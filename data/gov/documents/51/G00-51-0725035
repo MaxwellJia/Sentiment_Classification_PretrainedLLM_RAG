@@ -1,0 +1,959 @@
+http://adc.gsfc.nasa.gov/adc/adc_datamining.html
+
+   NASA
+   Astronomical Data Center
+
+   [bluepix.gif]
+    HOME · SCIENCE DATA · SITE MAP · SITE SEARCH · "HOW TO" · ABOUT ADC ·
+   NEWS · FEEDBACK
+   [bluepix.gif]
+
+                ADC's Data Mining Resources for Space Science
+
+   Table of Contents:
+     * Introduction
+     * What is Data Mining? What is Knowledge Discovery?
+     * User Requirements for Data Mining in Large Scientific Databases
+     * XML for distributed data mining
+     * Data Mining with the NVO and The GRID
+     * What is The GRID?
+     * Virtual Observatory (VO) Activities & Related Conferences [UPDATED]
+     * Conference Papers by ADC staff on "Data Mining with the NVO"
+     * Conferences on Data Mining & Knowledge Discovery (mainly 2002)
+       [UPDATED]
+       [SEE ALSO: pre-2002 Conferences]
+     * Data Mining Organizations
+     * Select Data Mining Publications
+     * Data Mining Methods
+     * Select Data Mining Software and Techniques
+     * Information Retrieval [NEW]
+     * Parallel and High-Speed Data Mining
+     * "MINING THE SKY" Conference Report
+     * Lessons Learned & Experiences in the Earth Sciences
+     * KDnuggets Interview with Usama Fayyad
+     * Very Large Astronomy Surveys and Telescopes
+     * Additional Scientific Data Mining Links
+     __________________________________________________________________
+
+   Introduction
+   This collection of resources and information on Space Science Data
+   Mining is not intended to be comprehensive, since whole books and
+   numerous international conferences each year address this subject
+   matter. The material presented here is primarily intended to be a
+   representative subset of those items that we have found useful or
+   applicable to data mining within the space sciences. In particular, the
+   summarization of the "Mining the Sky" conference focuses on those
+   aspects.
+   Disclaimer: Many web sites are referenced in this report. There is no
+   endorsement suggested or implied for any product identified here. The
+   information is provided solely as a convenience and reference for our
+   readers.
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   What is Data Mining? What is Knowledge Discovery?
+   Definition: "Data mining is defined as an information extraction
+   activity whose goal is to discover hidden facts contained in
+   databases."
+   Definition: "Knowledge discovery refers to finding out new knowledge
+   about an application domain using data on the domain usually stored in
+   a database."
+   (The application domain may be astrophysics, earth science, solar sytem
+   science, credit card usage histories, telephone usage histories,
+   basketball play-by-play histories, etc...)
+   Data Mining Summaries:
+     * Data mining glossary
+     * Lecture notes on data mining
+     * Data Mining 101
+     * Data mining research: opportunities and challenges
+     * Kurt Thearling's extensive Data Mining Tutorial
+     * Kurt Thearling's extensive list of Data Mining White Papers
+     * J. H. Maindonald's detailed report on issues and approaches related
+       to Scientific Data Mining
+
+   Data mining is used to find patterns and relationships in data.
+   Patterns can be analyzed via 2 types of models:
+     * Descriptive Models: Used to describe patterns and to create
+       meaningful subgroups or clusters.
+     * Predictive Models: Used to forecast explicit values, based upon
+       patterns in known results.
+
+   How does this apply to scientific research? ... through KNOWLEDGE
+   DISCOVERY.
+   Analysis of Data leads to Information, which leads to Knowledge, which
+   ultimately leads to Understanding, which is what we really seek when we
+   perform data mining. Understanding leads to new questions, which leads
+   to collecting more data, and so on, in a continuing cycle. This is the
+   essense of the Scientific Method.
+   In large scientific databases, data mining and knowledge discovery come
+   in two flavors:
+     * Event-based mining: (based upon events or trends in data)
+          + Known events / known algorithms -- use existing physical
+            models (descriptive models; algorithms) to locate known
+            phenomena of interest either spatially or temporally within a
+            large database.
+          + Known events / unknown algorithms -- use pattern recognition
+            and clustering properties of data to discover new
+            observational (physical) relationships (algorithms) among
+            known phenomena.
+          + Unknown events / known algorithms -- use expected physical
+            relationships (predictive models; algorithms) among
+            observational parameters of physical phenomena to predict the
+            presence of previously unseen events within a large complex
+            database.
+          + Unknown events / unknown algorithms -- use thresholds or
+            trends to identify transient or otherwise unique
+            ("one-of-a-kind") events and therefore to discover new
+            physical phenomena.
+     * Relationship-based mining: (based upon associations and
+       relationships within data)
+          + Spatial associations -- identify events (e.g., astronomical
+            objects) at the same location (e.g., same region of the sky).
+          + Temporal associations -- identify events occurring during the
+            same or related periods of time.
+          + Coincidence associations -- use clustering techniques to
+            identify events that are co-located within a multi-dimensional
+            parameter space.
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   User Requirements for Data Mining in Large Scientific Databases
+     * Cross-Identification -- refers to the classical problem of
+       associating the source list in one database to the source list in
+       another.
+     * Cross-Correlation -- refers to the search for correlations,
+       tendencies, and trends between physical parameters in
+       multi-dimensional data, usually across databases.
+     * Nearest-Neighbor Identification -- refers to the general
+       application of clustering algorithms in multi-dimensional parameter
+       space, usually within a database.
+     * Systematic Data Exploration -- refers to the application of the
+       broad range of event-based and relationship-based "What if?"
+       queries to a database in the hope of making a serendipitous
+       discovery of new objects or a new class of objects.
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   XML for distributed data mining
+   XML (= eXtensible Markup Language) has been found to be an increasingly
+   useful and universally supported metadata interchange language. Several
+   groups have investigated uses of XML that have scientific data mining
+   applications:
+     * NASA's Astronomical Data Center (ADC) XML Resources Page
+     * Extensible Data Format (XDF) = a common scientific data format
+       based on general mathematical principles, object models, and XML
+       that can be used throughout the scientific disciplines.
+     * Extensible Scientific Interchange Language (XSIL)
+     * Predictive Model Markup Language (PMML)
+     * Project DataSpace (includes PMML and DXML)
+     * Grid eXtensible Data (GXD)
+     * Mediation of Information using XML (MIX)
+          + See also: A Recipe for MIXing and Searching Online Information
+     * XML Interest Group (XIG)
+     * Data Mining at the Canadian Astronomy Data Centre. See also the
+       full article on Scientific Data Mining.
+     * astrores - CDS' XML Description of Astronomical Catalogs & Query
+       Results. See also the full article.
+     * Object Oriented Data Technology (OODT) and XML
+     * Scientific Experiment Markup Language (SEML)
+     * "Distributed Information Search and Retrieval for Astronomical
+       Resource Discovery and Data Mining"
+     * The Astronomical Markup Language (AML)
+     * XML Miner (for data-mining XML data)
+     * The Stanford Lore database management system for XML
+     * The Data Miner's Arcade
+     * . . . and many more links to XML .and. Scientific Data Mining
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Data Mining with the NVO and The GRID
+   Why "Data Mining with the NVO" (= National Virtual Observatory)? (1)
+   Because the major functions of the NVO and the related technical issues
+   include many aspects of data mining. And (2) the NVO is a framework to
+   enable distributed data mining across multiple heterogeneous data &
+   information services. The goals of the NVO include the following:
+     * To facilitate data mining and knowledge discovery within the new,
+       existing, and upcoming very large astronomical databases
+       (tera-bases). Related technical issues include: indexing for fast
+       queries, filtering of large queries, data subsetting,
+       visualization, statistical analysis, parallelism (queries &
+       access), . . .
+     * To facilitate linkages and cross-archive investigations utilizing
+       new mission data in conjunction with the rich legacy data archives
+       that preceded them. Related technical issues include: distributed
+       computing, scalable architectures, load balancing, thin middleware
+       layer, interoperability, code libraries, code-shipping,
+       data-finding services, data standards & interchange formats,
+       query/results protocols, data fusion, quality assessment,
+       archive/metadata profiles, user profiles, intelligent agents, . . .
+
+   Some papers that address the issues and applications of Data Mining
+   with a Virtual Observatory include these:
+     * "Toward a National Virtual Observatory: Science Goals, Technical
+       Challanges, and Implementation Plan", by the NVO Interim Steering
+       Committee.
+     * "Exploration of Large Digital Sky Surveys", by S.G.Djorgovski et
+       al.
+     * "Searches for Rare and New Types of Objects", by S.G.Djorgovski et
+       al.
+     * "The New Paradigm: Novel, Virtual Observatory Enabled Science", by
+       R.J.Brunner.
+     * "Theory in a Virtual Observatory", by P.Teuben.
+     * "Data Mining in Astronomical Databases", by K.D.Borne.
+     * "Science User Scenarios for a Virtual Observatory Design Reference
+       Mission: Science Requirements for Data Mining", by K.D.Borne.
+     * "Digital Sky Surveys: Software Tools and Technologies", by
+       S.G.Djorgovski & R.J.Brunner.
+     * "Astronomical Archives of the Future: A Virtual Observatory", by
+       A.S.Szalay & R.J.Brunner.
+     * "Data Mining a Large Digital Sky Survey: From the Challenges to the
+       Scientific Results", by S.G.Djorgovski et al.
+     * "The Virtual Observatory: Methodologies for Data Handling", by
+       F.Murtagh.
+
+   The NVO was the number 1 small initiative recommended in the 2000-2010
+   Decadal Survey Report prepared by the Astronomy and Astrophysics Survey
+   Committee (AASC), convened by The National Research Council of the
+   National Academy Sciences. References to the NVO can be found in the
+   AASC's report "Astronomy and Astrophysics in the New Millennium" on the
+   following pages -- Page 10 -- Page 12 -- Page 14 -- Page 33 -- Page 34
+   -- Page 37 -- Page 39 -- Page 44 -- Pages 132-133.
+   The NVO Interim Steering Committee has prepared an NVO White Paper.
+   Specific Virtual Observatory-related Data Mining Links are also
+   available.
+   An example of a similar project is The GRID !
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   What is The GRID?
+   "The GRID is a distributed computing infrastructure that facilitates
+   resource-sharing and coordinated problem-solving in dynamic,
+   multi-institutional virtual organizations." Thus, the GRID is a
+   prototype or model for the NVO.
+   Information on Grid-related projects and technologies can be found
+   here:
+     * http://www.globus.org/datagrid/ (The Data Grid)
+     * http://www.eu-datagrid.org/ (The Data Grid Project)
+     * http://www.astrogrid.ac.uk/ (The Astro-Grid Project = UK Virtual
+       Observatory)
+          + First AstroGrid Workshop (January 2001)
+          + http://www.astrogrid.ac.uk/gridnews.html (AstroGrid-related
+            News)
+     * http://www.griphyn.org/ (GriPhyN = the Grid Physics Network)
+     * http://www.phys.ufl.edu/~avery/mre/ (The GriPhyN Project)
+     * http://www.cacr.caltech.edu/ppdg/ (Particle Physics Data Grid)
+     * http://pcbunn.cithep.caltech.edu/ (GIOD = Globally Interconnected
+       Object Databases)
+     * http://www.gridforum.org/ (Global Grid Forum)
+     * http://www.ipg.nasa.gov/ (IPG = NASA's Information Power Grid)
+          + The IPG (Information Power Grid) Workshop (December 2001)
+     * http://www.nas.nasa.gov/~pv/gxd/ (GXD = Grid eXtensible Data)
+     * http://www.ncsa.uiuc.edu/TechFocus/Projects/NCSA/Grid-in-a-Box.html
+       (Grid-in-a-Box)
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Virtual Observatory (VO) Activities & Related Conferences
+     * ESO (November 1997) -- ESO Experts Workshop on Data Mining in
+       Astronomy
+     * Caltech (March 1998) -- Workshop on Interfaces to Scientific Data
+       Archives
+     * Princeton (May 1998) -- Workshop on Massive Astronomical Data Sets
+     * Anapolis, Maryland (September 1999) -- European-United States joint
+       workshop on Large Scientific Databases
+          + The Conference Report is available on-line here.
+          + Conference Position Papers are available on-line here.
+          + Related Large Scientific Databases links.
+     * Caltech (June 2000) -- "Virtual Observatories of the Future"
+          + Published Conference Proceedings are now available. [NEW]
+          + Several of the conference papers are on-line here.
+          + Several of the conference presentations are on-line here.
+     * MPA/ESO/MPE (August 2000) -- "Mining the Sky"
+          + Published Conference Proceedings are now available. [NEW]
+          + Conference papers are available on-line here.
+     * Queen's University Belfast (January 2001) -- The UK Astro-Grid
+       Workshop
+          + Conference papers are available on-line here.
+     * Aspen (May/June 2001) -- "New Astrophysics and Cosmology with a
+       Virtual Observatory"
+     * Penn State University (July 2001) -- Statistical Challenges in
+       Modern Astronomy Conference
+     * San Diego (August 2001) -- SPIE Astronomical Data Analysis (and
+       Data Mining) Conference
+     * Munich, Germany (September 2001) -- JENAM 2001 (Joint European and
+       National Astronomical Meeting) -- Joint Discussion on the "Virtual
+       Observatory"
+     * Victoria, BC (October 2001) -- ADASS XI (Astronomical Data Analysis
+       Software & Systems)
+     * Garching, Germany (June 2002) -- Toward an International Virtual
+       Observatory [NEW]
+     * Waikoloa, Hawaii (August 2002) -- Virtual Observatories [NEW]
+     * Waikoloa, Hawaii (August 2002) -- Astronomical Data Analysis II
+       [NEW]
+     * Waikoloa, Hawaii (August 2002) -- Advanced Global Communications
+       Technologies for Astronomy II [NEW]
+     * Baltimore, Maryland (October 2002) -- ADASS XII (Astronomical Data
+       Analysis Software & Systems) [NEW]
+     * More NVO-related conferences are listed here
+
+   For additional NVO-related activities, see also:
+     * General Presentation on NVO.
+     * National Virtual Observatory (NVO) Science Definition Team (SDT).
+     * The Virtual Observatory Forum.
+     * United States Virtual Observatory Project (NSF-funded).
+     * NOAO and the NVO.
+     * Caltech Digital Sky Project.
+     * Sloan Digital Sky Survey (SDSS) SkyServer.
+     * The UK Astro-Grid Project.
+     * European Astrophysical Virtual Observatory (AVO).
+     * Converging Computing Methodologies in Astronomy.
+     * The Australian Virtual Observatory.
+     * Data Mining the Stars.
+     * The Spectroscopic Virtual Observatory (SVO).
+     * The European ASTROVIRTEL Project = virtual astronomical telescope
+       dedicated to data mining ("Accessing Astronomical Archives as
+       Virtual Telescopes"). Cycle 2 Proposal Results (2001).
+     * CADC Long Range Plan for Data Mining.
+     * The French TERAPIX Project for data mining and data warehousing.
+     * Theory Virtual Observatory (TVO).
+
+   Of historical interest . . .
+     * AstroBrowse -- prototypes available (pre-NVO implementations --
+       list is out-of-date).
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Conference Papers by ADC staff on "Data Mining with the NVO"
+     * Presentation on "Scientific Data Mining in Theory & Practice: The
+       NVO" [powerpoint] -- presented at the 2001 JPL/Raytheon Science
+       Data Centers Symposium. Check out the NEW links to the conference
+       presentations now available at the conference web site.
+     * http://arXiv.org/abs/astro-ph/0008307 -- Look here to see the
+       materials used in the conference poster presentation.
+Title:  Science User Scenarios for a Virtual Observatory Design
+        Reference Mission: Science Requirements for Data Mining
+Comments: 4 pages. Paper to appear in the proceedings of the June 2000
+  "Virtual Observatories of the Future" conference at Caltech, edited
+  by R. J. Brunner, S. G. Djorgovski, & A. Szalay.
+
+ABSTRACT:  The knowledge discovery potential of the new large
+astronomical databases is vast. When these are used in conjunction with
+the rich legacy data archives, the opportunities for scientific
+discovery multiply rapidly. A Virtual Observatory (VO) framework will
+enable transparent and efficient access, search, retrieval, and
+visualization of data across multiple data repositories, which are
+generally heterogeneous and distributed. Aspects of data mining that
+apply to a variety of science user scenarios with a VO are reviewed.
+The development of a VO should address the data mining needs of various
+astronomical research constituencies. By way of example, two user
+scenarios are presented which invoke applications and linkages of data
+across the catalog and image domains in order to address specific
+astrophysics research problems.  These illustrate a subset of the
+desired capabilities and power of the VO, and as such they represent
+potential components of a VO Design Reference Mission.
+     * http://arXiv.org/abs/astro-ph/0010583 -- Look here to see the
+       materials used in the conference poster presentation.
+Title:  Data Mining in Astronomical Databases
+Comments: 3 pages. Uses eso.sty style file. Paper to appear in the
+  proceedings of the August 2000 MPA/ESO/MPE "Mining the Sky"
+  conference in Garching, Germany.
+
+ABSTRACT:  A Virtual Observatory (VO) will enable transparent and
+efficient access, search, retrieval, and visualization of data across
+multiple data repositories, which are generally heterogeneous and
+distributed.  Aspects of data mining that apply to a variety of science
+user scenarios with a VO are reviewed.
+     * For figures and demos related to the sample user scenarios
+       presented in the above conference papers, go to:
+       http://adc.gsfc.nasa.gov/adc/adc_science/adc-science-scenario-paper
+       s.html
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Conferences on Data Mining & Knowledge Discovery (mainly 2002)
+     * Mathematical Challenges in Scientific Data Mining - IPAM 2002
+       (January 2002)
+     * IEEE International Conference on Data Engineering - ICDE 2002
+       (February 2002)
+     * Second SIAM International Conference on Data Mining (April 2002)
+     * SPIE Data Mining & Knowledge Discovery: Theory, Tools, and
+       Technology (April 2002)
+     * 6th Pacific Asia Conference on Knowledge Discovery & Data Mining
+       (PAKDD-2002) (May 2002)
+     * Data Mining Summit (June 2002) [NEW]
+     * 14th International Conference on Scientific and Statistical
+       Database Management - SSDBM'2002 (July 2002) [NEW]
+     * 8th ACM International Conference on Knowledge Discovery and Data
+       Mining (KDD-2002) (July 2002)
+     * Knowledge Discovery from Temporal and Spatial Data (July 2002)
+       [NEW]
+     * 28th International Conference on Very Large Databases - VLDB 2002
+       (August 2002)
+     * Principles and Practice of Knowledge Discovery in Databases
+       (PKDD'02) (August 2002)
+     * Data Mining 2002 (September 2002)
+     * 4th International Conference on Data Warehousing and Knowledge
+       Discovery (DaWaK 2002) (September 2002)
+     * Discovery Science 2002 (November 2002) [NEW]
+     * 2002 IEEE International Conference on Data Mining - ICDM'02
+       (December 2002) [UPDATED]
+
+   Conferences on Data Mining & Knowledge Discovery (pre-2002)
+     * NASA Workshop on Data Fusion and Data Mining (July 1999)
+     * NASA Workshop on Issues in the Application of Data Mining to
+       Scientific Data (October 1999)
+          + . . . provides link to Final Workshop Report (PDF - 44 pages)
+     * Comprehensive list of data mining conferences at KDnuggets.com
+     * Comprehensive list of data mining conferences at KDCentral.com
+     * Series of conferences on Mining Scientific Datasets
+     * First SIAM International Conference on Data Mining (April 2001) . .
+       .
+          + . . . includes Workshop on Mining Scientific Datasets
+            (Astronomy, Earth Science,...)
+     * Data Mining and Knowledge Discovery: Theory, Tools, and Technology
+       III (April 2001)
+     * 4th International Workshop on Parallel and Distributed Data Mining
+       (April 2001)
+     * Fifth Pacific-Asia Conference on Knowledge Discovery & Data Mining
+       - PAKDD 2001 (April 2001)
+     * Workshop on Research Issues in Data Mining & Knowledge Discovery -
+       DMKD 2001 (May 2001)
+     * CALD Summer School - Data Mining & Machine Learning for
+       Professionals (June 2001)
+     * 13th International Conference on Scientific and Statistical
+       Database Management - SSDBM'2001 (July 2001)
+     * Machine Learning and Data Mining in Pattern Recognition (July 2001)
+     * SPIE Conference 4477 - Astronomical Data Analysis (August 2001)
+     * Americas Conference on Information Systems - "Data Warehousing"
+       (August 2001)
+     * Workshop on Learning from Temporal and Spatial Data (August 2001)
+     * DIMACS Workshop on Data Mining and Scalable Algorithms (August
+       2001)
+     * KDD-2001 Fourth Workshop on Mining Scientific Datasets (August
+       2001)
+     * KDD-2001 Workshop on Temporal Data Mining (August 2001)
+     * Full list of KDD-2001 Data Mining Workshops (August 2001)
+     * Seventh ACM SIGKDD International Conference on Knowledge Discovery
+       & Data Mining - KDD 2001 (August 2001)
+     * MDM/KDD2001 - Second International Workshop on Multimedia Data
+       Mining (August 2001)
+     * 5th European Conference on Principles and Practice of Knowledge
+       Discovery in Databases - PKDD'01 (September 2001)
+     * Workshop on Multi-Relational Data Mining - MRDM 2001 (September
+       2001)
+     * International Workshop on Visual Data Mining - VDM@ECML/PKDD2001
+       (September 2001)
+     * Semantic Web Mining - Workshop at ECML/PKDD2001 (September 2001)
+     * DEXA 2001 (September 2001) . . .
+          + . . . includes Conference on Data Warehousing and Knowledge
+            Discovery
+     * 27th International Conference on Very Large Databases - VLDB 2001
+       (September 2001)
+     * Fourth International Symposium on Intelligent Data Analysis - IDA
+       2001 (September 2001)
+     * Workshop on Information Retrieval - IR'2001 (September 2001)
+     * Announcement : Federal Data Mining Symposium (September 2001)
+     * "Data Mining's Gold Standard - Data Mining Technology Conference"
+       (October 2001)
+     * Workshop on Rule-Based Data Mining - RBDM 2001 (October 2001)
+     * DIMACS Workshop on Streaming Data Analysis and Mining (November
+       2001)
+     * Tenth International Conference on Information and Knowledge
+       Management - ACM CIKM 2001 (November 2001)
+     * IEEE International Conference on Data Mining - ICDM'01 (November
+       2001)
+     * IEEE Workshop on Integrating Data Mining and Knowledge Management
+       (November 2001)
+     * The IPG (Information Power Grid) Workshop (December 2001)
+     * Large-Scale Data Mining (December 2001)
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Data Mining Organizations
+     * Data Mining Center
+     * National Center for Data Mining
+     * The Data Mining Group
+     * The DataSpace Web
+     * The Data Mining Institute
+     * Data-Intensive Computing (DICE)
+     * The Data Mining Club (@Yahoo)
+     * KDnuggets
+     * Knowledge Discovery Central (KDCentral)
+     * ACM SIGKDD
+     * Information Discovery, Inc.
+     * Data Miners Home Page
+     * Remote Sensing Data Mining
+     * Statserv Data Mining Page
+     * Data Warehousing and Data Mining Resource Directory
+     * Data Mining Home Page
+     * Data Mining Forum
+     * Project DataSpace
+     * NCSA Data, Mining, and Visualization Division
+     * The Terabyte Challenge
+     * The Serendip Data Mining Project
+     * digiMine, Inc.
+     * UCLA Data Mining Laboratory
+     * Helsinki Data Mining and Machine Learning Group
+     * Imperial College Data Mining Research Group
+     * Classification Society of North America (CSNA)
+     * The Data Mine (comprehensive links to Data Mining resources)
+     * The Data Mining Company
+     * Exclusive Ore, Inc.
+     * Directory of Data Warehouse, Data Mining, and Decision Support
+       Resources
+     * Key Data Mining Resources at Links2Go.com
+     * datamining.org
+     * VLDB (Very Large Data Base) Endowment - with On-Line Conference
+       Proceedings
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Select Data Mining Publications
+     * Data Mining and Knowledge Discovery Journal
+     * KDnuggets Newsletter. Check out a sample copy.
+     * KDnuggets' List of Data Mining Publications
+     * ACM's SIGKDD Explorations
+     * Hundreds of on-line papers related to data mining
+     * "Advances in Knowledge Discovery and Data Mining", Edited by Fayyad
+       et al. (1996: AAAI Press).
+     * Kurt Thearling's Data Mining Tutorial and lists of Data Mining
+       White Papers & Books
+     * Data Mining in a Scientific Environment (article by J.Crawford &
+       F.Crawford)
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Data Mining Methods
+     * Clustering
+     * Neural Networks
+     * Decision Trees/Rules
+     * Logistic Regression
+     * Statistics
+     * Bayesian
+     * Visualization
+     * Association Rules
+     * Hybrid methods
+     * Text Mining
+     * Web mining
+     * Agents
+     * See KDnuggets Poll Results of most used Data Mining Methods
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Select Data Mining Software and Techniques
+     * SKICAT = Sky Image Cataloging and Analysis Tool
+          + "A machine learning system for automated cataloging of large
+            scale sky surveys" - described in this paper and in this
+            paper. This system has been cited in numerous publications
+            listed here and here.
+     * Diamond Eye = A Distributed Architecture for Image Data Mining
+          + "A suite of algorithms that will enable both scientists and
+            remote systems to find, analyze, and catalog spatial objects
+            and dynamic events in large scientific datasets and real-time
+            image streams" - described in this paper.
+     * ADAM = Algorithm Development and Mining System
+          + "Used to mine large scientific data sets for geophysical
+            phenomena detection and feature extraction. It provides a
+            variety of processing tools, which allow easy integration of
+            spatial and temporal variables of earth science data sets.
+            This mining system consists of a series of interoperable data
+            readers, preprocessing and analysis modules, and data writers.
+            These modules can be linked together in many ways to create
+            customized mining processes."
+     * E/RSS = Event/Relationship Search System
+          + "Allows users to conduct coincidence searches and relationship
+            tests between mined phenomena and a variety of factors such as
+            regions, boundaries, or other named phenomena for a specific
+            time period."
+     * AMASE = Astrophysics Multi-spectral Archive Search Engine
+          + "Supports astrophysics research by providing a position-based
+            data mining facility. The first implementation of this
+            facility will support field-of-view (FOV) correlation. The
+            team would use an instrument FOV to scan through the AMASE
+            database to extract information for off-target objects,
+            correlate them to other data (from other
+            catalogs/observations) via spatial (primary) and other
+            attributes, then present the results to a scientist for
+            review." (See reference.)
+     * IMPReSS = IMage PeRimeters of Sky Surveys
+          + "A graphical interface to astronomical databases that presents
+            the user with plane of the sky outlines or silhouettes of
+            images obtained by space-based telescopes. Its purpose is to
+            provide a visualization environment that finds and displays,
+            in detail, mission footprints that lie within a user selected
+            region of the sky. Searches can also be restricted by the
+            observation date." (See reference.)
+     * MOCHA = Middleware Based On a Code SHipping Architecture
+          + "A novel self-extensible database middleware system [for
+            distributed data mining] designed to interconnect hundreds of
+            data sources distributed over a wide area network." (See
+            reference.)
+     * SOM = Kohonen Self-Organizing Map
+          + In "Data exploration using self-organizing maps" Kaski (1997)
+            reported: "The self-organizing map (SOM) algorithm of Kohonen
+            can be used to aid in the exploratory data analysis or data
+            mining of vast multidimensional data sets -- the structures in
+            the data sets can be illustrated on special map displays." See
+            also:
+               o "Using SOM in Data Mining" (by Vesanto)
+               o "Neural Networks and Information Extraction in
+                 Astronomical Information Retrieval" (by Lesteven,
+                 Poincot, & Murtagh)
+               o CDS's SOM for Astronomical Catalogs
+               o CDS's SOM for over 10,000 published articles in Astronomy
+                 & Astrophysics
+     * Sapphire - for Large Scale Data Mining and Pattern Recognition
+          + "Scalable algorithms for the exploration of large, complex,
+            multi-dimensional scientific data. Applying and extending
+            ideas from data mining and pattern recognition in order to
+            improve the way in which scientists extract useful information
+            from data."
+     * SkyView - a Virtual Observatory on the Internet
+     * Andrew Moore's "Introductory Tutorial on KD-trees" (postscript)
+     * Fionn Murtagh's Multivariate Data Analysis Software and Resources
+     * XGobi - A System for Multivariate Data Visualization
+     * MCLUST / EMCLUST - Model-Based Classification Software
+     * TimeFinder - for the Visual Exploration of Time-Series Data
+     * Terabyte Challenge Applications
+     * Carnegie Mellon's Auton Project Home Page
+     * Mixture Modeling (hundreds of resources)
+     * Bayes Nets (tutorials)
+     * CONQUEST (Concurrent Queries over Space and Time) for Scientific
+       Data Mining
+     * Visual Data Mining [PhD Thesis]
+     * 3DV8: 3-D Visual Data Mining Software
+     * XmdvTool: Visual Data Mining Package
+     * VisDB: A Visual Data Mining and Database Exploration System
+     * Geometry in Action: Data Mining and Multidimensional Analysis
+     * The Data Miner's Arcade
+     * The Kensington Data Mining System
+     * Description of Data Mining Techniques (at SPSS.com)
+     * Links to Data Mining Software Packages at KDnuggets.com
+     * KDnuggets.com Poll of Frequently Used Data Mining Tools
+     * Links to Data Mining Software Packages at KDCentral.com
+     * StatCodes - On-line statistical software for astronomy and related
+       fields
+     * Statistics and Data Mining in Research & Research Training
+     * Data Mining from a Statistical Perspective
+     * Statistical Learning/Pattern Recognition Glossary [Very
+       Comprehensive, includes Machine Learning & Neural Nets]
+     * University of Washington's Statistics Software
+     * StatSoft - On-line Statistics Textbook
+     * StatLib - Statistical software, datasets, and information
+     * Statistical Science Web - Statistical Computing Resources
+     * Statistical Science Web - Statistical Methods
+     * ASCL.NET - Astrophysics Source Code Library: Archive
+     * Other data mining tools & techniques (list of links provided by
+       GMU)
+     * Comprehensive Links to Data Mining Software (provided by The Data
+       Mine)
+     * Extensive list of data mining resources (provided by UCAR)
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Information Retrieval
+   Definition: "Information Retrieval is the study of systems for
+   indexing, searching, and recalling data, particularly text or other
+   unstructured forms." (Reference: Glossary of Information Retrieval)
+   Selected topics:
+     * "Distributed Information Search and Retrieval for Astronomical
+       Resource Discovery and Data Mining" (article by F.Murtagh &
+       D.Guillaume)
+          + Astronomical Markup Language (AML)
+     * "Neural Networks and Information Extraction in Astronomical
+       Information Retrieval" (article by Lesteven, Poincot, & Murtagh)
+     * Google search on "Astronomical Information Retrieval"
+     * Google search on "Scientific Information Retrieval"
+     * Google search on "Data Mining" AND "Information Retrieval"
+     * ACM Special Interest Group on Information Retrieval
+     * The Center for Intelligent Information Retrieval
+     * NCSA's Emerge Project for Distributed Information Retrieval of
+       Scientific Data
+     * Illinois Institute of Technology Information Retrieval Lab
+          + Information Retrieval Projects
+     * Information Retrieval Research
+     * Information Retrieval links in the Open Directory Project
+     * Conference on Research and Development in Information Retrieval
+       (August 2002)
+     * Workshop on Information Retrieval - IR'2001 (September 2001)
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Parallel and High-Speed Data Mining
+     * The concept of parallel data mining is a particularly interesting
+       and relevant topic for mining very large scientific databases. The
+       use of inexpensive Beowulf clusters of PC's for parallel
+       drill-downs into huge databases may represent one implementation of
+       an NVO data mining and search engine. Some examples of groups
+       pursuing such research include these:
+          + http://www.drao.nrc.ca/outreach/newsletter/news_eng/mar99/beow
+            ulf.html
+          + http://discus.anu.edu.au/ml/dm/
+          + http://www.supercomp.org/sc97/proceedings/TECH/TAMURA/INDEX.HT
+            M
+          + SPIDER = Scalable, Parallel and Interactive Data Mining and
+            Exploration at Rensselaer
+     * "Scalable Scientific Datamining on Massively Parallel Computers", a
+       paper by P.Stolorz, R.Blom, R.Crippen, & C.Dean.
+     * QUAKEFINDER is a parallel data mining and knowledge discovery
+       package using machine learning techniques to detect earthquake
+       activity in massive volumes of remote sensing data.
+     * Here is an interesting paper (from the Caltech VOF conference) on
+       high-speed data mining technologies for the NVO:
+       http://arXiv.org/abs/astro-ph/009128.
+     * Check out Kumar & Joshi's excellent detailed Tutorial on High
+       Performance Data Mining, including astronomical applications.
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   "MINING THE SKY" Conference Report
+   [Disclaimer: This report was prepared by K.Borne and reflects the
+   interests and note-taking abilities of the preparer. The preparer
+   regrets any misrepresentation or incomplete representations of the
+   conference papers. For more details and more complete information
+   regarding any paper described here, and for many other papers not
+   described here, please refer to the on-line conference proceedings.]
+   INTRODUCTION:
+   The conference web site is here :
+   http://www.MPA-Garching.MPG.DE/~cosmo/
+   The conference organizers have compiled their own list of data mining
+   links.
+   Similarly, there was a conference on "Virtual Observatories of the
+   Future" (VOF) at Caltech in June, 2000. The VOF conference web site is:
+   http://www.astro.caltech.edu/nvoconf/, with a subset of the conference
+   presentations available on-line.
+   One of the major topics of discussion at the MINING THE SKY conference
+   was the European Virtual Observatory effort. It is coordinated by the
+   OPTICON network. Their first step towards implementing a VO is their
+   ASTROVIRTEL project. A fuller discussion of the OPTICON network can be
+   found in these papers by Gerry Gilmore: "OPTICON and the Virtual
+   Observatory" and "OPTICON: EC Optical Infrared Coordination Network for
+   Astronomy".
+   A project related to the NVO was discussed at these conferences: The
+   Digital Sky Project. This project was described in a paper here:
+   http://arXiv.org/abs/astro-ph/0011222
+   A significant Virtual Observatory initiative in the UK is now underway:
+   The Astro-Grid Project. They sponsored their First Astro-Grid Workshop
+   in January 2001.
+   REPORTS ON INDIVIDUAL PAPERS:
+   Specific highlights will now be presented from a few of the talks at
+   the MINING THE SKY conference that were particularly useful and
+   relevant for space science data mining. In most cases, the papers are
+   available at the on-line conference proceedings web site.
+    1. Three of the better summary talks on data mining space science data
+       were:
+          + "Mining 101" by E.Wright
+          + "Massive Variability Searches" by B.Paczynski, which was
+            published under a different title.
+            [may require subscription to be accessed]
+          + "Exploration of Large Digital Sky Surveys", by S.G.Djorgovski
+    2. B.Paczynski provided some links to very large databases of millions
+       of astronomical observations:
+          + http://archive.Princeton.EDU/~asas/
+          + http://bulge.princeton.edu/~ogle/
+       The ASAS (All Sky Automated Survey) is described in a paper here:
+       http://arXiv.org/abs/astro-ph/0005236
+    3. Though not on-line, P.Quinn's talk on the MACHO dataset was also
+       very informative. Their survey accumulated 90,000 images of the
+       sky, which comprise nearly 6 terabytes. Their derived photometric
+       database ("variable star catalog") is several hundred gigabytes
+       alone!
+    4. Several speakers reviewed indexing schemes for very large
+       astronomical databases, primarily in the context of all-sky maps
+       (e.g., cosmic microwave background experiments, such as COBE or
+       MAP). Two of the most discussed indexing schemes were HTM
+       (Hierarchical Triangular Mesh) and HEALPIX. Some related papers
+       were:
+          + "The Hierarchical Triangular Mesh" by P. Kunszt. See also the
+            related paper: "The Indexing of the SDSS Science Archive".
+          + "Splitting the Sky: HTM and HEALPix" by W. O'Mullane.
+          + Additional information on these techniques can be found here:
+            HTM : http://www.sdss.jhu.edu/htm/
+            HEALPix : http://www.eso.org/science/healpix/
+          + The paper by R.van de Weygaert on "Tesselation Reconstruction
+            Techniques" showed promising application to both mining of
+            datasets that map either to the earth sphere or to the
+            celestial sphere.
+          + A discussion of KD-trees and other techniques for indexing and
+            searching through large databases was presented by I.Szapudi
+            in his talk "Estimation of Correlations in Large Samples". He
+            described how a search can be reduced from N^3 to Nlog(N).
+    5. O.Lahav introduced the "Information Bottleneck Method" for the
+       compression and classification. He particularly talked about an
+       astronomical application, but it also works for document
+       classification and other applications. In addition to the on-line
+       conference presentation, related papers can be found here:
+          + http://arXiv.org/abs/astro-ph/0005306
+          + http://arXiv.org/abs/astro-ph/9911102
+    6. A technically informative paper on a powerful distributed parallel
+       computing architecture for mining very large terabyte databases
+       (for the Sloan Digital Sky Survey) was presented by A.Thakar.
+    7. Statistician Andrew Moore (CMU) gave an excellent summary of
+       problems related to autonomous data mining, KD-trees, AD-trees,
+       R-trees, ball trees, etc. Some links to his work can be found here:
+          + http://www.autonlab.org/
+          + http://www.autonlab.org/datamine.html
+          + http://www.schenley.com/
+    8. Several speakers spoke on automated techniques, including
+       J.Hakkila, N.Christlieb, G.Djorgovski, D.Madgwick, and others. For
+       example, J.Hakkila (AISRP grant-holder) gave a talk on mining
+       gamma-ray burst data. In addition to his on-line talk, there are
+       several related papers available on unsupervised learning,
+       artificial intelligence, a data mining tool shed, etc. The data
+       mining "tool shed" link is here: http://grb.CS.MNSU.EDU/~grb/
+    9. Though not specifically on the subject of data mining, many of the
+       early talks at the conference described large astronomical surveys
+       that are underway or being planned. These will produce very large
+       datasets that will be prime targets for data mining.
+   10. There were talks on PCA (Principal Component Analysis) and
+       Quadratic Discriminant Analysis, particularly the talk by
+       N.Christlieb.
+   11. There were talks on neural nets, including E.Bertin, G.Longo, and
+       R.Tagliaferri. Most of these speakers also discussed SOMs
+       (Self-Organized Maps) and wavelets as means to compress and
+       classify large data sets. A useful link was provided by Bertin:
+       http://www.multiresolution.com/
+   12. The numerical simulation theorists have generated their own
+       numerical (Virtual) observatory where one can explore gigabyte data
+       sets of simulated astronomical observations of clusters of
+       galaxies.
+   13. P.Kroll described a project that is cataloguing over 2 million
+       photographic plates that have imaged the sky. The database can be
+       searched here: http://www.skyarchive.org/
+   14. R.Nichol gave a very thorough talk on "Computation AstroStatistics:
+       How to Mine the Sky Quickly".
+   15. A.Szalay and B.Hanisch gave excellent talks on the NVO, large
+       surveys, existing tools, challenges, etc.
+   16. D.Egret and F.Ochsenbein (from CDS) gave interesting talks on
+       mining very large datasets and mining across heterogeneous data
+       sets. The challenges of mining legacy catalogs (with inhomogeneous
+       column headings, data formats, etc.) were described. Poster papers
+       by F.Genova and P.Ortiz summarized additional "mining the sky"
+       experience at CDS.
+   17. The preparer of this report (K.Borne) gave a poster presentation on
+       "Using On-Line Databases to Estimate the Galaxy Interaction Rate:
+       Looking Forward to a National Virtual Observatory". The paper for
+       the conference proceedings that was derived from this presentation
+       is entitled "Data Mining in Astronomical Databases", in which
+       aspects of data mining that apply to a variety of science user
+       scenarios with a Virtual Observatory (VO) are reviewed. A slightly
+       expanded discussion of user requirements for data mining with the
+       VO is presented in his Caltech VOF Conference Paper.
+   18. There were many more talks and posters not described here, most of
+       which can be downloaded from the conference proceedings web site.
+
+   [end of "Mining the Sky" Conference Report.]
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Lessons Learned & Experiences in the Earth Sciences
+   The NASA Goddard Earth Sciences (GES) community has prepared a report
+   (PDF format) on their data mining experiences and lessons learned at
+   the GES DISC DAAC (Data and Information Services Center, Distributed
+   Active Archive Center). These lessons learned will be applicable to any
+   implementation of data mining services in the NVO (National Virtual
+   Observatory).
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   KDnuggets Interview with Usama Fayyad
+   KDnuggets interviewed Usama Fayyad, one of the leading authorities on
+   data mining. The full set of interviews is now available: [1] - [2] -
+   [3] - [4] - [5] . For additional reading, check out his articles on
+   "From Data Mining to Knowledge Discovery in Databases", "Mining
+   Scientific Data", and "KDD for Science Data Analysis"; and check out
+   the numerous related articles that have referenced the latter paper.
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Very Large Astronomy Surveys and Telescopes
+   Numerous very large astronomical projects (telescopes and surveys) have
+   been and soon will be producing large volumes (gigabytes to terabytes,
+   and ultimately petabytes) of data. These data collections will be ideal
+   for data mining, scientific exploration, and astronomical discovery.
+   Some of those projects are listed here:
+     * Digitized Sky Survey (DSS at STScI) - POSS-I
+     * The Palomar Digital Sky Survey (DPOSS) - POSS-II
+     * Sloan Digital Sky Survey (SDSS) -- SDSS Archive
+     * Two-Micron All-Sky Survey (2MASS)
+     * USNO-Flagstaff Precision Measuring Machine project (PMM).
+       -- See the colorized sky density plot of 526,280,881 stars.
+     * U.Minnesota Automatic Plate Scanner project (APS)
+     * Royal Observatory Edinburgh SuperCOSMOS Sky Surveys (SSS)
+     * Deep Near-Infrared Survey of the southern sky (DENIS)
+     * Faint Images of the Radio Sky at Twenty centimeters (FIRST)
+     * NRAO VLA Sky Survey (NVSS)
+     * The MACHO Project (search for MAssive Compact Halo Objects)
+     * Optical Gravitational Lensing Experiment (OGLE)
+     * Robotic Optical Transient Search Experiment (ROTSE)
+     * Lowell Observatory Near-Earth Object Search (LONEOS)
+     * Lincoln Near Earth Asteroid Research Project (LINEAR)
+     * All-Sky Automated Survey (ASAS)
+     * ESO Imaging Survey Project (EIS)
+     * Large-aperture Synoptic Survey Telescope Observatory (LSSTO).
+       -- Also called the Dark Matter Telescope.
+     * VLT Survey Telescope (VST)
+     * Visible and Infrared Survey Telescope for Astronomy (VISTA)
+     * Supernova / Acceleration Probe (SNAP)
+     * Large High Dynamic Range Canada-France-Hawaii Telescope (HDRT)
+     * Hawaii Panoramic Optical Imager (POI)
+     * Canada's Extra Large (20-30m) Telescope (XLT)
+     * Univ.of Texas Extremely Large (29-meter) Telescope (ELT)
+     * California Extremely Large (30-meter) Telescope (CELT)
+     * NOAO Giant (30-50m) Segmented Mirror Telescope (GSMT)
+     * Gemini Maximum Aperture (30-50m) Telescope (MAXAT)
+     * Euro50 (50-meter) Optical and Infrared Telescope
+     * ESO "Over-Whelmingly Large" (100-meter) Telescope (OWL)
+     * Links to Other Surveys (maintained by the SDSS project)
+     * Links to Optical & NIR Surveys (maintained by the TERAPIX project)
+     * Links to Other Surveys (maintained by the TERAPIX project)
+     * Links to Other Surveys (maintained by the IAU Working Group on Sky
+       Surveys) [out of date]
+     * Workshop on Large Surveys at Royal Observatory Edinburgh
+          + Workshop Report to the European OPTICON Board - contains
+            useful recommendations on the linkages between Large Survey
+            Projects, their large data collections, and the Virtual
+            Observatory.
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   Additional Scientific Data Mining Links
+     * Google's search list for Scientific Data Mining links.
+     * Hotbot's search list for Scientific Data Mining links.
+     * alltheweb's search list for Scientific Data Mining links.
+     * Links2Go's search list for Scientific Data Mining links.
+
+   [Return to Top of Page]
+     __________________________________________________________________
+
+   [back arrow] [Return to Table of Contents]
+
+   [back arrow] [Return to ADC Homepage]
+
+     * To browse the ADC science data collection, use the ADC Science Data
+       search page.
+     * To examine the contents of the ADC web site, visit the ADC Web Site
+       Map.
+
+      Your comments and suggestions are welcome. For your convenience, use our
+      Feedback Form.
+
+   For Assistance, contact: help@adc.gsfc.nasa.gov
+   Curator: Dr. Kirk D. Borne
+   NASA Official: Dr. Cynthia Y. Cheung
+   Last Revised: 30-January-2002
+   NASA/GSFC Website Security and Privacy Statement [adcnewic.gif]

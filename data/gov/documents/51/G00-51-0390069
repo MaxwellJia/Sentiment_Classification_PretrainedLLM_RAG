@@ -1,0 +1,145 @@
+http://solg2.nascom.nasa.gov/solargrid/solargrid.shtml
+
+   Astrogrid (solar) [masthead-6.gif]
+   [masthead-5.gif]
+
+
+   [menu-top.gif]
+    Front Page
+    Scientific Ops
+    Engineering
+    Software
+    Results
+    Gallery
+    Atlas
+    Press
+    Links
+    Project
+    Copyright
+   [menu-bottom.gif]
+
+                                  [ag.gif]
+
+            Call for ideas and comments from the solar community
+                   relating to the solar part of Astrogrid
+
+   Following the decisions taken by the December 2000 meeting in St
+   Andrews and the subsequent inclusion of solar representatives in the
+   Astrogrid consortium, we have been asked to determine the needs and
+   aspirations of the UK solar physics community for a solar data grid.
+
+   Via PPARC's Astrocommunity mailing list, Astrogrid has already issued
+   its own call for general suggestions and input to the project, but we
+   wish to start the ball rolling on the solar side by requesting
+   community input specific to our solar needs.
+
+   The grid is not only intended to enable those analyses you could never
+   do before. It is also intended to facilitate analyses that up to now
+   have been very difficult, but perhaps not impossible, by reason of data
+   or information inaccessibility, or have only been possible by a chosen
+   few by reason of resource limitations. Astrogrid is, therefore, not
+   only about handling huge amounts of data, but could equally be about
+   facilitating the handling of small but complex and diverse amounts of
+   data. Before considering what your requirements might be, it is perhaps
+   also worth noting a section from the Astrogrid announcement which
+   highlights what the Astrogrid, and hence the solar part of it,
+   specifically is not.
+
+   The most generally useful format for collecting requirements in this
+   context appears to be in the form of 'use-cases'. A use-case starts out
+   as a scientific question or project and simply considers what tools are
+   required to enable datasets to be located, retrieved and analysed
+   quickly and easily in order to answer the question or undertake the
+   project.
+
+   As a first step to drawing up the Astrogrid requirements for solar
+   physics, we need to identify as nearly a complete set of these tools as
+   possible, without, for the time being, considering how these tools will
+   be provided.
+
+   Please give your imagination free rein and, most important, do not be
+   constrained by any preconceptions of what might or might not be
+   possible! We do not need to know your innermost thoughts as far as the
+   science is concerned, just details of the tools you think you will need
+   to do the job. However, the more detail you can give the better since a
+   contribution of "Based upon criteria x,y,z I will need to identify
+   automatically coronal holes in a set of full-disk images covering at
+   least half a solar cycle" would be a good deal more helpful and
+   informative than the vague reference to finding solar features in
+   example (1) given below.
+
+   Once we have received and collated your inputs the Astrogrid consortium
+   will assess and prioritise the requirements bearing in mind that it is
+   seen as vitally important that the initial goals of Astrogrid are
+   attainable within the resources and timescales likely to be made
+   available.
+
+   [email.gif] Please send your ideas and comments to the solar members of
+   the Astrogrid team (solargrid@rl.ac.uk) as soon as possible. We would
+   hope to have a first draft of the requirements ready for discussion at
+   the April NAM meeting.
+
+                 Some basic use-case examples for starters.
+
+   I need to ....
+
+   1) Search for datasets with specific characteristics:
+
+   Tools required:
+   a) specify data characteristics (eg wavelength or solar feature) and/or
+   instrument setup (eg filter or exposure time)
+   b) search single or multi-instrument catalogues or observing logs for
+   data matching the criteria.
+   c) remotely inspect sample of data in order to check or refine (a)
+
+   Technically, simple versions of this are already possible - where are
+   the current limitations? What extra capabilities would lead to
+   significant advances?
+
+   2) Access observational data efficiently:-
+
+   Tools required:
+   a) identify the required datasets as in (1) above or otherwise
+   b) download selected raw datasets and/or perform analysis of datasets
+   in situ and download results.
+   In situ analysis could take the form of calibration or reconstruction
+   of the raw data and/or scientific analysis.
+
+   3) Access auxiliary databases:
+
+   This requires access to datasets that are not strictly solar, but are
+   related. For example, STP data and atomic data databases.
+
+   Tools required:
+   a) ways of inspecting content of auxiliary databases
+   b) ways of correlating appropriate parameters with solar data
+
+   4) Identify the brightest 100 X-ray bright points seen in SOHO
+   spectroscopic data, which also have Yohkoh SXT and MDI co-spatial and
+   co-temporal data. Overlay magnetogram contours on monochromatic images
+   and derive emission measures from the spectra.
+
+   Tools required:
+   a) identify the datasets as in (1) above (including feature
+   recognition)
+   b) calibrate the individual datasets
+   c) produce images and overlays according to catalogued pointing
+   information
+   d) analyse line intensities
+
+   Such an example includes a number of options. Should the calibrated
+   data be cached locally to the user for further analysis or should just
+   the processed contour plots be downloaded? Should the user's own
+   software be uplinked to the grid to perform the spectral analysis or
+   should the spectral data, being a much smaller volume, be sent to the
+   user?
+
+   [email.gif] Please send your ideas and comments to the solar members of
+   the Astrogrid team (solargrid@rl.ac.uk)
+
+
+
+   This site is provided by the CDS Mission Operations Management Team at
+   the CLRC Rutherford Appleton Laboratory (UK).
+   It is maintained by Jeff Payne.
+   Last revised on Friday (02/Feb/2001) at 04:37.

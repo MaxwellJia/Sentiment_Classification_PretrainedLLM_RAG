@@ -1,0 +1,70 @@
+http://newsbulletin.lanl.gov/htmls/common/newsbull/examples.html
+
+     [home.gif] [comments.gif] [help.gif] [search.gif] [ship2black.gif]
+
+                        How to Search Topic Collections
+
+   Here are some examples of valid queries you can make against a Topic
+   collection.
+
+Searching for words and phrases
+
+   "Nevada"
+          Searches for the exact word "Nevada" without stemming.
+
+   contractor
+          Searches for any word with the stem "contract-". (e.g.,
+          contractual, contracts, contracting, contracted).
+
+   "Nevada Field Office"
+          Searches for the exact phrase "Nevada Field Office" without
+          stemming.
+
+   Environmental Restoration
+          Searches for the phrase "Environmental Restoration" using
+          stemming.
+
+   travel <and> reimbursement
+          Searches for documents containing both words, using stemming.
+
+   "neural networks" <or> "intelligent control"
+          Searches for documents containing either the exact phrase
+          "neural networks" or the exact phrase "intelligent control".
+          Topic returns first those documents containing both phrases.
+
+   "publications", clearance, "distribution limitations"
+          Searches for the word "publications", or words that have the
+          same stem as "clearance", or the phrase "distribution
+          limitations".
+
+          Topic will return the results of the search as a list of
+          documents in rank order. Documents that contain all three
+          words/phrases will rank higher than documents that contain only
+          two of the words/phrases, and so on.
+
+   licens*
+          Searches for documents containing the stem licens-.
+
+   business <not> pleasure
+          Searches for documents that contain the word "business" but do
+          not contain the word "pleasure".
+
+   "mixed waste disposal" <near> "facility design"
+          Searches for documents containing both phrases, returning a
+          ranked results list based on the proximity between the two
+          phrases.
+
+Nested Searching
+
+   "proprietary data" <and> (scientific <or> engineering)
+          Retrieves the phrase proprietary data and scientific or the
+          phrase proprietary data and engineering.
+     __________________________________________________________________
+
+         L O S   A L A M O S   N A T I O N A L   L A B O R A T O R Y
+      Operated by the University of California for the National Nuclear
+                          Security Administration,
+                       of the US Department of Energy
+
+      LANL External View | www@lanl.gov | Help | Copyright © UC 1999 |
+                                 Disclaimer

@@ -1,0 +1,286 @@
+http://snfactory.lbl.gov/snifs_sky_subtraction.ps
+
+   SNIFS Background Subtraction Requirements & Methods G. Aldering
+   Institute for Nuclear and Particle Astrophysics, E. O. Lawrence
+   Berkeley National Laboratory, Berkeley, California 94720. Abstract The
+   background-subtraction methodology for supernova studies with SNIFS is
+   discussed, with the goal of providing sufficient background on the
+   methodology to allow the SNfactory collaboration to make the best
+   choice regarding the need for additional sky-subtraction optics for the
+   red and/or blue spectroscopy channels. It is shown that, in the absence
+   of unmodeled errors, supernova photometry requires only that a final
+   reference observation be obtained with SNIFS, and that the relative
+   shapes of the PSF's of the spectrograph and imager channels be
+   determined. A solution to the later problem - based on reconstruction
+   of the wavefront error using defocused stellar images - is outlined,
+   but not explored in detail. The sky subtraction needs for galaxy
+   studies are also discussed. Minimal galaxy studies should be possible
+   in the blue without sky-subtraction optics. However, detailed studies,
+   especially in the red, require sky-subtraction optics. An alternative
+   to implementation of skysubtraction optics includes use of more
+   suitable ancillary instrumentation. This loses the advanatage of
+   parallel observations of the host galaxies which SNIFS provides, but
+   may in any case be dictated by the high signal-to-noise required for
+   the study of, e.g., the galaxy ages and abundances. 1 The Nature of the
+   Background The primary goal of the SNIFS instrument is to produce
+   spectrophotometry for its target SNe. For each observation, SNIFS will
+   produce a spectral image of a supernova (SN) superposed on its host
+   galaxy and the foreground night sky. This requires the subtraction of
+   the combined light of the host galaxy and the night sky. The host
+   galaxy component can range from smooth and faint to highly-structured
+   and bright. This component is intrinsically stable, but will be blurred
+   to varying extents by atmospheric seeing. The night sky is spatially
+   smooth at optical wavelengths (over scales of arcminutes), but the
+   spectral shape and amplitude can vary over a large range depending on
+   auroral activity, the amount of moonlight, and ecliptic coordinates.
+   Leinert et al. (1998) describe the properties of the night sky in some
+   detail. As shown in Fig. 1, the OH emission lines dominate the sky
+   spectrum in the red. These lines are quite variable on timescales of
+   minutes (Glazebrook & Bland-Hawthorn, 2001). There are also numerous
+   atmospheric absorption features in the red due to O2 and H2O; the
+   strength and structure of these features will vary with airmass and
+   meteorological conditions. The blue spectral region is relatively free
+   of strong emission lines at sites free of light pollution (Osterbrock &
+   Martel, 1992; Osterbrock et al., 1996; Osterbrock, Fulbright, & Bida,
+   1997; Osterbrock et al., 2000), however, it will contain numerous
+   absorption features due to scattered sunlight both at low ecliptic
+   latitudes or when the moon is up. Sunlight reflected off the moon or
+   interplanetary dust is reddened slightly, however, once it gets
+   scattered in the atmosphere it is quite blue since Rayleigh scattering
+   - and to some extent aerosal 1 Figure 1: Spectrum of the dark night
+   sky; note the logarithmic scaling scattering - preferentially scatter
+   blue light. The bottom line is that the sky spectrum for each SN
+   observation will be different, and sky subtraction based on models or
+   templates is insufficient. 2 Background subtraction techniques for SNe
+   2.1 Interpolation A fairly standard technique for subtracting the
+   background is based on using the background well away from the source
+   to interpolate the background at the source location. For SNe located
+   on a very smooth low-order background, this may be adequate. This would
+   occur in the case of SNe situated far from their host galaxies. This
+   method is unlikely to be adequate for SNe imbedded in the disk of a
+   spiral galaxy or located in the very steep inner portion of an
+   elliptical galaxy. Interpolation techniques are well known, so
+   implimentation details will not be discussed further other than to note
+   that basis functions which have better physical motivation than
+   polynomials (such as exponential, de Vacouleurs, or Sersic profiles
+   with positivity constraints) might prove advantageous. 2 2.2 Final
+   reference spectral image In the case of broadband photometry of SNe a
+   deep image of the host galaxy is obtained without the SN present and
+   then for all the images of the SN it is scaled in flux and subtracted.
+   In some cases a sufficiently good image of the host galaxy prior to the
+   SN event exists. More often, an image is taken after the SN has faded;
+   a waiting period of roughly one year after the SN explosion is
+   sufficient. These images are referred to as "final reference images."
+   The SNfactory will require final reference images for all its SNe since
+   spectral imaging like that of SNIFS will not have been obtained prior
+   to the SNe explosions. A further complication in subtracting a final
+   reference image is that the resolution of the SN image and the final
+   reference image must be made to match via convolution. In the case of
+   spectral imaging, this requires the same wavelength as well as spatial
+   resolution. As long as the SN and final reference images are obtained
+   with SNIFS, the wavelength resolution will be very nearly the same.
+   However, atmospheric seeing and optical aberrations (due to Seidel
+   aberrations as well as optical misalignment and focusing errors) will
+   result in different spatial resolutions. 2.3 Methodology Let us denote
+   the optical point spread function at the location of the spectrograph
+   microlens array as Ps(xs; ys; *; tj). xs; ys indicate the image
+   location on the microlens array, * is the wavelength of observation,
+   and tj denotes a specific time interval in which the spectrograph and
+   imager are simultaneously observing. (Spatial and wavelength resolution
+   set by the spectrograph optics will not be considered here since these
+   spatial and spectral resolution terms are not very time-dependent and
+   are generally easy to measure from arc lines.) Let us further denote
+   the optical point spread function for the i 2 f1; :::; N g filters of
+   the photometry channel as Pp(xp; yp; *i; tj). Both PSF's will have a
+   common component due to atmospheric seeing, A(*; tj ) as well as a
+   components, Os(xs; ys; *; tj) and Op(xp; yp; *i; tj) due to optical
+   elements (telescope, filters, mirrors, lenses, etc.). That is, we can
+   write Ps(xs; ys; *; tj) = A(*; tj ) \Omega Os(xs; ys; *; tj ) and
+   Pp(xp; yp; *i; tj) = A(*i; tj) \Omega Op(xp; yp; *i; tj) It is expected
+   that the widths, W , of these terms will satisfy W (Os) , W (Op) o/ W
+   (A) for all xs; ys; xp; yp; *; and tj, but this has yet to be
+   demonstrated. The host galaxy spectral image is assumed to be time
+   independent, and will be denoted as G(x; y; *). The supernova itself is
+   simply a delta function, FSN (*; tj )ffi(xSN ; ySN), spatially
+   convolved with Ps. (Note that in the current configuration the
+   supernovae cannot be observed simultaneously on both the spectrograph
+   and imager.) The sky, S(*; tj), is assumed to have no spatial
+   structure. The available data will be a set of M SN spectral images:
+   Isj = Ps(xs; ys; *; tj) \Omega [FSN (*; tj )ffi(xSN ; ySN ) + G(x; y;
+   *) + S(*; tj)] 3 a set of photometry channel images filled with
+   anonymous non-variable stars: Ipj = Pp(xp; yp; *i; tj) \Omega "X k
+   F\Lambda k (*)ffi(x\Lambda k ; y\Lambda k ) + S(*i; tj)# and a final
+   reference spectral image: Isr = Ps(xs; ys; *; tr) \Omega [G(x; y; *) +
+   S(*; tr)] : If a separate sky channel is implemented, if will provide
+   spectral images of blank sky: Issoj = Psso(xsso; ysso; *; tj) \Omega
+   S(*; tj); Issor = Psso(xsso; ysso; *; tr) \Omega S(*; tr): The
+   sky-subtraction optics (SSO) module may produce slightly difference
+   wavelength resolution, but that can be treated separately. Using this
+   dataset we wish to solve for the values of FSN (*; tj ) for j 2 f1;
+   :::; M g. Recalling that the convolution of a sum equals the sum of
+   convolutions (i.e., convolution is distributive under addition), and
+   that we have assumed that there is no spatial structure in the sky, the
+   sky can be taken out of the spatial convolution. Enforcing
+   normalization on the PSF-related spatial convolution kernals at each *
+   (which in practice must be accomplished using calibration) then gives:
+   Isj = Ps(xs; ys; *; tj) \Omega [FSN (*; tj )ffi(xSN ; ySN ) + G(x; y;
+   *)] + S(*; tj) Ipj = Pp(xp; yp; *i; tj) \Omega X k F\Lambda k
+   (*)ffi(x\Lambda k ; y\Lambda k ) + S(*i; tj); Isr = Ps(xs; ys; *; tr)
+   \Omega G(x; y; *) + S(*; tr); and Issoj = S(*; tj); Issor = S(*; tr):
+   It is apparent that in the general case FSN (*; tj) cannot be measured
+   from Isj alone. If G = 0, interpolative sky subtraction can be
+   performed since S has no spatial structure. The ideal general case will
+   be established and treated first. In general one obtains FSN (*;
+   tj)ffi(xSN ; ySN ) = 1P s(xs; ys; *; tj) \Omega I sj \Gamma Issoj
+   \Gamma G(x; y; *): The host galaxy is given by G(x; y; *) = 1P s(xs;
+   ys; *; tr) \Omega I sr \Gamma Issor ; which leads to FSN (*; tj
+   )ffi(xSN ; ySN ) = ^ 1P s(xs; ys; *; tj) \Omega I sj \Gamma 1P s(xs;
+   ys; *; tr) \Omega I sr * \Gamma \Theta Issoj \Gamma Issor \Lambda 4
+   upon substituion. In practice deconvolution is ill-posed, and in this
+   case it is unnecessary. Rather than performing a spatial deconvolution
+   it is sufficient to spatially convolve the image with the best PSF to
+   match the image with the worst PSF for each j; r pair. For simplicity,
+   it will be assumed that the PSF for the final reference spectral image
+   is as good as the best SN spectral image, that is, that W (Ps(xs; ys;
+   *; tr)) ^ W (Ps(xs; ys; *; tj)) for j 2 f1; :::; M g: Then there will
+   be a spatial convolution (as opposed to deconvolution) kernal, Ks(xs;
+   ys; *; tj;r) = Ps(xs; ys; *; tj) \Omega 1P s(xs; ys; *; tr) which can
+   be used to blur the reference observations to the spatial resolution of
+   the SN observations. This approach gives FSN (*; tj )Ps(xSN ; ySN ; *;
+   tj) = \Theta Isj \Gamma Ks(xs; ys; *; tj;r) \Omega Isr \Lambda \Gamma
+   \Theta Issoj \Gamma Issor \Lambda : Note again that, under the
+   assumption that the sky has no spatial structure, spatial convolutions
+   can be performed on images which have not been sky-subtracted. The
+   image resulting from executing only the first half of the above
+   equation is expected to be spatially flat except for the presence of
+   the SN, therefore the SN alone can be measured by interpolative
+   subtraction of structureless background. That is, FSN (*; tj )Ps(xSN ;
+   ySN ; *; tj) = \Theta Isj \Gamma Ks(xs; ys; *; tj;r) \Omega Isr \Lambda
+   \Gamma F(*); where F(*) j S(*; tj) \Gamma S(*; tr) is a function of
+   wavelength but has no spatial dependence. This is a critical point
+   since it means that -- technically speaking -- sky-subtraction optics
+   are not required for the purposes of SN spectro-photometry. Note also
+   that the quality of the result can be judged by whether all structure
+   other than the SN has been eliminated after the first half of the above
+   equation is calculated. Such evaluation is necessary since Ps(xs; ys;
+   *; tj) and Ps(xs; ys; *; tr) are not known quantities; they must be
+   estimated from the SN or other point sources in the 600 \Theta 600
+   spectrograph field of view or from the Pp(xpk ; ypk ; *i; tj) and
+   Pp(xpk ; ypk ; *i; tr) measured in the photometry channel. This latter
+   approach is discussed in the Appendix. 3 Sky Subtraction Needs for
+   Galaxy Studies Supernova host-galaxy redshifts are required as part of
+   the main SNfactory science program. In addition, there is scientific
+   interest in the study of the intrinsic properties of these host
+   galaxies. Finally, University of Hawaii observers may have their own
+   interests in studying extended sources. Without subtraction of the
+   night sky, the range of possible studies becomes limited. In the blue,
+   where the sky is not highly structured, it will be possible to measure
+   absorptionand emission-line redshifts, as well as velocity dispersions,
+   without sky subtraction. Emission line luminosities and ratios (but not
+   equivalent widths) can also be measured by interpolating in wavelength
+   around features of interest. However, absorption-line abundance and age
+   studies will be at the mercy of sky subtraction errors. A correct
+   estimate of the sky level will be possible only if the outer lenses of
+   the IFU are free of galaxy light. In the red (see Fig. 1) it may be
+   difficult to perform any meaningful analysis of the host galaxy without
+   sky subtraction due to the highly structured and variable nature of the
+   OH emission. Key 5 lines such as Hff and the Ca II triplet would be
+   difficult to work with for all but the brightest or most compact
+   galaxies. Since galaxies are centrally-concentrated, one could
+   eliminate the sky contribution while retaining some of the galaxy
+   contribution by subtracting the spectra of the outer lenses of the IFU.
+   The amount by which the galaxy signal is erroneously suppressed will
+   depend on how much galaxy light is in the periphery of the IFU field
+   compared to the center. With this approach, galaxy redshifts probably
+   could be measured in the red for most SN host galaxies. As redshifts
+   are the only SNfactory requirement for host galaxies, and because it is
+   plausible that redshifts can be measured without proper sky
+   subtraction, the SNfactory could consider a separate sky-subtraction
+   optical channel unnecessary. Indeed, for more detailed host-galaxies
+   studies it might prove more effective to use other instrumentation
+   better suited to these tasks. For instance, experience with long-slit
+   spectrographic observations of SN host galaxies from the SCP's Spring
+   1999 Nearby Campaign indicates that for the spectra of typical SN host
+   galaxies taken near the SN location integration times of many hours on
+   4-m class telescopes are necessary to begin to undertake meaningful age
+   and abundance studies. For the sake of discussion, assume 20 SNIFS
+   observations of 10 minutes each per SN; this gives a total integration
+   on the host galaxy equivalent to one hour on a 4-m class telescope. For
+   measurement of the bulk galaxy properties, all the pupil spectra with
+   galaxy light can be included, perhaps quadrupling the effective
+   integration compared to those from a long-slit spectrograph. These
+   rough calculations suggest that for typical host galaxies the SNfactory
+   observations are not going to provide detailed measurements of the host
+   galaxy at the SN location, and may be barely sufficient to provide
+   information on the intrinsic bulk properties of the SN hosts. 4
+   Conclusion on Sky-Subtraction Optics In summary, for the study of the
+   SNe themselves, sky-subtraction optics are not needed as long as final
+   reference observations with SNIFS are available to subtract from the
+   SNIFS SN observations. This conclusion must be tempered by the
+   possibility that calibration errors may result in skysubtraction errors
+   which have not been modeled here. Furthermore, age and abundance
+   studies of SN host galaxies require that SNIFS have skysubtraction
+   optics or that the SNfactory should employ other instrumentation (e.g.
+   VIMOS) more suited to this task. Without sky-subtraction optics
+   redshift determination, velocity dispersion studies, and emission-line
+   luminosity studies in the blue should still be possible. In the red,
+   even these - more limited - studies will be difficult without
+   sky-subtraction optics. References Glazebrook, K. & Bland-Hawthorn, J.
+   2001, PASP, 113, 197 Leinert, C. et al. 1998, A&ApS, 127, 1 Osterbrock,
+   D. E. & Martel, A. 1992, PASP, 104, 76 Osterbrock, D. E., Fulbright, J.
+   P., Martel, A. R., Keane, M. J., Trager, S. C., & Basri, G. 1996, PASP,
+   108, 277 Osterbrock, D. E., Fulbright, J. P., & Bida, T. A. 1997, PASP,
+   109, 614 6 Osterbrock, D. E., Waters, R. T., Barlow, T. A., Slanger, T.
+   G., & Cosby, P. C. 2000, PASP, 112, 733 Roddier, C. & Roddier, F. ;.
+   1993, Optical Society of America Journal, 10, 2277 A Determining
+   relative spatial convolution kernals From the previous discussion,
+   recall that spectro-photometry of each SN requires that the quantity
+   Ks(xs; ys; *; tj;r) be determined for all tj 2 f1; :::; M g. Although
+   it is relatively straightforward to assess whether the correct Ksj;r
+   have been chosen when high S=N data are available, finding the correct
+   Ksj;r to start with is not trivial, and for low S=N data feedback on
+   the quality of the result will be weak. Here the groundwork is laid for
+   a more general approach to determining Ksj;r . A.1 Using the imager PSF
+   to estimate the spectrograph PSF One possible approach would be to
+   measure anonymous stars before and after the SN observation taken at tj
+   and the final reference observation taken at tr. The difficultly here
+   is that the atmospheric seeing component, A, of the PSF will not be
+   sufficiently stable to guarantee that the calibration PSF matches the
+   SN or final reference PSF. The SNIFS imager will observe a field of
+   anonymous field star while the spectrograph is observing the SN. Thus,
+   an estimate of Ksj;r over specific wavelength ranges can be formulated
+   as: Ks(xs; ys; *; tj;r) = Ps(xs; ys; *; tj ) \Omega 1P s(xs; ys; *; tr)
+   = A(*i; tj) \Omega Os(xs; ys; *i; tj) \Omega 1A(* i; tr) \Omega Os(xs;
+   ys; *i; tr) Rewriting this in terms of Fourier transforms givese Ksj;r
+   = ePs je Psr = e Aj eOsje Ar eOsr = h e Ppj = eOpj i eOsjh e Ppr = eOpr
+   i eOsr = " ePp je Ppr # " e Osje Osr # " e Opre Opj # where the
+   function parameters and their Fourier counterparts have been suppressed
+   for ease of notation. ePpj = ePpr can be measured from the photometry
+   channel. So, if the ratio of the spectrograph and photometer eO's are
+   known at the time of observation (tj or tr), or if the ratio of eO's at
+   two different times (tj and tr) for each instrument are known, then a
+   measurement of Ksj;r needed for SN spectro-photometry can be made for
+   descrete wavelength ranges, *i. All P 's and O's also must be
+   interpolated to the focal-plane location of the SN, xSN ; ySN . The PSF
+   is expected to be a slowly and smoothly varying function of *,
+   interpolation should provide Ksj;r over the full wavelength range of
+   the spectro-photometric observations. It is possible that the ratios of
+   the O's will be fairly stable over time. Also, the widths, W (O), are
+   expected to be narrow, so their Fourier transforms should be very wide.
+   The error made by simply ignoring changes in the O's is given by: ffl =
+   T \Gamma 1 " eG ePpje Ppr # e Osje Osr e Opre Opj \Gamma 1!! 7 where T
+   \Gamma 1 denotes the inverse Fourier transform. A.2 Measurement of
+   optical transfer function from defocused phase maps If it turns out
+   that the optical transfer functions, Os and Op, are not negligable
+   relative to the atmospheric transfer function, A, and that Os and/or Op
+   are not stable, then they will have to measured as part of the
+   calibration procedure. One method of measuring the O's is using the
+   phase map method of (Roddier & Roddier, 1993). In this method an image
+   of a star is obtained on either side of focus. The image (or spectral
+   image) is that of the illumination beam pattern before and after the
+   optical pupil, and the intensity variations reveal changes in the total
+   curvature of the wavefront. The wavefront phase map which is the
+   Fourier transform of the desired optics PSF, O, can then be
+   reconstructed. The size of the defocused image will be limited to
+   600for the spectrograph -- some experimentation will be needed to
+   determine whether this is sufficient. 8

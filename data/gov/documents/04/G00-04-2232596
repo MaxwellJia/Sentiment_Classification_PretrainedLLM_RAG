@@ -1,0 +1,64 @@
+http://rnagene.lbl.gov
+
+                                 Title Graphic
+   Home
+   Run program
+   The authors
+   News
+   Instructions
+   Ode to RNA
+   Predictions
+
+RNA Gene Prediction
+
+RNAGENiE Manuscript Published
+
+   The paper that describes this work was published in Nucleic Acids
+   Research.
+   Carter R.J., Dubchak I., Holbrook S.R., "A computational approach to
+   identify genes for functional RNAs in Genomic Sequences", Nucleic Acids
+   Res 2001 Oct 1;29(19):3928-38
+     __________________________________________________________________
+
+   This program locates novel RNA genes based on the premise that all
+   stable, functional RNAs share common structural elements and that
+   sequences corresponding to these elements would occur preferentially in
+   RNA genes. These structural elements include double helices, GNRA
+   tetraloops, uridine turns, and non-Watson Crick mispairs in a symmetric
+   internal loop. Also UNCG tetraloops, tetraloop receptors and adenosine
+   platforms are expected to occur in higher frequency in RNA genes and
+   thus to be useful for their identification. Initially neural networks
+   have been trained to recognize RNA genes in E. coli. Since neural
+   networks based on the occurrence of RNA structural elements can not be
+   expected to identify non-RNA sequences in a positive manner, we used
+   additional sequence based neural networks based on global sequence
+   descriptors (previously applied to protein fold prediction) to
+   discriminate RNA genes from non-RNA genes.
+   We have used 6 structural parameters for RNA gene prediction:
+     * number of UNCG tetraloops;
+     * GNRA tetraloops;
+     * uridine turns;
+     * tetraloop receptors;
+     * CTAG tetramers
+     * the calculated free energy of folding.
+
+   The Sequence based descriptors include:
+     * 4 composition parameters - the number of A, C, G, T bases;
+     * 16 transition parameters, (dinucleotide frequency).
+
+   The structure based and sequence based neural networks are trained on
+   very different parameters and therefore can be expected to be
+   complimentary in their predictions. In order to optimize prediction, we
+   used a voting procedure in which predictions were accepted only when
+   predicted by both types of networks.
+     Some of our predictions -> Figures of predictions
+
+   link to perl.com
+
+                                          counter graphic since 7th June 2000
+
+             This RNA webring site owned by Richard J. Carter .
+     [ Previous 5 Sites | Previous | Next | Next 5 Sites | Random Site |
+                                List Sites ]
+
+   Rich Carter 1/01

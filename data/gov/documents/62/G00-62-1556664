@@ -1,0 +1,88 @@
+http://www.boulder.nist.gov/itl/div891/alpert/td-em/index.html
+
+      Time-Domain Algorithms for Computational Electromagnetics (AlgoCEM)
+
+   Waves Impinging on Planar Boundary (click for more info) Nonreflecting
+   Boundary Kernels (click for more info)
+
+  Computational Electromagnetics
+
+   Applications that require modeling of electromagnetic (and acoustic)
+   wave propagation are extremely broad, ranging over
+
+                                          Device design
+
+     Antennas and waveguides
+
+     Microcircuits and transducers
+
+              Low-observable aircraft     Nondestructive testing
+
+     Turbines
+
+     Jet engines
+
+              Railroad wheels (acoustics) Imaging
+
+     Geophysics
+
+     Medicine
+
+     Target identification
+
+   At NIST, applications include the modeling of antennas (including those
+   on integrated circuits), waveguides (microwave and photonic),
+   transducers, and in nondestructive testing.
+
+  Time-Domain Methods
+
+   Radiation and scattering of acoustic and electromagnetic waves are
+   increasingly modeled using time-domain computational methods, due to
+   their flexibility in handling
+     * Wide-Band signals,
+     * Material inhomogeneities, and
+     * Nonlinearities.
+
+   For many applications, the accuracy of the computed models is centrally
+   important. Nevertheless, existing methods typically allow for only
+   limited control over accuracy and cannot achieve high accuracy for
+   reasonable computational cost.
+
+  Project Goals
+
+   This project, a collaborative effort directed by B. Alpert (NIST), L.
+   Greengard (New York University), and T. Hagstrom (University of New
+   Mexico), and supported in part by the Defense Advanced Research
+   Projects Agency (DARPA) Applied and Computational Mathematics Program,
+   has the goal of the development of algorithms and codes for
+   high-accuracy time-domain computations, addressing key weaknesses of
+   existing methods, specifically
+    1. Accurate nonreflecting boundary conditions (that reduce an infinite
+       physical domain to a finite computational domain),
+    2. Suitable geometric representations of scattering objects, and
+    3. High-order, stable spatial and temporal discretizations for
+       realistic scatterer geometries.
+
+  Progress to Date
+
+   Fundamental progress in numerical algorithms for wave propagation has
+   been achieved by the project, in two of these areas:
+     * Efficient computation of the exact nonreflecting boundary
+       conditions, reported in
+       Bradley Alpert, Leslie Greengard, and Thomas Hagstrom, Rapid
+       Evaluation of Nonreflecting Boundary Kernels for Time-Domain Wave
+       Propagation, SIAM Journal on Numerical Analysis 37, 1138-1164
+       (2000), and
+     * High-order convergent discretization techniques, reported in
+       B. Alpert, L. Greengard, T. Hagstrom, An Integral Evolution Formula
+       for the Wave Equation, Journal of Computational Physics 162, 1-8
+       (2000).
+     __________________________________________________________________
+
+   A project of the Mathematical and Computational Sciences Division of
+   NIST.
+
+
+    Bradley K Alpert
+
+   Last modified: Fri Jul 14 12:21:25 MDT 2000

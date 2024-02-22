@@ -1,0 +1,225 @@
+http://hpcf.nersc.gov/accounts/nim/users_manual/
+
+   NERSC High Performance Computing
+
+   You are here: hpcf / accounts / nim / users_manual / index You came
+                                                              from:
+     __________________________________________________________________
+
+Summary
+
+   NERSC introduced new software to manage accounts in Fiscal Year 2001. A
+   web interface is used to view and modify accounting and user
+   information. The system is called the NERSC Information Management
+   (NIM) system and it replaces the old CUB system.
+
+   A major update to the NIM system was released on June 6, 2001. The new
+   interface provides access to ERCAP allocation request functions.
+
+NIM User's Manual
+
+Index
+
+     * Getting Started
+     * Common Tasks
+     * Detailed Displays
+     * Searching and Summary Lists
+     * Menus and Links
+
+Related Information
+
+     * Log Into NIM
+     * Energy Research Computing Allocations Process (ERCAP)
+     * NERSC Accounts
+
+   Getting Started Back to Index
+
+   Logging in to NIM and browser requirements
+          You log into NIM via your web browser. NIM works with current
+          browsers using the standard settings, but you may have to change
+          your custom settings. You need a valid NERSC username and NIM
+          password.
+
+   First-time login
+          You must change your NIM password the first time you log in.
+
+   Navigation frames and initial display
+          NIM communicates with you through three frames in your web
+          browser: the top left Menu Frame (see Menus and Links, below),
+          the top right Query Frame, and the bottom Result Frame. You'll
+          see a brief help frame and your usage summary immediately after
+          you log in.
+
+   getnim: the command line interface
+          The inquiry-only command called getnim is used interactively and
+          in scripts to get account (login name and repo) balances.
+
+   Common Tasks Back to Index
+
+     * Check your computer usage charges.
+     * View repo charges and usage by users.
+     * View mass storage (SRU) usage.
+     * Change your NIM password.
+     * Update your personal information.
+     * Submit an allocation request.
+     * Modify a repo's user list information.
+     * Add/Delete repository users.
+     * Transfer resources.
+
+   Detailed Displays Back to Index
+
+   Account Summary / Personal Information
+          A Summary of a person's login names in all their repositories,
+          and their personal contact information.
+
+   Repository Information / Users
+          Detailed repository information and usage by the repo's users.
+
+   User Lists
+          Repository Managers and PIs can examine and modify information
+          pertaining to users in the repository.
+
+   Searching and Summary Lists Back to Index
+
+   Using the Query Frame for Searches
+          How to specify search criteria for your queries.
+
+   Sorting and Formatting Lists
+          How to control the output from a query.
+
+   Repository Summary
+          A brief summary of repository information in a list returned as
+          the result of searching for a repo.
+
+   Person Summary
+          A brief summary of user information in a list returned as the
+          result of searching for People/Logins.
+
+   Menus and Links Back to Index
+
+   The menus and links described below are avialble in NIM's top left Menu
+   Frame. Selecting an item from a menu performs an action.
+
+  My Stuff Menu
+
+   When you choose something from the My Stuff pull-down menu the
+   resulting information is displayed in the bottom Results Frame.
+
+   My Info
+          Displays your Account Summary (a summary of your login names and
+          associated repositories) and Personal Information.
+
+   My PI Requests
+          Displays a listing of the ERCAP allocation requests for which
+          you are the PI.
+
+   My PI Proxy Requests
+          Displays a listing of the ERCAP allocation requests for which
+          you are the proxy for the PI (i.e. you have the PI's permission
+          to submit the request).
+
+   My Projects' Requests or Other Requests
+          Displays a listing of the ERCAP allocation requests for projects
+          in which you are a member (but not the PI or PI Proxy).
+
+  Search & Reports Menu
+
+   When you choose something from the Search & Reports pull-down-menu the
+   resulting Query Frame will display a form that allows you to specify
+   the criteria you want to use for executing your search.
+
+   People/Logins
+          Used to perform a search to find information about NERSC users.
+          The selection criteria you can specify in the resulting Query
+          Frame are Last Name, First Name, Login Name, Work Phone, Email
+          Address, Organization, and State. If you want information about
+          just one person and know the person's login name, use the Login
+          Name Quick Search instead.
+
+   Repositories
+          Used to perform a search to find information about NERSC
+          repositories. The selection criteria you can specify in the
+          resulting Query Frame are Repo Name, PI Last Name, Allocation
+          Type (e.g. production, startup), Resource Type (MPP, PVP), DOE
+          Office and Program. If you want information about just one
+          repository, use the Repository Quick Search instead.
+
+   Rept: Daily Usage
+          Used to perform a search to find information on daily usage by
+          users or repositories. The selection criteria you can specify in
+          the resulting Query Frame are: Login Name, Host Name (e.g.
+          seaborg, mcurie, killeen), Repo Name, Job Date (e.g. 09-OCT-01),
+          Job Month (e.g. October, March), Organization, Allocation Type
+          (e.g. production, startup), Resource Type (MPP, PVP), DOE Office
+          and Program.
+
+   Rept: Year to date (for repo managers or higher)
+          You can perform a search to find repositories to include in a
+          year-to-date report on repository usage. The selection criteria
+          you can specify in the resulting Query Frame are: Repo Name, PI
+          Last Name, Organization, Allocation Type (e.g. production,
+          startup), Resource Type (MPP, PVP), DOE Office and Program.
+
+   Transactions (for repo managers or higher)
+          You can perform a search for information about time transfers
+          from/to repositories and reserves. The selection criteria you
+          can specify in the resulting Query Frame are: From Adminunit
+          (e.g. repo name, DOE Office or Program reserve), To Adminunit,
+          Last Name (of the person who made the transfer), Transaction
+          Date (e.g. 09-OCT-01), Resource Type (MPP, PVP).
+
+  Actions Menu
+
+   Bug Report
+          Opens a new window with a form that allows you to report
+          problems with the NIM web interface.
+
+   Change Password
+          Brings up a form in the Result Frame that allows you to change
+          your NIM password.
+
+   ERCAP Use Form
+          Opens a new window with a form that allows you to request access
+          to the ERCAP (allocations request) portion of the NIM interface.
+          This form is for people who wish to be new PIs or for a PI to
+          designate a new PI Proxy.
+
+   Add/Delete User (for repo managers or higher)
+          Opens a new window with a form that allows PIs and Repo Managers
+          to request that a user be added to or deleted from a repository.
+
+   Transfer Resources (for repo managers or higher)
+          Authorized PIs and managers can transfer time time from their
+          repository (or other administrative unit like DOE Office or
+          Program reserve) to another "administrative unit".
+
+  Repository / Login Name Quick Search
+
+   By selecting Repository (the default setting) or Login Name from this
+   pull-down-menu you can display information about a specific repository
+   or user.
+
+   Repository
+          Enter the exact name of a repository and click on "Go" for
+          detailed repository information.
+
+   Login Name
+          Enter the exact login name and click on "Go" for information.
+
+  Other Links
+
+   NERSC HPCF
+          A link to the NERSC High Performance Computing Facility home
+          page.
+
+   NIM Users Manual
+          A link to this page.
+
+   Log Out
+          Log out of the NIM interface.
+     __________________________________________________________________
+
+   Page last modified: Thursday, 11-Oct-01 14:45:12
+   Page URL: http://hpcf.nersc.gov/accounts/nim/users_manual/index.html
+   Contact: Webmaster <webmaster@nersc.gov>
+   Privacy and Security Notice

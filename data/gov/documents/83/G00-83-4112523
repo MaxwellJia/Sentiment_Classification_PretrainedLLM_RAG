@@ -1,0 +1,570 @@
+http://www-astro-theory.fnal.gov/Conferences/ssc/ssc1/
+
+                        [SloanScienceInChicago-1.gif]
+
+                             [14August1998.gif]
+
+                               [10AM-4PM.gif]
+
+                            [WilsonHall1East.gif]
+
+                               [Fermilab.gif]
+
+                                                                   Organizers
+                                                             Jonathan Loveday
+                                                              Albert Stebbins
+                                                               Douglas Tucker
+     __________________________________________________________________
+
+   This was the first in a series of meetings to discuss what is and can
+   be done with the data for the Sloan Digital Sky Survey. The next
+   meeting will probably be held at the University of Chicago sometime in
+   October 1998. Some information about this meeting is given below.
+     __________________________________________________________________
+
+Agenda
+Known Participants
+Minutes
+1st Mailing
+2nd Mailing
+     __________________________________________________________________
+
+                                                                  top of page
+
+Agenda:
+
+   Topic Presentor Approximate Time
+   Status of the First Light data Brian Yanny ~30 min.
+   Status of the Photometric System Allyn Smith ~20 min.
+   White dwarfs in the SDSS Allyn Smith ~10 min.
+   Metallicities of G Stars from SDSS Colors Heidi Newberg ~30 min.
+   Use of the Sloan Data Simulations for Science Chris Stoughton ~30 min.
+   Star-Galaxy Separation Jon Loveday ~15 min.
+   The Angular Correlation Function Douglas Tucker ~15 min.
+   Searching for Dwarf Spheroidals in the Galactic Halo Douglas Tucker ~10
+   min.
+   Photometric Redshifts Tim Mckay ~15 min.
+   Weak Lensing Tim Mckay ~30 min.
+   Galaxy-Galaxy Lensing Albert Stebbins ~15 min.
+     __________________________________________________________________
+
+                                                                  top of page
+
+Participants:
+
+   Name              Participation
+   Asantha R. Cooray asante@hyde.uchicago.edu
+   Scott Dodelson    dodelson@mail-astro-theory.fnal.gov
+   Phil Fischer      philf@astro.lsa.umich.edu
+   Lucy Fortson      gates@tyrone.uchicago.edu
+   Evalyn Gates      gates@tyrone.uchicago.edu
+   Rocky Kolb        rocky@fnal.gov
+   Jonathan Loveday  loveday@oddjob.uchicago.edu
+   Tim Mckay         mckay@mich.physics.lsa.umich.edu
+   Ana Paula Miceli  anapaula@fnal.gov
+   Aronne Merrelli   merrelli@fnal.gov
+   Heidi Newberg     heidi@fnal.gov
+   Dennis Nicklaus   nicklaus@fnal.gov
+   Angela Olinto     olinto@oddjob.uchicago.edu
+   John Peoples      peop@fnal.gov
+   Jean Quashnock    jmq@oddjob.uchicago.edu
+   Gordon Richards   richards@oddjob.uchicago.edu
+   Constance Rockosi cmr@oddjob.uchicago.edu
+   Erin Sheldon      esheldon@umich.edu
+   Allyn Smith       jasmith@sdss1.physics.lsa.umich.edu
+   Albert Stebbins   stebbins@fnal.gov
+   Chris Stoughton   stoughto@fnal.gov
+   Douglas Tucker    dtucker@fnal.gov
+   Andrew Waltman    awaltman@umich.edu
+     __________________________________________________________________
+
+                                                                  top of page
+
+Minutes: (taken by Scott Dodelson)
+
+                     Brian Yanny -- Introduction to Data
+
+                callibrated objects sit on disks of fits files
+
+                corrected frames archived to tapes or robot
+
+                in their place are atlas images + sky frame
+                      together they can be used to reconstruct full frame
+                 ---------------------
+                May dark run 2 nights: PSF poor star galaxy poor
+                                                                astrometry good
+                                                                600,000 stars r'
+ < 23.5
+
+                June dark run: 80 square degrees, nearly filled rectangle
+                                                        211 < RA <  253
+                                                Should have ~800 QSO < 19
+                                                PSF much better determined
+                                                Good star/galaxy separation
+                                                Several examples of frames/bands
+/deblender
+                                                Deblender works at about 1 arcse
+c, relies on 2-fold
+                                                                        symmetry
+                                                25% of objects are blended
+                ------------------------------------
+
+                Showed luminosity functions in different bands
+                Equal numbers of stars/galaxies at 20th mag. After that
+                galaxies drop, artifact of identification. Should be
+                rise in galaxies at faint mags.
+
+                -------------------------------------
+
+
+                Showed color diagrams; look reasonable
+
+                ------------------------------------
+
+                plot stars vs frame number. Get blip at Pal 5
+                globular cluster. Early science: look for correlations
+                in star counts
+
+                ---------------------
+
+                working on zero point calibration between columns, appear to be
+                off by tenth of mag between columns.In a given column, offset
+                is only few hundredths of magnitude.
+
+                ------------------
+
+                standard fits readers should work. Documentation at
+
+                1] message 44 on sdss-obs mailing list
+
+                2] http://www.astro.princeton.edu/~rhl/photomisc
+
+                each object has many different descriptors
+
+                -------------------
+
+                Every bright object has mask file, which at present is difficult
+ to
+                decode. Eventually this will be available
+
+                               Albert Stebbins
+
+            In ~stebbins/bin/ look for sdssOBJfileReadCat
+            a way to read the files
+
+                 Allyn Smith -- Calibration ... White Dwarfs
+
+            CALIBRATION
+        Std Stars / 40 inch calibration observations at Flagstaff
+        ---------------------
+        many holes in red and blue ends
+        plugged some of the holes but most extreme red and blue holes
+        remain. Similarly with other colors.
+        Getting good coverage over 5 different months
+        ---------------------
+        dust ring at flagstaff lead to 6/100 mag error if image
+        is right on top of it.
+        ---------------------
+        no important differences as focus changes
+        ---------------------
+        As object moves across chip, no errors [as opposed to
+        early runs on MT]
+        ---------------------
+        On 40'', can't find some of the standard stars; should
+        be fixed soon. Ross 530, finding the wrong star [fixed].
+        ---------------------
+        Comparisons of 24'' and 40'' agree very well
+        ---------------------
+        Reilluminizing MT changed zero points by ~.2 mags.
+        Cleaning "whenever needed." Want it done regularly, once
+        a month or every other month.
+        ---------------------
+        Tim McKay: variations seen in z band. Do you see this in standard
+                   star?
+        Smith:     See variations day to day, and from morning to evening.
+                   Haven't looked carefully yet
+
+                         Allyn Smith -- WHITE DWARFS
+
+        Looking for WD luminosity function, good way to date age of galactic
+        disk. [Now gives 9.7 Gyr]. In u-g-r locus WD fall close to rest of
+        stars. In g-r-i subdwarfs fall out [g-r ~ 2]. Most important for
+        aging at L/L_solar = 10^{-5} are inseparable from ordinary stars
+        using Sloan colors.
+
+                    Heidi Newberg -- G Star Metallicities
+
+            Showed ways of star/galaxy separation using colors. Galaxies always
+            "on top" in u-g-r.
+            G stars with same metallicities line up in u-g-r: method of determin
+ing
+            metallicities from SDSS colors. Models suggest that knowledge of
+            colors to a few percent gives metallicities to .5 decs.
+            USNO data shows fainter --> lower metallicity
+            Should be able to determine metallicity of every G star in [u-band]
+survey
+            to within .5 dec. Will sample thin disk, thick disk, and halo stars
+            to see if metallicities change.
+
+                 Chris Stoughton -- Simulations for Science
+
+                Described simulations, will soon be documented,released
+                ---------
+                Test: choose a shape,scale length, mag,axis ratio, position angl
+e
+                For 100 objects, compare "observed" signal with input, find
+                few percent error in mag for exponential disk,20% with deV bulge
+ if
+                scale length is 5 pixels.
+                ---------
+                Used to test pipeline. Can we measure PSF magnitudes? Test deble
+nder.
+                ---------
+                QUASHNOCK: Put in weird shaped galaxies, what comes out?
+                STOUGHTON: Haven't done it.
+                McKAY: Can you take custom object and run it through PHOTO?
+                STOUGHTON: Yes, uses JPGTest.
+                STEBBINS: Where to put the files?
+                YANNY: June data is 400 GBytes
+                STEBBINS: Might get 100GB disk to do analysis on.
+                Discussion of how such a disk would be managed,placed?
+                STEBBINS: FNAL Theory group might get involved in this.
+
+                               BREAK FOR LUNCH
+
+                 Jonathan Loveday -- Star-Galaxy Separation
+
+                Comparison of Ssx magnitudes with PHOTO, quite a big spread and
+                even a bit of bias. All done withMay data, should get better.
+                Part of this discrepency is also due to different mags [Kron
+                vs Petrosian]
+                Star likelihood on May data is completely uncorrelated (PHOTO
+                and Ssx), again because PSF is not well-known.
+                ------------------------
+                Investigated different algorithm. Flux in annuli vs magnitude.
+                Even on May data, with 1.5'' seeing, do much better, can separat
+e down to 21st mag.
+                New algorithm does about as well on the May data as PHOTO does o
+n
+                June data.
+
+                STOUGHTON: Does this mean for target selection 1.5'' seeing is
+                good enough?
+
+                Will quantify all this with June data.
+
+               Douglas Tucker -- Correlation Function w(theta)
+
+                Use
+                        DD/DR - 1
+                N^2 operation. Can go to counts-in-cell statistics for large ang
+les
+
+                2 Advantages:
+
+                -- statistics
+
+                -- 55'' fiber separation loses close pairs; adaptive tiling will
+ help
+                   here.
+
+                At small distances (less than a Mpc) the correlation function is
+ affected
+                by the fiber separation
+
+                ---------------------------------
+
+                Want to study clustering vs morphology, say vs galaxy color
+                and concentration index. Clustering of faint galaxies can be don
+e
+                in Southern strip.
+
+                DODELSON: Stebbins, Frieman and I are writing code to get w.
+                Would be nice to use Chris' simulations to test it, especially
+                accounting for mask. Also need luminosity function to get accura
+te
+                window function in order to compare with theory.
+
+       Douglas Tucker -- Search for Dwarf Spheroidals in galactic halo
+
+                Milky Way has 9 DS satellites.
+
+                Armandropf et al preprint : took POSS-II images and wrote softwa
+re to
+                find DS. Might also use adaptive kernel technique for searching.
+
+                MCKAY: Might check on binned sky images. Can look in 3 colors
+                TUCKER: Most evident in bluer bands.
+
+                     Tim McKay -- Photometric Redshifts
+
+                Most work being done by Connolly/Szalay; meeting 8-24/25.
+                Get \delta z \simeq 0.03
+
+                No other survey w/ comparable numbers w/ 5 colors
+
+                ----------------------
+
+                Want to obtain redshifts for high z galaxies to calibrate estima
+tor.
+                LCRS galaxies, Johnson color data , observed fields w/ previousl
+y measured
+                redshifts.
+
+                Ultimately get spectra for 1500 objects down to r ~ 22, need 4m
+                telescope.
+
+                ----------------------
+
+                How to do it:
+                        1] fit polynomial to colors
+
+                        Did this @ Michigan ; got the right numbers for LCRS gal
+axies.
+
+                        2 runs on Schmidt in 5 SDSS colors, get 2600 galaxies wi
+th
+                        colors. Data useful in of itself, i.e. for looking at st
+ellar
+                        locus.
+
+                        2] template fitting [Connolly]
+
+                        Goal of JHU meeting to get official SDSS color-z techniq
+ue.
+
+                        YANNY: Problem if no detection in u-band
+                        MCKAY: Only need u at low redshift, where you will proba
+bly get them
+                                   anyway.
+                    QUASHNOCK: How far out will the relation be valid?
+
+                          Tim McKay -- Weak Lensing
+
+                Many things can produce non-random orientations. Use stars to me
+asure
+                instrumental distortions, then remove these from galaxies. Need
+to account
+                for shear -- all size change shape the same -- and smear -- chan
+ge of
+                shape depends on size. SDSS desgined to have little distortion,
+little
+                shear. To measure PSF, PHOTO spits out (Q,U) for every object [w
+eighted
+                momnts of brightness]. Stability in space and time is very impor
+tant.
+                In each column, there is variation across chip in amplitude on t
+he order
+                of 5%.
+
+                ---
+                NEWBERG:How does this affect star/galaxy separation?
+                ---
+
+                PSF changes as a function of time, but changes are correlated ac
+ross
+                whole camera.
+
+                ----------------------------
+
+                Even though SDSS does not go deep, statistics are fine because o
+f
+                large area. Clusters at z ~ 0.1 will give most of the lensing.
+
+                ----------------------------
+
+                Science:
+
+                1] clusters
+                                Johnstone has developed simulations to test code
+s and predict
+                                signals. Results: 10 sigma detections of objects
+ with velocity
+                                dispersions of 800 km/sec assuming 1'' PSF (Gaus
+sian).
+
+                                Elliptical objects circularized by PSF, amount c
+alled "dilution
+                                factor." If galaxy size is .7'', dilution factor
+ becomes large
+                                at seeing > 1.5''.
+
+                                Various weighting schemes give different dilutio
+ns but similar S/N.
+                                Use adaptive wieghting schemes to get same dilut
+ion for all S/N.
+                                Advocate using this adaptive weighting for other
+ things, i.e.
+                                galaxy shapes. Might be able to do this with atl
+as images. If not,
+                                PHOTO could do it.
+
+                                YANNY: If you want PHOTO to change, tell us soon
+.
+
+                                Will get through May/June data in next few month
+s. If there is signal,
+                                can correlate with known object or with dark obj
+ect. All these subject
+                                to large scale systematics.
+
+
+                  Albert Stebbins -- Galaxy-Galaxy lensing
+
+                can determine mass profile of galaxies: halo profile. This is le
+ss prone
+                to systematic effects since instrumental effects on small scales
+ are
+                small and there are so many galaxies that they wash out random
+                instrumental effects.
+
+                Used Joffre's software SExtractor to get prob of given object be
+ing star.
+                Looked at 14000 galaxies from May data. Expect distribution of a
+ngles to
+                be uniform. Plot -- for galaxies separated by 2-4'' -- maximum s
+eparation
+                of observed cumulative distribution and random cumulative distri
+bution.
+                They don't agree but the result is opposite what a "signal" woul
+d produce.
+                Hard to know how to analyze this. For galaxies separated by 6-24
+'' there
+                is no difference between random and observed.
+     __________________________________________________________________
+
+                                                                  top of page
+
+1st Mailing:
+
+                                                                 27 July 1998
+
+   Fellow SDSS Participants
+
+   Now that SDSS data exists there are many people in the Chicago area who
+   are starting to look at it as well as trying to glean some science from
+   this data. We are organizing an informal get together at Fermilab on
+   (somewhat along the lines of the meetings going on in Princeton) where
+   people may discuss what they are doing with the data, and what they
+   have found, both in terms of science and data quality. This would be a
+   one-day meeting, aimed mostly at Chicagoland residents, but of course
+   open to anyone in the collaboration.
+
+   The specifics are
+
+                   WHEN : Friday, 14 August 1998, ~9AM-4PM
+
+                    WHERE: 1 East, Wilson Hall, Fermilab
+
+   At the moment all we would like from you is an indication if you think
+   you might attend and also if there is something you would like to
+   present - or want to hear presented. Please reply by e-mail to
+   "ssc@simone.fnal.gov". Expect a 2nd announcement with more specifics in
+   a week or two which will also be sent to the "sdss-general" mailing
+   list. A web site with URL
+
+                   www-astro-theory.fnal.gov/Personal/ssc/
+
+   will be set up soon for up-to-the-minute information on the agenda.
+
+                                                              The Organizers:
+                                                              Albert Stebbins
+                                                               Douglas Tucker
+                                                                  Jon Loveday
+     __________________________________________________________________
+
+                                                                  top of page
+
+2nd Mailing:
+
+                                                               11 August 1998
+
+                                  Meeting:
+
+                        Sloan Science in Chicago - I
+
+                               14 August 1998
+
+                                  10AM-4PM
+
+                            Wilson Hall - 1 East
+
+                                  Fermilab
+
+   Fellow SDSS Participants
+
+   This is the 2nd and final announcement for the first Sloan Science in
+   Chicago meeting, date and time above. Further details can be found at
+   the web site
+
+                   www-astro-theory.fnal.gov/Personal/ssc/
+
+   The meeting is informal and should contain both presentations and
+   round-table discussion. Where you think it might be useful we would
+   encourage anyone to bring up any unfinished work or incomplete ideas. A
+   rough (and evolving) agenda is as follows
+    Status of the First Light data                Brian Yanny
+
+    Use of the Sloan Data Simulations             Chris Stoughton
+    for Science
+
+    Star-Galaxy Separation                        Jon Loveday
+
+    Using the Sloan to Find Dwarf                 Douglas Tucker
+    Spheroidals in the Galactic Halo
+
+    Photometric Redshifts                         Tim Mckay
+
+    Weak Lensing                                  Tim Mckay
+
+    Galaxy-Galaxy Lensing                         Albert Stebbins
+
+   A few people have expressed interest in talking about stars - but have
+   not quite come out of the closet. Any additions before the meeting will
+   noted on the web page.
+
+   SPECIAL NOTE: The good news is that we are able to use the rather
+   classy new 1 East conference room. The bad news is that absolutely no
+   food or drink are allowed in this room. Don't despair though - since
+   the cafeteria is only steps away one can easily pop out for a quick cup
+   of coffee.
+
+   The list of participants is as follows
+     Scott Dodelson
+     Phil Fischer
+     Evalyn Gates
+     Don Lamb
+     Jonathan Loveday
+     Tim Mckay
+     Heidi Newberg
+     Dennis Nicklaus
+     Angela Olinto
+     John Peoples
+     Jean Quashnock
+     Gordon Richards
+     Constance Rockosi
+     Bob Rosner
+     Erin Sheldon
+     Allyn Smith
+     Albert Stebbins
+     Chris Stoughton
+     Douglas Tucker
+     Andrew Waltman
+
+   If you are planning to attend and your name is not on the list please
+   send us an e-mail. Our address for this or any other questions you
+   might have is
+
+                            ssc@simone.fnal.gov .
+
+                                                              The Organizers:
+                                                              Albert Stebbins
+                                                               Douglas Tucker
+                                                                  Jon Loveday
+     __________________________________________________________________
+
+
+    Tue Aug 18 15:11:55 CDT 1998
+
+
+    ssc@simone.fnal.gov

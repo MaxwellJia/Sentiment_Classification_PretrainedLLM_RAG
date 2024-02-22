@@ -1,0 +1,118 @@
+http://hypermail.fnal.gov/cvs_faq.html
+
+                                  CDCVS FAQ
+
+   Q1:  How do I get write permission to a particular module?
+   A1:  Ask someone who currently has write permission to give you write
+   permission?
+
+   Q2:  How do I determine who has write permission?
+   A2:  "cvs co check_access.d/<module>", then inspect
+   check_access.d/<module>/allowed.
+               The users listed in the allowed file have permission to
+   give you write permission.
+               If there is a line like "#include <group>" in the allowed
+   file, you will need to
+               "cvs co check_access.d/groups/<group>".   Then inspect the
+   files "allowed" and/or
+               "members" in check_access.d/groups/<group>.
+
+   Q3:  How do I give someone write permission to a particular module?
+   A3:  Three steps (assuming you have write permission to the module):
+                      1) "cvs co check_access.d/<module>"
+                      2) edit check_access.d/<module>/allowed
+                      3) "cvs commit check_access.d/<module>/allowed"
+
+   Q4: How do I give a group of users permission to write to a module?
+   A4:  Place the line "#include <group>" where <group> is the name  of
+   the group alias constructed for this purpose.
+
+   Q5: How do I add someone to a group alias?
+   A5:  Three steps (assuming you have write permission to the group
+   alias):
+                      1) "cvs co check_access.d/groups/<group>"
+                      2) edit check_access.d/groups/<group>/allowed or
+                                   check_access.d/groups/<group>/members
+                      3) "cvs commit check_access.d/groups/<group>
+               If the user is placed in allowed, they have permission to
+   add other users to the group alias.
+               Users in the members file do not have this permission.
+
+   Q6: How do I request CVS access from a kerberized machine in the FNAL
+   realm?
+   A6:  Request CVS access from the Fermilab Helpdesk, providing them with
+   your kerberos principal name.
+
+   Q7:  How do I request CVS access from another machine using ssh?
+   A7:  Request CVS access from the Fermilab Helpdesk, providing them with
+   your ssh-key.
+
+   Q8:  How do I request CVS access from a Windows NT machine?
+   A8:  Request pserver access from the Fermilab Helpdesk.
+
+   Q9:  I was able to commit to the cvs repository before, but now it
+   doesn't work.  What's wrong?
+   A9:  Check the contents of the file CVS/Root in the directory in which
+   you are working .  It should contain
+               something like "cvsuser@cdcvs.fnal.gov:/cvs/cd".  If it
+   doesn't, this module was probably checked out
+               of a repository you don't have write permission to.  This
+   can be fixed by downloading this fixcvsroot
+               script and running it in the directory containing the
+   broken module.
+
+   Q10:  How do I check out a module with read-write access?
+   A10:  Use cvsuser@cdcvs.fnal.gov:/cvs/cd for your CVSROOT.  The
+   simplest way to do this is on the
+                   command line:
+                        cvs -d cvsuser@cdcvs.fnal.gov:/cvs/cd checkout
+   foobar
+                   To check out the module "foobar". CVS will remember the
+   "-d cvsuser@cdcvs.fnal.gov:/cvs/cd"
+                    business for the checked out module. You shouldn't
+   have to type it again to do updates, commits, etc.
+
+   Q11:  Why do I get this message?
+                       User `' is not permitted to modify module `foobar'
+                       cvsh is unable to determine your username. If you
+   are using public
+                       key access, please make sure you have ssh-agent
+   running.
+                       cvs server: Pre-commit check failed
+                       cvs [server aborted]: correct above errors first!
+   A11:  You need to have ssh-agent running. See instructions on using cvs
+   with ssh.
+
+   Q12:  I followed the instructions from A11, but I still get the message
+   from Q11!
+   A12:  The authentication mechanism FNAL uses requires you to forward
+   your agent. Agent forwarding is
+                   probably turned off in your system ssh_config file.
+   Grep /etc/ssh_config (or maybe /etc/ssh/ssh_config)
+                   for ForwardAgent to find out.   To workaround this
+   problem, you need to create a script:
+                          #!/bin/sh
+                           ssh -A $*
+                   Set the environment variable CVS_RSH to point to the
+   script. You should now be in business.
+
+   Q13:  How do I import a module into the cvs repository?
+   A13:  Sit inside the top directory of the module, then issue the
+   command:
+                     cvs import  <modulename>  <vendor_tag>  <release_tag>
+                 Where modulename = is the module name (obviously)
+                                    vendor_tag = possibly a vendor tag
+   (v4_1) or some other string (Fermilab, <username>, etc.)
+                                   release_tag = something to denote this
+   initial import, possibly "initial".
+                   Note that vendor_tag and release_tag are only used
+   later to check out a copy of the initially imported
+                   module, even after many changes have been checked in.
+   For this reason, the exact value of these
+                   fields is often not important.  However, they must not
+   be the same and must start with a letter.
+
+   _______________________________________________________________________
+
+   Last updated: 26 July 2001
+   cvs-support@fnal.gov

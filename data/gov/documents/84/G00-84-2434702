@@ -1,0 +1,82 @@
+http://pilc.grc.nasa.gov/meetings/dc/pilc-asym.pdf
+
+   of T) ns MI 99 tio ry han t lica 0.tx ym-0 , IETF, Nov 19 k Asymmet .
+   Padmanab roup -pilc-as G or Hari Balakrishnan ( Microsoft Research ith
+   t-ietf draf Netw Working Venkata N ork wt w PILC Join TCP Performance
+   Imp http://www.research.microsoft.com/~padmanab etry? der adversely
+   affected sen to ack disruption Outline ust disruption of acks on imize
+   ack flow disrupted min make sender rob What is network asymm Problem
+   Soluti Summary ry k Asymmet posite directions or ork/traffic
+   characteristics in isparity in network Netw ia access bandwidth med
+   error rate P performance in one direction is often Significant d
+   characteristics in op TC limited by netw the opposite direction eam
+   nstr ost2 sfer H Dow ranl T d acks A LMS97] D A k) [ delaye by packet
+   size ratio D irectiona try ( D A ivided D A ratio d el for Unid alized
+   asymme am de further by 2 for TCP Mod bandwidth divi Upstre Norm Host1
+   n ce er ly downstream bottleneck ata at slower pa slownd ack dilation
+   new d cw t reflect of Asymmetry on TCP ack clocking breaks dow
+   infrequent acks k is delivered to send es no cks out uld burst out
+   packets acks queue up at upstream Impact neck cing do der clo der
+   increments der co spa sen only 1 ack in sen sen k > 1 bottle If buffer
+   not full If buffer full ssion acks ession ion requent in ack stream
+   Solut ction/expansion/decompre n control disruption compression gestio
+   spects sender adapt to inf o a header ack filtering/compaction/compr
+   ack reconstru ack con Minimize Make Tw ntially se ssion onmm burst loss
+   ca unco loss/reordering not e er Compre [RFC-2507] s ar 6-7 byte
+   [RFC-1144] ddresses single packet loss case osse col machinery for Head
+   orithm urst l erable to packet t b r e alg bu 40-byte vuln ic primarily
+   a new proto Reduces size of ack-only pkts substa Tw Still need
+   mechanisms to shield/adapt sende acks ens subsume requirement t
+   filtered the former ream acks r of buffer nt d (s) no m cket loss happ
+   ering [BPK97] favo ndo filtere Filt ck # r ra igher cumulative ack # c
+   o hen pa sti andwidth and acks infreque cks not indicates hole Ack
+   aller a ini g w m that ter h sm de CK acks with h wit discard the
+   latter in reduces b but makes duplicate a SA Discard "redundant" upst
+   No filterin plyimld PK97] e gap ting for next one m acks wou perfectly
+   ile wai inter-ack ti elayed as d ly over " ack stream at far end a
+   little wh m send ack for machinery y acks t uni ack for otocol
+   "original as man apar restore original stream on to ce Ack
+   Reconstruction [B ew pr lds sender eases the effective RTT no next ack
+   insert spa hold if if next ack arrives no n shie hard to incr Restore
+   Pros and cons f deleted essor acing es acks compr nder the # o deleted
+   the de the e Schem chinery guessing ack sp chinery guessing # ma d for
+   ma nveys to expa # of bytes they acknowledge d for Alternativ times of
+   acks d the ids nee arrival ids even nee compacter co acks an avo but
+   new protocol compressor conveys to the avo but new protocol Ack
+   compaction & expansion [Sam99] Ack compressor & decompressor [Joh99]
+   ts) 97]K n packets) limits) in limi t acks ithin (with fly? w kill a
+   ntrol [BP late ack frequency infrequen (one ack for early ( C issues n
+   Co modu n lin to specific links) SE N to n multiplicatively ehammer to
+   estio CE no IP delayed acks ease sledg ses decrease ral (not tied lized
+   incr s sender to adapt to iver u is this a Ack Cong genera rece no ECN
+   ECN very gene end-to-end but require End-to-end alternative to ack
+   filtering Pros and cons edged te of default) acks by of aptation t) (to
+   say 3 growth of data acknowl number art using estima d/srt urst der Ad
+   (cwn indow Sen just the rate sider the amount er than t size of mini-b
+   ce mini-bursts ap nection con rath limi spa con Congestion w Burstiness
+   eam nstr ost2 fic H Dow n the af D A nal Trtio D D irec D A A D or
+   Bi-dl f D D de A Mo am Upstre Large data packets can hold up acks o
+   upstream link Host1 n ts ost nnectio packe 98] data ctly to h queuing
+   [LVR98] stream co down ions viates this attached dire it data pkt Solut
+   ng [BPK97,LVR link dent on ntation of data packets n control alle
+   heduli sc gestio ld cause starvation of upstream s-first cou ack con
+   assumes upstream performance depen ir"-scheduling of data/acks
+   [LMS97,LVR98] Ack Back-pressure to lim "Fa Link-level fragme dem
+   verhead ble mo Decreasing nd cessing ht Help , ca re seco Mig 802.11
+   pt/ack pro increased timer o ency ons Whe radio, forward per MAC cost
+   of ati requ rs tyle itu le: packet r S Ack F CTS sS/ rhead at the RT
+   Examp fewer packets to reduced network interru ove Othe Reduced MAC
+   overhead Backbone routers Internet serve 7] nd ccess 250 FC rite a
+   tering a n [R e.g., ack , ack fil adaptation ressio comp y Issues
+   ession sender compr header neither read nor w read-only access Securit
+   read-only + reconstructable control and SP header H nstruction gestion
+   rules out reco only end-to-end schemes work, con allows ack filtering
+   allows ack filtering allows (modified) IPSEC E TF-ESP/AH IPSEC A idth)
+   s problems on lro Summary structi ptive ssionre econ on cont mp g/rin
+   esti n of ack stream cause co lter imize disruption aderhe ack fi ack
+   cong min make sender ada Disruptio Solution: Potential benefits extend
+   beyond (bandw asymmetric contexts of T) ns MI 99 tio ry han t lica 0.tx
+   ym-0 , IETF, Nov 19 k Asymmet . Padmanab roup -pilc-as G or Hari
+   Balakrishnan ( Microsoft Research ith t-ietf draf Netw Working Venkata
+   N ork wt w PILC Join TCP Performance Imp
+   http://www.research.microsoft.com/~padmanab

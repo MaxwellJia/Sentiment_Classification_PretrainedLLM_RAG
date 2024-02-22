@@ -1,0 +1,447 @@
+http://expect.nist.gov
+
+                              The Expect Home Page
+
+   This page describes Expect and several other tools that can be found at
+   this site. First, Expect . . .
+     __________________________________________________________________
+
+Introduction
+
+   Expect is a tool for automating interactive applications such as
+   telnet, ftp, passwd, fsck, rlogin, tip, etc. Expect really makes this
+   stuff trivial. Expect is also useful for testing these same
+   applications. And by adding Tk, you can also wrap interactive
+   applications in X11 GUIs.
+
+   Expect can make easy all sorts of tasks that are prohibitively
+   difficult with anything else. You will find that Expect is an
+   absolutely invaluable tool - using it, you will be able to automate
+   tasks that you've never even thought of before - and you'll be able to
+   do this automation quickly and easily.
+
+   Ok - enough of the hype. More information on Expect is available in the
+   following documents:
+     * Download Expect for UNIX or Expect for Windows now!
+     * Exploring Expect is the book on Expect.
+     * Expect FAQ (Frequently Asked Questions List)
+     * List of examples that come with Expect - This is just a list. If
+       you want the actual examples, download the entire Expect
+       distribution. However, it's useful to look at this list to get a
+       feel for some of the many things that Expect makes easy.
+     * Contributed scripts in the public Expect archive
+     * The Expect README is the same README file that comes with Expect.
+       The README has lots of valuable information that has yet to be
+       incorporated into this home page. It includes a description of the
+       software distribution, where and how to send bug reports, how to
+       get support or classes, and some other background information.
+     * History about the development of Expect and differences between
+       versions. The current version of Expect is 5.34.0, created Thu Dec
+       20 16:12:41 EST 2001.
+     * Links to related information
+     __________________________________________________________________
+
+Obtaining Expect for UNIX
+
+You can get Expect and the examples from expect.nist.gov as expect.tar.Z or
+expect.tar.gz. The gz file is preferrable simply because it is quicker to
+download. However, if you have no idea what to do with a gz file once you've got
+it, just transfer the Z version of the distribution. Then, at the command line,
+type:
+
+ uncompress expect.tar.Z
+ tar -xvf expect.tar
+
+   This will create a directory containing the Expect distribution. Change
+   to that directory and read the README file.
+
+   Note: Expect requires Tcl. If you don't already have Tcl, you can get
+   it as tcl.tar.Z or gz. To install Tcl, just mimic the instructions as
+   for Expect.
+
+   The most current snapshots of Expect will be found in the SourceForge
+   CVS repository. Not all snapshots are official releases.
+
+   Not all old versions of Expect are available, but some are. The current
+   version is also available this way if you need to refer to it by
+   explicit version.
+
+Obtaining Expect for Windows
+
+There are two different ports of Expect for Windows:
+
+   Author Location Other notes
+   Gordon Chaffee http://bmrc.berkeley.edu/people/chaffee/tcltk.html
+   Native port, based on Expect V5.21
+   Rob Savoye http://www.welcomehome.org/dejagnu.html A cygwin-based port
+   (i.e., feels like UNIX), version unknown, bundled with DejaGnus
+
+        [The following statement is required per NIST policy] By selecting these
+        links, you will be leaving NIST webspace. We have provided these links
+        to other web sites because they may have information that would be of
+        interest to you. No inferences should be drawn on account of other sites
+        being referenced, or not, from this page. There may be other web sites
+        that are more appropriate for your purpose. NIST does not necessarily
+        endorse the views expressed, or concur with the facts presented on these
+        sites. Further, NIST does not endorse any commercial products that may
+        be mentioned on these sites.
+     __________________________________________________________________
+
+Obtaining the examples
+
+   The distribution contains many example scripts, including many
+   well-known scripts such as kibitz, rftp (recursive ftp), passmass,
+   autoexpect and the delicious beer script. All of the substantive
+   examples in the book are included and many of them have man pages
+   themselves.
+
+   To obtain the examples, follow the directions for obtaining Expect
+   (above). Once you have received and unpacked the distribution, you can
+   find the examples in the example directory.
+     __________________________________________________________________
+
+Links to related information
+
+        [The following statement is required per NIST policy] By selecting these
+        links, you will be leaving NIST webspace. We have provided these links
+        to other web sites because they may have information that would be of
+        interest to you. No inferences should be drawn on account of other sites
+        being referenced, or not, from this page. There may be other web sites
+        that are more appropriate for your purpose. NIST does not necessarily
+        endorse the views expressed, or concur with the facts presented on these
+        sites. Further, NIST does not endorse any commercial products that may
+        be mentioned on these sites.
+
+   The following are some other particularly worthwhile Expect-related
+   links.
+     * DejaGnu is a popular Expect-based framework for testing other
+       programs. If you are starting out and feel overwhelmed by the
+       capabilities of Expect or would just like some guidance on how to
+       structure a test suite, check out DejaGnu. DejaGnu is used by many
+       standards testing organizations.
+     * WINTERP is a rapid prototyping, development and delivery
+       environment for GUI-based applications on Unix platforms. WINTERP
+       uses Lisp instead of Tcl.
+     * expy is the Expect library embedded in Python instead of Tcl.
+     * ICE Tcl/Tk is a true compiler for Tcl/Tk. It also includes support
+       for Expect.
+     * Neosoft Integrated Tcl Release is an integrated collection of Tcl,
+       Expect, and several other extensions:
+          + tcl7.5p1
+          + tk4.1
+          + itcl2.1 (with itcl subdirs removed, includes iwidgets)
+          + tclX7.5.3-a1
+          + expect-5.20
+          + dp3.5beta2
+          + gd1.2 (a graphics drawing library)
+          + neo7.5.1p1 (neosoft-authored tcl Extensions, also includes
+            db.1.85)
+
+   Here are severals links to pages describing projects written using
+   Expect.
+     * WWW-based user interface to the Virginia Tech Library System
+       (VTLS). This service interacts with VTLS using VTLS-commands via a
+       telnet-connection. (Originally you had to understand Finnish, but
+       it's now available in English!)
+     * Drone is a tool for automatically running batch jobs of a
+       simulation program. Allows sweeps over arbitrary sets of
+       parameters, as well as multiple runs for each parameter set, with a
+       separate random seed for each run. Runs may be executed either on a
+       single computer or over the Internet on a set of remote hosts.
+     * Performance Management in an RDBMS Environmentexplores DB
+       performance management can be enhanced using, of course, Expect (as
+       well as some less important tools :-)
+
+  More about Exploring Expect
+
+   "Exploring Expect" is an excellent resource for learning and using
+   Expect. (Pub: O'Reilly, ISBN 1-56592-090-2) The book contains hundreds
+   of examples and also includes a tutorial on Tcl. Exploring Expect is
+   602 pages.
+
+   NIST policy is to avoid endorsements for commercial products or
+   organizations. Hence this page provides no link for the publisher or
+   any further information about how to obtain the book.
+
+  Articles, Papers, and Chapters on Expect
+
+     * Fisher, David L., Advanced Programming in Expect: A Bulletproof
+       Interface, November, 1999.
+     * Libes, D., "Expect", Tcl/Tk Extensions, ed, Mark Harrison, O'Reilly
+       & Associates, Inc., 1997.
+     * Libes, D., "Writing a Tcl Extension in Only ... 7 Years" (HTML,
+       PDF), PostScript, Proceedings of the Fifth Annual Tcl/Tk Workshop
+       '97, Boston, MA, July 14-7, 1997. Winner of Best Paper Award at
+       conference.
+     * Libes, D., "Tcl/Tk-based Agents for Mail and News Notification --
+       or -- A Tale of Two Biffs", Software - Practice & Experience, John
+       Wiley & Sons, West Sussex, England, to appear. [This paper isn't
+       really about Expect per se. However, a large section of the paper
+       is on tknewsbiff which is one of the Expect examples.]
+     * Friesenhahn, B., "Expect Offers UNIX Scripting", Byte Magazine,
+       April 1997.
+     * Libes, D., Automation and Testing of Interactive Character Graphic
+       Programs, Software - Practice and Experience, Vol. 27(2), p
+       123-137, February 1997.
+     * Libes, D., "How to Avoid Learning Expect -- or -- Automating
+       Automating Interactive Programs" (PDF, PostScript), Proceedings of
+       the Tenth USENIX System Administration Conference (LISA X),
+       Chicago, IL, September 30 - October 4, 1996.
+     * Libes, D., "Writing CGI Scripts in Tcl" (PDF, PostScript),
+       Proceedings of the Fourth Annual Tcl/Tk Workshop '96, Monterey, CA,
+       July 10-13, 1996. [This paper isn't really about Expect per se.
+       However, it does show a nice example of Expect in a CGI script for
+       the purpose of changing passwords through web pages. The complete
+       form/script can be found in the source distribution.] Winner of
+       Best Presentation Award at conference.
+     * Libes, D., Terminal Emulation for Automation and Testing of
+       Character Graphic Programs: A Code Walkthrough, Proceedings of The
+       21st Annual Trenton Computer Festival (TCF '96), Trenton, NJ, April
+       21-22, 1996 - a much longer and more detailed version of the SP&E
+       paper (above) [I submitted this originally to SP&E and they cut it
+       down to what ultimately appeared but recommended that this version
+       was still worth publishing elsewhere - hence this second
+       publication.]
+     * Faught, D., Testing Interactive Programs, Software QA Magazine,
+       Vol. 3, No. 1, February 1996.
+     * Fischer, P., The Expect Program and Other Skunkware Tools, SCO
+       World, February, 1996.
+     * Libes, D., Handling Passwords with Security and Reliability in
+       Background Processes (PostScript, PDF), Proceedings of the 1994
+       USENIX LISA VIII Conference, San Diego, CA, September 19-23, 1994 -
+       Simple techniques to allow secure handling of passwords in
+       background processes.
+     * Morse, W., A Tcl/Tk and Expect Tutorial, World Wide Technology
+       Conference, Houston, TX, December 1, 1994. Winner of Best Paper
+       Award at conference.
+     * Libes, D., Ouch, Those Programs Are Painful, ORA.COM, O'Reilly &
+       Associates, Inc., Fall '94.
+     * Libes, D., A Debugger for Tcl Applications, Proceedings of the 1993
+       Tcl/Tk Workshop, Berkeley, CA, June 10-11, 1993 - A presentation of
+       the Tcl debugger - theory, implementation, and use.
+       Warning: The examples in all of the papers listed below here are
+       archaic. Critical aspects (usually syntax) of both Expect and Tcl
+       have changed since they were written. (It's not that Expect has
+       changed that recently - rather it's because of incredibly slow
+       turnaround by many reviewers, editors, and journals.)
+       The papers still make interesting reading - just don't study the
+       examples too closely! Fortunately, most of the examples from the
+       papers also accompany the Expect distribution - and all of the
+       online examples are up to date.
+     * McNutt, D., Expect, January, 1994, UNIX Review, Vol. 12, No. 6,
+       January 1994 - Introductory article.
+     * Libes, D., X Wrappers for Non-Graphic Interactive Programs,
+       Proceedings of Xhibition '94, San Jose, CA, June 20-24, 1994 -
+       Discussion of wrapping interactive programs with Tk.
+     * Dichter, C., Surviving Software Testing, UNIX Review, pps 29-36,
+       V11, #2, Feb 1993.
+     * Libes, D., Kibitz - Connecting Multiple Interactive Programs
+       Together, Software - Practice & Experience, Vol. 23, No. 5, May
+       1993 - Paper on connecting multiple interactive programs together
+       using Expect.
+     * Libes, D., Obfuscated C and Other Mysteries, Chapter 36 ("Expect"),
+       John Wiley & Sons, ISBN 0-471-57805-3, January 1993 - An
+       explanation of some of the more interesting source code to an early
+       version of Expect.
+     * Libes, D., Automating Interactive Applications in the Network
+       Environment, International Communications Association Journal, May
+       17, 1992.
+     * Smith, B., Software Corner, Byte Magazine, 1992.
+     * Caffrey, P., User Interfaces and Automating Computer Human
+       Interaction, MSc. Thesis, Amdahl Ireland Ltd., 1992.
+     * Woodson, B., Regression Testing Using Expect, How To Implement
+       Quality In Software Conference, Santa Clara Valley Software Quality
+       Association, June 29, 1991.
+     * Libes, D., Regression Testing and Conformance Testing Interactive
+       Programs, Proceedings of the Summer 1992 USENIX Conference, San
+       Antonio, TX, June 8-12, 1992 - Discussion of regression and
+       conformance testing. If you are interested in this, you should also
+       check out DejaGnu.
+     * Libes, D., Expect: Scripts for Controlling Interactive Programs,
+       Computing Systems, Vol. 4, No. 2, University of California Press
+       Journals, 1991 - A nice overview with a balance of example scripts
+       and explanations.
+     * Libes, D., Implementor's Notebook: Implementing a Trap Command, C
+       Users Journal, Vol. 9, No. 3, R&D Publications, Lawrence, KS,
+       January, March, 1991 - Explanation of how Expect's trap command was
+       implemented.
+     * Libes, D., Implementor's Notebook: Expect, C Users Journal, Vol. 9,
+       No. 1, R&D Publications, Lawrence, KS, January, January, 1991 -
+       Explanation of some of the more interesting source code to an early
+       version of Expect (an improved version of this appeared later as
+       Obfuscated C and Other Mysteries, Chapter 36 ("Expect").
+     * Anderson, D., "Expect", January, 1991, SunExpert Magazine, Vol. 2,
+       No. 1, January 1991 - Introductory article.
+     * Libes, D., Using Expect to Automate System Administration Tasks,
+       Proceedings of the 1990 USENIX Large Systems Administration
+       Conference (LISA) IV, Colorado Springs, CO, October 17-19, 1990 -
+       Examples and discussion, specifically aimed at system
+       administrators.
+     * Libes, D., Expect: Curing Those Uncontrollable Fits of Interaction,
+       Proceedings of the Summer 1990 USENIX Conference, Anaheim, CA, June
+       11-15, 1990 - Discussion of Expect's implementation, philosophy,
+       and some performance notes.
+     __________________________________________________________________
+
+History
+
+   Expect was conceived of in September, 1987. The bulk of version 2 was
+   designed and written between January and April, 1990. Minor evolution
+   occurred after that until Tcl 6.0 was released. At that time (October,
+   1991) approximately half of Expect was rewritten for version 3. See the
+   HISTORY file for more information. The HISTORY file is included with
+   the Expect distribution.
+
+   Around January 1993, an alpha version of Expect 4 was introduced. This
+   included Tk support as well as a large number of enhancements. A few
+   changes were made to the user interface itself, which is why the major
+   version number was changed. A production version of Expect 4 was
+   released in August 1993.
+
+   In October 1993, an alpha version of Expect 5 was released to match Tcl
+   7.0. A large number of enhancements were made, including some changes
+   to the user interface itself, which is why the major version number was
+   changed (again). The production version of Expect 5 was released in
+   March '94.
+
+   In the summer of 1999, substantial rewriting of Expect was done in
+   order to support Tcl 8.2. (Expect was never ported to 8.1 as it
+   contained fundamental deficiencies.) This included the creation of an
+   exp-channel driver and object support in order to take advantage of the
+   new regexp engine and UTF/Unicode. The user interface is highly but not
+   entirely backward compatible. See the NEWS file in the distribution for
+   more detail.
+
+   There are important differences between Expect 3, 4, and 5. See the
+   CHANGES.* files in the distribution if you want to read about the
+   differences. Expect 5.30 and earlier versions have ceased development
+   and are not supported. However, the old code is available from
+   http://expect.nist.gov/old.
+
+   The Expect book became available in January '95. It describes Expect 5
+   as it is today, rather than how Expect 5 was when it was originally
+   released. Thus, if you have not upgraded Expect since before getting
+   the book, you should upgrade now.
+
+  Historical notes on Tcl and Tk according to John Ousterhout
+
+   I got the idea for Tcl while on sabbatical leave at DEC's Western
+   Research Laboratory in the fall of 1987. I started actually
+   implementing it when I got back to Berkeley in the spring of 1988; by
+   summer of that year it was in use in some internal applications of
+   ours, but there was no Tk. The first external releases of Tcl were in
+   1989, I believe. I started implementing Tk in 1989, and the first
+   release of Tk was in 1991.
+     __________________________________________________________________
+
+Other useful software at this site
+
+     * NICS - A service to allow collaborative management of identifiers.
+     * cgi.tcl - A comprehensive library for creating Tcl-based CGI
+       scripts. cgi.tcl supports tables, cookies, file upload, Expect, Tcl
+       applets, Java, etc, etc.
+     * tcl-debug - A Tcl debugger. Provides traditional debugging
+       capabilities to any Tcl script. Built in to Expect but it works
+       with any Tcl extension including Tk. Can be dynamically loaded.
+     * tkbiff - allows arbitrary commands (play audio clip, metamail, etc)
+       to be executed upon mail reception. (If you like xbiff++ but wish
+       it were more flexible or more portable, then you'll like tkbiff.)
+       tkbiff is flexible enough that you can make it do anything. Default
+       behavior: fast and convenient access to new email using very little
+       screen real estate.
+     * md5pure and sha1pure - Computes md5 and sha1 message digests using
+       only core Tcl commands. Surprisingly fast. (Surprised me anyway.)
+     * FAQ builder - A very easy-to-use FAQ builder. Simplifies
+       maintenance of hyperlinks, automatically repeats the questions with
+       links to the answers, automatically produces different formats
+       (currently only text and html supported), etc.
+     * Stopwatch - A little stopwatch - just right for helping you get the
+       timing down while practicing a talk. Provided both as an applet and
+       a standalone Tk script.
+     __________________________________________________________________
+
+Even more links
+
+        [The following statement is required per NIST policy] By selecting these
+        links, you will be leaving NIST webspace. We have provided these links
+        to other web sites because they may have information that would be of
+        interest to you. No inferences should be drawn on account of other sites
+        being referenced, or not, from this page. There may be other web sites
+        that are more appropriate for your purpose. NIST does not necessarily
+        endorse the views expressed, or concur with the facts presented on these
+        sites. Further, NIST does not endorse any commercial products that may
+        be mentioned on these sites.
+
+   The following links have nothing specifically to do with Expect but may
+   be significant in their value to Expect users nonetheless:
+
+  Books
+
+     * Tcl and the Tk Toolkit by John Ousterhout, Addison-Wesley, 1994,
+       ISBN 0-201-63337-X - the seminal book on Tcl and Tk.
+     * Practical Programming with Tcl and Tk by Brent Welch, Prentice
+       Hall, 1995, ISBN 0-13-182007-9.
+     * Graphical Applications with Tcl and Tk by Eric F. Johnson, M&T
+       Books, 1996, ISBN 1-55851-471-6 - Covers cross-platform development
+       with Tcl and Tk on Windows and UNIX.
+     * There are too many books to list all of them here. See the Tcl FAQ
+       for a bigger list.
+
+  FAQs
+
+     * Tcl FAQ (Japanese)
+          + Part 1: General questions
+          + Part 2: Bibliography, maillists, etc.
+          + Part 3: Misc questions
+          + Part 4: Applications
+          + Part 5: Extensions
+          + Tcl Usage FAQ
+          + Tcl Commercial Uses FAQ
+          + Tcl Windows FAQ
+     * Expect FAQ
+     * Tk FAQ (old)
+     * HUSH FAQ
+     * [incr Tcl] FAQ
+     * Tix FAQ
+
+  Overviews/Intros/Tutorials
+
+     * Brief Intro/Overview to Tcl
+     * TclTutor - Teach yourself Tcl
+
+  Man Pages
+
+     * Tcl/Tk man pages (Ioi)
+     * Tcl/Tk man pages (Sun)
+     * Tcl/Tk man pages (Critchlow)
+
+  Conferences
+
+     * Tcl '95 in Ontario (Frank Stajano's and Rob Walker's notes)
+     * Tcl '96 in Monterey (Mike Hopkirk's notes)
+
+  Tcl/Tk References on the Web
+
+   Even more comprehensive indices to what's out there including links to
+   extensions, applications, ftp sites, etc.
+     * ActiveState's Tclet demos
+     * Tcl bibliography
+     * Tcl/Tk Resources
+     * Tcl Links on the Web
+
+  Miscellaneous
+
+   Pages that are particularly worthwhile but don't fall in the preceding
+   categories.
+     * Newsgroups
+          + comp.lang.tcl - Expect discussion/questions are encouraged in
+            this newsgroup.
+          + comp.lang.tcl.announce (archive)
+     * Contributed sources archive at Neosoft (UK mirror)
+     * Tcl/Tk UofO Patch Archive
+     * ActiveState's Tcl page
+     * [incr Tcl]
+     __________________________________________________________________
+
+        Last edited: Sat Dec 29 20:20:22 EST 2001 by Don Libes
+        National Institute of Standards and Technology Disclaimer/Privacy

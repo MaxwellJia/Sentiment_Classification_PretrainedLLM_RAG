@@ -1,0 +1,159 @@
+http://nls3.nlm.nih.gov/MetaMap/query_expansion.97.pdf
+
+   Query Expansion Using the UMLS® Metathesaurus® Alan R. Aronson, Ph.D.
+   and Thomas C. Rindflesch, Ph.D. National Library of Medicine Bethesda,
+   MD 20894 ABSTRACT in greater detail its relationship to our work
+   (Aronson Recent work has demonstrated the importance of et al., [5]),
+   particularly with regard to the value of the query expansion for
+   improving retrieval effectiveness UMLS Metathesaurus for information
+   retrieval. when applying statistically-based systems to MED- Several
+   variables contribute to the final outcome in LINE® citations. The
+   research has suggested the use any IR experiment: the type of retrieval
+   system, the of retrieval feedback for enhancing the original text of
+   indexing terms, the queries, and the test collection. If users'
+   queries. As an alternative method of query two systems are to be
+   compared with regard to one of expansion, we propose the use of the
+   MetaMap pro- these variables the others must be kept constant (or gram
+   for associating UMLS Metathesaurus concepts controlled for).
+   Srinivasan's work is based on docu- with the original query. Our
+   experiments show that ments which have human-assigned indexing terms
+   query expansion based on MetaMap compares favor- associated with them.
+   Her final results are due to the ably with retrieval feedback. We
+   conclude that the accumulated effect of this indexing as well as docu-
+   optimal strategy would be to combine the two tech- ment feedback used
+   for query expansion. The results niques. reported in [5] are derived
+   from documents without reference to human-assigned indexing terms and
+   que- INTRODUCTION ries expanded through the use of the UMLS Meta- In a
+   series of recent articles Srinivasan [1-4] explores thesaurus. In order
+   to felicitously compare our method information retrieval in MEDLINE,
+   focusing on two of query expansion to Srinivasan's, both systems need
+   areas of the retrieval process, indexing [1] and query to be based on
+   the same type of indexing. Therefore, expansion [2-4]. Her results with
+   regard to query we would like to explore a comparison of our expansion
+   can be summarized by quoting from [3]: approach to Srinivasan's work,
+   concentrating on query expansion, and keeping the indexing constant In
+   brief, the best result obtained using queries by using human-assigned
+   MeSH® terms. expanded via retrieval feedback was a 11-AvgP (described
+   later) score of 0.6018. This represents QUERY EXPANSION BASED ON
+   RETRIEVAL a statistically significant 16.4% improvement FEEDBACK over
+   baseline 11-AvgP score of 0.5169 obtained with unexpanded queries. (p.
+   354) Srinivasan [1] reports on a number of experiments which illustrate
+   her overall approach. These experi- Srinivasan goes on to compare this
+   result to other rele- ments are based on a test collection produced by
+   vant work: "These papers show how the improve- Hersh et al. [6] which
+   comprises 75 queries and 2,344 ments in retrieval performance are
+   superior to those MEDLINE citations. Each citation includes a title, an
+   obtained by the alternative methods..." [3:354] In con- abstract, and
+   MeSH indexing terms assigned by trasting her work to ours Srinivasan
+   states: "In com- humans. The retrieval system used is SMART, a vec-
+   parison with the approach of Aronson et al., the tor space model
+   (Salton, [7]). All results are reported improvements achieved using
+   retrieval feedback are in terms of 11-point average precision. much
+   higher than the 4% improvement in precision that they report." [4:164]
+   In comparing retrieval feed- Query expansion (Efthimiadis, [8]) is a
+   technique for back to methods based on the UMLS Metathesaurus improving
+   effectiveness in information retrieval sys- she says: "Although the
+   metathesaurus offers an tems. Research in automatic methods, which do
+   not extremely rich vocabulary, it appears that further burden the user,
+   is of particular importance. As a innovation and research are needed to
+   make profitable means of query expansion, Srinivasan employs use of
+   this global medical thesaurus for information retrieval feedback based
+   on relevance feedback (Ide, retrieval." [4:164] We consider this
+   research to be [9]). In this technique salient terms from the top few
+   interesting and significant and would like to examine relevant
+   documents retrieved from an initial query are used to produce a second,
+   expanded query which per- In a separate study [2] Srinivasan reports on
+   query forms better than the initial, unexpanded query. Rele- expansion
+   based on a statistical thesaurus in addition vance feedback is
+   effective, but the user must choose to document feedback. The thesaurus
+   contains statisti- the documents which contribute to the expanded cal
+   correlations between MeSH terms and text and is query. In retrieval
+   feedback the system automatically consulted during retrieval in order
+   to add MeSH terms computes salient terms for inclusion in the expanded
+   to the query. The thesaurus-based query expansion query, without input
+   from the user. Tests in the context produces an increase in average
+   precision over the of the TREC experiments (Harmon, [10]) have dem-
+   baseline, but it is not as high as that achieved with onstrated that
+   retrieval feedback as a method of query feedback-based query expansion.
+   The best result expansion increases average precision, and Srini-
+   reported in [2] using a statistical thesaurus (and vasan's research
+   supports those results. MeSH-indexed documents) is 56.8% average preci-
+   In designing her experiments Srinivasan varies both sion, which is a
+   9.9% increase over the baseline of the documents and the queries.
+   Documents consist 51.7%, but only 2.2% over the average precision
+   either of text only (MEDLINE title and abstract) or attained with
+   MeSH-indexed text and unexpanded text along with the MeSH indexing
+   terms assigned to queries. As a final step, Srinivasan combines her
+   the- that document. Queries are comprised of either text saurus-based
+   query expansion with her feedback alone or are expanded with terms
+   derived from method and achieves a score of 60.5%. Since this rep-
+   retrieval feedback. The experiments which are rele- resents a 17.1%
+   increase over the baseline, it indicates vant to this study are the
+   following: a) both documents that, although the results are not quite
+   additive, and queries are text-only (this is the baseline); b) doc-
+   retrieval feedback may be profitably combined with uments contain text
+   along with MeSH indexing terms other methods of query expansion. and
+   queries consist of text-only; and c) documents We felt it would be
+   useful to explore the UMLS Meta- have both text and MeSH, and queries
+   are expanded thesaurus-based query expansion discussed in [5] in with
+   retrieval feedback. It is significant to note that the context of
+   Srinivasan's research. In our earlier the query expansion process has
+   access to the MeSH work we did not investigate the effects of applying
+   our terms in the indexed documents and thus can add query expansion
+   technique to MeSH-indexed text. appropriate MeSH terms to the text of
+   the query. QUERY EXPANSION BASED ON METAMAP Srinivasan reports
+   significant gains in average preci- AND THE UMLS METATHESAURUS sion
+   using her methodology. Average precision for retrieval of relevant
+   documents in the baseline experi- In conducting experiments parallel to
+   Srinivasan's, we ment, where both documents and queries consist of used
+   the test collection of Hersh et al. [6] and text-only, is 51.7%. Adding
+   the MeSH terms to the INQUERY (Callan et al., [11]), an inference
+   network- documents but leaving the queries unexpanded based
+   probabilistic retrieval model. This information increases average
+   precision to 55.6%, which is a 7.5% retrieval system readily
+   accommodates multiple rep- increase over the baseline. Using expanded
+   queries on resentations for both documents and queries (Rajas-
+   MeSH-indexed text further increases average preci- hekar and Croft,
+   [12]) and thus naturally supports sion to 60.2%. This represents a
+   16.4% increase over documents either with or without MeSH indexing and
+   the baseline average precision and an 8.3% increase queries in either
+   original or expanded form. over the experiment based on indexed text,
+   but with INQUERY supports a variety of document processing unexpanded
+   queries. techniques including the control of case, stopping, These
+   experiments demonstrate that both human stemming and indexing.
+   INQUERY's default behavior indexing as represented by the MeSH terms in
+   the includes ignoring case, performing stopping, employ- documents and
+   retrieval feedback contribute to the ing K-stemming and using a single
+   index for all overall improvement in average precision of 16.4% indexed
+   fields. The experiments reported here rely on over the baseline figure.
+   Apparently, each phenome- the default behavior except that Porter
+   stemming is non contributes equally to the final result. Adding used
+   instead of K-stemming. An example of a MED- human-assigned MeSH terms
+   (but leaving the queries LINE document in SGML format acceptable to
+   unexpanded) adds 7.5% to the base score (51.7% to INQUERY is 55.6%).
+   Similarly, adding retrieval feedback query _DOC_ expansion to
+   MeSH-indexed documents adds 8.3% to 2102 the score with unexpanded
+   queries (55.6% to 60.2%). Forty-nine nonsteroid-dependent children The
+   original queries are expanded using the phrases hospitalized with
+   status asthmaticus were random- and concepts found by MetaMap. This is
+   accom- ized to receive IV placebo or methylprednisolone plished by
+   forming a weighted sum of words, phrases treatment (1 mg/kg every six
+   hours). All patients and concepts using INQUERY's flexible query lan-
+   received nebulized isoetharine inhalations and con- guage. A series of
+   experiments was conducted to tinuous IV aminophylline infusion. ...
+   Findings of determine optimum relative weights. One of the best this
+   study indicate that IV corticosteroid therapy is weighting schemes is
+   to assign words, phrases and beneficial in treating pediatric status
+   asthmaticus. concepts weights of 2, 1 and 5, respectively. Follow- ing
+   is an example of an unexpanded query along with its expanded
+   counterpart augmented with these Adolescence weights (which appear
+   immediately to the left of the Asthma/*DRUG THERAPY #SUM operator).
+   Child Clinical Trials Unexpanded query: Double-Blind Method is there
+   evidence to support the use of inhaled steroids Human in COPD when the
+   patient is on intravenous steroids Intravenous Injections
+   Methylprednisolone/*ADMINISTRATION & Expanded query with weights:
+   DOSAGE/THERAPEUTIC USE #q34 = Random Allocation #WSUM ( 1 Status
+   Asthmaticus/*DRUG THERAPY 2 #SUM( is there evidence to support the use
+   of inhaled steroids in COPD when the _/DOC_ patient is on intravenous
+   steroids ) The field contains the document's ID 1 #SUM ( within the
+   test collection,

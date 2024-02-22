@@ -1,0 +1,90 @@
+http://www.dase.nist.gov/simulation.html
+
+   Group Logo
+
+
+
+   [  Home |  CIS Home  |  ITL Home  |  NIST Home  |  FAQ |  Download |
+   Documentation |  Symposium ]
+
+
+     GENERAL
+    Home
+    Project Slides
+    Disclaimer
+    FAQ
+    DASE Symposium
+    Archive
+     PRODUCTS
+    Download
+    STB Simulation
+    API Implementation
+    DASE Applications
+    Tools
+    Documentation
+     SUPPORT
+    Contact Us
+    Related Sites
+    E-support
+    NIST Information
+     PUBLICATIONS
+
+    DASE 2000 Proceedings
+    DASE 2001 Proceedings
+    DASE 2000 Slides
+    DASE 2001 Slides
+
+   NIST STB Simulation
+
+                NIST ATSC Set-top Box Simulation Environment
+
+   The NIST STB simulation is a collection of Java classes that
+   encapsulate the functions of a generic ATSC STB. These classes are
+   provided to the API implementation as services. A special class within
+   the STB simulation manages and controls access to this Java-based
+   simulation. The STB simulation is composed of two modules, the STB
+   simulation control and the Java simulation classes. The simulation
+   control boots the STB simulation and performs initialization. Tasks
+   include managing the JVM, running applications, and creating simulation
+   and HAL managers.
+
+   The Java simulation classes are largely composed of manager and
+   datatype objects. The manager objects maintain the ATSC/MPEG table data
+   as well as STB functionality. The datatype objects are constructs that
+   represent ATSC/MPEG table data, as well as data carousel objects. For
+   example, an ATSCVirtualChannel object contains the information for a
+   virtual channel. The datatype objects act as simple data repositories
+   that map ATSC data into Java types. The Java simulation also includes
+   classes to read the raw ATSC ancillary data extracted from a bitstream.
+   The NIST STB simulation does not process the MPEG transport stream,
+   however, but relies on an external program to extract the ATSC data
+   tables from that stream and provide them as input to the simulation.
+   The format of this input stream has been defined by NIST and contains
+   only updated versions of the ATSC and MPEG tables, with no audio or
+   video streams present.
+
+                              Simulation Design
+
+   The typical flow of control within the simulation modules is as
+   follows. The boot process creates a JVM, the STB Simulation Manager,
+   and HAL Data Manager. The STB Simulation Manager starts an ATSC Reader
+   object and creates the simulation data manager objects. The ATSC
+   ancillary data is read in, decoded and used to populate the simulation
+   tables. The HAL collects and merges table data and provides high-level
+   objects to the API implementation through the DataManager object. The
+   API implementation uses these objects to fulfill the requirements of
+   the API definitions.
+     __________________________________________________________________
+     __________________________________________________________________
+
+                      Privacy Statement/Security Notice
+                              Disclaimer | FOIA
+
+                          NIST is an agency of the
+                         U.S. Commerce Department's
+                         Technology Administration.
+
+              Web page comments to: webmaster@cmr.ncsl.nist.gov
+
+                           Date created: 4/18/2001
+                           Last updated: 6/29/2001

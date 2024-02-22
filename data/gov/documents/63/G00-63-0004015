@@ -1,0 +1,70 @@
+http://www-esd.fnal.gov/search/searchhelp.htm
+
+                       [compassw.gif] [searchhelp.gif]
+
+                                    Hints
+
+    Problem  Possible Solutions
+   The search found nothing when searching for a keyword.
+
+   Try an alternate spelling of the word.
+
+   Try turning SUBSTRING MATCHING on and searching for part of the word.
+   The search found nothing for several keywords.
+
+   Try separating the words with or or a combination of and and or.
+
+   Try eliminating a keyword and submitting the search again.
+
+                            Other things to check
+
+   Do not include hyphens or quotation marks in the query box.
+   Eg: A search for a "CAMAC crate controller" should be entered as this:
+
+   CAMAC crate controller
+
+   Not this:
+
+   "CAMAC crate controller"
+
+                                    Notes
+
+    1. Search Engine Response to Keywords:
+       The search engine is not case-sensitive. That is, it will convert
+       any text in upper-case to lower-case. For example, a search for the
+       word "CAMAC" or "Camac" will actually result in a search for the
+       word "camac." Since the search library does not index uppercase
+       words or characters (see 3 below), this does not restrict the
+       results of the search.
+       Also, keywords not seperated by "and" or "or" will automatically be
+       searched for using the "and" parameter. That is, the search will
+       look for documents with all of the specified keywords. For example,
+       the search "octal discriminator" will actually search for "octal
+       and discriminator."
+    2. Search Engine Response to Special Characters
+       The search engine is set to ignore any special characters such as
+       quotation marks and hyphens. Do not use a hypen in a query. Enter
+       any keywords normally hyphenated without the hyphen(s). For
+       instance, to search for "linear fan-out" you would enter "linear
+       fan out" in the query field.
+    3. Search Engine Index
+       The search engine works by searching through an index of keywords
+       from the specification pages in the Prep Catalog. The indexer
+       stores a given word (in lower case only) and the number of times it
+       occurs in a specific Web page. The Prep Catalog indexer has been
+       set to only index the FIRST page of all documents in the Prep
+       Catalog.
+    4. Query responses
+       When the Equipment Catalog Search returns a query, the set of
+       information presented to the browser should be as follows:
+          + The preferences that were set by the user for the search.
+          + The name of the document/module as a hypertext link.
+          + The path to that specific file.
+          + For each keyword:
+               o The keyword (or variations) as it appears in the index
+                 (in quotation marks)
+               o The number of times that word appears in the document
+               o The keyword as the user typed it (in parentheses)
+     __________________________________________________________________
+
+     This search system created by HEPNRC & is hosted on [hepiclogo.gif]

@@ -1,0 +1,97 @@
+http://bidug.pnl.gov/presentations/MacLellan2000/BAER2000Abstract.PDF
+
+   Hanford's Decision Level for Alpha Spectrometry Bioassay Analyses Based
+   on the Sample Specific Total Propagated Uncertainty J.A. MacLellan,
+   Radiation and Health Technology Pacific Northwest National Laboratory
+   Richland, Washington 99352. The bioassay program for the entire Hanford
+   workforce is managed by the Pacific Northwest National Laboratory.
+   Until April 2000, the decision levels by which samples containing
+   elevated quantities of radioactive material were identified were all
+   specified in the contract with the analytical laboratory as absolute
+   activity values. The contract specified an upper bound for the minimum
+   detectable activity (MDA) for each analysis (the contract limit), and
+   established the decision level at one-half the contract limit (CL). For
+   most alpha spectrometry analyses the CL was 0.02 dpm per sample. The
+   decision level was applied to the activity result, rather than the
+   count data. The detection criterion was therefore insensitive to sample
+   specific variables such as chemical yield and detector efficiency. In
+   order to select a better procedure, an investigation of the ANSI N13.30
+   and other proposed decision level equations was initiated (Strom and
+   MacLellan, 2000). The investigation concluded that the ANSI N13.30
+   equation significantly underestimates the number of false positive
+   results. The maximum number of false-positive results peaks at about
+   one background count during the counting period, but remains
+   significant up to an expected 100 counts. The ANSI N13.30 equation
+   answers the question "For a given background count rate, how large a
+   net count will be observed less than "alpha" percent of the time, if
+   there is no activity in the sample?" An equation proposed by Altshuler
+   and Pasternack in 1963 (Eq.1) was found to be far superior: 2 k k = k
+   2n a + 1+ a 1 a b Eq. 1 8n 8n b b where -1 is the decision level, nb is
+   the background count, and k is the abscissa of the standardized normal
+   distribution corresponding to the probability level 1 - . That equation
+   answers the question "How much activity can be in a sample, and the
+   confidence interval for the net count still include zero?" The decision
+   level obtained from the Altshuler and Pasternack equation remains
+   unbiased down to an expected three counts during the counting period.
+   The concept of the Altshuler and Pasternack (1963) equation was adopted
+   for the Hanford bioassay program, but an additional simplification was
+   incorporated. The actual form of the equation used in our previous
+   investigation calculates the decision level based only on the number of
+   observed background counts. However, the original form of the equation
+   used in the derivation equates the decision level with a multiple of
+   the standard deviation estimate of a net count value (-1). That is, the
+   decision level is derived from the following equation: = k n + = k 1 a
+   b n g + 2 a 1 b n Eq. 2 where ng is the gross count, nb is the
+   background count, and (ng+nb) is used as the estimate of the net count
+   variance. Equation 1 is derived by solving Equation 2 for -1. Hanford
+   uses Lc to represent the decision level, rather than -1. The Hanford
+   bioassay contract requires an estimate of the total propagated
+   uncertainty (TPU) for each result reported, and the analytical
+   laboratory uses the following equation for that calculation: t t a a C
+   + C × C + C × a ba t bt t t Eq. 3 b b 2 2 2 TPU = AC [ + + U + U + U C
+   - C C - C a ba ]2 [ t bt ]2 v t S where, (C - a C ba ) AC 1 = × ( A × C
+   - C V t ) t bt a At =Yield monitor activity Ca = gross counts in the
+   sample region of interest (ROI) Cb = gross background counts in the
+   sample or tracer ROI, as appropriate Cba = background gross counts in
+   the sample ROI for the same counting time as the sample, Cba = Cb x
+   (ta/tb). Cbt = background gross counts in the yield monitor ROI for the
+   same counting time as the sample, Cbt = (ta/tb). Ct = gross counts in
+   the yield monitor ROI. tb = background counting time in minutes. ta =
+   sample counting time in minutes. Va = sample size in the appropriate
+   reporting units. e.g. grams, kg, etc. Us = systematic procedure error,
+   typically 3% (0.03) Ut = random tracer-activity error, typically 3%
+   (0.03) Uv = random volume-measurement error, estimated to be 1.5%
+   (0.015). It is therefore simple to implement a sample specific decision
+   level based on the TPU. Rather than using equation 1 , Hanford alpha
+   spectrometry decision levels are set from equation 2, substituting the
+   TPU for the radical. A kI value of 2 was chosen in order to maintain
+   the average decision level near historic levels. The decision level
+   then takes the following simple form: LC = 2(TPU) Eq. 4 This decision
+   level has been used by many laboratories in its empirical form for many
+   years. With this equation, about two percent of the results are
+   expected to be false positives assuming a normal distribution of the
+   net count. Table 1 is a summary of data produced by a Monte Carlo
+   simulation program (Crystal Ball ) when the alpha spectrometry process
+   was modeled, and the Altshuler and Pasternack decision rule applied.
+   The model assumes a 2500-minute count time, 70% chemical yield, and 32%
+   detector efficiency. All count data are assumed to follow a Poisson
+   distribution, chemical yield a normal distribution, and detector
+   efficiency a triangular distribution. The count uncertainty is by far
+   the most significant contributor to the total propagated uncertainty.
+   The Hanford decision level methodology is expected to provide an
+   unbiased decision level at least down to 3 background counts, and will
+   not result in excessive false positive results even for detectors with
+   a background count of one. Decisioneering, Denver, CO. Table 1.
+   Estimated Decision Level (DL) and Minimum Detectable Activity (MDA)
+   Background MDA True Mean, Mean DL False Positive (5% False Negative
+   Probability) kI Counts Net Counts dpm Probability Net Counts dpm 1.645
+   1 2.7 0.0049 2.6% 10.4 0.019 2 3.7 0.0067 5.1% 12.0 0.021 3 4.6 0.0082
+   4.8% 13.5 0.024 4 5.3 0.0094 4.5% 14.9 0.027 2 1 3.3 0.0059 0.2% 12.5
+   0.022 2 4.6 0.0081 1.1% 14.0 0.025 3 5.5 0.0099 1.6% 16.2 0.028 4 6.4
+   0.0115 2.0% 17.5 0.031 References: Altshuler, Bernard and Bernard
+   Paternack, Statistical Measures of the Lower Limit of Detection of a
+   Radioactivity Counter. Health Physics 9:293-298; 1963. Strom, Daniel
+   J.and Jay A. MacLellan. Traditional Formulas For Decision Level Are
+   Wrong For Small Numbers of Counts. Health Physics (in press). (Prepared
+   in connection with work done under Contract Number DE-AC06-76RLO 1830
+   with the United States Department of Energy.)

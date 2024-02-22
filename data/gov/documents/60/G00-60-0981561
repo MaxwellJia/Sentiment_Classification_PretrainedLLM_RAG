@@ -1,0 +1,93 @@
+http://seadas.gsfc.nasa.gov/functionality.html
+
+SeaDAS Primary Functionalities
+
+    1. SeaWiFS processing programs:
+          + SeaWIFS L1, L2, L3, SMI (Standard Mapped Image) and Browse
+            products generation
+          + Level-1A to Level-0 program for renavigation
+          + Ancillary quality control display program
+          + Interactive L1 coastline registration and L2 QC
+          + L1, L2, and L3 Binned data projection
+          + L1 subscene extraction
+          + coccolithophore blooms mask generation
+    2. CZCS processing programs:
+          + L0 to L1 processing program
+          + L1 to L2 processing program
+          + L1 and L2 subscene extraction
+          + ringing mask generation program
+          + glint mask generation program
+          + coccolithophore blooms mask generation program
+          + Interactive L1 and L2 coastline registration
+          + Interactive L2 quality control program
+    3. OCTS processing programs:
+          + L0 to L1B processing program
+          + L1B to L2 processing program
+    4. MOS processing programs:
+          + L1B destriping correction program
+          + L1B to L2 processing program
+    5. General display program supports:
+
+     Input Data formats:
+
+     All SeaWiFS data products (L0 to L3-mapped products)
+     MODIS Ocean products (L1A, L1B, L2, L2A, L2B, L2 SST, L3, L4)
+     OCTS L0, L1B, L2 products, L3-Binned Mapped  (NASDA format)
+     OCTS L1B and L2 products (SeaDAS format)
+     CZCS formats :
+
+     SeaDAS
+     DAAC HDF & PST
+     SEAPAK
+
+     MOS L1B, L2 products
+
+     AVHRR SST/JPL PO.DAAC HDF formats:
+     Pathfinder Best SST (9km, 18km & 54km)
+     MCSST (18km)
+
+     SeaDAS Mapped HDF files
+
+     General HDF (any 2D SDs in an HDF file)
+
+     Binary flat files
+
+     GIF & TIFF & True Color
+
+     Sensor-specific functions:
+     Display Level-2 flags for SeaWiFS L2 products
+     Display Level-2 flags for OCTS L2 products
+     Display Level-2 flags for MODIS L2 products
+
+     Navigation Functions for all navigable data input formats:
+     Grid and Coastline graphics
+     Projection & globe spinning
+     Ship track plot and data extraction, interactive data line extraction
+     Cursor location and data displaying
+
+     General Functions for all data input formats:
+     User-controlled display scaling
+     Multiple frame buffers for image display
+     Interactive annotation generation
+     Histogram and color bar
+     Color manipulation, multiple concurrent color tables, density slicing
+     Cursor location and data displaying
+     Image data spreadsheet for raw and/or geophysical values
+     Image looping/movie
+     Scatter plot/contour plot/profile plot
+     Data display across multiple bands
+     Bathymetry generation
+     Arithmetic band functions
+     X-Y shifting
+     User-defined band operations
+     Postscript, GIF, TIFF output image formats.
+     ASCII, HDF SD and binary flat file output data formats.
+   _______________________________________________________________________
+
+   [seadas_logo.gif] This page maintained by:
+                     The SeaDAS Development Group
+                     Mark Ruebens, Robert Lindsay and Long Wang
+                     Code 970, NASA/GSFC
+                     seadas@seadas.gsfc.nasa.gov
+                     Last updated:  11/01/01
+   _______________________________________________________________________

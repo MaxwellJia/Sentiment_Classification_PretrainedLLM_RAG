@@ -1,0 +1,57 @@
+http://dial.gsfc.nasa.gov/cgi-bin/dib/dib_view/hdf?inventry.hdf&JAVA&HDF&FRAME
+
+                            Scientific Data Browser
+     __________________________________________________________________
+
+   This info came from inventry.hdf
+
+File Attributes
+
+   Attribute Name Attribute Value
+   MAXTIME
+RangeEndingTime
+
+   MINTIME
+RangeBeginningTime
+
+   MAXDATE
+RangeEndingDate
+
+   MINDATE
+RangeBeginningDate
+
+   MINLONG
+WestBoundingCoordinate
+
+   MINLAT
+SouthBoundingCoordinate
+
+   MAXLAT
+NorthBoundingCoordinate
+
+   MAXLONG
+EastBoundingCoordinate
+
+   CONFIG
+Attribute                 Datatype(output fmt)  Search  Conversion  Equivalent
+------------------------------------------------------------------------------
+LongName                        char8(80)       YES     NONE         NONE
+EastBoundingCoordinate          float32         YES     LONG         MAXLONG
+NorthBoundingCoordinate         float32         YES     LAT          MAXLAT
+SouthBoundingCoordinate         float32         YES     LAT          MINLAT
+WestBoundingCoordinate          float32         YES     LONG         MINLONG
+RangeBeginningDate              int32           YES     DATE         MINDATE
+RangeEndingDate                 int32           YES     DATE         MAXDATE
+RangeBeginningTime              int32           YES     TIME         MINTIME
+RangeEndingTime                 int32           YES     TIME         MAXTIME
+ParameterName                   char8(30)       YES     NONE         NONE
+PlatformShortName               char8(20)       YES     NONE         NONE
+SensorShortName                 char8(20)       YES     NONE         NONE
+ProcessingLevel                 char8(4)        YES     NONE         NONE
+     __________________________________________________________________
+
+Tables
+
+   There are 6 Tables visible at this level of the file:
+   [PROCESSINGLEVEL___________]
+   To select a particular table, press this button: Select Table

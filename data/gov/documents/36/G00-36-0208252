@@ -1,0 +1,88 @@
+http://hypermail.fnal.gov/check_access.html
+
+                             check_access script
+
+   The check_access script for the cdcvs.fnal.gov:/cvs/cd repository has
+   been updated to use an improved scheme for access management.   Module
+   maintainers are now capable of granting/revoking access to users
+   without the assistance of CVS administrators.
+   _______________________________________________________________________
+
+                   Granting users write acess to a module
+
+   Acess to CVS modules is now checked using an "allowed" file in the CVS
+   module check_access.d/<module>".  The allowed file contains the names
+   of users and groups of users with write permission to the module.
+   These users also have permission to add others to the "check_access.d"
+   allowed file.
+
+   To add a user to a module's allowed file:
+   1) "setup cdcvs"
+   2) "cvs co check_access.d/<module>"
+   3) edit check_access.d/<module>/allowed to include new user
+   4) "cvs commit" when sitting inside either check_access.d or
+   check_access.d/<module>
+   _______________________________________________________________________
+
+              Granting groups of users write access to a module
+
+   Groups of users may be given access to a module by placing "#include
+   <group name>"  in the allowed file of the module.
+   _______________________________________________________________________
+
+                           Adding users to a group
+
+   Groups may have members of two types:
+   1) Simple members
+           Listed in "check_access.d/groups/<group name>/members"
+   2) Members with permission to add other users
+           Listed in "check_access.d/groups/<group name>/allowed"
+
+   To add a user to a group:
+   1) "setup cdcvs"
+   2) "cvs co check_access.d/groups/<group name>"
+   3) edit either the allowed or members file in
+   check_access.d/groups/<group name>
+   4) "cvs commit" when sitting inside check_access.d/groups/<group name>
+
+   Note that other groups may be added to a group, by simply adding
+   "#include <group1>" in either the allowed or members file for <group2>.
+   _______________________________________________________________________
+
+                     Adding access files for new modules
+
+   After importing a new module into CVS, one must create an allowed file
+   for that module to grant users permission to write to the module.
+
+   1) Create an "allowed" file in an empty directory.
+               The file should contain usernames and/or "#include <group>"
+   lines.
+   2) "cvs import check_access.d/<module> fermilab initial" inside the
+   directory.
+
+   To add users to a module later (same as directions above):
+   3) "cvs co check_access.d/<module>"
+   4) Edit allowed file to add users or groups.
+   5) "cvs commit check_access.d/<module>/allowed"
+   _______________________________________________________________________
+
+                             Creating new groups
+
+   One may create a new group which consists of individuals or groups:
+
+   1) Create "allowed" and "members" (optional) files in an empty
+   directory.
+           The files should contain usernames and/or "#include <group>"
+   lines.
+   2) "cvs import check_access.d/groups/<group name> fermilab initial"
+   inside the directory.
+
+   _______________________________________________________________________
+
+   Note that in the above discussions the <module> can also be one or more
+   subdirectories below the check_access.d directory. If no such
+   subdirectory exists yet, one can be added by the usual CVS means.
+   (either a cvs import, or a cvs add, etc.)
+
+   In all cases, the contents of the head revision of the allowed and
+   members files is what counts.

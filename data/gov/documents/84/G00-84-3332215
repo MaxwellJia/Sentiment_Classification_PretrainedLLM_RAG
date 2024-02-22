@@ -1,0 +1,184 @@
+http://tuts.cit.nih.gov/powerlook_vargas/index.html
+
+                          PowerLook 3000 user tutorial
+
+Introductory notes
+
+   The UMAX PowerLook 3000 is a high-resolution flatbed scanner capable of
+   scanning both reflective and transparent media at resolutions of up to
+   3000 dots per inch. This high resolution allows users to enlarge small
+   sections of an image, as well as scan slides at page-sized
+   enlargements. (As always, try to determine your smallest necessary
+   resolution to avoid creation of overly-large scans.)
+
+   It uses an unique scanner bed that moves across the light source,
+   compared to most flatbed scanners where the light source moves across
+   the bed. When scanning reflective media, a special rubberized pad is
+   used to hold the media flat while the bed moves. For transparent media,
+   different media holders are available; x-ray films should be able to
+   stay flat while the bed moves through the slot in the front of the
+   scanner. Note that this moving bed requires that scanned items be thin
+   and flat. Otherwise, movement through the slot will be impaired,
+   possibly damaging the scanner.
+
+   When scanning 35mm slides, a special tray is used to hold up to six
+   slides at a time. The scanner is supposed to auto-detect slides and
+   select the correct areas of the scanning bed. Unfortunately, if a slide
+   is dark or underexposed, auto-detection cannot differentiate between
+   the slide frame and the slide itself. The user may need to manually
+   select the correct area.
+
+   The PowerLook scanner is often used in pre-press houses where color
+   correction is very important. As such, the PowerLook goes through a
+   calibration routine before each scan. Unfortunately, this calibration
+   step takes a fair amount of time, and is performed before each scan.
+   Patience is a virtue.
+
+Scanner software
+
+   The PowerLook comes with a Photoshop plug-in for scanning jobs directly
+   into Photoshop. It also comes with color correction software from
+   Binuscan. Both programs use a similar interface for setting resolution
+   and color depth of the scanner.
+
+   When you select the UMAX plug-in from Photoshop's File->Import menu, or
+   you select Acquire from the Binuscan software, four windows are
+   displayed: the Scanner Control window, the Scan Job List window, the
+   Info window, and the Preview Image window. Descriptions of each window
+   follows.
+
+  Scanner Control Window
+
+   [scannerctrl.gif] When accessing this window from Photoshop, use the
+   Manual Control setting. Selecting MagicMatch will give an error, and
+   using the Binuscan software is best done by launching the Binuscan
+   software directly.
+
+   The first pop-up menu selects the type of media being scanned:
+   reflective, transparent (positive or negative), or one of the special
+   transparency holder trays. Selecting one of the holder trays without
+   using that holder results in an error.
+
+   The second and third pop-up menus select the color depth and resolution
+   of the scan, using the dimensions set in the Preview Image window. For
+   example, selecting 600 dpi and setting the Preview Image dimensions to
+   4" x 5" results in a 4" x 5" 600 dpi scan, regardless of the size of
+   the selection made in the Preview Image window. If the final scan is
+   set to a large size from a small selected area, you may end up
+   surpassing the optical resolution of the scanner.
+
+   The fourth and fifth pop-up menus allow you to set descreening options
+   (when scanning in images that have already been printed using a
+   halftone screen, such as photos in a magazine or journal) and unsharp
+   masking (for images that are blurry).
+
+   The bottom section is only visible when "Manual Control" is selected.
+   Selecting "Auto" looks at the selected area in the Preview Image
+   window, tries to determine the white and black points, and sets them.
+   If there are known white and black points in the image, you may obtain
+   better results by setting them yourself with the white/black point
+   droppers in the Preview Image window.
+
+  Scan Job List window
+
+   [scanjoblist.gif] Like the Microtek Scanmaker III software, the UMAX
+   software allows you to select different areas of the flatbed and scan
+   them with different settings, creating multiple files. Each area
+   selected in the Preview Image window is listed in the Scan Job List
+   window. When the Scan button is clicked, each job is scanned and placed
+   into a new Photoshop window (or scanned to a file on disk if "Scan to
+   File" is selected).
+
+   Jobs can be duplicated, scanned to a particular folder, inspected for
+   current settings, or deleted, via the four buttons on the right of the
+   Scan Job List window.
+
+   Once jobs have been set up and adjusted, clicking the Scan button will
+   scan all jobs in the Scan Job List. With Multiple Scan selected, the
+   scanner bed returns to the top and recalibrates between each job. With
+   Batch Scan selected, all jobs are scanned in a single scanner pass.
+   Batch Scan is a quicker scanning method; however, the Multiple Scan
+   option may give better results if settings (brightness, color balance,
+   etc.) are significantly different for each job in the list.
+
+  Info window
+
+   [infopalette.gif] The Info Window displays a magnified view of
+   individual pixels under the cursor as it is moved over the Preview
+   Image. It calculates levels of RGB for each pixel; this can help you
+   determine whether a section of your image is suitable for setting the
+   white and black point. The X and Y section displays the current X and Y
+   pixel coordinate of your cursor. W and H displays the size of the
+   current job as well as the degrees of rotation. At the bottom of the
+   window, a calculation of your final scan size is displayed.
+
+  Preview Image window
+
+   [previmage_all.gif] The Preview Image window displays the preview scan
+   of the material on the scanner bed. This preview is where scanning
+   areas are selected and adjusted, thereby adding a job to the Scan Job
+   List window. The controls for previewing, selecting, and modifying the
+   scan are found at the top, left, and bottom of the Preview Image
+   window.
+
+   [previmage_top.gif] The dimensions of the currently selected area are
+   displayed at the top of the Preview Image window. Note that these are
+   the dimensions of the RESULTING scan, not the dimensions of the
+   selection. For instance, although the selected area in the Preview
+   Image screen shot above is of a 35mm slide (and therefore approximately
+   1" wide), the resulting scan will be 6.5 inches wide. These units can
+   be changed via the pop-up menu to the right of the dimensions. To keep
+   width and height proportional once a selection has been made, make sure
+   they are "chained" together via the chain graphic to their right.
+   Clicking on the chain graphic allows the selection to be resized
+   freely.
+
+   Clicking the Preview button scans a lower-resolution preview image for
+   selecting areas and adjusting scan settings. The Scan button scans all
+   jobs in the Scan Job List, and the Quit button exits the scanning
+   software.
+
+   The Proof button displays a screen-resolution preview of the currently
+   selected job, using the currently selected image modifications
+   (adjustments to brightness, contrast, white/black points, sharpening,
+   etc.). This can be useful to confirm the modifications you have made
+   prior to committing to a lengthy scan.
+
+   [previmage_left.gif] The left bar's top button is for selecting an area
+   of the preview to scan (thereby making a Scan Job that is added to the
+   Scan Job List). The second button (selection rectangle with a plus
+   sign) is for adding additional selections (scan jobs) to the set of
+   scans to perform. The third button allows rotation of a particular
+   selection, to compensate for incorrectly aligned images.
+
+   The magnifying glass and hand tool allow you to zoom in and scroll
+   within the preview image. Double-clicking with the magnifying glass on
+   the preview image zooms in to the maximum enlargement possible. Holding
+   down the Option key allows you to zoom back out, or double-click to
+   return to a "fit in window" display.
+
+   The two eyedroppers allow setting a white and black point respectively.
+   As mentioned above, using the Info window to determine lightest and
+   darkest points in your preview image can make setting white/black
+   points easier.
+
+   The "F/R" button allows you to flip/reverse an image, in the event of
+   being placed on the scanning bed incorrectly. This allows you to scan
+   the file "right reading" without having to reposition it on the
+   scanner. The next button (with the picture of the woman) toggles the
+   image between positive and negative.
+
+   [enhancement.gif] The final button brings up an Enhancement palette
+   with an array of tools for adjusting brightness, contrast, and color
+   balance of an image. The first two tabs work similarly to the Levels
+   and Curves commands in Photoshop. The last three tabs allow you to
+   adjust the color balance, either via a sampling eyedropper, a color
+   wheel selector, or via sliders similar to the Color Balance dialog in
+   Photoshop.
+
+   [previmage_bottom.gif] Finally, two controls at the bottom of the
+   Preview Image window allow you to select the desired scan resolution of
+   the preview, as well as the current magnification of the preview
+   window. Setting a higher-resolution preview scan can allow easier
+   selection of white/black points and more easily viewed Proofs, but has
+   no effect on the resolution of the final scan.

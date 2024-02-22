@@ -1,0 +1,80 @@
+http://videocast.nih.gov/McastUpgrade/multicast.html
+
+   NIH VideoCasting
+   National Institutes of Health
+   [leftmap.jpg]
+
+Supporting Multicast with RealPlayer 8
+
+   RealPlayer 8 Build: 6.0.9.450 does not properly support multicast. NIH
+   VideoCast recommends that NIH staff upgrade if their version of Real
+   Player 8 is earlier than Build: 6.0.9.584.
+
+   [about3.gif]
+     * Launch RealPlayer
+     * Select Help
+     * Select About Real Player
+
+   [real8multicast.gif]
+     * Upgrade to RealPlayer or RealOne if your version of Real Player 8
+       is earlier than Build: 6.0.9.584
+
+More Information About Multicast
+
+   Multicasting is a unidirectional communication deployed during live web
+   casts only. Clients simply listen to a data stream to join the
+   multicast. Multicasting conserves bandwidth (one 128kb stream viewed by
+   100 clients uses only 128kb of bandwidth), however, clients cannot
+   determine when the data stream starts, pause the stream without losing
+   data, or move forward or backward in the data stream. A client that
+   connects in the middle of a multicast misses half of the data stream.
+   Unicasts are data streams decoded on a one-to-one basis. Unicasting is
+   a bidirectional communication. Clients send requests to the server, and
+   each connection from client to server uses bandwidth. A 128kb data
+   stream unicast to 100 clients uses 12,800kb (12.8Mb) of bandwidth. When
+   unicasting is deployed for a past event (not a live web cast), clients
+   can determine when the data starts, move forward or backward in the
+   data stream, or pause the stream without missing any data.
+   Most of the NIH network is multicast enabled. Live events streamed to
+   computers on the NIHnet are mostly multicast, thus saving considerable
+   bandwidth. However, the same live event streamed to computers on the
+   Internet or to non-multicast enabled segments of the NIH network are
+   unicast. On-demand viewing of past events, whether on the NIH network
+   or the Internet are always unicast.
+
+How Do I Know If Multicast is Working?
+
+   [live.gif]
+     * Multicast status can be verified during a Live Event
+
+   [stats1.gif]
+     * Select View
+     * Select Statistics
+
+   [stats5.gif]
+     * Select the Streams tab
+
+   [stats2.gif]
+     * Transport Protocol : Multicast
+
+Who Should I Contact If Multicast is Not Working?
+
+   [stats3.gif]
+     * If Transport Protocol : UDP
+     * Make sure you are viewing Live Event
+     * Past Events are always unicast
+     * Make sure your computer is physically attached to the NIH network
+     * Computers with Internet connections outside of the NIH network
+       always receive unicast streams
+     * If your government-furnished computer on the NIH network is not
+       receiving multicast during a live webcast, contact CIT at
+       301-594-6248.
+
+   CIT
+
+   Center for Information Technology
+   National Institutes of Health
+   Bethesda, Maryland 20892
+   301 594 6248 (v) 301 496 8294 (TDD)
+
+   Comments

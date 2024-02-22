@@ -1,0 +1,953 @@
+http://solg2.nascom.nasa.gov/software/uguide/uguide.shtml
+
+      Software      [masthead-6.gif]
+   [masthead-5.gif]
+
+
+   [menu-top.gif]
+    Front Page
+    Scientific Ops
+    Engineering
+    Software
+     » Notes
+     » Mailing List
+     » Search
+     » Descriptions
+     » Download
+     » Calibration
+     » Fits Data
+     » Analysis
+     » User Guide
+    Results
+    Gallery
+    Atlas
+    Press
+    Links
+    Project
+    Newsletter
+    Copyright
+   [menu-bottom.gif]
+
+                An introduction to CDS data and its analysis
+
+   Latest web page revision made on Friday, 28-Sep-01 04:33:25.
+
+   Latest information update can be found here.
+
+   These notes show what is required to access CDS data, calibrate it and
+   begin to analyse the data arrays.
+   For a detailed discussion on many data-related topics, CDS Software
+   Notes . are available, and within IDL there are online routines which
+   provide help on finding and using the individual software routines.
+   If you are interested in keeping up with what's new with CDS data and
+   sharing problems/solutions you should sign up to the CDS email list.
+   Topics covered in these notes:
+     * Requesting and designing CDS observations
+     * Finding and reading the data
+     * Cleaning and calibrating the data
+     * Analysis of the data
+     * CDS Frequently Asked Questions
+     * Tricks of the trade
+     __________________________________________________________________
+
+   1) Requesting and designing CDS observations (Index)
+   The initial request. (Index)
+   Discuss your requirements with the CDS Principal Investigator . or his
+   deputy . as far in advance as possible. Once your observations have
+   been approved in principle you will be asked to submit a detailed
+   design proposal. If you have access to the planning software you may
+   perform the detailed observation design yourself, otherwise it is done
+   in consultation with the project staff . at RAL.
+
+   Details of what CDS has planned for the next few weeks/months can be
+   seen in the on-line Request Diary .
+   The detailed design. (Index)
+   CDS already has observations designed to cover most requests, but if
+   you really need to design something new then the IDL tools mk_raster
+   and mk_study can be used. You will need to download some of the
+   operations software for these routines to work.
+
+   The process of designing a CDS observation starts with the instrument
+   setup. For either spectrometer this involves deciding on:
+
+   a) The slit to be used - there are several options .
+   b) The raster area (this can be adjusted in various ways .
+   c) The exposure time for each spectrum. This depends on the source
+   target and it's best to look at existing data to judge this. Usually
+   the limiting factor is the total duration of the resulting raster and,
+   for NIS, the contamination by cosmic rays.
+   d) The line selection list for NIS (for GIS all the spectrum, apart
+   from channel #2, is downloaded). This selection should be based upon
+   the scientific goal. For NIS a maximum of 20 lines may be chosen. Often
+   though this has to be curtailed to restrict the amount of telemetry
+   needed .
+   e) The size of the data windows around each selected wavelength. Some
+   leeway is available depending on the analysis requirements, but examine
+   existing data and be aware of the effects of the extended line profile
+   wings and NIS2 asymmetry in the ability to determine background levels
+   and fit profiles.
+   f) The compression scheme. It is also possible to ameliorate the
+   telemetry situation for NIS data by compressing the data before
+   transmission. The standard option is to pack the 12 bit data into 16
+   bit words, but options are available.
+   Once preliminary choices of these parameters have been made, the
+   routine mk_raster should be used to check out the consequences in terms
+   of the overall duration of the raster. CDS has an on board store of
+   approximately 150 Kb for data coming from the detectors. If this is
+   filled during a raster then the on board timing becomes limited by the
+   rate at which telemetry can empty that buffer (~1.5 Kb/sec). Depending
+   on the amount of data read per exposure this can then lead to a sudden
+   change in the inter-exposure time within a raster.
+   If you encounter problems with planning new observations, email the CDS
+   staff at RAL.
+     __________________________________________________________________
+
+   2) Finding and reading the data (Index)
+   The first hurdle is to identify and retrieve the data files you wish to
+   analyse. If you know the file names, the data can be requested from CDS
+   staff at RAL . If you only wish to look at data use the CDS web atlas
+   (follow the ATLAS link within the CDS home page or use the CDS search
+   engine to select and display sets of data.
+   If you know the selection criteria (eg instrument, date/time, program
+   name etc.) you can select and download data from the SOHO archives
+   either at RAL or in the USA.
+   If you are at a site that has copies of all the CDS catalogue databases
+   (and their location is defined by the environment variable ZDBASE ),
+   datasets can also be identified using the command
+
+     * IDL> xcat
+
+   If any of the data files you identify in xcat are available locally in
+   a directory defined as CDS_FITS_DATA , it is also possible to read and
+   display the data within xcat.
+   On the assumption that you wish to work at a lower or programmable
+   level, the data file (using s12345r00 as an example) can be read with
+   the command
+
+     * IDL> qlds = readcdsfits('s12345r00')
+
+   This loads the data into a so-called quicklook data structure (QLDS) -
+   any name of course can be used for the variable.
+
+   Once the data have been loaded, a quick look at it and some analysis
+   can be done within various packages provided in the CDS software. The
+   QuickLook package itself (the same as is available from xcat ) is run
+   with the command
+
+     * IDL> dsp_menu, qlds
+
+   3) Cleaning and calibrating the data (Index)
+   NIS data should be cleaned to eradicate the worst effects of cosmic
+   rays hits. For example:
+
+     * IDL> cds_new_spike, qlds
+
+   Note that the routine cds_new_spike requires a minimum number of data
+   dimensions and size and so may not work on all datasets. It is also
+   fairly time consuming since it works in three dimensions of the data.
+   As a faster alternative try cds_clean_exp. For all the options
+   (excluding cds_new_spike which was written after the software note!)
+   see
+   CDS software Note 46: ,Missing Pixels and Cosmic Rays (PostScript - 244
+   Kb)
+   For most purposes the cleaned data need to be calibrated, both in the
+   sense of removing unwanted instrumental characteristics and in the
+   sense of converting the detected signal to physical units.
+   The former is achieved with the commands:
+
+     * IDL> vds_debias, qlds
+     * IDL> vds_calib, qlds
+
+   Note that in practice cds_new_spike will have run vds_debias on the
+   data itself, and furthermore so too will vds_calib if it hasn't
+   previously been applied to the data - all in all the call to vds_debias
+   is redundant!
+   To convert the data to physical units use:
+
+     * IDL> nis_calib, qlds + appropriate keywords
+
+   for example
+
+     * IDL> nis_calib, qlds, /erg, /ster
+
+   Note that nis_calib will automatically perform all the pre-calibration
+   operations if they have not been applied previously. In other words
+   only the calls
+
+     * IDL> cds_new_spike, qlds ; or equivalent routine
+     * IDL> nis_calib, qlds ; + suitable keywords
+     *
+
+   are required to clean and calibrate a suitable dataset.
+
+   4) Analysis of the data (Index)
+   Subtopics:
+     * What spectral lines and data windows were used in the observation?
+     * How do I extract a particular data window?
+     * How can I create a simple image from the spectral data?
+     * How do I retrieve a sample spectrum?
+
+   Once the data are cleaned and calibrated they can be extracted from the
+   QLDS for further analysis. There are many routines for extracting data
+   and information from the data structure, many of which are described in
+   CDS Software Note 41. (PostScript - 292 Kb)
+
+   [notes.gif] What spectral lines and data windows were used in the
+   observation?
+   (Index)
+
+     * IDL> lw = gt_wlimits(qlds, /short)
+
+   The /SHORT keyword ensures you only get a summary of the data for
+   example
+
+Window        Label         Band    Xmin   Xmax    Wmin      Wmax
+  0       HE_1_584_33       NIS2    601    618    583.25    585.24
+  1       FE_16_360_76      NIS1    750    767    360.17    361.37
+  2       MG_9_368_06       NIS1    854    871    367.50    368.70
+  3       O_5_629_73        NIS2    989   1006    628.81    630.81
+
+   The Xmin Xmax numbers give the detector start and stop pixels for each
+   data window. The wavelengths are calculated using an average
+   pixel-wavelength conversion applicable to the date of observation. The
+   table above also shows that the data windows are 18 pixels wide.
+
+   To obtain a wavelength array applicable to a particular data window (eg
+   HeI) use the pix2wave function.
+
+     * IDL> wave = pix2wave('N2', indgen(18)+ 601)
+
+   The routine gt_spectrum can also be used to extract a spectrum and
+   related wavelength arrray.
+
+   [notes.gif]
+   How do I extract a particular data window? (Index)
+
+     * IDL> data = gt_windata(qlds,N)
+
+   where N is the window index (0 to 3 in the example above). The variable
+   data will then be a data array with from 2 to 4 dimensions. The
+   dimensions are always in the order (Wavelength , SolarX, SolarY, Time).
+   The fourth dimension (Time) is only added where the observation sits at
+   the same SolarX location and takes repeated exposures. In that case the
+   SolarX dimension is retained, but only has one element.
+
+   Typically:
+
+     * IDL> data = gt_windata(qlds,N)
+
+   will give an array something like
+DATA            FLOAT     = Array[18, 120, 143]
+
+   indicating that the wavelength dimension has 18 pixels, 143 pixels (the
+   maximum) were selected along the slit (SolarY) and 120 exposures were
+   taken by stepping in SolarX.
+
+   [notes.gif] How can I create a simple image from the spectral data?
+   (Index)
+
+   The simplest ways are to average over the spectral dimension:
+
+     * IDL> image = average(data, 1, miss=-100)
+
+   or, using the QLDS rather than the extracted data array, choose a
+   specific wavelength range (w1 to w2) over which to integrate
+
+     * IDL> image = gt_bimage(qlds, w1, w2)
+
+   The resultant image can be displayed:
+
+     * IDL> plot_image, image
+
+   The last command may not give the expected display because of the
+   presence of missing data .
+
+   [notes.gif] How do I retrieve a sample spectrum? (Index)
+
+   You may wish to plot the spectrum obtained in a single exposure and at
+   a single location along the slit.
+
+     * IDL> spectrum = gt_spectrum( qlds, wind=0, xix=10, yix=20, lam=lam)
+     * IDL> plot, lam, spectrum, psym=10
+
+   or equivalently if the data array has already been extracted from the
+   data structure
+
+     * IDL> spectrum = data(*,10,20)
+     * IDL> plot, wave, spectrum, psym=10
+
+   where the wave array was defined earlier.
+
+   Various gt_xxxx routines may be packaged to define the average spectrum
+   over a given spatial area, but if the area is simply rectangular then
+   for instance
+
+     * IDL> spectrum = average(data(*,10:20,20:25),1,miss=-100)
+     * IDL> plot, wave, spectrum, psym=10
+
+   will do.
+
+   5) CDS Frequently Asked Questions (Index)
+   Data and software
+     * What software installation do I need?
+     * How do I know what data files exist
+     * What is the format of the data files?
+     * How do I know what software exists
+     * Which line fitting routines exist?
+     * How do I compare CDS images with other SOHO data?
+       Instrument performance
+     * How accurate is the intensity calibration
+     * How does the intensity calibration relate to flux, radiance and
+       irradiance?
+     * How accurate is the wavelength calibration
+     * How accurate is the pointing information?
+     * What is the spatial coverage and resolution of CDS?
+     * What is the spectral coverage and resolution of CDS?
+     * What information is available on scattered light in CDS?
+       Data features
+     * What effects should I look out for in NIS data?
+     * What are the features of GIS data?
+     * Is there an official CDS line list?
+       Miscellaneous
+     * What atomic data are available for comparison with observations?
+     * Can CDS track solar features as the Sun rotates?
+     * Where do I find further help?
+       [notes.gif] What software installation do I need? (Index)
+       We recommend the SolarSoft installation This gives access not only
+       to CDS software but software from other instruments on SOHO and
+       from other solar missions.
+       [notes.gif] How do I know what data files exist, and which ones can
+       I use? (Index)
+       CDS maintains a catalogue and atlas of all its observations. Check
+       out our data rights policy and see the section Finding and reading
+       the data on this page for details of how to search for and retrieve
+       data.
+       The CDS ATLAS of observations is available from here
+       [notes.gif] How do I know what software exists (Index)
+       A variety of on-line help is available within IDL. CDS Software
+       Notes are available, many of which deal with data analysis.
+       [notes.gif] What is the format of the data files? (Index)
+       The data from each CDS raster are stored in a FITS file as a binary
+       table.
+
+
+   [notes.gif] How accurate is the intensity calibration (Index)
+       From a comparison with Sumer data a figure of 30-40% is suggested
+       for the absolute calibration. A summary of the history and current
+       position of the calibration can be found here The calibration is
+       under continuous development.
+       Note: Recent analysis of NIS post-recovery data has resulted in the
+       following recommendation from Bill Thompson:
+       "The NIS2 sensitivity appears to be unchanged post-recovery, but
+       the exact change in the post-recovery NIS-1 sensitivity is still
+       under study, and the CDS calibration files will be updated as soon
+       as the modified calibration is available. In the meantime, I
+       suggest that line intensities in NIS-1 be multiplied by a
+       correction factor of 1.8 for all data since October 1998. This
+       correction factor appears to be independent of wavelength. Thus,
+       line ratios within NIS-1 should be unaffected."
+       Please note:
+       Following a calibration meeting in Bern in February 20001, a number
+       of issues related to photometric calibration arose. These matters
+       are being worked on. If a knowledge of the intensity calibration is
+       critical to your science analysis please contact us for the latest
+       news.
+       ------------------------------------------------------
+       UG_UPDATE:(top)
+       Bill Thompson gives an update on some calibration topics in the
+       Sept 2001 issue of the CDS Newsletter.
+       ------------------------------------------------------
+
+
+   [notes.gif] How does the intensity calibration relate to flux, radiance
+       and irradiance (Index)
+       The solar irradiance is defined as the total flux density of the
+       radiation from the entire solar disc at a distance of 1 AU. It is
+       measured in W/m^2 or erg/cm^2/s. This is also often called the
+       'solar constant' and is approximately 1368 W/m^2. When the
+       irradiance is resolved into specific wavelengths, or wavelength
+       bins, then it is called the spectral irradiance. Since the
+       wavelength is given, spectral irradiance can also be expressed in
+       photons rather than ergs.
+       Radiance is the specific intensity of a resolved feature on the
+       solar disk and is measured in W/m^2/ster or erg/cm^2/sec/sterad.
+       When CDS data are calibrated, the user has a choice of output
+       units. Using NIS data and the routine NIS_CALIB, for example, the
+       data may be calibrated into ergs/cm^2/sec/arcsec^2 by the use of
+       the command
+
+     * IDL> nis_calib, qlds, /erg
+
+   this gives the value of the radiance in each pixel. Multiplying by the
+   size of each pixel (in arcsec^2) gives the contribution of each pixel
+   to the total irradiance of the Sun. It is also the total flux in a
+   single pixel received at the position of SOHO.
+
+   The difference between radiance and flux is that radiance is
+   independent of distance while flux is not. To estimate the flux emitted
+   at the solar surface one needs to model how the radiance varies as a
+   function of direction. It is usual to assume a Lambertian surface. On
+   that assumption we may obtain the flux, at the Sun, of a solar feature
+   in a particular emission line in the following way:
+
+     * 1) IDL> nis_calib, qlds, /erg, /ster
+
+   (Units are now ergs/cm^2/sec/sterad in each spatial and spectral pixel.
+   There is also an implied "per pixel" in the spectral direction.)
+
+     * 2) Sum all the spectral pixels in the emission line, minus the
+       background.
+
+   (Units are now truly ergs/cm^2/sec/sterad.)
+
+     * 3a) Multiply by π (3.1415..) to allow for the Lambertian surface.
+
+   (Units are now ergs/cm^2/sec, representing the flux at the solar
+   surface.)
+
+   Note that taking the alternate route
+
+     * 3b) Sum all the spatial pixels in the solar feature, and multiply
+       by the size of each pixel in steradians.
+
+   (Units are now ergs/cm^2/sec, representing the flux at the instrument.)
+
+   gives a completely different result, but with the same units. This is
+   because the unit area in each case is in a different location. Using
+   step (3a) gives a flux at the solar surface, while step (3b) gives a
+   flux at the instrument.
+
+
+
+   [notes.gif] How accurate is the wavelength calibration (Index)
+
+   Although nominally CDS has a fixed wavelength range, small changes in
+   the zero point of the pixel-wavelength relation can occur, primarily
+   from on board temperature changes caused by varying illumination of the
+   structure by the Sun. The wavelength array returned by the gt_xxxx
+   functions or the pix2wave function is only an average determined from
+   sample spectra. For accurate wavelength analyses, the zero point should
+   be determined from each spectrum individually.
+
+   The calibration appropriate to a particular dataset is loaded when the
+   data file is read. If you want to know what the currently loaded
+   coefficients are, use the routine
+
+     * IDL> qwavecal
+
+   A demonstration of how the wavelength zero-point varied before the
+   optical bench temperature was stabilised can be seen here .
+
+   Note that small changes in the zero-point still occur (even during a
+   raster) and so without careful analysis no reliance should be placed
+   upon absolute or relative velocity changes of less than 10-15 km/s.
+
+
+
+   [notes.gif] How accurate is the pointing information? (Index)
+
+   CDS uses its offset pointing system (OPS) to move to any location
+   within range. This pointing has an rms of 5" or better .
+
+   When a dataset is read in using readcdsfits the pointing values in the
+   QLDS are updated according to current knowledge of the spacecraft
+   pointing - see Software Note #48 ( PostScript 87 Kb )
+
+   The reliability of the pointing has been checked from the year 2000
+   synoptic North limb rasters. The distribution of residuals of the
+   observed limb from the calculated one is shown here .
+
+   In the upper plot some large negative residuals are present, but
+   checking the raw data reveals that these result from corruption of the
+   OV limb data by filaments.
+
+   The lower distribution ignores those values and confirms that there has
+   been no degradation in the pointing which in one dimension has an rms
+   of less than 3".
+
+   The extent of the CDS pointing capability (its Field Of View - FOV) can
+   be seen using
+
+     * IDL> cdsfov, x, y
+
+   where x and y can be arrays of Solar (X,Y) locations (arcsecs from disk
+   centre) to plot on the diagram.
+
+     * IDL> cdsfov, [100,-1000],[500,2000]
+
+   produces this plot showing that the latter is an invalid location for
+   CDS.
+
+
+   [notes.gif] Which line fitting routines exist? (Index)
+
+   From launch to the loss in June 98, the CDS/NIS line profiles were very
+   closely approximated by Gaussians. A number of routines allow fitting
+   of these profiles. See the options in the QL software, the cfit package
+   described in Software note #47 ( PostScript 6.6 Mb ) and the low-level
+   routine cds_gauss. After recovery the NIS line profiles had changed.
+   See Software note #53 ( PostScript 132 Kb ) for details.
+
+
+
+   [notes.gif] What atomic data are available for comparison with
+   observations? (Index)
+
+   The CHIANTI atomic database and software have been used extensively in
+   the analysis of CDS data. See the following software notes:
+
+   33: The CHIANTI Synthetic Spectrum Program (PostScript 85 Kb)
+   37: Density and temperature diagnostic line ratios using CHIANTI
+   (PostScript 68 Kb)
+   50: DEM analysis using CHIANTI (PostScript 296 Kb)
+   52: Routines for use with the CHIANTI database (PostScript 336 Kb)
+
+   The Atomic Data and Analysis Structure ( ADAS ) is an interconnected
+   set of computer codes and data collections for modelling the radiating
+   properties of ions and atoms in plasmas and for assisting in the
+   analysis and interpretation of spectral measurements and has also been
+   used in connection with CDS data, particularly in the production of the
+   NIS linelist .
+
+
+
+   [notes.gif] What effects should I look out for in NIS data? (Index)
+
+   As with any instrument/detector system there are a few features of the
+   data produced that must be corrected for, or taken account of, in the
+   data analysis. All of the features of NIS data currently known can be
+   corrected for in the software, but users should be aware of their
+   presence to avoid drawing erroneous conclusions or over-interpeting the
+   data. The most obvious features of the NIS spectral data are
+
+     * Spectrum Rotation and Tilt
+     * Wavelength change with scan mirror position
+     * CCD flatfield
+     * MCP Burn-in
+     * Other fixed pattern effects
+     * Cosmic Rays
+     * NIS bias
+     * NIS continuum
+     * NIS data (noise) statistics
+     * Spatial offset between NIS1 and NIS2 (and GIS)
+     * Changed line profiles after recovery of SOHO
+
+   1) Spectrum ROTATION and TILT (Index)
+
+     * The dispersion directions are not parallel to the CCD rows, and are
+       slightly different for NIS1 and NIS2. This is known as ROTATION of
+       the spectrum and is caused by a slight misalignment of the grating
+       and the detector.
+     The spectral lines are not perpendicular to the dispersion direction.
+       This is known as TILT of the spectral lines and is caused by a
+       small misalignment of the grating and the slit.
+
+   Both of these features are illustrated in this diagram
+
+   If these features are not corrected they will have the following
+   effects upon the results:
+
+     * ROTATION implies that a row of CCD pixels covers different SolarY
+       values at different wavelengths. Comparison of line ratios for
+       instance would therefore be invalid since it would be comparing
+       different locations on the Sun.
+     TILT implies that the position of a spectral line (measured in CCD
+       x-pixels) will vary along the slit (SolarY direction) and would
+       give a false velocity variation in the N-S direction. The
+       calibration of tilt as a function of wavelength is shown in two
+       graphs for NIS1 and NIS2 .
+       Update:
+       It appears that the spectral line tilt may have changed
+       post-recovery. diagram shows a suggestion for updated values for
+       NIS2. If these new values are agreed, they will be loaded into the
+       databases used by the correction software.
+       Note, however, that the tilt often appears not to be a linear
+       function of position along the slit (so the values displayed are
+       only average values) and furthermore recent work by Danielle
+       Bewsher and Clare Parnell in St Andrews suggests that, for some
+       datasets at least, the tilt (cf the wavelength zeropoint) may also
+       be a function of time.
+
+   nis_rotate. corrects for these effects. Note also that when data
+   extraction windows are used in the design of a raster, their Y-pixel
+   location on the CCD is automatically calculated to take account of the
+   rotation. Consequently each data window array should have the same
+   Y-pixel/SolarY correspondence. However if the windows are very wide
+   some correction for rotation may still be necessary.
+
+   2) Wavelength change with scan mirror position (Index)
+
+   As the scan mirror rotates to provide the internal East/West spatial
+   coverage it also introduces a small non-linear change in the wavelength
+   scale zeropoint. The effect can be corrected for by again using
+   nis_rotate.
+
+   If you want to check what the correction values are as a function of
+   mirror location say, for example, for NIS2 data taken in early 1996,
+   try:
+
+     * IDL> get_mirshift, 2, '1996/1/1', mcoff
+     * IDL> mirr_pos = gt_mirrpos( qlds )
+     * IDL> mirr_corr = poly( mirr_pos-128., mcoff)
+
+   3) CCD flatfield (Index)
+
+   The sensitivity of the NIS CCD varies from pixel to pixel by a few
+   percent. In order to eliminate this effect the routine vds_calib
+   divides each exposure by a flatfield array which was determined in the
+   laboratory before launch. Because of a slight shift of the alignment
+   during launch, the laboratory flatfield array had to be modified after
+   launch and while it does a pretty good job, some small residual
+   inaccuracies persist.
+
+   In flight it is possible to take data which can approximate a uniform
+   exposure of the detector by moving the OPS while the camera is exposing
+   with the wide (90"x240") slit. A useful signal is of course only
+   detected in the spectral position of the brighter lines. An example of
+   this and of how such in-flight flatfields can be used if necessary for
+   very accurate flatfielding is shown in this display .
+
+   4) MCP Burn-in (Index)
+
+   The detector for NIS consists of a micro-channel plate (MCP)
+   intensified CCD. The MCP suffers from degradation when exposed to
+   radiation such that its sensitivity declines exponentially with photons
+   detected (or, almost equivalently, with time).
+
+   Since the CDS spectral format is fixed, the emission lines fall more or
+   less on the same area of the MCP all the time and the brightest lines
+   affect the MCP the most, resulting in BURN-IN , which is a region of
+   reduced sensitivity on the detector.
+
+   Special observations are taken to try and track the progress of the
+   burn-in and the variation of sensitivity with MCP/CCD location and time
+   is recorded in a database and a suitable correction applied in the
+   routine vds_calib
+   .
+
+   After the SOHO recovery the location of the NIS spectra on the MCP had
+   changed and so a new burn-in correction was established and is being
+   monitored. Details are given in CDS software note 51
+   The VDS Burn-in calibration (PostScript 7 Mb)
+
+   This plot shows a recent (July 2000) 'flat-field' exposure at the
+   wavelength of HeI 584 Å. On the left is the raw data, showing the
+   pre-loss and the current (to the right) burn in of that line. The
+   profile of the image is overlayed - notice that the post-recovery burn
+   in is already larger (at about 50%) than pre-loss. The image on the
+   right shows the same data after the standard corrections have been
+   applied.
+
+   5) Other fixed pattern effects (Index)
+
+   The NIS1 readout electronics create a low-level fixed-pattern effect in
+   the spectrum. Every fourth pixel appears to have a lower count than
+   expected. The effect is illustrated in this diagram. The effect is also
+   corrected for in the routine vds_calib.
+
+   Note also the first and last two columns of CCD data should not be used
+   in analysis. This only becomes relevant when the full spectrum is
+   extracted or data windows cover the extreme columns of the CCD (as
+   possibly in the OV 629A line in post-recovery data).
+
+   6) Cosmic rays (Index)
+
+   While the NIS is exposing, particles hit the CCD and release electrons
+   which are then counted as signal when the CCD is read out.
+
+   A recent paper (PostScript 284 Kb) gives details of the longterm
+   detection of cosmic rays by the CDS CCDs. The main figure shows that
+   the count had declined by approximately 45% since launch owing to the
+   increased strength of the heliospheric magnetic field at solar maximum.
+   During that time 1-2% of pixels on the CCD are affected by cosmic rays
+   in a 100 second exposure.
+
+   It is advantageous, before proceeding with any analysis, to identify
+   which pixels are affected and to either mark them as missing data . or
+   to replace them with interpolated values.
+
+   Several routines are available to perform this process. They are
+   described in CDS Software Note 46
+   Missing pixels and cosmic rays (PostScript 244 Kb)
+
+   Note that the routine cds_new_spike has beed added since that software
+   note was written.
+
+   7) NIS Bias (Index)
+
+   The NIS CCD readout electronics adds a constant value to the readout
+   data to make sure the data values are well clear of any low-level
+   effects. This is known as the BIAS level, and this value must be
+   subtracted from the data value before any further (multiplicative)
+   operations are applied to calibrate the data.
+
+   The bias level can change slightly as the characteristics of the
+   electronic components vary. The level is therefore monitored on each
+   exposure by reading out four small areas (10 x 10 pixels) of the
+   unilluminated CCD. The subtraction is performed by the routine
+   vds_debias and in a raster the bias is subtracted on an
+   exposure-by-exposure basis. Since there is noise on this value, this
+   can cause apparent variations if very low signal levels are being
+   compared from exposure to exposure or from raster to raster.
+
+   The bias level has been known to vary slowly with time since launch.
+   Note, however, that it seems to have been very stable since recovery.
+
+   One instance has also been noted when the bias varied abruptly .
+
+   During the year 2000 two abrupt changes in the bias occurred. These
+   coincide with proton storms reaching SOHO on July 14 and November 9.
+   Further interruptions for storms in 2001 do not appear to have had a
+   similar effect!
+
+   If rasters are designed without the inclusion of the bias windows (a
+   user option) then a suitable bias value must be supplied manually to
+   the vds_debias routine.
+
+   The bias levels recorded within a raster's exposures can be plotted:
+
+     * IDL> plot_vds_bias, qlds
+
+   8) NIS continuum
+   (Index)
+
+   After de-biasing the spectra, there will usually remain a non-zero
+   continuum. This is largely scattered light coming from outside of the
+   NIS wavebands. The main contributors are probably the Lyman-alpha 1216
+   Å line, the Lyman continuum, He II 304 Å and perhaps strong coronal
+   lines such as Fe IX 171 Å. The scattering arises from the grating in
+   the spectrograph.
+
+   Note that after de-biasing, the continuum is fairly uniform across the
+   NIS wavebands. When you perform the calibration, however, you will see
+   some fairly large variations with wavelength, particularly in NIS1
+   where the continuum will rise up at low wavelengths. This is just an
+   artifact of the calibration process.
+
+   Note also that the scattering has a strong spatial variation along the
+   slit and is dependent upon the solar features under the slit. One
+   consequence of this is that if the intensity data are simply averaged
+   or summed over the line window, without any attempt at background or
+   continuum subtraction, the resulting image may show faint spatial
+   features which are not at all related to the line in question.
+
+   See also the notes about scattered light under the Instrument
+   Performance section.
+
+   9) NIS data (noise) statistics (Index)
+
+   Since the NIS detector is not a photon-counting system, the data
+   statistics cannot be derived from the raw data numbers alone. However,
+   it is possible to derive the correct counting statistics and this is
+   explained in
+
+   CDS Software Note #49 Deriving Statistics from NIS data (PostScript 174
+   Kb) .
+
+   10) Spatial offset between NIS1 and NIS2 (and GIS) (Index)
+
+   Both NIS1 and NIS2 use the same entrance slit to the spectrograph.
+   However, there appears to be a N/S offset, sometimes amounting to
+   several arcseconds, between the solar features that NIS1 sees and those
+   that NIS2 sees.
+
+   A more detailed discussion is available.
+
+   If you want to see what the 'official' value of the offset is for any
+   particular observation (it's a function of date and CDS (X,Y)
+   location), try:
+
+     * IDL> gt_nis_alignment, qlds, x, y & print,x,y
+
+   where x and y are the offset of NIS1 relative to NIS2 in arcseconds.
+
+   Note that the routine nis_rotate has been modified to include a call to
+   gt_nis_alignment if the /ALIGN keyword is set.
+
+   See an example of the effect.
+
+   Note: There is also an offset between the imaging of NIS and GIS. GIS
+   images appear approximately 13" south of their NIS equivalents.
+   Specific (X,Y) pointings for GIS should therefore be 13" south of the
+   values determined by the software (image_tool for instance).
+
+   11) Changed line profiles after recovery of SOHO (Index)
+
+   The bakeout that CDS suffered during the SOHO loss changed the line
+   profiles produced by the NIS spectrometer. The NIS1 profiles exhibit
+   broader wings and the NIS2 profiles show a broadened and asymmetrical
+   long wavelength wing.
+
+   The new profiles were characterised, and the fitting software modified
+   to cater for them, as described in CDS Software Note #53 ( PostScript
+   132 Kb ).
+
+   [notes.gif] What are the features of GIS data? (Index)
+
+   The GIS has four SPAN detectors positioned around the Rowland circle of
+   the grating. Currently detector #2 (the one covering the HeII 304 Å
+   line) is not operational.
+
+   Each detector provides a 2048 pixel one-dimensional spectrum with
+   complementary wavelength ranges . Since the GIS optics are astigmatic a
+   small slit (2"x2" or 4"4") must be used and rasters are built up by
+   scanning both the internal mirror (E-W) and the slit (N-S).
+
+   The setup of the detector is dependant upon the feature to be observed.
+   Loading a new setup requires approximately 20 minutes of on board CPU
+   time so it is unwise to plan observations that require frequent
+   switching between different sources. Contact the GIS team for advice if
+   you are planning some GIS observations.
+
+   Detailed information on handling GIS data can be found in the following
+   CDS Software Notes:
+
+   54: CDS-GIS Instrument Guide (PostScript 3 Mb)
+   55: GIS Software User Manual (PostScript 465 Kb)
+   56: GIS Calibration Details (PostScript 1 Mb)
+
+
+
+   [notes.gif] How do I compare CDS images with other SOHO data? (Index)
+
+   It is possible to make maps from CDS data which have the pointing
+   information associated with them and then to compare those with data
+   from other instruments. The package of programs is described at Dominic
+   Zarro's web site. quick example of how to create a map object from CDS
+   data.
+
+
+
+   [notes.gif] Is there an official CDS line list? (Index)
+
+   Brooks et al. have compiled a quiet Sun line list for NIS and here .
+
+   There is also a line list created from the CHIANTI database.
+
+   Some spectra from previous solar missions that may be useful for
+   identifying lines in NIS spectra are:
+
+     Thomas & Neupert, ApJS 91, 461, 1994. Active region, 170-450 AA.
+
+     Dere, ApJ 221, 1062, 1978. Flare 171-630 AA.
+
+     Feldman et al. ApJS 113, 195, 1997. Above limb 500-1610 AA.
+
+     Vernazza & Reeves, ApJS 37, 485, 1978. Various 280-1350 AA.
+
+   [notes.gif] What is the spatial coverage and resolution ofCDS? (Index)
+
+   The internal scan mirror and slit movement of CDS allow CDS rasters to
+   cover a maximum area of 4' square within a single raster. The E-W
+   coverage is created by the scan mirror which can move in steps of 2.03"
+   (normally assumed to be 2"). Movement can only be in one direction from
+   West to East.
+
+   In NIS the N-S coverage is usually provided by the long slit (normal
+   slits are 2"x240" or 4"x240"). For GIS the N-S dimension is scanned by
+   moving one of the small square slits which can move in steps of 1.01"
+   (normally assumed to be 1"!).
+
+   The whole CDS instrument can be pointed anywhere on the solar disk by
+   use of the Offset Pointing System (OPS). The area reachable can extend
+   out to a maximum 1.4 solar radii in certain directions. See the
+   procedure cdsfov for details.
+
+   The paper
+ Intercalibration of SUMER and CDS on SOHO. I. SUMER
+        Detector A and CDS NIS.
+        Pauluhn, A., Ruedi, I., Solanki, S., Lang, J., Pike, C.D.,
+        Schuele, U., Thompson, W.T. and Huber, M.C.E.
+        1999, Applied Optics 38, 7035.
+
+   derive the Point Spread Function (PSF) for CDS/NIS from a comparison
+   with Sumer data. They suggest
+
+                                  [PSF.gif]
+
+   where J is the first-order Bessel function and the parameter b has a
+   value of 0.31 giving a slightly elliptical form with FWHM(x) = 6" and
+   FWHM(y) = 8". Their data were taken with the 4" wide slit and it is
+   possible that a slightly better spatial resolution (in SolarX) is
+   achievable in pre-loss data which used the 2" slit.
+
+   A discussion of the post-recovery PSF . is also available.
+
+   [notes.gif] What is the spectral coverage and resolution of CDS?
+   (Index)
+
+   Information on the spectral coverage and resolution of NIS is given
+   here. After the SOHO recovery the NIS line profiles changed, exhibiting
+   extended wings and an asymmetry in the NIS2 profiles. The software was
+   modified to permit fitting of these new profiles and is described in
+   CDS Software Note 53:
+   Post-recovery broadened line profiles (PostScript 128 Kb)
+
+   The PSF of the spectrograph (as opposed to the telescope) optics
+   affects the line profiles and can, if asymmetric, affect the
+   interpretation of velocity information. This is discussed in a paper by
+   S. V. H. Haugan
+
+   Anomalous Line Shifts from Local Intensity Gradients on the SOHO/CDS
+   NIS Detector (Solar Physics 185, 275, 1999)
+
+   where it is predicted that the NIS spectrograph PSF must be slightly
+   elliptical and rotated. From NIS observations taken with the small
+   2"x2" slit, this indeed appears to be the case.
+
+   See the routine CDS_CORR_GRADIENT for a possible correction technique.
+
+   Information on the spectral coverage and resolution of GIS is given
+   here . The temporary loss of SOHO appears to have had little effect
+   upon the spectral characteristics of GIS.
+
+   [notes.gif] What information is available on scattered light in CDS?
+   (Index)
+
+   Some pre-flight information is available in
+
+   Harrison et al (1995), Solar Physics, 162, 233.
+
+   which gives results for measures at a wavelength of 68 Å.
+
+   For a scientific application and extension of this to CDS observed
+   wavelengths see
+
+   David et al (1997), Fifth SOHO Workshop, SP-404, Page 313.
+
+   Routines to calculate the amount of scattered light and an explanation
+   of how to apply them are available.
+
+   [notes.gif] Can CDS track solar features as the Sun rotates? (Index)
+
+   Yes and no!
+
+   Please read software note #45 for details, but remember the "feature
+   tracking" option cannot be relied on to give stable pointing at the 2"
+   level. Remember also the difference between feature tracking and
+   rotation compensation.
+
+   [notes.gif] Where do I find further help? (Index)
+
+   If you have further questions about CDS data please contact the project
+   staff.
+
+6) Tricks of the trade (Index)
+
+   If you would like to advertise (and be given credit for) any
+   tricks/titbits you've discovered about dealing with CDS data please let
+   us know.
+
+   As a start, see these points that have been notified to us.
+
+   Watch out for NIS second order lines contributed by Enrico Landi.
+   Beware the NIS FeXIII density diagnostic contributed by Peter Gallagher
+   and Ken Phillips.
+   Deriving density, temperature and abundances contributed by Peter
+   Young.
+
+
+   This site is provided by the CDS Mission Operations Management Team at
+   the CLRC Rutherford Appleton Laboratory (UK).
+   It is maintained by Jeff Payne.
+   Last revised on Friday (28/Sep/2001) at 04:33.

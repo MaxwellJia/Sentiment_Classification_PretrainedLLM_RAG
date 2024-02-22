@@ -1,0 +1,92 @@
+http://glovis.usgs.gov/FAQ5.shtml
+
+   [USEMAP:edcbanner.jpg]
+
+   ***You have Scripting turned off in your browser**
+     This site uses Javascript to view the navigation of the site. If you
+     would like to use this feature, you will need to turn on your scripting
+     abilities for your browser. If you wish, you can find the same
+     information at: http://edc.usgs.gov/sitemap.html
+
+USGS Browse Image Viewer - Frequently Asked Questions
+
+  Question: Why are the Landsat 7 Browse Image colors so unusual?
+
+   Answer:
+          Color stretch is performed on the raw data upon ingest from the
+          satellite by Ground Station systems on a scene-by-scene basis
+          before being delivered to this system. Scenes in the same path
+          from the same acquisition date may vary due to their individual
+          image content for bands 5,4,3. For example, more or fewer
+          clouds, more or less water.
+
+  Question: How do I know where I am?
+
+   Answer:
+          The shaded relief map of the world in the lower left corner
+          displays a green icon to show "You are here". While your cursor
+          is in the locator map, the location is displayed in the browser
+          status bar, both in latitude/longitude and path/row units.
+          Clicking on this locator map will "teleport" the viewer to that
+          location.
+
+  Question: Why are some scenes cloudy when the cloud cover is 0% ?
+
+   Answer:
+          The cloud cover index is automated calculation, base on scene
+          content. This algorithm gets fooled by snow, ice, water, or
+          other unusual scene content. Haze and small or thin clouds can
+          get missed. This is an estimate only.
+
+  Question: What is this Map Projection Stuff, and why are some of the images
+  side-ways?
+
+   Answer:
+          Lambert Azimuthal Equal Area will produce more skewing near the
+          edges of a region. Just remember that North is pointing from
+          path to path-1, not necessarily towards the top of your page.
+
+  Question: Why such long response times?
+
+   Answer:
+          Nine graphic images of 30-40K each may take from a few seconds
+          up to 1.5 minutes, depending upon your internet connection. Once
+          a set is cached, response should be more interactive.
+
+  Question: Why do some images seem to change colors half-way through a scene?
+
+   Answer:
+          These are gain-changes in the sensor, which are done purposely.
+          When ordering Landsat 7 data, a calibration parameter file
+          containing all relevant gain change information is used to to
+          process the data. So, the appropriate gain and bias values are
+          incorporated and these artifacts do not exist in an actual Level
+          1 product.
+
+  Question: Why does the image browser web page display become corrupted when
+  the browser window is resized?
+
+   Answer:
+          This appears to be a bug with Netscape 4.x on many platforms. No
+          other tested browser shows this behavior. Pressing the "refresh"
+          button will properly redisplay the page.
+     __________________________________________________________________
+
+   Back to USGS Browse Image Viewer Home
+
+   Skip past USGS Links DOI USGS HOME Biology Geology Mapping Water EROS
+                                                                    HOME
+     __________________________________________________________________
+
+
+    U.S. Department of the Interior| U.S. Geological Survey (USGS)
+    Please read this general Disclaimer
+    URL: http://glovis.usgs.gov/
+    Maintainer: EDC Web Master email at edcweb@usgs.gov
+    Last Update: Tuesday, January 22, 2002
+    USGS Privacy Statement|Accessibility
+
+   Link to the FirstGov Web Site
+
+   A javascript is located here that grabs the window location and places
+   it into a hidden input value.

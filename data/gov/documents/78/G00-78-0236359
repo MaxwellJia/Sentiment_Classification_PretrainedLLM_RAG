@@ -1,0 +1,858 @@
+http://bidug.pnl.gov/references/wsrc-mm-2000-00097.pdf
+
+   WSRC-MM-2000-00097 August 8, 2000 The New ICRP Respiratory Tract And
+   Systemic Models Thomas R. La Bone Westinghouse Savannah River Company
+   Savannah River Site Aiken, SC 29808 The New ICRP Respiratory Tract and
+   Systemic Models Thomas R. La Bone Westinghouse Savannah River Company
+   Savannah River Site Aiken, SC 29808 WSRC-MM-2000-00097 August 8, 2000 1
+   Overview * Review respiratory tract models  ICRP 66  ICRP 30  ICRP 2
+   NCRP 125 * Benchmark ICRP 66 respiratory tract model * Review systemic
+   models  ICRP 2  ICRP 30  ICRP 56 series * Benchmark ICRP 66/67 Pu-239
+   model * Discuss practical applications of the new ICRP models 2
+   Characteristics of All Four Lung Models * Anatomy and Physiology *
+   Deposition * Clearance * Dosimetry To some extent, all models are wrong
+   3 ICRP 2 * Issued in 1959 in ICRP 2, "Permissible Dose for Internal
+   Dosimetry" * Designed for deriving secondary limits for adult radiation
+   workers 4 Deposition and Clearance 0.500 0.125 0.125 Upper Lower Lower
+   Respiratory Respiratory Respiratory Tract Tract Tract a b 120 day
+   within immediately halflife 24 hours Stomach Blood Stomach 5 Lung
+   Dosimetry Lung E = E - g f ( s x 1- e ) 10 cm 6 Limitations of Model *
+   Does not define the anatomy of the respiratory tract * Does not fully
+   define the kinetics of lung clearance * Does not address the dependence
+   of clearance on the solubility of the material * Does not address the
+   dependence of deposition on particle size * Does not address cross fire
+   from other source organs * Treats the lung as a single 1000-gram organ
+   7 However The ICRP 2 lung model was used to derive Maximum Permissible
+   Concentrations (MPCs) for air that were used with great success to
+   protect radiation workers for over 30 years. 8 ICRP 30 * Issued in 1978
+   in ICRP 30, "Limits for Intakes of Radionuclides by Workers" * Designed
+   for deriving secondary limits for adult radiation workers * Based on
+   the 1966 report of the Task Group on Lung Dynamics * Designed to
+   improve on ICRP 2 model while retaining its simplicity  Deposition
+   model accounts for aerosol size  Clearance model addresses solubility
+   Completely defined kinetics 9 Anatomy and Physiology * nasal passage
+   (NP region) * trachea and bronchial tree (TB region) * pulmonary
+   parenchyma (P region) 10 Lung Deposition * Deposition in each of the
+   regions depends on the activity median aerodynamic diameter (AMAD) of
+   the aerosol 1 µm 1 µm aerodynamic sphere diameter particle 11
+   Deposition Model 99.999% 99.99% 99.9% 99% NP 90% P 70% 50% 30%
+   Deposition 10% TB 1% 0.1% 0.01% 0.001% 10-1.0 2 3 4 5 6 7 100.0 2 3 4 5
+   6 7 101.0 2 Particle Size (microns) 12 Default Deposition * Aerosol
+   AMAD of 1 µµm is assumed for occupational exposures  Deposition in the
+   NP region DNP is 0.30 of the inhaled aerosol  Deposition in the TB
+   region DTB is 0.08 of the inhaled aerosol  Deposition in the P region
+   DP is 0.25 of the inhaled aerosol  Total deposition is 0.63 of the
+   inhaled aerosol 13 Clearance Model a NP b S blood c TB d e f i P lymph
+   h g j 14 Lung Clearance Classes * Class D - cleared from P region in
+   less than 10 days (0.5 day default) * Class W - cleared from the P
+   region in less than 100 days but more then 10 days (50 day default) *
+   Class Y - cleared from the P region in more than 100 days (500 day
+   default) 15 Model Parameters for Class Y Material Halflife Compartment
+   (days) Fraction a 0.01 0.01 b 0.4 0.99 c 0.01 0.01 d 0.2 0.99 e 500
+   0.05 f 1 0.4 g 500 0.4 h 500 0.15 I 1000 0.9 j 1.00E+10 0.1 16 System
+   of ODEs dNa = IDNP fa -kaNa dt dNb = IDNP fb -kbNb dt dNc = IDNP fc
+   -kcNc dt 17 Solving ODEs * Laplace transforms * Recursive algebraic
+   solutions (Skrable's Dragon) * Numerical ODE solvers  MathCad
+   Mathematica  Maple * MathCad example for Pu-239 18 Dose Equivalent HT =
+   c Us,j ( SEE T S)j s j 19 Specific Effective Energy SEE(T S) R Q ER R Y
+   AF(T S) = R R MT SEE(lung lung) = ( 6. 1 ×10 10 - )(20)( 15 . 5 MeV)
+   1000g SEE lung ( lung) = 648 . 1 ×10 11 - Sv/ decay 20 SEE, Decays, and
+   Dose LaBone ICRP 30 SEE (Sv/decay) 1.648E-11 1.6E-11 Decays 1.925E+07
+   1.9E+07 Lung DE (Sv) 3.172E-04 3.0E-04 Lung DE is listed in ICRP 30 as
+   3.2E-4 Sv/Bq 21 Effective Dose Equivalent He = iwHi i Weighting factor
+   for the lung is 0.12 22 Limitations of Model * Lung is a single
+   1000-gram organ * Ignores dose to NP region * Conservative model
+   designed for adult radiation workers * Not designed for evaluating
+   bioassay data 23 NCRP 125 * Issued in 1997 in NCRP 125, "Deposition,
+   Retention and Dosimetry of Inhaled Radioactive Substances" * Different
+   than the ICRP 66 model * Recommends the use of ICRP 66 model for
+   radiation protection * Uses non-linear kinetics * Not intended for
+   interpretation of bioassay data 24 ICRP 66 * Issued in 1994 in ICRP 66,
+   "Human Respiratory Tract Model for Radiological Protection" 25 Goals of
+   ICRP 66 * "provide a realistic framework for modeling lung retention
+   and excretion characteristics in an individual case, and the resulting
+   lung and systemic organ doses, based on bioassay data; * take account
+   of factors such as cigarette smoking and lung disease which influence
+   lung retention; * enable knowledge of the dissolution and absorption
+   behavior of specific materials to be used in the calculation of lung
+   dose, systemic absorption and excretion; 26 * apply explicitly to all
+   members of the population, giving reference values for children aged 3
+   months, 1, 5, 10, and 15 years, and for adults; * apply to gases and
+   vapors as well as particulates, and in all cases; * calculate
+   biologically meaningful doses in a manner that is consistent with the
+   morphological, physiological, and radiobiological characteristics of
+   the various tissues of the respiratory tract." A. C. James ICRP Task
+   Group on Lung Model 27 ICRP 66 Lung Model åAnatomy and physiology
+   çDeposition éClearance èDosimetry 28 å åAnatomy and Physiology
+   Extrathoracic Region * ET1 - anterior nose * ET2 - posterior nose,
+   mouth, pharynx, larynx * NP region in ICRP 30 Model 29 Thoracic Region
+   * Bronchial region (0-8)  BB or BBi * Bronchiolar region (9-15)  bb or
+   bbe  TB region (with BB) in ICRP 30 model * Alveolar-interstitial
+   region (16-26)  AI  P region in ICRP 30 model 30 31 Physiology * Tidal
+   volume VT  inhale-exhale volume  1250 mL for light exercise  750 mL for
+   sitting * Functional residual capacity FRC  volume left on exhale  3301
+   mL * Anatomical dead space  volume of airways that do not exchange
+   gases  146 mL * volumetric flow rate  twice breathing rate  833
+   mL/second for light exercise  300 mL/second for sitting 32 ç
+   çDeposition * Deposition model is empirical * Applicable to 0.0005 µµm
+   to 100 µµm AMAD aerosols * Takes into account  physical exertion
+   gender  age  ethnic origin  body size * Can give ranges for regional
+   deposition * Quite complex 33 Series of Filters PF ET1 ET2 BB bb AI
+   Inhale 0 1 2 3 4 5 Exhale 6 9 8 7 ET1 ET2 BB bb 34 Characteristics of
+   Filters Each filter has * a filtration efficiency, (eta) * a volume, v
+   function of physiological parameters 35 Deposition Processes Particles
+   are caused to impinge on the surfaces of the respiratory tract by two
+   different processes: * aerodynamic  particles carried by airflow
+   dominate with larger particles (>1 µµm)  characterized by aerodynamic
+   equivalent diameter, dae * thermodynamic  particles moved by Brownian
+   motion  dominate with smaller particles (<0.1 µµm)  characterized by
+   thermodynamic diameter, dth 36 Dual Properties All particles have both
+   aerodynamic and thermodynamic properties. For example, for a 5 µµm dae
+   aerosol 5mmdae = 35.mmdth 37 Filtration Efficiency h = input - output
+   input input output 38 Calculating The filtration efficiency is
+   calculated using empirical equations like the one shown below: h = - -
+   1 e aR p where a, R, and p are parameters supplied in ICRP 66. 39 th
+   for 5 µµm dae aerosol Filter Region a R p 1 ET1 18.0000 1.343E-08
+   0.5000 0.0010 2 ET2 15.1000 1.343E-08 0.5380 0.0009 3 BB 60.1773
+   5.049E-09 0.6391 0.0003 4 bb 90.2000 4.833E-09 0.5676 0.0017 5 AI
+   273.0000 9.247E-08 0.6101 0.0139 6 bb 90.2000 4.833E-09 0.5676 0.0017 7
+   BB 60.1773 5.049E-09 0.6391 0.0003 8 ET2 15.1000 1.343E-08 0.5380
+   0.0009 9 ET1 18.0000 1.343E-08 0.5000 0.0010 40 ae for 5 µµm dae
+   aerosol Filter Region a R p 1 ET1 3.000E-04 2.083E+04 1.0000 0.4310 2
+   ET2 5.500E-05 2.083E+04 1.1700 0.8613 3 BB 4.080E-06 2.083E+04 1.1520
+   0.3197 4 bb 1.147E-01 1.735E+00 1.1730 0.1966 5 AI 1.460E-01 3.205E+01
+   0.6495 0.7504 6 bb 1.147E-01 1.735E+00 1.1730 0.1966 7 BB 2.040E-06
+   2.083E+04 1.1520 0.1752 8 ET2 5.500E-05 2.083E+04 1.1700 0.8613 9 ET1
+   3.000E-04 2.083E+04 1.0000 0.4310 41 Total Filtration Efficiency 11 / h
+   2 2 1 2 1 = (hae +hth ) / h 2 2 1 2 1 = (0 4310 . + 0 0010 . ) h1 = 0
+   4310 . 42 Prefilter * The nasal opening is a prefilter having no volume
+   and a filtration efficiency of 0 * The prefilter filtration efficiency
+   is the complement of the inhalability I * Inhalability is the ratio of
+   the concentration CI of particles in inspired air to the concentration
+   CA of particles in ambient air h CI I = CA h 1 0 = - hI 43 Total
+   Filtration Efficiency For a monodisperse aerosol with an aerodynamic
+   equivalent diameter (dae) of 5 µµm, the filtration efficiencies are: .
+   3.221 10 2 0.7506 0 5 0.4310 0.1966 1 6 0.8613 0.1752 2 7 0.8613 0.3197
+   8 3 0.1966 0.4310 4 9 44 Filter Volume for Light Exercise v 0 v . 47 1
+   1250 v v 0 4 3301 7 3 v 0 v v 1 v = 64.798 8 2 4 v 50 2 v 1250 v v 5 9
+   1 v . 49 1 1250 3 3301 v v 6 4 v = 67.555 3 45 Volumetric fraction f0 =
+   1 k 1 - v i f i=0 k = 1- ,k = 1to5 T V fk = f10-k ,k =6to9 46 1 1 9 1 1
+   2 8 2 v 1 2 = 0.96 3 V 3 7 3 T v v 1 2 3 = 0.906 4 V 4 6 4 T v v v 1 2
+   3 4 = 0.854 5 V 5 T 47 Deposition Fraction i-1 i DE =hi fi (1-hk ) k =0
+   48 DE . 1 1 1 0 DE = 1 4.171 10 1 DE . . 2 2 1 0 1 1 DE = 2 4.743 10 1
+   v DE 1 2 . . . . 3 DE V 3 1 0 1 1 1 2 = 3 2.344 10 2 T v DE . 2 v3 . 1
+   . . . 4 4 1 DE V 0 1 1 1 2 1 3 = 4 9.255 10 3 T v DE . 2 v3 v4 . 1 . .
+   . . 5 5 1 DE V 0 1 1 1 2 1 3 1 4 = 5 2.676 10 2 T 49 v DE . 2 v3 v4 . 1
+   . . . . 5 5 1 DE V 0 1 1 1 2 1 3 1 4 = 5 2.676 10 2 T v DE . 2 v3 . 1 .
+   . . . . 6 6 1 DE V 0 1 1 1 2 1 3 1 4 1 5 = 6 1.854 10 3 T v DE . 2 . 1
+   . . . . . . 7 7 1 DE V 0 1 1 1 2 1 3 1 4 1 5 1 6 = 7 1.407 10 3 T DE .
+   1 . . . . . . . 8 8 0 1 1 1 2 1 3 1 4 1 5 1 6 1 7 DE = 8 5.942 10 3 DE
+   . 1 . . . . . . . . 9 9 0 1 1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 DE = 9 4.124
+   10 4 50 Recursive Form Given x fi , then i = fi-1 DE . 1 1 1 0 DE = 1
+   4.171 10 1 DE DE . . . 1 2 1 2 2 1 DE = 2 4.743 10 1 1 DE DE . . . 1 3
+   2 3 3 1 DE = 3 2.344 10 2 2 DE DE . . . 1 4 3 4 4 1 DE = 4 9.255 10 3 3
+   51 DE DE . . . 1 1 DE = 2.676 10 2 5 4 5 5 5 4 DE DE . . . 1 1 DE =
+   1.854 10 3 6 5 6 6 6 5 DE DE . . . 1 1 DE = 1.407 10 3 7 6 7 7 7 6 DE
+   DE . . . 1 1 8 7 8 8 DE = 5.942 10 3 7 8 DE DE . . . 1 1 DE = 4.124 10
+   4 9 8 9 9 9 8 52 Total Deposition for Light Exercise D et1 DE1 DE9 D =
+   et1 4.175 10 1 D et2 DE2 DE8 D = et2 4.802 10 1 D BB DE3 DE7 D = BB
+   2.485 10 2 D bb DE4 DE6 D = bb 1.111 10 2 D ai DE5 D = ai 2.676 10 2 D
+   D et1 D et2 D BB D bb D ai D = 9.605 10 1 53 Slow Clearing Fraction for
+   BB and bb r fs = 5 . 0 , dae 5 . 2 c 0.693 - (dt - .25) 1 1 . r fs = 5
+   . 0 e , dae > 5 . 2 c is the density of the particle and is the shape
+   factor 54 Slow Clearing Fraction for 5 µµm dae particle - ln(2)
+   (3.5-2.5) f 1.1 s = 0.5 e fs = 0.266 55 Lognormal Probability Density
+   Function f(x) gives the differential fraction of particles between dae
+   x and x + dx -[Ln(x )-Ln(mg )]2 [2Ln(sg )2] f ( ) e x = xLn(s g ) p 2
+   56 Lognormal PDF 0.12 g = 2.5 0.1 AMAD = µµg = 5.0 0.08 0.06 Fraction
+   0.04 0.02 20 40 60 80 Aerodynamic equivalent diameter (µµm) 57
+   Lognormal Cumulative Probability Function F(X) gives the probability of
+   observing a particle the same size or smaller than X: X F(X ) = f (x)dx
+   0 58 Deposition for Polydisperse Aerosol DE( max AMAD, d d s g )=
+   DE(dae) ae ae F dae + - F dae - min 2 2 59 Range and Increments of
+   Summation * Summation runs from min of -4 g to max of +4 g * dae is
+   given by (max - min) / 500 0.12 0.1 0.08 Fraction 0.06 0.04 0.02 20 40
+   60 80 Aerodynamic equivalent diameter (µµm) 60 Total Percent Deposition
+   for 5 µµm AMAD Aerosol during Light Exercise Percent La Bone Ludep
+   Error ICRP 66 ET1 34.77 34.80 -0.09 35.00 ET2 40.91 40.94 -0.07 41.00
+   BB 1.80 1.80 0.00 1.82 bb 0.89 0.89 0.00 0.90 AI 4.49 4.49 0.00 4.50
+   TOTAL 82.86 82.92 -0.07 83.00 FsBB 34.33 34.32 0.03 34.07 Fsbb 41.09
+   41.07 0.05 41.11 61 Total Percent Deposition for 5 µµm AMAD Aerosol
+   during Sitting Percent La Bone Ludep Error ICRP 66 ET1 28.08 28.10
+   -0.07 28.00 ET2 33.58 33.61 -0.09 34.00 BB 1.62 1.63 -0.61 1.63 bb 2.37
+   2.37 0.00 2.37 AI 10.38 10.40 -0.19 10.00 TOTAL 76.04 76.10 -0.08 76.00
+   FsBB 26.75 26.73 0.07 26.38 62 Deposition Fractions for Light Work *
+   Light Work consists of  5.5 hours of light exercise breathing at 1.5 m3
+   per hour  2.5 hours of sitting, breathing at 0.54 m3 per hour * The
+   deposition fractions for light work are the volume-weighted deposition
+   fractions for the two activity levels 54 . 0 × 5 . 2 fsitting = × + × =
+   54 . 0 5 . 2 5 . 1 5 . 5 14 . 0 5 . 1 × 5 . 5 fle = × + × = 54 . 0 5 .
+   2 5 . 1 5 . 5 86 . 0 63 Total Percent Deposition for 5 µµm AMAD Aerosol
+   during Light Work Percent La Bone Ludep Error ICRP CD ET1 33.83 33.85
+   -0.06 33.85 ET2 39.88 39.91 -0.08 39.91 BB 1.77 1.77 0.00 1.78 bb 1.10
+   1.10 0.00 1.10 AI 5.32 5.32 0.00 5.32 TOTAL 81.90 81.96 -0.07 81.96
+   FsBB 33.26 33.34 -0.24 33.35 Fsbb 40.47 39.75 1.81 39.75 64 Additional
+   Calculations * Other mixtures of breathing rates * breathing habits
+   mouth breather during light exercise » 40% of air through nose » 60% of
+   air through mouth * adjustments for age and sex * smokers and
+   respiratory ailments 65 é éClearance * mechanical clearance of
+   particles  to lymph nodes and GI tract  dependent on region of lung
+   independent of material * absorption to blood  dependent on solubility
+   of particles  F/M/S classification  same for all regions of lung
+   (except ET1) * competitive processes * linear first order kinetics 66
+   Mechanical Clearance ET1 Environment LN ET ET ET seq 2 GI BB BB BB seq
+   2 1 bb bb seq 2 bb1 LNTH AI AI 3 2 AI1 67 Partition of Deposition
+   Partition Compartment Fraction ET2 0.9995 ETseq 0.0005 BB1 0.993-FsBB
+   BB2 FsBB BBseq 0.007 bb1 0.993-Fsbb bb2 Fsbb bbseq 0.007 AI1 0.3 AI2
+   0.6 AI3 0.1 68 Mechanical Clearance Parameters Rate half-time Pathway
+   (1/d) (d) AI1-bb1 0.02 3.47E+01 AI2-bb1 0.001 6.93E+02 AI3-bb1 0.0001
+   6.93E+03 AI3-LNTH 0.00002 3.47E+04 bb1-BB1 2 3.47E-01 bb2-BB1 0.03
+   2.31E+01 bbseq-LNTH 0.01 6.93E+01 BB1-ET2 10 6.93E-02 BB2-ET2 0.03
+   2.31E+01 BBseq-LNTH 0.01 6.93E+01 ET2-GI 100 6.93E-03 ETseq-LNTH 0.001
+   6.93E+02 ET1-Env 1 6.93E-01 69 Absorption into Blood s Particles in pt
+   Particles in Initial State Transformed State fb sp f s b t (1-f (1-f )s
+   b)sp b t Bound Material sb Blood 70 Time Dependant Dissolution Function
+   -srt -sst r t() = f e + 1 ( - f ) e r r sp = ss + (sr - ss) fr spt =
+   (sr - ss) 1 ( - fr ) t s = ss 71 Total Clearance AI1 bb1 transformed
+   blood transformed AI1 bb1 bound bound AI bb 72 Solubility
+   Classifications * ICRP 66  F, fast dissolution  M, moderate dissolution
+    S, slow dissolution  refers to absorption to blood only * ICRP 30  D,
+   cleared in days  W, cleared in weeks  Y, cleared in years  refers to
+   total clearance (absorption and mechanical) 73 Absorption Parameters
+   D/F W/M Y/S sp 100 10 0.1 spt 0 90 100 st na 0.005 0.0001 fb 0 0 0 74
+   Gases and Vapors * No general deposition and clearance models as for
+   aerosols * General classifications  Insoluble and non-reactive: SR-0 »
+   H2, He, N2  soluble or reactive: SR-1 » O3, NO2, H2O  soluble and
+   reactive: SR-2 » SO2, HF 75 è èDosimetry * ICRP 60 quantities
+   equivalent dose (dose equivalent)  effective dose (effective dose
+   equivalent) * Equivalent dose to target tissues  Nuclear
+   transformations (decays) in source tissues  Specific effective energy
+   (SEE) for all source-target tissue combinations  Cellular targets *
+   Detriment weighted equivalent dose  radiation detriment apportionment
+   factors * Effective dose  ICRP 60 weighting factors 76 Decays The
+   number of decays of radionuclide j in source organ S over 50 years is
+   given by 50 Us,j = qs,j (t)dt 0 77 Decay Benchmark for 5 µµm AMAD Class
+   S Pu-239 (light work) Percent Compartment La Bone Ludep Error AI
+   4621000 4600000 0.46 bb1 2323 2300 1.00 bb2 12570 13000 -3.31 bbseq 660
+   660 0.00 BB1 603 600 0.50 BB2 16980 17000 -0.12 BBseq 1062 1100 -3.45
+   ET1 29250 29000 0.86 ET2 410 410 0.00 ETseq 15660 16000 -2.13 LNET
+   128800 130000 -0.92 LNTH 444200 440000 0.95 78 Sources * ET1-sur (ET1)
+   * ET2-sur (ET2 + TET2) * ET2-seq (ETseq + TETseq) * LN-ET (LNET +
+   TLNET) * BB-gel (BB1 + TBB1) * BB-sol (BB2 + TBB2) * BB-seq (BBseq +
+   TBBseq) * bb-gel (bb1 + Tbb1) * bb-sol (bb2 + Tbb2) * bb-seq (bbseq +
+   Tbbseq) * AI (AI1 + AI2 + AI3 + TAI1 +TAI2 + TAI3) * LN-TH (LNTH +
+   TLNTH) 79 Specific Effective Energy SEE(T S;t) R w ER R Y AF(T S;t) = R
+   R MT (t) 80 Targets * ET1-bas * ET2-bas * LN-ET * BBi-bas * BBi-sec *
+   bbe-sec * AI * LN-TH 81 82 83 SEE, decays, and HT for Pu-239 S E E
+   Sources Targets ET1-sur ET2-sur ET2-seq LN-ET BBi-gel BBi-sol BBi-seq
+   bbe-gel bbe-sol bbe-seq AI LN-Th ET1-bas 2.85E-14 2.84E-15 2.84E-15
+   2.84E-15 4.49E-20 4.49E-20 4.49E-20 4.49E-20 4.49E-20 4.49E-20 4.49E-20
+   4.49E-20 ET2-bas 2.84E-15 3.38E-15 5.06E-09 2.84E-15 4.49E-20 4.49E-20
+   4.49E-20 4.49E-20 4.49E-20 4.49E-20 4.49E-20 4.49E-20 LN-ET 2.84E-15
+   2.84E-15 2.84E-15 1.12E-09 4.49E-20 4.49E-20 4.49E-20 4.49E-20 4.49E-20
+   4.49E-20 4.49E-20 4.49E-20 BBi-bas 4.60E-20 4.60E-20 4.60E-20 4.60E-20
+   1.35E-15 2.04E-11 5.15E-09 7.13E-17 7.13E-17 7.13E-17 7.13E-17 7.13E-17
+   BBi-sec 4.60E-20 4.60E-20 4.60E-20 4.60E-20 2.74E-09 3.66E-09 9.80E-10
+   7.13E-17 7.13E-17 7.13E-17 7.13E-17 7.13E-17 bbe-sec 4.60E-20 4.60E-20
+   4.60E-20 4.60E-20 7.13E-17 7.13E-17 7.13E-17 1.97E-09 2.01E-09 9.40E-10
+   5.96E-13 7.13E-17 AI 4.60E-20 4.60E-20 4.60E-20 4.60E-20 7.13E-17
+   7.13E-17 7.13E-17 7.13E-17 7.13E-17 7.13E-17 1.53E-11 5.67E-16 LN-Th
+   4.60E-20 4.60E-20 4.60E-20 4.60E-20 7.13E-17 7.13E-17 7.13E-17 7.13E-17
+   7.13E-17 7.13E-17 7.13E-17 1.12E-09 decays 29250 410 15660 128800 603
+   16980 1062 2323 12570 660 4621000 444200 S v Sources Targets ET1-sur
+   ET2-sur ET2-seq LN-ET BBi-gel BBi-sol BBi-seq bbe-gel bbe-sol bbe-seq
+   AI LN-Th ET1-bas 8.34E-10 1.16E-12 4.44E-11 3.66E-10 2.71E-17 7.62E-16
+   4.77E-17 1.04E-16 5.64E-16 2.96E-17 2.07E-13 1.99E-14 ET2-bas 8.30E-11
+   1.39E-12 7.92E-05 3.66E-10 2.71E-17 7.62E-16 4.77E-17 1.04E-16 5.64E-16
+   2.96E-17 2.07E-13 1.99E-14 LN-ET 8.30E-11 1.16E-12 4.44E-11 1.44E-04
+   2.71E-17 7.62E-16 4.77E-17 1.04E-16 5.64E-16 2.96E-17 2.07E-13 1.99E-14
+   BBi-bas 1.35E-15 1.89E-17 7.21E-16 5.93E-15 8.16E-13 3.46E-07 5.47E-06
+   1.66E-13 8.96E-13 4.70E-14 3.30E-10 3.17E-11 BBi-sec 1.35E-15 1.89E-17
+   7.21E-16 5.93E-15 1.65E-06 6.21E-05 1.04E-06 1.66E-13 8.96E-13 4.70E-14
+   3.30E-10 3.17E-11 bbe-sec 1.35E-15 1.89E-17 7.21E-16 5.93E-15 4.30E-14
+   1.21E-12 7.57E-14 4.58E-06 2.52E-05 6.20E-07 2.75E-06 3.17E-11 AI
+   1.35E-15 1.89E-17 7.21E-16 5.93E-15 4.30E-14 1.21E-12 7.57E-14 1.66E-13
+   8.96E-13 4.70E-14 7.05E-05 2.52E-10 LN-Th 1.35E-15 1.89E-17 7.21E-16
+   5.93E-15 4.30E-14 1.21E-12 7.57E-14 1.66E-13 8.96E-13 4.70E-14 3.29E-10
+   4.97E-04 SEECAL gives SEE in units of Sv. 84 Equivalent Dose Benchmark
+   La Bone Ludep Percent Target (Sv) (Sv) Error ET1-bas 1.25E-09 3.44E-06
+   -99.96 ET2-bas 7.92E-05 8.16E-05 -2.89 LN-ET 1.44E-04 1.43E-04 0.70
+   BBi-bas 5.81E-06 7.79E-06 -25.37 BBi-sec 6.48E-05 6.70E-05 -3.25
+   bbe-sec 3.32E-05 3.51E-05 -5.50 AI 7.05E-05 7.12E-05 -1.02 LN-Th
+   4.97E-04 4.90E-04 1.35 85 Detriment Weighted Equivalent Doses HET = HET
+   A 1 ET + H 1 ET A 2 ET + H 2 LN A ET LN ET HTH = HBB A sec BB + H sec
+   BB A + + + bas BB H bas bb Abb HAI AAI HLN A TH LNTH 86 Detriment
+   Weighted Equivalent Dose Benchmark ED DWED Target (Sv) RAF (Sv) Ludep
+   Genmod ICRP CD ET1-bas 1.25E-09 0.0010 1.25E-12 ET2-bas 7.92E-05 0.9980
+   7.91E-05 LN-ET 1.44E-04 0.0010 1.44E-07 ET 7.92E-05 8.16E-05 7.93E-05
+   8.0E-05 BBi-bas 5.81E-06 0.1665 9.68E-07 BBi-sec 6.48E-05 0.1665
+   1.08E-05 bbe-sec 3.32E-05 0.3330 1.10E-05 AI 7.05E-05 0.3330 2.35E-05
+   LN-TH 4.97E-04 0.0010 4.97E-07 TH 4.68E-05 4.83E-05 4.68E-05 4.7E-05 87
+   Effective Dose * HTH (lung dose) is weighted by 0.12 and added to the
+   effective dose sum * HET is treated as a remainder organ 88 Systemic
+   Biokinetic Models * ICRP 2 (1959) * ICRP 30 series (1979-1988)  Parts
+   1, 2, 3, 4, and ICRP 48 * ICRP 56 series (1990-1996)  ICRP 56, 67, 69,
+   71, 72 89 ICRP 2 * Based on  stable element distribution in humans  rat
+   experimental data  limited human occupational and experimental data *
+   Single exponential retention functions for organs * Designed for
+   calculating MPCs  concerned with long-term retention  MPC based on
+   critical organ  does not address systemic excretion * Mid 1950's
+   technology 90 ICRP 2 Plutonium Bone Model 0.9 blood bone 73000 days
+   -Ln(2)t 73000 bone q (t) = 0.9e 91 ICRP 30 * Based on  ICRP 2 database
+   large mammal/primate experimental data  additional human data *
+   Multiple exponential retention functions possible for organs * Designed
+   for calculating worker ALIs and DACs  does not address systemic
+   excretion  ALI based on dose to all specified organs, not just the
+   critical organ * Some physiologically based models (iodine) * Mid
+   1970's technology 92 ICRP 30 Plutonium Bone Model 0.45 blood bone 18250
+   days -Ln(2)t 18250 bone q (t) = 0.45e 93 ICRP 30 Uranium Bone Model 0.2
+   20 days blood 0.023 5000 days bone -Ln(2)t -Ln(2)t 20 5000 bone q (t) =
+   0.2e + 0 023 . e 94 ICRP 67 * Multiple exponential retention functions
+   for organs * Physiologically based biokinetic models for bone seekers *
+   Designed for calculating dose to public and radiation workers *
+   Systemic excretion addressed  either explicitly in model or with ff/fu
+   ICRP 60 wt for bladder  bioassay * Mid 1980's technology 95 New
+   Physiological Models * Bone Surface Seeker  plutonium (ICRP 67)
+   neptunium (ICRP 67)  thorium (ICRP 69)  americium (ICRP 67) * Bone
+   Volume Seeker  uranium (ICRP 69)  strontium and alkaline earths (ICRP
+   67) 96 General Bone Volume Seeker Model ST1 ST0 ST2 liver 2 nonexch
+   exch cortical cortical cortical volume volume surface liver 1 nonexch
+   exch trabecular plasma trabecular trabecular surface volume volume SI
+   other RBC kidney ULI tissue urinary LLI urinary urine bladder path
+   contents feces gonads 97 General Bone Surface Seeker Model ST1 ST0 ST2
+   liver 2 cortical cortical cortical volume surface marrow liver 1
+   trabecular trabecular trabecular blood volume surface marrow SI other
+   kidney ULI tissue urinary LLI urinary urine bladder path contents feces
+   gonads 98 Advantages of Physiological Biokinetic Models * Realistic
+   models * Aid in development of realistic models  extrapolating to human
+   subgroups  extrapolating from animals to humans  extrapolating from
+   chemical analogs  extrapolating model in time * Realistic treatment of
+   daughters  shared kinetics  independent kinetics * Explicit treatment
+   of systemic excretion * Evaluate intakes following chelation therapy 99
+   Disadvantages of Physiological Biokinetic Models * Complexity * Absence
+   of commercially available software  LuDep does not use new systemic
+   models  Genmod is in beta test * Acceptance of of new models by
+   regulators * Internal dosimetrists' general lack of familiarity with
+   the new models 100 Pu-239 Type S Benchmark * Acute inhalation of type S
+   5.0 µµm AMAD plutonium-239 under light-work conditions * Comparison of
+   results from three sources  MathCad and Excel worksheets with SEECAL
+   SEEs  ICRP Database of Dose Coefficients Workers and Members of the
+   Public (V1.0 CD)  Genmod-PC V4.13 beta test 101 Mathcad Method *
+   Calculate decays  Mathcad worksheet using eigensystem or matrix
+   exponential method of solving systems of ODEs. * Create SEE matrix
+   SEECAL SEEs in Excel spreadsheet * Multiply decays by SEE matrix * Sum
+   doses from all source organ over each target organ. * Sum target doses
+   and apply weights to obtain effective dose. 102 SEE Matrix with Decays
+   - Left Side SEE UB_Cont C_Bone-S C_Bone-V T_Bone-S T_Bone-V. St_Cont
+   SI_Cont ULI_Cont. LLI_Cont Kidneys Liver ET1-sur ET2-sur Adrenals
+   4.404E-21 1.550E-19 1.550E-19 3.491E-19 3.491E-19 1.544E-19 3.382E-20
+   4.217E-20 1.064E-20 2.562E-18 9.717E-19 3.759E-21 3.759E-21 UB_Wall
+   6.920E-13 1.875E-20 1.875E-20 4.357E-20 4.357E-20 9.001E-21 1.197E-19
+   8.364E-20 5.207E-19 9.614E-21 5.917E-21 9.305E-23 9.305E-23 Bone_Sur
+   4.894E-20 3.437E-11 1.375E-12 3.437E-11 3.437E-12 8.520E-20 2.611E-19
+   1.620E-19 4.918E-19 2.315E-19 2.214E-19 2.445E-19 2.445E-19 Brain
+   9.104E-24 3.830E-19 3.830E-19 2.493E-19 2.493E-19 2.954E-22 3.952E-23
+   4.637E-23 1.895E-23 1.222E-22 4.993E-22 6.661E-20 6.661E-20 Breasts
+   7.300E-22 6.208E-20 6.208E-20 1.184E-19 1.184E-19 2.839E-20 3.799E-21
+   4.342E-21 1.387E-21 9.684E-21 3.638E-20 1.391E-20 1.391E-20 St_Wall
+   9.600E-21 3.192E-20 3.192E-20 6.435E-20 6.435E-20 3.321E-13 3.063E-19
+   6.765E-19 9.693E-20 1.479E-19 9.988E-20 2.123E-21 2.123E-21 SI_Wall
+   1.132E-19 6.162E-20 6.162E-20 2.238E-19 2.238E-19 1.587E-19 2.076E-13
+   7.684E-18 3.890E-18 1.384E-19 1.024E-19 2.907E-22 2.907E-22 ULI_Wall
+   8.250E-20 6.235E-20 6.235E-20 2.266E-19 2.266E-19 4.134E-19 1.710E-17
+   3.774E-13 2.449E-18 1.224E-19 1.921E-19 5.261E-22 5.261E-22 LLI_Wall
+   5.773E-19 1.426E-19 1.426E-19 5.134E-19 5.134E-19 5.607E-20 6.671E-18
+   7.861E-19 6.151E-13 2.589E-20 6.684E-21 1.627E-22 1.627E-22 Kidneys
+   9.904E-21 5.699E-20 5.699E-20 1.564E-19 1.564E-19 1.500E-19 1.384E-19
+   1.136E-19 3.365E-20 5.412E-11 3.515E-19 1.810E-21 1.810E-21 Liver
+   5.781E-21 5.007E-20 5.007E-20 9.035E-20 9.035E-20 9.068E-20 1.024E-19
+   1.725E-19 8.251E-21 3.515E-19 9.320E-12 4.291E-21 4.291E-21 ET1-bas
+   9.259E-23 6.197E-20 6.197E-20 5.315E-20 5.315E-20 1.576E-21 2.907E-22
+   5.152E-22 1.972E-22 1.810E-21 4.291E-21 2.851E-14 2.838E-15 ET2-bas
+   9.259E-23 6.197E-20 6.197E-20 5.315E-20 5.315E-20 1.576E-21 2.907E-22
+   5.152E-22 1.972E-22 1.810E-21 4.291E-21 2.838E-15 3.384E-15 LN-ET
+   9.259E-23 6.197E-20 6.197E-20 5.315E-20 5.315E-20 1.576E-21 2.907E-22
+   5.152E-22 1.972E-22 1.810E-21 4.291E-21 2.838E-15 2.838E-15 BBi-bas
+   6.091E-22 8.574E-20 8.574E-20 1.540E-19 1.540E-19 1.045E-19 6.519E-21
+   8.394E-21 2.399E-21 3.524E-20 7.294E-19 4.603E-20 4.603E-20 BBi-sec
+   6.091E-22 8.574E-20 8.574E-20 1.540E-19 1.540E-19 1.045E-19 6.519E-21
+   8.394E-21 2.399E-21 3.524E-20 7.294E-19 4.603E-20 4.603E-20 bbe-sec
+   6.091E-22 8.574E-20 8.574E-20 1.540E-19 1.540E-19 1.045E-19 6.519E-21
+   8.394E-21 2.399E-21 3.524E-20 7.294E-19 4.603E-20 4.603E-20 AI
+   6.091E-22 8.574E-20 8.574E-20 1.540E-19 1.540E-19 1.045E-19 6.519E-21
+   8.394E-21 2.399E-21 3.524E-20 7.294E-19 4.603E-20 4.603E-20 LN-Th
+   6.091E-22 8.574E-20 8.574E-20 1.540E-19 1.540E-19 1.045E-19 6.519E-21
+   8.394E-21 2.399E-21 3.524E-20 7.294E-19 4.603E-20 4.603E-20 Muscle
+   3.680E-19 1.638E-19 1.638E-19 2.229E-19 2.229E-19 2.496E-19 3.395E-19
+   2.092E-19 2.862E-19 5.576E-19 2.668E-19 1.009E-18 1.009E-18 Ovaries
+   3.645E-19 4.498E-20 4.498E-20 1.576E-19 1.576E-19 2.688E-20 3.779E-18
+   3.485E-18 8.600E-18 3.245E-20 1.744E-20 1.914E-22 1.914E-22 Pancreas
+   6.790E-21 4.081E-20 4.081E-20 9.323E-20 9.323E-20 3.119E-18 7.026E-20
+   8.295E-20 2.330E-20 3.738E-19 4.228E-19 3.534E-21 3.534E-21 R_Marrow
+   3.856E-20 2.429E-18 2.429E-18 5.498E-12 5.501E-13 4.748E-20 2.087E-19
+   1.343E-19 3.598E-19 1.524E-19 8.720E-20 5.519E-20 5.519E-20 Skin
+   3.729E-20 1.425E-19 1.425E-19 1.367E-19 1.367E-19 3.404E-20 1.882E-20
+   2.006E-20 4.962E-20 7.483E-20 4.070E-20 4.551E-20 4.551E-20 Spleen
+   4.682E-21 4.408E-20 4.408E-20 8.227E-20 8.227E-20 7.368E-19 5.089E-20
+   5.138E-20 3.017E-20 2.122E-18 3.413E-20 4.032E-21 4.032E-21 Testes
+   2.357E-19 1.930E-20 1.930E-20 1.466E-20 1.466E-20 1.807E-21 1.252E-20
+   9.661E-21 8.379E-20 1.862E-21 9.978E-22 2.975E-23 2.975E-23 Thymus
+   5.395E-22 6.272E-20 6.272E-20 1.185E-19 1.185E-19 1.737E-20 2.371E-21
+   2.943E-21 1.173E-21 8.506E-21 2.878E-20 7.815E-20 7.815E-20 Thyroid
+   9.259E-23 6.197E-20 6.197E-20 5.315E-20 5.315E-20 1.576E-21 2.907E-22
+   5.152E-22 1.972E-22 1.810E-21 4.291E-21 6.661E-20 6.661E-20 Uterus
+   2.309E-18 2.392E-20 2.392E-20 7.576E-20 7.576E-20 2.250E-20 1.374E-18
+   2.496E-19 3.486E-19 2.877E-20 1.487E-20 1.777E-22 1.777E-22 Decays
+   1.284E+01 1.900E+06 4.332E+05 6.623E+05 3.058E+05 1.708E+03 6.838E+03
+   2.224E+04 4.106E+04 7.237E+03 2.070E+06 2.925E+04 4.099E+02 103 SEE
+   Matrix with Decays - Right Side ET2-seq LN-ET BBi-gel BBi-sol BBi-seq
+   bbe-gel bbe-sol bbe-seq AI LN-Th R_Marrow Testes Blood BT-Soft
+   3.759E-21 3.759E-21 3.207E-19 3.207E-19 3.207E-19 3.207E-19 3.207E-19
+   3.207E-19 3.207E-19 3.207E-19 3.491E-19 9.583E-22 2.437E-13 2.63E-13
+   9.305E-23 9.305E-23 8.325E-22 8.325E-22 8.325E-22 8.325E-22 8.325E-22
+   8.325E-22 8.325E-22 8.325E-22 4.357E-20 2.459E-19 2.437E-13 2.63E-13
+   2.445E-19 2.445E-19 3.428E-19 3.428E-19 3.428E-19 3.428E-19 3.428E-19
+   3.428E-19 3.428E-19 3.428E-19 5.592E-12 4.952E-20 2.437E-13 1.31E-13
+   6.661E-20 6.661E-20 3.952E-21 3.952E-21 3.952E-21 3.952E-21 3.952E-21
+   3.952E-21 3.952E-21 3.952E-21 2.493E-19 3.035E-24 2.437E-13 2.63E-13
+   1.391E-20 1.391E-20 3.317E-19 3.317E-19 3.317E-19 3.317E-19 3.317E-19
+   3.317E-19 3.317E-19 3.317E-19 1.184E-19 0.000E+00 2.437E-13 2.63E-13
+   2.123E-21 2.123E-21 1.800E-19 1.800E-19 1.800E-19 1.800E-19 1.800E-19
+   1.800E-19 1.800E-19 1.800E-19 6.435E-20 2.338E-21 2.437E-13 2.63E-13
+   2.907E-22 2.907E-22 6.450E-21 6.450E-21 6.450E-21 6.450E-21 6.450E-21
+   6.450E-21 6.450E-21 6.450E-21 2.238E-19 1.252E-20 2.437E-13 2.63E-13
+   5.261E-22 5.261E-22 8.396E-21 8.396E-21 8.396E-21 8.396E-21 8.396E-21
+   8.396E-21 8.396E-21 8.396E-21 2.266E-19 9.196E-21 2.437E-13 2.63E-13
+   1.627E-22 1.627E-22 1.821E-21 1.821E-21 1.821E-21 1.821E-21 1.821E-21
+   1.821E-21 1.821E-21 1.821E-21 5.134E-19 1.285E-19 2.437E-13 2.63E-13
+   1.810E-21 1.810E-21 3.433E-20 3.433E-20 3.433E-20 3.433E-20 3.433E-20
+   3.433E-20 3.433E-20 3.433E-20 1.564E-19 1.862E-21 2.437E-13 2.63E-13
+   4.291E-21 4.291E-21 6.592E-19 6.592E-19 6.592E-19 6.592E-19 6.592E-19
+   6.592E-19 6.592E-19 6.592E-19 9.035E-20 9.978E-22 2.437E-13 2.63E-13
+   2.838E-15 2.838E-15 4.490E-20 4.490E-20 4.490E-20 4.490E-20 4.490E-20
+   4.490E-20 4.490E-20 4.490E-20 5.315E-20 2.975E-23 2.437E-13 2.63E-13
+   5.060E-09 2.838E-15 4.490E-20 4.490E-20 4.490E-20 4.490E-20 4.490E-20
+   4.490E-20 4.490E-20 4.490E-20 5.315E-20 2.975E-23 2.437E-13 2.63E-13
+   2.838E-15 1.118E-09 4.490E-20 4.490E-20 4.490E-20 4.490E-20 4.490E-20
+   4.490E-20 4.490E-20 4.490E-20 5.315E-20 2.975E-23 2.437E-13 2.63E-13
+   4.603E-20 4.603E-20 1.354E-15 2.037E-11 5.148E-09 7.126E-17 7.126E-17
+   7.126E-17 7.132E-17 7.126E-17 1.540E-19 2.664E-22 2.437E-13 2.63E-13
+   4.603E-20 4.603E-20 2.742E-09 3.659E-09 9.803E-10 7.126E-17 7.126E-17
+   7.126E-17 7.131E-17 7.126E-17 1.540E-19 2.664E-22 2.437E-13 2.63E-13
+   4.603E-20 4.603E-20 7.126E-17 7.126E-17 7.126E-17 1.972E-09 2.006E-09
+   9.398E-10 5.959E-13 7.126E-17 1.540E-19 2.664E-22 2.437E-13 2.63E-13
+   4.603E-20 4.603E-20 7.126E-17 7.126E-17 7.126E-17 7.126E-17 7.126E-17
+   7.126E-17 1.525E-11 5.674E-16 1.540E-19 2.664E-22 2.437E-13 2.63E-13
+   4.603E-20 4.603E-20 7.126E-17 7.126E-17 7.126E-17 7.126E-17 7.126E-17
+   7.126E-17 7.126E-17 1.118E-09 1.540E-19 2.664E-22 2.437E-13 2.63E-13
+   1.009E-18 1.009E-18 6.737E-19 6.737E-19 6.737E-19 6.737E-19 6.737E-19
+   6.737E-19 6.737E-19 6.737E-19 2.229E-19 6.340E-19 2.437E-13 2.63E-13
+   1.914E-22 1.914E-22 2.787E-21 2.787E-21 2.787E-21 2.787E-21 2.787E-21
+   2.787E-21 2.787E-21 2.787E-21 1.576E-19 0.000E+00 2.437E-13 2.63E-13
+   3.534E-21 3.534E-21 1.252E-19 1.252E-19 1.252E-19 1.252E-19 1.252E-19
+   1.252E-19 1.252E-19 1.252E-19 9.323E-20 1.465E-21 2.437E-13 2.63E-13
+   5.519E-20 5.519E-20 1.339E-19 1.339E-19 1.339E-19 1.339E-19 1.339E-19
+   1.339E-19 1.339E-19 1.339E-19 1.118E-11 1.346E-20 2.437E-13 2.63E-13
+   4.551E-20 4.551E-20 4.312E-20 4.312E-20 4.312E-20 4.312E-20 4.312E-20
+   4.312E-20 4.312E-20 4.312E-20 1.367E-19 1.105E-18 2.437E-13 2.63E-13
+   4.032E-21 4.032E-21 3.127E-19 3.127E-19 3.127E-19 3.127E-19 3.127E-19
+   3.127E-19 3.127E-19 3.127E-19 8.227E-20 1.279E-21 2.437E-13 2.63E-13
+   2.975E-23 2.975E-23 2.662E-22 2.662E-22 2.662E-22 2.662E-22 2.662E-22
+   2.662E-22 2.662E-22 2.662E-22 1.466E-20 4.793E-10 2.437E-13 2.63E-13
+   7.815E-20 7.815E-20 2.085E-19 2.085E-19 2.085E-19 2.085E-19 2.085E-19
+   2.085E-19 2.085E-19 2.085E-19 1.185E-19 1.630E-22 2.437E-13 2.63E-13
+   6.661E-20 6.661E-20 4.490E-20 4.490E-20 4.490E-20 4.490E-20 4.490E-20
+   4.490E-20 4.490E-20 4.490E-20 5.315E-20 2.975E-23 2.437E-13 2.63E-13
+   1.777E-22 1.777E-22 2.158E-21 2.158E-21 2.158E-21 2.158E-21 2.158E-21
+   2.158E-21 2.158E-21 2.158E-21 7.576E-20 0.000E+00 2.437E-13 2.63E-13
+   1.566E+04 1.288E+05 6.034E+02 1.698E+04 1.062E+03 2.323E+03 1.257E+04
+   6.598E+02 4.621E+06 4.442E+05 6.248E+04 2.548E+03 2.648E+03 5.556E+05
+   104 Dose Matrix - Left Side Dose UB_Cont C_Bone-S C_Bone-V T_Bone-S
+   T_Bone-V. St_Cont SI_Cont ULI_Cont. LLI_Cont Kidneys Liver ET1-sur
+   ET2-sur . Adrenals 5.657E-20 2.945E-13 6.714E-14 2.312E-13 1.067E-13
+   2.637E-16 2.312E-16 9.379E-16 4.369E-16 1.854E-14 2.011E-12 1.099E-16
+   1.541E-18 UB_Wall 8.888E-12 3.563E-14 8.122E-15 2.886E-14 1.332E-14
+   1.537E-17 8.185E-16 1.860E-15 2.138E-14 6.958E-17 1.225E-14 2.721E-18
+   3.814E-20 Bone_Sur 6.286E-19 6.531E-05 5.956E-07 2.276E-05 1.051E-06
+   1.455E-16 1.785E-15 3.603E-15 2.019E-14 1.675E-15 4.583E-13 7.151E-15
+   1.002E-16 Brain 1.169E-22 7.278E-13 1.659E-13 1.651E-13 7.623E-14
+   5.045E-19 2.702E-19 1.031E-18 7.781E-19 8.844E-19 1.034E-15 1.948E-15
+   2.730E-17 Breasts 9.376E-21 1.180E-13 2.689E-14 7.841E-14 3.620E-14
+   4.849E-17 2.598E-17 9.657E-17 5.695E-17 7.008E-17 7.531E-14 4.068E-16
+   5.702E-18 St_Wall 1.233E-19 6.065E-14 1.383E-14 4.262E-14 1.968E-14
+   5.672E-10 2.094E-15 1.505E-14 3.980E-15 1.070E-15 2.067E-13 6.209E-17
+   8.702E-19 SI_Wall 1.454E-18 1.171E-13 2.669E-14 1.482E-13 6.843E-14
+   2.711E-16 1.419E-09 1.709E-13 1.597E-13 1.002E-15 2.120E-13 8.502E-18
+   1.192E-19 ULI_Wall 1.060E-18 1.185E-13 2.701E-14 1.501E-13 6.929E-14
+   7.061E-16 1.169E-13 8.394E-09 1.006E-13 8.858E-16 3.976E-13 1.539E-17
+   2.157E-19 LLI_Wall 7.415E-18 2.710E-13 6.177E-14 3.400E-13 1.570E-13
+   9.577E-17 4.561E-14 1.748E-14 2.526E-08 1.874E-16 1.384E-14 4.758E-18
+   6.669E-20 Kidneys 1.272E-19 1.083E-13 2.469E-14 1.036E-13 4.782E-14
+   2.562E-16 9.463E-16 2.527E-15 1.382E-15 3.917E-07 7.276E-13 5.294E-17
+   7.419E-19 Liver 7.425E-20 9.514E-14 2.169E-14 5.984E-14 2.763E-14
+   1.549E-16 7.002E-16 3.837E-15 3.388E-16 2.544E-15 1.929E-05 1.255E-16
+   1.759E-18 ET1-bas 1.189E-21 1.178E-13 2.684E-14 3.520E-14 1.625E-14
+   2.692E-18 1.988E-18 1.146E-17 8.097E-18 1.310E-17 8.882E-15 8.338E-10
+   1.163E-12 ET2-bas 1.189E-21 1.178E-13 2.684E-14 3.520E-14 1.625E-14
+   2.692E-18 1.988E-18 1.146E-17 8.097E-18 1.310E-17 8.882E-15 8.300E-11
+   1.387E-12 LN-ET 1.189E-21 1.178E-13 2.684E-14 3.520E-14 1.625E-14
+   2.692E-18 1.988E-18 1.146E-17 8.097E-18 1.310E-17 8.882E-15 8.300E-11
+   1.163E-12 BBi-bas 7.824E-21 1.629E-13 3.714E-14 1.020E-13 4.709E-14
+   1.785E-16 4.457E-17 1.867E-16 9.850E-17 2.550E-16 1.510E-12 1.346E-15
+   1.887E-17 BBi-sec 7.824E-21 1.629E-13 3.714E-14 1.020E-13 4.709E-14
+   1.785E-16 4.457E-17 1.867E-16 9.850E-17 2.550E-16 1.510E-12 1.346E-15
+   1.887E-17 bbe-sec 7.824E-21 1.629E-13 3.714E-14 1.020E-13 4.709E-14
+   1.785E-16 4.457E-17 1.867E-16 9.850E-17 2.550E-16 1.510E-12 1.346E-15
+   1.887E-17 AI 7.824E-21 1.629E-13 3.714E-14 1.020E-13 4.709E-14
+   1.785E-16 4.457E-17 1.867E-16 9.850E-17 2.550E-16 1.510E-12 1.346E-15
+   1.887E-17 LN-Th 7.824E-21 1.629E-13 3.714E-14 1.020E-13 4.709E-14
+   1.785E-16 4.457E-17 1.867E-16 9.850E-17 2.550E-16 1.510E-12 1.346E-15
+   1.887E-17 Muscle 4.727E-18 3.112E-13 7.095E-14 1.476E-13 6.816E-14
+   4.263E-16 2.321E-15 4.653E-15 1.175E-14 4.035E-15 5.523E-13 2.951E-14
+   4.136E-16 Ovaries 4.682E-18 8.547E-14 1.948E-14 1.044E-13 4.819E-14
+   4.591E-17 2.584E-14 7.751E-14 3.531E-13 2.348E-16 3.610E-14 5.598E-18
+   7.846E-20 Pancreas 8.721E-20 7.754E-14 1.768E-14 6.174E-14 2.851E-14
+   5.327E-15 4.804E-16 1.845E-15 9.567E-16 2.705E-15 8.752E-13 1.034E-16
+   1.449E-18 R_Marrow 4.953E-19 4.615E-12 1.052E-12 3.641E-06 1.682E-07
+   8.109E-17 1.427E-15 2.987E-15 1.477E-14 1.103E-15 1.805E-13 1.614E-15
+   2.262E-17 Skin 4.790E-19 2.708E-13 6.172E-14 9.053E-14 4.180E-14
+   5.814E-17 1.287E-16 4.462E-16 2.037E-15 5.415E-16 8.425E-14 1.331E-15
+   1.865E-17 Spleen 6.014E-20 8.376E-14 1.909E-14 5.448E-14 2.516E-14
+   1.258E-15 3.480E-16 1.143E-15 1.239E-15 1.536E-14 7.065E-14 1.179E-16
+   1.653E-18 Testes 3.027E-18 3.667E-14 8.360E-15 9.709E-15 4.483E-15
+   3.086E-18 8.561E-17 2.149E-16 3.440E-15 1.348E-17 2.065E-15 8.701E-19
+   1.219E-20 Thymus 6.930E-21 1.192E-13 2.717E-14 7.848E-14 3.623E-14
+   2.967E-17 1.621E-17 6.545E-17 4.816E-17 6.156E-17 5.957E-14 2.286E-15
+   3.203E-17 Thyroid 1.189E-21 1.178E-13 2.684E-14 3.520E-14 1.625E-14
+   2.692E-18 1.988E-18 1.146E-17 8.097E-18 1.310E-17 8.882E-15 1.948E-15
+   2.730E-17 Uterus 2.966E-17 4.545E-14 1.036E-14 5.017E-14 2.316E-14
+   3.843E-17 9.395E-15 5.551E-15 1.431E-14 2.082E-16 3.078E-14 5.197E-18
+   7.284E-20 105 Dose Matrix - Right Side ET2-seq LN-ET BBi-gel BBi-sol
+   BBi-seq . bbe-gel bbe-sol bbe-seq AI LN-Th R_Marrow Testes Blood
+   BT-Soft 5.887E-17 4.841E-16 1.935E-16 5.445E-15 3.407E-16 7.450E-16
+   4.032E-15 2.116E-16 1.482E-12 1.424E-13 2.181E-14 2.442E-18 6.453E-10
+   1.460E-07 1.457E-18 1.198E-17 5.023E-19 1.413E-17 8.843E-19 1.934E-18
+   1.047E-17 5.493E-19 3.847E-15 3.698E-16 2.722E-15 6.266E-16 6.453E-10
+   1.460E-07 3.829E-15 3.148E-14 2.068E-16 5.820E-15 3.641E-16 7.963E-16
+   4.309E-15 2.262E-16 1.584E-12 1.523E-13 3.494E-07 1.262E-16 6.453E-10
+   7.301E-08 1.043E-15 8.578E-15 2.385E-18 6.710E-17 4.198E-18 9.181E-18
+   4.968E-17 2.608E-18 1.826E-14 1.755E-15 1.558E-14 7.734E-21 6.453E-10
+   1.460E-07 2.178E-16 1.791E-15 2.001E-16 5.632E-15 3.523E-16 7.705E-16
+   4.170E-15 2.189E-16 1.533E-12 1.473E-13 7.398E-15 0.000E+00 6.453E-10
+   1.460E-07 3.325E-17 2.734E-16 1.086E-16 3.056E-15 1.912E-16 4.181E-16
+   2.263E-15 1.188E-16 8.317E-13 7.995E-14 4.021E-15 5.958E-18 6.453E-10
+   1.460E-07 4.553E-18 3.743E-17 3.892E-18 1.095E-16 6.851E-18 1.498E-17
+   8.109E-17 4.256E-18 2.980E-14 2.865E-15 1.398E-14 3.190E-17 6.453E-10
+   1.460E-07 8.239E-18 6.775E-17 5.066E-18 1.426E-16 8.919E-18 1.950E-17
+   1.055E-16 5.540E-18 3.880E-14 3.729E-15 1.416E-14 2.343E-17 6.453E-10
+   1.460E-07 2.548E-18 2.095E-17 1.099E-18 3.092E-17 1.934E-18 4.230E-18
+   2.289E-17 1.202E-18 8.414E-15 8.088E-16 3.208E-14 3.275E-16 6.453E-10
+   1.460E-07 2.835E-17 2.331E-16 2.071E-17 5.829E-16 3.647E-17 7.975E-17
+   4.316E-16 2.265E-17 1.586E-13 1.525E-14 9.772E-15 4.745E-18 6.453E-10
+   1.460E-07 6.720E-17 5.526E-16 3.978E-16 1.119E-14 7.002E-16 1.531E-15
+   8.287E-15 4.350E-16 3.046E-12 2.928E-13 5.645E-15 2.543E-18 6.453E-10
+   1.460E-07 4.445E-11 3.655E-10 2.709E-17 7.623E-16 4.769E-17 1.043E-16
+   5.645E-16 2.963E-17 2.075E-13 1.994E-14 3.321E-15 7.581E-20 6.453E-10
+   1.460E-07 7.924E-05 3.655E-10 2.709E-17 7.623E-16 4.769E-17 1.043E-16
+   5.645E-16 2.963E-17 2.075E-13 1.994E-14 3.321E-15 7.581E-20 6.453E-10
+   1.460E-07 4.445E-11 1.440E-04 2.709E-17 7.623E-16 4.769E-17 1.043E-16
+   5.645E-16 2.963E-17 2.075E-13 1.994E-14 3.321E-15 7.581E-20 6.453E-10
+   1.460E-07 7.209E-16 5.927E-15 8.170E-13 3.459E-07 5.468E-06 1.655E-13
+   8.958E-13 4.702E-14 3.296E-10 3.165E-11 9.622E-15 6.789E-19 6.453E-10
+   1.460E-07 7.209E-16 5.927E-15 1.655E-06 6.213E-05 1.041E-06 1.655E-13
+   8.958E-13 4.702E-14 3.295E-10 3.165E-11 9.622E-15 6.789E-19 6.453E-10
+   1.460E-07 7.209E-16 5.927E-15 4.300E-14 1.210E-12 7.570E-14 4.581E-06
+   2.522E-05 6.201E-07 2.753E-06 3.165E-11 9.622E-15 6.789E-19 6.453E-10
+   1.460E-07 7.209E-16 5.927E-15 4.300E-14 1.210E-12 7.570E-14 1.655E-13
+   8.958E-13 4.702E-14 7.047E-05 2.520E-10 9.622E-15 6.789E-19 6.453E-10
+   1.460E-07 7.209E-16 5.927E-15 4.300E-14 1.210E-12 7.570E-14 1.655E-13
+   8.958E-13 4.702E-14 3.293E-10 4.966E-04 9.622E-15 6.789E-19 6.453E-10
+   1.460E-07 1.580E-14 1.299E-13 4.065E-16 1.144E-14 7.156E-16 1.565E-15
+   8.469E-15 4.445E-16 3.113E-12 2.992E-13 1.393E-14 1.616E-15 6.453E-10
+   1.460E-07 2.997E-18 2.465E-17 1.682E-18 4.732E-17 2.960E-18 6.474E-18
+   3.504E-17 1.839E-18 1.288E-14 1.238E-15 9.847E-15 0.000E+00 6.453E-10
+   1.460E-07 5.535E-17 4.551E-16 7.554E-17 2.126E-15 1.330E-16 2.908E-16
+   1.574E-15 8.261E-17 5.785E-13 5.561E-14 5.825E-15 3.733E-18 6.453E-10
+   1.460E-07 8.643E-16 7.107E-15 8.079E-17 2.273E-15 1.422E-16 3.111E-16
+   1.683E-15 8.835E-17 6.187E-13 5.947E-14 6.985E-07 3.430E-17 6.453E-10
+   1.460E-07 7.127E-16 5.860E-15 2.602E-17 7.321E-16 4.580E-17 1.002E-16
+   5.421E-16 2.845E-17 1.992E-13 1.915E-14 8.541E-15 2.816E-15 6.453E-10
+   1.460E-07 6.314E-17 5.192E-16 1.887E-16 5.309E-15 3.322E-16 7.264E-16
+   3.931E-15 2.063E-16 1.445E-12 1.389E-13 5.140E-15 3.259E-18 6.453E-10
+   1.460E-07 4.659E-19 3.831E-18 1.606E-19 4.520E-18 2.828E-19 6.184E-19
+   3.346E-18 1.756E-19 1.230E-15 1.182E-16 9.160E-16 1.221E-06 6.453E-10
+   1.460E-07 1.224E-15 1.006E-14 1.258E-16 3.540E-15 2.215E-16 4.843E-16
+   2.621E-15 1.376E-16 9.634E-13 9.261E-14 7.404E-15 4.154E-19 6.453E-10
+   1.460E-07 1.043E-15 8.578E-15 2.709E-17 7.623E-16 4.769E-17 1.043E-16
+   5.645E-16 2.963E-17 2.075E-13 1.994E-14 3.321E-15 7.581E-20 6.453E-10
+   1.460E-07 2.783E-18 2.288E-17 1.302E-18 3.664E-17 2.292E-18 5.013E-18
+   2.713E-17 1.424E-18 9.972E-15 9.585E-16 4.734E-15 0.000E+00 6.453E-10
+   1.460E-07 106 Remainder Organs * If the maximum dose to any remainder
+   organ is less than the maximum dose to any risk organ, then 10 T m HT T
+   = Hremainder = 1 10 Tm T =1 107 Remainder Organs * If the maximum dose
+   to a remainder organ T is greater than the maximum dose to the any risk
+   organ, then 10 T m HT T = T , 1 T H remainder = 0.5 + 0.5 H 10 T T m T
+   = T , 1 T 108 Ht A A x Ht Wt Mass (g) Ht x Mass Ht x Wt Adrenals
+   1.467E-07 14 2.053E-06 UB_Wall 1.467E-07 0.050 7.333E-09 Bone_Sur
+   9.014E-05 0.010 9.014E-07 Brain 1.467E-07 1400 2.053E-04 Breasts
+   1.467E-07 0.050 7.333E-09 St_Wall 1.472E-07 0.120 1.767E-08 S I_W all
+   1.481E-07 640 9.477E-05 ULI_Wall 1.551E-07 0.570 8.838E-08 LLI_Wall
+   1.719E-07 0.430 7.392E-08 Kidneys 5.383E-07 310 1.669E-04 Liver
+   1.944E-05 0.050 9.720E-07 ICRP 60 ET1-bas 1.479E-07 0.001 1.479E-10
+   ET2-bas 7.939E-05 0.998 7.923E-05 LN-ET 1.441E-04 0.001 1.441E-07
+   BBi-bas 5.960E-06 0.167 9.924E-07 BBi-sec 6.497E-05 0.167 1.082E-05
+   bbe-sec 3.332E-05 0.333 1.109E-05 AI 7.062E-05 0.333 2.352E-05 LN-Th
+   4.968E-04 0.001 4.968E-07 Muscle 1.467E-07 28000 4.107E-03 Ovaries
+   1.467E-07 Pancreas 1.467E-07 100 1.467E-05 R_Marrow 4.655E-06 0.120
+   5.586E-07 Skin 1.467E-07 0.010 1.467E-09 S pleen 1.467E-07 180
+   2.640E-05 Testes 1.368E-06 0.200 2.736E-07 Thymus 1.467E-07 20
+   2.933E-06 Thyroid 1.467E-07 0.050 7.333E-09 Uterus 1.467E-07 80
+   1.173E-05 Composite Organs lungs 4.692E-05 0.120 5.630E-06 ET 7.937E-05
+   15 colon 1.623E-07 0.120 1.948E-08 oesophagus 1.467E-07 0.050 7.333E-09
+   remainder 1.506E-07 0.050 7.528E-09 1.000 30759 4.631E-03 effective
+   8.411E-06 109 Dose Benchmark DCF (Sv/Bq) LaBone 8.41E-06 Genmod
+   8.41E-06 ICRP 8.30E-06 Genmod uses SEEs from SEECAL 110 ICRP 30 vs ICRP
+   66/67: Which is Better? * Neither model gives "right" answer for a
+   particular person, but on the average the new models are more "right."
+   ICRP 66/67 designed for evaluating bioassay data.  ICRP 66/67 designed
+   to be "accurate" instead of "conservative." * ICRP 66/67 is as complex
+   as it has to be. 111 Using New Models with Current Regulations * No
+   regulations prohibit the use of the new respiratory tract and systemic
+   models.  10CFR835 requires the use of ICRP 26 weighting factors.  DACs
+   and ALIs are based on ICRP 30. * How to mix new with old  ICRP 2 versus
+   ICRP 30 mentality - been there, done that.  No guidance on mixing
+   models.  Should I recalculate my historic doses? 112 Ht A A x Ht Wt Ht
+   x Wt Adrenals 1.467E-07 UB_Wall 1.467E-07 Bone_Sur 9.014E-05 0.03
+   2.704E-06 Brain 1.467E-07 Breasts 1.467E-07 0.15 2.200E-08 St_Wall
+   1.472E-07 ICRP 30 SI_Wall 1.481E-07 0.06 8.885E-09 ULI_Wall 1.551E-07
+   0.06 9.303E-09 LLI_Wall 1.719E-07 0.06 1.031E-08 Kidneys 5.383E-07 0.06
+   3.230E-08 Liver 1.944E-05 0.06 1.166E-06 ET1-bas 1.479E-07 0.001
+   1.479E-10 ET2-bas 7.939E-05 0.998 7.923E-05 LN-ET 1.441E-04 0.001
+   1.441E-07 BBi-bas 5.960E-06 0.167 9.924E-07 BBi-sec 6.497E-05 0.167
+   1.082E-05 bbe-sec 3.332E-05 0.333 1.109E-05 AI 7.062E-05 0.333
+   2.352E-05 LN-Th 4.968E-04 0.001 4.968E-07 Muscle 1.467E-07 Ovaries
+   1.467E-07 Pancreas 1.467E-07 R_Marrow 4.655E-06 0.12 5.586E-07 Skin
+   1.467E-07 Spleen 1.467E-07 Testes 1.368E-06 0.25 3.420E-07 Thymus
+   1.467E-07 Thyroid 1.467E-07 0.03 4.400E-09 Uterus 1.467E-07 Composite
+   Organs lungs 4.692E-05 0.12 5.630E-06 effective 1.00 1.049E-05 113
+   Mixing Models for Plutonium ICRP 30/Jones ICRP 66/Jones Intake Dose
+   ICRP 66/67 LAS BZA 114 In-vitro Lung Solubility * Difficult to use with
+   ICRP 30 lung model * Readily adapted to F/M/S classifications of ICRP
+   66 lung model * Practical application of in-vitro solubility data to
+   ICRP 66 lung model discussed in ICRP 71 115 Chelation Therapy * The
+   ICRP 67 systemic model explicly considers the plutonium content of the
+   bloodstream, including recycling from systemic organs. * This suggests
+   a direct and rather simple method for modeling the urinary excretion of
+   plutonium following chelation therapy.  Stop biokinetic model at time
+   of chelation  Remove plutonium (chelate) that is in the blood
+   compartment  Restart biokinetic model with new initial comartment
+   contents  Add chelate excretion to normal plutonium excretion 116
+   Simplified Model respiratory tract GI tract blood systemic organs
+   excreta 117 Initial Contents fraction fraction Compartment 0 days
+   Compartment 10 days ET2 3.989E-01 feces 4.000E-01 ET1 3.385E-01 ENV
+   3.380E-01 AI2 3.191E-02 TAI2 2.700E-02 AI1 1.596E-02 TAI1 1.100E-02 BB1
+   1.171E-02 LIV1 9.000E-03 bb1 6.570E-03 TS 9.000E-03 BB2 5.920E-03 CS
+   6.000E-03 AI3 5.320E-03 TAI3 5.000E-03 bb2 4.380E-03 TBB2 4.000E-03
+   ETseq 2.000E-04 ST1 4.000E-03 BBseq 1.200E-04 Tbb2 3.000E-03 bbseq
+   7.721E-05 LLI 1.000E-03 feces 0.000E+00 blood 1.000E-03 118 Excretion
+   Curve 1.E-03 non-chelate chelate 1.E-04 sum 1.E-05 Pu in Urine 1.E-06 0
+   10 20 30 40 50 Time After Intake(days) 119 Acknowledgments * Keith
+   Eckerman, ORNL * Alan Birchall, NRPB * Tony James, ACJ and Associates *
+   Ken Skrable, Retired * Clay French, UML * Gary Mansfield, LLNL *
+   Guthrie Miller, LANL 120 Appendicies 1. Listing of Pascal code
+   LUNGDEP66 that calculates the deposition fractions for the ICRP 66
+   respiratory tract model. 2. Listing of the Mathcad worksheet
+   pu239sDecays that calculates the decays that occur following an
+   inhalation intake of 5.0 µm AMAD type S Pu-239. 3. Listing of the
+   Mathcad worksheet Functions that is called by pu239sDecays. 4. Output
+   of Genmod for inhalation intake of 5.0 µm AMAD type S Pu- 239. 5.
+   Output of ICRP CD for inhalation intake of 5.0 µm AMAD type S Pu- 239.
+   6. Listing of the Mathcad worksheet iodine that illustrates the
+   eigensystem and matrix exponential methods of solving systems of
+   ordinary differential equations. 1 Appendix 1 { Raises a to the b
+   power. } var sign : integer; c : double; begin if (a > 0.0) then rse :=
+   sexp(b*ln(a)) else if a = 0.0 then rse := 0 else begin c := trunc(b);
+   if b <> c then begin write('error in function rse'); halt; end; if
+   odd(trunc(b)) then sign := -1 else sign := 1; rse :=
+   sign*sexp(b*ln(abs(a))); end; end; {rse} function log( x:double ) :
+   double; { Calculates the common (base 10) logarithm of x. } begin log
+   := ln(x) / ln(10.0); end; {log} function alog( x:double ) : double; {
+   Calculates 10 raised to the power of x. } begin alog := sexp(x*ln(10));
+   end; {alog} function c( d:double ) : double; { Slip correction factor,
+   Equation D.6 in ICRP 66. } begin c := 1.0 +
+   0.0683/d*(2.514+0.8*sexp(-0.55*d/0.0683)); end; {c} procedure
+   calc_diameter( var dt:double; da:double ); { Calculates the
+   thermodynamic diameter from the aerodynamic diameter, see Equation D.13
+   in ICRP 66. Uses Newton's method to find root. } var new_dt,diff :
+   double; function k_0( da,dt:double ) : double; begin k_0 :=
+   sqr(dt)*c(dt) - sqr(da)*c(da)*chi/rho; end; function k_1( dt:double ) :
+   double; begin k_1 := 0.8*0.0683*sexp(-0.55*dt/0.0683) + 2.0*dt +
+   2.514*0.0683 - 0.55*0.8*dt*sexp(-0.55*dt/0.0683); end; begin dt := da;
+   repeat new_dt := dt - k_0(da,dt) / k_1(dt); diff := abs(new_dt -
+   dt)/new_dt; dt := new_dt; until diff < 1.0e-15; end; {calc_diameter}
+   procedure nose_deposition( {$N+} {$R+} program lungdp66; { Calculates
+   the deposition in the five regions of the respiratory tract using the
+   ICRP 66 respiratory tract model. Written in Turbo Pascal V6.0. T. R. La
+   Bone 22 January 1998 } uses wincrt; const chi = 1.5; {particle shape
+   factor} rho = 3.0; {density of particle} type depo_record = record eta
+   : double; {filtration efficiency for a region} phi : double; {fraction
+   of air reaching a region} xi : double; {ratio of phi for two filters}
+   DE : double; {deposition in a region} end; depo_type = (ae,th);
+   depo_array = array[1..5] of double; var ouf : text; dep : depo_array;
+   sum : double; i,j : integer; BB1s, {slow-clearance fraction deposited
+   in BB} bb2s, {slow-clearance fraction deposited in bb} amad, {activity
+   median aerodynamic diameter} s, {geometric standard deviation of the
+   amad} amtd, {activity median thermodynamic diameter} U, {wind speed in
+   m/s} V, {total air flow rate through nose and mouth} Vn, {air flow rate
+   through the nose} FRC, {functional residual capacity of the lung} VT,
+   {tidal volume of the lung} VDet, {anatomical dead space of the ET
+   region} VDbb2, {anatomical dead space of the bb region} VDBB1,
+   {anatomical dead space of the BB region} SFA, {scaling factor for the
+   bronchiole} SFt, {scaling factor for the trachea} SFb : double;
+   {scaling factor for the bronchiolar airways} poly_deposition :
+   depo_array; {deposition in five regions of RT}
+   (**********************************************************************
+   ) function sexp( x:double ) : double; { Prevents runtime errors caused
+   by exp underflowing. } begin if x < -2000 then sexp := 0.0 else sexp :=
+   exp(x); end; function rse( a,b:double ) : double; Appendix 1 R[ae,4] :=
+   (0.056+rse(tb2,1.5))*rse(da,rse(tb2,-0.25)); R[ae,5] := Sqr(da)*tA;
+   R[ae,6] := (0.056+rse(tb2,1.5))*rse(da,rse(tb2,-0.25)); R[ae,7] :=
+   Sqr(da)*V*rse(SFt,3); R[ae,8] := Sqr(da)*Vn*rse(SFt,3); R[ae,9] :=
+   Sqr(da)*Vn*rse(SFt,3); R[th,1] := D*rse(Vn*SFt,-0.25); R[th,2] :=
+   D*rse(Vn*SFt,-0.25); R[th,3] := D*tB1; R[th,4] := D*tb2; R[th,5] :=
+   D*tA; R[th,6] := D*tb2; R[th,7] := D*tB1; R[th,8] :=
+   D*rse(Vn*SFt,-0.25); R[th,9] := D*rse(Vn*SFt,-0.25); p[ae,1] := 1.0;
+   p[ae,2] := 1.17; p[ae,3] := 1.152; p[ae,4] := 1.173; p[ae,5] := 0.6495;
+   p[ae,6] := 1.173; p[ae,7] := 1.152; p[ae,8] := 1.17; p[ae,9] := 1.0;
+   p[th,1] := 0.5; p[th,2] := 0.538; p[th,3] := 0.6391; p[th,4] := 0.5676;
+   p[th,5] := 0.6101; p[th,6] := 0.5676; p[th,7] := 0.6391; p[th,8] :=
+   0.538; p[th,9] := 0.5; { calculate phi, xi, and DE} depo[1].phi := 1.0;
+   depo[2].phi := 1.0; depo[3].phi := 1 - VDet/VT; depo[4].phi := 1 -
+   (VDet+V_DBB1)/VT; depo[5].phi := 1 - (VDet+V_DBB1+V_Dbb2)/VT;
+   depo[6].phi := depo[4].phi; depo[7].phi := depo[3].phi; depo[8].phi :=
+   depo[2].phi; depo[9].phi := depo[1].phi; eta[ae,1] :=
+   0.5*(1-1/(a[ae,1]*rse(R[ae,1],p[ae,1])+1)); eta[ae,2] :=
+   1-1/(a[ae,2]*rse(R[ae,2],p[ae,2])+1); eta[ae,3] := 1 -
+   sexp(-a[ae,3]*rse(R[ae,3],p[ae,3])); eta[ae,4] := 1 -
+   sexp(-a[ae,4]*rse(R[ae,4],p[ae,4])); eta[ae,5] := 1 -
+   sexp(-a[ae,5]*rse(R[ae,5],p[ae,5])); eta[ae,6] := eta[ae,4]; eta[ae,7]
+   := 1 - sexp(-a[ae,7]*rse(R[ae,7],p[ae,7])); eta[ae,8] := eta[ae,2];
+   eta[ae,9] := eta[ae,1]; eta[th,1] :=
+   0.5*(1-sexp(-a[th,1]*rse(R[th,1],p[th,1]))); eta[th,2] := 1 -
+   sexp(-a[th,2]*rse(R[th,2],p[th,2])); eta[th,3] := 1 -
+   sexp(-a[th,3]*rse(R[th,3],p[th,3])); eta[th,4] := 1 -
+   sexp(-a[th,4]*rse(R[th,4],p[th,4])); eta[th,5] := 1 -
+   sexp(-a[th,5]*rse(R[th,5],p[th,5])); eta[th,6] := eta[th,4]; eta[th,7]
+   := eta[th,3]; eta[th,8] := eta[th,2]; var deposition : depo_array; da,
+   dt, U, V, Vn, FRC, VT, VDet, VDbb2, VDBB1, SFA, SFt, SFb : double ); {
+   The procedure nose_deposition calculates the deposition in the five
+   regions of the respiratory track following an inhalation of a
+   monodisperse particulate material through the nose. } var depo :
+   array[1..9] of depo_record; eta,a,R,p : array[depo_type,1..9] of
+   double; i : integer; V_Dbb2, V_DBB1, D, Psith, tB1, tb2, tA : double;
+   begin for i := 1 to 5 do deposition[i] := 0.0; V_Dbb2 := VDbb2 * (1 +
+   VT/FRC); V_DBB1 := VDBB1 * (1 + VT/FRC); D := 1.38e-16*310*c(dt) /
+   (3*Pi*1.88e-8*dt); Psith := 1 +
+   100*sexp(-Sqr(log(100+10/rse(dt,0.9)))); tB1 := VDBB1/V * (1 +
+   0.5*VT/FRC); tA := ( VT - VDet - (VDBB1+VDbb2)*(1 + VT/FRC) ) / V; tb2
+   := VDbb2/V * (1 + 0.5*VT/FRC); { assign parameters from Table 12 of
+   ICRP 66 } a[ae,1] := 3.0e-4; a[ae,2] := 5.5e-5; a[ae,3] := 4.08e-6;
+   a[ae,4] := 0.1147; a[ae,5] := 0.146*rse(SFA,0.98); a[ae,6] := 0.1147;
+   a[ae,7] := 2.04e-6; a[ae,8] := 5.5e-5; a[ae,9] := 3.0e-4; a[th,1] :=
+   18.0; a[th,2] := 15.1; a[th,3] := 22.02*rse(SFt,1.24)*Psith; a[th,4] :=
+   -76.8 + 167.0*rse(SFb,0.65); a[th,5] := 170 + 103*rse(SFA,2.13);
+   a[th,6] := -76.8 + 167.0*rse(SFb,0.65); a[th,7] :=
+   22.02*rse(SFt,1.24)*Psith; a[th,8] := 15.1; a[th,9] := 18.0; R[ae,1] :=
+   Sqr(da)*Vn*rse(SFt,3); R[ae,2] := Sqr(da)*Vn*rse(SFt,3); R[ae,3] :=
+   Sqr(da)*V*rse(SFt,3); Appendix 1 var lower_limit,upper_limit,increment
+   : double; da,dt,fs : double; prob : double; i,j : integer; deposition :
+   depo_array; begin BB1s := 0.0; bb2s := 0.0; lower_limit := ln(amad) -
+   z*ln(s); upper_limit := ln(amad) + z*ln(s); increment := (upper_limit -
+   lower_limit) / number_increments; for i := 1 to 5 do poly_deposition[i]
+   := 0.0; for i := 1 to number_increments do begin prob :=
+   integral(lower_limit+increment,ln(amad),ln(s)) -
+   integral(lower_limit,ln(amad),ln(s)); da := exp(lower_limit +
+   increment/2); calc_diameter(dt,da);
+   nose_deposition(deposition,da,dt,U,V,Vn,FRC,VT,VDet,VDbb2,VDBB1,SFA,SFt
+   ,SFb); for j := 1 to 5 do poly_deposition[j] := poly_deposition[j] +
+   prob*deposition[j]; if da <= 2.5*sqrt(rho/chi) then fs := 0.5 else fs
+   := 0.5*sexp( -ln(2)/1.1*(dt-2.5)); BB1s := BB1s +
+   fs*prob*deposition[3]; bb2s := bb2s + fs*prob*deposition[4];
+   lower_limit := lower_limit + increment; end; end; {nose_polydeposition
+   } procedure sigma_g( var s:double; amad,amtd:double ); { Calculates the
+   geometric standard deviation of a polydisperse aerosol, see Equation 16
+   of ICRP 66. } begin if amad > 1.0 then s := 2.5 else if amad < 0.0005
+   then s := 1.0 else s := 1 + 1.5*(1- 1/(100*rse(amtd,1.5)+1)); end;
+   {sigma_g}
+   (**********************************************************************
+   ) begin clrscr; {for light exercise} V := 833.0; Vn := V; VT := 1250.0;
+   amad := 5.0; U := 0.0; FRC := 3301.0; VDet := 50.0; VDbb2 := 47.0;
+   VDBB1 := 49.0; SFA := 1.0; SFt := 1.0; SFb := 1.0; 2 eta[th,9] :=
+   eta[th,1]; depo[1].xi := 1.0; for i := 2 to 9 do depo[i].xi :=
+   depo[i].phi / depo[i-1].phi; for i := 1 to 9 do { Equation 10}
+   depo[i].eta := Sqrt( Sqr(eta[ae,i]) + Sqr(eta[th,i])); depo[1].DE :=
+   depo[1].eta { Equation 8} * (1 - 0.5*(1-1/(7.6e-4*rse(da,2.8)+1)) +
+   1e-5*rse(U,2.75)*sexp(0.055*da)); for i := 2 to 9 do depo[i].DE :=
+   depo[i-1].DE * depo[i].eta * depo[i].xi * (1/depo[i-1].eta - 1);
+   depo[1].DE := depo[1].DE + depo[9].DE; depo[2].DE := depo[2].DE +
+   depo[8].DE; depo[3].DE := depo[3].DE + depo[7].DE; depo[4].DE :=
+   depo[4].DE + depo[6].DE; for i := 1 to 5 do deposition[i] :=
+   depo[i].DE; end; {nose_deposition} function integral( x,m,s:double ) :
+   double; { Calculates integral of the normal PDF between -infinity and
+   x, given x, the mean m, and the standard eviation s. } var p,z,r :
+   double; begin z := (x-m)/s; r := 1/(1+0.2316419*abs(z)); p :=
+   sexp(-z*z/2) * r*(0.319381530 + r*(-0.356563782 + r*(1.781477937 +
+   r*(-1.821255978 + r*1.330274429)))) / sqrt(2*Pi); if z > 0.0 then p :=
+   1 - p; integral := p; end; {integral} procedure nose_polydeposition(
+   var poly_deposition : depo_array; var BB1s : double; var bb2s : double;
+   amad, amtd, s, U, V, Vn, FRC, VT, VDet, VDbb2, VDBB1, SFA, SFt, SFb :
+   double ); { The procedure nose_polydeposition calculates the deposition
+   in the five regions of the respiratory track following an inhalation of
+   a polydisperse particulate material through the nose. } const
+   number_increments = 500; z = 4.0; Appendix 1 calc_diameter(amtd,amad);
+   sigma_g(s,amad,amtd); for i := 1 to 5 do poly_deposition[i] := 0.0;
+   nose_polydeposition(dep,BB1s,bb2s,amad,amtd,s,U,V,Vn,FRC,VT,VDet,VDbb2
+   ,VDBB1,SFA,SFt,SFb); for i := 1 to 5 do poly_deposition[i] := dep[i];
+   writeln('ET1 : ',(100*poly_deposition[1]):12:2); writeln('ET2 :
+   ',(100*poly_deposition[2]):12:2); writeln('BB :
+   ',(100*poly_deposition[3]):12:2); writeln('bb :
+   ',(100*poly_deposition[4]):12:2); writeln('AI :
+   ',(100*poly_deposition[5]):12:2); sum := 0.0; for i := 1 to 5 do sum :=
+   sum + poly_deposition[i]; writeln('Sum : ',100*sum:12:2); writeln;
+   writeln('Fs BB : ',(BB1s/poly_deposition[3]):12:5); writeln('Fs bb :
+   ',(bb2s/poly_deposition[4]):12:5); assign(ouf,'lungdp66.out');
+   rewrite(ouf); writeln(ouf,'ET1 : ',(100*poly_deposition[1]):12:2);
+   writeln(ouf,'ET2 : ',(100*poly_deposition[2]):12:2); writeln(ouf,'BB :
+   ',(100*poly_deposition[3]):12:2); writeln(ouf,'bb :
+   ',(100*poly_deposition[4]):12:2); writeln(ouf,'AI :
+   ',(100*poly_deposition[5]):12:2); writeln(ouf,'Sum : ',100*sum:12:2);
+   writeln(ouf); writeln(ouf,'Fs BB : ',(BB1s/poly_deposition[3]):12:5);
+   writeln(ouf,'Fs bb : ',(bb2s/poly_deposition[4]):12:5); close(ouf);
+   end. D:\PROJECTS\ABHP Appendix 2 8/14/00 Course\pu239sDecays.mcd Dose
+   from an inhalation intake of 5 µµm Type S plutonium-239 using the ICRP
+   66 lung model and ICRP 67 systemic model. Written in Mathcad 2000 and
+   Excel 97. T. R. La Bone 1.0 Define global variables. ln(2) Radioactive
+   decay contstant for Pu-239. (8.7837 106 ) ORIGIN 1 Defines arrays to
+   begin with the 1,1 element. T1 0 T2 50 365 Times in days for
+   calculating decays. Reference:D:\PROJECTS\ABHP Course\functions.mcd(R)
+   2.0 The compartments in the model are assigned numbers to clarify their
+   use in the arrays to be defined. Respiratory tract compartments. AI1 :=
+   1 bb1 := 4 BB1 := 7 ET2 := 10 LNet := 13 AI2 := 2 bb2 := 5 BB2 := 8
+   ETseq := 11 LNth := 14 AI3 := 3 bbseq := 6 BBseq := 9 ET1 := 12
+   Transformed respiratory tract compartments. TAI1 := 15 Tbb1 := 18 TBB1
+   := 21 TET2 := 24 TLNth := 27 TAI2 := 16 Tbb2 := 19 TBB2 := 22 TETseq :=
+   25 TAI3 := 17 Tbbseq := 20 TBBseq := 23 TLNet := 26 GI tract
+   compartments and feces. S := 28 SI := 29 ULI := 30 LLI := 31 Systemic
+   compartments of the ICRP 67 plutonium model. blood := 32 ST0 := 35 CV
+   := 38 TV := 41 OKT := 44 nads := 47 feces := 49 LIV1 := 33 ST1 := 36 CS
+   := 39 TS := 42 UP := 45 ENV := 48 urine := 50 LIV2 := 34 ST2 := 37 CM
+   := 40 TM := 43 UBC := 46 1 D:\PROJECTS\ABHP Appendix 2 8/14/00
+   Course\pu239sDecays.mcd 4.0 Initial content of the compartments for an
+   aerosol whose AMAD is defined later in the spreadsheet . Any content
+   not explicitly given has a value of zero. AMAD 5 D := Depo(AMAD) i :=
+   AI1.. ET1 q0i := Di q0urine := 0 5.0 Define rate constants. All rate
+   constants are in units of 1/days. Absorption rate constants Type S
+   material in units of 1/days. Defaults are fr=0.001, sr=100, ss=0.0001.
+   fr 0.001 sr 100 ss 0.0001 sp := ss + fr (sr - ss) spt := (1 - fr) (sr -
+   ss) st := ss sp = 0.10010 spt = 99.89990 st = 0.00010 Define transfer
+   rate constants for the respiratory tract compartments.

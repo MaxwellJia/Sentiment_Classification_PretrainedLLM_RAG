@@ -1,0 +1,261 @@
+http://gnarly.lanl.gov/History/CFDVG_6_96.pdf
+
+   Great Lies of CFD Codes The Legacy and Future of CFD "It will solve
+   your problem without modifications." at Los Alamos "The manual has
+   everything you need to run the code." "Standardized graphics output,
+   compatible with third party post-processors." Norman L. Johnson
+   "Minimal learning curve." "Executable on all machines with no
+   modifications" Fluid Dynamics Group, T-3 Theoretical Division "Robust
+   and accurate." Los Alamos National Laboratory "All physics are
+   compatible." nlj@lanl.gov "User friendly." http://gnarly.lanl.gov
+   "There are no more bugs in the code, only undocumented features." "You
+   can run the code without the manual." Canadian '96 CFD Conference
+   Ottawa, Canada "The technique was first developed here." June 3, 1996
+   Reference: N. L. Johnson, LA-UR-96-1426, CFD Canada 6/96 Los Alamos Los
+   Alamos National Laboratory May 1996 Acknowledgments and Contacts Early
+   years * Based on a lecture by Tony Hirt * With Frank Harlow, Jerry
+   Brackbill, John Dukowicz, Tony Amsden Turbulence * Tim Clark Interface
+   Tracking, Telluride, Pagosa, parallel computing * Doug Kothe Particle
+   methods and FLIP * Jerry Brackbill CFDLIB and CCMAC * Bryan Kashiwa and
+   Brian VanderHeyden Future of CFD * Jerry Brackbill and John Dukowicz
+   And all the members of T-3, past and future CFD Canada 6/96 Los Alamos
+   . CDF at Los Alamos in 1956 Problems: Multiple materials under high
+   compression, behaving like fluids, with large flow distortion. Codes:
+   Lagrangian with staggered variables. Challenges: Mesh entanglement was
+   fixed by hand. Computing resources: Maniac and IBM 704. 109 Cray-1 CDC
+   7600 CDC 6600 106 IBM 7030 IBM 704 Maniac Seac Operations/sec 103
+   accounting machines 100 1940 1950 1960 1970 1980 Year CFD Canada 6/96
+   Los Alamos PIC - Solving the Unsolvable Formulation: First Use of
+   Solution Phases: Fixed Eulerian 2-D grid of equal size Lagrangian -
+   Particles with species and mass Advance cell values without advection,
+   map new values to particles. Eulerian Advection - p, I, v, Move
+   particles. r, m, species Book Keeping - Map particle information to
+   mesh. Partition energy in multi-material cells. Treated: Comments:
+   Compressible flow First solutions of large deformations with Multiple
+   materials distorting interfaces. Time dependent flow Problems with
+   particle fluctuations - Large distortion 16 particles per cell -
+   minimum. Should have been classified - Large Particle method in Soviet
+   Union, Harlow, J. Ass. Comp. Mach. 4, 137 (1957). CFD Canada 6/96 Los
+   Alamos PIC - Results Shock compression of a single fluid: Shock
+   distortion with two materials: Excellent comparison with experiments.
+   Realistic interface instability. Particle resolution and stability.
+   Robust treatment of a difficult problem. CFD Canada 6/96 Los Alamos
+   Vorticity-Stream Function Method (1963) Problem: Solve 2-D, transient,
+   incompressible flow. Approach: Use non-primative variables to satisfy
+   the incompressibility condition. Comments: Technique developed by Jacob
+   Fromm with Frank Harlow, Fromm and Harlow, Phys. Fluids 6, 975 (1963).
+   The solution to the von Karman vortex shedding problem made the cover
+   of Scientific American. Later Fromm extended it to free-surface
+   problems. Fromm's Phase Error Correction method anticipated
+   monotonicity preserving advection methods now so popular. CFD Canada
+   6/96 Los Alamos Origins of MAC: Marker and Cell Method The MAC method
+   (1965) was the origin of the "Staggered Mesh" Cell Centered Mesh
+   Staggered Mesh V p, U, V U p U V * "Checker board" pressure field. *
+   Coupled p-v fields. * Difference approximations reach 2 x. * More
+   compact support, x. * Now possible through nonlinear * Simplified v
+   boundary conditions. or temporal coupling. * Single control volume. *
+   Multiple control volumes Original MAC scheme used particles to "mark"
+   the free surface. CFD Canada 6/96 Los Alamos Other T-3 CFD Methods PAF
+   (Particle and Force) in 1961 - Largely unknown method: Goal: Eliminate
+   the instabilities of mapping to the PIC Eulerian mesh. Approach: Fluid
+   represented by directly interacting mass points - Newtonian dynamics of
+   many bodies with fluid-like forces. * Suffered the same slowness and
+   high memory costs of the PIC method. * Exhibited extreme fluctuations
+   as "fluid particles" reconnect. * First of the Free-Lagrange method,
+   precursor to SPH and Lattice-gas methods. FLIC (Fluid in Cell) in 1966:
+   Goal: Eliminate particle fluctuations and high CPU costs associated
+   with PIC. Approach: Co-located state and kinetic variables at cell
+   center; compute fluxes across cell boundaries. * Exhibited classic
+   instability from poorly couple pressure-momentum fields. * First method
+   to use Fractional Area/Volume formulation - never expolited. k-
+   Turbulence Model in 1967: Goal: Introduce an additional length/time
+   scale and dissipation equation. * Used q-d because of the word
+   processing at the time. ICE (Implicit Continuous-Fluid Eulerian) in
+   1967, 1970: Goal: Develop an all-speed algorithm - a generalized MAC
+   method. CFD Canada 6/96 Los Alamos Origins of ALE: Arbitrary
+   Lagrangian-Eulerian Method First T-3 Lagrangian method (1967): LINC
+   (Lagrangian Incompressible) Based on the cell volume remaining constant
+   - not a zero-divergence. Original formulation plagued by p-v null space
+   oscillations. Led to: * Implicit p-v solution scheme, as later used for
+   MAC. * Showed necessity of automatic mesh rezoning (remapping). *
+   Explored elastic-plastic strength models and surface tension. ALE
+   capability was the second generation LINC development in 1974. * The
+   first finite-volume formulation. * Precusor to the SALE and its progeny
+   (Hirt) and FLIP (Brackbill). CFD Canada 6/96 Los Alamos Overview of the
+   Early Days The T-3 style: * The focus was on the physics, not the
+   mathematics. * All techniques resulted from collaboration - no titles
+   used. The early days: * Almost all territory was unexplored; every
+   development found an application. * Computing resourses were always a
+   limiting factor. * All graphing was done by hand (on Fridays). * Each
+   code was written from scratch. * By 1966, 160 groups used the T-3
+   techniques and then use mushroomed. * Codes were never distributed;
+   SOLA was the first (1975). Passing of an Era: 1968 was the last year
+   that Harlow said he could keep up with all the CFD developments around
+   the world. CFD Canada 6/96 Los Alamos Time Line of T-3 Activities
+   Computing Resources 40's Activities Mechanical calculators All
+   Lagrangian codes 50's Maniac Harlow and PIC arrive 60's T-3 established
+   with 7 members Vortex-stream function, PAF - Free Lagrangian IBM
+   Stretch MAC, ICE, k- turbulence CDC 6600 70's LINC Harlow steps down as
+   Group Leader CDC 7600 MHD, ALE, Finite Volume CRAY-1 Multiphase codes -
+   SOLA More CRAYs 80's Reactive flows - RICE SALE Solid mechanics -
+   ductile failure Clusters CAVEAT, Massively parallel codes TMI CM-2 90's
+   The return of Eulerian codes TMI CM-5 Grand challenges CRI T3D, Triton
+   Fully unstructured codes 30 members ???? 2000 ???? CFD Canada 6/96 Los
+   Alamos Current Research in T-3 Reactive Flow and Combustion Turbulence
+   * Automotive flows * Spectral modeling KIVA-3, KIVA-F90, KIVA-AC, *
+   Direct numerical simulations NO-UTOPIA, * Engineering models
+   Hydrogen-fueled powerplants * Wildfire code for Crisis Management
+   Material modeling * High strain-rate plasticity
+   Multiphase/Multimaterial/Multifield * Ductile and brittle failure *
+   Reactive-multiphase flow (CFDLIB) * Composites * High distortion flows
+   (PAGOSA) * Casting (TELLURIDE) Miscellaneous * CO Particle methods 2
+   elimination * MHD (FLIP) * Underground tunnel location * Granular flow
+   modeling * and others Global modeling - Parallel computing Comments *
+   Ocean flow modeling (POP) * Mostly in collaboration * Ocean ice
+   modeling (CICE) * Funding from * Coupled Ocean-Atmosphere modeling
+   Industry partnerships * Mantle dynamics DOE thrust areas Internal
+   research support CFD Canada 6/96 Los Alamos FLIP: A Modern PIC
+   Improvements over the historical PIC method: * Mesh solution updates
+   particle data - minimal numerical diffusion and finite-grid
+   instability. * Mesh is adaptive. * Automatic particle density
+   algorithm. * Higher order interpolation to the mesh. * Compact support
+   for better mixed material treatment. * Extension to 3-D, solid
+   mechanics, plasmas, and MHD. FLIP advantages over other non-particle
+   methods: * Galilean invariance for rotationally dominated flows. *
+   Lagrangian state storage for advection-challenged material models.
+   Solid rotation of a cylinder showing vorticity conservation, surface
+   instabilities and mesh adaptivity. CFD Canada 6/96 Los Alamos Modeling
+   of Discontinuities: Interfaces The challenge: * Accuracy, efficiency
+   and robustness in 3-D, not offered by PIC, VOF or interface tracking
+   methods. The approach: 1) Neglect sub-grid information. 2) Reconstruct
+   interface (or discontinuity) each time step in 3-D, based on grid
+   information. 3) Use reconstruction to apply physics or for advection. 0
+   0 0 0 Comments: * VOF origin, Youngs developed, 0.94 0.58 0.03 0
+   extended to non-orthogonal meshes. * Very powerful when combined with
+   1.0 1.0 0.58 0 adaptive remapping as in CAVEAT. * Major resurgence of
+   Eulerian codes. 1.0 1.0 0.94 0 An example showing the reconstruction *
+   Now basis of PAGOSA and TELLURIDE. of a circle from volume fractions.
+   CFD Canada 6/96 Los Alamos CFD Library and CCMAC Origins: Late 1980's,
+   development of a cell-centered ALE code - CAVEAT * General purpose code
+   for large distortional flows. * Modular and efficient structure in 2-D
+   and 3-D, using multi-block hexas. * Resolved material interfaces and
+   interface tracking with adaptivity. * Explicit Godunov numerics with
+   approximate Reimann solver - Difficult to implement additional physics.
+   Development of CCMAC: A cell-centered MAC scheme * Uses TVD space-time
+   centered fluxing method Duplicates the staggered-grid p-v coupling.
+   Reduces to Lax-Wendroff scheme when space-time centered. * Extended to
+   all-speed flows Requires a single Poisson pressure solutions each time
+   step. * Compatible with additional physics. CFDLIB: A common library of
+   CFD modules, based on CAVEAT * All physics (compressible,
+   incompressible, MHD, multiphase, ...) * Reactive flows in heterogenous
+   systems. * Fluid-structure interactions CFD Canada 6/96 Los Alamos
+   Turbulence Spectral Models (T. Clarke and C. Zemach) Consider a
+   "Two-Point" Generalization of the Reynolds Stress Tensor (for a Single
+   Fluid) Rij (x1,x2,t) = u i(x1,t)u j(x2,t) Derive an exact transport
+   equation via Navier-Stokes and (1) change coordinates: X = 1 (x ), r =
+   x 2 1 + x2 1 - x2 (2) Fourier Transform with respect to the relative
+   coordinate, r , and (3) perform angular integrations to reduce the
+   vector-k space to a scalar k-space; Rij (x1,x2,t) 1 Rij (X,r,t) 2 Rij
+   (X,k,t) 3 Rij (X,k,t) Result: A spectral model of the turbulent
+   Reynolds stress, related to the "single-point" engineering model by
+   integration over wavenumber; Rij (X,t) = R ij(X,k,t)dk = 2 E
+   ij(X,k,t)dk 0 0 where the "Energy Spectrum" E(k,t) is Enn(k,t), the
+   turbulent kinetic energy K(t) is K(X,t) = E(X,k,t)dk 0 * Requires no
+   dissipation equation, or length-scale equation. * Permits computation
+   of "non-equilibrium" turbulence. * Cost of direct numerical solution is
+   much more costly than using a spectral model, which is more costly then
+   using an engineering closure. Turbulence and Symmetry "A turbulent
+   flow, initialized at t=0 in some arbitrary way, may relax, after some
+   transient period, to a self-similar flow." The turbulence may satisfy
+   the same symmetries and scalings as the governing equations, i.e., the
+   Navier-Stokes Equations. Self-Similarity originates in invariance of
+   the turbulence dynamics under a group of transformations, e.g.,
+   space-time transformations such as (for isotropic) t = t, (time
+   scaling), t = t + t0 (time translation), l = l, (length scaling).
+   Consider a scaling subgroup, = ; for which an invariant solution obeys
+   3 -2E(k,t) = E( - k,-t0 + (t + t0 )). This can be shown to have a
+   solution of the form (Karman-Howarth) E(k,t) = K(t)L(t) f (kL(t)),
+   where f( ) satisfies an auxiliary equation given by a theory, model,
+   Navier- Stokes etc. Time dependencies are K(t) = K0 (1+ t / t0 )- K ,
+   L(t) = L0 (1+ t / t0 ) , and K = 2 - 2 . This agrees precisely with K-
+   closures and with results from (all?) spectral models for isotropic
+   turbulence. Self-Similarity and Engineering Closures Assertion:
+   Single-Point (Engineering) closures can be rigorously correct in the
+   limit of spectral self-similarity. Consider the self-similar form for
+   turbulence at high Reynolds number subjected to a homogeneous mean flow
+   velocity gradient; Eij (k,t) = K(t)L(t) fij (kL(t)). In general, each
+   fij is different. During free decay, (upon releasing the mean flow
+   strain or shear) the spectrum tends asymptotically towards the form
+   E(k,t) = K(t)L(t) f (kL(t)). and Eij (k,t) = Eij (k,t) - 1 ( ) = K (
+   )L(t) f(kL(t)) 3 ijE k,t ij t where K ij (t ) = 1 R ( ) = 1 R ( ) - 1 (
+   ) 2 ij k,t 2 ij k,t 3 ij Rnn k,t Simple Group analysis (and the
+   spectral model) predicts the same time dependencies of Kij (t) and K(t)
+   . Hence the anisotropy, given by K ( ) b ij t ij (t ) = K(t) ,
+   asymptotes to a constant--Hence, No Long-Term Return to Isotropy!
+   Conclusion: The detailed process of "Return Toward Isotropy" is a non-
+   equilibrium process, not accurately depicted by engineering closures.
+   Example: Experiment of Uberoi & Wallis (J. Fluid Mech. 24, 1979).
+   Lesson: One should not ask "too much" of an engineering closure.
+   Construction of Engineering Closures From Spectral Closures (1)
+   Determine the appropriate similarity group for the problem class.
+   -Might be an approximation. -In conjunction with direct computation of
+   the spectral model, and direct numerical simulation. (2)Determine the
+   self-similar form of the spectra. (3) Substitute the self-similar
+   expression into the spectral model equations, and take "appropriate"
+   k-space moments. "Appropriate" moments may be a product of the tastes
+   of the researcher. E.G., does one want a dissipation rate equation or a
+   length scale equation? (4) Model coefficients will depend on spectral
+   moments and are determined by the details of the self-similar forms
+   produced by the spectral model. Example: K- -bij models constructed
+   from self-similar form for homogeneous mean-flow form. K-Equation K(t)
+   = -2 Un b t x nm - m where bij = f ij( )d . 0 -Equation = -{g } Um - g
+   2 t 0bnm + g 1 nm X 2 n K where g 0 = 3m - 2 , m g 1 = 3cF2m + 2 m , g
+   3m - 2 J(m) 2 = 1 + 1 m 2 Inn(m) , I ( ) ij m ij = Inn(m), Iij (m) = m
+   f ij ( )d , 0 and J(m) = m d F ( )d . d f 0 bij-Equation (Algebraic) (
+   U c j Um B - 1) Ui b b b x nj + ni - 2 ij nm n xn 3 xn +c Un Um B1 b b
+   b x nj + Un ni - 2 ij nm i xj 3 xn U +c Ui j B0 + + 2 Un b x nmbij j xi
+   xm = cM , K ij - bij where 1/2 ij = 3/2 f nn ( ) fij ( )d . 0 Summary
+   Symmetry considerations and transformation groups within spectral
+   turbulence models provide a framework to view the behavior of
+   turbulence and closures without resort to ad-hoc modeling hypotheses.
+   Spectral models in simulations provide a much richer picture of the
+   dynamics of turbulence and mix than do engineering closures, but at a
+   greater computational cost. In the limit of self-similarity (where a
+   group transformation applies) engineering closures can be derived
+   rigorously from spectral closures. But, "equilibrium" engineering
+   closure, in a non-equilibrium world, is at best, approximate. CFD
+   Canada 6/96 Los Alamos Future Work Focusing on the development of a
+   rigorous nonhomogeneous theory that does not assume spectral scales are
+   smaller than mean scales. Examining 3-point spectral models to give
+   guidance for closure techniques for 2-point models. Derivation of
+   multi-scale models or "reduced spectral" models for use in large
+   computer codes; Applicable to non-self-similar turbulence. More
+   tractable than full spectral closure. Deferring effects of helicity
+   ("swirl") until nonhomogeneous theory is developed. CFD Canada 6/96 Los
+   Alamos Future of CFD Current Status * One method won't solve all
+   problems. * Distributed processing will be the largest computational
+   resource. * Grand Challenge problems still require supercomputers. *
+   Machine independence of codes has been almost achieved Good software
+   tools are more important than speed. All new codes written in F90, with
+   some C++. Unstructured codes using high-level communication libraries.
+   Same problems now as in the beginning * Efficiency, accuracy and
+   robustness. * Multi-scale phenomena. * Treatment of nonlinear governing
+   equations. * Improvement of boundary conditions. * Implementation of
+   additional physics. Areas of major future developments * Operators
+   based on fundamental properties of governing equations (conservation,
+   symmetry, energy exchange, ...) * Stochastic CFD codes * Better methods
+   for analysis of large data sets * CFD code libraries - interchangeable
+   methods and machines CFD Canada 6/96 Los Alamos Definitions of a CFD
+   Code I/O and boundary conditions are longer than the hydrodynamics.
+   Roubustness is often determined by an undocumented feature. OR It is
+   impossible to reconstruct a code from the manual. Generates more
+   information than can ever be studied, or even stored. Capable of
+   saturating all existing computing resources. CFD Canada 6/96 Los Alamos
+   Great Lies of CFD Codes "It will solve your problem without
+   modifications." "The manual has everything you need to run the code."
+   "Standardized graphics output, compatible with third party
+   post-processors." "Minimal learning curve." "Executable on all machines
+   with no modifications" "Robust and accurate." "All physics are
+   compatible." "User friendly." "There are no more bugs in the code, only
+   undocumented features." "You can run the code without the manual." "The
+   technique was first developed here." CFD Canada 6/96 Los Alamos

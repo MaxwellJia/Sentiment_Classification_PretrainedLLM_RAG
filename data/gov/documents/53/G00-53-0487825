@@ -1,0 +1,1500 @@
+http://www-oss.fnal.gov/projects/roboinst/roboinst.html
+
+                   IRIX Distribution Server Documentation
+
+Contents
+
+   I. Overview
+
+   II . Getting the network ready for using roboinst
+
+   *III. Booting from the Prom Monitor
+
+   *IV. Creating the MRCONFIG file
+
+   *V. Conflicts
+
+   *VI. Security Scripts
+
+   VII. Server Maintenance and Directory Structure
+
+   *VIII. Mrconfig Syntax Creating the MRCONFIG file
+
+   *IX. Default Environment Variables
+
+   *X. Additional Sources of Information
+
+   *XI. Disk Partitioning
+
+   *XII. Basic steps required to use roboinst
+
+   *XIII. Example postinst script
+
+   *IXV. Demo mrconfig file
+
+   *IIXV. Example mrconfig
+
+   * Items marked this way are of interest to end user system
+   administrators. Other items pertain to server maintenance.
+
+I. Overview
+
+   RoboInst is a tool that allows you to automate miniroot installations
+   of IRIX 6.5. Since some setup is involved, to create a mrconfig file
+   and to configure bootp and tftp, RoboInst is most useful when you you
+   are installing multiple client machines, or upgrading or re-installing
+   a single machine often. If you are installing Irix 6.5 on a single
+   machine, it will be easier not to use RoboInst. In that case,just load
+   the miniroot from the Irix 6.5 Installation Tools CD, and use inst to
+   perform the installation interactively. RoboInst uses the remote
+   logging facility of syslogd(1) to report progress during the
+   installation.
+
+II. Getting the network ready for using roboinst
+
+   Roboinst depends on three networking protocols to work at fermi:
+   1. Bootp
+   2. Tftp
+   3. Remote access enable
+
+   In order for bootp to function correctly, the following steps need to
+   be taken to enbale it between the roboinst server and the roboinst
+   client:
+
+   1. The following line must appear in the /etc/services file. Any other
+   occurances of lines that begin with the service "bootp" should be
+   commented out:
+
+   bootp 67/udp bootps
+
+   2. The following line must appear in the /etc/inetd.conf file. Any
+   other occurances of lines that begin with the service "bootp" should be
+   commented out:
+
+   bootp dgram udp wait root /usr/etc/dhcp_bootp dhcp_bootp -o
+   /etc/config/dhcp_bootp.options
+
+   3. The command killall -1 inetd needs to be issued on the server to
+   make the installed changes take affect.
+
+   4. The network routers for the Fermi local area network should have
+   bootp forwarding enabled. This is done by the Fermi networking group by
+   adding bootp helpers to the routers. You must provide the IP address of
+   the client you are upgrading to the Fermi networking group. Please
+   contact Fermi networking for more information on this issue.
+
+   In order for tftp to function correctly, the following steps need to be
+   taken:
+
+   1. The following line should appear in the /etc/services file. Any
+   other occurances of lines that begin with the service "tftp" should be
+   commented out:
+
+   tftp 69/udp
+
+   2. The following line must appear in the /etc/inetd.conf file. Any
+   other occurances of lines that begin with the service "tftp" should be
+   commented out:
+
+   tftp dgram udp wait guest /usr/etc/tftpd tftpd -s /usr/etc/boot /dist
+   /stand /custom /usr/local/boot /usr/sbin
+
+   3. The command "killall -1 inetd" needs to be issued on the server to
+   make the installed changes take affect.
+
+   4. To date, tftp services are allowed through Fermi routers. Remote
+   access must be anabled on the roboinst server in order to allow the SGI
+   "inst" process to read from the software distributions. Remote access
+   can be controlled through the use of a .rhost file for aa specified
+   account. The chosen account does not need to be a priviledged account,
+   however, this account should have read access to all the configuration
+   and software distributions. To date, this account is the guest account
+   on the server.
+
+III. Booting from the Prom Monitor
+
+
+   Now that bootp and tftp are enable, we can describe the boot command
+   from the prom monitor. The only way to initate the roboinst boot
+   process is from the prom monitor unless the roboinst license is
+   present. For the purpose of this discussion, only booting from the prom
+   monitor is described.
+
+   Before initiating the roboinst process from prom monitor, several steps
+   need to be taken to setup the prom environment:
+
+   For newer systems (indy and beyond), the "-p" option to setenv can be
+   used to have the environment variable persist. On older systems, you
+   must retype these setenv commands after each attempt to reboot:
+
+   1. The netaddr must be set to the correct IP address for the host to be
+   automaticlly installed. For example:
+
+   Newer systems:
+
+   >> setenv -p netaddr www.xxx.yyy.zzz
+
+   Older systems:
+
+   >> setenv netaddr www.xxx.yyy.zzz
+
+   2. The netmask for the subnet the system resides on needs to be set.
+   For example:
+
+   Newer systems:
+
+   >> setenv -p netmask 0xffffff00
+
+   Older systems:
+
+   >> setenv netmask 0xffffff00
+
+   Here, 0xffffff00 is an example of a class C subnet mask.
+
+   3. The variable dlgate (stands for diskless gateway) needs to be set to
+   the default gateway for the subnet the system resides on. For example:
+
+   Newer systems:
+
+   >> setenv -p dlgate www.xxx.yyy.zzz
+
+   Older systems:
+
+   >> setenv dlgate www.xxx.yyy.zzz
+
+   where www.xxx.yyy.zzz is the Ip address of the network gateway.
+
+   The typical prom monitor command to initate the roboinst process could
+   be as follows:
+
+   >> boot -f bootp()www.xxx.yyy.zzz:/dist/sa(sashARCS) mrmode=custom
+   mrconfig=www.xxx.yyy.zzz:/custom/pathname
+
+   where
+
+   >>
+
+   is the prom monitor prompt.
+
+   boot
+
+   is the prom monitor boot command.
+
+   -f
+
+   is the switch used when specifying a specific location of the boot
+   file.
+
+   bootp()
+
+   specifies that the prom should initiate the boot request via the bootp
+          protocol.
+
+          www.xxx.yyy.zzz
+
+   is the ipaddress of the server the boot request is being sent to.
+
+   /dist/sa
+
+   is the pathname of the file to be booted on the server. This is an
+   example and the path could be any path pointing to a legitimate boot
+   file.
+
+   sashXXXX
+
+   this argument is passed to the sa when booting to specify the type of
+   architecture of the client. For Origin and Octane, XXXX should be
+   replaced with "64". For all other non 64 bit systems, it should be
+   replaced by "ARCS". ARCS stands for Advanced RISC Computing Standard.
+
+   mrmode=custom
+
+   specifies that a the roboinst configuration is taken from a custom
+   configuration file.
+
+   mrconfig=www.xxx.yyy.zzz:/custom/pathname
+
+   specifies the pathname to the the confiuration file on server
+   www.xxx.yyy.zzz. The path can point to any directory containing a
+   mrconfig to used for installing the client.
+
+   disksetup=true
+
+   This option should only be used when disk partitioning is included in
+   the mrconfig file. If specified, it causes roboinst to use fx to setup
+   the disk specified by the disk partitioning info in the mrconfig file.
+   If this option is not present, any partitioning info in the mrconfig
+   file will be ignored.
+
+   Warning: remember that if this option is present and disk partitioning
+   info is present in the mrconfig file, fx will destroy any data that
+   previously existed on the disk in question.
+
+   When the above command is executed, The prom monitor initiates the boot
+   request via the bootp protocol. The server recieves the request and
+   transfers the /dist/sa file. The /dist/sa file is booted on the client
+   according to whether sashARCS or sash64 is specified. Once booted,
+   /dist/sa command downloads the appropriate kernel and miniroot via tftp
+   for the architecture specified. The kernel is booted and the roboinst
+   install process is started.
+
+   It should be noted that the prom monitor has a limited line length. One
+   way around this limitation is to use the prom "setenv" command to set
+   an environment variable at the prom equal to a portion of the boot
+   string thereby shortening the overall string. For example, using the
+   typical boot string listed earlier:
+
+   >> boot -f bootp()www.xxx.yyy.zzz:/dist/sa(sashARCS) mrmode =custom
+   mrconfig=www.xxx.yyy.zzz:/custom/pathname
+
+   we could shorten the overall length in the following way:
+
+   >> setenv -p BOOTARGS "bootp()www.xxx.yyy.zzz:/dist/sa(sashARCS)"
+   >> setenv -p BOOTARGS2 "mrconfig=www.xxx.yyy.zzz:/custom/pathname"
+   >> boot -f $BOOTARGS1 $BOOTARGS2
+
+   The only caveat to using this method is that the variable used to
+   shorten the overall string length is not preserved between boot
+   attempts on older SGI systems (preindy). On newer systems, the "-p"
+   argument to the setenv command will preserve the variable through
+   reboots and powercyles.
+
+IV. Creating the MRCONFIG file
+
+   In this section, I will discuss the skeleton of an mrconfig created and
+   used for Fermi installations. The flow of the file is discussed and the
+   actual sytax of the mrconfig file is left to the next section,
+   "Mrconfig Syntax". The hope here is to get a sense of how and why the
+   file was created based on the needs of Fermi system administrators.
+
+   The file chosen was used to install a system with a disk that was
+   designated as repartitionable. This means that we could use roboinst
+   partitioning to repartition the disk build the filesystems. It is
+   critical to distinguish between a disk involved in a new install and
+   one that is simply being upgraded as was pointed out in the "Booting
+   from the Prom Monitor" section above. This is because the partitioning
+   process destroys all data on the disk.
+
+   Here is the Fermi /custom/ppd/new_disk file and descriptions of each
+   line in the file. Actual syntax is discussed in the next section:
+
+   The first line refers to the version of roboinst. If omitted, 1 is
+   assumed.
+
+   version 1
+
+   Here the loghost chosen is the current roboinst server IP address. This
+   address will probably change so consideration should be given to where
+   logging should be done. Any unix system with syslogd enabled can accept
+   these log entries.
+
+   loghost 131.225.81.183
+
+   The next section specifies the partitioning of the "new" disk. In this
+   case, we're creating a standard root partition on dks0d1s0.
+   The swap partition is on dks0d1s1. Note that swap is actually,
+   physically the first partition after the volume header, dks0d1s8.
+   The / partition is physically located after swap and finally the
+   partition designated as /afs is after root. The / and /afs partitions
+   will have xfs filesystems installed on them prior to mounting.
+
+   disksetup
+   partition dks0d1s0 standard root
+   partition dks0d1s1 followspart8:1024000 swap swap
+   partition dks0d1s0 followspart1:7737344 xfs/512 /
+   partition dks0d1s2 followspart0:122880 xfs/4096 /afs
+
+   The next line simply creates a variable, DIST, that is used to simplify
+   the writing of the inst commands below. It refers to the location of
+   the distribution hierarchy. Note again, that the IP address of the
+   server could change so care should be given in considering the server
+   name/address.
+
+   setenv DIST 131.225.81.183:/dist
+
+   The next line tells roboinst to stop at the manual inst command line in
+   the event of an error. If your creating a new mrconfig file, this is
+   extremely useful for debugging. Especially in the case of software
+   conflicts. See the "Conflicts" section below.
+
+   onerror wait
+
+   In the next line, roboinst is telling inst which files on the system
+   are considered precious and therefore should not be edited or
+   overwritten by the installation process. In this case, we installing a
+   new system so this line has no affect. In the event we were upgrading
+   an existing system, This list of files would probably contain custom
+   information to the fermi network and we would not want them over
+   written. Note that the list is required to appear in double quotes.
+
+   WARNING: This list should not be considered complete and should be
+   updated at the descretion of the Fermi System and Network
+   Administrators.
+
+   inst admin set precious_files "/etc/TIMEZONE /etc/fstab /etc/aliases
+   /etc/default/login /etc/group /etc/hosts /etc/inetd.conf
+   /etc/ipfilterd.conf /etc/motd /etc/passwd /etc/rpc /etc/sendmail.cf
+   /etc/sendmail.hf /etc/snmpd.auth /etc/snmpd.data /etc/snmpd.remote.conf
+   /etc/snmpd.trap.conf /etc/sys_id /etc/syslog.conf /etc/nsswitch.conf"
+
+   The next line inst is told that certain "delayable" conflicts should be
+   ignored. Not all conflicts are ignorable. Please refer to the section
+   "Conflicts" below and to the man page inst(1M) for additional info.
+   inst set delay_conflicts on
+
+   The next line controls behavior when overlays are loaded. Please refer
+   to inst(1M) for additional info.
+   inst set overlay_mode default
+
+   The next line controls the type of overlay to be installed. In this
+   example, maint refers to the fact that we are installing the 6.5.6m
+   stream.
+   inst set stream maint
+
+   The following section of lines iteratively tells inst which
+   distributions to be included in the installation. The lines containing
+   the "sh echo" command merely echo the string that follows and is simply
+   for debugging purposes while the roboinst process is running.
+
+   inst sh echo Installing Foundation1
+   inst from $DIST/6.5/Foundation1
+   inst sh echo Installing Foundation2
+   inst open $DIST/6.5/Foundation2
+   inst sh echo Installing NFS
+   inst open $DIST/6.5/NFS
+   inst sh echo Installing Applications
+   inst open $DIST/6.5/Applications
+   inst sh echo Installing Development_foundation
+   inst open $DIST/6.5/Development_foundation
+   inst sh echo Installing Development_libraries
+   inst open $DIST/6.5/Development_libraries
+
+   The next set of lines on a new installation has the affect of
+          installing defaults. If these same lines were used on an
+          upgrade, then it would refer to upgrade subsystems plus new,
+          default sibling subsystems (in the same product) that were not
+          part of the product the last time they were installed. Note that
+          the "keep *.64*" would be used on none 64 bit hardware platforms
+          (those other than Origin and Octane).
+
+          inst keep *
+          inst install standard
+          inst install default roboinst
+          inst install prereqs
+          inst keep *.sw64*
+
+   The next statement initates the inst process for the distributions
+   selected up to this point.
+
+   inst go
+
+   The description for the following set of lines is the same as for those
+   described above accept that the selections are for the maintenance
+   release overlays in the /dist/6.5.6 directory on the server. The only
+   difference is the "keep incompleteoverlays" statement which instructs
+   inst to keep the subset of overlay products which cannot be installed
+   because the corresponding base product is not installed, and is not
+   loaded in the distribution view.
+
+   inst sh echo Installing overlays-1-of-2
+   inst from $DIST/6.5.6/overlays-1-of-2
+   inst sh echo Installing overlays-2-of-2
+   inst open $DIST/6.5.6/overlays-2-of-2
+   inst keep *
+   inst install standard
+   inst install default roboinst
+   inst install prereqs
+   inst install overlays
+   inst keep *.sw64*
+   inst keep incompleteoverlays
+   inst go
+
+   The final line, if uncommented would instruct roboinst to execute the
+   Fermi custom script if it existed which could do any custom system and
+   network administration for the Fermi network.
+
+   postinst /custom/mypostinst
+
+   Upon completion of an mrconfig file and before boot the file for
+   testing, the command roboinst_config must be run in the directory the
+   mrconfig file exists in. For example, if we had just finished editing
+   the file /custom/ppd/new/mrconfig, we would do:
+
+   # ./roboinst_config
+
+   This command is run on the configuration server system to check and
+   index the contents of a roboinst configuration directory. The mrconfig
+   file is parsed for errors, other scripts, if any, are checked, and a
+   table of contents is built. Any custom configuration directories (for
+   specific hardware or network addresses) beneath the configuration
+   directory are also checked and included in the table of contents. Refer
+   to the man page roboinst_config(1M) for aditional information.
+
+V. Conflicts
+
+   Software conflicts are a the result of install choices that conflict
+   with others. Conflicts are not caused by or cured by the roboinst
+   process. When creating an mrconfig file for either a new install or an
+   upgrade, care must be taken to debug the mrconfig file and to eliminate
+   software conflicts through trial and error. Some conflicts can be
+   ignored but many can not and must be resolved before an installation
+   can proceed. For this reason, it is probably a good idea to use the
+   "onerror wait" roboinst directive in the mrconfig file until the file
+   has been debugged and all conflicts resolved.
+
+   There is no magic answer to fixing conflicts. When SGI developers
+   create software packages they are put into INST format which contains
+   information about what version of the operation system they go with as
+   well as compatibilities or incompatibilities with other software
+   packages. If you attempt to install incompatible pieces of software you
+   get conflicts which you must resolve to go forward.
+
+   Sometimes, conflicts occur due to no fault of the administrator. The
+   inst process attempts to select things that marked default. Some of
+   those things require additional pieces not on the current CD or they
+   are pieces incompatible with other default pieces. This is a
+   defieciency of the SGI software distributions that is out of my
+   control.
+
+   Anyone who has ever install SGI software (which is anyone who ever had
+   to admin an SGI system) knows how the process of elimination conflicts
+   works. Since roboinst is simply a wrapper around inst, resolving
+   conflicts works the same way. The difference is that you are writing an
+   mrconfig (script) to do everything automatically. This is the reason
+   you must write your script, test it, fix conflicts and then retest.
+
+   As mentioned above, you can use the the "onerror wait" directive of
+   roboinst. When a conflict occurs, roboinst will go into interactive
+   inst mode and you can work on resolving conflicts the same way that you
+   would if installing from inst in the first place. Once you have
+   determined what commands needed to be issued to resolve the conflicts,
+   you can put these commands into your mrconfig file at the appropriate
+   point and then restart the roboinst process.
+
+   In the following example, 3 conflicts appear after the issuance of the
+   "go" command as follows:
+
+   >> go
+   ERROR: Conflicts must be resolved.
+   webviewer_dev.sw.rapidapp cannot be installed because of missing
+   prerequisites:
+   1a. Do not install webviewer_dev.sw.rapidapp (1274627333)
+   1b. Also install webviewer.sw.eoe (0 - 2147483647) from an additional
+   distribution -- insert another CD or specify another software
+   distribution.
+   java_dev.sw32.binaries cannot be installed because of missing
+   prerequisites:
+   2a. Do not install java_dev.sw32.binaries (1274502210)
+   2b. Also install java_eoe.sw32.binaries (1274502210 - 2147483647) from
+   an
+   additional distribution -- insert another CD or specify another
+   software distribution.
+   java_dev.sw.base cannot be installed because of missing prerequisites:
+   3a. Do not install java_dev.sw.base (1274502210)
+   3b. Also install java_eoe.sw.base (1274502210 - 2147483647) from an
+
+   From the interactive prompt, these 6 conflicts can be eliminated by
+          choosing not to install the conflicting subsystems by issueing
+          the following command:
+
+          >> conflicts 1a 2a 3a
+
+   Since this command eliminated the conflicts, we would put the following
+   command in our mrconfig file just prior to the "go" command:
+
+   inst conflicts 1a 2a 3a
+
+   Another method to eliminate these conflicts would be to issue a "keep"
+   command just before the "go" command as follows:
+
+   >> keep webviewer_dev.sw.rapidapp java_dev.sw32.binaries
+   java_dev.sw.base
+
+   And the mrconfig version of this would look like:
+
+   inst keep webviewer_dev.sw.rapidapp java_dev.sw32.binaries
+   java_dev.sw.base
+
+   Finally, if your not worried about the conflicts that may appear, you
+   can avoid them all together by issuing the following command prior to
+   issuing the "go" command:
+
+   set rulesoverride on
+
+   which would ignore all conflicts and proceed with the install. The
+   mrconfig version of this command is as follows:
+
+   inst set rulesoverride on
+
+VI. Security Scripts
+
+   In addition to the roboinst specific information defined in this
+   document, the following 4 scripts:
+
+   1. config_check
+   2. inetd_check
+   3. passwd_check
+   4. services_check
+
+   were written and reside in the /custom/.bin directory on the server.
+   The description and usage of each script is contained below. These
+   scripts are example of commands you may wish to include in a postinst
+   shell script run out of the mrconfig file.
+
+    1. config_check
+
+   Usage: config_check [-f <path to config.allow file>] [-l <path to log
+   file>]
+
+   The script checks the system configuration maintained by the chkconfig
+          command. It checks to make sure that the only "chkconfig on"
+          items are those in the config.allow file. The script writes the
+          current configuration to the temporary file
+          /usr/tmp/chkconfig.out and checks item to see if it's allowed
+          and if so if it's on. If not on, it chkconfigs it on and if off,
+          it does nothing. Likewise, if a config item is on but not in the
+          config.allow file, then it chkconfigs it off, otherwise it does
+          nothing. All changes are logged to either syslog of a specified
+          file with a command line switch.
+
+   The following switches modify the behavior of the script:
+
+   -f <filename> Altername pathname for the config.allow file.
+   Default=/etc/config.allow
+   -l <filename> Alternate path to the logfile. Default=logging to
+   syslog() facility.
+   -t Sets test mode. Logging of what would have been done is done, but
+   nothing is actually done.
+
+    2. inetd_check
+
+   Usage: inetd_check [-s <path to inetd.conf save file>] [-f <path to
+   inetd.allow>] [-l <path to log file>] <path to inetd.conf file (usually
+   /etc/inetd.conf)>
+
+   The script checks inetd.conf for services that are currently available
+   but not ". By default, it uses the file /etc/inetd.allow to determine
+   which services are allowed to be active. By default, the script creates
+   a new temporary version of /etc/inetd.conf in /usr/tmp/inetd.conf.new
+   and comments out services that are currently available but not allowed
+   the inetd.allow file. In addition, by default, it creates a copy of the
+   old inetd.conf file in /etc/original/inetd.conf.<pid>. Finally, it
+   moves the newly created version of the file in place of the old one. If
+   no unsecure services are found in the original file, nothing is done
+   and the new temporary file is removed.
+
+   By default inetd_check also logs any unsecure services changes
+   found to syslog.
+
+   The following switches modify the behavior of the script:
+
+   -s <filename> Altername pathname for the inetd.conf file.
+   Default=/etc/inetd.conf.
+   -f <filename> Alternate pathname to the inetd.allow file.
+   Default=/etc/inetd.allow.
+   -l <filename> Alternate path to the logfile. Default=logging to
+   syslog() facility.
+
+    3. passwd_check
+
+   Usage: passwd_check [-s <path to passwd save file>] [-l <path to log
+   file>] <path to passwd file (usually /etc/passwd)>
+
+   The script checks passwd for accounts with open passwords. By default,
+   the script creates a new temporary version of /etc/passwd in
+   /usr/tmp/passwd.new. In addition, by default, it it creates a copy of
+   the old passwd file in /etc/original/passwd.<pid>. Finally, it moves
+   the newly created version of the file in place of the old one. If no
+   open passwords are found, the original file is left ion tact and the
+   temporary file is removed.
+
+   By default passwd_check also logs any accounts with open passwords to
+   syslog.
+
+   The following switches modify the behavior of the script:
+
+   -s <filename> Altername pathname for the passwd file.
+   Default=/etc/passwd.
+   -l <filename> Alternate path to the logfile. Default=logging to
+   syslog() facility.
+
+    4. services_check
+
+   Usage: services_check [-s <path to services save file>] [-f <path to
+   services.allow>] [-l <path to log file>] <path to services file
+   (usually /etc/services)>
+
+   The script checks services for services that are currently available
+   but not ". By default, it uses the file /etc/services.allow to
+   determine which services are allowed to be active. By default, the
+   script creates a new temporary version of /etc/services in
+   /usr/tmp/services.new and comments out services that are currently
+   available but not allowed the services.allow file. In addition, by
+   default, it creates a copy of the old services file in
+   /etc/original/services.<pid>. Finally, it moves the newly created
+   version of the file in place of the old one. If no unsecure services
+   are found in the original file, nothing is done and the new temporary
+   file is removed.
+
+   By default services_check also logs any unsecure services changes found
+   to syslog.
+
+   The following switches modify the behavior of the script:
+
+   -s <filename> Altername pathname for the services file.
+   Default=/etc/services.
+   -f <filename> Alternate pathname to the services.allow file.
+   Default=/etc/services.allow.
+   -l <filename> Alternate path to the logfile. Default=logging to
+   syslog() facility.
+
+VII. Server Maintenance and Directory Structure
+
+    1. Directory Structure
+
+   The directory struscture and naming conventions for the locations of
+          various IRIX distributions is completely arbitrary and can be
+          changed at any time. Currently,the roboinist components are
+          divided into 2 directory subtrees:
+
+          A. /dist
+          B. /custom
+
+      A. /dist
+
+   The second level directory naming structure of /dist consists of
+   directories named for the IRIX release they contain. Currently, /dist
+   contains:
+
+   6.2, 6.3 6.5, 6.5.5, 6.5.6, 6.5.7, 6.5.8, 6.5.9, 6.5.10, miniroot
+
+   The files "sa" and "miniroot" are links and are discussed below. Each
+   directory contains subdirectories that contain the actual instable
+   images. Again, the naming is completely arbitrary and is only important
+   when creating an mrconfig file.
+
+   At this writing, it was determined that IRIX 6.2 and 6.3 don't function
+   correctly under roboinst so these installations should be done using
+   normal manual inst processes.
+
+   IRIX 6.5 is the base for all new installations and the /dist/6.5
+   directory contains the following subdirectories:
+
+   Foundation1
+   Foundation2
+   Applications
+   NFS
+   Development_foundation
+   Development_libraries
+   Freeware1
+   Freeware2
+   Base_Documentation
+   Patches
+   tardists
+
+   All these subdirectories except tardists are copies of the contents of
+   the CD's that are shipped with IRIX 6.5. The tardist directory contains
+   tar files of the CD's themselves. These exist for backup purposes only
+   and should be removed if disk space becomes an issue on the server.
+
+   IRIX 6.5 maintenance releases are of the form 6.5.X. Currently, only
+   releases 6.5.5 and beyond are stored in /dist in addition to 6.5 which
+   should always be kept installed. As additional maintenance releases are
+   installed in this hierarchy, disk space may become limited so older
+   maintenance releases should be removed to make remove for new
+   maintenance releases. For example, it be necessary to remove
+   /dist/6.5.5 to make room for /dist/6.5.10 and so forth.
+
+   Each maintenance release directory contains subdirectories like the
+   following:
+
+   overlays-1-of-3
+   overlays-2-of-3
+   overlays-3-of-3
+   miniroot
+   sa
+   tardists
+
+   Each overlays directory contains the instable images for the respective
+   maintenance release CD. In this example, there were 3 maintenance
+   release CD's for this release but the number of these CD's dependant on
+   the size of the maintenance release from SGI at the time of the
+   release. The number could be any greater than one.
+
+   The miniroot and sa directories are contained on the first CD in the
+   maintenance release and are required by both the inst program as well
+   as roboinst when booting the miniroot to install or upgrade a system.
+   These are the directories that the /dist/sa and /dist/miniroot links
+   discussed above refer too.
+
+   As with the IRIX 6.5 major release discussed above, the tardists
+   directory is contains the tar images of the CD's and exists for backup
+   purposes only. This directory and the files it contains can be removed
+   if disk space becomes an issue.
+
+      B. /custom
+
+   The /custom directory is nothing more than a repository for mrconfig
+   files. There is no requirement that this directory be called /custom
+   nor is there a naming requirement for any of the subdirectories in
+   /custom. It is only important that the naming structure be properly
+   refered to when typing the "mrconfig=" parameter of the boot string.
+   Refer to the section "Booting from the Prom Monitor" above for more
+   info on the "mrconfig=" parameter.
+
+   The only requirement when using the /custom hierarchy is that the
+   directory refered to by the "mrconfig=" parameter contain a valid
+   "mrconfig" file. Valid means that after the last change (edit) to this
+   file, the "roboinst_config" command was run on the file. Refer to the
+   "Creating the Fermi Mrconfig File" section above for more info.
+
+   It should be noted here and is noted in the "Creating the Fermi
+   Mrconfig File" section above that there is NO requirement that the
+   mrconfig file reside on the roboinst server. This file can reside on
+   system as long as that system is accessible via tftp during the
+   roboinst process and that the roboinst_config command has been used to
+   make sure the file is valid.
+
+    2. /dist/sa and /dist/miniroot
+
+   In addition to the /dist/6.5.X directories, there are two links in the
+   /dist directory, /dist/sa and /dist/miniroot. These links exist
+   forconvenience and are linked to the most recent maintenance release sa
+   and miniroot. For instance, if the most recent maintenance release is
+   IRIX 6.5.8 then the ls command would show that these are links to:
+
+   lrwxr-xr-x 1 root sys 20 Sep 25 12:35 miniroot -> /dist/6.5.8/miniroot
+   lrwxr-xr-x 1 root sys 14 Sep 25 12:35 sa -> /dist/6.5.8/sa
+
+   These exist for the reason that the prom monitor command line has a
+   limited line length. The use of the link can shorten the length of the
+   boot line use at the prom monitor by several characters which could use
+   make the difference. Please refer to the "Boot from the Prom Monitor"
+   section above for more info on shortening the boot string.
+
+VIII. Mrconfig Syntax Creating the MRCONFIG file
+
+   Roboinst uses a file called mrconfig to specify what and how a client
+   should be installed. The following is a describion of the file and the
+   syntax and ordering of the statements in the file:
+
+   Blank lines, and comments between # and newline are ignored. Other
+   lines are statements comprised of whitespace-separated words. The first
+   word must be one of the specific keywords described below.
+
+   The ordering of lines is only significant among lines that have the
+   same initial keyword. For example all lines that begin with the keyword
+   inst are assumed to contain input lines for the inst program, and this
+   input is passed to inst in the same order it appears in the mrconfig
+   file.
+
+   Order of processing
+   This is the order in which statements from your mrconfig file are
+   processed.
+   1. miniroot booted
+   2. mrconfig file obtained
+   3. init keyword commands executed
+   4. disks partitioned according to partition keywords
+   5. fx keyword commands executed
+   6. filesystems created according to partition keywords
+   7. mkfs keyword commands executed
+   8. filesystems mounted
+   9. preinst keyword commands executed
+   10. inst keyword commands executed
+   11. build new kernel (unless the nokernel keyword is specified)
+   12. postinst keyword commands executed
+   13. miniroot shutdown, boot to multi-user mode
+
+      Specific syntax for each keyword
+
+   Keyword Arguments
+   version number
+
+   Versioning information in case new keywords are added in the future. If
+   this keyword is omitted, version 1 is assumed. The RoboInst software
+   will terminate with an error if it encounters an mrconfig file with a
+   higher version number.
+
+   loghost www.xxx.yyy.zzz
+
+   Roboinst uses syslog services to report the progress of an
+   installation. This keyword specifies the ipddress of the system that
+   syslog messages should be sent to.
+
+   partition device size type name mount-options mkfs-options
+
+   Specify partitions to create and filesystems to mount. See Partitioning
+   below.
+
+   setenv variable value
+
+   Set the named variable in the RoboInst environment. The variable is
+   also exported to subcommands such as those executed in the preinst,
+   postinst, etc. phases of the installation.
+
+   onerror action
+
+   The onerror keyword controls the behavior of inst in response to an
+   error, such as incompatible product selections, disk space shortages,
+   etc. If set to ignore, the default, then inst continues past errors
+   without stopping (errors are still reported in /root/var/inst/INSTLOG
+   and in the SYSLOG). If set to wait, inst will stop and wait in
+   interactive mode whenever an error occurs.
+
+   partition device size type name options
+
+   Specify partitions to create and filesystems to mount. See Partitioning
+   below.
+
+   disksetup
+
+   This keyword is required when repartitioning of the root disk drive is
+   requested, and the drive is in a pre-6.5 format, that is, when swap is
+   not located just after the volume header at the physical beginning of
+   the drive. The presence of this keyword will cause the swap partition
+   to be relocated to the beginning of the drive, when the installation
+   session is initiated from multi-user mode using roboinst.
+
+   Note: if the installation is initiated from the PROM command monitor,
+   the disksetup keyword will be ignored. You must also specify
+   disksetup=true on the boot command line when initiating roboinst from
+   the PROM command monitor. See Partitioning below.
+
+   init /bin/sh command
+
+   This keyword is used to specify shell commands to be executed during
+   the init phase.
+
+   fx /bin/sh command
+
+   This keyword is used to specify shell commands to be executed during
+   the fx phase.
+
+   mkfs /bin/sh command
+
+   This keyword is used to specify shell commands to be executed during
+   the mkfs phase.
+
+   preinst /bin/sh command
+
+   This keyword is used to specify shell commands to be executed during
+   the preinst phase.
+
+   inst "inst command "
+
+   Inst command to be executed. Multiple inst keywords may be specified.
+   Commands are collected and then executed in the order they appear in
+   the mrconfig file.
+
+   nokernel
+
+   The presence of this keyword causes the building of a new kernel to be
+   skipped. If you use this keyword, you must manually build the UNIX
+   kernel from your own scripts, if necessary.
+
+   postinst /bin/sh command
+
+   This keyword is used to specify shell commands to be executed during
+   the postinst phase.
+
+   if
+   ...
+   elsif
+   ...
+   else
+   ...
+   endif
+   expr
+   expr
+
+   The conditional syntax is similar to the if syntax in /bin/sh. The
+   first expr is executed as a /bin/sh statement, and if it returns a zero
+   exit status, the statements up to the next else, elsif or endif are
+   evaluated. Otherwise, the next expr is executed, if its value is zero,
+   the statements up to the next else/elsif/endif are evaluted, and so on.
+   If all the expressions exit non-zero, the statements following the
+   final else (if present) are evaluated. As in /bin/sh, the elsif and
+   else clause(s) are optional. Multiple elsif clauses are allowed.
+   Nesting of if statements is permitted. Conditional statements are
+   useful for performing different disk partitioning, or software
+   installation instructions, based on cpu-type, or graphics type, for
+   example:
+
+   if [ $SGI_CPUBOARD = IP30 ]; then
+   init echo This is an Octane
+   elsif [ $SGI_CPUBOARD = IP22 ]
+   init echo This is an Indy
+   else
+   init echo This is neither an O2 nor an Indy.
+   endif
+
+   See Default Envirment Variables below for a description of other
+   postentially useful variables.
+
+    Disk Partitioning
+
+   Use the partition keyword to specify disk partitioning, filesystem
+   creation, and mount points. For example to create a standard system
+   disk layout:
+
+   partition dks0d1s0 standard root /
+   partition systemdisk standard root /
+
+   Or to create a standard option disk mounted at /xxx:
+
+   partition dks0d2s0 standard option /xxx
+
+   The complete partition syntax is:
+
+   partition device size type name mount-options ; mkfs-options ;
+
+   The device, size, and type and arguments are used as input to the fx -s
+   command to perform the partitioning. Partitions are laid out in the
+   order specified, unless a start position is given. NOTE: in order for
+   repartitioning of the system disk to work properly, the disksetup
+   keyword (described above) must appear in the mrconfig file, or the
+   disksetup=true argument should be specified on the boot command line
+   when initiating roboinst from the PROM command monitor.
+
+   device is one of:
+
+   systemdisk
+
+   This is a shorthand notation for partition 0 of the disk on which the
+   miniroot is currently loaded (the current system disk). The systemdisk
+   keyword, if immediately followed by a number (eg. systemdisk1 refers to
+   a specific partition on the system disk).
+
+   a device name
+
+   This is referring to a disk device in the /dev/rdsk directory, for
+   example dks0d1s0.
+
+   size is one of:
+
+   existing
+
+   Keep the same size.
+
+   standard
+
+   Use a standard layout for the entire disk. Type root or option must
+   also be specified - see below. When standard is used, it applies to the
+   entire disk (the partition component in the device name is irrelevant),
+   and there must be no other partition statements for that disk.
+
+   all
+
+   Use the entire disk.
+
+   start:size
+
+   Start is an integer that specifies the exact start address of the
+   partition, in 512-byte blocks. Alternatively, start can be the keyword
+   followspart# where # is the partition-number which this partition is to
+   immediately follow on the same disk.
+
+   Size is an integer that specifies the size of the partition in 512-byte
+   blocks, or the keyword remainder to use the entire remainder of disk
+   after making all of its other partitions.
+
+   type is one of:
+
+   root
+
+   This is only valid when standard is specified (see above). A standard
+   root disk is created, containing a swap partition.
+
+   option
+
+   This is only valid when standard is specified (see above).
+
+   xfs xfs/blocksize
+
+   An XFS filesystem is created with the specified blocksize and
+   mkfs-options, and mounted at the directory name with the specified
+   mount-options. The blocksize must be an integer multiple of 512 and
+   cannot exceed 65536. If omitted, a blocksize of 4096 is assumed.
+
+   efs
+
+   An EFS filesystem is created, and mounted at the directory name with
+   the specified options. Caution: EFS filesystems will not be supported
+   in future IRIX releases. Use XFS filesystems in nearly all situations.
+
+   swap
+
+   A swap partition of the specified size is created.
+
+   preserve
+
+   Any existing filesystem is preserved, and no new one is created. name
+   is ignored when type is swap. For other partition types, its value can
+   be:
+
+   pathname
+
+   indicating a local directory where the filesystem is to be mounted.
+
+   nomount
+
+   If nomount is specified, the filesystem is not mounted.
+
+   mount-options are:
+
+   any valid mount options
+
+   This field is optional. Any options specified are to be passed to the
+   -o option of the mount command as a single argument. Multiple options
+   should be comma-separated with no spaces.
+
+   mkfs-options are:
+
+   any valid mkfs options
+
+   This field is optional. Any options specified are passed along to the
+   mkfs command used to create the filesystem. If you want to specify mkfs
+   options but no mount options (see above), use a single hyphen character
+   (-) for the mount-options. For example:
+
+   partition dks0d1s0 standard root / - -d unwritten=0
+
+IX. Default Environment Variables
+
+   The RoboInst software sets the following variables in the environment
+   of all shell commands that you define in your mrconfig file.
+
+   SGI_CPUBOARD
+   SGI_CPUARCH
+   SGI_GFXBOARD
+   SGI_SUBGR
+   SGI_MODE
+   SGI_MACHINE
+   SGI_ABI
+
+   These are set to the value of CPUBOARD, CPUARCH, GFXBOARD, SUBGR, MODE
+   and MACHINE as described in the inst(1M) man page under the -m option.
+   Some variables can have multiple values. In that case the values are
+   separated by whitespace. Note: SGI_CPUARCH has the MIPS2, MIPS3, etc.
+   values removed. The MIPS2, MIPS3, etc. value is contained in the
+   SGI_ABI variable. For example, if inst says CPUARCH=R4000 and
+   CPUARCH=MIPS2, then the RoboInst variable SGI_CPUARCH is set to R4000,
+   and SGI_ABI is set to MIPS2.
+
+   SGI_CAPACITY
+   SGI_CAP_dks#d#vol
+
+   SGI_CAPACITY is set to the capacity of the root disk drive, in 512-byte
+   blocks. The variables SGI_CAP_dks#d#vol are also set to correspond to
+   the capacity of specific scsi disk drives attached to the system. For
+   example, if you have a 2GB system disk (dks0d1vol) and a 1 GB option
+   disk (dks0d2vol) then the following variables would be set:
+
+   SGI_CAPACITY=4197405
+   SGI_CAP_dks0d1vol=4197405
+   SGI_CAP_dks0d2vol=2070235
+   SGI_ROOT
+
+   SGI_ROOT is set to the pathname of the directory where the actual
+   system root directory (when the system is booted normally) is mounted
+   on the miniroot filesystem. This is normally /root.
+
+   SGI_CUSTOM
+
+   SGI_CUSTOM is set to the pathname of the directory where your mrconfig
+   files, and any other custom files, are copied to in RoboInst mode. This
+   is normally /custom.
+
+   SGI_HOSTNAME
+
+   SGI_HOSTNAME is set to the hostname of the client machine, or a NULL
+   string if the hostname has not been set.
+
+   SGI_IPADDR
+
+   SGI_IPADDR is set to the network ip address of the client machine, or a
+   NULL string if the ip address has not been set.
+
+   SGI_SYSID
+
+   SGI_SYSID is set to the system identifier comprised of 12 hexadecimal
+   characters. For example, 08:00:69:07:73:80.
+
+   SGI_MEMSIZE
+
+   SGI_MEMSIZE is set to the amount of memory on the system in megabytes,
+   as reported by hinv(1M).
+
+   SGI_SYSTEMPART
+   SGI_SYSTEMDISK
+
+   SGI_SYSTEMPART is set to the pathname of the device file of partition 0
+   on the disk where the miniroot has been loaded. For live installs, this
+   is the disk where / is mounted. For example, /dev/dsk/dks1d1s0.
+   SGI_SYSTEMDISK is the same as SGI_SYSTEMPART, but without the final
+   partition specifier. For example, /dev/dsk/dks1d1. See dks(7M) for a
+   discussion of disk device names.
+
+   SGI_BOOTSERVER
+   SGI_BOOTDIR
+
+   SGI_BOOTSERVER is set to the name of the machine where the miniroot was
+   booted from. SGI_BOOTDIR is set to the name of the directory containing
+   that miniroot.
+
+   SGI_CONFIGSERVER
+   SGI_CONFIGDIR
+
+   SGI_CONFIGSERVER is set to the name of the machine where your custom
+   files (mrconfig, .index, etc.) are copied from. SGI_CONFIGDIR is set to
+   the name of the directory containing those files.
+
+X. Additional Sources of Information
+
+    1. SGI Online Books
+
+     * IRIX Admin: Disks and Filesystems
+     * IRIX Admin: Networking and Mail
+     * IRIX Admin: Peripheral Devices
+     * IRIX Admin: Software Installation and Licensing
+     * IRIX Admin: System Configuration and Operation
+
+    2. Man Pages
+
+     * autoconfig (1M) - configure kernel
+     * bootp (1M) - server for Internet Bootstrap Protocol
+     * fx(1M) - disk utility
+     * hosts.equiv, rhosts (4) - trusted hosts by system and by user
+     * inetd (1M) - Internet ``super-server''
+     * inst(1M) - software installation tool
+     * mkfs (1M) - construct a filesystem
+     * nvram, sgikopt (1M) - get or set non-volatile RAM variables
+     * prom(1M) - PROM monitor
+     * roboinst, roboinst_start, roboinst_check (1M) - automatic software
+       installation tool
+     * roboinst_config, mrconfig (1M) - configure automatic
+     * services (4) - service name database
+     * tftp (1C) - trivial file transfer program
+     * tftpd (1M) - internet Trivial File Transfer
+     * Protocol server
+
+XI. More On Disk Partitioning
+
+   The question was asked whether some level of interactive control could
+   be placed in the mrconfig to question the administrator whether they
+   want to partition the disk or not. The answer is no and yes.
+
+   There is no way to do this using mrconfig systax directly as far as I
+   know. However, you can create a simple shell script like the following:
+   partition.csh
+
+   This script simply asks if you want to partition and if so unmounts,
+   runs fx -x -s referencing an fx script called partition.fx as follows:
+   partitioner.fx
+
+   Once the partitioning of the standard root is done, mkfs_xfs is run and
+   the script exits. If no partitioning is selected, the script exits.
+
+XII. Basic steps required to use roboinst
+
+   1. Decide whether roboinst is right for you. If you are installing a
+   number of identically configured systems, or a single system that will
+   be reinstalled over and over again, Roboinst is right for you. If you
+   are doing a one time install or upgrade, it is probably much easier to
+   use inst for a manual install.
+
+   2. Create the directory that you are going to put the mrconfig and any
+   supporting shell scripts in.
+
+   3. Copy the supporting shell scripts to this directory.
+
+   4. Create the mrconfig file. Be sure and use the init or preinst
+   roboinst directives to execute any shell scripts that need to run prior
+   to installing software. For example, using the script above to
+   partition drives would require the use of the "init" directive because
+   partitioning needs to occur prior to the root filesystem being mounted.
+   You could not use the "preinst" directive for this purpose, because the
+   preinst directive is processed after filesystem mounting occurs.
+
+   5. Choose the products you want to install and create the:
+
+   inst install .......
+
+   6. Since the possibility of conflicts exists, use the "onerror wait"
+   directive to help in testing the mrconfig.
+
+   7. If conflicts do occur, use one of the methods outline in the
+   conflicts section above to resolve them in you mrconfig.
+
+   8. Add an appropriate "postinst" script written by you to custom
+   configure your system. In this script, you could run the security
+   scripts referneced above. Remember, you must have copied the security
+   scripts to the same directory your mrconfig is located.
+
+   9. run the command "roboinst_config" in the directory where your
+   mrconfig is located so the the .index file is created.
+
+   10. Execute the appropriate boot command from the prom monitor as
+   outlined in the prom monitor section above.
+
+XIII. Example postinst script
+
+   Here is an example postinst script I wrote for one of the Fermi admins:
+
+   #!/bin/sh -x
+   #script for postinstall on PPD-astro nodes
+   # these are YP clients of pavo.fnal.gov
+   #
+   # This is a test script to configure an IRIX system in the miniroot
+   # when installations are completed. It is normally run as a "postinst"
+   # command from a RoboInst mrconfig file.
+
+   ##### The system uses default hostname of IRIX so we probably need to
+   hardcode
+   ##### the hostname here instead of using "`hostname`".
+   echo "configuring the system: "
+   mkdir -p $SGI_ROOT/var/yp
+   echo "humason" > /root/var/yp/ypdomain
+   #echo `hostname` > /root/etc/sys_id
+   echo "oasis" > /root/etc/sys_id
+
+   ##### Same thing here as above for hostname. This test will work cause
+   the
+   ##### hostname IRIX is in /etc/hosts already so you'll get ok no matter
+   what.
+   hn=`hostname`
+   if `grep ${hn} /root/etc/hosts > /dev/null 2>&1`; then
+   echo hosts file OK.
+   else
+   echo '#auto-generated hosts entry' >> /root/etc/hosts
+   chroot /root /usr/bin/fgrep -vf /etc/hosts /etc/hosts >> /etc/hosts
+   fi
+   echo "netmask 255.255.255.0" > /root/etc/config/ifconfig-1.options
+
+   # set the network
+   ##### NEED to change interface from EC to whatever is right for O2.
+   ##### Why do we need to do this here? The network should already be on.
+   chroot /root /usr/etc/ifconfig ec0 inet 131.225.55.15 netmask
+   0xffffff00 broadcast 131.225.55.255
+   #
+   # add the NIS master entry in the hosts file
+   echo "131.225.55.19 pavo.fnal.gov pavo" >> /root/etc/hosts
+
+   # chkconfig settings
+   chroot /root /etc/chkconfig -f afsclient on
+   chroot /root /etc/chkconfig -f afsml off
+   chroot /root /etc/chkconfig -f autoconfig_ipaddress off
+   chroot /root /etc/chkconfig -f autofs off
+   chroot /root /etc/chkconfig -f automount on
+   chroot /root /etc/chkconfig -f desktop on
+   chroot /root /etc/chkconfig -f fontserver off
+   chroot /root /etc/chkconfig -f gated off
+   chroot /root /etc/chkconfig -f lockd on
+   chroot /root /etc/chkconfig -f lp on
+   chroot /root /etc/chkconfig -f mediad on
+   chroot /root /etc/chkconfig -f mrouted off
+   chroot /root /etc/chkconfig -f named off
+   chroot /root /etc/chkconfig -f network on
+   chroot /root /etc/chkconfig -f nfs on
+   chroot /root /etc/chkconfig -f noiconlogin off
+   chroot /root /etc/chkconfig -f nostickytmp off
+   chroot /root /etc/chkconfig -f ns_admin off
+   chroot /root /etc/chkconfig -f ns_fasttrack off
+   chroot /root /etc/chkconfig -f nss_fasttrack off
+   chroot /root /etc/chkconfig -f pcnfsd on
+   chroot /root /etc/chkconfig -f privileges off
+   chroot /root /etc/chkconfig -f proclaim_relayagent off
+   chroot /root /etc/chkconfig -f proclaim_server off
+   chroot /root /etc/chkconfig -f rarpd off
+   chroot /root /etc/chkconfig -f routed off
+   chroot /root /etc/chkconfig -f rsvpd off
+   chroot /root /etc/chkconfig -f rtnetd off
+   chroot /root /etc/chkconfig -f rwhod off
+   chroot /root /etc/chkconfig -f sar off
+   chroot /root /etc/chkconfig -f savecore on
+   chroot /root /etc/chkconfig -f sendmail on
+   chroot /root /etc/chkconfig -f snetd on
+   chroot /root /etc/chkconfig -f soundscheme on
+   chroot /root /etc/chkconfig -f timed off
+   chroot /root /etc/chkconfig -f timeslave off
+   chroot /root /etc/chkconfig -f verbose on
+   chroot /root /etc/chkconfig -f videod off
+   chroot /root /etc/chkconfig -f visuallogin off
+   chroot /root /etc/chkconfig -f vswap off
+   chroot /root /etc/chkconfig -f windowsystem on
+   chroot /root /etc/chkconfig -f xdm on
+   chroot /root /etc/chkconfig -f yp on
+   chroot /root /etc/chkconfig -f ypmaster off
+   chroot /root /etc/chkconfig -f ypserv on
+
+   # add network.local
+   chroot /root /bin/touch /etc/init.d/network.local
+
+   ##### The following 6 lines aren't necessary since we chkconfiged
+   routed off above.
+   echo '# Kill all route daemons currently running' >>
+   /root/etc/init.d/network.local
+   echo '/etc/killall routed' >> /root/etc/init.d/network.local
+   echo '# Turn off chkconfig routed option' >>
+   /root/etc/init.d/network.local
+   echo '/etc/chkconfig routed off >/dev/null 2>&1' >>
+   /root/etc/init.d/network.local
+   echo '# Flush the routing tables' >> /root/etc/init.d/network.local
+   echo '/usr/etc/route -n -f >/dev/null 2>&1' >>
+   /root/etc/init.d/network.local
+
+   ##### This is the only thing we need in network.local at this point.
+   echo '# Start up static routing' >> /root/etc/init.d/network.local
+   #echo '/usr/etc/route add default 131.225.55.200' >>
+   /root/etc/init.d/network.local
+   echo '/usr/etc/route add default 131.225.87.200' >>
+   /root/etc/init.d/network.local
+
+   chroot /root /bin/ln -s /etc/init.d/network.local
+   /etc/rc2.d/S30network.local
+
+   # entries for resolv.conf
+   chroot /root /bin/touch /etc/resolv.conf
+   echo 'domain fnal.gov' >> /root/etc/resolv.conf
+   echo 'hostresorder local nis bind' >> /root/etc/resolv.conf
+   echo 'nameserver 131.225.8.120' >> /root/etc/resolv.conf
+   echo 'nameserver 131.225.17.150' >> /root/etc/resolv.conf
+
+   echo 'TZ=CST6CDT' > /root/etc/TIMEZONE
+
+IXV. Demo mrconfig file
+
+
+# enable logging to a remote host. Note: IP address, not hostname!
+
+loghost  131.225.81.183
+
+init /custom/preinst.csh
+
+setenv DIST 131.225.81.183:/dist
+setenv RELEASE 6.5.8
+
+inst admin set precious_files "/etc/TIMEZONE /etc/fstab /etc/aliases
+/etc/default/login /etc/group /etc/hosts /etc/inetd.conf /etc/ipfilterd.conf
+/etc/motd /etc/passwd /etc/rpc /etc/sendmail.cf /etc/sendmail.hf
+/etc/snmpd.auth /etc/snmpd.data /etc/snmpd.remote.conf etc/snmpd.trap.conf
+/etc/sys_id /etc/syslog.conf"
+
+inst sh echo Adding default route
+inst sh /usr/etc/route add default 131.225.55.200
+inst set delay_conflicts on
+inst set rulesoverride on
+inst set overlay_mode default
+inst set stream maint
+inst sh echo Installing Foundation1
+inst from $DIST/6.5/Foundation1
+inst sh echo Installing Foundation2
+inst open $DIST/6.5/Foundation2
+inst keep *
+inst install standard
+inst install default roboinst
+inst go
+inst sh echo Installing overlays-1-of-2
+inst from $DIST/6.5.6/overlays-1-of-2
+inst sh echo Installing overlays-2-of-2
+inst open $DIST/6.5.6/overlays-2-of-2
+inst keep *
+inst install upgrade
+inst install upgrade_and_rnds_or_new
+inst install default roboinst
+inst install prereqs
+inst install overlays
+inst keep incompleteoverlays
+inst go
+postinst /custom/postinst_script.sh
+
+IIXV. Example mrconfig
+
+Here is a sample mrconfig file provided by SGI with the roboinst
+software:
+
+# Clean install and configure a small server.
+# Server admins usually prefer to split up the "root"
+filesystem
+# for safety and manage-ability.
+# Also shows partitioning based upon root disk size.
+
+version 1
+
+# logging to remote host -- use IP address, not hostname!
+loghost  10.62.51.110
+
+# customizing partitions.
+#  WARNING will wipe the disk!
+
+disksetup
+partition dks0d1s0 standard root
+if [ "$SGI_CAPACITY" -lt 3000000 ] then
+    partition dks0d1s1 followspart8:150000 swap swap
+    partition dks0d1s0 followspart1:800000 xfs/512 /
+    partition dks0d1s6 followspart0:600000 xfs/4096 /var
+    partition dks0d1s7 followspart6:remainder xfs/4096 /tmp
+else
+  if [ "$SGI_CAPACITY" -lt 6000000 ] then
+    partition dks0d1s1 followspart8:300000 swap swap
+    partition dks0d1s0 followspart1:1800000 xfs/512 /
+    partition dks0d1s6 followspart0:1400000 xfs/4096 /var
+    partition dks0d1s7 followspart6:remainder xfs/4096 /tmp
+  else
+    partition dks0d1s1 followspart8:400000 swap swap
+    partition dks0d1s0 followspart1:3000000 xfs/512 /
+    partition dks0d1s6 followspart0:2800000 xfs/4096 /var
+    partition dks0d1s7 followspart6:remainder xfs/4096 /tmp
+  endif
+endif
+partition dks0d3s7 standard option /home
+
+# note that due to some early boot-time dependencies with /var,
+# you may have to play some tricks (like booting to single first)
+# to get it to boot successfully with a seperate /var partition.
+
+# poor-man's miniroot nameserver
+init echo "appending to miniroot hosts file..."
+init cat /custom/hosts >> /etc/hosts 2>/dev/null
+
+# install basic system, with server-ish stuff: accounting, quotas, acls,
+etc
+# obviously, you can add your own stuff to install...
+setenv DIST dist:/os/irix/6.5
+inst from $DIST/irix_foundation1
+inst from $DIST/irix_foundation2
+inst open $DIST/irix_apps
+inst open $DIST/nfs
+inst open $DIST/roboinst
+inst keep *
+inst install required
+inst install default *_eoe *_base netscape* nfs imgtools 4Dwm print
+inst install default webviewer media_warehouse pcp_eoe
+inst install eoe.*.nds eoe.*.gifts_perl* impr_base *.man *.books
+inst install eoe.sw.acct eoe.sw.acl eoe.sw.audit eoe.sw.cpr eoe.sw.dmi
+inst install eoe.sw.ipgate eoe.sw.miser eoe.sw.named eoe.sw.netman
+inst install eoe.sw.quotas eoe.sw.xlv
+inst install default roboinst
+inst keep *.sw64* *dev
+inst install prereqs
+# If you don't have all the replacement or prereq products,
+# or some of the rules are not correct, you may have conflicts.
+#  you can try variations of the following options,
+#  but note that just "keep conflicting" can be dangerous
+#inst keep conflicting prod1 prod2
+#inst install required
+inst go
+
+postinst echo "could perform additional non-inst installation
+here"
+
+# configure it before rebooting.
+postinst /custom/mypostinst
+
+
+IXV. Example mrconfig
+
+   mrconfig
+     __________________________________________________________________
+
+   Security, Privacy, Legal

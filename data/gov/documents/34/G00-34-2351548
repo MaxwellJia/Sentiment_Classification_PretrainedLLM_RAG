@@ -1,0 +1,264 @@
+http://library.msha.gov/basisbwdocs/bwsrch.htm
+
+                        The BASIS WEBserver Search Form
+
+   You can use this form to retrieve documents from the associated
+   database, which is indicated in the title bar of your Web browser. Just
+   fill out the form and click the OK button. The system will then display
+   a summary list of all the documents that met your search criteria.
+
+   This section describes the following:
+     * Parts of the Search Form
+     * Toolbar Buttons
+
+   If you are new to the BASIS WEBserver and would like more information
+   about it, or if you'd like to see the table of contents for the entire
+   document, see Introducing the BASIS WEBserver.
+
+                            Parts of the Search Form
+
+   A Search form can vary from Web site to Web site and from database to
+   database. However, at the very least, the form will always consist of
+   field labels and search value boxes. The field labels show all the
+   fields that you can search in the database. Enter search values in the
+   blank box(es) underneath the field label(s). When you click OK, the
+   system will retrieve the documents that meet your search criteria.
+
+   Note: In addition to the field labels on the form, you may come across
+   a droplist box containing a list of field names. This is known as a
+   multipurpose field. You can search any of the listed fields by
+   selecting its name from the droplist and entering a seach value in the
+   box underneath the multipurpose field.
+
+   The other components that may appear on a search form are test
+   operators, connector operators, and sort information droplist boxes.
+   For information about each of these components, click one of the
+   following:
+     * search values,
+     * test operators,
+     * connector operators,
+     * sort information,
+
+   or just continue to scroll down.
+
+Search values
+
+   The search value is the value that you want each document's field data
+   compared against. The search value boxes are located underneath the
+   field label and after the test operator--if test operators exist on the
+   form. You do not need to enclose your search values within any special
+   characters (such as double quotes). Depending upon how the site
+   administrator set up the database, the search may be case-sensitive.
+   The following list shows the possible search values you can enter and
+   some examples. (If you want to know more about search values, click
+   here.)
+
+   Numbers
+
+          + 23
+          + 3.14
+          + -55
+
+   Character strings
+
+          + Smith
+          + 2nd
+
+   Dates
+
+          + Jun 21, 1991
+          + 21Jun1991
+
+   Ranges
+
+          + 1:10
+          + a:c
+
+   Phrases
+
+          + hello there
+          + University of California
+
+   Lists
+
+          + sand, sun, sea
+          + 1 & 3 & 5
+
+   Character patterns
+
+          + con???
+          + pres*
+
+   Phrase patterns
+
+          + University # California
+          + # # parking
+
+Test Operators
+
+   Test operators may appear on the Search form. If they do not, then the
+   default operator specifed by the site administrator is used. If they do
+   appear, then they are located underneath the field labels in the form
+   of droplist boxes.
+
+   These operators indicate the desired relationship between your search
+   value and the data in the field you are searching. For instance, you
+   may want to retrieve documents whose NAME field equals JOE. Equals (the
+   test operator) indicates that the search value JOE and the data in the
+   NAME field should match (i.e., matching is the desired relationship).
+
+   The following list describes the test operators that may appear in the
+   droplist boxes for each type of field. (If you want to know more about
+   test operators, click here.)
+
+  For Numeric Fields
+
+   =
+          Searches for a value that matches your search value.
+
+   greater than
+          Searches for a value that is greater than your search value.
+
+   greater than or equal to
+          Searches for a value that is greater than or equal to your
+          search value.
+
+   less than
+          Searches for a value that is less than your search value.
+
+   less than or equal to
+          Searches for a value that is less than or equal to your search
+          value.
+
+   not=
+          Searches for a value that does not match your search value.
+
+  For Short and Long Text Fields
+
+   To understand fully the functions of the following operators, you must
+   know the definitions of stopwords and keywords. Stopwords are small,
+   common words that have little retrieval value, such as "the," "a,"
+   "of," and "for." Your administrator determines exactly which words are
+   stopwords. Keywords are any words that are not designated as stopwords.
+
+   inc
+
+        Searches for any keywords in any order (when the search values are
+                separated with commas).
+
+        Searches for all keywords in any order (when the search values are
+                separated with ampersands).
+
+   contains all
+          Searches for all keywords in any order.
+
+   contains any
+          Searches for any keywords in any order.
+
+   contains the phrase
+          Searches for all keywords and stopwords in exact order and
+          position.
+
+   contains in order
+          Searches for all keywords in exact order and position.
+
+   equals**
+          Searches for a value that matches your search value.
+
+   is not**
+          Searches for a value that does not match your search value.
+          (This test operator is for short text fields only.)
+
+   ** These operators are available only for short text fields are not
+   indexed.
+
+  For Date Fields
+
+   on
+          Searches for a date that matches your search value.
+
+   after
+          Searches for a date that is greater than your search value.
+
+   on or after
+          Searches for a date that is greater than or equal to your search
+          value.
+
+   before
+          Searches for a date that is less than your search value.
+
+   on or before
+          Searches for a date that is less than or equal to your search
+          value.
+
+   not on
+          Searches for a date that does not match your search value.
+
+Connector Operators
+
+   If there are connector operators on the search form, they may appear in
+   the following places:
+     * in the lower right corner of the form after the label "Connector"
+     * after each search value box on the form
+
+   If they do not appear on the form, then the system uses the default
+   specified by the site administrator.
+
+   These operators enable you to combine two or more search conditions.
+   For instance, you may want to search more than one field at the same
+   time. The possible connector operators are:
+
+   AND
+          Retrieves documents when all search conditions are true.
+
+   OR
+          Retrieves documents when any search condition is true.
+
+   AND NOT
+          Retrieves documents when the search condition that precedes the
+          operator is true and the one that follows is not true. (This
+          operator is available only when the connector operator droplist
+          boxes appear after each search value box on the form and when
+          the document is not is HTML format.)
+
+Sort Information
+
+   When the sort feature is available on the Search form, it appears as a
+   droplist box after the label "Sort By." This criterion affects the
+   order in which the retrieved documents are listed in the summary
+   display. You can sort the documents according to any field that appears
+   in this droplist box. If you select $RANK as the sort criterion, then
+   the documents will be sorted according to how many hits were found in
+   each. (A hit is a term in the document that matches the search value
+   you specified.) If you keep the default value of NONE, then the
+   documents will not be sorted. Also, if the sort order criterion
+   droplist box does not appear on the search form, the documents will not
+   be sorted.
+
+   Another sort feature that may appear on the Search form is a droplist
+   box labelled "Sort Order." This box gives you even more control over
+   the order in which the retrieved documents are listed in the summary
+   display. Once you've chosen the sort criterion in the Sort By box, you
+   can indicated whether you want the documents sorted in Ascending or
+   Descending order by selecting one of these two values in the Sort Order
+   box.
+
+   Note: When you specify $RANK for the Sort By box, the system will list
+   the documents in descending order no matter what value you have
+   selected in the Sort Order box.
+
+                                Toolbar Buttons
+
+   The buttons that are highlighted on the toolbar can be used from the
+   Search form and are explained below. Those not highlighted are inactive
+   and therefore are not described in this section.
+
+   [find.gif]
+          Clears the boxes on the Search form of any existing data.
+
+   [terms2.gif]
+          Displays the Search Assistant form. This form enables you to
+          look at terms from a field's index, thesaurus, or legal list.
+
+   [help.gif]
+          Displays the online help.

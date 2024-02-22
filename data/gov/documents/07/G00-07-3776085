@@ -1,0 +1,720 @@
+http://chemin.lanl.gov
+
+   CHEMIN: A Miniaturized Simultaneous X-ray Diffraction/X-ray
+   Fluorescence Instrument
+
+   David L. Bish (bish@lanl.gov)
+
+   David T. Vaniman (vaniman@lanl.gov)
+
+   Steve J. Chipera (chipera@lanl.gov)
+
+   Earth and Environmental Science EES-1
+
+   MS D462, Los Alamos National Laboratory
+   [CHEMINDiagram-1.JPG]
+   David F. Blake (dblake@mail.arc.nasa.gov)
+
+   NASA Ames Research Center
+   Stewart A. Collins (stewart.a.collins@jpl.nasa.gov)
+
+   Jet Propulsion Laboratory
+     __________________________________________________________________
+
+   Introduction: Demonstration of the Need for an XRD/XRF Instrument
+
+   The difficulty of uniquely determining mineralogy from chemical data
+   alone (e.g., X-ray fluorescence or XRF data) is amply illustrated by
+   the problems encountered in interpreting the Viking XRF data. The
+   Viking XRF data provide multiple possible mineralogic fits to the
+   chemistry, even after years of inquiry seeking to constrain the
+   mineralogic interpretations with thermodynamic data (e.g., Clark and
+   VanHart, 1981). This uncertainty in mineral identification is
+   attributable largely to the presence of water, sulfur, and chlorine on
+   the martian surface. With this mix of volatile and anionic species, the
+   possible mineral forms that can occur dramatically increase in number.
+   A simple normative calculation of mineralogy is therefore not possible.
+   Indeed, the problem of determining extraterrestrial mineralogy from
+   chemistry extends beyond Mars.
+
+   [Mars_surface-s.JPG]
+
+   Recently, there has been wider recognition of the need for X-ray
+   diffraction (XRD) mineral determinations in addition to the chemical
+   data that can be obtained by XRF. For example, Fegley et al. (1992)
+   cited our early CHEMIN concept as an approach to resolving mineralogic
+   uncertainties for Venus. Any planetary, asteroidal, or cometary body
+   with mineral constituents that contain water (including ices), sulfur,
+   or halogens will require XRD in addition to chemical analysis (XRF) for
+   adequate understanding of origin and evolution. The need for
+   diffraction data in addition to chemistry led to the development of the
+   combined XRD/XRF CHEMIN concept, in which the combined CHEmical and
+   MINeralogical capability is reflected in the instrument name.
+
+   Science Objectives
+
+   The origins and histories of planetary, asteroidal, and cometary bodies
+   are reflected in their constituent minerals. The <100 naturally
+   occurring elements combine together to form >3800 known minerals. This
+   tremendous variety of mineralogy carries stories of pressure,
+   temperature, oxygen fugacity, and solution chemistry, all intertwined
+   with histories of sedimentation, igneous activity, metamorphism,
+   impacts, and surface weathering. The science objectives of determining
+   simultaneous chemistry and mineralogy thus span the full history of
+   planetary, asteroidal, and cometary formation and evolution. We have
+   had an active interest in the possibilities of miniaturized XRD/XRF
+   instrumentation since 1990. Early concepts that we have pursued
+   included both isotopic and tube-source instruments, as well as a
+   variety of detector systems fitted to a transmission analytical
+   geometry (Vaniman et al., 1991a,b; Blake et al., 1992). We have
+   discussed elsewhere the applications and instrument designs of possible
+   modern XRD/XRF instrumentation for planetary exploration.
+
+   Approach
+
+   CHEMIN is a miniaturized, CCD-based simultaneous X-ray
+   diffraction/X-ray fluorescence (XRD/XRF) instrument. The device is
+   designed to characterize elemental composition and mineralogy from
+   small fine-grained or powder samples. The projected flight-instrument
+   weight is <1 kg, the volume is 500 cc, and power requirement is 2 W.
+   Usable diffraction data have been obtained from the prototype
+   instrument in a few minutes, and flight-instrument data-collection
+   times of 1-2 hours are predicted. Both diffraction and fluorescence
+   data are obtained simultaneously by operating the CCD in single-photon
+   counting mode. X-ray fluorescence data will be obtained for elements
+   with 4<Z<92. Energy discrimination is used to distinguish between
+   diffracted characteristic photons and fluorescence photons. Diffraction
+   data are obtained in transmission mode, and resolution is presently
+   sufficient to allow application of the Rietveld refinement method to
+   the diffraction data. The Rietveld method is an advanced technique that
+   allows interpretations of data by fitting a diffraction pattern,
+   calculated from a knowledge of the component minerals, to the observed
+   diffraction data. Such analyses provide a variety of chemical and
+   crystal structural (mineralogic) information from a single diffraction
+   pattern. In addition, because the CHEMIN concept combines diffraction
+   and fluorescence data, simultaneous linear equations can be used to
+   derive the most accurate, self-consistent mineral and chemical
+   composition.
+
+   The prototype instrument currently in use at NASA Ames Laboratory is
+   illustrated in Figure 1, and a schematic illustration of the CHEMIN
+   flight instrument is provided in Figure 2. More detailed information is
+   provided in Tables 1 and 2.
+
+   [Ccdcam-2s.JPG] Figure 1. Prototype CHEMIN instrument, showing
+   collimator and sample holder on the left and CCD on the right.
+
+
+   [CHEMINDiagram-1s.JPG] Figure 2. Schematic of the flight CHEMIN
+   instrument
+
+   Figure 2 shows the spatial relationships between the three components
+   that are critical to the operation of CHEMIN:
+
+    1. an X-ray tube source
+    2. a sample manipulation system
+    3. a CCD detector that discriminates both energy and position of
+       X-rays
+
+   1). The X-ray source component is shown as a standard tube in Figure 2,
+   reflecting one design option, but our preferred X-ray source is a
+   sealed, high-vacuum envelope housing a micromachined field-emitter
+   (MMFE) array, an electrostatic focusing element, and an anode, onto
+   which a small focused beam of electrons is accelerated. The principle
+   of micromachined field-emission sources was first described by Spindt
+   (1971) and has been developed to a relatively advanced state for a
+   number of uses such as flat-panel color displays (Spindt, 1992; Brodie
+   and Schwoebel, 1994). In operation, a continuous electrostatic
+   potential of 20 keV is applied between the anode and the MMFE array. An
+   electron current is created by impressing a potential of ~50 V on the
+   extraction anode of the MMFE array. The electron flow is turned on and
+   off by impressing and removing this potential. The electron current
+   leaving the MMFE is focused onto the anode using an electrostatic
+   focusing system. The throughput of the system is limited by
+   electron-beam heating of the target, which will be kept below the
+   melting point of the metal. When electrons strike the target,
+   characteristic and continuum X-rays are generated which propagate in
+   all directions. Small fractions of these travel in the
+   forward-scattered direction toward a 50-µm aperture. This aperture has
+   the effect of creating a nearly parallel 50-µm beam of continuous and
+   characteristic radiation from the anode.
+
+   2). The Sample Collection Disc or Carousel. The collimated X-ray beam
+   strikes a thin-film substrate held in the second component of the
+   system, a multi-position sample carousel. The carousel disc is the only
+   moving part in the CHEMIN instrument. The carousel can be precisely and
+   continuously rotated about 360 degrees by a stepper motor. The
+   substrates are X-ray thin (~2 µm) mylar films made sticky on the top
+   surface with a thin film of vacuum grease or the like. A protective
+   cover is removed from the coated mylar as it advances into the sample
+   collection port. A sample is dumped into the sample collection port and
+   powder adheres to the sticky surface of the mylar, while excess powder
+   and larger grains roll off the inclined substrate. The carousel is then
+   rotated into position for analysis between the X-ray source and CCD
+   detector array. While in the position for analysis, 50-µm diameter
+   regions are illuminated by the collimated X-ray beam. Approximately 50
+   exposures are collected of each area, after which the motor steps ~100
+   µm so that a new area of sample material on the same substrate is
+   analyzed. An "exposure" is made by providing a pulse of 50 volts to the
+   extraction anode of the X-ray tube, flooding the CCD with diffracted
+   and fluoresced X-ray photons.
+
+   3). CCD Detector Array. The third component of CHEMIN is the CCD
+   detector array and detector electronics. The array consists of a matrix
+   of 1024 X 1024 pixels, in a front-illuminated, thin polygate device.
+   Salient characteristics of the device are listed in Table 1. In most
+   applications CHEMIN can be operated in shaded or in local nighttime
+   conditions, when the ambient temperature is sufficiently low to reduce
+   background to an acceptable level.
+
+   Table 1
+   . Characteristics of the proposed CHEMIN CCD
+
+Format
+
+                                                                     1024 x 1024
+
+Pixel size, µm
+
+                                                                         18
+
+Number of readout channels
+
+                                                                          4
+
+Readout noise, e- (rms)
+
+                                                                         0.5
+
+                                Energy
+
+                                                                 Quantum Efficiency
+
+                                                                  Energy Resolution (FWHM), eV
+
+                                277 eV
+
+                                                                        0.15
+
+                                                                               38
+
+                                1000 eV
+
+                                                                        0.70
+
+                                                                               60
+
+                                5400 eV
+
+                                                                        0.15
+
+                                                                               115
+
+                                8000 eV
+
+                                                                        0.05
+
+                                                                               130
+
+
+   The CCD proposed for use in CHEMIN has already been used in X-ray
+   astronomy applications (e.g., CUBIC). The principal characteristics of
+   the CUBIC device are listed in Table 1. Three characteristics of this
+   CCD are uniquely suited to the needs of a combined XRD/XRF instrument:
+
+   A thin-gate design is incorporated. A CCD consists of a layer of
+   single-crystal, photon-sensitive silicon that is overlain by an
+   insulator and polysilicon electrodes. These overlying layers (total
+   thickness ~ 500 nm) absorb a portion of the incident energy, with
+   absorption being most severe at energies less than 1 keV. For some
+   instruments, enhanced soft X-ray sensitivity has been achieved by
+   removing the thick, insensitive silicon substrate on which the CCD is
+   fabricated and illuminating the detector from the backside. Although
+   thinning and backside illumination do significantly improve low-energy
+   sensitivity, they also produce significant drawbacks, including
+   increased charge splitting between pixels and partial charge
+   collection. The CCD to be used in the CHEMIN instrument is unthinned
+   and front-side illuminated. A unique pixel design is employed to
+   provide enhanced low-energy X-ray response .
+
+   Ultra-low-noise floating gate amplifiers are used. These amplifiers
+   have a basic readout noise of 3-4 electrons (rms). Unlike conventional,
+   floating diffusion CCD amplifiers, floating gate readout is
+   nondestructive, permitting multiple readout of the charge from each
+   pixel. This reduces final readout noise through averaging. Using this
+   approach, a readout noise of less than one electron has been achieved,
+   sufficiently low to permit shot-noise-limited measurement of the energy
+   of carbon K
+   a photons (277 eV), generating a signal of only 76 electrons per C Ka
+   photon.
+
+   Excellent charge transfer efficiency is maintained in the architecture.
+   Individual X-ray photons generate very little charge (76 - 2050
+   electrons for the range of 277 - 7500 eV). Most CCDs do not transfer
+   such small quantities of charge with sufficient efficiency to permit
+   measurement of photon energy. The proposed CHEMIN CCD has been
+   specifically designed (and has been demonstrated) to permit such
+   measurement.
+
+   Table 2
+   . Overall Instrument Parameters for CHEMIN
+
+ Detector
+
+                                             X-ray sensitive (thin polygate) CCD
+
+ X-ray tube electron source
+
+                                                 Field-effect emitter array
+
+ Range, degrees 2
+ q
+
+                                                           5-55°
+
+ Diffraction resolution
+
+                                                            <0.2
+                           ° 2q
+
+ Mass, kg
+
+                                                             0.8
+
+ Power, W
+
+                                                             2.0
+
+
+   As described above, both diffraction and fluorescence data are obtained
+   simultaneously by operating the CCD in single-photon counting mode.
+   Figure 3 illustrates the flat-plate diffraction data obtained for
+   Al[2]O[3] (corundum) from CHEMIN, before radial integration. Further
+   data processing, which involves integrating around each entire measured
+   diffraction ring, produces a diffraction pattern like that shown in
+   Figure 4, which illustrates a comparison between the CHEMIN diffraction
+   pattern of quartz and the pattern obtained on a conventional laboratory
+   diffractometer. Radial integration allows CHEMIN to obtain high-quality
+   diffraction data from relatively coarse-grained samples.
+
+   [Al2o3ccd-1s.JPG] Figure 3. Flat-plate diffraction data for Al[2]O[3
+   ]obtained using the prototype CHEMIN instrument.
+
+
+   [Qtzcomparison-s.JPG] Figure 4. Diffraction pattern for quartz
+   resulting from radial integration of flat-plate data, compared with
+   data from a conventional laboratory diffractometer.
+
+
+   XRF data as well as XRD data are collected even with the test CCD at
+   NASA-Ames, although XRF data of higher quality are obtained with the
+   CUBIC CCD at the Jet Propulsion Laboratory. X-ray fluorescence data can
+   potentially be obtained for elements with 4<Z<92. The CCD, which is the
+   heart of the CHEMIN instrument, can be optimized for soft X-ray
+   sensitivity by removing the thick, insensitive silicon substrate on
+   which the CCD is fabricated and illuminating the detector from the
+   backside. Although thinning and backside illumination significantly
+   improve low-energy sensitivity, they also produce significant
+   drawbacks, including increased charge splitting between pixels and
+   partial charge collection. The CCD to be used in the CHEMIN instrument
+   is unthinned and front-side illuminated. A unique pixel design is
+   employed to provide enhanced low-energy X-ray response .
+   Ultra-low-noise floating gate amplifiers are used. These amplifiers
+   have a basic readout noise of 3-4 electrons (rms). Unlike conventional,
+   floating diffusion CCD amplifiers, floating gate readout is
+   nondestructive, permitting multiple readout of the charge from each
+   pixel. This reduces final readout noise through averaging. Using this
+   approach, a readout noise of less than one electron has been achieved,
+   sufficiently low to permit shot-noise-limited measurement of the energy
+   of carbon K
+   a photons (277 eV), generating a signal of only 76 electrons per C Ka
+   photon. Excellent charge transfer efficiency is maintained in this
+   architecture. Individual X-ray photons generate very little charge (76
+   - 2050 electrons for the range of 277 - 7500 eV). Most CCDs do not
+   transfer such small quantities of charge with sufficient efficiency to
+   permit measurement of photon energy. The proposed CHEMIN CCD has been
+   specifically designed (and has been demonstrated) to permit such
+   measurement. The type of CCD proposed for use in CHEMIN has already
+   been used in X-ray astronomy applications (e.g., CUBIC). Example X-ray
+   fluorescence data for the evaporite mineral löweite are shown in Figure
+   5, illustrating the excellent performance for light elements. Because
+   the CHEMIN concept combines diffraction and fluorescence data,
+   simultaneous linear equations can be used to derive the most accurate,
+   self-consistent mineral and chemical composition.
+
+   [LoeweiteXRF-s.JPG] Figure 5. X-ray fluorescence spectrum for löweite.
+
+
+   Capability Enhancements
+
+   Several instruments are available for remote chemical analysis of
+   extraterrestrial surface samples, but there are none that determine
+   mineral presence and abundance. Proposals for an XRD system with such
+   capabilities have been advanced in the past , and instruments for
+   collecting simultaneous XRD and XRF data have been suggested , but the
+   systems envisioned then had limited capabilities. Both XRD and XRF
+   technologies have advanced considerably in the past 30 years, allowing
+   the possibility of a practical and effective combined and simultaneous
+   XRD/XRF system for planetary exploration. Recent progress in X-ray
+   detector technology allows the development of simultaneous XRD and XRF
+   analysis in a system such as CHEMIN that is scaled down in size and
+   power to the point where it can be mounted on fixed landers, soft
+   penetrators, or small robotic rovers.
+
+   The quality of CHEMIN XRD data has now progressed to a point where
+   trace mineral occurrences (<1%) can be identified and quantified. Such
+   applications illustrate the high sensitivity of the prototype CHEMIN
+   instrument in detecting very small quantities of diagnostic minerals.
+   Contaminant detection that can distinguish between clastic, cemented
+   clastic, and chemical sediments will be an important tool in remote
+   petrologic and exobiologic studies. The ability to recognize and
+   quantify minor minerals (present in only a few percent) will be
+   important in these studies.
+
+   Table 3 compares two XRD analyses and a normative calculation for a
+   terrestrial basalt sample. One of the XRD analyses was obtained with
+   the NASA-Ames CHEMIN prototype instrument (Fig. 6); the other with a
+   Siemens laboratory diffractometer. The basalt sample is a high-alumina
+   basalt from the Southwest Nevada Volcanic Field. Although the CHEMIN
+   instrument has poorer peak resolution, the data obtained with the
+   CCD-based instrument are sufficient not only to determine the mineral
+   phases present, but also to apply Rietveld analysis in estimating the
+   relative proportions of mineral phases in the sample. Rietveld analysis
+   involves calculating a model diffraction pattern based on the crystal
+   structures of the known phases in a mixture. The quality of fit between
+   the observed and calculated diffraction patterns is then improved via a
+   least-squares process in which relative amounts of each phase and
+   crystal structural parameters are varied. For minerals in which solid
+   solution is possible, the atoms used to populate the cation sites can
+   be varied to refine the fit, and unit-cell parameters determined by the
+   analysis provide yet another key to solid solution variations. In
+   addition, software is being developed to combine both the chemical XRF
+   data and the XRD result to perform this operation more rigorously (Bish
+   and Howard, 1988). The analysis represented in Fig. 6 uses only the XRD
+   data. The goodness of fit for a Rietveld analysis of the XRD data is
+   usually expressed by statistical parameters but can also be visualized
+   as a difference pattern, shown at the bottom of Fig. 6.
+
+   [BasaltCCDw-oanalysis-s.JPG] Figure 6. Results of Rietveld refinement
+   of basalt using CHEMIN diffraction data.
+
+
+   The direct consideration of the ratios in which the calculated minerals
+   are mixed to reproduce the observed pattern provides the weight
+   proportions of minerals that best match the measured XRD data. These
+   weight proportions are listed in Table 3, calculated for both the
+   CHEMIN XRD pattern as shown in Fig. 6 and for XRD data of the same
+   sample collected on a laboratory diffractometer. The errors listed are
+   calculated instrumental errors of approximately two sigma. Note that
+   the relative error varies not only with mineral abundance but also with
+   mineral type. Clearly some minerals abundances can be more precisely
+   measured than others; for example, the feldspars are complicated not
+   only by ternary cation exchange (Ca, Na, K) and associated framework
+   Al/Si ratio variations, but in high-alumina basalts such as this sample
+   they also form as phenocryst and groundmass phases, with separate
+   exsolution histories, resulting in superposed complex mixtures of
+   high-temperature and low-temperature structural types. Although this
+   makes the feldspar calculations more error-prone and, in this sample,
+   of greater abundance than should be present (compare the calculated
+   normative value in Table 3), in fact the complexity of the pattern
+   indicates a wealth of unused information. Experience with other complex
+   rocks (Bish and Post, 1993) indicates that advances within the next
+   decade should allow the extraction of far more information from
+   CHEMIN-quality data than currently obtainable. It should also be noted
+   that in some respects, the Rietveld data are more accurate than a
+   normative calculation. The normative calculation is exceptionally
+   sensitive to SiO[2] content and the norm shown in column (3) of Table 3
+   reports less olivine and more oxide minerals than the sample
+   petrography allow. This reflects the magnitude of the errors commonly
+   associated with instrumental determinations of SiO[2] content in rock
+   samples. In this instance, the Rietveld determinations of mineral
+   abundance are closer to reality. The XRD-based analysis also identifies
+   phlogopite, which is not recognized in the normative calculation, and
+   does not assume spurious occurrences of ilmenite and hematite.
+
+   Table 3: Rietveld Analyses of Basalt using XRD data from CHEMIN and a
+   Laboratory Diffractometer, Compared with a Normative Calculation (all
+   data in weight percent)
+
+
+                                 (1) CHEMIN
+
+                        (2) laboratory diffractometer
+
+                          (3) normative calculation
+
+   forsterite
+
+                                  7.5(3.0)
+
+                                  9.3(2.0)
+
+                                     2.7
+
+   albite
+
+                                  28.9(7.0)
+
+                                  22.2(5.0)
+
+                                    35.2
+
+   anorthite
+
+                                  17.5(5.0)
+
+                                  27.3(3.0)
+
+                                    20.7
+
+   sanidine
+
+                                  37.9(8.0)
+
+                                  28.8(6.0)
+
+                                    17.5
+
+   augite
+
+                                  4.7(2.0)
+
+                                  9.3(2.0)
+
+                                    10.5
+
+   magnetite
+
+                                  1.9(1.0)
+
+                                  1.1(1.0)
+
+                                     3.3
+
+   ilmenite
+
+                                     --
+
+                                     --
+
+                                     3.4
+
+   hematite
+
+                                     --
+
+                                     --
+
+                                     4.2
+
+   fluorapatite
+
+                                  1.6(1.0)
+
+                                  2.1(1.0)
+
+                                     2.3
+
+   phlogopite
+
+                                  0.1(0.1)
+
+                                  0.1(0.1)
+
+                                     --
+
+
+   A prototype CHEMIN instrument has been in operation since July of 1996.
+   This prototype has verified the principle of CCD-based simultaneous XRD
+   and XRF, but the instrument is composed of surrogate components that do
+   not illustrate the full capabilities that can be realized with an
+   optimized instrument. The prototype CHEMIN instrument has demonstrated
+   detection and quantification of minerals at abundances as low as 1%, as
+   well as the ability to provide quantitative chemistry and mineralogy
+   from complex mixtures (Table 3).
+
+
+   The CHEMIN instrument can be demonstrated as a series of subsystems:
+
+   1) Field-emission X-ray tube
+
+   At present, a standard laboratory X-ray tube is used with CHEMIN, but
+       the flight instrument will use a miniaturized X-ray source of new
+       design (being developed under an active phase-II SBIR). The
+       electron source, electrostatic focusing element geometry, and anode
+       configuration for a low-voltage X-ray tube have been developed by
+       Moxtec, Inc., under phase-I and phase-II SBIR contracts. Moxtec,
+       Inc. will be responsible for delivery of the power supply, X-ray
+       tube source and collimator system.
+
+   2) CUBIC-quality CCD
+
+   The technology of thin polygate CCD systems is evolving rapidly. We
+       have available several options for pursuing this subsystem,
+       including chips that are becoming available from Philips as well as
+       from English Electric Valve and other companies. An expanded
+       variety of performance factors, including improved efficiencies for
+       heavy-element analysis, may be obtained in the near future. Part of
+       the demonstration methodology will be to evaluate the various
+       options and determine the optimal design.
+
+   3) Rock-powder preparation system
+
+   In general, mechanical handling of rock samples, soils, and ices is one
+       of the more difficult problems in robotic analysis of
+       extraterrestrial bodies. Both eolian dusts and soils can be readily
+       collected and can often be analyzed without extensive processing.
+       Full analysis of solid geologic media will almost invariably
+       require a method for obtaining powders. Fortunately, all evidence
+       points to the fine grained nature of cometary material. Therefore,
+       sample preparation for a cometary mission is not a daunting task as
+       the solid materials on cometary surfaces are already fine grained.
+       Sample "preparation" will consist primarily of mounting the
+       fine-grained material for analysis. In situ analysis is preferable
+       to sample return because the temperatures associated with sample
+       return are not sufficiently low to ensure that the various cometary
+       ices will not recrystallize or form clathrates. For accurate phase
+       identification by diffraction methods, the solid materials on
+       cometary surfaces must be analyzed in situ.
+       In the event that solid geologic media are anticipated, alternate
+       sample preparation methods will be used. Our preferred powder
+       generation and collection systems are presently focused on (1)
+       piezoelectric microdrilling or (2) explosive powdering systems.
+       Both methods are developed and are currently under investigation,
+       and both have prototype systems available that will be tested
+       against a variety of target lithologies. Part of the subsystem test
+       may be to determine how representative the samples are of true rock
+       composition, as well as the reliability of adequate powder delivery
+       to a sample carousel.
+     __________________________________________________________________
+
+   Pertinent References
+
+
+   Bish, D. L. and S. A. Howard (1988). "Quantitative phase analysis using
+       the Rietveld method." Jour. Appl. Cryst 21: 86-91.
+       Bish, D. L. and J. E. Post (1989). Modern Powder Diffraction. Min.
+       Soc. Amer. Reviews in Mineralogy, vol. 20, 369 pp.
+       Bish, D. L. and J. E. Post (1993). "Quantitative mineralogical
+       analysis using the Rietveld full-pattern fitting method." Amer.
+       Min. 78: 932-942.
+       Blake, D. F., et al. (1992a). "Design of an X-ray diffraction /
+       X-ray fluorescence instrument for planetary applications." LPSC
+       XXIII: 117-118.
+       Blake, D. F. et al. (1992b). "CHEMIN: Chemical and Mineralogical
+       Analysis for Planetary Exploration using combined X-ray
+       Fluorescence and X-ray Diffraction." Discovery Mission Workshop,
+       San Juan Capistrano, CA.
+       Blake, D. F. et al. (1993). "X-ray Diffraction Apparatus." U.S.
+       Patent No. 5,491,738.
+       Blake, D. F. et al. (1994). "A mineralogical instrument for
+       planetary applications." Lun. Plan. Sci. Conf. XXV: 121-122.
+       Brodie, I. and P. R. Schwoebel (1994). "Vacuum microelectronic
+       devices." Pric. IEEE 82: 1006-1034.
+       Clark and VanHart, (1981). "The salts of Mars. Icarus 45, 370-378.
+       Das Gupta, K. et al. (1966). "A Combined Focusing X-ray
+       Diffractometer and Nondispersive X-ray Spectrometer for Lunar and
+       Planetary Analysis." Adv. in X-ray Analysis 9: 221-241.
+       Fegley, B. Jr., Treiman, A. H., and Sharpton, V. L. (1992) Venus
+       surface mineralogy: Observational and theoretical constraints.
+       Proc. Lunar and Planet Sci 22, 3-19.
+       Kraft, R. P. (1994). "Soft X-ray spectroscopy using Charge-Coupled
+       Devices with thin poly gates and floating gate output amplifiers."
+       Proc. SPIE 2280.
+       Spindt, C. A. (1968). "A thin film field emission cathode." J.
+       Appl. Physics 39: 3504-3505.
+       Spindt, C. A. (1992). "Microfabricated field-emission and
+       field-ionization sources." Surface Science 266(145-154).
+       Toothacker, W. S. and L. E. Preuss (1968). "Radioisotopes as Zero
+       Power Sources of X-rays for X-ray Diffraction Analysis." Nucleonics
+       in Aerospace, Instrument Society of America: 341-343.
+       Vaniman, D. T. et al. (1991a). "Integrated XRD and XRF Data from a
+       Single Instrument for Planetary Surface Exploration." Clay Min.
+       Soc. 28th Ann Mtng.: 157.
+       Vaniman, D. T. et al. (1991b). "In-situ Planetary Surface Analyses:
+       The Potential of X-ray Diffraction with Simultaneous X-ray
+       Fluorescence." Lunar and Planet. Sci. XXII: 1429-1430.
+
+     __________________________________________________________________
+
+   The CHEMIN team
+
+   David Bish, Los Alamos National Laboratory
+
+   David Bish received a Ph.D. in Mineralogy and Petrology from
+   Pennsylvania State University in 1977. After graduation, he completed
+   three years of postdoctoral studies in the Department of Geological
+   Sciences, Harvard University. Since 1980, he has been a research
+   scientist in the Earth and Environmental Sciences Division of Los
+   Alamos National Laboratory where he presently serves as Project Leader
+   for Yucca Mountain Mineralogy-Petrology studies. He has authored or
+   co-authored more than 75 peer-reviewed articles, three books and 150
+   abstracts covering all aspects of mineralogy and diffraction theory.
+   His areas of specialization include clay and zeolite mineralogy, X-ray
+   powder diffraction, and Rietveld refinement applications. He has
+   received numerous honors and awards, and presently serves as president
+   of the Clay Minerals Society and as associate editor for Zeitschrift
+   für Kristallographie, an international crystallography journal.
+
+   David Blake, NASA Ames Research Center
+
+   David Blake received a Ph.D. in Geology and Mineralogy from the
+   University of Michigan in 1983. After graduation, he completed two
+   years of postdoctoral studies in the Department of Geological Sciences,
+   University of Michigan and an additional two years as a National
+   Research Council fellow at NASA Ames Research Center. Since 1988, he
+   has been a research scientist in the Space Sciences Division of NASA
+   Ames Research Center. His areas of specialization include the
+   characterization of extraterrestrial ice analogs and interplanetary
+   dust particles by electron microscopy, diffraction and X-ray
+   microanalysis, and new analytical and diffraction techniques. He has
+   authored or co-authored 25 peer-reviewed articles, and edited or
+   written chapters for two books.
+
+   Steve J. Chipera, Los Alamos National Laboratory
+
+   Steve Chipera received an M.Sc. in Geology from the University of North
+   Dakota in 1985. Since 1985, he has been a research scientist in the
+   Earth and Environmental Sciences Division of Los Alamos National
+   Laboratory where he serves as member of the Yucca Mountain
+   Mineralogy-Petrology team. He has authored or co-authored more than 21
+   peer-reviewed publications, 2 book chapters, 11 conference proceedings,
+   over 50 abstracts, and numerous Los Alamos Laboratory reports. His
+   areas of specialization include X-ray powder diffraction, water
+   sorption/desorption reactions in hydrous minerals, and thermodynamic
+   modeling of mineral equilibria.
+
+   Stewart A. Collins, Jet Propulsion Laboratory
+
+   Stewart A. Collins received a B.S. degree from Principia College in
+   1969 and has been employed by the Jet Propulsion Laboratory since that
+   time. He was imaging science experiment representative for the Mariner
+   Mars 1969 and the Voyager missions, and was a member of the Voyager
+   Imaging Science Team. He is supervisor of the JPL Imaging Systems
+   Section's Advanced Development Group, which is responsible for the
+   development of imaging detectors for various NASA space-imaging
+   systems. His experience includes performance analysis of scientific
+   instruments, mission operations planning and implementation for imaging
+   investigations, conceptual design of CCDs and of CCD instruments, and
+   the management of CCD fabrication procurements and of CCD test
+   activities. He received NASA's Exceptional Service Medal in 1981. Mr.
+   Collins has authored or co-authored more than 30 peer-reviewed
+   articles.
+
+   David Vaniman, Los Alamos National Laboratory
+
+   David Vaniman received a Ph.D. in Earth Sciences from the University of
+   California, Santa Cruz in 1976. From 1976-1979, he concentrated on
+   lunar regolith studies as a postdoctoral researcher at the State
+   University of New York, Stony Brook. He has been employed from 1979 to
+   the present as a research scientist in the Earth and Environmental
+   Sciences Division of Los Alamos National Laboratory. In this capacity,
+   he managed the mineralogy-petrology research group for the Yucca
+   Mountain Project (investigation of a potential high-level nuclear waste
+   repository in Nevada) from 1981-1988 and 1992-1993. Dr. Vaniman has
+   authored or co-authored more than 60 peer-reviewed articles and
+   co-edited Lunar Sourcebook: A User's Guide to the Moon. His research
+   interests include the mineralogy and geochemistry of igneous and
+   metamorphic rocks and their alteration assemblages, soil mineralogy,
+   lunar and planetary petrology, and instrumentation for planetary
+   mineralogic and geochemical studies.

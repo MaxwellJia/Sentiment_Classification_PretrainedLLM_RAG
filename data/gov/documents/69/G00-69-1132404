@@ -1,0 +1,194 @@
+http://space.jpl.nasa.gov/faq.html
+
+   [swsss.gif] [USEMAP:swmenu.gif]
+   Solar System Simulator
+   Frequently Asked Questions - often-asked questions and problems with
+   the simulator.
+   [swstrip.gif]
+     __________________________________________________________________
+
+   How do I save these images to my hard disk?
+
+   With netscape, at least, if you click-and-hold with the mouse over the
+   image, you get a pop-up menu with "Save Image As..." as an option. If
+   your image appeared in a separate window, the program that opened it
+   should have a save item in its menu. You may want to rename it since
+   it's an automated output from a cgi-bin script.
+
+   What image format are these images in?
+
+   They're all JPEG images at 75% quality. Can I use these images in my
+   CD-ROM / article / web page / t-shirt / video?
+
+   Refer to the Image Usage Info page.
+
+   How real are these images?
+
+   The body positions should be accurate near the limits of our knowledge
+   of them (i.e. pretty dang accurate). The appearance, well I'm using
+   static texture maps which should be pretty good. Look at the samples
+   page for accuracy tests and see for yourself! One item the simulator
+   does not yet model is light time, i.e. the time it takes for the light
+   from a distant object to reach the Earth is nonzero, and this can have
+   potentially noticeable effects on the position of the bodies.
+
+   It takes a long time for the images to download. What can I do to speed
+   it up?
+
+   Well, you can try the mirror site(s) - if one is listed on the top
+   page. Or, you can try keeping to the suggested 320x240 image size until
+   you're ready for your final image. Orbits tend to take a while to draw,
+   especially if a lot of them are drawn - this tends to happen when
+   orbits are requested but don't really add anything (like when you're
+   looking at the whole solar system, and check "satellite orbits" -
+   geez). Don't turn them on unless you're sure you need them. Be patient,
+   there are a lot of other users.
+
+   How do I set up the simulator to give me what I would really see for
+   the naked eye or my binoculars / telescope?
+
+   If you mean, "what would I see if I were really standing there looking
+   at it," that's kind of complicated. The human eyes have a really wide
+   field of view, but the world is projected onto your eyeballs, which is
+   a spherical surface, and then processed by your brain as such. If you
+   were to try to draw a wide field of view image with the simulator, it
+   would look really distorted because it has to be projected onto a flat
+   surface (your computer screen). It's kind of an apples and oranges
+   thing.. what you see on the screen can't really be compared to what you
+   would see through your eyes, only what you would see if, say, you took
+   a picture. The average person's total field of view (including
+   peripheral vision) is probably something like 170 degrees. Even at 120
+   degrees (the maximum setting on the simulator) everything starts to
+   look distorted on the flat images. It would also depend on how far you
+   were standing from the screen, etc. I like to try 60-90 degrees, and
+   pretend I'm looking out a car (or spacecraft) window - that's pretty
+   close.
+
+   For binoculars or a telescope, it really depends on how you've set it
+   up or what model you have. You'll have to look in your instructions or
+   figure it out, I'm afraid. Remember, the Moon is about one half of one
+   degree in width - try looking at it and guess from there. (Be careful
+   with a powerful telescope - it can be very bright and even painful
+   sometimes.)
+
+   How is the vantage point determined? Am I standing on the body I
+   picked, or what?
+
+   The simulator renders as if you were at the center of the your body of
+   choice (an unrealistic case, I know, but it does simplify things). I've
+   been thinking about adding a lat/lon feature to it which would allow
+   you to pick a spot, but that'll be a week or two if it happens.
+
+   I tried to get a picture during a solar eclipse / stellar occultation /
+   planetary occultation I knew about, and it didn't look right. What
+   gives?
+
+   For eclipses / occultations, there are likely to be significant
+   differences depending where on the Earth (or wherever) you are
+   standing. The simulator renders images as if you were only at the
+   center of the body (see previous question). Also, as mentioned earlier,
+   light time is not included yet in the body positions, and this can have
+   potentially noticeable effects for multibody or distant occultations.
+
+   The image looks too bright / the colors are washed out. What gives?
+
+   If the "extra brightness" box is checked, uncheck it. If it's not,
+   that's weird - try adjusting your monitor (sorry - that's the best
+   answer I have).
+
+   The image looks too dark. What gives?
+
+   If the "extra brightness" box is unchecked, check it. Each monitor is
+   different, and many have differrent distributions of brightness to the
+   naked eye (this is called "gamma").
+
+   How does this simulator work?
+
+   Try the technical details page.
+
+   How do I make a movie from these images?
+
+   I'm afraid the only way to do this at this point is by hand, since
+   allowing people to make movies would choke my machine. If you're a web
+   whiz, you can look at the form itself and figure out what arguments are
+   called what, then generate requests with a script on your machine to
+   automate this a little.
+
+   Can I download this program (or source code, etc.) to use on my
+   computer?
+
+   Not yet, but maybe some day. Keep checking!
+
+   Where can I get the texture maps you used for the planets / satellites?
+
+   Try the technical details page, it's discussed there.
+
+   How come I can't pick a year in B.C. or very far in the future?
+
+   We really have very little way of knowing precisely where the planets
+   and satellites were / will be back then / that far ahead. Each body
+   acts on each other in small ways, and we can only predict their exact
+   positions so far. The range in the form is about the longest range that
+   we can be very accurate.
+
+   I got a server error when I tried to run the simulator. What gives?
+
+   Occasionally I see these in the log files, but don't know what caused
+   them. I admit I probably haven't worked out all the bugs, and if this
+   happens to you, LET ME KNOW what options you picked so I can correct
+   the error!
+
+   Why aren't all the JPL spacecraft on the body list?
+
+   I don't have ephemeris files for all the JPL spacecraft; I'm trying to
+   get all of them eventually. Request your favorite if you don't see it
+   there and I'll give it higher priority.
+
+   I thought that some of these bodies are irregularly shaped. What gives?
+
+   Irregular body rendering is a capability the simulator can't do yet. I
+   realize this creates inconsistencies with Phobos, Deimos, and some of
+   the smaller satellites of Saturn. I'm working on it!
+
+   How come I don't see shadows when the moon(s) pass in front of their
+   planet?
+
+   This body to body shadowing (except for Saturn's rings) is a feature
+   the simulator doesn't have yet. I'm working on it!
+
+   I thought we hadn't gone to Pluto yet. How come you have a map for it?
+
+   Well, it's just a guess. I had to show something.
+
+   I thought Venus' spin was opposite, making its north pole point down -
+   your simulator shows it pointing up (like Earth's). What gives?
+
+   It depends on who you ask. I figured that having the pole be down
+   (which determines part of the viewing geometry - the "twist" axis,
+   really) would confuse more people who weren't aware of this. The de
+   facto standard, I think, is down.
+
+   How come you don't have rings for the other planets besides Saturn like
+   Jupiter?
+
+   I haven't had time to assemble ring files for those planets; yes, it is
+   an oversight which is on my list of things to fix in the future.
+   However, the rings of Jupiter, Uranus and Neptune are extremely dim and
+   you probably wouldn't see much of anything if you were actually
+   standing there, unless you were at just the right geometry and had
+   really good eyesight. Actual images of those planets' ring systems that
+   you've seen in the past were probably heavily exaggerated to show
+   detail.
+
+   I want to send you a bunch of money just for doing this. How do I reach
+   you?
+
+   Send it care of Dave Se-- no, really, I work for Caltech. Taking the
+   time to get this site set up has been my pleasure. (But see the
+   question on usage rights if you're using any of this for a commercial
+   product, news broadcast, or non-educational video.)
+     __________________________________________________________________
+
+   David Seal
+   seal@samadhi.jpl.nasa.gov
+   Jet Propulsion Laboratory

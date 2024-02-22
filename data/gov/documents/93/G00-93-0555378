@@ -1,0 +1,389 @@
+http://linkwinds.jpl.nasa.gov/formats.html
+
+                            [USEMAP:jumpbar2.gif]
+     __________________________________________________________________
+
+FORMATS READ BY LINKWINDS
+
+   LinkWinds accepts data which is rectangularly gridded. A rank 2 dataset
+   is an image read in scan-line order. A rank 3 dataset may be thought of
+   as a series of images which are read in an image at a time to form a
+   volume. A rank 4 dataset may be thought of as a series of volumes.
+   Higher rank datasets are not currently read. In some cases, the first
+   four dimensions encountered are used, in other cases the desired four
+   dimensions may be specified. Only scalar data is currently accepted.
+
+   The formats currently accepted by LinkWinds are:
+
+   1) Raw binary data, which includes single byte, signed and unsigned
+   shorts and longs (2 and 4 bytes), floating point and double precision.
+   A minimal amount of metadata must also be given in an associated .db
+   file described below.
+
+   2) The Hierarchical Data Format (HDF) of the National Center for
+   Supercomputing Applications (NCSA).
+
+   3) The Common Data Format (CDF) originated at Goddard Space Flight
+   Center.
+
+   4) Network Common Data Format (NetCDF), derived from CDF at the
+   National Center for Atmospheric Research.
+
+   5) The Silicon Graphics, Inc. native RGB image format.
+
+   6) Data with Planetary Data System (PDS) headers, originated at the Jet
+   Propulsion Laboratory.
+
+   7) The Flexible Image Transport System (FITS) widely used by the
+   astrophysics community.
+
+   8) ASCII text. As with raw binary data, a .db file must also be
+   supplied to give metadata.
+
+   9) Two data formats of UARS, the Upper Atmosphere Research Satellite.
+   Both the format maintained by the Goddard DAAC and the UNIX variant of
+   the format of the Central Data Handling Facility (CDHF) are readable.
+
+   10) The data format of SAGE, the Stratospheric Aerosol and Gas
+   Experiment.
+
+   11) HDF-EOS including NASA Scatterometer data.
+
+  DATA FORMATS
+
+   1. Raw binary data.
+
+   Unless there is a header present, this type of data file typically has
+   only the data values. Therefore, a minimal amount of metadata must also
+   be given in an associated .db file. The possible load functions in the
+   .db file (loadFunc = ) are loadByte, loadShort, loadUShort, loadLong,
+   loadULong, loadFloat and loadDouble. These correspond to data which is,
+   respectively, single byte, 2 byte signed and unsigned integers, 4 byte
+   signed and unsigned integers, 4 byte floating point and 8 byte floating
+   point (double precision). In some older .db files, "loadOAdata" was
+   used as well for byte data. While still acceptable for backwards
+   compatibility, this load function should no longer be used. If the data
+   file has a header, this may be skipped by specifying its size, in
+   bytes, in the "header" parameter of the .db file. Because the
+   dimensions of the dataset must be given in the .db file, any trailing
+   bytes will not be read. There is currently no way to skip bytes in the
+   middle of the file.
+
+   For byte data, the "range" parameter under "dataset" in the .db file
+   gives the real number extremal values, with intermediate values being
+   linearly mapped. The minimum corresponds to byte 2, the maximum to byte
+   255. Bytes 0 and 1 are reserved in LinkWinds to represent "no data" and
+   "missing data", respectively. For multibyte data, the "range" parameter
+   tells how the binning should be done. Values equal to the minimum will
+   be placed in pixel 2 upon read-in, while values equal to the maximum
+   will be placed in pixel 255. Intermediate values are binned linearly,
+   by default. Values outside the extrema can be placed in pixels 2 and
+   255, or are assigned the pixel value 1, depending on the option chosen
+   in the data object menu. If both the minimum and maximum are set to 0,
+   then before binning LinkWinds will automatically determine the extrema
+   by reading through the entire dataset.
+
+   2) The Hierarchical Data Format (HDF) of the National Center for
+   Supercomputing Applications (NCSA).
+
+   LinkWinds currently uses HDF version 4.0, release 1, and accepts all
+   regularly gridded data types. These are the 8-bit Raster, 24-bit Raster
+   and both single and multi-file Scientific Dataset (SDS) formats.
+   Because LinkWinds currently requires regularly gridded data, the HDF
+   Vdata type is not accepted at the moment. We plan to access irregularly
+   gridded data in future releases of LinkWinds. Please contact us if you
+   have sample databases of types not currently readable.
+
+   A sequence of 8-bit Raster images forms a 3D dataset. Each image of
+   24-bit Raster data becomes three slices of data in LinkWinds; one each
+   for the red, green and blue components. Thus, if a .db file is being
+   used, the size of coordinate 1 is three times the number of 24-bit
+   Raster images. With all HDF data, a palette may be defined.
+
+   If a .db file is used, then the appropriate "loadFunc" is "loadR8" for
+   8-bit Raster, "loadC8" for compressed 8-bit Raster, "loadR24" for
+   24-bit Raster and "loadSDS" for scientific data. More simply, setting
+   the load function to "loadHDF" will cause LinkWinds to test for which
+   type of HDF format the dataset is. Indeed, even if the wrong HDF load
+   function is specified, LinkWinds should be able to detect and
+   compensate for the mistake.
+
+   The main advantage of using a .db file with HDF is the ability to set
+   the data range. For the raster formats, this mapping from byte value to
+   real numbers is not possible inside HDF. For floating point numbers,
+   different extrema for rebinning may be set, provided these have not
+   been explicitly set in the HDF file. If no extrema are given in either
+   the HDF file or the .db file, then LinkWinds will search through the
+   dataset to find them.
+
+   All HDF files may be listed directly without a .db file and may also be
+   chosen with the FileFinder. For multi-file HDF data sets read directly,
+   each file will be listed separately in the "data" menu of LinkWinds.
+
+   3) The Common Data Format (CDF) originated at Goddard Space Flight
+   Center.
+
+   LinkWinds is currently using CDF version 2.5. All of the allowable data
+   types should be readable, as well as files containing multiple
+   datasets. If the CDF file itself is listed in Databases without a .db
+   file, then LinkWinds will list all the data variables as individual
+   datasets under the "data" menu. If a .db file is used, the key word
+   "dataVar" may be used to specify which data variable will be assigned
+   to any specific dataset in the file. Multiple datasets may also be
+   defined in the .db file, each with a different value of "dataVar". If
+   no "dataVar" value is specified, then by default the first data
+   variable encountered in the file is used. The data variables may be
+   determined by the CDFbrowse tool that comes with the CDF software.
+
+   If a CDF database has more than four dimensions, including the "record"
+   variable, then by default only the first four will be used. However, if
+   a .db file is used, then a separate dataset may be created for any
+   record number by specifying it with the "record" parameter. As an
+   example, writing in the .db file:
+
+
+dataset                         # key word to start a dataset definition
+   menu = Tmp_rec100            # menu name of the database
+   datafile = multi-dim.cdf     # disk file name for loader
+   loadFunc = loadCDF           # file format
+   dataVar = 5                  # Variable which will be data. If
+                                #    negative, first one is used.
+   record = 100                 # CDF record to read, if dimension of
+                                #    dataset is 3 or greater.
+
+   creates from the file multi-dim.cdf, a dataset with the name
+   "Tmp_rec100" which is composed of the values of the 5th variable at the
+   100th record.
+
+   As noted above, the load function for CDF is "loadCDF". Aside from the
+   specifications of data variables and records, another advantage of
+   using a .db file is the ability to specify a palette. However, direct
+   input of the CDF file through its listing in Databases has the
+   advantage that it automatically lists all the data variables defined in
+   the file without the need for creating a .db file.
+
+   4) Network Common Data Format (NetCDF), derived from CDF at the
+   National Center for Atmospheric Research.
+
+   LinkWinds currently reads netCDF data files through its HDF interface
+   in HDF version 4.0r1, which uses netCDF version 2.3.2. All data types
+   should now be readable by LinkWinds. As with multi-file HDF and CDF, if
+   the data file itself is given in the Databases file, then all of the
+   data variables will be automatically listed as separate datasets in the
+   "data" menu. Similarly, inside a .db file, the "dataVar" parameter may
+   be used to specify which variable to use for any specific dataset. The
+   load function for netCDF is "loadNetCDF", although "loadHDF" will work
+   as well.
+
+   Advantages and disadvantages of using a .db file are similar to other
+   formats. A palette may be included in the .db file, and different
+   extrema may be given for rebinning. If 0's are specified for the range
+   of the data, then LinkWinds defaults to the values in the dataset. If
+   these values are not explicitly set in the netCDF file, then LinkWinds
+   will read through the entire dataset and use the true minimum and
+   maximum values.
+
+   5. The Silicon Graphics, Inc. native RGB image format
+
+   LinkWinds should now read all images stored in this format. If you
+   experience problems with any RGB image, please let us know so that we
+   can make additional fixes.
+
+   All RGB images will be three slices deep: the first slice for red, the
+   second for green and the third for blue. A grey scale palette is
+   assigned to a single slice. The main purpose of this format is to make
+   three color com posite RGB images. If a .db file is used, the load
+   function is "loadRGB".
+
+   Utilities for the creation and display of RGB images are bundled with
+   SGI workstations. The LinkWinds F1, F2 and F3 screen dump facilities
+   also create RGB files.
+
+   6) Data with Planetary Data System (PDS) headers, originated at the Jet
+   Propulsion Laboratory.
+
+   LinkWinds reads data from most planetary missions, including files with
+   detached labels and data that has been Huffman encoded or JPEG
+   compressed. Data with VICAR headers should be readable as well,
+   although this capability is not as thoroughly tested. If the dataset
+   exists with a detached label, then the label file must be listed in
+   either Databases or the .db file. LinkWinds will read the header of the
+   label file and determine in which file the actual data is stored. No
+   special notation is needed for Huffman encoded or compressed images;
+   they will be detected and decoded or decompressed automatically. 8-bit,
+   16-bit and floating point data are read. If a .db file is used, the
+   load function is "loadPDS".
+
+   LinkWinds recognizes that a file is in PDS format by reading the
+   initial code word in the header. We do not recognize all files that use
+   PDS headers, but can read most of them, including the Viking, Voyager,
+   Magellan and Galileo missions. Similarly, while LinkWinds can obtain
+   much of the metadata from the header, idiosyncrasies in the naming
+   among the different missions causes it to miss information
+   occasionally. We will add recognition of different headers and key
+   words as we become aware of them. Please contact us with examples.
+
+   Many of the PDS images are in sinusoidal projection. LinkWinds can
+   input these with no problem. The areas beyond the edge of the
+   projection are simply treated as "no data" and assigned pixel value 0.
+   They thus will appear black in either a grey scale or RGB composite
+   image. However, when the image is mapped on the Globe or Polar tools,
+   LinkWinds assumes cylindrical projection, and distortions will result.
+   The images may be reprojected to a simple cylindrical projection upon
+   input by setting the "projection" parameter in the .db file to
+   "sinToCyl".
+
+   PDS images are often available with different color filters, which can
+   then be composited. Each image typically is in a separate file. These
+   can be loaded into the same dataset both by direct listing in the
+   Databases file or inside a .db file. For the former, writing:
+
+:Mars
+  ::mars00n082 mg00n082.*
+
+   will create a dataset called "mars00n082" in the main LinkWinds
+   "database" and "data" menus. In this dataset will be all the data files
+   which start with "mg00n082." and whose extensions are "red", "grn",
+   "sgr" and "vio". These are the extensions representing the color
+   filters of which we are aware. Each image becomes a separate slice in
+   the dataset.
+
+   Using a .db file, the parameters "DatFiles" and "datafile" must be set.
+   For example, writing:
+
+
+dataset                            # key word to start a dataset definition
+   menu         = Mars00n082       # menu name of the database
+   DatFiles     = 3                # Number of datafiles in one dataset
+   datafile     = mg00n082.red mg00n082.sgr mg00n082.vio
+                                   # disk file name for loader
+   loadFunc     = loadPDS          # file format
+   projection   = sinToCyl         # conversion of projections (optional)
+
+   creates a three slice dataset out of the red, synthetic green and
+   violet images.
+
+   7) The Flexible Image Transport System (FITS) widely used by the
+   astrophysics community.
+
+   LinkWinds should read any rectangularly gridded dataset written in the
+   FITS format. This includes files with extensions to the header and
+   using any of the standard "sample sizes". LinkWinds has been tested
+   with several different sample datasets but has limited experience with
+   FITS. If you have a problem, please contact us. Your comments and
+   datasets are most welcome.
+
+   As with other formats, FITS databases may be listed directly in the
+   Databases file or use a .db file. For the latter, the load function
+   should be set to "loadFITS". As discussed above, the advantages of
+   using a .db file include specifications of data minimum and maximum,
+   and the inclusion of a palette.
+
+   8. ASCII text
+
+   Much about the way LinkWinds handles data written as text is similar to
+   raw byte data. A .db file must be given for the data set to supply a
+   minimal amount of metadata. The load function is loadAscii. As with raw
+   data, the "header" parameter may be given in the .db file to state how
+   many initial bytes of the file will be skipped. The "range" parameter
+   under dataset is also handled in an identical fashion.
+
+   9. UARS data
+
+   Data from the Upper Atmosphere Research Satellite (UARS) is stored in
+   its own format at the Central Data Handling Facility (CDHF), the UNIX
+   variety of which is readable by LinkWinds. There is also a VMS version
+   which is not as widespread and cannot be read. Finally, the Goddard
+   DAAC maintains UARS files in still a third variant, which is also
+   readable by LinkWinds. UARS data files contain sufficient information
+   in the header to be readable directly, without need for a .db file.
+   Both the data and error information are accessible. For the Goddard
+   DAAC variety, the "META" file must be listed; LinkWinds will find the
+   data in the "PROD" file listed inside the "META" file.
+
+   UARS data is not gridded in latitude and longitude, but rather consists
+   of individual latitude and longitude points followed by the values for
+   the different pressure levels. When stored in LinkWinds, the data is
+   placed on a grid with interstitial points placed at the closest grid
+   value. By default, a global grid of size 180x360 is used. For a
+   different grid size, a .db file must be used with the size of
+   coordinates 2 and 3 set as desired. The load function is loadUARS for
+   the CDHF variety and loadDAACUARS for the Goddard DAAC variety.
+
+   10. SAGE data
+
+   Data from the Stratospheric Aerosol and Gas Experiment (SAGE) is also
+   stored in a specific format that is readable by LinkWinds. This format
+   is still in an early stage and may change. At the time of this writing,
+   the accessibility of the data to the public is still uncertain, but we
+   have included this option just in case. Because there is no header
+   information, LinkWinds cannot read this format directly, and a .db file
+   must be used. The appropriate load function is loadSAGE.
+
+   As with UARS data, the data is ungridded in latitude and longitude. The
+   user supplies the size and range of these coordinates in the .db file.
+   Data points are placed at the closest gridded values. SAGE data files
+   contain a year of data, stored in daily records. If the .db file makes
+   the data set rank 3, then the full year's data will be placed on the
+   latitude and longitude grid, giving nice global coverage. If the rank
+   is given as 4, then each day's worth of data may be examined
+   individually. However, the global coverage will be scant, with only
+   about 15 points per day. For this four dimensional data, either the
+   time or altitude dimension may be frozen at input.
+
+   11. HDF-EOS data
+
+   HDF-EOS is an particular application of HDF developed for NASA's Earth
+   Observing System (EOS). It is a schema built from basic HDF data
+   elements. LinkWinds currently uses version 2.00 of the HDF-EOS
+   programming interface. We give a very brief description here of the
+   data structures defined in HDF-EOS. For a little more detail, see
+   Volume 1 of the HDF-EOS User's Guide. Its available from the following
+   web sites:
+
+   http://ulabhp.gsfc.nasa.gov/~workshop/hdf.html
+
+   http://ecsinfo.hitc.com/iteams/HDF-EOS/HDF-EOS.html
+
+   HDF-EOS was designed to store data from a wide variety of instruments,
+   aboard Earth-orbiting satellites, plus other data sources. The three
+   basic structures are known as Grids, Swaths, and Points.
+
+   Grids are rectilinear arrays. The data have been converted from their
+   original sources into physically meaningful quantities. In remote
+   sensing parlance, these are referred to as "processing level 3" and
+   above. LinkWinds reads Grid data through the vanilla SD interface.
+
+   Swaths were designed specifically to handle data from satellites and
+   aircraft. A swath is typically thought of as all the data from a single
+   orbit. However, the swath data structure may hold any number of orbits
+   or fractions of an orbit. So-called "level 2" data are georeferenced,
+   and sometimes expressed in physically meaningful units. Other, less
+   processed data, known as level 1b, are not georeferenced, and contain
+   only time and signal strength and quality information. When it can,
+   LinkWinds will match data to geographic coordinates and rebin the data
+   onto a latitude-longitude grid. Otherwise, the data will be rendered in
+   their original dimensions.
+
+   Points are linked tables of loosely structured data. The most common
+   application would probably be to hold data from ground stations or
+   balloons. Unlike remotely-sensed data, these would normally be direct
+   measurements of physical quantities, such as temperature, soil type,
+   downward radiation, and sea-level height. As of this writing, we are
+   unaware of any real examples of point structures, and the format is not
+   supported in LinkWinds.
+
+   Some code has been included to read NASA Scatterometer data from the
+   JPL Physical Oceanography Distributed Active Archive Center (PO-DAAC).
+   These functions were merely an attempt to understand orbital swath
+   data, and were written before the LinkWinds Team had access to actual
+   HDF-EOS samples. The functions have not been fully tested, so you may
+   encounter limitations if you try to do something very sophisticated
+   with such data, such as concatenation of files.
+     __________________________________________________________________
+
+   [Back] Return to the LinkWinds Home Page
+     __________________________________________________________________
+
+
+    LinkWinds Development Team / linkwind@twinky.jpl.nasa.gov / 4-29-98

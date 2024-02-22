@@ -1,0 +1,962 @@
+http://epims.gsfc.nasa.gov/epims_pub/isr_epims.book.pdf
+
+   NASA Parts Project Office December 17, 1993 Information System
+   Requirements for the Electrical, Electronic, and Electromechanical
+   (EEE) Parts Information Management System (EPIMS) From NASA-DID-P200
+   (Requirements DID) of NASA-STD-2100-91 Approval Signatures
+   __________________________________________ _________________ Stephen C.
+   Waterbury Date EPIMS Technical Representative NASA Parts Project Office
+   Code 310.A Goddard Space Flight Center
+   __________________________________________ _________________ Jack J.
+   Shaw Date Manager, NASA Parts Project Office Code 310.A Goddard Space
+   Flight Center __________________________________________
+   _________________ Daniel Barney Date Manager, NASA EEE Parts Program
+   Code QW NASA Headquarters __________________________________________
+   _________________ Linda Methia Date Manager, Assurance Information
+   Technology Code QV NASA Headquarters Information System Requirements
+   for the Electrical, Electronic, and Electromechanical (EEE) Parts
+   Information Management System (EPIMS) iii
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/coverisr_epims NASA
+   Parts Project Office Information System Requirements for the
+   Electrical, Electronic, and Electromechanical (EEE) Parts Information
+   iv Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/coverisr_epims
+   Table of Contents 11
+   Introduction...........................................................
+   ................. 17 1.1 Identification
+   .......................................................................
+   ......... 17 1.2
+   Scope..................................................................
+   .......................... 18 1.3 Purpose and
+   Objectives.............................................................
+   . 18 1.4 Document Status and
+   Schedule................................................. 18 1.5
+   Document Revision
+   Policy.......................................................... 19 1.6
+   Document Organization
+   .............................................................. 19 1.6.1
+   Major Sections of This
+   Document.......................................................19 1.6.2
+   EPIMS Life Cycle Documentation
+   Set.................................................21 1.7 Requirements
+   Approach and Trade-offs ................................... 22 1.7.1
+   Requirements Approach
+   ......................................................................2
+   2 1.7.1.1 Definition and Coordination of Requirements
+   ................................. 22 1.7.1.2 Configuration Control of
+   System Requirements ............................. 22 1.7.1.3
+   Identification and Traceability of Requirements to Design ............
+   22 1.7.2 Requirements Trade-offs
+   .....................................................................22
+   22 Related Documentation
+   ........................................................ 25 2.1 EPIMS
+   Documents..............................................................
+   ......... 25 2.2 NASA
+   Documents..............................................................
+   .......... 25 2.3 Other Reference Documents
+   ...................................................... 26 33 System
+   Concept Overview ................................................... 27
+   3.1
+   Introduction...........................................................
+   ....................... 27 3.2 Definition of the Software
+   ........................................................... 27 3.2.1
+   Purpose and Scope
+   .......................................................................
+   .......27 3.2.2 Goals and Objectives
+   .......................................................................
+   ....28 3.2.3 Description
+   .......................................................................
+   .....................28 3.2.4 Policies and Standards
+   .......................................................................
+   .28 3.2.4.1 EEE Parts Domain Standards and
+   Policies...................................... 28 3.2.4.2 System,
+   Software, and Metadata Standards ....................................
+   28 3.3 User Community Definition
+   ........................................................ 30 3.3.1
+   Primary Users
+   .......................................................................
+   ................30 3.3.2 Secondary Users
+   .......................................................................
+   ...........30 3.4 Capabilities and
+   Characteristics................................................ 30
+   3.4.1
+   Architecture...........................................................
+   ................................30 Information System Requirements for
+   the Electrical, Electronic, and Electromechanical (EEE) Parts
+   Information Management System (EPIMS) v
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsTOC.doc
+   NASA Parts Project Office 3.4.1.1 Multi-Tiered Client-Server
+   Architecture ............................................30 3.4.1.2
+   Client-Server Roles
+   .......................................................................
+   ......31 3.4.1.3 The EPIMS Application
+   .......................................................................
+   31 3.4.2 EPIMS Baseline Functionality
+   .............................................................33 3.4.2.1
+   EPIMS Baseline Functional Decomposition
+   .....................................33 3.4.2.2 Synopsis of EPIMS
+   Baseline Functional Areas................................34 44 External
+   Interface Requirements.......................................... 37 4.1
+   User Interface Requirements
+   ......................................................37 4.1.1 System
+   Level User Interface
+   Requirements.......................................37 4.1.2 Application
+   Level Interface Requirements
+   .........................................37 4.1.3 Function Level User
+   Interface Requirements ....................................38 4.2
+   External System Interfaces
+   .........................................................38 4.2.1 NASA
+   Systems................................................................
+   ......................38 4.2.2 NASA Contractor Systems
+   ..................................................................38
+   4.2.3 Non-NASA Government Systems
+   .......................................................39 4.2.3.1
+   Government-Industry Data Exchange Program (GIDEP) ................39 55
+   Requirements Specification
+   ................................................. 41 5.1 Functional
+   Requirements
+   ............................................................41 5.1.1
+   Functional Subject
+   Areas..................................................................
+   ...41 5.2.2 Baseline EPIMS Functional Requirements
+   ........................................43 5.1.2.1 Help
+   .......................................................................
+   ...............................43 On-Line Help
+   System..............................................................43
+   Window-Specific Help Topics
+   .................................................43 Access to All Help
+   Topics .......................................................43
+   Context Sensitivity
+   ..................................................................43
+   Presentation of a Help Topic
+   ..................................................43 String Search
+   .......................................................................
+   ...43 Save-to-FIle Capability
+   ...........................................................43 Print
+   Capability.............................................................
+   ...........44 5.1.2.2 Federal Supply Class (FSC) Directory
+   ..............................................44 FSC Database
+   .......................................................................
+   .44 Query Capability
+   .....................................................................44
+   Query Results
+   Presentation....................................................44
+   Report Capability
+   ....................................................................44
+   FSC Look-up
+   Capability..........................................................44
+   FSC Look-up
+   Query................................................................44
+   FSC Look-up Query Results Presentation..............................45
+   FSC Look-up
+   Insertion............................................................45
+   5.1.2.3 Commercial And Government Entity (CAGE)
+   Directory..................45 CAGE Database
+   .....................................................................45
+   Support for State as Separate Data Element .........................45
+   Query Capability
+   .....................................................................45
+   Display of Query Result List
+   ...................................................46 Display of
+   Detailed CAGE Information....................................46 Report
+   Capability
+   ....................................................................46
+   Add Capability (Administrator only)
+   ........................................46 Modify Capability
+   (Administrator only) ....................................46 Delete
+   Capability (Administrator only) ....................................46
+   CAGE Look-up
+   Capability.......................................................46
+   CAGE Look-up
+   Query.............................................................47
+   CAGE Look-up Query Results Presentation...........................47
+   CAGE Look-up Detailed Information
+   ......................................47 CAGE Look-up
+   Insertion.........................................................47
+   5.1.2.4 User Directory and Data Access
+   Control..........................................47 User Directory
+   Repository.......................................................47
+   Information System Requirements for the Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information vi Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsTOC.doc
+   Query
+   Capability.............................................................
+   ........ 47 Commercial And Government Entity (CAGE) Look-up ..........
+   48 Project Directory
+   Look-up....................................................... 48
+   Display of Query Result List
+   ................................................... 48 Display of
+   Detailed User Directory Information ...................... 48 Add
+   Capability (Administrator only)
+   ........................................ 48 Modify Capability
+   (Administrator only).................................... 48 Delete
+   Capability (Administrator only) .................................... 49
+   User Types
+   .......................................................................
+   ...... 49 Data Access Roles
+   ................................................................. 49
+   5.1.2.5 NASA Project Directory
+   .....................................................................
+   53 Project Directory
+   Repository................................................... 53 Query
+   Capability.............................................................
+   ........ 53 Query Results Presentation
+   ................................................... 53 Add Capability
+   (Global Data Administrator only) .................... 53 Modify
+   Capability (Global Data Administrator only)................ 53 Delete
+   Capability (Global Data Administrator only) ................ 53 Project
+   Look-up Capability
+   ..................................................... 54 Project
+   Look-up Query Capability........................................... 54
+   Project Look-up Query Results Presentation ......................... 54
+   Project Look-up Insertion
+   ....................................................... 54 5.1.2.6 NASA
+   Spacecraft and Design Elements Directory .......................... 54
+   NASA Spacecraft and Design Elements Directory Repository... 54 Data
+   Access
+   Control...............................................................
+   54 Query
+   Capability.............................................................
+   ........ 55 Query Results Presentation
+   ................................................... 55 Add Capability
+   (Project Data Administrator only) ................... 55 Modify
+   Capability (Project Data Administrator only) ............... 55 Delete
+   Capability (Project Data Administrator only) ............... 55 NASA
+   Spacecraft and Design Elements Directory Look-up
+   Capability.............................................................
+   ................... 56 Look-up Query
+   Capability....................................................... 56
+   Look-up Query Results Presentation
+   ..................................... 56 Look-up
+   Insertion..............................................................
+   ...... 56 5.1.2.7 Alerts/Advisories/Problem Reports
+   .................................................. 56 GIDEP FEDI
+   Repository......................................................... 56
+   Repository Data
+   Elements...................................................... 57 Add
+   Capability (Global Data Administrator only) .................... 57
+   Modify Capability (Global Data Administrator only)................ 57
+   Delete Capability (Global Data Administrator only) ................ 57
+   NASA Advisories
+   Repository.................................................. 57 Add
+   Capability (Global Data Administrator only) .................... 57
+   Modify Capability (Global Data Administrator only)................ 57
+   Delete Capability (Global Data Administrator only) ................ 58
+   Query
+   Capability.............................................................
+   ........ 58 FSC Look-up for Query
+   .......................................................... 58 CAGE
+   Look-up for Query
+   ....................................................... 58
+   Alert/Advisory Query Results Presentation ............................
+   58 Display of Detailed Alert/Advisory Information
+   ....................... 58 Alert/Advisory Report
+   Capability............................................. 58 5.1.2.8
+   Parts Lists
+   .......................................................................
+   .................... 58 An Important Note on Parts List "Versions" in
+   EPIMS............ 59 Parts List Repository
+   .............................................................. 59 Parts
+   List Data Access Control...............................................
+   60 Parts List
+   Selection..............................................................
+   ... 60 Part and Parts List Selection by Parts List Type
+   .................... 60 Part and Parts List Selection by Project
+   ................................. 60 NASA Systems and Design Entities
+   Look-up......................... 60 Information System Requirements for
+   the Electrical, Electronic, and Electromechanical (EEE) Parts
+   Information Management System (EPIMS) vii
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsTOC.doc
+   NASA Parts Project Office Part Selection
+   .......................................................................
+   ..60 Query Results
+   Presentation....................................................60
+   Display of Detailed Part Information
+   .......................................61 Display of Detailed Part
+   Manufacturer Information .................61 Display of Design Element
+   and System Information...............61 Parts List Information Input -
+   General ..................................61 Parts List Required
+   Information Input .....................................61 Pick List of
+   Relevant Projects .................................................61
+   Pick List of Relevant Spacecraft
+   .............................................62 New Spacecraft Input
+   .............................................................62 Pick
+   List of Parts List
+   Types....................................................62 Pick List
+   of Parts List Versions to Use in the Creation of a Work- ing
+   Copy...................................................................
+   ...............62 Parts List Working Copy
+   Creation...........................................62 Parts List
+   Version Creation
+   .....................................................62 Part
+   Information Input
+   .............................................................63
+   Spacecraft Element Information Input
+   ....................................63 New System or Design Entity
+   Input ........................................63 Part
+   Quantity...............................................................
+   ............63 Parts List Line Item Modify
+   .....................................................63 Parts List Line
+   Item Delete......................................................63
+   Parts List
+   Release................................................................
+   ...64 Parts List Report Capability
+   ....................................................64 5.1.2.9
+   Non-Standard Part Approval Requests
+   (NSPAR).............................64 NSPAR Repository
+   .................................................................64
+   NSPAR Data Access
+   Control..................................................64 NSPAR
+   Selection..............................................................
+   ......64 NSPAR Selection by
+   Project...................................................65 NSPAR
+   Selection by
+   Version..................................................65 Query
+   Results
+   Presentation....................................................65
+   Display of Detailed NSPAR Information
+   .................................65 Display of NSPAR Part Manufacturer
+   Information..................65 NSPAR Add or Modify -
+   General..........................................66 NSPAR Required
+   Information Input........................................66 NSPAR
+   Optional Information Input .........................................66
+   Pick List of Relevant Projects
+   .................................................66 Pick List of NSPAR
+   Types ......................................................66 NSPAR
+   FSC Look-up
+   .............................................................66 NSPAR
+   Add
+   .......................................................................
+   .....67 NSPAR Creation by Copying an Existing NSPAR..................67
+   NSPAR
+   Modify.................................................................
+   .......67 NSPAR Delete
+   .......................................................................
+   .67 NSPAR Release
+   .....................................................................67
+   NASA NSPAR Number/Version Uniqueness..........................68 NSPAR
+   Resubmit (Copy, Modify, and Release).....................68 NSPAR
+   Report
+   Capability.......................................................68
+   5.1.2.10 NASA Standard Parts List (NSPL, or
+   MIL-STD-975).........................68 NSPL Repository
+   ....................................................................68
+   NSPL Data Access
+   .................................................................68
+   NSPL Version Selection
+   .........................................................68 Query
+   Capability
+   .....................................................................69
+   FSC Look-up for
+   Query...........................................................69
+   Query Results
+   Presentation....................................................69
+   Display of Detailed Part Information
+   .......................................69 NSPL Report
+   Capability..........................................................69
+   5.1.2.11 Alert Impact
+   Cross-Reference........................................................
+   ....69 Alert Impact Cross-Reference Repository
+   ..............................70 Alert/Part Match Definition
+   ......................................................70 Alert/Part
+   Match Prioritization
+   .................................................73 Information System
+   Requirements for the Electrical, Electronic, and Electromechanical
+   (EEE) Parts Information viii Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsTOC.doc
+   Automatic Maintenance of Cross-Reference Integrity: Parts List or NSPAR
+   Additions, Modifications, and Deletions ............... 74 Automatic
+   Maintenance of Cross-Reference Integrity: Alert, Advisory, and Problem
+   Report Additions, Modifications, and Deletions
+   .......................................................................
+   ......... 74 Automatic Notification of Hits
+   ................................................. 75 Query Capability
+   and Data Access Control ............................ 75 Project Look-up
+   for Query ...................................................... 75 FSC
+   Look-up for Query
+   .......................................................... 75
+   Spacecraft and Design Elements Look-up for Query ............. 75 Query
+   Results Presentation
+   ................................................... 76 Alert Detailed
+   Information Display .......................................... 76 Parts
+   List Detailed Information Display .................................. 76
+   Disposition of Alert
+   Impacts.................................................... 76
+   "Release" of Alert Impact Dispositions
+   ................................... 76 Alert Impact Cross-Reference
+   Report Capability ................... 77 5.1.2.12 Parts Lists
+   Comparison
+   .....................................................................
+   77 Selection of Parts Lists to Be
+   Compared................................ 77 Parts List Comparison
+   Logic: Two Project Parts Lists or Project- Approved Parts Lists
+   .............................................................. 77 Parts
+   List Comparison Logic: A Project Parts List or a Project- Approved
+   Parts List vs. the NSPL .......................................... 78
+   Parts List Comparison Results Display - Matched Parts ..... 79 Parts
+   List Comparison Results Display - Unmatched Parts. 80 Parts List
+   Comparison Results Display - Detailed Information.... 80 Parts List
+   Comparison Results Report ................................... 80 Parts
+   List Comparison - Recomparing on Other FSC's ....... 80 5.1.2.13
+   Technical Documents and
+   News....................................................... 80
+   Technical News and Technical Document Archives .............. 80
+   Presentation of a Technical
+   Article......................................... 80 String
+   Search.................................................................
+   ......... 80 Recursive String
+   Search......................................................... 81
+   Selection and Retrieval of Technical Articles .........................
+   81 Save-to-FIle Capability
+   ........................................................... 81 Print
+   Capability
+   .......................................................................
+   81 5.1.3 Candidate EPIMS Functional Requirements
+   ..................................... 82 5.1.3.1 Help
+   .......................................................................
+   ............................... 82 5.1.3.2 FSC
+   Directory..............................................................
+   ........................ 82 5.1.3.3 CAGE
+   Directory..............................................................
+   ..................... 82 5.1.3.4 User Directory
+   .......................................................................
+   .............. 82 5.1.3.5 NASA Project
+   Directory..............................................................
+   ........ 84 5.1.3.6 NASA Spacecraft and Design Elements Directory
+   .......................... 84 5.1.3.7 Alerts/Advisories/Problem Reports
+   .................................................. 84 User Selection of
+   Alert/Advisory/Problem Report Types to be Cross-Referenced to Project
+   Data ......................................... 84 Create and Maintain
+   Problem Report Data ............................ 85 Release Problem
+   Report Data ............................................... 85
+   Registration of EPIMS Users of GIDEP Data......................... 85
+   Specific Access Restrictions on GIDEP Data......................... 85
+   Notification to Users of GIDEP Data Sensitivity .....................
+   85 5.1.3.8 Parts Lists
+   .......................................................................
+   .................... 86 Capture of Parts Lists from CAD/CAM
+   Applications............... 86 Bill-of-Materials generation from
+   project parts list .................. 86 5.1.3.9 Non-Standard Part
+   Approval Requests (NSPAR) ............................ 87 5.1.3.10 NASA
+   Standard Parts List (NSPL, or MIL-STD-975) ........................ 87
+   Nomination System for MIL-STD-975 Candidate Parts.......... 87 Notes
+   for MIL-STD-975
+   .......................................................... 88 5.1.3.11
+   Alert Impact Cross-Reference
+   ........................................................... 89
+   Information System Requirements for the Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information Management System (EPIMS) ix
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsTOC.doc
+   NASA Parts Project Office Alert Impact Cross-Reference
+   Reports...................................89 5.1.3.12 Parts List
+   Comparison.............................................................
+   ...........89 5.1.3.13 Technical Documents and News
+   .......................................................89 Technical
+   News and Technical Document Archives...............89 Enhanced
+   Technical Document Archive.................................89 Textual
+   Data Repository
+   .........................................................89 Textual
+   Data Repository: Archiving .......................................90
+   5.1.3.14 Part List Review
+   .......................................................................
+   ...........90 Project Parts List Review
+   Repository......................................90 Project Parts List
+   Review Data Access Control ......................91 Project Parts List
+   Review Query Capability ............................91 Project Parts
+   List Review UPN Look-up .................................91 Project
+   Parts List Review Query Capability Spacecraft and Design Elements
+   Look-up.......................................................91
+   Project Parts List Review Query Results Display ...................91
+   Project Parts List Review Detail
+   Display.................................91 Project Parts List Review
+   Access to NSPAR Data .................92 Project Parts List Review
+   Access to Alert Impact Cross-Refer- ence Data
+   .......................................................................
+   ........92 Project Parts List Review Access to Parts List Compare Func-
+   tions
+   .......................................................................
+   .................92 Project Parts List Review Access to Test and Field
+   Reliability Data
+   .......................................................................
+   .................92 Project Parts List Review Notes Data Support
+   .......................92 Project Parts List Review Notes
+   Display.................................92 Project Parts List Review
+   Report Capability ...........................92 5.1.3.15 Qualified
+   Manufacturers Lists/Qualified Products Lists (QML/QPL) and Manufacturer
+   Surveys93 5.1.3.16 User Comments and Change
+   Requests............................................94 5.1.3.17 Parts
+   Test and Analysis
+   Data.............................................................94
+   Parts Test and Analysis Data Repository
+   ...............................94 Screening Test Data
+   ...............................................................95
+   Receiving Test and Inspection Data
+   .......................................95 Test Requirements Information
+   ..............................................95 5.1.3.18 Parts
+   Radiation Test
+   Data...................................................................
+   95 Access to JPL's RADATA
+   System..........................................95 5.1.3.19 Parts
+   Library
+   .......................................................................
+   .................96 Part Selection
+   .......................................................................
+   ..96 Part Specifications and Drawings
+   ...........................................96 Access to Vendor Data
+   (Electronic Data Books) ....................96 Access to Libraries Via
+   the Internet ........................................96 5.1.3.20 Data
+   Capture, Upload, and Download
+   ...............................................96 Data Upload
+   Validation
+   ...........................................................96 Data
+   Upload and Download Interactive Mode ........................97
+   Ordering of Data Elements (Fields)
+   ........................................97 Upload/Download ASCII Text
+   Files ........................................97 Upload/Download Image
+   Data................................................97 Upload/Download
+   Data from Computer-Aided (CA*) Applica- tions
+   .......................................................................
+   .................97 Space Station Freedom Data Exchange
+   Function..................97 MAPTIS Data Import
+   Function................................................97 5.1.3.21
+   Parts Procurement, Tracking, and Inventory
+   ...................................98 Parts Procurement, Tracking, and
+   Inventory ..........................98 5.1.3.22 Parts Application
+   Information............................................................
+   98 Part Derating Calculation
+   System...........................................98 MIL-HDBK-978
+   .......................................................................
+   98 5.1.3.23 Parts Reliability Data
+   .......................................................................
+   ...98 Reliability Data
+   Repository......................................................98
+   5.1.3.24 User Technical Interchange Forum
+   ...................................................99 Information
+   System Requirements for the Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information x Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsTOC.doc
+   User Technical Interchange Forum - Concept ....................... 99
+   5.2 Performance and Quality Engineering Candidate Requirements 100
+   5.2.1 Performance
+   Requirements...........................................................
+   ....100 5.2.2 Quality Engineering
+   Requirements...................................................100
+   5.2.2.1 Data Quality and Integrity
+   ................................................................ 100
+   Data
+   Back-ups...............................................................
+   ....... 100 Data Archiving
+   ......................................................................
+   100 5.3 Safety
+   Requirements...........................................................
+   ...... 100 5.4 Security and Privacy Requirements
+   ........................................ 101 5.4.1 Application Level
+   Security and Privacy Requirements...................101 5.4.2 System
+   Level Security
+   Requirements...............................................101 5.5
+   Implementation Constraints
+   ..................................................... 101 5.6 Site
+   Adaptation
+   .......................................................................
+   ... 101 5.7 Design
+   Goals..................................................................
+   ............ 101 66 Traceability to Parent Requirements
+   ................................. 103 6.1 NHB 5300.4(1F) Requirements
+   ................................................. 103 6.1.1 General NHB
+   Requirements and Information ..................................103
+   information
+   management...................................................... 104
+   use of information specifications
+   .......................................... 104 minimum information
+   requirements ...................................... 105 data submittal
+   in electronic format........................................ 105
+   maximize use of standard parts
+   ........................................... 105 minimize different
+   types and styles of parts ......................... 105 6.1.2 Specific
+   NHB Requirements
+   ..............................................................107 6.2
+   EPIMS System Specification (ESS) Requirements................. 107 77
+   Partitioning for Phased Delivery
+   ........................................ 115 7.1 Rationale for
+   Phasing................................................................
+   115 7.2 Recursively Phased Life Cycle Plan
+   ........................................ 115 7.3 Development Priorities
+   ............................................................. 116 7.4
+   Detailed Phase Definition
+   Matrices.......................................... 119 7.4.1 EPIMS
+   Phase 1 Baseline Definition Matrix
+   .......................................119 88
+   Notes..................................................................
+   ................... 159 8.1 Parts List Versions in
+   EPIMS.................................................... 159 8.2 EPIMS
+   Integration with the NASA Design Environment ........ 159 Information
+   System Requirements for the Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information Management System (EPIMS) xi
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsTOC.doc
+   NASA Parts Project Office Information System Requirements for the
+   Electrical, Electronic, and Electromechanical (EEE) Parts Information
+   xii Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsTOC.doc
+   List of Figures Figure 1: Position of This Document in the EPIMS Life
+   Cycle Documentation Set .............21 Figure 2. EPIMS Interface and
+   Data Flow Overview - Level 0......................................29
+   Figure 2. Multi-Tiered Client-Server
+   Architecture...........................................................
+   31 Figure 3. EPIMS Distributed System Client-Server
+   Roles..............................................32 Figure 4. EPIMS
+   Baseline Top Level Functional Decomposition: Functional Modules
+   ...........33 Figure 5: Formal Specification of Alert Impact
+   Cross-Reference Match Condition.................72 Figure 6: Project
+   Parts List and Project-Approved Parts List Comparison Match
+   Condition.................78 Figure 7: NASA Standard Parts List
+   Comparison Match Condition..............................79 Figure 8:
+   EPIMS Recursively Phased Life
+   Cycle...........................................................116
+   Information System Requirements for the Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information Management System (EPIMS)
+   xiii
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsLOF.doc
+   NASA Parts Project Office Information System Requirements for the
+   Electrical, Electronic, and Electromechanical (EEE) Parts Information
+   xiv Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsLOF.doc
+   List of Tables User Types
+   .......................................................................
+   ......................................................50 Data Access
+   Roles
+   .......................................................................
+   ..............................................51 Alert/Part Match
+   Prioritization
+   .......................................................................
+   ............................73 User Types (Candidate
+   Requirements)..........................................................
+   ........................... 83 User Priorities for EPIMS Functional and
+   User Support Areas ............................................117
+   EPIMS Phase 1 Baseline Definition Matrix
+   .......................................................................
+   ......120 Information System Requirements for the Electrical,
+   Electronic, and Electromechanical (EEE) Parts Information Management
+   System (EPIMS) xv
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsLOT.doc
+   NASA Parts Project Office Information System Requirements for the
+   Electrical, Electronic, and Electromechanical (EEE) Parts Information
+   xvi Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/isr_epimsLOT.doc 1
+   Introduction 1.1 Identification This document is the Information System
+   Concept and Requirements for the Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information Management System (EPIMS).
+   The Universe of Discourse of EEE parts information has extensive
+   commonalities with the greater engineering design and manufacturing
+   domain. For this reason, applicable engineering information standards
+   for data elements and information models are being incorporated into
+   these requirements as much as possible, to further the strategies of
+   information sharing, data integrity, concurrent engineering, and
+   integrated product life cycle support. The NASA Parts Project Office
+   (NPPO) is participating in and coordinating with the principal
+   government, industry, and international standards activities that are
+   addressing the problems of exchange, commerce, tracking, storage, and
+   access of EEE parts data and product data in general. Standards
+   activities in which the NPPO actively participates include: * ISO
+   Technical Committee 184, Subcommittee 4 (TC184/SC4), "Industrial Data
+   and Global Manufacturing Programming Languages," which is developing
+   ISO 10303, the Standard for Exchange of Product Model Data
+   (colloquially known as "STEP" - see Glossary); * The IGES/PDES (Initial
+   Graphics Exchange Specification/Product Data Exchange using STEP)
+   Organization, or IPO, which is the ANSI-accredited U.S. standards body
+   contributing to the development of IGES and ISO 10303; * The
+   International Electrotechnical Commission (IEC) TC 3, Documentation and
+   Graphical Symbols, and TC 93, Design Automation; Information System
+   Requirements for the Electrical, Electronic, and Electromechanical
+   (EEE) Parts Information Management System (EPIMS) 17
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/1isr_epims NASA
+   Parts Project Office * The National Initiative for Product Data
+   Exchange (NIPDE) Electronic Commerce of Component Information (ECCI)
+   program. NIPDE is a U.S. initiative with participation from government
+   agencies, manufacturers, software vendors, and suppliers of information
+   and information systems. 1.2 Scope The scope of this document is to
+   conceptualize and define both baseline and future upgrades for the
+   development of an information management system designed to assist the
+   NASA management of EEE parts information. This document is coordinated,
+   published, and maintained by the NASA Parts Project Office for the
+   Office of Safety and Mission Assurance, NASA Headquarters. 1.3 Purpose
+   and Objectives The purpose of this document is to specify the baseline
+   requirements of the NASA EEE parts information system in order to
+   identify existing capabilities and future upgrades. The objectives to
+   achieve this purpose include: * the replacement of the previous set of
+   requirements described in the NASA Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information System (EPIMS) System
+   Specification (NASA Parts Project Office, 1988.); * the addition of
+   requirements that have been identified since the release of the above
+   document; * the recording of the requirements for the EEE parts
+   information system as identified by EEE parts managers and other NASA
+   officials in the areas of project management, engineering design,
+   testing, quality assurance, and logistics; * the documentation of a
+   baseline set of requirements; and * the documentation of the
+   requirement priorities for future phase development. 1.4 Document
+   Status and Schedule When this document has been coordinated and
+   approved, it will be issued as a baseline version. The data
+   requirements of the NASA EEE parts assurance and engineering user
+   communities are complex, extensive, and subject to change - therefore,
+   this document will require continuing maintenance to reflect properly
+   the requirements it defines. As a matter of policy, revisions will be
+   issued annually, or more frequently when necessary. Information System
+   Requirements for the Electrical, Electronic, and Electromechanical
+   (EEE) Parts Information 18 Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/1isr_epims 1
+   Introduction 1.5 Document Revision Policy Any revisions to the baseline
+   requirements specified in this document will be fully coordinated among
+   all NASA centers, as follows: * A Joint Application Development (JAD)
+   meeting will be conducted in which all NASA centers will be invited to
+   participate. The baseline requirements and priorities defined in this
+   document will be discussed in the agency-wide JAD, and a consensus will
+   be reached on a set of revisions to the baseline requirements and
+   implementation priorities. * The NPPO will prepare a draft revision of
+   this document based upon the results of the JAD. The draft will be
+   distributed to the centers for comment. * The NPPO will present a
+   proposed disposition of the center comments to the NASA Parts Steering
+   Committee (NPSC) for final disposition. * The NPPO will use the final
+   disposition of the NPSC to prepare a final draft of the document, which
+   will be presented to the NPSC for approval. * Upon approval by the
+   NPSC, the document will be issued as a new version, which will become
+   the new baseline EPIMS requirements. 1.6 Document Organization 1.6.1
+   Major Sections of This Document The major sections of this document
+   are: * Section 1, Introduction, provides the volume identification,
+   scope, purpose, objectives, status, schedule, revision policy,
+   organization, and requirements approach and trade- offs. * Section 2,
+   Related Documentation, lists all documents that are parents or
+   references for this document, as well as other existing documents in
+   the EPIMS application life cycle documentation set. * Section 3, System
+   Concept, contains relevant portions of the NASA-DID-P100 (Concept) Data
+   Item Description - i.e., high level Definition of the Software, User
+   Definition, and Capabilities and Characteristics. * Section 4, External
+   Interface Requirements, specifies the general system requirements for
+   interfaces between the EPIMS application and its external environment
+   (i.e., all users). * Section 5, Requirements Specification, contains
+   all system requirements for data and user functions. Note: all current
+   EPIMS baseline requirements are contained in Section 5 of this
+   document. Information System Requirements for the Electrical,
+   Electronic, and Electromechanical (EEE) Parts Information Management
+   System (EPIMS) 19
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/1isr_epims NASA
+   Parts Project Office * Section 6, Traceability to Parent Requirements,
+   relates the requirements specified in this document to the requirements
+   of the NASA Handbook (NHB) that specifies EEE parts management policy,
+   the Electrical, Electronic, and Electromechanical (EEE) Parts
+   Management and Control Requirements for NASA Space Flight Programs, NHB
+   5300.4(1F) (July 1989), and to the information system requirements of
+   the parent document to this one, the NASA Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information System (EPIMS) System
+   Specification (NASA Parts Project Office, 1988). * Section 7,
+   Partitioning for Phased Delivery, specifies which requirements will be
+   implemented in which development phases (currently this section
+   contains only the first phase of EPIMS development: i.e., the EPIMS
+   baseline requirements, which will be implemented in EPIMS 1.0). *
+   Section 8, Abbreviations and Acronyms. * Section 9, Glossary. * Section
+   10, Notes. * Appendix A, EPIMS Data Element Definitions, defines all
+   data elements to be used in building the EPIMS information model and
+   database structure. Information System Requirements for the Electrical,
+   Electronic, and Electromechanical (EEE) Parts Information 20 Management
+   System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/1isr_epims 1
+   Introduction 1.6.2 EPIMS Life Cycle Documentation Set Figure 1:
+   Position of This Document in the EPIMS Life Cycle Documentation Se NASA
+   Software EPIMS Application Documentation Standard Life Cycle Documents
+   (NASA-STD-2100) Top Level DID's Management Plan Management Plan
+   (NASA-DID-M000) (M000) Concept Requirements Design (Architectural &
+   Detailed) Product (P100) (P200) Specification (P300 & P400)
+   (NASA-DID-P000) Version Administrator's Description User's Guide Guide
+   and Operational Procedures (P500) Manual (P600) (P700) Assurance and
+   Assurance Test Procedures Procedures Test Procedures (NASA-DID-A000)
+   (A100) (A200) Management, Engineering, and Management, Assurance
+   Reports Engineering, and Assurance (NASA-DID-R000) Reports (R000)
+   Information System Requirements for the Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information Management System (EPIMS) 21
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/1isr_epims NASA
+   Parts Project Office 1.7 Requirements Approach and Trade-offs 1.7.1
+   Requirements Approach 1.7.1.1 Definition and Coordination of
+   Requirements The requirements documented in this version of the
+   Information System Requirements for the Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information Management System (EPIMS)
+   include requirements which were inherited from the NASA Electrical,
+   Electronic, and Electromechanical (EEE) Parts Information System
+   (EPIMS) System Specification and requirements which have been
+   identified by users of the EPIMS early prototype systems at GSFC, JSC,
+   and MSFC. These requirements represent a baseline. They are the basis
+   for the current EPIMS operational prototype. 1.7.1.2 Configuration
+   Control of System Requirements The EPIMS requirements defined in this
+   document will be placed under configuration management upon acceptance
+   by the NASA Parts Steering Committee and the Head of Assurance Data
+   Systems. Any future changes to the EPIMS requirements will be fully
+   coordinated through Joint Application Development (JAD) activities
+   involving all NASA centers (see paragraph 1.5, Document Revision
+   Policy, on page 19). 1.7.1.3 Identification and Traceability of
+   Requirements to Design Each requirement defined in this document will
+   be identified with a unique requirement number, which will appear in
+   brackets [] preceding the text of the requirement. The current EPIMS
+   prototype functions are directly traceable to the provisional baseline
+   requirements defined in this document. This traceability will be
+   documented in the Information System Design for the NASA Electrical,
+   Electronic, and Electromechanical (EEE) Parts Information Management
+   System and in the Information System Assurance and Test Procedures for
+   the NASA Electrical, Electronic, and Electromechanical (EEE) Parts
+   Information Management System (EPIMS). All subsequent EPIMS development
+   and maintenance activities will be based upon the current requirements
+   and functionality as a starting point. Configuration management of any
+   changes shall be maintained relative to the current baseline. 1.7.2
+   Requirements Trade-offs In the event that conflicting requirements are
+   identified for the EPIMS, the NASA Parts Project Office will develop
+   and propose ways of reconciling the conflict. Any such trade-
+   Information System Requirements for the Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information 22 Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/1isr_epims 1
+   Introduction off study and decision-making will be fully coordinated
+   with all NASA centers, and will be subject to final approval by the
+   NASA Parts Steering Committee. No conflicting requirements have yet
+   been identified for the EPIMS. Information System Requirements for the
+   Electrical, Electronic, and Electromechanical (EEE) Parts Information
+   Management System (EPIMS) 23
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/1isr_epims NASA
+   Parts Project Office Information System Requirements for the
+   Electrical, Electronic, and Electromechanical (EEE) Parts Information
+   24 Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/1isr_epims 2
+   Related Documentation 2.1 EPIMS Documents 2.1.1 NASA Electrical,
+   Electronic, and Electromechanical (EEE) Parts Information System
+   (EPIMS) System Specification NASA Parts Project Office, September 1988.
+   2.1.2 Electrical, Electronic, and Electromechanical (EEE) Parts
+   Information Management System (EPIMS) System Requirements Definition
+   Document (RDD) Space Station Freedom (SSF) Safety and Product Assurance
+   (S&PA) Information Planning Group (IPG), July 19, 1989. 2.2 NASA
+   Documents 2.2.1 Electrical, Electronic, and Electromechanical (EEE)
+   Parts Management and Control Requirements for NASA Space Flight
+   Programs, NHB 5300.4(1F) (July 1989) NASA Headquarters, Code
+   QR/Reliability, Mainainability, and Quality Assurance Division,
+   National Aeronautics and Space Administration, Washington, DC 20546
+   2.2.2 NASA Management Instruction NMI 5310.2C: Participation in the
+   Government-Industry Data Exchange Program (GIDEP) NASA Headquarters,
+   Code QR/Reliability, Mainainability, and Quality Assurance Division,
+   National Aeronautics and Space Administration, Washington, DC 20546
+   Information System Requirements for the Electrical, Electronic, and
+   Electromechanical (EEE) Parts Information Management System (EPIMS) 25
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/2isr_epims NASA
+   Parts Project Office 2.2.3 NASA Management Instruction NMI 5310.2D:
+   NASA Alert Reporting of Parts, Materials, and Safety Problems NASA
+   Headquarters, Code QR/Reliability, Mainainability, and Quality
+   Assurance Division, National Aeronautics and Space Administration,
+   Washington, DC 20546 2.3 Other Reference Documents 2.3.1 Database
+   Language SQL FIPS PUB 127-1 National Technical Information Service
+   (NTIS), February 2, 1990. (Adopts ANSI X3.135-1989 [SQL], which is
+   identical to ISO 9075:1989, and ANSI X3.168-1989 [Embedded SQL] as a
+   Federal Information Pro- cessing Standard [FIPS].) 2.3.2 User Interface
+   Component of Applications Portability Profile, FIPS PUB 158-1 (MIT X
+   Window System) National Technical Information Service (NTIS), October
+   1, 1992. Information System Requirements for the Electrical,
+   Electronic, and Electromechanical (EEE) Parts Information 26 Management
+   System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/2isr_epims 3 System
+   Concept Overview The material in this section is informative, rather
+   than normative: it is provided for information only, and does not
+   contain requirements. 3.1 Introduction The system concept overview
+   presented in this section is excerpted from the forthcoming EPIMS
+   system concept document, Information System Concept for the EEE Parts
+   Information Management System, which will be issued soon. The same
+   information will be presented in greater detail in the EPIMS system
+   concept document. 3.2 Definition of the Software EPIMS is conceived as
+   a NASA-wide electronic database system that captures, maintains, and
+   distributes information on EEE parts for all NASA projects. 3.2.1
+   Purpose and Scope The purpose of EPIMS is to provide automated
+   engineering information management for EEE parts reliability, quality
+   assurance, design support, and cost control with an agency- wide,
+   integrated, on-line data system accessible to all NASA projects,
+   contractors, and supporting personnel. The scope of EPIMS will include
+   storage of and access to EEE part selection,availability,
+   qualification, usage, test, field history, and inventory data;
+   electronic submittal of contractual data requirements; and automated
+   support for parts management tasks for all NASA projects and for the
+   NASA Standard Parts Program. Information System Requirements for the
+   Electrical, Electronic, and Electromechanical (EEE) Parts Information
+   Management System (EPIMS) 27
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/3isr_epims NASA
+   Parts Project Office 3.2.2 Goals and Objectives The principal design
+   goals of EPIMS are to: * Integrate NASA EEE parts management with
+   system design activities; * Capture NASA project data and deliverables
+   electronically; * Share parts and design data among all NASA projects;
+   * Automate tasks for NASA EEE parts engineers and managers; * Build a
+   NASA EEE parts engineering and design "corporate memory". 3.2.3
+   Description A top-level Data Flow Diagram of the baseline EPIMS is
+   shown in Figure 2. EPIMS Interface and Data Flow Overview - Level 0, on
+   page 29. 3.2.4 Policies and Standards The policies or standards
+   relevant to EPIMS include both domain standards and policies (NASA EEE
+   parts policies) and metadata standards (system and software standards).
+   3.2.4.1 EEE Parts Domain Standards and Policies All policy documents
+   are cited in Section 2, Reference Documentation. The most important
+   policy organ relative to EPIMS is: * The Electrical, Electronic, and
+   Electromechanical (EEE) Parts Management and Control Requirements for
+   NASA Space Flight Programs, NHB 5300.4(1F) (July 1989), which defines
+   the NASA requirements for EEE parts management and control for NASA
+   spaceflight project. 3.2.4.2 System, Software, and Metadata Standards
+   The System, Software, and Metadata Standards applicable to EPIMS are: *
+   The SQL standard, Database Language SQL FIPS PUB 127-1 (a NIST
+   Application Portability Profile standard). * The POSIX (IEEE 1003.1,
+   FIPS 151-1) operating system standard (a NIST Application Portability
+   Profile standard) * The X Windows graphic user interface (GUI) standard
+   (a NIST Application Portability Profile standard) * Computer-Aided
+   Acquisition and Logistics Support (CALS) standards for data, including
+   ISO8879, the Standard Generalized Mark-up Language (SGML), the Initial
+   Graphics Exchange Specification (IGES), and others. Information System
+   Requirements for the Electrical, Electronic, and Electromechanical
+   (EEE) Parts Information 28 Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/3isr_epims 29 /e
+   NASA Parts Project Office xport/home/w Figure 2. EPIMS Interface and
+   Data Flow Overview - Level 0 aterb
+   ug/epims/docs/isreq/isr_epims1.0/3isr_epims - Reference Data
+   Maintenance (FSC, CAGE) - Bulk Loading of User Data NASA - NASA
+   Standard Parts List (NSPL) Administration - GIDEP Data Loading and
+   Maintenance Information Parts Air Project Force Aerospace - Part
+   Problem Identification Office Space Corporation - Usage and Qual Data
+   Division System - Alert Dispositions - Parts Lists Requirements -
+   NSPARs/Reviews - Class S Stock List - QML/QPL Data Defense -
+   [Specifications] Parts - Alert Impacts - [VHDL Model Library]
+   Electronics European Engineers - Parts List Compares Supply Space -
+   Usage and Qual Data for Center Agency the (DESC) Electrical, - Parts
+   Lists - NSPARs - FSC Codes - S/C Elements - CAGE Data - NSPL - PAPLs,
+   PPLs EPIMS Defense Electronic, Design Logistics Engineers - Part Usage
+   Supply Navy/Crane - Part Qual Data Center - Part Availability and
+   (DLSC) Electromechanical - Failure - Project Parts Lists Experience -
+   NSPARs Data Interchange NASA - PAPLs (FEDI) & JPL - Alert Impact
+   Data/Dispositions Data - Parts List Reviews (Alerts, etc.) Management
+   System (EPIMS) Projects - NSPAR Reviews GIDEP Contractors - Parts List
+   Compares (EEE) - Data from Other Projects Key Parts NASA Baseline:
+   Information Interfaces External Future: Interfaces NASA Parts Project
+   Office * ISO 10303, or STEP (Standard for Exchange of Product Model
+   Data), an international standard for data exchange, Concurrent
+   Engineering (CE), CAD integration SQL, POSIX, and X Windows are
+   integral to the EPIMS concept, and are to be implemented in the EPIMS
+   1.0 baseline. The CALS and ISO 10303 (STEP) standards will be
+   implemented in future releases of EPIMS. At this writing, the ISO 10303
+   electrical standard is still in draft form. 3.3 User Community
+   Definition 3.3.1 Primary Users * NASA Center EEE Parts Managers * NPPO
+   Manager, NPPO engineers, and NPPO support contractor engineers * All
+   NASA and JPL Project Parts Engineers and Design Engineers * All other
+   NASA personnel with EEE parts data requirements 3.3.2 Secondary Users *
+   Space Agencies: NASDA (Japan), ESA (Europe), and CSA (Canada) * DoD:
+   DESC, Navy-CRANE, Air Force Space Systems Division * Support
+   Contractors: Aerospace Corp., RAC * NASA OEM's: GE Astro, Hughes, TRW,
+   Rockwell, MacDonnell-Douglas 3.4 Capabilities and Characteristics 3.4.1
+   Architecture 3.4.1.1 Multi-Tiered Client-Server Architecture The system
+   architecture concept for EPIMS is based on a multi-tiered client-server
+   structure, in which a Master Data Server maintains and serves all EPIMS
+   data to the local sites, or nodes (initially, the nodes are only the
+   NASA centers and JPL). Each local site has at least one Local Server
+   machine that runs the EPIMS database client application and
+   communicates directly with the Master Data Server via the Wide-Area
+   Network. Users access EPIMS by logging on to the Local Server, setting
+   the X Windows display to the user machine, and running the EPIMS
+   database client application on the Local Server. A schematic
+   representation of this concept is shown in Figure 2. Multi-Tiered
+   Client-Server Architecture.. Information System Requirements for the
+   Electrical, Electronic, and Electromechanical (EEE) Parts Information
+   30 Management System (EPIMS)
+   /export/home/waterbug/epims/docs/isreq/isr_epims1.0/3isr_epims 3 System
+   Concept Overview Figure 2. Multi-Tiered Client-Server Architecture.
+   Users Local Server LAN Master [Local-Area Data Network]

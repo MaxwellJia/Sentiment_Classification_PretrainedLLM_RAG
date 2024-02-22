@@ -1,0 +1,146 @@
+http://gisdata.usgs.gov/seamless.html
+
+   [mini_usgs.gif]
+
+                        Seamless Access and Delivery
+
+  Objectives
+
+     * to provide full-resolution browse access and delivery of selected
+       USGS datasets in seamless GIS-ready form
+     * to provide these data to emergency and disaster response programs,
+       to Federal users, and to Strategic Partners (e.g. Open Data Access,
+       OGIS Web Mapping Testbed, FGDC Clearinghouses)
+     * to provide geospatial data delivery using online downloads and
+       offline products that adhere to FGDC and NSDI principals and
+       standards (e.g. SDTS TVPand RPE; FGDC GEO-Metadata; NSDI
+       Clearinghouse, Framework, and Standards)
+     _______________________________________________________________
+
+Seamless Databases
+
+   [sastamps.gif] The SAST Database - In response to the 1993 floods on
+   the Mississippi and Missouri River systems, the White House Office of
+   Science and Technology Policy commissioned an eight agency, 18-member,
+   Scientific Assessment and Strategy Team (SAST) to assess the impacts of
+   flooding. To support the SAST, the USGS brought together a team of
+   scientists and technicians to develop a GIS database and produce
+   cartographic products required by the SAST. The team required high
+   quality maps to be generated for the rivers and upland basins of the
+   upper Mississippi and lower Missouri Rivers, an area involving up to 13
+   states and 1/4 of the conterminous United States.
+
+   [sastteams.jpg] In order to meet the ambitious schedule of the SAST,
+   the EDC support team worked day and night on seamless libraries for
+   over 480 - 100K quadrangles that contained over 80 categories of vector
+   data. These libraries were used for detailed reference and for thematic
+   mapping of the SAST study area. The support group correctly perceived
+   that if they did their jobs well, this database could be maintained and
+   extended for future applications. For a time, their efforts were
+   supported by a Hazard Preparedness and Disaster Response activity at
+   EDC that raised visibility of "proactive" efforts such as the SAST
+   library development. Over a couple years, the libraries were extended
+   some layers to complete the conterminous United States. In 1999, these
+   library layers of vector data were loaded into ESRI's Spatial Database
+   Engine (SDE), a system that better facilitates seamless access and
+   delivery.
+     _______________________________________________________________
+
+   [nhds.jpg] [nhdsamps.jpg] The National Hydrography Dataset - the
+   National Hydrography Dataset was begun in 1994 as a partnership of EPA
+   and USGS to combine EPA's Reach Files (RF3), with USGS's 100K
+   hydrography data. In addition to combining the spatial characteristics
+   of the USGS files with the attributes of EPA files, the system was
+   designed to allow data for hydrologic basins or river systems to be
+   extracted out without regard to quadrangle boundaries or the limits of
+   a basin. This notion of seamless query resulted in a unique Feature
+   Oriented Database that was subsequently implemented using SDE
+   technology. As of this writing, NHD delivery is limited to cataloging
+   units, but the basic design of the FOD is ready and waiting for a
+   seamless delivery "engine".
+     _______________________________________________________________
+
+   [NEDlogos.jpg] The National Elevation Dataset - The National Elevation
+   Dataset (NED) was begun in 1996, inspired by the release of GTOPO30, a
+   30-second resolution global elevation dataset assembled from
+   best-available sources. In taking on a one-second resolution NED
+   design, the same people who had built GTOPO30 began work on over 50,000
+   24K quadrangles of data. The work involved assembling, filtering, edge
+   matching, and resampling to a common datum and projection. They coined
+   a motto, "Today the World, Tomorrow the United States".
+
+   [neduss.gif] NED is now complete, and is in a monthly update cycle,
+   drawing off new and revised DEM quadrangles from the USGS's Sales
+   Database. The NED team is working on a series of hydrologic
+   deriviatives, called NED-H, and also in the planning stages of a higher
+   resolution 1/3 arc-second version of NED that takes advantage of the 10
+   meter resolution DEM's that are becoming available for a significant
+   part of the conterminous United States. An interim delivery mechanism
+   has been designed to allow customers to gain access to NED. Based on
+   the interest that has been expressed to date, a new motto has been
+   circulating among the staff, "If you build it, they will come."
+     _______________________________________________________________
+
+   [mrlcs.jpg] The National Land Cover Dataset - The National Land Cover
+   Characterization project is part of the interagency Multi-Resolution
+   Land Characterization (MRLC) initiative involving three divisions of
+   the US Geological Survey (National Mapping Division, Water Resources
+   Division, and the Biological Resources Division), the Environmental
+   Protection Agency, the National Oceanic and Atmospheric Administration,
+   and the US Forest Service. [washdcs.jpg] These agencies have a
+   requirement for a nationally consistent land cover dataset, and in 1993
+   these agencies combined financial resources to purchase Landsat
+   Thematic Mapper data covering the entire United States. The USGS/EROS
+   Data Center took the lead to process the data and develop the National
+   Land Cover Data (NLCD) set. The NLCD will be completed by the end of
+   Calendar 1999, and will be available on CD as statewide coverages. In
+   addition, NLCD will be made available for seamless access and delivery.
+   __________________________________________________________________
+
+Cooperative Research and Development Agreement
+
+   In 1995, USGS and Environmental Systems Research Institute (ESRI)
+   entered into a Cooperative Research and Development Agreement (CRADA)
+   to work together to evaluate USGS's feature-oriented NHD data model in
+   ESRI's SDE.
+
+   In 1999, the USGS and ESRI entered into a new CRADA relationship with
+   expanded scope. The new agreement has a duration of 36 months, and
+   bears the ambitious title of Research and development of spatial data
+   modeling, management, access,and distribution systems for large-scale
+   databases. The CRADA contains several activities that involve Internet
+   developments, as well as data delivery systems developments unique to
+   specific data collections, namely the NHD, NED, Land Cover, and the
+   National Atlas Project. Specific CRADA Program Activities are described
+   in Appendix A that will lead to a seamless server, as follows:
+
+     * A.1 National Hydrography Dataset Access - Contacts: USGS - Blaine
+       Ailts, ESRI - Christoph Graf
+     * A.3 National Atlas of the US Program - Contacts: USGS - Jay
+       Donnelly, ESRI - Jim Ciarrocca
+     * A.4 Land Cover and Image Data - Contacts: USGS - Dave Greenlee,
+       ESRI - Mike Boyd
+     * A.8 Global GIS Program - Contacts: USGS - Paul Hearn, ESRI - Dan
+       Sherrill
+
+   The following paragraph, extracted from the CRADA document, explains
+   how USGS and ESRI have set up the early phasing so that tasks can be
+   taken on as resources become available:
+
+     To increase the effectiveness of each of the teams developing
+     intranet/internet applications, the A.4 - Land Cover and Image Data
+     program will be used as a model for the others. Phase I of this
+     activity will kick off at the initiation of the CRADA effort. The
+     purpose of Phase I is to assemble a prototype image browser and
+     server using COTS software and existing logically seamless datasets
+     at EDC. Several ESRI products will be used in this effort:
+     MapObjects, MapObjects Internet Map Server, and the Spatial Database
+     Engine.
+   __________________________________________________________________
+
+   U.S.Department of the Interior
+   U.S. Geological Survey
+   Please read this general disclaimer
+   URL http://gisdata.usgs.gov/
+   Maintainer: Dave Greenlee greenlee@usgs.gov
+   Last Update: 6/15/01

@@ -1,0 +1,219 @@
+http://www.isd.mel.nist.gov/projects/rcslib/
+
+   Manufacturing Engineering Laboratory National Institute of Standards
+   and Technology
+   ISD Research Areas
+   ISD home About ISD ISD Research Areas ISD's Products and Services
+   What's New in ISD Search ISD
+
+
+   Real-Time Control Systems Library -- Software and Documentation
+        __________________________________________________________________
+
+      The Real-Time Control Systems library is an archive of free C++ and
+      Java code, scripts, tools, makefiles, and documentation developed to
+      aid programmers of software to be used in real-time control systems
+      (especially those using the Reference Model Architecture for
+      Intelligent Systems Design).
+
+      Search the RCS library documention:
+      _______________
+      Search
+
+      The following documents describe the library in more detail:
+
+      Public FTP RCS Library Download Directory
+             The directory containing all the ".tar.Z" and ".zip" files with
+             source code, compiled object files, tools, etc related to the
+             RCS Library. (See getrcs.html. for instructions.)
+
+      Sourceforge EMC Project directory
+             Sourceforge project page for EMC, which also includes CVS access
+             and the some recent builds of the RCS library.
+
+      OSU/NIST-RCS Library: Tools for Control System Development
+             The Control Research Laboratory (CRL) at the Department of
+             Electrical Engineering at The Ohio State University is currently
+             working in coordination with NIST to develop a catalog of
+             generic controller and estimation routines for the NIST-RCS
+             Library. At their web site you will find:
+
+             + A catalog of downloadable generic controller and estimation
+               routines that can be used in both RCS and non-RCS
+               applications,
+             + A short introduction the theory and methodology of RCS,
+             + A description of a university laboratory course on the RCS
+               Library,
+             + A description of a handbook that is currently being written
+               about the RCS Library,
+             + A short description of some of the current NIST RCS
+               applications, and
+             + A variety of references on RCS that can be downloaded.
+
+      NML Presentation Slides
+             Slides from a presentation we have given to several audiences.
+             Requires PowerPoint from Microsoft Office 97 to view.
+
+      RCS Tools Walk-Through(PC Version)
+             Complete step-by-step instructions for using the RCS tools to
+             build and test an example RCS controller. (UNIX instructions not
+             yet available.)
+
+      A Quick C++ Introduction for RCS Library Users
+             An introduction to C++ intended primarily for C programmers who
+             need to learn just enough C++ to use the RCS Library. It covers
+             the definition of classes, constructors, destructors,
+             inheritance, and virtual functions.
+
+      The NML Programmer's Guide (C++ Version)
+             Describes the use of the Neutral Message Language(NML)
+             components of the library and related parts of the Communication
+             Management System(CMS). It includes distributed application
+             development in C++/Java and creating custom NML vocabularies.
+             (Examples and function prototypes are given in C++.)
+
+      The NML Programmer's Guide (Java Version)
+             Describes the use of the Neutral Message Language(NML)
+             components of the library and related parts of the Communication
+             Management System(CMS). It includes distributed application
+             development in Java/C++ and creating custom NML vocabularies.
+             (Examples and function prototypes are given in Java.)
+
+      The NML Configuration Files
+             Describes writing an NML Configuration file and the options
+             available. (Formerly this was a section of the NML Programmer's
+             Guide.)
+
+      The Version 2.0 NML Configuration File Format and Tool
+             Describes a newer experimental version of the NML Configuration
+             file, the options available and a tool needed to convert the new
+             format to the old format.
+
+      NML Subdivisions
+             Describes some extensions to NML that allow advanced users to
+             access subdivisions within an NML buffer.
+
+      The NML Query/Reply Service
+             Describes some extensions to NML that allow advanced users to
+             create Query/Reply Services more easily.
+
+      NML Performance Results
+             A summary of the results of some performance tests run on NML,
+             including some hints at optimizing NML and running your own
+             tests.
+
+      Supplementary NML Timing Diagnostics Tools
+             Describes some tools and configuration options that allow users
+             to obtained detailed information on the timing of reads and
+             writes to thier NML buffers.
+
+      NML Code Generator
+             Java-based Graphical Tool for automatically generating NML
+             update and format functions in C++ or Java.
+
+      NML Code Generator Instructions
+             Instructions for using the NML Code Generator to create C++ or
+             Java NML definitions.
+
+      NML_MODULE
+             Describes the NML_MODULE base class which can be used to provide
+             a template or framework for RCS applications.
+
+      RCS Java-based Diagnostics Tool
+             A tool written as a java applet that allows programmers to see
+             the status and send commands to any RCS module.
+
+      RCS Java-based Diagnostics Tool Instructions
+             Instructions on how to build applications for use with the
+             diagnostics tool.
+
+      RCS-Design Tool
+             A tool written as a java applet that allows programmers to
+             create RCS applications graphically and generates source code.
+
+      RCS-Design Tool Instructions
+             Instructions on how to build applications with the RCS-Design
+             tool.
+
+      RCS Data Plotter
+             A Java applet which plots data on a cartesian or polar graph,
+             read either in real-time or from a text file.
+
+      Socket Interface to NML
+             Describes how to connect to an NML server using sockets
+             directly. This information should also be useful for other
+             languages where the C++ NML client interface is not available.
+
+      RCS Posemath Library
+             A library of classes for representing positions, rotations, and
+             translations in a variety of coordinate systems and the
+             functions to add/subtract/multiply/divide/convert them.
+
+           For more info on posemath you may also want to check out:
+             + Karl Murphy's Posemath Examples
+
+      RCS Library Lower Level Utilities
+             Describes many of the lower level utilities used to create the
+             NODE, CMS, and NML components of the RCS Library but which may
+             be useful on their own. Includes timers, semaphores,
+             linked-lists, printing, and windows functions.
+
+      Using generic.def for RCS Applications
+             Describes the RCS Directory structure and the use of generic.def
+             to ease development of applications on multiple platforms and
+             allow multiple programmers to work together more easily.
+
+      RCS Library Installation Instructions
+             Provides instructions for getting and making the RCS Library.
+
+      RCS Library Example Set Instructions
+             Provides instructions for getting and using the set of examples
+             taken from the RCS Library documents.
+
+      Platforms Tested Table
+             A table of supported operating systems and CPU's, and the
+             required compiler and additional network software.
+
+      RCS Library Version Functions
+             Documentation for some functions for determining at run-time
+             which version of the RCS library your using.
+
+      RCS Library Modifications
+             An automatically generated list of modifications on the RCS
+             library.
+
+      References
+        __________________________________________________________________
+
+      Commercial Product Disclaimer
+
+        DISCLAIMER: Certain commercial equipment, instruments, or materials
+        are identified in this paper to specify the experimental procedure
+        adequately. Such identification is not intended to imply
+        recommendation or endorsement by the National Institute of Standards
+        and Technology, nor is it intended to imply that the materials or
+        equipment identified are necessarily the best available for the
+        purpose.
+        __________________________________________________________________
+
+      Software Disclaimer
+
+        DISCLAIMER: This software was produced by the National Institute of
+        Standards and Technology (NIST), an agency of the U.S. government,
+        and by statute is not subject to copyright in the United States.
+        Recipients of this software assume all responsibility associated
+        with its operation, modification, maintenance, and subsequent
+        redistribution.
+        See NIST Administration Manual 4.09.07 b and Appendix I
+        __________________________________________________________________
+
+      Last Modified: 8-Mar-2001
+
+      If you have questions or comments regarding this page please contact
+      Will Shackleford at shackle@nist.gov
+
+      To be automatically sent information on updates to the RCS library,
+      please subscribe to the "nist_rcs" mailing list on
+      http://www.onelist.com.
+
+      This page has been accessed page counter times since February 23, 2000.

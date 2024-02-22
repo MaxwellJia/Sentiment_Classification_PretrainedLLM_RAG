@@ -1,0 +1,23 @@
+http://forms99.psc.gov/Forms/UpdateAndRedirect_ie.htm
+
+              Update and Redirect Sample for Internet Explorer
+
+   This sample contains a Version Management control hidden at the bottom
+   of the page. The form names below do not link directly to their related
+   HTML files; instead, clicking the hyperlink calls a JavaScript function
+   named Redirect, which is defined in the page.
+   Redirect accepts the name of an HTML file in the current directory as a
+   parameter, then sets the Version Management control's FormURL property
+   and calls the AnalyzeUpdateAndRedirect method. Your form object
+   versions will be checked and updated as necessary before proceeding to
+   the requested form.
+
+   Memorandum A single page memorandum that automatically places the
+   current system date on the form. This form also contains a large
+   multiple-line field for data entry.
+   Leave Request A leave request form used to request a leave of absence.
+   This form illustrates field formatting, basic field calculations, radio
+   buttons and drop-down list boxes.
+   Purchase Order A requisition form that uses formatting for dates and
+   currency fields, calculations to determine the totals and taxes, radio
+   buttons, and drop-down list boxes.

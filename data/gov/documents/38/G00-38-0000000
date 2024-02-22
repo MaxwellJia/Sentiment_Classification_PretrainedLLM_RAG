@@ -1,0 +1,186 @@
+http://www.emc.ncep.noaa.gov/experiments.html
+
+                    Experimental and Parallel Model Runs
+
+
+
+   This page links to graphics and other data from model experiments for
+   the different branches of the EMC.  In no way do they represent
+   operational forecasts, but we offer them so that meteorologists in the
+   field may give us feedback on the results.  Diagnostic tools are used
+   to analyze the date at EMC, and the results of this analysis are what
+   appear as links below.
+
+   Before going to the data, however, we suggest you read the following
+   section, which discusses the experimental process, from how EMC
+   uncovers a problem to the final "parallel" run, performed to remove the
+   final "bugs" prior to operational implementation.
+
+
+                How model changes get tested and implemented
+
+   How do we determine what experiments to perform to improved the
+   numerical weather prediction (NWP) model?
+
+     * Through examination of existing model biases or error patterns, or
+     * Through research done at NCEP or elsewhere which might improve an
+       existing NWP model, using
+
+     * new physical parameterizations,
+     * new data assimilation methods, or
+     * better resolution,
+
+     Through anticipated increases in computer resources which drive
+   decisions on what improvements can be implemented.
+
+   Terms typically used for model experiments before model changes become
+   operational include, in roughly chronological order from problem
+   identification to pre-implementation:
+
+     * case study (examine one weather event to diagnose model perfomance,
+       for example)
+     * sensitivity study (low-resolution model runs to see if a model
+       change will have a significant positive or negative impact on model
+       climate)
+     * experimental runs (low-resolution forecasts without data
+       assimilation, to check the changed model climate)
+     * retrospective (usually in conjunction with model climate testing)
+     * parallel (full data assimilation system at expected operational
+       model resolution, with 'bundles' of experimental changes which have
+       passed previous tests above)
+
+     * How do all the planned changes interact together?
+     * Assessment done by NCEP and field office Science and Operations
+       Officers (SOOs)
+
+     * Forecast impact of:
+
+     * Amplification of changes and errors through the data assimilation
+       system
+     * Changes in old biases and errors
+     * Effects on vertical motion (model spin-up)
+
+     Accumulate vertification statistics for an objective comparison to
+   existing operational model configuration Once these steps have been
+   taken there are additional approvals required for NWP model changes to
+   be made operational, at both EMC, NCEP, and NWS headquarters.
+
+   A schematic of the full model change cycle can be found here [link will
+   be activated to flowchart "Path to Operations" soon!].
+   _______________________________________________________________________
+
+
+
+                          CURRENT MODEL EXPERIMENTS
+
+                           Global modeling branch
+
+                          Mesoscale modeling branch
+
+                            Ocean modeling branch
+
+                           Climate modeling branch
+
+
+
+
+Global modeling branch experimental runs:
+
+     AVN/MRF:
+     * Pete Caplan's near-realtime T170 parallel run diagnostics
+
+     * Suru Saha's web page
+
+     * Experiments to solve the AVN warm bias problem
+
+
+       Each of these experiments are 45 day model runs, with the first 15
+       days thrown away to account for model spin-up ("adjustment") to the
+       model change.  Observations are NOT incorporated into the
+       experiment except to determine the initial condition.  The
+       experiments either involve the treatment of short and long-wave
+       radiation in the atmosphere or the parameterization of surface
+       processes like albedo or vegetation control over
+       evapotranspiration.
+       Diagnostic comparisons of model bias are made to the NCEP
+       Reanalysis product for both experiment and  operational AVN (the
+       control).  Graphics of both time series of regional area averaged
+       model bias, and regional spatial distribution of model bias are
+       shown.
+
+     T170 parallel run test diagnostics (summer  1998 retrospective and
+   winter 1998-99 concurrent experiments)
+     * Climate parallel runs (climate version of the AVN/MRF run at coarse
+       resolution)
+
+     * Yuejian Zhu's experimental web page  (Comparison of AVN output grid
+       data to observations)
+
+   Includes comparisons from summer 1998 retrospective run, winter
+       parallel runs for T170L42, and North American Observing System
+       (NAOS) global experiments.
+
+
+     Glenn White's systematic  differences and errors in the parallel test
+   of T170/L42 in Feb. 1999
+
+   Also includes diagnostics for parallel test from August 1998 (for
+       summer comparison in addition to winter comparison).  Zonal means
+       and regional differences are displayed.
+
+
+
+      Glenn White's diagnostic comparison of old and new orography during
+   February-March 1999
+
+   This is a low-resolution (T62) set of experiments using a new
+       orography.  The effect of the new orography is most marked on
+       gravity waves and topographically forced long waves.
+
+
+
+Mesoscale Modeling Branch experimental runs:
+
+                                      Eta:
+
+
+     * Experimental Eta runs
+
+     * Parallel Eta-X.
+     * Parallel Eta runs at 48-km resolution, including Kain-Fritch
+       convection scheme test, and assimilated precipitation from
+       multisensor analyses.
+     * Kain-Fritch convective scheme
+
+     * NSSL runs
+
+     Winter precipitation types (from Bob Rozumalski/SOOSAC, determined by
+   postprocessing Eta model data)
+
+
+
+
+Ocean Modeling Branch experimental runs:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Climate Modeling Branch experimental runs:

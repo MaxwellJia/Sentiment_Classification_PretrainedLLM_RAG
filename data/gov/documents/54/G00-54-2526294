@@ -1,0 +1,297 @@
+http://rs6.loc.gov/ammem/amviewer.html
+
+                   American Memory -- Library of Congress
+
+                     American Memory Viewer Information
+            Viewing and Listening to American Memory Collections
+
+   The majority of American Memory collections can be seen and read
+   without special viewers. However, in some collections the Library
+   provides sound recordings, films, additional high-resolution images,
+   and text with enhanced navigation. Just as you need special equipment
+   to play videotapes, cassettes, or CDs at home, you need special viewers
+   to see and hear these historical materials.
+
+   For information on what viewers are needed, select a format from the
+   list below. For installation on your computer, follow the directions
+   found on the viewer homepage. To connect your browser to the viewers,
+   on the browser toolbar open Options, General Preferences, Helpers and
+   follow the browser's directions.
+
+   Audio | Documents (text & page images) | Maps | Photo & Print Images |
+                                    Video
+
+   NOTE: Additional viewer and format information is available on
+   individual American Memory collection home pages and on item pages
+   within the collections.
+     __________________________________________________________________
+
+                                    Audio
+
+   Sound recordings in American Memory are offered in three formats,
+   RealAudio, MPEG 2, Layer 3 (.mp3) and .wav (WaveForm). These sound
+   recording formats require special players. See a list of American
+   Memory sound recordings in RealAudio, MP3, and .wav Formats.
+
+   RealAudio
+   American Memory sound recordings presented in the RealAudio format
+   deliver sound faster, with a minimum of download time. To use
+   RealAudio, you must have a 14.4 K-bps (kilobits per second) or faster
+   Internet connection for your computer.
+
+   Note: RealAudio upgrades its players for improved performance. If you
+   have trouble playing an American Memory sound recording presented in
+   RealAudio, try downloading the most recent version of the RealAudio
+   player.
+   RealAudio Player Suggestion:
+     * Windows & Macintosh - RealPlayer
+
+   MPEG 2, Layer 3
+   Some American Memory collections offer audio files in the MPEG 2, Layer
+   3 (MP3) format. MP3 offers high quality sound that comes close to the
+   quality of WaveForm at greatly reduced file size. MP3 files download
+   much faster than .wav files. Many popular audio players can play MP3
+   files.
+
+   Note: Some audio players that are not specifically designed to play MP3
+   files do not display the bibliographic information that resides in the
+   ID3 v.2 tag of the .mp3 file.
+   MP3 Audio Players Suggestion:
+     * Windows & Macintosh - MP3 Software Players
+
+   WaveForm
+   American Memory sound recordings are also presented in a higher-quality
+   version, known as the .wav (WaveForm) format. Sound recordings
+   presented in the .wav format must download completely before they can
+   be played. Download time for .wav files is longer than for RealAudio.
+   Windows 3.1 and Windows 95 computers come equipped with a player that
+   plays .wav files. Later Web browsers (ex. Netscape 3.0) have a built-in
+   media player that will also play .wav sound files. For users with
+   earlier browsers, search the World Wide Web for free or inexpensive
+   players that will play .wav files. WAV Player Suggestion:
+     * Windows - c:\windows\mplayer.exe (on your local computer)
+
+   Note: To search for freeware or shareware audio players on the World
+   Wide Web, use the search words audio helper applications.
+
+   Top of Page
+     __________________________________________________________________
+
+                      Documents (text and page images)
+
+   No Viewers Required
+   Most American Memory document collections require no special viewers.
+   Your Web browser automatically displays the texts in these collections,
+   which have been transcribed from original documents. Your Web browser
+   allows you to search and browse all texts presented in HTML (Hypertext
+   Markup Language).
+   See a list of American Memory document collections requiring no special
+   viewers.
+
+   SGML Viewer Option (Text)
+   Some American Memory document collections offer the added feature of a
+   hot-linked table of contents and enhanced search and browse features.
+   These collections, displayed in SGML (Standard Generalized Markup
+   Language), allow you to jump around within long selections and within
+   complete books on-line.
+   See a list of American Memory Document Collections with SGML Option.
+
+   SGML Viewer Suggestion:
+     * Interleaf Panorama Viewer
+
+   TIFF, PCX and JPEG Viewers (Page images & illustrations)
+   In addition to text transcribed from originals, some American Memory
+   collections include pictures of pages and illustrations from original
+   documents. To see pictures of original source document pages or
+   illustrations that are .tif or .tiff (Tagged Image File Format) and
+   .pcx format, you will need a special viewer. The .jpg or .jpeg (Joint
+   Photographic Experts' Group) format illustrations require a special
+   viewer only within SGML viewer software. TIFF/PCX/JPEG Viewer
+   Suggestions:
+     * Windows - Docuview
+     * Windows 3.1, 95 - ViewDirector Prizm Plug-in for Netscape
+     * Windows 3.1, 95, NT - ThumbsPlus, PaintShop Pro
+     * Macintosh, Power PC - Graphic Converter
+
+   Original Illustrations
+   Images of original illustrations are displayed in one of the .pcx, .jpg
+   or .jpeg (Joint Photographic Experts' Group) formats.
+   See a list of American Memory document collections with PCX or JPEG
+   images.
+   Original Pages
+   Images of original pages are displayed in .tif or .tiff (Tagged Image
+   File Format) formats.
+   See a list of American Memory Document Collections with TIFF Images.
+   Original Pages and Illustrations Within SGML Viewer
+   To see the original pages while you are using an SGML viewer, you must
+   add a few instructions to your SGML viewer's program file, setup.
+    1. Download and install an image viewer, ex. Docuview
+    2. Download and install Panorama Viewer (SGML viewer)
+    3. Open a text editor, ex. Windows Notepad.
+    4. In the text editor, under File - Open, open the Panorama folder.
+    5. In the Panorama folder, find and open setup (no extension).
+    6. At the bottom, add:
+
+entity tif
+
+   launch "c:\dv\docuview.exe \file"
+
+entity pcx
+
+   launch "c:\dv\docuview.exe \file"
+
+entity jpg
+
+   launch "c:\dv\docuview.exe \file"
+
+entity jfif
+
+   launch "c:\dv\docuview.exe \file"
+
+
+   NOTE: If you installed Docuview in the dv folder on your hard drive
+   (c:\), add the lines above as written. If Docuview is installed in a
+   different location, substitute that location for c:\dv\.
+
+   Top of Page
+     __________________________________________________________________
+
+                                    Maps
+
+   No Viewers Required
+   You need no special viewers to view maps in the American Memory
+   collections. Your Internet browser automatically shows images presented
+   in .gif (Graphics Interchange Format) format in which American Memory
+   maps are presented. A special technology called MrSID (Multi-Resolution
+   Seamless Image Database) by LizardTech allows you to zoom in or out on
+   an area of the map that you wish to inspect. Maps are stored in .sid
+   format.
+   See a list of American Memory map collections requiring no special
+   viewers.
+
+   MrSID Viewer Option
+   For most American Memory maps, the .sid files are now available to
+   download to your computer. You have the option of using a free viewer
+   to see .sid format maps that you save to your computer. To use the
+   viewer, install it on your machine. The average file size in the .sid
+   format is 5 megabytes. Viewer Options:
+
+   MrSID Image Viewer:
+     * Windows 95/NT & Macintosh - LizardTech Online Viewer
+
+   Top of Page
+     __________________________________________________________________
+
+                            Photo & Print Images
+
+   No Viewers Required
+   You need no special viewers to view most photographs in the American
+   Memory collections. Your Internet browser automatically shows images
+   presented in .gif (Graphics Interchange Format) and .jpg or .jpeg
+   (Joint Photographic Experts' Group) formats, the formats in which most
+   American Memory photographs are presented.
+   See a list of American Memory photo & print collections requiring no
+   special viewers.
+
+   TIFF Viewer Option
+   For some American Memory photographs, you have the option of seeing
+   high-quality .tif or .tiff (Tagged Image File Format) photographs.
+   These are of higher resolution and larger file size than .gif or .jpeg
+   images and require a special viewer.
+   See a list of American Memory photo & print collections collections
+   with TIFF images. TIFF Viewer Suggestions:
+     * Windows - Docuview
+     * Windows 3.1, 95 - ViewDirector Prizm Plug-in for Netscape
+     * Windows 3.1, 95, NT - ThumbsPlus, PaintShop Pro
+     * Macintosh, Power PC - Graphic Converter
+
+   Scalability Viewer Options:
+   Some images are larger than most computer screens and require scrolling
+   to se the entire image. Some viewers offer the option of scaling the
+   image to fit inside the viewing window. Scalability Viewer Suggestions:
+     * Windows - Docuview
+     * Windows 3.1, 95 - ViewDirector Prizm Plug-in for Netscape
+     * Windows 3.1, 95, NT - ThumbsPlus
+
+   Top of Page
+     __________________________________________________________________
+
+                                    Video
+
+   All American Memory film collections require special viewers.
+   Currently, films are presented in three formats, QuickTime, .mpg
+   (Motion Pictures Experts Group or MPEG), and .rm (Real Media). For
+   detailed playback information, see Video Viewer - Additional Playback
+   Information.
+
+   QuickTime Format
+   All American Memory films are displayed in the QuickTime (with Cinepak
+   compression) format. This format offers smaller, downloadable files and
+   allows films to be viewed on lower-end computer systems. In QuickTime,
+   film quality is not as crisp as .mpg format film (see below). On
+   lower-end, slower-speed computers, QuickTime will drop video frames.
+   The average file size in the QuickTime (Cinepak) format is about five
+   megabytes for each minute of motion picture.
+
+   Quicktime 3 (with Sorenson compression), has enhanced image quality and
+   higher resolution, and is now available in one collection. The average
+   file size in QuickTime 3 (Sorenson) format is about six megabytes for
+   each minute of motion picture. QuickTime 3 (Sorenson) requires a
+   high-end, high-speed computer (Pentium 90 or PowerMac).
+   See a list of American Memory film collections in QuickTime format.
+   QuickTime Player Suggestion:
+
+   Quicktime (with Cinepak compression)
+     * Windows 3.1 - Quicktime 2.1.2
+     * Windows 95 - Media Player
+     * Macintosh - QuickTime
+
+   Quicktime 3 (with Sorenson compression)
+     * Windows & Macintosh - QuickTime
+
+   MPEG Format
+   American Memory's highest-quality film files are presented in the .mpg
+   (Motion Picture Experts Group) format. Films presented in .mpg format
+   are higher resolution and better quality than the equivalent QuickTime
+   versions. To view films in the .mpg format, you should have a high-end,
+   high-speed computer (such as a Pentium 90 (or better) with a PCI or AGP
+   graphics card and .mpg playback software, or a PowerMac with .mpg
+   playback software).
+
+   An MPEG-1 video playback board or hardware-assisted playback may
+   increase the playback performance of MPEG movies, but it is not
+   necessary for modern computers. The average file size for the .mpg
+   format is about nine megabytes for each minute of film.
+   See a list of American Memory film collections in MPEG format.
+   MPEG Player Suggestions:
+     * Windows 3.1, 95 - VMPEG 1.7 Lite
+     * Windows 95 - Media Player
+     * Additional MPEG recommendations
+
+   Real Media (.rm)
+   American Memory film collections will add this format, one collection
+   at a time. Real Media allows viewing of the film as it arrives at the
+   user's computer, eliminating the need to download the film completely
+   before viewing. Real Media format is especially useful for computers
+   with slower Internet connections, such as a 28.8 modem. Video playback
+   is slower (3-6 frames per second) and may be affected by Internet
+   traffic.
+   See a list of American Memory film collections in Real Media format.
+   Real Media Player Suggestions:
+     * Windows 3.1, 95 - Real Media Player
+
+   Note: To search for freeware or shareware video players on the World
+   Wide Web, use the search words video helper applications.
+
+   Top of Page
+     __________________________________________________________________
+
+   American Memory | Search All Collections | Collection Finder | Learning
+   Page
+     __________________________________________________________________
+
+   LC Logo Library of Congress
+   URL: www.loc.gov
+   Questions: American Memory Help Desk Notice
+
+   Nov-00

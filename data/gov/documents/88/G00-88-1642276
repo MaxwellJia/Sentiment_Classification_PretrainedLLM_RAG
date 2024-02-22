@@ -1,0 +1,94 @@
+http://edc.usgs.gov/doc/edchome/ndcdb/header.js
+
+   var isNav3, isIE3, isNav4, isIE4 var range = "" var styleRef = "" var
+   number = 0 var layerNames = new Array() previd=500; page='ndcdb.html';
+   function domlay(id,trigger,lax,lay,content) { // If selecting new
+   layer, hide previous layer if (previd!=500){ if (document.layers)
+   document.layers[''+previd+''].visibility = "hide" else if
+   (document.all) document.all[''+previd+''].style.visibility = "hidden"
+   else if (document.getElementById)
+   document.getElementById(''+previd+'').style.visibility = "hidden" } //
+   Layer visible if (trigger=="1"){ if (document.layers)
+   document.layers[''+id+''].visibility = "show" else if (document.all)
+   document.all[''+id+''].style.visibility = "visible" else if
+   (document.getElementById)
+   document.getElementById(''+id+'').style.visibility = "visible" } //
+   Layer hidden else if (trigger=="0"){ if (document.layers)
+   document.layers[''+id+''].visibility = "hide" else if (document.all)
+   document.all[''+id+''].style.visibility = "hidden" else if
+   (document.getElementById)
+   document.getElementById(''+id+'').style.visibility = "hidden" } // Set
+   horizontal position if (lax){ if
+   (document.layers){document.layers[''+id+''].left = lax} else if
+   (document.all){document.all[''+id+''].style.left=lax} else if
+   (document.getElementById){document.getElementById(''+id+'').style.left=
+   lax+"px"} previd = id; if (document.cookie.length > 0){ thisLayer =
+   previd; } else { thisLayer = "Default"; } // set the cookie
+   document.cookie = page+ "=" + thisLayer; } //end of domlay if (page !=
+   "About") { top_netscape4 = 140; // netscape4 top_ie = 140; // ie
+   top_netscape6 = 140 + "px"; // netscape6 } else { top_netscape4 = 140;
+   top_ie = 140; top_netscape6 = 140 +"px"; } // Set vertical position if
+   (lay){ if (document.layers){document.layers[''+id+''].top =
+   top_netscape4} else if (document.all){document.all[''+id+''].style.top
+   = top_ie} else if
+   (document.getElementById){document.getElementById(''+id+'').style.top =
+   top_netscape6} } // change content if (content){ if (document.layers){
+   sprite=document.layers[''+id+''].document; // add father layers if
+   needed! document.layers[''+father+'']... sprite.open();
+   sprite.write(content); sprite.close(); } else if (document.all)
+   document.all[''+id+''].innerHTML = content; else if
+   (document.getElementById){ rng = document.createRange(); el =
+   document.getElementById(''+id+''); rng.setStartBefore(el); htmlFrag =
+   rng.createContextualFragment(content) while(el.hasChildNodes())
+   el.removeChild(el.lastChild); el.appendChild(htmlFrag); } } // end of
+   if (content) } if (navigator.appVersion.charAt(0) >= "4") { if
+   (navigator.appName == "Netscape") { isNav4 = true; layerRef =
+   "document.layers"; styleRef = ""; insideWindowWidth = window.innerWidth
+   } else { isIE4 = true; layerRef = "document.all"; styleRef = ".style";
+   range = "all." } } else if (navigator.appVersion.charAt(0) <= "3") { if
+   (navigator.appName == "Netscape") { isNav3 = true; } else { isIE3 =
+   true; } } if ((isNav3) || (isIE3)) {
+   location.replace("ndcdb_old.html"); } function add_layer(tempLayer) {
+   layerNames[number] = tempLayer number++ } add_layer("Default")
+   add_layer("Layer2") add_layer("Layer3") add_layer("Layer4")
+   add_layer("Layer5") add_layer("Layer6") add_layer("Layer7")
+   add_layer("Layer8") add_layer("Layer9") add_layer("Layer10")
+   add_layer("Layer11") add_layer("Layer12") add_layer("Layer13")
+   add_layer("Layer14") add_layer("Layer15") add_layer("Layer16")
+   add_layer("Layer17") function showLayer(layer) { clearall(); for
+   (loop=0; loop < number; loop++) { if (layer==layerNames[loop]) {
+   MM_showHideLayers('document.layers[layerNames[loop]]','document.all[lay
+   erNames[loop]]','show'); } else {
+   MM_showHideLayers('document.layers[layerNames[loop]]','document.all[lay
+   erNames[loop]]','hide'); } } } function hideLayer(layer) { for (loop=0;
+   loop < number; loop++) { if (layer==layerNames[loop]) {
+   MM_showHideLayers('document.layers[layerNames[loop]]','document.all[lay
+   erNames[loop]]','hide'); } } } function MM_showHideLayers() { //v1.2
+   var i, visStr, args, theObj; args = MM_showHideLayers.arguments; for
+   (i=0; i<(args.length-2); i+=3) { //with arg triples
+   (objNS,objIE,visStr) visStr = args[i+2]; if (navigator.appName ==
+   'Netscape' && document.layers != null) { theObj = eval(args[i]); if
+   (theObj) theObj.visibility = visStr; } else if (document.all != null) {
+   //IE if (visStr == 'show') visStr = 'visible'; //convert vals if
+   (visStr == 'hide') visStr = 'hidden'; theObj = eval(args[i+1]); if
+   (theObj) theObj.style.visibility = visStr; } } } function
+   dropit(whichone){ if (isIE4){ if
+   (whichone.style.visibility=="visible"){
+   whichone.style.visibility="hidden" } else{ clearall()
+   whichone.style.padding="4px"
+   whichone.style.left=document.body.scrollLeft+event.clientX-event.offset
+   X
+   whichone.style.top=document.body.scrollTop+event.clientY-event.offsetY+
+   18 whichone.style.visibility="visible" } } else{ if
+   (whichone.visibility=="show"){ whichone.visibility="hide" } else{
+   clearall() whichone.visibility="show" } } } function clearall(){ if
+   (isIE4){ dropmenu0.style.visibility="hidden"
+   dropmenu1.style.visibility="hidden" dropmenu2.style.visibility="hidden"
+   dropmenu4.style.visibility="hidden" dropmenu5.style.visibility="hidden"
+   } else{ document.dropmenu0.visibility="hide"
+   document.dropmenu1.visibility="hide"
+   document.dropmenu2.visibility="hide"
+   document.dropmenu4.visibility="hide"
+   document.dropmenu5.visibility="hide" } } function reDo() {
+   location.reload(); } if (isNav4) onload = init; function init() {
+   setTimeout("onresize = reDo", 1000); }

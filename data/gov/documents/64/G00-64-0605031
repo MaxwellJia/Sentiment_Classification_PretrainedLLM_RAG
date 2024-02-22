@@ -1,0 +1,99 @@
+http://pioneer.gsfc.nasa.gov/public/iml/
+
+
+    Home Instrument Markup Language
+         » AIML | XML for Astronomy Instruments
+                                    » HAWC | SAFIRE | SPIRE Related Sites
+
+    Last Updated: 12/08/00 National Aeronautics and Space Administration
+                                               Logo
+
+   Instrument Markup Language
+
+   Background
+
+      Instrument Markup Language (IML) is a vocabulary based on the W3C
+      standard, the Extensible Markup Language (XML). IML is under
+      development by NASA/GSFC and Commerce One. The approach taken by the
+      development team is to create a very general and highly extensible
+      framework that applies to virtually any kind of instrument that can be
+      controlled by a computer. To this end, the Astronomical Instrument
+      Markup Language (AIML) is the first implementation of the more general
+      Instrument Markup Language, which has been created based on experience
+      gained by focusing on the astronomy domain (and infrared instruments in
+      particular). However, the key aspects of our approach to instrument
+      description and control apply to many domains, from medical instruments
+      (e.g., microscopes) to printing presses to machine assembly lines. The
+      concepts behind IML apply equally well to the description and control
+      of instruments in general.
+
+   Goals
+
+      The main project goals are to:
+        * Provide as much platform independence as possible.
+        * Create a system that is easy to develop, modify, maintain, and
+          extend.
+        * Explicitly promote reuse by design by utilizing emerging
+          technologies that enable reuse.
+        * Greatly reduce the implementation time for facility instruments
+          (i.e., reliable, robust, state-of-the-art instruments that are easy
+          to use by scientists other than the instrument designers).
+        * Clearly define the interface between hardware and software
+          engineers.
+        * Facilitate multiple iterations of the instrument description during
+          design and implementation by means of a software architecture that
+          is readily adaptable to such changes.
+        * Cleanly separate implementation (representation) from description.
+
+   Scope
+
+      Aspects addressed by IML include (but are not limited to):
+        * Graphical user interfaces to control and monitor the instrument
+        * Command set and command formats (arguments, data types,
+          constraints, etc.)
+        * Data streams (responses to commands and other telemetry from the
+          instruments)
+        * Visualizations of instrument telemetry
+        * Support for different types of communication mechanisms
+        * Online help and documentation (from terse ToolTips to detailed
+          information to user manuals)
+
+   Examples
+
+        * IML Schema (used with the upcoming version 3 of IRC framework),
+          iml.xsd and iml_shared.xsd. The first file is the IML definition.
+          It includes the iml-shared definitions. These iml-shared
+          definitions are used in other schemas as well, such as the
+          definitions of command procedures also used in IRC.
+        * Example IML file of the HAWC Housekeeping subsystem which uses
+          iml.xsd.
+        * Prior versions of IML.
+
+        * IML Document Type Definition (DTD), (version used prior to XML
+          schema availability) iml.dtd (formerly called aiml.dtd)
+        * Example XML file of the HAWC instrument which uses iml.dtd.
+
+   Presentations
+
+     * PowerPoint 97 poster presentation from the 193rd Meeting of the AAS
+       (January 1999): Using XML for Instrument Description, Communication
+       and Control of the SOFIA / HAWC Instrument
+     * Word 97 description of IML and AIML and how they are being used on
+       SOFIA
+
+   Note: If you have difficulty viewing the DTD or XML files in your
+   browser, download the files and open them with any text editor.
+     __________________________________________________________________
+
+        Responsible NASA Official:
+        » Julie Breed (Julia.D.Breed.1@gsfc.nasa.gov)
+                Advanced Architectures and Automation Branch (Code 588)
+
+        Curators:
+        » Troy Ames (Troy.J.Ames.1@gsfc.nasa.gov)
+                Advanced Architectures and Automation Branch (Code 588)
+        » Lynne Case (Lynne.Case@commerceone.com)
+                Commerce One eGovernment Solutions, Inc.
+
+        Please read the NASA Website Privacy Statement.
+        Site design by Commerce One

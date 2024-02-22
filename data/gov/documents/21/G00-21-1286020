@@ -1,0 +1,89 @@
+http://nsmp.wr.usgs.gov/data_sets/20010909_1.html
+
+   U.S. Geological Survey       National Strong-Motion Program
+     __________________________________________________________________
+
+   Event Name: West Hollywood, California Earthquake
+   Event Date: 09/09/2001, 23:59 UTC (04:59 PM PDT)
+   Event Identification: 20010909_1
+   Recorder Type: ETNA
+     __________________________________________________________________
+
+     Data Organization and Format ||  Downloads (updated 11/14/2001) ||
+                         Tables (updated 11/14/2001)
+     __________________________________________________________________
+
+   Data Organization and Format
+
+   The September 09, 2001 ML 4.2 West Hollywood, California Earthquake
+   data recorded by the USGS National Strong-Motion Network (NSMN) are
+   available via the NSMP ftp server in the folder (directory)
+   "20010909_1" (ftp://smftp.wr.usgs.gov/20010909_1).    The time series
+   provided are available in uncorrected acceleration, corrected
+   acceleration, corrected velocity, corrected displacement, response
+   spectra (relative displacement, relative velocity, pseudo-velocity, and
+   absolute acceleration), and Fourier amplitude spectra of corrected
+   acceleration.  All of the data are in SMC format.
+
+   In a departure from previous file-naming conventions (where for a
+   particular channel the different the time series data all had the same
+   filename, and thus required separate directories for each data type),
+   the file names for the data have the following form:
+
+   uncorrected acceleration:      RRRRc_u.smc
+   corrected acceleration:        RRRRc_a.smc
+   corrected velocity:            RRRRc_v.smc
+   corrected displacement         RRRRc_d.smc
+   response spectra:              RRRRc_r.rs2
+   Fourier amplitude spectra (f): RRRRc_f.fs1
+
+   where 'RRRR' is the four-digit recorder serial number (including
+   leading 0's), 'c' is the channel number of the recorder ('a'
+   corresponds to channel 1, 'b' to channel 2 , etc), the '_x' is used to
+   identify the data type, and the suffix refers to the data format (rs2
+   and fs1 are valid SMC format types recognized by the BAP processing
+   program.
+
+   The data are stored in two directories: uncorrected (only uncorrected
+   acceleration) and corrected (all of the corrected and processed data,
+   including acceleration, velocity, displacement, response spectra and
+   Fourier ampliude spectra. This convention for organizing the data was
+   implemented to avoid confusion between the directory names (Vol1, Vol2,
+    Vol6) previously used for some earlier events and the standard
+   conventions for Volume1, Volume2 and Volume 3 processing.
+
+   Information on how the data are processed can be found in the section
+   on DATA PROCESSING.
+     __________________________________________________________________
+
+   Downloads
+
+   To facilitate downloading the data, the data have been compressed into
+   PC compatible ".zip" format.  The same zip file is located in the
+   "zips" folder in "20010909_1/" on the NSMP ftp server,
+   "ftp://smftp.wr.usgs.gov/20010909_1".  Time series and peak values data
+   for station 5402 (Beverly Hills; PacBell Facility, S/N 0586) were added
+   to the data set on 10/29/2001.  Time series and peak values data for
+   stations 655 (Slymar; Jensen Filter Plant, S/N 1937 and 1939) and 757
+   (Los Angeles; Sepulveda Canyon, S/N 1936) were added to the data set on
+   11/14/2001.
+
+        20010909 West Hollywood Earthquake Downloads in ".zip" format
+   20010909_1_uncorr.zip     uncorrected  (1.1 Mb; uncompresses to 3.9 Mb;
+   updated 11/14/2001)
+   20010909_1_corr.zip     corrected (6.0 Mb; uncompresses to 17.4 Mb;
+   updated 11/14/2001)
+     __________________________________________________________________
+
+   Tables
+
+   List of corrected peak ground accelerations and velocities for
+   available time-series data (to obtain list as Excel spreadsheet click
+   here ) updated 11/14/2001
+     __________________________________________________________________
+
+   Return to top of page.
+   Return to Data Sets page
+   Return to NSMP Homepage
+
+   This page was posted on September 13, 2001 and updated on 11/14/2001.

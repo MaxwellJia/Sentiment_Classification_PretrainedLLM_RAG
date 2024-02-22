@@ -1,0 +1,101 @@
+http://www-cdf.fnal.gov/upgrades/cdfdh/welcome.html
+
+                            CDF Run II Data Handling
+
+     * Welcome
+     * Operations
+     * User Guides
+     * Project Description
+     * Project Scope
+     * Project Structure
+     * Project Status
+     * Documentation
+     __________________________________________________________________
+
+Welcome
+
+   to the CDF Run II Data Handling Subgroup. This page contains a
+   description of the project. It also contains design information for
+   various components and has status information of the data handling
+   system. There are reports on performance also.
+   Data Handling is one of the CDF Run II computing subgroups.
+   A subpage contains a list of people working in the group and has e-mail
+   distribution lists relating to the project.
+     __________________________________________________________________
+
+Operations; Kahuna/Stager Status
+
+   Information on Data Handling operations, system availability and
+   status.
+     __________________________________________________________________
+
+User Guides
+
+   Links to user guides for Data Handling software.
+     __________________________________________________________________
+
+Project Description
+
+   Data handling for CDF Run II will be sequential files based on the ROOT
+   file format.
+   The data handling system will archive RAW data files and serve them to
+   the production system(s) upon request. Data are organized and
+   catalogued by dataset and run section, with all events of a dataset and
+   run section being in the same file. Reconstruction data will be picked
+   up at the production system, archived, and made accessible to the
+   analysis systems in about 50 primary datasets. Physics groups are
+   expected to define secondary datasets that will be catalogued in the
+   data handling system.
+     __________________________________________________________________
+
+Project Scope
+
+   The scope encompasses both hardware and software, i.e. computer systems
+   for offline analysis of data, and software methods for access to the
+   data. Design and assembly of the computer cluster is included. Design
+   and construction of software methods to access the data on shared disk
+   and in the tape archive is also included. The computer cluster also
+   needs advanced networks, and a sub-system to archive raw data.
+     __________________________________________________________________
+
+Project Structure
+
+   The project has four sub-divisions:
+     * CDF Data Catalogue
+     * Central Analysis System
+     * Resource Management
+     * Mass Storage System Interface
+
+   Others added later are:
+     * Archiving of online data streams
+     * Input and output of data to production farm
+     * Input and output modules for user's analysis framework
+     * Initial setup and operation of Look areas for detector data
+     __________________________________________________________________
+
+Project Status
+
+     * DH Reviews of September and November 2001. This site is also a
+       TUTORIAL FOR THOSE NEW TO DATA HANDLING.
+     * Minutes of Data Handling meetings (Wednesdays of ON weeks, 9am -
+       10am, CDF Pump Room).
+     __________________________________________________________________
+
+Documentation
+
+   Some of the most import reports and talks are:
+     * CHEP 2000 contribution of the CDF Data Handling Group.
+     * CHEP 2001 contribution of the CDF Data Handling Group.
+     * Data volume estimates and equipment requirements, CDF 4072.
+     * CDF Run II Data Handling Resource Management and Software
+       Components CDF 4759.
+     * CDF Run II Data Handling Central Analysis System Hardware
+       Architecture CDF 4707.
+     * First Run II Report of the Serial Media Working Group, CDF 4560.
+     * CDF Run II Data Handling Resource Management Prototype CDF 4766.
+     __________________________________________________________________
+
+   http://www-cdf.fnal.gov/upgrades/cdfdh/welcome.html was last updated
+   June 11, 2001 by Mark Leininger and November 9, 2001 by Terry Watts
+
+                                Legal Notices

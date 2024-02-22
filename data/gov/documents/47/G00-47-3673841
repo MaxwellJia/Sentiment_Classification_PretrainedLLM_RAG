@@ -1,0 +1,355 @@
+http://www.crh.noaa.gov/lot/science/lkbracar.99w.htm
+
+             Use of ACARS Data to Improve Lake Breeze Forecasts
+
+      Kenneth M. Labas, National Weather Service, Chicago (Romeoville)
+                                  Illinois
+
+    Raymond W. Arritt and Christopher J. Anderson, Iowa State University,
+                                  Ames Iowa
+
+      (presented at the AMS Third Conference on Coastal Prediction, New
+                             Orleans, Nov. 1999)
+
+   1. INTRODUCTION
+
+   A potentially significant forecast problem for northeast Illinois is
+   the onset and movement inland of the lake breeze from Lake Michigan. A
+   Cooperative Project between the National Weather Service (NWS) and Iowa
+   State University has been funded by COMET (Cooperative Program for
+   Meteorological Education and Training) to use a mesoscale model to help
+   forecast and understand this phenomenon. A traditional data source for
+   this model is the twice daily upper air sounding from Davenport (DVN)
+   Iowa. Given the sensitivity of the lake breeze to the boundary layer
+   wind field and distance of the data source from the lake shore we have
+   begun to employ aircraft wind and temperature profiles from Chicagoland
+   airports. It offers improvement in spatial and temporal relevance of
+   the input and can lead to significant improvement in the forecast.
+
+   2. PROJECT SUMMARY
+
+   With a population of over 8 million people within the Chicago
+   metropolitan area (including northwest Indiana) under the influence of
+   the effects of Lake Michigan the understanding of the water induced
+   lake breeze has a number of significant repercussions. In prior studies
+   of the lake breeze in northeast Illinois by Lyons (1972, 1973, 1973,
+   1976) the focus was on air pollution issues along with some
+   climatology.
+
+   Air pollution is still a concern but one of the motivations for this
+   work was being able to use model simulation to anticipate wind shifts
+   at O'Hare and Midway airports. O'Hare International Airport is the
+   busiest in the world and wind shifts define runway use, impacting
+   operations both locally and nationally. Investigation of the structure
+   of the lake breeze was also a goal using model output as well as
+   locally available data sources. We have also assembled a rough
+   climatology of the phenomena through daily logging of data from
+   selected observation sites in northeast Illinois.
+
+   The advent of new technologies such as the WSR-88D (Doppler) radar
+   afforded the opportunity to study, increase understanding and improve
+   forecasts of this phenomena. The Chicago WSR-88D is located about 42km
+   SW of the Lake Michigan shore. The location allows close monitoring of
+   the lake breeze interface across most all of northeast Illinois and is
+   an important verification tool for model forecasts.
+
+   We have thus been able to incorporate both a local forecast need and
+   improved observational tools to address an operationally significant
+   problem for a major population base.
+
+   3. MODEL CHARACTERISTICS
+
+   In a previous COMET Cooperative Project we successfully implemented a
+   high-resolution (8km) mesoscale model for the Lake Michigan lake breeze
+   at the Chicago WFO. This numerical model, which is known by the acronym
+   AMBLE, is a hydrostatic primitive-equation model with physical
+   parameterizations including short-and long-wave radiative transfer,
+   boundary layer turbulence (Yamada, 1983; Arritt and Physick, 1989), and
+   shallow cumulus clouds (Wetzel, 1990). Land surface processes,
+   including the influence of soil and vegetation, are represented using
+   the Noilhan and Planton (1989) scheme which we have found to achieve a
+   useful balance between physical realism and simplicity of use. Fluxes
+   from water surfaces are computed using a representation given by Smith
+   (1988), which is based on extensive data sets. The water surface
+   temperature in the model may be specified to vary spatially, for
+   example with warm water near the lake shore and cooler water elsewhere
+   (see Arritt 1987 for illustrative examples).
+
+   The simulations use a horizontal grid spacing of 8km and 14 vertical
+   levels. The model has been installed on a Hewlett-Packard J200 Unix
+   workstation at WFO Chicago where it requires about 75 minutes to
+   execute a 12-hour forecast. The model code is written with strict
+   adherence to the ANSI Fortran-77 standard, which ensures that the model
+   can readily be transferred to any system with a Fortran compiler that
+   is compliant with this standard.
+
+   The main difference from models such as the NCEP Eta model and the MM5
+   is that AMBLE uses a mesoscale perturbation form of the governing
+   equations. The benefits of this approach are that the model runs about
+   twice as fast and requires only a single vertical profile for
+   initialization. The latter feature greatly simplifies procedures for
+   ingesting new data sources such as the ACARS data. The main
+   disadvantage is that the mesoscale perturbation approach cannot handle
+   rapid variations in the synoptic background patterns.
+
+   4. COMMENTS ON RESULTS USING TRADITIONAL RAOBS
+
+   Input into this locally generated mesoscale model has been the 1200 UTC
+   upper air sounding from Davenport Iowa. This site is about 205km west
+   of the Lake Michigan shoreline. The distance can be a significant
+   factor in accurately reflecting the boundary layer wind field leading
+   to unrepresentative input.
+
+   The lake breeze is a thermally driven event between the cooler lake and
+   warm land which interacts with the ambient background wind. With the
+   straight and curved shoreline of southern Lake Michigan the interaction
+   between prevailing background wind and push of cool air inland results
+   in highly variable orientations of the lake breeze front. This fact
+   highlights the critical nature of initial data input, a point which
+   ACARS data attempts to address.
+
+   The ultimate intent of this project is to provide real time guidance
+   using this model. Early in the project both 0000UTC and 1200UTC data
+   were used (2 runs) which provided output for forecasts issued during
+   predawn hours. The model output time frame is 700LT(local time) to
+   1900LT although use of 1200 UTC data gave output around 900LT. About 75
+   minutes of computational time is required to create this 12 hour
+   forecast.
+
+   Comparisons of results from each input time was highly variable
+   reflecting the applicability of the wind regime to the day in question.
+   In general the 1200UTC input time yielded more realistic results due to
+   the relevance of the observation time. The fact that weather systems
+   change more slowly during the summer months allowed the 0000 UTC data
+   to be useful at all.
+
+   5. NEED FOR ACARS
+
+   Like all numerical simulations the quality of the output is highly
+   dependent upon the quality of the input. This is even more the case in
+   the present application because previous studies have shown that small
+   differences in the background wind speed and direction can produce
+   large changes in the inland penetration of the predicted lake breeze.
+   Therefore the use of a data source to provide wind profiles closer in
+   space and time to the target prediction gives the potential for
+   significant improvements in forecast accuracy.
+
+   ACARS (an acronym for the commercial system that transmits the data )
+   is meteorological data* provided by many commercial aircraft during
+   both enroute and ascent/descent modes of their flight (Mamrosh,
+   1996,1998). We are using the ascent/descent phase in this work as it
+   provides a detailed vertical profile of wind and temperature**. The
+   intent is to use this data to determine whether improvements can be
+   seen in the lake breeze forecast vs using data from DVN.
+
+   Flights from O'Hare International (ORD) or Rockford Airport (RFD) are
+   used. Both of these sites have ACARS profiles available during the late
+   night and early morning hours. With ORD located 17km and RFD 108 km
+   from the lake shore the proximity of both these sources is
+   theoretically superior to DVN
+
+   During the 1999 warm season comparison simulations were done on
+   appropriate days using both data sets. An "appropriate" day was one
+   where the 1200 UTC DVN wind profile below 700mb varied noticeably from
+   that seen at ORD or RFD. In most cases wind direction was different due
+   to the orientation or position of the synoptic system. A detailed DVN
+   sounding was retrieved from the Forecast Systems Lab (FSL) web site.
+   The wind field was then adjusted using ACARS data. Temperatures and
+   heights were not.
+
+   Those comparisons using ACARS data were generally no worse than those
+   using the more remote DVN input and in some cases dramatically
+   improved. Cases are illustrated below.
+
+   *This data set can be viewed or accessed via the web through
+   acweb.fsl.noaa.gov, government sites only
+
+   ** Data provided by United Parcel Service originates at the surface and
+   is the set used.
+
+   6. MODEL FORECAST RESULTS AND COMPARISON CASES
+
+   Over the past three seasons of work with this simulation, using a
+   'distant' data source, a number of model characteristics and biases can
+   be noted. Using positions primarily determined from radar signatures as
+   verification for the lake breeze location the best results were under a
+   weak (less than 10 kt) background northwest flow. This usually implied
+   a surface ridge line just to the west near the Mississippi River. A
+   northwest wind appeared to maximize definition of the interface at the
+   same time reduce the west (offshore) component of the wind.
+
+   Light west, southwest and southeast ambient wind flows also had good
+   results on occasion. Often when the initial wind field is southwest it
+   implies a surface ridge has passed and the gradient wind tends to
+   increase during the day. This cannot be reflected in a static input and
+   is a problem regardless of the data source.
+
+   Frequently the lake breeze is forecast too inland, regardless of
+   orientation. The model may not account for sufficient boundary layer
+   friction, turbulent mixing or surface heating. In a southeast regime
+   the breeze forecast is skewed inland north of downtown Chicago while
+   remaining offshore south of the city. In reality there is often some
+   penetration (up to 5 nm) inland south of the city while to the north
+   the forecast does reflect the differential motion inland.
+
+   Under an east or northeast background wind it is questionable whether a
+   true lake breeze occurs at all. Once a westerly component is evident in
+   the background flow a defined convergent interface can be seen in model
+   output as well as radar returns.
+
+   May 10, 1999: The 1200UTC DVN sounding initialized the model with a
+   modestly strong southeast boundary layer wind of 5-8m/s increasing to
+   12m/s or more above 600 meters. Using an O'Hare ACARS report from
+   0928UTC wind below 600meters was veered from NE to SE at 5-8 m/s then
+   become southwest 3-6m/s above that. On the base map O = O'Hare Int'l, M
+   = Midway Arpt, L = NWS Office.
+
+   Output at 1800LT reflects the full extent of the predicted lake breeze
+   development. The DVN output places a lake breeze across the extreme
+   northeast tip of Illinois, showing no penetration inland over much of
+   the Illinois shoreline. A marked southeast flow continues over land.
+   The orientation of the breeze front is obviously skewed by the strong
+   background flow.
+
+   The ORD based simulation is significantly different with a lake breeze
+   now forecast well to the south and west of the shoreline. The wind
+   directions near ORD and MDW have a northeast component which was the
+   case in reality.
+
+   The dashed line in the ORD output is the approximate location of the
+   lake breeze at 1800LT. While the model output differences are apparent,
+   the ORD input was still not aggressive enough in moving the lake breeze
+   inland possibly reflecting an even weaker background wind during the
+   day.
+
+   July 13, 1999: A surface ridge line was in place between DVN and the
+   lake shore and this was reflected in the 0700LT initialized wind field
+   on the DVN run. In contrast ACARS data from O'Hare at 1221UTC reflected
+   a slight northwest component and is seen in the initialized model
+   field.
+
+   Past experience with this simulation suggests that an ambient northwest
+   flow is handled best of any background wind. In this case that was
+   true.
+
+   At 1600LT the DVN run indicated an elongated trough in the wind field
+   just off shore but no indication of any onshore wind component over
+   northeast Illinois.
+
+   Output from the ORD ACARS painted a more realistic picture. By 1600LT a
+   lake breeze was forecast inland just east of MDW (M) and to the
+   vicinity of ORD (O). The actual location is denoted by the dashed line
+   in the ORD image.
+
+   The model was too aggressive in moving the breeze inland (compare
+   forecast location with dashed verification line). Observations from
+   both MDW and ORD indicated no wind shift to an easterly component ever
+   occurred. Despite this the ACARS initialized forecast was far superior
+   to that using DVN data. It reflected the true background wind in the
+   vicinity of the lake shore and northeast Illinois.
+
+   7. SUMMARY
+
+   A mesoscale model with a domain across southern Lake Michigan and
+   northeast Illinois was used to simulate the development of a lake
+   breeze. This phenomenon affects the Chicago area in numerous ways
+   including comfort, air pollution, convection and operations at major
+   airports.
+
+   Input to initialize the background wind for this simulation the 1200
+   UTC upper air observation from Davenport Iowa is used. One of the
+   drawbacks in this scheme is that input is a point observation at a
+   given time. Another is that the data location is distant (205 km) from
+   the area of concern. Conditions at this remote site may or may not
+   reflect those actually present.
+
+   With the availability of real time aircraft data from local airports
+   through the ACARS system the ability to use a more relevant data source
+   in both time and space exists.
+
+   Using point source data for model input increases the need for the most
+   accurate and timely data possible. The lake breeze is very sensitive to
+   the background wind so any improvement in this area has a potentially
+   large impact on results.
+
+   Comparison studies have been done for specific events to determine the
+   validity of using the ACARS data source. In some cases the results were
+   dramatic. Two are documented in this article.
+
+   The use of ACARS data is one step that can be taken to improve the
+   performance of a locally run model. In many instances the differences
+   in model output form the two data sources (ACARS and DVN) are nil. In
+   isolated cases a bit worse.
+
+   Nonetheless when weak synoptic patterns are present (which is often the
+   case during the summer months) and there is a notable difference in
+   boundary layer background winds across northern Illinois one would
+   expect data with a better proximity to Lake Michigan to yield superior
+   results. This appears to be true.
+
+   Work will continue to formulate a procedure to ingest ACARS data into
+   this model. Comparisons in specific cases are to be done to determine
+   when the most favorable results may be expected. The value of this work
+   will be realized when it is employed in an operational environment,
+   using the best data source, to improve local forecasts.
+
+   ACKNOWLEDGMENT
+
+   This paper is funded under a cooperative agreement between the National
+   Oceanic and Atmospheric Administration (NOAA) and the University
+   Corporation for Atmospheric Research (UCAR). The views expressed herein
+   are those of the authors and do not necessarily reflect the view of
+   NOAA, it sub-agencies or UCAR.
+
+   REFERENCES
+
+   Arritt, R.W., 1987:The effects of water surface temperatures on lake
+   breeze and thermal internal boundary layers. Bound.-Layer Meteor., 40,
+   101-125.
+
+   Arritt, R.W. and W.L. Physick, 1989:Formulation of the thermal internal
+   boundary layer in a mesoscale model. II:Simulations with a Level-2.5
+   turbulence closure. Bound.-Layer Meteor.,49,411-416.
+
+   Lyons, W.A., 1972:The climatology and prediction of the Chicago lake
+   breeze. Mo. Wea. Rev.,100,1259-1270.
+
+   Lyons,W.A. and Olsson,L.E., 1973:Detailed mesometeorological studies of
+   air pollution dispersion in the Chicago lake breeze. Mo. Wea.
+   Rev.,101,387-403.
+
+   Lyons, W.A.. and Cole, H.S., 1973:Fumigation and plume trapping on the
+   shores of Lake Michigan during stable onshore flow. J. Appl.
+   Meteor.,12, 494-510.
+
+   Lyons, W.A.. and Cole, H.S., 1976:Photochemical oxidant transport:
+   mesoscale lake breeze and synoptic scale aspects. J. of Appl. Meteor.,
+   15, 733-743.
+
+   Mamrosh, R. D., and K. M. Labas, 1996: Real-time monitoring and
+   reconstruction of a severe thunderstorm environment using unique data
+   sets; Central Region Technical Attachment, National Weather Service,
+   No. 96-03, May 1996.
+
+   Mamrosh, R.D., 1998: The use of high-frequency ACARS soundings in
+   forecasting convective storms, Preprints, 16^th Conf. On Wea. Analysis
+   and Fcstg, Amer. Meteor. Soc., Boston MA. 106-108.Noilhan, J and
+   S.Planton, 1989:A simple parameterization of land surface processes for
+   meteorological models. Mon. Wea.Rev.,117,536-549.
+
+   Smith, S.D., 1988:Coefficients for sea surface wind stress, heat flux
+   and wind profiles as a function of wind speed and temperature.
+   J.Geophys. Res.,93,15467-15472.
+
+   Wetzel,P.J., 1990:A simple parcel method for prediction of cumulus
+   onset and area-averaged cloud amount over heterogeneous land surfaces.
+   J.Appl.Meteor.,29,515-523.
+
+   Yamada,T,1983:Simulations of nocturnal drainage flows by a q2l
+   turbulence closure model. J.Atmos.Sci. 40, 91-106.
+
+   -----------------------------------------------------------------------
+   -----------------------------------------------------------------------
+   ----------------------------------------------
+
+   KML 8/99

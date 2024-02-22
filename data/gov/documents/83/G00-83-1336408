@@ -1,0 +1,181 @@
+http://podaac.jpl.nasa.gov/info/ftp.html
+
+   [podaac_line_banner.gif]
+   PO.DAAC SEARCH ORDER FTP EMAIL FEEDBACK
+   [left_top_sm_waves.gif]
+   Data Catalog
+   Data Services
+   Documentation
+   What's New
+   FAQ
+   EOS Data Gateway
+   Public Interest/Education
+   Mailing List
+   Related Links
+   About PO.DAAC
+   [left_nav_bluegrnbord.gif]
+   [left_nav_sites.gif]
+   TOPEX/POSEIDON
+   ERS-1 Altimeter
+   QuikScat
+   NSCAT
+   Pathfinder SST
+   SST Climatology
+   NAVOCEANO
+   NAVOCEANO
+   ATSR
+   NCEP Reynolds SST
+   MCSST
+   Scatterometry Pathfinder
+   [left_nav_grnblkbord.gif]
+   [left_nav_hottopics.gif]
+   El Nino
+   [left_nav_blkbord.gif]
+   [ftp_banner.gif]
+   [USEMAP:bottom_banner.gif]
+
+
+      All data available through the PO.DAAC FTP site, podaac.jpl.nasa.gov,
+      are located in the pub/ directory.
+
+        * PO.DAAC FTP Site Map
+        * PO.DAAC FTP Site Utilities
+        * Anonymous FTP Instructions
+        __________________________________________________________________
+
+                               PO.DAAC FTP Site Map
+
+
+   pub/ atmospheric_moisture/    ssmi/
+        data_collections/        geosat_ndbc/
+                                 monthly_mean_atlas/
+                                 toga_cdrom_update/
+                                 woce_cdrom/
+        heat_flux/               nimbus7_goesw/
+                                 ssmi/
+        hydrographic_software/   atlast/
+                                 imagic/
+                                 power_ocean_atlas/
+        ocean_wind/              nimbus7/
+                                 nscat/
+                                 quikscat/
+                                 seasat/
+                                 ssmi/
+        pigment_conc/
+        (sw only)
+        sea_surface_height/      geos3/
+                                 topex_poseidon/
+        sea_surface_temperature/ atsr/               gbt/
+                                 avhrr/              mcsst/
+                                                     mcsst_czcs/
+                                                     (sw only)
+                                                     navoceano_mcsst/
+                                                     pathfinder/
+                                                     subsetting/
+                                                     (sw only)
+                                 modis/
+                                 buoy/               gostaplus/
+                                 climatology/        pathfinder/
+                                 reynolds/           oisst/
+                                                     rsst/
+        __________________________________________________________________
+
+                            PO.DAAC FTP Site Utilities
+
+      The JPL PO.DAAC FTP Site uses the Washington University FTP server
+      which can be obtained from http://www.wu-ftpd.org. This server supports
+      a number of features including TAR and Compressed data transfers.
+
+   TAR Data Transfer
+
+      If your system supports the TAR utility, you can request an entire
+      directory from our FTP site by typing:
+   get directory.tar
+
+      A tar file of the requested directory will be created and sent to your
+      computer.
+
+   Compressed Data Transfer
+
+      If your system supports either GNU ZIP (GZIP) or UNIX COMPRESS, you can
+      request a compressed version of any data file by appending the
+      appropriate suffix.
+
+      To obtain GZIP compressed files, type:
+   get filename.gz
+
+      To obtain UNIX compressed files, type:
+   get filename.Z
+
+   TAR Compress Data Transfer
+
+      The Compression utilities can be used in conjunction with the Tar
+      utility. For example, the command:
+   get directory.tar.Z
+
+      creates and sends a compressed tar file of the selected directory.
+        __________________________________________________________________
+
+                            Anonymous FTP Instructions
+
+      To access the PO.DAAC FTP site, enter the following on a computer which
+      is connected to the internet:
+        ftp podaac.jpl.nasa.gov
+
+      or
+        ftp 128.149.225.30
+
+      To login, enter "anonymous" at the name prompt, and use your complete
+      e-mail address as your password. All available data are located in the
+      pub directory. To change directories, enter:
+        cd pub
+        ls
+
+      The latter command will list all files and subdirectories. The
+      subdirectories in the pub directory are named according to
+      oceanographic parameter. Therefore, to access sea surface temperature
+      data, for example, enter:
+        cd pub/sea_surface_temperature
+
+      Once you have located the files which you would like to transfer,
+      enter:
+        get filename
+
+      to obtain a single file. Similarly, multiple files can be obtained
+      using the "mget" command.
+        mget *common*
+
+      where *common* are all files with "common" in their filenames.
+
+      Please remember that most PO.DAAC data files are in binary, and thus,
+      must be transferred in binary. To do so, enter:
+        binary
+
+      before "getting" any files.
+
+      Once you have completed data transfer, enter:
+        quit
+
+   to end your FTP session.
+
+   [podaac_line_banner.gif]
+
+      |  PO.DAAC  |  SEARCH  |  ORDER  |  FTP  |  E-MAIL  |  FEEDBACK  |
+      GENERAL INFO  |
+      |  Data Catalog  |  Documentation  |  What's New  |  FAQ  |  EDG  |
+      Education  |  Mailing List  |  Links  |  About PO.DAAC  |
+      |  TOPEX / POSEIDON  |  QuikSCAT  |  NSCAT  |  Pathfinder SST  |  SST
+      Climatology  |  MODIS  |
+      |  NAVOCEANO MCSST  |  ATSR  |  NCEP Reynolds  |  MCSST  |
+      Scatterometry Pathfinder  |
+      |  Hot Topics  |
+
+      Copyright © 1999-2002 California Institute of Technology. (NASA/JPL
+      PO.DAAC) All rights reserved.
+      Last Modified: Wednesday, 07-Nov-2001 09:07:29 PST
+      http://podaac.jpl.nasa.gov/info/ftp.html
+
+                            NASA Privacy Statement
+   Responsible NASA Official: Don Collins
+   PODAAC is part of JPL section 381, clearance: CL 99-1617, Site Contact:
+   Monika Kessling

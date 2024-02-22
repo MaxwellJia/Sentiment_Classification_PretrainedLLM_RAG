@@ -1,0 +1,70 @@
+http://seadas.gsfc.nasa.gov/doc/tutorial/sds_tutorial.html
+
+
+                               SeaDAS Tutorial
+                      (List of test files in $SDSDEMO)
+
+     * Starting SeaDAS
+     * Scenarios
+     * General Display Program (seadisp)
+     * SeaWiFS Data Product Generation Programs
+
+     * Generate L1A file from L0 (HRPT) file (l1agen)
+     * Generate L1B file from L0 (HRPT) file (l1bgen)
+     * Generate L2 file from L1A (GAC, LAC, HRPT) file (msl12,0)
+     * Generate L3 space or time-binned files from L2 files (l3bin)
+     * Generate L3 SMI standard mapped product from L3 binned data
+       (smigen)
+     * Generate L1A browse (Band 865nm) file, L2 browse (chlor_a) file, &
+       L3 SMI browse (optional products) files (browse)
+     * Generate projected L1A HDF file (bl1map)
+     * Generate projected L2 HDF file (bl2map)
+     * Generate projected L3 HDF file (bl3map)
+     * Generate L0 file from L1A (HRPT) file (l1atol0)
+     * Generate coccolithophore blooms mask file (coccobloom)
+
+     SeaWiFS Data Extraction and Quality Control Programs
+     * L1A and L2 file extraction (subscene)
+     * L1A coastline registration and warping (register)
+     * L2 display and reprocess (l2chk)
+
+     CZCS Data Product Generation Programs
+     * Generate L1A file from L1A CRTT file (l1aczcs)
+     * Generate L2 file from L1A file (l2czcs)
+     * Generate glint mask file (glint)
+     * L1A and L2 file extraction (exczcs)
+     * Generate ringing mask file (ring)
+     * Generate coccolithophore blooms mask file (coccobloom)
+
+     CZCS Data Extraction and Quality Control Programs
+     * L1A and L2 file extraction (exczcs)
+     * L1A coastline registration and warping (rgczcs)
+     * L2 box data examine and regeneration (chkczcs)
+     * Generate ringing mask file (ring)
+
+     OCTS Data Product Generation Programs
+     * Generate SeaDAS OCTS L1B file from OCTS L0 file (l1bocts)
+     * Generate SeaDAS OCTS L1B file from OCTS L1A file (l1bgen)
+     * Generate SeaDAS OCTS L2 file from SeaDAS OCTS L1B file (msl12,1)
+     * Generate SeaDAS OCTS L3 space or time-binned files from L2 files
+       (l3bin)
+     * Generate SeaDAS OCTS L3 SMI standard mapped product from L3 binned
+       data (smigen)
+
+     MOS Data Product Generation Programs
+     * Generate SeaDAS MOS L1B destriped file  (mosl1corr)
+     * Generate SeaDAS MOS L2 file from MOS-B L1B file (msl12,2)
+
+     Ancillary Data Generation and Quality Control Programs
+     * Interactive ancillary data products quality control (ancqc)
+   _______________________________________________________________________
+
+
+
+   [seadas_logo.gif] This page maintained by:
+                     The SeaDAS Development Group
+                     Mark Ruebens, Robert Lindsay and Long Wang
+                     Code 970, NASA/GSFC
+                     seadas@seadas.gsfc.nasa.gov
+                     Last updated: 11/01/01.
+   _______________________________________________________________________

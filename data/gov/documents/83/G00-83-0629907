@@ -1,0 +1,139 @@
+http://tsdis.gsfc.nasa.gov/tsdis/tsdis_redesign/software.html
+
+     __________________________________________________________________
+
+   [softwarePageBanner.gif]
+     __________________________________________________________________
+
+   TSDIS Toolkit
+
+                             TSDIS Browse Viewer
+
+                             TSDIS Orbit Viewer
+
+                                                        VIRS L1B Converter
+     __________________________________________________________________
+
+   NOTE:
+   TSDIS will provide support for registered TSDIS Science Users (TSUs)
+   only. TSU's may contact tsdis@tsdis.gsfc.nasa.gov with questions about
+   the TSDIS software.
+
+   If you are not a TSU (or working with a TSU), please use the software
+   at your own risk and contact the Goddard DAAC if you have any questions
+   about TSDIS software.
+     __________________________________________________________________
+
+   [icntool.gif] TSDIS Science Algorithm Toolkit
+
+   To help the TSDIS Science Users (TSUs) develop the TRMM algorithms,
+   TSDIS has provided the TSDIS Science Algorithm Toolkit. The purpose of
+   the toolkit is two-fold. First, the toolkit provides a library of
+   commonly used routines, constants, and macros, and, secondly, it allow
+   seamless integration of TRMM algorithms into the TSDIS environment.
+
+   In developing algorithms for TSDIS, the TSUs must interact with HDF
+   files for TSDIS standard products. The toolkit provides routines for
+   reading and writing data to and from the HDF files; routines are
+   provide for Level 1-3 products and for both satellite and GV. Each of
+   the routines in the toolkit are callable in either C or FORTRAN. The
+   toolkit also includes routines for reading land/sea data and
+   topographical data. The routines provided in the toolkit can be divided
+   into the following categories:
+     * File Access (e.g., open/close routines)
+     * Data Access (e.g., read/write routines)
+     * Metadata Access (e.g., reading and writing metadata elements)
+     * Ancillary Data Access (e.g., land/sea or topographical data access)
+     * Error Reporting Utilities.
+
+   For more information about the TSDIS Toolkit or to download the
+   toolkit, please see the TSDIS Toolkit Homepage.
+     __________________________________________________________________
+
+   [TSDISBrowseViewer1.sm.gif] TSDIS Browse Viewer
+
+   The TSDIS Browse Viewer is a GUI application that provides the means to
+   display the TSDIS produced browse images. The browse viewer is capable
+   of displaying Level 1-3 of Satellite and GV browse images. The images
+   are subsampled before they are displayed on the users terminal, but the
+   browse viewer includes the option of zooming the images to full
+   resolution. The browse viewer application provides the following
+   functionality:
+     * Display Level 1-3 of Satellite and GV Browse Images
+     * Turn On/Off Continental Outlines
+     * Turn On/Off Latitude/Longitude Grids
+     * Turn On/Off GV Sources
+     * Turn On/Off Time Indicators
+     * Zooming the Browse Image
+     * View Core/Product Specific/Browse Metadata
+     * Change the Overlay Colors
+     * Change the Grid Resolution
+     * Save the Browse Images in either HDF or PostScript Format.
+
+   In addition to the browse images, the Viewer will display the
+   associated color bar (including scale) and the current cursor position
+   in latitude/longitude coordinates (if appropriate).
+
+      Screen Shot of the Browse Viewer Displaying PR L1C Synthetic Data
+
+   Requirements:
+     * IDL (either development or runtime version) - required Version 5.0
+     * 2 MB Diskspace
+     * Memory will depend on image size.
+     * Platform: UNIX (with IDL)
+
+   The current release of the Browse Viewer is Version 1.8.
+
+   Download a copy of the TSDIS Browse Viewer.
+     __________________________________________________________________
+
+   [release_main_sm.gif] TSDIS Orbit Viewer
+   The TSDIS Orbit Viewer displays TRMM Standard Products,
+   Coincidence-Subsetted Intermediate (CSI) Products, and Quick Look (QL)
+   Products. Only satellite products, levels 1B through 3, can be
+   displayed. The viewer can display all data in the files, including SDS
+   variables, V data, and metadata.
+   For level 1 and 2 products, the entire orbit can be viewed at once, and
+   a portion of the orbit can be zoomed to reveal detail. Both horizontal
+   and vertical slices of the zoomed region can be viewed. The sample
+   images on the right demonstrate these capabilities.
+   For level 3 products, the entire tropics can be viewed at once, and a
+   portion of the tropics can be zoomed to reveal detail.
+
+   For more information about the TSDIS Orbit Viewer or to download the
+   viewer, please see the TSDIS Orbit Viewer Homepage.
+     __________________________________________________________________
+
+   VIRS L1B Radiance Converter
+
+   The 1B01 Calibration software creates an alternative VIRS L1B product.
+   It converts the 1B01 radiances to percent albedo for visible channels
+   and to brightness temperatures for thermal channels. The output has the
+   same HDF format as the 1B01 product and all 1B01 parameters except
+   radiances are carried over.
+
+   The software is written in c. The TSDIS toolkit and a few HDF routines
+   are used and included in this software package.
+
+   The VIRS L1B converter can be obtained using the TSDIS anonymous FTP
+   site:
+
+   UNIX> cd ~
+       UNIX> ftp ftp-tsdis.gsfc.nasa.gov
+       user: anonymous
+       password: enter your e-mail address
+       FTP> cd pub/convertvirs
+       FTP> mget 1B01CALTB.tar
+       FTP> quit
+     __________________________________________________________________
+
+                     [back.gif] Return to TSDIS Homepage
+                     ___________________________________
+
+   Responsible NASA Official: Erich Stocker, Code 902, NASA/GSFC
+       This page is maintained by: Craig Jamieson, Mentor Technologies,
+       Inc.
+
+   Send comments to: jamieson@tsdis.gsfc.nasa.gov
+
+   Last updated on April 12, 2001

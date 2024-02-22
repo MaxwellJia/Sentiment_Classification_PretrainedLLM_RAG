@@ -1,0 +1,654 @@
+http://masterweb.jpl.nasa.gov/documents/master.pdf
+
+   Remote Sensing of Environment 76 (2001) 93±102
+   www.elsevier.com/locate/rse The MODIS/ASTER airborne simulator (MASTER)
+   Ð a new instrument for earth science studies Simon J. Hooka,*, Jeffrey
+   J. Myersb, Kurtis J. Thomec, Michael Fitzgeraldb, Anne B. Kahlea aMail
+   Stop 183-501, Jet Propulsion Laboratory, California Institute of
+   Technology, Pasadena, CA 91009, USA bSAIC, NASA Ames Research Center,
+   Moffett Field, CA 94035, USA cOptical Sciences Center, University of
+   Arizona, Tucson, AZ 85721, USA Received 25 October 1999; accepted 23
+   July 2000 Abstract The MODIS/ASTER Airborne Simulator was developed for
+   the Advanced Spaceborne Thermal Emission and Reflection Radiometer
+   (ASTER) and Moderate Resolution Imaging Spectroradiometer (MODIS)
+   projects. ASTER and MODIS are both spaceborne imaging instruments on
+   the Terra platform launched in the fall of 1999. Currently MASTER is
+   flown on the Department of Energy (DOE) King Air Beachcraft B200
+   aircraft and the NASA DC-8. In order to validate the in-flight
+   performance of the instrument, the Jet Propulsion Laboratory and the
+   University of Arizona conducted a joint experiment in December 1998.
+   The experiment involved overflights of the MASTER instrument at two
+   sites at three elevations (2000, 4000, and 6000 m). The two sites:
+   Ivanpah Playa, California, and Lake Mead, Nevada, were selected to
+   validate the visible±shortwave infrared and thermal infrared (TIR)
+   channels, respectively. At Ivanpah Playa, a spectrometer was used to
+   determine the surface reflectance and a sun photometer used to obtain
+   the optical depth. At Lake Mead contact and radiometric surface lake
+   temperatures were measured by buoy-mounted thermistors and
+   self-calibrating radiometers, respectively. Atmospheric profiles of
+   temperature, pressure, and relative humidity were obtained by launching
+   an atmospheric sounding balloon. The measured surface radiances were
+   then propagated to the at-sensor radiance using radiative transfer
+   models driven by the local atmospheric data. There was excellent
+   agreement between the predicted radiance at sensor and the measured
+   radiance at sensor at all three altitudes. The percent difference
+   between the channels not strongly affected by the atmosphere in the
+   visible±shortwave infrared was typically 1±5% and the percent
+   difference between the TIR channels not strongly affected by the
+   atmosphere was typically less than 0.5%. These results indicate the
+   MASTER instrument should provide a well-calibrated instrument for Earth
+   Science Studies. It should prove particularly valuable for those
+   studies that leverage information across the electromagnetic spectrum
+   from the visible to the TIR. D 2001 Elsevier Science Inc. All rights
+   reserved. 1. Introduction characteristics of the MASTER instrument are
+   summarized in Table 2. The MODIS/ASTER Airborne Simulator (MASTER) The
+   primary mission of MASTER is to: was developed to support scientific
+   studies by the Advanced Spaceborne Thermal Emission and Reflection
+   Radiometer Collect ASTER-like and MODIS-like data sets to support
+   (ASTER) and Moderate Resolution Imaging Spectroradi- the validation of
+   the ASTER and MODIS geophysical ometer (MODIS) projects. ASTER and
+   MODIS (Barnes, retrieval algorithms. Pagano, & Salomonson, 1998;
+   Salomonson, Barnes, May- Collect these data sets at a higher spatial
+   resolution than mon, Montgomery, & Ostrow, 1989; Yamaguchi, Kahle, the
+   spaceborne datasets to permit scaling studies and Tsu, Kawakami, &
+   Pniel, 1998) are both spaceborne ima- comparisons with in-situ
+   measurements. ging instruments on the first Earth Observing System
+   plat- Underfly the Terra ASTER and MODIS sensors to form launched in
+   the fall of 1999. The characteristics of provide an additional
+   radiometric calibration to assist with these instruments are summarized
+   in Table 1 and the satellite instrument performance characterization.
+   This is particularly important for ASTER where on-board calibra- tion
+   is dependent on a single blackbody in the thermal * Corresponding
+   author. infrared (TIR) and only partial aperture illumination in the
+   E-mail address: simon.j.hook@jpl.nasa.gov (S.J. Hook). visible±near
+   infrared (VNIR). 0034-4257/00/$ ± see front matter D 2001 Elsevier
+   Science Inc. All rights reserved. PII: S0034-4257(00)00195- 4 94 S.J.
+   Hook et al. / Remote Sensing of Environment 76 (2001) 93±102 Table 1
+   Summary characteristics of the ASTER and MODIS instruments (modified
+   from Kaufman, Herring, Ranson, & Collatz, 1999) Instrument ASTER MODIS
+   Spatial resolution at nadir 15 m (4 channels-VNIR), 250 m (2 channels),
+   30 m (5 channels-SWIR), 500 m (5 channels), 90 m (5 channels-TIR) 1000
+   m (29 channels Number of channels 14 channels 36 channels Spectral
+   range 0.5±12 mm 0.4±14 mm Swath width 60 km 2330 km Repeatability
+   Nominally 16 daysa Daily except near the equator Stereo capability Yes
+   No Main measurements General studies at the local scale General land,
+   ocean, and atmospheric (requiring high spatial resolution imagery)
+   global studies across the visible to across the visible to TIR spectrum
+   TIR spectrum a Repeat coverage is possible at greater frequency for the
+   visible±near infrared channels by instrument pointing. VNIR Ð visible
+   near infrared. SWIR Ð shortwave infrared. TIR Ð thermal infrared. A
+   secondary mission of MASTER is to: tions are configured to more closely
+   match those of ASTER and MODIS (Tables 3 and 4). However, the Provide a
+   back-up instrument for the current MODIS exact bandpasses of MASTER
+   differ in detail from the Airborne Simulator (MAS), which is committed
+   to a filter-based ASTER and MODIS instruments. The system program of
+   atmospheric and oceanic measurements (King itself consists of a
+   scanhead unit and a set of electronic et al., 1996). subsystems,
+   weighing 174 and 12l lb, respectively. The Provide a wider spectral and
+   dynamic range alternative to scanhead occupies 3.9 ft3 of space, and
+   the electronics the Thermal Infrared Multispectral Scanner (TIMS,
+   Pallu- utilize approximately 30 in. of vertical space in a standard
+   coni & Meeks, 1985) for local-scale studies. 19 in. mounting rack. The
+   optical system is composed of a spectrometer In order to meet these
+   objectives the MASTER instru- mounted on a scanning fore-optic unit.
+   Both the spectro- ment must be well calibrated. Further, the
+   calibration needs meter and fore-optics portions are mated to an
+   optical to be verified in-flight since the operating environment is
+   baseplate. The fore-optics consist of a full-face rotating scan very
+   different to the laboratory calibration environment. mirror, canted 45°
+   to the flight direction, directing light into Therefore, a validation
+   experiment was conducted to char- an afocal Gregorian telescope with a
+   15.2-cm paraboloid acterize the performance of the instrument
+   in-flight. main mirror. A folding mirror then directs the energy The
+   MASTER instrument and data reduction procedures are described below
+   followed by the results from a recent in- flight validation experiment.
+   Finally, the results are sum- marized and conclusions drawn. Table 2
+   Summary characteristics of the MASTER instrument Wavelength range
+   0.4±13 mm Number of channels 50 2. Instrument description Number of
+   pixels 716 Instantaneous field 2.5 mrad The MASTER instrument was
+   developed by the NASA of view Ames Research Center in conjunction with
+   the Jet Propul- Total field of view 85.92° Platforms DOE King Air
+   Beachcraft B200, sion Laboratory. The instrument consists of three key
+   NASA ER-2, and NASA DC-8 components: the scanning spectrometer, the
+   digitizer, and Pixel size DC-8 10±30 m the storage system. The scanning
+   unit was built by Sensys Pixel size ER-2 50 m Technology (formerly
+   Daedalus Enterprises), and the digi- Pixel size B200 5±25 m tizer was a
+   collaborative effort between Berkeley Camera ER-2 range 3700 statute
+   miles (without refueling) Engineering and the Ames Airborne Sensor
+   Facility (ASF) B200 range 700 statute miles The data storage system and
+   overall system integration were (without refueling) also provided by
+   the ASF. DC-8 range 5403 statute miles The MASTER instrument is similar
+   to the MAS (without refueling) developed by the MODIS project (King et
+   al., 1996). Scan speeds 6.25/12.5/25 rps Products Radiance at sensor
+   (Level 1B) However, its has two key differences. First, MASTER
+   Calibration VIS-SWIR Laboratory Integrating Sphere supports a variety
+   of scan speeds allowing it to acquire Calibration MIR-TIR 2 on-board
+   blackbodies contiguous imagery from a variety of altitudes with Data
+   Format Hierarchical Data Format (HDF) differing pixel sizes (Table 2).
+   Second, the channel posi- Digitization 16-bit S.J. Hook et al. / Remote
+   Sensing of Environment 76 (2001) 93±102 95 Table 3 The analog
+   electrical signals from each detector are Spectral characteristics of
+   the visible ± shortwave infrared MASTER passed through a series of
+   low-noise preamplifiers on the channels scanhead, and are then passed
+   to a digitizer via shielded Full width twisted-pair cables. The
+   first-stage preamplifiers on the Port Channel half maximum Channel
+   center Channel peak 2 and 3 detector arrays (SWIR and MIR) are
+   cryogenically 1 0.0433 0.4574 0.458 cooled within the Dewar assemblies,
+   to minimize noise. 2 0.0426 0.4981 0.496 Specially designed adaptive,
+   16-bit analog-to-digital (A/D) 3 0.0427 0.54 0.538 4 0.0407 0.5807 0.58
+   converters are used in the digitizer, that actively track the 5 0.0585
+   0.6599 0.652 DC level of the signal from the cooled detectors. This
+   level, 6 0.042 0.711 0.71 especially from HgCdTe arrays, typically
+   drifts with time, 7 0.0418 0.7499 0.75 and has been an historic source
+   of calibration error in IR 8 0.042 0.8 0.8 systems. The use of an
+   actively adjusted, programmable 9 0.0417 0.8658 0.866 10 0.0407 0.9057
+   0.906 preamplifier on the front end of the A/D converter allows 11
+   0.0403 0.9452 0.946 this to be nullified, and the signal digitized very
+   accurately, 12 0.0542 1.6092 1.608 while preserving a full 16-bit
+   dynamic range. Optical 13 0.0526 1.6645 1.666 isolation was used,
+   together with other noise reducing 14 0.0514 1.7196 1.718 techniques,
+   wherever possible in the system design. The 15 0.0521 1.7748 1.774 16
+   0.0506 1.8281 1.826 digitized video signal is then merged with
+   ancillary engi- 17 0.0457 1.8751 1.874 neering and external navigation
+   data, and is then stored on 18 0.0575 1.9244 1.924 the hard disk.
+   Further details of the optical system are given 19 0.0504 1.9807 1.98
+   in King et al. (1996). 20 0.0481 2.0806 2.08 The MASTER channels are
+   calibrated spectrally and 21 0.0511 2.1599 2.16 22 0.0508 2.2106 2.212
+   radiometrically in the laboratory preflight and postflight. 23 0.0513
+   2.2581 2.258 A preflight and postflight calibration is typically
+   undertaken 24 0.0683 2.3284 2.32 after major campaigns or periodically
+   throughout the flight 25 0.0641 2.3939 2.388 season. The MIR and TIR
+   channels (26±50) are also It should be noted the channel positions
+   shift slightly between radiometrically calibrated in-flight by viewing
+   an internal calibrations and therefore the calibration nearest the
+   acquisition date should be used. Table 4 Spectral characteristics of
+   the mid-TIR MASTER channels through a field stop aperture, and onto a
+   2.5-cm paraboloid Full width Pfund assembly, which forms a collimated
+   beam with a 2.5- Channel half maximum Channel center Channel peak mrad
+   equivalent field of view. This is then directed by a 26 0.1559 3.1477
+   3.142 deviating mirror into the spectrometer unit through a hole in 27
+   0.1459 3.2992 3.292 the baseplate (Fig. 1). The spectrometer is divided
+   into four 28 0.1478 3.4538 3.452 output sections or ports, each with
+   its own detector array and 29 0.1544 3.6088 3.607 associated optics.
+   The input energy is wavelength-separated 30 0.1345 3.7507 3.757 31
+   0.1524 3.9134 3.912 by a chain of dichroic beam splitters, and directed
+   into each 32 0.1548 4.0677 4.067 of the four output ports of the
+   spectrometer (Visible near 33 0.153 4.2286 4.224 infrared (VNIR),
+   shortwave infrared (SWIR), mid-infrared 34 0.153 4.3786 4.374 (MIR) and
+   Thermal infrared (TIR)). A diffraction grating is 35 0.1446 4.5202
+   4.522 mounted at each output port, which spectrally disperses the 36
+   0.1608 4.6684 4.667 37 0.1521 4.8233 4.822 energy through a lens and
+   onto a linear detector array. The 38 0.1487 4.9672 4.962 bandpass of
+   each individual channel is determined by the 39 0.1495 5.116 5.117
+   geometry of the detector array and its location with respect 40 0.1578
+   5.2629 5.272 to the grating. Three of the four detector arrays (two
+   InSb 41 0.3645 7.7599 7.815 and one HgCdTe) are cryogenically cooled
+   with liquid 42 0.4333 8.1677 8.185 43 0.3543 8.6324 8.665 nitrogen; the
+   silicon array for the VNIR channels is tem- 44 0.4253 9.0944 9.104
+   perature-stabilized with a thermal±electric cooler. The 45 0.4083
+   9.7004 9.706 HgCdTe array used with the TIR channels also has a cooled
+   46 0.3963 10.116 10.115 linear-variable filter mounted over it to
+   reduce background 47 0.5903 10.6331 10.554 noise (a similar
+   installation will be made on the MIR array of 48 0.6518 11.3293 11.365
+   49 0.4929 12.117 12.097 MASTER shortly). This grating-based design
+   maximizes 50 0.4618 12.8779 12.876 optical efficiency, while remaining
+   radiometrically flat to It should be noted the channel positions shift
+   slightly between within 1% across the total field of view, and is not
+   spectrally calibrations and therefore the calibration nearest the
+   acquisition date should dependent on viewing angle. be used. 96 S.J.
+   Hook et al. / Remote Sensing of Environment 76 (2001) 93±102 sary to
+   conduct a validation experiment on each platform. The validation of
+   MASTER on the B200 platform is described herein. MASTER can acquire
+   data with pixel sizes in the range of 5±25 m from this platform
+   depending on surface and flight altitude. It should be noted that a
+   custom air-fence was installed on the B200 to minimize calibration
+   errors due to wind-blast over the exposed refer- ence blackbodies. This
+   phenomenon, first observed with the TIMS instrument flying on the NASA
+   C-130 aircraft, produces a differential cooling on the surface of the
+   black- body that makes it impossible to accurately measure its
+   temperature (Schmugge, Becker, & Li, 1991). A properly sized air-fence,
+   installed forward of the scanner viewing aperture, minimizes turbulent
+   airflow over these surfaces. Empirical data show that this greatly
+   increases the calibra- tion accuracy of the IR channels. MASTER data
+   are typically supplied as a standard Fig. 1. MASTER optical layout.
+   product through the NASA Distributed Active Archive Center (DAAC)
+   system, as a Level-1B product. This hot and cold blackbody with each
+   scanline. Because the includes image data calibrated to
+   radiance-at-sensor, MASTER system design is optically and mechanically
+   together with ancillary files containing geo-location, navi- identical
+   to the MAS, the same laboratory calibration gation, and calibration
+   data. The files are encapsulated in procedures are used (Arnold et al.,
+   1996). Briefly, a 30-in. Hierarchical Data Format (HDF), for which
+   several public diameter integrating sphere is used as the primary
+   radio- domain viewers are available. metric source for calibrating the
+   visible±shortwave infrared A quicklook is generated for each flightline
+   and posted channels (1±25). The sphere is operated at four decreasing
+   on the MASTER web site (http://masterweb.jpl.nasa.gov). lamp levels, to
+   establish linearity of the system response. Users can browse the
+   on-line archive and order data at a The sphere itself is periodically
+   calibrated against a NIST nominal cost. standard lamp, both by a team
+   from the Goddard Space Flight Center and by the Ames Sensor Facility.
+   Both the 30- in. sphere and the standard lamp/plaque assembly used as a
+   3. Ivanpah Playa, California primary source were also measured
+   independently by NIST and the Univ. of Arizona Optical Sciences Dept.
+   on Sept. 1± Ivanpah Playa is a dry lakebed on the border between 2,
+   1999. These measurements agreed within 5% with the California and
+   Nevada. Interstate 15 traverses through the working values currently
+   being used for MASTER calibra- playa that is located about 50 km
+   southwest of Las Vegas tion (Butler, 2000). Spectral characterizations
+   are preformed and is at an elevation of approximately 800 m. A 60 Â 60
+   m with both a scanning monochrometer, and Fourier transform area of the
+   playa was selected as the test site (Fig. 2A). The interferometer. This
+   involves mounting the scanner over an size of the site gives
+   approximately a 20 Â 20 pixel area for 8-in. diameter collimator,
+   interfaced to an optical bench for the lowest altitude of the MASTER
+   overflight and nearly a these measurements. This procedure is described
+   in Arnold 5 Â 5 pixel area for the high altitude pass of the B-200.
+   This et al. (1996). The measured spectral response functions for gives
+   a reasonable number of pixels in the imagery while some channels are
+   atmospherically corrected with a radia- allowing rapid measurement of
+   the surface reflectance with tive transfer model (MODTRAN), to remove
+   the effects of adequate sampling to understand the spatial
+   heterogeneity of water vapor and CO2 absorption. Essentially, channels
+   that the test site. Tarpaulins were placed at one corner of the site
+   have strong absorbers even over short path lengths. Spatial to indicate
+   its location in the MASTER imagery. The local characterization and
+   polarization sensitivity measurements atmosphere was characterized
+   using a Reagan Sun Photo- of the instrument will be made at a future
+   date. MASTER is meter and the surface reflectance was measured using an
+   also periodically characterized in a cold-chamber, to moni- Analytic
+   Spectral Devices FieldSpec FR. tor radiometric and spectral stability
+   at the operating tem- The atmospheric characterization is based on
+   solar perature of the high altitude ER-2 aircraft. extinction
+   measurements and these data are converted to The radiometric
+   calibration of the MASTER instrument spectral optical depths that are
+   used to describe aerosol is also validated in-flight. Currently, plans
+   call for the parameters and columnar amounts of gaseous absorbers.
+   MASTER instrument to be flown on three aircraft. These The solar
+   radiometer was calibrated in intercept to a preci- are the Department
+   of Energy (DOE) King Air Beachcraft sion of better than 1% in all
+   bands. This leads to an optical B200, the NASA DC-8 and the NASA ER-2.
+   Since each depth retrieval better than 5% giving less than 0.2% uncer-
+   instrument has a unique operating environment it is neces- tainty in
+   the at-sensor radiance based on runs of the radiative S.J. Hook et al.
+   / Remote Sensing of Environment 76 (2001) 93±102 97 tainty. Additional
+   effects due to missing data at overpass are incorrect values for the
+   aerosol size distribution and column ozone. Changing the Junge
+   parameter by 20% (a 0.7 change in Junge parameter), led to less than
+   0.2% changes in the radiance. Assuming an uncertainty in ozone amount
+   of 25% led to significant changes in only bands 2 and 3 with 2% and 3%
+   changes, respectively. Thus, the overall uncertainty in these bands
+   would be greater than those of bands with no ozone absorption. The
+   reflectance of the surface was measured using an Analytic Spectral
+   Devices FieldSpec FR. This instrument covers the wavelength range of
+   350±2500 nm with output reported at 1 nm intervals. It uses three
+   separate gratings to cover this spectral range. The first grating
+   covers approxi- mately the range from 350 to 1000 nm at better than 1
+   nm spectral resolution. The second and third gratings cover the 1000 to
+   2000 nm and 2000 to 2500 nm spectral ranges, respectively, at 10 nm
+   resolution. Measurements of the surface were made by transporting the
+   FieldSpec across the test site and measuring upwelling radiance. The
+   upwel- ling radiance is converted to reflectance by comparing the
+   radiance to that from a panel of known reflectance. The reference for
+   this work was a 46 cm2 monolithic piece of Spectralon. The 60 Â 60 m
+   test site was divided into eight east±west sections. Forty sample
+   spectra were collected within each section with each sample consisting
+   of an Fig. 2. MASTER image of the Ivanpah Playa site using data from
+   Channel average of 30 individual spectra. Measurements of the 6 (0.711
+   mm). Tarpaulin marking test site is just visible above the apex of
+   reflectance standard were made every 160 samples. These the letter A.
+   reference measurements are corrected for the bidirectional reflectance
+   effects of the reference panel and for changing transfer code (RTC).
+   Fig. 3 shows the spectral optical sun angle during the 30-min
+   measurement period (Biggar et thickness as a function of time for the
+   day of the MASTER al., 1998). Because atmospheric conditions were
+   relatively overflight for spectral bands centered at 441 and 781 nm.
+   stable during the 30-min data collection, no correction is Molecular
+   scattering optical thicknesses based on the atmo- made for changing
+   diffuse sky illumination. spheric pressure have been removed from these
+   results. Thus, the optical thicknesses shown in the figure are those
+   due to aerosol scattering and absorption and a small amount of ozone
+   absorption. As can be seen in the figure, the optical thickness shows a
+   significant decrease early in the morning with an apparent leveling
+   around 11 a.m. local standard time. Unfortunately, optical thickness
+   data are not available for the actual overflight times and the optical
+   thicknesses used to retrieve the aerosol size distribution were based
+   on a 20-min average of data at the end of the collection. The lack of
+   solar extinction measurements at the exact time of sensor overpass are
+   not expected to be a significant source of uncertainty due to the high
+   surface reflectance of the test site and low aerosol loading. To
+   evaluate this effect, the aerosol optical thickness was doubled and the
+   radiances at the sensor recomputed. This led to less than 0.7% change
+   in radiance with the effect becoming smaller at longer wave- lengths.
+   For the Ivanpah test site, this level of change in optical thickness
+   has not been seen without significant amounts of blowing dust due to
+   high-wind conditions. Since Fig. 3. Spectral optical thickness as a
+   function of time for the day of the MASTER overflight for spectral
+   bands centered at 441 and 781 nm. this was not the case for this date,
+   the effects of missing Molecular scattering optical thicknesses based
+   on the atmospheric pressure solar extinction data is not a significant
+   source of uncer- have been removed from these results. 98 S.J. Hook et
+   al. / Remote Sensing of Environment 76 (2001) 93±102 for much of the
+   spectrum. Similar results, both magnitude and variability, were
+   obtained for the earlier two data collections with all three sets
+   agreeing to better than 1.5% of the reflectance. 4. Lake Mead, Nevada
+   Lake Mead is located northeast of Las Vegas, NV. Measurements were made
+   at two localities at Lake Mead. The first locality was the end of a
+   peninsula slightly east of the Las Vegas Bay Marina (Fig. 5, Locality
+   A). This site was used to launch the atmospheric sounding balloon. The
+   second locality was Gypsum Bay (Fig. 5, Locality B) where the radiative
+   surface temperature and bulk water temperature was measured by
+   radiometers and buoy-mounted tempera- Fig. 4. Surface reflectance of
+   Ivanpah Playa measured with the Analytical ture loggers, respectively.
+   Spectral Devices FieldSpec FR spectrometer. The atmospheric water bands
+   (noise dominated) around 1.4 and 1.9 mm have been masked out. Obvious
+   Fig. 6 illustrates the atmospheric profiles of pressure, artifacts are
+   apparent in the spectrum around 1.0 mm and beyond 2.4 mm. temperature,
+   and relative humidity obtained from the launch of an atmospheric
+   sounding balloon at 12 noon. A total of three sets of reflectance data
+   were collected The sounder ascended to approximately 20 km at which
+   between 11:00 and 12:30 local standard time. Fig. 4 shows point the
+   balloon burst and the sensor package continued the retrieved
+   reflectance based on the average of the 320 to transmit on the descent
+   until contact was lost with the samples from the test site for the data
+   collected between receiver at approximately 5 km. It is clear that the
+   bulk of 12:00 and 12:30. The standard deviation of the average of the
+   variation in water vapor occurs below 5 km (Fig. 6A). the data shown is
+   less than 0.005 throughout the spectrum corresponding to a percent
+   standard deviation of about 1% Fig. 6. Atmospheric profiles of
+   pressure, temperature and relative humidity obtained from the launch of
+   an atmospheric sounding balloon at 12 noon. (a) Profiles from 0±24 km;
+   (b) Profiles from 0±100 km. The relative humidity device froze at 5.8
+   km, producing a spike. A point was taken on Fig. 5. MASTER image of the
+   Lake Mead site using data from Channel 42 either side of the spike and
+   then points were taken until 20 km above which (8.185 mm). Images
+   labels: A Ð Las Vegas Bay Marina; B Ð Gypsum Bay. the default
+   mid-latitude profile from MODTRAN was used. S.J. Hook et al. / Remote
+   Sensing of Environment 76 (2001) 93±102 99 1998). Provided the internal
+   blackbodies bracket the scene, the radiometer is accurate to 0.2 K. The
+   radiometer- derived surface temperatures are cyclic over time. This
+   results from the boat traversing back and forth between the mouth and
+   landward end of Gypsum Bay (Figs. 5 and 7). The first couple of
+   traverses went closer to the land and further out of the bay and as a
+   result have greater amplitude than the subsequent traverses. The
+   radiometer measurements were made every second and the location of the
+   boat at the time of the measurement was recorded by differential GPS,
+   allowing the location of the boat at the time of the overpass to be
+   determined. The differential GPS measurements are accurate to 1±2 m.
+   Fig. 8 illustrates the kinetic water temperature measured Fig. 7.
+   Surface brightness temperature and surface kinetic temperature for from
+   a buoy-mounted temperature logger and self-calibrat- Gypsum Bay from
+   one of the JPL self-calibrating radiometers mounted on ing radiometer.
+   The loggers were calibrated in a NIST either side of a pontoon boat.
+   traceable water bath at the University of Davis. The buoy temperatures
+   step compared to the radiometer data. The At 5.8 km there is a spike in
+   the relative humidity, this steps are due to the digitization interval
+   for the temperature spike is an artifact caused by freezing of the
+   relative loggers. The radiometric or skin temperature is a few tenths
+   humidity device (Fig. 6A). The sounder data were used of a degree
+   cooler than the logger temperatures as expected to create an input
+   profile for use with the MODTRAN due to wind-induced cooling of the
+   surface. RTC to predict the radiance at sensor from the surface
+   radiance measurements. The values in the profile above 20 km were taken
+   from the default mid-latitude winter model 5. Comparison of MASTER
+   sensor radiance to field (Fig. 6B). derived radiance Fig. 7 illustrates
+   the surface radiative temperature recov- ered from one of the two JPL
+   self-calibrating radiometers 5.1. Visible±shortwave infrared mounted on
+   either side of a pontoon boat. The lower curve is the surface
+   brightness temperature and the upper curve is The radiance-validation
+   work at Ivanpah Playa relies on the surface kinetic temperature. The
+   surface kinetic tem- the reflectance-based method, which has a proven
+   history of perature is derived by correcting for surface emissivity and
+   use through the radiometric calibrations of Landsat-4 and -5
+   subtracting the sky radiance reflected by the surface into the Thematic
+   Mapper and SPOT-1, -2, and -3, the AVIRIS, and path of the radiometer:
+   a Daedalus scanner (Balick, Golanics, Shines, Biggar, & L Slater, 1991;
+   Gellman et al., 1993; Slater et al., 1987; L obs À Lpath À t 1 À e
+   Ldown sur 1 Thome, Gustafson-Bold, Slater, & Farrand, 1996; Vane et te
+   al., 1993). This approach uses ground-based measurements where: Lsur =
+   surface radiance; Lobs = observed radiance; Lpath = path radiance; t =
+   atmospheric transmission; e = sur- surface emmisivity; and Ldown =
+   downwelling atmospheric radiance. The kinetic temperature is obtained
+   from the surface radiance by inverting the Planck equation. The
+   radiance terms are calculated by integrating over the system response
+   curve for the JPL self-calibrating radiometer (Eq. (2)). Ll L l R l dl
+   2 l Eq. (1) is solved iteratively. The sky radiance term is obtained
+   from the RTC driven by the profile illustrated in Fig. 6. The
+   emissivity of the water was obtained from the ASTER spectral library.
+   The JPL self-calibrating radiometer has internal hot and cold
+   blackbodies and is NIST traceable. NIST traceability is provided by
+   laboratory calibration of the radiometer against the JPL cone blackbody
+   that was Fig. 8. Surface kinetic temperature of Gypsum Bay measured
+   radiometer traced to NIST using their transfer radiometer (Kannenberg,
+   and bulk temperature measured by buoy-mounted temperature logger. 100
+   S.J. Hook et al. / Remote Sensing of Environment 76 (2001) 93±102 of
+   the surface and atmosphere at a selected site to predict view angles
+   and the solar angle at the time of sensor radiance at the top of the
+   atmosphere. overpass. Model runs of the RTC with historical BRDF The
+   above results were used in a modified version of data for the site give
+   less than 0.5% uncertainty in the a Gauss±Seidel iteration RTC to
+   predict the at-sensor at-sensor radiances. radiances for each of the
+   five runs at 1-nm intervals The atmospheric conditions used in the code
+   are based on from 350±2500 nm (Herman & Browning, 1965; Thome the
+   results of the atmospheric measurements described et al., 1996). The
+   RTC assumes the surface to be above. The primary instrument used to
+   characterize the lambertian and homogeneous. Because of the low alti-
+   atmosphere over the site is the solar radiometer. The solar tudes of
+   the aircraft, high reflectance of the surface, and radiometers are
+   relatively calibrated immediately prior to, low aerosol loading,
+   adjacency effects due to multiple during, or after each field campaign.
+   Data are used in a scattering in the atmosphere will be minimal and the
+   Langley method retrieval scheme to determine spectral assumption of
+   homogeneity will cause less uncertainty in atmospheric optical depths
+   (Gellman, Biggar, Slater, & the results than the uncertainty in the
+   reflectance mea- Bruegge, 1991). The optical depth results are used as
+   part surements. The assumption of a lambertian surface is of an
+   inversion scheme developed by the RSG to determine also not a
+   significant source of uncertainty since past ozone optical depth and a
+   Junge aerosol size distribution measurements of the surface BRDF of
+   this test site show parameter (Biggar, Gellman, & Slater, 1990). The
+   size the surface to be within 5% of lambertian out to 40° distribution
+   and columnar ozone are used to determine the Table 5 Comparison of the
+   predicted radiance at sensor with the measured radiance at sensor for
+   the Ivanpah and Lake Mead sites Radiances (W/m2 mm sr) Low altitude
+   Medium altitude High altitude Channel Center number wavelength Predict
+   MASTER % difference Predict MASTER % difference Predict MASTER %
+   difference 1 0.457 58.288 58.400 À 0.192 58.597 57.100 2.554 60.256
+   57.200 5.072 2 0.498 66.493 68.500 À 3.018 64.766 64.900 À 0.207 64.984
+   63.700 1.976 3 0.540 79.552 81.300 À 2.197 75.832 75.500 0.437 74.765
+   72.500 3.030 4 0.581 90.558 91.500 À 1.040 85.136 83.800 1.569 83.082
+   79.700 4.071 5 0.660 90.166 92.000 À 2.034 84.044 84.100 À 0.067 81.487
+   79.200 2.807 6 0.711 82.338 83.800 À 1.775 75.329 76.300 À 1.290 72.522
+   71.500 1.409 7 0.750 76.452 79.000 À 3.333 69.786 71.900 À 3.030 67.017
+   67.200 À 0.273 8 0.800 73.746 77.600 À 5.225 68.028 70.700 À 3.929
+   65.678 66.000 À 0.490 9 0.866 64.052 70.300 À 9.755 59.695 64.500 À
+   8.049 57.838 60.100 À 3.911 10 0.906 48.586 53.000 À 9.084 43.273
+   48.000 À 10.923 41.310 44.400 À 7.481 11 0.945 28.558 34.030 À 19.159
+   23.492 30.270 À 28.853 21.885 27.470 À 25.523 12 1.609 19.857 21.060 À
+   6.061 18.348 19.390 À 5.681 17.633 18.150 À 2.933 13 1.665 18.139
+   19.450 À 7.226 16.808 17.920 À 6.615 16.194 16.850 À 4.049 14 1.720
+   15.135 16.390 À 8.290 13.855 15.060 À 8.699 13.321 14.240 À 6.899 15
+   1.775 8.361 9.440 À 12.911 7.190 8.580 À 19.332 6.795 8.090 À 19.058 16
+   1.828 0.496 1.500 À 202.358 0.350 1.400 À 300.114 0.313 1.200 À 283.264
+   17 1.875 0.035 0.730 À 1973.864 0.030 0.690 À 2238.983 0.028 0.570 À
+   1943.011 18 1.924 0.299 1.100 À 267.401 0.180 0.970 À 440.390 0.147
+   0.790 À 436.320 19 1.981 3.545 3.800 À 7.196 2.687 3.320 À 23.581 2.390
+   3.020 À 26.365 20 2.081 6.923 7.140 À 3.134 5.975 6.410 À 7.288 5.541
+   5.950 À 7.391 21 2.160 6.673 7.210 À 8.055 6.143 6.600 À 7.436 5.913
+   6.250 À 5.698 22 2.211 5.686 6.340 À 11.506 5.213 5.780 À 10.875 4.999
+   5.430 À 8.626 23 2.258 5.277 5.600 À 6.127 4.798 5.090 À 6.088 4.554
+   4.780 À 4.958 24 2.328 4.021 3.990 0.781 3.535 3.580 À 1.267 3.296
+   3.360 À 1.936 25 2.394 2.455 2.520 À 2.643 2.045 2.250 À 10.041 1.885
+   2.100 À 11.418 41 7.760 6.193 6.182 0.187 5.583 5.547 À 1.040 5.101
+   4.881 4.325 42 8.168 7.163 7.155 0.117 6.967 6.899 À 0.050 6.844 6.763
+   1.186 43 8.632 7.681 7.701 À 0.258 7.613 7.563 À 0.226 7.588 7.559
+   0.379 44 9.094 7.975 7.990 À 0.181 7.930 7.900 À 0.251 7.916 7.874
+   0.520 45 9.700 8.175 8.211 À 0.441 8.102 8.039 0.027 8.023 8.002 0.262
+   46 10.116 8.223 8.253 À 0.362 8.199 8.165 À 0.017 8.189 8.151 0.462 47
+   10.633 8.156 8.196 À 0.483 8.133 8.107 À 0.574 8.130 8.092 0.470 48
+   11.329 7.931 7.952 À 0.255 7.911 7.879 À 0.108 7.915 7.880 0.447 49
+   12.117 7.525 7.541 À 0.217 7.493 7.458 À 1.422 7.490 7.440 0.670 50
+   12.878 7.040 7.011 0.408 6.956 6.854 À 1.784 6.910 6.871 0.556 The TIR
+   image values were obtained from averages of 9 Â 9, 6 Â 6, and 3 Â 3
+   pixel blocks for the low, medium, and high lines, respectively. No data
+   are provided for the mid-infrared channels due to the low signal to
+   noise of MASTER in this region. S.J. Hook et al. / Remote Sensing of
+   Environment 76 (2001) 93±102 101 optical depths at 1-nm intervals from
+   350 to 2500 nm. where C is the sensor response function and l1 and l2
+   are Columnar water vapor is derived using a modified Langley the lower
+   and upper boundaries of each channel. approach and comparisons to
+   radiosonde balloon results The atmospheric terms in Eq. (3) were
+   obtained from shows better than 10% agreement using this approach a
+   radiative transfer model (MODTRAN 3.5, Berk, Bern- (Thome, Herman, &
+   Reagan, 1992). The retrieved columnar stein, & Robertson, 1989) driven
+   by the local atmosphe- water vapor is used as an input to MODTRAN3 to
+   deter- ric data. mine transmittance for the sun-to-surface-to-satellite
+   path for 1-nm intervals from 350 to 2500 nm. The proper solar zenith
+   angle is used for each altitude 6. Discussion run, and we include
+   effects due to sensor altitude. The view angle used for the radiative
+   transfer calculations is based on Table 5 shows the MASTER radiance,
+   the predicted the location of the test site relative to the nadir point
+   in the radiance, and the percent difference between the two image and
+   the swath width of the sensor. The output of the radiances for the
+   three overpasses. The percent difference RTC is relative radiance that
+   is converted to absolute between the channels not strongly affected by
+   the atmo- radiance using MODTRAN3 derived solar irradiance inter-
+   sphere in the visible±shortwave infrared is typically 1± polated to
+   1-nm increments and corrected for the appropriate 5% and the percent
+   difference between the TIR channels earth±sun distance. These 1-nm
+   absolute radiances are not strongly affected by the atmosphere is
+   typically less band-averaged using the MASTER spectral response curves
+   than 0.5% ( < 0.3 K). In the TIR there does not appear to for each band
+   in the solar reflective. be a systematic discrepancy between the data
+   from the The band-averaged radiances from the radiative transfer three
+   flight altitudes, suggesting the TIR channels are not calculations are
+   compared to radiances derived from the strongly affected by wind-blast
+   as was observed in earlier MASTER data. This was done by first locating
+   the test site similar experiments prior to the installation of the air-
+   in the image based on the tarpaulins placed at two corners of fence.
+   The percent difference in channels strongly affected the site. All
+   pixels in the area within the tarpaulin are used to by atmospheric
+   absorption is very large, such as those determine the average radiance
+   and this is done for all three around the 0.94 and 1.8 mm water
+   absorption bands, due altitude runs. As an indication of the site's
+   homogeneity, the to the low signal at these wavelengths. The large
+   percent standard deviation of the average is < 1% for bands with
+   difference in Channel 22 is probably due to surface little atmospheric
+   absorption. To estimate the uncertainty variability. Channel 22 is
+   centered on 2.2 mm where the due to a misregistration between the
+   reflectance data and the playa has a strong absorption caused by the
+   presence of MASTER data, the test site in the MASTER image was
+   hydroxyl-bearing (clay) minerals. In the TIR channels the shifted by up
+   to 2 pixels and recomputed. The results of percent difference is
+   slightly larger at the shortest and these tests indicate that
+   registration uncertainties are less longest wavelengths due to water
+   and CO2 absorption, than 0.2% in all solar-reflective bands with little
+   atmo- respectively. Due to the low signal to noise of the spheric
+   absorption. MASTER MIR channels the instrument was not radio-
+   metrically validated in this wavelength region. Plans are 5.2. Thermal
+   infrared underway to add a linear variable filter to the MIR channels
+   to improve the signal to noise at which time After calibration the
+   MASTER at-sensor TIR radiance these channels will be radiometrically
+   validated in-flight. (Ls) for a given wavelength (l) can be written as:
+   Â Ã Lsl elLbbl T 1 À el Lskyl tl Latml 3 7. Summary and conclusions
+   where: el = surface emissivity at wavelength l; Lbbl(T) = spectral
+   radiance from a blackbody at surface tempera- A new multispectral
+   scanner, termed MASTER, has been ture T; L developed to simulate and
+   validate data from the ASTER skyl = sky radiance (spectral downwelling
+   radiance incident upon the surface from the atmos- and MODIS satellite
+   instruments. The scanner acquires data phere);t over the spectral range
+   0.4 to 13 mm in 50 spectral channels l = transmittance (spectral
+   atmospheric transmis- sion); and L at a variety of spatial resolutions.
+   Results from an in-flight atml = path radiance (spectral upwelling
+   radiance from atmospheric emission and scattering that validation
+   experiment indicate the instrument is well cali- reaches the sensor).
+   brated over the range of conditions utilized in this study. Eq. (3) was
+   used to predict the radiance at-sensor, which Several data sets have
+   been acquired with MASTER was convolved with the MASTER system response
+   function (including the data from this study) and are available for
+   using Eq. (4). browsing and ordering from:
+   http://masterweb.jpl.nasa.gov. It is anticipated the instrument will
+   prove especially l2 C l e valuable for studies that leverage data over
+   the full spectral L l lLBB lY T dl 1 l 4 l range at high spatial
+   resolution since such information is not 2 l C l dl 1 currently
+   available from other airborne instruments. 102 S.J. Hook et al. /
+   Remote Sensing of Environment 76 (2001) 93±102 Acknowledgments Gellman,
+   D. I., Biggar, S. F., Dinguirard, M. C., Henry, P. J., Moran, M. S.,
+   Thome, K. J., & Slater, P. N. (1993). Review of SPOT-1 and-2 calibra-
+   The research described in this paper was carried out in tions at White
+   Sands from launch to present. Proceedings of SPIE, 1938, 118±125. part
+   at the Jet Propulsion Laboratory, California Institute of Gellman, D.
+   I., Biggar, S. F., Slater, P. N., & Bruegge, C. J. (1991). Cali-
+   Technology, under a contract with the National Aeronautics brated
+   intercepts for solar radiometers used in remote sensor calibration. and
+   Space Administration as part of the Earth Observing Proceedings of
+   SPIE, 1493, 175±180. System Mission to Planet Earth Program. Herman, B.
+   M., & Browning, S. R. (1965). A numerical solution to the Numerous
+   people have contributed to the validation equation of radiative
+   transfer. Journal of the Atmospheric Sciences, 22, 559±566. effort for
+   the MASTER instrument. In particular we would Kannenberg, B. (1998). IR
+   instrument comparison workshop at the Rosen- like to thank Ali Abtahi,
+   Ron E. Alley, Timothy Thompson, stiel School of Marine and Atmospheric
+   Science (RSMAS). Earth Ob- and Degu Gu from the Jet Propulsion
+   Laboratory, and Stuart server, 10, 38±42. F. Biggar, John L. Lamarr,
+   Brian I. Magi, and Marek Kaufman, Y. J., Herring, D. D., Ranson, K. J.,
+   & Collatz, G. J. (1999). Earth Mienko from the University of Arizona.
+   observing system AM1 mission to earth. IEEE Transactions on Geoscience
+   and Remote Sensing, 36, 1045±1055. We would also like to acknowledge
+   the invaluable King, M. D., Menzel, W. P., Grant, P. S., Myers, J. S.,
+   Arnold, G. T., support of the MASTER instrument engineering team at
+   Platnick, S. E., Gumley, L. E., Tsay, S. C., Moeller, C. C., Fitzge-
+   NASA Ames Research Center, in particular Edward Hildum, rald, M.,
+   Brown, K. S., & Osterwisch, F. G. (1996). Airborne scan- Patrick Grant,
+   Pavel Hajek, and Jeannette van den Bosch. ning spectrometer for remote
+   sensing of cloud, aerosol, water vapor Reference herein to any specific
+   commercial product, and surface properties. Journal of Atmospheric and
+   Oceanic Techno- logy, 13, 777±794. process, or service by trade names,
+   trademark, manufacturer Palluconi, F. D., & Meeks, G. R. (1985).
+   Thermal infrared multispectral or otherwise does not imply endorsement
+   by the United scanner (TIMS): an investigator's guide to TIMS data. JPL
+   Publication, States or the Jet Propulsion Laboratory, California
+   Institute 85-32. of Technology. Salomonson, V. V., Barnes, W. L.,
+   Maymon, P. W., Montgomery, H. E., & Ostrow, H. (1989). MODIS: advanced
+   facility instrument for studies of the earth as a system. IEEE
+   Transactions on Geoscience and Remote Sensing, 27, 145±153. References
+   Schmugge, T. J., Becker, F., & Li, Z.-L. (1991). Spectral emissivity
+   varia- tions observed in airborne surface temperature measurements.
+   Remote Arnold, G. T., Fitzgerald, M. F., Grant, P. S., Platnick, S.,
+   Tsay, S., Myers, J. S., Sensing of the Environment, 35, 95±104. & King,
+   M. D. (1996). MODIS Airborne Simulator Radiometric Cali- Slater, P. N.,
+   Biggar, S. F., Holm, R. G., Jackson, R. D., Mao, Y., Moran, bration.
+   SPIE Proceedings, Earth Observing System Conference, 2820, M. S.,
+   Palmer, J. M., & Yuan, B. (1987). Reflectance- and radiance- 56±66.
+   based methods for the in-flight absolute calibration of multispectral
+   Balick, L. K., Golanics, C. J., Shines, J. E., Biggar, S. F., & Slater,
+   P. N. sensors. Remote Sensing of the Environment, 22, 11±37. (1991).
+   The in-flight calibration of a helicopter-mounted Daedalus mul- Thome,
+   K. J., Gellman, D. I., Parada, R. J., Biggar, S. F., Slater, P. N., &
+   tispectral scanner. Proceedings of SPIE, 1493, 215±223. Moran, M. S.
+   (1993). In-flight radiometric calibration of Landsat-5 Barnes, W. L.,
+   Pagano, T. S., & Salomonson, V. V. (1998). Pre-launch Thematic Mapper
+   from 1984 to present. Proceedings of SPIE, 1938, characteristics of the
+   Moderate Resolution Imaging Spectroradiometer 126±130. (MODIS) on EOS
+   AM1. Transactions on Geoscience and Remote Sen- Thome, K. J.,
+   Gustafson-Bold, C. L., Slater, P. N., & Farrand, W. H. (1996). sing,
+   36, 1088±1100. In-flight radiometric calibration of HYDICE using a
+   reflectance-based Berk, A., Bernstein L. S., & Robertson, D.C. (1989).
+   MODTRAN: a mod- approach. Proceedings of SPIE, 2821, 311±319. erate
+   resolution model for LOWTRAN 7. Tech. Rep. GL-TR-89-0122, Thome, K. J.,
+   Herman, B. M., & Reagan, J. A. (1992). Determination of Geophys. Lab.,
+   Bedford, MA. precipitable water from solar transmission. Journal of
+   Applied Meteor- Biggar, S. F., Gellman, D. I., & Slater, P. N. (1990).
+   Improved evaluation of ology, 31, 157±165. optical depth components
+   from Langley plot data. Remote Sensing of Vane, G., Green, R. O.,
+   Chrien, T. G., Enmark, H. T., Hansen, E. G., & the Environment, 32,
+   91±101. Porter, W. M. (1993). The Airborne Visible/Infrared Imaging
+   Spectro- Biggar, S. F., Labed, J., Santer, R. P., Slater, P. N.,
+   Jackson, R. D., & Moran, meter (AVIRIS). Remote Sensing of the
+   Environment, 44, 127±143. M. S. (1998). Laboratory calibration of field
+   reflectance panels. Pro- Yamaguchi, Y., Kahle, A. B., Tsu, H.,
+   Kawakami, T., & Pniel, M. (1998). ceedings of SPIE, 924, 232±240.
+   Overview of advanced spaceborne thermal emission reflectance radio-
+   Butler, J. (2000). Personal communication of MODIS Airborne Simulator
+   meter. IEEE Transactions on Geoscience and Remote Sensing, 36, Annual
+   Meeting Notes. Goddard Space Flight Center, March 2000. 1062±1071.

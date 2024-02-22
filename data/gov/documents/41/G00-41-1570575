@@ -1,0 +1,137 @@
+http://step.nasa.gov/omg/cwm_part4_00-01-11.pdf
+
+   Common Warehouse Metamodel (CWM) Specification Volume 4. Extensions
+   XML, IDL and DTD Proposal to the OMG ADTF RFP: Common Warehouse
+   Metadata Interchange (CWMI) Joint Submission International Business
+   Machines Oracle Corporation Corporation Unisys Corporation UBS AG NCR
+   Corporation Genesis Development Corpora- tion Hyperion Solutions
+   Corporation Dimension EDI Supported by: Deere & Company InLine Software
+   Sun Microsystems, Inc. Aonix Hewlett-Packard Company Hitachi, Ltd. Data
+   Access Technologies OMG Document ad/2000-01-11 February 11, 2000
+   Copyright 1999, IBM Corporation Copyright 1999, Unisys Corporation
+   Copyright 1999, NCR Corporation Copyright 1999, Hyperion Solutions
+   Copyright 1999, Oracle Corporation Copyright 1999, UBS AG Copyright
+   1999, Genesis Development Corporation Copyright 1999, Dimension EDI The
+   companies listed above hereby grant a royalty-free license to the
+   Object Management Group, Inc. (OMG) for worldwide distribution of this
+   document or any derivative works thereof, so long as the OMG reproduces
+   the copyright notices and the below paragraphs on all distributed
+   copies. The material in this document is submitted to the OMG for
+   evaluation. Submission of this document does not represent a commitment
+   to implement any portion of this specification in the products of the
+   submitters. WHILE THE INFORMATION IN THIS PUBLICATION IS BELIEVED TO BE
+   ACCURATE,THE COMPANIES LISTED ABOVE MAKE NO WARRANTY OF ANY KIND WITH
+   REGARD TO THIS MATERIAL INCLUDING BUT NOT LIMITED TO THE IMPLIED
+   WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. The
+   companies listed above shall not be liable for errors contained herein
+   or for incidental or consequential damages in connection with the
+   furnishing, performance or use of this material. The information
+   contained in this document is subject to change without notice. This
+   document contains information which is protected by copyright. All
+   Rights Reserved. Except as otherwise provided herein, no part of this
+   work may be reproduced or used in any form or by any means--graphic,
+   electronic, or mechanical, including photocopying, recording, taping,
+   or information storage and retrieval systems--without the permission of
+   one of the copyright owners. All copies of this document must include
+   the copyright and other information contained on this page. The
+   copyright owners grant member companies of the OMG permission to make a
+   limited number of copies of this document (up to fifty copies) for
+   their internal use as part of the OMG evaluation process. RESTRICTED
+   RIGHTS LEGEND. Use, duplication, or disclosure by government is subject
+   to restrictions as set forth in subdivision (c) (1) (ii) of the Right
+   in Technical Data and Computer Software Clause at DFARS 252.227.7013.
+   CORBA, OMG, and Object Request Broker are trademarks of Object
+   Management Group. 1. CWMX Rendered in XML 5 2. CWM Interfaces as CORBA
+   IDL 197 2.1 ER.idl 198 2.2 CORBAIDLDataTypes.idl 205 2.3 COBOLData.idl
+   211 2.4 DMSII.idl 225 2.5 Essbase.idl 243 2.6 Express.idl 254 2.7
+   IMSDatabase.idl 269 2.8 InformationSet.idl 300 2.9
+   InformationReporting.idl 309 3. CWMX Document Types Definitions 313 3.1
+   CWMX.dtd 314 3.2 ER.dtd 315 3.3 CORBAIDLDataTypes.dtd 320 3.4
+   COBOLData.dtd 325 3.5 DMSII.dtd 334 3.6 Essbase.dtd 347 3.7 Express.dtd
+   356 3.8 IMSDatabase.dtd 364 3.9 InformationSet.dtd 383 3.10
+   InformationReporting.dtd 387 2/11/2000 ad/2000-01-11: Common Warehouse
+   Metamodel, Vol 4 iii iv ad/2000-01-11: Common Warehouse Metamodel, Vol
+   4 2/11/2000 1 CWMX Rendered in XML This chapter contains the CWM
+   Extension (CWMX) metamodels expressed in XML. These metamodels are used
+   to generate the interfaces and XML document types in chapters 2 and 3
+   of this volume. The XML is shown below as an update to the CWM XML
+   rather than as a separate XML document so that links to CWM and UML
+   model elements can be expressed as simple XMI references. To add CWMX
+   metamodels to the CWM XML in volume 2, chapter 1, make the two
+   additions shown below. First, add the following XMI.model elements into
+   the XMI.header section after the CWM XMI.model elements. Second, add
+   the following into the end of the XMI.content section. ER Entity
+   NonuniqueKey 2/11/2000 ad/2000-01-11: Common Warehouse Metamodel, Vol 4
+   5 CandidateKey ForeignKey relationshipEnd 0 1 false false Domain
+   validationRule 6 ad/2000-01-11: Common Warehouse Metamodel, Vol 4
+   2/11/2000 1 1 false false default 1 1 false false baseType 0 1 false
+   false Attribute Relationship 2/11/2000 ad/2000-01-11: Common Warehouse
+   Metamodel, Vol 4 7 RelationshipEnd delete 1 1 false false update 1 1
+   false false insert 1 1 false false 8 ad/2000-01-11: Common Warehouse
+   Metamodel, Vol 4 2/11/2000 foreignKey 0 1 false false ModelLibrary
+   Model SubjectArea 2/11/2000 ad/2000-01-11: Common Warehouse Metamodel,
+   Vol 4 9 PrimaryKey ForeignKeyImplements relationshipEnd 0 1 false false
+   foreignKey 0 1 false false DomainBaseType 10 ad/2000-01-11: Common
+   Warehouse Metamodel, Vol 4 2/11/ baseType 0 1 false false domain 0 -1
+   false true Expressions Foundation KeysIndexes Model_Management
+   2/11/2000 ad/2000-01-11: Common Warehouse Metamodel, Vol 4
+   org.omg.mof.idl_prefix=org.omg.cwmx.foundation org.omg.mof.idl_prefix
+   org.omg.cwmx.foundation
+   org.omg.mof.java_prefix=org.omg.java.cwmx.foundation
+   org.omg.mof.java_prefix org.omg.java.cwmx.foundation
+   org.omg.xmi.namespace=CWMXER org.omg.xmi.namespace CWMXER
+   org.omg.mof.idl_substitute_name=defaultValue
+   org.omg.mof.idl_substitute_name defaultValue
+   org.omg.mof.java_substitute_name=defaultValue
+   org.omg.mof.java_substitute_name defaultValue
+   org.omg.mof.idl_substitute_name=ErAttribute
+   org.omg.mof.idl_substitute_name 12 ad/2000-01-11: Common Warehouse
+   Metamodel, Vol 4 2/11/ ErAttribute
+   org.omg.mof.java_substitute_name=ErAttribute
+   org.omg.mof.java_substitute_name ErAttribute
+   org.omg.mof.idl_substitute_name=ErRelationship
+   org.omg.mof.idl_substitute_name ErRelationship
+   org.omg.mof.java_substitute_name=ErRelationship
+   org.omg.mof.java_substitute_name ErRelationship
+   org.omg.mof.idl_substitute_name=ErModel org.omg.mof.idl_substitute_name
+   ErModel org.omg.mof.java_substitute_name=ErModel
+   org.omg.mof.java_substitute_name ErModel 2/11/2000 ad/2000-01-11:
+   Common Warehouse Metamodel, Vol 4 CORBAIDLDataTypes IDLType typeCode 1
+   1 false false ArrayType length 1 1 false false 14 ad/2000-01-11: Common
+   Warehouse Metamodel, Vol 4 2/11/ elementType 1 1 false false
+   ExceptionType SequenceType length 1 1 false false elementType 2/11/2000
+   ad/2000-01-11: Common Warehouse Metamodel, Vol 4 1 1 false false
+   WstringType length 1 1 false false StringType length 16 ad/2000-01-11:
+   Common Warehouse Metamodel, Vol 4 2/11/ 1 1 false false FixedType
+   digits 1 1 false false scale 1 1 false false Alias 2/11/2000
+   ad/2000-01-11: Common Warehouse Metamodel, Vol 4 StructType UnionType
+   EnumType TypeCode > 18 ad/2000-01-11: Common Warehouse Metamodel, Vol 4
+   2/11/ ArrayElementType elementType 1 1 false false arrayType 0 -1 false
+   true SequenceElementType elementType 1 1 false false 2/11/2000
+   ad/2000-01-11: Common Warehouse Metamodel, Vol 4 sequence 0 -1 false
+   true Foundation DataTypes org.omg.mof.idl_prefix=org.omg.cwmx.resource
+   org.omg.mof.idl_prefix org.omg.cwmx.resource
+   org.omg.mof.java_prefix=org.omg.java.cwmx.resource
+   org.omg.mof.java_prefix org.omg.java.cwmx.resource
+   org.omg.xmi.namespace=CWMXIDL org.omg.xmi.namespace CWMXIDL 20
+   ad/2000-01-11: Common Warehouse Metamodel, Vol 4 2/11/ COBOLData
+   COBOLField level 1 1 false false signKind 1 1 false false isFiller 1 1
+   false 2/11/2000 ad/2000-01-11: Common Warehouse Metamodel, Vol 4 false
+   isJustifiedRight 1 1 false false isBlankWhenZero 1 1 false false
+   isSynchronized 1 1 false false picture 1 1 false 22 ad/2000-01-11:
+   Common Warehouse Metamodel, Vol 4 2/11/ false occursLower 0 1 false
+   false occursUpper 0 1 false false indexName 0 -1 false false isExternal
+   1 1 false 2/11/2000 ad/2000-01-11: Common Warehouse Metamodel, Vol 4
+   false isGlobal 1 1 false false dependingOnField 0 1 false false
+   occurringField 0 -1 false true occursKeyInfo 24 ad/2000-01-11: Common
+   Warehouse Metamodel, Vol 4 2/11/ 0 -1 true true occursKeyFieldInfo 0 -1
+   false true redefinedByField 0 -1 false true redefinedField 0 1 false
+   false 2/11/2000 ad/2000-01-11: Common Warehouse Metamodel, Vol 4
+   paddedFD 0 -1 false true linageInfo 0 -1 false true dependingFD 0 -1
+   false true statusFD 26 ad/2000-01-11: Common Warehouse Metamodel, Vol 4
+   2/11/ 0 -1 false true firstRenames 0 -1 false true thruRenames 0 -1
+   false true relativeFD 0 -1 false true 2/11/2000 ad/2000-01-11: Common
+   Warehouse Metamodel, Vol 4 Usage COBOLFD organization 1 1 false false
+   accessMode 1 1 false false 28 ad/2000-01-11: Common Warehouse
+   Metamodel, Vol 4 2/11/ isOptional 1 1 false false reserveAreas 0 1
+   false false

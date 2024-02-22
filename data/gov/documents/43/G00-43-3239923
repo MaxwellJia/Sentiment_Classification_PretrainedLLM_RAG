@@ -1,0 +1,149 @@
+http://www-oss.fnal.gov/uas/
+
+     __________________________________________________________________
+
+      OSS Dept - Computing Division - Fermi at Work - Fermi Home Page -
+                                  Comments
+     __________________________________________________________________
+
+   Welcome to the User Application Support (UAS) group home page.
+
+   New! Community-Support mailing lists! Several mailing lists have been
+   established so that the user community can more effectively help each
+   other to use the available software tools and utilities.
+
+   Got a question? Look at the community support mailing lists. If you
+   can't find an appropriate list, We recommend that you send mail to
+   helpdesk@fnal.gov or call x2345, but you may also contact the UAS group
+   directly by sending mail to uas-group@fnal.gov.
+     __________________________________________________________________
+
+Software We Provide:
+
+   Use upc to check the status of your favorite UPS product (i.e., which
+   versions are available in kits and/or on fnalu, which versions are
+   "current" or "test" or unchained, etc.).
+
+   See the fnal.announce.products and/or fnal.announce.unix newsgroups for
+   recent product release information.
+
+   The software packages we support fully include:
+     * FUE - the core products of the Fermi User Environment
+          + bootstrap, to install FUE the first time
+          + coreFUE, which contains ups, upd, and perl.
+          + fullFUE, which contains coreFUE plus systools (Fermi-specific
+            system administration utilities) and futil (Fermi-specific
+            user utilities)
+     * tape support (ftt, rbio, fmb, juke...)
+     * login shells ( bash, tcsh) and scripting languages and tools (
+       perl, python, expect, tk, tcl, blt, tktools)
+     * Freeware compilers and debuggers (gcc, gdb, dddebugger...)
+
+   We also make various software packages available, without providing
+   full support for them (user consulting for these is generally handled
+   via the community support mailing lists). These include:
+     * email readers (exmh, mh, pine) and news readers (news, netscape)
+     * editors (emacs, xemacs, tpu and the fermitpu extensions, edt...)
+       Note: nedit is a very popular editor, supported and developed by
+       members of the PAT department.
+     * web browsers (netscape, lynx), and web servers (apache)
+     * auxiliary web products (ghostview, ximagetools, xpdf...)
+     * word processing utilities (tex/latex, conv2html, ispell, psutils)
+     * GNU tools (gtools, groff,...)
+
+   We do NOT provide CERNLIB, X terminal, or Computer Simulation support;
+   these are supported by the PAT (Physics Analysis Tools) Department. We
+   also do not support the Online software.
+
+Additional Resources and Documentation for UAS Products:
+
+     * A checklist of steps that OSS members should take when preparing
+       products for distribution -- this includes packaging the product to
+       ups standards for distribution from fnkits.fnal.gov via upd, as
+       well as the additional beaureaucratic overhead of news postings,
+       documentation, etc.
+     * A snapshot of the products we have released in ups v4 format -- all
+       of which include instances which will run on Linux. (November 1998)
+     * The directions we are taking, and why, with /usr/local/products
+       links. (October 1998)
+       Closely related: Trampoline files for shell scripting languages.
+       How do we meet all of the following requirements, within the FUE
+       environment?
+          + must be able to install and use multiple concurrent versions
+            of the product
+          + must be able to run a particular version when requested (via
+            setup)
+          + must be able to run a "default" version from a static, known
+            location without requiring setup
+     * Y2K statement from UAS. In particular, fmb is a product that is
+       mission-critical and will need to be tested.
+     * UAS Policy and Priorities regarding supported platforms. (September
+       1998)
+     * General Documentation (look here first!) and information about
+       offline applications. Or browse the product documentation area.
+     * UPC (Product Status Report), where you can get detailed information
+       on the status of any product(s) you wish.
+     * UAS reports from the Unix User Meetings. Other presentations from
+       Unix User Meetings (held monthly). (Well, they used to be held
+       monthly; they haven't been held regularly for quite some time, and
+       UAS hasn't had any presentations other than product status updates,
+       since 1997.
+     * UNIX Resources, which lists many other sources of information about
+       UNIX, including the UNIX at Fermilab manual.
+     * Email and You, a presentation given in April 1997 concerning: the
+       alias fnalu, what it means and when you should (and shouldn't!) use
+       it; some information about your .forward file; and information on
+       how to move your PINE mail from the system spool area to your own
+       home area (a very good idea!).
+
+Projects We Support:
+
+     * Linux Application Support: our considerations and priorities in
+       providing user applications under Linux.
+     * FUE (Fermi UNIX Environment)
+     * Run 2 Computing and some of its Working Groups:
+          + Configuration Management
+          + C++
+          + Code Management
+     * Fermi Modular Backup (fmb).
+     * FermiTools software repository.
+     * ... and some of us are involved in the Auditorium Committee ...
+
+Useful Reference Places:
+
+     * CD Documentation and Software, which describes the various places
+       wherein one may find useful information about software
+     * CD Documentation DB, a searchable database of Computing Division
+       documents
+     * Build Machines: a list of the officially designated machines where
+       the UAS (and other groups') products are compiled and linked.
+
+Members of UAS:
+
+     * Lauri Loebel Carpenter (lauri@fnal.gov), Group Leader, x2214.
+     * Wayne Baisley (baisley@fnal.gov, x8490
+     * Chuck DeBaun (debaun@fnal.gov), x3522
+     * Marc Mengel (mengel@fnal.gov), x8256
+     * Donna Reid (donnar@fnal.gov), x2379
+     * Mike Stolz (stolz@fnal.gov), x8060
+
+Our mission is to:
+
+     * obtain and/or develop "general purpose" UNIX offline software
+       utilities,
+     * assemble these into standard FUE-compliant software packages,
+     * make them available to the Fermi user community through kits
+       distribution,
+     * install packages as required on the fnalu general purpose UNIX
+       cluster,
+     * provide consulting on the installation (and, frequently, the use)
+       of said packages on other clusters,
+     * develop and/or maintain the necessary infrastructure to perform the
+       above duties.
+
+
+    Mail comments about this page to uas-group@fnal.gov
+    Last Modified by Lauri Loebel Carpenter on 13 January 2000.
+     __________________________________________________________________
+
+   Security, Privacy, Legal

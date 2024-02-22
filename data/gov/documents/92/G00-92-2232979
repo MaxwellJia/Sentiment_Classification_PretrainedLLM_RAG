@@ -1,0 +1,669 @@
+http://infinite-entropy.lbl.gov/VRML/
+
+   [vrmltex2.gif]
+
+  VRML Class Summary
+
+              History of VRML
+              Capabilities
+
+                    # Selective Refinement
+                    # Hyperlinks
+                    # Texture Maps
+                    # Level of Detail
+
+              System Requirements
+              The Future of VRML
+
+                    # VRML+
+                    # Embedded VRML
+                    # Java
+
+              VRML Browsers
+
+                    # SDSC repository
+
+              Introduction to the Webspace Browser
+
+                    # Examiner Viewer
+                    # Walk Viewer
+
+              Setting up your VRML environment
+
+                    # VRML mime-type
+                    # VRML mailcap for unix
+
+              Converting 3D data into VRML
+
+                    # Repository site for VRML convertors
+                    # DXF to VRML (from Intergraph)
+                    # Inventor to VRML
+
+              Basic VRML File Editing
+
+                    # Adding lights
+                    # Adding Hyperlinks to Objects
+
+              Details of VRML File Format
+
+                    # What is an Node.
+                    # What is a Scene Graph
+                    # Types of nodes
+                         @ Objects (spheres, cones, cubes, text)
+                         @ 3D primitives (lines, points, normals)
+                         @ Materials
+                         @ Lights
+                         @ Groups/Separators
+                         @ Transformations
+                         @ Control
+                         @ Cameras
+                    # How does the renderer proceed through the scene.
+                         @ Propagation of Transformations
+                         @ Propagation of materials.
+                         @ Control structures
+                         @ Shape Types
+                    # Exercises in building VRML files by hand.
+                         @ Simple cone.
+                         @ Change materials of cone
+                              - diffuse color
+                              - specular color
+                         @ Change lighting of cone
+                              - types of lights
+                              - light properties
+                         @ Making the cone a hyperlink
+                         @ Applying a texture map
+
+                Other Examples
+                  _____________________________________________________
+
+VRML Class
+
+  History of VRML
+
+                (A more detailed history can be found at SGI)
+                VRML is a simple ascii-text description of geometries that
+                can be shared across platforms (unix, mac, windows). It is
+                based on SGI's OpenInventor file format. It has been
+                extended to support web- oriented capabilites like
+                hyperlinks and selective refinement.
+
+                The VRML 1.0 standard was developed during discussions via
+                an electronic mailing list involving representatives from
+                industry and the web community and organized during the
+                1993 web conference. The first VRML browser, WebSpace, was
+                unveiled during the 1995 web conference in Darmstadt
+                Germany.
+                  _____________________________________________________
+
+  Capabilties
+
+               o Selective Refinement (WWW Inlines) (Palladium) and
+                 (stonehenge):
+                 It would take impractically long to download very complex
+                 scenes. Having all of the scene data at the same time
+                 would also severely impact rendering performance. VRML
+                 has the ability to download portions of the scene from
+                 the webserver independently so that sections of the scene
+                 can be selectively refined as you get close enough to see
+                 the details. This capability is works hand-in-hand with
+                 Level-of-Detail.
+               o Level of Detail: This has a two-fold purpose; to reduce
+                 network load (when used with WWWInlines) and also enable
+                 some browsers to select different levels of detail to
+                 improve their drawing speed. The 3D rendering capabilites
+                 can differ greatly from machine-to-machine. Slower
+                 machines can select a lower level-of-detail so that they
+                 can render the objects faster.
+               o HyperLinks (Palladium):
+                 Similar to text hyperlinks and active-maps, objects in
+                 the 3D VRML scenes can be hyperlinked to other VRML files
+                 or web pages. When you go inside of the palladium, you
+                 will notice that some of the objects highlight when you
+                 hold the mouse cursor over them. These are 3D hyperlinks
+                 that can be activated when you click on them.
+               o Texture Mapping (Paragraph):
+                 Applying images to surfaces of 3-D objects to give them
+                 texture and realistic detail.
+                  _____________________________________________________
+
+  System Requirements for VRML browsing
+
+                3D graphics acceleration certainly makes viewing VRML
+                files faster and more enjoyable, but it is not a
+                prerequisite. VRML browsers have been implemented
+                completely in software for a variety of platforms. You
+                should expect VRML browsers for all platforms (Mac,
+                Windows, and Unix) in the near future.
+                  _____________________________________________________
+
+  The Future of VRML
+
+               o VRML +: A collaborative form of VRML being developed by
+                 Worlds Inc and IBM Corp. Normally viewing a VRML geometry
+                 is a private experience. With VRML +, each of the people
+                 entering a VRML scene can see each other. VISA will be
+                 the first to take advantage of this for customer service
+                 on the net.
+               o Embedded VRML: Most popular web browsers have plug-in's
+                 to embed the VRML viewer inside of the Web browser so you
+                 can embed geometries inside of your documents. You will
+                 see much more of this sort of embedding with Active-X and
+                 OpenDoc/Cyberdog containers for VRML viewers which will
+                 allow VRML scenes to be embedded in text documents and
+                 even your machine's desktop.
+               o Hot Java: Java is a machine-independent interpreted
+                 object-oriented language developed by Sun Microsystems.
+                 The web as it is now allows sharing of data (hypertext,
+                 images, video, geometries...etc.) Java allows small
+                 programs ("applets") to be shared on the Web. Not only
+                 would you be able to dynamically download your VRML
+                 viewer with the 3D scene it is intended to view, you
+                 could also make your 3D objects active programs. This
+                 also ties in with collaborative VRML since Java-based
+                 collaborative development frameworks like Habenero will
+                 allow you to create hybrid Java/VRML based collaborative
+                 environments.
+                  _____________________________________________________
+
+  VRML Browsers
+
+                SDSC repository: The San Diego Supercomputing Center
+                (SDSC) maintains a list of availible VRML browsers.
+                Browsers are availible now for almost every major computer
+                platform and Web Browser.
+
+                The browser we will use for example here is SGI/TGS
+                Webspace which is integrated with SGI's Web Browser.
+                Template Graphics Software (TGS), who developed the SGI
+                Webspace is also working on versions for Windows (95 and
+                NT), and the Macintosh.
+
+  Introduction to the WebSpace Browser
+
+    from SGI and Template Graphics Systems (TGS)
+
+                [WebSpaceWinm.gif] The browser is a helper application
+                that is launched whenever you download a .wrl file. It
+                requires an SGI system running Irix 5.3 and the SGI
+                Netscape 1.1JS web browser. Both can be downloaded from
+                the SGI site. Other browsers are availible for PC and
+                Macintosh platforms listed at SDSC.
+
+                The browser has two modes of operaton which are selected
+                under the "options" menu (image)
+
+               o Examiner viewer
+
+                    Used for viewing objects.
+
+                            It has a globe which you can use to spin the
+                            object around and move it around the window.
+
+                    The pad with the arrows on it on the left moves you
+                            up,down, left, or right without rotating you
+                            as the handebars would.
+
+                    The crosshairs allow you to select the center of
+                            rotation for the scene.
+
+                    The thumbwheel to the right of the globe zooms you in
+                            and out of the scene.
+
+               o Walk viewer
+
+                    Used to walk through architectural models.
+
+                    The handlebars act like the controls of a
+                            motor-scooter that flys through the scene. It
+                            is not able to sense the location of walls or
+                            even the floor, so nothing will stop you from
+                            walking right through them.
+
+                    The pad with the arrows on it on the left moves you
+                            up,down, left, or right without rotating you
+                            as the handebars would.
+
+                    The crosshairs allow you to select a location to fly
+                            towards automatically.
+
+                    The Dial on the right side of the handlebars controls
+                            your vertical angle-of-view. (ie. looking up
+                            or down)
+                  _____________________________________________________
+
+  Setting up your System Environment for VRML
+
+                The SGI Webspace installer automatically sets up your
+                environment to handle VRML files, however, it is useful to
+                know the modifications it made to your configuration.
+
+    VRML mimetype
+
+                VRML uses the mimetype x-world/x-vrml. This mime-type is
+                automatically bound to files ending in the .wrl or .vrml
+                extension. You will need to use the .wrl extension for the
+                internet at large because DOS/Windows 3.x users can only
+                handle 3-letter file extensions.
+
+                The following line in your .mimetypes file in Unix
+                identifies .wrl/.vrml files as being this mimetype.
+
+                x-world/x-vrml exts=wrl,vrml
+
+                In addition, you need to add this mime type to your http
+                server so that it will serve up the file as the proper
+                mime-type. For the NCSA httpd, you can find the mime.types
+                file in the conf subdirectory. You would need to add the
+                following entry.
+
+                x-world/x-vrml wrl vrml The installation script for many
+                VRML browsers will do this automatically.
+
+    VRML mailcap
+
+                If you use unix, the operating system must also be told
+                which application program to launch when it receives a
+                file of this type. To have your browser automatically
+                launch webspace, the following line is added to your
+                .mailcap
+
+                x-world/x-vrml; /usr/sbin/webspace -remote %s ; \
+                description="VRML document";
+
+                With Macintosh and Windows Web browsers, you change your
+                mailcap from within the browser using the preferences
+                menu.
+                  _____________________________________________________
+
+  Converting Model Files to VRML
+
+                There is a Repository site for VRML convertors at SDSC.
+                Some of the most important convertors are.
+
+               o DXF to VRML
+                 DXF is an old file format for interchange of 3D models.
+                 It is most commonly associated with AutoCad, however,
+                 many other CAD systems support it.
+               o Inventor to VRML
+                 Which converts from SGI's Inventor 3D model file format.
+                  _____________________________________________________
+
+  Basic VRML File Editing
+
+                Since VRML files are a simple ascii format, you can edit
+                them just like any regular text file. The top of any VRML
+                text file begins with
+                #VRML V1.0 ascii
+                Following that header is a heirarchial description of the
+                model as well as the scene which contains it. This is
+                referred to as a scene graph.
+
+                Following are some common changes that you need to make to
+                VRML files that don't require very detailed knowledge of
+                the file format.
+
+              Adding lights
+                      Sometimes a model you have imported from another
+                      file format appears black when you view it using the
+                      VRML browser (sample). This is because the VRML file
+                      lacks light sources. (note: the SGI Webspace browser
+                      will automatically insert lights if none are present
+                      in the file) A point light source provides the
+                      simplest way to light a scene (sample). To add a
+                      point light, add the following lines to the head of
+                      a VRML file.
+
+PointLight {
+        location 0 0 1
+        color 1 1 1
+}
+
+                      This will add a white light to the scene at location
+                      x=0,y=0,z=0 in 3D space, thus illuminating any
+                      objects in the scene. There are many other lighting
+                      styles availible.
+
+              Adding Hyperlinks to Objects
+                      This requires that we get into our files with more
+                      depth. We will use the following simplified demo
+                      file.
+
+#VRML V1.0 ascii
+Separator {
+        PerspectiveCamera {
+            position 0 0 10
+        }
+        #light the scene
+        DirectionalLight { #default color and location
+            direction 0 0 -1
+        }
+        #Draw 3 spheres side-by-side
+        #The sphere in the middle is half the
+        #size of the ones on the end.
+
+        # Draw First Sphere is in the Center
+        Sphere {
+                radius 0.5
+        }
+        Translation { # move to the left by 1
+                translation -4 0 0
+        }
+        # Draw Second Sphere usng above translation
+        Sphere {
+                radius 1.0
+        }
+        Translation { #now move right by 2
+                # Which ends up being to the right of center by 1
+                translation 8
+        }
+        #Draw the 3rd Sphere
+        Sphere {
+                radius 1.0
+        }
+}
+
+                      Now, we will make each of these spheres VRML
+                      hyperlinks to other URLs on the Web. To make an
+                      object a hyperlink, we encapsulate it with a
+                      WWWAnchor as follows
+
+WWWAnchor {
+        name "some URL"
+        some object
+}
+
+                      In this case, we will encapsulate each of the
+                      spheres with WWWAnchor's. For example, lets take the
+                      left sphere and make it a hyperlink to an html page
+                      using.
+
+WWWAnchor {
+        name "http://www.ncsa.uiuc.edu"
+        #Draw the 2nd sphere
+        Sphere {
+                radius 1.0
+        }
+}
+
+                      And then make the second sphere a link to another
+                      VRML file using
+
+ WWWAnchor {
+        name "http://bach.ncsa.uiuc.edu/VRML/examples/LightedCone.wrl"
+        #Draw the 2nd sphere
+        Sphere {
+                radius 1.0
+        }
+}
+
+                      When you reload the scene, you will notice that the
+                      leftmost sphere will highlight if you hold the mouse
+                      pointer over it. If you click on it, you will go to
+                      that URL.
+
+              More advanced Hyperlinks.
+                      It is important to be able to manipulate VRML files
+                      without actually understanding their content. Often
+                      the content was computer- generated, so you cannot
+                      hope to completely understand it. In this example,
+                      we will take two computer-generated models, combine
+                      them into one scene, and then hyperlink them.
+
+                      Starting with fred.iv and car.iv.
+
+                   1. Convert fred.iv into a VRML file using ivtovrml
+                      ivToVRML -o fred.wrl fred.iv
+                      Convert car.iv using the same utility
+                   2. Copy fred.wrl to a new file called both.wrl as
+                      follows
+                      cp fred.wrl both.wrl
+                   3. Now we will combine the two files by cutting and
+                      pasting in an editor. On your SGI's commandline
+                      type;
+                      jot both.wrl
+                      then type
+                      jot car.wrl
+                      Copy the entire contents of the car.wrl editing
+                      window and paste it at the beginning of the both.wrl
+                      editing window. Then save the result, but don't exit
+                      the editors.
+                   4. Open your browser to the both.wrl file. You will
+                      notice that the two objects are on top of
+                      one-another. We need to move the car to the left
+                      some to get it out of the way of the space-station.
+                      This is done by adding the following to the both.wrl
+                      file.
+        Translation {
+                translation 1 0 0
+        }
+
+                      Save both.wrl and reload it in Webspace. Now the
+                      objects are separated. 5) Now we will make each
+                      object a hyperlink to the individual object. Where
+                      the fred.wrl data begins in both.wrl, add the
+                      following
+WWWAnchor {
+        name "file://fred.wrl"
+        .....< the fred data>.....
+}
+
+                      Do the same for the car.wrl data in the both.wrl
+                      file using the url file://car.wrl.
+                   5. Now when you reload the file both.wrl, each of the
+                      objects are hyperlinked to the .wrl file with the
+                      individual object. This would be a rudimentary
+                      method of creating a gallery of selectable objects.
+                  _____________________________________________________
+
+Details of VRML File Format
+
+  What is an Node.
+
+              A VRML node is an individual object or operation in the 3D
+                      model. For example, a node can be a light, an object
+                      like a cube, or an operation like a rotation.
+
+              The VRML textual representation of a node is of the form
+                      name
+                      {
+
+                    some data
+
+                    ......
+
+                      }
+                      The name identifies the node type. The contents
+                      (some data) can be descriptions of parameters for
+                      the node or other "nested" nodes. Paramters can be
+                      one of the following
+
+                    Single-valued Property
+                            propertynamevalue
+                            such as the radius of a sphere
+                            radius 1.0
+                            or such as a URL
+                            name "http://www.anywhere.com"
+
+                    Mult-valued Property
+                            propertyname value1 value2 .... valueN
+                            such as a location in 3D
+                            location 0 1 1
+
+                    List of Properties propertyname [ value1a value2a
+                            value3a, value1b value2b value3b ]
+                            such as a list of points in 3D space.
+                            point [ 0 0 0, 0 0 1, 0 -3 0, 1 1 1 ]
+
+  What is a Scene Graph
+
+                    A scene graph is a heirarchial description of the
+                            objects and operations in the VRML model. The
+                            term, graph, comes from the tree-like
+                            organization of objects in the model. The
+                            effect of operations is restricted only to
+                            objects in the same branch of the tree and all
+                            of their children.
+
+  Types of Inventor Nodes
+
+                    # Objects (spheres, cones, cubes)
+                    # 3D primitives
+                    # Materials
+                    # Lights
+                    # Groups/Separators
+                    # Transformations
+                    # Control
+
+  How does the renderer proceed through the scene
+
+                    # Propagation of Transformations
+                    # Propagation of materials.
+                    # Control structures
+                    # Shape Types
+                  _____________________________________________________
+
+  Exercises in building VRML files by hand
+
+    Simple cone
+
+                Back again to square-one. We will build a simple scene
+                with a cone.
+
+         1. Begin with the following scene graph
+#VRML V1.0 ascii
+Separator {
+        #PerspectiveCamera {}
+        DirectionalLight {
+             direction 0 0 -1
+        }
+        Cone {
+                bottomRadius 1
+                height 2
+        }
+}
+
+         2. Change materials of cone Now we will change the material that
+            the cone is made of using a "Material" node. Insert the
+            material node right after the "PointLight". The following
+            settings will made the node appear to be a bright red.
+Material {
+        diffuseColor 0.8 0 0 # r=.8 g=0 b=0
+}
+
+              diffuse color:
+                      This is the flat (matte) reflective color of the
+                      material.
+
+              ambient color:
+                      This is the color of the material when unlighted
+                      (ie. the material will appear to glow) in the
+                      absence of light.
+
+              specular color/shininess:
+                      The specular color of a material is the color of the
+                      highlights of a shiny/metallic surface. Hence, the
+                      shininess of the material and its specular color are
+                      linked. The shininess determines how pronounced the
+                      highlights are while the specular color determines
+                      the color of those highlights.
+
+         Change lighting of cone Currently, the cone is lighted with a
+            point-light. There are a wide variety of lights availible to
+            duplicate real-word situations
+            Types of lights
+
+              PointLight:
+                      Similar to a bare lightbulb.
+
+              DirectionalLight:
+                      Similar to a flashlight. Illuminates as a tube of
+                      light.
+
+              SpotLight:
+                      Similar to a tracklight, floodlight, or lamp.
+                      Illuminates in a cone of light.
+
+         Light properties This depends on the light. We will try lighting
+            the cone with three different light sources. First, we will
+            experiment with the PointLight.
+
+         1. Make the object white again by changing the material
+            properties to
+            diffuseColor 1 1 1
+         2. The point light has only 4 properties
+            (on,intensity,color,location), really, only color and location
+            are important. Lets change the color of the light to blue by
+            adding the property
+            color 0 0 1
+         3. We can also move the light to a different location by adding
+            the property
+            location 10 0 0
+            This places the light to the right of the cone.
+
+      Using the SpotLight
+
+          In addition to the parameters availible to the PointLight, the
+          parameters of the SpotLight node basically define the dimensions
+          and orientation of a cone using location, direction, and
+          cutOffAngle.
+
+         1. Replace the PointLight node with the following SpotLight node.
+SpotLight{
+        location 0 4 0     # Above the object by 4 units
+        direction 0 -1 0   # point downward
+        cutOffAngle 0.7
+}
+
+    Applying a texture map
+
+          Now we can investigate how to apply an image to these 3D
+          surfaces. Texture maps can be used to improve the realism of a
+          relatively simple scene.
+
+         1. Begin with the following scene graph
+#VRML V1.0 ascii
+Separator {
+        PointLight {
+                location 4 4 4
+        }
+        PointLight {
+                location -8 -8 -8
+                color .2 .2 .8   #blue light
+        }
+        Cube {
+                width 1
+                height 1
+                depth 2
+        }
+        Translation {
+                translation 3 0 0
+        }
+        Sphere{ radius 1 }
+}
+
+         2. We need to have an image to apply to the surface. We will use
+            "capture" to get ourselves an appropriate image. Type
+            capture
+            at the sgi commandline. Find some interesting pattern on the
+            screen and grab it by pressing on the "sweep" button and
+            selecting an area of the screen. Try to select a relatively
+            square region.
+            In practice, you will want to convert your texturemaps to jpeg
+            or gif since not all machines support rgb images.
+         3. Apply the texturemap to the the cube by using the Texture2
+            node before the Cube node.
+Texture2 {
+# for texture maps, you need to use the absolute path name to the
+# image
+        filename "file://texture.rgb"
+}
+
+         4. Load the VRML scene.
+            ___________________________________________________________
+
+          Other Examples
+            ___________________________________________________________
+
+
+    maintained by John Shalf
+    jshalf@ncsa.uiuc.edu

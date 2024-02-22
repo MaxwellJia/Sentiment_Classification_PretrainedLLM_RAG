@@ -1,0 +1,112 @@
+http://octlcam.jpl.nasa.gov/pub/io/neyee.html
+
+The Auxiliary I/O
+
+   A Mini-DIN 8-pole external connector is provided for auxiliary
+   connections to the camera server. This page discusses the additional
+   functionality that this connector provides.
+     __________________________________________________________________
+
+  Physical connection
+
+   The Auxiliary I/O connector provides the interface to one relay switch
+   output and two digital inputs.
+
+    Pinout
+
+   A pinout table and diagram for the connector is detailed below:
+
+
+   [neyeea.gif]
+
+          Rear view of the camera server  pinout of the Aux connector
+          (enlarged)
+
+   Pin Function
+   1 - Relay switch (Max 24V AC/DC, 100mA)
+   2 - Relay switch (Max 24V AC/DC, 100mA)
+   3 - Iris output signal
+   4 - N/C
+   5 - Auto Iris Lens power (+12V max 50 mA)
+   6 - Input 1
+   7 - Input 2
+   8 - Ground
+
+   Note:
+   GND on the IO connector is not connected directly to the power
+   connector. Always use two independent power sources! Connecting GND to
+   the power connector will permanenly damage your camera server.
+     __________________________________________________________________
+
+  Controlling and Monitoring
+
+    I/O Files
+
+   The status of the input/output interface can be monitored and
+   controlled by the IO software within your camera server. From your Web
+   browser, you can access the IO control file in order to either drive
+   the relay output or monitor the status of the digital inputs. To access
+   the IO files enter one of the following URLs:
+
+     http://cameraname/io/input.txt
+     http://cameraname/io/relayon.txt
+     http://cameraname/io/relayoff.txt
+
+   You will require root access to reach these files and may now be asked
+   to supply a username and password. Login as root and supply the root
+   password (default password is pass).
+
+  Relay Output
+
+   You can use this output to drive directly a maximum load of 24V AC/DC
+   at 100mA. By connecting additional relay circuitry, you can also use
+   this output to drive heavier loads.
+
+   You can drive the relay off and on simply by clicking relayoff.txt or
+   relayon.txt. Clicking on either of these will return either of the
+   following messages, respectively:
+
+     Relay is On
+     Relay is Off
+
+   Note:
+   You can also control the relay switch via a CRON script using the
+   snapshot command.
+
+  Digital Inputs
+
+   The two digital inputs on pins 6 and 7 of the connector makes it
+   possible to trigger your snapshots on chosen events. However, you must
+   use a CRON script to implement this functionality.
+
+   By connecting a digital microcircuit to a particular door for example,
+   it is possible to take a snapshot on each occasion that it opens or
+   closes.
+
+   Status information for each of the two digital inputs is presented
+   within a text string. The status of the inputs may be read by
+   clicking on the input.txt. The string will amongst other things define
+   the time and duration of the last trigger event for the each input:
+
+   input:1 current:0 last:1 time:12.22 pulse:2
+   input:2 current:1 last:0 time:14.46 pulse:6
+
+     This table describes each digital input text string:
+
+   String   Description
+   input:   Input reference (Input 1= pin 6, Input 2 = pin 7)
+   current: Current port status (Logical high = 1, Logical low = 0)
+   last:    Status before last read operation
+   time:    Time of the last read operation
+   pulse:   Elapsed time (number of pulses received since the last read
+            operation)
+
+   The way in which you use the auxiliary connector is of course for you
+   to decide. Axis does not provide application software, but instead
+   allow you to determine how this connector is best utilized. Naturally,
+   we would be more than pleased to learn of any interesting applications
+   that you might develop!
+     __________________________________________________________________
+
+
+    Tech-Support@axis.com

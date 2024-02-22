@@ -1,0 +1,50 @@
+http://fn781a.fnal.gov/etc/w781.html
+
+                            Using the World-Wide-Web
+
+   Using the World-Wide-Web involves communication between two types of
+   programs. One type is a browser and the other is a server. The browser
+   is the program that you run to look at the Web. There are many
+   browsers. The two that we have tested are
+
+   Mosaic
+   This program is a graphical browser that runs on UNIX workstation using
+   X windows, or Macintoshes, or PC's with Windows. This program can
+   display some graphics directly and uses external programs like
+   ghostview to display postscript or xv to display gif files. The
+   external programs needed are listed in the documentation.
+
+   This is the prefered way to browse the Web. Mosaic used to be called
+   xmosaic. It is available precompiled for many machines by anonymous ftp
+   from ftp.ncsa.uiuc.edu. Mosaic is available on most Fermilab machines
+   by using the commands
+      setup www
+      xmosaic
+
+   Lynx
+   This program works on VT100 type terminals. It cannot display graphics,
+   but it can download graphics files. This browser is well suited to
+   people with slow network connections. If you can telnet and ftp you can
+   use this browser.
+
+   I have tested this browser with an xterm, Decterm, and a Wyse VT220
+   equivalent. It works very well. I have run it from my home over the
+   phone lines with a 2400 baud modem. In my experience I have found only
+   one problem with this browser. It did not allow downloading to a local
+   file when I used the xterm. It did work correctly for the Decterm and
+   the Wyse terminal. I fixed the problem with the xterm by adding the
+   line
+       DOWNLOADER:Save to local disk:cp %s %s:TRUE
+
+   to the file lynx.cfg.
+
+   This browser is available by anonymous ftp from ftp2.cc.ukans.edu.
+   There are precompiled binaries for sun, ibm, ultrix and the vax.
+
+   Server software should not be a concern unless you wish to set up your
+   own server away from Fermilab. If you are interested there are many
+   different servers. The one we run on fn781a is the CERN server.
+     __________________________________________________________________
+
+
+    procario@fn781a.fnal.gov

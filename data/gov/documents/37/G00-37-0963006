@@ -1,0 +1,1338 @@
+http://www.ncvhs.hhs.gov/hipaa000706.pdf
+
+   July 6, 2000 The Honorable Donna E. Shalala Secretary Department of
+   Health and Human Services 200 Independence Avenue SW Washington, D.C.
+   20201 Dear Secretary Shalala: On behalf of the National Committee on
+   Vital and Health Statistics (NCVHS), I am pleased to present to you the
+   Report on Uniform Data Standards for Patient Medical Record
+   Information. This report was mandated by the Health Insurance
+   Portability and Accountability Act (HIPAA) of 1996. HIPAA directed
+   NCVHS to "study the issues related to the adoption of uniform data
+   standards for patient medical record information and the electronic
+   exchange of such information" and to report to you "not later than 4
+   years after the date of the enactment of the Health Insurance
+   Portability and Accountability Act of 1996 recommendations and
+   legislative proposals for such standards and electronic exchange [HIPAA
+   Section 263]." This report was prepared by the Computer-based Patient
+   Record Work Group within NCVHS' Subcommittee on Standards and Security.
+   The report describes how the lack of complete and comprehensive PMRI
+   standards is a major constraint on the ability of our healthcare
+   delivery system to enhance quality, improve productivity, manage costs
+   and safeguard data. It recommends that the government take a leadership
+   role in addressing these issues by accelerating the development,
+   adoption, and coordination of PMRI standards. Further, it addresses the
+   related issues of protecting the confidentiality of PMRI, reducing
+   barriers to the electronic exchange of PMRI caused by diverse state
+   laws, and coordinating the development of PMRI standards within the
+   broader context of the National Health Information Infrastructure. The
+   NCVHS believes that the recommendations in this report are important to
+   the nation because they will facilitate significant improvements in the
+   quality of care, improve productivity and reduce costs. Sincerely, /s/
+   John R. Lumpkin, M.D., M.P.H. Chair Enclosure cc: John Eisenberg,
+   Co-chair, HHS Data Council Margret Hamburg, Co-chair, HHS Data Council
+   NATIONAL COMMITTEE ON VITAL AND HEALTH STATISTICS Report to the
+   Secretary of the U.S. Department of Health and Human Services on
+   Uniform Data Standards for Patient Medical Record Information as
+   required by the Administrative Simplification Provisions of the Health
+   Insurance Portability and Accountability Act of 1996 July 6, 2000
+   Report to the Secretary of HHS Uniform Data Standards for Patient
+   Medical Record Information Table of Contents I. Executive Summary. . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . 5 II. Introduction. . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . 11 A. Purpose and
+   Scope. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . 11 B. Intended Audience
+   for the Report . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . 11 C. Background and General
+   Rationale . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . 11 1. How does this Report help to address
+   national healthcare issues? . . . . . . . . . . . . . . . . . 12 2.
+   What has already been done to control rising healthcare costs and
+   improve quality? . . . 12 3. How have other sectors of the economy been
+   able to control costs and improve quality? 13 4. Why has health care
+   been slower than other industries to implement an information
+   infrastructure to control costs and improve quality? . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . 13 5. How do standards for
+   patient medical record information (PMRI) fit within the health
+   information infrastructure (HII)? . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 14 6. What are the
+   consequences of not having complete and comprehensive standards for
+   PMRI? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14 7. Why
+   is it taking so long to develop and implement complete and
+   comprehensive standards for PMRI? . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+   8. What other issues should be considered? . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . 16 9. What benefits can we
+   expect when standards for PMRI facilitate a health information
+   infrastructure? . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16 10.
+   Summary of general rationale . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . 18 D. Process of
+   Studying Issues and Making Recommendations. . . . . . . . . . . . . . .
+   . . . . . . . . . . . 18 III. Overview of Standards for Patient Medical
+   Record Information. . . . . . . . . . . . . . . . . . . . . . . . . 19
+   A. PMRI Standards Concepts . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19 1. Patient
+   medical record information (PMRI). . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . 19 2. Electronic exchange of PMRI .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . 19 3. Uniform data standards for PMRI . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   19 4. Health information infrastructure. . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19 5. Health
+   information vs. PMRI . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . 20 6. HIPAA Administrative
+   Simplification requirements for PMRI . . . . . . . . . . . . . . . . .
+   . . . . . . 20 B. Evolution of Healthcare Informatics Standards . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20 1.
+   Healthcare informatics standards history. . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . 20 2. Standards
+   development organizations . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . 21 3. Accreditation and coordination
+   of standards development organizations . . . . . . . . . . . . . . 21
+   C. Overview of Issues Relating to Data Standards for PMRI . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . 21 1. Interoperability . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . 21 2. Comparability . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . 23 3. Data quality, data accountability,
+   and data integrity . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . 26 4. Other issues . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   28 D. Current Status of Data Standards for PMRI. . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 32 1. Message
+   format standards . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . 32 2. Medical terminologies .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . 33 3. Data quality, data accountability,
+   and data integrity . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . 34 IV. Recommendations . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . 37 A. Introduction. . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . 37 Guiding Principles for Selecting PMRI Standards . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . 38 B. Recommendations . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . 39 C. Conclusions. . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . 41 Appendix A. NCVHS Work Group on
+   Computer-based Patient Records . . . . . . . . . . . . . . . . . . . .
+   43 Appendix B. CPR Work Group Work Plan . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . 45 Appendix C.
+   List of Testifiers. . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . 55 Appendix D.
+   Glossary of Terms and Acronyms. . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . 59 I. EXECUTIVE SUMMARY High
+   quality health care depends on complete and comprehensive patient
+   medical record information (PMRI). This information is essential to
+   support diagnosis and treatment, measure and improve quality of care,
+   advance public health, enhance healthcare productivity, and facilitate
+   reimbursement. Today, however, patient medical record information is
+   primarily written, stored, and transported on paper. This paper-based
+   information is often illegible, subject to delays, difficult to
+   interpret, frequently misplaced or lost, and contributes to unnecessary
+   costs. While health care has adopted information technology for
+   financial and administrative systems, it has made limited progress in
+   utilizing information technology to support patient care. Today, the
+   greatest impediment to the adoption of information technology is the
+   lack of complete and comprehensive standards for patient medical record
+   information. CALLS FOR ACTION In 1991, the Institute of Medicine (IOM)
+   set forth a basic vision for use of information technologies in The
+   Computer-based Patient Record: An Essential Technology for Health Care.
+   In 1993, the General Accounting Office (GAO) urged the acceleration of
+   message format and healthcare terminology standards development in
+   Automated Medical Records: Leadership Needed to Expedite Standards
+   Development. In 1999, the IOM in To Err Is Human: Building a Safer
+   Health System drew national attention to medication errors that often
+   occur as a result of illegible and incomplete information. In December
+   1999, President Clinton directed the Quality Interagency Coordination
+   Task Force (QuIC) to evaluate the IOM's recommendations. In February
+   2000, QuIC responded with an action plan, Doing What Counts for Patient
+   Safety: Federal Actions to Reduce Medical Errors and Their Impact. In
+   2000, the IOM released Networking Health: Prescriptions for the
+   Internet, which criticizes the health industry for failing to take
+   better advantage of information technologies such as the Internet.
+   Despite these and other calls to action, the nation still has not
+   adopted the laws, standards, business practices, and technologies
+   necessary to create a health information infrastructure. As a result,
+   health care continues to fall short of its potential to improve quality
+   and productivity and to constrain costs. To achieve further
+   administrative simplification, it is essential that the healthcare
+   delivery system adopt uniform data standards for patient medical record
+   information. LEGISLATIVE IMPERATIVE The Provisions for Administrative
+   Simplification in the Health Insurance Portability and Accountability
+   Act of 1996 (HIPAA) are intended to "improve the efficiency and
+   effectiveness of the healthcare system, by encouraging the development
+   of a health information system through the establishment of standards
+   and requirements for the electronic transmission of certain health
+   information." Section 263 of these provisions requires the National
+   Committee on Vital and Health Statistics (NCVHS) to "study the issues
+   related to the adoption of uniform data standards for patient medical
+   record information and the electronic exchange of such information" and
+   report to the Secretary of HHS by August 21, 2000 on recommendations
+   and legislative proposals for such standards. MAJOR FINDINGS To carry
+   out this legislative directive, the NCVHS sought input from providers,
+   payers, vendors, terminology developers, standards development
+   organizations, professional associations, government agencies, and
+   medical informatics experts. It found that the major impediments to
+   electronic exchange of patient medical record information are limited
+   interoperability of health information systems, limited comparability
+   of data exchanged among providers, and the need for better quality,
+   accountability, and integrity of data. PMRI Report, July 6, 2000 Page 5
+   Interoperability Interoperability is the ability of one computer system
+   to exchange data with another computer system. Today, health care
+   employs many different information systems, both within an organization
+   and across organizations. For example, a hospital may have a laboratory
+   system from one vendor, a pharmacy system from another vendor, and a
+   patient care documentation system from a third vendor. Physicians
+   affiliated with the hospital also have different systems in their
+   offices, yet need access to data from the hospital on their patients.
+   To achieve interoperability between different information systems, the
+   healthcare delivery system is developing message format standards.
+   Today, these standards have a high degree of optionality in order to
+   accommodate the variability of workflow and availability of information
+   in different care settings. This optionality creates the need for
+   costly and time-consuming customization when implementing message
+   format standards. In addition, vendors and providers have developed
+   their own implementation guides that differ from the standards.
+   Finally, there is little or no conformance testing of message format
+   standards. Non-standard implementations result in the need for costly
+   and time-consuming customization to allow information systems to
+   seamlessly exchange data with one another. These customized solutions
+   contribute to high cost of systems. Such high cost, in turn, restricts
+   the broadest possible adoption of information systems by providers. If,
+   by accelerating uniform message format standards development and
+   implementation, the cost of these healthcare information systems can be
+   lowered, their market acceptance would increase. This would contribute
+   directly to improved quality of care, improved provider productivity,
+   and reduced healthcare costs. Data Comparability Comparability requires
+   that the meaning of data is consistent when shared among different
+   parties. Lack of comparable data can directly impact patient care. A
+   simple example is the use by physical therapists of a pain scale that
+   ranges from 1 to 4, and another used by nurses that ranges from 1 to
+   10. Obviously, pain designated at "level 3" carries vastly different
+   meanings to these professionals. Today, there are no healthcare
+   vocabularies that are designated as national standards. Standard
+   healthcare vocabularies would assure that data shared across systems
+   are comparable at the most detailed level. Information system vendors
+   and healthcare providers who wish to use detailed vocabularies, have
+   had to create their own proprietary set of terms that are not
+   comparable with other vocabularies, or have had to choose from one of
+   several commercially-available vocabularies that do not necessarily
+   cover all clinical areas. Without national standard vocabularies,
+   precise clinical data collection and accurate interpretation of such
+   data is difficult to achieve. Further, this lack of standard
+   vocabularies makes it difficult to study best practices and develop
+   clinical decision support. Data Quality It is very difficult to measure
+   the quality of healthcare data, yet every provider can point to
+   examples where data quality has clearly been suspect or could not be
+   validated. Information systems today do not incorporate sufficient data
+   editing capability, uniformity in units of measure, or other controls.
+   Data quality is also impacted by the inability to uniquely identify
+   patients. This can result in loss of data for patient care. The
+   Administrative Simplification provisions of HIPAA address this issue by
+   calling for a unique identifier for patients. However, there is public
+   concern about the issuance of a unique identifier for patients,
+   especially in light of the absence of healthcare privacy legislation.
+   Finally, the criteria for data quality need to be addressed within
+   message format and vocabulary standards in order to improve the ability
+   to exchange accurate data for continuity of care across providers. PMRI
+   Report, July 6, 2000 Page 6 Other Issues Other issues considered in
+   this Report include the need to address the diversity of state laws
+   with respect to retention and authentication of patient medical record
+   information, the business case for standards development, and the need
+   for a national health information infrastructure. Barriers to adoption
+   of Internet applications, such as reported in the National Research
+   Council's 2000 report, Networking Health: Prescriptions for the
+   Internet, need to be overcome. The establishment of uniform standards
+   for patient medical record information also raises a wide range of
+   issues relating to privacy, confidentiality, and security. A complete
+   discussion of all these issues is beyond the scope of this Report. The
+   NCVHS has addressed these issues in prior documents and will continue
+   further study and report on them separately. RECOMMENDATIONS This
+   Report reflects the belief that significant quality and cost benefits
+   can be achieved in health care if clinically specific data are captured
+   once at the point of care and that all other legitimate data needs are
+   derived from those data. The standards for patient medical record
+   information that will result from the recommendations in this Report
+   will be consistent and compatible with the HIPAA financial and
+   administrative transaction standards, including the upcoming claims
+   attachment standards. In consideration of broad industry testimony on
+   these key issues, the NCVHS recommends that the Secretary of HHS: 1.
+   Adopt the Guiding Principles for Selecting PMRI Standards as the
+   criteria to select uniform data standards for patient medical record
+   information (PMRI). These Guiding Principles are based on those
+   published in the notice of proposed rulemaking for selecting financial
+   and administrative transaction standards, which have been modified by
+   adding characteristics and attributes that specifically address
+   interoperability, data comparability, and data quality. 2. Consider
+   acceptance of forthcoming NCVHS recommendations for specific PMRI
+   standards. The first set of these recommendations will be delivered to
+   the Secretary eighteen months following submission of this Report and
+   will include suggested implementation timeframes that consider industry
+   readiness for adoption. For each recommendation for PMRI standards,
+   NCVHS encourages the Secretary to provide an open process to give the
+   public an opportunity to comment on the PMRI standards proposals before
+   final rules are adopted. 3. Provide immediate funding to accelerate the
+   development and promote early adoption of PMRI standards. This should
+   take the form of support for: a. government membership and
+   participation in standards development organizations b. broader
+   participation of expert representation in standards development c.
+   enhancement, distribution, and maintenance of clinical terminologies
+   that have the potential to be PMRI standards through: (1.)
+   government-wide licensure or comparable arrangements so these
+   terminologies are available for use at little or no cost. (2.)
+   augmentation of the National Library of Medicine's Unified Medical
+   Language System (UMLS) to embody enhanced mapping of medical
+   vocabularies and classifications. PMRI Report, July 6, 2000 Page 7 (3.)
+   development and testing of quality measures and clinical practice
+   guidelines, such as published in the Agency for Healthcare Research and
+   Quality (AHRQ) clearinghouses, and patient safety measures for their
+   compatibility with existing and developing healthcare terminologies.
+   (4.) development and testing in multi-agency projects, such as GCPR
+   (Government Computer-based Patient Record) framework project. d.
+   coordination of data elements among all standards selected for adoption
+   under HIPAA through the development and maintenance of an open
+   meta-data registry and working conferences to harmonize message format
+   and vocabulary standards. e. improvement of drug data capture and use
+   by: (1.) requiring the Food and Drug Administration (FDA) to make
+   publicly available its National Drug Codes (NDC) database registry
+   information (2.) requiring the FDA to develop a drug classification
+   system based on active ingredients so that all drugs that fall into a
+   given category can be identified by the name of that category. (3.)
+   encouraging the FDA to participate in private sector development and
+   ongoing maintenance of a reference terminology for drugs and biologics
+   that promotes the ability to share clinically specific information. f.
+   early adoption of PMRI standards within government programs to provide
+   broadened feedback to the standards development community. 4. For each
+   standard recommended by NCVHS, commit funding for development of a
+   uniform implementation guide, development of conformance testing
+   procedures, and ongoing government licensure of, or comparable
+   arrangements for, healthcare terminology standards. 5. Support
+   demonstration of the benefits and measurement of the costs of using
+   uniform data standards for PMRI that provide for interoperability, data
+   comparability, and data quality. 6. Support increases in funding for
+   research, demonstration, and evaluation studies on clinical data
+   capture systems and other healthcare informatics issues. 7. Accelerate
+   development and implementation of a national health information
+   infrastructure. HHS should work in collaboration with other federal
+   components, state governments, and the private sector on demonstration
+   and evaluation projects and test beds. 8. Promote United States'
+   interest in international health data standards development through HHS
+   participation in international healthcare informatics standards
+   development organizations and, in cooperation with the Secretary of the
+   Department of Commerce, through monitoring the activity of U.S.
+   healthcare information system vendors abroad. 9. Promote the equitable
+   distribution of the costs for using PMRI standards among all major
+   beneficiaries of PMRI. This may take the form of incentives for
+   submission of data using the PMRI standards that can support a variety
+   of purposes, including quality improvement. 10. Encourage enabling
+   legislation for use and exchange of electronic PMRI, including: PMRI
+   Report, July 6, 2000 Page 8 a. comprehensive federal privacy and
+   confidentiality legislation. This would ensure that all health
+   information in any medium, used for any purpose, and disclosed to any
+   entity receives equal privacy protection under law. b. uniform
+   recognition by all states of electronic health record keeping; and
+   national standards for PMRI retention and electronic authentication
+   (digital signatures). PMRI Report, July 6, 2000 Page 9 [This page
+   intentionally blank.] PMRI Report, July 6, 2000 Page 10 II.
+   INTRODUCTION A. Purpose and Scope This Report has been prepared for the
+   Secretary of Health and Human Services (HHS) in accordance with Section
+   263 of the Administrative Simplification provisions of the Health
+   Insurance Portability and Accountability Act of 1996 (HIPAA), Public
+   Law 104-191. These provisions state the National Committee on Vital and
+   Health Statistics (NCVHS): "(B) shall study the issues related to the
+   adoption of uniform data standards for patient medical record
+   information and the electronic exchange of such information; (C) shall
+   report to the Secretary not later than 4 years after the date of the
+   enactment of the Health Insurance Portability and Accountability Act of
+   1996 recommendations and legislative proposals for such standards and
+   electronic exchange;" Other provisions of administrative simplification
+   address financial and administrative transactions (and the code sets
+   within them), identifiers, security, and privacy. This Report addresses
+   standards that would make the content and structure of patient medical
+   record information (PMRI) more uniform, and hence more easily exchanged
+   between computer systems and understood across systems. PMRI includes
+   patient demographics, orders, observations, diagnoses/problems,
+   allergies, medications, and other information.1 For a more complete
+   definition of PMRI, refer to the Glossary in Appendix D. As a result of
+   uniform standards for such data and their exchange, PMRI systems will
+   be better able to enhance quality, improve productivity, manage costs,
+   and safeguard patient data. B. Intended Audience for the Report This
+   Report is addressed to the Secretary of HHS, in accordance with the
+   Administrative Simplification provisions of HIPAA as cited above.
+   However, it is recognized that many other people will read this report
+   and use it in a variety of ways. The Executive Summary is intended to
+   provide a brief overview of the entire Report. The Background and
+   General Rationale establishes the context for the issues addressed in
+   the Report for those unfamiliar with the topic. The Overview of
+   Standards for Patient Medical Record Information is intended for HHS
+   staff, Congressional members and staff, and the public. It defines the
+   major concepts in the Report, provides a brief historical framework for
+   the standards and terminologies related to the concepts, identifies the
+   issues surrounding these standards and terminologies, and describes the
+   current status of the standards and terminologies that address the
+   issues. The Recommendations section lays out the recommendations in
+   detail. C. Background and General Rationale A lack of uniform data
+   standards results in a patient's death because information about the
+   patient's allergy to a particular anesthetic was not presented in a
+   standard format and was overlooked when the patient was prepared for
+   surgery. A lack of data communications standards between a home
+   healthcare information system and the physician's information system
+   did not convey the warning of a sudden change in a diabetic patient's
+   serum glucose level, resulting in an emergency admission to an
+   intensive care unit. This admission resulted in life-threatening
+   morbidity and tens of thousands of dollars of healthcare cost that
+   could have been avoided. 1 Buck AS. Joint Commission on Accreditation
+   of Healthcare Organizations, Testimony to NCVHS CPRWG on Data Quality,
+   September 16-17, 1999. PMRI Report, July 6, 2000 Page 11 A lack of data
+   comparability standards resulted in a patient having a severe reaction
+   to a medication when a nurse administered an incorrect dosage because
+   the standard tablet size described in the formulary at the nursing unit
+   was different from that used by the pharmacy. Many more examples of the
+   need for uniform adoption of PMRI standards exist, including those
+   described in the recent Institute of Medicine (IOM) report on patient
+   safety.2 The lack of complete and comprehensive standards for
+   healthcare information systems impairs our ability to improve the
+   quality of care and to control healthcare costs. 1. How does this
+   Report help to address national healthcare issues? Today, healthcare
+   information systems are beginning to demonstrate that they can
+   potentially improve quality and lower costs at the same time.3 This
+   report recommends standards that contribute not only to financial and
+   administrative simplification, but begin to address the core clinical
+   issues of our nation's healthcare delivery system. The information age
+   is causing a paradigm shift in which healthcare providers will be able
+   to more explicitly measure the quality of care and translate those
+   measures directly into achieving further improvements in key measures
+   of health care and wellness. Technologically, the healthcare delivery
+   system in the United States is considered to be among the best in the
+   world. The U.S. has outstanding medical schools, prestigious medical
+   research institutions, numerous local healthcare facilities,
+   state-of-the-art medical technologies, and more well-trained healthcare
+   professionals than in most other countries. During the last few decades
+   the U.S. healthcare system has achieved significant improvements in the
+   health status of our population in many key measures of health care and
+   wellness. However, the U.S. healthcare delivery system has some complex
+   and serious problems. These problems include the limited ability to
+   measure and improve quality, difficulty in controlling rising
+   healthcare costs, serious problems related to patient safety during the
+   patient care process, and the increasing demand for more data to
+   support clinical research and public health practice. As we examine the
+   root causes of and potential solutions to these problems we discover
+   that quality improvement and cost control in health care are often
+   interdependent, mutually supportive goals. When we try to measure the
+   quality of health care in the U.S. in comparison to our spending (13.5
+   percent of Gross Domestic Product in 1997), we see much room for
+   improvement. For example, while the U.S. spends more than any other
+   country on health care as a percentage of its GDP, many other
+   industrialized nations have lower infant mortality rates and longer
+   life expectancy.4 Additional concern is raised by the recent report
+   from the IOM, which estimated that medical adverse events cause more
+   deaths annually in the U.S. than highway crashes, breast cancer, or
+   AIDS.5 2. What has already been done to improve quality and control
+   rising healthcare costs? Many approaches and methods have been
+   instituted in an attempt to improve quality and control rising
+   healthcare costs. The organizational approaches that have been employed
+   include the expansion of managed care organizations with an emphasis on
+   wellness and disease prevention, 2 Institute of Medicine, To Err Is
+   Human: Building a Safer Health System, Washington, DC: National Academy
+   Press, 1999. 3 Greenspan A. Wall Street Journal, January 31, 2000 4
+   HHS. Health, September 1999 (PHS99-1232), p. 283. 5 Institute of
+   Medicine. To Err Is Human: Building a Safer Health System, Washington,
+   DC: National Academy Press, 1999, p. 1. PMRI Report, July 6, 2000 Page
+   12 establishment of integrated delivery networks with an emphasis on
+   continuity of care, the emergence of pharmacy benefit management
+   organizations with an emphasis on improved medication management, and
+   the growth of group purchasing alliances with an emphasis on cost
+   reduction of cost. Administrative and clinical methods and programs to
+   address these issues include risk management, utilization management,
+   case management, disease management, physician profiling, care plans,
+   performance measurement, accreditation programs, wellness programs, and
+   a variety of other techniques. All of these initiatives have helped to
+   address the quality and cost issues, but they have yet to achieve
+   broad-based quality improvements, cost containment, and the level of
+   productivity gains enjoyed by other sectors of the nation's economy. 3.
+   How have other sectors of the economy been able to improve quality and
+   control costs? Other industries including financial services,
+   telecommunications, transportation, manufacturing, and retailing have
+   achieved dramatic improvements in quality, cost containment,
+   productivity, and the introduction of new services because these
+   industries have established information infrastructures that have
+   brought them into the information age. For example, the financial
+   industry has developed an infrastructure that includes online banking,
+   automated teller machines, and electronic deposits. The
+   telecommunications industry has developed an infrastructure that
+   facilitates touch-tone dialing, portable phones, cellular phones,
+   voicemail, and Internet access. The transportation industry has
+   developed an infrastructure that facilitates online reservation
+   services, programmed equipment maintenance, advanced scheduling, and
+   traffic flow management. The manufacturing industry has developed an
+   infrastructure that facilitates mass customization, just-in-time
+   inventories, and condensed "time to market" for new products. The
+   retailing industry has developed an infrastructure that facilitates
+   customer relationship management, online sales of products and
+   services, and automated inventory management. These information
+   infrastructures have improved the accuracy of data, lowered the cost of
+   sharing information, facilitated improved measurements for performance
+   and quality, enabled continuous quality improvements, spawned the
+   availability of new knowledge-based capabilities (such as decision
+   support), and provided new information services that improve
+   effectiveness and efficiency. 4. Why has health care been slower than
+   other industries to implement an information infrastructure to improve
+   quality and control costs? Many factors have contributed to slower
+   adoption of an information infrastructure in health care. First,
+   healthcare information is much more complex than information in other
+   industries. Clinical data are textual and contextual, not simply
+   numeric, making it more difficult for computers to process. Information
+   technology has not yet been able to fully convert natural language to
+   discrete data elements. A second issue is the difficulty on the part of
+   the healthcare industry to advance use of information technology. Other
+   industries have typically viewed the establishment of an information
+   infrastructure as a strategic investment and a competitive advantage.
+   In contrast, the healthcare industry still tends to regard information
+   systems as additional cost. Another issue is one of behavior
+   modification. In many healthcare institutions information systems have
+   been adopted to support financial and administrative processes,
+   automate some departmental systems (such as laboratory and radiology),
+   and computerize some clinical processes (such as order communications
+   and results reporting). However, the basic functions of clinical care,
+   including the capture, process, review, analysis, and communication of
+   clinically specific information as a normal PMRI Report, July 6, 2000
+   Page 13 part of the patient care process is only beginning to be
+   addressed. In most healthcare settings, the capture of patient history
+   and progress notes continues to be performed manually and stored on
+   paper. Physicians continue to write orders that are transcribed into
+   order communication systems by clerical staff. Medical record folders
+   may contain over 100 pages of paper. Information in such folders is
+   often difficult to find, illegible, inconsistent, and incomplete.
+   Moreover, the folder can only be in one location at a given time, so it
+   may not always be accessible to the caregiver when needed. This
+   environment is extremely error-prone and contributes to the caregiver's
+   inability to measure and improve clinical outcomes. 5. How do standards
+   for patient medical record information (PMRI) fit within a national
+   health information infrastructure (NHII)? An information infrastructure
+   may be defined as including related standards, laws, regulations,
+   business practices, and technologies. For example, information systems
+   standards are needed to facilitate the sharing of comparable data.
+   Federal law is needed to protect the confidentiality of information, to
+   remove barriers to sharing data, and to define the conditions under
+   which individuals' data may be shared-uniformly across our States.
+   Federal regulations are needed that define consistent policies and
+   practices to protect the integrity of and to provide security for
+   healthcare nformation. Cost-effective systems and technologies can then
+   be developed that utilize the infrastructure and translate system
+   effectiveness and efficiency into value for the user. This report will
+   address the need for standards that support a national health
+   information infrastructure. More specifically it will focus on those
+   standards that have the greatest potential to improve the quality of
+   care and control or reduce the cost of care: these are uniform data
+   standards for patient medical record information (PMRI). PMRI includes
+   patient demographics, orders, observations, diagnoses/problems,
+   allergies, medications, and other information.6 For a more complete
+   definition of PMRI, refer to the Glossary in Appendix D. 6. What are
+   the consequences of not having complete and comprehensive standards for
+   PMRI? Not having complete and comprehensive PMRI standards impairs the
+   basic functions and effectiveness of healthcare information systems and
+   limits our ability to achieve a national health information
+   infrastructure. In particular, not having PMRI standards: ß Limits the
+   ability of different healthcare information systems to communicate with
+   one another (interoperability). This can greatly increase the cost of
+   sharing and integrating data. ß Limits the capability to capture
+   clinically specific information and have it automatically converted
+   into computer readable codes (that retain their accuracy and precision
+   of meaning). This means that healthcare information systems may be able
+   to communicate with each other, but the data that they share is not
+   necessarily complete, accurate, and comparable. The lack of
+   interoperability and comparability of healthcare data makes it
+   difficult to process discrete data elements to support clinical
+   decision-making, to aggregate data for quality measures, and to improve
+   clinical processes. These constraints continue to relegate many
+   clinical activities to sub- optimal levels of performance and quality.
+   6 Buck AS. Joint Commission on Accreditation of Healthcare
+   Organizations, Testimony to NCVHS CPRWG on Data Quality, September
+   16-17, 1999. PMRI Report, July 6, 2000 Page 14 From a vendor and user
+   perspective, the lack of complete and comprehensive PMRI standards has
+   resulted in impaired ability to: ß Develop information systems that are
+   more cost effective (standardized and mass-produced). ß Integrate these
+   systems in a timely and low-cost manner (avoiding customization of
+   interfaces and the need for translation and mapping of data). ß Capture
+   clinically specific information that enhances quality of care, promotes
+   evidence-based medicine, utilizes clinical decision support, and
+   permits continuous quality improvement. ß Share comparable patient care
+   data among multiple sites of care, and therefore enable continuity of
+   care. This lack of PMRI standards has served to discourage investments
+   by those vendors and providers who attempt to develop healthcare
+   information systems. 7. Why is it taking so long to develop and
+   implement complete and comprehensive standards for PMRI? The standards
+   and processes necessary to communicate clinical information are vastly
+   more complex than those in other industries. Standards for exchanging
+   healthcare data must be extremely comprehensive. Healthcare language
+   requires precision, but is also dynamic. New illnesses are continuously
+   identified and new treatments created. However, in order to retain
+   consistent meaning over a period of time sufficient to conduct
+   longitudinal healthcare studies, the meaning of terms must be retained
+   while creating new terms to address new issues. Therefore, developing
+   PMRI standards is costly and time-consuming. The process of developing
+   healthcare data standards is more difficult than developing standards
+   in other industries. This is because health care is comprised of many
+   diverse entities such as individual and group practices, software
+   developers, domain-specific professional associations, and allied
+   health services. This fragmentation has slowed the dissemination and
+   adoption of standards. It has also made it difficult to convene all of
+   the relevant stakeholders and subject matter experts in standards
+   development meetings, and to reach consensus within a reasonable period
+   of time. Many observers have noted that the healthcare delivery system
+   appears to have placed a higher priority on acquiring information
+   systems for reimbursement than on developing systems that support
+   quality of care. There are several reasons for this. First, the
+   standardization of information required for the claims process was
+   easier to automate than the standardization of information for clinical
+   processes. Secondly, standards for supporting clinical processes have
+   not been universally developed or applied. Lack of investment in
+   healthcare information systems is further impacted by the fact that
+   many of those who benefit by these systems do not share in the cost of
+   implementing and using them. Many of the benefits that result from
+   these systems are enjoyed by payers, such as insurers (both private and
+   public) and employers, and are not shared with providers. Additionally,
+   payers do not often compensate for the provider's burden of the time
+   and cost of implementing these systems. The point is that savings
+   throughout the healthcare system should be shared with those who pay
+   for and use standardized PMRI. Otherwise, the incentive to take on the
+   extra burden of standardization is reduced. PMRI Report, July 6, 2000
+   Page 15 8. What other issues relative to PMRI should be considered?
+   Uniform data standards for PMRI are essential to the establishment of a
+   health information infrastructure. The role of the government is to
+   promote and support the public and private development and use of these
+   standards. As these PMRI standards facilitate the development of a
+   health information infrastructure, vendor solutions are likely to be
+   developed to utilize this infrastructure. However, it is the
+   marketplace and not the government that will determine the extent to
+   which it will invest in solutions that use these standards. These
+   solutions include clinical data warehouses and advanced data mining
+   tools, clinical decision support systems, computer-based patient record
+   systems, natural language processors, systems-based ontological
+   principles, etc. It is also important that the PMRI standards support a
+   health information infrastructure that addresses the needs of all PMRI
+   users, including providers, payers, public health officials,
+   researchers, and consumers. Another factor is the lack of uniform
+   privacy protections for PMRI, and the lack of widely-implemented
+   security mechanisms. The Administrative Simplification provisions of
+   HIPAA in these two areas are good, though incomplete, steps in the
+   right direction to correct this deficiency. 9. What benefits can we
+   expect when standards for PMRI facilitate a health information
+   infrastructure? When complete and comprehensive standards for PMRI are
+   available, vendors and users will be able to develop information
+   systems that will: ß Capture clinically specific information more
+   accurately, more quickly, and less expensively. ß Enable authorized
+   caregivers to access this information from many different locations in
+   a manner that can improve continuity of care. ß Provide clinical
+   guidelines and protocols to clinicians to use concurrently with the
+   patient care process. ß Prevent adverse events and other potential
+   problems by providing warnings to the clinician concurrent with the
+   process of patient care. ß Provide more complete and comprehensive
+   clinical data for outcomes analysis to facilitate continuous quality
+   improvement of clinical processes. ß Monitor the health status of
+   elderly and homebound patients via real time or store-and-forward
+   telecommunications to caregivers. ß Extend the knowledge and expertise
+   of healthcare professionals at leading-edge medical facilities to
+   underserved populations via telehealth. ß Facilitate low-cost
+   information exchange between patients and providers via the Internet. ß
+   Improve the ability of public health to recognize and react quickly to
+   problems affecting the health of the public, especially in national
+   health emergencies, by providing more accurate, complete and timely
+   information. ß Increase the scope, efficiency, and effectiveness of
+   clinical and health services research. PMRI Report, July 6, 2000 Page
+   16 ß Improve the ability to monitor and protect the confidentiality of
+   healthcare information. ß Improve the ability to use automated,
+   intelligent systems to identify and even correct certain problems with
+   data quality including those associated with data capture, coding, and
+   transmission. ß Facilitate the ability to construct and maintain a
+   comprehensive, lifelong healthcare record that enables continuity of
+   care. Measuring the full benefit of the above functions and
+   capabilities is not possible until a threshold level of PMRI standards
+   implementations within the health information infrastructure is
+   achieved. However, there are examples of pioneering efforts that have
+   produced impressive results: ß At Kaiser-Permanente of Ohio, smoking
+   cessation reminders automatically provided to the caregivers at the
+   time of visit reduced smoking prevalence in the region by 12%.7 ß
+   Brigham & Women's Hospital in Boston found that a system displaying
+   charges for lab tests being ordered prompted physicians to choose less
+   expensive tests. In one year, a 5% reduction in ordering saved the
+   hospital approximately $1,000,000.8 ß LDS Hospital in Salt Lake City
+   employs computerized adverse drug event monitoring. In 1992, 569
+   adverse drug events were prevented, which eliminated an average of
+   1,104 inpatient days at a savings of $1,103,291.9 ß At Queen's Medical
+   Center, Hawaii, automating the guideline for ordering restraints
+   improved compliance with the restraint guideline from 9% to 98% within
+   weeks.10 ß At Regenstrief Institute, Indianapolis, a two-year study of
+   1,491 decision support rules executed for 12,000 patients demonstrated
+   a 20% increase in compliance with reminders for all classes of
+   providers.11 These and other examples in peer-reviewed medical
+   literature lead us to the conclusion that information systems have the
+   potential to both improve the quality and lower the cost of health
+   care. These examples are isolated in large part, however, because of
+   the lack of standards for seamless exchange of data and standards to
+   achieve data comparability and quality. 7 Khoury .A et al. "The Medical
+   Automated Record System," Third Annual Nicholas E. Davies CPR
+   Recognition Symposium Proceedings, Bethesda, MD: Computer-based Patient
+   Record Institute, 1997, p. 66. 8 Teich JM, et al. "Toward
+   Cost-Effective, Quality Care: The Brigham Integrated Computing System,"
+   Second Annual Nicholas E. Davies CPR Recognition Symposium Proceedings,
+   Bethesda, MD: Computer-based Patient Record Institute, 1996, p. 28. 9
+   Grandia LD, et al. "Building a Computer-based Patient Record System in
+   an Evolving Integrated Health System," First Annual Nicholas E. Davies
+   CPR Recognition Symposium Proceedings, Bethesda, MD: Computer-based
+   Patient Record Institute, 1995, p. 29. 10 Davis DC, et al. "Clinical
+   Performance Improvement with an Advanced Clinical Information System at
+   The Queen's Medical Center," Fifth Annual Nicholas E. Davies CPR
+   Recognition Symposium Proceedings, Bethesda, MD: Computer-based Patient
+   Record Institute, 1999, p. 113. 11 McDonald CJ, et al. "The Three
+   Legged Stool: Regenstrief Institute for Health Care," Third Annual
+   Nicholas E. Davies CPR Recognition Symposium Proceedings, Bethesda, MD:
+   Computer-based Patient Record Institute, 1997, p. 116. PMRI Report,
+   July 6, 2000 Page 17 10. Summary of general rationale The ability of
+   our healthcare delivery system to manage costs, improve productivity,
+   enhance quality of care, and safeguard patient data is severely
+   constrained by the lack of complete and comprehensive PMRI standards.
+   This Report discusses the issues and offers recommendations that
+   address the development and use of these standards. D. Process of
+   Studying Issues and Making Recommendations To study the issues and make
+   recommendations associated with uniform data standards for the
+   electronic exchange of PMRI, NCVHS created the Computer-based Patient
+   Record Work Group as part of its Subcommittee on Standards and Security
+   (see Appendix A). The Work Group was charged to solicit information,
+   guidance, and recommendations from experts in the field (see Appendix B
+   for work plan). A total of 92 individuals in 11 days of hearings over a
+   period of 10 months provided testimony. Appendix C provides a list of
+   testifiers by category. Testifiers were asked to comment on their
+   definition of PMRI, discuss the need for comparability of PMRI, and
+   address specific issues relative to focus areas. These focus areas
+   included message format standards, medical terminologies, data quality,
+   privacy, diverse state laws, business case for standards, and
+   relationship to a national health information infrastructure. They were
+   also asked to identify problems within these focus areas and recommend
+   what the role of the government should be in addressing these problems.
+   Reflecting the consensus of testimony, NCVHS identified key issues,
+   observations, and assumptions relative to PMRI standards and their
+   electronic exchange. These findings led the Committee to develop
+   recommendations that address the selection of PMRI standards, the
+   acceleration of the development of PMRI standards, the early adoption
+   of PMRI standards, and the relationship of PMRI standards to other
+   issues. The Committee also solicited feedback on these recommendations
+   from external reviewers. The NCVHS also developed a set of guiding
+   principles for the selection of PMRI standards. This was done to ensure
+   consistency with those guiding principles already established for
+   selecting the financial and administrative transaction standards, and
+   to ensure that they were applicable to the selection of PMRI standards.
+   Therefore, some important additions and modifications to the existing
+   guiding principles were needed. The resulting principles are
+   recommended to become the Guiding Principles for Selecting PMRI
+   Standards. (See Section IV, page 38.) PMRI Report, July 6, 2000 Page 18
+   III. OVERVIEW OF STANDARDS FOR PATIENT MEDICAL RECORD INFORMATION In
+   order to establish the context for recommending uniform data standards
+   for PMRI and the electronic exchange of such information, it is
+   important to review some basic concepts and terms, identify the
+   overarching issues, and describe the current status of PMRI standards.
+   A. PMRI Standards Concepts 1. Patient medical record information (PMRI)
+   Patient medical record information (PMRI) is information about a single
+   patient generated by healthcare professionals as a direct result of
+   interaction with the patient, or with individuals who have personal
+   knowledge of the patient, or both. This information includes
+   demographics, health history, details of present illness or injury,
+   orders for care and treatment, observations, records of medication
+   administration, diagnoses/problems, allergies, and other health
+   information. 2. Electronic exchange of PMRI Electronic exchange of PMRI
+   is the electronic communication of data, audio, and/or images between
+   healthcare information systems. It does not imply a specific type of
+   information system or repository of data. In other words, if a hospital
+   has administrative, patient billing, laboratory, pharmacy, and patient
+   medical record information systems, they all should exchange data
+   seamlessly, with the ability for the data to be interpreted
+   consistently and accurately, and with privacy and security measures in
+   place to safeguard confidentiality, data integrity, and availability.
+   3. Uniform data standards for PMRI Uniform data standards are methods,
+   protocols, and terminologies agreed on by the industry to allow
+   disparate information systems to operate successfully with one another.
+   NCVHS has identified these standards as including: those required to
+   identify individuals, populations, and events; data elements and
+   definitions required to produce PMRI; sources for the data elements;
+   ways of classifying and coding the data elements to achieve
+   comparability of data; and data transmission formats and standards to
+   achieve interoperability.12 4. Health information infrastructure A
+   health information infrastructure is a set of standards, laws,
+   regulations, business practices, and technologies that facilitate
+   exchange of PMRI by authorized users for legitimate uses. For example,
+   a hospital may need to exchange patient-identifiable data with a
+   physician's office practice management system in order to capture
+   hospital charges. Patients may complete a health risk assessment that
+   contributes data to a physician's electronic medical record system. A
+   hospital may receive a patient's test results from a reference
+   laboratory. A radiologist may conduct a teleradiology consultation with
+   another radiologist in another country. Other systems that exchange
+   PMRI could include those supporting quality improvement, public health
+   surveillance, research, and other authorized uses that may be local,
+   regional, national, or even international in scope. 12 The National
+   Committee on Vital and Health Statistics, 1996-98, U.S. Department of
+   Health and Human Services, Centers for Disease Control and Prevention,
+   National Center for Health Statistics, Hyattsville, MD, December 1999,
+   p. 32. PMRI Report, July 6, 2000 Page 19 5. Health information vs. PMRI
+   A broader context of health information, beyond patient medical record
+   information, is emerging today. This context includes not only data
+   about the illness or injury of a patient, but also about wellness,
+   disease prevention, and health promotion for an individual. Such health
+   information is collected and stored not only by traditional members of
+   the healthcare delivery system but also directly by individuals
+   themselves and by others. This information may be communicated across
+   the Internet and housed in a Web-based data repository. 6. HIPAA
+   Administrative Simplification requirements for PMRI The HIPAA
+   Administrative Simplification legislation directed NCVHS to focus
+   specifically on uniform data standards for patient medical record
+   information and its electronic exchange. Accordingly, this Report is
+   limited primarily to the issues of interoperability, comparability, and
+   data quality. It also references the broader issues of privacy, diverse
+   state laws, the business case for standards development, and the
+   national health information infrastructure, but does not address them
+   in depth. B. Evolution of Healthcare Informatics Standards 1.
+   Healthcare informatics standards history The field of healthcare
+   informatics standards started in the late 1960s. One of the earliest
+   efforts took place under the jurisdiction of ASTM (American Society for
+   Testing and Materials). Standards for laboratory message exchange,
+   properties for electronic health record systems, data content, and
+   health information system security were among the first healthcare
+   informatics standards that ASTM developed. The College of American
+   Pathologists started developing a nomenclature for pathology in 1965,
+   which has now become the internationally recognized Systematized
+   Nomenclature of Human and Veterinary Medicine13 In 1974, the first
+   Uniform Hospital Discharge Data Set (UHDDS) was promulgated by the
+   Secretary of the HHS, based on advice from NCVHS.14 In 1987 Health
+   Level Seven (HL7) began to develop a wide range of message format
+   standards for patient registration, orders, and observations reporting
+   and published its first version in October of that year.15 In 1991, the
+   Accredited Standards Committee (ASC) X12N Insurance subcommittee
+   started developing standards for interactive communication of health
+   claims and other financial and administrative transactions.16
+   Initially, a need for a standard in a specific area was often
+   identified by a clinical specialty group or by a professional or trade
+   association. For example, the American College of Radiology and
+   National Electrical Manufacturers Association identified a need in 1985
+   for a non-proprietary data interchange protocol, digital image format,
+   and file structure for biomedical images and image-related information,
+   now the Digital Imaging and Communications in Medicine (DICOM)
+   standard. The National Council for Prescription Drug Programs (NCPDP)
+   is another group that created a successful standard focused on a very
+   specific niche area of health care  transactions between community
+   pharmacies, payers, and pharmacy benefits managers. The Logical
+   Observations Identifier, Names and Codes (LOINC) 13 Kudla K, College of
+   American Pathologists 14 U.S. Department of Health and Human Services,
+   Public Health Service, Centers for Disease Control and Prevention,
+   National Center for Health Statistics, The National Committee on Vital
+   and Health Statistics, 1992 15 Hammond, W. Ed. "Health Level 7: An
+   Application Standard for Electronic Medical Data Exchange," Topics in
+   Health Record Management, 1991, 11(4), 59-66 16 Data Interchange
+   Standards Association (DISA) web site (www.disa.org) PMRI Report, July
+   6, 2000 Page 20 database is used widely by commercial labs and
+   government agencies and has been provided at no cost on the Worldwide
+   Web since 1995.17 Standards in other industries often arise from a
+   dominant vendor (e.g., Microsoft Disk Operating System) or industry
+   action group of vendors willing to converge on a standard in order to
+   enable widespread use of a technology (e.g., ATM banking transactions).
+   In contrast, healthcare standards developed by specific vendors often
+   do not rise to dominance because there are no truly dominant vendors in
+   the industry, nor are there industry action groups powerful enough to
+   achieve voluntary convergence. 2. Standards development organizations
+   As a result of the diverse needs and fragmentation in health care, many
+   different standards development organizations have emerged. Many of
+   these groups are highly focused and fill a very specific need. When a
+   standards development organization recognizes a need, which may also be
+   related to another focus area, this creates the potential for
+   coordinated standard development. For example, many of the nursing
+   terminologies focus on a specific aspect of nursing, but by necessity
+   must incorporate some common data elements. In the absence of a
+   coordination point for healthcare informatics standards, the potential
+   for overlaps or gaps occurs, where no organization is addressing a
+   standards need. 3. Accreditation and coordination of standards
+   development organizations The American National Standards Institute
+   (ANSI) has been the "accreditor and coordinator of the U.S. private
+   sector voluntary standardization system" since 1918, "ensuring that its
+   guiding principles  consensus, due process, and openness  are followed
+   by the entities accredited under one of its three methods of
+   accreditation (organization, committee, or canvass)." ANSI "promotes
+   the use of U.S. standards internationally, advocates U.S. policy and
+   technical positions in international and regional standards
+   organizations, and encourages the adoption of international standards
+   as national standards where these meet the needs of the user
+   community." "A Standards Board is a standing organization within ANSI
+   having planning and coordination responsibilities on a continuing basis
+   for a defined scope of activity."18 In 1991, the predecessor
+   organization to the ANSI Healthcare Informatics Standards Board (HISB)
+   was created, initially to respond to European efforts in healthcare
+   informatics standards. It exists currently to coordinate national
+   healthcare informatics standards. ANSI HISB has conducted an extensive
+   inventory of standards that contributed to the selection process for
+   the proposed transaction and code set standards under HIPAA
+   Administrative Simplification. ANSI HISB is voluntary in nature, and it
+   focuses primarily on establishing communications among standards
+   development organizations. As a result of this communication focus,
+   several bilateral and multi-lateral agreements among standards groups
+   have developed. Still, the state of healthcare informatics standards
+   remains complex and underdeveloped, as explained in the following two
+   sections. C. Overview of Issues Relating to Data Standards for PMRI 1.
+   Interoperability Interoperability refers to the ability of one computer
+   system to exchange data with another computer system. There are three
+   levels of interoperability. 17 Forrey AW, McDonald CJ, DeMoor G, et al.
+   The Logical Observation Identifier Names and Codes (LOINC) Database: A
+   Public Use Set of Codes and Names for Electronic Reporting of Clinical
+   Laboratory Test Results," Clinical Chemistry, 1996, 42, 81-90. 18
+   American National Standards Institute, Questions & Answers PMRI Report,
+   July 6, 2000 Page 21 "Basic" interoperability allows a message from one
+   computer to be received by another but does not require the ability for
+   the receiving computer to interpret the data. "Functional"
+   interoperability is an intermediate level that defines the structure,
+   or format, of messages (hence the term message format standards).
+   Functional interoperability defines the syntax of the message. It
+   ensures that messages between computers can be interpreted at the level
+   of data fields. For example, when one computer has a structured data
+   field for Ear Exam, that computer should be able to pass data from that
+   structured data field on to another computer and have it appropriately
+   stored in a comparably structured field for Ear Exam in the receiving
+   computer. Neither system has understanding, however, of the meaning of
+   the data within the fields. "Semantic" interoperability provides common
+   interpretability, i.e., information in the fields within the message
+   can be used in an intelligent manner. At the highest level, semantic
+   interoperability takes advantage of both the structuring of the message
+   and the codification of the data so that the receiving computer can
+   interpret the data. That is, the object Ear Exam may have an attribute
+   "inflammation" with a value "positive," and this could be used to
+   trigger knowledge tools (e.g., guidelines, protocols, and alerts) in
+   the receiving computer. This would help the caregiver make the best
+   possible choice of medication, follow best practices for subsequent
+   care, and offer tailored instructions to the patient. The healthcare
+   delivery system today employs many different information systems from
+   different vendors, both within a single organization and across
+   multiple organizations. For example, a hospital may have a laboratory
+   system from one vendor, a pharmacy system from another vendor, and a
+   patient care documentation system from a third vendor. Physicians
+   affiliated with the hospital also have different systems in their
+   offices, yet need access to data from the hospital on their patients.
+   These different systems are often not interoperable. Existing message
+   format standards intended to achieve interoperability between different
+   information systems have a high degree of optionality and are often not
+   implemented in a standard manner. Options were incorporated into these
+   standards in order for vendors to accommodate the variability of
+   workflow and the availability of information in different healthcare
+   settings. This optionality can require costly and time-consuming custom
+   programming. Even larger issues relate to non-standard implementations
+   of the standards and the enormous variability of vocabulary. Developing
+   customized solutions to exchange data contributes to high costs of
+   healthcare information systems. The high cost of systems development
+   inhibits vendors from researching and developing new and better ways to
+   capture and process data. The high cost of customized solutions also
+   restricts the broadest possible adoption of information systems by
+   providers. If, by accelerating PMRI standards development and
+   implementation, we can lower the cost of these healthcare information
+   systems, their market acceptance would increase. This would contribute
+   directly to improvements in quality of care and encourage quality
+   improvement studies that will improve provider productivity and reduce
+   service costs. Standard Implementation Guides to Improve
+   Interoperability For many reasons, institutions and vendors develop
+   their own implementation guides that may contradict or avoid
+   requirements that are very specifically defined in the standard.
+   Further, some implementations may differ from the standard, including
+   being more specific than the standard, without indicating these
+   differences or providing an implementation guide at all. It is
+   important to have a very specific but standard implementation guide
+   that is employed by all vendors for each kind of PMRI message and to
+   have conformance tests that can verify a vendor's conformance to the
+   standard. In the long run this will provide significant savings to the
+   industry. PMRI Report, July 6, 2000 Page 22 Conformance Testing to
+   Improve Interoperability There currently is little or no conformance
+   testing of message format standards. As administrative simplification
+   begins to require standard transactions and trading partners must
+   assure that their data exchange is compliant, conformance testing of
+   standards will be essential. Conformance testing performed by an
+   independent organization assures that a standard has been implemented
+   according to its implementation guidelines and that it performs its
+   functions as intended. Greater Semantic Precision to Improve
+   Interoperability Until recently, message format standards have operated
+   at the level of functional interoperability- passing messages between
+   computers and ensuring their appropriate structure, but not ensuring
+   that the content of the messages is interpretable. Message format
+   standards developers are beginning to coordinate their activities with
+   healthcare terminology standards developers to specify the content of
+   the message and make the message format standards interoperable at the
+   semantic level. Further coordination among message format standards
+   developers and healthcare terminology standards developers is needed to
+   promote harmonization, which is the process of incorporating medical
+   terminologies into message formats in a consistent and agreed-upon
+   manner so that the messages can be appropriately interpreted.
+   Addressing Gaps and Inconsistencies and the Need for Acceleration to
+   Improve Interoperability The healthcare market is highly fragmented and
+   new technologies are continually being introduced. As a result, gaps
+   and inconsistencies in message format standards occur. Also, standards
+   development processes are by nature slow in order to permit due
+   process. These factors make it difficult to address all market needs in
+   a timely fashion. Enhanced coordination and acceleration of standards
+   development are needed to fill gaps and address emerging technologies
+   in a timely manner. 2. Comparability Comparability requires that the
+   meaning of data is consistent when shared among different parties. The
+   healthcare terminology used by one clinician in one context must mean
+   the same to another clinician in a similar context. For example, a pain
+   scale used by a physical therapist must either utilize the same
+   measurements or automatically map to a pain scale used by a nurse. A
+   pain level of 3 as described by a physical therapist on a scale of 1 to
+   4 is quite different than a pain level of 3 as described by a nurse on
+   a scale of 1 to 10. In this example, semantic comparability requires
+   that the matching terms have their context supplied. However, simply
+   supplying context to a linguistic match, does not necessarily provide
+   semantic comparability. For example, if the abbreviation "BPH" is
+   determined to always mean benign prostatic hypertrophy, then it should
+   never be used in any context as shorthand for "blood pressure is high."
+   Comparability of data also allows clinical findings, trends, population
+   measures, and clinical operations to be validated and contrasted.
+   Semantic comparability of data, however, does not necessarily ensure
+   that the data are accurate. For example, diagnosing a patient with BPH
+   when he actually has prostatic cancer is inaccurate. Neither healthcare
+   information systems vendors nor healthcare organizations have adopted a
+   standard set of data elements necessary to supply basic PMRI content,
+   nor a medical vocabulary to assure that data shared across systems are
+   comparable at the most detailed level. Many organizations adopt their
+   vendor's proprietary data dictionary and code sets or develop one of
+   their own. The result is that these data elements may be incomplete for
+   patient care and may not be PMRI Report, July 6, 2000 Page 23
+   comparable when aggregated for clinical research or public health
+   initiatives. Not only do they not use standard terminologies, these
+   data dictionaries often are limited in scope to administrative data
+   and/or certain clinical domains. Lack of a highly detailed,
+   standardized data set and data definitions can lead to
+   misunderstandings and interpretation problems when used for direct
+   patient care. Lack of comparable data can also directly impact patient
+   care, for example, when different data elements are used to convey the
+   same meaning. Lack of comparable data also makes it difficult to study
+   best practices and to develop widespread quality of care guidance. When
+   statistical classification systems are used, varying rules associated
+   with different reimbursement schemes often compromise the quality of
+   data. Data that have been classified into large groupings also may not
+   have sufficient clinical detail to trigger clinical decision support
+   alerts or to satisfy scientific evidence-based requirements for
+   presenting knowledge that feeds into the development of clinical
+   decision support tools. Terminology Concepts In order to be precise in
+   our own use of language with reference to the concept of healthcare
+   terminology, we describe several associated concepts and how they are
+   being used in this Report: ß "Terminology" is considered to be "a
+   collective term used to describe the continuum of code set,
+   classification, and nomenclature [or vocabulary]." 19 ß A "code" is a
+   representation assigned to a term so that it may more readily be
+   processed. In general, most terminologies incorporate a coding system
+   for computer processing. A simple listing of codes and the terms with
+   which they are associated is a code set. ß A "classification" arranges
+   or organizes like or related terms for easy retrieval.20 For example, a
+   classification system might organize terms by major categories,
+   alphabetically, chronologically, or numerically. ß A "nomenclature, "
+   or "vocabulary," is a set of specialized terms that facilitates precise
+   communication by minimizing or eliminating ambiguity. The term
+   "controlled vocabulary" indicates only the set of individual terms in
+   the vocabulary. A "structured vocabulary," or "reference terminology,"
+   relates terms to one another (with a set of relationships) and
+   qualifies them (with a set of attributes)21 to promote precise and
+   accurate interpretation. These relationships and attributes may be
+   represented in some type of an information model. Vocabulary
+   Characteristics and Attributes Comparability of PMRI is achieved
+   through use of vocabularies that incorporate all the characteristics
+   and attributes that are necessary for clinicians to use them as
+   standards for clinical information. There have been several scholarly
+   papers that have set forth such characteristics and attributes22, 23,
+   24, 25, 26 19 "Action Plan for Development of Health Data Standards,"
+   Computer-based Patient Record Institute, September 1996. 20
+   "Clarification of Clinical Data Sets, Vocabularies, Terminologies, and
+   Classification," Journal of AHIMA/February 1999  70/2, 72-73. 21 Kannry
+   JL, et al. "Portability Issues for a Structured Clinical Vocabulary:
+   Mapping From Yale to the Columbia Medical Entities Dictionary," Journal
+   of the American Medical Informatics Association, Jan/Feb 1996, 3/1,
+   66-78. 22 Chute CG, et al. "A Framework for Comprehensive Health
+   Healthcare terminology Systems in the United States: Development
+   Guidelines, Criteria for Selection, and Public Policy Implications,"
+   Journal of the American Medical Informatics Association, Nov/Dec 1998,
+   5/6, 503-510. 23 Spillers R., Written Testimony to NCVHS on Standard
+   Reference Ontology 24Cimino JJ. "Desiderata for Controlled Medical
+   Vocabularies in the Twenty-First Century," Methods of Information in
+   Medicine, 1998, 37(4-5), 394-403. PMRI Report, July 6, 2000 Page 24 The
+   ASTM Standard of Quality Indicators for Controlled Health Vocabularies
+   discusses these characteristics within four topics: general
+   characteristics, structure, maintenance, and evaluation27 ß General
+   characteristics relate to utility and appropriateness in clinical
+   applications, including that concepts are not vague, ambiguous, or
+   redundant; purpose and scope are clear; coverage is in-depth, explicit,
+   and comprehensive; there are systematic and formal definitions of all
+   concepts; and the concepts are built into a reference vocabulary. ß
+   Structure of the vocabulary model determines the ease with which
+   practical and useful interfaces for term navigation, entry, or
+   retrieval can be supported. ß Maintenance characteristics provide the
+   technical choices which impact the capacity of a vocabulary to evolve,
+   change, and remain usable over time, including context-free
+   identifiers, persistence of identifiers, and version control. ß
+   Evaluation criteria address how a vocabulary should be evaluated, and
+   include a clear statement of purpose and scope, availability of tools
+   for mapping, and usability. Data Capture Challenges Ideally, data
+   should be captured once for patient care purposes at the most granular
+   or precise level. All information required for other purposes, such as
+   that required for reimbursement, public health, research, and other
+   uses of data should be derived therefrom.28 Few healthcare information
+   systems today, however, are capable of supporting the practitioner in
+   capturing clinically specific data. Methods that currently exist to
+   capture data include keyboard entry, mouse clicks, bar codes, light
+   pens, touch screens, document imaging, dictation (and associated
+   transcription), and speech recognition technology. A major requirement
+   to encourage clinician use of information systems is the existence of a
+   critical mass of information in the system, so that the clinician can
+   access the computer as the sole source of required information.
+   Additional requirements include that the data capture process be fast
+   and simple and that value to the individual user be clearly
+   demonstrable. The biggest challenge in using a healthcare vocabulary is
+   to balance usability of the system with the necessity to capture
+   information in a structured form that permits encoding of the data by
+   the system. For example, many physicians order vital signs to be taken
+   at specific intervals, but each physician may have a different concept
+   of what is included in vital signs. To achieve precision, it would be
+   necessary to have the physician check off explicitly what vital signs
+   are to be taken  temperature, pulse, respiration, blood pressure
+   (standing, sitting, or supine), etc. Yet, entering data at this level
+   of detail is very time-consuming. One solution to the challenge of
+   capturing codable data would be to automatically encode narrative text.
+   Several "text processing" methods are currently in development to parse
+   text from both traditional transcriptions and those created through
+   speech recognition technology, or from documents scanned with optical
+   character recognition. The ability of the system to translate this data
+   into encoded form is a promising method to achieve comparability of
+   data. However, the parsing methodologies that are 25 Elkin PL, et al.
+   "The Role of Compositionality in Standardized Problem List Generation,"
+   in: Cesnik B, McCray AT, and Scherrer JR, eds. Ninth World Congress on
+   Medical Informatics, IOS Press: 1998, pp. 660-664. 26 Rossi-Mori A, et
+   al. "Semantic Standards for the Representation of Medical Records,"
+   Medical Decision Making, 1991; 4(Suppl): S76-80. (See also ToMelo
+   Project, www.ehm.kun.nl/tomelo) 27 ASTM, Standard Specification for
+   Controlled Health Vocabularies, 2000 28 McDonald CJ. "Quality Measures
+   and Electronic Medical Systems," Journal of the American Medical
+   Association, Vol. 282 No. 12, September 22/29, 1999, p. 1181-1182. PMRI
+   Report, July 6, 2000 Page 25 dependent upon a reference vocabulary are
+   in early development and are limited because there is no standard
+   healthcare reference terminology yet existing. 29 Furthermore, not all
+   clinicians in all settings will want to perform narrative
+   documentation. In fact, clinicians in some settings may prefer using
+   data entry technologies such as touch-screen or pick-lists that are
+   supported by a structured vocabulary. 3. Data quality, data
+   accountability, and data integrity The first function of PMRI is
+   communication. PMRI is necessary for communication among the patient's
+   multiple caregivers and to overcome the fallibility of human memory
+   between episodes of care. A second critical function of PMRI is to
+   provide the basis for assessing and continuously improving the
+   performance (effectiveness and efficiency) and thereby improving
+   quality of the healthcare system. A third function is to facilitate
+   adverse event reporting and contribute to producing and analyzing
+   population measures, such as those found in public health surveillance,
+   public health indicators, and so forth. All of these functions require
+   that healthcare information must possess standard features and
+   characteristics of data quality, data accountability, and data
+   integrity. These concepts are closely related. Data quality refers to
+   the functions and characteristics that must be incorporated into PMRI
+   standards to ensure that data are without error. Data accountability
+   requires that the design of PMRI standards incorporate the
+   identification of the entity associated with the data. Data integrity
+   is a security feature that ensures data have not been altered. Data
+   Quality It is very difficult to measure the quality of healthcare data.
+   Every user of healthcare data can point to examples where data quality
+   is suspect and/or cannot be validated for one of the following reasons:
+   ß Erroneous data and variation in the rigor of data editing: The level
+   of sophistication and rigor of processes to edit and audit data varies
+   considerably among institutions and results in variation of data
+   accuracy. ß Missing data: Data that could be potentially entered but
+   are missing or are entered incompletely. This may be the result of lack
+   of training, lack of data entry devices, lack of time, or lack of
+   accommodation by the system. There may be no adherence to standard data
+   content requirements and thus no place in the information system for
+   entering certain data. ß Unstructured data: While narrative data are
+   often essential, abstracted data from free text are often inaccurate,
+   inconsistent, and incomplete. ß Lack of standardized data definitions:
+   Despite some commonality of data dictionaries, different provider
+   settings and different healthcare professions continue to use different
+   definitions for terms within these dictionaries. ß Lack of uniformity
+   in units of measure: Different healthcare professions often adopt
+   different scales for the same measure, including English vs. metric
+   units of measure. For example, the pain scale used by physical
+   therapists and nurses differs such that a high rating by a physical
+   therapist may be interpreted by a nurse as only a moderate rating. 29
+   Eisenberg F, SMS, Testimony to the NCVHS CPRWG on Data Quality,
+   Accountability, and Integrity, October 14, 1999. PMRI Report, July 6,
+   2000 Page 26 ß Use of nonstandard codes: Some health plans do not use
+   the current version of standard diagnosis or procedure code systems or
+   coding guidelines. Some require providers to use health plan- or
+   payer-developed diagnosis or procedure codes (in place of or as a
+   supplement to ICD-9- CM or CPT-4). Use of such nonstandard code systems
+   hampers comparable performance measurement and requires tracking of
+   multiple coding schemes for providers working for multiple health
+   plans. ß Modification of standard codes: Some health plans that use
+   only standard codes sometimes modify the definitions to accommodate
+   billing and payment needs, thereby impeding the ability to compare
+   performance of health plans. ß Limitations of current classification
+   systems: Current proprietary and standard classification systems,
+   particularly those designed specifically for billing purposes, do not
+   always capture healthcare data as needed for performance measurement or
+   quality improvement processes.30, 31 ß Lack of ability to uniquely
+   identify patients: Because each provider creates its own patient
+   medical record identifier system and maintains its own patient index,
+   patients have different identifiers at each location where they have
+   received care. This makes it very difficult to seamlessly exchange
+   data, when authorized, among providers. Additionally, different systems
+   that assign identifiers often collect different information, making it
+   difficult to map identifiers. For instance, one system may capture
+   patient name, address, telephone number, and date of birth. Another
+   system may substitute social security number for date of birth, not
+   capture telephone number but capture mother's maiden name. Sometimes
+   patients get assigned several different numbers by one provider, such
+   as when a patient has a name change or uses a nickname on a subsequent
+   visit. This can result in loss of data for patient care purposes. It
+   constrains the ability to exchange data across providers for continuity
+   of care. As providers merge and consolidate, there is a huge cost to
+   merging patient indexes into an enterprise-wide master patient index.
+   Data Accountability Data accountability refers to the identification of
+   the healthcare party (e.g., individuals, organizations, business units)
+   or agent (e.g., software, device, instrument, monitor) that is
+   responsible for data origination, amendment, verification, translation,
+   stewardship, access and use, disclosure, and transmission and
+   receipt.32 Information on who, what, when, where, how, under what
+   conditions, and in what context is often incompletely captured. A
+   unique provider identifier, as provided for under the Administrative
+   Simplification provisions of HIPAA, assigned to each caregiver is
+   essential for ensuring complete capture of information about who had
+   access to what data. Finally, evidence of accountability often does not
+   persist throughout the life of the data, making auditing difficult or
+   impossible. Data Integrity Data integrity means that data have not been
+   altered or destroyed in an unauthorized manner. Data integrity is both
+   a security and quality principle that prevents information from being
+   modified or otherwise corrupted, either maliciously or accidentally. 30
+   Jenich, H, IPRO, Testimony to NCVHS CPRWG on Data Quality, September
+   16, 1999 31 Griffith, SP, Indian Health Service, Testimony to NCVHS
+   CPRWG on Data Quality, September 16, 1999. 32 Dickinson, GL, Per Se
+   Technologies, Inc. Testimony to NCVHS CPRWG on Data Quality,
+   Accountability, and Integrity, October 14, 1999. PMRI Report, July 6,
+   2000 Page 27 In addition to addressing data integrity here under data
+   quality, data integrity is also addressed in the HIPAA Security Notice
+   of Proposed Rulemaking. 4. Other issues From hearing testimony
+   associated with interoperability, comparability, and data quality, the
+   NCVHS identified other issues relevant to PMRI standards. Some of these
+   issues are already being addressed by proposed regulations under HIPAA
+   Administrative Simplification or through other reports from NCVHS.
+   However, these issues remain relevant to PMRI standards. Privacy,
+   Confidentiality, and Security Privacy, confidentiality, and security
+   issues must be addressed in order for the public to trust having their
+   PMRI exchanged in electronic form. Virtually every testifier cited
+   these issues when addressing uniform data standards for PMRI and the
+   electronic exchange of such data. There is public concern that PMRI in
+   electronic form may compromise an individual's privacy by reducing the
+   confidentiality of the information; this public concern has not been
+   alleviated by the limited scope of the privacy protections under
+   HIPAA.33 Many healthcare professionals share this concern. On the other
+   hand, many believe that the existence of electronic security tools will
+   protect the confidentiality of PMRI even better than in their current
+   paper form. In the absence of national legislation to protect the
+   privacy of PMRI, however, public distrust is likely to continue to be
+   the most important barrier to the acceptance of a national health
+   information infrastructure that can help us to improve quality and
+   control costs. Another problem is that businesses providing Web sites
+   to collect health information from consumers to provide lifetime health
+   record repository services, consumer health education, and consumer-
+   oriented e-commerce (e.g., sites filing prescriptions and selling
+   health-related products) are often not covered entities as defined by
+   HIPAA regulations. In many cases they do not have business partner
+   relationships with covered entities. As a result, the healthcare
+   information these businesses collect is not protected health
+   information subject to HIPAA regulation. In addition to these general
+   concerns and those already addressed by NCVHS in its comments on the
+   proposed rule for Standards for Privacy of Individually Identifiable
+   Health Information, several other specific issues also surfaced.
+   Several testifiers reported that use of offshore transcription and
+   other information services for healthcare operations for which they
+   contract is a significant privacy concern with respect to electronic
+   PMRI. Some foreign countries may not follow the same principles with
+   respect to protecting private health information as exist in the United
+   States. Privacy and confidentiality must be addressed in contractual
+   agreements, generally covered through international treaties. A
+   significant privacy concern is the potential for unauthorized
+   disclosure of data by business partners that provide services to the
+   healthcare organization. These businesses have received the data
+   initially under contract to perform specific healthcare operational
+   services. The concern is that these businesses may mine these data for
+   information of value to them, without the knowledge or consent of their
+   clients or the patients whose data are being mined, and may make
+   unauthorized disclosures. This may occur when the businesses store
+   transcriptions, maintain pharmaceutical databanks, provide remote
+   connectivity options, or serve as application service providers. 33
+   Testimony to NCVHS Subcommittee on Privacy and Confidentiality,
+   Chicago, June 1998. PMRI Report, July 6, 2000 Page 28 The establishment
+   of uniform standards for PMRI raises a wide range of issues related to
+   privacy, confidentiality, and security. A complete discussion of all
+   these issues is beyond the scope of this Report. The NCVHS has
+   addressed these issues in prior documents and will continue to further
+   study and report separately. Diverse State Laws Diverse state laws
+   impact the ability to achieve uniformity and to exchange medical record
+   information efficiently.34 Achieving widespread use of electronic PMRI
+   is a necessary component of building a national health information
+   infrastructure that can make possible the provision of integrated
+   healthcare services across multiple settings and providers of care.
+   Diverse state laws, however, force vendors to alter their systems for
+   different states, which dramatically increases the time and cost to
+   develop PMRI systems. Some of these diverse state laws mean that
+   different states have different rules for patients to access their
+   records, different periods of retention for records, and different
+   requirements for authentication of records. States also vary widely in
+   rights of patients to receive a copy and/or view their own medical
+   records. At the present time, 33 states grant access by patients to
+   their records held by hospitals and healthcare facilities; 13 states
+   grant access to records held by health maintenance organizations; 16
+   states grant access to records held by insurance companies; and 29
+   states grant patients access to records held by some provider, but each
+   state defines the access differently. There is also diversity with
+   respect to record retention. The Medicare Conditions of Participation
+   for Hospitals state that "medical records must be retained in their
+   original or legally reproduced form for a period of at least 5 years".
+   Individual state statutes vary. For example, California hospitals must
+   maintain medical records for a minimum of 7 years following patient
+   discharge, except for minors' records, which must be maintained for at
+   least 1 year after a minor has reached age 18, but in no event for less
+   than 7 years. In New York, medical records must be retained for a
+   period of at least 6 years from the date of discharge or 3 years after
+   the patient's age of majority (18 years), whichever is longer, or at
+   least 6 years after death. Authentication requirements also vary
+   significantly and as a result may render electronic signatures invalid.
+   Authentication requirements are often embedded in state statutes that
+   do not necessarily pertain directly to medical records or health care
+   but address business records in general. The Medicare Conditions of
+   Participation for Hospitals state "all entries must be legible and
+   complete, and must be authenticated and dated promptly by the person
+   (identified by name and discipline) who is responsible for ordering,
+   providing, or evaluating the service furnished. The author of each
+   entry must be identified and must authenticate his or her entry.
+   Authentication may include signatures, written initials or computer
+   entry." The Joint Commission on Accreditation of Healthcare
+   Organizations (JCAHO) requires that hospitals have only discharge
+   summaries, history and physical examinations, consultation reports, and
+   operative reports authenticated. There must be a medical staff policy
+   regarding authentication of entries in the medical record. Many states
+   require that entries in the medical record be dated and signed. Few
+   states have recognized the use of electronic authentication. Currently,
+   both Illinois and New York permit electronic authentication. In
+   summary, diverse state laws are barriers to the electronic exchange of
+   PMRI because different states have different requirements for
+   maintenance or retention of patient records on paper or other 34
+   Frawley K. American Health Information Management Association, Written
+   Testimony to NCVHS CPRWG, 1999. PMRI Report, July 6, 2000 Page 29 media
+   that are incompatible with full computerization of PMRI. Diverse state
+   statutes and regulations result in discrepancies concerning
+   authentication, retention, permanence, and other data features that
+   increase costs and delay availability of electronic PMRI solutions.
+   Business Case for Standards Development Another issue that was
+   identified is the need to support industry investments in the
+   development of PMRI standards. Standardization increases productivity
+   by reducing the need for customization, decreasing errors through
+   applying single meani

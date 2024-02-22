@@ -1,0 +1,222 @@
+http://asc.jpl.nasa.gov
+
+   [jpllogo.gif] Projects: ASC, CASPER, Planning and Scheduling,
+                 Artificial Intelligence Group                  [Nasalogo.gif]
+                   [asc_title.gif]
+
+   nothing
+
+   artificial intelligence group [_line.gif] planning and scheduling
+   [_line.gif] machine learning systems [_line.gif] jpl [_line.gif]
+   caltech [_line.gif] nasa
+
+   [dot.gif] [earth.gif]
+   nothing
+   background description impact technology status significance problem
+   sponsors moreinfo publications the team contacts
+   [ts21.gif]    [asc_screen.gif]
+
+   Background top
+
+   Since the dawn of the space age, unmanned spacecraft have flown blind
+   with little or no ability to make autonomous decisions based on the
+   content of the data they collect.  The Autonomous Sciencecraft
+   Constellation flight experiment (ASC) will fly on the Air Force
+   TechSat-21 constellation (an unclassified mission scheduled for launch
+   in 2004).  ASC will use onboard science analysis and replanning to
+   radically increase science return by enabling intelligent downlink
+   selection and autonomous retargeting.
+
+
+   AI Technology top
+
+   The onboard processing package will consist of three software
+   components: (1) a synthetic aperture radar (SAR) image formation
+   module, (2) onboard science algorithms that will analyze the image
+   data, generate derived science products, and detect trigger conditions
+   such as terrain boundaries and change relative to previous
+   observations, and (3) a low-latency continuous planner that will replan
+   activities, including downlink, based on science observations in the
+   previous orbit cycles.  The ASC demonstration will also utilize cluster
+   management and execution management software flying onboard the
+   constellation.  Techsat-21 will be flying the TeamAgent and ObjectAgent
+   cluster management software to enable the distributed spacecraft to be
+   treated as a single virtual instrument.  This software enables
+   functions to be migrated from spacecraft to spacecraft as operations
+   dictate.  Techsat-21 will also be flying the spacecraft command
+   language (SCL) execution system to enable low-level autonomous
+   responses and automation.
+
+   The image formation module will transform the raw radar instrument data
+   into a possibly reduced-resolution SAR image. Preliminary calculations
+   indicate that this processing is feasible, based on the complexity of
+   SAR processing and the number of compute cycles available per orbit.
+
+   The onboard science algorithms will analyze the images to extract
+   static features and detect changes relative to previous observations.
+   This module will enable downlinking only regions of interest, e.g.,
+   regions where change such as flooding, ice melt, and lava flows have
+   occurred and will also enable retargeting and search, e.g., shifting
+   the radar aimpoint on the next orbit cycle to identify and capture the
+   full extent of a flood. On deep space missions, onboard science
+   analysis will enable capture of short-lived science phenomena at the
+   finest time-scales without overwhelming onboard caching or downlink
+   capacities. Examples include eruption of volcanoes on Io, formation of
+   jets on comets, and phase transitions in ring systems. Generation of
+   derived science products (e.g., boundary descriptions, catalogs) and
+   change-based triggering will also reduce data volumes to a manageable
+   level for extended duration missions that study long-term phenomena
+   such as atmospheric changes at Jupiter and flexing and cracking of the
+   ice crust on Europa.
+
+   Onboard conversion of raw data to derived science products constitutes
+   a form of intelligent data compression. Examples of derived products
+   include compact descriptions of terrain boundaries (the outline of a
+   flooded region or a fresh lava flow), histograms of heights, slopes, or
+   reflectivities (volcano hypsometry), vector field descriptions of flows
+   (wind vectors, ice migration), catalogs of features including type,
+   location, and size information  (lakes, sand dunes), and image data of
+   regions of interest, particularly regions where change has occurred or
+   which stand out from the local surroundings (flooding, lava, forest
+   regrowth). We note that downlinking such summarizations is
+   complementary with traditional data compression techniques.
+
+   The onboard planner will generate low-level command sequences from
+   goals provided by the onboard science analysis module. The model-based
+   planning algorithms will enable rapid response to a wide range of
+   operations scenarios based on a deep model of spacecraft constraints,
+   including faster recovery from spacecraft anomalies.   The onboard
+   planner will accept as inputs the science and engineering goals and
+   ensure high-level goal-oriented behavior for the constellation.
+
+
+   Problem top
+   Constrained downlink resources limit the science return of current and
+   future space missions.
+
+
+   Impact top
+   Demonstration of these capabilities in a flight environment will open
+   up tremendous new opportunities in planetary science, space physics,
+   and earth science that would be unreachable without this technology.
+   This technology would:
+     * dramatically increase the science per fixed downlink by enabling
+       downlink of the highest priority science data.
+     * enable study of short-lived science events (such as volanic
+       eruptions, dust storms, etc.)
+     * reduce downtime lost to anomalies due to robust execution enabled
+       by autonomy software
+     * reduce instrument setup time by using autonomy software take
+       advantage of execution information to streamline operations.
+
+
+   Status top
+   Autonomous Sciencecraft Constellation selected for New Millennium ST6
+   study. Study phase begins in February 2001 and ends in August 2001.
+
+   Implementation phase would result in delivery of software for
+   spacecraft completion in Fall 2003 and scheduled launch in Fall 2004.
+
+
+   Description top
+
+   To further illustrate the ASC concept, consider a volcano observation
+   scenario that involves monitoring of lava flows in Hawaii. SIR-C radar
+   data have been used in ground-based analysis [Zebker et al., 1996;
+   2000] to study this phenomenon. The ASC concept would be applied as
+   follows:
+
+   1) Select volcano region
+   2) Radar image volcano
+   3) Form reflectivity image
+   4) Compare image with previous image (which may simply be a comparison
+   of previous boundary position, if that was all that was returned)
+   5) Determine area of new flow
+   6) Downlink imagery of identified new flow areas; alternatively
+   downlink a higher-level characterization of the flow.
+
+   A more aggressive example would involve re-prioritize observation for
+   high-resolution and/or repeat imaging.  As demonstrated by this
+   scenario, onboard science processing and spacecraft autonomy enable
+   focus of mission resources onto science events such that the most
+   interesting science data is downlinked.  In this case, a large number
+   of high priority science targets can be monitored and only the most
+   interesting science data (during times of change and focused on the
+   areas of change) need be downlinked.
+   This important flight validation will enable radically different
+   missions with significant onboard decision-making leading to novel
+   science opportunities. The paradigm shift toward highly autonomous
+   spacecraft will enable future NASA missions to achieve significantly
+   greater science returns with reduced risk and cost.
+
+Possible Science Missions
+
+Tracking Europa Surface Ice
+
+   [europa.jpeg]
+
+Monitoring Io Volcanoes
+
+   [io.jpg]
+
+
+
+
+   Publications top
+
+   Please Note:
+   This material is provided for your personal use only and may not be
+   retransm itted or redistributed without permission in writing from the
+   paper's publisher and/o r author. You may not upload this material to
+   any public server, on-line service, network, or bulletin board without
+   prior written permission from the publisher and/or author. You may not
+   make copies for any commercial purpose. This material is not public
+   domain. Repro duction or storage of materials retrieved from this web
+   site are subject to the U.S. Co pyright Act of 1976, Title 17 U.S.C.
+
+   S. Chien, R. Sherwood, M. Burl, R. Knight, G. Rabideau, B. Engelhardt,
+   A. Davies, P. Zetocha, R. Wainright, P. Klupar, P. Cappelaere, D.
+   Surka, B. Williams, R. Greeley, V. Baker, J. Doan, "The Techsat-21
+   Autonomous Sciencecraft Constellation Demonstration", Proceedings of
+   i-SAIRAS 2001, Montreal, Canada, June 2001. (PDF)
+
+   ASC Lunchtime Talk 7/24/2001 von Karman Auditorium (Slides, 10MB) (PDF)
+
+   A. Davies, R. Greeley, K. Williams, V. Baker, J. Dohm, M. Burl, E.
+   Mjolsness, R. Castano, T. Stough, J. Roden, S. Chien, R. Sherwood, "ASC
+   Science Report," August 2001. (7.6MB) (PDF)
+
+   Contacts top
+
+   Dr. Steve Chien
+   Steve.Chien@jpl.nasa.gov, (818) 393-5320
+
+   Robert Sherwood
+   Robert.Sherwood@jpl.nasa.gov
+
+   The Project Team top
+
+   JPL: Steve Chien, Rob Sherwood, Russell Knight, Gregg Rabideau, Daniel
+   Tran, Ashley Davies, Steve Schaffer
+
+   Air Force Research Laboratory, Kirtland: Paul Zetocha, Ross Wainright,
+   Pete Klupar
+
+   Interface and Control Systems: Pat Cappelaere, Dean Oswald
+
+   Princeton Satellite Systems: Derek Surka, Margarita Brito
+
+   Massachusetts Institute of Technology, Space Systems Laboratory:
+   Professor Brian Williams
+
+   Arizona State University: Professor Ronald Greeley, Kevin Williams
+
+   University of Arizona: Professor Victor Baker, James Dohm
+
+   Sponsors top
+
+   New Millennium Program
+
+   JPL Telecommunications and Mission Operations Technology Program
+
+   [jpllogo.gif] Questions: www@www-aig.jpl.nasa.gov

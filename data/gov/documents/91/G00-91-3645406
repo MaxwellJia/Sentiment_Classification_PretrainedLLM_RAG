@@ -1,0 +1,37 @@
+http://www.pppl.gov/search/
+
+                               PPPL Web Search
+
+                     Enter Words To Search Documents For
+                  ________________________________________
+                Go Search Documents Clear Search Input Field
+     __________________________________________________________________
+
+   This performs a case-insensitive search using a number of keywords.
+
+   You can use the booleans and, or, or not in searching. Without these
+   booleans, the search will assume you're anding the words together.
+   Evaluation takes place from left to right only, although you can use
+   parentheses to force the order of evaluation.
+
+   You can also use wildcards (asterisks) to search for matches to the
+   beginnings of words only - you can't put asterisks at the front or in
+   the middle of words.
+
+  example 1: john and doe or jane
+  example 2: john and (doe or not jane)
+  example 3: not (john or jane) and doe
+  example 4: j* and doe
+
+    1. This search evaluates the expression from left to right.
+    2. This search will also be evaluated from left to right, although the
+       operation in parentheses will be evaluated as a whole first.
+    3. john or jane will be evaluated first, a not operation will be
+       performed on that, then everything will be anded with doe.
+    4. This will search for all files that contain words starting with the
+       letter j and that also contain doe.
+     __________________________________________________________________
+
+   [back.xbm] PPPL Home Page
+   Send Comments To:Webmaster
+   Last Revised: March 11 1997

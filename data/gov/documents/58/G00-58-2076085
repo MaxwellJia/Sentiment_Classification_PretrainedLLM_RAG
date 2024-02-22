@@ -1,0 +1,110 @@
+http://lupus.gsfc.nasa.gov/core/core1098/core-results.html
+
+                   Recent Results of CORE Session Analysis
+
+                        Dan MacMillan, NVI, Inc./GSFC
+
+                              October 15, 1998
+
+   The results of the CORE experiments are not in general as good as
+   scheduled. Two quantitative measures of this are (1) the estimates of
+   observed SEFD that can be compared with scheduled SEFDs and (2) the
+   formal uncertainties (sigmas) of parameters estimated from actual
+   experiment data compared with uncertainties based on scheduled
+   observations. These uncertainties are computed using the geodetic
+   analysis program SOLVE. The estimated parameters are either earth
+   orientation parameters or station positions.
+
+   (1) SEFDs
+
+   The results of the comparison of observed versus scheduled SEFDs
+   appears on the web page for each session (snr summary file). In the
+   station table for X- and S-band, the ‘Fact’ column gives the factor, F,
+   such that
+
+   observed SNR = F1*F2*scheduled SNR.
+
+   Since SNR ~ 1/Ö [SEFD[1]*SEFD[2]],
+
+   observed SEFD[1] = scheduled SEFD[1]/[F1*F2]
+
+   For example, if a receiver ran warm, typically the station factor would
+   be ~0.65 so that the observed SEFD ~ 1500 Jy/[0.65*0.65] = 3550 Jy
+
+   (2) Solve Analysis
+
+   The formal uncertainties of estimated parameters depend on
+     * Observed SEFDs
+     * clocklike errors, e.g., unstable maser behavior, or bad phasecal
+     * troposphere noise
+     * missing stations (the effect of this can be seen in both the
+       simulated and the observed sigmas)
+
+   The figures linked in the table below show the observed formal EOP
+   sigmas compared with the simulated sigmas based on scheduled
+   observations. The observed sigmas have generally met the 1998 goal, but
+   have been greater than the simulated sigmas.
+
+   Sigmas
+
+           1998 Goal
+
+                    Simulation
+
+                              Actual Performance
+
+   UT1
+
+           3.5 m s
+
+                    2.0 m s
+
+                              2.5-3.5 m s
+
+   X-Wobble
+
+           100 m as
+
+                    60 m as
+
+                              70-100 m as
+
+   Y-Wobble
+
+           100 m as
+
+                    50 m as
+
+                              55-100 m as
+
+   The simulations indicate that the CORE-A experiments give the smallest
+   EOP uncertainties. CORE-A was planned to have the same stations in each
+   session, although some substitutions have occurred due to station
+   problems. The three CORE-B networks each have a set of core stations,
+   but 1-3 additional stations have been added. Since these additional
+   stations are not the same for each session, these networks are not as
+   stable as CORE-A. The reason that CORE-A should do better is that it
+   has a much greater north-south extent since it includes Hartrao and
+   Hobart. The disadvantage of this network is that those two southern
+   sites are not as well connected to the rest of the network because they
+   can only observe significantly with 1 or 2 sites. One of the CORE-Bs
+   (CORE-B209, 98JUN17) actually had the best sigmas of any of the CORE
+   experiments. This was an 8-station network with a southern hemisphere
+   station DSS45 well-connected with Kashima and Kokee.
+
+   When observed data is analyzed, we estimate the relative clock delay
+   between the reference station and each other station in the network. To
+   account for baseline dependent clocklike errors, we generally estimate
+   baseline clock parameters for the baselines between the non-reference
+   stations. These parameters are supposed to account for nonclosure of
+   the group delays around a triangle of sites (that is, the sum of the
+   group delays should equal zero). Possible baseline-dependent effects
+   are (1) feed cross polarization leakage, (2) complicated source
+   structure, and (3) mismatch in passbands between stations that causes
+   phase misalignments (due to a missing channel, feed response, or
+   different VC/BBC filter delays). The EOP sigmas for the CORE-A network
+   are especially sensitive to estimating the baseline clock parameters to
+   Hobart. When they are estimated in the simulation , the EOP sigmas are
+   about 2 m s, 60 m as, and 50 m as for UT1, X-Wobble, and Y-Wobble. This
+   accounts for a large portion of the difference between observed and
+   simulated sigmas for CORE-A.

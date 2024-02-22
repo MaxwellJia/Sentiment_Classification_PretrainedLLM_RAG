@@ -1,0 +1,95 @@
+http://is2.antd.nist.gov/nistswitch/
+
+                                NIST NIST ITG
+
+NIST Switch Home Page
+
+   This is the NIST Switch home page. NIST Switch is a label switching
+   development package that runs (or will, eventually) on Linux and
+   FreeBSD.
+
+  New! Version 0.2 released! (10 May 2000)
+
+   Version 0.2 of NIST Switch is now available. This version runs with
+   FreeBSD 3.3 and ALTQ-2.0, and includes new functionality.
+
+  Version 0.1 released! (9 July 1999)
+
+     This is to announce the release of the preliminary version 0.1 of
+     our multiprotocol label switching (MPLS) research platform, NIST
+     Switch. NIST Switch implements quality of service and explicit
+     routing through label switching. It uses proposed extensions to RSVP
+     to signal QoS requests and distribute labels.
+
+  NIST Switch functionality
+
+   NIST Switch version 0.2 implements functionality described in a number
+   of Internet Drafts:
+     * draft-ietf-mpls-arch-05.txt - MPLS architecture
+     * draft-ietf-mpls-label-encaps-04.txt - Label stack encoding
+     * draft-ietf-mpls-rsvp-00.txt - RSVP-mediated label exchange
+     * draft-ietf-mpls-rsvp-lsp-tunnel-04.txt - RSVP-mediated lsp tunnel
+       creation
+     * draft-rosen-mpls-lan-encaps-00.txt - "Shim" LAN label encapsulation
+     * draft-srinivasan-mpls-lans-label-00.txt - "MAC" LAN label
+       encapsulation (receive only)
+
+   NIST Switch runs over Ethernet (10Mb and 100Mb) and ATM. It is based on
+   commodity PC hardware running on freely-available operating systems
+   (currently, FreeBSD 3.3) (Linux 2.2.X versions to come).
+
+   As an experimental platform, NIST Switch is designed to be easily
+   altered. Each of its key components (queueing algorithms, label
+   databases and distribution, routing algorithms, device support
+   routines, QoS policies) are independently configurable modules which
+   are readily replaceable.
+
+   NIST Switch is free, public domain code. (More precisely, while our
+   implementation is public domain, it is based in part on other code
+   which is covered by BSD-style copyrights.)
+
+  NIST Switch Software
+
+     * FreeBSD NIST Switch software distribution and installation (version
+       0.1 and 0.2)
+     * Linux NIST Switch software distribution and installation - coming
+
+  NIST Switch Mailing Lists
+
+  NIST Switch Frequently Asked Questions
+
+  NIST Switch Papers
+
+     * New! Presentation to DARPA NGI PI meeting, December, 1999 (gzipped
+       PostScript file)
+     * Presentation to November, 1999 IETF meeting (gzipped PostScript
+       file)
+     * NIST Switch: A Platform for Research on Quality of Service Routing
+       (Paper presented to SPIE '98 Symposium on Voice, Video, and Data
+       Communications, PostScript format)
+     * FY '99 Project Plan, PDF format
+     * Initial Project Description, HTML format
+     * Initial Project Description, PostScript file
+
+  NIST Switch Logos
+
+     * Try 'em out!
+
+Acknowledgements
+
+   This project is part of the research and development program of the
+   NIST Internetworking Technology Group (ITG).
+
+   Project support was provided by:
+
+   The NIST Information Technology Laboratory (ITL) [banner2.gif]
+
+   The code is based in part on:
+
+   FreeBSD version 2.2.6 [powerani.gif]
+   ALTQ version 1.1      [SonyCSL.GIF]
+   ISI RSVPD rel4.2a3    [logo_small.gif]
+     __________________________________________________________________
+
+   Comments? Questions? Let us know at nistswitch-dev@antd.nist.gov.
+     __________________________________________________________________

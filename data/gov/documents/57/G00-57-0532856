@@ -1,0 +1,58 @@
+http://www.visn21.med.va.gov/search.htm
+
+              VA Sierra Pacific Network Search
+                                        [USEMAP:b_seardch.gif]
+
+
+   Enter your query below:
+   ________________________________________ Go
+                    [ ] Use Free-Text Query
+
+      Tips For Searching
+
+      At its simplest, a query can be just a word or a phrase. But with the
+      tips on this page, you can expand the focus of your query to give you
+      more complete results. These tips will get you started with basic query
+      language and acquaint you with the full power of Microsoft Index
+      Server.
+        * Look for words with the same prefix. For example, in your query
+          form type key* to find key, keying, keyhole, keyboard, and so on.
+        * Search for all forms of a word. For example, in the form type
+          sink** to find sink, sinking, sank, and sunk.
+        * Search with the keyword NEAR, rather than AND, for words close to
+          each other. For example, both of these queries, system and manager
+          and system near manager, look for the words system and manager on
+          the same page. But with NEAR, the returned pages are ranked in
+          order of proximity: The closer together the words are, the higher
+          the rank of that page.
+        * Refine your queries with the AND NOT keywords to exclude certain
+          text from your search. For example, if you want to find all
+          instances of surfing but not the Net, write the following query:
+          surfing AND NOT the Net
+        * Add the OR keyword to find all instances of either one word or
+          another, for example:
+          Abbott OR Costello
+          This query finds all pages that mention Abbott or Costello or both.
+        * Put quotation marks around keywords if you want Index Server to
+          take them literally. For instance, if you type the following query:
+          "system near manager"
+          Index Server will literally look for the complete phrase system
+          near manager. But if you type the same query without the quotation
+          marks:
+          system near manager
+          Index Server searches all documents for the words system and
+          manager.
+        * Use Free Text Queries if you want to enter queries using natural
+          language. Index Server will examine your query, extract nouns and
+          noun phrases and construct a query for you. With free text queries
+          you can enter any text you want, from a proper question, to a
+          string of words and phrases, without worrying about the query
+          language. For example, if you type in the following query:
+          "How do I use the Index Server administration snap-in?"
+          Index Server will create a query for you automatically and begin
+          the search. Note that when you're using free text queries, the
+          regular query language features are disabled and keywords such as
+          AND, OR, and NEAR are interpreted as normal words.
+
+
+                                    © VISN 21

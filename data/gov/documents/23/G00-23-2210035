@@ -1,0 +1,2133 @@
+http://www-cad.fnal.gov/groupinfo/dcs/dcsinformation.html
+
+                                   [dcs.gif]
+
+   Fermilab Drawing Control System, Guide
+     __________________________________________________________________
+
+  Table of Contents
+
+     * User Section
+          + User Interface
+               o Using the Mouse in the Main List
+               o Interacting With Text Entry Fields
+          + File Menu Operations
+          + Item Menu Operations
+               o The Query Function
+               o The New Function
+               o The Group Function
+               o The Checkout Function
+               o The Checkin Function
+               o The Update Function
+               o The Release Function
+               o The Information Function
+               o The Add Sheet Function
+               o The Delete Function
+               o The Launch Function
+          + Settings Menu Operations
+          + Applications Menu Operations
+               o The CAD Plotter Application
+               o The ER/ECO Application
+               o The WHERE-USED Application
+               o The Archive/Restore Application
+          + User Configuration/Preferences Files
+               o \$HOME/.dcsprefs file
+               o \$HOME/.launchdcs file
+               o \$HOME/.dcsdefaults file
+               o \$HOME/.dcscontrols directory
+     * Administrator Section
+          + Description of the Depository Tree
+               o The local_configs.tcl File.
+               o The extensions.descriptions File.
+               o The data directory.
+               o The numbanks directory.
+               o The files000... directories.
+               o The custom directory.
+               o The access directory.
+               o The projects directory.
+                    # The projectcodes.dat file.
+               o The batchreq directory.
+          + Setting User Access Privileges
+          + Configuring Access to an Alternate or Remote Depository
+          + Defining Line Printers
+          + The Korn Shell Configuration File. (local_env.ksh file)
+          + Setting Up Part Number Banks.
+          + Defining Custom Operations.
+          + Setting Up Global Application Launching.
+               o Writing a Launch Script.
+               o The Global .launchdcs File.
+          + Example Steps Taken to Install a New Depository.
+          + Adding a New Project.
+          + Setting up a New User for DCS Use.
+     * Developer Section
+          + Adding a New Display Format to the DCS GUI
+          + DCS Installation Tree
+          + Default Bindings File
+          + Description of the DBA Utilities
+          + Description of the DCS Database
+          + Description of the DCS Indexes
+          + Description of the DCS Access Lists
+     * Index
+     __________________________________________________________________
+
+User Section
+
+   This section of the DCS Guide is intended for the general end user of
+   the DCS system. It explains how to effectively use the system.
+
+   The DCS system manages CAD files in a folder scenario. All files in a
+   folder are considered one record in the DCS system. One DCS record can
+   contain many files in its folder.
+
+   When adding new records to the DCS system, files copied to the
+   depository are specified in a folder specification. That is, a filename
+   without a file extension.
+
+   New records can be added to the DCS system without there actually being
+   existing files to control, i.e.: only information about an item exists,
+   but no CAD file exists yet.
+
+   Where there are records with data existing, the record should remain
+   checked in unless work is being performed on the data in the short
+   term. Under normal conditions, one user might have, at most, 50 records
+   checked out. An average number is more like 10 records checked out at a
+   time.
+
+   Records can be checked in and checked out many times until a release is
+   performed on the record. Only one person at a time can check out the
+   same record.
+
+   Records that are in the release state, that are then checked out cause
+   the DCS system to create a new revision of the record and the folder it
+   controls.
+
+   User Interface
+          The DCS Graphical User Interface (GUI) consists of a main screen
+          which contains the main list window. All operations in DCS
+          revolve around the contents of the current main list.
+
+          At the top of the main screen is a series of pull down menus
+          named File, Item, Settings, and Help. Pressing the left mouse
+          button on any of the menu names will temporarily display the
+          menu and its selections. If the middle mouse button is pressed
+          on the menu items, the menu will stat displayed until another
+          left mouse press is pressed on the menu. Also, if the middle
+          mouse button is pressed and held, the menu will drag to a
+          location on the screen and stay when the mouse button is
+          released. This feature is known as tear off menus.
+
+          Some of the items in the menus will appear gray. If an item is
+          gray it is said to be non-active. There are two reasons why an
+          item may be set non-active, (1) The current use id is not
+          authorized to perform the task for the active vault, or (2)
+          there are no files selected from the main list to perform the
+          task.
+
+          At the bottom of the main screen there is status information.
+          The left most information items include the number of items
+          indexed in the current main list, the number of items selected
+          from the main list, the name of the currently active depository
+          group and the name of the currently active main list display
+          format.
+
+          The far right bottom of the screen is where status icons appear
+          when DCS is either busy or prompting the user for information or
+          displaying error messages. For example, a stop watch icon will
+          appear in the lower right corner of the main screen whenever DCS
+          is busy searching for records when the Query function is
+          executed.
+
+          Using the Mouse in the Main List
+          For selecting and reselecting items in the main list, the three
+          mouse buttons, and the shift key are used. These are the
+          selection operations available for the main list:
+
+         1. Single Selection
+            Pressing and releasing the left mouse button will select a
+            single record.
+         2. Multiple Selection
+            Pressing and holding the left mouse button, and dragging the
+            mouse will select multiple records.
+         3. Extended Selection
+            A combination of the left mouse button and the keyboard shift
+            key will extend the current selection to include all records
+            between the current mouse position and the current selection
+            list. This feature is a productive and easy way to select many
+            records, more than can be seen on the terminal screen at one
+            time.
+         4. Clear Selection
+            Pressing the right button in the main list will clear the
+            selection list.
+
+          The middle mouse button used in the main list is used to allow
+          dual-scrolling (horizontal and vertical) of the list. When the
+          middle mouse button is pressed and held, dragging the mouse from
+          left to right, up and down will scroll the main list.
+
+          Interacting With Text Entry Fields
+          The mouse buttons recognized in text entry fields are as
+          follows:
+
+         1. Select Text
+            A left mouse button press and hold and drag will select text
+            edit and paste operations. Holding the shift key down at the
+            same time the left mouse button is pressed will extend the
+            selection text.
+         2. Paste Text
+            Pressing the middle mouse button will paste the text in the
+            text entry field.
+         3. Scroll Text
+            Pressing the right mouse button and dragging it will scroll
+            the text in the text entry field.
+
+          When entering text in any text entry field in DCS, the following
+          special keystrokes are recognized:
+
+         1. ^W
+            Delete a word left of the current cursor position.
+         2. ^H
+            Erase one character left of the current cursor position. If
+            there is selected text, ^H will erase all selected characters
+            from the text value.
+         3. ^U
+            Clears the text field.
+         4. ^D
+            Clears selected text from the text field.
+
+   File Menu Operations
+          The File menu contains two functions, Print and Quit. The Print
+          function will display a window for selecting output destination,
+          file or queue, and output format, plain text or postscript. The
+          main list items will be sent to the printer or filename
+          specified.
+
+          The Quit function will exit the DCS program after confirmation.
+
+   Item Menu Operations
+          All the functions in the Item menu will reference the current
+          selection list from the main list. Most require at least one
+          item be selected from the main list, some it is optional. The
+          items will become non-active if they require a selection set.
+
+          The following are the functions available from the Item menu,
+          and descriptions of the operation it will perform:
+
+        The Query Function
+                This function will display a query dialog window. This is
+                where all search operations are performed. The items in
+                the query window form an and match requirement. When
+                assembling a search command, all items with the a toggle
+                selected are checked against every record in the database.
+                If a record matches all criteria, then it is displayed in
+                the main list. All text fields here take literal values,
+                except the Title: field.
+
+                The Title: field can take a literal title string to use
+                for searching, but this is probably not a practical search
+                habit. For this reason, this field will accept *
+                characters as a logical match zero or more characters.
+                Thus a search like *STEEL*WALL* would be interpreted as
+                any record that has zero or more characters that are
+                followed by the characters STEEL, followed by zero or more
+                characters, followed by the characters WALL, followed by
+                zero or more characters. This search might match records
+                with titles like:
+
+    CENTRAL MUON UPGRADE - NORTH STEEL AND BRICK WALL ASSY.
+    STEEL ELBOW, WALL MOUNT
+
+                Double-left-mouse-press in the main list will populate key
+                fields of this window with information relative to the
+                record selected.
+
+                No selected records are required for this function to be
+                active.
+
+        The New Function
+                This function is used to add new records to the DCS
+                system. All the meta information on a record is entered
+                here. If there is associated data files (i.e.: CAD files,
+                Safety Documents), they are identified in the operating
+                system.
+
+                The DCS system provides a mechanism for retrieving a
+                Fermilab Part number. Banks of numbers are set aside and
+                registered with DCS. Each bank of numbers is given a
+                name-description. The next available number is given to
+                the new record from the selected number bank.
+
+                All records in the DCS system are initialized as a initial
+                file revision.
+
+                The current user name and date are recorded and associated
+                the record.
+
+                Each record in the DCS system is accompanied with a
+                HISTORY file. The HISTORY file contains information on the
+                operations that were performed on the record. A new
+                HISTORY file is created at this time.
+
+                No selected records are required for this function to be
+                active.
+
+        The Group Function
+                This function is used to define user specific record
+                groupings to retrieve an exact record list at any time.
+
+                Group names are individualized per user. The group name
+                can be anything. Files in a group definition can only
+                appear once, however the same record can appear in more
+                than one group set.
+
+                No selected records are required for this function to be
+                active.
+
+        The Checkout Function
+                This is how a user obtains write access to a folder (group
+                of files).
+
+                Upon checkout, a list of available file types is displayed
+                and specific file types can be checked out.
+
+                Only one person at a time can check out the same record.
+
+                Only the latest version of a record can be checked out. If
+                an earlier version of a record is desires, the Copy Only
+                option is available in the check out window. Files checked
+                out Copy Only cannot be checked back in under the same
+                record, i.e.: Fermilab Part Number, Sheet Number, Revision
+                combinations make a unique record in DCS.
+
+                When the checkout is performed, files from the DCS
+                depository are copied into user workspace for
+                modification.
+
+        The Checkin Function
+                This is how files are returned to the DCS depository. Once
+                the checkin operation is complete, files in the depository
+                are updated with the latest changes to the data. The
+                status on the record is changed to IN, allowing for
+                another Checkout to be performed if needed.
+
+        The Update Function
+                The Update function provides for non-control information
+                on a record to be updated. Multiple records will be
+                updated consistently depending on the toggles set in this
+                window.
+
+                Non-control information includes the following fields:
+
+               o Title
+               o Drawing Type
+               o Data Type
+               o Paper Size
+               o Project Classification
+               o Sub-Project Classification
+               o Uses Information.
+
+                Control Information, items that cannot be changed without
+                administration privileges include the following fields:
+
+               o Initialized by User
+               o Initialized Date
+               o Part Number
+               o Sheet Number
+               o Revision Designation
+               o File Statuses, IN, OUT, RELEASE, LATEST, ARCHIVE
+
+        The Release Function
+                This function is usually reserved for manager and/or
+                project leaders who are responsible for signing off on
+                drawings. A file is Released only once. Once a file is
+                released, no longer can it be Checked-Out for changes
+                under the same revision. If changes are required, the next
+                Checkout on the record will result in a new revision of
+                the record.
+
+                At release time, a list of people can be specified as
+                authorized to create a new revision of the record, i.e.:
+                check out the file.
+
+                See the Revise Authorization File notes for more
+                information on how authorization for revision is granted.
+
+        The Information Function
+                This function gives all details on records in the current
+                selection list. This information will always include the
+                following:
+
+               o Folder Initialization Date and Initializing User name.
+               o Database tracking number for the record.
+               o Fermilab Part number.
+               o Sheet Number
+               o Revision Specification
+               o Drawing Title
+               o Last Accessed date and User name.
+               o Project and Subproject association.
+               o Drawing Type
+               o Paper Size
+               o Data Type
+               o Folder Status information, IN, OUT, RELEASE,
+                 NOT-RELEASED, ARCHIVED, LATEST VERSION
+               o Uses Information
+               o Files in the Depository
+               o Record History Logs.
+
+                This information can be sent to a printer or file using
+                the PRINT button in this dialog.
+
+        The Add Sheet Function
+                This function provides a mechanism to add an additional
+                file sheet to an existing part number.
+
+        The Delete Function
+                This function allows authorized users to delete records
+                from the database, and the associated data files.
+
+                Only files in their initial revision that are the latest
+                record for PARTNO/SHEET/REV can be deleted. Otherwise, no
+                record in the latest version can be deleted, otherwise the
+                life chain for that record would be lost.
+
+                Any record that is not the latest version of the life
+                chain can be deleted.
+
+        The Launch Function
+                In association with a DCS global configuration file named
+                .launchdcs, or a personal file named \$HOME/.launchdcs
+                specified applications can be configured to activate files
+                in the DCS system. One example is to launch the drafting
+                software on a file selected from the main list of DCS.
+
+                There are several modes that a launch can be configured
+                by. Each mode instructs the DCS system what to do if, for
+                example, a file is released or checked out by someone else
+                while attempting to launch. The modes describe how to
+                launch on an application. The modes are defined as
+                follows:
+
+               o U, Launch for checkout, or abort
+                 In this case, if the file is released, or checked out by
+                 someone else, the checkout operation will not be able to
+                 complete without intervention. Using this mode the launch
+                 would be aborted.
+               o u, Launch for checkout, or switch to R mode.
+                 In this case, if the file is released, or checked out by
+                 someone else, the mode would change to mode R.
+               o R, Launch for checkout with Copy Only set.
+                 In this case, all launching on files is done in Copy Only
+                 mode, no exclusive locking or write-return on the record
+                 is granted. This mode might be commonly configured for
+                 plotting since no modifications to the data will occur.
+               o E, Launch for checkout and create a new revision if the
+                 file is released.
+                 In this case, if the file is released, a revision of the
+                 record is created first, and the new revision is launched
+                 with u mode.
+
+                The applications that are launched are specialized
+                programs that must be developed by the end user or DCS
+                system administrator.
+
+                A sample launch file, \$HOME/.launchdcs:
+
+    # File: \$HOME/.launchdcs
+    SDRC Drafting:U:dwg:./custom/launchdrafting -m
+    SDRC Solids:E:mf1,mf2:./custom/launchsolids
+    Plot Size E:R:pff:\$HOME/bin/myeplotter.com
+
+                In the above example file, the line beginning with a "#"
+                sign is a comment and is not interpreted by DCS.
+
+                The line SDRC Drafting:U:dwg:./custom/launchdrafting -m
+                describes a launch in mode, U, on a file with the
+                extension dwg. The application to launch is named
+                ./custom/launchdrafting, it takes one argument, -m. The
+                DCS Launch menu would contain an entry named "SDRC
+                Drafting" for this configuration.
+
+                Since the name of the application starts with a "." (dot)
+                character, the exact program would be
+                \$DCS_DEP/\$DCSGROUP/custom/launchdrafting.
+
+                The second launch application is "SDRC Solids". Notice on
+                this line, two files are needed to launch, "mf1", and
+                "mf2". The mode here is to perform a revision change if
+                needed, mode E.
+
+                The last application launch is "Plot Size E". It uses mode
+                R, and an application program that is in my \$HOME/bin
+                directory.
+
+   Settings Menu Operations
+          The Settings menu gives access to the display formats and
+          alternate DCS depositories.
+
+          Display formats describe how to show the main list items, i.e.:
+          part number followed by sheet number, etc. These formats are
+          predefined, if there is one you desire, let your local DCS
+          support person know.
+
+          Local sites can configure multiple depositories or access remote
+          depositories from the Depository setting. Record searches do not
+          span depositories, and each depository is uniquely configured
+          with separate authorization and configuration tables.
+
+   Applications Menu Operations
+          The Applications menu is another way to integrate applications
+          with DCS, other than "Launching" them. An application integrated
+          via the Applications menu is different than an application
+          integrated via the Launching process in these ways:
+
+          + Launch
+               o Need to have at least one item selected in the main list.
+                 The main list is generated from either the Query function
+                 or the Group function.
+               o Data files are either checked-out or review copied into
+                 workspace to perform application work.
+                 This fashion, the launch process determines if write
+                 locks are applied to the record and data files controlled
+                 by it. Also, disk activity is performed in the work space
+                 directory, and not the DCS Depository.
+               o Performs database modifications if need be.
+                 Again, either the record(s) are checked-out or
+                 review-copied to work space and the DCS record is updated
+                 to reflect this.
+               o Application is generally only called from DCS interface.
+                 Although all applications integrated with DCS can be
+                 called external to DCS, generally Launched applications
+                 require a selection list from the main list to operate.
+               o Requires specifically written interface routine.
+                 All Launched applications in DCS are integrated using a
+                 specifically written interface program defined by the DCS
+                 system.
+               o Launch Items can be personalized per user, or DCS
+                 instance specific.
+                 The launch menu is dynamically build at start up of DCS
+                 based on either personal configuration files or global
+                 support configuration files.
+          + Applications
+               o May or may not perform database reads or modifications.
+                 The application may only reference the current main list
+                 generated by a Query function or a Group function. The
+                 database records activated on by the application are not
+                 write locked, or modified at all. Else, if the
+                 application needs to perform any record modification that
+                 the main DCS interface does, it may.
+               o Can be called standalone from the command line. Any
+                 application in the Applications menu can be call from the
+                 shell command line in a graphical user interface mode
+                 specifying data file names externally. The specific
+                 graphical interface will need to account for sensitivity
+                 of the buttons and other functions of the interface.
+                 Note: Standalone applications in this case still use all
+                 DCS system libraries. This requires DCS to be installed
+                 and configured in order to be able to call the
+                 application standalone.
+               o Can be activated from inside DCS with a zero sized
+                 selection list
+                 However, the application has to determine when functions
+                 are active or inactive based on the size of the main
+                 list.
+               o Data files are manipulated directly from the DCS
+                 depository space.
+                 Since no check-ins or check-outs are performed, all data
+                 file manipulation is performed on the files in the DCS
+                 depository.
+               o Applications are configured on a installation basis, as
+                 opposed to a user basis.
+                 The applications added to the DCS Application menu may
+                 require minor updates to the main DCS source code to
+                 ensure proper integration, thus the ability to configure
+                 user level applications is restricted. However, an
+                 application could be integrated read-only in the DCS
+                 source code. The advantage is all DCS library routines
+                 are available to use by the application and DCS database
+                 records can be modified.
+
+        The CAD Plotter Application
+                This application allows the selection of one or many item
+                from the DCS main list to convert and process file data to
+                printers and plotters. The data files associated with the
+                records selected from the main list list are processed and
+                sent to the SDRC iplot program. If the folder of the
+                record selected contains only a "dwg" (see also:
+                "tk_env(PLOTBASEEXT)") file, it is converted to a "pff"
+                (see also: "tk_env(PLOTEXT)") file. If a "pff" file
+                already exists, it is sent to iplot via this application.
+
+                The CAD Plotter interface allows specific instructions to
+                be given to iplot to control pen maps, orientation, color
+                maps, and more.
+
+        The ER/ECO Application
+                The ER/ECO application will allow an additional tracking
+                method inside the DCS system related specifically to the
+                Engineering life-cycle processes. This application is
+                still under construction.
+
+        The WHERE-USED Application
+                The WHERE-USED application will provide another method of
+                searching/Querying data records based on where they are
+                used/referenced by other records. It is effectively a Bill
+                of Materials type function. The DCS database field
+                utilized by this application is the uses field. This
+                application is still under construction.
+
+        The Archive/Restore Application
+                The Archive/Restore application will provide a method of
+                placing files on long term storage devices, and/or
+                restoring them from these devices. This application is
+                still under construction.
+
+   User Configuration/Preferences Files
+          The DCS GUI has several startup configuration files that the
+          user can setup. There is also a directory that the DCS system
+          will create and manage in the users \$HOME directory.
+
+          + \$HOME/.dcsprefs file.
+            This file controls the visual characteristics of the DCS
+            system, i.e.: fonts, colors, geometry layouts. If this file
+            does not exist, the file in the DCS installation library
+            directory is used to default the visual characteristics.
+            A sample .dcsprefs file:
+    !! File: .dcsprefs
+    *background: snow3
+    *main.foreground: black
+    *Dialog*background: LightYellow2
+    *Dialog*foreground: blue
+    *print*background: azure3
+    *print*foreground: black
+    *menu.file.background: grey
+    *menu.file.menu.background: azure3
+    *print*geometry: 400x280+100+100
+    *mainlist*geometry: 120x20+100+100
+    *mainlist.yscroll.background: blue
+    *mainlist.yscroll.foreground: snow2
+    *mainlist.xscroll.background: red
+    *mainlist.xscroll.foreground: snow2
+    *mainlist.list.background: azure4
+    *mainlist.list.foreground: black
+    *info*metainfo*font: 8x13
+    *info*files*font: 8x13
+    *info*history*font: 8x13
+    *info*uses*font: 8x13
+    *error*font: 7x14
+    *plot*entryfont: 7x14
+    *plot*font: 7x14
+    *plot*listboxFont: 7x14
+    *plotQuestion*font: 7x14
+    *statusinfo*font: 7x14
+    *statusinfo*font: 7x14
+    *plot*geometry: 682x435+10+10
+    *plotpens*geometry: 375x290+10+10
+    *plotpens*font: 7x14
+    *plotpens*pen0l*foreground: #FFFFFF
+    *plotpens*pen0l*background: #000000
+    *plotpens*pen1l*background: #0000FF
+    *plotpens*pen2l*background: #4884F8
+    *plotpens*pen3l*background: #00AAFF
+    *plotpens*pen4l*foreground: #000000
+    *plotpens*pen4l*background: #8EE5EE
+    *plotpens*pen5l*background: #005500
+    *plotpens*pen6l*background: #00AA00
+    *plotpens*pen7l*background: #00FF00
+    *plotpens*pen8l*foreground: #000000
+    *plotpens*pen8l*background: #FFFF00
+    *plotpens*pen9l*background: #FFAA00
+    *plotpens*pen10l*background: #FF5500
+    *plotpens*pen11l*background: #FF0000
+    *plotpens*pen12l*background: #FF00FF
+    *plotpens*pen13l*foreground: #000000
+    *plotpens*pen13l*background: #FF85FF
+    *plotpens*pen14l*foreground: #000000
+    *plotpens*pen14l*background: #FFAAFF
+    *plotpens*pen15l*foreground: #000000
+    *plotpens*pen15l*background: #FFFFFF
+
+          + \$HOME/.launchdcs file.
+            This file defines the applications to provide DCS launching
+            access to in the Item/Launch... menu selection. If this file
+            does not exist, the file in the DCS installation library
+            directory is used to default the list of applications to
+            launch.
+            A sample .launchdcs file.
+    # File: .launchdcs
+    # Format:
+    #  menu-title:launch-mode:f-extension[,f-extension]:program [options]
+    #   where "launch-mode" is one of:
+    #     U = launch in UPDATE mode do not ECO.
+    #     u = launch in UPDATE mode whenever possible, else launch in review mod
+e.
+    #     R = always launch in REVIEW mode regardless on the status of the item.
+    #     E = launch in UPDATE mode and ECO if need be.
+    # if "launch-program" is specified as a relative path, it is assumed to resi
+de
+    # relative to \$DCS_DEP/\$DCSGROUP
+    SDRC Drafting:U:dwg:./custom/launchdrafting -m
+    SDRC Solids:E:mf1,mf2:./custom/launchsolids
+
+          + \$HOME/.dcsdefaults file.
+            This file contains default environment settings that control
+            how DCS acts.
+            A sample .dcsdefaults file.
+    # File: \$HOME/.dcsdefaults
+    # Referenced by the DCS at startup.
+    # Format: Use Korn Shell syntax for variable definitions.
+
+    # ------------------------- DEFAULT VAULT SETUP... ----------
+    # The next line sets up the initial vault to start DCS in.
+    export DCSGROUP="${DCSGROUP:-D0electrical}"
+    # ------------------------------------------------------------
+
+    # ------------------------- DEFAULT PRINT SETUP... ----------
+    # The next line sets up the default file name to start with.
+    export DCSPRNTFILE="\${DCSPRNTFILE:-\${HOME}/dcslist.txt}"
+
+    # The next line sets up the default print format to start with.
+    export DCSPRNTFMT="\${DCSPRNTFMT:-ps}" # "ps" or "txt"
+
+    # The next line sets up the default print to.
+    export DCSPRNTOUT="\${DCSPRNTOUT:-queue}" # "queue" or "file"
+    # ------------------------------------------------------------
+
+    # ------------------------- DEFAULT QUERY SETUP... ----------
+    # The next line sets up the default toggle setting checkin or
+    # check-out, set to "I" for IN and "O" for OUT. Leaving it
+    # updefined selects neither toggle initially.
+    #export DCSQINOUT="I"
+    #export DCSQINOUT="O"
+
+    # The next line sets up the default toggle setting release or
+    # not released, set to "R" for RELEASED or "NR" for not released.
+    # Leaving it updefined selects neither toggle initially.
+    #export DCSQRORNR="R"
+    #export DCSQRORNR="NR"
+
+    # The next line sets up the default toggle setting for draw-type.
+    # Set to "M", "A" or "E" for Mechanical, Architectural or Electrical.
+    # Leaving it updefined selects no toggle initially.
+    #export DCSQDTYPE="M"
+    #export DCSQDTYPE="A"
+    #export DCSQDTYPE="E"
+
+    # The next line sets up the default toggle setting for paper-size.
+    # Set to "A", "B", "C", "D", "E" or "U" (user defined).
+    # Leaving it updefined selects no toggle initially.
+    #export DCSQPSIZE="A"
+    #export DCSQPSIZE="B"
+    #export DCSQPSIZE="C"
+    #export DCSQPSIZE="D"
+    #export DCSQPSIZE="E"
+    #export DCSQPSIZE="U"
+
+    # The next line sets up the default toggle setting for data-type.
+    # Set to "P" or "C" for Paper or CAD.
+    # Leaving it updefined selects no toggle initially.
+    #export DCSQPORC="P"
+    #export DCSQPORC="C"
+
+    # The next line sets up the default toggle setting for show
+    # latest versions only.
+    export DCSLATEST="\${DCSLATEST:-T}" # Set to "T" or "F"
+
+    # The Query window will initially place the current username in the
+    # "Init By Who:" text field and enable the toggle to use for searching.
+    # If you do not want the toggle enabled initially, set the following
+    # variable to "F".
+    #export DCSQINITBWHO="F"
+
+    # The Query window will initially place the current username in the
+    # "Last Accessed by who:" text field and enable the toggle to use for
+    # searching.  If you do not want the toggle enabled initially, set the
+    # following variable to "F".
+    #export DCSQACCBWHO="F"
+
+    # The next line sets up the location of the temporary index
+    # file used by the DCS "dbadump" command.
+    #export DCSSEQQNUM="\${DCSSEQQNUM:-\${HOME}/.dcsindex}"
+    # ------------------------------------------------------------
+
+    # ------------------------- DEFAULT CHECKOUT SETUPS... ------
+    # The next line sets up the node name to place in the checkout
+    # dialog window by default.
+    #export DCSDFLTNODE=\${DCSDFLTNODE:-\$(hostname)}
+
+    # The next line sets up the initial directory name.
+    #export DCSDFLTDIR=\${DCSDFLTDIR:-\${HOME}/dcsworkspace}
+
+    # The next line sets up the default file extensions to automatically
+    # retrieve.
+    #export DCSOUTEXTS="${DCSOUTEXTS:-dwg mf1 mf2 dxf gen prt igs asc}"
+
+          + \$HOME/.dcscontrols directory.
+            This directory contains files that the DCS GUI will create and
+            manage. One such group of files in the directory will be the
+            index lists of the record group the user creates with the
+            Item/Group... menu.
+            If this directory does not exist and the Item/Group... menu is
+            used, this directory will be created.
+            The files in this directory should not be edited manually by
+            the user.
+     __________________________________________________________________
+
+Administrator Section
+
+   This section of the DCS Guide is intended for the system administrator
+   of the DCS system. This is the person who is responsible for
+   configuration, setting access controls, and installing updates of the
+   DCS executables. This person might also be configured with access
+   privileges in the DCS GUI to perform supervisor type operations.
+
+   The DCS depository tree, known as \$DCS_DEP/\$DCSGROUP contains all the
+   configuration files and access control files, and CAD data files.
+
+   There are several subdirectories in the \$DCS_DEP/\$DCSGROUP tree. They
+   are defined as follows:
+
+   Description of the Depository Tree
+  local_configs.tcl
+  extensions.descriptions
+    |
+    +-----------+--------------+-----------+------....
+   /data     /numbanks       /files000  /files001
+     |         |               |           |
+    main.db  numberbanks.dat   +---+---+   +----+
+                               |       |        |
+                             /000    /001     /000
+                               |
+                         12345601__.*
+                         32100010__.*
+
+        ....--+----------+---------------------+-------------------+
+           /custom    /projects              /access             /batchreq
+              |          |                      |                   |
+              |          |                      |                   |
+          launch*      projectcodes.dat       administrative.acc  batchiges
+          checkin      XXX.checkin.acc        checkin.acc
+          checkout     XXX.checkinothers.acc  checkinothers.acc
+          release      XXX.checkout.acc       checkout.acc
+                       XXX.review.acc         review.acc
+                       XXX.newaccess.acc      newaccess.acc
+                       XXX.release.acc        release.acc
+                       XXX.revision.acc       revision.acc
+                       XXX.update.acc         status.acc
+                       XXX.managers           update.acc
+                       XXX.administrative.acc manualnums.acc
+
+   The local_configs.tcl File.
+          This file contains default controlling information for the
+          Tk/TCL libraries. It is referenced by the dcs.tk program when
+          the DCS system is started.
+
+          It is in this file that defines the names of the localized
+          programs to execute when checkin, checkout and release
+          operations are performed.
+
+          A sample \$DCS_DEP/\$DCSGROUP/local_configs.tcl file:
+
+   # File: local_configs.tcl
+   #-------------------------------------
+   # 1= force uppercase, 0=leave case alone.
+   set tk_env(DCSUPPERCASE) 1
+   # directory where project codes databases reside.
+   set tk_env(DCSPROJECTCODES) "\$env(DCS_DEP)/\$tk_env(DCSGROUP)/projects"
+   # file that contains number bank definitions.
+   set tk_env(DCSNUMBANKSDBA) "\$env(DCS_DEP)/\$tk_env(DCSGROUP)/numbanks/number
+banks.dat"
+   # directory that contains user access databases.
+   set tk_env(DCSACCESS) "\$env(DCS_DEP)/\$tk_env(DCSGROUP)/access"
+   # the word used in GUI to describe "codea" field.
+   set tk_env(MAJORWORD) "Experiment"
+   # the word used in GUI to describe "suba" field.
+   set tk_env(MINORWORD) "Project"
+   # the program to execute after successful check-in operations.
+   set tk_env(DCSCHECKIN) "\$env(DCS_DEP)/\$tk_env(DCSGROUP)/custom/CustomChecki
+n"
+   # the program to execute after successful check-out operations.
+   set tk_env(DCSCHECKOUT) "\$env(DCS_DEP)/\$tk_env(DCSGROUP)/custom/CustomCheck
+out"
+   # the program to execute after successful release operations.
+   set tk_env(DCSRELEASE) "\$env(DCS_DEP)/\$tk_env(DCSGROUP)/custom/CustomReleas
+e"
+   # the program to execute after successful New operations.
+   set tk_env(DCSNEW) "\$env(DCS_DEP)/\$tk_env(DCSGROUP)/custom/CustomNew"
+   # the program to execute after successful Update operations.
+   set tk_env(DCSUPDATE) "\$env(DCS_DEP)/\$tk_env(DCSGROUP)/custom/CustomUpdate"
+   # used with the application Plotter interface...
+   set tk_env(PLOTEXT) "pff"
+   set tk_env(PLOTBASEEXT) "dwg"
+   set tk_env(PLOTSAVEPIC) "true"
+   #set tk_env(PLOTSAVEPIC) "false"
+
+   The extensions.descriptions File.
+          This file contains short descriptions of the file extensions
+          recognized by the DCS system. The descriptions defined in this
+          file are displayed in the Item/Information... window of the DCS
+          GUI.
+
+          The format of the file is simply an extension name string,
+          followed by a ":", followed by the formal description for the
+          extension.
+
+          A sample \$DCS_DEP/\$DCSGROUP/extensions.descriptions file:
+
+   # File: extensions.descriptions
+   # Format: ext:description.
+   SDF: OLD DCS Status Database File    asci  (SDF)
+   HIS: DCS History File   compressed binary  (HIS)
+   acad: AutoCAD File                 binary  (acad)
+   asc: SDRC Drafting file              asci  (asc)
+   dwg: SDRC Drafting file              asci  (dwg)
+   dwg.BAK: SDRC Drafting file backup   asci  (dwg.BAK)
+   dxf: AutoCAD Drafting Exchange file  asci  (dxf)
+   empty: Empty file                          (empty)
+   igs: Initial Graphics Exchange file  asci  (igs)
+   mf1: SDRC model file               binary  (mf1)
+   mf2: SDRC model file               binary  (mf2)
+   prt: Anvil 5000 file               binary  (prt)
+   gen: Anvil 5000 generic file       binary  (gen)
+   cdk: CadKey Part file              binary  (prt)
+   ptn: CadKey Pattern file           binary  (ptn)
+   unv: SDRC Universal model file       asci  (unv)
+   pff: SDRC Formatted Picture file.    asci  (pff)
+   ps: Postscript file.                 asci  (ps)
+   eps: Encapsulated Postscript file.   asci  (eps)
+   pic: SDRC Formatted Picture file     asci  (pic)
+
+   The data directory.
+          The data directory contains three permanent files, main.db,
+          main.idx, and main.cnt. These three files comprise one DCS
+          depository meta database. The ".db" file contains all raw meta
+          information. The ".idx" file is all the indexes to the ".db"
+          file. The ".cnt" file is a contains the next unique id value for
+          the database record to be added.
+
+          When a user is actively accessing the database through the GUI
+          or through any of the dba utilities commands, there will be a
+          lock file in this directory named "main.lck". This file is
+          created and removed each time a user accesses the database. It
+          will contain the user id of the person currently accessing the
+          database. This is the mechanism that avoids having more than one
+          person at a time modifying the database.
+
+          The files in this directory must be set to a mode (chmod) that
+          allows all members of the work group to read and write the
+          files. This is commonly accomplished by configuring a common
+          group for all users in the "/etc/group" file in the UNIX
+          operating system.
+
+   The numbanks directory.
+          This directory contains one permanent file, numberbanks.dat.
+          This file contains all the necessary descriptions of a number
+          bank.
+
+          When a user is actively accessing the numberbank file to extract
+          a next number, there will be a file created in this directory
+          named "numberbanks.dat.lck". This file is created and removed
+          each time a user accesses the numberbank file. It will contain
+          the user id of the person currently accessing the file. This is
+          the mechanism that avoids having more than one person at a time
+          modifying the numberbank file.
+
+   The files000... directories.
+          Any directory in the \$DCS_DEP/\$DCSGROUP directory named with
+          the syntax "files" followed by a three digit value is used by
+          the DCS system to store new data items. Each of these
+          directories will contain subdirectories named with syntax of
+          three digits. The DCS system will always attempt to use the
+          least capacity directory when storing new data items.
+
+          The scheme employed here allows for a balanced OS tree of data
+          files to be managed. Using this mechanism, file access times
+          will be optimized at the operating system level.
+
+          The DCS system administrator is responsible for opening or
+          providing these directories and subdirectories.
+
+          Files stored in these directories will be named by the values of
+          the DCS database fields partnum, sheetnum and rev. The rev value
+          of the database will always be used in two characters,
+          substituting an "_" (underscore) character for initial revision
+          files and single revision files.
+
+          For example, the DCS record whose database values for partnum,
+          sheetnum and rev are "123456", "1" and "A" respectively, would
+          be stored in the DCS depository "files000" tree as "12345601_A".
+          Since the combined fields partnum, sheetnum and rev comprise a
+          unique entry in DCS, this storage method ensures no two records
+          will attempt to store in the same name.
+
+          The modes of the files in the "files000" directory will always
+          be stored with mode 0775, read/write for owner and group. The
+          group owner setting of the files stored will be inherited from
+          the group owner setting of the directory where it is stored.
+          This implementation allows for file sharing amongst DCS users.
+          Note: the group ownership used on the subdirectories in the
+          "files" tree must be one that the DCS users are also a member
+          of.
+
+          Example scenario for file storage in a DCS depository:
+
+                .../files000/001/12345601_A.dwg
+                .../files000/001/12345601_A.igs
+                .../files000/003/12345602_A.dwg
+                .../files000/003/12345602_A.dwg
+                .../files000/001/12345601__.dwg
+                .../files000/001/12345601__.dwg
+
+   The custom directory.
+          This directory is set aside for locating local customized, DCS
+          related program files. By default, all of the custom checkin,
+          checkout and release programs are in this directory. The
+          specialized launch programs can be found in this directory too.
+
+          Some functions in the DCS system are performed on an automatic
+          basis or during off hours. Programs configured to administrate
+          the DCS system from UNIX crontab reside in this directory as
+          well.
+
+   The access directory.
+          This directory contains all the authorization databases that
+          control what tasks users are able to perform in the DCS GUI at
+          the depository level. See the section on Setting User Access
+          Privileges
+
+   The projects directory.
+          This directory contains a file named projectcodes.dat that
+          identifies all legal project values and all the authorization
+          databases that control what tasks users are able to perform in
+          the DCS GUI at the project level. See the section on Setting
+          User Access Privileges for more information on what an access
+          file is.
+
+          For each project defined in the projectcodes.dat file, there are
+          a set of authorization files associated with the project. The
+          name of those files will always be composed of the name of the
+          project, followed by a "." followed by the specific
+          authorization file.
+
+          The project authorization files and descriptions are: (In all
+          examples below, "XXX" would be substituted for the name of the
+          project)
+
+        Administrator Authorization, file: XXX.administrative.acc
+                Authorized users specified in this file are able to delete
+                records from the database that belong to this project.
+
+        Checkin Authorization, file: XXX.checkin.acc
+                Authorized users specified in this file are able to
+                checkin records that belong to this project.
+
+        Checkin Records That Are Checked Out by Someone else
+                Authorization, file: XXX.checkinothers.acc
+                Authorized users specified in this file are able to
+                checkin records that belong to this project, that are not
+                necessarily checked out by the active user.
+
+        Checkout Authorization, file: XXX.checkout.acc
+                Authorized users specified in this file are able to
+                checkout records that belong to this project.
+
+        New Authorization, file: XXX.newaccess.acc
+                Authorized users specified in this file are able to add
+                new records to this project.
+
+        Release Authorization, file: XXX.release.acc
+                Authorized users specified in this file are able to
+                release records that belong to this project.
+
+        Revise Authorization, file: XXX.revision.acc
+                Authorized users specified in this file are able to
+                checkout records that belong to this project, after they
+                are released, essentially creating a new revision of the
+                record.
+
+        Update Authorization, file: XXX.update.acc
+                Authorized users specified in this file are able to modify
+                the meta information associated to record of this project
+                using the Item/Update menu.
+
+          Each project set will also contain a file "XXX.managers". This
+          file contains single line entries identifying manager email
+          addresses. This file is not an authorization file, but is used
+          to notify all assigned managers for a project of various
+          operations (usually implemented through the custom checkin,
+          checkout and release programs).
+
+          Sample XXX.managers file:
+
+   # File: XXX.managers
+   smith@fnal.gov
+   larryb@xjg11.eee.com
+
+   The projectcodes.dat file.
+          The projectcodes.dat describes all the legal projects of a
+          depository.
+
+          Sample projectcodes.dat file:
+
+   # File: \$DCS_DEP/\$DCSGROUP/projects/projectcodes.dat
+   # Format:
+   # Major codes are fully left justified, Minor codes  follow  the  Major
+   # code description and are indented  one  character.  Each  Major  code
+   # section is  separated  by  a  single  blank  line.  Descriptions  may
+   # follow, to the left, the Major and Minor Codes. If a project  has  an
+   # associated number bank, that bank is defined by having two spaces, the
+   # string "BANK: ", and the name of the bank. Bank association is optional.
+   # i.e.: +-------------------
+   #       |CDF Central Detector Facility
+   #       | 2345 Subcode for Central Detector Facility
+   #       | 2346 Another Subcode for Central Detector Facility
+   #       |  BANK: CDF
+   #       |
+   # History:
+   #-------------------------------------------------
+   MAJOR1 Sample Major One Project Code.
+    xxxx.000 Sample xxxx.000 subcode to MAJOR1
+    1xxx.001 Sample 1xxx.001 subcode to MAJOR1
+    2xxx.002 Sample 2xxx.002 subcode to MAJOR1
+    25xx.004 Sample 25xx.004 subcode to MAJOR1
+     BANK: NAME1
+
+   MAJOR2 Sample Major Two Project Code.
+    xxxx.001 Sample xxxx.001 subcode to MAJOR2
+    xxxx.002 Sample xxxx.002 subcode to MAJOR2
+    xxxx.003 Sample xxxx.003 subcode to MAJOR2
+
+   MAJOR3 Sample Major Three Project Code.
+    5550.000
+
+   The batchreq directory.
+          This directory is set aside for log file entries. Various
+          operations may be performed off hours. This directory will
+          contain log files identifying records of the DCS database to
+          perform a certain operation on.
+
+          One example of a log file in this directory is the create IGES
+          request log file. This log file is referenced by a programming
+          running independent of the DCS sessions. All logs are written to
+          this file during checkin or release by the DCS GUI.
+
+   Setting User Access Privileges
+   Authorization to perform various Item functions in DCS are controlled
+   on a per user basis. The granularity of control is set at three levels,
+    1. Record level
+    2. Project level
+    3. Depository level
+
+   The access directory contains a set of authorization files defining
+   users who are authorized to perform specific DCS tasks controlled at
+   the Depository level.
+
+   Each of the files in this directory may contain one or all of the
+   following keywords on a single line:
+
+   Keyword: EVERYONE
+          For the item control this file specifies, everyone who can
+          access the DCS depository by UNIX login or by NFS access can
+          perform this specific task.
+
+   Keyword: INCLUDE:filename
+          This keyword is used to incorporate another file contents as a
+          list of authorized user names. If the file name is specified
+          using a relative path name, the value of \$DCS_DEP/\$DCSGROUP is
+          assumed as a root, otherwise the absolute file is located to
+          read. This keyword might be used to define a group of people in
+          a file located in this same directory.
+
+   Keyword: username
+          For the item control this file specifies, this entry identifies
+          a literal user name who is authorized to perform this specific
+          task.
+
+   The various authorization files and descriptions are:
+
+   Administrator Authorization, file: administrative.acc
+          Authorized users specified in this file are able to use the
+          Item/Delete menu.
+
+   Checkin Authorization, file: checkin.acc
+          Authorized users specified in this file are able to use the
+          Item/Checkin menu.
+
+   Checkin Others Data Authorization, file: checkinothers.acc
+          Authorized users specified in this file are able checkin other
+          peoples checked out records even if project and record level
+          authorizations deny it.
+
+   Checkout Authorization, file: checkout.acc
+          Authorized users specified in this file are able to use the
+          Item/Checkout menu.
+
+   New Authorization, file: newaccess.acc
+          Authorized users specified in this file are able to use the
+          Item/New menu.
+
+   Release Authorization, file: release.acc
+          Authorized users specified in this file are able to use the
+          Item/Release menu.
+
+   Revise Authorization, file: revision.acc
+          Authorized users specified in this file are able checkout
+          records that are released, even if project and record level
+          authorizations deny it.
+
+          Authorization to perform a record revision (by checking out a
+          record that is released) is granted first by the global DCS
+          authorization file "revision.acc", if authorization is not
+          granted there, the project level "XXX.revision.acc"
+          authorization file is checked. If authorization is not granted
+          there, the acclsta field of the data record is checked. If all
+          checks fail, the file is not checked out and no revision of the
+          record occurs.
+
+   Update Authorization, file: update.acc
+          Authorized users specified in this file are able to use the
+          Item/Update menu.
+
+   Status Authorization, file: status.acc
+          Authorized users specified in this file are able to use the
+          Item/Query menu.
+
+   Manual Numbers Authorization, file: manualnums.acc
+          Authorized users specified in this file are able to enter in
+          manual numbers in the New... dialog when using the Item/New
+          menu.
+
+   Configuring Access to an Alternate or Remote Depository
+   Several depositories can be configured in the DCS system. Follow these
+   steps to configure an alternate or remote vault:
+    1. Provide the file system access to the alternate vault.
+       If the alternate vault is local to the machine where the DCS
+       installation is, this means simply creating a directory in the
+       directory known by \$DCS_DEP. Use mkdir for this.
+       If the alternate vault is located on a remote machine, configure
+       AFS or NFS or AutoMount to handle mounting the remote directory. Be
+       sure to mount the remove directory in the \$DCS_DEP directory.
+    2. Edit or create the vaults.dat file.
+       This file will exist in the \$DCS_DIR/lib directory. Each vault, or
+       depository, is given a name known locally. Add the name and the
+       relative mount point to the vaults.dat file.
+       Sample vaults.dat file:
+   # File: vaults.dat
+   #  This configuration file is used to define the "Vaults..." menu in DCS.
+   #  Format: "menubutton-title:directoryspec-relative-to-$DCS_DEP"
+   Technical Support:TSS
+   Computing Division:CD
+   D0 Mechanical Support:D0
+
+       The above example vaults.dat file contains three configured vaults,
+       "Technical Support", "Computing Division", and "D0 Mechanical
+       Support". Each vault is located in the \$DCS_DEP/TSS, \$DCS_DEP/CD,
+       and \$DCS_DEP/D0 directories respectively.
+       Authorization to remote depository tasks must be performed by each
+       local administrator.
+
+   Defining Line Printers
+   Multiple line printers can be configured in DCS for printing both the
+   main list entries of the GUI, or the information window data.
+
+   The printers.dat file contains all predefined line printers. This file
+   is located in the \$DCS_DIR/lib directory.
+
+   Sample printers.dat file:
+  # File: printers.dat
+  # Format:
+  # Printer commands are fully left justified, one per line.
+  #-------------------------------------------------
+  /usr/ucb/lpr -Picb3c_HP_ps
+  flpr -h fnprt -q wh8x_ps
+  flpr -h fnprt -q fcc3e_hp3si
+
+   The Korn Shell Configuration File.
+   The DCS system utilizes both executable image files and Korn Shell
+   programs to perform most tasks.
+
+   The local_env.ksh file is used to configure the DCS Korn Shell
+   environment. This file is located in the \$DCS_DIR/lib directory.
+
+   The variables that control the Korn Shell for DCS are defined as
+   follows:
+     * DCS_DIR
+       This variable is set to the absolute upper level directory path
+       where the DCS software is located.
+     * DCS_DEP
+       This variable is set to the absolute upper level directory path
+       where the DCS depositories will be located.
+     * DCSGROUP
+       This variable is set to the name of the local depository. There
+       will be a directory under the same name as the value this variable
+       holds in the \$DCS_DEP directory.
+     * DCSNODENAME
+       This variable is set to the name of the local machine.
+     * FUNCTIONS
+       This variable is set to the absolute directory where the Korn shell
+       sharable libraries are located.
+     * TCL_LIBRARY
+       This variable is set to the absolute directory where the TCL
+       sharable libraries are located.
+     * TK_LIBRARY
+       This variable is set to the absolute directory where the TK
+       sharable libraries are located.
+     * DCSBITMAPS
+       This variable is set to the absolute directory where the DCS bitmap
+       files are located.
+     * DCSHEADERA2
+       This variable is set to the display format to be used in the header
+       for the DCS main list, used in conjunction with the dbadump option
+       -a2.
+     * DCSHEADERA3
+       This variable is set to the display format to be used in the header
+       for the DCS main list, used in conjunction with the dbadump option
+       -a3.
+     * FMTNAME
+       This variable is set to the name of the default display list at
+       startup.
+     * HEADERSTART
+       This variable is set to the name of the variable to use as a
+       starting display format for the DCS main list header.
+     * DCSDEFAULTFMT
+       This variable is used to denote the format option to initially use
+       in the main list format, the value of this variable is set to one
+       of the legal dbadump -a# options.
+     * DCSDEFAULTIDX
+       This variable is set to an existing database index name and is used
+       as the default index to order the main list by.
+     * DCSNEWSTAT
+       This variable is set to the name of a scratch file used in
+       conjunction with the dbaadd command.
+     * DCSNEWINFO
+       This variable is set to the name of a scratch file used in
+       conjunction with the dbaadd command.
+     * DCSNEWINP
+       This variable is set to the name of a scratch file used in
+       conjunction with the dbaadd command.
+     * DCSNEWERR
+       This variable is set to the name of a scratch file used in
+       conjunction with the dbaadd command.
+     * DCSINUPDATE
+       This variable is set to the name of a scratch file used in
+       conjunction with the dbamod command.
+     * DCSQUERYDATA
+       This variable is set to the name of a scratch file used in
+       conjunction with the dbadump command.
+     * DCSQUERYSTAT
+       This variable is set to the name of a scratch file used in
+       conjunction with the dbadump command.
+     * DCSQUERYERR
+       This variable is set to the name of a scratch file used in
+       conjunction with the dbadump command.
+     * DCSRECORDDATA
+       This variable is set to the name of a scratch file used in
+       conjunction with the DCS launching facility.
+     * DCSPRNTFILE
+       This variable is set to the default file name to use when printing
+       to a file in the DCS Print... window.
+     * DCSPRNTFMT
+       This variable is set to the default format to use when printing in
+       the DCS Print... window.
+     * DCSPRNTOUT
+       This variable is set to the default output to use when printing in
+       the DCS Print... window.
+     * DCSLATEST
+       If this variable is set to "T" (true), then the "Latest" toggle
+       will be enabled by default in the DCS Query... window. Else it is
+       set to "F" (false).
+     * DCSDFLTNODE
+       This variable is set to the default node name to use in the DCS
+       CheckOut window.
+     * DCSDFLTDIR
+       This variable is set to the default directory to use in the DCS
+       CheckOut window.
+     * DCSSEQQNUM
+       This variable is set to the name of a scratch file used in
+       conjunction with the dbadump command. The file name will contain
+       the database "id" numbers of the active main list window items.
+     * TEMPFILEPRNT
+       This variable is set to the name of a scratch file used in
+       conjunction with the DCS printing facility.
+     * DCSOUTEXTS
+       This variable is a space separated list of file extensions to
+       default retrieve in the DCS CheckOut window.
+     * DCSCONTROLS
+       This variable is set to a directory that is used to save the DCS
+       Group... indexes.
+
+   Sample local_env.ksh file:
+  # File: local_env.ksh
+  # Get the user specific settings first...
+  if [ -r \$HOME/.dcsdefaults ]; then
+   . \$HOME/.dcsdefaults
+  fi
+
+  #=======================================================================
+  # Tk/Tcl and Shell bootstrap variables...
+  # These variables are only defined on local start ups to this DEPOSITORY.
+  export DCS_DIR="\${DCS_DIR:-/DCS_network/v3.0}"
+  export DCS_DEP="/DCS_depository"
+  export DCSNODENAME=\$(hostname)
+  export DCSGROUP="TSS"
+  export FUNCTIONS="\${DCS_DIR}/lib/ksh_funcs"
+  export TCL_LIBRARY="\${DCS_DIR}/lib/tcl"
+  export TK_LIBRARY="\${DCS_DIR}/lib/tk"
+  export DCSBITMAPS="\${DCS_DIR}/lib/bitmaps"
+  export DCSHEADERA2='[DWG#]   [Proj] [ Cat. ] Sh Rev /                    - DRA
+WING TITLE -                  \    Init.     INIT.B
+  Y.      STATUS          When Who     ,     Node Name:     ,Directory Location:
+                     ,File Ref:                ECO#
+     '
+  export DCSHEADERA3='Part Sheet'
+  export FMTNAME="Default"
+  export HEADERSTART="DCSHEADERA2"
+  export DCSNEWSTAT="/usr/tmp/DCSnews\${\$}\${LOGNAME}"
+  export DCSNEWINFO="/usr/tmp/DCSnewi\${\$}\${LOGNAME}"
+  export DCSNEWINP="/usr/tmp/DCSnewinput\${\$}\${LOGNAME}"
+  export DCSNEWERR="/usr/tmp/DCSnewe\${\$}\${LOGNAME}"
+  export DCSINUPDATE="/usr/tmp/DCSinupdate\${\$}\${LOGNAME}"
+  export DCSQUERYDATA="/usr/tmp/DCSqdata\${\$}\${LOGNAME}"
+  export DCSQUERYSTAT="/usr/tmp/DCSqstat\${\$}\${LOGNAME}"
+  export DCSQUERYERR="/usr/tmp/DCSqerr\${\$}\${LOGNAME}"
+  export DCSRECORDDATA="/usr/tmp/DCSrecorddata\${\$}\${LOGNAME}"
+  export DCSPRNTFILE="\${DCSPRNTFILE:-\${HOME}/dcslist.txt}"
+  export DCSPRNTFMT="\${DCSPRNTFMT:-ps}" # "ps" or "txt"
+  export DCSPRNTOUT="\${DCSPRNTOUT:-queue}" # "queue" or "file"
+  export DCSLATEST="\${DCSLATEST:-T}" # Set to "T" or "F"
+  export DCSDFLTNODE=\${DCSDFLTNODE:-\$(hostname)}
+  export DCSDFLTDIR=\${DCSDFLTDIR:-\${HOME}/dcsworkspace}
+  export DCSDEFAULTFMT="-a2"
+  export DCSDEFAULTIDX="partnums"
+  export DCSSEQQNUM="\${DCSSEQQNUM:-\${HOME}/.dcsindex}"
+  export TEMPFILEPRNT="/usr/tmp/\${\$}_tempprint_\${LOGNAME}"
+  export DCSOUTEXTS="\${DCSOUTEXTS:-dwg mf1 mf2 dxf gen prt igs asc}"
+  export DCSCONTROLS="\${HOME}/.dcscontrols"
+  # If the CAD Plotter Interface seetting (integration with SDRC iplot)
+  export PLOTOPTIONSFILE="/ideas/current/local_plot/guiplotter.optfiles"
+  export PLOTQUEUESFILE="/ideas/current/local_plot/guiplotter.queues"
+  export PLOTFMTSFILE="/ideas/current/local_plot/guiplotter.formats"
+  export PLOTTEMPFILE="/usr/tmp/Plot_Temp_\${\$}_\${LOGNAME}"
+  export PICTOPLOTPROGRAM="/ideas/current/bin/iplot"
+  export BASETOPICPROGRAM="/ideas/bin/createpic.com"
+  export TAGPLOTPROGRAM="/ideas/bin/tagplot.com"
+
+   Setting Up Part Number Banks.
+   The DCS system dispenses part numbers when the Item/New... menu is
+   used. The numbers it dispenses are first reserved from the publications
+   office.
+
+   The DCS system can manage a single bank of reserve numbers or multiple
+   number banks.
+
+   The value of tk_env(DCSNUMBANKSDBA) as defined in the local_configs.tcl
+   file defines the name of the number banks configuration file. The
+   default distribution sets it to
+   \$env(DCS_DEP)/\$tk_env(DCSGROUP)/numbanks/numberbanks.dat
+
+   Sample numbanks/numberbanks.dat file:
+  # File: \$DCS_DEP/\$DCSGROUP/numberbanks.dat
+  # See also: nextnum.ksh
+  # NOTICE!!: DO NOT EDIT THIS FILE WHILE OTHERS ARE ACTIVE IN
+  #           THE DCS SYSTEM.
+  #
+  # Format: Number bank name/descriptions are fully left justified.
+  #         number ranges for a bank follow the description.
+  #         the next available number follows the range spec.
+  #         Example:
+  #         +-------------------------------
+  #         |# Comment
+  #         |CDF Numbers
+  #         | 000000 000978
+  #         | 000256
+  # History:
+  #-------------------------------------------------
+  NAME1 Sample Bank Name 1
+   000000 000999
+   000013
+  NAME2 Sample Bank Name 2
+   001000 001999
+   000002
+  NAME3 Sample Bank Name 3
+   002000 002999
+   000000
+
+   The above example file defines three separate number banks. The line
+   following each of the proper names for the banks is the low and high
+   number range for the bank. The next line following the low and high
+   number range is the next number to be given in the next Item/New...
+   operation. The low and high number range, and the next number
+   specification are indented one space.
+
+   The names of the banks are used in the pull-down menu list in the
+   B>Item/New...
+   window.
+
+   The program nextnum.ksh reads and modifies this file every time a
+   number is requested. The mode of the nextnum.ksh is set bit on the
+   owner. So the mode of the number banks database file should be set to
+   mode 744.
+
+   While a number is being distributed, a lock file will appear in this
+   directory.
+
+   Defining Custom Operations.
+   Some of the major DCS operations, Checkin, Checkout, Release, New, and
+   Update can have localized custom operations associated to the task.
+   These operations may include the incorporation of email messages to
+   project managers when files are checked-in and out. Or the automatic
+   generation of auxiliary files like IGES or Postscript for viewing
+   tools. Or the management and automation of the CAD files associated to
+   the record item.
+
+   The values set to tk_env(DCSCHECKIN), tk_env(DCSCHECKOUT),
+   tk_env(DCSRELEASE), tk_env(DCSNEW), and tk_env(DCSUPDATE) in the
+   local_configs.tcl file define the names of the programs to execute
+   after a successful Item/CheckOut..., Item/CheckIn..., Item/Release...,
+   Item/New..., and Item/Update... operations respectively.
+
+   Each of the programs defined as a custom operation program is given two
+   command line arguments:
+    1. The absolute depository path to the files that where operated on.
+    2. The file spec. of the files that got operated on.
+
+   Each of the custom programs can depend on the environment variables
+   DCSRECORDDATA, DCS_DEP, and DCSGROUP. These variables will be defined
+   as follows:
+     * DCSRECORDDATA
+       Set to the name of a file that contains the entire database record
+       associated to the item being operated on.
+     * DCS_DEP
+       Set to the upper level directory where the DCS depository is
+       located.
+     * DCSGROUP
+       Set the name of the sub-directory of \$DCS_DEP to specifically
+       reference for the active DCS depository to use.
+
+   Sample custom program files can be found in the subdirectory samples of
+   the DCS installation directories.
+
+   Setting Up Global Application Launching.
+   Any application or task that is performed on the data items stored in
+   the DCS depository that can be automated, can be integrated into the
+   DCS system for automatic start up.
+
+   The process of providing an application launch is first to develop a
+   specialized DCS launch interface program to the specific application.
+   Secondly to configure the DCS launch menu to activate the launch
+   program.
+
+   Launch programs are given four environment variables:
+
+    1. DCSRETURNSET
+       The value of this variable will be one of L or R or the database id
+       number of the item being launched. This variable is used to
+       determine what action the launching program should take once the
+       application has completed.
+       If the "L" (leave) value is given, the files are left in workspace,
+       no further actions are taken. The "L" value assumes the file that
+       was launched was pre-checkedout by the user, and the launching
+       process did not perform the checkout automatically.
+       If the "R" (review) value is given, the files are normally deleted
+       from work space. This value might be used in plot launching type
+       tasks. The "R" values signifies a check-out/copy-only was performed
+       automatically by the launching process.
+       If a number is given in the DCSRETURNSET variable, it is assumed to
+       be the database id number of the item launched on. In this case, a
+       subsequent checkin operation could be performed on the item if the
+       application warrants it. It is assumed in this case the launching
+       process performed an automatic checkout of the item before
+       launching the application.
+    2. DCSFILESPEC
+       The value of this variable will be the absolute path name of the
+       file to launch on, less file extension.
+    3. DCSEXTENSIONS
+       The value of this variable will be the a space separated list of
+       file extensions to apply to the \$DCSFILESPEC variable to comprise
+       the files to use in the launch process.
+    4. DCSVAULT
+       The value of this variable will be set to the specific depository
+       name that was active when the launch occurred. The value will
+       reflect a subdirectory name found in the upper level directory tree
+       where all DCS depositories are located at a specific site.
+
+   Launch programs should be installed in the DCS depository tree such
+   that remotely connected DCS process can see the programs. A good
+   location for them is in the custom subdirectory of the DCS depository
+   tree.
+
+   There are sample launch programs in the subdirectory samples of the DCS
+   installation directories.
+
+   Once a launch program has been developed and installed, the file
+   .launchdcs in the DCS lib installation directory can be edited to make
+   the application available to all DCS users for the site, or the file
+   \$HOME/.launchdcs can be created for user level launch configurations.
+
+   Once this file is edited, the Item/Launch... menu will contain the
+   application. See the section User Configuration/Preferences Files
+   subsection, \$HOME/.launchdcs file
+
+   Example Steps Taken to Install a New Depository.
+   The following are the example steps taken to install a new depository
+   and the entire DCS system:
+    1. Create the directory where the DCS executable and library files
+       will reside.
+       The disk space required in this directory is approximately 1Mbyte.
+    % mkdir -p {dcs_install_dir_name}; cd {dcs_install_dir_name}
+
+    2. Set the DCS_DIR environment variable.
+       The DCS_DIR environment variable should be set to the absolute
+       directory name where the DCS software will be installed.
+    % setenv DCS_DIR \`pwd\`
+
+    3. Extract the distribution of the DCS software.
+       The DCS distribution can be obtained via anonymous ftp at Fermilab,
+       provided by the UNIX Application Support Group. After extracting
+       the software, make sure the file modes are set properly.
+    % ftp ftp
+    Login: ftp
+    Password: *****
+    ftp> cd pub/.../dcs
+    ftp> get DCS.tar.Z
+    ftp> quit
+    % zcat DCS.tar.Z | tar -xvpf -
+    % chmod 755 \`find . -type d -print\`
+    % chmod u+s \$DCS_DIR/bin/nextnum
+
+    4. Create the directory where the DCS depository will reside.
+       This directory will contain all the subdirectories of DCS
+       depositories. Each subdirectory named in this directory is a
+       separate depository each containing configuration files and the
+       directories where the controlled data is located. The selected disk
+       partition should allow several megabytes of data space.
+   % mkdir -p {dcs_depository_tree} ; cd {dcs_depository_tree}
+   % setenv DCS_DEP \`pwd\` ; cd \$DCS_DEP
+   % setenv DCSGROUP {name_of_one_depository}
+   % mkdir \$DCSGROUP ; cd \$DCSGROUP
+
+    5. Edit the DCS Installation Configuration Startup File.
+       Edit the \$DCS_DIR/lib/local_env.ksh file, enter in the proper
+       values for the DCS_DEP and DCSGROUP variables.
+    6. Extract a Core Depository.
+       The DCS distribution includes a core depository tree for setting up
+       new sites. Extract the core depository into the \$DCS_DEP
+       directory.
+   % cd \$DCS_DEP/\$DCSGROUP
+   % zcat \$DCS_DIR/samples/core_depository.tar.Z | tar -xvfp -
+
+    7. Place an extensions.descriptions file in Depository
+       Make sure a default extensions.descriptions file is placed in the
+       upper level Depository directory.
+   % cp \$DCS_DIR/samples/extensions.descriptions \$DCS_DEP/\$DCSGROUP
+   % chmod 744 \$DCS_DEP/\$DCSGROUP/extensions.descriptions
+
+    8. Edit the "access" directory files.
+       In the directory \$DCS_DEP/\$DCSGROUP/access, there are several
+       files controlling user access privileges. Add the user names to the
+       files as you see appropriate.
+    9. Edit and Create Project Control files.
+       In the directory \$DCS_DEP/\$DCSGROUP/projects, edit the
+       projectcodes.dat file. Create individual project files as
+       necessary.
+   10. Edit the numberbanks.dat File.
+       In the directory \$DCS_DEP/\$DCSGROUP/numbanks, edit the
+       numberbanks.dat to reflect those number banks reserved from the
+       publications office.
+   11. Edit the utils_env.ksh file if migrating from DCS v2.x
+       If you are planning to migrate from a DCS version 2.x system, edit
+       the file \$DCS_DIR/lib/utils_env.ksh, set the variables DBADIR and
+       V2_DEPOSITORY properly.
+   12. Create the New DCS Meta Database Files
+       Execute the \$DCS_DIR/bin/dcsbuild.ksh to create the DCS database
+       files. These files will be located in the \$DCS_DEP/\$DCSGROUP/data
+       directory.
+   13. Edit the printers.dat File.
+       In the \$DCS_DIR/lib directory, edit the printers.dat file. This
+       file defines the default line printers to use with the DCS system.
+   14. Edit the vaults.dat File.
+       In the \$DCS_DIR/lib directory, edit the vaults.dat file. This file
+       defines the auxiliary/remote directories to provide access to.
+   15. Edit the formats.dat File.
+       In the \$DCS_DIR/lib directory, edit the formats.dat file. This
+       file defines the names of all supported main list display formats.
+   16. Edit the .launchdcs File.
+       In the \$DCS_DIR/lib directory, edit the .launchdcs file. This file
+       defines the applications available for DCS launching.
+   17. Select a Common Group for all local DCS Users, Set Modes Per the
+       Group.
+       Select a group from the /etc/groups file that all user of DCS will
+       be a member of (DCS version 2.x sites have historically used mcg
+       group). Make sure the data directory of the DCS depository are
+       writable by this group. Also make sure the numbanks/numberbanks.dat
+       file is readable by all.
+   % cd \$DCS_DEP/\$DCSGROUP
+   % chmod 775 data data/*
+   % chgrp mcg data data/*
+   % chmod 744 numbanks/numberbanks.dat
+
+   18. Migrate the DCS v2.x data to DCS v3.x
+       If you are migrating v2.x data, run the oldtonew.ksh program to get
+       the meta information into DCS v3.x, then disable DCS v2.x.
+   % \$DCS_DIR/bin/oldtonew.ksh
+   % compress /DCS_network/xdcs
+   % chmod 700 /DCS_network/xdcs.Z
+
+   Adding a New Project.
+   Follow these steps to add a new project description to an existing DCS
+   installation.
+
+    1. Create a complete set of authorization files for the new project.
+    2. Edit the projectcodes.dat file.
+       Add the description of the new project, its subproject codes and
+       associated number bank.
+
+   All future sessions of DCS will see the new project. All active
+   sessions will need to force a re-read of the project descriptions. This
+   can be done by either changing active vaults or exiting and restarting
+   xdcs.
+
+   Setting up a New User for DCS Use.
+   Follow these steps to set up a new user for use of the xdcs system.
+
+    1. Add the new user login name to the proper authorization files.
+    2. Make sure the use is a member of the group in "/etc/group" that is
+       used commonly for the particular DCS site.
+       This would be that group that the data/main files are group-owned
+       by. Refer to the section that describes setting up a new DCS vault,
+       Example Steps Taken to Install a New Depository.
+     __________________________________________________________________
+
+Developer Section
+
+   This section of the DCS Guide is intended for the person who is
+   interested in advancing the DCS system by providing new features or
+   functions. This section attempts to describe the internals of the DCS
+   system for the purpose of ensuring proper technical support.
+
+   Adding a New Display Format to the DCS GUI.
+   Follow these steps to add a new display format to the DCS utilities and
+   to the DCS GUI:
+    1. In the DCS "src" tree, there is a file named dcslib/showrecfmt.c.
+       Edit this file to define the new display format. Template one of
+       the other formats to create the new format. Re-compile and build
+       the dcslib.a file.
+    2. Once the new format is added to the dcslib.a archive, edit the
+       dba_utils/dbadump.c file to add a new -a# command argument
+       associated to the new format in showrecfmt.c. Re-compile and build
+       the dbadump executable.
+    3. Edit the file in the DCS installation tree named lib/formats.dat.
+       Add the name of the display format with the associated dbadump
+       command option created from the previous step.
+
+   DCS Installation Tree
+   The following is a short description of the DCS installation directory
+   tree:
+         \$DCS_DIR
+             |
+             |
+        +-----------+-------------+---------+--------+---------+
+      /bin         /lib          /man      /src      /docs     /samples
+        |           |                        |
+  DCSstatus.exe   local_env.ksh            dcs.h
+  appendseq       utils_env.ksh
+  checkdata.ksh   printers.dat
+  checkin.ksh     formats.dat
+  checkout.ksh    vaults.dat
+  cpfolder.ksh    dcsrelease.dat
+  dbaadd          resources.dat
+  dbacreat        technical.dat
+  dbadel             |
+  dbadump            /-+------+------+-----+--------+----------+
+  dbamod               /tcl   /tix   /tk   /tk-dcs  /bitmaps   /ksh_funcs
+  dbastat
+  dcs.tk
+  dcsbuild.ksh
+  deleteseq
+  idxadd
+  idxdel
+  idxstat
+  launchreturn.ksh
+  listfolder.ksh
+  new.ksh
+  nextnum
+  offset2id
+  oldtonew.ksh
+  print.ksh
+  query.ksh
+  startdcs.ksh
+
+   Default Bindings File
+   The file \$DCS_DIR/lib/.dcsdefaultbindings contains all common DCS key
+   bindings.
+
+   Description of the DBA Utilities
+   The following is a short description of the DCS DBA utilities programs.
+   Each of the programs accepts the "-help" command argument for complete
+   information on the program.
+     * DCSstatus.exe
+       Used to read DCS v2.x SDF files for input into dbaadd for migrating
+       to DCS v3.x.
+     * appendseq
+       Will add a sequence number to an dba sequence database file. If the
+       sequence database does not exist, it is created.
+     * checkdata.ksh
+       Performs disk integration for existence of a file on a specific
+       node, directory, filename.
+     * checkin.ksh
+       Performs the data movement during checkin operations.
+     * checkout.ksh
+       Performs the data movement during checkout operations.
+     * cpfolder.ksh
+       Performs a complete copy of a DCS depository folder to a new folder
+       under a new revision.
+     * dbaadd
+       Adds a record(s) to the database.
+     * dbacreat
+       Creates a new database with full definition and datatypes.
+     * dbadel
+       Deletes record(s) from the database.
+     * dbadump
+       Displays the contents of a database in various pre-defined output
+       formats. Also accepts several conditional arguments to display a
+       subset of records from the database.
+     * dbamod
+       Modifies record(s) in the database.
+     * dbastat
+       Displays the logical definition of a database as created by the
+       dbacreat program.
+     * dcs.tk
+       The main Tk/Tcl Start up program for DCS.
+     * dcsbuild.ksh
+       Program used to build the DCS databases and indexes.
+     * deleteseq
+       Deletes a sequence number from a sequence database file.
+     * idxadd
+       Adds an index to the database.
+     * idxdel
+       Deletes an index from the database.
+     * idxstat
+       Displays information on one or all indexes of a database.
+     * launchreturn.ksh
+       Program used in conjunction with launch programs to perform checkin
+       operations.
+     * listfolder.ksh
+       Lists all files in a DCS folder combining the information in the
+       file extension.descriptions.
+     * new.ksh
+       Used to copy data from workspace to the DCS depository during a
+       Item/New operation.
+     * nextnum
+       Reads and modifies a number bank configuration file, obtaining the
+       next available number for a particular bank name.
+     * offset2id
+       Reads a sequence database file to display database id numbers.
+     * oldtonew.ksh
+       Proceduralizes the process of migrating a DCS v2.x system to a DCS
+       v3.x system. Will call DCSstatus.exe and dbaadd.
+     * print.ksh
+       Interface program used when printing from DCS to files or printer
+       queues.
+     * query.ksh
+       Program used to integrate the dbadump program with the DCS GUI
+       allowing for Query abort operations.
+     * startdcs.ksh
+       Main program callable by the end user to start the DCS system. Only
+       requires the \$DCS_DIR environment variable to be defined.
+
+   Description of the DCS Database
+   The following is the current definition of the DCS v3.0 database:
+      Field name.   Type.       Description
+      -----------   -----       ----------------------------
+    0 id..............L.........Unique DBA entry number.
+    1 partnum.........L.....*...Fermilab 6 digit part number.
+    2 shtnum..........I.....*...2 digit sheet number.
+    3 rev.............C.....*...2 character revision designation.
+    4 title...........S.........Drawing Title.
+    5 idate...........L.........Date of Initialization into DCS. (YYMMDD)
+    6 ibuser..........S.........Initialized by user.
+    7 ladate..........L.........Date of last access. (YYMMDD)
+    8 labuser.........S.........Last Accessed by user.
+    9 rdate...........L.........Release date.  (YYMMDD)
+   10 rstats..........S.........Other Release status.
+   11 psize...........I.........Paper size.
+   12 dtype...........I.........Data Type, 1=CAD, 2=Paper.
+   13 etype...........I.........Engineering Type.
+   14 osname..........S.........OS name of data files, repository.
+   15 archive.........S.........Archive Information.
+   16 outstats........S.........Information on check-out stats.
+   17 uses............S.........List of parts this part is composed of.
+   18 codea...........S.........First association.
+   19 suba............S.........Subordinate to "codea"
+   20 api1............S.........Future Use.
+   21 api2............S.........Future Use.
+   22 acclsta.........S.........Access list information.
+   23 update..........S.........Update lock.
+   24 ecoinfo.........S.........Eco related information.
+   25 islatest........I.........Is this record latest revision, 0=yes, 1=no
+
+
+          (26) fields. (0-25, field "0" is managed internally)
+
+    (*) These fields combined represent a unique entry, i.e.: no other
+        record will have the same values in these combined fields.
+  -----------------------------------------------------------------------
+  Field Id/Extended notes.
+  --------/----------------
+
+    0 .... This number is generated by the DCS system, is not allowed
+           to be manipulated by any of the database interface routines,
+           is guaranteed to be unique.
+    1 ....
+    2 ....
+
+    3 .... This field is initially set to "" for new files. The  first  revision
+           change on the record will change this value to a single "A" character
+,
+           then "B", then "C" and so on. When revision "Z" is reached, the  next
+           revision designation is "AA", then "AB" then "AC" and so on. Once "ZZ
+"
+           is reached, no more revisions are available. In field  14,  the  "OS"
+           filename,  the  revision  designation  is  always  specified  in  two
+           characters, padding the value with "_"  characters.  The  initial  OS
+           revision designation is "__", revision "A" is "_A".
+    4 ....
+    5 ....
+    6 ....
+    7 ....
+    8 ....
+
+    9 .... If a file is not released, this value will be "0".
+
+   10 .... Information that is related to a Released drawing, except the
+           date of release, since this might be used mathematically in
+           conditional searches. This field is grossly undefined at this
+           time. To attempt to leave fields open horizontally in this
+           field, several ":" separator characters are written here for
+           future use. Currently 21 fields exist in this field. They are
+           defined as:
+             0 = name of user who performed the release operation.
+             1 = to be defined
+             2 = to be defined
+             3 = to be defined
+             4 = to be defined
+             5 = to be defined
+             6 = to be defined
+             7 = to be defined
+             8 = to be defined
+             9 = to be defined
+            10 = to be defined
+            11 = to be defined
+            12 = to be defined
+            13 = to be defined
+            14 = to be defined
+            15 = to be defined
+            16 = to be defined
+            17 = to be defined
+            18 = to be defined
+            19 = to be defined
+            20 = to be defined
+
+   11 .... Paper size values: 1=A, 2=B, 3=C, 4=D, 5=E, 6=User defined.
+           The actual paper size is not stored in DCS when "6" is used.
+   12 ....
+
+   13 .... Engineering Types: 1=Architectural, 2=Mechanical, 3=Electrical,
+           4=Spec.Drawings, 5=Sketches, 6=Layouts, 99=Other.
+           See also: "dcs.h" in "dcslib".
+
+   14 .... This field is the absolute or relative filespec of  a  file  (folder)
+           stored in the DCS repository, split at the leaf name  with  a  single
+           space. An unspecified ".*" is assumed at the end of the leaf name whe
+n
+           used with the OS. The DCS implementation  uses  the  database  fields
+           "partnum", "shtnum" and "rev" combined for the  leaf  name.  Even  if
+           there is no data in the repository for the record,  this  field  will
+           contain values where data might be stored in the event data is  added
+           at a later time.
+             i.e.: /DCS_depository/TSS/files000/001 12312301__
+               or
+             i.e.: ./files00/001 12312301__
+           The second example above will assume  the  absolute  path  using  the
+           values of \$DCS_DEP and \$DCSGROUP in the path spec.,
+                   \$DCS_DEP/\$DCSGROUP/files00/001 12312301__
+           The full folder could be listed like this:
+            # ls -al \$DCS_DEP/\$DCSGROUP/files00/001 12312301__.*
+
+
+   15 .... This field will probably be a file name relative to the UniTree
+           path of the "tar" file archived there. The information here will
+           probably be as defined:
+            path_to_unitree_archive who when
+           Note: see "InfoWindow.tcl", it references this field.
+
+   16 .... The value here is a " " (space) separated list of value as defined:
+             0    1    2   3    4     5
+           "stat when who node dir filespec"  Where is stat = 1, file is out,
+           if stat = 0, file is in. This way "last checked out" information
+           Is preserved. If a file was "never" checked out, this field will
+           contain a single value, "0".
+
+   17 .... This list is a ":" separated list of "id#,qty#,partnum sheetnum rev"
+           identifiers.
+              "id#,qty#,partnum sheetnum rev:id#,qty#,partnum sheetnum rev:..."
+        Where:
+         id#= Is a DCS id number for a record, i.e.: field 0 of the database.
+              This field is optional (can be null) only if "partnum sheetnum rev
+"
+              are given.
+         qty#= The quantity of uses of the part in the record.
+         "partnum sheetnum rev"= The 6 digit part number, two digit sheetnumber
+                    and current revision. The "rev" will be null if the file is
+                    in the initial revision.
+
+         An entry in this field must contain a part number and sheet number at a
+         minimum.
+
+        Example:
+         54,10,317444 01 B:,5,317445 01:,2,317446 01 A:
+          DBA record "54", part number 317444 is used "10" times, part number "3
+17445"
+          sheet "01" is used "5" times, and part number "317446" sheet "01" rev
+"A" is
+          used "2" times.
+   18 ....
+   19 ....
+   20 ....
+   21 ....
+
+   22 .... This field contains several accesslist  information  related  to  the
+           specific item. The field values here are first space separated.  Each
+           field will begin with an accesslist name, followed by  a  single  "="
+           sign. The values following the "=" sign are ":" separated  values  of
+           either individual user names, or a group definition name,  identified
+           by a leading "_" character (see notes on group definitions). Example:
+                  IN= ECO=koenen:smith:_TSSpeople.dat OUT=koenen
+           The example above is only that, an example. See notes on current acce
+ss
+           definitions. The example above shows an empty list named "IN", a list
+           named "ECO" that contains two individual user names,  and  one  group
+           definition named "TSSpeople.dat", and a last list  named  "OUT"  that
+           contains one individual user name. The absence of a list  definition,
+           and an empty list definition are the same. The order of the list name
+s
+           is not relevant.
+
+   23 .... This field contains the name of the user who is currently accessing
+           of modifying this record, or the NULL value if no one is. This is
+           used by the application interfaces to ensure concurrent users do not
+           modify the same record at the same time.
+
+   24 .... This field is a ":" (colon) separated of information on ECO data for
+           this part. "econum:ecodate:ecoedby"
+   25 ....
+
+   Description of the DCS Indexes
+   There are some pre-defined indexes on the DCS database, they are:
+     * idnums
+       An index that is in the order of the main.db/id field.
+     * partnums
+       An index that is in the order of the main.db/partnum,sheet,rev
+       fields.
+
+   Description of the DCS Access Lists
+   Field 22 of the DCS database is reserved for defining access rights for
+   a particular record. Notes on currently defined access lists are:
+   Field "22" of the DCS database contains accesslist information for  a
+   specific record. The field values are first "space"  separated.  Each
+   field begins with an accesslist name, followed by a single "="  sign.
+   The values following the "=" sign are ":" separated values of  either
+   individual user names, or a group definition name,  identified  by  a
+   leading "_" character. A group definition is simply  a  file  in  the
+   repository directory tree path "access". The format of  file  is  the
+   same for any  access  file.  Each  line  can  contain  an  individual
+   username, the keyword "EVERYONE" or the keyword "INCLUDE:" followed by
+   a file name of the same format.
+    Example:
+      (Example using DCS group "TSS"...)
+
+        REV=koenen:smith:_TSSpeople.dat XXX= YYY=_Yale.dat
+
+   The example  above  shows  the list  named  "REV" that  contains  two
+   individual user names, and one group definition named "TSSpeople.dat".
+   So the user "koenen" and "smith" can  perform  an  ECO  (make  a  new
+   revision) on this item. Also, anyone defined in the file
+   "/DCS_depository/TSS/access/TSSpeople.dat" can too. Also the empty list
+   "XXX" and the list "YYY" which contains one group definition: "Yale.dat",
+   full file name: "/DCS_depository/TSS/access/Yale.dat"
+
+  Currently implemented acclsta names and descriptions:
+  List Name  Description
+  ------------------------------------------------------------------------------
+  REV        List of those people who can generate a new revision for this folde
+r.
+  UPD        List of those people who can perform met-data updates on this file.
+  REL        List of those people who can release this folder.
+  DEL        List of those people who can delete this folder from the database.
+     __________________________________________________________________
+
+Index
+
+   Project:
+   The term "Project" is a common nickname used for the database field
+   codea. The codea is referenced in the DCS GUI by the string set to the
+   value of \$tk_env(MAJORWORD) as defined in local_configs.tcl file.
+   Projects are the first order in which CAD information is grouped. The
+   second order is known as the subproject, or database filed suba.
+
+   DCS installation library directory: \$DCS_DIR/lib
+   This directory contains all the DCS startup files and Tk/Tcl libraries.
+
+   DCS Folder:
+   A DCS Folder is a group of files contained in one DCS Record.
+
+   DCS Record:
+   A DCS Record is identified as one entry of the DCS system. Once record
+   contains all the information about the entry. Three database fields
+   combined uniquely define a DCS record: partnum, sheetnum, and rev. One
+   record may control several files, or one folder.
+
+   DCS Depository:
+   A DCS Depository is a UNIX directory tree containing all files
+   controlled by the system and all configuration files controlling the
+   DCS system.
+
+   DCS Folder Specification:
+   A DCS Folder Specification is a group of files defined by a name, then
+   followed by a ".*" wildcard. A Folder Specification does not include a
+   File Extension name. Example: for the files "larry.dwg", "larry.igs",
+   and "larry.txt", the Folder Specification is "larry".
+
+   DCS File Extension:
+   A DCS File Extension is a string of characters of a file name following
+   the Folder Specification name. Example: for the files "larry.dwg",
+   "larry.igs", and "larry.txt", the Folder Extension names are "dwg",
+   "igs", and "txt".
+
+   Checked In:
+   When a record is checked in, the data associated with the record is
+   stored exclusively in the DCS depository. The status on the record in
+   the database is set to IN, allowing the record to be checked out again.
+   Only records that are checked out, status OUT, can be checked in.
+
+   Checked Out:
+   When a record is checked out, the data associated with the record is
+   copied from the depository to the user work space directory, specified
+   by the user when the check out occurs. The status on the record in the
+   database is set to OUT preventing anyone else from checking the record
+   out at the same time. Caution: renaming or removing the file checked
+   out by DCS in the work space will dis-associate the file with the DCS
+   system, bypassing the copy of data back into the depository on a check
+   in operation. Only the latest record version of a file can be checked
+   out.
+
+   Release:
+   This operation changes the status on a database record to RELEASE. When
+   a record is released it can no longer be checked out without creating a
+   new revision of the record. A record that is released is essentially
+   locked in that state forever.
+
+   Life Chain:
+   All records in DCS are unique based on the combination of three
+   database fields, partno, shtnum, and rev. The rev field represents a
+   life cycle from initial engineering design to latest. When a folder is
+   revised, a new folder is created with the next higher level rev
+   designation. The folder that was used to cr

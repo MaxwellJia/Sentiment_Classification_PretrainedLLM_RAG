@@ -1,0 +1,642 @@
+http://www.fnal.gov/docs/working-groups/fpcltf/fpcltf.html
+
+                      [ particle_coll_bar_463_grey.gif]
+
+              Fermilab Physics Class Library Task Force (ZOOM)
+
+                                  [bar.gif]
+
+   [new.gif] New streamlined ZOOM main page (under development)
+
+Contents:
+
+     * ZOOM news and other recent developments
+     * [new.gif] How to access the ZOOM cvs Repository for anonymous (read
+       only) access
+     * Recent release notices (separate page)
+     * Collected release notices (separate page for each package)
+     * Summary of latest tagged releases
+        This is a quick way to get to the main web documentation page for
+            any package.
+     * Open discussions about proposed enhancements to ZOOM production
+       packages.
+     * ZOOM Production Packages Page --
+       Links to main documentation, feature logs, and problem tracking for
+       each ZOOM production package.
+     * List of ZOOM-supported platforms (as specified by the Run II
+       Steering Committee)
+     * ZOOM modules (packages, libraries) now available (released)
+     * ZOOM modules now in progress (under active development or user
+       testing)
+     * ZOOM modules possible for further future development
+     * Selected ZOOM documents (including some overheads from talks)
+     * Code of ZOOM Packages, via a couple of browsers
+     * ZOOM contact information
+
+   This page was last updated on July 11, 2001.
+
+                                  [bar.gif]
+
+ZOOM news and other recent developments:
+
+July 11, 2001:
+
+ZOOM release 01-07-11 has been rtagged and released
+
+ZOOM Release Note
+
+   [greenball.gif] CLHEP Matrix
+
+     * Faster matrix inversion in HepMatrix for 6x6, 5x5, and 4x4
+       non-symmetric matrices.
+     * When a singular is inverted, ifail comes back 1 but nothing is
+       written to cerr.
+
+[greenball.gif] ErrorLogger
+
+     * Support for Multi-threaded applications.
+
+   [greenball.gif] HepTuple
+     * Support for ROOT 3.0x.
+
+   [greenball.gif] SpecialFunctions
+     * Uses gsl 0.8.
+
+   July 9, 2001:
+
+   Instructions for accessing the ZOOM cvs repository are available:
+     * setenv CVSROOT
+       :pserver:anonymous@zoomcvs.fnal.gov:/usr/people/cvsuser/repository
+     * In your home directory, the file .cvspass must contain the line
+:pserver:anonymous@zoomcvs.fnal.gov:/usr/people/cvsuser/repository A+.(=0BB&
+
+   These instructions will be kept on this Web page, below.
+
+   May 30, 2001:
+
+   ZOOM release 01-05-30 has been rtagged and released
+
+   ZOOM Release Note
+   [greenball.gif] New CLHEP features:
+
+     * Faster matrix inversion in HepSymMatrix for 6x6, 5x5, and 4x4
+       symmetric matrices.
+
+   [greenball.gif] ErrorLogger minor modification:
+     * Reduced template code instantiation.
+
+   May 29, 2001: Proposed Enchancement to ErrorLog: Thread Safety
+   A good way to do this has been found; see the discussion on the
+       proposed enhancements page or for more detail, in the FeatureLog.
+
+   May 2, 2001:
+
+   ZOOM release 01-05-02 has been rtagged and released
+
+   ZOOM Release Note
+   [greenball.gif] New ISOcxx features:
+
+     * Ability to distribute package for NT without having to rebuild it
+       locally.
+     * Support for KAI 4.0 on Sun 5.8 systems.
+
+   [greenball.gif] SpecialFunctions modification:
+     * Transitioned to use of gsl 0.7.
+
+   [greenball.gif] CLHEP enhancement:
+     * Matrix constructors zero locally allocated memory to avoid FP traps
+       on Intel chips.
+
+   [greenball.gif] HepTuple enhancement:
+     * Cleanup of examples and documentation
+
+   [greenball.gif] ZMtools declared production package
+
+   April 17, 2001:
+
+   ZOOM release 01-04-17 has been rtagged and released
+
+   ZOOM Release Note
+   [greenball.gif] New Exceptions features:
+
+     * ZMexValidationStyle
+        to format outputs without timestame and file path.
+     * ZMthrow_from(exception, line, file)
+        for use with message preparation routines which should mimic
+            throwing from a different, remembered line.
+     * ZMexception::setSeverity(), setName(), setFacility()
+     * Vetting StandardDefinitions macros
+        to properly use namespace zmex when ZM_USE_NAMESPACES is enabled.
+
+   [greenball.gif] New ErrorLogger features:
+     * Multi-module filtering and exclusion
+
+   [greenball.gif] CLHEP enhancements:
+     * `NaN-Proofing' the Vector package
+        No methods will under any circumstances silently produce a NaN or
+            infinity (or call system routines with arguments which should
+            produces those), without first ZMthrow-ing.
+
+   [greenball.gif] HepTuple declared production package
+     __________________________________________________________________
+
+   April 11, 2001:
+
+   Walter Brown's talk on C++ Meta< Programming > Concepts and Results
+   This Computing Techniques Seminar was presented April 10, 2001. It
+       discusses the use of the C++ template mechanism to formulate
+       powerful compile-time intelligence, at zero run-time cost.
+
+   April 4, 2001:
+
+   ZOOM release 01-04-04 has been rtagged and released
+
+   ZOOM Release Note
+   [greenball.gif] New HepTuple features:
+
+     * New opening modes HEP_REMOVE and HEP_RENAME
+     * Documentation brought more up to date
+
+   [greenball.gif] CLHEP brought into synch with changes made at CERN
+   since 1.6
+   [greenball.gif] New Package: HistTools
+   [greenball.gif] ZMutility declared production package
+
+   April 3, 2001: New ZOOM platforms: KAI 4.0d on Linux, IRIX, SUN
+   These replace KAI 3.3, which is now obsolete as a supported platform.
+
+   Archive of older news items
+
+                                  [bar.gif]
+
+How to Access the ZOOM cvs Repository
+
+To obtain read-only access to the ZOOM cvs repository (which allows you to check
+out and update ZOOM packages):
+
+     * setenv CVSROOT
+       :pserver:anonymous@zoomcvs.fnal.gov:/usr/people/cvsuser/repository
+     * In your home directory, the file .cvspass must contain the line
+:pserver:anonymous@zoomcvs.fnal.gov:/usr/people/cvsuser/repository A+.(=0BB&
+
+   This provides access even if the local system does not use Kerberos for
+   secure logins.
+
+   To obtain write privilege for a specific ZOOM package, which goes via
+   the CVSROOT cvsuser@zoomcvs.fnal.gov:/usr/people/cvsuser/repository,
+   please contact the zoom support group.
+
+   Write access to the ZOOM repository does require Kerberos.
+
+                                  [bar.gif]
+
+Summary of latest tagged releases:
+
+To get to the main web documentation page for a package:
+
+     * Click the package in the list below --
+        This brings up a short describption lower on this web page.
+     * Then click on the package name heading that descrption, to get to
+       the package documentation web page.
+
+   [blueball.gif] Packages in ZOOM repository, primarily ZOOM-developed.
+       [cyanball.gif] Packages in KITS/FermiTools, primarily
+       ZOOM-developed.
+       [redball.gif] Externally available packages having ZOOM version.
+       [greenball.gif] Run II support packages shared by ZOOM.
+       [yellowball.gif] Obsolete package.
+
+   CAPTION: As of July 11, 2001:
+
+   Package Name Version Namespace Requirements and remarks
+   [redball.gif] Allocator v1.0.2 ---
+   [redball.gif] CLHEP v1.6.10 --- needs Exceptions when built for ZOOM
+   [blueball.gif] ErrLogEx 1.5.4 --- needs Exceptions 2.0 or later and
+   ErrorLogger 2.0 or later
+   [blueball.gif] ErrorLogger 2.1 zmel needs ZMutility 1.2.3 and ISOcxx
+   1.1 or later
+   [blueball.gif] Exceptions 2.0.3 zmex needs ZMutility 1.3.1 and ISOcxx
+   1.1 or later
+   [yellowball.gif] FixedTypes --- (no longer a ZOOM product -- use
+   version in ZMutility instead)
+   [blueball.gif] HepTuple v2.0.4 zmht needs ZMutility 1.3.7 or later,
+   Exceptions 1.2.1 or later, ISOcxx 1.1 or later, and CERNLIB for HBook,
+   histo v5_0_3a0 or higher for Histoscope, and/or ROOT v2_26 or higher
+   for ROOT
+   [blueball.gif] ISOcxx v1.5.1 zmiso no prerequisites
+   [blueball.gif] LinearAlgebra v1.3.14 zmla needs ZMutility v1.2.3 or
+   later
+   [blueball.gif] PhysicsVectors v2.0.3 zmpv needs CLHEP 1.6 or later
+   (Vector package) and ZMutility 1.3.1 or later and Exceptions 1.3 or
+   later
+   [cyanball.gif] SIunits v1.0.1 si
+   [blueball.gif] SpecialFunctions v1.3 zmsf needs ZMutility 1.5 or later
+   and Exceptions 1.1 or later
+   [yellowball.gif] STLUtility --- originated from BaBar; deprecated in
+   favor of using ISOcxx
+   [blueball.gif] ZMtools v2.0.1 zmtmr
+   for ZMtimer
+   zmt
+   for Block, HolderPtr, IteratorFilter ZMtimer needs ZMutility 1.4 and
+   Exceptions 1.1 or later
+   [blueball.gif] ZMutility v2.0 zmfxt
+   for FixedTypes no prerequisites
+
+   (Note: namespaces indicated are not yet enabled by default.)
+
+   CAPTION: Code management information
+
+   Package Name CVS Tag Same since Last enhancement of note
+   [redball.gif] Allocator V01-00-02 v1.0.1 12-Sep-2000 initial release
+   (1.0)
+   [redball.gif] CLHEP V01-06-10 v1.6.8 30-May-2001 Faster HepSymMatrix
+   inversion (1.6.8)
+   [blueball.gif] ErrlogEx V01-05-04 v1.5.4 27-Feb-2001 Package created,
+   from classes in ZMtools (1.5)
+   [blueball.gif] ErrorLogger V02-01-00 v2.1 11-Jul-2000 Multiple thread
+   support
+   [blueball.gif] Exceptions V02-00-03 v2.0.3 06-Aug-1999 Cut dependency
+   on ErrorLogger (1.2.8)
+   [blueball.gif] HepTuple V02-00-04 v2.0.4 07-Mar-2000 HepFileManager
+   combine() method (1.7.3)
+   [blueball.gif] ISOcxx V01-05-01 v1.5.1 27-Feb-2001 NT Distribution and
+   Sun 2.8 Accomodations (1.5)
+   [blueball.gif] LinearAlgebra V01-03-14 v1.3.14 16-May-2000 Improved
+   speed on 5x5, 6x6 inverse (1.3.5)
+   [blueball.gif] PhysicsVectors V02-00-02 v2.0.2 22-Jan-2001 Merged with
+   CLHEP Vector (2.0)
+   [cyanball.gif] SIunits V01-00-01 v1.0.1 16-Feb-1998 Accomodation for
+   VC++ Windows NT (1.0.1)
+   [blueball.gif] SpecialFunctions V01-03-00 v1.3 11-Jul-2001 Use gsl 0.8
+   (1.3)
+   [blueball.gif] ZMtools V02-00-01 v1.5.3 27-Feb-2001 ZMxel etc. moved to
+   ErrLogEx (1.5)
+   [blueball.gif] ZMutility V02-00-00 v1.6 14-Mar-2000 Coordination with
+   ISOcxx (1.5)
+
+                                  [bar.gif]
+
+List of ZOOM-supported platforms: A platform means some combination of specific
+hardware, operating system, and compiler.
+
+The list of mandated platforms for ZOOM to support is determined by the Run II
+Computing Steering Committee, and approved requests from the Run II experiments.
+All ZOOM products at beta release or later should work on all these supported
+platforms.
+
+Current supported platforms are:
+
+     * KAI compiler (KCC 3.4) under IRIX 6.2 and higher
+     * KAI compiler (KCC 4.0d) under IRIX 6.2 and higher
+     * KAI compiler (KCC 3.4) under Linux
+     * KAI compiler (KCC 4.0d) under Linux
+     * KAI compiler (KCC 3.4) on Sun
+     * KAI compiler (KCC 4.0d) on Sun
+     * GNU compiler (gcc 2.95.2) under IRIX 6.2 and higher
+     * GNU compiler (gcc 2.95.2) under Linux
+     * Microsoft compiler (VC++ 6.0) under NT4 and NT5 with Cygwin
+     * Microsoft compiler (VC++ 6.0) under NT5 with Cygwin
+     * GNU compiler (gcc 2.95.2) under NT5 with Cygwin
+
+   Four platforms were specified initially, all for SGI machines:
+
+   As of Dec. 1, 1997, the following x86 PC architecture platforms were
+   added by the Committee:
+     * KAI compiler (KCC) under Linux
+     * Microsoft Visual C++ 5.0 compiler under Windows NT
+          + NT-specific distribution is coordinated with SoftRelTools and
+            relies on the cygwin "Unix shell" product.
+          Due to problems with interactions among SRT, ISOcxx, CYGWIN and
+            NT, we are presently not capable of supporting ZOOM packages
+            on NT at a level compatible with D0 usage.
+          + The current NT compiler version in common use is 6.0, and
+            support is targetted for that rather than 5.0.
+
+   As of June 1, 1998, the committee has eliminated gcc from the list, at
+   least until some variant properly supports namespaces. The ZOOM
+   products generally still work with gcc as long as ZM_USE_NAMESPACES is
+   not defined and the user makes no use of namespaces.
+
+   OSF/1 for the Alpha architecture using the KAI compiler was informally
+   added to this list but no longer is actively being pursued.
+
+                                  [bar.gif]
+
+ZOOM modules now available: The following modules have been released for use by
+production and develpment projects. Information on each is maintained by the
+indicated person.
+
+     * Allocator
+     * CLHEP
+     * CLHEP Random Validation
+     * CLHEP StdHepC++
+     * ErrLogEx
+     * ErrorLogger
+     * Exceptions
+     * HepTuple
+     * LinearAlgebra
+     * SIunits
+     * SpecialFunctions
+     * ZMtools
+     * ZMutility
+     __________________________________________________________________
+
+   [blueball.gif] Allocator module (Walter Brown)
+   A simple allocator that greatly speed up code that frequently builds up
+       many std::vectors of objects. The Zoom Allocator package provides a
+       memory-management subsystem. This subsystem has an interface whose
+       design follows the model of the std::allocator class, while
+       featuring significantly improved performance for dynamic memory
+       management. This performance benefit is achieved by takes advantage
+       of known fixed-size properties to reduce the average per-allocation
+       performance overhead, and using the strategies of recycling deleted
+       storage and bulk allocation.
+
+   [blueball.gif] CLHEP module (Mark Fischler)
+   A common version of the CLHEP library, with all sub-packages compilable
+       on the ZOOM-supported platforms. CLHEP is a collection of routines
+       written by physicists around the world, and an organization for
+       assigning "editor" responsibility to those packages.
+       For ZOOM purposes, we categorize the sub-packages that make up
+       CLHEP by level of support:
+
+     * PRESENT -- These have been tried out on each of the ZOOM platforms
+       and put into a form where they compile and build with no apparent
+       problems. However, no claim is made as to quality, applicability,
+       or correctness, and no responsibility is taken for bug fixes
+       (beyond reporting bugs to package editors).
+     * VALIDATED -- These are components of CLHEP that ZOOM recommends Run
+       II users employ wherever needed. Beyond compiling, they have been
+       validated for at least rudimentary correctness against ZOOM (and/or
+       other) tests. ZOOM will not be creating packages that duplicate the
+       semantics of these validated parts of CLHEP.
+
+   [blueball.gif] CLHEP Random validation (John Marraffino and Mark
+   Fischler)
+   Validation against randomness test suite, completion of set of
+       distributions, and additional random engines.
+
+   Page is not up to date with regard to validation of distributions.
+
+   [blueball.gif] CLHEP StdHepC++ (Lynn Garren)
+   StdHep contains a set of translation routines which convert Herwig,
+       Jetset, Isajet, or QQ events to and from the standard HEP event
+       format. StdHep also contains utility routines to work with the
+       HEPEVT common block and a set of I/O routines.
+       StdHepC++ implements that functionallity in C++, and takes
+       advantage of the object-oriented nature to provide conceptually
+       clean interfaces.
+
+   [blueball.gif] ErrLogEx module (Mark Fischler)
+   Tools involving both the Exceptions and the ErrorLogger packages. For
+       example, a way to route messages produced by ZMexceptions, through
+       the output destinations associated with an ErrorLog.
+
+   [blueball.gif] ErrorLogger module (Mark Fischler)
+   Flexible multi-destination logging and statistics facility designed for
+       use in the D0 and CDF frameworks. Central control of logging to
+       multiple destination logs, with uniform formatting, filtering by
+       severity level at each destination, throttling of multiple
+       appearences of messages, and error statistics summaries. Automatic
+       appending of time, module/package, and context (run/event)
+       information
+
+   [blueball.gif] Exceptions module (Mark Fischler)
+   A mechanism to permit, under user control, selective ignoring,
+       handling, and throwing of any exceptions potentially raised by ZOOM
+       modules. Selected features include:
+
+     * a standard handler for exception objects, while permitting
+       installation of custom handlers
+     * a standard mechanism for logging, to user-specified destinations,
+       both raised exceptions and user-generated explicit log messages
+     * user-selectable logging policies (e.g., by exception severity),
+       while permitting installation of custom loggers
+     * an extensible design to allow users to define, handle, and log
+       their own exception objects via the same machinery used by
+       ZOOM-generated exceptions
+     * a base class and special logger to connect user or ZOOM exceptions
+       to the ErrorLogger package, so that statistics and multiple
+       destinations are available
+
+   [blueball.gif] HepTuple module (Philippe Canal)
+   An interface to several underlying HEP histogramming and Ntuple
+       collection packages including HBOOK, Histoscope, and ROOT.
+
+   [blueball.gif] ISOcxx module (Walter Brown)
+   The goals of the ISOcxx C++ Portability package are to:
+
+     * document known features and defects of C++ development environments
+       for supported Run II platforms
+     * provide, to the extent possible, C++ standard-compliant fixes and
+       workarounds that serve as cures for known defects' consequences
+     * provide a framework for testing known defects and for testing
+       compliance code proposed as cures for defects
+     * provide a centralized source of information regarding known
+       problems and possible cures for various platforms
+     * provide a framework for easily adding newly-discovered defects and
+       new (or improved) defect cures to the package
+
+   The package is designed to be used independently but, for Run II
+   projects, interfaces with the Fermilab SoftRelTools (SRT) package for
+   environment definitions.
+
+   [blueball.gif] LinearAlgebra module (Leo Michelotti)
+   Matrix manipulations, with specific attention paid to efficient
+       operations for small-matrix cases.
+
+   Currently in beta release, with the following
+       restrictions/dependencies:
+
+     * math functions (like cos, sin) have not been implemented
+     * does not use the Exception package yet
+     * not available on gcc yet due to problems with dynamic_cast
+     * requires ZMutility v0.02
+
+   [blueball.gif] PhysicsVectors (3- and 4-Vectors) module (Mark Fischler)
+   3-vector and Lorentz Vector concepts commonly used in High Energy
+       Physics calculations; boosts, rotations, invariant masses, and so
+       forth.
+       Now these classes are derived from CLHEP Vector classes (which have
+       been given the added ZOOM capabilities).
+
+   [blueball.gif] SIunits (SI Library of Unit-Based Computation) module
+   (Walter Brown)
+   Types representing quantities with basic and derived units (such as
+       Length and Energy), and dimension analysis checking when working
+       with these numerical quantities.
+       Implements all concepts recognized by the Systeme International
+       d'Unites (SI) and a comprehensive set of other terms and constants
+       found in various physics texts.
+       Dimension checking is done at compile time and incurs no run-time
+       overhead or increase in memory for these quantities.
+       Code compatibility but without strong dimension checking on VC++ /
+       Windows NT.
+       The SIunits package has been placed into KITS and is available
+       through FermiTools.
+
+   [blueball.gif] SpecialFunctions (GNU Scientific Library) module (John
+   Marafino)
+   Based on the Special Functions section of the Gnu Scientific Library,
+       this provides various functions such as Bessel functions, Legendre
+       polynomials, Elliptic integrals, and so forth.
+
+   [blueball.gif] ZMtools module (Walter Brown)
+   A collection of useful codes contributed by non-ZOOM physicists
+       (generally at FNAL) who have solved specific problems that others
+       may share. Also includes codes developed by ZOOM as needed
+       auxiliaries, which may be useful to physicists in their own right.
+       assertN.h
+
+   A set of graded assert macros.
+       Related macros that employ the ErrorLogger mechanism are given in
+       ErrorLogger/ELassertN.h .
+
+   Block
+   Simple templated class that behaves like an STL container but can also
+       be block-initialized like a fixed-size native C++ array.
+
+   HolderPtr
+   Simple templated class that can serve as a pointer to an object, with
+       the property that when the HolderPtr is copied, it creates its own
+       copy of the object pointed to as well.
+
+   IteratorFilter
+   Provides a simple means of selecting certain of a container's members
+       while traversing (iterating through) the container.
+
+   ZMexAugmented
+   Classes implementing "augmented ZMexceptions" which are the ZOOM
+       Exceptions that utilize the ErrorLogger output (and routing and
+       filtering and statistics...)
+
+   ZMtimer
+   Simple timer classes, providing semantics similar to those in
+       Tools.h++, and more. (This builds on work independently contributed
+       by Randy Herber and Fritz Bartlett.)
+
+   [blueball.gif] ZMutility module
+   (Walter Brown)
+   A collection of auxiliary headers and small routines that were needed
+       for other ZOOM packages, many of which may also be of use to users.
+       FixedTypes
+
+   Uniform nomenclature for 32, 64, and 128-bit floats, and 1, 2, 4, and
+       8-byte integers, along with defines allowing the compiler to use
+       the appropriate types for Float8, Int2, and so forth.
+
+   Reference-counting
+   Counter and handle classes, useful for general-purpose
+       reference-counting. (Inspired by code published separately by
+       Bjarne Stroustrup and Andrew Koenig.)
+
+                                  [bar.gif]
+
+Modules under active development:
+
+   Work toward the following modules has begun. Information on each is
+   maintained by the indicated person.
+
+   [blueball.gif] StdHep (Lynn Garren)
+   Bridge among the various Hep simulation and event generation packages.
+       StdHepC++ is already in CLHEP, but is to undergo major improvements
+       in terms of object oriented approach.
+
+     * A design for the ParticleData and related classes has been done,
+       and initial codingis underway.
+     * The instance code will be restructured using the concept of a
+       container class representing a Directed Acyclic Graph. Attempts are
+       being made to coordinate this with code developed by HepMC rfor
+       ATLAS.
+
+   [blueball.gif] Coordination with CLHEP (M. Fischler)
+   Several ZOOM packages are being incorporated into (Exceptions,
+       ErrorLogger) CLHEP for more general availability. PhysicsVectors
+       has been merged with the CLHEP Vector package.
+       CLHEP has also expressed a desire to merge in ZOOM Exceptions and
+       the ErrorLogger, and willingness to coordinate configuration issues
+       under the umbrella of the ZOOM ISOcxx package.
+
+                                  [bar.gif]
+
+Possible future modules:
+
+   The following modules were originally intended at some low level of
+   priority. These are modules which have been at one point identified as
+   possible development targets, but which are for the present not slated
+   for being done:
+
+   [blueball.gif] MINUIT++
+   A wrapper for MINUIT or some other means of getting a good minimization
+       package into the HEP public domain.
+       Assuming somebody else in the HEP community does this, ZOOM will
+       not have to.
+
+   [blueball.gif] Particle data book data
+   Is now part of StdHepC++, which we provide for CLHEP.
+     __________________________________________________________________
+
+                                  [bar.gif]
+
+Selected ZOOM documents:
+
+   [blueball.gif] Recommendation for Fermilab Physics Class Library
+   document
+   [blueball.gif] Original Scope and Standards Document (postscript)
+   [blueball.gif] FPCL Coding Standards (postscript)
+   [blueball.gif] FPCLTF Contents and Priorities Workshop Report (January
+   1997 Workshop)
+   [blueball.gif] ZOOM paper for CHEP 98 (postscript)
+   [blueball.gif] ZOOM paper for CHEP 97 (postscript)
+   [blueball.gif] Run II Computing Steering committee: a new charge to
+   guide ZOOM efforts
+   [blueball.gif] ZOOM Mini-Workshop (5/6/98) background materials
+   [blueball.gif] CLHEP Paper (describing ZOOM coordination) for CHEP 2000
+   (postscript)
+     __________________________________________________________________
+
+   [blueball.gif] Slides of ZOOM Status Presentation to Run II Steering
+   committee, Feb 29, 2000.
+   [blueball.gif] RUN II Software Review (postscript) presented 10/14/97
+   -- slides and talk content
+   [blueball.gif] ZOOM Synopsis (postscript) presented 4/30/97, preparing
+   for PMG review of Run II computing
+   [blueball.gif] Progress of Phase I Modules (postscript) presented
+   4/17/97 for Run II computing committee
+   [blueball.gif] CHEP97 (postscript) slides presented at CHEP97 (Berlin)
+   around 4/1/97
+   [blueball.gif] LHC ZOOM Talk (postscript) presented at CERN, November,
+   1996, at LHC/CLHEP workshop
+   [blueball.gif] Walter Brown's talk on C++ Meta< Programming > Concepts
+   and Results
+
+                                  [bar.gif]
+
+ZOOM contact information:
+
+   The following distribution e-mail points have been set up:
+
+   [blueball.gif] zoom@fnal.gov
+   ZOOM task force mailing list. Open participation; D0 and CDF
+       experimenters particularly encouraged to subscribe.
+
+   [blueball.gif] zoom-support@fnal.gov
+   ZOOM Product Support mailing list. Users are encouraged to report
+       problems with ZOOM packages or to request assistance in finding,
+       setting up, and using packages, via this address. Please use the
+       package name as the first word of the subject.
+     __________________________________________________________________
+
+   Author:
+   Mark Fischler,
+
+   This ZOOM Home Page is registered as number WP0044 in the Computing
+   Division Documentation and Software database.
+
+                                  [bar.gif]
+
+       Fermilab Computing Division - Fermilab at Work - Fermilab Home
+
+                            Contents of this page
+
+                                Legal Notices

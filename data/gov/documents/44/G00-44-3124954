@@ -1,0 +1,167 @@
+http://queeg.ngdc.noaa.gov/local/move.html
+
+                     Information on SEG Related Servers
+
+   This is an information page about the new servers. It includes
+   information about the servers themselves, their usage, and their setup.
+   If there is anything you find missing or lacking, please let Sue McLean
+   (sjm@ngdc.noaa.gov) know.
+     __________________________________________________________________
+
+   Quick Search:
+   General Information
+       Locations and Paths
+       Concepts and Procedures
+     __________________________________________________________________
+
+                             General Information
+
+                               Top of the Page
+
+   Apex, Zenith(www.ngdc.noaa.gov):
+   These are the two machines that share the www duties, replacing julius.
+       There are not any logins on apex or zenith, all development should
+       occur on meridian. Cgi's,html pages, and data files are moved from
+       meridian to apex and zenith. For SEG, you must submit the files to
+       be moved via the the m2www transfer program. Apex and zenith are
+       identical to users - you won't be able to tell the difference.
+       There is a 100 slot cdrom tower mounted on each of the machines. If
+       you need to mount a new cd on the web, you must provide two copies
+       to Sue McLean. This co-server setup provides a backup machine
+       should one machine crash.
+       Contacts:
+
+     * Mike Doney ............. mad@ngdc.noaa.gov
+     * Mark Sleeper ........... mos@ngdc.noaa.gov
+     * Susan McLean ........... sjm@ngdc.noaa.gov
+
+   Meridian:
+   Meridian is the web development server for the data center. Everyone
+       should have a login onto meridian. In order to have something
+       placed on the www servers, you must submit it at the m2www
+       submittal page. Meridian is not servable to the outside world. This
+       means that if you give someone outside of ngdc an url to meridian,
+       they won't be able to see it. Meridian also hosts the NGDC
+       intranet. See http://meridian/intranet. Queeg still hosts the SEG
+       intranet- see queeg below. On Meridian, anything placed in the
+       /net/ftp/Solid_Earth/ directory will be mirrored to apex and zenith
+       once an hour. Meridian's ftp area does not accept anonymous logins.
+       If you need to place something in anonymous ftp, you must actually
+       ftp to ftp.ngdc.noaa.gov and place it there.
+       contacts:
+
+     * Mike Doney ............. mad@ngdc.noaa.gov
+     * Mark Sleeper ........... mos@ngdc.noaa.gov
+     * Susan McLean ........... sjm@ngdc.noaa.gov
+
+   Borealis(idl.ngdc.noaa.gov):
+   Borealis is the idl server for the data center. This machine only runs
+       code that is used on the web. This machine is not intended for
+       development work.The current version of idl installed is 5.1. The
+       machine is a dual PentiumII 233, running RedHat Linux v5.1. Mark
+       Sleeper is the main administrator.
+       contacts:
+
+     * Mark Sleeper ........... mos@ngdc.noaa.gov
+     * Mike Doney .............. mad@ngdc.noaa.gov
+
+   Homepage:
+     * Borealis Homepage
+
+   Picasso:
+   Picasso is the development idl server for SEG. It is running RedHat
+       Linux 5.1 on a Pentium II 300. If you need an account please see
+       Mark Sleeper (mos@ngdc.noaa.gov).
+       contacts:
+
+     * Mark Sleeper ........... mos@ngdc.noaa.gov
+     * Mike Doney .............. mad@ngdc.noaa.gov
+
+   Homepage:
+     * Picasso Homepage
+
+   Queeg(hypernews.ngdc.noaa.gov):
+   Queeg is the misc. web server. It should only be seen as
+       hypernews.ngdc.noaa.gov to the outside world. It also hosts the SEG
+       Intranet, personal home pages for SEG, IAGA and WDC webcrossing
+       pages, and the IAGA devlopment site, along with HyperNews. It is a
+       linux box.
+       contacts:
+
+     * Mark Sleeper ........... mos@ngdc.noaa.gov
+     * Mike Doney ........ mad@ngdc.noaa.gov
+
+   Homepage:
+     * Queeg Homepage
+     __________________________________________________________________
+
+                        Important Locations and Paths
+
+                               Top of the Page
+
+                              Description/Path
+
+                                Apex & Zenith
+
+                                  Meridian
+
+                                  Borealis
+
+                                   Picasso
+
+   url www.ngdc.noaa.gov/seg/ meridian.ngdc.noaa.gov/seg/
+   idl.ngdc.noaa.gov/seg/ picasso.ngdc.noaa.gov/seg/
+   url cgi path /cgi-bin/seg/ /cgi-bin/seg/ /cgi-bin/seg/ /cgi-bin/seg/
+   html path /net/web/seg/html /net/web/seg/html /home/web/seg/html
+   /home/web/seg/html
+   cgi path /net/web/seg/cgi-bin /net/web/seg/cgi-bin
+   /home/web/seg/cgi-bin /home/web/seg/cgi-bin
+   data path /net/web/seg/data /net/web/seg/data /home/web/seg/data
+   /home/web/seg/data
+   conf path /usr/local/lib/seg/ /usr/local/lib/seg/ /usr/local/lib/seg/
+   /usr/local/lib/seg/
+   cdroms /net/web/seg/data/cdroms/ /net/web/seg/data/cdroms/
+   /home/web/seg/data/cdroms/ /home/web/seg/data/cdroms/
+   ftp directory /net/ftp/Solid_Earth /net/ftp/Solid_Earth NA NA
+   ftp address ftp.ngdc.noaa.gov meridian.ngdc.noaa.gov NA NA
+   anonymous ftp ftp.ngdc.noaa.gov/pub NA NA NA
+     __________________________________________________________________
+
+                         New Concepts and Procedures
+
+                               Top of the Page
+
+   There are several new ideas and procedures that we are using on the new
+   web servers. The descriptions are listed below.
+     * Server Side Includes (SSI)
+        This is a method of providing uniformity among the pages of our
+            site, along with providing ease of changing the standard
+            headers/footers. Given a standard page with a header and a
+            footer, normally you would copy the header and footer out of
+            the template page to your document. The problem is if the
+            footer is changed, then every document that has the footer in
+            it has to be changed. With SSI, a comment line tells the web
+            server to include a specified footer at that point in the
+            document. This allows us to have one copy of the footer
+            arround that many can use, and there is only one footer to
+            modify. Any file that has SSI's should end in .shtml vs .html
+            so the server knows to do the SSI. If you have any questions,
+            please see Susan McLean (sjm@ngdc.noaa.gov) or Mark Sleeper
+            (mos@ngdc.noaa.gov). See the template page for an example.
+     * The Conf Directory
+        The idea of the conf directory is to place a number of files that
+            contain path information in the same place on every machine.
+            If we have to change machines, we just have to change the path
+            information in the configuration files instead of in all of
+            the programs. The conf directory will always be located at
+            /usr/local/lib/seg/. The files in this directory will be asci
+            files containing path info. The more we utilize these the
+            easier porting to a new machine will be. If you have any
+            questions please see Susan McLean (sjm@ngdc.noaa.gov).
+     * Relative Links
+        Please make all links to other documents in our web site relative.
+            If the links are relative, then the pages are server
+            independant (A very good thing).
+            examples:
+          + static: http://queeg.ngdc.noaa.gov/local/move.htm
+          + relative: /local/move.html

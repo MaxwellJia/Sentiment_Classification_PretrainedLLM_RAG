@@ -1,0 +1,61 @@
+http://gnarly.lanl.gov/Cfdlib/Cfdlib.html
+
+   [bcc302.gif]
+
+
+                                     CFDLIB
+
+   CFDLIB is the Los Alamos LIBrary of computer codes capable of solving a
+   wide range of Computational Fluid Dynamics (CFD) problems in two or
+   three space dimensions. The codes are related to one another by virtue
+   of a set of common features. These include the use of Finite-Volume
+   computational schemes in which all state variables are cell-centered; a
+   multiblock data structure that enables highly efficient processing on
+   modern supercomputers; and an Arbitrary Lagrangian-Eulerian (ALE) split
+   computational cycle. All flow speed regimes are accessible in the
+   library, ranging from fully incompressible to hypersonic; and code
+   volumes exist that enable multifluid and multiphase computations with
+   an arbitrary number of fluid fields, each with their own set of
+   conservation equations. The design of each code volume in the library
+   is modular, making the development of codes for specialized
+   applications exceptionally fast. For example, a k-epsilon model of the
+   Reynolds stress, developed for one code volume, is easily inserted into
+   another because of the common data structure among the codes.
+     __________________________________________________________________
+
+
+Common Features
+
+
+     * Multiblock data structure enables highly efficient processing on
+       modern supercomputers, with complex geometries.
+     * Finite-Volume numerical schemes with fully cell-centered state
+       variables.
+     * Uniform, dynamic memory management among all codes.
+     * Interactive mesh generator (2D).
+     * Split Lagrangian-Eulerian (ALE) formulation.
+     * Sesame equation of state interface.
+     * Adaptive meshing capability.
+     * Fully vectorized (and parallelizable) solver for
+       symmetric-positive-definite linear systems.
+     __________________________________________________________________
+
+Availability of CFDLIB
+
+   CFDLIB code is available (for a fee) from Energy Science and Technology
+   Center (ESTSC) at (615) 576-2606. The mailing address for ESTSC is P.O.
+   Box 1020, Oak Ridge, TN 37831-1020. The email address for ESTSC is
+   estsc@adonis.osti.gov. Direct distribution of CFDLIB from Los Alamos
+   National Laboratory is only to our direct collaborators.
+
+   For more information about CFDLIB, contact Dr. Nely Padial at
+   nelylanl@lanl.gov.
+     __________________________________________________________________
+
+CFDLIB People
+
+   [Johnson.gif] Norman Johnson
+   [Kashiwa.gif] [bak.kid.gif] Bucky Kashiwa
+   [Face.gif] Nely Padial
+   [Hercules.gif] Rick Rauenzahn
+   [VanderHeyden.gif] Brian VanderHeyden

@@ -1,0 +1,136 @@
+http://triticale.pw.usda.gov
+
+                  Welcome to the wEST Working Group Website
+
+   Discussion items will be placed on this webserver. In some cases,
+   discussions will require feedback, and a bulletin board has been set up
+   for this at: The Curator Bulletin Board
+     __________________________________________________________________
+
+  Trace Files
+
+   Available here are the raw tracefiles that come directly from the
+   ABI3700 sequencer. [All of the files have been transferred and
+   compressed as *.ab1.gz files; tables will be prepared to point to
+   locations and library sources of the sequences; a sequence run viewer
+   is being set up to present the quality of the sequencing run].
+
+     * Go directly to the TraceFiles
+     __________________________________________________________________
+
+   As a test set for comparing clustering methods, a select collection of
+   sequences will be chosen for developing contig assembly methods. The
+   test set will include 35639 sequences currently listed in the wEST
+   database. These sequences are derived from several libraries
+   constructed with Chinese Spring derived tissue. These sequences are
+   derived from 460 independent sequencing runs done on an ABI 3700
+   sequencer [81% of the sequences from these runs made it through the
+   pipeline]. It is presumed that this early set without sequence data
+   from other cultivars or genomes can help prepare for the evaluation of
+   these methods in future assemblies when genome complexity is introduced
+   into the test set.
+
+   Preliminary methods started with the FASTA formatted files (without
+   quality data files). The FASTA files used were previously screened with
+   the PHRED program to identify the Quality Read Length (QRL) which
+   essentially included stretches of DNA that had PHRED Score values above
+   20. The sequence outside of the QRL was trimmed using the SWEEP1 PERL
+   script. The resulting sequences were then marked-up using the
+   CROSS_MATCH program which identified vector sequence to be removed
+   using the SWEEP2 PERL script. The resulting files were composed of the
+   QRL minus vector identified regions (there were occasional misses by
+   the CROSS_MATCH program).
+     __________________________________________________________________
+
+  QRL FASTA SEQUENCES (35639) WITHOUT QUALITY SCORES
+
+   Phrap (Default; -penalty -2 -minmatch 14 -minscore 30 )
+     * Contigs : 6350
+     * Singletons : 7336
+
+   Phrap (Chao Settings; -penalty -5 -minmatch 50 -minscore 100 )
+     * Contigs : 5448
+     * Singletons : 10853
+
+   Phrap (Chao Settings) Sequences Shuffled
+     * Contigs : 5444
+     * Singletons : 10853
+
+   CAP3 (Default; -a 20 -b 20 -c 10 -d 200 -e 30 -g 6 -m 2 -n -5 -o 30 -p
+   75 -s 500 -u 4 -v 2 )
+     * Contigs : 5285
+     * Singletons : 8700
+     __________________________________________________________________
+
+  GENOME CONSENSUS STUDY
+
+   Phrap (Default; -penalty -2 -minmatch 14 -minscore 30 )
+     * Barley (Hordeum spp.) [71180 sequences]
+     * Contigs : running
+     * Singletons : running
+     * Wheat (Triticum spp.) [66483 sequences]
+     * Contigs : 10314
+     * Singletons : 10312
+     * Wheat/Barley (Triticum/Hordeum spp.) [137663 sequences]
+     * after 2.5 days calculation; program crashes (with 4Gb memory)
+
+   Phrap (Chao Settings; -penalty -5 -minmatch 50 -minscore 100 )
+     * Barley (Hordeum spp.) [71180 sequences]
+     * Contigs : 8588
+     * Singletons : 12258
+     * Wheat (Triticum spp.) [66483 sequences]
+     * Contigs : 8874
+     * Singletons : 17109
+     * Wheat/Barley (Triticum/Hordeum spp.) [137663 sequences]
+     * Contigs : 17084
+     * Singletons : 25242
+     __________________________________________________________________
+
+   I we wish to construct different sets of contigs, what would be a good
+   strategy for doing this? The following is a breakdown of Triticeae
+   species and the number of Genbank sequences for each.
+
+   Triticeae species [149132]:
+   Genus # Genome Ploidy AKA Crosses with:
+   Hordeum 71185 H 2X,4X,6X Elytrigia, Agropyron, Secale, Sitanion,
+   Triticum
+   Triticum 66484 A,AB,ABD 2X,4X,6X Aegilops, Agropyron, Elymus,
+   Elytrigia, Hordeum, Lophopyrum, Secale, Taeniatherum
+   Secale 8370 R 2X X Triticum, Agropyron, Aegilops, Hordeum, Elytrigia
+   Aegilops 2699 B,C,D,L,M,U,BU,CD,CU,DM,MU,DMU 2X,4X,6X also Elymus,
+   Elytrigia Triticum, Secale, Dasypyrum, Elytrigia
+   Kengylia 83 PSY 6X
+   Elymus 77 HS,SY 4X,6X,8X Triticum, Sitanion
+   Psathyrostachys 40 N 2X Leymus
+   Lophopyrum 29 E 2X,4X,8X,10X also Elymus, Elytrigia Elytigia, Leymus,
+   Sitanion, Triticum
+   Agropyron 23 P 2X,4X,6X Hordeum, Leymus, Elytrigia, Secale, Triticum,
+   Sitanion
+   Leymus 23 JN 4X,6X,8X Agropyron, Elytrigia, Psathyrostachys, Thinopyrum
+   Pseudoroegneria 23 S 2X,4X also Elymus, Elytrigia
+   Pascopyrum 21 8X also Agropyron smithii, Elymus, Elytrigia
+   Australopyrum 16 W 2X also Agropyron
+   Thinopyrum 10 J 2X,4X,6X Leymus, Elytrigia
+   Eremopyrum 9 F 2X,4X
+   Peridictyon 6 ? 2X also Festucopsis sancta
+   Taeniatherum 5 T 2X also Elymus Triticum. (Sterile: XHordeum,
+   XAegilops)
+   Amblyopyrum 4 Z 2X also Aegilops
+   Critesion 4
+   Henrardia 4 O 2X
+   Heteranthelium 4 Q 2X
+   Crithopsis 4 K 2X
+   Festucopsis 3 G 2X also Elymus
+   Hordeum X Triticum 3
+   Daspyrum 2 V 2X,4X Aegilops
+   Crithodium 2
+   Eremium 1 S 2X,4X also Elymus
+   Elymus X Leymus 1
+   Triticosecale 0
+     __________________________________________________________________
+
+  MySQL datasets
+
+   For a sample of some MySQL datasets, please check out the following
+   site for sample displays of BEST_HITS.
+     __________________________________________________________________

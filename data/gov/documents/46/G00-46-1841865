@@ -1,0 +1,87 @@
+http://www-cdf.fnal.gov/upgrades/computing/calibration_db/CodeGen.html
+
+             Code Generation and the CDFII Calibration Database
+
+
+
+       Page maintained by Jack Cranshaw. Last updated 6/1/99
+
+      For the calibration database the data stored is in a set format and
+   the storage mode has a regular/repeated structure. A set of code
+   generation tools are being developed by Paolo Calafiura at LBL, so that
+   once the user has provided a list of valid channels and defined a data
+   storage structure {int channel; float data1 .... float datan;}, then
+   this will define the
+   table and a set of access routines will be generated. The consumer will
+   communicate with an API and will not need to know any details of what
+   database is being accessed or how the data is stored.
+
+       The following image shows a schematic of how the codegen takes a
+   data definition in Java classes and uses that to produce many outputs.
+   The code generation program itself is written in Java. Plans are that
+   the CodeGen program will become a product and part of the SoftRelTools
+   build procedure. The diagram below shows the flow of the process. The
+   entities in blue have a known working, although perhaps not final
+   version. The solid green entities have someone who has at least done
+   some work. A dashed line indicates that it is in the current plan,
+   although not implemented.
+
+                               [codegen2.jpg]
+
+
+
+   A sample java class definition:
+
+     import emitter.Attrib;
+     import java.io.Serializable;
+     /**
+      * Calorimeter PED Per Channel/Phototube constants
+      * @author Jack Cranshaw
+      * @version 1.0
+      * First attempt Based on information from CDF152
+      */
+     public class CALPed extends Attrib implements Serializable
+     {
+     /**
+      *
+      *    Geometry     (bits 0-12)
+      * bit  :    0 : pmt
+      * bits :  1-5 : eta
+      * bits : 6-10 : phi
+      * bit  :   11 : we
+      * bit  :   12 : em/had
+      */
+       long  channel;      /* corresponds to calorimeter phototube */
+       short noent;        /* number of entries used to calculate
+     pedestal */
+       float pedestal;     /* mean of gaussian fit */
+       float sigma;        /* sigma of gaussian fit */
+     }
+
+       The handling of channel id's across calibrations of the same
+   detector is under study. The current working decision is that
+   calibrations should be defined for detector elements and not for
+   electronic subaddresses. For example, each QIE has 32 capacitors for
+   each calorimeter channel, but all 32 capacitors are included in one
+   struct defined in java. Each java definition should include the
+   following in addition to the structure of the data.
+     * author and/or contact person for the calibration.
+     * simple one or two line explanation of the purpose of the
+       calibration.
+     * short explanation of any sub-channel addressing
+     * description of variable meaning.
+
+   The comments are important and will be sent to the generated .html
+   files. Insufficiently commented definitions will not be part of the
+   official release.
+
+       The codegen java code is kept in the offline CVS repository as the
+   package AACodeGen. The official java calibration definitions are in the
+   offline CVS repository in CalibDBTables/dictionary/Tables.
+
+       For people developing calibrations, please send java calibration
+   definitions to Mark Lancaster (lmark@kfesg.lbl.gov) if it is an offline
+   (post-run, FCC) calibration and to Jack Cranshaw(cranshaw@fnal.gov) if
+   it is an online (B0) calibration for inclusion in the official release.
+
+   Return to  CalibDB Page

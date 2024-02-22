@@ -1,0 +1,117 @@
+http://www-phys.llnl.gov/Research/scattering/index.html
+
+   Elastic Photon-Atom Scattering
+
+      John William Strutt at age 28
+      John William Strutt
+
+      Explore:
+      RTAB: the Rayleigh scattering database
+
+      Interactively generate tables of:
+      Anomalous Scattering Factors | Cross Sections.
+
+      Jump to:
+      Abstract | Generate Tables | Data Files | Links to related web sites |
+      Contacts.
+        __________________________________________________________________
+
+   Abstract
+
+      Elastic photon scattering is an important tool for obtaining
+      information about the structural properties of matter. The programs and
+      data presented here are useful for evaluating Rayleigh scattering, the
+      contribution to elastic scattering made by the bound electrons of an
+      atom. Rayleigh scattering dominates elastic scattering for most of the
+      x-ray and low-energy gamma-ray regimes. Most of the data available at
+      this site are based on the anomalous-scattering-factor (ASF)
+      approximation, although more sophisticated S-matrix predictions are
+      available as data files. For a more detailed discussion of these and
+      other approximations to scattering, see
+
+      "Validity of Form-Factor, Modified-Form-Factor and
+      Anomalous-Scattering-Factor Approximations in Elastic Scattering
+      Calculations," by Lynn Kissel, B. Zhou, S. C. Roy, S. K. Sen Gupta and
+      R. H. Pratt, Acta Crystallographica A51, 271-288 (1995).
+
+      "New Relativistic S-Matrix Results for Scattering - Beyond the Usual
+      Anomalous Factors/Beyond Impulse Approximation," by R. H. Pratt, Lynn
+      Kissel and P. M. Bergstrom, Jr., in Resonant Anomalous X-Ray
+      Scattering, edited by G. Materlik, C. J. Sparks and K. Fischer
+      (North-Holland: Amsterdam, 1994).
+
+      "Elastic Scattering of Gamma-Rays and X-Rays by Atoms," by P. P. Kane,
+      Lynn Kissel, R. H. Pratt and S. C. Roy, Physics Reports 140, 75-159
+      (1986).
+
+      "Rayleigh Scattering - Elastic Photon Scattering by Bound Electrons,"
+      by Lynn Kissel and R. H. Pratt, in Atomic Inner-Shell Physics, edited
+      by Bernd Crasemann (Plenum Publishing: New York, 1985).
+        __________________________________________________________________
+
+   Generate Tables
+
+        * Direct access to anomalous scattering factors for your choice of
+          atom and photon energy.
+        * Generate differential and total cross sections for elastic
+          scattering based on form factors and angle-independent anomalous
+          scattering factors.
+        __________________________________________________________________
+
+   Data Files
+
+      Also see ftp://www-phys.llnl.gov/pub/rayleigh/README.txt for additional
+      information.
+
+      You may directly access text files containing differential elastic
+      scattering tables on a relatively dense grid in scattering angle (97
+      points on 0-180 degrees), photon energy (56 points on 0.0543-2754 keV),
+      and atomic number (all Z on 1-99). These data are available via
+      anonymous ftp from
+
+   ftp://www-phys.llnl.gov/pub/rayleigh/
+
+   stored in files with names of the form
+
+   model[+NT]_zzz
+
+   where
+
+   model - model for Rayleigh amplitudes
+       SM => S-matrix method for inner-electrons
+       MFASF => MF w/angle-independent anomalous scattering factors
+       RFASF => MF w/angle-independent anomalous scattering factors
+       MF => modified relativistic form factors, g(q)
+       RF => relativistic form factors, f(q)
+       NF => non-relativistic form factors, f(q), Hubbell et al. (1975)
+   +NT - optional, indicates that nuclear Thomson amplitudes are included
+   zzz - 3-digit atomic number (e.g., 006 => Carbon)
+
+   For example,
+
+   SM_006 - contains S-matrix predictions for Carbon,
+   RFASF_029 - contains MF+ASF predictions for Copper,
+   NF+NT_050 - contains NF Rayleigh predictions (including NT amplitudes)
+   for Tin.
+
+   You may also directly access files containing the supporting
+   form-factor and anomalous-scattering-factor data on dense variable-step
+   grids for:
+
+     * anomalous scattering factors, f', f''
+     * modified relativistic form factors, g(q)
+     * relativistic form factors, f(q)
+     __________________________________________________________________
+
+Contacts
+
+   We appreciate your comments on this document or the underlying data;
+   please contact:
+
+   Lynn Kissel, lkissel@llnl.gov
+     __________________________________________________________________
+
+   [lll.gif] LLNL home page and LLNL Disclaimers
+   UCRL-MI-122422
+
+   Information date: August 8, 2000 lk

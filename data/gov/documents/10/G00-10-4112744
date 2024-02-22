@@ -1,0 +1,55 @@
+http://persil.lbl.gov
+
+                    Welcome to Your New Home in Cyberspace!
+     __________________________________________________________________
+
+   This is a placeholder page installed by the Debian release of the
+   Apache Web server package, because no home page was installed on this
+   host. You may want to replace this as soon as possible with your own
+   web pages, of course....
+
+   Unless you changed its configuration, the server is configured as
+   follows:
+     * Configuration files can be found in /etc/apache.
+     * The DocumentRoot, which is the directory under which all your HTML
+       files should exist, is set to /var/www.
+     * CGI scripts are looked for in /usr/lib/cgi-bin, which is where
+       Debian packages will place their scripts.
+     * Log files are placed in /var/log/apache, and will be rotated daily.
+     * Files cached by the proxy server are stored in /var/cache/apache
+       (but the proxy service is not enabled by default).
+     * The default directory index is index.html, meaning that requests
+       for a directory /foo/bar/ will give the contents of the file
+       /var/www/foo/bar/index.html if it exists (assuming that /var/www is
+       your DocumentRoot).
+     * User directories are enabled, and user documents will be looked for
+       in the public_html directory of the users' homes.
+
+   All standard Apache modules are available with this release and can be
+   chosen with the apacheconfig script. Installing a new module on your
+   system is just a matter of compiling it (with the apache-dev package)
+   and adding a line to your httpd.conf configuration file.
+
+   More documentation on Apache can be found on:
+     * The Apache documentation stored on your server.
+     * The Apache project server.
+     * The ApacheWeek server.
+     * The NCSA server which documents the NCSA httpd from which the
+       Apache server is derived.
+     * The Debian Project Documentation which contains HOWTOs, FAQs, and
+       software updates.
+
+   You can also consult the list of World Wide Web Frequently Asked
+   Questions for information.
+
+   If you find a bug in this Apache package, or in Apache itself, please
+   forward it to the maintainer of this package who will take appropriate
+   action. Instructions on a formal way of doing that, and the list of
+   known bugs of this package, can be found on the Debian bug tracking
+   system.
+
+   Thanks for using this package, and congratulations for your choice of a
+   Debian system!
+     __________________________________________________________________
+
+   JLI, 1 Jan. 98.

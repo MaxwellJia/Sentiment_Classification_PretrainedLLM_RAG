@@ -1,0 +1,66 @@
+http://seadas.gsfc.nasa.gov/requirements.html
+
+SeaDAS 4.1 Configuration and Requirements
+
+   SeaDAS 4.1 is currently being developed on Silicon Graphics Inc.'s
+   (SGI) O2/IRIX 6.3 and has been successfully ported to an SGI ONYX/IRIX
+   6.5,  SUN UltraSPARCs running both Solaris 2.6 and Solaris 2.7 and PC's
+   running the Red Hat Linux 6.0, 6.2, 7.0, and 7.1 operating systems.
+
+   The Interactive Data Language (IDL) from Research System Inc. (RSI) is
+   used to build all the GUI and display-related programs in SeaDAS. With
+   Update #001 to SeaDAS 4.0 (released July 11, 2000), IDL is no longer
+   required in order to run SeaDAS. Instead, users may choose to run
+   SeaDAS under an embedded  IDL runtime license which is provided with
+   the SeaDAS package. SeaDAS includes the Hierarchical Data Format (HDF)
+   libraries from National Center for Supercomputing Applications (NCSA)
+   which are also required to build certain SeaDAS programs. C, FORTRAN77,
+   and IMAKE from the vendors are required only if you want to modify the
+   source code and rebuild the executables.
+
+   Currently SeaDAS only supports the following platforms: SGI and SUN
+   unix workstations as well as PC platforms running Red Hat Linux 6.0,
+   6.2, 7.0, and 7.1.  The SeaDAS development team may try to port SeaDAS
+   to other platforms in the future. In the meantime, since all the source
+   codes are available, if any group is interesting in porting SeaDAS to
+   other platforms, the development team will be happy to give any kind of
+   assistance.
+
+  Suggested Hardware Requirements:
+
+     * Platform: SGI O2,  SUN UltraSPARC workstations or PC
+     * Memory:192MB (regular user), 384 (HRPT user)
+     * Disk: 9 GB*
+     * Tape Drive: 4MM(DAT) or 8mm Exabyte (for data from DAAC)
+     * Display: 19" Console or X-terminal with 20MB memory, 1280x1024
+       resolution, 8-bit, 256 colors
+
+   *Note: The actual SeaDAS installation requires about 330MB without demo
+   files and 950MB with demo files. The embedded IDL runtime feature will
+   require an additional 130MB. A large amount of disk space is suggested
+   for storing data.
+
+  Software Requirements:
+
+     * Operating Systems: SGI: IRIX 6.3 or 6.5, SUN: Solaris 2.6 or 2.7,
+       PC: Red Hat Linux 6.0, 6.2, 7.0, or 7.1
+     * Optional Software: IDL 5.3 or IDL 5.4
+       Note:  IDL 5.2 will still probably work, but has not been retested
+     * Optional Compiler: C , FORTRAN (required if desire to compile from
+       scratch)
+     * Software Libraries: HDF 4.1r1 (included in SeaDAS)
+
+  Compile-from-scratch support:
+
+     * SGI: IRIX 6.3 and  6.5
+     * SUN: Solaris 2.6 and  2.7
+     * PC: Red Hat Linux 6.0, 6.2, 7.0, and 7.1
+   _______________________________________________________________________
+
+   [seadas_logo.gif] This page maintained by:
+                     The SeaDAS Development Group
+                     Mark Ruebens, Robert Lindsay, and Long Wang
+                     Code 970, NASA/GSFC
+                     seadas@seadas.gsfc.nasa.gov
+                     Last updated: 11/01/01
+   _______________________________________________________________________

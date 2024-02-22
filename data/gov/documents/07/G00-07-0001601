@@ -1,0 +1,45 @@
+http://hypermail.fnal.gov
+
+                           cdcvs0.fnal.gov Home page
+
+Overview
+
+   This is the cdcvs0 CVS repository system. It provides CVS service for
+   Fermilab and collaborators. There are web browsers for several
+   repositories:
+     * public -- visible to the public
+     * cdcvs/osscvs/fermilinux -- visible on-site at Fermilab
+
+Access control
+
+   Users are allowed in via either cvs pserver access (per repository), or
+   via the cvsuser account, which is accessed either by ssh with RSA keys,
+   or via kerberos rsh. More details are available here.
+
+   Within the cdcvs:/cvs/cd repository there is also a check_access
+   script, which has recently been updated to allow users control over the
+   permissions of their own modules. This link describes how to modify
+   commit privileges for your module.
+
+Migration
+
+   Users who were still referring to the old cvs server as fndaub or
+   fndaub.fnal.gov should fetch the fixcvsroot script, which will change
+   the CVS/Root files in a checked-out cvs module to reflect the new
+   hostname. This script also has a man page.
+
+Frequently Asked Questions
+
+   Users should review the cdcvs faq for possible answers to their
+   questions.
+
+Implementation
+
+   The cdcvs0.fnal.gov web and cvs address is served by either
+   cdcvs1.fnal.gov or cdcvs2.fnal.gov at any one time, and files are
+   rsynced to the other system every 15 minutes.
+
+   cdcvs1.fnal.gov is backed up currently via fmb on davoid.fnal.gov
+   nightly.
+
+   More details are available (on-site only) here

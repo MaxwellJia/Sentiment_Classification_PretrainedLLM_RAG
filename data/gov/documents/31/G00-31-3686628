@@ -1,0 +1,917 @@
+http://demo1.eis.noaa.gov/nvdscm/webdocs/NVDSCMdoc.html
+
+
+                        NVDS
+
+                            Configuration Management
+     __________________________________________________________________
+
+
+                          Configuration Management
+
+                                   for the
+
+                        National Virtual Data System
+                                   (NVDS)
+
+
+                             Version: 09/24/2001
+     __________________________________________________________________
+
+
+     * Introduction
+     * Configuration Control Board
+     * Delegation of Change Authority
+     * Configuration Items (CI)
+     * CM Repository
+     * NVDS Change Management Process
+     * Request-for-Change Template
+     * Configuration Items (CI) List
+     * NVDS Software Directory Tree Drawings
+     * NVDS Baselines Drawings
+     * Request-for-Change Archive Summary
+     * Test Plan Template
+     __________________________________________________________________
+
+
+
+Introduction
+
+   For NVDS, the basis for Configuration Management (CM) policies and
+   procedures lies in the four principal elements of CM, described in the
+   table below.
+
+                         The Four Principal Elements
+                         of Configuration Management
+
+     * Identification – establishing a baseline of the items, including
+       documentation, that make up a system and making sure that each item
+       is completely specified.
+
+     * Change Control – procedures and tools that make sure that the
+       purpose and impact of changes are known, and providing traceability
+       through the ancestry of versions back to the original baseline.
+
+     * Status Accounting and Reporting – periodic reporting about the
+       activities of the configuration management process.
+
+     * Configuration Auditing – independent review of the baseline and all
+       changes to assure that the system is meeting its requirements.
+
+
+
+   To these principles, we have added recognition that NVDS is a dynamic,
+   web-based system that needs to respond rapidly to changing
+   requirements, changing user needs and perceptions, and changing
+   technologies. Our basic approach to streamlining CM is to delegate
+   change authority to the subsystems when predefined criteria are met.
+   Thus, our process can be summarized as follows:
+     * Ultimate change authority resides in the NVDS Project Manager.
+
+     * The Project Manager relies on the Configuration Control Board (CCB)
+       for most decisions.
+
+     * For predefined categories, the CCB delegates authority to Subsystem
+       Managers.
+
+     * A repository of all Configuration Items (CI's) is maintained. CI's
+       include documentation, executable programs, scripts, HTML pages,
+       IDB database content, etc.
+
+     * Information about each change is maintained on a Request for Change
+       (RC) form and saved in a database for analysis.
+
+     * Changes are tried first in the 'Development' system, then the CI is
+       checked out of its repository and changes installed in the 'Test'
+       system. When testing is satisfactory, the CI is checked back in
+       with changes documented. The change may then be propagated to the
+       'Production' system.
+
+
+                             Go Back to the TOP
+
+     __________________________________________________________________
+
+
+
+Configuration Control Board
+
+   The table on the next page establishes the membership of the
+   Configuration Control Board. The CCB meets at regularly-scheduled NVDS
+   video-conferences, whenever there are CM matters to be considered.
+
+
+
+   NVDS Configuration Management - Overall Infrastructure Ver: 6/22/01
+
+   NVDS Configuration Management Program Leader - Chung Wu
+   CCB Chair and NVDS Program/Project Manager - Sylvia Graff
+   CCB Membership - ITAT Representatives from each data center
+
+   Sub-system Manager(s) indicated by diamond icon (<>)
+   Subsystem NCDC NGDC NODC Program Office
+   CCB Rep Kendra Tarver John Kinsfather Parmesh Dwivedi Chung Wu
+   NNDC server Richard Baldwin Ted Habermann <> Jeff Ogata
+   COMPS Katherine Fincher <>
+   Lead Denise Sylvester Jim Berger
+   OnLine Store Dee Dee Anders <>
+   Lead Denise Sylvester Jim Berger
+   Metadata Charles Phillips Mai Edwards <> Don Collins
+   Atlas Rich Baldwin Ted Habermann <> Jeff Ogata / J.Shirley
+   WebTie Rich Baldwin Ted Habermann <> Jeff Ogata / J.Shirley
+   Interface Data Base Rich Baldwin Ted Habermann <> Jeff Ogata /
+   J.Shirley
+   NOAA Server Rich Baldwin Marc Ertle <> Jeff Ogata / J.Shirley
+   Network Infrastruc
+   & HW/sys Infrastruc Doug Snowden Tom Carey <> Joe Shirley / E.Ogata
+   Chung Wu
+   SDE
+   Ted Habermann <>
+   Systems Eng Rep
+   Chung Wu <>
+   User Group Rep
+   Don Collins Chung Wu
+
+
+                             Go Back to the TOP
+
+     __________________________________________________________________
+
+
+
+Delegation of Change Authority
+
+   The original concept was that "for situations that meet documented
+   criteria previously approved by the CCB, change authority is delegated
+   to Subsystem Managers." These criteria may be proposed either by the
+   Subsystem Managers (who want to streamline change management within
+   their subsystems), or by the CCB (when they find too much time and
+   effort being spent on repetitive situations). Although any documented
+   criteria that meet with CCB approval may be used, the following types
+   of criteria have been suggested:
+     * Changes that fit a pattern (e.g., adding a data set to the online
+       store) – the criteria specify the pattern and the procedures to be
+       followed.
+
+     * Changes that do not affect known interfaces or dependencies with
+       other subsystems – the criteria specify each interface and
+       dependency. When new interfaces or dependencies are "discovered,"
+       they are added to the criteria.
+
+     * Changes that affect known interfaces or dependencies in predictable
+       ways – again, the criteria specify them, and the affected Subsystem
+       Managers must concur.
+
+
+
+                             Go Back to the TOP
+
+     __________________________________________________________________
+
+
+
+Configuration Items and List
+
+   For NVDS, a configuration item is a file that describes, affects, or
+   embodies any NVDS function. We have three kinds of configuration items:
+   software Configuration Items (CI's), Interface Control Documents
+   (ICD's), and System Documentation Items (SDI's). All configuration
+   items are controlled for configuration management purposes by placing
+   them in a repository.
+
+   Software Configuration Items are files that contain system code or
+   other information that behaves like system code. They include (but are
+   not necessarily limited to) the following:
+     * HTML pages;
+     * Shell scripts;
+     * Perl scripts;
+     * JavaScript files;
+     * Executable binaries, plus their source and make files;
+     * Java .class and .jar files, plus the corresponding java source
+       files;
+     * Image files used to support NVDS functionality (e.g. user
+       interfaces);
+     * Database content that is used to control NVDS functionality (e.g.,
+       IDB);
+     * SQL scripts.
+
+   It is important to distinguish these items from data files that are
+   used by NVDS but do not control the performance of system functions.
+   For example, customer account records in COMPS are data files. Data
+   files are not subject to configuration management. Sometimes, the
+   distinction is not clear, and we will have to use our best judgement.
+
+   Interface Control Documents are used to record the configuration of
+   Hardware Items (HI's) and System Service Items (SSI's). HI's are
+   generally the individual hardware platforms on which NVDS operates.
+   SSI's are systems services (such as the Apache Web Server) that are
+   used by NVDS. The Interface Control Document records all configuration
+   information about its subject HI or SSI (device tables, .conf files,
+   etc.) that could affect the performance or function of NVDS. Many of
+   our HI's and SSI's are dedicated to NVDS, and thus their configuration
+   is under control of the NVDS Project Manager. Others are resources that
+   are shared with other systems, and their system administrators answer
+   to another authority. In both cases, the ICD serves as a configuration
+   reference so that any proposed configuration change can be evaluated
+   and coordinated before the change takes place.
+
+   System Documentation Items describe the architecture, function and
+   usage of NVDS for human readers. They are usually in word-processor or
+   HTML formats. SDI's are configuration controlled because we want to try
+   to ensure that they continue to reflect the true state of the system.
+   Thus, a Request for Change (RC) for a software configuration item or
+   ICD should identify any SDI's that need to be revised when the change
+   is implemented.
+
+   Click the link to view the NVDS Configuration Item List.
+
+
+                             Go Back to the TOP
+
+     __________________________________________________________________
+
+
+
+CM Repository
+
+   The CM Repository is a controlled database that contains a master copy
+   of every configuration item. When a configuration item needs to be
+   changed, it is checked out of the Repository by a single authorized
+   implementor. While the item is checked out, it is not available to
+   other implementors for other changes. When the changes are complete and
+   have been satisfactorily tested, the item is checked back in to the
+   Repository as a new version, along with a description of the changes
+   that were made. The Repository keeps a complete history of all changes
+   since the initial baseline, so that any previous version can be
+   recovered. (For SDI's, this means that we can safely cite any NVDS
+   document by version number, even though some documents—such as on-line
+   user guides—are evolving rapidly.)
+
+   NVDS allows Subsystem Managers to have local working repositories, so
+   long as they use CVS (or some another repository system if approved by
+   the CCB), and so long as no more than one repository per subsystem is
+   used. A central repository will be established that contains copies of
+   all configuration items stored in the local repositories, to serve as a
+   basis for configuration audits.
+
+
+   The Latest NVDS CM Repository Status:
+   Software Function Current Version Lead Repository Location CM Tool
+   NNDC Server N/A Jeff Ogata cave.ngdc.noaa.gov CVS
+   NOAA Server N/A Steve Roberts
+   Tod Pearce cave.ngdc.noaa.gov CVS
+   WebTIE 1.1.6 Ted Haberman cave.ngdc.noaa.gov CVS
+   Interface DB N/A Ted Haberman cave.ngdc.noaa.gov CVS
+   ATLAS 1.5.2 Dan Marner @Keylogic N/A
+   Online Store 1.5 Dee Dee Anders monsoon.ncdc.noaa.gov N/A
+   Online Data Store N/A Dee Dee Anders monsoon.ncdc.noaa.gov N/A
+   COMPS 2.5.0 Katherine Flincher
+   Scott McCormic pvcs.ncdc.noaa.gov
+   maradaNT.narada-corp.com PVCS
+   SDE (COTS) 3.0.2 Ted Haberman dunes.ncdc.noaa.gov
+   whiterim.ngdc.noaa.gov
+   nndc0.nodc.noaa.gov N/A
+   Metadata N/A Charles Phillips
+   Mai Edwards
+   Don Collins
+   Li Zhang meridan.ngdc.noaa.gov
+   @NODC
+   @ESDIM Blue Angel
+
+
+                             Go Back to the TOP
+
+     __________________________________________________________________
+
+
+
+NVDS Change Management Process
+
+   The following steps have been approved by the CCB as the process for
+   managing configuration changes in NVDS:
+
+(1)   Change Proposal
+
+     * Any representative authorized by the Change Control Board (CCB) may
+       propose a change.
+     * The proposer initiates a Request for Change (RC) Form, identifying:
+          + proposer and date proposed,
+          + requirement for change,
+          + priority,
+          + level of impact,
+          + Configuration Items (software, hardware, or service) to be
+            changed,
+          + expected nature of the change(s),
+          + resources needed,
+          + interfaces with other CI's, HI's or SSI's that might be
+            affected.
+     * The CI(s) to be changed must reside in an approved repository.
+     * In case of an emergency, this and subsequent steps may be completed
+       retroactively, but the Project Manager (PM) and CCB must be
+       notified immediately and the affected subsystem is considered out
+       of compliance until all steps are complete.
+
+(2)   Approval for Development
+
+     * The Subsystem Manager determines whether the proposed change meets
+       the criteria for which change authority has been delegated. If not,
+       the proposal is forwarded to the CCB.
+     * The approving authority decides whether to approve the change, and
+       if so, assigns and records on the RC form:
+          + deadline for completion of the change,
+          + resources required to complete the change,
+          + approving authority and date of development approval.
+     * Notification that the change has been approved is sent to all
+       members of the CCB, along with the information on the RC form.
+     * If any CCB member has reason to believe that the scope of impact
+       may be greater than originally anticipated, he or she may call for
+       suspension of work on the change, pending review by the CCB. The
+       suspender records:
+          + suspender's name and date of suspension,
+          + reason for suspension.
+
+(3)   Development
+
+     * The implementors first try their solution in the development
+       system.
+     * For this stage, no formalities are required, but the implementors
+       may wish to begin with a copy of the CI(s) from the repository.
+     * For hardware or system services modifications, it may not be
+       possible to work within the development system, but wherever
+       possible, changes should be made outside the production system to
+       limit the possibility of irreversible impacts. Any changes made to
+       the production system at this stage must be explicitly approved by
+       the CCB (and recorded on the RC Form).
+
+(4)   Documentation and Test Plan
+
+     * When the implementors are satisfied with their solution, they
+       document the exact changes to the original CI(s), the reasons for
+       the changes, and the expected way(s) in which system behavior will
+       change.
+     * The implementors prepare a Test Plan describing all test cases to
+       be tried, the expected outcomes, and the criteria for success.
+     * The Change Documentation and Test Plan are submitted to the
+       approving authority. When approved, the following are recorded on
+       the RC Form:
+          + Change Documentation,
+          + Test Plan, (link to the "NVDS Test Plan Template" on separate
+            page for a convenient file save.)
+          + approving authority and date of testing approval.
+
+(5)   Check-out and Testing
+
+     * At this point, the implementors formally check out the CI(s) and/or
+       ICD(s) from the repository, apply the changes, install them in the
+       test system, and conduct the planned tests.
+     * Once a CI or ICD has been checked out to an implementation team, no
+       other implementation team can work on that item until it has been
+       checked back in.
+
+(6)   Check-in
+
+     * If the planned tests are satisfactory, the CI's are checked back
+       into the repository as updated versions, along with a description
+       of the differences, and the RC Form records the following:
+          + Test Report,
+          + date of completion and check-in,
+          + actual resources expended in development and testing.
+     * If the tests are not successful, the CI's are checked back in
+       unchanged, the symptoms of failure are noted on the RC Form, and
+       the implementors return to step (3).
+
+(7)   Installation
+
+     * Once the changed CI's have been checked back in to the repository,
+       the new versions may be installed immediately on the production
+       system, or they may be staged for later installation, at the
+       discretion of the original approving authority.
+     * When the change is installed in the production system, the CR Form
+       records:
+          + date of installation.
+
+
+                             Go Back to the TOP
+
+     __________________________________________________________________
+
+
+
+Request for Change Template
+
+   The following template has been approved for use in recording Requests
+   for Change as they move through the steps described above. On an
+   interim basis (until a web-forms based interface is developed), this
+   template will be distributed on the NVDS-CM listserv as each step is
+   completed and another section of the RC Form is filled out.
+
+   An HTML version (provided by Ted Habermann) using table cells for the
+   spaces to be filled-in, is also shown. Users may choose whichever
+   version seems easier to use.
+
+   For convenience, here are links to separate pages containing each
+   version of the Request for Change Template.
+
+                       Req4Change.txt Req4Change.html
+
+   To submit a new Request for Change, simply download the version of your
+   choice, use your favorite editor to fill in the blanks for Step 1 (as
+   minimum input), and include it in or attach it to an email to:
+      <rc-cm@infolist.nws.noaa.gov>
+
+RC Template in ASCII Text Format:
+
+
+
+STEP 1 - CHANGE PROPOSAL
+
+Any representative authorized by the Change Control Board (CCB) may
+propose a change.  The proposer initiates a Change Request, identifying:
+
+**> Date of Change Proposal:
+
+
+**> Name of Proposer:
+
+
+**> Requirement or Reason for Change:
+
+
+**> Priority (Critical, High, Medium or Low [See the CM Plan, page 16]):
+(Critical: high visibility errors or lack of function)
+(High: functional errors with difficult workaround)
+(Medium: functional errors with obvious workaround)
+(Low: little effect on functionality or visibility)
+
+
+**> Level of Impact (1, 2, or 3 [See the CM Plan, page 16]):
+(Level 1: changes impact only this subsystem)
+(Level 2: changes only in this subsystem, but may impact others)
+(Level 3: changes impacting more than one subsystem)
+
+
+**> Configuration Item(s) to be Changed:
+
+
+**> Expected Nature of the Change(s):
+
+
+**> Estimate of Resources Needed:
+
+
+**> Interfaces with Other Configuration Items that might be
+affected by this Change:
+
+
+
+
+
+STEP 2 - APPROVAL FOR DEVELOPMENT
+
+The Subsystem Manager determines whether the proposed change
+meets the criteria for which change authority has been delegated.
+If not, the proposal is forwarded to the CCB.   The approving
+authority decides whether to approve the change, and if so,
+assigns and records:
+
+**> Date of Approval:
+
+
+**> Name of Approving Authority:
+
+
+**> Resources Assigned to Development for this Change:
+
+
+**> Expected Deadline for Completion:
+
+
+
+If any CCB member has reason to believe that the scope
+of impact may be greater than originally anticipated,
+he or she may call for suspension of work on the change,
+pending review by the CCB.  The suspender records:
+
+**> Date of Call for Suspension:
+
+
+**> Name of CCB Member Calling for Suspension:
+
+
+**> Reason for Suspension:
+
+
+
+The CCB reviews Suspensions as quickly as possible, and records:
+
+**> Date of Suspension Review:
+
+
+**> Outcome of Suspension Review:
+
+
+
+
+
+STEP 3 - DEVELOPMENT
+
+The implementors first try their solution in the development system.
+For this stage, no formalities are required, but the implementors
+may wish to begin with a copy of the CI(s) from the repository.
+Although not required, the developers may wish to record notes here:
+
+**> Development Notes:
+
+
+
+For hardware or system services modifications, it may not be possible
+to work within the development system, but wherever possible, changes
+should be made outside the production system to limit the possibility
+of irreversible impacts.  Any changes made to the production system
+at this stage must be explicitly approved by the CCB and recorded:
+
+**> Date of Approval for Changes to Production System:
+
+
+**> Approving Authority for Changes to Production System:
+
+
+**> Identification of Production System Items to be Changed:
+
+
+**> Nature of Approved Changes to Production System:
+
+
+
+
+
+STEP 4 - DOCUMENTATION AND TEST PLAN
+
+When the implementors are satisfied with their solution, they
+document the exact changes to the original CI(s), the reasons for the
+changes, and the expected way(s) in which system behavior will change.
+The implementors prepare a Test Plan describing all test cases to be
+tried, the expected outcomes, and the criteria for success.
+The Change Documentation and Test Plan are submitted to the approving
+authority.  When approved, the following are recorded:
+
+**> Date of Testing Approval:
+
+
+**> Approving Authority for Testing:
+
+
+**> Change Documentation:
+
+
+**> Test Plan:
+
+
+
+STEP 5 - CHECK-OUT AND TESTING
+
+At this point, the implementors formally check out the CI(s) and/or
+ICD(s) from the repository, apply the changes, install them in the
+test system, and conduct the planned tests.  Once a CI or ICD has been
+checked out to an implementation team, no other implementation team
+can work on that item until it has been checked back in.
+Although not required, the testers may wish to record notes here:
+
+**> Testing Notes:
+
+
+**> Section 508 Compliant Testing Notes:
+
+
+
+STEP 6 - CHECK-IN
+
+If the planned tests are satisfactory, the CI's are checked back into
+the repository as updated versions, along with a description of the
+differences, and the following is recorded:
+
+**> Date of Completion and Check-in:
+
+
+**> Test Report:
+
+
+**> Actual Resources Expended in Development and Testing:
+
+
+
+If the tests are not successful, the CI's are checked back in unchanged,
+the symptoms of failure are noted, and the implementors return to STEP 3.
+
+**> Date of Unchanged Check-in
+
+
+**> Test Report, Describing Unsatisfactory Results:
+
+
+**> Actual Resources Expended in Development and Testing:
+
+
+
+
+STEP 7 - INSTALLATION
+
+Once the changed CI's have been checked back in to the repository,
+the new versions may be installed immediately on the production system,
+or they may be staged for later installation, at the discretion of the
+original approving authority.  When the change is installed in the
+production system, the date of installation is recorded:
+
+**> Date of Installation:
+
+
+
+
+                             Go Back to the TOP
+
+     __________________________________________________________________
+
+
+  RC Template in HTML Format:
+
+   Link to the Request for Change Form Template on separate page for a
+   convenient file save.
+
+   STEP 1 - CHANGE PROPOSAL:
+
+   Date of Change Proposal:
+
+   Name of Proposer:
+
+   Requirement or Reason for Change:
+
+   Priority (Critical, High, Medium or Low [See the CM Plan, page 16]):
+   (Critical: high visibility errors of lack of function)
+   (High: functional errors with difficult workaround)
+   (Med: functional errs with obvious workaround)
+   (Low: little effect on functionality or visibility)
+
+   Level of Impact (1, 2, or 3 [See the CM Plan, page 16]):
+   (L 1: changes impact only this subsystem)
+   (L 2: changes only in this subsys, but may impact others)
+   (L 3: changes impact more than one subsystem)
+
+   Configuration Item(s) to be Changed:
+
+   Expected Nature of the Change(s):
+
+   Estimate of Resources Needed:
+
+   Interfaces with Other Configuration Items that might be affected by
+   this Change:
+
+   STEP 2 - APPROVAL FOR DEVELOPMENT
+
+   The Subsystem Manager determines whether the proposed change meets the
+   criteria for which change authority has been delegated. If not, the
+   proposal is forwarded to the CCB. The approving authority decides
+   whether to approve the change, and if so, assigns and records:
+
+   Date of Approval:
+
+   Name of Approving Authority:
+
+   Resources Assigned to Development for this Change:
+
+   Expected Deadline for Completion:
+
+   If any CCB member has reason to believe that the scope of impact may be
+   greater than originally anticipated, he or she may call for suspension
+   of work on the change, pending review by the CCB. The suspender
+   records:
+
+   Date of Call for Suspension:
+
+   Name of CCB Member Calling for Suspension:
+
+   Reason for Suspension:
+
+   The CCB reviews Suspensions as quickly as possible, and records:
+
+   Date of Suspension Review:
+
+   Outcome of Suspension Review:
+
+   STEP 3 - DEVELOPMENT
+
+   The implementors first try their solution in the development system.
+   For this stage, no formalities are required, but the implementors may
+   wish to begin with a copy of the CI(s) from the repository. Although
+   not required, the developers may wish to record notes here:
+
+   Development Notes:
+
+   Date of Approval for Changes to Production System:
+
+   Approving Authority for Changes to Production System:
+
+   Identification of Production System Items to be Changed:
+
+   Nature of Approved Changes to Production System:
+
+   STEP 4 - DOCUMENTATION AND TEST PLAN
+
+   When the implementors are satisfied with their solution, they document
+   the exact changes to the original CI(s), the reasons for the changes,
+   and the expected way(s) in which system behavior will change. The
+   implementors prepare a Test Plan describing all test cases to be tried,
+   the expected outcomes, and the criteria for success. The Change
+   Documentation and Test Plan are submitted to the approving authority.
+   When approved, the following are recorded:
+
+   Date of Testing Approval:
+
+   Approving Authority for Testing:
+
+   Change Documentation:
+
+   Test Plan:
+
+   STEP 5 - CHECK-OUT AND TESTING
+
+   Testing Notes:
+
+   Section 508 Compliant Testing Notes:
+
+   STEP 6 - CHECK-IN
+
+   If the planned tests are satisfactory, the CI's are checked back into
+   the repository as updated versions, along with a description of the
+   differences, and the following is recorded:
+
+   Date of Completion and Check-in:
+
+   Test Report:
+
+   Actual Resources Expended in Development and Testing:
+
+   Date of Unchanged Check-in:
+
+   Test Report, Describing Unsatisfactory Results:
+
+   Actual Resources Expended in Development and Testing:
+
+   STEP 7 - INSTALLATION
+
+   Once the changed CI's have been checked back in to the repository, the
+   new versions may be installed immediately on the production system, or
+   they may be staged for later installation, at the discretion of
+
+   the original approving authority. When the change is installed in the
+   production system, the date of installation is recorded:
+
+   Date of Installation:
+
+
+                             Go Back to the TOP
+
+     __________________________________________________________________
+
+
+NVDS Software Direcory Tree Drawings:
+
+   Click one of the following links to select NVDS Software Function:
+     * NNDC Server
+     * Online Store Server
+     * Online Data Store Server
+     * COMPS
+     * WebTie Server
+     * Spatial Data Engine
+     * NOAA Server
+     * Atlas
+
+
+                             Go Back to the TOP
+
+     __________________________________________________________________
+
+
+NVDS Baseline System Drawings:
+
+   Click the following links to view the NVDS Baseline System Drawings:
+     * NVDS System Architecture at NCDC
+     * NVDS System Architecture at NGDC
+     * NVDS System Architecture at NODC
+
+
+                             Go Back to the TOP
+
+     __________________________________________________________________
+
+
+   Link to the NVDS CM Test Plan Template on separate page for a
+   convenient file save.
+
+NVDS CM Test Plan Template
+
+   Version 07/02/2001
+
+  1. Overview
+
+   (Provide referenced "Request for Change" information and test plan
+   summary.)
+
+  2. Testing Scope and Goals
+
+   (Define all required testing tasks.)
+
+  3. Testing Task Descriptions and Procedures
+
+   (Provide descriptions and procedures for all testing tasks.)
+
+  3.1 Testing Task 1
+
+  Step 1: Test General Information
+
+   Test Name:
+
+   Purpose:
+
+   Test Date:
+
+   Test Elapse Time:
+
+   Point of Contact:
+
+   Tester(s) Name(s):
+
+  Step 2: Testing Environment
+
+   System Platform:
+
+   Software Module(s):
+
+   Testing Tools:
+
+  Step 3: Testing Method
+
+   Testing Instructions:
+
+   Additional Test Input:
+
+   Test Pass/Fail Criteria:
+
+  Step 4: Testing Procedures
+
+   No.
+
+      Prodedure
+
+               Expected Results
+
+                               Pass/Fail
+
+                                        Discrepancy
+
+   1.
+
+   2.
+
+   ...
+
+   N.
+
+  Step 5: Overall Testing Report
+
+   Pass/Fail:
+
+   Discrepancy and Analysis:
+
+   Tester(s) Signature:
+
+  3.2 Testing Task 2
+
+   (Use the same template as used in Task 1.)
+
+   . . .
+
+  3.N Testing Task N
+
+   (Use the same template as used in Task 1.)
+
+  4. References
+
+   (If any.)
+
+  3.2 Testing Task 2
+
+   (Use the same template as used in Task 1.)
+
+   . . .
+
+  3.N Testing Task N
+
+   (Use the same template as used in Task 1.)
+
+  4. References
+
+   (If any.)
+
+                             Go Back to the TOP
+
+     __________________________________________________________________

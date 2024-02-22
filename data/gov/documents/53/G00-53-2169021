@@ -1,0 +1,38 @@
+http://loki-www.lanl.gov/loki-inside.html
+
+                                  Loki Logo
+
+                            Loki - What's Inside
+     __________________________________________________________________
+
+Hardware
+
+   Each node consists of:
+     * (1) Intel Pentium Pro 200 Mhz CPU with 256k integrated L2 cache
+     * (1) Intel VS440FX (Venus) motherboard utilizing the 82440FX
+       (Natoma) chipset.
+     * (4) 8x36 60ns parity SIMMS (128 Mb per node)
+     * (1) Quantum Fireball 3240 Mbyte IDE Hard Drive
+     * (1) Cogent EM400 TX PCI Quartet Fast Ethernet Adapter
+     * (1) SMC EtherPower 10/100 Fast Ethernet PCI Network Card
+     * (1) S3 Trio-64 1Mb PCI Video Card
+
+   Each node is directly connected to four others using crossed Category-5
+   stranded cable to form a hypercube network. The hypercube is augmented
+   with two 3Com SuperStack II Switch 3000 TX 8-port Fast Ethernet
+   switches, which also provide connectivity to the front-end.
+   Uniterruptible power is provided by an APC Smart-UPS 2200.
+
+   For Supercomputing '96, each node has an added D-Link DFE-500TX 100 Mb
+   Fast Ethernet Adapter, which provides connectivity to the Caltech
+   machine.
+     __________________________________________________________________
+
+Software
+
+   Linux Penguin Logo
+
+   Each node is running Linux. We use the standard Linux software tools
+   and the GNU programming tools. The kernel has not been modified from
+   its form in the Linux distribution.
+   [arrow_b.gif] Back to Loki Home Page

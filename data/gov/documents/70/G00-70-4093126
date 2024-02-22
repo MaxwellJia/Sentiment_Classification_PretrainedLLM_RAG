@@ -1,0 +1,67 @@
+http://dcb.larc.nasa.gov/Introduction/Lecture.pdf
+
+   Airplane Dynamics, Modeling, and Control Dr. Eugene A. Morelli NASA
+   Langley Research Center May 14, 1997 Overview G General Airplane
+   Dynamics G Modeling for Control Design G Control Design for Airplanes G
+   Demonstrations Airplane Dynamics G The Airplane is a Nonlinear
+   Dynamical System G Newton's 2nd Law for a Rigid Body r r *
+   Translational Motion : p = F r r * Rotational Motion : h = M
+   Assumptions G Earth is an inertial reference, no curvature G Airplane
+   is a rigid body with lateral symmetry G Thrust acts along fuselage
+   through the c.g. G Still atmosphere (no winds, no gusts) G Constant
+   mass, no internal mass movements Axis Systems G Equations written in
+   body axes  Fixed to the airplane, constant inertia  Rotating axes
+   nonlinear inertial terms xb zb yb Earth xe ye ze Nonlinear Equations of
+   Motion Translational motion of the c.g. r r r r r r mV + × mV = F aero
+   + F prop + F gravity Rotational motion about the c.g. r r r r I + × I =
+   M aero Rotational kinematics r r = L States and Controls - r - a - e v
+   q u p r w V States and Controls u V v th w r r e V p p u = r r a x = =
+   q or q r r r r Steady Flight r r G Nonlinear Equations of Motion : x =
+   f r (x , r u ) r r G Define steady state (trim) : 0 = f r (x o, r u o)
+   L unstable T D stable M L t V o W TRIM Modeling for Control Design r r
+   G Define steady state (trim) : 0 = f r (x o, r u o) Linearize about
+   trim : r r r x = [ f r x ] r x + [ f r u ] r u r x r o ,r u o x o,r u o
+   Linear model for analysis and control design : r x = A r x + B r u
+   Linear Models Linearized model variables are perturbations
+   Linearization naturally decouples dynamics Longitudinal Lateral /
+   Directional V p r th x = r u = r a r r q x = u = e r Longitudinal
+   Linear Equations V = (XV + TV )V + X - g + T th th + X e e = ZV V + Z +
+   q + Z e e q = MV V + M + Mq q + M e e = q Laplace Transform s V = (X V
+   + TV ) V + X - g + T th th + X e e s = Z V V + Z + q + Z e e s q = M V
+   V + M + Mq q + M e e s = q Computing Transfer Functions s - (X V + TV )
+   -X 0 g V T X th e -Z V s - Z -1 0 0 Z e th = -M V -M s - Mq 0 q 0 M e e
+   0 0 -1 s 0 0 Computing Transfer Functions s - (XV + TV ) X 0 g e -ZV Z
+   -1 0 e -MV M s - M e q 0 0 0 -1 s = ( ) e s - XV + TV -X 0 g -ZV s - Z
+   -1 0 -MV -M s - Mq 0 0 0 -1 s Modeling Example Airplane : F-16 c.g.
+   position : 0.2 (fwd) c Flight Condition : 5º AOA 10,000 ft 350 kts Full
+   Linear Model -0.19 [s + 0.008]2 + 0.082 ( ) = e [s + 0.008]2 + 0.07 2 (
+   ) [s +1.3]2 +2.92 ( ) Short Period Approx. = -0.19 e [s +1.3]2 + 2.92 (
+   ) Why Feedback Control? G Modify plant dynamics G Accurate regulation
+   or tracking G Overcome plant uncertainty n r + e + u y Controller Plant
+     b K SAS Sensors Airplane Control Tasks G Stability Augmentation
+   System (SAS) G Control Augmentation System (CAS) » pitch rate command
+   system » g-load command system G Autopilots (pilot relief) » airspeed
+   hold » altitude hold » heading hold » turn coordination Choosing
+   Feedback Quantity Stability Augmentation q = M + Mq q + M ( + ) e eSAS
+   ePILOT e = K SAS q = (M + K M ) + M e 1 2 4 4 3 4 4 q q + M e ePILOT
+   effective M Stability Augmentation System (SAS) ePILOT +  e eSAS K SAS
+   Design Demonstration Airplane : F-16 c.g. position : 0.2 (fwd) c Flight
+   Condition : 5º AOA 10,000 ft 350 kts Short Period Approx. = -0.19 e [s
+   +1.3]2 + 2.92 ( ) Full Linear Model c.g. position : 0.35 (nom) c -0.18
+   s [ + 0.007]2 + 0.082 ( ) = e [s + 0.08]2 + 0.132 ( )(s+1.8)(s -0.1)
+   Choosing Feedback Quantity Regulation or Tracking Airplane r = VDESIRED
+   + e V Controller th V  th Sensor = 0 to hold trim airspeed Airspeed
+   Hold Demonstration Airplane : F-16 c.g. position : 0.2 (fwd) c Flight
+   Condition : 5º AOA 10,000 ft 350 kts Full Linear Model V 0.17 [s +1.3]2
+   + 6.12 ( )(s +0.8) = th [s + 0.008]2 + 0.072 ( ) [s +1.3]2 +2.92 ( )
+   Control System Design G Close feedback control loops » one at a time
+   (classical control) » many at once (modern control) G Use several
+   linear models design points G Link individual designs (gain scheduling)
+   Practical Considerations G Control Effectiveness » Deflection limits »
+   High AOA » Nonlinearity » Actuator Dynamics G Time delay » Control
+   surface rate limits » Transport delay G Unmodeled effects G Pilot
+   variability Control Design Nonlinear Airplane Linear Dynamic Model
+   Design Models Control Flight Test Design Piloted Nonlinear Nonlinear
+   Batch Simulation Simulation Summary G General Airplane Dynamics G
+   Modeling for Control Design G Control Design for Airplanes G
+   Demonstrations G References for Further Study

@@ -1,0 +1,98 @@
+http://csmr.ca.sandia.gov/projects/opt.html
+
+   #Juan Meza
+
+         Computational Sciences and Mathematics Research Department
+     ___________________________________________________________________
+
+         Large-Scale Scientific and Engineering Design Optimization
+
+     (Funded in part by the Mathematical, Information, and Computational
+               Sciences Division of the Department of Energy.)
+
+                                 Description
+
+    Nonlinear optimization problems arise in a wide range of science and
+    engineering applications at Sandia. These traditionally include such
+      areas as optimal design and control, computational chemistry, and
+   materials characterization. In addition, we are starting to encounter a
+    new generation of problems arising from model-based safety assessment
+      applications developed under the Accelerated Strategic Computing
+         Initiative (ASCI). Optimization problems arising from these
+      applications often require running a complex, PDE-based computer
+     simulation in order to compute a function value. As a result, they
+        present many challenges to optimization algorithms, including
+    computationally expensive function evaluations, low-accuracy function
+     values, and lack of analytic gradients. The same may be true of the
+      constraints. In this situation, the constraints are likely to be
+      nonlinear, and while there are good methods for bound and linear
+     constraints, handling nonlinear constraints is a difficult problem.
+   Furthermore, it may not be possible to quantify all of the constraints.
+    For example, a function evaluation could fail for a particular set of
+      parameters. This is a type of constraint that cannot be described
+    mathematically and that must be handled on the fly. Other issues that
+      are becoming increasingly important include non-convex functions,
+   non-smooth functions, uncertainty in the input parameters, and multiple
+                           levels of parallelism.
+
+    Our goals are to address the challenges described here by developing
+   nonlinear optimization algorithms that are both theoretically sound and
+    computationally efficient and to incorporate them in object-oriented
+                             software libraries.
+
+                                 News Notes
+
+     * Asynchronous Parallel Pattern Search (APPS) for Optimization
+       (10/00)
+     * Advanced Automatic Train Control Optimization (3/99)
+
+                                  Software
+
+     * APPSPACK, a C++ implementation of asynchronous parallel pattern
+       search
+     * JOT, a Java implementation of large-scale SQP
+     * OPT++, a C++ library of nonlinear optimization methods for
+       engineering optimization
+
+                               Project Members
+
+     * Paul Boggs
+     * Patty Hough
+     * Tammy Kolda
+     * Kevin Long
+     * Monica Martinez-Canales
+     * Juan Meza
+     * Pam Williams
+
+                           Students (Summer 2001)
+
+     * Ariel Cintron-Arias, Cornell University
+     * Danny Dunlavy, University of Maryland
+     * Aaron Fisher, University of California
+     * Johnny Guzman, Cornell University
+     * Chris Siefert, University of Illinois
+
+                                Related Links
+
+     * Global Optimization, Sandia's MICS-supported research on global
+       optimization methods
+     * Discrete Optimization, Sandia's MICS-supported research on discrete
+       optimization methods
+     * Sandia MICS Program, an overview of Sandia's MICS-supported
+       research projects
+     * Optimization Technology Center, a joint optimization research
+       center between Argonne and Northwestern
+     * Computer Science Research Institute, an ASCI-supported institute
+       that fosters collaborations between Sandia and universities
+
+                                   Contact
+
+              For more information, please contact Patty Hough
+                          (pdhough@ca.sandia.gov).
+
+     ___________________________________________________________________
+
+       CSMR Department Projects at Sandia National Labs in California.
+            Copyright © 2001, Sandia Corp. All rights reserved.
+                        Comments: tgkolda@sandia.gov.
+                       Acknowledgments and Disclaimer.

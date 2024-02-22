@@ -1,0 +1,893 @@
+http://nls3.nlm.nih.gov/MetaMap/ambiguity01.pdf
+
+   Ambiguity in the UMLS Metathesaurus 2001 Edition Alan R. Aronson May 9,
+   2001 1. Introduction The UMLS® Metathesaurus® denotes explicit
+   ambiguity by appending an ambiguity designator, a number in angle
+   brackets, to the end of an ambiguous string. Because strings with
+   ambiguity des- ignators require significant special processing, the
+   original string (with possible case changes) is always included as
+   another string for the concept involved.1 Thus each concept with a
+   string `aaa ' also has string `aaa' (ignoring case differences). But
+   now any application which gains access to the Metathesaurus textually,
+   cannot tell the difference among the concepts of an ambiguous cluster
+   `aaa ' each of which is represented by `aaa'. The purpose of this
+   report is to examine ambiguity in the 2001 release of the Metathesaurus
+   in the context of its effect on natural language processing (NLP)
+   applications. The number of explicitly ambiguous Metathesaurus terms in
+   the 2001 edition has grown signifi- cantly over the 2000 edition. Table
+   1 shows several counts that indicate that growth in broad 1999 2000
+   2001 Strings with an ambiguity designator 7,912 9,416 (+19%) 12,840
+   (+36%) Concepts with one or more ambiguity 6,565 7,409 (+13%) 9,637
+   (+30%) Cases of ambiguity 3,669 4,361 (+19%) 5,571 (+28%) Table 1.
+   Measures of ambiguity in the UMLS Metathesaurus terms. Some examples
+   will clarify the meaning of the counts. There are 55 Metathesaurus
+   strings `Other ' for n ranging from 1 to 55; these strings occur in 55
+   distinct concepts but represent a single case of ambiguity. Some
+   concepts contain more than one ambiguous string, i.e. they are
+   ambiguous in more than one way. In fact, the concept `Optic Nerve
+   Glioma, Childhood' has 37 ambiguous strings. A more manageable example
+   of a concept with multiple ambiguities is `Arthrogryposis' which has
+   the following six ambiguous strings: 1. This year there are some
+   exceptions to this rule: the strings `Antitussive <2>',
+   `Antigonadotrophins, antiestro- gens, antiandrogens, not elsewhere
+   classified <1>' and `Other psychotropic drugs, not elsewhere classified
+   <1>' have no corresponding string without the ambiguity designator. 1
+   1. Introduction Amyoplasia congenita <1> Congenital Arthromyodysplasia
+   <1> Congenital multiple arthrogryposis <1> myodystrophia fetalis
+   deformans <2> myodystrophia foetalis deformans <2> pterygium universale
+   <2> All but the last string are ambiguous with the concept `Amyoplasia
+   congenita disruptive sequence'. The concept containing `pterygium
+   universale <1>', however, is `Multiple pterygium syndrome'. The
+   information in Table 1 shows that the amount of ambiguity in the
+   Metathesaurus increased by about 30% from 2000 to 2001. Examining the
+   cases of ambiguity more closely, consider the degree of ambiguity,
+   i.e., the number of ways a string is ambiguous, or the number of
+   concepts in which it occurs. `Other ', for example, has degree 55.
+   Table 2 contains the distribution of Degree of ambiguity 1999 cases
+   2000 cases 2001 cases 55 0 0 (-) 1 (-) 54 1 1 (0%) 0 (-100%) 23 1 1
+   (0%) 1 (0%) 18 1 1 (0%) 1 (0%) 17 0 0 (-) 60 (-) 16 2 2 (0%) 1 (-50%) 8
+   3 3 (0%) 3 (0%) 7 2 2 (0%) 2 (0%) 6 1 2 (+100%) 4 (+100%) 5 9 9 (0%) 22
+   (+144%) 4 52 71 (+37%) 68 (-4%) 3 321 403 (+26%) 479 (+19%) 2 3,249
+   3,835 (+18%) 4,898 (+28%) 1 27 31 (+15%) 31 (0%) Total 3,669 4,361
+   (+19%) 5,571 (+28%) Table 2. Metathesaurus ambiguity distribution by
+   degree ambiguities in the Metathesaurus according to degree. Note that
+   an ambiguity of degree one is not actually an ambiguity. `Abbreviations
+   <1>', for example, is not ambiguous since there are no other
+   `Abbreviations ' strings in the Metathesaurus. The most important thing
+   to note about the table is that, with the exception of degree 17 cases,
+   changes in ambiguity are focused on ambi- guities of degree six or less
+   and mainly of degree two. The sixty new cases of ambiguity of degree 17
+   would be problematic except for the fact that most of them are
+   suppressible synonyms. So for 2001 there is effectively no
+   proliferation of the problematic ambiguity of high degree. Table 3
+   shows the ambiguity distribution after excluding suppressible synonyms.
+   Note that there is only Ambiguity in the UMLS Metathesaurus (2001
+   Edition) 2 2. Higher Degree Ambiguity Degree of ambiguity 1999 cases
+   2000 cases 2001 cases 55 0 0 (-) 0 (-) 54 1 0 (-100%) 0 (-) 23 1 1 (0%)
+   1 (0%) 18 1 1 (0%) 1 (0%) 17 0 0 (-) 1 (-) 16 1 1 (0%) 0 (-100%) 8 3 3
+   (0%) 3 (0%) 7 2 2 (0%) 2 (0%) 6 0 1 (-) 2 (+100%) 5 6 6 (0%) 7 (+17%) 4
+   24 34 (+42%) 37 (+9%) 3 223 303 (+36%) 385 (+27%) 2 2,849 3,435 (+21%)
+   4,511 (+31%) 1 338 352 (+4%) 361 (+3%) Total 3,449 4,139 (+20%) 5,311
+   (+28%) Table 3. Metathesaurus ambiguity distribution after removing
+   suppressibles one case of degree 17 and that there are many more cases
+   of degree 1, i.e., where suppression has resolved some ambiguities.
+   Section 2 of this report reviews the higher degree (5 or more)
+   ambiguity cases; section 3 summa- rizes section 2; section 4 focuses on
+   the cases of ambiguity of lesser degree (4 and 3 but not 2); section 5
+   contains additional ambiguities discovered while preparing for MetaMap
+   suppression; and section 6 contains a final summary of the results and
+   recommendations for handling ambigu- ity in the Metathesaurus. 2.
+   Higher Degree Ambiguity The most ambiguous English Metathesaurus
+   strings are listed below in decreasing order of degree of ambiguity.
+   Bold text indicates a difference between the 2000 and 2001
+   Metathesaurus. Expla- nations for all cases of degree 5 or more are
+   given below; in addition, the reader is referred to pre- vious editions
+   for other explanations. * 55 `Other ' (was 54) * 23 `Protocols ' * 18
+   `Patient Education Plans ' * 17 `Administrative procedure ' ... (Except
+   for `Assessment ', there are a total of 59 cases of ambiguity of degree
+   17; all are new, and their ambiguous forms are marked as suppressible.
+   See section 2.4 below for an example, and see the appendix for the
+   complete list.) Ambiguity in the UMLS Metathesaurus (2001 Edition) 3 2.
+   Higher Degree Ambiguity * 17 `Assessment ' (appears to be 17 but is
+   actually 16) * 16 `Limited function/disability ' * 8 `cde genotype ' *
+   8 `Driver injured in collision with other and unspecified motor
+   vehicles in nontraffic acci- dent ' * 8 `Driver injured in collision
+   with other and unspecified motor vehicles in traffic accident ' * 7
+   `Passenger injured in collision with other and unspecified motor
+   vehicles in nontraffic accident ' * 7 `Passenger injured in collision
+   with other and unspecified motor vehicles in traffic acci- dent ' * 6
+   `Cold ' * 6 `Other injuries ' * 6 `Stomach ' (was 5) * 6 `urethra '
+   (was 5) * 5 `[SO] Premolar tooth ' * 5 `adjustment ' * 5 `Appendix ' *
+   5 `Bladder ' * 5 `cd ' * 5 `Cl ' (was 4) * 5 `conjunctiva ' (was 4) * 5
+   `Esophagus ' (was 4) * 5 `Injuries ' * 5 `Kidney ' (was 4) * 5 `Larynx
+   ' (was 4) * 5 `Liver ' (was 4) * 5 `P ' (was 4) * 5 `Pancreas ' (was 4)
+   * 5 `Penis ' (was 4) * 5 `Pineal Gland ' (was 4) * 5 `Premolar tooth '
+   * 5 `prostate ' * 5 `Rectum ' (was 4) * 5 `Tourniquet on ' * 5 `Ureter
+   ' (was 4) * 5 `Vagina ' (was 4) 2.1 `Other ' The one new `Other '
+   string is `Other <55>' for concept `Miscellaneous Dietary Supple-
+   ments'. Besides the legitimate concept `Other', the five cases of
+   unsuppressed ambiguity are for concepts 1. `Other location of
+   complaint' (<2>) 2. `Other activities involving preparation of a
+   routine non-injectable drug product' (<52>) Ambiguity in the UMLS
+   Metathesaurus (2001 Edition) 4 2. Higher Degree Ambiguity 3. `Other
+   activities involving preparation of compounded non-parenteral
+   medications' (<53>) 4. `Other activities involving preparation of
+   compounded parenteral medications' (<54>) 5. `Miscellaneous Dietary
+   Supplements' (<55>) These should all be marked as suppressible
+   synonyms. 2.2 `Protocols ' All 23 strings `Protocols ' are
+   generalizations of their preferred names and should be marked as
+   suppressible. Their concepts are 1. `Protocols documentation' 2.
+   `Protocols: Activities' 3. `Protocols: Bowel Elimination' 4.
+   `Protocols: Circulation' 5. `Protocols: Cognition' 6. `Protocols:
+   Coping' 7. `Protocols: Fluid and Electrolyte' 8. `Protocols: Health
+   Behavior' 9. `Protocols: Immunology' 10. `Protocols: Medications and
+   Blood Products' 11. `Protocols: Metabolism' 12. `Protocols: Nutrition'
+   13. `Protocols: Physical Regulation' 14. `Protocols: Pre- or Intra- or
+   Post-Procedure' 15. `Protocols: Respiration' 16. `Protocols: Role
+   Relationship' 17. `Protocols: Safety' 18. `Protocols: Self-Care' 19.
+   `Protocols: Self-Concept' 20. `Protocols: Sensation, Pain and Comfort'
+   21. `Protocols: Tissue Integrity' 22. `Protocols: Tissue Perfusion' 23.
+   `Protocols: Urinary Elimination' 2.3 `Patient Education Plans ' All 18
+   strings `Patient Education Plans ' are generalizations and should be
+   suppressed. Their concepts are 1. `Patient Education Plans: Activities'
+   2. `Patient Education Plans: Bowel Elimination' 3. `Patient Education
+   Plans: Circulation' 4. `Patient Education Plans: Coping' 5. `Patient
+   Education Plans: Health Behavior' 6. `Patient Education Plans:
+   Immunology' 7. `Patient Education Plans: Medications and Blood
+   Products' 8. `Patient Education Plans: Metabolism' 9. `Patient
+   Education Plans: Nutrition' Ambiguity in the UMLS Metathesaurus (2001
+   Edition) 5 2. Higher Degree Ambiguity 10. `Patient Education Plans:
+   Physical Regulation' 11. `Patient Education Plans: Pre- or Intra- or
+   Post-Procedure' 12. `Patient Education Plans: Respiration' 13. `Patient
+   Education Plans: Role Relationship' 14. `Patient Education Plans:
+   Safety' 15. `Patient Education Plans: Self-Care' 16. `Patient Education
+   Plans: Sensation, Pain and Comfort' 17. `Patient Education Plans:
+   Tissue Integrity' 18. `Patient Education Plans: Urinary Elimination'
+   2.4 `Administrative procedure ' The concepts associated with the 17
+   senses of `Administrative procedure' are 1. `Administrative procedure'
+   2. `Administrative procedure, BLOOD/BLOOD FORMING ORGANS/IMMUNE MECHA-
+   NISM' 3. `Administrative procedure, CIRCULATORY' 4. `Administrative
+   procedure, DIGESTIVE' 5. `Administrative procedure, EAR' 6.
+   `Administrative procedure, ENDOCRINE/METABOLIC/NUTRITIONAL' 7.
+   `Administrative procedure, EYE' 8. `Administrative procedure, FEMALE
+   GENITAL SYSTEM INCLUDING BREAST' 9. `Administrative procedure, MALE
+   GENITAL SYSTEM INCLUDING BREAST' 10. `Administrative procedure,
+   MUSCULOSKELETAL' 11. `Administrative procedure, NEUROLOGICAL' 12.
+   `Administrative procedure, PREGNANCY, CHILDBEARING, FAMILY PLANNING'
+   13. `Administrative procedure, PSYCHOLOGICAL' 14. `Administrative
+   procedure, RESPIRATORY' 15. `Administrative procedure, SKIN' 16.
+   `Administrative procedure, SOCIAL PROBLEMS' 17. `Administrative
+   procedure, URINARY SYSTEM' The first concept, simply `Administrative
+   procedure', occurs in sources ICPC2E, ICPC93, SNMI98 and RCD99. The
+   remaining concepts only occur in ICPC2E, and their ambiguous forms are
+   already marked as suppressible. 2.5 `Assessment ' The concepts
+   associated with the 16 senses of `Assessment' are 1. `Assessment: Bowel
+   Elimination' 2. `Assessment: Circulation' 3. `Assessment: Cognition' 4.
+   `Assessment: Coping' 5. `Assessment: Fluid and Electrolytes' 6.
+   `Assessment: Health Behavior' 7. `Assessment: Medications and Blood
+   Products' 8. `Assessment: Metabolism' 9. `Assessment: Pre- or Intra- or
+   Post-Procedure' Ambiguity in the UMLS Metathesaurus (2001 Edition) 6 2.
+   Higher Degree Ambiguity 10. `Assessment: Respiration' 11. `Assessment:
+   Safety' 12. `Assessment: Self-Care' 13. `Assessment: Sensation, Pain
+   and Comfort' 14. `Assessment: Urinary Elimination' 15. `Knowledge
+   acquisition using a method of assessment' 16. `Nutrition Assessment'
+   `Assessment ' is of degree 16, but this year the string `Assessment
+   <17>' has been added to the concept, `Assessment: Cognition', which
+   already has string `Assessment <5>'. The concepts occur in eight
+   sources including PCDS97, MSH2001, PSY97 and ICPC2P. All of the
+   ambiguous forms should be marked as suppressible. 2.6 `Limited
+   function/disability ' All ambiguous forms for the 16 `Limited
+   function/disability ' concepts are already marked as suppressible. 2.7
+   `cde genotype ' The 8 strings `cde genotype ' differ only in the case
+   of `c', `d' or `e'. They seem to be legiti- mate concepts from RCD99.
+   In a case sensitive environment, there is no ambiguity; the presence of
+   strings with ambiguity designators, although not harmful, is not
+   necessary. When case is ignored, the ambiguity exists and the
+   additional strings are warranted (albeit possibly confusing because
+   they appear with mixed case). Thus, the ambiguous forms are correctly
+   not suppressed. 2.8 `Driver injured in collision with other and
+   unspecified motor vehicles in nontraffic accident ' and other cases The
+   8 strings `Driver injured ... ' occur in RCD99 and ICD10 with some
+   variation in the wording. The concepts for these strings are 1. `Bus
+   driver injured in collision with other and unspecified motor vehicles
+   in nontraffic accident' 2. `Car driver injured in collision with other
+   and unspecified motor vehicles in nontraffic accident' 3. `Driver
+   injured in collision with other and unspecified motor vehicles in
+   nontraffic accident' 4. `Driver of three-wheeled motor vehicle injured
+   in collision with other and unspecified motor vehicles in nontraffic
+   accident' 5. `Driver pedal cycle injured in collision with other and
+   unspecified motor vehicles in non- traffic accident' 6. `Heavy
+   transport vehicle driver injured in collision with other and
+   unspecified motor vehicles in nontraffic accident' 7. `Motorcycle
+   driver injured in collision with other and unspecified motor vehicles
+   in non- traffic accident' 8. `Pick-up truck or van driver injured in
+   collision with other and unspecified motor vehi- cles in nontraffic
+   accident' Ambiguity in the UMLS Metathesaurus (2001 Edition) 7 2.
+   Higher Degree Ambiguity Except for the third case, the ambiguous
+   strings are generalizations and should be suppressed. (Note that it
+   does no harm to suppress all ambiguous forms because the third case is
+   the preferred form for its concept; these are normally not suppressed
+   by MetaMap.) Similar analyses apply to * `Driver injured in collision
+   with other and unspecified motor vehicles in traffic accident ' *
+   `Passenger injured in collision with other and unspecified motor
+   vehicles in nontraffic accident ' * `Passenger injured in collision
+   with other and unspecified motor vehicles in traffic acci- dent ' i.e.,
+   all ambiguous forms should be suppressed. 2.9 `Cold ' The concepts
+   associated with the six senses of `Cold' are * `Chronic Obstructive
+   Airway Disease' (which has strings `COLD' and `Chronic Obstructive Lung
+   Disease') (<3>) * `Cold Sensation' (<5>) * `Cold Therapy' (<4>)
+   [consider suppressing] * `Cold brand of
+   chlorpheniramine-phenylpropanolamine' (<6>) * `Common Cold' (<2>) *
+   `cold temperature' (<1>) Senses <3>, <4> and <6> are currently
+   suppressed by MetaMap for mainly practical reasons (see 2000 Edition),
+   The only sense that might be marked as suppressible in the
+   Metathesaurus is sense <4>, `Cold Therapy', and even that sense has
+   been found in MEDLINE citations. 2.10 `Other injuries ' All ambiguous
+   forms for the 6 `Other injuries' concepts are marked as suppressible.
+   The concepts are * `Other auditory injuries' * `Other digestive system
+   injuries' * `Other hematologic injuries' * `Other neurologic injuries'
+   * `Other ocular injuries' * `Other respiratory injuries' 2.11 `Stomach
+   ' and other cases The concepts associated with the 6 senses of
+   `Stomach' are * `Benign neoplasm of stomach' (<3>) * `Carcinoma in situ
+   of stomach' (<2>) * `Neoplasm of uncertain or unknown behavior of
+   stomach' (<4>) * `Procedures on the stomach' (<6>) Ambiguity in the
+   UMLS Metathesaurus (2001 Edition) 8 2. Higher Degree Ambiguity *
+   `Stomach' (<1>) * `Stomach problem' (<5>) The new sense for 2001 is
+   `Procedures on the Stomach' and represents a systematic introduction of
+   ambiguity arising from ICD10AM, i.e., many body parts exhibit the same
+   ambiguity. Only the concept `Stomach', itself, is a legitimate sense of
+   the word stomach. Except for the new sense, the ambiguous forms for the
+   other concepts are already marked as suppressible. Those for `Proce-
+   dures on the stomach' should also be so marked. The concepts for the 6
+   senses of `urethra' are * `Benign neoplasm of urethra' (<3>) *
+   `Malignant neoplasm of urethra' (<2>) * `Neoplasm of uncertain or
+   unknown behavior of urethra' * `Procedures on Urethra' (<6>) *
+   `Urethra' (<1>) * `Urethral Diseases' (<5>) Sense <6> is new, only
+   sense <1> is legitimate, senses <2> through <4> have already been
+   marked as suppressible, and senses <5> and <6> should also be marked as
+   suppressible. The concepts for the 5 senses of `Appendix' are *
+   `Appendix' (<1>) * `Benign neoplasm of appendix' (<4>) * `Malignant
+   neoplasm of appendix' (<3>) * `Neoplasm of uncertain or unknown
+   behavior of appendix' (<2>) * `Procedures on Appendix' (<5>) Sense <5>
+   is new, only sense <1> is legitimate, senses <2> through <4> have
+   already been marked as suppressible, and sense <5> should also be
+   marked as suppressible. The concepts for the 5 senses of `Bladder' are
+   * `Benign neoplasm of bladder' (<3>) * `Bladder' (<1>) * `Carcinoma in
+   situ of bladder' (<2>) * `Neoplasm of uncertain or unknown behavior of
+   bladder' (<4>) * `Procedures on bladder' (<5>) This case is identical
+   to `Appendix': sense <5> should be marked as suppressible. The concepts
+   for the 5 senses of `conjunctiva' are * `Benign neoplasm of
+   conjunctiva' (<3>) * `Conjunctival Diseases' (<4>) * `Malignant
+   neoplasm of conjunctiva' (<2>) * `Procedures on conjunctiva' (<5>) *
+   `conjunctiva' (<1>) Sense <1> is the only legitimate sense, senses <2>
+   and <3> are already marked as suppressible, and senses <4> and <5>
+   should also be marked as suppressible. Ambiguity in the UMLS
+   Metathesaurus (2001 Edition) 9 2. Higher Degree Ambiguity The concepts
+   for the 5 senses of `Esophagus' are * `Benign neoplasm of esophagus'
+   (<3>) * `Carcinoma in situ of esophagus' (<2>) * `Esophagus' (<1>) *
+   `Esophagus problem' (<4>) * `Procedures on the esophagus' (<5>) Sense
+   <1> is legitimate, senses <2> through <4> are already marked as
+   suppressible, and sense <5> should also be marked as suppressible. The
+   concepts for the 5 senses of `Kidney' are * `Benign neoplasm of kidney'
+   (<2>) * `Kidney' (<1>) * `Kidney problem' (<4>) * `Neoplasm of
+   uncertain or unknown behavior of kidney' (<3>) * `Procedures on Kidney'
+   (<5>) Sense <1> is legitimate, senses <2> through <4> are already
+   marked as suppressible, and sense <5> should also be marked as
+   suppressible. The concepts for the 5 senses of `Larynx' are * `Benign
+   neoplasm of larynx' (<2>) * `Carcinoma in situ of larynx' (<3>) *
+   `Larynx' (<1>) * `Neoplasm of uncertain or unknown behavior of larynx'
+   (<4>) * `Procedures on larynx' (<5>) Sense <1> is legitimate, senses
+   <2> through <4> are already marked as suppressible, and sense <5>
+   should also be marked as suppressible. The concepts for the 5 senses of
+   `Liver' are * `Benign neoplasm of liver' (<2>) * `Liver' (<1>) * `Liver
+   brand of Vitamin B 12' (<4>) * `Liver problem' (<3>) * `Procedures on
+   liver' (<5>) Senses <1> and <4> are legitimate (although MetaMap
+   suppresses <4>), senses <2> and <3> are already marked as suppressible,
+   and sense <5> should also be marked as suppressible. The concepts for
+   the 5 senses of `Pancreas' are * `Benign tumor of pancreas' (<2>) *
+   `Pancreas' (<1>) * `Pancreas extract' (<3>) * `Pancreas problem' (<4>)
+   * `Procedures on Pancreas' (<5>) Ambiguity in the UMLS Metathesaurus
+   (2001 Edition) 10 2. Higher Degree Ambiguity Sense <1> is legitimate,
+   senses <2> and <4> are already marked as suppressible, and senses <3>
+   and <5> should also be marked as suppressible. Note that this case of
+   body part ambiguity is dis- tinct because of the concept `Pancreas
+   extract'. The concepts for the 5 senses of `Penis' are * `Benign tumor
+   of penis' (<3>) * `Carcinoma in situ of penis' (<2>) * `Penile
+   Diseases' (<4>) * `Procedures on Penis' (<5>) * `penis' (<1>) Sense <1>
+   is legitimate, senses <2> and <4> are already marked as suppressible,
+   and senses <3> and <5> should also be marked as suppressible. The
+   concepts for the 5 senses of `Pineal Gland' are * `Benign neoplasm of
+   pineal gland' (<3>) * `Malignant neoplasm of pineal gland' (<2>) *
+   `Neoplasm of uncertain or unknown behavior of pineal gland' (<4>) *
+   `Pineal gland' (<1>) * `Procedures on Pineal Gland' (<5>) Sense <1> is
+   legitimate, senses <2> through <4> are already marked as suppressible,
+   and sense <5> should also be marked as suppressible. The concepts for
+   the 5 senses of `prostate' are * `Benign neoplasm of prostate' (<3>) *
+   `Carcinoma in situ of prostate' (<2>) * `Neoplasm of uncertain or
+   unknown behavior of prostate' (<4>) * `Prostate' (<1>) * `Prostatic
+   Diseases' (<5>) Again, sense <1> is legitimate, senses <2> through <4>
+   are already marked as suppressible, and sense <5> should also be marked
+   as suppressible. The concepts for the 5 senses of `Rectum' are *
+   `Benign neoplasm of rectum' (<3>) * `Carcinoma in situ of rectum' (<2>)
+   * `Neoplasm of uncertain or unknown behavior of rectum' (<4>) *
+   `Procedures on Rectum' (<5>) * `Rectum' (<1>) Yet again, sense <1> is
+   legitimate, senses <2> through <4> are already marked as suppressible,
+   and sense <5> should also be marked as suppressible. The concepts for
+   the 5 senses of `Ureter' are * `Benign neoplasm of ureter' (<2>) *
+   `Disorder of ureter' (<4>) * `Neoplasm of uncertain or unknown behavior
+   of ureter' (<3>) Ambiguity in the UMLS Metathesaurus (2001 Edition) 11
+   2. Higher Degree Ambiguity * `Procedures on Ureter' (<5>) * `Ureter'
+   (<1>) Sense <1> is legitimate, senses <2> and <3> are already marked as
+   suppressible, and senses <4> and <5> should also be marked as
+   suppressible. The concepts for the 5 senses of `Vagina' are * `Benign
+   neoplasm vagina' (<2>) * `Carcinoma in situ of vagina' (<3>) *
+   `Procedures on Vagina' (<5>) * `Vagina' (<1>) * `Vaginal Diseases'
+   (<4>) Again, sense <1> is legitimate, senses <2> and <3> are already
+   marked as suppressible, and senses <4> and <5> should also be marked as
+   suppressible. 2.12 `[SO] Premolar tooth ' and `Premolar tooth ' These
+   two cases involve the same concepts with identical ambiguity
+   designators: * `Bicuspid' (<1>) * `Permanent lower right second
+   premolar tooth' (<5>) * `Permanent upper left first premolar tooth'
+   (<4>) * `Permanent upper left second premolar tooth' (<3>) * `Permanent
+   upper right first premolar tooth' (<2>) As observed in the 1999
+   Edition, this is not a true case of ambiguity. The ambiguous forms for
+   all senses should be marked as suppressible. 2.13 `adjustment ' The
+   concepts for the 5 senses of `adjustment' are * `Adjustment -
+   classification term' (<4>) * `Adjustment Action' (<3>) * `Clinical
+   Adjustment' (<2>) * `Individual Adjustment' (<1>) * `Psychological
+   adjustment' (<5>) Except for sense <4>, this is legitimate ambiguity.
+   Sense <4> is self referential and should be marked as suppressible.
+   2.14 `cd ' The concepts for the 5 senses of `cd' are * `CP protocol' *
+   `Cadmium' * `Compact discs' * `Diagnosis, clinical' * `candela'
+   Ambiguity in the UMLS Metathesaurus (2001 Edition) 12 2. Higher Degree
+   Ambiguity This is legitimate ambiguity (although it is not clear why
+   `CP protocol' is related to `cd'). How- ever, the ambiguous forms are
+   suppressed in MetaMap because they are abbreviations. 2.15 `Cl ' The
+   concepts for the 5 senses of `Cl' are * `Chloride Ion' * `Chloride
+   measurement' * `Chlorine' * `Cycloleucine' * `centiliter' Like `cd',
+   the senses are legitimate but are suppressed in MetaMap. 2.16 `Injuries
+   ' The concepts for the 5 senses of `Injuries' are * `Female genital
+   injuries' (<4>) * `Injury inflicted to the body by an external force'
+   (<2>) * `Male Genital Injuries' (<5>) * `Physical trauma' (<1>) *
+   `urologic injuries' (<3>) Senses <1> and <2> are legitimate (they may
+   be synonymous) and the remaining senses are already marked as
+   suppressible. 2.17 `P ' The concepts for the 5 senses of `P' are *
+   `Phosphorus' * `Phosphorus measurement' * `Properdin' * `lower case
+   pea' * `upper case pea' The senses of `P' are abbreviations and, in the
+   last two cases, self referential. They are all sup- pressed by MetaMap.
+   2.18 `Tourniquet on ' * `Application of tourniquet' (<1>) * `Lower
+   tourniquet cuff inflation' (<3>) * `Manual tourniquet application'
+   (<4>) * `Tourniquet cuff inflation' (<5>) * `Upper tourniquet cuff
+   inflation' (<2>) There is no obvious reason why these terms have been
+   made ambiguous using the expression `Tourniquet on'. All senses should
+   be marked as suppressible. Ambiguity in the UMLS Metathesaurus (2001
+   Edition) 13 3. Summary of Higher Degree Ambiguity 3. Summary of Higher
+   Degree Ambiguity This section summarizes the recommendations of the
+   previous section to add new strings to the Metathesaurus or to mark
+   some Metathesaurus strings as suppressible. 3.1 Missing strings for
+   ambiguous concepts The following strings only occur with an ambiguity
+   designator: * `Antitussive <2>' * `Antigonadotrophins, antiestrogens,
+   antiandrogens, not elsewhere classified <1>' * `Other psychotropic
+   drugs, not elsewhere classified <1>' Corresponding strings without it
+   should be added to the appropriate concepts: * `Antitussive' *
+   `Antigonadotrophins, antiestrogens, antiandrogens, not elsewhere
+   classified' * `Other psychotropic drugs, not elsewhere classified' 3.2
+   Strings which should be marked suppressible Some concepts have
+   ambiguous forms which should be marked as suppressible, where ambiguous
+   forms means a string with an ambiguity designator and one or more
+   strings without it. Note that some concepts such as `Assessment:
+   Cognition' have more than one ambiguous form with ambi- guity
+   designator, `Assessment <5>' and `Assessment <17>' in this case. The
+   concepts, sometimes followed by the relevant ambiguity number, are *
+   `Other location of complaint' (<2>) * `Other activities involving
+   preparation of a routine non-injectable drug product' (<52>) * `Other
+   activities involving preparation of compounded non-parenteral
+   medications' (<53>) * `Other activities involving preparation of
+   compounded parenteral medications' (<54>) * `Miscellaneous Dietary
+   Supplements' (<55>) * `Protocols documentation' * `Protocols:
+   Activities' * `Protocols: Bowel Elimination' * `Protocols: Circulation'
+   * `Protocols: Cognition' * `Protocols: Coping' * `Protocols: Fluid and
+   Electrolyte' * `Protocols: Health Behavior' * `Protocols: Immunology' *
+   `Protocols: Medications and Blood Products' * `Protocols: Metabolism' *
+   `Protocols: Nutrition' * `Protocols: Physical Regulation' * `Protocols:
+   Pre- or Intra- or Post-Procedure' * `Protocols: Respiration' *
+   `Protocols: Role Relationship' * `Protocols: Safety' Ambiguity in the
+   UMLS Metathesaurus (2001 Edition) 14 3. Summary of Higher Degree
+   Ambiguity * `Protocols: Self-Care' * `Protocols: Self-Concept' *
+   `Protocols: Sensation, Pain and Comfort' * `Protocols: Tissue
+   Integrity' * `Protocols: Tissue Perfusion' * `Protocols: Urinary
+   Elimination' * `Patient Education Plans: Activities' * `Patient
+   Education Plans: Bowel Elimination' * `Patient Education Plans:
+   Circulation' * `Patient Education Plans: Coping' * `Patient Education
+   Plans: Health Behavior' * `Patient Education Plans: Immunology' *
+   `Patient Education Plans: Medications and Blood Products' * `Patient
+   Education Plans: Metabolism' * `Patient Education Plans: Nutrition' *
+   `Patient Education Plans: Physical Regulation' * `Patient Education
+   Plans: Pre- or Intra- or Post-Procedure' * `Patient Education Plans:
+   Respiration' * `Patient Education Plans: Role Relationship' * `Patient
+   Education Plans: Safety' * `Patient Education Plans: Self-Care' *
+   `Patient Education Plans: Sensation, Pain and Comfort' * `Patient
+   Education Plans: Tissue Integrity' * `Patient Education Plans: Urinary
+   Elimination' * `Assessment: Bowel Elimination' * `Assessment:
+   Circulation' * `Assessment: Cognition' * `Assessment: Coping' *
+   `Assessment: Fluid and Electrolytes' * `Assessment: Health Behavior' *
+   `Assessment: Medications and Blood Products' * `Assessment: Metabolism'
+   * `Assessment: Pre- or Intra- or Post-Procedure' * `Assessment:
+   Respiration' * `Assessment: Safety' * `Assessment: Self-Care' *
+   `Assessment: Sensation, Pain and Comfort' * `Assessment: Urinary
+   Elimination' * `Knowledge acquisition using a method of assessment' *
+   `Nutrition Assessment' * `Bus driver injured in collision with other
+   and unspecified motor vehicles in nontraffic accident' * `Car driver
+   injured in collision with other and unspecified motor vehicles in
+   nontraffic accident' * `Driver of three-wheeled motor vehicle injured
+   in collision with other and unspecified motor vehicles in nontraffic
+   accident' * `Driver pedal cycle injured in collision with other and
+   unspecified motor vehicles in nontraffic accident' Ambiguity in the
+   UMLS Metathesaurus (2001 Edition) 15 3. Summary of Higher Degree
+   Ambiguity * `Heavy transport vehicle driver injured in collision with
+   other and unspecified motor vehicles in nontraffic accident' *
+   `Motorcycle driver injured in collision with other and unspecified
+   motor vehicles in nontraffic accident' * `Pick-up truck or van driver
+   injured in collision with other and unspecified motor vehicles in
+   nontraffic accident' * Similarly, 7 concepts for `Driver injured in
+   collision with other and unspecified motor vehicles in traffic accident
+   ' * Similarly, 7 concepts for `Passenger injured in collision with
+   other and unspecified motor vehi- cles in nontraffic accident ' *
+   Similarly, 7 concepts for `Passenger injured in collision with other
+   and unspecified motor vehi- cles in traffic accident ' * `Procedures on
+   the stomach' (<6>) * `Procedures on Urethra' (<6>) * `Urethral
+   Diseases' (<5>) * `Procedures on Appendix' (<5>) * `Procedures on
+   bladder' (<5>) * `Conjunctival Diseases' (<4>) * `Procedures on
+   conjunctiva' (<5>) * `Procedures on the esophagus' (<5>) * `Procedures
+   on Kidney' (<5>) * `Procedures on larynx' (<5>) * `Procedures on liver'
+   (<5>) * `Pancreas extract' (<3>) * `Procedures on Pancreas' (<5>) *
+   `Benign tumor of penis' (<3>) * `Procedures on Penis' (<5>) *
+   `Procedures on Pineal Gland' (<5>) * `Prostatic Diseases' (<5>) *
+   `Procedures on Rectum' (<5>) * `Disorder of ureter' (<4>) * `Procedures
+   on Ureter' (<5>) * `Procedures on Vagina' (<5>) * `Vaginal Diseases'
+   (<4>) * `Bicuspid' (including both `Premolar tooth ' and `[SO] Premolar
+   tooth ' forms) * `Permanent lower right second premolar tooth'
+   (including both `Premolar tooth ' and `[SO] Premolar tooth ' forms) *
+   `Permanent upper left first premolar tooth' (including both `Premolar
+   tooth ' and `[SO] Pre- molar tooth ' forms) * `Permanent upper left
+   second premolar tooth' (including both `Premolar tooth ' and `[SO]
+   Premolar tooth ' forms) * `Permanent upper right first premolar tooth'
+   (including both `Premolar tooth ' and `[SO] Premolar tooth ' forms) *
+   `Application of tourniquet' (<1>) * `Lower tourniquet cuff inflation'
+   (<3>) * `Manual tourniquet application' (<4>) Ambiguity in the UMLS
+   Metathesaurus (2001 Edition) 16 4. Lesser Degree Ambiguity *
+   `Tourniquet cuff inflation' (<5>) * `Upper tourniquet cuff inflation'
+   (<2>) 4. Lesser Degree Ambiguity Ambiguity of degree 4 or 3 is
+   considered in this section. Because of the large number of cases of
+   such ambiguity (68 and 479, respectively), the section will be written
+   over time and only those cases calling for some action will be
+   reported. Ambiguous forms for concepts shown in bold should be marked
+   as suppressible, and other recommendations specific to the
+   Metathesaurus are also shown in bold. Recommendations for cases which
+   are not clear are indicated with a question mark or by the word
+   consider. 4.1 Ambiguity of degree 4 * 4 `[x]abnormal findings on exami
+   ' `Abnormal findings on examination of other body fluids, substances
+   and tissues, without diagnosis' (<3> and <4>) * 4 `abnormal findings on
+   exami ' `Abnormal findings on examination of other body fluids,
+   substances and tissues, without diagnosis' (<3> and <4>) * 4 `ad '
+   Suppress ambiguous forms (MetaMap only) * 4 `adrenal gland '
+   `Procedures on adrenal gland' (<4>) * 4 `aminoglycosides '
+   `Antibiotics, Aminoglycoside' (<4>)? * 4 `breast ' `Procedures on
+   breast' (<4>) * 4 `cam ' Suppress ambiguous forms (MetaMap only) * 4
+   `compression ' Consider collapsing senses and/or marking senses as
+   suppressible. * 4 `cope ' Suppress ambiguous forms including those for
+   preferred names (MetaMap only) * 4 `cornea ' `Corneal Diseases' (<4>) *
+   4 `cvp ' Suppress ambiguous forms (MetaMap only) * 4 `epididymis '
+   `Epididymis disorders' (<4>) * 4 `et - esotropia ' Consider suppressing
+   ambiguous forms for all concepts except `Esotropia' since they are
+   findings of the disease. * 4 `evaluation ' Consider suppressing
+   ambiguous forms for `Health evaluation' (<2>). `Pulmonary evaluation'
+   (<4>) Ambiguity in the UMLS Metathesaurus (2001 Edition) 17 4. Lesser
+   Degree Ambiguity * 4 `fire ' `Accident caused by unspecified fire'
+   (<1>) * 4 `genetic counseling ' `elements of cancer genetics risk
+   assessment and counseling' (<4>)? * 4 `grafts Consider suppressing
+   ambiguous forms for `Graft material' (<4>). Consider suppressing
+   ambiguous forms for `Homologous Grafts' (<1>) as being too specific. *
+   4 `hrf ' Suppress ambiguous forms (MetaMap only) * 4 `mac ' Suppress
+   ambiguous forms (MetaMap only) * 4 `mole ' `Benign melanocytic nevus of
+   skin' (<2>) Consider suppressing ambiguous forms for `Nevus, Pigmented'
+   (<4>) as being a kind of `Benign melanocytic nevus of skin' (<2>). * 4
+   `ms ' Suppress ambiguous forms (MetaMap only) * 4 `neck ' `Assessment
+   of active neck movement' (<2>) `Assessment of passive neck movement'
+   (<3>) * 4 `oesophagus ' `Procedures on the esophagus' (<4>) * 4
+   `orbital prosthesis ' `Orbital prosthesis implantation' (<2>) and
+   (<4>)? * 4 `pnet ' Suppress ambiguous forms (MetaMap only) * 4 `relapse
+   ' `Cancer Relapse' (<3>) * 4 `retina ' `Retinal Diseases' (<4>) * 4
+   `screening ' `Screening for cancer' (<3>) * 4 `scrotum ' `Disease of
+   scrotum' (<4>) * 4 `spleen ' `Procedures on Spleen' (<4>) * 4 `tem '
+   Suppress ambiguous forms (MetaMap only) * 4 `thymus ' `Procedures on
+   Thymus' (<4>) * 4 `trachea ' `Procedures on trachea' (<4>) * 4 `u '
+   Suppress ambiguous forms (MetaMap only) Ambiguity in the UMLS
+   Metathesaurus (2001 Edition) 18 4. Lesser Degree Ambiguity * 4 `xt -
+   exotropia ' Consider suppressing ambiguous forms for all concepts since
+   they are findings of the disease Exotropia. 4.2 Ambiguity of degree 3 *
+   3 `a33 ' Suppress ambiguous forms (MetaMap only). * 3 `adh ' Suppress
+   ambiguous forms (MetaMap only). * 3 `ag ' Suppress ambiguous forms
+   (MetaMap only). * 3 `allograft ' `Allograft surgical material' (<3>) *
+   3 `ami ' Suppress ambiguous forms (MetaMap only). * 3 `ana ' Suppress
+   ambiguous forms (MetaMap only). * 3 `anesthesia ' `Oriental Medicine
+   Procedures using Anesthesia' (<3>) * 3 `anthracyclines ' `prior
+   anthracycline therapy' (<3>) * 3 `anticoagulants `Poisoning by
+   anticoagulants' (<2>) * 3 `antigonadotrophins, antiestrogens,
+   antiandrogens, not elsewhere classified ' `Poisoning by
+   antigonadotrophins, antiestrogens, antiandrogens NEC in RCD99' (<1>)
+   `Poisoning by antigonadotrophins, antiestrogens, antiandrogens NEC in
+   ICD10' (<3>) `Adverse effects in the therapeutic use of
+   antigonadotrophins, antiestrogens, antian- drogens NEC in ICD10' (<2>)
+   Consider removing all terms referring to a constituent Metathesaurus
+   vocabulary. * 3 `apc ' Suppress ambiguous forms (MetaMap only). * 3
+   `arteriovenous anastomosis ' `Arteriovenous anastomosis procedure' (<2>
+   and <3>) * 3 `autograft ' `Autograft Material' (<2>) * 3 `b ' Suppress
+   ambiguous forms (MetaMap only). * 3 `b-esterase ' Consider suppressing
+   all ambiguous forms since there is no longer any ambiguity. * 3
+   `balance ' Consider suppressing ambiguous forms for `Assessment of
+   balance' (<3>). * 3 `barbiturate ' `Poisoning by barbiturate' (<3>)
+   Ambiguity in the UMLS Metathesaurus (2001 Edition) 19 4. Lesser Degree
+   Ambiguity * 3 `basal metabolic rate ' `Basal Metabolic Rate Procedure'
+   (<2>) * 3 `c ' Suppress ambiguous forms (MetaMap only). * 3 `ca '
+   Suppress ambiguous forms (MetaMap only). * 3 `cad ' Suppress ambiguous
+   forms (MetaMap only). * 3 `cast ' Suppress ambiguous forms of `CAST
+   <2>' (MetaMap only). * 3 `cat ' Suppress ambiguous forms of `CAT <2>'
+   (MetaMap only). * 3 `cave ' Suppress ambiguous forms of `CAVE <1>' and
+   `CAVE <2>' (MetaMap only). * 3 `cdv ' Suppress ambiguous forms (MetaMap
+   only). * 3 `clap ' Suppress ambiguous forms (MetaMap only). * 3 `class
+   i malocclusion ' `Class I malocclusion therapy' (<2>) `Atypical class I
+   malocclusion therapy' (<3>) * 3 `class iii malocclusion ' `Transitional
+   class III malocclusion therapy' (<2>) `Permanant (sic) class III
+   malocclusion therapy' (<3>) * 3 `complications ' `Complications
+   Specific to Antepartum or Postpartum' (<3>) * 3 `complications of
+   surgical and medical care, not elsewhere classified ' `Complications of
+   surgical and medical care NEC in RCD99' (<3>) `Complications of
+   surgical and medical care NEC in ICD10' (<1>) `Complications of
+   surgical and medical care NEC in ICD2000' (<2>) * 3 `confrontation '
+   `Social confrontation skill' (<1>)? * 3 `control ' Suppress ambiguous
+   forms (MetaMap only). * 3 `cortical bone ' `Cortical bone surgical
+   material' (<3>) * 3 `cpar ' Suppress ambiguous forms (MetaMap only). *
+   3 `cpdd ' Suppress ambiguous forms (MetaMap only). * 3 `cpi ' Suppress
+   ambiguous forms (MetaMap only). * 3 `crabs ' Suppress ambiguous forms
+   (MetaMap only). * 3 `cytomegalovirus ' `Cytomegalovirus Infections'
+   (<3>) Ambiguity in the UMLS Metathesaurus (2001 Edition) 20 4. Lesser
+   Degree Ambiguity * 3 `da ' Suppress ambiguous forms (MetaMap only). * 3
+   `dab ' Suppress ambiguous forms excluding `Dab fish' (<2>) (MetaMap
+   only). * 3 `deaf mutism, not elsewhere classified ' `Deaf mutism NEC in
+   RCD99' (<3>) `Deaf mutism NEC in ICD10' (<1>) `Deaf mutism NEC in
+   MDR99' (<2>) * 3 `depression ' `Cancer patients and suicide and
+   depression' (<3>) * 3 `depressive disorder, not elsewhere classified '
+   `Depressive disorder NEC in CCS99' (<2>) `Depressive disorder NEC in
+   ICD2000' (<1>) `Depressive disorder NEC in MDR99' (<3>) * 3 `disorders
+   of meninges, not elsewhere classified ' `Disorders of meninges NEC in
+   ICD10' (<1>) `Disorders of meninges NEC in ICD2000' (<2>) `Disorders of
+   meninges NEC in MDR99' (<3>) * 3 `disruption of operation wound, not
+   elsewhere classified ' `Disruption of operation wound NEC in ICD10'
+   (<3>) `Disruption of operation wound NEC in ICD91' (<2>) `Disruption of
+   operation wound NEC in MDR31' (<1>) * 3 `dm ' Suppress ambiguous forms
+   (MetaMap only). * 3 `dt ' Suppress ambiguous forms (MetaMap only). * 3
+   `ectopic hormone secretion, not elsewhere classified ' `Ectopic hormone
+   secretion NEC in ICD10' (<1>) `Ectopic hormone secretion NEC in
+   ICD2000' (<3>) `Ectopic hormone secretion NEC in MDR99' (<2>) * 3 `epi
+   ' Suppress ambiguous forms (MetaMap only). * 3 `epiphysis `Epiphysis
+   disorders' (<1>) * 3 `erp ' Suppress ambiguous forms (MetaMap only). *
+   3 `exposure ' `EFFECTS OF EXPOSURE TO EXTERNAL CAUSES' (<2>) `Accident
+   due to exposure to weather conditions' (<3>) * 3 `fallopian tube '
+   `Procedures on the fallopian tube' (<3>) * 3 `family health ' `Family
+   Health Company' (<2>)? * 3 `fdp ' Suppress ambiguous forms (MetaMap
+   only). Ambiguity in the UMLS Metathesaurus (2001 Edition) 21 4. Lesser
+   Degree Ambiguity * 3 `fluoridation ' `Fluoridation reaction' (<2>) * 3
+   `frequency ' `Increased frequency of micturition' (<3>)? * 3 `fsh '
+   Suppress ambiguous forms (MetaMap only). * 3 `galactorrhoea '
+   `Galactorrhea not associated with childbirth' (<2>) `Galactorrhea
+   associated with childbirth' (<3>) Careful: `Galactorrhea <2>' is
+   associated with the same concept as `Galactorrhoea <3>' and should also
+   be suppressed; there is no `Galactorrhea <3>'. * 3 `graft ' `Graft
+   material' (<3>) * 3 `group b streptococcus ' `Carrier or suspected
+   carrier of Group B streptococcus' (<2>) * 3 `head ' `Procedures on
+   Head' (<3>) * 3 `hereditary disturbances in tooth structure, not
+   elsewhere classified ' `Hereditary disturbances in tooth structure NEC
+   in ICD10' (<1>) `Hereditary disturbances in tooth structure NEC in
+   ICD2000' (<3>) `Hereditary disturbances in tooth structure NEC in
+   MDR99' (<2>) * 3 `homograft ' `Allograft surgical material' (<3>) * 3
+   `hsp ' Suppress ambiguous forms (MetaMap only). * 3 `hypoglycaemic
+   reaction ' Consider suppressing all ambiguous forms since there is no
+   longer any ambiguity. * 3 `i ' Suppress ambiguous forms (MetaMap only).
+   * 3 `ice ' Suppress ambiguous forms except for `Ice' (<1>), itself
+   (MetaMap only). * 3 `in ' Suppress ambiguous forms (MetaMap only). * 3
+   `inner ear ' `Diseases of inner ear' (<1>) `Procedures on Inner Ear'
+   (<3>) * 3 `isolation ' `Need for isolation' (<3>) * 3 `jaw '
+   `Assessment of active jaw joint movement' (<2>) `Assessment of passive
+   jaw joint movement' (<3>) * 3 `k ' Suppress ambiguous forms (MetaMap
+   only). * 3 `ld ' Suppress ambiguous forms (MetaMap only). Ambiguity in
+   the UMLS Metathesaurus (2001 Edition) 22 4. Lesser Degree Ambiguity * 3
+   `ldh ' Suppress ambiguous forms (MetaMap only). * 3 `litigation '
+   `Litigation affecting health status' (<3>) * 3 `mace '
+   `cytarabine/etoposide/methotrexate' (<3>) (MetaMap only). * 3 `map '
+   Suppress ambiguous forms except for `Maps' (<2>) (MetaMap only). * 3
+   `mf ' Suppress ambiguous forms (MetaMap only). * 3 `middle ear '
+   `Disorder of middle ear' (<3>) * 3 `miosis ' `Miosis disorder' (<1>) *
+   3 `mm ' Suppress ambiguous forms (MetaMap only). * 3 `mr ' Suppress
+   ambiguous forms (MetaMap only). * 3 `mustargen ' Consider suppressing
+   all ambiguous forms since there is no longer any ambiguity. * 3 `n '
+   Suppress ambiguous forms (MetaMap only). * 3 `oh ' Possibly suppress
+   ambiguous forms (MetaMap only). * 3 `open wound of other and multiple
+   sites ' `Open wound of ear and other and multiple sites' (<1>) `Open
+   wound of face and other and multiple sites' (<2>) `Open wound of mouth
+   and other and multiple sites' (<3>) * 3 `open wound of other and
+   multiple sites, complicated ' `Open wound of ear, other and multiple
+   sites, complicated' (<1>) `Open wound of face, other and multiple
+   sites, complicated' (<2>) `Open wound of internal structure of mouth,
+   other and multiple sites, complicated' (<3>) * 3 `optic nerve '
+   `Disorder of the optic nerve' (<3>) * 3 `other adverse food reactions,
+   not elsewhere classified ' `Other adverse food reactions NEC in ICD10'
+   (<2>) `Other adverse food reactions NEC in ICD2001' (<3>) `Other
+   adverse food reactions NEC in RCD99' (<1>) * 3 `other complications of
+   labor and delivery, not elsewhere classified ' `Other complications of
+   labor and delivery NEC in ICD10' (<1>) `Other complications of labor
+   and delivery NEC in ICD2000' (<2>) `Other complications of labour and
+   delivery NEC in MDR99' (<3>) * 3 `other complications of procedures,
+   not elsewhere classified ' `Other complications of procedures NEC in
+   ICD10' (<2>) `Other complications of procedures NEC in MDR99' (<3>)
+   Ambiguity in the UMLS Metathesaurus (2001 Edition) 23 4. Lesser Degree
+   Ambiguity `Other complications of procedures NEC in RCD99' (<1>) * 3
+   `other psychotropic drugs, not elsewhere classified ' `Poisoning by
+   other psychotropic drugs NEC in RCD99' (<1>) Note that this case not
+   only refers to its vocabulary but also introduces the notion of
+   poisoning; it should be suppressed just as the other cases are. * 3
+   `pac ' Suppress ambiguous forms (MetaMap only). * 3 `parathyroid '
+   `Disease of parathyroid glands' (<1>) `Parathyroid hormone preparation'
+   (<3>) * 3 `pb ' Suppress ambiguous forms (MetaMap only). * 3 `pcp '
+   Suppress ambiguous forms (MetaMap only). * 3 `pe ' Suppress ambiguous
+   forms (MetaMap only). * 3 `perform routine activity (no selection;
+   dispense as written) ' `Perform routine dosage choice (no selection;
+   dispense as written)' (<2>) `Perform routine procurement (no selection;
+   dispense as written)' (<3>) `Perform routine product choice (no
+   selection; dispense as written)' (<1>) * 3 `peripheral primitive
+   neuroectodermal tumor ' Consider suppressing all ambiguous forms since
+   there is no longer any ambiguity. * 3 `poisoning by antidotes and
+   chelating agents, not elsewhere classified ' `Poisoning by antidotes
+   and chelating agents, NEC in ICD10' (<3>) `Poisoning by antidotes and
+   chelating agents, NEC in ICD2000' (<1>) `Poisoning by antidotes and
+   chelating agents, NEC in MDR99' (<2>) * 3 `poisoning by enzymes, not
+   elsewhere classified ' `Poisoning by enzymes NEC in ICD10' (<1>)
+   `Poisoning by enzymes NEC in ICD2000' (<2>) `Poisoning by enzymes NEC
+   in MDR99' (<3>) * 3 `poisoning by vitamins, not elsewhere classified '
+   `Poisoning by vitamins NEC in ICD10' (<1>) `Poisoning by vitamins NEC
+   in ICD2000' (<3>) `Poisoning by vitamins NEC in MDR99' (<2>) * 3 `ppnet
+   ' Consider suppressing all ambiguous forms since there is no longer any
+   ambiguity. * 3 `primitive peripheral neuroectodermal tumor ' Consider
+   suppressing all ambiguous forms since there is no longer any ambiguity.
+   * 3 `prosthesis ' `Prosthesis Implantation' (<1> and (<3>)? * 3 `psi '
+   Suppress ambiguous forms (MetaMap only). * 3 `pt ' Suppress ambiguous
+   forms (MetaMap only). * 3 `ptc ' Suppress ambiguous forms (MetaMap
+   only). Ambiguity in the UMLS Metathesaurus (2001 Edition) 24 4. Lesser
+   Degree Ambiguity * 3 `pvc ' Suppress ambiguous forms (MetaMap only). *
+   3 `rda ' Suppress ambiguous forms (MetaMap only). * 3 `release '
+   Suppress ambiguous forms for `Release brand abscission agent' (<4>)
+   only (MetaMap only). * 3 `rpr ' Suppress ambiguous forms (MetaMap
+   only). * 3 `s ' Suppress ambiguous forms (MetaMap only). * 3
+   `sacroiliitis, not elsewhere classified ' `Sacroiliitis NEC in ICD10'
+   (<1>) `Sacroiliitis NEC in ICD2000' (<2>) `Sacroiliitis NEC in MDR99'
+   (<3>) * 3 `sarcoma, ewing's ' Consider suppressing all ambiguous forms
+   since there is no longer any ambiguity. * 3 `se ' Suppress ambiguous
+   forms (MetaMap only). * 3 `ski ' Suppress ambiguous forms except for
+   `Manufactured ski' (<1>) (MetaMap only). * 3 `skin graft ' `Skin graft
+   material' (<1>) * 3 `sleep ' Suppress ambiguous forms for `Sleep brand
+   of diphenhydramine hydrochloride' (<3>) only (MetaMap only). * 3 `sound
+   measurement ' `heart sonography' (<4>) `skeletal sonography' (<5>) * 3
+   `spores ' `Spores found during Potassium hydroxide skin test' (<2>) * 3
+   `spurious polycythemia ' Consider suppressing all ambiguous forms since
+   there is no longer any ambiguity. * 3 `stiffness of joint, not
+   elsewhere classified ' `Stiffness of joint NEC in ICD10' (<3>)
+   `Stiffness of joint NEC in ICD2000' (<1>) `Stiffness of joint NEC in
+   MDR99' (<2>) * 3 `t3 ' Suppress ambiguous forms (MetaMap only). * 3
+   `tetracycline ' `Tetracyclines causing adverse effects in therapeutic
+   use' (<3>) * 3 `tetracyclines ' `Tetracyclines causing adverse effects
+   in therapeutic use' (<3>) * 3 `therapeutic ' Suppress ambiguous forms
+   for `Therapeutic brand of coal tar' (<3>) only (MetaMap only).
+   Ambiguity in the UMLS Metathesaurus (2001 Edition) 25 5. Additional
+   Cases of Ambiguity * 3 `tmp ' Suppress ambiguous forms (MetaMap only).
+   * 3 `tongue ' `Procedures on the tongue' (<3>) * 3 `tramp ' Suppress
+   ambiguous forms for `tyrosine-rich acidic matrix protein' (<1>) only
+   (MetaMap only). * 3 `uterus ' `Uterine Diseases' (<3>) * 3 `v '
+   Suppress ambiguous forms (MetaMap only). * 3 `vesical fistula, not
+   elsewhere classified ' `Vesical fistula NEC in ICD10' (<1>) `Vesical
+   fistula NEC in ICD2000' (<3>) `Vesical fistula NEC in MDR99' (<2>) * 3
+   `vessel ' `Vessel Positions' (<2>)? * 3 `vibration ' `Injury caused by
+   vibration' (<3>) * 3 `vital capacity ' `Vital capacity procedure' (<1>)
+   * 3 `w ' Suppress ambiguous forms (MetaMap only). * 3 `x ' Suppress
+   ambiguous forms (MetaMap only). * 3 `xenograft ' `Xenograft procedure'
+   (<1>) 5. Additional Cases of Ambiguity The cases of ambiguity in this
+   section were discovered during the process of suppressing the cases
+   described in previous sections. * `allografts ', `homograft ' and
+   `homografts ' Consider suppressing the following ambiguous forms for
+   concept `Allograft surgical material' `Allografts <1>' `Homograft <2>'
+   `Homografts <2>' * `barbiturates ' Suppress the following ambiguous
+   forms for concept `Poisoning by barbiturate' `Barbiturates <2>' * `crab
+   ' Suppress the following ambiguous forms for concept `Phthirus pubis'
+   `Crab <2>' Ambiguity in the UMLS Metathesaurus (2001 Edition) 26 5.
+   Additional Cases of Ambiguity * `grafts ' Consider suppressing the
+   following ambiguous forms for concept `Graft material' `Grafts <4>' *
+   `heterograft ' Suppress the following ambiguous forms for concept
+   `Xenograft procedure' `Heterograft <1>' * `miosis ', `constricted pupil
+   ', `pupils constricted ', `constricted pupils ' and `small pupil '
+   Suppress the following ambiguous forms for concept `Miosis disorder'
+   `Miosis <1>' `Constricted Pupil <1>' `PUPILS CONSTRICTED <1>'
+   `Constricted Pupils <1>' `Small pupil <1>' Also note that further
+   modifications to `Miosis disorder' are required in order to com-
+   pletely remove all references to miosis. * `miscellaneous ' Suppress
+   the following ambiguous forms for concept `Miscellaneous Dietary
+   Supple- ments' `Miscellaneous <1>' * `mms ' Suppress the following
+   ambiguous forms for concept `millimeter' (MetaMap only) `mms <2>'
+   Suppress the following ambiguous forms for concept `macrophage-derived
+   mucus secretagogue' (MetaMap only) `MMS <1>' * `other complications of
+   labour and delivery, not elsewhere classified ' Suppress the following
+   ambiguous forms for concept `Other complications of labor and delivery
+   NEC in ICD10' (MetaMap only) `Other complications of labour and
+   delivery, not elsewhere classified <1>' Suppress the following
+   ambiguous forms for concept `Other complications of labor and delivery
+   NEC in MDR99' (MetaMap only) `Other complications of labour and
+   delivery, not elsewhere classified <2>' * `poisoning by
+   antigonadotrophins, antiestrogens, antiandrogens, not elsewhere
+   classified ' Suppress the following ambiguous forms for concept
+   `Poisoning by antigonadotrophins, antiestrogens, antiandrogens NEC in
+   RCD99' (MetaMap only) `Poisoning by antigonadotrophins, antiestrogens,
+   antiandrogens, not elsewhere classi- fied <2>' Suppress the following
+   ambiguous forms for concept `Poisoning by antigonadotrophins,
+   antiestrogens, antiandrogens NEC in ICD10' (MetaMap only) `Poisoning by
+   antigonadotrophins, antiestrogens, antiandrogens, not elsewhere classi-
+   fied <2>' Ambiguity in the UMLS Metathesaurus (2001 Edition) 27 6.
+   Conclusions * `poisoning by other psychotropic drugs, not elsewhere
+   classified ' Suppress the following ambiguous forms for concept
+   `Poisoning by other psychotropic drugs NEC in RCD99' (MetaMap only)
+   `Poisoning by other psychotropic drugs, not elsewhere classified <1>'
+   Suppress the following ambiguous forms for concept `Poisoning by other
+   psychotropic agent NEC in ICD10' (MetaMap only) `Poisoning by other
+   psychotropic drugs, not elsewhere classified <2>' * `prostheses '
+   Suppress the following ambiguous forms for concept `Prosthesis
+   Implantation' `Prostheses <2>' * `suicide ' Suppress the following
+   ambiguous forms for concept `Cancer patients and suicide and
+   depression' `suicide <2>' Also note that further modifications to
+   `Cancer patients and suicide and depression' are required in order to
+   completely remove all references to suicide and depression. 6.
+   Conclusions The analysis in this and previous editions of this report
+   reveals some classes of ambiguity com- monly occurring in the
+   Metathesaurus: * Body part/disease ambiguity. This class of false
+   ambiguity is exemplified by the string `Pros- tate' for `Prostatic
+   Diseases'. It arises from terms which require context within their
+   vocabulary in order to be properly understood. * Body part or medical
+   device/procedure ambiguity. Similar to the above class, this class of
+   false ambiguity is exemplified by `Stomach' and `Procedures on the
+   stomach' or by `Prosthe- sis' and `Prosthesis Implantation'. This kind
+   of ambiguity is not as clearly false ambiguity as the previous class. *
+   Substance/measurement ambiguity. This class, exemplified by `Thyroid
+   stimulating immuno- globulins' and `Thyroid stimulating immunoglobulins
+   assay', generally represents true ambi- guity, especially in patient
+   records but also in the biomedical literature. Note that it is a non-
+   trivial exercise to decide when the strings for a given concept should
+   be split into two concepts. These first three cases of ambiguity
+   represent a spectrum: concepts for the first class should be split;
+   those for the last should not be split; and those for the middle class
+   could probably be decided either way. * Generalization ambiguity. This
+   is also false ambiguity caused by grouping several concepts together
+   using a more general term. For example, 23 concepts including
+   `Protocols documenta- tion' and `Protocols: Activities' are generalized
+   to `Protocols'. * Abbreviation ambiguity. This is another, large class
+   of ambiguity caused by distinct concepts having the same acronyms (or
+   abbreviations). An example from above is that `Mitral Valve Stenosis',
+   `Multiple Sclerosis', `Morphine Sulfate' and `millisecond' all have
+   abbreviation `MS' or `ms'. Although this class represents true
+   ambiguity in a strict sense, it is better to disal- low it in many text
+   processing situations, especially those in which authors define the
+   abbrevia- tions they use. Ambiguity in the UMLS Metathesaurus (2001
+   Edition) 28 7. Appendix * Meta ambiguity. This new class of ambiguity,
+   represented by strings such as `Other complica- tions of procedures NEC
+   in ICD10', contain meta information. In this case it is the name of the
+   vocabulary, ICD10 in the example. As opposed to the first class of
+   ambiguity above in which strings such as `Prostate' meaning `Prostatic
+   Diseases' do not say enough about themselves, these strings say too
+   much. It is true that the meaning of a string containing `NEC', `not
+   else- where classified' or like phrase, depends upon its vocabulary,
+   but such information is already available in the MSRO file (where it
+   belongs). It is also true that such strings have different meanings and
+   strictly speaking should be different concepts. But the practical
+   result of such a representational scheme is to introduce an ambiguity
+   that most users do not want or need to resolve. (It is not even clear
+   that those who do want to resolve the ambiguity can do so with the
+   information available in the Metathesaurus.) Trying to decide what
+   level of ambiguity is acceptable in some textual application is
+   analogous to determining what granularity of meaning is appropriate in
+   a knowledge source such as the Meta- thesaurus. Different levels are
+   appropriate for different purposes. One reasonable way to divide
+   responsibility for handling ambiguity is to * mark the following kinds
+   of ambiguity as suppressible in the Metathesaurus: Body part/disease,
+   Body part or medical device/procedure, Generalization, and Meta1
+   ambiguity; * suppress Abbreviation ambiguity within MetaMap; and * do
+   nothing for Substance/measurement ambiguity. One limitation of this
+   study is that there is no follow-up of ambiguous strings discovered
+   while examining the strings for a given case. For example, the set of
+   all strings for the concepts contain- ing a `sound measurement ' string
+   include the ambiguous strings `Ultrasonography ', `Echography ',
+   `Ultrasound ', `Echotomography ' and `ultrasound scanning '. If the
+   ambiguous forms for `sound measurement ' are to be marked as
+   suppressible, how does that affect the other ambiguous strings. Each of
+   them is part of a cluster of concepts, possibly dif- ferent from the
+   one for `sound measurement '. Although it is probably not necessary to
+   explore the new concept clusters, it is essential to examine the
+   original cluster for additional ambiguous forms to suppress. Finally,
+   the study ignores the almost 5,000 cases of ambiguity of degree 2.
+   Manual examination of them would be very time-consuming. However, it
+   would be worthwhile to search for patterns such as `Procedures on ...'
+   or ` of ...' which occur frequently in ambiguity of higher degree in
+   order to discover further strings to mark as suppressible. 7. Appendix
+   7.1 List of Ambiguity Cases of Degree 17 The following 59 cases of
+   ambiguity have degree 17 in the 2001 Metathesaurus. All are suppress-
+   ible (except for a few appropriate cases as noted). 1. Consider
+   completely removing meta ambiguity strings which mention a vocabulary,
+   collapsing what are now the ambiguous forms for the concepts into a
+   single concept. This would reinstate the previous way of han- dling
+   such cases (i.e., by doing nothing). Ambiguity in the UMLS
+   Metathesaurus (2001 Edition) 29 7. Appendix 1. Administrative procedure
+   (the concept `Administrative procedure' is not suppressed) 2. Blood
+   test (strings `Blood Test', ignoring case, are not suppressed for
+   concept `Blood Tests') 3. Clarification/discussion of patient's
+   RFE/demand 4. Clarification/discussion RFE/demand 5. Consultation
+   primary care provider 6. Consultation with primary care provider 7.
+   Consultation with specialist 8. Diagnostic endoscopy (the concept
+   `Diagnostic endoscopy' is not suppressed) 9. Diagnostic
+   radiology/imaging (the concept `Diagnostic radiology/imaging' is not
+   sup- pressed) 10. Dressing/pressure/compress/tamponade 11.
+   Dressing/pressure/compression/tamponade 12. Electrical tracing (the
+   string `Electrical tracing' for concept `Electrical tracing, GEN-
+   ERAL/UNSPECIFIED' is not suppressed) 13. Enc/prob init by other than
+   pt/prov 14. Encounter/prob initiated by provider 15. Encounter/problem
+   initiated by other than patient/provider 16. Encounter/problem
+   initiated by provider 17. Exc/remov/biopsy/destruc/debrid/caut 18.
+   Excision/removal tissue/biopsy/destruction/debridement/cauterization
+   19. Faeces test (the string `Faeces test' for concept `Feces test' is
+   not suppressed) 20. Feces test (the concept `Feces test' is not
+   suppressed) 21. Follow-up encounter unspecified 22.
+   Histological/exfoliative cytology 23. I&D/flush/aspiration 24.
+   Incision/drainage/flushing/aspiration/removal body fluid 25.
+   Instrument/catheter/intubate/dilate 26.
+   Instrumentation/catheterization/intubation/dilation (the string
+   `Instrumentation/catheter- ization/intubation/dilation' for concept
+   `Instrumentation/catheterization/intubation/dilation,
+   GENERAL/UNSPECIFIED' is not suppressed) 27. Local
+   injection/infiltration (the concept `Local injection/infiltration' is
+   not suppressed) 28. Medical examin/health eval complete 29. Medical
+   examin/health eval partial 30. Medical examination/health evaluation
+   complete (the concept `Medical examination/ health evaluation/complete'
+   is not suppressed) 31. Medical examination/health evaluation partial
+   (the concept `Medical examination/health evaluation partial' is not
+   suppressed) 32. Medication/prescr/renewal/inject 33.
+   Medication/prescription/renewal/injection 34.
+   Microbiological/immunological test 35. Observ/health educat/advice/diet
+   36. Observation/health education/advice/diet 37. Other diagnostic
+   procedure (the concept `Other diagnostic procedure' is not suppressed)
+   38. Other laboratory test NEC 39. Other preventive procedure (the
+   concept `Other preventive procedure' is not suppressed) 40. Other
+   reason for encounter NEC 41. Other referral NEC 42. Other therap
+   proced/minor surg NEC Ambiguity in the UMLS Metathesaurus (2001
+   Edition) 30 7. Appendix 43. Other therapeutic procedure/minor surgery
+   NEC 44. Physical function test (the concept `Physical function test' is
+   not suppressed) 45. Physical medicine/rehabilitation 46. Preventive
+   immunization/medication (the concept `Preventive
+   immunization/medication' is not suppressed) 47. Referral to
+   MD/specialist/clin/hosp 48. Referral to non-MD provider 49. Referral to
+   other provider/nurse/therapist/social worker 50. Referral to
+   physician/specialist/clinic/hospital 51. Repair/fix-suture/cast/prosth
+   device 52. Repair/fixation-suture/cast/prosthetic device (apply/remove)
+   53. Result exam/test/lett oth provider 54. Result
+   examination/test/record/letter from other provider 55. Result
+   test/procedure (the string `Result test/procedure' for concept `Result
+   test/proce- dure, GENERAL/UNSPECIFIED' is not suppressed) 56.
+   Sensitivity test (the concept `Sensitivity test' is not suppressed) 57.
+   Therapeutic counseling/listening (the concept `Therapeutic
+   counseling/listening' is not suppressed) 58. Therapeutic
+   counselling/listening (the concept `Therapeutic counselling/listening'
+   is not suppressed) 59. Urine test (the string `Urine test' for concept
+   `Urinalysis' is not suppressed) Ambiguity in the UMLS Metathesaurus
+   (2001 Edition) 31

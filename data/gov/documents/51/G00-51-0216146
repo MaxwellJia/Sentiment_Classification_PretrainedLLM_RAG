@@ -1,0 +1,202 @@
+http://octlcam.jpl.nasa.gov/pub/qi/index.html
+
+          AXIS 200 / AXIS 200+ Camera Server Quick Installation Guide
+     __________________________________________________________________
+
+   The AXIS 200+ Camera Server supersedes the AXIS 200 Camera Server. This
+   guide covers the installation and basic setup procedures for both
+   products. Should you require more detailed instructions, please refer
+   to the Camera Server User's Manual available via the Axis WWW Home Page
+   at http://www.axis.com/salessupport/manuals.html or
+   http://www.se.axis.com/products/documentation/manuals.html
+     __________________________________________________________________
+
+                               [neyeqia1.gif]
+
+   Familiarize yourself with your version of the camera server. The
+   pictures show the front of the AXIS 200+ and AXIS 200, respectively.
+   Note that the rear view is the identical for the two products.
+
+Installing the Camera Server
+
+   Follow these instructions to install your camera server:
+    1. Record the serial number of your camera server. Please note that
+       the serial number is identical to the Ethernet address of the unit.
+    2. Connect your camera server to the network using an Ethernet 10baseT
+       connector.
+    3. Connect the external power supply (Axis type PS-D), to the camera
+       server and check that the power indicator is then lit.
+    4. Acquire an unused Internet address for your camera server.
+    5. Assign the Internet address to your camera server using the method
+       approriate for your network environment as detailed below:
+
+   Windows 95, Windows NT
+
+   Start a DOS window and type the following commands:
+
+   arp -s <Internet address> <Ethernet address>
+   ping <Internet address>
+
+   Example:
+
+   arp -s 192.168.3.191 00-40-8c-10-00-86
+   ping 192.168.3.191
+
+   Note:
+
+   When using the Windows 95 implementation of ARP you must first, if you
+   have an empty ARP table (seen with arp -a), ping an existing unit on
+   your network before setting the Internet Address of your camera server.
+
+   UNIX
+
+   Type the following commands:
+
+   arp -s <Internet address>> <Ethernet address> temp
+   ping <Internet address>
+
+   Example:
+
+   arp -s 192.168.3.191 00:40:8c:10:00:86 temp
+   ping 192.168.3.191
+
+    6. Access the camera server by entering the Internet address (URL) of
+       your camera into the location field of your browser.
+       Example:http://192.168.3.191/
+    7. Adjust the focus of your camera by carefully turning the lens.
+       Reload your browser to test your adjustments.
+          + AXIS 200: A white dot on the lens assembly indicates the
+            approximate focus position for the camera, when adjusted to
+            the 12 o' clock position.
+          + AXIS 200+: The camera server is delivered in approximate focus
+            position, with focus set to infinity. If you need to fine
+            adjust to close focus, carefully turn the smaller lens. If you
+            cannot obtain a sharp picture, loosen the lock ring and bring
+            the camera into focus by turning the larger lens. Tighten the
+            lock ring afterwards.
+
+   The installation is now complete and pictures taken by the camera may
+   now be included into your own applications.
+     __________________________________________________________________
+
+Taking Snapshots
+
+   To trigger a camera snapshot, simply enter the URL of your camera into
+   the location field of your Web browser.
+
+   The following picture sizes and respective file references are
+   available for snapshots:
+     * fullsize.jpg - Full size JPEG snapshot. 352 x 288 pixels, typical
+       file size 30 kbytes. Generation time = approx. 0.5 sec
+     * halfsize.jpg - Half size JPEG snapshot. 176 x 144 pixels, typical
+       file size 15 kbytes. Generation time = approx. 0.3 sec
+     * lastshot.jpg - The last snapshot taken by the camera, either a full
+       size of half size.
+     * hugesize.jpg - The highest resolution snapshot available. 704 x 576
+       pixels. As opposed to the `fullsize' and `halfsize' images, this
+       type of snapshot is software generated. Generation time = approx.
+       18 sec
+     * zoom.jpg - Derived from the from the center of `hugesize'. 352 x
+       288 pixels. Generation time = approx. 8 sec
+
+   To integrate live snapshot images into your own web pages and
+   applications, refer to the target snapshot type as detailed below:
+
+   Example:
+
+   http://192.168.3.191/fullsize.jpg
+
+   Example: (Adding an HTML reference)
+
+   <IMG SRC="http://192.168.3.191/fullsize.jpg" ALT="A fullsize JPEG
+   Image">
+     __________________________________________________________________
+
+The CRON Script
+
+   The camera server includes a CRON script service that facilitates
+   periodic command execution. It allows you to program event and/or time
+   triggered functions within the camera server. From the Camera Server
+   Home Page, you can access an on-line editor for generating the CRON
+   script file. Alternatively, you can use a common text editor and
+   download the file via ftp.
+
+   For example, you can program the camera server to store a new fullsize
+   image on an ftp server every 5 minutes.
+
+   The camera server can also be activated by logical transitions on its
+   input ports. Thus, by connecting a digital microcircuit to an entrance
+   door, the camera server could be triggered to take a snapshot on each
+   occasion the door opens and then, for example, send an e-mail with the
+   snapshot to an operator.
+     __________________________________________________________________
+
+EyeGet - the JPEG Script
+
+   When using the camera server over the Internet, we recommend that it is
+   accessed over an assisting web server and not directly. This is because
+   the camera server has limited capacity for handling the extra amount of
+   buffering that the Internet may generate. Axis has developed a JPEG
+   collector program that periodically collects JPEG snapshots from your
+   camera server and writes them to a local file on your web server for
+   later retrieval. The program is called EyeGet and is available in both
+   Windows and UNIX versions. You can download EyeGet free of charge from
+   http://www.axis.com/products/axis_neteye_200/scripts.shtml
+     __________________________________________________________________
+
+Point to Point Protocol (PPP)
+
+   PPP support allows you to use your camera server remotely, just as if
+   it were on your local network. Any PPP capable host can be used to dial
+   into the camera server.
+
+   Should you wish to use PPP from another host, i.e. Windows NT, UNIX,
+   click here.
+
+   PPP configuration for a Windows 95 host
+
+   Follow these instructions to configure PPP from a Windows 95 host:
+    1. Connect the remote modem to the serial port of the camera server
+       (US Robotics modem recommended).
+    2. From the Windows desktop, double-click on the My Computer icon and
+       then open Dial-Up Networking.
+    3. Double click on Make New Connection. From within this dialog,
+       define a <name> that descibes the connection you are creating in
+       the `Type name for the computer you are using' field. Select a
+       local modem from the displayed modem list.
+    4. Click on the configure button to enter the modem Properties page.
+       Accept all default settings, but ensure that modem speed is
+       compatible with your modem and does not exceed 38,400 bps, which is
+       the maximum serial port speed for the camera server.
+    5. Click the Connection tab and then click the Advanced button.
+          + AXIS 200: Check the Software (XON/XOFF) radio button.
+          + AXIS 200+: Check the Hardware (RTS/CTS) radio button.
+       Click OK to return to the `Make new connection' dialog.
+    6. Enter the relevant phone number information for the remote modem
+       connected to your camera server. Click Next.
+    7. Click Finish. The system then proceeds to build the Driver
+       information database and your connection dialog will then
+       subsequently appear in the Dial-Up Networking dialog.
+
+   Accessing the remote camera server
+
+   Follow this procedure to dial out to a remote camera server:
+    1. Double click on the newly created icon to establish a modem
+       connection for your remote camera server.
+    2. Enter your User name and Password an then Click Connect. The status
+       dialogs "dialing" and "logging onto the network" are presented
+       prior to the display of a Connected to <name> dialog that will
+       confirm a successful connection.
+    3. You can now access the camera server by entering its Internet
+       address (URL) into the location field of your Web browser. Please
+       ensure that you are not using a a proxy server (Netscape: Options
+       menu\Select Network\Proxies).
+
+   If your Windows 95 computer does not have a dial up networking
+   installed, click here.
+     __________________________________________________________________
+
+
+    Tech-Support@axis.com
+
+   Copyright © 1998, Axis Communications. All rights reserved.

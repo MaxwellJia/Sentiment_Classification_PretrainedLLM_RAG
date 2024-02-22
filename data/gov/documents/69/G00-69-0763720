@@ -1,0 +1,29 @@
+http://forms99.psc.gov/Forms/UpdateAndRedirectWithASP.htm
+
+                     Update and Redirect with ASP Sample
+
+   This sample references an Active Server Page containing a Version
+   Management control in order to perform the AnalyzeUpdateAndRedirect
+   method. The form names below do not link directly to their related HTML
+   files; instead, clicking the hyperlink directs you to
+   UpdateControls.asp.
+   UpdateControls.asp accepts the name of an HTML file in the current
+   directory as a parameter, then sets the Version Management control's
+   FormURL property and ExecuteMethod property to call the
+   AnalyzeUpdateAndRedirect method once the control activates. Your form
+   object versions will be checked and updated as necessary before
+   proceeding to the requested form.
+   Click on a form name below to test this functionality. View the source
+   code of UpdateControls.asp, located in the Forms folder in the
+   directory where you installed the FormFlow 99 Server Components, to see
+   how this sample works.
+
+   Memorandum A single page memorandum that automatically places the
+   current system date on the form. This form also contains a large
+   multiple-line field for data entry.
+   Leave Request A leave request form used to request a leave of absence.
+   This form illustrates field formatting, basic field calculations, radio
+   buttons and drop-down list boxes.
+   Purchase Order A requisition form that uses formatting for dates and
+   currency fields, calculations to determine the totals and taxes, radio
+   buttons, and drop-down list boxes.

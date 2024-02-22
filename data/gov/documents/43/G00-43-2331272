@@ -1,0 +1,60 @@
+http://cammp.nos.noaa.gov/spo/prodlist.taf?alltype=6
+
+   banner.jpg (19758 bytes)
+
+   Home
+   Home
+   Line Graphic
+   Site Map
+   Search
+   Line Graphic
+   News & Events
+   Projects
+   Programs
+   Line Graphic
+   Publications & Products
+   cd-roms
+   datasets
+   publications
+   webpages
+   Line Graphic
+   SPO Employees
+   Contact Us
+
+                             CD-ROMs and Videos
+
+   The Special Projects Office has produced video tapes and CD-ROMs
+   covering U.S. coastal issues, policy, and science. Click on the titles
+   below for information on how to obtain copies of these video tapes or
+   CD-ROMs.
+
+                                    1998
+
+     * Turning the Tide: America's Coasts at a Crossroads
+     * Our Crowded Shores: Balancing Growth and Resource Protection
+     * Law of the Sea Convention Video opportunity to Protect and Promote
+       U.S. Economic Interests
+     * Developing U.S. Ocean Policy, Lessons Learned from the Stratton
+       Commission
+     * Benthic habitats of the Florida Keys: CD-ROM
+
+                                    1997
+
+     * Analysis and Planning for Integrated Coastal Management
+     __________________________________________________________________
+
+   [Application File] START /spo/prodlist.taf alltype=6
+   [Results Action] Results
+   [Changed Vars] user$type=6
+   [Search Action] Search
+   [Query] SELECT
+   C1.OFFERING_CODE,C1.DATA_DISPLAY_NAME,C1.ON_LINE,C1.OFFERING_TYPE,C1.OR
+   GANIZATIONAL_UNIT,C1.FIRST_YEAR FROM ORCA_LIB.CATALOG C1 WHERE
+   (C1.OFFERING_TYPE=6 AND C1.ORGANIZATIONAL_UNIT=:v1) ORDER BY 6 DESC,1
+   ASC
+   [BoundVals] [v1='SEA']
+   [ActionResults] 6_SEA_98-CD-1 Turning the Tide: America's Coasts at a
+   Crossroads N 6 SEA 1998
+   [Changed Vars] user$pastyear=1997
+   [user$ Vars] pastyear=1997 type=6 variabletimeout=240
+   [local$ Vars] resultset=[Array:6x6] variabletimeout=240

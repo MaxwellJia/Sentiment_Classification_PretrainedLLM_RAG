@@ -1,0 +1,453 @@
+http://spec.jpl.nasa.gov/ftp/pub/catalog/doc/catintro.pdf
+
+   Submillimeter, Millimeter, and Microwave Spectral Line Catalog H. M.
+   Pickett R. L. Poynter E. A. Cohen M. L. Delitsky J. C. Pearson H. S. P.
+   M¨uller May 11, 2000 ABSTRACT This report describes a
+   computer-accessible catalog of submillimeter, mil- limeter, and
+   microwave spectral lines in the frequency range between 0 and 10,000
+   GHz (i.e., wavelengths longer than 30 µm). The catalog can be used as a
+   planning guide or as an aid in the identification and analysis of
+   observed spectral lines. The information listed for each spectral line
+   includes the frequency and its estimated error, the intensity, the
+   lower state energy, and the quantum number assignment. This edition of
+   the catalog has information on 298 atomic and molecular species and
+   includes a total of 1,448,153 lines. The catalog has been constructed
+   by using theoretical least squares fits of published spectral lines to
+   accepted molecular models. The associated predictions and their
+   estimated errors are based upon the resultant fitted parameters and
+   their covariances. Future versions of this catalog will add more atoms
+   and molecules and update the present listings as new data appear. The
+   catalog is available on-line via anonymous ftp at spec.jpl.nasa.gov and
+   on the world wide web at http://spec.jpl.nasa.gov. iii iv FOREWORD
+   Revision 2 of the Submillimeter Spectral Line Catalog incorporated a
+   number of changes: (1) a quantum number format, (2) addition of a
+   complete set of partition functions for each species, (3) a
+   computer-accessible directory of species, (4) a table of relative
+   abundances of the isotopes under terrestrial conditions, (5) a new
+   format for the individual species descriptions, (6) eighteen new
+   species, and (7) thirty revised species. The present version is changed
+   only by the addition of new and revised species. The changes are as
+   follows: NEW SPECIES, REV. 4 (93) Tag Name Tag Name Tag Name 7001
+   Li-6-H 8001 LiH 8002 Li-6-D 9001 LiD 13003 CH+ 19004 H3O+ 25002 NaH
+   27004 C-13-N 28008 HCNH+ 28009 CO+ 29006 CO-17 29007 HOC+ 30010 HOC-13+
+   30011 NO+ 30012 DOC+ 31003 HDCO 31004 HO-18-C+ 31005 HNO 32006 D2CO
+   32007 DNO 37002 C3H 37003 c-C3H 38003 C3D 38004 CCC13H 38005 C13CCH
+   38006 c-C3D 40003 SiC 40004 SiC-v1 40005 KH 41007 SiC-13 41008 CaH
+   41009 CH3NC 42004 CaD 42005 K-41-H 44010 HCP 44011 AlOH 45009 DCP 45010
+   HOCO+ 45011 AlOD 45012 O-17-CO 46008 CH3OCH3 46009 AlF 46010 NS 46011
+   DOCO+ 46012 HOC-13-O+ 46013 O-18-CO 48009 NS-34 49003 C4H 49004 MgCCH
+   50008 C3N 50009 MgCN 50010 MgNC 51004 HCCNC 51005 HCCNC-v7 51006
+   HCCNC-v6 51007 HCCNC-v5 51008 HNCCC 52012 DNCCC 53007 C2H3NC 54007
+   HCCCHO 56007 CCS 56008 C2H3CHO 57001 C-13CS 57002 CC-13S 58001 CCS-34
+   58002 NaCl 60003 CH3OCHO-A 60004 CH3OCHO-E 60005 NaCl-37 61003 C5H
+   62005 AlCl 62006 C5D 64003 AlCl-37 66002 OS-34-O 66003 CaNC 69002
+   C3H7CN 73001 HC6 74001 KCl 74002 C2H5OOCH 75002 H2NCH2COOH I 75003
+   H2NCH2COOH II 76008 KCl-37 76009 C4Si 89001 Sr-88-H 90001 Sr-88-D 92001
+   C5S 94001 C5-34-S 96001 HOBr-79 98002 HOBr-81 99002 HC7N 112001
+   Se-80-O2 123001 HC9N 147001 HC11N v REVISED SPECIES, REV. 4 (24) Tag
+   Name Tag Name Tag Name 26001 CN, v = 0, 1 27002 HNC 28001 CO 28007 DNC
+   29001 C-13-O 30001 CO-18 33001 HO2 34001 O-18-O 34002 H2S 34004 H2O2
+   38002 c-C3H2 39001 c-HC-13-CCH 39002 c-HCC-13-CH 39005 c-C3HD 41001
+   CH3CN 46004 C2H5OH 49001 O3-sym-O-17 49002 O3-asym-O-17 52007 SiCC
+   53001 C2H3CN 55001 C2H5CN 80001 HBr-79 82001 HBr-81 98001 H2SO4 For
+   reference, the changes in Rev. 3 are: NEW SPECIES, REV. 3 (55) Tag Name
+   Tag Name Tag Name 4001 H2D+ 19003 H2O-17 20002 HF 20003 H2O-18 21001
+   HDO-18 21002 DF 27003 HCN-v2 32005 O2 snglt dlta 33002 O-17-O 37001 DCl
+   38002 C3H2 39001 C-13-3H2a 39002 C-13-3H2s 39003 C3HD 39004 DCl-37
+   40002 NaOH 42003 NH2CN 43002 HNCO 43003 AlO 44006 DNCO 44007 HN-15-CO
+   44008 HNC-13-O 44009 N2O-v2 45005 HCS+ 45006 HNCO-18 45007 NN-15-O
+   45008 N-15-NO 46007 N2O-18 48008 O3-v1,3+v2 50007 CH3Cl-35 51002 ClO-v1
+   52007 SiCC 52008 CCCO 52009 CH3Cl-37 52010 CH2F2 52011 CH2F2-v4 53003
+   C-13-CCO 53004 CC-13-CO 53005 CCC-13-O 53006 Cl-37-O-v1 54006 CCCO-18
+   63002 HNO3-v7 63003 HNO3-v9 63004 HNO3-v6 63005 HNO3-v8 63006 HNO3-v5
+   66001 COF2 67001 OCl-35-O 68001 CCCS 69001 OCl-37-O 70001 CCCS-34 79001
+   HOONO2 98001 H2SO4 102001 ClOOCl 104001 Cl-37-OOCl vi REVISED SPECIES,
+   REV. 3 (28) Tag Name Tag Name Tag Name 3001 HD 12001 C-atom 13001
+   C-13-atom 14002 N-atom-D-state 17001 OH 18003 H2O 19002 HDO 20001 D2O
+   28001 CO 32001 O2 32002 O2-v1 33001 HO2 34003 PH3 34004 H2O2 36001 HCl
+   38001 HCl-37 46006 NO2 48004 O3 48005 O3-v2 48006 O3-v1,3 48007 O3-2v2
+   51002 ClO 52006 HOCl 53002 Cl-37-O 54005 HOCl-37 63001 HNO3 64001 S2
+   64002 SO2 For reference, the changes in Rev. 2 are: NEW SPECIES, REV. 2
+   (18) Tag Name Tag Name Tag Name 13002 CH 17004 NH3-v2 20001 D2O 25001
+   CCH 26001 CN 26002 CN-v1 29004 HCO 29005 NNH+ 30009 NND+ 33001 HO2
+   46006 NO2 48007 O3-2v2 49001 O3-sym-O-17 49002 O3-asym-O-17 50005
+   O3-s-O18-v2 50006 O3-a-O18-v2 97002 Cl-35-NO3 99001 Cl-37-NO3 REVISED
+   SPECIES, REV. 2 (30) Tag Name Tag Name Tag Name 16001 O-atom 17001 OH
+   17002 NH3 18001 OD 18003 H2O 18005 H2O-v2 19001 HO-18 19002 HDO 27001
+   HCN 29002 HCO+ 30002 HC-13-O+ 30003 DCO+ 31001 HCO-18+ 32001 O2 32002
+   O2-v1 34001 O-18-O 41005 CH3CCD 44001 CS 44002 SiO 45001 C-13-S 46001
+   CS-34 48004 O3 48005 O3-v2 48006 O3-v1,3 50003 O3-sym-O-18 50004
+   O3-asym-O-18 52006 HOCl 54005 HOCl-37 63001 HNO3 64002 SO2 For
+   reference, the new and revised species listed in the first revision of
+   this catalog are: NEW SPECIES, REV. 1 (9) Tag Name Tag Name Tag Name
+   18004 NH2D 18005 H2O-v2 34004 H2O2 44005 CH3CHO-E 48005 O3-v2 48006
+   O3-v1,3 52006 HOCl 54005 HOCl-37 63001 HNO3 vii REVISED SPECIES, REV. 1
+   (24) Tag Name Tag Name Tag Name 17002 NH3 18002 N-15-H3 18003 H2O 29003
+   CH2NH 30007 CH2ND 32001 O2 32002 O2-v1 32003 CH3OH 34002 O-18-O 34002
+   H2S 34003 PH3 45003 NH2CHO 51002 ClO 53002 Cl-37-O 55001 C2H5CN 56001
+   CH3CH2C-13-N 56002 CH3C-13-H2CN 56003 C-13-H3CH2CN 56005 CH2DCH2CN-s
+   56006 CH2DCH2CN-a 60001 OCS 61001 OC-13-S 62001 OC-34-S 62002 O-18-CS
+   viii Contents 1 INTRODUCTION 1 2 DATA FORMAT 1 2.1 Line Files . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1 2.2 Directory
+   File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+   2.3 Documentation files . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . 2 3 INTENSITY UNITS AND CONVERSIONS 3 4 GENERAL COMMENTS ON
+   PRECISION 5 5 FORMAT OF QUANTUM NUMBERS 7 6 DOCUMENTATION BY SPECIES 9
+   6.1 Isotope Corrections . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . 9 6.2 List of Species in This Catalog . . . . . . . . . . . . .
+   . . . . . . . . . 11 ix 1 INTRODUCTION This report describes a
+   computer-accessible catalog of submillimeter, millimeter, and microwave
+   spectral lines in the frequency range between 0 and 10,000 GHz (i.e.,
+   wavelengths longer than 30 µm). The catalog is intended to be used as a
+   guide in the planning of spectral line observations and as a reference
+   that can facilitate identification and analysis of observed spectral
+   lines. The selection of lines for the catalog is based on the project
+   needs of astronomers and atmospheric scientists. The catalog is
+   constructed using theoretical least squares fits and predictions based
+   on spectral lines, mostly obtained from the literature. In subsequent
+   versions of the catalog, more molecules will be added and existing
+   molecular listings will be updated as new data appear. The catalog is
+   available on-line via anonymous ftp at spec.jpl.nasa.gov and on the
+   world wide web at http://spec.jpl.nasa.gov. The format of the data is
+   given in Section 2. Section 3 gives conversions between different
+   measures of spectral line intensity. General comments on the precision
+   of the spectral line positions and intensities are given in Section 4,
+   while species-specific comments are reserved for Section 6. Section 5
+   gives the format of quantum numbers as they appear in the catalog.
+   Documentation for each molecular or atomic species is listed in Section
+   6 in order of the "species tag." This tag is a six-digit number in
+   which the three most significant digits represent the mass number of
+   the molecule or atom and the last three digits are an accession number
+   for the given mass. Usually there is a separate tag for each
+   vibration-electronic state of a particular molecule. 2 DATA FORMAT 2.1
+   Line Files The catalog line files are composed of 80-character lines,
+   with one line entry per spectral line. The format of each line is:
+   FREQ, ERR, LGINT, DR, ELO, GUP, TAG, QNFMT, QN , QN (F13.4, F8.4, F8.4,
+   I2, F10.4, I3, I7, I4, 6I2, 6I2) 1 FREQ: Frequency of the line in MHz.
+   ERR: Estimated or experimental error of FREQ in MHz. LGINT: Base 10
+   logarithm of the integrated intensity in units of nm2·MHz at 300 K.
+   (See Section 3 for conversions to other units.) DR: Degrees of freedom
+   in the rotational partition function (0 for atoms, 2 for linear
+   molecules, and 3 for nonlinear molecules). ELO: Lower state energy in
+   cm-1 relative to the lowest energy spin rotation level in ground
+   vibronic state. GUP: Upper state degeneracy. TAG: Species tag or
+   molecular identifier. A negative value flags that the line frequency
+   has been measured in the laboratory. The absolute value of TAG is then
+   the species tag and ERR is the reported experimental error. The three
+   most significant digits of the species tag are coded as the mass number
+   of the species, as explained above. QNFMT: Identifies the format of the
+   quantum numbers given in the field QN. These quantum number formats are
+   given in Section 5 and are different from those in the first two
+   editions of the catalog. QN : Quantum numbers for the upper state coded
+   according to QNFMT. QN : Quantum numbers for the lower state. 2.2
+   Directory File The catalog contains a special directory file called
+   catdir.cat Each element of this directory is an 80-character record
+   with the following format: TAG, NAME, NLINE, QLOG, VERSION (I6,X, A13,
+   I6, 7F7.4, I2) TAG: The species tag or molecular identifier. NAME: An
+   ASCII name for the species. NLINE: The number of lines in the catalog.
+   QLOG: A seven-element vector containing the base 10 logarithm of the
+   partition function for temperatures of 300 K, 225 K, 150 K, 75 K, 37.5
+   K, 18.75 K, and 9.375 K, respectively. VERSION: The version of the
+   calculation for this species in the catalog. 2.3 Documentation files
+   The documentation files are stored natively as ASCII LaTex files for
+   each species. Postscript, LaTex, and PDF versions of this publication
+   are also available on line. The documentation files provide the
+   intensity and frequency cut-offs, partition functions at representative
+   temperatures, assumed dipole moments, literature citations for the
+   experimental lines, and a brief description of the nature of the
+   Hamiltonian model 2 used in the calculation. The documentation file
+   also includes a suggested isotopic correction based on cosmic
+   abundances. This correction includes the appropriate statistics for
+   equivalent nuclei. Note the catalog intensities do not include this
+   isotopic correction. In this edition of the catalog, several of the
+   species have spectra that are extended to 10,000 GHz, so the
+   documentation includes a maximum frequency cutoff. For almost all
+   species, a strength cutoff was also employed: 10LGINT > 10LOGSTR0 + (
+   /300GHz)2 · 10LOGSTR1 A blank entry for LOGSTR1 means that the second
+   term was not included. We have found that LOGSTR1 is often a useful
+   cut-off parameter to account for the decreased sensitivity of
+   instrumentation with increasing frequency or as a means to capture
+   lines with comparable transition dipoles. The partition functions
+   listed (Q) in the catalog include rotation and spin statistics but
+   usually do not include vibrational or electronic corrections.
+   (Exceptions such as H2O and O3 are noted.) Calculation of Q is based on
+   a sum over states. At higher temperatures, the sum-over-states
+   calculation is replaced by a classical calculation when the latter is
+   larger due to a limited number of states in the catalog. The spin
+   statistics included in the partition function are sometimes divided by
+   a common factor, but the partition functions are always consistent with
+   the statistics used for intensities in the catalog. This common factor
+   is not always documented, but the choice should be clear from the GUP
+   field in the line file. 3 INTENSITY UNITS AND CONVERSIONS The units of
+   intensity given in the catalog, nm2·MHz, are based on the integral of
+   the absorption cross-section over the spectral line shape. The value of
+   the intensity is calculated for 300 K and is directly comparable with
+   the common infrared inten- sity unit of cm-1/(molecule/cm2). The latter
+   is obtainable by dividing the catalog intensity by 2.99792458 × 1018.
+   The line intensity in the catalog, Iba (300 K), is obtained from I x
+   ba(T ) = (8 3/3hc) ba Sba µ2x[e-E /kT - e-E /kT ]/Qrs (1) = 4.16231 ×
+   10-5 x ba Sba µ2x[e-E /kT - e-E /kT ]/Qrs (2) where ba is the line
+   frequency, xSba is the line strength, µx is the dipole moment along the
+   molecular axis x, E and E are the lower and upper state energies,
+   respectively, and Qrs is the rotation-spin partition function (using
+   the same zero of energy as E and E ). In Eq.(2), Iba has units of
+   nm2·MHz, ba has units of MHz, and µx has units of Debye. In many
+   molecules, there are several dipole moment projections and there even
+   may be mixing between dipoles. In such cases, xSba µ2x is replaced with
+   the sum of the squares of the transition dipoles for each M component
+   in the line. For magnetic dipole transitions, Eq.(2) can be used with
+   the conversion that a Bohr magneton 3 is equivalent to 0.009274 Debye.
+   Note that with this definition the intensities are defined with respect
+   to the total concentration of the vibration-electronic state of the
+   species. No vibrational partition function is included, except where
+   explicitly stated in the documentation. Care is taken to assure that
+   xSba and Qrs are determined with the same state degeneracies. For the
+   catalog, Eq. (2) is evaluated for T = T = 300 K. Values of Iba at other
+   temperatures can also be obtained from Eq.(1) once the temperature
+   dependence of Qrs is known. For linear molecules, Qrs is proportional
+   to T in the limit where the energy spacings are small compared with kT.
+   For nonlinear molecules, Qrs is proportional to T3/2 in the same limit.
+   Explicitly, Iba(T) is e-E /kT - e-E /kT Iba(T ) = Iba(T )[Qrs(T )/Qrs(T
+   )] (3) e-E /kT - e-E /kT = Iba(T ) · (T /T )n+1e-(1/T-1/T )E /k (4)
+   where n = 1 for a linear molecule and 3/2 for a nonlinear molecule.
+   Eq.(4) requires that E - E is small compared with kT and kT .
+   Absorption coefficients of collision-broadened lines can be obtained
+   from Iba with the relation I ba(T ) max = (T /T ) × 102.458 cm-1 (5) in
+   which is the half-width at half-height in MHz at 1 torr partial
+   pressure of the absorber at temperature T, Iba is in units of nm2·MHz,
+   and max is in units of cm-1. The power transmission through a uniform
+   medium of length L at the peak of the line is exp(- maxL). The
+   attenuation is maxL × 4.3429 in dB. The corresponding value of max in
+   the thermal Doppler limit is I ba(T )p max = (T /T ) × 151.194 cm-1 (6)
+   d in which p is the partial pressure of the absorber in torr, and d is
+   the Doppler half-width at half-height in units of MHz. The Doppler
+   width is given by d = 1.17221 × 10-6 × ba (T/T )(28/m) (7) in which m
+   is the mass of the absorber (in atomic mass units). The explicit
+   inverse temperature dependence in Eqs.(5) - (6) is due to the
+   conversion of density to pressure units. There is additional implicit
+   temperature dependence in Iba(T ) and in the widths. In Eqs.(7) - (10),
+   ba is the line frequency in MHz. The absorption cross-section of an
+   interstellar absorber integrated over a 1 km/s- velocity interval is I
+   ba ba = × 2.99792 × 10-9 cm2. (8) ba The power transmission through a
+   uniform medium of length L and number density is exp(- ba L). The
+   inverse of ba is the column density per unit optical depth in the same
+   1 km/s-velocity interval. 4 The average spontaneous emission rate from
+   the upper states into the lower states is Aba = Iba(T ) 2ba[Qrs/g ][e-E
+   /kT - e-E /kT]-1 × 2.7964 × 10-16 sec-1 (9) = Iba(T ) ba[Qrs(T )/g ]eE
+   /kT × 1.748 × 10-9 sec-1 (10) in which g is the degeneracy of the upper
+   state. The value of g is listed as part of the spectral line
+   information in the catalog. Values of Qrs are listed in the
+   documentation and on the directory file. Eq.(10) requires that h ba is
+   small compared with kT and kT . It should be noted that the information
+   to make all the intensity conversions given above is available from the
+   directory file and from the line files, with the exception of the
+   collisional broadening coefficients. As a matter of policy, we have not
+   included collisional linewidths in the catalog because of the large
+   variety of different collision partners relevant for the laboratory,
+   the Earth's atmosphere, and the atmospheres of the other planets. 4
+   GENERAL COMMENTS ON PRECISION The expected errors of the frequency as
+   listed in the catalog are usually based on a propagation of errors
+   estimated from a least squares fit of the observed frequencies to a
+   model Hamiltonian, using the following equation: 2 n n n = Vkj (11) kj
+   pk pj in which n is the estimated error of frequency n and Vkj is an
+   element of the least square variance-covariance matrix for the
+   parameters pk. This variance-covariance matrix is determined from the
+   observed lines by (V -1) m m kj = -2 m (12) m pk pj in which the
+   summation over m is over the experimental lines using experimental
+   uncertainies, m. The diagonal elements of V are the squares of the
+   parameter uncer- tainties and the off-diagonal elements of V are
+   products of the parameter uncertainties and correlation coefficients.
+   The experimental uncertainties generally given in the literature vary
+   from 1.6- estimates to 3- estimates and are usually "guesstimates."
+   Unfortunately, many authors do not even report their experimental
+   uncertainties. Therefore, the expected errors in predicted lines
+   obtained from fits based on such data will usually reflect this
+   ambiguity in laboratory uncertainties through Eq. (10) and (11). In
+   some cases, the quality of the least squares fit of the parameters to
+   the experimental lines can be a guide to the statistical nature of the
+   experimental uncertainties. Whenever possible, 5 the expected errors in
+   this catalog will reflect an expected 95% confidence interval based on
+   the model used to fit the data. However, the errors can be different
+   from this design goal by factors of three just due to the quality of
+   the input error estimates. Lines with an expected error greater than 1
+   GHz have been dropped from the catalog. The expected errors can only be
+   computed relative to the model used. There are at least two ways the
+   model can be "wrong" for the predicted frequencies. First, higher order
+   centrifugal distortion terms may no longer be negligible for the
+   predicted frequencies. This effect will generally be important for
+   lines of higher J or K than the laboratory-determined data set. In a
+   sense, the predictions are then a form of extrapolation rather than
+   interpolation and are therefore more suspect. A second factor leading
+   to discrepancies in the predicted frequencies comes from "resonances."
+   These resonances come from a near overlap of energy states that are
+   coupled by elements of the Hamiltonian matrix. Poor predictability
+   comes when these elements are neglected in the model or are treated
+   inadequately by some form of perturbation theory. Such a neglect of
+   coupling elements is always necessary at some level in any practical
+   calculation. A major contributing problem is that often the existing
+   data set is not sensitive to the parameters that are needed to
+   characterize the resonances. Precision in the intensity estimates is
+   generally less critical than precision in the frequency. Contributing
+   to intensity uncertainty are errors in the dipole moment, errors in the
+   line strength xSba, and errors in the rotation-spin partition function
+   (the vibration-electronic partition defined on the basis of
+   concentrations of the given vibration-electronic state). Dipole moment
+   errors come directly from the experimen- tal determination and
+   indirectly from the J dependence of the dipole moment due to
+   centrifugal mixing of the vibrational states. Line strength errors can
+   come from defi- ciencies in the model Hamiltonian and are particularly
+   severe when resonances have been inadequately accounted for. Partition
+   function errors are relatively benign but can become significant if the
+   classical formulae are used at low temperatures for small molecules.
+   With the exception of unanticipated resonances and poorly determined
+   dipole moments, worst-case errors in the intensity will generally be at
+   the 1% level or lower. Many molecular models are found in the
+   literature. In principle, a very general model should be able to treat
+   every possible case. In practice, this is hardly ever done. A specific
+   model is most frequently used for every case, mainly because every
+   author starts with a different viewpoint of the problem. In our case,
+   we have tried to develop a program that will treat a wide variety of
+   problems with a minimum of adaptation. This saves a great deal of time
+   in the initial setup, and provides a uniform output format for the
+   final results. Most importantly, the basic treatment is the same for
+   every molecule, regardless of the model used, so that a high degree of
+   consistency can be maintained, facilitating comparisons between
+   different molecules. The particular model needed to analyze a specific
+   problem is treated as a subroutine. For certain problems, this
+   subroutine can be quite simple, but for others, it is more complex.
+   Simple singlet sigma diatomic, linear, and symmetric rotor molecules
+   are treated 6 together. Asymmetric rotors with and without various
+   complicating interactions are treated exactly, without any perturbation
+   expansions. This is done by employing the Hamiltonian operators to
+   generate the matrix elements. All possible operators can be used, so
+   any conceivable interaction can be included initially. Comments on
+   specific models are given for the individual species. 5 FORMAT OF
+   QUANTUM NUMBERS For the later editions of this catalog, we have
+   attempted to use a quantum number format convention that allows the
+   quantum numbers to be accessed easily by computer (see Table 1). First,
+   the upper and lower quantum number sets have been separated into
+   distinct fields. Second, the quantum format designations have been
+   defined to have more accessible information encoded in them. The
+   quantum number format designation, QNFMT, is a 4-digit quantity in the
+   catalog. We divide QNFMT into a series of digits so that QNFMT = Q ·
+   100 + H · 10 + NQN in which Q determines the type of molecule (see
+   Table 1), H determines the coding of half-integer quantum numbers, and
+   NQN is the number of quantum numbers for each state. Q is defined so
+   that MOD(Q,5) is the number of primary quantum numbers. If NQN is
+   greater than the number of primary quantum numbers, the degeneracy is
+   derived from the last quantum number. Otherwise, the degeneracy is
+   derived from the first quantum number. H is a 3-bit binary code for the
+   existence of half-integer quantum numbers for the last three quantum
+   numbers. The least significant bit refers to quantum number NQN and is
+   1 if the last quantum number is half-integer. In the catalog, all
+   half-integer quantum numbers are rounded up to the next integer. The
+   parity given may not always be experimentally determined, but the
+   parity convention is guaranteed to produce parities of the same sign
+   for interacting states and to produce a change in parity across dipole
+   allowed transitions. It should be noted that for symmetric top
+   transitions with no K splitting, the parity designation is frequently
+   dropped. Unless otherwise stated below, the parity of prolate symmetric
+   tops follows the parity of K+1 for the corresponding asymmetric top
+   level, while for oblate tops, the parity follows K-1. For example, the
+   level 53,2 for an asymmetric rotor has K = 3 for a prolate symmetric
+   top quantum field, and K = -2 for an oblate top. Hund's case (b) quanta
+   are similar to symmetric top quanta except that K is replaced with .
+   Hunds's case (a) quanta also have parity encoded in the field. The
+   correlation between parity and e,f designations should follow the
+   recommendations of J. M. Brown et al., 1975, J. Mol. Spect. 55, 500.
+   For reference, this convention is 7 TABLE 1. QUANTUM NUMBER FORMATS
+   Type Q DR Quantum Order Atom 0 0 (J),(F),· · · Linear - 1 2
+   N,(J),(F1),(F2)(F) Linear - Case b 2 2 N, ,(F1),(F2),(F) Linear - Case
+   a (2S+1 odd) 3 2 J, , ,(F1),(F2),(F) Linear - Case a (2S+1 even) 8 2
+   J+1, + 1, ,(F 2 2 1), (F2),(F) Symmetric rotor 2 3
+   N,K,(J),(F1),(F2),(F) Symmetric rotor with vibration 13 3
+   N,K,v,(J),(F1),(F) Asymmetric rotor 3 3 N,K-1,K+1,(J),(F1),(F)
+   Asymmetric rotor with vibration 14 3 N,K-1,K+1,v,(J),(F) Conventions:
+   1. Half-integer quantum numbers are rounded up. 2. The sign of and K
+   refers to the parity under inversion of spatial coordinates, not the
+   sign of the operator. 3. Quantum numbers in parentheses are optional. 8
+   For odd-spin multiplicity: if p(-1)J+1/2 = -1, then e if p(-1)J+1/2 =
+   1, then f For even-spin multiplicity: if p(-1)J = 1, then f if p(-1)J =
+   -1, then e where p is ±1 according to the parity. Care must be used
+   because this convention is not universally followed in the literature.
+   6 DOCUMENTATION BY SPECIES In this edition of the catalog, several of
+   the species have spectra that are extended to 10,000 GHz, so the
+   documentation below includes a maximum frequency cutoff. For almost all
+   species, a strength cutoff was also employed: 10LGINT > 10LOGSTR0 + (
+   /300GHz)2 · 10LOGSTR1 A blank entry for LOGSTR1 means that the second
+   term was not included. The partition functions listed (Q) include
+   rotation and spin statistics but usually do not include vibrational
+   corrections. (Exceptions such as H2O and O3 are noted.) Calcula- tion
+   of Q is based on a sum over states. At higher temperatures, the
+   sum-over-states calculation is replaced by a classical calculation when
+   the latter is larger due to a lim- ited number of states in the
+   catalog. The spin statistics included are only a partial set but are
+   consistent with the intensities in the catalog. 6.1 Isotope Corrections
+   For convenience, we have included an isotope correction for the rarer
+   isotopes that includes effects of redundant substitution. The atomic
+   abundances used are listed in Table 2. It should be stressed that the
+   intensities in the catalog do not contain an isotope correction. 9
+   TABLE 2. ASSUMED RELATIVE ISOTOPIC ABUNDANCES FOR CATALOG DESCRIPTION
+   Isotope Log (abundance) Isotope Log (abundance) 1H 0.000 2H -3.824 6Li
+   -1.131 7Li -0.033 12C 0.000 13C -1.955 14N 0.000 15N -2.432 16O 0.000
+   17O -3.432 18O -2.690 28Si -0.035 29Si -1.327 30Si -1.506 32S -0.022
+   33S -2.125 34S -1.376 35Cl -0.122 37Cl -0.611 79Br -0.296 81Br -0.306
+   10 6.2 List of Species in This Catalog Table 3 lists all the species
+   provided in this catalog, by tag and name. TABLE 3. LIST OF SPECIES Tag
+   Name Tag Name Tag Name 1001 H-atom 2001 D-atom 3001 HD 4001 H2D+ 7001
+   Li-6-H 8001 LiH 8002 Li-6-D 9001 LiD 12001 C-atom 13001 C-13-atom 13002
+   CH 13003 CH+ 14001 N-atom 14002 N-atom-D-st 16001 O-atom 17001 OH 17002
+   NH3 17003 CH3D 17004 NH3-v2 18001 OD 18002 N-15-H3 18005 H2O-v2 19001
+   HO-18 19002 HDO 19003 H2O-17 19004 H3O+ 20001 D2O 20002 HF 20003 H2O-18
+   21001 HDO-18 21002 DF 25001 CCH 25002 NaH 26001 CN, v = 0, 1 27001 HCN
+   27002 HNC 27003 HCN-v2 27004 C-13-N 28001 CO 28002 HC-13-N 28003 HCN-15
+   28004 DCN 28005 HNC-13 28006 HN-15-C 28007 DNC 28008 HCNH+ 28009 CO+
+   29001 C-13-O 29002 HCO+ 29003 CH2NH 29004 HCO 29005 NNH+ 29006 CO-17
+   29007 HOC+ 30001 CO-18 30002 HC-13-O+ 30003 DCO+ 30004 H2CO 30005
+   C-13-H2NH 30006 CH2N-15-H 30007 CH2ND 30008 NO 30009 NND+ 30010 HOC-13+
+   30011 NO+ 30012 DOC+ 31001 HCO-18+ 31002 H2C-13-O 31003 HDCO 31004
+   HO-18-C+ 31005 HNO 32001 O2 32002 O2-v1 32003 CH3OH 32004 H2CO-18 32005
+   O2-snglt-dlta 32006 D2CO 32007 DNO 33001 HO2 33002 O-17-O 34001 O-18-O
+   34002 H2S 34003 PH3 34004 H2O2 35001 HDS 36001 HCl 37001 DCl 37002 C3H
+   37003 c-C3H 38001 HCl-37 38002 c-C3H2 38003 C3D 38004 CCC13H 11 TABLE
+   3. (continued) Tag Name Tag Name Tag Name 38005 C13CCH 38006 c-C3D
+   39001 c-HC-13-CCH 39002 c-HCC-13-CH 39003 c-C3HD 39004 DCl-37 40001
+   CH3CCH 40002 NaOH 40003 SiC 40004 SiC-v1 40005 KH 41001 CH3CN 41002
+   CH3CC-13-H 41003 CH3C-13-CH 41004 C-13-H3CCH 41005 CH3CCD 41006 CH2DCCH
+   41007 SiC-13 41008 CaH 41009 CH3NC 42001 CH3CN-15 42002 CH2CO 42003
+   NH2CN 42004 CaD 42005 K-41-H 43001 CHDCO 43002 HNCO 43003 AlO 44001 CS
+   44002 SiO 44003 CH3CHO-a 44004 N2O 44005 CH3CHO-e 44006 DNCO 44007
+   HN-15-CO 44008 HNC-13-O 44009 N2O-v2 44010 HCP 44011 AlOH 45001 C-13-S
+   45002 Si-29-O 45003 NH2CHO 45005 HCS+ 45006 HNCO-18 45007 NN-15-O 45008
+   N-15-NO 45009 DCP 45010 HOCO+ 45011 AlOD 45012 O-17-CO 46001 CS-34
+   46002 Si-30-O 46003 H2CS 46004 C2H5OH 46005 HCOOH 46006 NO2 46007
+   N2O-18 46008 CH3OCH3 46009 AlF 46010 NS 46011 DOCO+ 46012 HOC-13-O+
+   46013 O-18-CO 47001 H2C-13-S 47002 HC-13-OOH 47003 DCOOH 47004 HCOOD
+   48001 SO 48002 SO-v1 48003 H2CS-34 48004 O3 48005 O3-v2 48006 O3-v1,3
+   48007 O3-2v2 48008 O3-v1,3+v2 48009 NS-34 49001 O3-sym-O-17 49002
+   O3-asym-O-17 49003 C4H 49004 MgCCH 50001 S-34-O 50002 SO-18 50003
+   O3-sym-O-18 50004 O3-asym-O-18 50005 O3-s-O18-v2 50006 O3-a-O18-v2
+   50007 CH3Cl-35 50008 C3N 50009 MgCN 50010 MgNC 51001 HCCCN 51002 ClO
+   51003 ClO-v1 51004 HCCNC 51005 HCCNC-v7 51006 HCCNC-v6 51007 HCCNC-v5
+   51008 HNCCC 52001 HCCC-13-N 52002 HCC-13-CN 52003 HC-13-CCN 52004
+   HCCCN-15 52005 DCCCN 52006 HOCl 52007 SiCC 12 TABLE 3. (continued) Tag
+   Name Tag Name Tag Name 52008 CCCO 52009 CH3Cl-37 52010 CH2F2 52011
+   CH2F2-v4 52012 DNCCC 53001 C2H3CN 53002 Cl-37-O 53003 C-13-CCO 53004
+   CC-13-CO 53005 CCC-13-O 53006 Cl-37-O-v1 53007 C2H3NC 54001 CH2CHC-13-N
+   54002 CH2C-13-HCN 54003 C-13-H2CHCN 54004 CH2CDCN 54005 HOCl-37 54006
+   CCCO-18 54007 HCCCHO 55001 C2H5CN 56001 CH3CH2C-13-N 56002 CH3C-13-H2CN
+   56003 C-13-H3CH2CN 56004 C2H5CN-15 56005 CH2DCH2CN-s 56006 CH2DCH2CN-a
+   56007 CCS 56008 C2H3CHO 57001 C-13CS 57002 CC-13S 58001 CCS-34 58002
+   NaCl 60001 OCS 60002 SiS 60003 CH3OCHO-A 60004 CH3OCHO-E 60005 NaCl-37
+   61001 OC-13-S 61002 Si-29-S 61003 C5H 62001 OC-34-S 62002 O-18-CS 62003
+   Si-30-S 62004 SiS-34 62005 AlCl 62006 C5D 63001 HNO3 63002 HNO3-v7
+   63003 HNO3-v9 63004 HNO3-v6 63005 HNO3-v8 63006 HNO3-v5 64001 S2 64002
+   SO2 64003 AlCl-37 66001 COF2 66002 OS-34-O 66003 CaNC 67001 OCl-35-O
+   68001 CCCS 69001 OCl-37-O 69002 C3H7CN 70001 CCCS-34 73001 C6H 74001
+   KCl 74002 C2H5OOCH 75001 HCCCCCN 75002 H2NCH2COOH I 75003 H2NCH2COOH II
+   76001 HCCCCC-13-N 76002 HCCCC-13-CN 76003 HCCC-13-CCN 76004 HCC-13-CCCN
+   76005 HC-13-CCCCN 76006 HCCCCCN-15 76007 DCCCCCN 76008 KCl-37 76009
+   C4Si 79001 HOONO2 80001 HBr-79 82001 HBr-81 89001 Sr-88-H 90001 Sr-88-D
+   92001 C5S 94001 C5-34-S 95001 Br-79-O 96001 HOBr-79 97001 Br-81-O 97002
+   Cl-35-NO3 98001 H2SO4 98002 HOBr-81 99001 Cl-37-NO3 99002 HC7N 102001
+   ClOOCl 104001 Cl-37-OOCl 112001 Se-80-O2 123001 HC9N 147001 HC11N 13

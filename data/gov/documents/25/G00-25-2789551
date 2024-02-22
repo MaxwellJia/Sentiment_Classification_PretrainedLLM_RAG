@@ -1,0 +1,370 @@
+http://www.tips.osmre.gov/FAQs.htm
+
+   Skip Navigational Links
+
+   TRAINING PROGRAM SOFTWARE/HARDWARE SUPPORT RESEARCH & DEVELOPMENT
+   TECHNICAL ASSISTANCE SITE INDEX
+
+                         Frequently Asked Questions
+
+                              Table of Contents
+
+   1. I have lost my "____"  icon. How do I start it up again?
+
+   2. How do I change my password?
+
+   3. I forgot my password -- can you tell me what it is?
+
+   4. How can we add new users to our machine?
+
+   5. I get the following message in my backup report, what does it mean?
+
+   6. How can I write data to my tape drive?
+
+   7. How can I write to my floppy drive?
+
+   8. How do I eject my floppy disk?
+
+   9. My plotter won't plot.
+
+   10. What should my plotter settings be?
+
+   11. How do I decode a picture or sound file from the Internet news?
+
+   12. What is the best way to get help from TIPS?
+
+                           reddiam.gif (880 bytes)
+
+   DON'T FORGET THAT THE BEST WAY TO ANSWER YOUR OWN QUESTIONS IS TO  USE
+   THE ON-LINE MANUAL PAGE.
+
+   To use the on-line manual page just type "man <command>," substitute
+   the command you are looking up for <command>. If you're not sure what
+   the exact command is, type man -k <command>, substitute a word that
+   describes what you want to do for <command>.
+
+   OR, you can click on the Manual Page icon at the top of your screen (If
+   it isn't there, see "To restore your Manual Page" below). Click on the
+   "Options" selection in the pull-down menu (hold the left button down).
+   Select "Search." If you know the exact command that you are looking up,
+   type that command in and select "Man Page." If you are not sure what
+   the exact command is, type in a word that describes the command that
+   you want to find and select "Apropos."
+
+  1. I have lost my "____" icon. How do I start it up again?
+
+   To restore the Mail
+
+     zmail -gui &
+
+     or
+
+     Go to the pull-down menu under "Find." Then select "Icon Catalog,"
+     next select applications. You should see the MediaMail icon --
+     double-click with the left mouse button on the icon to start
+     MediaMail.
+
+   To restore your Manual Page
+
+   xman &
+
+   or
+
+   Go to the pull-down menu under "Find." Then select "An Icon." When the
+   small box appears, type "xman" in it with NO RETURN. Double-click on
+   the icon that comes up.
+
+   To start the Console
+
+   Go to the pull-down menu under "System." Then select "Start New
+   Console."
+
+   Other Popular Applications:
+
+   To start the calculator
+
+   xcalc &
+
+   or
+
+   xcalc -rpn -stipple & (rpn = Hewlett Packard style; stipple = stippled
+   background)
+
+   To start the News Reader
+
+   xrn &
+
+   To start the Internet Access
+
+   Mosaic & (Note the uppercase `M')
+
+   To start the Graphics Viewer
+
+   xv &
+
+   (Remember, you must be in the directory where the pictures are located,
+   SO . . . before you start the viewer, change directory to News -- cd
+   News -- from your home directory) When the xv viewer comes up, place
+   your mouse in the window and press the right mouse button.
+
+   To start the Sound Utility
+
+   soundfiler &
+
+   (You must be in the directory where the sound files are located)
+
+   To start the CD Music Player
+
+   cdman & (Or, find the cdman icon under "Find" -- "Icon Catalog" --
+   "Media Tools." OR-- Double-click on the cdrom small-icon when you have
+   a music CD loaded). You control the volume with "Audio Control Panel"
+   under Utilities in the cdman window.
+
+  2. How do I change my password?
+
+   yppasswd
+
+   After you use this command to change your password the change will not
+   take effect for about an hour.
+
+  3. I forgot my password -- can you tell me what it is?
+
+   No one on the system can tell what your password is -- not even the
+   system administrator (it's encoded and can't be decoded). The only
+   thing that the system administrator can do is remove your password and
+   change it to a new one. If you have forgotten your password, you should
+   contact your local TIPS site administrator (the person that has the
+   password to turn your machine off) and have them send a request to
+   "system" to get your password deleted and changed.
+
+  4. How can we add new users to our machine?
+
+   Contact your local TIPS site administrator (the person in your agency
+   that can power-off your machine). The administrator will write to
+   "system" (without the quote marks of course), requesting that new users
+   be added. Be sure to include the full name of each new user. Your
+   friendly System Administrator will write back when the new user logins
+   are set up.
+
+  5. I get the following message in my backup report, what does it mean?
+
+   bru: warning - unrecoverable error, assuming end of volume 1
+
+   bru: warning - close error on archive: I/O error
+
+   bru: "/dev/tty": warning - can't open for interaction: No such device
+   or address
+
+   bru: load volume 2 and enter device [default: /dev/tape] >>
+
+   It means your backup that was supposed to occur on the previous evening
+   was not successful. The cause of that can be one of several things:
+
+   1. Almost all of the tape drives fail occasionally on the backups. If
+   it happens frequently, you've got other problems -- see the remaining
+   reasons.
+
+   2. Your tape is old and worn out. It no longer makes a good backup and
+   you should replace it with a new tape.
+
+   3. You may be using "KAO" Brand tapes -- we've found that the tape
+   drives don't like that brand.
+
+   4. The cables to your tape drive are faulty or their connections are
+   loose. Check the cable connections before asking for help.
+
+   5. The tapes are supposed to hold 2 GB of data. We've found that
+   commonly they only hold about 1.8 GB. Check your disk use (on the /usr)
+   directory with the "df" command. If your disk is 90% full or more you
+   may be exceeding the tape's ability to hold data. Contact us (see
+   below) and we can arrange for your backups to compress files during
+   backup to hold all the data on one tape.
+
+   6. If all else fails . . . your tape drive may be broke. Get help from
+   TIPS, see "What is the best way to get help from TIPS" below.
+
+  6. How can I write data to my tape drive?
+
+   A lot of people don't realize that the tape drive is not just for
+   backups. To store data on tape all you have to do is:
+
+   tar cv <full pathname of the data you want to store>
+
+   Bear in mind that "tar cv" overwrites anything that's on the tape. If
+   you want to ADD to whatever is already on the tape you must use the
+   command, "tar rv <pathname>"
+
+   To retrieve the data from the tape drive:
+
+   tar xv
+
+   This restores it directly to the pathname that it originally came from.
+   Your tape drive can hold up to about 1.8 GB -- yes, GIGAbytes! To get
+   more details about how to use the "tar" command, just look up "tar" in
+   your online manual page.
+
+  7. How can I write to my floppy drive?
+
+   Your floppy drive has been setup to work outside of SoftPC. In this
+   manner it can be used for both UNIX and DOS data. All you have to do is
+   put a floppy disk in the drive and watch the floppy icon in the
+   background of your screen. In a few seconds it will have a picture of a
+   floppy disk sticking out of it. This means that it's ready to use. Just
+   double click on the floppy icon with your left mouse button. That will
+   open a window that will show all of the contents of your floppy drive.
+   Next, double click on the folder icon for your directory. That will
+   open a window showing the contents of your directory. Make sure that
+   you open whatever subdirectory that has the file you want to access and
+   then drag the icon for that file to your floppy drive by holding down
+   the left mouse button.
+
+   Simple! Just drag and drop!
+
+   For example, if you have a DOS file on floppy that you want to use in
+   Reflex, all you have to do is put the floppy in the drive, open the
+   floppy window by double clicking on the floppy icon. Then, open your
+   home directory folder icon, when that opens, find the folder for your
+   e_drive subdirectory -- open that, then open the folder for the Reflex
+   subdirectory. Drag the file icon from the floppy contents widow to the
+   Reflex directory contents window and the job is done.
+
+  8. How do I eject my floppy disk?
+
+   Just click ONCE on the floppy icon with your left mouse button so that
+   the icon turns yellow (this means it's selected). Then, with your mouse
+   on the icon or nearby (but still in the background -- NOT IN A
+   WINDOW!), hold down the RIGHT mouse button and slide down to the bottom
+   selection of the resulting menu to pick "Eject Floppy."
+
+  9. My plotter won't plot.
+
+   This appears to be a problem only with AutoCAD users. The problems seem
+   to occur only with plotting to the plotter, not the laser, and they
+   occur only when someone has changed their configuration from the
+   original TIPS setup. Select "File" from the AutoCAD menu, then select
+   "Plot." Make sure the "Plot to File" is selected, then click on the
+   "File Name" button. The selected file name MUST be "Autospool,"
+   otherwise your plot won't work. This is the way your AutoCAD has been
+   configured by TIPS, but you may have changed it at one time to try to
+   solve your plotting problems.
+
+  10. What should my plotter settings be?
+
+   >
+
+   > PLOT MGMT > QUEUE MGMT > PLOT # > 1
+
+   > > NEST > OPTIMAL > NEST WAIT > 30 SEC
+
+   > > QUEUE > ON
+
+   >
+
+   > UTILITIES > MENU MODE > FULL
+
+   >
+
+   > I/O SETUP > RS-232-C > CONFIG A > BAUDRATE > 38400
+
+   > > PARITY > NONE (0)
+
+   > > HANDSHAKE > Xon/Xoff
+
+   >
+
+   > PLOTTER SETUP > LANGUAGE > 7586/HP-GL2 > TIMEOUT > 2 MIN
+
+   > > TERMINATOR > NORMAL
+
+   > > QUALITY > SOFTWARE
+
+   > > MEDIA BYPASS > OFF
+
+   > > PEN CHECK > ON
+
+   > > CONTRAST > NORMAL
+
+   > > DRY TIME > NORMAL.
+
+   >
+
+   > PEN SETTINGS > PALETTE > SOFTWARE
+
+   > > MERGE CONTROL > OFF
+
+   >
+
+   > PAGE FORMAT > SIZE > INKED AREA
+
+   > > MIRRORING > OFF
+
+   > > MARGINS > NORMAL
+
+   > > ROTATE > 0
+
+   >
+
+  11. How do I decode a picture or sound file from the Internet news?
+
+   a. While in the news-reader (xrn), you should be looking at the file
+   that you want to decode.
+
+   b. Select the save button with your mouse.
+
+   c. Give the saved file a name (Larger sound or picture files may be
+   comprised of more than one file -- be sure to give them each a name
+   when you save them).
+
+   d. The files are saved in your News directory (note the uppercase N).
+   Leave the news reader, change directory to News (cd News) and start the
+   jot editor (jot <filename>)
+
+   e. Edit the file to remove the header information. When you're
+   finished, your first line should read "begin 644" (or whatever number
+   may be appropriate). If your picture or sound file is composed of more
+   than one file, you need to remove the header information from ALL
+   files, and remove any tail information (including any lines that say
+   "cut here") from ALL files EXCEPT the last one. In the end you should
+   have a beginning file that says "begin 644" and an end file that
+   includes the word "end" -- all files in between should be coded
+   information ONLY.
+
+   f. At your command line in the winterm window, type the following:
+
+   cat <file1> <file2> <file3> <etc> | uudecode
+
+   This is the process of "concatenating" the files together and "piping"
+   them to uudecode. The "pipe" key is the shift of the backslash (\ --
+   the one right above the "enter" key -- it looks like two vertical
+   lines). If you have only one file, the process is identical, except
+   only one file is listed. The result is that you have created a file
+   with whatever name was listed after the words "begin 644."
+
+   g. You can now delete the files that you saved from the news.
+
+   h. To view a picture file, use the "xv" utility (see "To start the
+   Graphics Viewer" under number 1 above).
+
+   i. To listen to a sound file, type "sfplay <soundfile>" -- OR type
+   soundfiler (see "To start the Sound Utility" in number 1 above).
+
+  12. What is the best way to get help from TIPS?
+
+   To get HELP from TIPS -- send mail to system or sysadm fully describing
+   your problem. This is the best way for all concerned. Mail to system or
+   sysadm goes directly to TIPS' three System Administrators. They can
+   each read it and the one with the most expertise in the problem will
+   respond. Response time can vary from one minute to 24-hours. Usually an
+   Administrator will respond within half an hour. This e-mail system
+   allows the administrators to review and discuss your problem as
+   necessary to provide you the best answer. It also allows them some
+   flexibility to respond when they are best able, whereas a telephone
+   question may disrupt an Administrator in the middle of helping another
+   user. But, since the inquiry goes to all THREE of the Administrators
+   simultaneously, your question usually gets full attention faster than a
+   phone call.
+
+
+   e-mail webmanager for problems with the TIPS website
+
+   Home WRCC Homepage  OSM National Website Privacy Policy

@@ -1,0 +1,167 @@
+http://wist.ngdc.noaa.gov/webbook/
+
+     __________________________________________________________________
+
+   Click here to visit WebBook's Home Page
+
+   WebBook's Home Page:
+   http://webbook.ngdc.noaa.gov/webbook/
+   A WebBook is a way of organizing many interconnected Web pages into an
+   easy-to-read collection of chapters and pages, much like a paper book.
+   But a WebBook has the advantages of being easy-to-search and can be
+   distributed via the Web or CDROM to Macs, PCs, or Unix computers. A
+   Kiosk Mode automatic page-turning feature provides a continuous
+   presentation of the next page every few seconds like a slide-show.
+
+     * Reading a WebBook
+     * Searching a WebBook
+     * The WebBook Concept
+     * Creating your own WebBook
+     __________________________________________________________________
+
+Reading a WebBook
+
+   A Web site that has been setup as a WebBook has a control panel added
+   to every page that looks like:
+
+                            [wbheaderhelp72.gif]
+
+    NOTE: This control panel can vary in appearance and not all features
+                       are implemented in all WebBooks
+
+   You can read through a WebBook page-by-page simply by clicking the Next
+   Page or Previous Page arrow buttons, like turning pages in a book. The
+   Home Page button takes you to the book's overall Table of Contents
+   (i.e. the "home page" of a Web site).
+
+   The colored Position Bar shows how far you are through the book, and
+   can be clicked to go directly to any particular page in the book. Try
+   rolling your mouse over the color bar and looking down at the status
+   line of your browser (the status line is usually at the bottom of the
+   window) to see which page you will go to.
+
+   The WebBook Title and Chapter Title are shown in the center. The
+   Chapter Title is optional, and may be clickable to go to a Table of
+   Contents just for that Chapter. A small Book or Site Logo ("GLOBE" in
+   our example above) may be used to provide a link back to an originating
+   Web site. The WebBook Logo provides a link to a page for help and
+   general information on WebBooks.
+
+   The Last Modified Date is displayed next to the page number and is the
+   date of the most recent change to that page. Above that date there may
+   be an optional "Kiosk" button for automatic page turning: a continuous
+   presentation of the next page every few seconds like a slide-show.
+   Another optional button can be for a special page related to the
+   current one: usually this is an Adobe PDF Page icon, indicating a PDF
+   version of this same page that is suitable for printing or zooming in
+   for viewing details not visible in the plain HTML (PDF pages also allow
+   you to see the page exactly as they were when printed on paper).
+   Different WebBooks may use this space for other purposes or not at all.
+
+Searching a WebBook
+
+   Some WebBooks may allow searching through all their text. If so, they
+   will have an additional "footer" that looks like this:
+
+    ____________________ Search Options (*) This Chapter ( ) Entire Book
+
+   Since WebBooks can be organized by Book and Chapter, they may also be
+   searched that way. Sometimes, especially in large books (or Web sites),
+   a simple search returns too many pages. Hence, we have provided a way
+   to limit searches to just one Chapter. Simply go to any page in that
+   chapter, and type in the word you are looking for, and select the "This
+   Chapter" button before clicking "Search".
+
+   More specific searches are available by clicking the "Options" link.
+   This takes you to a page with many search options including:
+     * Case sensitive: e.g. find "Boulder", but not "boulder"
+     * Partial word match: e.g. find all words containing "temp"
+       ("temperature", "temporary", etc.)
+     * Misspellings: e.g. find even misspelled words ("tmparature")
+
+   The modified WebGlimpse search software used here is Copyright © 1996,
+   University of Arizona.
+
+The WebBook Concept
+
+   The Web has introduced us all to the power of "hypertext", and Web
+   sites are often marvelous "hierarchies" of information. Still, there
+   are times that you just wish you could go through all or many of the
+   pages in sequence, instead of always having to click the Web browser's
+   "BACK" button to return to a "home" page, then click again on another
+   page link -- over and over again.
+
+                          [webbook-depth-first.gif]
+
+              Navigating an entire Web site the "hypertext" way
+
+   A WebBook uses a Book and Chapter metaphor that we are all familiar
+   with. It allows visitors to view the entire site page-by-page in
+   sequence, or even jump quickly to any page, much like we can do with
+   paper books. Sometimes, especially in educational and story-telling
+   material, the old-fashioned sequential book model actually works better
+   than "hypertext". And just quickly scanning a bunch of pages by
+   "thumbing" through them in a WebBook is much easier than navigating up
+   and down a complex hierarchy (all that extra mouse-clicking and page
+   redrawing can be very distracting!).
+
+                            [webbook-serial.gif]
+
+               Navigating an entire Web site the "WebBook" way
+
+   A WebBook doesn't lose the original hypertext structure of a Web site
+   -- it preserves it, while adding a new, sequential way to view the
+   site. It unties the "Gordian Knot" of a complicated hypertext structure
+   into a straight "thread" of information!
+
+Creating your own WebBook
+
+   You can easily build your own WebBook by just providing a list of pages
+   anywhere on the Web. In this way you can create "tours" of favorite or
+   related Web pages, with slide show capability and full-text
+   searchability.
+
+   The WebBook Creator page:
+
+     http://wist.ngdc.noaa.gov/webbook/wbcreator
+
+   lets you simply paste in a list of page URLs, choose your features, and
+   click to create a live WebBook with no knowledge of Web programming.
+
+     If you wish more flexibility, and have access to a Unix-based Web
+     server, then you can use our webbook.pl Perl script to customize and
+     build WebBooks with your own look-and-feel, to host on your own Web
+     server. For more details on other ways to build WebBooks, see:
+     http://webbook.ngdc.noaa.gov/~fozzard/documentation/wb
+
+    Frame Support
+
+   IMPORTANT NOTE: The WebBook tool does not currently support web pages
+   using "frames". Please let us know if frame support is important to
+   you. In the meantime, please consider if frames are really important to
+   your presentation; there are some serious drawbacks to using them (see
+   Jakob Nielsen's "Why Frames Suck..." at:
+   http://www.useit.com/alertbox/9612.html)
+
+   The WebBook concept was developed by Richard Fozzard
+   (fozzard@ngdc.noaa.gov) at the National Geophysical Data Center (NGDC),
+   a part of the National Oceanic and Atmospheric Administration (NOAA).
+   The work was supported by the Global Learning and Observations to
+   Benefit the Environment Program (GLOBE), and was developed for the
+   purposes of science education and in consultation with K-12 teachers in
+   that Program.
+
+   There is a Technical Tutorial paper given at WebShop '97 that provides
+   more details on WebBooks and how to create them:
+   WebBook: "Thumbing" Through a Good Web Site
+
+   [winnoaa.jpg]
+   The WebBook tool was used to create the GLOBE Teacher's Guide, the
+   Grand Winner of The Best Web Page in NOAA award!
+
+   WebBook shares some features and concepts with Metalog, and future
+   plans for WebBook might include capabilities from Metalog.
+
+   Interested readers may want to examine another exciting technology
+   related to the WebBook, which is currently under development: Built-in
+   Orderly Organized Knowledge device

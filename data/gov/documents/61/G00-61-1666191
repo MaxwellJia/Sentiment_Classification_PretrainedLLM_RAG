@@ -1,0 +1,253 @@
+http://laps.fsl.noaa.gov/birk/LAPS_FACTS.htm
+
+   LAPS Information Summary Website
+   _______________________________________________________________________
+
+   Last updated 6/4/98
+   _______________________________________________________________________
+
+   Purpose
+
+   This web page has been put together to help potential LAPS users and
+   provide consistent information with regard to LAPS frequently asked
+   questions (FAQs). Most of this information is already available via the
+   web through our README file. However, due to the increasing number if
+   inquiries with regard to LAPS details, a webpage that focused on the
+   FAQs from interested users was deemed appropriate. As inquiries are
+   fielded by our LAPS staff, we intend to update this page as often as
+   needed. This page also contains valuable links to a number of
+   information sources that will help answer LAPS related questions.
+   _______________________________________________________________________
+
+   Topical index:
+     * System Requirements:
+     * Data specific information:
+     * Bosnia prototype:
+     * Platforms:
+     * Misc (including Y2K info):
+     * Additional Information:
+     * Publications and documentation:
+     * Disclaimer:
+     * Inquiries:
+   _______________________________________________________________________
+
+   LAPS System Requirements:
+
+   What are typical disk space requirements for input data and generated
+   output?
+
+   The current Colorado LAPS (domain size 61x61x21):
+     * Typically generates approximately 380 - 400 Mbytes of data per 24
+       hours.
+     * We purge LAPS hourly retaining in most cases 24 hours worth of
+       information.
+     * Some files are maintained longer (i.e., LAPS soil moisture, .lsm
+       files, are kept for 48 hours).
+     * This requirement scales upward or downward depending on domain
+       size.
+     * A typical file (one time's output for one 3-d field) consumes
+       316892 bytes
+
+   How much machine memory does LAPS need?
+     * The current version of LAPS requires approximately 256 Mbytes of
+       RAM, primarily for its satellite interface
+     * If you don't run LAPS with satellite data, less than 128 Mbytes of
+       RAM are required.
+     * We are working on a future release that will enable it to run with
+       satellite data, and require less than 128 Mbytes of RAM.
+
+   Data specific information:
+
+   What data formats are used in LAPS?
+
+   NetCDF or ASCII data are used for output and most internal data
+   storage. This way all data files are machine independent.
+
+   How does LAPS interface to my local datasets?
+
+   Each local installation requires unique routines to access local data.
+   These local routines are the responsibility of the user and are linked
+   and become part of the LAPS ingest software.
+
+   What satellite data does LAPS use?
+
+   Currently, LAPS uses GOES image data (visible plus IR channels 3, 4,
+   and 5). We plan to expand LAPS satellite capabilities in the following
+   areas in this order:
+     * GOES Sounder [enabled in software 4/15/97 but data interface has
+       yet to be developed or tested]
+     * TIROS IR sounder
+     * TIROS microwave
+     * DMSP sounder (microwave)
+
+   Bosnia prototype:
+
+   What are the data sets used in the Bosnia demonstration?
+
+   The following datasets are used in the Bosnia prototype at AFGWC:
+     * RAOBs
+     * Surface data (SAOs)
+     * NOGAPS forecasts (background)
+
+   Platforms:
+
+   What platforms has LAPS run on?
+     * To date, LAPS has run on:
+
+     * Sun (SunOS v 4.3.1)[Solaris is planned later this year]
+     * IBM(AIX v 2.3) [AFGWC has this running under AIX v 4. but we have
+       not yet tested this at FSL]
+     * HP(HP-UX v B.10.20)
+
+     * DEC VAX-VMS (original version, no longer supported)
+
+     We plan to port to:
+     * SGI (IRIX64 v 6.2)
+     * Dec Alpha (OSF1 v 4.0)
+
+   How much computer time is needed to run LAPS?
+     * On our Sun 670 (SunOS v 4.3.1), one LAPS cycle for the Colorado
+       61x61x21 domain takes roughly 10 - 15 minutes. 9.5min Avg.
+       [7.294x10**-3 sec/gridpoint]
+     * On our IBM 590 (AIX v 2.3), one ROC domain cycle 125x105x21 takes
+       between 6 - 16 minutes. 9.3min Avg. [2.024x10**-3 sec/gridpoint]
+
+   Misc.
+
+   How many lines of code does LAPS contain?
+
+   LAPS contains approximately 180,000 lines of FORTRAN and 34,000 lines
+   of C code.  There are additional lines for scripts, Make files and the
+   like, but this give you a rough estimate.  This figure does not include
+   any model code (e.g., RAMS or MM5); this is strictly analysis code.
+
+   Is LAPS Y2K Compliant?
+
+   The latest information on this is can be found on our Y2K page.
+
+   What is "newLAPS?"
+
+   During 1997 LAPS was recast into a more user friendly configuration
+   format.  This new system comes with an auto-configure feature that will
+   examine your system to see what operating system you have, what
+   compiler settings are required, where special libraries exist (and if
+   they don't it will let you know to get them before you proceed),  and
+   then it allows you to specify directory paths for different aspects of
+   the system.  Data, binaries, and source code can be separated to
+   different user-defined paths.  The makefiles are automatically
+   configured for your system and the system builds.
+
+   NewLAPS also contains better terrain data than Old LAPS.  (30 second
+   for the entire globe)
+
+   What software is used to visualize LAPS?
+
+   We use AVS for most web graphics. AVS Express is used for the D3D
+   component of the workstation. A plotting program using NCAR graphics is
+   supplied with LAPS and is also used for some web graphics.
+
+   What are the critical datasets for LAPS?
+
+   Basically you need:
+     * Background data generally forecasts from a large-scale forecast
+       model (mandatory for upper-level output). LAPS has used the
+       following forecast models to supply background information:
+
+     * RUC
+     * NGM
+     * NOGAPS
+
+     Surface data (mandatory for most upper-level output) What happens if
+   data sets fail to arrive in time for inclusion in a given analysis run?
+
+   LAPS is robust. However, given less data the analysis will be less and
+   less accurate. It will run until the surface or background fields are
+   not available.
+
+   Does LAPS use 3D Var (three dimensional variational analysis
+   techniques)?
+
+   Not at this time. However, some aspects of LAPS utilize 1D var (surface
+   temperature gradients from satellite data, upper level humidity
+   adjustment from satellite data complete with forward model). We are
+   pursuing an upgrade to 3Dvar and this is one of our current interests.
+
+   What are the characteristics of the terrain data that LAPS comes with?
+
+   OldLAPS terrain file covers the entire globe with:
+     * 30 second resolution over most of the continental United States
+     * 10 minute resolution of the rest of the world
+
+   NewLAPS terrain covers the entire globe:
+     * 30 second resolution full coverage (even Antarctica)
+
+   Additional information:
+
+   More information can be found under our readme file:
+
+   README
+   _______________________________________________________________________
+
+   Publications and documentation
+
+   LAPS publications can be found in a variety of locations, this is our
+   best source of "documentation" at this time:
+     * 1997
+     * 1996
+     * 1995
+     * 1994
+     * 1993
+     * 1992
+     * topical listing
+   _______________________________________________________________________
+
+   Additional reminders
+
+   Have you checked out our key homepages?
+
+   Additional information can be obtained in some of these LAPS
+   information pages.
+     * LAPS Branch Page
+     * LAPS current README file
+     * Dan Birkenheuer's homepage
+
+     * Dan's AWIPS-GOES Data Utilization Page-one way to get more out of
+       satellite image data
+     * Dan's LAPS Satellite Moisture Algorithm Overview
+
+     Steve Albers' homepage
+   _______________________________________________________________________
+
+   FSL's Disclaimer
+
+   These data and/or display products as well as their documentation are
+   in the public domain and are furnished "as is." This data is research
+   data and was collected with the intent of using it for meteorological
+   research. The United States government, its instrumentalities,
+   officers, employees, and agents make no warranty, express or implied,
+   as to the accuracy, quality, completeness, continuity, timeliness,
+   reliability, or the general usefulness of the data, products, and/or
+   documentation for any purpose. They cannot be held responsible for any
+   circumstances resulting from their use, unavailability, or possible
+   inaccuracy. FSL will make data and/or display products available in
+   World Meteorological Organization (WMO), FSL, or other standard formats
+   which may change at times. FSL reserves the right to suspend or
+   discontinue this service, or portions thereof, at any time.
+
+   Permission to use, copy, and distribute this data is hereby granted,
+   provided that the entire disclaimer notice appears on all copies.
+   _______________________________________________________________________
+
+   Inquiries
+
+   After examining this page and other LAPS web pages, additional LAPS
+   inquiries should be directed to:
+
+   Dr. Daniel Birkenheuer CIRA, Forecast Systems Laboratory
+   LAPS Project Manager
+   b i r k @fsl.noaa.gov (remove spaces and the e-mail address is valid)
+   (303) 497 5584
+   _______________________________________________________________________
+
+   This page is maintained by Dan Birkenheuer.
+   _______________________________________________________________________

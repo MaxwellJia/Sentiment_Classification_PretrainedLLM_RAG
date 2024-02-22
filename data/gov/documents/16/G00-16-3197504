@@ -1,0 +1,45 @@
+http://edcsnw3.cr.usgs.gov/ip/header.js
+
+   if (typeof (MenuShow)=="boolean") { if (MenuShow) { var localMenuShow =
+   "TEXT"; } else { var localMenuShow = "NONE"; } } else { var
+   localMenuShow = MenuShow.toUpperCase(); } if (localMenuShow!="NONE") {
+   document.writeln('
+
+   '); document.writeln('
+   '); } document.write(' USGS logo <\/a>'); document.writeln('
+     __________________________________________________________________
+
+   '); document.writeln(' International Program at the EROS Data Center
+   <\/a>'); switch (localMenuShow) { case "TEXT" :
+   document.writeln('<\/td><\/tr>
+   '); document.writeln(' spacer
+   '); document.writeln('About the Program<\/a>
+   '); document.writeln('Program Activities<\/a>
+   '); document.writeln('IP Publications<\/a>
+   '); document.writeln('Geospatial Data<\/a>
+   '); document.writeln('Learning Center<\/a>
+   '); document.writeln('Partners<\/a>
+   '); document.writeln('
+   '); document.writeln('SEARCH<\/a>
+   '); document.writeln('
+   '); document.writeln('EROS Data Center<\/a>
+   '); document.writeln('Contact Us<\/a>
+   '); if (MenuShowHome) { document.writeln('
+   '); document.writeln('IP HOME  ><\/a>
+   '); } document.writeln('<\/B><\/td> '); break; case "GRAPHIC" :
+   document.writeln('<\/td><\/tr>
+   '); document.writeln(' spacer
+   '); document.writeln(' About the Program <\/a>
+   '); document.writeln(' Program Activities <\/a>
+   '); document.writeln(' IP Publications <\/a>
+   '); document.writeln(' Geospatial Data <\/a>
+   '); document.writeln(' Learning Center <\/a>
+   '); document.writeln(' Our Partners <\/a>
+   '); document.writeln('
+   '); document.writeln(' Search <\/a>
+   '); document.writeln('
+   '); document.writeln(' EDC <\/a>
+   '); document.writeln(' Contact Us <\/a>
+   '); if (MenuShowHome) { document.writeln('
+   '); document.writeln(' IP Home <\/a>
+   '); } document.writeln('<\/B><\/td> '); break; }

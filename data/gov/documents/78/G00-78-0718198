@@ -1,0 +1,719 @@
+http://vraptor.jpl.nasa.gov/voyager/30plan.html
+
+VOYAGER APPROACH TO MAINTAINING SCIENCE DATA ACQUISITION FOR A 30 YEAR EXTENDED
+MISSION
+
+   [tiedye.gif]
+
+  1. INTRODUCTION
+
+   The Voyager Interstellar Mission (VIM) has the potential for obtaining
+   useful interplanetary, and possibly interstellar, fields, particles,
+   and waves (FEW) science data until around the year 2020 when the
+   spacecraft's ability to generate adequate electrical power for
+   continued science instrument operation will come to an end. In order to
+   capitalize on this lengthy data acquisition potential, it is imperative
+   that the spacecraft have a continuing sequence of instructions for
+   acquiring the desired science data, and that the spacecraft High Gain
+   Antenna (HGA) remain boresighted on the Earth for continuous data
+   transmission. Because of the long mission duration and the likelihood
+   of periodic spacecraft anomalies, it is also advantageous to continue
+   the use of the on-board fault protection capability for automated
+   responses to specific subsystem anomalies, and to provide an on board
+   sequence to continue spacecraft operation in the specific event of the
+   future loss of command reception capability. All of these factors are
+   considered in the VIM sequencing strategy. The following sections
+   describe the overall spacecraft sequencing strategy being used for VIM
+   operations and the four sequencing elements (Baseline Sequence, Overlay
+   Sequence, Mini-Sequence, and Backup Mission Load) used to implement the
+   strategy.
+
+   The VIM sequencing strategy for spacecraft operations is significantly
+   different from the strategy used during the primary mission which ended
+   with the Voyager 2 flyby of Neptune in 1989. Only the current VIM
+   strategy is discussed.
+
+    2. SEQUENCING STRATEGY
+
+   A spacecraft sequence is the set of instructions that are stored in an
+   on-board computer memory and control the operation of the engineering
+   subsystems and science instruments for the purpose of gathering and
+   transmitting science data to the ground stations. Typically, a
+   spacecraft sequence is designed to function for a specific period of
+   time. Some of the key factors that determine the duration of a
+   spacecraft sequence are:
+
+     * size of the on-board memory;
+     * characteristics of the science observations; a series of one of a
+       kind type of observations, or a series of observations that are
+       repetitive for an extended period of time;
+     * ability to store HGA pointing information on-board the spacecraft.
+
+   With the Voyager spacecraft being mid-1970's technology, the available
+   on-board memory for storing spacecraft sequence information is very
+   limited by today's standards. A total of less than 1700 words are
+   available between the two Computer Command Subsystem (CCS) memories for
+   storing sequence instructions and HGA pointing information. This
+   limited memory space can be a significant factor if the sequence is
+   composed of a series of one of a kind activities. Fortunately, the
+   science observations being made during VIM are very repetitive in
+   nature. This allows a science observation or instrument calibration to
+   be repeated (cyclicized), essentially for the duration of the mission,
+   at practically the same memory word cost as a single observation or
+   calibration. This implementation of events as a cyclic sequence that
+   repeats an observation or calibration on a regular basis is key to the
+   VIM sequencing strategy. Another key factor is the ability to store HGA
+   pointing information out to approximately the year 2020 in the CCS
+   memory. This not only simplifies the routine sequence generation
+   support by not requiring HGA pointing information to be included in
+   individual sequences transmitted to the spacecraft, but also enables
+   the ability to provide a 30 year science data return mission even if
+   command capability to the spacecraft is lost.
+
+   As long as command capability exists between the ground and the
+   spacecraft, new spacecraft sequences can be stored on-board the
+   spacecraft, or existing on-board sequences can be modified. If command
+   capability is lost, the spacecraft must continue to operate with the
+   sequence that is already stored on-board. Both of these command
+   capability considerations are part of the VIM sequencing strategy.
+
+   The VIM sequencing strategy relies on having stored on-board each
+   spacecraft a continuously executing sequence of repetitive science
+   observations that satisfies the basic VIM heliospheric data acquisition
+   requirements. HGA pointing information (HPOINTS), to keep the HGA
+   pointed at the Earth until approximately the year 2020, are also stored
+   in sequence memory to provide for continual communications capability.
+   These two sequence capabilities are referred to as the "baseline
+   sequence." Augmentation of the baseline sequence with non-repetitive
+   science or engineering events use either an "overlay sequence," or a
+   "mini-sequence." The difference between these two types of augmentation
+   sequences is that the overlay sequence operates for a fixed interval of
+   time, currently six months, and contains all of the baseline sequence
+   augmentations for that time interval. The mini-sequence is focused on
+   accomplishing a single augmentation need and is not a regularly
+   scheduled activity but is done on an as needed basis. Both types of
+   sequences are developed and transmitted from the ground.
+
+   The baseline sequence, overlay sequence, and mini-sequence provide the
+   basic operational sequence elements for normal operations while command
+   capability with the spacecraft is available. In the event command
+   capability is lost, another sequence element, the "Backup Mission Load,
+   " (BML) provides the mechanism for continued spacecraft data
+   acquisition without further ground interaction. A BML is stored
+   on-board each spacecraft and contains the necessary instructions to
+   modify the continuously executing baseline sequence to maintain the
+   continued return of basic FPW data. The BML also terminates both the
+   use of the gyros when the available electrical power will no longer
+   support their operation, and Digital Tape Recorder (DTR) utilization
+   when telecom performance is no longer sufficient to support the minimum
+   DTR playback data rate of 1.4 kbps. The termination of gyro and DTR
+   operations are unconditional events and will occur at the programmed
+   times even if command capabilty is available. If command capability is
+   available, the times of these events can be updated based on observed
+   actual performance.
+
+   All of these sequence elements use pre-defined blocks of commands to
+   accomplish specific spacecraft functions. This is in contrast to the
+   prime mission method of essentially programming each sequence in
+   assembly language to maximize the science data return for each
+   sequence. While the ability to use pre-defined blocks of commands
+   greatly reduces the effort required to generate and validate a sequence
+   of commands, there is an increase in the number of memory words needed
+   to accomplish a given function. Fortunately, the VIM science data
+   acquisition requirements, sequencing strategy, and available CCS memory
+   space support the use of pre-defined blocks of commands.
+
+   The remainder of this write-up describes each of the four sequence
+   elements. Also discussed is:
+
+    1. the interaction of the sequence elements with the on-board Fault
+       Protection Algorithms (FPAs) that continually monitor selected
+       subsystem performance parameters and contain programmed responses
+       which are initiated in the event of out of-tolerance performance;
+    2. the planned modifications to the spacecraft configuration in
+       response to the continual reduction in electrical power
+       availability throughout the remainder of the mission.
+
+    3. BASELINE SEQUENCE DESCRIPTION
+
+   The baseline sequence is stored in CCS memory and is the continuously
+   executing set of spacecraft operating instructions that controls the
+   collection and return of the bulk of VIM science data acquired during
+   normal operations (when command capability exists). It also provides
+   the foundation for continuing the return of science data in the event
+   of loss of command capability and the resulting BML entry (described in
+   the following BACKUP MISSION LOAD DESCRIPTION).
+
+   Baseline sequence implementation relies on the use of eleven
+   "spacecraft block routines" that are also stored in CCS memory. These
+   routines are the equivalent of software program subroutines and are
+   called by the baseline sequence for execution. These block routines
+   consist of:
+
+   
+
+   
+
+   BR1  GYRO ON (GYONAB, GYONBC)
+   
+
+   
+
+   BR2  SS-HGA CALIBRATION (ASCAL)
+   
+
+   
+
+   BR3  MAGNETOMETER ROLL MANEUVER (MAGROL)
+   
+
+   
+
+   BR4  GYRO ACTIVITY INTEGRATED (GAIN)
+   
+
+   
+
+   BR5  ATTITUDE CONTROL DEADBAND CONTROL (ADB)
+   
+
+   
+
+   BR6  FDS DATA MODE CONTROL (FDAMO)
+   
+
+   
+
+   BR7  PLASMA WAVE SUBSYSTEM DATA RECORD (PWSREC)
+   
+
+   
+
+   BR8  DTR MAINTENANCE (DTRMA)
+   
+
+   
+
+   BR9  PLASMA WAVE SUBSYSTEM DATA PLAYBACK (PWSPB)
+   
+
+   
+
+   BR10 DTR ACTIVITY INTEGRATED (DAIN)
+   
+
+   
+
+   BR11 PLS/MAG/PESCAL (PMPCAL)
+
+   During normal operations, each spacecraft performs the following
+   repetitive science and engineering activities under the control of the
+   baseline sequence:
+
+     * collection and transmission of continuous real time cruise science
+       telemetry data, primarily at 160 bps data rate;
+     * recording of one frame of high rate Plasma Wave Subsystem (PWS)
+       data on the DTR each week
+     * playback of six months of recorded high rate PWS data every 6
+       months;
+     * execution of a magnetometer calibration roll maneuver (MAGROL)
+       every 3 months;
+     * execution of a HGA/sun sensor calibration maneuver (ASCAL) every 6
+       months;
+     * perform a PMPCAL once a month. The PMPCAL consists of a combined
+       Plasma Subsystem (PLS), Magnetometer Subsystem (MAG), and FPW
+       Periodic Engineering and Science Calibration (PESCAL), calibration
+       ;
+     * perform DTR maintenance twice a year;
+     * perform gyro conditioning (on/off) and a CCS timing test every 3
+       months
+
+   In addition, the baseline sequence contains the HGA pointing
+   information to keep the antenna pointed at Earth for communication
+   purposes. Commands are stored on-board to maintain HGA pointing on
+   Voyager 1 until Day-Of-Year (DOY) 342, 2020, and until DOY 204, 2017 on
+   Voyager 2. HGA pointing accuracy is assessed every 6 months with the
+   ASCAL maneuver. If necessary, the stored pointing information can be
+   updated, via ground command, with a new pointing file. No updates have
+   been required since the HGA pointing information was initially stored
+   in both spacecraft in 1990 and none are expected in the future based on
+   peformance trends to date.
+
+   All of the Voyager 1 baseline sequence spacecraft events which require
+   70m station coverage for capturing the telemetry data on the ground
+   (MAGROL, playback of recorded high rate PWS data, & ASCAL) are
+   scheduled to occur over the Goldstone station complex and the Voyager 2
+   events over the Canberra complex. These combinations provide the best
+   telecom performance for data return. In order to keep baseline sequence
+   spacecraft events in sync with Deep Space Station (DSS) view periods
+   (requires a near constant sidereal time), spacecraft events are shifted
+   in time at the rate of approximately 4 minutes earlier per day. This
+   adjusts for the difference between a solar day (24 hours) and a
+   sidereal day (23 hours, 56 min, 04.09 sec). As a result of the
+   accumulated effect of this 4 minute per day shift, spacecraft events
+   occur one day earlier for each year of operation. After six consecutive
+   years, the spacecraft events have shifted 6 days earlier in time. At
+   the start of the seventh year, the timing of the events are delayed 7
+   days and the 4 minute per day shifting begins again. This periodic 7
+   day timing shift keeps the spacecraft events occurring within a one
+   week calendar time window for the duration of VIM, thus avoiding
+   critical spacecraft (DTR playbacks or attitude maneuvers) from
+   occurring during designated quiet weeks (i. e. Thanksgiving,
+   Christmas/New Years). It should be noted that the described timing
+   shifts are designed to maintain the proper Earth Received Time (ERT) of
+   the spacecraft telemetry data within the desired station view period.
+   This is important since the one-way light time increases approximately
+   1/2 hour per year of flight.
+
+   Once a year, in November for Voyager 1 and September for Voyager 2, the
+   baseline sequence cyclics end and restart with the previously described
+   timing adjustments being made. At this time, any ground commanded
+   modifications to the baseline sequence also take effect.
+
+   Because of the continual reduction in the electrical power available to
+   operate the spacecraft, gyro operations have to be terminated at some
+   future time. DTR operations also have to be terminated when the
+   downlink telecom performance will no longer support the minimum DTR
+   playback data rate of 1.4 kbps. Based on expected power and telecom
+   subsystem performance, the dates for the termination of gyro and DTR
+   operations are stored in the long term events table of the BML for each
+   spacecraft. These timed unconditional execute commands are used to
+   terminate the baseline sequence gyro activities (MAGROLs, ASCALs, and
+   gyro conditioning), and to terminate the recording and playback of high
+   rate PWS data. The current dates stored in the long term events table
+   are:
+
+
+
+
+
+   Voyager 1 Voyager 2
+
+
+   Terminate gyro operations (Current RTG trends suggest a 2 to 3 years
+   later date for these events) DOY 001, 2007 DOY 007, 2004
+
+
+   Terminate DTR operations DOY 305, 2010 DOY 251, 2012
+
+    4. OVERLAY SEQUENCE DESCRIPTION
+
+   Overlay sequences are used to augment the continuously executing
+   baseline sequence and are prepared on a regularly scheduled basis. At
+   the start of VIM (1990), overlay sequences were of 3 month duration,
+   with a 6 week development period. Considering both spacecraft, with
+   overlay sequence execution staggered 1 1/2 month between spacecraft,
+   there was essentially an overlay sequence being developed at all times.
+   Initial VIM flight team staffing levels supported two Sequence
+   Integration Engineers (SIEs). This allowed one SIE to be developing an
+   overlay sequence while the second SIE could be performing other tasks
+   (real time command requests, documentation updates, software
+   maintenance, etc.). With the 1993 reduction in flight team staffing
+   (reduction to one full time SIE), the duration of the overlay loads was
+   extended to 6 months. The development time remained at 6 weeks
+   providing time for the single SIE to perform the other necessary SIE
+   tasks between overlay sequence development periods.
+
+   The intent of the overlay sequence is to provide a mechanism for
+   incorporating non-repetitive science or engineering events into the
+   spacecraft sequence of activities in combination with the baseline
+   sequence. Typical events in overlay sequences have included:
+
+     * Ultraviolet Spectrometer Subsystem (UVS) stellar and heliospheric
+       observations;
+     * two additional MAGROLs per year per spacecraft;
+     * additional high rate PWS records and DTR playbacks;
+     * DTR playbacks to recover data when the baseline sequence playback
+       was not captured on the ground;
+     * CCS/Flight Data Subsystem (FDS)/Attitude and Articulation Control
+       Subsystem (AACS) memory readouts;
+     * updates to BML and FPAs;
+     * modifications to the baseline sequence.
+
+   The need for the 3 month and then 6 month overlay sequences has been
+   driven primarily by the requirement for acquiring UVS stellar and
+   heliospheric observations. The termination of UVS observations will
+   eliminate the necessity for these regularly scheduled sequence loads.
+   However, there remains a need to continue to provide a capability for
+   augmentation of the baseline sequence for either science data
+   acquisition or spacecraft engineering needs. This augmentation will be
+   accomplished by small individual mini-sequences that perform a specific
+   function and are implemented on an as needed basis.
+
+    5. MINI-SEQUENCE DESCRIPTION
+
+   Mini-sequences also augment the baseline sequence but are prepared on
+   an as needed basis rather than on a regularly scheduled basis. These
+   sequences are usually intended to perform a single function rather than
+   the multiple functions performed by an overlay sequence. The
+   development time for a mini-sequence varies from a day to a week or so
+   depending on the complexity of the sequence. A common use of a
+   mini-sequence is to sequence a second DTR playback of high rate PWS
+   data if the baseline sequence playback is not captured on the ground.
+   Another common use is in response to a spacecraft anomaly (i. e. the
+   performance of a memory readout, a CCS timing test, or other diagnostic
+   or anomaly resolution effort). When the termination shock is expected
+   to be encountered, a mini-sequence will be used to enable an on-board
+   stored routine that will increase the number of high rate PWS records
+   from once a week to approximately every nine hours. A mini-sequence
+   will also be used to play back the recorded data.
+
+    6. BACKUP MISSION LOAD DESCRIPTION
+
+   The BML provides automated on-board protection against the loss of
+   command capability to the spacecraft. Without command capability, the
+   spacecraft must continue to operate with the instructions previously
+   stored in the CCS memory. Key to the automated protection against the
+   loss of command capability is the implementation of a command loss
+   timer on-board each spacecraft. The command loss timer is simply a
+   programmable timer that resets to a programmed duration each time a
+   command is received by the spacecraft. The current duration of the
+   command loss timer is six weeks. When a command is received by the
+   spacecraft, the timer is reset to a six weeks duration and immediately
+   begins counting down towards zero. If the timer reaches zero, as a
+   result of a command not being received by the spacecraft within the
+   programmed six week duration, the command loss timer will have expired
+   and the Command Loss (CMDLOS) routine will be activated which leads to
+   the initiation of the BML.
+
+   The implementation of BML-7 (the seventh BML to be loaded on-board
+   Voyager 2), in conjunction with the baseline sequence, provides this
+   automated protection against loss of command capability. BML-7, with
+   some differences in implementation for the two spacecraft, is loaded
+   on-board both Voyager 1 and 2.
+
+   BML-7 is designed to meet the following science and mission objectives:
+
+    1. Continue to provide baseline sequence FPW data after a loss of
+       command cability, for as long as the spacecraft continues to
+       operate. In order to achieve this, BML-7 modifies the baseline
+       sequence events to limit spacecraft activities (i. e. terminate
+       MAGROLs and ASCALs) and configures the spacecraft FPAs for
+       compatibility with the loss of command reception capability.
+    2. Continue to provide baseline sequence periodic calibrations of the
+       science instruments (PMPCALs) in order to allow science teams to
+       properly interpret the data.
+    3. Continue to perform baseline sequence DTR maintenance in support of
+       the PWS high rate data acquisition, until DTR operations are
+       terminated in 2010 for Voyager 1 and 2012 for Voyager 2.
+    4. Provide periodic gyro conditioning to maintain gyro integrity for
+       FPA responses. Gyro conditioning is continued until the sequenced
+       termination of gyro operations in 2007 for Voyager 1 and 2004 for
+       Voyager 2.
+    5. Include reasonable provisions for maintaining an acceptable telecom
+       posture for receipt of telemetry data via the X-band link.
+    6. Include additional reasonable fault protection enhancements.
+    7. Be transparent to the normal VIM sequence activities.
+
+   In response to these objectives, the design of BML-7 is organized into
+   three independent tables, the BML Long-Term Events Table, the BML
+   Initialization Table 1 (BMLIT1) and the BML Initialization Table 2
+   (BMLIT2). BMLIT1 and BMLIT2 are initiated after entry into the CMDLOS
+   routine and contain commands that are only needed in the event command
+   reception capability is lost. The BML Long-Term Events Table is a
+   continuously active time event region in the CCS that executes
+   independently of BML (the events contained in this table will occur
+   whether BML-7 is entered or not).
+
+   BML is initiated with the execution of BMLIT1. The BMLIT1 events will
+   be executed two weeks after CMDLOS entry if the CMDLOS timer has not
+   been reset, but not prior to the end of a current overlay sequence plus
+   24 hours. The former condition indicates that BMLIT1 will not execute
+   if command ability is restored. The latter condition is necessary to
+   maintain the transparency of BML-7 from the normal sequencing
+   activities. It is critical for BML to be independent of an active
+   overlay sequence to avoid the necessity of constraining the contents of
+   the overlay sequence to be compatible with BML-7.
+
+   A flag (CCS location 6714B) used in normal sequence design to allow the
+   multiple uplink of a sequence load is also used in BML-7 to check for
+   the end of an overlay sequence. This flag is set to 1 by the successful
+   reception of all command blocks of an overlay sequence transmission. It
+   remains set to 1 during execution of the overlay sequence and is
+   automatically reset to 0 when the next planned uplink window opens at
+   the end of an overlay sequence. This flag constrains the BMLIT1 events
+   to not occur until 24 hours after the flag has been reset to 0 by the
+   completion of the overlay sequence, even if the time from CMDLOS entry
+   has exceeded 2 weeks.
+
+   Once initiated, BMLIT1 will:
+
+    1. Disable future attitude control maneuvers (ASCALs and MAGROLs).
+       ASCALs will not be needed if the HPOINTS (sun sensor bias commands
+       to update HGA pointing) cannot be reloaded, and MAGROLs may require
+       update of the gyro scale factor, neither of which can be done if
+       spacecraft command capability does not exist.
+    2. Initiate gyro conditioning. One pair of gyros will be powered on
+       for a one week duration with the gyro fault test enabled once a
+       year.
+    3. Select the 0.05 degree yaw deadband and the 0.25 degree roll
+       deadband. All the future attitude control deadband will be
+       0.05/0.05/0.25 degrees, pitch/yaw/roll to maximize telecom
+       performance.
+    4. Select the 160 bps downlink data rate for cruise data return.
+    5. Select the Attitude Propulsion (AP) thruster pulse width to the
+       nominal 10 ms duration.
+
+   Prior to the start of the A022 sequence (October 16,1995) for Voyager 1
+   and the start of the B025 sequence (January 15,1996) for Voyager 2, the
+   command loss timer for each spacecraft was set to four weeks. Beginning
+   with sequences A022 and B025, the command loss timer for each
+   spacecraft is set to six weeks. If command reception is not achieved
+   during the duration of the command loss timer following the last
+   successful command reception, entry into the CMDLOS routine
+   automatically occurs. CMDLOS entry initiates a programmed response to
+   try and establish a command reception capability using different
+   combinations of redundant command reception hardware. The reception of
+   a ground command by the spacecraft during CMDLOS execution terminates
+   CMDLOS and resets the CMDLOS timer while maintaining the successful
+   command reception hardware configuration. After CMDLOS entry, the
+   CMDLOS routine is executed four consecutive times. After the fourth
+   execution of the CMDLOS routine, the routine is permanently disabled
+   and BML will take effect. The BMLIT2 events will occur approximately
+   three weeks after the initiation of the fourth, and final, CMDLOS
+   execution (17 weeks, 4 days and 3 hours from the first CMDLOS entry if
+   the command loss timer is set for four weeks and 23 weeks, 4 days and 3
+   hours if the command loss timer is set for six weeks).
+
+   Once initiated, BMLIT2 issues commands to power down the scan platform
+   and configure the spacecraft for the long-term BML mission.
+   Specifically, BMLIT2 will:
+
+    1. Power down the scan platform. The following electrical loads will
+       be powered off if not already off:
+          + Imaging Subsystem (ISS) Wide Angle (WA) Vidicon Replacement
+            Heater
+          + ISS WA Electronics Replacement Heater
+          + ISS Narrow Angle (NA) Vidicon Replacement Heater
+          + ISS NA Electronics Replacement Heater
+          + Scan Platform Azimuth Actuator Heater
+          + Azimuth Actuator Coil Heater
+          + Infrared Interferometer Spectrometer and Radiometer Subsystem
+            (IRIS) Replacement Heater
+          + Ultraviolet Spectrometer Subsystem (UVS)
+    2. Initialize the Low Energy Charged Particle Subsystem (LECP) for
+       data gathering.
+    3. Initialize the CRS for data gathering.
+    4. Select data rate of 1.4 kbps for DTR playback of high rate PWS
+       data.
+    5. Inhibit switch of X-band power level from high to low power after
+       DTR playback of high rate PWS data.
+    6. Configure the RF subsystem for the BML mission by establishing
+       X-high power for all BML downlink operations if the prime X-band
+       traveling wave tube (TWT) is operating on Voyager 1 and either
+       X-band TWT is operating on Voyager 2. Because of the previous TWT
+       switch on Voyager 1, X-Hi is maintained only if the current prime
+       TWT is operating. If the current prime TWT fails and a switch to
+       the backup TWT is made, X-Lo will be used for telemetry
+       transmission.
+    7. Modify PWRCHK fault protection algorithm to select X-band TWT to
+       the BML configuration after a PWRCHK entry.
+    8. Link the AACS Trajectory Correction Maneuver (TCM) thrusters as a
+       second backup to provide pitch/yaw attitude control if the primary
+       and backup thruster branchs have failed.
+
+   The BML Long-Term Events Table is a separate continuously executing
+   time event region that contains all of the unconditional long-term
+   events for baseline sequence and BML operation. These events have
+   absolute time values associated with them and will occur independent of
+   whether the BML has been initiated. Key spaceraft reconfiguration
+   events contained in this table include the termination of gyro and DTR
+   operations.
+
+    7. SEQUENCE INTERACTION WITH ON BOARD FAULT PROTECTION
+
+   The FPAs on the Voyager spacecraft are designed to recover the
+   spacecraft from specific potential mission-catastrophic failures. They
+   are implemented primarily in the CCS, while some are in the AACS. The
+   FPAs in the CCS are invoked by interrupts received from external
+   sources, and followed by preprogrammed responses.
+
+   The five FPAs that currently reside in the CCS are:
+
+     * AACS Power Code Processing (AACSIN)
+     * Command Loss (CMDLOS)
+     * Radio Frequency Power Loss (RFLOSS)
+     * CCS Error (ERROR)
+     * Power Check (PWRCHK)
+
+   The main function of the AACSIN routine is responding to AACS anomalies
+   by the processing of Power Codes (PCs) received from the AACS. A PC is
+   a regularly transmitted message from the AACS to the CCS providing
+   status information about the AACS. Some of those PCs relating to a
+   faulty AACS condition include heartbeat failure, celestial reference
+   loss/acquisition, power supply failure, gyro failure, scan slew abort,
+   command parity error, and bad/no echo response. The PCs are either
+   functional or informational: the functional PC is used to generate a
+   command to the power subsystem to initiate the proper response, and the
+   informational PC is used by the CCS to invoke the preprogrammed
+   responses. In most instances, the CCS echoes the PC back to the AACS to
+   confirm receipt.
+
+   The purpose of the CMDLOS routine is to provide a means for the
+   spacecraft to automatically respond to an on-board failure resulting in
+   the inability to receive ground commands. Whenever a specified number
+   of hours have elapsed without the CCS receiving a valid command, the
+   CCS assumes a spacecraft failure and attempts to correct that failure
+   by systematically switching to redundant hardware elements until a
+   valid command is received. CMDLOS will be executed four consecutive
+   times if command reception is not successful. After four unsuccessful
+   executions, CMDLOS will be permanently disabled and BML will be
+   activated.
+
+   The RFLOSS routine provides the spacecraft a means of automatically
+   recovering from a failure of an X-band exciter or transmitter. The CCS
+   monitors four input signals from the RFS that are associated with a
+   failure of the exciters and transmitters. Whenever one or more of the
+   above signals is input to the CCS, RFLOSS will systematically
+   interrogate the four interrupts and attempt to correct the failure by
+   swapping to a redundant unit.
+
+   If an AACSIN, CMDLOS, or RFLOSS entry occurs, the response will be
+   integrated into any on-going sequencing activities which typically
+   includes the baseline load, overlay load, HPOINTS and any unconditional
+   long term events that are contained in the BML Long-Term Events Table.
+   The commands from an FPA response and the regular sequencing activities
+   will be interleaved.
+
+   The ERROR routine provides the capability to respond to certain
+   anomalous CCS hardware and software conditions. In the event of a
+   detected anomaly, the routine puts the CCS in a known, quiescent state
+   and waits for ground action. It also stops any on-going sequencing
+   activities including baseline load, overlay load, HPOINTS, and BML
+   Long-Term Events Table. However, if an ERROR entry occurs in the BML
+   mission, the sequencing activities will be restarted by the programmed
+   rollback feature as described below.
+
+   The purpose of the PWRCHK is to provide a means for the spacecraft to
+   automatically configure itself to a safe, low-power operating mode
+   following a power subsystem undervoltage condition or a CCS tolerance
+   detector trip. If a PWRCHK entry is due to an undervoltage condition,
+   the routine issues commands reducing the spacecraft power load in an
+   attempt to recover from the failure condition and configure the
+   spacecraft to a safe, low-power mode. If the CCS tolerance detector
+   trip occurs indicating that the CCS input power has dropped below a
+   level where the processor can reliably function, the spacecraft assumes
+   that all other loads have experienced power-on-resets and issues the
+   commands to re-enable the essential functions. In addition, due to the
+   long round trip light time (RTLT), reduced Deep Space Network (DSN)
+   coverage and BML vulnerability, a set of commands was designed and
+   implemented on the spacecraft for VIM to configure the science
+   instruments and DTR back to the nominal mission.
+
+   Since the PWRCHK is entered via ERROR routine, all the sequencing
+   activities including heartbeat, baseline load, overlay load, HPOINTS
+   and BML Long-Term Event Table will be terminated as in the ERROR entry.
+   However, the baseline load and HPOINTS will be restarted by rollback,
+   and the heartbeat and the BML Long-Term Events Table by PWRCHK.
+
+   The rollback is a special feature designed to allow one time event
+   region per processor to be automatically restarted in the event of a
+   PWRCHK entry or an ERROR entry in the BML mission. The rollback keeps
+   track of timing of that particular event so it can be restarted as if
+   there were no interruption. The CCS processor A rollback is used to
+   restart the HPOINT table and the CCS processor B is for the baseline
+   load.
+
+   In addition, one location in PWRCHK is reserved for restarting the BML.
+   Unlike the baseline load or HPOINTs, timing for BML Long-Term Events is
+   not kept track of, and that location has to be periodically updated in
+   the BML Long-Term Events Table to point to the next long-term event. As
+   a result, some of BML long-term events may be repeated. However, this
+   will not pose any harm to the spacecraft.
+
+    8. MODIFICATIONS IN RESPONSE TO ELECTRICAL POWER LIMITATIONS
+
+   Radioisotope Thermoelectric Generators (RTGs) provide electrical power
+   to the Voyager spacecraft. Due to the radioactive decay of the
+   Plutonium fuel source, the electrical power provided by the RTGs is
+   continually declining. The current rate of decay is approximately 5
+   watts per year. Because of the continual decline in the amount of power
+   that is available, it is necessary to periodically reduce power
+   consumption in order to maintain an adequate power margin. This is
+   accomplished by turning off spacecraft power loads. Modifications
+   planned are listed in the following tables by specific events and times
+   for each spacecraft.
+
+   VOYAGER 1
+
+   1998 DOY 316 - Reduction in Scan Platform power - preserve UVS and
+   Elevation Actuator temperature (+11.0 W)
+     * WA Vidicon Heater OFF (+5.5 W)
+     * NA Vidicon Heater OFF (+5.5 W)
+
+   2002 - Terminate UVS operations - turn-off all Scan Platform loads
+   (43.9 W). Date expected to change.
+     * WA Electronics Replacement Heater OFF (+10.5 W)
+     * IRIS Replacement Heater OFF (+7.8 W)
+     * NA Electonics Replacement Heater OFF (+10.5 W)
+     * Azimuth Actuator Supplemental Heater OFF (+3.5 W)
+     * UVS Power OFF (+2.4 W)
+     * UVS Replacement Heater OFF (+2.4 W)
+     * Azimuth Coil Heater OFF (+4.4 W)
+     * Scan platform slewing power OFF (+2.4 W)
+
+   2010 - Termination of DTR operations (+5.8 W for DTR turnaround)
+   This power load reduction step is currently sequenced to occur on DOY
+   007, 2004 and could be changed if the current performance trends
+   continue.
+
+   2011 - Discontinue gyro operations (+14.4 W steady state, +3.6 W turn
+   on transient). This power load reduction step is currently sequenced to
+   occur on DOY 305, 2010.
+
+   2015 - Pyro Instrumentation Power OFF (+2.4 W)
+
+   2016 - Turn off PLS instrument
+     * PLS 2.4 kHz power OFF (+4.2 W)
+     * PLS Replacement Heater OFF (+4.32 W)
+
+   Further responses to decreasing electrical power, beginning in 2018,
+   will consist of either turning instrument off sequentially or turning
+   instruments off and on in a power sharing mode to maintain an adequate
+   power margin.
+
+   VOYAGER 2
+
+   1996 DOY 023 - Reduction in Scan Platform power - preserve UVS and
+   Elevation Actuator temperature (+11.0 W)
+     * WA Vidicon Heater OFF (+5.5 W)
+     * NA Vidicon Heater OFF (+5.5 W)
+
+   1998 DOY 316- Terminate UVS operations - turn-off all Scan Platform
+   loads (43.9 W)
+     * WA Electronics Replacement Heater OFF (+10.5 W)
+     * IRIS Replacement Heater OFF (+7.8 W)
+     * NA Electonics Replacement Heater OFF (+10.5 W)
+     * Azimuth Actuator Supplemental Heater OFF (+3.5 W)
+     * UVS Power OFF (+2.4 W)
+     * UVS Replacement Heater OFF (+2.4 W)
+     * Azimuth Coil Heater OFF (+4.4 W)
+     * Scan platform slewing power OFF (+2.4 W)
+
+   2006 - AP Branch 2 Heater OFF (+11.8 W)
+   This power reduction step is currently sequenced to occur on DOY 267,
+   2006.
+
+   2010 - Discontinue gyro operations (+14.4 W steady state, +3.6 W turn
+   on transient)
+   This power load reduction step is currently sequenced to occur on DOY
+   007, 2004 and could be changed if the current performance trends
+   continue.
+
+   2012 - Termination of DTR operations (+5.8 W for DTR turnaround)
+   This power load reduction step is currently sequenced to occur on DOY
+   251, 2012.
+
+   2016 - Pyro Instrumentation Power OFF (+2.4 W)
+
+   Further responses to decreasing electrical power, beginning in 2016,
+   will consist of either turning instrument off sequentially or turning
+   instruments off and on in a power sharing mode to maintain an adequate
+   power margin.
+
+   [back.gif] Return to Voyager Project Home Page
+
+   [tiedye.gif]
+
+   Last Updated: 7/23/2001
+   Comments ? Questions ? Problems ? Your Feedback is Welcome!

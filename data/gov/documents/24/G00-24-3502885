@@ -1,0 +1,239 @@
+http://ircatalog.gsfc.nasa.gov/search_help.html
+
+Object Names
+
+   Due to the rather small size of the CIO's object name field, the name
+   formats of the CIO may not always match conventional usage. Some
+   examples of common names and their CIO non-standard equivalents are:
+
+           Common Name         CIO Name
+   G (Gliese star)             GLIESE
+   HH (Herbig-Haro object)     H-H
+   HR (Yale bright star)       BS
+   MKN, MRK (Markarian galaxy) MARK
+
+   To search for a bright star with a Greek letter name, look under the
+   three-letter constellation abbreviation. Greek letters are represented
+   by the abbreviations listed in the table below.
+   Examples: ALF CEN (Alpha Centauri) is listed with the CEN names, NUU
+   PEG (Nu Pegasi) can be found with the PEG names, and ZET ORI (Zeta
+   Orionis) is listed under the ORI names.
+
+    Greek
+   Letter  Catalog
+           Abbrev
+                  Greek
+                  Letter Catalog
+                         Abbrev
+                                 Greek
+                                Letter  Catalog
+                                        Abbrev
+                                                Greek
+                                               Letter  Catalog
+                                                       Abbrev
+   alpha   ALF
+                  gamma  GAM
+                                omega   OME
+                                               sigma   SIG
+   beta    BET
+                  iota   IOT
+                                omicron OMI
+                                               tau     TAU
+   chi     CHI
+                  kappa  KAP
+                                phi     PHI
+                                               theta   THE
+   delta   DEL
+                  lambda LAM
+                                pi      PI
+                                               upsilon UPS
+   epsilon EPS
+                  mu     MUU
+                                psi     PSI
+                                               xi      XI
+   eta     ETA
+                  nu     NUU
+                                rho     RHO
+                                               zeta    ZET
+     __________________________________________________________________
+
+Searching for Catalog Listings by Source Name
+
+   Infrared sources in the Catalog are listed alphabetically by their base
+   name (such as a constellation name) in the Source Atlas. Many sources
+   may also have prefixes and/or suffixes as part of their name. Most
+   source names appear in the Catalog in abbreviated form. These
+   abbreviations are not always intuitive. For these reasons, it can
+   sometimes be difficult to locate a source in the Catalog. However,
+   sources can more easily be recognized by browsing the alphabetical name
+   list in the Source Atlas which is part of this database.
+
+   After clicking on the appropriate green button, a list of source names
+   arranged alphabetically by base name is displayed. Clicking on a
+   highlighted source name directs the search engine to that RA/Dec in the
+   Catalog.
+
+  The Source Atlas is arranged alphabetically by the base name
+
+   For example, to find. . .
+
+   SOURCE      Prefix Base Suffix    Click on:
+   ------      ------ ---- ------    --------
+   Alpha Sco    ALPHA SCO              "S"
+   NGC 1068           NGC  1068        "N"
+   3C 273           3 C    273         "C"
+   I ZW 10          I ZW   10          "Z"
+
+   To top of page
+     __________________________________________________________________
+
+Positions
+
+   Positions in the CIO are taken directly from the relevant articles. In
+   some cases, positions are derived by the editors or obtained from
+   SIMBAD or NED, but "homogeneous" positions are not used. Therefore,
+   data for a given object may appear at a wide variety of locations.
+
+   Positions can be entered in the formats shown on the search page and a
+   search will be made for all objects within the indicated ranges, which
+   can be widened or narrowed as desired. When entering positions, leading
+   zeroes are required.
+
+   The symbols >, <, >=, and <= can be used to return all objects with RA
+   or Dec greater than or less than the value typed in the box. For these
+   cases, any entries in the position search range boxes are ignored. For
+   example, to display all objects 1 degree or less from the North
+   Celestial Pole, enter ">=+89" (without the quotation marks) in the Dec
+   text box and leave the RA text box blank.
+
+   When the search is completed, clicking an object name enters BROWSE
+   mode, which displays 25 records on either side of the selected record,
+   allowing the user to check for more data of interest near that
+   position.
+
+   To top of page
+     __________________________________________________________________
+
+Position Ranges
+
+   By default, positions are searched over a range of one second of right
+   ascension and ten arcseconds of declination. To specify a different
+   range, type the desired value in the text box, and select a unit from
+   the drop down box. Decimal values, such as 0.5 arcminutes, are
+   acceptable.
+     __________________________________________________________________
+
+Wavelengths
+
+   Enter wavelength in units of microns (µm). The symbols >, <, >=, and <=
+   can be used to return all records with wavelengths greater than or less
+   than the value typed in the first box. To search for a range of
+   wavelengths, enter the desired values in the FROM and TO boxes. If you
+   enter values in both boxes, the search will be *NON-INCLUSIVE* of the
+   values you enter. Some examples are shown below.
+
+   CAPTION: ENTRY EXAMPLES
+
+   To Return All Observations... Enter in the boxes...
+   ...at 10 µm                   [rangesw.gif]
+   ...between 2.2 - 12.4 µm,
+   not including those values
+   ...greater than 25 µm
+   ...less than or equal to 5 µm
+
+   To top of page
+     __________________________________________________________________
+
+Fluxes
+
+   The two boxes can be used to restrict the search to a specific flux
+   value or range of flux values. The symbols >, <, >=, and <= can be used
+   to return all records with fluxes greater than or less than the value
+   typed in the first box. To search for a range of fluxes, enter the
+   desired values in the FROM and TO boxes. If you enter values in both
+   boxes, the search will be *NON-INCLUSIVE* of the values you enter. (See
+   examples in the table below.)
+
+   NOTE: In the case of objects with magnitude measurements (units "M" and
+   "C"), specifying a range of "greater than" (>) will return fainter
+   values, and specifying a range of "less than" (<) will return brighter
+   values.
+
+   CAPTION: ENTRY EXAMPLES
+
+   To Return All Observations...     Enter in the boxes...
+   ...flux of 10                     [rangesf.gif]
+   ...flux between 100 and 1000,
+   not including those values
+   ...flux greater than 1000
+   ...flux less than or equal to 2.0
+
+   To top of page
+     __________________________________________________________________
+
+Units
+
+   By default, a query returns all flux units appearing in the catalog. If
+   you wish to specify one or more units, check the appropriate box(es)
+   and/or choose a unit from one or more of the drop-down boxes. For
+   example, to see only fluxes given in units of magnitude, check the
+   Magnitudes box. The result will include records with flux units "M" and
+   "C" (magnitude derived from a color measurement).
+
+   The overwhelming majority of the fluxes in the catalog were measured in
+   Janskys or Magnitudes. To specify one of the other catalog units,
+   highlight it in the appropriate drop-down box.
+
+   Occasionally the flux unit will include the qualifier "V" (variable or
+   the mean of several values measured at the same beam size), "L" (lower
+   limit), "E" (editors determined flux from maps, spectra, or other
+   non-tabulated material), or "U" (upper limit). Records with these
+   qualifiers will be returned by default.
+
+   Unit Definition                               No. of Publications
+                                                 Using This Unit
+   A    normalized magnitude                                     29
+   B    10^-19 W m^-2 Hz^-1 Sr^-1                                47
+   C    magnitude, derived from color                           558
+   D    diameter measurement                                    187
+   E    erg sec^-1 cm^-2 Sr^-1                                   78
+   F    10^-16 W cm^-2 µm^-1                                    134
+   G    10^-14 ergs sec^-1 cm^-2                                186
+   H    log(ergs sec^-1 cm^-2 Hz^-1)                             14
+   I    10^-9 W cm^-2 µm^-1 Sr^-1                                16
+   J    10^-26 W m^-2 Hz^-1 = 1 Jansky                         1185
+   JA   Janskys arcsec^-2                                         2
+   K    log(10^-26 W m^-2 Hz^-1)                                 20
+   L    log(W m^-2 Hz^-1)                                        12
+   M    magnitude                                              2572
+   MA   magnitudes arcsec^-2                                     52
+   N    log(ergs sec^-1 cm^-2 µm^-1)                              6
+   P    polarization data                                       308
+   Q    log(10^-3 Jansky)                                         6
+   R    log(W cm^-2 µm^-1)                                        8
+   S    spectral data                                          1809
+   T    -2.5 log(ergs sec^-1 cm^-2 Hz^-1) - 48.6                  9
+   U    upper limit
+   V    variable
+   W    10^-14 W m^-2                                           179
+   X    10^-18 W cm^-2                                          229
+   Y    relative line intensity                                  50
+   Z    10^-21 W cm^-2 µm^-1 arcsec^-2                            5
+
+   To top of page
+     __________________________________________________________________
+
+Bibliographic Reference Number
+
+   The bibliographic reference number identifies the original journal
+   article for each observation in the Catalog. The reference number is
+   made up of the year and month of publication, and a sequential number
+   which is assigned to the article (for example, "790104" breaks down
+   into 79-01-04, where 79 = 1979, 01 = January, and 04 = article randomly
+   assigned as #4 in that month). References that do not indicate the
+   month of publication have "00" in the month field.
+     __________________________________________________________________
+
+   Last modified: December 5, 2000
+
+   [Search] CIO Search Page [Home] CIO Home Page

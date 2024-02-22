@@ -1,0 +1,901 @@
+http://marslander.jpl.nasa.gov/LANDER-MP.PDF
+
+   MARS SURVEYOR `98 PROJECT LANDER MISSION PLAN and DATABOOK August 8,
+   1997 LANDER MISSION PLAN AND DATABOOK - TABLE OF CONTENTS 5.0 MARS
+   SURVEYOR 1998 LANDER MISSION PLAN 4 5.1 FLIGHT SYSTEM
+   DESCRIPTION............................................................
+   .......................................................................
+   ............................... 4 5.1.1 Lander Bus - Cruise Stage, EDL
+   and Propulsion
+   Systems................................................................
+   ....................................................... 4 5.1.2 Lander
+   Bus - Structure, Power/Thermal, Telecom
+   .......................................................................
+   ........................................................... 6 5.1.3
+   Lander Payload - Mars Descent Imager [MARDI], LIDAR, New Millenium
+   Microprobes............................................................
+   ... 8 5.1.4 Lander Payload - Mars Volatiles and Climate Surveyor
+   [MVACS]................................................................
+   ..................................... 10 5.2 LANDER MISSION
+   OVERVIEW...............................................................
+   .......................................................................
+   ............................ 12 5.2.1 Overall Mission
+   Description............................................................
+   .......................................................................
+   ................................... 12 5.2.2 Mission
+   Phases.................................................................
+   .......................................................................
+   ..................................................... 14 5.2.3 Lander
+   Launch/Arrival Period * This page under Change Control *
+   .......................................................................
+   ............................... 16 5.2.4 Summary of Mission Events and
+   DSN Tracking Requirements * This page under Change Control
+   *................................................ 18 5.2.5 Lander V and
+   Propellant Mass Summary * This page under Change Control
+   *......................................................................
+   ............. 22 5.3 LANDER LAUNCH AND BOOST & S/C INITIALIZATION
+   PHASES
+   .......................................................................
+   ........................ 24 5.3.1 Lander Countdown and Pre-launch SOE
+   .......................................................................
+   .......................................................................
+   .. 24 5.3.2 Lander Launch Events
+   Summary................................................................
+   .......................................................................
+   ....................... 26 5.3.3 Lander Boost and Spacecraft
+   Initialization Timeline
+   .......................................................................
+   ...................................................... 28 5.4 LANDER
+   CRUISE PHASE
+   .......................................................................
+   .......................................................................
+   ................................ 30 5.4.1 Lander Cruise Navigation *
+   This page under Change
+   Control*...............................................................
+   ................................................. 30 5.4.2 TCM's * This
+   page under Change
+   Control*...............................................................
+   .......................................................................
+   ............. 30 5.4.3 TCM Sequence of
+   Events.................................................................
+   .......................................................................
+   .................................... 32 5.4.4 Lander Payload Cruise
+   Checkout, Characterization, and Calibration
+   Campaigns..............................................................
+   ............. 34 5.4.4.1 Overview
+   .......................................................................
+   .......................................................................
+   ................................................. 34 5.4.4.2 Lander
+   Payload Cruise Checkout and Calibration Operations
+   .......................................................................
+   .............................. 36 5.4.4.3 Cruise Data Playback Strategy
+   .......................................................................
+   .......................................................................
+   ............. 38 5.4.5 Pre-Entry Timeline
+   .......................................................................
+   .......................................................................
+   ........................................ 40 5.5 ENTRY, DESCENT, AND
+   LANDING PHASE
+   .......................................................................
+   .................................................................... 42
+   5.5.1 Entry
+   Overview...............................................................
+   .......................................................................
+   ...................................................... 42 5.6 LANDED
+   SCIENCE PHASE
+   .......................................................................
+   .......................................................................
+   ............................. 44 5.6.1 Commanding and Data Return
+   Strategy
+   .......................................................................
+   .......................................................................
+   ... 44 L.2 8/8/97 5.6.2 Sol 0,1 Design Reference Missions - Assumptions
+   and Goals * This page under Change Control
+   *................................................. 46 5.6.2.1 Sol 0
+   Design Reference Mission - Morning * This page under Change Control *
+   .......................................................................
+   ..... 48 5.6.2.2 Sol 0 Design Reference Mission - Afternoon * This page
+   under Change Control
+   *......................................................................
+   .... 50 5.6.2.3 Sol 0,1 Night-time and Sol 1 Design Reference Missions
+   * This page under Change Control
+   *..................................................... 52 5.6.3 TEGA
+   Day 1 Design Reference Mission * This page under Change Control
+   *......................................................................
+   .................. 54 APPENDIX B: LANDER MISSION DATABOOK 56 B.1 Lander
+   Mission Database B.2 Lander DSN and Air Force Tracking Initial
+   Acquisition Geometry B.3 Lander Cruise Trajectory Characteristics B.4
+   Approach/Entry Illustrations B.5 Post-Landing Data B.5.1: First Pass
+   after Landing - Variability with Landing Site and Orbiter Mean Anomaly
+   B.5.2: Orbiter/Lander Geometry Timelines B.5.3: UHF Pass Information:
+   Pass Durations, Data Volumes during Landed Science Mission B.5.4: Earth
+   and Sun Azimuth and Elevation during Landed Science Mission B.5.5: Sun
+   and Earth Geometry with Respect to Mars B.5.6: Design Reference Mission
+   Power Profiles B.5.7: Payload Scenarios B.6 Lander Configuration
+   Drawings B.7 Lander Navigation Memo B.8 BWG usage B.9 Approach Tracking
+   Schedule B.9.1: Entry - 45d to Entry - 30d B.9.2: Near Simultaneous
+   Tracking - Integrated Tracking Schedule B.9.3: Lander Track Durations
+   B.10 Lander Data Rates B.11 Lander Approach Targeting Data *This
+   Section under Change Control* L.3 8/8/97 5.0 MARS SURVEYOR 1998 LANDER
+   MISSION PLAN 5.1 FLIGHT SYSTEM DESCRIPTION 5.1.1 Lander Bus - Cruise
+   Stage, EDL and Propulsion Systems Cruise Stage: The lander flight
+   system consists of a separable cruise stage with a MDAC Vband launch
+   vehicle separation interface, and propulsive lander/entry assembly. The
+   cruise stage is jettisoned just prior to atmospheric entry, providing a
+   clean aerodynamic shape for entry and a reduced ballistic coefficient.
+   Cruise stage operational components include redundant star cameras and
+   sun sensors for attitude determination, two solar array wings (2.6m2
+   total area) for power generation, an X-Band medium gain
+   transmit/receive horn antenna and one low gain receive patch antenna
+   and a redundant pair of solid state power amplifiers (SSPA's) for
+   telecommunications during cruise. Threeaxis attitude control during
+   cruise is provided using a redundant Inertial Measurement Units (IMU's)
+   and four cruise reaction engine modules (REM's) located on the Lander.
+   Each REM contains one aft-facing 5-lbf TCM thruster and one canted [20
+   out, 15 aft] 1-lbf RCS thruster. EDL System: The 2.4 m diameter
+   heatshield structure and ablator makes use of the tooling developed for
+   Pathfinder, sharing the same nose radius and cone angle. The ballistic
+   coefficient is 58 to 62 kg/m2, somewhat lower than Pathfinder. The
+   Pathfinder parachute design is used to lower cost. As on Pathfinder,
+   the parachute is deployed based on an on-board navigator velocity
+   estimate, eliminating the longrange radar altimeter used on Viking. The
+   parachute is mortar-deployed to ensure good separation for inflation in
+   the freestream. After parachute deployment the heatshield is separated
+   from the backshell, 3 landing legs are deployed, and the descent
+   engines are warmed with short firing pulses. The MARDI descent imager
+   starts operating shortly before heatshield separation. After a short
+   parachute ride the flight software attitude control algorithms
+   determine the optimum time to release the lander from the
+   backshell/parachute to begin the powered descent phase. Propulsion
+   System: Two diaphragm propellant tanks contain the 64 kg of purified
+   hydrazine propellant used for both cruise maneuvers and attitude
+   control as well as for lander powered descent. This is a
+   pressure-regulated system with serially-redundant pressure regulators
+   utilizing helium gas pressurant. For final descent, a Doppler radar
+   provides accurate altitude and 3D velocity estimates. Descent control
+   is provided by twelve 266 N retroengines arranged in three groups of
+   four engines each. The engines are pulse modulated. As the lander
+   descends to within 12 meters of the surface the spacecraft control
+   system begins the 2.4 m/s constant velocity terminal descent phase.
+   Landing engines are cutoff when any one of the lander footpads touches
+   the planet surface. The AACS subsystem controls the orientation of the
+   lander on landing, placing the X axis within 5 degrees of the desired
+   azimuth [45 West of North, to maximize the solar array efficiency and
+   minimize Direct To Earth (DTE) antenna blockage]. Go to TOC L.4 8/8/97
+   LANDER BUS - CRUISE STAGE, EDL & PROPULSION SYSTEMS * Cruise Stage: -
+   Redundant star cameras, sun sensors - Two solar arrays: 2.6 m2 total
+   area - X-Band transmit/receive horn MGA, 1 patch LGA, redundant pair of
+   solid state power amplifiers (SSPA's) - 3 axis control: redundant
+   IMU's, 4 reaction engine modules [REM's] located on Lander. » Each
+   contains 1 aft-facing 5-lbf TCM thruster and 1 1-lbf RCS thruster
+   [canted outward 20 and aft 15 ]. * EDL System: - 2.4 m diameter
+   heatshield [ablator] based on PF design - Ballistic coefficient 58 - 62
+   kg/m2 , PF parachute design. - Mortar parachute deployment based on IMU
+   velocity estimate - Heatshield separates after parachute deployment,
+   landing legs are deployed, descent engines are warmed with short pulses
+   - MARDI starts operating just prior to heatshield separation - Fight
+   software attitude control algorithms determine optimum time for lander
+   release & start of powered descent phase. * Propulsion System: - 2
+   diaphragm tanks [64 kg total hydrazine capacity] used for translational
+   and rotation V for all mission phases. - Pressure regulated with He
+   pressurant - Final Descent: » Doppler radar provides altitude &
+   velocity estimates » Twelve pulse modulated 266 N engines, 3 groups of
+   4 engines each » 2.4 m/s constant vel terminal descent phase starts 12
+   meters above surface » Engines cut off when any of the footpads touch
+   the surface » AACS subsystem controls landed orientation to place X
+   axis within 5 of desired azimuth [45 West of North] Terminal Descent
+   Configuration L.5 8/8/97 5.1.2 Lander Bus - Structure, Power/Thermal,
+   Telecom Structure: The Lander structure is constructed of a composite
+   material consisting of honeycomb aluminum core with graphite-epoxy
+   facesheets bonded to each side. A thin aluminum sheet is bonded to the
+   composite to provide a Faraday cage around the thermal enclosure. The
+   landing legs are made of aluminum and have compression springs to
+   deploy the legs from the stowed position. Tapered, crushable, aluminum
+   honeycomb inserts in each leg provide the shock absorption necessary
+   for landing. The design has a thermally isolated component deck inside
+   of a central thermal enclosure to control the thermal environment for
+   spacecraft and Payload electronics. Located within this enclosure is
+   the Command and Data Handling (C&DH) electronics, the Power
+   Distribution electronics (PDDU), the Charge Control Unit (CCU), the
+   Nickel-Hydrogen Common Pressure Vessel Batteries (CPV's), The X-Band
+   and UHF telecommunication electronics, and the Capillary Pump Loop Heat
+   Pipe (LHP) components. Imbedded within the component deck are the LHP
+   evaporators which transfer heat from the aluminum facesheets of the
+   component deck to the LHP radiators located outside of the thermal
+   enclosure. Components used only during EDL are mounted external to the
+   enclosure to maximize volume inside the thermal enclosure for onsurface
+   functions (The gyroscopes, pyro firing electronics, radar and radar
+   electronics are located outside the thermal enclosure). Power and
+   Thermal: For the landing footprint of 75° to 78° South latitudes the
+   sun does not go below the nominal horizon for the season of the prime
+   mission. However, a 10° terrain mask is assumed for power analyses and
+   results in a defined day and night interval when the sun goes below the
+   horizon mask. The solar array, consisting of 6 panels [4 fixed, 2
+   deloyed] provides power during the daytime for payload operations and
+   recharges the batteries which provide nighttime heater power for the
+   thermal enclosure. The C&DH and Power Distribution electronics have a
+   low-power sleep mode to reduce energy consumption at night. The lander
+   lifetime is limited by the size of the batteries. As the nights get
+   longer and colder late in the summer the heater power required at night
+   increases until the demand can no longer be satisfied by the 16 A-hr
+   batteries. The batteries then freeze and the mission ends. Daytime
+   operations are limited by the size of the arrays and the amount of
+   power required to recharge the batteries. The duration of the payload
+   and spacecraft daytime operations is approximately 8-9 hours at
+   landing, but decreases as the sun goes lower in the sky. The power
+   system is designed for full operation in a dusty atmosphere of opacity
+   (Tau) = 0.5. Survival under full dust storm conditions (Tau = 1) TBD
+   may be possible with advance planning but is not a design requirement.
+   Telecom: The primary telecom link for science data relay and spacecraft
+   commanding is the UHF relay link to the `98 orbiter. A UHF link to Mars
+   Global Surveyor is also available, for data relay only. Eight to ten
+   UHF communication passes above 20° effective terrain mask can occur
+   with each orbiter each day. An Xband, Direct-To-Earth link with a
+   steerable dish is provided as a transmit/receive backup. The maximum
+   duration of an X-Band transmit event is limited to one hour by the
+   capability of the Loop Heat Pipe to transfer the heat energy from the
+   X-Band Solid State Amplifier out of the thermal enclosure. The number
+   of UHF and X-Band use cycles is limited by the amount of daytime power
+   available. Go to TOC L.6 8/8/97 LANDER BUS - STRUCTURE, POWER/THERMAL,
+   TELECOM * Lander Structure - Composite: honeycomb Aluminum core with
+   graphite- epoxy facesheets - Legs: spring-deployed, Aluminum, with
+   crushable inserts - Thermally isolated component deck inside central
+   thermal enclosure, contains C&DH, PDDU, CCU, Ni-H common pressure
+   vessel batteries, telecom [X-band direct and UHF relay], heat pipe -
+   Externally mounted componenets used during EDL are: gyros, pyro firing
+   electronics, radar * Power and Thermal - 6 Solar panels [4 fixed, 2
+   deployed] provide power during "daytime" - defined to be when sun is
+   above 10 elevation. » Sun does not go below nominal horizon for prime
+   mission, for landing between 75S and 78S » Batteries [16 A-hr] provide
+   night-time heater power for thermal enclosure - C&DH and Power
+   distribution electronics have low-power night-time sleep mode - Payload
+   allocated 25 Watts continuous when operating - S/C daytime operations ~
+   8-9 hrs [landing], decreases towards the end of the mission - Designed
+   for full operation in atmosphere up to opacity of 0.5. Operation during
+   dust storm [ =1] TBD - Mission ends when batteries freeze * Telecom -
+   Primary link for data relay & commanding is the UHF link to the M98
+   orbiter, downlink via MGS also available - 8 - 10 UHF passes above 20
+   terrain mask available for each orbiter per day - X-band DTE w/
+   steerable dish available as command/relay backup. 1 hr duration
+   suppotred by thermal limits - Number of UHF and DTE cycles per day
+   limited by daytime power L.7 8/8/97 5.1.3 Lander Payload - Mars Descent
+   Imager [MARDI], LIDAR, New Millenium Microprobes Mars Descent Imager
+   (MARDI) MARDI includes a single camera head consisting of optics, focal
+   plane assembly and support electronics, and housing. Using a megapixel,
+   electronically shuttered CCD, MARDI provides panchromatic images of the
+   landing site with a resolution of 1.25 mrad/pixel. Images are taken
+   starting just before heatshield jettison, and continue until landing.
+   Under nominal circumstances approximately ten 1000 x 1000 pixel images
+   will be acquired. Taken at altitudes less than 8 km above the surface,
+   these images cover areas from 9 km to 9 m across and at resolutions of
+   7.5 m to 9 mm per pixel pair. MARDI is built by Malin Space Science
+   Systems (MSSS), with Dr. Michael Malin (MSSS) as Principal
+   Investigator. LIDAR The LIDAR [Light Detection and Ranging] is an
+   upward viewing lidar mounted on the Lander deck. It consists of a
+   sensor assembly, an electronics assembly, and the interconnecting cable
+   assembly. The LIDAR is provided by the Space Research Institute (IKI)
+   of the Russian Academy of Science, under the sponsorship of the Russian
+   Space Agency (RSA). The Principal Investigator is S. Linkin. The LIDAR
+   transmitter uses a pulsed GaAlAs laser diode which emits 400 nJ energy
+   in 100 nsec pulses at a rate of 2.5 kHz and at 0.88 µm wavelength. The
+   LIDAR has two sounding modes. During active sounding, light pulses are
+   emitted and their return timed in order to locate and characterize ice
+   and dust hazes in the lowest few kilometers (< 2-3 km). An acoustic
+   device [microphone] will also be included as part of the LIDAR
+   assembly. New Millenium Microprobes Two microprobes supplied by the New
+   Millenium Project will be carried aboard the Lander cruise stage and
+   will deploy themselves 1520 seconds after separation of the cruise
+   stage from the aeroshell. Each battery-powered microprobe penetrator
+   will activate on separation, collect temperature, accelerometer, and
+   engineering data during entry, and impact the surface at 180 m/s,
+   destroying the integrated aeroshell. At impact the penetrator forebody
+   penetrates > 0.3 m into the soil; a cable connects the forebody to the
+   separable aft body which remains near the surface. The aft body
+   contains batteries, a pressure sensor, sun detector, and a antenna for
+   data relay through MGS. Immediately after impact, a soil sample will be
+   taken, and the probes will begin listening for the MGS MR beacon. All
+   data will be relayed via MGS during the probes' mission life, expected
+   to be 2 sols [primary mission] to 30-45 sols [extended mission] in
+   duration. Experiments include measurements of soil thermal
+   conductivity, taken every few minutes during the first hour and once
+   per hour thereafter, atmospheric pressure measurements taken once per
+   hour, and a water detection experiment designed to sense the presence
+   of ice and hydrated minerals. Go to TOC L.8 8/8/97 LANDER PAYLOAD -
+   MARS DESCENT IMAGER [MARDI], LIDAR, NEW MILLENIUM MICROPROBES * Mars
+   Descent Imager (MARDI) - Images taken starting just before heatshield
+   jettison, & continue until landing. - Megapixel, electronically
+   shuttered CCD will take panchromatic images of the landing site at 1.25
+   mrad/pixel. - 10 1000x1000 pixel images will be taken, covering areas
+   from 9 km to 9 m across at resolutions of 7.5 m to 9 mm per pixel pair.
+   - Built by Malin Space Science Systems, Dr. Michael Malin Principal
+   Investigator. * LIDAR [Light Detection and Ranging] - Upward viewing
+   lidar mounted on the Lander deck. - Provided by Space Research
+   Institute (IKI) [Russian Academy of Science] under sponsorship of the
+   Russian Space Agency (RSA). S. Linkin PI - LIDAR transmitter uses a
+   pulsed GaAlAs laser diode - 2 sounding modes: * Active sounding: light
+   pulses emitted and thier return timed to locate and characterize ice
+   and dust hazes below 2-3 km * Acoustic device [microphone] * NEW
+   MILLENIUM MICROPROBES 350 mm - 2 probes separate from cruise ring 15
+   -20 sec after cruise stage jettison * Separation turns on the probes. *
+   Temperature, accelerometer, engineering data recorded during descent. -
+   Impact ~7 min later at ~180 m/s. Aeroshell destroyed on impact. *
+   Forebody penetrates > 0.3 m 247 mm * Aft body containing batteries,
+   pressure sensor, sun detector, and antenna remains on surface 83 mm 96
+   mm - Immediately after impact, a soil sample is acquired - Begin
+   listening for MGS beacon. All data relayed via MGS. - Primary Mission:
+   2 Sols, Extended Mission: 30-45 Sols 39 mm - Experiments: Soil thermal
+   conductivity, Atmospheric pressure, Water detection 126 mm L.9 8/8/97
+   5.1.4 Lander Payload - Mars Volatiles and Climate Surveyor [MVACS]
+   MVACS is an integrated payload with four major science elements: a
+   Stereo Surface Imager, a Robotic Arm with Camera, a Meteorological
+   package of pressure, temperature, wind, and water vapor sensors, and a
+   Thermal and Evolved Gas Analyzer. Dr. David Paige (UCLA) is the
+   Principal Investigator for the MVACS. Stereo Surface Imager (SSI): The
+   mast-mounted SSI provides panoramas of the Lander site, characterizes
+   the general environment at the landing site, and provides imaging
+   support for other payload elements, especially operations of the RA and
+   TEGA, and for the spacecraft, as needed. The SSI is essentially a clone
+   of the Mars Pathfinder IMP; it is a multi-spectral imager accessing
+   several wavelengths between 0.4 and 1.1 microns. This multi-spectral
+   capability, together with onboard calibration targets, provides true
+   color images. SSI also images magnetic targets on the Lander deck to
+   characterize the magnetic properties of surface material. Narrow-band
+   imaging of the sun provides line-of-sight optical depths of atmospheric
+   aerosols and (slant column) water vapor abundances. Stereo imaging is
+   provided by the dual optical lens systems focusing onto a single CCD.
+   Robotic Arm (RA); Robotic Arm Camera (RAC): A two-meter RA with an
+   articulated end member is used to dig trenches at the site, to acquire
+   samples of surface and subsurface materials, and to support operations
+   of an attached RA Camera. The RAC will image the surface and subsurface
+   at close range to reveal fine-scale layering if present and to
+   characterize the fine-scale texture of the samples and trench sides.
+   The light-weight RA also supports a probe for measuring surface and
+   subsurface temperatures. Meteorological Package (MET): Mounted on a
+   1.2-m mast, the MET package includes a wind (speed and direction)
+   sensor, several temperature sensors, and Tunable Diode Lasers (TDL)
+   which measure water vapor amounts and specific isotopes of water and
+   carbon dioxide. A secondary mast (0.9 m in length) is attached to the
+   main MET mast, and supports a wind speed and two temperature sensors
+   near the surface saltation layer. Pressure sensors are mounted within
+   the spacecraft. Once on the surface the MET sensors are read at
+   periodic intervals, as power permits. Thermal and Evolved Gas Analyzer
+   (TEGA): TEGA uses differential scanning calorimetry (DSC) combined with
+   gas-specific sensors to determine the concentrations of ices, adsorbed
+   volatiles and volatile-bearing minerals in surface and subsurface
+   samples acquired and imaged by the Robotic Arm (RA). The RA deposits
+   the sample on a grated screen over a chute which fills the sample
+   receptacle. This receptacle is then mated with a cover to form the oven
+   in which the sample is heated; a paired (empty) oven provides a
+   calibration for the heating run. Evolved gases are wafted to sensors
+   which quantify the rate of discharge of oxygen, carbon dioxide and
+   water vapor. Once used, the ovens cannot be used again. TEGA is
+   designed to receive eight surface (soil) samples during the Lander
+   mission. Go to TOC L.10 8/8/97 LANDER PAYLOAD - MARS VOLATILES AND
+   CLIMATE SURVEYOR [MVACS] * Stereo Surface Imager [SSI] - Mast-mounted
+   stereo color imager, clone of PF IMP » Multispectral capability [0.4 -
+   1.1 microns] » Dual optics focusing on single CCD - Provides panoramas
+   of site and imaging support for other payload elements, especially the
+   Robotic Arm and TEGA - Images magnetic targets on deck » Magnetic
+   characterization of surface material - Narrow-band imaging of Sun »
+   Line of sight optical depths of aerosols » Slant column water vapor
+   abundances * Robotic Arm [RA]; Robotic Arm Camera [RAC] - 2-meter arm
+   with articulated end member, camera, and temperature probe - Digs
+   trenches, to acquire samples of surface and subsurface materials, and
+   support operations of the RAC - RAC images surface and subsurface to
+   reveal fine-scale layering if present and characterize fine-scale
+   texture of the samples and trench sides * Meteorological Package [MET]:
+   - Mounted on 1.2-m mast: wind (speed and direction) sensor, temperature
+   sensors, and Tunable Diode Lasers (TDL) which measure water vapor
+   amounts and specific isotopes of water and carbon dioxide. - Secondary
+   mast (0.9 m) is attached to the main MET mast: wind speed & 2
+   temperature sensors near the surface saltation layer. - Pressure
+   sensors are mounted within the spacecraft. - On the surface, MET
+   sensors are read at periodic intervals, as power permits. * Thermal and
+   Evolved Gas Analyzer [TEGA]: - Uses differential scanning calorimetry
+   (DSC) combined with gas-specific sensors to determine the
+   concentrations of ices, adsorbed volatiles and volatile-bearing
+   minerals in surface and subsurface samples acquired and imaged by the
+   Arm. - Operation: RA deposits the sample in a receptacle, which is then
+   mated with a cover to form the oven; Evolved gases are wafted to
+   sensors which quantify the rate of discharge of oxygen, carbon dioxide
+   and water vapor. Once used, the ovens cannot be used again. Eight
+   surface [soil] samples can be analyzed. L.11 8/8/97 5.2 LANDER MISSION
+   OVERVIEW 5.2.1 Overall Mission Description The MSP 98 Lander will be
+   launched on a Delta 7425 in January 1999, and will arrive at Mars in
+   December 1999. Burnout of the 3rd stage will be followed by yo-yo
+   despin of the entire stack, followed by spacecraft separation. At this
+   point both the spacecraft and upper stage will have been injected onto
+   a Type 2 trajectory whose aimpoint is biased away from the nominal
+   entry aimpoint, to assure that the upper stage has less than a 1E-4
+   probabilty of impacting Mars, as required by Planetary Protection
+   regulations. After separation, the solar panels will be deployed and
+   pointed to the sun, and initial acquisition achieved by the DSN.
+   Throughout cruise, contact will be maintained via the Medium Gain
+   Antenna. The solar panels will be pointed at the sun [with a small
+   offset in inner cruise]. Approximately 15 days after launch, the
+   largest Trajectory Correction Maneuver [TCM-1] will be executed. This
+   maneuver will remove launch vehicle injection errors and the
+   spacecraft's injection aimpoint bias. Depending on the size of the
+   maneuver, it may be necessary to divide this into two smaller
+   maneuvers. Provisions have been made to execute up to 3 additional
+   small TCM's during the remainder of cruise, plus a contingency 5th TCM
+   seven hours prior to entry for final control of the entry angle and
+   landing footprint, if needed. Precision approach navigation will be
+   effected via near simultaneous tracking of the approaching Lander and
+   an orbiter at Mars [either the MSP98 Orbiter or MGS]. After a direct
+   atmospheric entry, the Lander will be slowed by a Mars
+   Pathfinder-heritage aeroshell and parachute, and a controlled
+   propulsive landing effected. For launch during the Lander's primary
+   launch period, landing will occur between 75 and 78 S, on the southern
+   polar layered terrain. The first landed day's activities will include
+   deployment of the solar panels, functional checkout, and establishment
+   of communication with the Orbiter and time critical science activities.
+   Routine science activities will commence, at the earliest, on the
+   second day following landing. The Lander will be equipped with a UHF
+   relay for downlink via the MSP98 Orbiter and/or MGS, and command uplink
+   via the MSP98 Orbiter. A direct to Earth [DTE] link will also be
+   available for Lander commanding and as a backup downlink. The Lander
+   will carry the Mars Volatiles and Climate Surveyor (MVACS) instrument
+   suite, which will perform in situ investigations to address the science
+   theme "Volatiles and Climate History", the Mars Descent Imager (MARDI),
+   and a LIDAR instrument supplied by the Russian Space Agency. The Lander
+   will search for near-surface ice and possible surface records of cyclic
+   climate change, and characterize physical processes key to the seasonal
+   cycles of water, carbon dioxide and dust on Mars. The duration of the
+   landed science phase is expected to last no more than approximately 90
+   days. Go to TOC L.12 8/8/97 OVERALL MISSION DESCRIPTION Cruise * 5
+   TCM's [Contingency TCM-5 7 hrs before Entry] S/C Initialization * Comm
+   via MGA/LGA * Deploy Solar Arrays * Near simultaneous tracking w/ Mars
+   * Safe Mode for Sun/Earth orbiter starting E-30d Acquisition * Initial
+   DSN Acquisition Entry, Descent & Landing * Direct entry * Propulsive
+   Landing Launch * 615 kg Launch Mass Landed Operations * Delta II 7425
+   Vehicle * Commanding via UHF to M98 Orbiter or DTE link * Data relay
+   via M98 Orbiter, MGS, or DTE link * Landed mission duration: up to ~ 90
+   days L.13 8/8/97 5.2.2 Mission Phases Launch and Boost & S/C
+   Initialization Phases: The launch phase extends from Liftoff - 20 hours
+   through liftoff. The Boost and s/c Initialization Phase covers Liftoff
+   until initial DSN contact. Cruise Phase: The cruise phase extends from
+   spacecraft initialization to Entry - 30 hours. It includes initial
+   checkout of the spacecraft, required trajectory correction maneuvers
+   (TCMs) and calibrations, and initiation of the pre-entry episode.
+   Entry, Descent, and Landing Phase: The entry, descent, and landing
+   [EDL] phase extends from Entry - 30 hours until cutoff of the descent
+   engines. Landed Operations Phase: The landed operations phase extends
+   from descent engine cutoff through the end of science data taking.
+   Phase duration will be a function of lander capabilities. Go to TOC
+   L.14 8/8/97 MISSION PHASES * Launch and Boost & S/C Initialization
+   Phases: - Launch: Liftoff - 20 hours to liftoff. - Boost and s/c
+   Initialization: Liftoff until initial DSN contact. * Cruise Phase: -
+   From spacecraft initialization through Entry - 30 hours - Includes
+   initial checkout of the spacecraft, TCMs and calibrations * Entry,
+   Descent, and Landing [EDL]: - From Entry - 30 hours until cutoff of the
+   descent engines * Landed Operations Phase: - From descent engine cutoff
+   through end of science data taking - Phase duration is a function of
+   lander capabilities L.15 8/8/97 5.2.3 Lander Launch/Arrival Period *
+   This page under Change Control * The MSP98 Lander launch period is
+   divided into an 8 day Primary period [1/3/99 - 1/10/99] followed by a 6
+   day Secondary launch period [1/11/99 - 1/16/99]. A Contingency launch
+   period [1/17/99-1/27/99] is also supported. All lander trajectories are
+   Type 2, which allow high southern latitude accessibility during
+   southern Spring. Additional information on trajectory states can be
+   found in Appendix B.1 - Lander Mission Database. Lander design,
+   including ablator thickness and thermal design, and propellant loads
+   are based on conditions during the Primary launch/arrival period. The
+   Secondary and Contingency intervals are characterized by reduced
+   probabilities of achieving mission goals, including site elevation
+   requirements. Primary Launch Period [1/3/99 - 1/10/99]: The choice of
+   the Lander's Primary launch interval is based on a number of factors.
+   In order to avoid conflict with the Orbiter launch, the start of the
+   Lander launch period must occur no earlier than January 2, 1999. In
+   addition, the arrival date must be no earlier than December 3, 1999,
+   which corresponds to a solar longitude [Ls] of 256 . This is the
+   earliest arrival consistent with Lander survival and operation in the
+   thermal environment expected at the high Southern landing latitudes.
+   The date for the open of the Primary launch period which satisfies
+   these requirements and also keeps the launch energy [C3] acceptably low
+   is January 3, 1999. Across the 8 day primary period, the arrival date
+   is kept fixed, primarily to keep arrival V low for improved approach
+   navigation accuracy. A fixed arrival date also simplifies Lander
+   operations planning. With this stategy, the maximum C3 and V for the
+   Primary interval both occur on the first day of the Launch period. The
+   history of the Delta launch vehicle indicates that a high probability
+   [approximately 98% or higher] exists that launch will occur during the
+   Primary interval. Entry Angle and Landing Latitude: For a flight path
+   angle of -13.25 , the nominal landing latitude is approximately 76 S at
+   the start of the Primary launch period, and 75 S at the end of Primary.
+   The Landing footprint is approximately ± 1.5 for an entry angle
+   corridor of 0.45 [3 ]. [See B.1, the Lander Mission Database for more
+   data.] The probability of staying within the required entry angle
+   corridor of ±0.25 is TBD for the Primary launch period. The range of
+   acceptable longitudes is approximately 170 W - 235 W, corresponding to
+   ice- free conditions at the landing latitude. For planning purposes,
+   the nominal landing latitude is assumed to be 210 W. Secondary Launch
+   Period [1/11/99 - 1/16/99]: During the 6 day Secondary period which
+   follows the Primary interval, the nominal launch/arrival strategy is to
+   follow a contour of constant latitude, to maintain approximately the
+   same lattitude access available at the end of the Primary interval. As
+   the following graphic illustrates, by the latter half of the Secondary
+   launch period, the arrival V will start exceeding the maximum V
+   encountered during the Primary interval. This will tend to degrade
+   approach navigation accuracy [leading to larger landing ellipses] and
+   lead to higher heat loads. For launches towards the very end of the
+   Secondary period, it may become necessary to sacrifice latitude access
+   in order to keep heating loads within limits. Contingency Launch Period
+   [1/17/99 - 1/27/99]: Launch beyond the end of the Secondary period is
+   feasible, by following a launch/arrival strategy which does not
+   increase arrival V beyond the limit imposed by the ablator thickness.
+   As the following graph indicates, this leads to landing sites at more
+   Northern latitudes. Go to TOC L.16 8/8/97 LANDER LAUNCH/ARRIVAL PERIOD
+   * This page under Change Control * * 14 Day Launch Period: 1/3/99 -
+   1/16/99 LANDER LAUNCH/ARRIVAL SPACE - 13.25 Entry Angle - Type 2
+   trajectories allow access to high South latitudes during Southern
+   Spring. - Primary Period: 1/3/99 - 1/10/99 [8 days] * = 6 V » Lander
+   design based on conditions during Primary » Start of Primary chosen to
+   keep C3 < ~ 11, Lat = -74 C3 = 10 for constant arrival date 12/3/99
+   ARRIVAL DATE 12/18/99 C3 = 11 * 12/3/99 corresponds to Ls = 256 , 12/17
+   12/16 12/15 12/14 Earliest arrival consistent with lander 12/13 12/12
+   12/11 V* = 5 12/10 thermal design at landing latitudes 12/9 12/8/9912/7
+   12/6 * Keeps arrival V* low for improved approach Nav 12/5 12/4 12/3
+   12/2 Contingency * Constant arrival date simplifies planning 12/1
+   Secondary 11/30 11/29 » Landing Site: 11/28/99 Primary * For nominal
+   fpa = -13.25 , Nominal Landing C3 = 9 Latitude = 76 [open primary] - 75
+   [close primary] Lat = -72 * ~ ± 1.5 footprint for entry corridor = 0.45
+   [3s] 12/31/98 1/5/99 1/10/99 1/15/99 * Probability of staying within
+   required ±0.25 entry 1/1 1/2 1/3 1/4 1/6 1/7 1/8 1/9 1/11 1/12 1/13
+   1/14 1/16 angle corridor = TBD * Range of longitudes [ice-free] ~ 170 -
+   230 W. LAUNCH DATE Nominal site currently placed at 210 W - Secondary
+   Period: 1/11/99 - 1/16/99 [6 days] Latitude contours are approximate -
+   intended to show trends only » Reduced probability of meeting mission
+   goals [e.g. landing site elevation] » Follows contour of constant
+   latitude as long as feasible * Contingency Period: 1/17/99 - 1/27/99 is
+   also supported [bound V*, landing sites move Northward] - SUMMARY Day
+   in Launch Arrival Depart Arrival Landing Landing Landing Landing Launch
+   Date Date C3 Vinf Ls Sun angle True Solar Latitude Period [km^2/s^2]
+   [km/s] [deg.] [deg.] Time [deg.] Open of Primary 1 1/3/99 12/3/99 11.17
+   4.84 256.3 18.3 4:14:33 76S Close of Primary 8 1/10/99 12/3/99 9.76
+   4.76 256.3 17.5 4:10:10 75S Close Secondary 14 1/16/99 12/15/99 9.71
+   5.08 263.5 16.5 3:36:35 ~ 75S L.17 8/8/97 5.2.4 Summary of Mission
+   Events and DSN Tracking Requirements * This page under Change Control *
+   Shown on the following 3 pages is a text summary of the timing of major
+   mission events and associated DSN tracking requirements. Summaries are
+   provided for the open and close of the Primary Launch Period, and the
+   end of the Secondary Launch Period. 34m HEF antennae are baselined
+   throughout, although limited use of the 34m BWG is feasible and
+   required for some portions of the mission, to accommodate DSN usage
+   conflicts. In addition, some modification of the nominal tracking
+   profile is occasionally required in order to accommodate conflicts with
+   other missions using the same DSN assets. Expected BWG use and
+   modifications to nominal tracking schedules is detailed in Appendix
+   B.8. The 70m net is also being requested for Entry±5 days. [Note: 70m
+   support is also being requested for the Orbiter during the entire
+   Lander surface mission.] Go to TOC L.18 8/8/97 Lander Open Primary
+   Launch Period DSN REQUIREMENTS Start Start End End # Hrs/ Passes/
+   Passes/ Total Phase Sub-Phase Event Date DOM Date DOM Days Pass Day
+   Week Hrs Note Launch 1/3/99 0 Cruise Launch to Launch + 7 Launch + 7 d
+   1/3/99 0 1/10/99 7 7 8 3 21 168 A Cruise Cruise 1/10/99 7 1/15/99 12 5
+   4 1 7 20 Cruise TCM1, entry 1/15/99 12 1/18/99 15 3 4 1 7 12 Cruise
+   TCM1, maneuver TCM1 @ Launch + 15 d 1/18/99 15 1/19/99 16 1 4 1 7 4
+   Cruise TCM1, exit 1/19/99 16 1/22/99 19 3 4 1 7 12 Cruise Cruise
+   1/22/99 19 1/30/99 27 8 4 1 7 32 Cruise TCM2, entry 1/30/99 27 2/2/99
+   30 3 4 1 7 12 Cruise TCM2, maneuver TCM2 @ Launch + 30 d 2/2/99 30
+   2/3/99 31 1 4 1 7 4 Cruise TCM2, exit 2/3/99 31 2/6/99 34 3 4 1 7 12
+   Cruise Cruise 2/6/99 34 2/12/99 40 6 4 1 7 24 Cruise Payload Checkout,
+   Calibration Campaign Launch+ 40 d 2/12/99 40 2/19/99 47 7 4 1 7 28 B
+   Cruise Cruise 2/19/99 47 9/4/99 245 198 4 1 7 791 Cruise Payload
+   Checkout, Calibration Campaign Entry - 90 d 9/4/99 245 9/11/99 252 7 4
+   1 7 28 B Cruise Cruise 9/11/99 252 10/1/99 272 20 4 1 7 80 Cruise TCM3,
+   entry 10/1/99 272 10/4/99 275 3 4 1 7 12 Cruise TCM3, maneuver TCM3 @
+   Arrival - 60 d 10/4/99 275 10/5/99 276 1 4 1 7 4 Cruise TCM3, exit
+   10/5/99 276 10/8/99 279 3 4 1 7 12 Cruise Cruise to Arrival - 45 d Ends
+   at Arrival - 45 d 10/8/99 279 10/19/99 290 3 4 1 7 12 Cruise Approach
+   Increased tracking levels Starts at Arrival - 45 d 10/19/99 290 11/3/99
+   305 15 4 3 21 180 A Cruise Approach Dual-s/c tracking Starts at Arrival
+   - 30 d 11/3/99 305 11/28/99 330 25 4 3 21 300 A,D Cruise Approach Add
+   70m coverage Starts at Arrival - 5 d 11/28/99 330 11/29/99 331 1 4 3 21
+   12 A,B,D Cruise Approach TCM4, maneuver TCM4 @ Arrival - 4 d 11/29/99
+   331 11/29/99 331 0 4 3 21 0 A,B,D Cruise Approach cruise 11/29/99 331
+   12/1/99 333 3 4 3 21 36 A,B,D Cruise Approach continuous coverage
+   Starts at Arrival - 2 d 12/1/99 333 12/3/99 335 4 8 3 21 96 B,D Cruise
+   Approach TCM5, maneuver TCM5 @ Arrival - 0.3 d 12/3/99 335 12/3/99 335
+   1 8 3 21 12 B,D Entry Entry 12/3/99 335 12/3/99 335 0 8 3 21 0 B,D
+   Primary Mission Day 1 12/3/99 335 12/4/99 336 1 8 3 21 24 B,D Primary
+   Mission end continuous coverage Ends at Arrival + 2 d 12/4/99 336
+   12/5/99 337 1 8 3 21 24 B,D Primary Mission End 70m coverage Ends at
+   Arrival + 5 d 12/5/99 337 12/8/99 340 3 1 1 7 3 B,C Primary Mission
+   Remainder Ends at Arrival + 88 d 12/8/99 340 2/29/00 423 83 1 1 7 83 C
+   Primary Mission EOM 2/29/00 423 0 Grand Total 2037 Notes A: S/C
+   transmitter operation limited to 4 hrs on: 5 hrs off or equivalent
+   ratio B: 70m D/L support required in addition to 34 m coverage for
+   uplink C: This 10 hr interval must be correlated with Lander site local
+   "day". Overlap with 1 hr Orbiter daily contacts TBD. [See Orbiter req.]
+   D: Interval of Near-simultaneous Orbiter and Lander tracking. Lander
+   tracks must be coordinated with Orbiter tracks, from same HEF antenna.
+   * This page under Change Control * L.19 8/8/97 Lander End Primary
+   Launch Period DSN REQUIREMENTS Start Start End End # Hrs/ Passes/
+   Passes/ Total Phase Sub-Phase Event Date DOM Date DOM Days Pass Day
+   Week Hrs Note Launch 1/10/99 0 Cruise Launch to Launch + 7 Launch + 7 d
+   1/10/99 7 1/17/99 14 7 8 3 21 168 A Cruise Cruise 1/17/99 14 1/22/99 19
+   5 4 1 7 20 Cruise TCM1, entry 1/22/99 19 1/25/99 22 3 4 1 7 12 Cruise
+   TCM1, maneuver TCM1 @ Launch + 15 d 1/25/99 22 1/26/99 23 1 4 1 7 4
+   Cruise TCM1, exit 1/26/99 23 1/29/99 26 3 4 1 7 12 Cruise Cruise
+   1/29/99 26 2/6/99 34 8 4 1 7 32 Cruise TCM2, entry 2/6/99 34 2/9/99 37
+   3 4 1 7 12 Cruise TCM2, maneuver TCM2 @ Launch + 30 d 2/9/99 37 2/10/99
+   38 1 4 1 7 4 Cruise TCM2, exit 2/10/99 38 2/13/99 41 3 4 1 7 12 Cruise
+   Cruise 2/13/99 41 2/19/99 47 6 4 1 7 24 Cruise Payload Checkout,
+   Calibration Campaign Launch+ 40 d 2/19/99 47 2/26/99 54 7 4 1 7 28 B
+   Cruise Cruise 2/26/99 54 9/4/99 245 191 4 1 7 763 Cruise Payload
+   Checkout, Calibration Campaign Entry - 90 d 9/4/99 245 9/11/99 252 7 4
+   1 7 28 B Cruise Cruise 9/11/99 252 10/1/99 272 20 4 1 7 80 Cruise TCM3,
+   entry 10/1/99 272 10/4/99 275 3 4 1 7 12 Cruise TCM3, maneuver TCM3 @
+   Arrival - 60 d 10/4/99 275 10/5/99 276 1 4 1 7 4 Cruise TCM3, exit
+   10/5/99 276 10/8/99 279 3 4 1 7 12 Cruise Cruise to Arrival - 45 d Ends
+   at Arrival - 45 d 10/8/99 279 10/19/99 290 3 4 1 7 12 Cruise Approach
+   Increased tracking levels Starts at Arrival - 45 d 10/19/99 290 11/3/99
+   305 15 4 3 21 180 A Cruise Approach Dual-s/c tracking Starts at Arrival
+   - 30 d 11/3/99 305 11/28/99 330 25 4 3 21 300 A,D Cruise Approach Add
+   70m coverage Starts at Arrival - 5 d 11/28/99 330 11/29/99 331 1 4 3 21
+   12 A,B,D Cruise Approach TCM4, maneuver TCM4 @ Arrival - 4 d 11/29/99
+   331 11/29/99 331 0 4 3 21 0 A,B,D Cruise Approach cruise 11/29/99 331
+   12/1/99 333 3 4 3 21 36 A,B,D Cruise Approach continuous coverage
+   Starts at Arrival - 2 d 12/1/99 333 12/3/99 335 4 8 3 21 96 B,D Cruise
+   Approach TCM5, maneuver TCM5 @ Arrival - 0.3 d 12/3/99 335 12/3/99 335
+   1 8 3 21 12 B,D Entry Entry 12/3/99 335 12/3/99 335 0 8 3 21 0 B,D
+   Primary Mission Day 1 12/3/99 335 12/4/99 336 1 8 3 21 24 B,D Primary
+   Mission end continuous coverage Ends at Arrival + 2 d 12/4/99 336
+   12/5/99 337 1 8 3 21 24 B,D Primary Mission End 70m coverage Ends at
+   Arrival + 5 d 12/5/99 337 12/8/99 340 3 1 1 7 3 B,C Primary Mission
+   Remainder Ends at Arrival + 88 d 12/8/99 340 2/29/00 423 83 1 1 7 83 C
+   Primary Mission EOM 2/29/00 423 0 Grand Total 2009 Notes A: S/C
+   transmitter operation limited to 4 hrs on: 5 hrs off or equivalent
+   ratio B: 70m D/L support required in addition to 34 m coverage for
+   uplink C: This 10 hr interval must be correlated with Lander site local
+   "day". Overlap with 1 hr Orbiter daily contacts TBD. [See Orbiter req.]
+   D: Interval of Near-simultaneous Orbiter and Lander tracking. Lander
+   tracks must be coordinated with Orbiter tracks, from same HEF antenna.
+   * This page under Change Control * L.20 8/8/97 Lander End Secondary
+   Launch Period DSN REQUIREMENTS Start Start End End # Hrs/ Passes/
+   Passes/ Total Phase Sub-Phase Event Date DOM Date DOM Days Pass Day
+   Week Hrs Note Launch 1/16/99 0 Cruise Launch to Launch + 7 Launch + 7 d
+   1/16/99 13 1/23/99 20 7 8 3 21 168 A Cruise Cruise 1/23/99 20 1/28/99
+   25 5 4 1 7 20 Cruise TCM1, entry 1/28/99 25 1/31/99 28 3 4 1 7 12
+   Cruise TCM1, maneuver TCM1 @ Launch + 15 d 1/31/99 28 2/1/99 29 1 4 1 7
+   4 Cruise TCM1, exit 2/1/99 29 2/4/99 32 3 4 1 7 12 Cruise Cruise 2/4/99
+   32 2/12/99 40 8 4 1 7 32 Cruise TCM2, entry 2/12/99 40 2/15/99 43 3 4 1
+   7 12 Cruise TCM2, maneuver TCM2 @ Launch + 30 d 2/15/99 43 2/16/99 44 1
+   4 1 7 4 Cruise TCM2, exit 2/16/99 44 2/19/99 47 3 4 1 7 12 Cruise
+   Cruise 2/19/99 47 2/25/99 53 6 4 1 7 24 Cruise Payload Checkout,
+   Calibration Campaign Launch+ 40 d 2/25/99 53 3/4/99 60 7 4 1 8 32 B
+   Cruise Cruise 3/4/99 60 9/16/99 256 196 4 1 9 1009 Cruise Payload
+   Checkout, Calibration Campaign Entry - 90 d 9/16/99 256 9/23/99 263 7 4
+   1 8 32 B Cruise Cruise 9/23/99 263 10/13/99 283 20 4 1 9 103 Cruise
+   TCM3, entry 10/13/99 283 10/16/99 286 3 4 1 7 12 Cruise TCM3, maneuver
+   TCM3 @ Arrival - 60 d 10/16/99 286 10/17/99 287 1 4 1 7 4 Cruise TCM3,
+   exit 10/17/99 287 10/20/99 290 3 4 1 7 12 Cruise Cruise to Arrival - 45
+   d Ends at Arrival - 45 d 10/20/99 290 10/31/99 301 3 4 1 7 12 Cruise
+   Approach Increased tracking levels Starts at Arrival - 45 d 10/31/99
+   301 11/15/99 316 15 4 3 21 180 A Cruise Approach Dual-s/c tracking
+   Starts at Arrival - 30 d 11/15/99 316 12/10/99 341 25 4 3 21 300 A,D
+   Cruise Approach Add 70m coverage Starts at Arrival - 5 d 12/10/99 341
+   12/11/99 342 1 4 3 21 12 A,B,D Cruise Approach TCM4, maneuver TCM4 @
+   Arrival - 4 d 12/11/99 342 12/11/99 342 0 4 3 21 0 A,B,D Cruise
+   Approach cruise 12/11/99 342 12/13/99 344 3 4 3 21 36 A,B,D Cruise
+   Approach continuous coverage Starts at Arrival - 2 d 12/13/99 344
+   12/14/99 346 4 8 3 21 96 B,D Cruise Approach TCM5, maneuver TCM5 @
+   Arrival - 0.3 d 12/14/99 346 12/15/99 346 1 8 3 21 12 B,D Entry Entry
+   12/15/99 346 12/15/99 346 0 8 3 21 0 B,D Primary Mission Day 1 12/15/99
+   346 12/16/99 347 1 8 3 21 24 B,D Primary Mission end continuous
+   coverage Ends at Arrival + 2 d 12/16/99 347 12/17/99 348 1 8 3 21 24
+   B,D Primary Mission End 70m coverage Ends at Arrival + 5 d 12/17/99 348
+   12/20/99 351 3 1 1 7 3 B,C Primary Mission Remainder Ends at Arrival +
+   76 d 12/20/99 351 2/29/00 422 71 1 1 7 71 C Primary Mission EOM 2/29/00
+   422 0 Grand Total 2274 Notes A: S/C transmitter operation limited to 4
+   hrs on: 5 hrs off or equivalent ratio B: 70m D/L support required in
+   addition to 34 m coverage for uplink C: This 10 hr interval must be
+   correlated with Lander site local "day". Overlap with 1 hr Orbiter
+   daily contacts TBD. [See Orbiter req.] D: Interval of Near-simultaneous
+   Orbiter and Lander tracking. Lander tracks must be coordinated with
+   Orbiter tracks, from same HEF antenna. * This page under Change Control
+   * L.21 8/8/97 5.2.5 Lander V and Propellant Mass Summary * This page
+   under Change Control * Propellant required by the Lander during its
+   mission life has been calculated using end-to-end Monte Carlo
+   simulations. Propellant loading is based on accommodating 99% of the
+   simulated cases for the start of the launch period, which has the
+   highest arrival V across the primary. The maximum Lander wet mass is
+   assumed to be 615 kg, based on the maximum allowable entry mass and the
+   requirement to carry the New Millenium microprobes. The site elevation
+   goal is 5 km ± 1 km uncertainty. Analysis: A high fidelity Monte Carlo
+   simulation has been used to determine propellant needs for the Lander.
+   This simulation uses 2000 approach states and entry masses as inputs.
+   These data include dispersions in the approach state due to various
+   error sources, including orbit determination, maneuver execution, and V
+   imparted by attitude thrusters. Entry dispersions due to uncertainties
+   and variability in the atmosphere are modeled using the statistical
+   model in MarsGRAM 3.4, with inputs tailored to simulate more accurate
+   GCM atmosphere profiles. A wind profile [source: R. Zurek] where
+   maximum windspeed is a function of altitude is also modeled. The
+   mgnitude of the wind is selected randomly and held constant for each
+   case in the simulation. Entry aerodynamics, including angle of attack,
+   are modeled as well. The clock angle and magnitude of the angle of
+   attack [within a ±1 envelope] are selected randomly and held constant
+   for each case. Other modeled effects include IMU errors, errors in
+   propagation of the onboard navigation state, variability in
+   characteristics of the terminal descent propulsion system, and radar
+   errors. The following table summarizes V and mass drop data for the
+   Lander. Go to TOC L.22 8/8/97 LANDER V AND PROPELLANT MASS SUMMARY *
+   This page under Change Control * * REQUIREMENTS: - Propellant loading
+   based on Lander launch at the start of primary period [highest V during
+   primary] » 99% of cases accommodated - 615 kg maximum wet mass at
+   launch - dictated by maximum allowable entry mass of Lander and
+   requirement to carry New Millenium microprobes. - Site elevation = 5 km
+   ± 1 km uncertainty * ANALYSIS: High Fidelity Monte Carlo Simulation -
+   2000 Approach states used as inputs - dispersions due to orbit
+   determination errors, maneuver execution errors, V imparted by attitude
+   thruster firings. - Statistical Atmosphere [MarsGRAM 3.4 with
+   modifications for simulating GCM results] - Zurek wind profile: maximum
+   magnitude a function of altitude » Magnitude and direction randomly
+   selected & held constant for each case - Entry arodynamics, including
+   angle of attack » Maximum angle of attack = ± 1 . Clock angle,
+   magnitude randomly selected & held constant for each case - IMU errors
+   & propagation of onboard navigation state modeled - Terminal Descent
+   propulsion & radar errors included V or Mass Drop Mass after Event [kg]
+   Burn Time [seconds] Event 95% Low Mean 95% High 95% Low Mean 95% High
+   95% Low Mean 95% High TCM-1 [m/s] 9.51 30.24 60.10 597.5 605.7 611.4
+   75.16 230.19 452.00 TCM-2 [m/s] 0.04 0.42 1.08 596.3 604.7 610.4 0.32
+   3.11 8.00 TCM-3 [m/s] 0.02 0.20 0.57 595.4 603.7 609.4 0.09 1.26 3.96
+   TCM-4 [m/s] 0.01 0.04 0.08 594.4 602.7 608.5 0.06 0.67 1.75 TCM-5 [m/s]
+   0.03 0.10 0.20 593.4 601.7 607.5 0.05 0.49 1.28 Cruise RCS Usage [kg]
+   4.7 included in above Entry (cruise stage jettisoned) 76.7 516.8 525.0
+   530.8 - - - TO BE UPDATED Descent (heat shield jett) TBS TBS TBS TBS -
+   - - Terminal descent (bshell,chute jett) TBS TBS TBS TBS TBS TBS TBS
+   L.23 8/8/97 5.3 LANDER LAUNCH AND BOOST & S/C INITIALIZATION PHASES
+   5.3.1 Lander Countdown and Pre-launch SOE The following timeline
+   illustrates the timing of events prior to Launch. The Lander is placed
+   in nighttime mode during this time to manage internal temperatures. Go
+   to TOC L.24 8/8/97 LANDER COUNTDOWN AND PRE-LAUNCH SOE Install Battery
+   Sun Acquisition Enable Plug Lift-Off S/C Functional 30 Min. S/C Check
+   Test and GO For Launch (Init. CMIC) Lander In Nighttime Mode Backshell
+   Cooling Hose 24 Remove B/S 22 Cooling MST Cart Rollback 20 Fairing Air
+   Conditioning (13° C) 18 16 Battery Cell Temperature (°C) Battery Cell
+   Temperature (°C) 14 Battery Cell Temperature 12 5 min. wakeup 10 0 L -
+   18 2 L - 16 4 L - 14 6 L - 12 8 L - 10 10 L - 8 12 L - 6 14 L - 4 16 L
+   - 2 18 Launch Time (hrs) Time (Hrs) L.25 8/8/97 5.3.2 Lander Launch
+   Events Summary Go to TOC L.26 8/8/97 LANDER LAUNCH EVENTS SUMMARY Event
+   Time (sec) Stage I Liftoff 0.000 Main Engine Cutoff (MECO) 261.3 Stage
+   III Separation 269.3 Stage II Ignition Signal 274.8 Jettison Fairing
+   285.0 First CutoffStage II (SECO 1) 668.7 Restart Stage II 1827.3
+   Second CutoffStage II (SECO 2) 1846.7 Start Stage III Ignition Time
+   Delay Relay 1896.7 Fire Spin Rockets 1896.7 Jettison Stage II 1899.7
+   Stage III Ignition 1936.7 Stage III NCS Enable 1936.7 Stage III Burnout
+   (TECO) 2023.8 NCS Disable/Yo-Yo Despin Initiation 2306.7 Spacecraft
+   Separation 2311.7 Note: Assumes a "short-coast" trajectory for launch
+   on 3 January 1999. L.27 8/8/97 5.3.3 Lander Boost and Spacecraft
+   Initialization Timeline Shown below are the boost and Initialization
+   sequence of events. See Appendix B.2 for initial DSN and Air Force
+   Tracking Station acquisition geometry data. Go to TOC L.28 8/8/97
+   LANDER BOOST AND SPACECRAFT INITIALIZATION TIMELINE Boost Enable TCS
+   CPL_PRIME ON Enable RCS Catbed Heaters IMU ON LIFT-OFF (L) Strt S/C
+   Init Block L+4:00 L+6:00 L+18:31 L+37:31 L+38:00 SEPARATION
+   L+38:31-39:25 Initialization Sun Acq. Safe Mode Slew to Yes Initiate
+   Initial DSN Contact via Ground Command Cruise Rate Dply SAs Att.
+   Determin. Comm Att. Cnfg Damping (5 min) H/W (4 min) (8 min) (5 min) (1
+   min) Enable No Attitude Initialized? Sequence Cone for Earth Aborts
+   (time = TBD) Ground Command to Exit Safe Mode Disabled RCS Control
+   Transition to Safe Mode Start Automatic Transmission TMU, SSPA powered
+   ON IOS in View ( no X-Band) DSN in View ( Canberra ) S+1 min S+6 min
+   S+11 min S+18 min S+23 min S+30 min SEP(S) (L+38-39 min) S+10 min LL-8
+   L.29 8/8/97 5.4 LANDER CRUISE PHASE 5.4.1 Lander Cruise Navigation *
+   This page under Change Control* Radiometric tracking requirements
+   during cruise involve the use of two way coherent doppler and ranging
+   according to the schedule described in the following table. As
+   indicated, for the first 30 days after launch a minimum of one 4 hour
+   pass per day is required. During quiescent cruise, only one 4 hour pass
+   per DSN complex per week is required for radiometric tracking. [One
+   4-hour DSN track is baselined per day for purposes of spacecraft
+   monitoring.] For TCM's 1 - 3, one 4 hour pass per day would be required
+   during a 7 day interval centered about the TCM. For the track occuring
+   during the 24 hour interval centered at TCM, the entire pass must be
+   visible from a single DSN station. [Note: The analysis described in
+   Appendix B.7 assumed 3 4-hr passes per day during the 24 hours centered
+   on each TCM. Subsequent analyses confirm that a single 4-hr pass is
+   sufficient.] Pre-Entry Tracking - Near Simultaneous Orbiter/Lander
+   Tracking: Additional tracking is required for the 45 days prior to
+   Entry; during this time, approximately three 4-hour passes per day are
+   required for the higher precision navigation required prior to Entry.
+   TBD: In addition, in order to improve entry angle control, a program of
+   near-simultaneous tracking between the Lander and an orbiter at Mars
+   [either the MSP98 Orbiter or MGS] is required starting 30 days before
+   Entry. This technique reduces the effects of error sources common to
+   both spacecraft, such as station-dependant biases, Earth orientation
+   errors, and errors in media and solar plasma modelling. Lander tracks
+   would immediately precede or follow an orbiter track from the same HEF
+   antenna. During much of this interval, the Lander would enjoy greater
+   flexibility in scheduling its tracks, compared with an orbiter,
+   especially the MSP98 Orbiter, which would be in Aerobraking at this
+   time. As a result, the Lander tracks would have to be scheduled to fit
+   in with the Orbiter tracks, while satisfying the Lander transmitter
+   on/off cycle [4 hrs on/5 hrs off during cruise]. The baseline assumes
+   use of the MSP98 Orbiter. MGS would be used as a backup in case the
+   MSP98 Orbiter is not available. A strawman integrated tracking schedule
+   and estimate of D/L data volume can be found in Appendix B.9. 5.4.2
+   TCM's * This page under Change Control* Although the Lander trajectory
+   does not require any deterministic deep space maneuvers to reach Mars,
+   statistical Trajectory Correction Maneuvers [TCM's] are required to
+   shape the cruise trajectory. Up to five TCM's are planned to occur, at
+   Launch + 15 days, Launch + 30 days, Entry - 60 days, Entry - 4 days,
+   and a contingency maneuver at Entry - 7 hours. At injection, the
+   probability of impact of the upper stage is less than 1E-4, as required
+   by Planetary Protection regulations. [See the MGS Planetary Protection
+   Plan.] It is not necessary to bias the injection aimpoint away from the
+   nominal to satisfy this requirement. As a result, the primary purpose
+   for TCM-1 is to correct injection errors. TCM-1 constitutes 98% of the
+   total TCM V required during a mission, and will be broken into two
+   maneuvers, separated by a repressurization interval, if the required
+   value of TCM-1 is greater than 24 m/s. The following page includes a
+   table of the 95% high, mean, and 95% low values of each TCM and the
+   summary statistical V for the beginning of the Primary launch period.
+   Propellant loading is based on an end-to-end Monte Carlo analysis of
+   propellant usage, including the effects of maneuver execution errors
+   and orbit determination errors. Go to TOC L.30 8/8/97 LANDER CRUISE
+   NAVIGATION * This page under Change Control* * Navigation Cruise
+   Tracking Requirements [Two-way Coherent Doppler and Ranging]:
+   NavTracking Mission Event Requirements Comments Launch to Launch + 30
+   days 1 4-hr pass/day Quiescent Cruise 3 4-hr passes/week One pass per
+   complex per week required for navigation. [One 4-hour pass per day
+   baselined for s/c monitoring.] TCM entry [TCM-3.5 days to TCM] 1 4-hr
+   pass/day TCM [24 hrs centered on TCM] 1 4-hr pass/day <-Pass must be
+   visible from single DSN station TCM exit [TCM to TCM + 3.5 days] 1 4-hr
+   pass/day Approach [Entry-45 days to Entry] 3 4 hr passes/day *
+   Pre-entry Tracking - Near Simultaneous Orbiter/Lander Tracking [TBD]: -
+   Begins 30 days before Entry, required for precision entry angle control
+   - Lander tracks are placed immediately before or after an orbiter track
+   [M98 or MGS] from same HEF antenna » Reduces effects of error sources
+   common to both spacecraft [station-dependant biases, Earth orientation
+   errors, and errors in media and solar plasma modelling] » Lander would
+   have to accommodate orbiter tracking schedule [esp. M98 Orbiter,
+   Aerobraking during this time] » Baseline assumes use of MSP98 Orbiter.
+   MGS would be used as a backup. * Example Integrated tracking schedule &
+   D/L data volume estimates in Appendix B.9 * Trajectory Correction
+   Maneuvers: - Probability(Mars impact) of upper stage < 1E-4 [Planetary
+   Protection] without the need to bias injection aimpoint - TCM-1
+   corrects injection dispersions - TCM's for Open of Primary Launch
+   Period: [to be updated] TCM # Placement 95% Low V [m/s] Mean V [m/s]
+   95% High V [m/s] Comments 1 Launch + 15 days 9.86 30.28 59.90 Will be
+   broken into 2 maneuvers if > 24 m/s 2 Launch + 30 days 0.08 0.41 1.07 3
+   Entry - 60 days 0.01 0.17 0.53 4 Entry - 4 days 0.03 0.09 0.18 5 Entry
+   - 7 hrs 0.04 0.16 0.36 Contingency maneuver Totals 10.29 31.10 61.20
+   L.31 8/8/97 5.4.3 TCM Sequence of Events Illustrated below is the
+   sequence of events for a Lander TCM. TCM-1 is large enough that it may
+   be necessary to split the maneuver into two parts, repressurizing the
+   propulsion system in between. This repressurization would be performed
+   during a communications pass. Subsequent maneuvers would be performed
+   in blow-down mode. Go to TOC L.32 8/8/97 TCM SOE - To Be Updated DAILY
+   OPS EPISODE ENTRY,DESCENT & LANDING DSN Contact Inner Cruise Prop Sys
+   Activity Nominal Ops Status Activity Note: 4 hr/day Activity (5
+   min/day) TCM(2-5) Burns TCM-1(A,B) EPISODE (Blow Down Mode) T (TCM-2)
+   L+ 45 d ENABLE MAINTAIN ENABLE Interval T (TCM-3) A - 60 d SSPA,TMU,
+   and Inner Cruise Press Transducers Activity T (TCM-4) A - 10 d Exciter
+   T (TCM-5) A - 2 d Attitude via 7h STATUS DSN RCS Control T(TCM-2,4) <
+   20 sec TRANSMIT Repressurize Propellant System T(TCM-3) < 12 min MGA @
+   100 bps DISABLE T(TCM-5) = TBD (*periodically update Press Transducers
+   Open PVC1 to Isolate by RECEIVE solar pointing offset Repressurize
+   Closing PVO1 as SPE changes) MGA @ 125 bps TCM-1(A,B) EPISODE PRE -TCM
+   DSN Prepare for TCM-1(A,B) TCM CONTACT (TCM ±2 h) TCM Burn Recovery
+   ENABLE ENABLE TCM THRUSTER ENABLE TCM THRUSTERS SLEW TO OUTER CRUISE
+   ATT SSPA,TMU, and CATBED HEATERS (Blow Down Mode) T = 2 min Exciter T =
+   Burn - 20 min SLEW TO TCM ATTITUDE DISABLE TCM CBH TRANSMIT T (TCM-1A)
+   L+15 d T = Burn - 5 min MGA @ 100 bps T(TCM-1A) < 5 min T = 5 min
+   T(TCM-1B) L + 17 d RECEIVE T(TCM-1B) < 9 min MGA @ 125 bps L.33 8/8/97
+   5.4.4 Lander Payload Cruise Checkout, Characterization, and Calibration
+   Campaigns 5.4.4.1 Overview Constraints: Checkouts and calibrations of
+   the Lander instruments must be de-conflicted with Lander and Orbiter
+   mission-critical events. No science checkouts, calibrations, or
+   playback of data will be performed within ±3 days of a Lander TCM or
+   within 45 days of Entry, consistent with Lander power limitations. None
+   of the Lander science cruise calibrations affect the orientation of the
+   spacecraft. Checkout, Characterization, and Calibration Campaigns: A
+   single sequence will perform all required science checkouts and
+   calibrations. This sequence will run twice, at approximately Launch +
+   40 days and Entry - 90 days. Each campaign will last 7 days, during
+   which all payload checkout and calibration activities, and playback of
+   all data will be performed. 70m tracking support will be requested for
+   these intervals, allowing the lander to communicate at a D/L da

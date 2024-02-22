@@ -1,0 +1,527 @@
+http://lnx21.wwb.noaa.gov/images/conf2/conf2.html
+
+                          REANALYSIS PRIOR TO 1958
+
+                   Robert Kistler^(1), Eugenia Kalnay^(2)
+
+                           (1) EMC/NCEP /NWS/NOAA
+
+    W/NP Room 207 WWBG, 5200 Auth Road, Camp Springs, MD 20746-4303, USA
+
+                       E-mail: Robert.Kistler@noaa.gov
+
+    (2) Department of Meteorology , University of Maryland, 3431 Computer
+                        and Space Sciences Building,
+
+                        College Park, Maryland 20742
+
+                                STATUS: final
+
+                                 July 2,1999
+
+   ABSTRACT
+
+   The NCEP/NCAR reanalysis extends from Jan 1948 to the present. The
+   period prior to June 1957 presented a challenge to conventional
+   techniques in that the primary rawindsondes launches were valid at 03
+   and 15GMT, while surface data was collected at 00, 06, 12, and18GMT.
+   Presumably in preparation for the International Geophysical Year of
+   July 1957-June 1958 (IGY ), rawindsonde launches worldwide were
+   advanced to 00 and 12GMT. In this paper the generalization of the
+   assimilation system to accommodate the observation time dichotomy prior
+   to June 1957 is described. Standard measures of prediction skill,
+   hemispheric rms and anomaly correlation scores, are presented to
+   measure the assimilation quality. In addition we examine the
+   assimilated state and forecast verifications of two historic storms.
+   Additional daily predictions were made to fill in between the routine
+   every-fifth-day 192 hour predictions. In this paper two historic storms
+   of the 1950's are presented: 1) the November 24-26, 1950 storm over the
+   northeastern United States ; 2) the Jan 31-Feb 2, 1953 North Sea Gale
+   that broke the dikes in Holland.
+
+   Introduction
+
+   The National Centers for Environmental Prediction/National Center for
+   Atmospheric Research (NCEP/NCAR ) have cooperated in the Reanalysis
+   Project described in detail in Kalnay et al (1996). The Project started
+   in 1989 at NCEP (formerly known as the National Meteorological Center
+   or NMC) with the initial goal of just building a "Climate Data
+   Assimilation System" (CDAS) which would use a "frozen" system, and not
+   be affected by the changes introduced by many improvements to the
+   numerical weather prediction operational systems. (See Kalnay et al,
+   1998 for a documentation of the changes in the NCEP operational systems
+   from the 1950's to 1998).
+
+   The CDAS Advisory Panel suggested in 1990 that CDAS would be much more
+   useful if carried out in conjunction with a long-term reanalysis. NCEP
+   contacted NCAR, which has developed a comprehensive archive of
+   atmospheric and surface data, to explore the possibility of a joint
+   project to perform a very long reanalysis. NCAR enthusiastically agreed
+   and was also supportive of the idea of starting as far back as the
+   International Geophysical Year ,1957-1958, ( IGY) and to gather the
+   data to perform a long-term reanalysis using a frozen state-of-the-art
+   system. The support of NOAA (the National Weather Service, NWS , and
+   the Office of Global Programs, (OGP ) and of the National Science
+   Foundation (NSF ) was essential to carrying out the project.
+
+   The NCEP/NCAR Reanalysis system was designed, developed and implemented
+   during 1990-1994. The early design was discussed at the Reanalysis
+   Workshop held at NCEP in April 1991 (Kalnay and Jenne, 1991). The
+   reanalysis system required a completely different design from NCEP
+   operations: the goal was to perform one month of reanalysis per day in
+   order to carry out a 40-year reanalysis in just a few years. Several
+   new systems which were developed for this project and later ported to
+   NCEP operations, including a new BUFR archive designed to keep track of
+   additional information about each observation ("meta data") and an
+   advanced quality control (QC) system. The model was also upgraded, and
+   was identical (except for having half the horizontal resolution) to the
+   system that became operational on 25 January 1995. The most difficult
+   task, made easier by the collaboration with NCAR, was to assimilate
+   data that came from many different sources, with very different
+   formats, and to quality control them (Woollen and Zhu, 1997 , Ebisuzaki
+   et al, 1997, Kistler et al, 1997, Saha and Chelliah, 1993).
+
+   The actual reanalysis started in June 1994. Although identical to the
+   global system implemented operationally in January 1995, the
+   operational system benefited from many errors found by the early
+   reanalysis tests in the Global Data Assimilation System. The CDAS
+   (performed 3-days after real time with a system identical to the
+   reanalysis) became operational in 1995, and since then it has been
+   extensively used for climate monitoring by the Climate Prediction
+   Center (CPC) and many other groups. The period 1968-1996 was completed
+   in early 1997. The reanalysis period 1957-1967, was started in July
+   1997 and finished on 13 October 1997. This completed the 40 years
+   originally planned. Following the latest recommendation of the Advisory
+   Panel, the decade 1948-1957 was also reanalyzed during 1998, although
+   these oldest data presented many additional problems, such as a
+   different observing schedule and coverage primarily over NH land. This
+   (combined with CDAS which extends it to the present) completes more
+   than 50 years of reanalysis. There are two major products of the
+   reanalysis. The first is the 4-dimensional gridded fields of the global
+   atmosphere, the output most widely used by weather and climate
+   researchers. It also includes 8-days "reforecasts" performed every 5
+   days. The second major product is the Binary Universal Format
+   Representation (BUFR) archive of the atmospheric and surface
+   observations for the 5 decades of reanalysis . The BUFR archive now
+   includes, for each observation, additional useful information about
+   each observation, such as the value of the 6hr forecast, analysis, and
+   a preliminary 7-year (1987-1993) climatology from the NCEP operational
+   archives, collocated with each observation, as well as quality control
+   decisions (meta data). In the process of preparation, and during the
+   reanalysis, many errors were identified in the data archives, and many
+   were corrected. This information, and the meta-data included in the
+   BUFR archives, will be invaluable for carrying out improvements in the
+   next phases of reanalysis.
+
+   In this paper we emphasize results from the earliest decade of the 50
+   years, 1948-1958, since it was completed following the November 1997
+   First International Conference on Reanalyses, and, more importantly, it
+   represents the pioneering first glimpse with modern NWP tools into the
+   pre-NWP era. Much of the presentation is excerpted from the closure
+   paper by Kistler, et.al.,(1999), that, if all goes as planned, is
+   included on the NCEP/NCAR CDROM to be distributed at the conference.
+   Other wise, the CDROM will accompany the published paper in BAMS , in
+   similar fashion to Kalnay, et.al. (1996) and its companion CD_ROM .
+
+   The latest information regarding the CDAS/Reanalysis may found in the
+   NCEP Reanalysis Home Page ,.
+
+
+   Analysis system
+
+   The reanalysis system, described in more detail in Kalnay et al (1996)
+   includes the NCEP global spectral model operational in 1995, with 28
+   "sigma" vertical levels and a horizontal triangular truncation of 62
+   waves, equivalent to about 210km. The analysis scheme is a
+   3-dimensional variational (3D-Var) scheme cast in spectral space
+   denoted Spectral Statistical Interpolation (Parrish and Derber, 1992).
+   The assimilated observations are:
+
+   · upper air rawinsonde observations of temperature, horizontal wind and
+   specific humidity;
+
+   · operational TOVS vertical temperature soundings from NOAA polar
+   orbiters over ocean, with microwave retrievals excluded between 20N and
+   20S due to rain contamination;
+
+   · temperature soundings over land only above 100 hPa
+
+   · cloud tracked winds from geostationary satellites;
+
+   · aircraft observations of wind and temperature;
+
+   · land surface reports of surface pressure, and
+
+   · oceanic reports of surface pressure, temperature, horizontal wind and
+   specific humidity.
+
+   Evolution of the observing upper air network and impact on the
+   reanalysis
+
+   We can distinguish three major phases in the global upper air observing
+   system: a) the early period, starting with the first upper air
+   rawinsonde observations and ending with the (IGY ) of 1957-58; b) the
+   "modern" global rawinsonde network established during the IGY and used
+   almost exclusively until 1978; and c) the advent of a global
+   operational satellite observing system starting in 1979 until the
+   present.
+
+   The NH rawinsonde observations had already been started by 1948. Good
+   data coverage in China started in 1956, and in India by 1950. The
+   world's upper air rawinsonde network of stations can be considered to
+   be almost modern from June 1957-on, with the start of the IGY . Before
+   the IGY there were no observations from most of South America and
+   Antarctica, and although observations in Australia, New Zealand and
+   parts of Africa and South America started earlier, the network was
+   exceedingly inadequate in the SH. In the NH, the upper air observations
+   for the early years actually had some advantages compared with present
+   days. A number of permanent ships started observations in the late
+   1940's and data at these locations continued in the northern oceans
+   until about 1973-1974. After that the number of ships was greatly
+   reduced. There were weather reconnaissance flights over the northern
+   oceans and to the North Pole during 1947-1960. These, together with the
+   permanent ship rawinsondes from 1948 to 1973 have helped the reanalysis
+   over the oceans during the early years.
+
+   Winds aloft from radar or visual tracking of balloons (called pilot
+   balloons or pibals) are an important data source for reanalysis. For
+   the early years, there are millions of these observations, especially
+   in data set TD54 (see next subsection). There is considerable pibal
+   data from Africa, South America, India, US, etc. Pibals for early years
+   have come from sources like Brazil, Australia and France.
+
+   Satellite cloud-tracked winds from geosynchronous satellites became
+   operationally available for the Western Hemisphere in 1973-74; by the
+   end of the 1970's they were available from European and Japanese
+   satellites as well.
+
+   The world's first satellite sounder data started in April 1969 on a
+   polar orbiting satellite (SIRS-A, with 8 infrared channels). The
+   NCEP/NCAR system started using vertical temperature soundings from an
+   infrared instrument (VTPR) in the SH starting in March 1975. In 1979,
+   with the First GARP Global Experiment (FGGE ), the TOVS (TIROS-N
+   Operational Vertical Sounder) became the first combined
+   infrared/microwave (HIRS/MSU) operational sounder. This instrument had
+   a major positive impact in the forecasts in the SH, and continued to be
+   used with little change until the recent implementation of an advanced
+   microwave sounding unit (AMSU) in 1998. The NCEP/NCAR Reanalysis uses
+   the NESDIS temperature soundings from TOVS, although NCEP started using
+   radiances directly in October 1996.
+
+
+   Latitude/time distribution of data
+
+   In order to provide the user with information about the data
+   availability for different periods of the Reanalysis, we have prepared
+   detailed monthly data density maps available at link from NCEP
+   Reanalysis home page. Monthly summaries are also available on CD-ROM to
+   be distributed, providing the number of observations every month in
+   every 2.5 ^o latitude-longitude box for seven categories of
+   observations.
+
+   As a summary, Fig. 1 shows the zonal mean number of all types of
+   observations as a twelve-month running mean from 1946 to 1998. Few
+   observations were available before 1948, even in the Northern
+   Hemisphere mid-latitudes. Increases near the equator and in the
+   Southern Hemisphere sub-tropics in the 1950s reflect mostly increases
+   in land surface synoptic reports. Increases in the late 1960s reflect
+   increases in land surface synoptic reports, ocean ship reports,
+   radiosondes and aircraft reports. Satellite winds became available in
+   significant numbers in the mid-1970s, increased in number in the late
+   1980s and increased further in 1998. Satellite temperatures we first
+   available in 1972, first used in 1975, and in significant numbers in
+   1979.
+
+   The information on data distribution is very valuable in assessing the
+   reliability of the reanalysis, as illustrated in the following example
+   from a study by Brett Mullan of New Zealand's National Institute of
+   Water and Atmosphere (pers. comm., 1999). The lower panel of Fig. 2
+   (kindly provided by Dr. Mullan) traces 40 years of the difference of
+   monthly mean sea level pressure of the reanalysis and that observed at
+   Campbell Island (52.55S,169.15E). The upper panel shows monthly mean
+   data counts of land surface reports from the New Zealand area (40-50S,
+   106-175E) for the same period. The data count was computed from the
+   reanalysis data counts web page
+   http://wesley.wwb.noaa.gov/cgi-bin/disp_m_obscnt.sh , also available on
+   the conference CD-ROM. Note that the large differences at Campbell
+   Island between 1963 and 1967 during the years when only 5 surface
+   observations per month from New Zealand were available to the NCEP/NCAR
+   reanalysis.
+
+   However, the data distribution alone does not take into account the
+   ability of 4-dimensional data assimilation systems to transport
+   information from data rich to data sparse regions. As a result, as will
+   be shown by the forecast results in a subsequent section, the disparity
+   between the quality of the reanalyses in the NH and those in the SH
+   before the advent of satellite data in 1979 is considerably smaller
+   than the data density alone would suggest.
+
+
+   Observation changes in 1957 and the reanalysis for 1948-1957
+
+   On June 1 1957, with the beginning of the International Geophysical
+   Year ( IGY), the World Meteorological Organization (WMO) made several
+   major changes. This included shifting the upper air observing times
+   from 03UTC, 09UTC, 15UTC and 21UTC to 00UTC, 06UTC, 12UTC, and 18UTC
+   respectively, the same major synoptic times already used for the
+   surface observations.
+
+   Given this change, we decided to perform the NCEP/NCAR Reanalysis at
+   the observing times for upper air data for the period 1948-June 1957
+   (03UTC, 09UTC, 15UTC, 21UTC). However, in order to facilitate user
+   comparisons with the post-1957 reanalysis, the 3hr forecast fields at
+   06UTC, 12UTC, 18UTC and 00UTC were also saved and diagnostic files were
+   maintained at 06UTC, 12UTC, 18UTC and 00UTC for continuity with the
+   following 40 years of reanalysis. In order to maintain the philosophy
+   of a constant data assimilation/forecast system throughout the
+   reanalysis, no attempt was made to modify the forecast errors
+   statistics used in the 3-dimensional variational data assimilation
+   system (3D-Var) used in the Reanalysis (Parrish and Derber, 1992).
+   Since the forecasts for this early stage are of poorer quality, this
+   decision implies that in the pre 1958 period, the information from the
+   data was not optimally extracted: the forecasts were given relatively
+   more weight than optimal. When a long reanalysis is performed again,
+   the information already gathered in the first reanalysis will allow to
+   reconsider the pre-1958 period and estimate the forecast error
+   covariances as they evolve with changes in the observing systems.
+
+
+   Impact of changes in the observing systems
+
+   As indicated in the previous section, there were two major changes in
+   the observing systems in the last 50 years. The first one took place
+   during the period 1948 - 1957, when the NH upper air network was
+   gradually improved, and culminated in the International Geophysical
+   Year of 1957-58. The NH network was relatively stable after that time,
+   but the tropics and SH were very poorly observed. The second major
+   addition took place with the First Global GARP (Global Atmospheric
+   Research Project) Experiment (FGGE ), run from Dec 1978 - Nov 1979,
+   which introduced several innovative observing systems relying on
+   spacecraft sensing and communication to provide unprecedented global
+   observation coverage and timely data receipt. Although satellite
+   cloud-tracked winds were introduced in the early 1970's, and VTPR
+   temperature soundings in 1975, the global observing system with the
+   more advanced TOVS sounder was consolidated during FGGE. During and
+   after FGGE, many satellite data impact tests were executed, and
+   generally reported strongly positive results in the Southern
+   Hemisphere, but little impact in the Northern Hemisphere. (See Mo et
+   al., 1995 for a summary.)
+
+   Impact of the evolving observing systems on the forecasts
+
+   As indicated in the introduction, we have carried out 8-day forecasts
+   every 5 days as part of the reanalysis. Fig. 3 and Fig 4 show the
+   annual average of the rms difference between the forecasts and the
+   verifying analyses, for days 1 to 8, in the NH and SH, respectively.
+   The impact of the observing systems and data processing in the NH is
+   clearer in the shorter forecasts (days 1-3) which are less sensitive to
+   the influence of variations in atmospheric predictability. We can
+   distinguish several stages in the observing systems: From 1948 through
+   1957 there is a continuous improvement in the forecasts, as the upper
+   air network was being established. From 1958 through 1972, there is a
+   plateau in the forecast skill. In 1973 there is a large improvement
+   apparently associated with the WMO format change and the ON29 format
+   established at NMC discussed in Section 3 (recall that these forecasts
+   include the effect of the reanalysis QC, including Complex QC of
+   rawinsonde heights and temperatures and OIQC of all data). In contrast,
+   the 500 hPa S1 scores for the 36 hr operational forecasts, which did
+   not include the Reanalysis QC, indicate a drop in the operational
+   forecast skill in 1973-75 (Kalnay et al, 1998). The impact of more
+   recent improvements in the observing systems is more gradual and rather
+   small. In the winter scores (not shown) there is a very significant
+   increase in skill in the NH after FGGE for the forecast range 3 days
+   and beyond. This can be attributed to positive satellite data impact on
+   oceanic analyses, with the downstream effects taking several days to
+   have an influence.
+
+   Fig. 5 shows the annually averaged 5-day anomaly correlation (AC) for
+   the 50 years of reanalysis forecasts (full lines), as well as the
+   operational scores (dashed lines) which are available only for the last
+   decade. A level of AC of 60%, considered to be a threshold for useful
+   skill, is also indicated in the plot. As in the rms error plot, there
+   is a rapid improvement in the reanalysis AC in the NH in the period
+   1948-1957, and a large improvement with the changes made in 1973. It is
+   remarkable that 5-day skillful "reforecasts" were possible with the
+   upper air data of the mid-1950's, a level attained operationally at
+   NCEP in the mid-1980's. The impact of the higher horizontal resolution
+   of the operational system (T126 operational vs. T62 in the reanalysis)
+   is apparent starting in 1991. The largest operational improvement
+   apparent during 1996 and 1997 (compared to the reanalysis) is probably
+   mostly due to the direct use of TOVS radiances, replacing the
+   operational NESDIS retrievals used still in the reanalysis (Derber and
+   Wu, 1998 ).
+
+   Fig. 5 also shows that in the SH, the impact of improvements in the
+   observing systems is much clearer than in the NH. In the Reanalysis the
+   AC for the 5-day forecasts increases from less than 50% before the
+   advent of satellite data to well over 60%. The impact that the
+   continuous improvement of NESDIS TOVS retrievals had on the SH
+   forecasts is also very apparent. The AC for the period before 1958 is
+   shaded to emphasize that this period is less reliable because of the
+   change in observing schedule, the lack of observations in the SH, and
+   the less than optimal analysis. In the NH a much lower AC reflects
+   these factors in the earliest period. In the SH, the very high AC is
+   spurious, simply reflecting the fact that, without data, as shown
+   clearly by Fig 1, the analysis is essentially given by the forecast.
+
+   Storm of November 1950
+
+   Near the top of the list of candidates for "Storm of the Century" over
+   the United States would be the storm of November 25-27, 1950 (Smith,
+   1950, Bristor,1951). The storm caused widespread East Coast flooding
+   and wind damage, while further inland record snowfalls and minimum
+   temperatures were observed during its rampage over the northeastern
+   United States. (Author Kistler was an eye-witness as a young boy on
+   what was normally a simple commute between Northern New Jersey and New
+   York City on Saturday morning, Nov. 25.) In the years following the
+   storm, it served as a case study by the pioneers in numerical weather
+   prediction (e.g. Phillips, 1958).
+
+   During the routine execution of the reanalysis, 8-day predictions were
+   initiated at five-day intervals . Fortuitously for this case, a
+   prediction was initiated from 0300 GMT 22 Nov 1950, thereby permitting
+   an examination of modern medium range skill in the pre-NWP era. The
+   initial conditions, Fig 6, depict a weak cyclonic wave over Minnesota,
+   along the leading edge of a very cold air mass over southwestern
+   Canada. Over the course of the next 5 days, the record breaking cold
+   air moved southeastward, eventually spawning a coastal "bomb" that
+   retrograded back to the lower Great Lakes underneath a deep closed
+   vortex.
+
+   We present 3 panel depictions of the verifying analyses and 96-hour
+   prediction , Fig. 7 and Fig. 8, respectively. While the prediction
+   evolved a strong East Coast cyclone development underneath closed
+   vortices at 500 and 850 hPa, it lacked the details of depth and
+   location of the actual storm. It was still, overall, an excellent
+   medium range prediction, whereas it was originally missed even in the
+   short-range forecasts. Note that the hemispheric position of major
+   troughs and ridges is also fairly accurate, as indicated by the fact
+   that the hemispheric anomaly correlation for the prediction is 0.76.
+
+   A series of twice daily prediction was for run for the full 8-day lead
+   time for this storm. Phillips (pers. comm) is reviewing the predictions
+   and plans to present the results in a invited paper at the "Symposium
+   50th Anniversary of Numerical Weather Prediction" in Potsdam, Germany,
+   in March 2000. The set of forecasts may be viewed at
+   http://lnx21.wwb.noaa.gov/images/storm_nov_1950/
+
+   1953 North Sea Gale
+
+   Colleague Hugh van den Dool was imperiled as a youth by the flooding of
+   the Netherlands by the storm of Jan. 31-Feb. 2, 1953 as the dikes were
+   breached. At his request, we ran daily forecasts to fill in the period
+   between the regular operative predictions of Jan. 26 and Jan. 31. A set
+   of maps for this period may be viewed here.
+
+   FIGURE CAPTIONS
+
+   Fig. 1. Zonal mean number of all types of observations/2.5
+   ^olatitude-longitude box/month from 1946 to 1998. A twelve-month
+   running mean has been applied.
+
+   Fig. 2: Upper panel: monthly mean observation counts from the
+   reanalysis for the New Zealand area (40-55S, 160-175E). Lower panel:
+   monthly mean MSLP differences NCEP reanalysis minus Campbell Island
+   (52.55S, 169.15E).
+
+   Fig. 3: Annual average of the rms difference between the forecasts and
+   the verifying analyses, for days 1 to 8 for the NH.
+
+   Fig. 4: Annual average of the rms difference between the forecasts and
+   the verifying analyses, for days 1 to 8 for the SH.
+
+   Fig. 5: Annually averaged 5-day anomaly correlation (AC) for the 50
+   years of reanalysis forecasts (full lines), as well as the operational
+   scores (dashed lines) which are available only for the last decade. The
+   first decade has almost no data in the Southern Hemisphere, so that the
+   high anomaly correlations simply represent agreement of the model with
+   itself.
+
+   Fig. 6: Analysis valid at 0300 GMT 22 Nov. 1950. Upper left panel:
+   hemispheric 500 hPa heights and absolute vorticity. Upper right panel:
+   MSLP (hPa) in black, lowest model level temperature (C), with
+   temperatures above freezing in dashed red, below freezing in dashed
+   blue, 0C in bold dashed blue. Lower panel: 850-hPa height contours (dm)
+   and shaded temperature (C).
+
+   Fig. 7: Analysis valid at 0300 GMT 26 Nov. 1950. Panels the same as
+   Figure 7.
+
+   Fig. 8: 96-hour prediction from the Reanalysis valid at 0300 GMT 26
+   Nov. 1950. Panels are the same as in Fig. 7 except that the upper right
+   panel: includes 12 hour accumulated precipitation in green shaded
+   contours.
+
+    REFERENCES:
+
+   Bristor, C.L., 1951: The Great Storm of November 1950. Weatherwise,
+   4,10-16.
+
+   Phillips, N. A. 1958: Geostrophic Errors in Predicting the Appalachian
+   Storm of November 1950. Geophysica, 6, 389-405.
+
+   Derber, J. C. and Wan-Shu Wu, 1998 : The Use of TOVS Cloud-Cleared
+   Radiances in the NCEP SSI Analysis System. Mon. Wea. Rev.,
+   126,2287-2299.
+
+   Ebisuzaki, W., M. Chelliah and R. Kistler, 1997: NCEP/NCAR Reanalysis:
+   Caveats. Proc. of the First WCRP International Conference on
+   Reanalyses, Silver Spring, MD, 27-31 October 1997. WCRP-104;
+   WMO/TD-876. Pp 81-84.
+
+   Jenne, Roy, and J. Woollen, 1994 , The Reanalysis Database, Extended
+   Abstracts, Tenth Conference on Numerical Weather Prediction, Portland,
+   OR, American Meteorological Society.
+
+   Kalnay E., and R. Jenne, 1991 : Summary of the NMC/NCAR Reanalysis
+   Workshop of April 1991. Bulletin American Meteorological Society, 72,
+   1897-1904.
+
+   Kalnay, E., M. Kanamitsu, R. Kistler, W. Collins, D. Deaven, L. Gandin,
+   M. Iredell, S. Saha, G. White, J. Woollen, Y. Zhu, M. Chelliah, W.
+   Ebisuzaki, W. Higgins, J. Janowiak, K. C. Mo, C. Ropelewski, J. Wang,
+   A. Leetmaa, R. Reynolds, Roy Jenne, and Dennis Joseph, 1996: The
+   NMC/NCAR 40-Year Reanalysis Project". Bull. Amer. Meteor. Soc., 77,
+   437-471.
+
+   Kalnay, E., S. Lord, and R. McPherson, 1998: Maturity of Numerical
+   Weather Prediction: the medium range. Bull. Am. Met. Soc., 2753-2769.
+
+   Kistler, R., E. Kalnay, W. Collins, S. Saha, G.White, J.Woollen, M.
+   Chelliah, W. Ebisuzaki, M. Kanmitsu,V. Kousky, H. van den Dool, R.
+   Jenne, and M. Fiorino, 1999: The NCEP/NCAR 50-Year Reanalysis, Bull.
+   Amer. Meteor. Soc., in press.
+
+   Kistler, R. E., Kalnay and S. Saha, 1997: Comparison of pre- and
+   post-FGGE Reanalyses. Proc. of the First WCRP International Conference
+   on Reanalyses, Silver Spring, MD, 27-31 October 1997. WCRP-104;
+   WMO/TD-876. Pp 391-394.
+
+   Mo, K. C., X. L. Wang, R. Kistler, M. Kanamitsu, and E. Kalnay, 1995:
+   Impact of satellite data on the CDAS-Reanalysis system. Mon. Wea. Rev.,
+   123, 124-139.
+
+   Parrish, D. F. and J.C. Derber, 1992: The National Meteorological
+   Center's spectral statistical interpolation analysis system. Mon.
+   Wea.Rev.,120, 1747-1763.
+
+   Phillips, N. A. 1958: Geostrophic Errors in Predicting the Appalachian
+   Storm of November 1950. Geophysica, 6, 389-405.
+
+   Saha, S., and M. Chelliah, 1993: Automatic Monitoring system for the
+   atmospheric Reanalysis project at NMC. Proc. of Clim. Diagn. Workshop,
+   Boulder, CO 1-5 Nov 1993.Available from NOAA/NMC CAC, Washington DC
+   20233.
+
+   Smith, C.D. 1950: The Destructive Storm of November 25-27, 1950. Mon.
+   Wea. Rev., 78, 204-209.
+
+   Woollen, J. S., E. Kalnay, L. Gandin, W. Collins, S. Saha, R. Kistler,
+   M. Kanamitsu, and M. Chelliah, 1994: Quality Control in the Reanalysis
+   System. Tenth Conference On Numerical Weather Prediction, American
+   Meteorological Society, 13-14.
+
+   Woollen, J. S., and Yuejian Zhu, 1997: The NCEP/NCAR Reanalysis
+   Observation Archive, 1957-1997. Proc. of the First WCRP International
+   Conference on Reanalyses, Silver Spring, MD, 27-31 October 1997.
+   WCRP-104; WMO/TD-876. Pp 402-405.

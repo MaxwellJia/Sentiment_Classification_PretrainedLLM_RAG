@@ -1,0 +1,75 @@
+http://forms99.psc.gov
+
+                               [FormFlow.gif]
+
+   The samples for the FormFlow 99 Server Components are divided into two
+   categories: Business Forms and Version Management Control. You can
+   start any of the samples listed below by simply clicking the
+   appropriate form name.
+   Each of the Business Forms contain a Features page which outlines the
+   the various features used in the form. Use these forms to test your
+   FormFlow 99 Web Server install. See the FormFlow 99 Deployment Guide
+   for instructions on deploying sample forms supplied with FormFlow 99
+   Form Designer. These samples illustrate additional FormFlow 99
+   features.
+   The Version Management Control section provides samples for deploying
+   the Version Management control in a Web environment. For these samples,
+   a detailed description of the topic is provided.
+   Please note that Netscape Navigator users must install the FormFlow 99
+   Plug-in for Netscape Navigator in order to use the Version Management
+   Control. For details on the Version Management control, see the
+   FormFlow 99 Deployment Guide.
+
+                           Business Forms
+
+                                         Top Next
+
+      [heading.gif]
+    Memorandum A single page memorandum that automatically places the
+   current system date on the form. This form also contains a large
+   multiple-line field for data entry.
+    Leave Request A leave request form used to request a leave of absence.
+   This form illustrates field formatting, basic field calculations, radio
+   buttons and drop-down list boxes.
+    Purchase Order A requisition form that uses formatting for dates and
+   currency fields, calculations to determine the totals and taxes, radio
+   buttons, and drop-down list boxes.
+
+                   Version Management Control
+
+                                             Top Previous
+
+      [headingb.gif]
+    Version Management
+
+     For Internet Explorer
+
+     For Netscape
+
+     Detect browser An example of an administrative page that users could
+   access to update their FormFlow controls or troubleshoot difficulties
+   with form object versions. Demonstrates the UpdateControls,
+   SendDiagnostics, and AnalyzeAndUpdateVersions methods of the Version
+   Management control.
+    Update and Redirect
+
+     For Internet Explorer
+
+     For Netscape
+
+     Detect browser Demonstrates how the AnalyzeUpdateAndRedirect method
+   of the Version Management control can be used to ensure a client's form
+   objects are up-to-date before proceeding to another page. This sample
+   uses JavaScript to access a Version Management control.
+
+    Update and Redirect with ASP This sample calls an ASP to ensure a
+   client's form objects are up-to-date before proceeding to another page.
+   Demonstrates how the AnalyzeUpdateAndRedirect method and ExecuteMethod
+   property of the Version Management control can be used in an Active
+   Server Page. To use this sample, UpdateControls.asp must be installed
+   on a server which supports ASPs.
+    controls.txt This is a sample of the controls.txt file which the
+   Version Management control uses to gather version information on the
+   controls on a client's system. Administrators may alter this file as
+   described in the FormFlow 99 Deployment Guide in order to control the
+   user interface.

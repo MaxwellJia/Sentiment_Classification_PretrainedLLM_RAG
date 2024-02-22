@@ -1,0 +1,612 @@
+http://land.gsfc.nasa.gov/HouserWRR1998.pdf
+
+   WATER RESOURCES RESEARCH, VOL. 34, NO. 12, PAGES 34053420, DECEMBER
+   1998 Integration of soil moisture remote sensing and hydrologic
+   modeling using data assimilation Paul R. Houser,1,2 W. James
+   Shuttleworth,1 James S. Famiglietti,3 Hoshin V. Gupta,1 Kamran H.
+   Syed,4 and David C. Goodrich4 Abstract. The feasibility of synthesizing
+   distributed fields of soil moisture by the novel application of
+   four-dimensional data assimilation (4DDA) applied in a hydrological
+   model is explored. Six 160-km2 push broom microwave radiometer (PBMR)
+   images gathered over the Walnut Gulch experimental watershed in
+   southeast Arizona were assimilated into the Topmodel-based
+   Land-Atmosphere Transfer Scheme (TOPLATS) using several alternative
+   assimilation procedures. Modification of traditional assimilation
+   methods was required to use these high-density PBMR observations. The
+   images were found to contain horizontal correlations that imply length
+   scales of several tens of kilometers, thus allowing information to be
+   advected beyond the area of the image. Information on surface soil
+   moisture also was assimilated into the subsurface using knowledge of
+   the surface- subsurface correlation. Newtonian nudging assimilation
+   procedures are preferable to other techniques because they nearly
+   preserve the observed patterns within the sampled region but also yield
+   plausible patterns in unmeasured regions and allow information to be
+   advected in time. 1. Introduction and less error than either remotely
+   sensed data or model sim- ulations separately. Soil moisture is most
+   often described as the water in the root The focus of this research is
+   a prototype system that uses zone that can interact with the atmosphere
+   through evapo- four-dimensional data assimilation (4DDA) methods
+   applied transpiration and precipitation. Because soil moisture links
+   the in a macroscale land hydrology model to generate soil moisture
+   hydrologic cycle and the energy budget of land surfaces by fields on
+   regular space and time intervals. The resulting model regulating latent
+   heat fluxes, accurate assessment of the spatial is a first step toward
+   a new generation of meteorological mod- and temporal variation of soil
+   moisture is important for the els that have the capability to
+   assimilate both atmospheric and study, understanding, and management of
+   surface biogeophysi- hydrologic observations for an improved
+   understanding of the cal processes. Given the crucial role of soil
+   moisture in land interaction between weather and hydrological
+   processes. surface processes, it should be monitored with the same
+   accu- racy and frequency as other important environmental vari- ables.
+   However, because in situ soil moisture measurements 2. Methods are
+   generally expensive and often problematic, no large-area 2.1. TOPLATS
+   soil moisture networks exist to measure soil moisture at the high
+   frequency, multiple depths, and fine spatial resolution The Topmodel
+   [Beven and Kirby, 1979]based Land Atmo- that is required for various
+   applications. sphere Transfer Scheme (TOPLATS) [Famiglietti and Wood,
+   Remote sensing of soil moisture is limited by errors intro- 1994] was
+   used in this study. However, any high-quality spa- duced by soil type,
+   landscape roughness, vegetation cover, and tially distributed
+   soil-vegetation-atmosphere transfer scheme inadequate coverage in both
+   space and time. Alternatively, (SVATS) could have been used. The
+   TOPLATS incorporates many reliable hydrologic models are available for
+   calculating simple representations of atmospheric forcing, vertical
+   soil soil moisture, but these are prone to error in both structure
+   moisture transport, plant-controlled transpiration, intercep- and
+   parameterization. It has been suggested [Wei, 1995] that tion,
+   evaporation, infiltration, surface runoff, and sensible and the best,
+   operational soil moisture estimates might be obtained ground heat
+   fluxes. The subsurface soil column was originally through a synthesis
+   between remote-sensing data and hydro- partitioned into root and
+   transmission zone layers in the logic modeling. Remote-sensing data,
+   when combined with TOPLATS. However, passive microwave remote sensing
+   is numerical simulation and other data, should provide estimates
+   sensitive to moisture only near the soil surface [Jackson, 1993], of
+   soil moisture with higher spatial and temporal resolution so a third
+   surface soil layer was added for this study (J. S. Famiglietti et al.,
+   manuscript in preparation, 1998). 1Department of Hydrology and Water
+   Resources, University of Ar- 2.2. Data Assimilation Methods izona,
+   Tucson. 2Now at NASA Goddard Space Flight Center, Greenbelt, Maryland.
+   The TOPLATS was modified to allow the assimilation of soil 3Department
+   of Geological Sciences, University of Texas at Austin. moisture and
+   other state variables. For ease of explanation, the 4Agricultural
+   Research Service, U.S. Department of Agriculture, following description
+   assumes assimilation of observed surface Tucson, Arizona. soil moisture
+   o. However, with modifications specific to the Copyright 1998 by the
+   American Geophysical Union. state variable, the following description
+   can be used to assim- Paper number 1998WR900001. ilate other variables,
+   such as surface temperature. 0043-1397/98/1998WR900001$09.00 After each
+   TOPLATS time step, coincidental observations 3405 3406 HOUSER ET AL.:
+   USE OF DATA ASSIMILATION IN SOIL MOISTURE MODEL or observations within
+   a predefined temporal window of the 2.4. Newtonian Nudging Assimilation
+   Method current model time step are sought. It was found that when
+   Newtonian nudging relaxes the model state toward the ob- there is a
+   precipitation event between the time of an observa- served state in a
+   manner that resembles the process of New- tion and the model time,
+   assimilation of that observation is tonian cooling. This relaxation is
+   performed by adding a term undesirable because of the very different
+   surface conditions to the prognostic equation that is proportional to
+   the differ- caused by the precipitation event. ence between the two
+   states. These small forcing terms grad- If the observations fall
+   outside the TOPLATS soil moisture ually correct the model fields, which
+   are assumed to remain in range, defined by the saturated soil moisture
+   s and the resid- approximate equilibrium at each time step [Stauffer
+   and Sea- ual soil moisture r they are reassigned as follows: man,
+   1990]. In this way the model can be nudged toward regularly spaced
+   observations, or toward randomly spaced ob- o r 0.1% o r (1) servations
+   during a period of time and space. o s 0.1% o s (2) 2.5. Nudging
+   Towards a Gridded Analysis A gridded analysis is an interpolation of
+   observation data to It was found that this applied to less than 5% of
+   the PBMR the model grid. When this is available, the "nudging to the
+   observations. If a large number of observations fall outside the
+   analysis" method described by Stauffer and Seaman [1990] is models'
+   allowed range, it is most probably an indication that used: the models'
+   allowed soil moisture range is incorrect or that there is an
+   observational error. A control and a direct insertion simulation are
+   used as the t F , x, t G W x, t x o (6) basis for evaluating the data
+   assimilation runs. A control sim- ulation (i.e., the simulation without
+   data assimilation) can be The model's forcing terms are represented by
+   F, o is the considered an extreme case, in which it is assumed that the
+   observation at the model grid, and t is time. G is the nudging
+   observations contain no information. The other extreme is factor that
+   determines the magnitude of the nudging term direct insertion, where it
+   is assumed that the model contains no relative to all other model
+   processes, while the four- information. In this case, the model
+   prediction of surface soil dimensional weighting function W specifies
+   its spatial and moisture, temporal variation. The analysis quality
+   factor varies between sz, is replaced with a soil moisture observation
+   o whenever an observation is available, i.e., 0 and 1 and is based on
+   the quality and distribution of the observations. Equation (6) is
+   implemented for all three sz o if o observed (3) TOPLATS soil layers,
+   with the weighting factor decreasing with depth and time using the
+   four-dimensional weighting With direct insertion, no data are
+   assimilated outside the re- function described later. The horizontal
+   weighting function is gion where observations are available; therefore
+   any advection always unity, because the only observation considered was
+   that of information is accomplished only via the model physics in lying
+   directly on the model grid that is being nudged. subsequent model
+   integrations. 2.6. Nudging to Individual Observations 2.3. Statistical
+   Correction Assimilation Method When observations are randomly spaced,
+   the technique of "nudging to individual observations," as described by
+   Stauffer In the "statistical correction" data assimilation technique,
+   and Seaman [1990], is used. In this method the difference the modeled
+   surface soil moisture mean and standard devia- between the simulated
+   and observed state is determined at the tion are adjusted to match the
+   observed mean and standard location of the observation then
+   interpolated back onto the deviation. The method assumes that the
+   statistics of the obser- model grid. The model's predictive equation is
+   therefore vations are perfect, which is arguably more reasonable than
+   assuming that each observation is perfect, as in direct insertion. N It
+   also assumes that the patterns predicted by the model are W2 i x, t i o
+   i correct but that the predicted surface soil moisture statistics i 1
+   contain bias. As with direct insertion, advection of information t F ,
+   x, t G (7) N into deeper soil layers is accomplished solely through the
+   W model physics. i x, t i 1 The statistical correction method was
+   implemented as fol- lows. The mean o where the subscript i denotes the
+   ith observation of N that lies o and standard deviation of the soil
+   mois- ture observations and model predictions were determined, and
+   within a preset radius, o is the locally observed value of , and the
+   model's standard deviation is the model's prognostic variable
+   interpolated in three di- was adjusted to the obser- vation standard
+   deviation as follows: mensions to the location of the observation. The
+   observational quality factor varies from 0 to 1 and accounts for
+   character- o istic errors in measurement systems and
+   representativeness. i i for all i (4) The four-dimensional weighting
+   function (described below) accounts for the separation distance, both
+   spatially and tem- where i was the field of model soil moisture. The
+   mean of the porally, of the ith observation from a given grid point at
+   a given model-adjusted field of soil moisture states was redetermined
+   time. Again, this nudging technique was applied vertically to all
+   following the adjustment of the standard deviation, and the model soil
+   layers. mean of the model field, , was adjusted to match the obser-
+   vation field mean; thus 2.7. Temporal and Spatial Weighting Functions
+   The Newtonian nudging weighting function W at time t and i i o for all
+   i (5) location x for each observation I is a combination of the hor-
+   HOUSER ET AL.: USE OF DATA ASSIMILATION IN SOIL MOISTURE MODEL 3407
+   Figure 1. Schematic illustrating the location and boundaries of the
+   USDA-ARS Walnut Gulch Experimen- tal Watershed in southeastern Arizona.
+   Grass- or brush-dominated ecosystems are mapped, and the locations of
+   the Lucky Hills and Kendall sites are shown [Kustas and Goodrich,
+   1994]. izontal weighting function wxy, the vertical weighting function
+   zobs z w w , z z, and the temporal weighting function wt; thus z 1 R
+   obs z Rz (11) z W x, t wxywzwt (8) wz 0, zobs z Rz (12) For the
+   analysis-nudging technique, where observations are available for each
+   grid in the remotely sensed area, the hori- where Rz is the vertical
+   radius of influence, and zobs is the zontal weighting function w
+   vertical position of the ith observation. The temporal weight- xy is
+   unity. In the case of the ob- servation-nudging technique, the
+   horizontal weighting function ing function is defined as can be defined
+   by a Cressman-type horizontal weighting func- tion as wt 1, t to 4 (13)
+   R2 D2 wxy R2 D2 , 0 D R (9) t t w o t /4 , 4 t to (14) wxy 0, D R (10)
+   w where R is the radius of influence, and D is the distance from t 0, t
+   to (15) the ith observation to the grid point. The vertical weighting
+   where t is the model-relative time, t0 is the model-relative time
+   function, wz, is also a distance weighting function, following of the
+   ith observation, and is the half period of a predeter- Seaman [1990];
+   thus mined observation-influencing time window. 3408 HOUSER ET AL.: USE
+   OF DATA ASSIMILATION IN SOIL MOISTURE MODEL Table 1. Spatially and
+   Temporally Constant TOPLATS Parameters for Walnut Gulch Parameter
+   Source Value Vegetation Parameters Vegetation height, m Humes et al.
+   [1994] 0.22 Leaf area index Daughtry et al. [1991] 1.31 Minimum
+   stomatal resistance, s/m calibrated (P. R. Houser et al., manuscript in
+   preparation, 1998) 574 Initial water storage in canopy, m assumed dry
+   at start of simulation 0 Unstressed soil moisture, % assumed halfway
+   between s and r 20 Wilting point soil moisture, % assumed r (cacti
+   rarely wilt) 2.2 Vegetation fraction Kustas et al. [1994] 0.42 Albedo,
+   wet vegetation Dickinson et al. [1993] 0.2 Albedo, dry vegetation
+   Dickinson et al. [1993] 0.25 Albedo, bare soil Dickinson et al. [1993]
+   0.33 Root activity factor calibrated (P. R. Houser et al., manuscript
+   in preparation, 1998) 348,025 Root density, m/m3 calibrated (P. R.
+   Houser et al., manuscript in preparation, 1998) 86.5 Root resistivity,
+   s/m calibrated (P. R. Houser et al., manuscript in preparation, 1998) 4
+   1011 Critical leaf water potential, m calibrated (P. R. Houser et al.,
+   manuscript in preparation, 1998) 500 Soil Parameters Surface zone
+   depth, m Jackson [1993] 0.1 Initial surface soil moisture, % Monsoon
+   '90 Database [Kustas and Goodrich, 1994] 10.0 Root zone depth, m D. J.
+   Breckenfeld (unpublished document, 1993) 0.8 Initial root soil
+   moisture, % Monsoon '90 database [Kustas and Goodrich, 1994] 17.0
+   Maximum rate of capillary rise, m/s default [Famiglietti, 1992] 0.1
+   Initial transmission soil moisture, % Monsoon '90 database [Kustas and
+   Goodrich, 1994] 17.0 Sand content, % calibrated (P. R. Houser et al.,
+   manuscript in preparation, 1998] 14.4 Clay content, % calibrated (P. R.
+   Houser et al., manuscript in preparation, 1998) 8.1 Bulk density, g/cm3
+   Kustas and Goodrich [1994] 1.6 Residual soil moisture, % calibrated (P.
+   R. Houser et al., manuscript in preparation, 1998) 2.2 Saturated soil
+   moisture, % calibrated (P. R. Houser et al., manuscript in preparation,
+   1998) 30 Saturated hydraulic conductivity, m/s calibrated (P. R. Houser
+   et al., manuscript in preparation, 1998) 8.7 10 6 Bare soil roughness
+   length, m assumed 0.001 Bare soil zero plane displacement, m assumed
+   0.0 Topmodel Parameters Ks exponential decay parameter Famiglietti
+   [1992] 7.0 Water table depth, m Kustas and Goodrich [1994] 100.0 Energy
+   Balance Parameters Soil moisture for PET calculation, % calibrated (P.
+   R. Houser et al., manuscript in preparation, 1998) 0.46 Diurnal heat
+   penetration, m calibrated (P. R. Houser et al., manuscript in
+   preparation, 1998) 0.33 Temperature of deep soil layer, K calibrated
+   (P. R. Houser et al., manuscript in preparation, 1998) 287.6 These
+   horizontal weighting functions are well behaved in 2.8. Statistical
+   Interpolation Assimilation Method areas of low observation density, but
+   they degrade when ap- Statistical interpolation is a minimum variance
+   method that plied in regions of high observation density typical of
+   remote- is closely related to kriging. The technique can be traced back
+   sensing observations. By adding more information in the form to
+   Kolmogorov [1941] and has been in use by most major of observations at
+   a distance, this weighting function decreases western meteorological
+   services since the mid-1970s. the total magnitude of the nudging. As
+   information is added Statistical interpolation is implemented in all
+   three with increasing numbers of observations, the weight should
+   TOPLATS soil layers as follows [Daley, 1991]: increase. The simple
+   solution adopted here was to prevent the total nudging weight in (7)
+   from falling below the largest indi- K vidual observation weighting
+   function, W( x, t). Information a ri b ri Wik o rk b rk (17) from more
+   distant observations is still used based on its indi- k 1 vidual
+   weight, but the total weight is set to correspond to that where K is
+   the number of observation points, W at the closest observation. The
+   modified predictive equation is ik is the weight function, (r) is the
+   soil moisture analysis variable, r is the three-dimensional spatial
+   coordinates, N a(ri) is the analyzed W valueof attheanalysisgridpointr,
+   b(ri)isthebackground i x, t i o i or first-guess value of at r i 1 i,
+   and o(rk) and b(rK) are the t F , x, t G W x, t max observed and
+   background values, respectively, at the observa- N tion station r W k.
+   Again, in this study no interpolation is required i x, t to obtain the
+   above fields because of the correspondence be- i 1 (16) tween the model
+   and observation grids. The weight function Wik is determined by least
+   squares where W( x, t)max is the maximum weight calculated for any
+   minimization of (17), with the assumptions that b(rk), b(ri), single
+   observation in the set of observations. and o(rk) are unbiased; that
+   there is no correlation between HOUSER ET AL.: USE OF DATA ASSIMILATION
+   IN SOIL MOISTURE MODEL 3409 Figure 2. Multiquadric interpolated
+   precipitation for the Walnut Gulch Experimental Watershed for the
+   6-hour storm of day 213, 1990. the model and observation error; that
+   the error correlations vation which is the observation with the highest
+   information are homogeneous, isotropic, and time invariant; and that
+   the content is always included in this subset, thus approximating
+   background error correlation b is horizontally and vertically the
+   analysis made with all available observations. The second separable
+   (i.e., b bxy bz) [Daley, 1991]. Thus method uses "superobservations,"
+   these being average values of observation groups. The model domain is
+   divided into sec- K tions, and all observations found in those sections
+   are averaged W 2 il bxy rl rk o o rl rk bxy ri rk bz zi zk to define
+   the superobservation. In this study, either 100 ran- l 1 dom samples or
+   100 superobservations are used when applying (18) the statistical
+   interpolation method. where o is the observation error correlation
+   matrix, bxy is the background horizontal error correlation matrix, and
+   2.9. Walnut GulchMonsoon '90 Observations bz is the vertical error
+   correlation matrix. The most satisfactory way of The Walnut Gulch
+   Experimental Watershed (31 43 N, estimating o and b is to use
+   observations from a dense 110 41 W) near Tombstone, Arizona, is
+   operated by the homogenous observation network and corresponding model
+   Southwest Watershed Research Center (SWRC), Agriculture predictions
+   [Schlatter, 1975]. Calculations of background error Research Service
+   (ARS), U.S. Department of Agriculture correlation matrices are much
+   more efficient if correlations are (USDA). The catchment is an
+   instrumented area comprising specified using symmetric, positive
+   definite correlation models the upper 148 km2 of the Walnut Gulch
+   drainage basin in an [Buell, 1972]. The system of linear equations
+   given in (18) is alluvial fan portion of the San Pedro watershed in
+   southeastern solved using a simple and efficient Cholesky
+   decomposition. Arizona (Figure 1). Eighty-five recording rain gauges,
+   11 pri- Each PBMR image contains over 35,000 observations, which mary
+   watershed runoff-measuring flumes, and micrometeoro- requires solving a
+   system of 35,000 linear equations for each logical observations make
+   the Walnut Gulch Experimental model grid point, each time an
+   observation was available. Watershed a valuable research location.
+   During Monsoon '90 Clearly, the computational resources needed for this
+   task are (July 23 through August 10, 1990), eight micrometeorological
+   unreasonable; hence a simplified method is required. energy flux
+   (Metflux) instruments provided continuous mea- Two alternative methods
+   for simplifying this problem surement of local meteorological
+   conditions and the surface through reduction of observations were
+   explored. In the first, a energy balance, and extensive remote-sensing
+   observations subset of observations is randomly selected. The closest
+   obser- were made; see Kustas and Goodrich [1994] for details. 3410
+   HOUSER ET AL.: USE OF DATA ASSIMILATION IN SOIL MOISTURE MODEL Figure
+   3. Watershed average Monsoon '90 meteorological observations used as
+   forcing for the TOPLATS model. 2.10. TOPLATS Model Domain ture; thus
+   much effort was devoted to deriving spatially dis- The entire Walnut
+   Gulch Experimental Watershed was tributed precipitation data sets for
+   the Monsoon '90 experi- modeled in a spatially distributed manner at a
+   40-m resolution. ment. A multiquadric-biharmonic interpolation
+   algorithm Predictions were made hourly from July 22 to August 15 (day
+   [Syed, 1994] was used to produce spatially distributed precip- of year
+   204228), 1990. The model was driven with spatially itation values for
+   the entire model domain from the available variable topography and
+   precipitation because these have a rain gauge data. An example of this
+   interpolated precipitation significant impact on soil moisture. All
+   other soil and vegeta- is shown in Figure 2. The
+   multiquadric-biharmonic interpola- tion characteristics were spatially
+   constant. tion method was selected because it proved superior to other
+   common interpolation algorithms [Syed, 1994]. All other me- 2.11.
+   TOPLATS Parameters teorological forcing (Figure 3) was assumed to be
+   spatially The TOPLATS parameterization was based largely on ob-
+   constant and derived from averaging observations at the eight
+   servations made during Monsoon '90 [Daughtry et al., 1991; Metflux
+   stations in place during the experiment [Kustas and Kustas et al.,
+   1994; Humes et al., 1994; Kustas and Goodrich, Goodrich, 1994]. 1994;
+   D. J. Breckenfeld, unpublished document, 1993]. How- ever, many model
+   parameters were not observed and had to be 2.13. Soil Moisture State
+   Observations for Assimilation estimated or specified by model
+   calibration (P. R. Houser et al., The National Aeronautics and Space
+   Administration manuscript in preparation, 1998). A summary of the
+   TOPLATS (NASA) L band push broom microwave radiometer (PBMR), parameter
+   values used in this study is given in Table 1. which operates at a
+   frequency of 1.42 Ghz (21-cm wavelength), was flown on a NASA C-130
+   aircraft at an altitude of 600 m 2.12. Temporal Forcing above the
+   ground. The PBMR has four horizontally polarized Precipitation is the
+   most important spatial forcing variable in beams pointing at 8 and 24
+   from nadir. Each beam has a semi-arid regions owing to its highly
+   variable, convective na- full width at half maximum power of 16 , which
+   yields a 3412 HOUSER ET AL.: USE OF DATA ASSIMILATION IN SOIL MOISTURE
+   MODEL Figure 4. Correlation between time series of PBMR data collected
+   at different locations, plotted versus the distance separating the time
+   series locations. Correlation distances for (a) PBMR soil moisture
+   six-point time series; (b) PBMR soil moisture five- and six-point time
+   series; (c) PBMR brightness temperature six-point time series; and (d)
+   PBMR brightness temperature five- and six-point time series. Data
+   presented are a random selection of 0.01% selection of the total.
+   measurements were also made at daily intervals and at multi-
+   measurement area and can be projected to extend to 60 km, ple depths
+   down to 0.5 m at two of the Metflux sites [Kustas assuming linear
+   correlation structures. Similar linear spatial and Goodrich, 1994].
+   correlation structures were observed for the time series of sensible,
+   latent, and soil heat flux. This supports the validity of 3. Results
+   forcing the TOPLATS model with watershed average meteo- rological
+   forcing data and of calibrating the TOPLATS model 3.1. Correlation
+   Structure Analysis with watershed average flux observations. The
+   ability of data assimilation methodologies to advect A geostatistical
+   analysis of the PBMR-derived soil moisture information from data-rich
+   regions to data-poor regions de- data showed that their correlation
+   structure varies with time. pends on the assumption that there is some
+   natural spatial The first PBMR observations taken during a dry day show
+   a structure or correlation in the data. The correlation of PBMR
+   disorganized spatial pattern in the variogram. After the large
+   brightness temperature and soil moisture time series versus day 213
+   precipitation event, the variogram becomes organized; distance is shown
+   in Figure 4. This figure shows that the inver- then this organization
+   degrades with soil dry down over the sion from brightness temperature
+   to soil moisture has little next few days (Figure 5). The variograms
+   shown in Figure 5 are impact on this correlation, and that longer time
+   series im- based on instantaneous observations, which are a fundamen-
+   proves the definition of the spatial structure. Figure 4 also tally
+   different measure of spatial structure than the time series shows that
+   the PBMR time series are highly spatially corre- correlation distances
+   shown in Figure 4. Data assimilation lated. In fact, it seems that the
+   correlation structure present in methodologies generally assume that
+   correlation structures are these remotely sensed data extends well past
+   the 15-km-long temporally invariant; hence further investigation of the
+   chang- HOUSER ET AL.: USE OF DATA ASSIMILATION IN SOIL MOISTURE MODEL
+   3413 Figure 5. Variograms for a 1% selection of PBMR brightness
+   temperatures. ing soil moisture correlation structure is warranted when
+   ap- The background error correlation (i.e., the distance corre-
+   propriate longer-term soil moisture observations become avail- lation
+   of the (P-TS) time series) shown in Figure 6 is the able. primary
+   mechanism for advecting observational information Implementation of
+   statistical interpolation requires the into data-sparse regions in the
+   statistical interpolation method. specification of the background and
+   observation error correla- It is clear from this figure that one
+   additional measurement in tion. The observation error correlation is
+   the horizontal cor- the time series has a large positive impact on the
+   ability to relation between various observed time series with
+   correlated identify the correlation structure; hence a longer time
+   series error, minus observations without correlated error. Usually,
+   would produce a more identifiable structure. Because of the for
+   observations taken with separate, stationary instruments, dense nature
+   of remote-sensing observations, the total number observation errors are
+   uncorrelated [Daley, 1991]. For re- of pairs can exceed 600 million for
+   the PBMR-TOPLATS data motely sensed observations measured by the same
+   instrument, set; thus a 0.01% random subsample was used in Figure 6.
+   however, the observation errors are correlated and cannot be A standard
+   background error correlation function [Thie- ignored. The time series
+   of in situ gravimetric observations G baux, 1976]: were used to assess
+   the error correlation in the PBMR soil moisture observations P and the
+   TOPLATS soil moisture con- sin cr r b r cos cr exp (19) trol run
+   predictions T Lc L C. An analysis of the correlation of the (G-P) and
+   (G-TC) time series showed no error correlation in was fit to the
+   6-period background horizontal error correlation the PBMR data or
+   TOPLATS predictions. using a simplex technique to derive the constants
+   c and L. This 3414 HOUSER ET AL.: USE OF DATA ASSIMILATION IN SOIL
+   MOISTURE MODEL Figure 6. Surface soil moisture background error
+   correlation versus distance for (a) six-point time series, and (b)
+   five-point time series. Plots represent a 0.01% selection of the total
+   data. fitted curve is shown in Figure 6, and its parameters are given
+   3.2. Assimilation Results in Table 2. Watershed average time series of
+   surface and root zone soil Statistical interpolation allows for
+   vertical assimilation of moisture derived using the various
+   assimilation strategies are data, but to do so requires specification
+   of a vertical, back- ground error correlation function. Because
+   explicit definition shown in Figure 7. The transmission zone soil
+   moisture is not of this function was not possible from PBMR
+   observations, in shown because it varies less than 1% in practice.
+   Nudging to situ profile TDR observations were used as a surrogate to
+   the gridded PBMR observations inside the observed area formulate this
+   function for the root zone (Table 3). yields an undesirable
+   discontinuity at this boundary; therefore Following Stauffer and Seaman
+   [1990], most of the Newto- nudging to randomly spaced observations was
+   performed both nian nudging parameters, such as the analysis and
+   observation inside and outside the observed area. Without calibration
+   the quality factors, were set to unity. The parameters that deter-
+   TOPLATS was unable to simulate surface soil moisture dy- mine the
+   spatial radius of influence were set to the values namics, and even
+   after a comprehensive multiobjective param- determined for the
+   statistical interpolation technique (Table eter calibration, the model
+   overestimated surface zone soil 4). The nudging factor is usually less
+   than 1/ t, where t is the moisture and was unable to achieve observed
+   poststorm dry- model's time step length [Stauffer and Seaman, 1990];
+   10% of down. All of the data assimilation methods significantly and
+   this value worked well in this study. similarly improved the simulation
+   of surface zone soil mois- Table 3. Vertical Background Error
+   Correlation Table 2. Optimized Background Horizontal Error Correlation
+   Function Parameter Values Reanalysis Parameter 100 Random 100 Super-
+   Metflux Site Original Observations observations c L Lucky Hills (site
+   1) 0.4 0.26 0.27 Random observation reanalysis 1.1 10 7 3277.1 Kendall
+   (site 5) 0.62 0.43 0.40 Superobservation reanalysis 8.9 10 8 12715.4
+   Surface minus root zone, z 0.7 m. HOUSER ET AL.: USE OF DATA
+   ASSIMILATION IN SOIL MOISTURE MODEL 3415 Table 4. Parameters for Soil
+   Moisture Newtonian Nudging in TOPLATS Parameter Value Source Average
+   depth of observation 0.05 m Schmugge et al. [1994] Average depth of
+   surface zone can be variable TOPLATS parameters Average depth of root
+   zone can be variable TOPLATS parameters Average depth of transmission
+   zone can be variable TOPLATS parameters Temporal radius of influence 12
+   hours subjective optimization Horizontal radius of influence 10,000 m
+   SI correlation analysis Vertical radius of influence 0.5 m SI
+   correlation analysis Surface zone nudging constant 0.2 subjective
+   optimization Root zone nudging constant 0.1 subjective optimization
+   Transmission zone nudging constant 0.0 subjective optimization Analysis
+   quality factors 1.0 Stauffer and Seaman [1990] Observation quality
+   control factors 1.0 Stauffer and Seaman [1990] Figure 7. (a) Comparison
+   of TOPLATS watershed average surface zone soil moisture time series
+   from various assimilation simulations. (b) Comparison of TOPLATS
+   watershed average root zone soil moisture time series from various
+   assimilation simulations. (Identical model trajectories often result in
+   one line that represents multiple simulations.) 3416 HOUSER ET AL.: USE
+   OF DATA ASSIMILATION IN SOIL MOISTURE MODEL Table 5. Watershed Average
+   Water Balance Information ture, with the exception of direct insertion,
+   which is unable to for the TOPLATS Data Assimilation Simulations impose
+   an entire watershed correction and was therefore un- able to adjust the
+   model trajectory sufficiently. Nudging had Simulation the clear
+   advantage of providing smoother temporal adjust- Stat. SuperObs ments;
+   however, this characteristic also inhibits the application Variable
+   Control Updating Corr. Nudging SI of this method in real time. All
+   simulations produced identical surface zone soil moisture simulations
+   after the storm on day Precipitation 93.44 93.44 93.44 93.44 93.44 224
+   because this storm saturated the surface zone, causing all Capillary
+   Rise 0.00 0.00 0.00 0.00 0.00 ET 41.86 39.97 36.76 37.32 36.19 past
+   surface zone forcing to be forgotten; however, this process Runoff 6.21
+   5.68 5.15 5.08 5.11 does not occur in the models' root zone, where
+   memory of past Recharge 0.00 0.00 0.00 0.00 0.00 assimilation is
+   preserved. This sequence of events is not unre- Surface S 5.69 5.69
+   5.69 5.69 5.69 alistic; rather, it suggests a time interval at which
+   soil moisture Root S 33.51 32.31 29.85 22.60 0.40 Trans S 6.14 5.75
+   5.09 3.49 1.91 observations are needed for data assimilation, this
+   interval Leaf S 0.03 0.03 0.03 0.03 0.03 being less than or equal to
+   the time between storm events. In-out 45.37 47.79 51.53 51.03 52.14 In
+   the root zone the modeled time series fell into two distinct Total S
+   45.37 43.78 40.66 31.81 8.03 groups corresponding to methods with and
+   without the capa- Error 0.00 4.01 10.87 19.22 44.11 bility for vertical
+   assimilation of information. Among the latter Capillary rise refers to
+   the upward flux of water from the saturated group, nudging assimilation
+   performs a more conservative cor- surface, ET is evapotranspiration,
+   recharge is the drainage to the rection compared with statistical
+   interpolation. None of the saturated zone, surface S is the sum of the
+   changes in storage in the methods produced time series that match the
+   root zone obser- surface zone, leaf S is the sum of the changes in
+   storage in the vations. However, it is important to bear in mind that
+   with only interception store, in-out is the total input less the total
+   output, total S is the total change in storage, and error is in-out
+   less total S. All two root zone observations, the root zone spatial
+   variability is values are in millimeters. not adequately sampled.
+   Figure 8. Sensitivity of assimilation information on watershed average
+   surface soil moisture prediction using statistical corrections
+   assimilation. 3420 HOUSER ET AL.: USE OF DATA ASSIMILATION IN SOIL
+   MOISTURE MODEL these correlations, it might be surmised that this
+   concept holds Beven, K., and M. J. Kirby, A physically based, variable
+   contributing for a distance of less than 60 km. The correlation
+   structures area model of basin hydrology, Hydrol. Sci. Bull., 24(1),
+   4369, 1979. vary in time, depending on the soil's state of drying, but
+   its time Buell, C., Correlation functions for wind and geopotential on
+   isobaric surfaces, J. Appl. Meteorol., 11, 5159, 1972. series do have
+   strong horizontal and vertical correlation struc- Daley, R.,
+   Atmospheric Data Analysis, 457 pp., Cambridge Univ. Press, tures. New
+   York, 1991. There is a clear trade-off between using a complex data
+   Daughtry, C. S. T., M. A. Weltz, E. M. Perry, and W. P. Dulaney,
+   assimilation technique and the ability to use all the available Direct
+   and indirect estimates of leaf area index, paper presented at data due
+   to the large computational burdens of performing Tenth Conference on
+   Biometeorology and Aerobiology; Special Session on Hydrometeorology,
+   Am. Meteorol. Soc., Salt Lake City, data assimilation at fine
+   resolutions using dense data sets. On Utah, 1991. the basis of this
+   study, it was found that, as the complexity of Dickinson, R. E., A.
+   Henderson-Sellers, and P. J. Kennedy, Biosphere- the data assimilation
+   model increases, the size of the assimi- Atmosphere Transfer Scheme
+   (BATS) version 1e as coupled to the lated data set needs to decrease in
+   order to maintain compu- NCAR Community Climate Model, Tech. Note
+   NCAR/TN- 387 STR, Natl. Cent. for Atmos. Res., Boulder, Colo., 1993.
+   tational feasibility. Complex methods have the ability to extract
+   Famiglietti, J. S., Aggregation and scaling of spatially-variable
+   hydro- more useful information from assimilated data, but simpler
+   logical processes: Local, catchment-scale, and macroscale models of
+   methods use more of the data to extract similar information. water and
+   energy balance, dissertation, Dep. of Civ. Eng. and Oper. This
+   trade-off allows simpler assimilation techniques to per- Res.,
+   Princeton Univ., Princeton, N. J., 1992. form almost as well as complex
+   techniques. In general, this Famiglietti, J. S., and E. F. Wood,
+   Application of multiscale water and energy balance models on a
+   tallgrass prairie, Water Resour. Res., argument suggests the use of
+   assimilation methods that are of 30(11), 30613078, 1994. moderate
+   complexity, are sound and computationally efficient, Humes, K. S., W.
+   P. Kustas, and M. S. Moran, Use of remote sensing but use as much data
+   as possible. If the information in the data and reference site
+   measurements to estimate instantaneous surface can be efficiently
+   compressed or filtered before its use in data energy balance components
+   over a semiarid rangeland watershed, Water Resour. Res., 30(5),
+   13631373, 1994. assimilation, it may be more reasonable to use larger
+   data sets Jackson, T. J., Measuring surface soil moisture using passive
+   micro- in complex data assimilation strategies. Because hydrologic wave
+   remote sensing, Hydrol. Processes, 7, 139152, 1993. data assimilation
+   requires hydrologic modeling predictions, it Kolmogorov, A.,
+   Interpolated and extrapolated stationary random se- is limited by a
+   similar trade-off between fine resolution and quences (in Russian),
+   Izv. Akad. Nauk SSSR, Ser. Mat., 5(2), 8595, large area implementation.
+   A statistically based assimilation 1941. Kustas, W. P., and D. C.
+   Goodrich, Preface to the special section on may be a viable approach
+   for use in large areas, but ultimately Monsoon 90, Water Resour. Res.,
+   30(5), 12111225, 1994. the trade-off between resolution and area will
+   be determined Kustas, W. P., J. H. Blanford, D. I. Stannard, C. S. T.
+   Daughtry, W. D. by the application. Nichols, and M. A. Weltz, Local
+   energy flux estimates for unstable Several supplementary observations
+   are essential for imple- conditions using variance data in semiarid
+   rangelands, Water Resour. Res., 30(5), 13511361, 1994. mentation of
+   soil moisture data assimilation, the most impor- Schlatter, T., Some
+   experiments with a multivariate statistical objective tant being
+   meteorological forcing. Forcing averaged over large analysis scheme,
+   Mon. Weather Rev., 103, 246257, 1975. areas may be adequate, but
+   detailed spatial patterns of precip- Schmugge, T., T. J. Jackson, W. P.
+   Kustas, R. Roberts, R. Parry, D. C. itation are essential. Clearly,
+   regular, remotely sensed soil Goodrich, S. A. Amer, and M. A. Weltz,
+   Push broom microwave moisture observations are required, but these must
+   be supple- radiometer observations of surface soil moisture in Monsoon
+   '90. Water Resour. Res., 30(5), 13211328, 1994. mented by in situ
+   surface and root zone observations across the Seaman, N. L., Newtonian
+   nudging: A four-dimensional approach to operational domain to specify
+   error correlations, to calibrate data assimilation, paper presented at
+   Mesoscale Data Assimilation, parameters, and to validate the
+   model-calculated fields. Ob- 1990 Summer Colloquium, Natl. Cent. for
+   Atmos. Res., Boulder, servations of soil and vegetation characteristics
+   are likely Colo., June 6July 3, 1990. Stauffer, D. R., and N. L.
+   Seaman, Use of four-dimensional data needed for optimal model
+   performance, while observations of assimilation in a limited area
+   mesoscale model, I, Experiments with surface water and energy fluxes
+   are valuable for validating synoptic-scale data, Mon. Weather Rev.,
+   118, 12501277, 1990. simulation results. Syed, K. H., Spatial storm
+   characteristics and basin response, M. S. thesis, 261 pp., Dep. of
+   Hydrol. and Water Resour., Univ. of Ariz., Tucson, 1994.
+   Acknowledgments. This work was supported, fostered, and carried
+   Thiebaux, H. J., Anisotropic correlation functions for objective anal-
+   out to completion at the University of Arizona, Department of Hy- ysis,
+   Mon. Weather Rev., 104, 9941002, 1976. drology, with financial support
+   provided through NASA grants Wei, M. Y., Soil moisture: Report of a
+   workshop held in Tiburon, NAGW-4165, NAGW-4087, and NAG5-3492#1 and
+   through the California, 2527 January 1994, NASA Conf. Publ., CP-3319,
+   1995. award of a NASA Global Change Fellowship. C. White facilitated
+   processing and checking of Walnut Gulch data sets, while C. White, J.
+   J. S. Famiglietti, Department of Geological Sciences, University of
+   Garatuza, A. Mohammed Arzin, R. Scott, T. Keefer, and C. Harlow Texas
+   at Austin, Austin, TX 78712. assisted in field validation of this work.
+   J. Broermann and D. Braith- D. C. Goodrich and K. H. Syed, Southwest
+   Watershed Research waite provided patient and consistent computational
+   assistance. The Center, Agricultural Research Service, U.S. Department
+   of Agricul- study would not have been possible without the data
+   provided by the ture, Tucson, AZ 85719. USDASouthwest Watershed
+   Research Center and without their as- H. V. Gupta and W. J.
+   Shuttleworth, Department of Hydrology and sistance in interpreting
+   these data from the Walnut Gulch Experimen- Water Resources, Building
+   11, Room 122, University of Arizona, P. O. tal Watershed. The authors
+   would also like to thank T. Schmugge, T. Box 210011, Tucson, AZ
+   85721-0011. (shuttle@hwr.arizona.edu) Keefer, J. Toth, and an anonymous
+   reviewer for their helpful com- P. R. Houser, Hydrological Sciences
+   Branch and Data Assimilation ments on the manuscript. Office, Code 974,
+   NASA Goddard Space Flight Center, Greenbelt, MD 20771.
+   (houser@dao.gsfc.nasa.gov) References Amer, S. A., T. O. Keefer, M. A.
+   Weltz, D. C. Goodrich, and L. B. Bach., Soil moisture sensors for
+   continuous monitoring, Water Re- (Received May 14, 1997; revised August
+   23, 1998; sour. Bull., 30(1), 6983, 1994. accepted August 28, 1998.)

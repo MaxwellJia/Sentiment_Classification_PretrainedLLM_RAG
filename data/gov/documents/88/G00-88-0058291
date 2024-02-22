@@ -1,0 +1,192 @@
+http://sxi.ngdc.noaa.gov/sxi/servlet/sxibrowse
+
+   go to National Geophysical Data Center home.
+
+                                     Solar-Terrestrial Physics navigation.
+
+   [space10.gif]
+
+   [SXI_Thin.gif]
+
+
+    Browse   Summary   Search   Greatest   Mission   Notes   Operations
+                                                                         Forum
+
+   Execute   Image width: 175   Rows: [1]   Columns: [3]   Interval:
+   [Minimum_]   Table Type: [Stream________]
+
+                             Image Type:
+                                            [Test______________]
+   [X] :Recent
+
+                                   - or -
+
+    [2001] :Y
+   [12] :M
+   [20] :D
+   [02] :H
+   [42] :M
+
+   [SXI_20011220_024232043_BA_12S.PNG] [SXI_20011220_024148733_BA_12S.PNG]
+   [SXI_20011220_024034091_BA_12S.PNG]
+   Metadata:
+   [DATE_OBS: 2001-12-20 02:42:32] [DATE_OBS: 2001-12-20 02:41:48]
+   [DATE_OBS: 2001-12-20 02:40:34]
+
+     If your browser disallows session tracking, some features will not
+     operate.
+     Press the Execute button, if this message persists, these features will
+     not be available:
+
+       Data delivery via the 'Basket' system.
+
+     The Step buttons.
+   To use these features, enable cookies in your browser's preferences or
+   options.
+
+       Current Time:   2002-01-30 18:01:31 GMT     2002-01-30 11:01:31 MST
+
+
+                             SXI Status (2001-12-20)
+
+     GOES 12 and SXI have successfully completed Post-Launch Testing (PLT).
+     The spacecraft has been placed in a storage mode as of December 20,
+     2001 as a backup to the currently operational GOES spacecraft. GOES 12
+     and SXI will become operational when needed as a replacement for either
+     GOES 8 or GOES 10. No new SXI data will be available until that time.
+
+     However, there are plans to release FITS format data from the PLT
+     period by the summer of 2002, when additional instrument performance
+     analysis will have been completed.
+
+
+                          SXI Data Online (2001-09-07)
+
+     NOAA is pleased to announce that the first SXI images are now available
+     for viewing.
+
+     You may use this archive browser to view the first sequence of released
+     images.
+
+     Please consider these data preliminary. During this period of system
+     testing, the image calibration algorithms will evolve, and the image
+     collection sequence will be supporting instrument testing.
+
+     The "basket" delivery system is currently configured to deliver browse
+     imagery only. After the testing period is completed, that system will
+     also deliver the archival image data in the FITS format.
+
+     If you browser isn't configured to accept "cookies," the "basket"
+     system will not work.
+
+
+                                     Errata
+
+     2001-10-03 17:47:08 GMT
+     Beginning 2001-10-02 14:57:31, the browse images are incorrectly
+     labeled with the month set to January. The problem persisted until
+     2001-10-04 22:33:52.
+
+
+
+                                    Contacts
+
+     If you have questions about the SXI archive and this public interface
+     please contact Daniel.C.Wilkinson@noaa.gov.
+
+     If you have questions concerning the current status of the instrument,
+     image processing, or image quality, please follow the Operations link
+     to the Space Environment Center.
+
+
+                               Product Development
+
+     The SXI observation sequence will be calibrated to observe the low
+     X-ray output from the Corona, moderate X-ray output of the Active
+     Regions, and the very intense X-ray output of Solar Flares. Flares will
+     cause pixel saturation to occur in the images calibrated for the
+     Corona, and Active Regions.
+
+     Data products, such as composite images, deconvoluted images, and
+     animations sequences will be available in the futue, see the Greatest
+     Hits page for samples.
+
+     Each image in the spread sheet is linked to it's 576x512 counterpart.
+     The long term plan is to launch an applet when clicking an image that
+     will allow the user to change color, display a negative, adjust
+     brightness and contrast, overlay coordinate grids, zoom and pan, etc.
+
+     Users will be able to generate a movie from any Stream type table.
+
+
+        BROWSE INSTRUCTIONS:
+          * All times are Universal Time unless labeled otherwise.
+          * The Execute button must be pressed in order to make changes in the
+            display.
+          * The Image width option (in pixels) allows the user to scale the
+            size of the browse images.
+               + The native size of the browse imagery is 576 x 512 pixels.
+               + If you select a value < 180, a thumbnail image is used whose
+                 native size is 128 x 128 pixels.
+          * The number of Rows and Columns in the spread sheet can be adjusted
+            to a maximum of 4.
+          * The Interval setting will have a different affect, depending on the
+            Table Type selected.
+               + When Table Type is set to Column Compare, Interval is the time
+                 interval between rows.
+               + When Table Type is set to Stream, Interval is the time
+                 interval between successive images.
+          * There are two Table Types.
+               + Column Compare allows a different image type to be selected
+                 for each column. Column one is the control point for the time
+                 constraint, i.e., when the interval is set to one hour, an
+                 image for column one is found (at least) one hour from the
+                 previous rows column one. The images in the other columns are
+                 the next images, of the selected type, found after the column
+                 one time.
+               + Stream creates a sequence of images of a single image type.
+                 The image in row one, column one, controls the image type and
+                 the start time for the sequence.
+          * < Step will shift the spread sheet view towards more recent data.
+          * Step > will shift the spread sheet view towards older data.
+               + Stepping up and down in the data base with these buttons may
+                 not have symetric results, depending on the temporal
+                 distribution of the data.
+               + There is a slight complication that may arise when using these
+                 buttons -- using the your browsers Back button immediately
+                 afterwards will give unexpected results.
+          * When Recent is checked, the first row always displays the most
+            recent data in the data base.
+          * To start the spread sheet on a date and time of your choosing,
+            deselect Recent, and enter your time parameters: Y=year, M=month,
+            D=day, H=hour, M=minute.
+          * The Image Type displayed in each column can be selected from the
+            drop list.
+          * Meta Data for each image is displayed in a drop list, to compare a
+            particular parameter between images, use the drop list to select
+            that item in each image you are comparing.
+            A Shopping Basket system is available for you to retrieve full
+            resolution browse images, or data files in the FITS format.
+          * If you press the Add to Basket button, the images in the display
+            will added to your basket.
+          * If you press the Empty Basket button, all images will be removed
+            from the basket.
+          * If you press the View Basket button, a second window will be opened
+            that will display the contents of your basket.
+               + You may specify browse images or FITS formatted data files.
+               + Enter an e-mail address that will be used to notify you where
+                 to retrieve your images.
+               + The images in your order will be packed into ZIP files.
+               + In order to make room for other data orders, please retrieve
+                 your files within 3 hours of submitting your order. Files left
+                 longer than 3 hours will be deleted.
+          * Browse images will be in either .PNG or .JPG format. The Space
+            Environment Center delivers browse imagery as .PNG files. NGDC
+            converts them to .JPG each day in order to decrease the time
+            required for them to be downloaded to the user.
+          __________________________________________________________________
+
+                Please send suggestions to Daniel.C.Wilkinson@noaa.gov.
+            ______________________________________________________
+
+   Stop page() - elapsed time: 1.696 sec

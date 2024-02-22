@@ -1,0 +1,186 @@
+http://usability.gov/serverlog/index.html
+
+                             Skip Navigation Bar
+
+                   National Cancer Institute
+                   Usability.gov
+                                 Home
+                                 Dictionary
+                                 Site Map
+                                 Frequently Ask Questions
+
+   Server Log Analysis
+
+   Provides information on techniques for measuring system performance and
+   traffic from server logs.
+     * Frequently Asked Questions About Analyzing Server Log Files
+     * Web Sites
+     * Articles
+
+   Frequently Asked Questions About Analyzing Server Log Files
+     * What are server log files and how can they be used to measure
+       system performance and traffic?
+     * What does a server log file look like?
+     * How do you analyze server log files?
+
+    What are server log files and how can they be used to measure system
+   performance and traffic?
+
+   Server log files are records of Web server activity (or server activity
+   for any digital medium). They provide details about file requests to a
+   server and the server response to those requests. Collecting and
+   analyzing these files can provide:
+     * Information about who is coming to your Web site
+     * What information they're requesting
+     * Their navigation and behavior
+
+   What types of data you collect on your server depends on how it has
+   been set up and defined by the technical staff. The ideal log file for
+   performance and traffic analysis should contain the following data:
+
+   Types of log data to collect
+     * Who is visiting your site. You want unique visitor identification
+       so you know whether a visitor is returning to your site.
+     * The path visitors take through your pages. With knowledge of each
+       page a visitor viewed and the order, you can identify trends in how
+       visitors navigate through your pages. You also want to know what
+       element (link, icon) a visitor clicked on each page to go to the
+       next page.
+     * How much time visitors spend on each page. A pattern of lengthy
+       viewing time on a page might lead you to deduce the page is very
+       interesting or very confusing.
+     * Where visitors are leaving your site. The last page a visitor
+       viewed before leaving your site might be a logical place to end the
+       visit, or it might be a place where the visitor bailed out.
+     * The success of users experiences at your site. Purchases
+       transacted, downloads completed, and information viewed are
+       concrete indicators of tasks accomplished.
+
+     From Tec-Ed, Inc., "Assessing Web Site Usability from Server Log
+     Files" on Tec-Ed., Inc. Web site
+     http://www.teced.com/c_and_p.html#WU
+
+   Top of Page
+
+    What does a server log file look like?
+
+What's New
+
+    NCI Usability Experts
+   Highlighted in
+   Federal Computer Week
+
+    Webcast for Recent Training Now Available
+
+   NCI Cancer Communications Priorities
+
+    Extraordinary Opportunities in Cancer Communications
+
+    Plans & Priorities for Cancer Research: Cancer Communications 2002
+
+   Here is an example of a log file:
+    Time   |   IP Address     |      Server    |   Action | Object | Result code
+ and size |            Browser / version and platform              |
+      Refering URL
+
+  01:50:17 216.126.148.89 - ICICWEB1 GET /pdq.html - 200 16391 295 Mozilla/4.0+(
+compatible;+MSIE+4.01;+Windows+98)    http://cancernet.nci.nih.gov/pdqsrch.shtml
+  01:50:17 216.126.148.89 - ICICWEB1 GET /images/pdq.gif - 200 793 290 Mozilla/4
+.0+(compatible;+MSIE+4.01;+Windows+98)    http://128.231.164.190/pdq.html
+  01:50:18 216.126.148.89 - ICICWEB1 GET /images/banner1.gif    - 200 4067 294 M
+ozilla/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.html
+  01:50:18 216.126.148.89 - ICICWEB1 GET /images/news.gif - 200 1054 291 Mozilla
+/4.0+(compatible;+MSIE+4.01;+Windows+98)    http://128.231.164.190/pdq.html
+  01:50:18 216.126.148.89 - ICICWEB1 GET /images/sn_top.gif    - 200 277 293 Moz
+illa/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.html
+  01:50:19 216.126.148.89 - ICICWEB1 GET /images/sn_visitor.gif - 200 767 297
+ Mozilla/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.html
+  01:50:19 216.126.148.89 - ICICWEB1 GET /images/sn_rule.gif - 200 371 294 Mozil
+la/4.0+(compatible;+MSIE+4.01;+Windows+98)    http://128.231.164.190/pdq.html
+  01:50:19 216.126.148.89 - ICICWEB1 GET /images/sn_new.gif    - 200 911 293 Moz
+illa/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.html
+  01:50:19 216.126.148.89 - ICICWEB1 GET /images/sn_about.gif - 200 720 295 Mozi
+lla/4.0+(compatible;+MSIE+4.01;+Windows+98)    http://128.231.164.190/pdq.html
+  01:50:20 216.126.148.89 - ICICWEB1 GET /images/sn_ways.gif    - 200 1066 294 M
+ozilla/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.html
+  01:50:20 216.126.148.89 - ICICWEB1 GET /images/sn_cis.gif - 304 139 379 Mozill
+a/4.0+(compatible;+MSIE+4.01;+Windows+98)    http://128.231.164.190/pdq.html
+  01:50:20 216.126.148.89 - ICICWEB1 GET /images/sn_short.gif    - 200 578 295 M
+ozilla/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.html
+  01:50:20 216.126.148.89 - ICICWEB1 GET /images/sn_trials.gif - 200 590 296 Moz
+illa/4.0+(compatible;+MSIE+4.01;+Windows+98)    http://128.231.164.190/pdq.html
+  01:50:20 216.126.148.89 - ICICWEB1 GET /images/sn_espanol.gif    - 200 538 297
+ Mozilla/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.html
+  01:50:22 216.126.148.89 - ICICWEB1 GET /images/sn_pdq_search.gif - 200 775 300
+    Mozilla/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.h
+tml
+  01:50:28 216.126.148.89 - ICICWEB1 GET /images/sn_search_clin.gif - 200 739
+ 301 Mozilla/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.
+html
+  01:50:30 216.126.148.89 - ICICWEB1 GET /images/sn_bott.gif - 200 354 294 Mozil
+la/4.0+(compatible;+MSIE+4.01;+Windows+98)    http://128.231.164.190/pdq.html
+  01:50:30 216.126.148.89 - ICICWEB1 GET /images/gray_hrule.gif    - 200 268 297
+ Mozilla/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.html
+  01:50:30 216.126.148.89 - ICICWEB1 GET /images/sn_links.gif - 200 749 295 Mozi
+lla/4.0+(compatible;+MSIE+4.01;+Windows+98)    http://128.231.164.190/pdq.html
+  01:50:30 216.126.148.89 - ICICWEB1 GET /images/sn_view.gif    - 200 981 294 Mo
+zilla/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.html
+  01:50:30 216.126.148.89 - ICICWEB1 GET /images/red_square.gif - 200 314 297
+ Mozilla/4.0+(compatible;+MSIE+4.01;+Windows+98) http://128.231.164.190/pdq.html
+  01:50:31 216.126.148.89 - ICICWEB1 GET /images/sn_nci.gif - 200 1302 293 Mozil
+la/4.0+(compatible;+MSIE+4.01;+Windows+98)    http://128.231.164.190/pdq.html
+
+
+    How do you analyze server log files?
+
+   Depending on the size of your server, log files can contain extreme
+   amounts of data that may be irrelevant to what you're looking for. Work
+   with your technical staff to identify software that analyzes and
+   summarizes the log data, a variety of tools are available. Technical
+   staff can also help set the log files to capture data of most
+   importance to your organization.
+
+     Reviews of Web Site Analysis Tools
+     http://www.zdnet.com/pcmag/stories/reviews/0,6755,2570466,00.html
+
+   If your log files are small, you might be able to work with the raw
+   data using a tool like a spreadsheet program.
+
+   Top of Page
+
+   Web Sites
+
+     Usable Web
+     http://usableweb.com/topics/000649-0-0.html
+     * Has information on log analysis
+     * Includes links about using server log files
+
+   Top of Page
+
+   Articles
+
+     A 24-Hour Focus Group: Sites dig into search queries to learn
+     customer preferences
+     http://www.internetwk.com/lead/lead040700-1.htm
+
+     Assessing Web Site Usability from Server Log Files
+     http://www.teced.com/c_and_p.html#WU
+
+     Characterizing Browsing Strategies in the World-Wide Web
+     http://www.igd.fhg.de/archive/1995_www95/proceedings/papers/80
+     /userpatterns/UserPatterns.Paper4.formatted.html
+
+     Measuring User Motivation from Server Log Files
+     http://www.microsoft.com/usability/webconf/fuller/fuller.htm
+
+     Web Traffic Analysis Turns Management Data To Business Data
+     http://www.internetwk.com/story/INW19990402S0006
+
+   Top of Page
+     [spacer.gif]
+
+
+   Home  Dictionary  Site Map  Frequently Asked Questions
+   About This Site  Privacy Policy  Contact Us Communication
+   Technologies Branch
+   Office of Communications National Cancer Institute

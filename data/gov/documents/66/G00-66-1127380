@@ -1,0 +1,806 @@
+http://heasarc.gsfc.nasa.gov//W3Browse/w3browse-help.html
+
+   nasa meatball   [USEMAP:data7.gif]
+                   javascript image popup
+
+
+   Browse Browse Help                Help
+                      Version 6.3
+                      New/Updated Tables
+
+   Main sections of this help document:
+     * Introduction to Browse
+     * Main Interface
+     * Catalog Index Interface
+     * Batch Interface
+     * Cross Correlation Interface
+     * Acknowledging HEASARC in Publications
+     __________________________________________________________________
+
+                             Introduction to Browse
+
+   Browse provides access to the catalogs and astronomical archives of the
+   High Energy Astrophysics Science Archive Research Center (HEASARC) over
+   the World-Wide Web. Catalogs include data from all astronomical
+   regimes, but the emphasis of the archive is data from high energy
+   astrophysics satellites. These satellites, launched by NASA and other
+   space agencies, observe X rays and gamma rays from astronomical objects
+   including stars, galaxies, supernova remnants, clusters of galaxies and
+   active galactic nuclei. This document gives a brief description of how
+   to use Browse.
+
+   There are four different Browse interfaces:
+     * Main Interface
+
+        This interface is the main web interface to the archive. You can
+                choose the missions and tables you want to query. You can
+                also set up complex parameter queries or do
+                name/coordinate searches in various coordinate
+                systems/equinoxes with arbitrary search radii and plot
+                query results using Java. Cross-correlations can be
+                performed based on the results of a query.
+
+     * Catalog Index Interface
+
+        Lists all mission catalogs with links to appropriate HEASARC
+                resources.
+
+     * Batch Interface
+
+        This is a set of Perl scripts that you can execute on remote Unix
+                workstations to do multiple batch Object Name/Coordinates
+                Searches without having to use a Web browser.
+
+     * Cross-correlation Interface
+
+        This interface allows you to cross-correlate full tables on radius
+                or time.
+     __________________________________________________________________
+
+                                 Main Interface
+
+     * Quick Start
+     * Mission Selection form
+          + Table types
+     * Selecting the Catalogs to Query
+     * Object Name/Coordinates Search
+          + Explanation of Name/Coordinates Input Formats
+          + Searching for Multiple Objects and/or Coordinate Pairs
+          + Choosing a Name Resolver
+          + Other Search Options
+          + Cone Search Offset Calculation
+     * Search by Parameter
+          + Building a Parameter Search Query
+     * Query Results
+          + Sort Results
+          + Show all columns
+          + Data Products
+          + Cross-correlation of Query Results
+          + Plotting Query Results with Java
+     * Getting Data Products
+     __________________________________________________________________
+
+   VizieR logo In addition to offering access to the catalogs and tables
+   at the HEASARC, the Browse main interface supports transparent access
+   to thousands of catalogs in VizieR maintained by the CDS in Strasbourg,
+   France and mirrored at sites around the world. When VizieR tables are
+   queried, links are provided wherever possible so that the user can
+   switch to the VizieR query interface.
+
+Quick Start
+
+   The HEASARC Browse comprises several layers of Web pages starting from
+   the launch page and providing successively more detailed access to the
+   information resources of the HEASARC. A typical search for archival
+   information looks something like the following:
+     * Select the interface to use.
+       Most users will use the main Browse interface. This interface
+       allows you to choose missions and/or catalogs and search by
+       coordinates, object name, or any other parameter in the table. The
+       other interfaces will be discussed later in this document.
+     * Select missions or catalogs to search.
+       Each mission or catalog set contains a number of database tables.
+       The database tables list different types of information (including
+       proposed observations, scheduled observation, completed
+       observations)
+     * Initiate the search:
+       You can choose to search directly from here, or choose More Options
+       if you'd like to query on parameters other than position or date,
+       or if you'd like to choose the tables to query within the missions
+       you've selected. If you start the search from this page, the tables
+       queried within each mission are preselected by the HEASARC based on
+       internal priorities.
+
+                                      Search from here or More options
+
+     Enter an object name or coordinates, and/or enter a date/time, and
+       click the Start Search button. OR
+
+     Optionally enter an object name or coordinates, and/or enter a
+   date/time, and click the More Options button.
+
+     Select one or more tables.
+
+     Click Submit Search, or Specify Additional Parameters. Submit Search
+   will search the tables around the position and/or date you specify. By
+   clicking Specify Additional Parameters you can query any field in the
+   table.
+     * Select data records to be examined in more detail.
+       You can choose to retrieve or view lists of data associated with a
+       given catalog entry, look at all the fields in the row (including
+       those that were not initially displayed), plot your results, or
+       cross-correlate your results with other tables.
+     * Select data products (images, spectra, events lists, proposal
+       abstracts, etc.) to be downloaded to your computer. This page is
+       only shown if you chose to View data products from the query
+       results page.
+       Archival products are not available for all catalogs.
+
+   Limitations of starting the search from the first page:
+     * The HEASARC staff has given each table an internal priority
+       ranking. When the search is initiated from the first page, only the
+       highest ranking tables are searched for the table types and
+       missions you have selected. To see all the tables available, click
+       More Options.
+     * When an object name is specified, the NED name resolver is queried
+       first, using SIMBAD if NED is unable to resolve the object name. To
+       select the name resolver yourself, click More Options. See Choosing
+       a Name Resolver for more information about these services.
+     * It is not possible to specify search on parameters other than
+       object position or observation date.
+     __________________________________________________________________
+
+Detailed help
+
+   The Main Browse interface comprises a series of forms: the Missions
+   selection form, the optional Catalog Selection form, the optional
+   Parameter Search form, the Query Results form, the Data Products form,
+   and the Data Retrieval form. Typically, you will descend through these
+   forms until the data desired is found. The last two forms are used only
+   if archival data is to be retrieved. You may use the features of your
+   Web browser to back up to previous forms, make a change to the
+   selection at that level, and then go forward.
+
+Mission Selection page
+
+   The first form is the Missions selection form. You may enter one or
+   more object names or coordinates, and/or observation dates. If you are
+   planning to query tables on parameters other than position or dates,
+   ignore this section.
+
+   Select one or more missions/observatories, groups of catalogs, or
+   individual catalogs by checking the checkboxes. Links will display help
+   in a new window. The Multiwavelength Catalogs section on this first
+   page lists a few special "pseudo-missions". Typically, these catalogs
+   do not have associated archival data. The Master catalog contains
+   catalogs which have been generated by combining smaller catalogs.
+
+   There is a set of checkboxes where you can choose the types of
+   information queried - checking these will have a filter effect on the
+   missions and catalogs you select. For example, checking Proposal
+   Information and ROSAT and ASCA means you are only selecting those ROSAT
+   and ASCA tables which contain proposal information. Using these table
+   types, you can more accurately select what types of tables you search.
+     * Archive and Observations - tables which contain observation
+       pointings.
+     * Object Catalogs - compiled catalogs which contain objects found
+       during a mission or survey.
+     * Proposal Information - catalogs of proposals, abstracts, and
+       schedules.
+     * CDS VizieR - This special 'type' queries CDS's VizieR service for
+       tables that are relevant to the missions and catalogs selected.
+       (For example, selecting Stars and ROSAT and VizieR selects those
+       resources VizieR holds that are star catalogs or have ROSAT data.)
+     * There is a 'hidden' type - Physics - which is always on, and only
+       applies to the Atomic Data catalogs.
+
+   Finally, you can choose to modify the defaults for the output display.
+   You may change the number of results returned for each table, change
+   the output format, and choose to show all fields in the results rather
+   than the default fields.
+
+   Click Start Search if you're ready to search, or More Options if you'd
+   like to choose the tables to query within each mission, or if you want
+   to query tables on parameters other than position or observation date.
+
+Selecting the Catalogs to Query
+
+   NOTE: If you have initiated the search from the first page, this page
+   will not be displayed.
+
+   The top of the Catalog Selections page contains links to the selected
+   missions. Each of these mission links will take you to a page which
+   displays some description of all the catalogs available for the
+   mission.
+
+   This page displays the catalogs available for the selected missions.
+   Each row in the tables tells you the catalog name, description, whether
+   the catalog contains archive data, the default search radius, the name
+   of the mission to which the table belongs, and the type of information
+   contained in the table (Object catalog, observation catalog, proposal
+   information, etc). When this page first comes up, the catalogs are
+   ordered by priority so that more important tables appear first. You can
+   sort these tables by other parameters by clicking on the up and down
+   arrows beside each column name.
+
+   This page requires you to check the catalogs you want to query and then
+   click on Submit Search or Specify Additional Parameters buttons. The
+   Submit Search button will run a search on the position or date you
+   specify. Clicking on Specify Additional Parameters will allow you to
+   search on other parameters.
+
+Object Name/Coordinates Search
+
+    Topics:
+
+     * Explanation of Name/Coordinates Input Formats
+     * Searching for Multiple Objects and/or Coordinate Pairs
+     * Choosing a Name Resolver
+     * Other Search Options
+     * Cone Search Offset Calculation
+
+    Explanation of Name/Coordinates Input Formats
+
+   Example coordinate inputs:
+     * 12 00 00, 4 12 6
+     * 180., 4.21
+     * 12 14.2 -4 12 6.48
+     * 0., 0.
+
+                             Example name inputs:
+                               * Cygnus X-1
+                               * Eta Car
+                               * Ar Lac
+                               * A2156
+                               * Sco X-1
+
+   By default, the coordinates you input are assumed to be J2000
+   equatorial coordinates. You may change this by choosing a different
+   coordinate system or equinox.
+
+   The object name or position may be entered in a number of different
+   formats. If an object name (i.e., any entry containing characters other
+   than decimal digits, spaces, and '.', '-', or '+') is entered, then the
+   name will be resolved to coordinates using one of the supported name
+   resolving services.
+
+   Object names should conform to the established IAU specifications for
+   designating astronomical radiation sources. There is a nomenclature
+   dictionary for celestial objects that can be searched if you are unsure
+   of the object name that you should be using.
+
+   Coordinates must be separated by a comma or by either a plus or minus
+   sign. If a coordinate consists of a single number which contains a
+   decimal point, then that coordinate is taken to be given in decimal
+   degrees; otherwise, the sexagesimal format is assumed and the
+   coordinate is parsed accordingly. Galactic coordinates are always
+   assumed to be in degrees, whether in sexagesimal or decimal format. If
+   equatorial coordinates are entered in sexagesimal format, right
+   ascension values are assumed to be in hours/minutes/seconds, and
+   declination values are assumed to be in degrees/minutes/seconds. Spaces
+   should be used to separate hours/degrees from minutes and minutes from
+   seconds in sexagesimal format. Seconds values are optional in
+   sexagesimal format, so if you only want to specify hours/minutes and/or
+   degrees/minutes that is allowed. The minutes can even be decimal
+   minutes if so desired. Since it is impossible to determine whether a
+   lone integer right ascension value is in hours or degrees and to
+   prevent confusion, typing a lone integer coordinate value is considered
+   invalid. This means, for example, if you want to do a search for
+   objects near 0 hours right ascension and 0 degrees declination, then
+   you should enter either "0.,0." (the decimal points flag the input as
+   decimal degrees) or "00 00 00, 00 00 00" (if sexagesimal input is
+   preferred). Entering simply "0,0" is considered an error.
+
+    Searching for Multiple Objects and/or Coordinate Pairs
+
+   Browse can perform name/coordinate cone searches on multiple object
+   names and/or coordinate pairs in a single query submission. Separate
+   each entry with a semicolon.
+
+   Example of multiple name/coordinate inputs:
+     * Cyg X-1; Cyg X-2; Cyg X-3
+     * 3c273; 12.235, 15.345; 3c279; 18 12 5.29, 4 18 3.4
+
+   The only limit on the number of name/coordinates that you can search
+   for in this manner is determined by your browser. Depending upon your
+   browser, the limit on the size of the name/coordinates entry string can
+   be on the order of hundreds of characters or even thousands.
+
+    Choosing a Name Resolver
+
+   If you enter an object name, that object name is resolved into a pair
+   of coordinates. You can specify the service to use to resolve the
+   object name you have specified. The SIMBAD and NED services can be
+   used. In general, SIMBAD should be preferred for galactic sources. By
+   default, NED is queried first, and if the object name is not resolved,
+   then SIMBAD is queried.
+
+    Specifying Observation Dates
+
+   You may query by observation dates. Not every table is queryable by
+   date, for example the object catalogs do not have dates. In the tables
+   of results that are returned, the observation date column may have
+   different names - typical labels include 'start date', 'start time',
+   'time', 'begin date', etc.
+
+   The general format for the observation date is YYYY-MM-DD hh:mm:ss,
+   where the hh:mm:ss is optional. MJD is also accepted. Multiple dates
+   are allowed - separate each date with a semicolon. Ranges can be
+   specified using the '..' syntax shown below. If a range is not given,
+   the range is assumed to be +/- 1 day around the date given.
+
+   Example of date/time inputs:
+     * 2001-01-20 06:00:00
+     * 2001-01-20
+     * 51929
+     * 2001-01-20 .. 2001-02-15
+     * 1992-12-31; 48980.5; 1995-01-15 12:00:00; 1997-03-20 .. 2000-10-18
+
+    Other Search Options
+
+   You may optionally choose the coordinate system/equinox that you wish
+   to use in the search. The search results are displayed in the
+   coordinate system and equinox that you choose.
+
+   You can also choose the radius for the database search. Each catalog
+   has a default radius which is displayed in units of arcminutes in the
+   list of catalogs. If you wish to override these defaults, then use the
+   Search Radius menu to select the value you want. In this case the same
+   radius will be used for all selected catalogs.
+
+   You may limit the number of displayed results by choosing the result
+   limit from the menu.
+
+   You can choose to display the output in HTML tables (the default),
+   plain text tables (displays faster, and can be imported more easily
+   into other programs), or FITS tables (can be analyzed using standard
+   FITS tools like FTOOLS).
+
+   Normally the results of a query have only the most significant columns
+   displayed. If you want to see every column in the results, check the
+   Show all Fields box.
+
+    Cone Search Offset Calculation
+
+   Browse will calculate the distance from the center of the search cone
+   specified by the Object Name/Coordinates Search criterion to the
+   coordinates of each observation in the Query Results output. Browse
+   places these calculated values in a pseudo-column with the name
+   'Offset' in the query results. These values have units of arc-minutes.
+   The Haversine formula is used to compute the offsets.
+
+Search by Parameter
+
+   A more general search on table(s) can be made by choosing Specify
+   Additional Parameters from the Catalogs Selection page. After doing
+   this, you will see the page that allows you to set parameter criteria.
+
+    Building a Parameter Search Query
+
+   You can build a Parameter Search query consisting of multiple criteria.
+   The form displays all parameters present in a catalog. It also allows
+   you to see the minimum and maximum values for each parameter. You have
+   the option to set several criteria in order to form your own query:
+     * View: The checkboxes under View allow you to chose the parameters
+       you want displayed. The defaults are selected when you first come
+       to this page. (If you are querying multiple tables, this column is
+       not displayed.)
+     * Sort: The radio buttons under Sort allow you to select the
+       parameter to sort results on. You may only sort on one parameter at
+       a time.
+     * Parameter: The Parameter heading displays the parameter name. Each
+       link will take you to catalog help on the parameter.
+     * Operation: This column allows you to set the operation. between
+       will query between min and max, while outside is the opposite - not
+       between min and max.
+     * Min (or Value) and Max: If either the between or outside operators
+       is selected, the Min (or Value) column allows you to set the
+       minimum. However, if you selected the '=' or '!=' operator, you can
+       query for a given value. The Max column can be used only if you
+       have chosen the 'between' or 'outside' operators.
+     * Wildcards, Spaces and Case Sensitivity:
+          + If you are using the '=' or '!=' operators on a non-numeric
+            field, you can use '*' or '%' (they are treated identically)
+            as a wildcard to take the place of multiple characters: ie
+            '3c*' will match 3c273, 3c279, etc.
+          + Searches are generally case insensitive. Your entries will be
+            uppercased before being sent to the database. The exception is
+            the case of long text fields, such as abstracts. Those are
+            stored in the database in mixed case, and your min/max values
+            are not uppercased before searching.
+          + Internal spaces are significant: searching for '3c 279' will
+            not find '3c279'. Use wildcards (3c*) if there is a
+            possibility of internal spaces.
+          + Nulls: You can search for null values (useful when you are
+            looking for all rows where a flag is not set, for example) by
+            deleting the minimum field.
+
+Query Results
+
+   Once you have submitted a search, the database is queried to find the
+   data which satisfy the conditions you have imposed. A Query Results
+   form is returned with one line for each matching row in the database.
+   If you have used the defaults and retrieved only the standard
+   parameters then there will typically be between five and ten parameters
+   including information such as name, observer, date of observation,
+   position and exposure. If you selected all parameters there may dozens
+   of parameters on a very wide form. The exact parameters will vary
+   depending upon the catalog chosen. There is no field which is included
+   in all catalogs, although right ascension ("ra") and declination
+   ("dec") are usually present. To get information about a parameter click
+   on the column headings in the form.
+
+   If you requested data from more than one catalog, you will see separate
+   listings for each catalog you chose.
+
+  Coordinate Conversion Error
+
+   Any coordinates shown in the results table have been converted to the
+   same format as your input coordinates. If there is an error in
+   computing the conversion, you will see the unaltered coordinates as
+   given in the table, and the flag "!!" which is a link to this help
+   section. One common reason for this error is that dummy coordinates (ie
+   '-999') may have been entered in the table to indicate that an
+   observation was not a true data observation.
+
+  Sort Results
+
+   You can resort the query results for a table by clicking on the up and
+   down arrows beside each column name. (VizieR tables can only be
+   searched in one direction and will only have one arrow for each
+   column.)
+
+  Show all columns
+
+   Clicking on the magnifying glass icon at the start of each row will
+   show you all the parameters for that row, including any that don't show
+   up by default. For the results from VizieR queries, the icons are split
+   - white on top and red on the bottom. Clicking on the white section
+   will show the columns in the HEASARC format, while clicking on the red
+   section will show the columns as VizieR formats them.
+
+  Data Products
+
+   To see what archival data products are associated with any given
+   observation, click on the checkbox next to the entry, and then (if the
+   option is available) choose whether you want to download a data
+   products set (Retrieve) or get a listing of individual data products
+   that are available for download (View). All the data sets are checked
+   by default, if you don't want to download or list all those data sets,
+   uncheck the ones you don't want.
+
+   The products list will show the file sizes for all the products, which
+   may influence your decision to download them. Any GIFs included in the
+   data sets will be shown in miniature. Click on them to get a full size
+   image. This allows you to preview the data set before downloading.
+
+  Cross-Correlation of Query Results
+
+   You may also cross correlate on query results from here. Click on the
+   Cross-correlate button (there will be one for each table in the
+   results). You will then see a form that sets up a cross-correlation
+   query.
+
+  Plotting Query Results with Java
+
+   You may plot results even if you don't have the most recent browser
+   version. Both client-side as well as server-side plotting are
+   supported. If you have a browser that supports Java 1.1 you can use the
+   client-side Java applet to plot. If you have don't have a browser that
+   supports Java 1.1, you may plot using a server-side form-based plotting
+   interface which can create GIF images of your plot.
+
+   To begin plotting, click on the Plot button for the table you want to
+   plot on the Results Page. If your applet does not load up, click on
+   Java Server-Side Plotting to begin. You can choose from a variety of
+   plot types that include scatter, histogram, cumulative histogram,
+   aitoff projection, log/log, and semilog plots. You may also chose to
+   sample data on another parameter.
+
+Getting Data Products
+
+   If you chose to View data products from the Query Results form, you
+   will be presented with the Data Products form which repeats the query
+   result information from the previous page for the entries you selected
+   and follows it with a list consisting of brief descriptions of each of
+   the data products available for the selected database table entries (if
+   any). Click on the checkbox next to the data products you wish to
+   download, and then click on the Retrieve button. The selected products
+   are combined into a single TAR file. The Data Retrieval page summarizes
+   the contents of this resulting file and allows you to retrieve it
+   directly to your system via your Web browser. The data may also be
+   retrieved via anonymous FTP.
+
+   If you chose Retrieve on the Query Results page, you will instead go
+   directly to the Data Retrieval page where a TAR file will be created
+   for you to download. This option (and the View option) will only be
+   presented if at least one of the catalogs you queried has data products
+   sets defined. Most of the more important and new catalogs have defined
+   data products sets, but many of the older catalogs have not yet
+   implemented this sets feature.
+
+   Almost all astronomical data files are stored in the standard FITS file
+   format. Most astronomical analysis packages (for example, FTOOLS) can
+   easily read FITS file and an extensive suite of software tools for the
+   analysis of HEASARC and other astronomical data is available.
+     __________________________________________________________________
+
+                         Browse Catalog Index Interface
+
+    Topics:
+
+     * Getting Started
+     * Mission Links
+     * Catalog Links
+     __________________________________________________________________
+
+Getting Started
+
+   The Catalog Index Interface provides links to resources for each
+   catalog in a mission. You can use it as a reference to find information
+   on a particular catalog.
+
+Mission Links
+
+   Each mission name links to the FTP area for that mission. If you want
+   to read about a mission, you can click on the description link next to
+   the mission name. Below the mission name line, you will see links to
+   the various catalogs in that mission.
+
+Catalog Links
+
+   The first link for each catalog contains its full name. If you want to
+   search this catalog, click on this link and it will take you to a
+   Browse Query Page.
+
+   The second link is a short name for that catalog. It links to a help
+   page describing the catalog and its parameters.
+
+   The third link displays the number of parameters in the catalog.
+
+   The fourth link displays the number of row entries in the catalog. This
+   link will take you to the catalog's Transportable Database Aggregate
+   Table (TDAT) file. This file contains parameter information, metabase
+   information and all the data contents of a particular catalog.
+     __________________________________________________________________
+
+                             Browse Batch Interface
+
+    Topics:
+
+     * Software Installation
+     * Usage
+     * Examples
+     __________________________________________________________________
+
+Software Installation
+
+   Please note that only Object Name/Coordinates Searches can be executed
+   using the the batch interface. Also, in order to use the batch
+   facility, you will need access to a Unix workstation with Perl 5.x or
+   Perl 4.x compiled and installed on it.
+
+   You will need to download two Perl scripts:
+    1. browse_extract.pl
+    2. webquery.pl (Perl 5.x) OR webquery.pl (Perl 4.x)
+
+   from the HEASARC's anonymous FTP server. Once you've downloaded these
+   files, make sure they have executable permissions and place them in
+   your executable path. These scripts assume your system has the Perl
+   command installed in /usr1/local/bin. If Perl has been installed
+   elsewhere on your machine, you should edit the first line of each
+   script to change:
+   #!/usr1/local/bin/perl to the correct location.
+
+   Note: These scripts are in the public domain. Please feel free to copy
+   and modify them to use however you wish. However, we can only support
+   the versions of the scripts that we have made available.
+
+Usage
+
+   To use the Batch Interface, simply type browse_extract.pl at your shell
+   prompt. Many options are available, but you are only required to
+   specify the table to be searched and the astronomical position(s) of
+   interest.
+
+   The syntax of the command is:
+
+   browse_extract.pl table=table name
+
+     optional arguments:
+     position=object name or position
+     coordinates=EQUATORIAL or GALACTIC
+     equinox=year
+     radius=numerical value in units of arc-minutes
+     fields=STANDARD or ALL
+     name_resolver=NED or SIMBAD
+     infile=input filename
+     outfile=output filename
+
+   All arguments are case insensitive.
+
+   Explanation of command line arguments:
+
+   table
+          This is the abbreviated or short table name as used in Browse,
+          e.g., ABELL, XTEOBS, ROSPUBLIC. You can find these table names
+          in the Catalog Index Interface.
+
+   position
+          This is either the name of an object or a set of coordinates to
+          search around. If a name is given it will be resolved using the
+          service given in the name_resolver argument or SIMBAD by
+          default. The syntax for coordinates is the same as those
+          supported in the Browse Web service. If the coordinates string
+          contains embedded spaces (e.g., 12 2 3.3, -13 8 1), then this
+          argument should be enclosed in quotes.
+
+   coordinates
+          This should be either "Equatorial" or "Galactic". The default is
+          Equatorial.
+
+   equinox
+          This defines the equinox year for both your input and and the
+          resulting coordinates in the output. It defaults to 2000.
+
+   radius
+          This gives the radius in arcminutes for which a match should be
+          made. This defaults to 1 degree. Note that this is different
+          from the interactive Browse system where the default differs
+          from table to table.
+
+   parameters
+          indicates which parameters are to be retrieved from the table.
+          The default, "Standard", indicates that only a preselected set
+          of the most critical parameters will be retrieved. "All" will
+          retrieve all parameters from the table.
+
+   name_resolver
+          may be used to select the system used to convert names into
+          coordinates. The currently supported services are NED and
+          SIMBAD. The default is SIMBAD.
+
+   infile
+          specifies a file containing positions to be searched.
+
+   outfile
+          specifies a file to contain the table of returned results. If
+          not specified the results will be printed on standard out.
+
+   You may specify the target positions using the position argument, using
+   a predefined file specified with infile, or from the standard input. In
+   the latter two cases each line until an EOF will be used as a position.
+
+Examples
+
+   Are there any public ROSAT observations of 3C273?
+
+   % browse_extract.pl table=rospublic position=3c273 name_resolver=ned
+
+   should print to standard output a table like the following:
+
+seq_id     |instrument|exposure|ra(2000)  |dec(2000)  |name              |public
+_date(ISO)|
+RP600242   |PSPC      |    3078|12 27 43.2|+01 36 00.0|GIOVANELLI-HAYNES |
+1994-03-22|
+RP600242A01|PSPC      |   24830|12 27 43.2|+01 36 00.0|GIOVANELLI-HAYNES |
+1994-03-22|
+RH120001   |HRI       |       0|12 29 04.8|+02 03 00.0|XRT/HRI NORTH DUMM|
+1995-08-01|
+WP141509N00|PSPC      |    3332|12 29 04.8|+02 03 00.0|3C273             |
+1994-09-28|
+RP120000N00|PSPC      |     916|12 29 04.8|+02 03 00.0|XRT/PSPC NORTH DUM|
+1995-01-31|
+WF700191   |PSPC      |    3291|12 29 04.8|+02 03 00.0|3C273             |
+1996-02-07|
+WP700191   |PSPC      |    6243|12 29 04.8|+02 03 00.0|3C273             |
+1996-02-07|
+RP141520N00|PSPC      |     485|12 29 04.8|+02 03 00.0|3C273             |
+1995-09-27|
+WH700234   |HRI       |   17174|12 29 07.2|+02 03 00.0|3C 273            |
+1993-07-20|
+...
+Search of table ROSPUBLIC around '3c273' with a radius 60' returns 25 rows
+
+   I might first do a query of all WGACAT sources within 80' of the
+   galactic center using:
+% browse_extract.pl table=wgacat radius=80 coordinates=galactic position='0.,0.'
+ outfile=wgacat_gc.list
+
+   The results of that query can be edited (manually or by a simple
+   script) to produce at file like:
+359.386118, 1.149945
+359.510470, 1.223261
+359.274779, 0.933392
+359.279818, 0.934399
+359.383583, 0.977861
+359.389096, 0.979161
+359.392070, 0.972419
+359.292038, 0.907242
+359.389873, 0.967603
+359.390891, 0.967811
+359.393223, 0.969269
+...
+
+   plus 340 more lines.
+
+   If this result is stored as wgacat_galcen.dat, we can find nearby HST
+   Guide Star Catalog positions with:
+browse_extract.pl table=gsc coordinates=galactic infile=wgacat_galcen.dat outfil
+e=wgacat_galcen_guidestars.dat
+
+   It will take a while to process 350 targets...
+
+   If you have questions concerning the installation or usage of these
+   scripts please contact Tom McGlynn (tam@silk.gsfc.nasa.gov) or contact
+   the HEASARC at request@athena.gsfc.nasa.gov.
+     __________________________________________________________________
+
+                      Browse Cross-Correlations Interface
+
+    Topics:
+
+     * Getting Started
+     * Cross-Correlations Query
+
+Getting Started
+
+   This interface can give you information such as which ASCA and XTE
+   observations were made within one week of each other and within 10'
+   radius of each other.
+
+Cross-Correlations Query
+
+   First select which two tables to cross-correlate. Select the primary
+   table from the first menu, and the secondary table from the second
+   menu. A flag after each table name indicates the type of correlation
+   that each table supports. For example, if a table contains a 'R' flag,
+   it can be correlated by specifying radius. A 'T' flag indicates that
+   the table can be correlated by time. A 'RT' indicates that the table
+   can be correlated using radius and/or time.
+
+   By default, the radius cross-correlation is selected, using the default
+   radius. Correlation by time is also available, and you can change the
+   correlation default delta in radius and time if you wish.
+     __________________________________________________________________
+
+HEASARC Acknowledgment
+
+   Browse is provided by the Laboratory for High Energy Astrophysics at
+   NASA/Goddard Space Flight Center. If using this service made a
+   significant contribution to a research project, please make the
+   following acknowledgment in any resulting publication:
+
+   "This research has made use of data obtained through the High Energy
+   Astrophysics Science Archive Research Center Online Service, provided
+   by the NASA/Goddard Space Flight Center."
+
+   Please send a preprint or reprint of the paper to:
+        The HEASARC
+        Code 660.2
+        NASA/Goddard Space Flight Center
+        Greenbelt, Maryland 20771
+        USA
+     __________________________________________________________________
+
+   Part of the NASA OSS
+   Structure and Evolution of the Universe theme.
+
+   Questions/Comments/Feedback
+   Tell me about black holes, astronomy, and more!
+
+   NASA Security and Privacy Statement
+   A service of the Laboratory for High Energy Astrophysics (LHEA) at
+   NASA/ GSFC
+   and the High Energy Astrophysics Division of the Smithsonian
+   Astrophysical Observatory (SAO)
+
+   HEASARC Director: Dr. Nicholas E. White,
+   HEASARC Associate Director: Dr. Steve Murray,
+   Responsible NASA Official: Eunice Eng,
+   eunice.eng@gsfc.nasa.gov
+     __________________________________________________________________
+
+   Page Author: Browse Software Development Team
+   <request@athena.gsfc.nasa.gov>
+   Last Modified: Friday, 09-Nov-2001 15:48:10 EST

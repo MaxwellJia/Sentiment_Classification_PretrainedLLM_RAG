@@ -1,0 +1,294 @@
+http://idlastro.gsfc.nasa.gov/idlfaq.html
+
+                         The IDL Astronomy Library FAQ
+
+   This document is intended to answer the most Frequently Asked Questions
+   (FAQs) about the IDL Astronomy Library. The FAQ is a dynamic document
+   that will change as information changes. Suggestions for corrections or
+   additional sections are welcome -- please email them to
+   landsman@mpb.gsfc.nasa.gov.
+
+   A. Purpose and Organization of the IDL Astronomy Library
+
+   A1. How can I find out about stars, planets, black holes, galaxies
+   etc.?
+   A2. I haven't purchased an IDL license -- can I still use the Library?
+   Can I use it with PV-WAVE?
+   A3. How do I install the IDL Astronomy Library?
+   A4. Who supports the IDL Astronomy Library?
+   A5. Which platforms and IDL versions are supported by IDL Astronomy
+   Library?
+   A6. Is there an online help file associated with the IDL Astronomy ?
+   A7. Why are there so few widget and object-oriented programs in the
+   Library?
+   A8. Are there known name incompatibilities between the IDL Astronomy
+   Library and other IDL Libraries?
+   A9. Where can I find IDL software for a particular instrument ?
+   A10. How is configuration control (version numbers) maintained for the
+   IDL Astronomy Library?
+
+    B. IDL Software for Astronomy
+
+   B1.  What astronomical image display widgets are available?
+   B2. Are there any IDL widgets for astronomical spectroscopy?
+   B3. What IDL software is available for image deconvolution?
+   B4. Will there be any updates to the IDLPHOT photometry package?
+     __________________________________________________________________
+
+   Section A.
+
+Purpose and Organization of the IDL Astronomy Library
+
+   A1.  Where can I find out about stars, planets, black holes, galaxies
+   etc.?
+
+   Sorry, you've come to the wrong place. The IDL Astronomy Library is a
+   collection of low-level software in the commercial language  IDL , and
+   is mainly of interest to professional astronomers who already have
+   purchased an IDL software license. For general questions about
+   astronomy, one good starting point is the list of Web resources
+   available at the WEBStars page at Goddard Space Flight Center.
+
+   A2.  I haven't purchased an IDL license -- can I still use the Library?
+   Can I use it with PV-WAVE?
+
+   Sorry, the programs in the IDL Astronomy Library will not run without
+   an IDL license.   You are welcome to use any of the programs as
+   metacode and convert them to your favorite language.
+
+    PV-WAVE  is a commercial programming language with similarities to
+   IDL.    In fact, at one time (1990) it was an identical language to
+   IDL, but has since evolved separately.       I do not attempt to make
+   the programs in the IDL Astronomy Library  compatible with PV-WAVE, but
+   since the IDL Astronomy Library has little use of widgets or
+   object-oriented programming (see  A7 ), much of the code can probably
+   still be converted to PV-WAVE without too much effort.
+
+   A3.  How do I install the IDL Astronomy Library?
+
+   The entire contents of the Library can be loaded from one of two .tar
+   files or from a .zip file at the  FTP site .     The astron.dir.tar.gz
+   file maintains the procedures in separate topical directories,  whereas
+   the  astron.tar.gz file has the same files but with all the procedures
+   in a single directory. The astron.zip file has identical contents to
+   astron.tar.gz but in .zip format.
+
+   The  procedures in the IDL Astronomy Library need simply be placed in a
+   directory included in the IDL !PATH.     This can either be done at
+   startup (using the UNIX/VMS system variable IDL_PATH or the
+   Windows/Macintosh preferences file) or by simply concatenating the
+   directory to the !PATH system variable.      Note that the procedures
+   in the IDL Astro Library are not a self-contained "package" but rather
+   a collection of low-level procedures to be incorporated with the user's
+   own software.
+
+   For historical reasons, many of the IDL Astronomy Library procedures
+   use the following three  non-standard system variables.   These must
+   first be defined with the  ASTROLIB procedure (or the equivalent DEFSYS
+   definitions).
+     *   !PRIV - Used in a couple of the database programs.   Needs to be
+       set when  modifying a database.
+     *   !TEXTOUT - Used in the program TEXTOPEN which is called by the
+       database and several other programs.   Programs which use this
+       non-standard system variable also allow a keyword TEXTOUT to be
+       used instead of the  system variable
+     *  !TEXTUNIT - Logical output unit number used by TEXTOPEN
+
+   The procedure ASTROLIB also defines a default ASTRO_DATA data
+   directory.       This directory contains a FITS file JPLEPH.405
+   containing the JPL DE405 ephemeris, which is used by several routines
+   (e.g. JPLEPHINTERP) to compute highly accurate positions and velocities
+   of major solar system objects (including the Earth and the Sun).
+   However, due to its size, the JPLEPH.405 file is not included in the
+   standard .tar and .zip distributions of the IDL Astro Library .
+   Thus, the use the JPL procedures the following two steps are required:
+
+    1. FTP the files in http://idlastro.gsfc.nasa.gov/ftp/data/ to  your
+       /data directory
+    2. Define the environment variable ASTRO-DATA (and/or edit the
+       ASTROLIB procedure) to point to your /data directory
+
+   A4.  Who supports the IDL Astronomy Library?
+
+   The IDL Astronomy Library has been supported by NASA under a small
+   grant from the Astrophysics Data Program.   The first grant was awarded
+   in 1990 to Wayne Landsman for three years, and the grant was renewed in
+   1993 and 1996.    At various times, other people , including Frank
+   Varosi, Krishna Venkatakrishna, and Joseph Lyu, have worked part-time
+   on the Library.
+
+   At the end of  November 2000, all funding for the IDL Astronomy Library
+   ended.      An application to renew support for the IDL Astronomy
+   Library was made to the NASA Applied Information Systems Research in
+   September 2000 but was not successful.    The Library is currently
+   supported by a small amount  of director's discretionary funding from
+   Code 600 at Goddard Space Flight Center.  I am currently looking for
+   other sources of funding.
+
+   Many of the programs in the IDL Astronomy Library have been contributed
+   by the user community.    In particular,  Don Lindler, Craig Markwardt,
+   Tom McGlynn,  and Bill Thompson have made significant contributions to
+   the Library.
+
+   A5.  Which versions and platforms of IDL are supported by IDL Astronomy
+   Library?
+
+   The programs in the IDL Astronomy Library should work in  V5.1 and all
+   later versions of IDL.       There is a separate  V4.0 version  of the
+   Library that uses parentheses rather than square brackets for array
+   indexing, as was required in IDL versions prior to V5.0 (released in
+   1997).
+
+   There is a V5.3 directory  which contains modifications of several IDL
+   Astronomy Library procedures to use special features introduced in
+   V5.3.  The procedures in the V5.3 directory will not work in earlier
+   versions of IDL.
+
+   I currently only have access to IDL on Unix (Solaris) and VMS machines,
+   though I try to maintain Windows & Mac compatibility.
+
+   A6.    Is there on online help file available for the IDL Astronomy
+   Library?
+
+   Each procedure contains a  documentation header.      Unfortunately,
+   there is no easy way in IDL to link the documentation for user
+   procedures with either the hypertext help or the Acrobat .PDF files
+   used for intrinsic procedures.      One way to create help files is to
+   use the standard IDL procedure MK_HTML_HELP to create an .html help
+   file (or fetch the astron.html  file).       This help file can be
+   awkward to use, due to its large size and lack of subcategories.     An
+   alternative is to simply use the  one-line description of procedures,
+   available at Goddard or in Tübingen or to mirror one of these sites
+   locally.     Users of Emacs can use the excellent help facilities
+   incorporated into the IDLWAVE mode.
+
+   A7.   Why are there so few widget and object-oriented procedures in the
+   IDL Astronomy Library?
+
+   The emphasis of the IDL Astronomy Library is on low-level algorithms
+   for astronomy (including FITS I/O).      The are many excellent Web
+   sites for other aspects of IDL programming.   (Probably the three most
+   widely used libraries for astronomers are  those of  David Fanning,
+   Craig Markwardt,  and  Ray Sterner . )  Historically, widget procedures
+   are also more difficult to maintain over different IDL platforms and
+   versions.
+
+   A8.  Are there known incompatibilities between the IDL Astronomy
+   Library and other IDL Libraries?
+
+      I am aware of the following procedure name conflicts:
+    1. DATATYPE() -- This function was originally from the  JHUAPL
+       Library  but diverged with the introduction of the new data types
+       (e.g. unsigned integers).   The use of DATATYPE() is being phased
+       out of the IDL Astronomy Library in favor of SIZE(/TNAME).
+    2. TRIM() -- This function for trimming strings is duplicated from
+       the  Solarsoft  library.  There is an entirely different  procedure
+       named TRIM in the IUE library.   Therefore, while TRIM is kept in
+       the IDL Astro Library, it is not required by any other procedure
+    3. CONCAT_DIR() -- The version of this function in the  Solarsoft
+       library contains some additional VMS-specific capabilities.
+    4. FIND_ALL_DIR() -- Users with Windows and V5.2 or earlier should use
+       the version in the Solarsoft  library.       The Solarsoft version
+       is not duplicated in the Astro Library because it would require
+       more than 20 supporting procedures.
+
+   A9. Where can I find IDL software for a particular instrument?
+
+   In general, the IDL Astronomy Library does not contain any
+   instrument-specific software.   Check the  Links to other IDL Astronomy
+   Sites  for IDL software for a particular instrument.     Please inform
+   Wayne Landsman of any additions or corrections to this page.
+
+   The one exception to the "no instrument specific" software for the IDL
+   Astronomy Library has been for the WFPC2 (Wide Field/Planetary Camera)
+   instrument on the Hubble Space Telescope (HST).      The exception is
+   made because WFPC2 may be the most widely used astronomical instrument,
+   and there is no other site supporting IDL software for it.
+
+   A10.   How is configuration control (version numbers) maintained for
+   the IDL Astronomy Library?
+
+   Unfortunately, I do not have the facilities to maintain strict
+   configuration control.    Procedures in the FTP site are updated as
+   soon as a bug fix or enhancement has been implemented and tested for
+   backwards compatibility.  The tar and zip files are updated roughly
+   every month.     (Therefore, the ASCII file version of a procedure may
+   be up to a month newer than what is found in the tar file.)    Every
+   change is recorded in the "Revision History" section  of the
+   documentation header, and is also recorded in the  news  file.
+     __________________________________________________________________
+
+   Section B
+
+   IDL Software  in Astronomy
+
+   B1.   What astronomical image display widgets are available within IDL?
+
+   I know of  three  sophisticated image display widgets written in IDL,
+   that work with FITS files and recognize the world coordinate systems
+   for astronomy.
+    1. The  ATV Image Display Tool  is an IDL program written by Aaron
+       Barth (CFA) modeled after the popular  SAOImage  image display
+       utility.
+    2. The object-oriented programs XCTV, XCTV2, XCTVN, XINSPECT,
+       XINSPECT2 in  the  bhill  contrib directory of IDL Astronomy
+       Library
+    3. The program IDP3 (Image Display Paradigm 3) in the  NICMOS
+       library
+
+   Other   non-astronomical image display widgets might also be useful.
+   The  LOOK widget by Fred Knight is easily extensible for including
+   user-supplied code.  The  IMDISP  utility by Liam Gumley has been
+   especially recommended for formatting images that look good both on the
+   display and on the printer.
+
+   B2.   Are there any IDL widgets for astronomical spectroscopy?
+
+   I  recommend the IDL utilities available at the  FUSE  (Far-Ultraviolet
+   Spectroscopic Explorer) software site.    The package contains widgets
+   for continuum normalization, multiple Gaussian or Lorentzian fittings,
+   and equivalent width measurements.
+
+   B3. What IDL software is available for image deconvolution?
+
+   The IDL astro programs  max_likelihood  and  max_entropy  have no
+   method to determine when to stop the iterations,  though there is a
+   very old widget interface  deconv_tool  to assist with visualization.
+   The NICMOS library includes an interactive tool LUCY for
+   Richardson-Lucy deconvolution.    IDL software for image reconstruction
+   using the  PIXON  method is available on request. Jongchul Chae used
+   IDL maximum entropy code to correct for stray light in solar
+   filter-based magnetograph images.     The ANDRIL iterative
+   deconvolution algorithm based on maximum likelihood was used for the
+   Yohkoh Soft X-ray Telescope (SXT).
+
+   B4. Will there be any updates to the IDLPHOT photometry package?
+
+           The IDLPHOT library was written in 1990 and was based on the
+   1987 version of the  DAOPHOT  photometry package.     Thus the code for
+   PSF fitting is  awkward to use by modern standards, and for PSF-fitting
+   I would recommend one of the modern non-IDL packages such as  DAOPHOT
+   II or HSTPhot or DOPHOT .  However, some of the procedures in IDLPHOT
+   such as mmm.pro to estimate a sky background, find.pro to locate point
+   sources, and aper.pro to perform aperture photometry remain useful and
+   easily cannibilized.     While some updates to aper.pro are planned
+   (e.g. to recognize NAN values as bad pixels, and accept an error array)
+   there are no immediate plans to improve the PSF fitting software.
+
+   Other available IDL photometry packages include the following:
+    1. STARFINDER - A PSF-fitting photometry program from Bologna for the
+       analysis of well-sampled crowded stellar fields
+    2. HIIPHOT - A software package by D. Thilker (NMSU, 2000 AJ, 120,
+       3070 ) designed for accurate photometric characterization of H II
+       regions.
+    3.  CCDPHOT - Marc Buie's CCD Photometry program originally designed
+       for solar system objects.
+     __________________________________________________________________
+
+   Last Modified: 15-Jan-2002
+
+
+    Wayne Landsman / Science Systems and Applications (SSAI) /
+    landsman@mpb.gsfc.nasa.gov
+
+    Return to the IDL Astronomy Library Homepage

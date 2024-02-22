@@ -1,0 +1,125 @@
+http://cs-www.ncsl.nist.gov/ipsec/
+
+   National Institute of Standards and Technology (NIST) ... working with
+    industry to develop and apply technology, measurements, and standards
+                             NIST IPsec Project
+
+   horizontal line
+
+
+
+   Cerberus - NIST's Reference Implementation of IPsec Cerberus
+   NIST's Reference Implementation of IPsec
+   PlutoPlus - NIST's Reference Implementation of IKE/ISAKMP PlutoPlus
+   NIST's Reference Implementation of IKE/ISAKMP
+   IPsec-WIT - NIST's IPsec WWW-Based Interoperability Tester IPsec-WIT
+   NIST's IPsec WWW-Based Interoperabililty Tester
+   NIST IPsec Presentations and Papers NIST IPsec Presentations and Papers
+   NIST FY00-01 IPsec Project Plan NIST FY00-01 IPsec Project Plan
+   NIST FY99 IPsec Project Plan NIST FY99 IPsec Project Plan
+   IPsec Internet Drafts IPsec Internet Drafts
+
+                                Introduction
+
+   The NIST IPsec Project is concerned with providing authentication,
+   integrity and confidentiality security services at the Internet (IP)
+   Layer, for both the current IP protocol (IPv4) and the next generation
+   IP protocol (IPv6). Current efforts are concentrated on IPv4 because of
+   the high level of interest in fielding Internet security technology as
+   rapidly as possible. Implementing IPsec requires modifications to the
+   system's communications routines and a new systems process that
+   conducts secret key negotiations. The main deliverables of the NIST
+   IPsec project are:
+     * Cerberus - adds IP communications security to the system
+     * PlutoPlus - conducts secret key negotiations and management
+     * IPsec-WIT - an interactive Web-based interoperability tester that
+       uses Cerberus and PlutoPlus to enable developers and users to test
+       the interoperability of their systems or to demonstrate IPsec's
+       functionality
+
+   horizontal line
+
+                                 Description
+
+   The NIST IPsec Project concerns itself with the emerging Internet
+   protocols that provide increased services at the Internet level, in
+   particular a larger address space and built-in security facilities.
+   These security facilities (known as IPsec) are significant since they
+   will be used to secure the infrastructure of the Internet (routing,
+   DNS, etc.) and they can also be used to protect application-level
+   Internet communications. They enable a centrally-controlled access
+   policy, as well as a multi-level, layered approach to security. IPsec
+   provides the following security services: data origin authentication,
+   connectionless integrity, replay protection, data confidentiality,
+   limited traffic flow confidentiality, and key negotiation and
+   management. The IETF has mandated the use of IPsec wherever feasible;
+   the standards documents are close to completion, and there are numerous
+   implementations.
+
+   To expedite the development of this crucial technology, ITL staff
+   designed and developed Cerberus, a reference implementation of the
+   latest IPsec specifications, and PlutoPlus a reference implementation
+   of the IPsec key negotiation and management specifications . Numerous
+   organizations from all segments of the Internet industry have acquired
+   these implementations as a platform for on-going research on advanced
+   issues in IPsec technology.
+
+   To answer an industry call for more frequent and accessible
+   interoperability testing for emerging commercial implementations of
+   IPsec technology, ITL developed the NIST IPsec WWW-based
+   Interoperability Tester, IPsec-WIT, which is built around the Cerberus
+   and PlutoPlus prototype implementations. IPsec-WIT also serves as an
+   experiment in test system architectures and technologies. The novel use
+   of WWW technology allows IPsec-WIT to provide interoperability testing
+   services anytime and anywhere without requiring any distribution of
+   test system software, or relocation of the systems under test.
+
+   ITL staff also collaborated with key industry representatives to
+   co-author protocol specifications and resolve technical impasses that
+   threatened the progress of the IPSec design and standardization
+   process.
+   horizontal line
+
+                          Presentations and Papers
+
+     * Sheila Frankel, Rob Glenn and Scott Kelly, " The Candidate AES
+       Cipher Algorithms and Their Use With IPsec,"
+       draft-ietf-ipsec-ciph-aes-cbc-00.txt, February 2000.
+     * Sheila Frankel, " The IKE (Internet Key Exchange) Protocol," NIST
+       Key Management Workshop, February 2000.
+     * Sheila Frankel, " Implementing and Testing IPsec: NIST's
+       Contributions and Future Developments," RSA 2000 Conference,
+       January 2000.
+     * Sheila Frankel, " PlutoPlus: Policy and PKI Plans for FY00,"
+       November 1999.
+     * Sheila Frankel, " NIST's IPsec Web-Based Interoperability Tester
+       (IPsec-WIT)," IPsec99 Conference, October 1999.
+     * Rodney Thayer, Naganand Doraswamy and Rob Glenn, " IP Security
+       Document Roadmap," RFC 2411, November 1998.
+     * Rob Glenn and Stephen Kent, " The NULL Encryption Algorithm and Its
+       Use With IPsec," RFC 2410, November 1998.
+     * Cheryl Madson and Rob Glenn, " The Use of HMAC-SHA-1-96 within ESP
+       and AH," RFC 2404, November 1998.
+     * Cheryl Madson and Rob Glenn, " The Use of HMAC-MD5-96 within ESP
+       and AH," RFC 2403, November 1998.
+     * Rob Glenn, " Cerberus: an IPsec Reference Implementation," 1998
+       Linux Congress, August 1998. (HTML)
+     * Sheila Frankel," Crossing the Styx: Taming the Underworld Using
+       Cerberus and PlutoPlus (ITL's Contributions in the Area of Internet
+       Security)," March 1998.
+     * Sheila Frankel," IPv6," October 1997.
+     * Pau-Chen Cheng and Rob Glenn, " Test Cases for HMAC-MD5 and
+       HMAC-SHA-1," RFC 2202, September 1997.
+
+   horizontal line
+
+                                  Contacts:
+              Sheila Frankel, Computer Security Division (CSD)
+         Robert Glenn, Advanced Network Technologies Division (ANTD)
+
+   horizontal line
+
+    Computer Security Division and CSRC Home Page CSD and CSRC Home Page
+         ANTD Home Page ANTD Home Page NIST Home Page NIST Home Page
+         Please send comments or suggestions to ipsec-info@nist.gov
+                  Last Modified: Friday, December 21, 2001.

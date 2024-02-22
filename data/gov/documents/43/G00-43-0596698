@@ -1,0 +1,137 @@
+http://www.sst.nrel.gov/topics/new_mat.html
+
+        Computer-Aided Search for New Materials Using Quantum-Mechanics
+
+   Perhaps the most intriguing aspect of the spectacular success that
+   semiconductor-based high technology has had in the past 50 years is the
+   tiny number of species (core materials) on which these technologies are
+   based. Even considering a broad range of semiconductor
+   devicestransistor, computer chips, solid state lasers, detectors,
+   solar cells, light-emitting diodes, etc.there are only about ten basic
+   semiconductors (all belonging to the same crystal type!), that enables
+   these strategic technologies. This is a strikingly narrow material
+   base, considering the number of core materials that enable other
+   technologies: e.g., the 10^310^5 species used in metallurgy, polymer
+   technologies, biotech, and the pharmaceutical drug industry. Thus, it
+   is entirely possible that we are currently missing the crucial
+   breakthrough material for present-day and future electronic devices.
+   But how is one to search for new stable materials? Even if one
+   considers only two types of atoms, there are as many as 2**N crystal
+   structures possible on a lattice with N sites. Even for N=35, this
+   equals the number of stars in our galaxy! Theoretical physicists at the
+   National Renewable Energy Laboratory (NREL) in Golden, Colorado have
+   developed a new strategy that enables one, using fast computers and
+   concepts from Quantum Mechanics to search this astronomic space of
+   possibilities for the "winning combination" of atoms producing novel,
+   stable crystal structures. This approachLinear Expansion in Geometric
+   Objects (LEGO)is based on the recognition that even complex crystal
+   structures can be viewed as a collection of simple Geometric Objects
+   such as pairs of atoms (dumbbells), triangles of atoms, etc. By
+   assigning to each Geometric Object an (quantum-mechanical) energy
+   value, one can rapidly scan hundreds of thousands of candidate
+   structures (obtained by different assemblies of the Geometric Objects),
+   looking for the one with the lowest overall energy. This LEGO approach
+   has already predicted a number of previously unsuspected intermetallic
+   compounds, that were missed by the conventional approach of
+   trial-and-error. This could revolutionize the way in which novel
+   materials are sought.
+
+                    "Linear Expansion in Geometric Objects":
+                        Recent Application and Advances
+
+     * The LEGO method was applied to predict, from first principles, the
+       electrochemical potential of a Li battery (C. Wolverton and
+       A. Zunger, Phys. Rev. Lett. 81, 606 (1998)).
+     * Previously-unsuspected ordered phase of Cu[7]Pt was predicted and
+       subsequently observed experimentally (see "online LEGO
+       presentation").
+     * Three previously ordered structures of Pd-Pt were predicted:
+       Pd[3]Pt(L1[2]), PdPt(L1[1]), and PdPt[3](L1[2]). Experimental
+       testing is awaited (see "online LEGO presentation").
+     * Novel, previously unknown phases of Rh-Pt are predicted: D1[a],
+       D0[22], X2, and "40" (see "online LEGO presentation").
+     * Size- and temperature dependence of precipitate shpaes are
+       predicted for Al-Zn: Based on a detailed study abou the coherent
+       phase stability of Al-Zn (S. Müller, L.-W. Wang, Alex Zunger, and
+       C. Wolverton, Phys. Rev. B 60, 16448 (1999)), the relation between
+       sizes and shapes as a function of temperature was predicted in
+       remarkable agreement with experiment, and explained in terms of
+       energetics. We found that although the precipitates are created by
+       an inherently kinetic heat treatment process, the entire series of
+       their size vs. shape realtion can be explained in terms of
+       thermodynamic arguments and understood in terms of strain and
+       chemical energies (S. Müller, C. Wolverton, Lin-Wang Wang, and Alex
+       Zunger, Acta. Mater., in press).
+     * Time-dependence of the distribution of precipitate shapes and sizes
+       are predicted: Beside the relation between size and shape of an
+       individual precipitate, the size- and shape distribution as a
+       function of aging time t and temperature T is essential to
+       understand at which T and t the distribution of sizes and shpaes is
+       most efficient in order to pin dislocations. For this, the "Linear
+       Expansion in Geometric Objects" Hamiltonian was successfully used
+       in a Kinetic Monte Carlo program. It turns out that the growth of
+       precipitates follows the rules of classical Ostwald-ripening.
+     * Low-temperature ground states are determined for Cu-Zn: a-brass is
+       the most important phase of Cu-Zn. We find that at low temperature
+       the system will order into a novel structure, so-called DO[23] (S.
+       Müller and Alex Zunger, submitted to Phys. Rev. B).
+     * Three low-temperature ground-states are detected in Ag-Pd: We were
+       able to predict three low temperature ground-states at
+       concentrations of 25%, 50%, and 75% Palladium and the corresponding
+       coherent phase boundaries. This discovery will lead to an important
+       addition in the existing phase-diagram of Ag-Pd.
+
+Quantum-mechanical simulations able to predict precipitate shapes in metal
+alloys
+
+   The increased hardness of heat-treated alloys such as Al-Zn is due to
+   formation of precipitates which act as obstacles to dislocation motion.
+   The knowledge of sizes and shapes of precipitates is crucial for and
+   understanding of strengthening mechanisms in metal alloys. For the
+   first time, it is now possible to theoretically predict via
+   quantum-mechanical "first-principles" simulations the experimentally
+   observed size- and temperature- dependence of precipitate shapes in
+   Al-Zn alloys using a parameter free model, know as LEGO, or "Linear
+   Expansion in Geometric Objects" (a cluster expansion). Figure 1 shows
+   the evolution of the Zn precipitate shape with temperature, for a given
+   number of atoms. In agreement with experimental studies, we find that
+   the precipitates change from a nearly spherical to a more hexagonal
+   shape with decreasing temperature and increasing size. The direction in
+   which the precipitates flatten is always the [111] direction. A
+   quantitative measure for the observed "flattening" is the c/a ratio,
+   shown schmatically in the bottom right picture of Fig. 1. In Figure 2
+   we present a quantitative comparison between our simulations (given by
+   lines) and different experimental studies (given by symbols) for two
+   different temperatures. The excellent agreement demonstrates the
+   unprecendented ability to predict precipitate shapes and sizes even
+   without carrying our experiments.
+
+                               [alzn_prec.gif]
+
+   Fig. 1: Shape-dependence of coherent fcc-Zn precipitates as a function
+          of the unber of Zn atoms and temperature in Al-Zn alloys.
+
+                                [zinc_ca.gif]
+
+        Fig. 2: Size-shape relatoin of Zn precipitates for two of the
+     temperatures in Fig. 1. While the lines denote the results from our
+    calculations, the points are taken from different experiments studies
+                      done at T = 300 K and T = 200 K.
+
+Online Presentation of LEGO methodology
+
+   We have an online presentation describing the LEGO methodology in HTML
+
+Selected References
+
+    1. A. Zunger, "First Principles Statistical Mechanics of Semiconductor
+       Alloys and Intermetallic Compounds," in NATO Advanced Study
+       Institute on Statics and Dynamics of Alloy Phase Transformations,
+       edited by P. Turchi and A. Gonis, Plenum Press, New York, 361-419
+       (1994).
+
+Other References
+
+   For a listing of all SST references on the topic "Statistical Mechanics
+   of Alloys", click on the "Get References" button below.
+   Get References

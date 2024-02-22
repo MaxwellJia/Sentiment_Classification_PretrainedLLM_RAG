@@ -1,0 +1,724 @@
+http://ch2linux.star.bnl.gov/mysql/Docs/manual_toc.html
+
+                  MySQL Reference Manual for version 3.23.33.
+     __________________________________________________________________
+
+     * 1 General Information About MySQL
+          + 1.1 What Is MySQL
+          + 1.2 About This Manual
+               o 1.2.1 Conventions Used in This Manual
+          + 1.3 History of MySQL
+          + 1.4 Books About MySQL
+          + 1.5 The Main Features of MySQL
+          + 1.6 How Stable Is MySQL?
+          + 1.7 Year 2000 Compliance
+          + 1.8 General SQL Information and Tutorials
+          + 1.9 Useful MySQL-related Links
+     * 2 MySQL Mailing Lists
+          + 2.1 The MySQL Mailing Lists
+          + 2.2 Asking Questions or Reporting Bugs
+          + 2.3 How to Report Bugs or Problems
+          + 2.4 Guidelines for Answering Question on the Mailing List
+     * 3 MySQL Licensing and Support
+          + 3.1 MySQL Licensing Policy
+          + 3.2 Copyrights Used by MySQL
+               o 3.2.1 Copyright Changes
+          + 3.3 Example Licensing Situations
+               o 3.3.1 Selling Products that use MySQL
+               o 3.3.2 ISP MySQL Services
+               o 3.3.3 Running a Web Server Using MySQL
+          + 3.4 MySQL Licensing and Support Costs
+               o 3.4.1 Payment information
+               o 3.4.2 Contact Information
+          + 3.5 Types of Commercial Support
+               o 3.5.1 Basic E-mail Support
+               o 3.5.2 Extended E-mail Support
+               o 3.5.3 Login Support
+               o 3.5.4 Extended Login Support
+     * 4 Installing MySQL
+          + 4.1 How to Get MySQL
+          + 4.2 Operating Systems Supported by MySQL
+          + 4.3 Which MySQL Version to Use
+          + 4.4 How and When Updates Are Released
+          + 4.5 Installation Layouts
+          + 4.6 Installing a MySQL Binary Distribution
+               o 4.6.1 Linux RPM Notes
+               o 4.6.2 Building Client Programs
+               o 4.6.3 System-specific Issues
+                    # 4.6.3.1 Linux Notes for Binary Distributions
+                    # 4.6.3.2 HP-UX Notes for Binary Distributions
+          + 4.7 Installing a MySQL Source Distribution
+               o 4.7.1 Quick Installation Overview
+               o 4.7.2 Applying Patches
+               o 4.7.3 Typical configure Options
+          + 4.8 Installing from development source tree
+          + 4.9 Problems Compiling?
+          + 4.10 MIT-pthreads Notes
+          + 4.11 Perl Installation Comments
+               o 4.11.1 Installing Perl on Unix
+               o 4.11.2 Installing ActiveState Perl on Windows
+               o 4.11.3 Installing the MySQL Perl Distribution on Windows
+               o 4.11.4 Problems Using the Perl DBI/DBD Interface
+          + 4.12 System-specific Issues
+               o 4.12.1 Solaris Notes
+               o 4.12.2 Solaris 2.7/2.8 Notes
+               o 4.12.3 Solaris x86 Notes
+               o 4.12.4 SunOS 4 Notes
+               o 4.12.5 Linux Notes (All Linux Versions)
+                    # 4.12.5.1 Linux-x86 Notes
+                    # 4.12.5.2 RedHat Version 5.0 Notes
+                    # 4.12.5.3 RedHat Version 5.1 notes
+                    # 4.12.5.4 Linux-SPARC Notes
+                    # 4.12.5.5 Linux-Alpha Notes
+                    # 4.12.5.6 MkLinux Notes
+                    # 4.12.5.7 Qube2 Linux Notes
+                    # 4.12.5.8 Linux IA64 Notes
+               o 4.12.6 Alpha-DEC-UNIX Notes (Tru64)
+               o 4.12.7 Alpha-DEC-OSF1 Notes
+               o 4.12.8 SGI-Irix Notes
+               o 4.12.9 FreeBSD Notes
+               o 4.12.10 NetBSD notes
+               o 4.12.11 OpenBSD Notes
+                    # 4.12.11.1 OpenBSD 2.5 Notes
+                    # 4.12.11.2 OpenBSD 2.8 Notes
+               o 4.12.12 BSD/OS Notes
+                    # 4.12.12.1 BSD/OS Version 2.x Notes
+                    # 4.12.12.2 BSD/OS Version 3.x Notes
+                    # 4.12.12.3 BSD/OS Version 4.x Notes
+               o 4.12.13 SCO Notes
+               o 4.12.14 SCO Unixware Version 7.0 Notes
+               o 4.12.15 IBM-AIX notes
+               o 4.12.16 HP-UX Version 10.20 Notes
+               o 4.12.17 HP-UX Version 11.x Notes
+               o 4.12.18 Mac OS X Notes
+                    # 4.12.18.1 Mac OS X Public beta
+                    # 4.12.18.2 Mac OS X Server
+               o 4.12.19 BeOS Notes
+          + 4.13 Windows Notes
+               o 4.13.1 Installing MySQL on Windows
+               o 4.13.2 Starting MySQL on Windows 95 or Windows 98
+               o 4.13.3 Starting MySQL on NT or Windows 2000
+               o 4.13.4 Running MySQL on Windows
+               o 4.13.5 Connecting to a Remote MySQL from Windows with SSH
+               o 4.13.6 Splitting Data Across Different Disks Under
+                 Windows
+               o 4.13.7 Compiling MySQL Clients on Windows
+               o 4.13.8 Windows and BDB Tables
+               o 4.13.9 MySQL-Windows Compared to Unix MySQL
+          + 4.14 OS/2 Notes
+          + 4.15 MySQL Binaries
+          + 4.16 Post-installation Setup and Testing
+               o 4.16.1 Problems Running mysql_install_db
+               o 4.16.2 Problems Starting the MySQL Server
+               o 4.16.3 Starting and Stopping MySQL Automatically
+               o 4.16.4 Command-line Options
+               o 4.16.5 Option Files
+          + 4.17 Installing many servers on the same machine
+          + 4.18 Upgrading/Downgrading MySQL
+               o 4.18.1 Upgrading From Version 3.22 to Version 3.23
+               o 4.18.2 Upgrading from Version 3.21 to Version 3.22
+               o 4.18.3 Upgrading from Version 3.20 to Version 3.21
+               o 4.18.4 Upgrading to Another Architecture
+     * 5 How Standards-compatible Is MySQL?
+          + 5.1 MySQL Extensions to ANSI SQL92
+          + 5.2 Running MySQL in ANSI Mode
+          + 5.3 MySQL Differences Compared to ANSI SQL92
+          + 5.4 Functionality Missing from MySQL
+               o 5.4.1 Sub-selects
+               o 5.4.2 SELECT INTO TABLE
+               o 5.4.3 Transactions
+               o 5.4.4 Stored Procedures and Triggers
+               o 5.4.5 Foreign Keys
+                    # 5.4.5.1 Reasons NOT to Use Foreign Keys constraints
+               o 5.4.6 Views
+               o 5.4.7 `--' as the Start of a Comment
+          + 5.5 What Standards Does MySQL Follow?
+          + 5.6 How to Cope Without COMMIT/ROLLBACK
+     * 6 The MySQL Access Privilege System
+          + 6.1 General Security
+          + 6.2 How to Make MySQL Secure Against Crackers
+          + 6.3 Startup options to mysqld which concerns security
+          + 6.4 What the Privilege System Does
+          + 6.5 MySQL User Names and Passwords
+          + 6.6 Connecting to the MySQL Server
+          + 6.7 Keeping Your Password Secure
+          + 6.8 Privileges Provided by MySQL
+          + 6.9 How the Privilege System Works
+          + 6.10 Access Control, Stage 1: Connection Verification
+          + 6.11 Access Control, Stage 2: Request Verification
+          + 6.12 When Privilege Changes Take Effect
+          + 6.13 Setting Up the Initial MySQL Privileges
+          + 6.14 Adding New User Privileges to MySQL
+          + 6.15 Setting Up Passwords
+          + 6.16 Causes of Access denied Errors
+     * 7 MySQL Language Reference
+          + 7.1 Literals: How to Write Strings and Numbers
+               o 7.1.1 Strings
+               o 7.1.2 Numbers
+               o 7.1.3 Hexadecimal Values
+               o 7.1.4 NULL Values
+               o 7.1.5 Database, Table, Index, Column, and Alias Names
+                    # 7.1.5.1 Case Sensitivity in Names
+          + 7.2 User Variables
+          + 7.3 Column Types
+               o 7.3.1 Column Type Storage Requirements
+               o 7.3.2 Numeric Types
+               o 7.3.3 Date and Time Types
+                    # 7.3.3.1 Y2K Issues and Date Types
+                    # 7.3.3.2 The DATETIME, DATE, and TIMESTAMP Types
+                    # 7.3.3.3 The TIME Type
+                    # 7.3.3.4 The YEAR Type
+               o 7.3.4 String Types
+                    # 7.3.4.1 The CHAR and VARCHAR Types
+                    # 7.3.4.2 The BLOB and TEXT Types
+                    # 7.3.4.3 The ENUM Type
+                    # 7.3.4.4 The SET Type
+               o 7.3.5 Choosing the Right Type for a Column
+               o 7.3.6 Column Indexes
+               o 7.3.7 Multiple-column Indexes
+               o 7.3.8 Using Column Types from Other Database Engines
+          + 7.4 Functions for Use in SELECT and WHERE Clauses
+               o 7.4.1 Grouping Functions
+               o 7.4.2 Normal Arithmetic Operations
+               o 7.4.3 Bit Functions
+               o 7.4.4 Logical Operations
+               o 7.4.5 Comparison Operators
+               o 7.4.6 String Comparison Functions
+               o 7.4.7 Cast Operators
+               o 7.4.8 Control Flow Functions
+               o 7.4.9 Mathematical Functions
+               o 7.4.10 String Functions
+               o 7.4.11 Date and Time Functions
+               o 7.4.12 Miscellaneous Functions
+               o 7.4.13 Functions for Use with GROUP BY Clauses
+          + 7.5 CREATE DATABASE Syntax
+          + 7.6 DROP DATABASE Syntax
+          + 7.7 CREATE TABLE Syntax
+               o 7.7.1 Silent Column Specification Changes
+          + 7.8 ALTER TABLE Syntax
+          + 7.9 RENAME TABLE Syntax
+          + 7.10 DROP TABLE Syntax
+          + 7.11 OPTIMIZE TABLE Syntax
+          + 7.12 CHECK TABLE Syntax
+          + 7.13 BACKUP TABLE Syntax
+          + 7.14 RESTORE TABLE Syntax
+          + 7.15 ANALYZE TABLE Syntax
+          + 7.16 REPAIR TABLE Syntax
+          + 7.17 DELETE Syntax
+          + 7.18 TRUNCATE Syntax
+          + 7.19 SELECT Syntax
+          + 7.20 JOIN Syntax
+          + 7.21 INSERT Syntax
+          + 7.22 REPLACE Syntax
+          + 7.23 LOAD DATA INFILE Syntax
+          + 7.24 UPDATE Syntax
+          + 7.25 USE Syntax
+          + 7.26 FLUSH Syntax (Clearing Caches)
+          + 7.27 KILL Syntax
+          + 7.28 SHOW Syntax (Get Information About Tables, Columns,...)
+               o 7.28.1 SHOW Information About Databases, Tables, Columns,
+                 and Indexes
+               o 7.28.2 SHOW Status Information About Tables
+               o 7.28.3 SHOW Status Information
+               o 7.28.4 SHOW VARIABLES
+               o 7.28.5 SHOW Information About Log Files
+               o 7.28.6 SHOW Information About Connected Threads
+                 (Processes)
+               o 7.28.7 SHOW GRANTS (Privileges) for a User
+               o 7.28.8 SHOW CREATE TABLE
+          + 7.29 EXPLAIN Syntax (Get Information About a SELECT)
+          + 7.30 DESCRIBE Syntax (Get Information About Columns)
+          + 7.31 BEGIN/COMMIT/ROLLBACK Syntax
+          + 7.32 LOCK TABLES/UNLOCK TABLES Syntax
+          + 7.33 SET Syntax
+          + 7.34 GRANT and REVOKE Syntax
+          + 7.35 CREATE INDEX Syntax
+          + 7.36 DROP INDEX Syntax
+          + 7.37 Comment Syntax
+          + 7.38 CREATE FUNCTION/DROP FUNCTION Syntax
+          + 7.39 Is MySQL Picky About Reserved Words?
+     * 8 MySQL Table Types
+          + 8.1 MyISAM Tables
+               o 8.1.1 Space Needed for Keys
+               o 8.1.2 MyISAM Table Formats
+                    # 8.1.2.1 Static (Fixed-length) Table Characteristics
+                    # 8.1.2.2 Dynamic Table Characteristics
+                    # 8.1.2.3 Compressed Table Characteristics
+          + 8.2 MERGE Tables
+          + 8.3 ISAM Tables
+          + 8.4 HEAP Tables
+          + 8.5 BDB or Berkeley_db Tables
+               o 8.5.1 Overview over BDB tables
+               o 8.5.2 Installing BDB
+               o 8.5.3 BDB startup options
+               o 8.5.4 Some characteristic of BDB tables:
+               o 8.5.5 Some things we need to fix for BDB in the near
+                 future:
+               o 8.5.6 Errors You May Get When Using BDB Tables
+     * 9 MySQL Tutorial
+          + 9.1 Connecting to and Disconnecting from the Server
+          + 9.2 Entering Queries
+          + 9.3 Examples of Common Queries
+               o 9.3.1 The Maximum Value for a Column
+               o 9.3.2 The Row Holding the Maximum of a Certain Column
+               o 9.3.3 Maximum of Column per Group
+               o 9.3.4 The Rows Holding the Group-wise Maximum of a
+                 Certain Field
+               o 9.3.5 Using user variables
+               o 9.3.6 Using Foreign Keys
+          + 9.4 Searching on Two Keys
+          + 9.5 Creating and Using a Database
+               o 9.5.1 Creating and Selecting a Database
+               o 9.5.2 Creating a Table
+               o 9.5.3 Loading Data into a Table
+               o 9.5.4 Retrieving Information from a Table
+                    # 9.5.4.1 Selecting All Data
+                    # 9.5.4.2 Selecting Particular Rows
+                    # 9.5.4.3 Selecting Particular Columns
+                    # 9.5.4.4 Sorting Rows
+                    # 9.5.4.5 Date Calculations
+                    # 9.5.4.6 Working with NULL Values
+                    # 9.5.4.7 Pattern Matching
+                    # 9.5.4.8 Counting Rows
+               o 9.5.5 Using More Than one Table
+          + 9.6 Getting Information About Databases and Tables
+          + 9.7 Using mysql in Batch Mode
+          + 9.8 Queries from Twin Project
+               o 9.8.1 Find all Non-distributed Twins
+               o 9.8.2 Show a Table on Twin Pair Status
+     * 10 MySQL Server Functions
+          + 10.1 What Languages Are Supported by MySQL?
+               o 10.1.1 The Character Set Used for Data and Sorting
+               o 10.1.2 Adding a New Character Set
+               o 10.1.3 The character definition arrays
+               o 10.1.4 String Collating Support
+               o 10.1.5 Multi-byte Character Support
+          + 10.2 How Big MySQL Tables Can Be
+     * 11 Replication in MySQL
+          + 11.1 Introduction
+          + 11.2 Replication Implementation Overview
+          + 11.3 HOWTO
+          + 11.4 Replication Features and known problems
+          + 11.5 Replication Options in my.cnf
+          + 11.6 SQL Commands Related to Replication
+          + 11.7 Replication FAQ
+          + 11.8 Troubleshooting Replication
+     * 12 Getting Maximum Performance from MySQL
+          + 12.1 Optimization Overview
+          + 12.2 System/Compile Time and Startup Parameter Tuning
+               o 12.2.1 How Compiling and Linking Affects the Speed of
+                 MySQL
+               o 12.2.2 Disk Issues
+                    # 12.2.2.1 Using Symbolic Links for Databases and
+                      Tables
+               o 12.2.3 Tuning Server Parameters
+               o 12.2.4 How MySQL Opens and Closes Tables
+               o 12.2.5 Drawbacks to Creating Large Numbers of Tables in
+                 the Same Database
+               o 12.2.6 Why So Many Open tables?
+               o 12.2.7 How MySQL Uses Memory
+               o 12.2.8 How MySQL Locks Tables
+               o 12.2.9 Table Locking Issues
+               o 12.2.10 How MySQL uses DNS
+          + 12.3 Get Your Data as Small as Possible
+          + 12.4 How MySQL Uses Indexes
+          + 12.5 Speed of Queries that Access or Update Data
+               o 12.5.1 Estimating Query Performance
+               o 12.5.2 Speed of SELECT Queries
+               o 12.5.3 How MySQL Optimizes WHERE Clauses
+               o 12.5.4 How MySQL Optimizes DISTINCT
+               o 12.5.5 How MySQL Optimizes LEFT JOIN and RIGHT JOIN
+               o 12.5.6 How MySQL Optimizes LIMIT
+               o 12.5.7 Speed of INSERT Queries
+               o 12.5.8 Speed of UPDATE Queries
+               o 12.5.9 Speed of DELETE Queries
+          + 12.6 Other Optimization Tips
+          + 12.7 Using Your Own Benchmarks
+          + 12.8 Design Choices
+          + 12.9 MySQL Design Limitations/Tradeoffs
+          + 12.10 Portability
+          + 12.11 What Have We Used MySQL For?
+     * 13 The MySQL Benchmark Suite
+     * 14 MySQL Utilites
+          + 14.1 Overview of the Different MySQL Programs
+          + 14.2 safe_mysqld, the wrapper around mysqld
+          + 14.3 mysqld_multi, program for managing multiple MySQL servers
+          + 14.4 The Command-line Tool
+          + 14.5 Administering a MySQL Server
+          + 14.6 Dumping the Structure and Data from MySQL Databases and
+            Tables
+          + 14.7 Copying MySQL Databases and Tables
+          + 14.8 Importing Data from Text Files
+          + 14.9 Converting an error code to the corresponding error
+            message
+          + 14.10 Showing Databases, Tables, and Columns
+          + 14.11 The MySQL Compressed Read-only Table Generator
+     * 15 Maintaining a MySQL Installation
+          + 15.1 Using myisamchk for Table Maintenance and Crash Recovery
+               o 15.1.1 myisamchk Invocation Syntax
+                    # 15.1.1.1 General Options for myisamchk
+                    # 15.1.1.2 Check Options for myisamchk
+                    # 15.1.1.3 Repair Options for myisamchk
+                    # 15.1.1.4 Other Options for myisamchk
+               o 15.1.2 myisamchk Memory Usage
+          + 15.2 Setting Up a Table Maintenance Regimen
+          + 15.3 Getting Information About a Table
+          + 15.4 Using myisamchk for Crash Recovery
+               o 15.4.1 How to Check Tables for Errors
+               o 15.4.2 How to Repair Tables
+               o 15.4.3 Table Optimization
+          + 15.5 Log file Maintenance
+     * 16 Adding New Functions to MySQL
+          + 16.1 Adding a New User-definable Function
+               o 16.1.1 UDF Calling Sequences
+               o 16.1.2 Argument Processing
+               o 16.1.3 Return Values and Error Handling
+               o 16.1.4 Compiling and Installing User-definable Functions
+          + 16.2 Adding a New Native Function
+     * 17 Adding New Procedures to MySQL
+          + 17.1 Procedure Analyse
+          + 17.2 Writing a Procedure
+     * 18 MySQL ODBC Support
+          + 18.1 How To Install MyODBC
+          + 18.2 How to Fill in the Various Fields in the ODBC
+            Administrator Program
+          + 18.3 How to Report Problems with MyODBC
+          + 18.4 Programs Known to Work with MyODBC
+          + 18.5 How to Get the Value of an AUTO_INCREMENT Column in ODBC
+          + 18.6 Reporting Problems with MyODBC
+     * 19 Using MySQL with Some Common Programs
+          + 19.1 Using MySQL with Apache
+          + 19.2 Borland C++
+     * 20 Problems and Common Errors
+          + 20.1 How to Determine What Is Causing Problems
+          + 20.2 What to Do if MySQL Keeps Crashing
+          + 20.3 Problems When Linking with the MySQL Client Library
+          + 20.4 Some Common Errors When Using MySQL
+               o 20.4.1 MySQL server has gone away Error
+               o 20.4.2 Can't connect to [local] MySQL server error
+               o 20.4.3 Host '...' is blocked Error
+               o 20.4.4 Too many connections Error
+               o 20.4.5 Out of memory Error
+               o 20.4.6 Packet too large Error
+               o 20.4.7 Communication Errors / Aborted Connection
+               o 20.4.8 The table is full Error
+               o 20.4.9 Can't create/write to file Error
+               o 20.4.10 Commands out of sync Error in Client
+               o 20.4.11 Ignoring user Error
+               o 20.4.12 Table 'xxx' doesn't exist Error
+          + 20.5 How MySQL Handles a Full Disk
+          + 20.6 How to Run SQL Commands from a Text File
+          + 20.7 Where MySQL Stores Temporary Files
+          + 20.8 How to Protect `/tmp/mysql.sock' from Being Deleted
+          + 20.9 Access denied Error
+          + 20.10 How to Run MySQL As a Normal User
+          + 20.11 How to Reset a Forgotten Password
+          + 20.12 Problems with File Permissions
+          + 20.13 File Not Found
+          + 20.14 Problems Using DATE Columns
+          + 20.15 Time Zone Problems
+          + 20.16 Case Sensitivity in Searches
+          + 20.17 Problems with NULL Values
+          + 20.18 Problems with alias
+          + 20.19 Deleting Rows from Related Tables
+          + 20.20 Solving Problems with No Matching Rows
+          + 20.21 Problems with ALTER TABLE.
+          + 20.22 How To Change the Order of Columns in a Table
+     * 21 Solving Some Common Problems with MySQL
+          + 21.1 Database Replication with Update Log
+          + 21.2 Database Backups
+          + 21.3 Running Multiple MySQL Servers on the Same Machine
+     * 22 The MySQL log files
+          + 22.1 The Error Log
+          + 22.2 The Query Log
+          + 22.3 The Update Log
+          + 22.4 The Binary Log
+          + 22.5 The Slow Query Log
+     * 23 MySQL Client Tools and APIs
+          + 23.1 MySQL C API
+          + 23.2 C API Datatypes
+          + 23.3 C API Function Overview
+          + 23.4 C API Function Descriptions
+               o 23.4.1 mysql_affected_rows()
+               o 23.4.2 mysql_close()
+               o 23.4.3 mysql_connect()
+               o 23.4.4 mysql_change_user()
+               o 23.4.5 mysql_character_set_name()
+               o 23.4.6 mysql_create_db()
+               o 23.4.7 mysql_data_seek()
+               o 23.4.8 mysql_debug()
+               o 23.4.9 mysql_drop_db()
+               o 23.4.10 mysql_dump_debug_info()
+               o 23.4.11 mysql_eof()
+               o 23.4.12 mysql_errno()
+               o 23.4.13 mysql_error()
+               o 23.4.14 mysql_escape_string()
+               o 23.4.15 mysql_fetch_field()
+               o 23.4.16 mysql_fetch_fields()
+               o 23.4.17 mysql_fetch_field_direct()
+               o 23.4.18 mysql_fetch_lengths()
+               o 23.4.19 mysql_fetch_row()
+               o 23.4.20 mysql_field_count()
+               o 23.4.21 mysql_field_seek()
+               o 23.4.22 mysql_field_tell()
+               o 23.4.23 mysql_free_result()
+               o 23.4.24 mysql_get_client_info()
+               o 23.4.25 mysql_get_host_info()
+               o 23.4.26 mysql_get_proto_info()
+               o 23.4.27 mysql_get_server_info()
+               o 23.4.28 mysql_info()
+               o 23.4.29 mysql_init()
+               o 23.4.30 mysql_insert_id()
+               o 23.4.31 mysql_kill()
+               o 23.4.32 mysql_list_dbs()
+               o 23.4.33 mysql_list_fields()
+               o 23.4.34 mysql_list_processes()
+               o 23.4.35 mysql_list_tables()
+               o 23.4.36 mysql_num_fields()
+               o 23.4.37 mysql_num_rows()
+               o 23.4.38 mysql_options()
+               o 23.4.39 mysql_ping()
+               o 23.4.40 mysql_query()
+               o 23.4.41 mysql_real_connect()
+               o 23.4.42 mysql_real_escape_string()
+               o 23.4.43 mysql_real_query()
+               o 23.4.44 mysql_reload()
+               o 23.4.45 mysql_row_seek()
+               o 23.4.46 mysql_row_tell()
+               o 23.4.47 mysql_select_db()
+               o 23.4.48 mysql_shutdown()
+               o 23.4.49 mysql_stat()
+               o 23.4.50 mysql_store_result()
+               o 23.4.51 mysql_thread_id()
+               o 23.4.52 mysql_use_result()
+               o 23.4.53 Why Is It that After mysql_query() Returns
+                 Success, mysql_store_result() Sometimes Returns NULL?
+               o 23.4.54 What Results Can I Get From a Query?
+               o 23.4.55 How Can I Get the Unique ID for the Last Inserted
+                 Row?
+               o 23.4.56 Problems Linking with the C API
+               o 23.4.57 How to Make a Thread-safe Client
+          + 23.5 MySQL Perl API
+               o 23.5.1 DBI with DBD::mysql
+               o 23.5.2 The DBI Interface
+               o 23.5.3 More DBI/DBD Information
+          + 23.6 MySQL Eiffel wrapper
+          + 23.7 MySQL Java Connectivity (JDBC)
+          + 23.8 MySQL PHP API
+               o 23.8.1 Common Problems with MySQL and PHP
+          + 23.9 MySQL C++ APIs
+          + 23.10 MySQL Python APIs
+          + 23.11 MySQL Tcl APIs
+     * 24 How MySQL Compares to Other Databases
+          + 24.1 How MySQL Compares to mSQL
+               o 24.1.1 How to Convert mSQL Tools for MySQL
+               o 24.1.2 How mSQL and MySQL Client/Server Communications
+                 Protocols Differ
+               o 24.1.3 How mSQL 2.0 SQL Syntax Differs from MySQL
+          + 24.2 How MySQL Compares to PostgreSQL
+     * 25 MySQL Internals
+          + 25.1 MySQL Threads
+          + 25.2 MySQL Full-text Search
+               o 25.2.1 Fine-tuning MySQL Full-text Search
+               o 25.2.2 New Features of Full-text Search to Appear in
+                 MySQL 4.0
+               o 25.2.3 Full-text Search TODO
+          + 25.3 MySQL Test Suite
+     * A Environment Variables
+     * B Some MySQL Users
+          + B.1 General News Sites
+          + B.2 Some Web Search Engines
+          + B.3 Some Information Search Engines Concentrated on Some Area
+          + B.4 Online Magazines
+          + B.5 Web Sites that Use MySQL as a Backend
+          + B.6 Some Domain/Internet/Web and Related Services
+          + B.7 Web Sites that Use PHP and MySQL
+          + B.8 Some MySQL Consultants
+          + B.9 Programming
+          + B.10 Uncategorized Pages
+     * C MySQL customer usage
+     * D Contributed Programs
+          + D.1 APIs
+          + D.2 Clients
+          + D.3 Web Tools
+          + D.4 Performance Benchmarking Tools
+          + D.5 Authentication Tools
+          + D.6 Converters
+          + D.7 Using MySQL with Other Products
+          + D.8 Useful Tools
+          + D.9 RPMs for Common Tools (Most Are for RedHat 6.1)
+          + D.10 Useful Functions
+          + D.11 Windows programs
+          + D.12 Uncategorized
+     * E Credits
+          + E.0.1 Developers at MySQL AB
+          + E.0.2 Contributors to MySQL
+          + E.0.3 Supporters to MySQL
+
+     F MySQL change history
+     * F.1 Changes in release 4.0.x (Development; Alpha)
+          + F.1.1 Changes in release 4.0.0
+     * F.2 Changes in release 3.23.x (Stable)
+          + F.2.1 Changes in release 3.23.33
+          + F.2.2 Changes in release 3.23.32
+          + F.2.3 Changes in release 3.23.31
+          + F.2.4 Changes in release 3.23.30
+          + F.2.5 Changes in release 3.23.29
+          + F.2.6 Changes in release 3.23.28
+          + F.2.7 Changes in release 3.23.27
+          + F.2.8 Changes in release 3.23.26
+          + F.2.9 Changes in release 3.23.25
+          + F.2.10 Changes in release 3.23.24
+          + F.2.11 Changes in release 3.23.23
+          + F.2.12 Changes in release 3.23.22
+          + F.2.13 Changes in release 3.23.21
+          + F.2.14 Changes in release 3.23.20
+          + F.2.15 Changes in release 3.23.19
+          + F.2.16 Changes in release 3.23.18
+          + F.2.17 Changes in release 3.23.17
+          + F.2.18 Changes in release 3.23.16
+          + F.2.19 Changes in release 3.23.15
+          + F.2.20 Changes in release 3.23.14
+          + F.2.21 Changes in release 3.23.13
+          + F.2.22 Changes in release 3.23.12
+          + F.2.23 Changes in release 3.23.11
+          + F.2.24 Changes in release 3.23.10
+          + F.2.25 Changes in release 3.23.9
+          + F.2.26 Changes in release 3.23.8
+          + F.2.27 Changes in release 3.23.7
+          + F.2.28 Changes in release 3.23.6
+          + F.2.29 Changes in release 3.23.5
+          + F.2.30 Changes in release 3.23.4
+          + F.2.31 Changes in release 3.23.3
+          + F.2.32 Changes in release 3.23.2
+          + F.2.33 Changes in release 3.23.1
+          + F.2.34 Changes in release 3.23.0
+     * F.3 Changes in release 3.22.x (Older; Still supported)
+          + F.3.1 Changes in release 3.22.35
+          + F.3.2 Changes in release 3.22.34
+          + F.3.3 Changes in release 3.22.33
+          + F.3.4 Changes in release 3.22.32
+          + F.3.5 Changes in release 3.22.31
+          + F.3.6 Changes in release 3.22.30
+          + F.3.7 Changes in release 3.22.29
+          + F.3.8 Changes in release 3.22.28
+          + F.3.9 Changes in release 3.22.27
+          + F.3.10 Changes in release 3.22.26
+          + F.3.11 Changes in release 3.22.25
+          + F.3.12 Changes in release 3.22.24
+          + F.3.13 Changes in release 3.22.23
+          + F.3.14 Changes in release 3.22.22
+          + F.3.15 Changes in release 3.22.21
+          + F.3.16 Changes in release 3.22.20
+          + F.3.17 Changes in release 3.22.19
+          + F.3.18 Changes in release 3.22.18
+          + F.3.19 Changes in release 3.22.17
+          + F.3.20 Changes in release 3.22.16
+          + F.3.21 Changes in release 3.22.15
+          + F.3.22 Changes in release 3.22.14
+          + F.3.23 Changes in release 3.22.13
+          + F.3.24 Changes in release 3.22.12
+          + F.3.25 Changes in release 3.22.11
+          + F.3.26 Changes in release 3.22.10
+          + F.3.27 Changes in release 3.22.9
+          + F.3.28 Changes in release 3.22.8
+          + F.3.29 Changes in release 3.22.7
+          + F.3.30 Changes in release 3.22.6
+          + F.3.31 Changes in release 3.22.5
+          + F.3.32 Changes in release 3.22.4
+          + F.3.33 Changes in release 3.22.3
+          + F.3.34 Changes in release 3.22.2
+          + F.3.35 Changes in release 3.22.1
+          + F.3.36 Changes in release 3.22.0
+     * F.4 Changes in release 3.21.x
+          + F.4.1 Changes in release 3.21.33
+          + F.4.2 Changes in release 3.21.32
+          + F.4.3 Changes in release 3.21.31
+          + F.4.4 Changes in release 3.21.30
+          + F.4.5 Changes in release 3.21.29
+          + F.4.6 Changes in release 3.21.28
+          + F.4.7 Changes in release 3.21.27
+          + F.4.8 Changes in release 3.21.26
+          + F.4.9 Changes in release 3.21.25
+          + F.4.10 Changes in release 3.21.24
+          + F.4.11 Changes in release 3.21.23
+          + F.4.12 Changes in release 3.21.22
+          + F.4.13 Changes in release 3.21.21a
+          + F.4.14 Changes in release 3.21.21
+          + F.4.15 Changes in release 3.21.20
+          + F.4.16 Changes in release 3.21.19
+          + F.4.17 Changes in release 3.21.18
+          + F.4.18 Changes in release 3.21.17
+          + F.4.19 Changes in release 3.21.16
+          + F.4.20 Changes in release 3.21.15
+          + F.4.21 Changes in release 3.21.14b
+          + F.4.22 Changes in release 3.21.14a
+          + F.4.23 Changes in release 3.21.13
+          + F.4.24 Changes in release 3.21.12
+          + F.4.25 Changes in release 3.21.11
+          + F.4.26 Changes in release 3.21.10
+          + F.4.27 Changes in release 3.21.9
+          + F.4.28 Changes in release 3.21.8
+          + F.4.29 Changes in release 3.21.7
+          + F.4.30 Changes in release 3.21.6
+          + F.4.31 Changes in release 3.21.5
+          + F.4.32 Changes in release 3.21.4
+          + F.4.33 Changes in release 3.21.3
+          + F.4.34 Changes in release 3.21.2
+          + F.4.35 Changes in release 3.21.0
+     * F.5 Changes in release 3.20.x
+          + F.5.1 Changes in release 3.20.18
+          + F.5.2 Changes in release 3.20.17
+          + F.5.3 Changes in release 3.20.16
+          + F.5.4 Changes in release 3.20.15
+          + F.5.5 Changes in release 3.20.14
+          + F.5.6 Changes in release 3.20.13
+          + F.5.7 Changes in release 3.20.11
+          + F.5.8 Changes in release 3.20.10
+          + F.5.9 Changes in release 3.20.9
+          + F.5.10 Changes in release 3.20.8
+          + F.5.11 Changes in release 3.20.7
+          + F.5.12 Changes in release 3.20.6
+          + F.5.13 Changes in release 3.20.3
+          + F.5.14 Changes in release 3.20.0
+     * F.6 Changes in release 3.19.x
+          + F.6.1 Changes in release 3.19.5
+          + F.6.2 Changes in release 3.19.4
+          + F.6.3 Changes in release 3.19.3
+
+     G Known errors and design deficiencies in MySQL
+
+     H MySQL and the future (The TODO)
+     * H.1 Things that should be in 4.0
+     * H.2 Things that must done in the real near future
+     * H.3 Things that have to be done sometime
+     * H.4 Some things we don't have any plans to do
+
+     I Comments on porting to other systems
+     * I.1 Debugging a MySQL server
+          + I.1.1 Compiling MYSQL for debugging.
+          + I.1.2 Creating trace files and using gdb on mysqld
+          + I.1.3 Using a stack trace
+          + I.1.4 Using log files to find cause of errors in mysqld
+          + I.1.5 Making a test case when you experience table corruption
+     * I.2 Debugging a MySQL client
+     * I.3 The DBUG package.
+     * I.4 Locking methods
+     * I.5 Comments about RTS threads
+     * I.6 Differences between different thread packages
+
+     J Description of MySQL regular expression syntax
+
+     K What is Unireg?
+
+     L GNU General Public License
+
+     M GNU Library General Public License
+
+     SQL command, type and function index
+
+     Concept Index
+     __________________________________________________________________
+
+   This document was generated on 9 Febuary 2001 using the texi2html
+   translator version 1.52 (extended by davida@detron.se).

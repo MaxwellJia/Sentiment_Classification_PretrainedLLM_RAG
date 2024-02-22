@@ -1,0 +1,70 @@
+http://www.pmel.noaa.gov/tsunami/pdctm.html
+
+                       Pacific Disaster Center (PDC) &
+               Maui High Performance Computing Center (MHPCC)
+                              Tsunami Modeling
+                     ___________________________________
+
+   Tsunami Forecasting and Hazard Assessment Capabilities
+   Vasily Titov, Frank Gonzalez and Hal Mofjeld
+   A suite of numerical simulation codes, known collectively as the MOST
+   (Method of Splitting Tsunami) model, have been implemented and tested
+   on the Maui High Performance Computing Center (MHPCC) IBM PS2 nodes.
+   Together, they are capable of simulating the three primary processes of
+   tsunami evolution, i.e., generation by an earthquake, transoceanic
+   propagation, and inundation of dry land. Generation and propagation
+   capabilities were tested against deep ocean bottom pressure recorder
+   collected by PMEL during the 1996 Andreanov tsunami; inundation
+   computations were compared with field measurements of maximum runup on
+   Okushiri Island collected shortly after the 1993 Hokkaido-Nansei-Oki
+   tsunami. Research objective
+   The goal of this work is to provide forecasting and hazard assesment
+   guidance for Hawaii during an actual tsunami event.
+   Methodology
+   Supercomputer implementation of the MOST model allows the efficient
+   computation of many scenarios. This capability is used to perform
+   multiple-run sensitivity studies of two closely related, but separable,
+   processes -- offshore wave dependence on distant earthquake magnitude
+   and position, and site-specific inundation dependence on offshore wave
+   characteristics. The results will be organized into an electronic
+   database, and associated software will be developed for analysis and
+   visualization of this database, including the assimilation of real-time
+   data streams.
+   Results
+   The MOST model has been successfully parallelized and implemented on
+   the MHPCC IBM PS2 supercomputer. Field observations acquired during the
+   Pacific-wide 1996 Andreanov tsunami have been used to test the
+   generation and propagation capabilities of the code, and the inundation
+   capabilities of the code have been tested against runup data acquired
+   on Okushiri Island after the 1993 Hokkaido-Nansei-Oki earthquake and
+   tsunami.
+   Significance
+   The current state-of-the-art in tsunami modeling still requires
+   considerable quality control, judgment, and iterative, exploratory
+   computations before a scenario is assumed reliable. This is why the
+   efficient computation of many scenarios for the creation of a database
+   of pre-computed scenarios that have been carefully analyzed and
+   interpreted by a knowledgeable and experience tsunami modeler is an
+   essential first step in the development of a reliable and robust
+   tsunami forecasting and hazard assessment capability. As currently
+   implemented, the computation of 6.5 hours of tsunami propagation takes
+   about 1 hour; as the model utilizes more efficient parallelization
+   algorithm, the computing/real time ratio will drop dramatically. Using
+   more advanced parallel algorithm, it may become technically feasible to
+   execute real-time model runs for guidance as an actual event unfolds.
+   However, this is not currently justified on scientific grounds; an
+   operational real-time model forecasting capability must await improved
+   and more detailed characterization of earthquakes in real-time, and
+   verification that the real-time tsunami model computations are
+   sufficiently robust to be used in an operational, real-time mode.
+
+   Figure 1. Linear propagation.
+
+   Figure 2. Nonlinear runup.
+
+   Figure 4. Okushiri simulation.
+
+   Figure 3. Andreanov simulation.
+     __________________________________________________________________
+
+   Tsunami HOME

@@ -1,0 +1,65 @@
+http://gnarly.lanl.gov/Pop/Pop.html
+
+                                     POP
+
+                                  [sst.gif]
+
+                         The Parallel Ocean Program
+
+   The Parallel Ocean Program (POP) developed at LANL is one of many
+   efforts in the Department of Energy's CHAMMP program aimed at increased
+   understanding of the earth's climate through the use of modeling and
+   high performance computing. POP has been used to perform the highest
+   resolution (1/5 degree on average) global ocean simulation ever
+   undertaken using the Thinking Machines CM5 computer located at LANL's
+   Advanced Computing Laboratory (ACL).
+
+   POP is a descendant of the Bryan-Cox model that is used frequently in
+   ocean simulations. This earlier model has been substantially improved
+   and adapted for use with massively parallel computers. Some of these
+   improvements are:
+     * a surface pressure formulation that allows for an unlimited number
+       of land masses (with no additional computational cost) and
+       unsmoothed bottom topography.
+     * an implicit free surface technique that allows the air-sea
+       interface to evolve freely.
+     * the equations of motion are formulated and discretized to allow the
+       use of any locally orthogonal horizontal grid (instead of just
+       latitude/longitude) which, for example, can let the Arctic ocean be
+       resolved without the standard problems of convergence of meridians
+       at the North Pole.
+     * the code is written in Fortran90 and is capable of running on a
+       variety of parallel and serial computer architectures.
+
+   A primary motivation for performing such high resolution simulations is
+   to resolve eddy motions that can play an important role in the dynamics
+   of the ocean. Two examples of this are eddies shed by the Agulhas
+   Current and in meanders of the Gulf Stream.
+
+   Currently, efforts are underway to couple POP to NCAR's Community
+   Climate Model (CCM) and a sea ice model also being developed at LANL.
+     __________________________________________________________________
+
+Assorted Images
+
+   Surface Heat Flux (day 1 of coupled model, scale is +-500 W/m**2)
+   Yucatan Channel (POP)
+   Yucatan Channel (CME 1/6)
+   Yucatan Channel (CME 1/3)
+   Drifters in the North Atlantic
+   View from the North Pole (with Temperature)
+   View from the North Pole (without Temperature, tiff file)
+   View from the Atlantic (without Temperature, black background, tiff
+   file)
+
+   View from the Atlantic (without Temperature, white background, tiff
+   file)
+     __________________________________________________________________
+
+POP people
+
+   [Dukowicz.gif] John Dukowicz
+   [Jones.gif] Phil Jones
+   [Maltrud.gif] Mat Maltrud
+   [Smith.gif] Rick Smith
+   [Hunke.gif] Elizabeth Hunke

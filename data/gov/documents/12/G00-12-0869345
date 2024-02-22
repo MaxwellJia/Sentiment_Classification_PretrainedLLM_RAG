@@ -1,0 +1,341 @@
+http://endo.sandia.gov/SEACAS/Documentation/SEACAS.html
+
+           Sandia Engineering Analysis Code Access System (SEACAS)
+
+                            Also known as ACCESS
+
+                         Privacy and Security Notice
+
+    See the licensing information page for details on obtaining and using
+                             the SEACAS system.
+
+       See the translation table for a very terse listing of available
+                 translators to/from the Exodus file format.
+
+     Adobe Acrobat version 3.0 (or higher) is required to view these PDF
+                                   files.
+
+
+
+   Code Description
+   General Information
+   Overview The Sandia National Laboratories (SNL) Engineering Analysis
+   Code Access System (SEACAS) is a collection of structural and thermal
+   codes and utilities used by analysts at SNL. The system includes pre-
+   and post-processing codes, analysis codes, database translation codes,
+   support libraries, UNIX shell scripts, and an installation system.
+   Using SEACAS on
+   Parallel Computers DRAFT. Instructions to run the SEACAS/ACCESS system
+   on Parallel computers. Currently specific to Sandia National
+   Laboratories systems.
+   Analysis Codes
+   JAS3D JAS3D is a three-dimensional finite element program designed to
+   solve large quasi-static nonlinear mechanics problems. The continuum
+   equations describe nonlinear mechanics involving large rotation and
+   strain, which are iteratively solved using either nonlinear conjugate
+   gradient or dynamic relaxation algorithms. At present, several
+   constitutive material models are incorporated into the program. They
+   include models which account for elasticity, viscoelasticity, several
+   types of hardening plasticity, strain rate dependent behavior, damage,
+   internal state variables, deviatoric and volumetric creep, and
+   incompressibility. The code also has the capability to apply a variety
+   of mechanical time-dependent loads to a model. JAS3D has mechanisms to
+   calculate coupled response in conjunction with other-physics codes,
+   such as thermal, electrical, or chemical-kinetics. Arbitrary contacting
+   surfaces between bodies are accounted for, which allows many physical
+   processes to be modeled realistically. The contacts can be tied
+   together, slide without friction, or slide with friction, and can be
+   allowed to open and close as the solution dictates.
+   (This document is still in review. Contact Mark Blanford
+   (mlblanf@sandia.gov) for more information.)
+   Pronto3D PRONTO 3D is a three- dimensional transient solid dynamics
+   code for analyzing large deformations of highly nonlinear materials
+   subjected to extremely high strain rates. This Lagrangian finite
+   element program uses an explicit time integration operator to integrate
+   the equations of motion. Eight- node uniform strain hexahedral elements
+   and four- node quadrilateral uniform strain shells are used in the
+   finite element formulation. An adaptive time step control algorithm is
+   used to improve stability as well as performance in plasticity
+   problems. Hourglass distortions can be eliminated without disturbing
+   the finite element solution using either the Flanagan- Belytschko
+   hourglass control scheme or an assumed strain hourglass control scheme.
+   All constitutive models in PRONTO are cast in an unrotated
+   configuration defined using the rotation determined from the polar
+   decomposition of the deformation gradient. A robust contact algorithm
+   allows for the impact and interaction of deforming contact surfaces of
+   quite general geometry. The Smooth Particle Hydrodynamics method has
+   been embedded into PRONTO using the contact algorithm to couple it with
+   the finite element method.
+   The following reports are available:
+     * Users Manual: an updated set of users' instructions for PRONTO3D.
+       (Printable format>),
+     * Formulation of Nonlinear Problems: an introduction to the basic
+       concepts and principles involved in the formulation of nonlinear
+       problems in solid mechanics.(Printable format).
+     * Nonlinear Continuum Mechanics: summarizes the key continuum
+       mechanics concepts required for the systematic prescription and
+       numerical solution of finite deformation solid mechanics problems.
+       (Printable format)
+     * Finite Element Formulations: outlines the application of finite
+       element methodology to large deformation solid mechanics problems,
+       detailing also some of the key technological issues that effective
+       finite element formulations must address. (Printable format)
+
+   Coyote (Theory)
+   Coyote (Users) The COYOTE computer code is a general purpose program
+   package designed for the solution of heat conduction problems and other
+   types of diffusion problems. The code is based on the Galerkin form of
+   the finite element method (FEM). The class of problems treated by
+   COYOTE are basically those described by the standard heat conduction
+   equation. The capability to simulate surface-to-surface radiation in
+   conjunction with the thermal conduction problem is also available in
+   COYOTE; capabilities for treating chemically reacting materials are
+   supported in the software package. Though specifically intended for the
+   solution of heat conduction problems, the code can be used for a wide
+   variety of boundary and initial value problems. This generality stems
+   from the analogy between the heat conduction equation and other
+   diffusion equations encountered in engineering and physics. A partial
+   list of application areas that are analogous to the heat conduction
+   problem are: Saturated or partially saturated flow in porous media,
+   Potential fluid flow, Electrostatic fields, Electric conduction, Mass
+   diffusion, and Lubrication flows. Many of these types of problems may
+   be solved with COYOTE in either the steady-state or transient form.
+   Dakota The DAKOTA (Design Analysis Kit for OpTimizAtion) iterator
+   toolkit is a flexible, extensible interface between simulation codes
+   and iterative systems analysis methods. The toolkit implements
+   optimization with a variety of gradient and nongradient-based methods,
+   uncertainty quantification with nondeterministic propagation methods,
+   parameter estimation with nonlinear least squares solution methods, and
+   sensitivity analysis with general-purpose parameter study capabilities.
+   By employing object-oriented design to implement abstractions of the
+   key concepts involved in iterative systems analyses, the DAKOTA toolkit
+   provides a flexible and extensible problem-solving environment for
+   current and future problems of interest. Point solutions from
+   simulation codes can be used for answering more fundamental engineering
+   questions, such as "what is the best design?", "how safe is it?", or
+   "how much confidence do I have in my answer?".
+
+   The DAKOTA toolkit also provides a platform for research and
+   development of advanced methodologies which focus on increasing the
+   robustness and efficiency of these systems analyses for computationally
+   complex engineering problems. These research activities have culminated
+   in the development of adaptive optimization strategies which have
+   multiple levels of iteration coupled with multiple levels of modeling
+   fidelity and approximation executing on high performance parallel
+   computers.
+
+   For further information see the Dakota Home Page. A version of the
+   manual formatted for printing is available here.
+   Support (Preprocessing, Postprocessing, Manipulation) Codes
+   Algebra The ALGEBRA program allows the user to manipulate data from a
+   finite element analysis before it is plotted. The finite element output
+   data is in the form of variable values (e.g., stress, strain, and
+   velocity components) in an EXODUS database. The ALGEBRA program
+   evaluates user-supplied functions of the data and writes the results to
+   an output EXODUS database which can be read by plot programs.
+   Aprepro Aprepro is an algebraic preprocessor that reads a file
+   containing both general text and algebraic, string, or conditional
+   expressions. It interprets the expressions and outputs them to the
+   output file along with the general text. Aprepro contains several
+   mathematical functions, string functions, and flow control constructs.
+   In addition, functions are included that, with some additional files,
+   implement a units conversion system and a material database lookup
+   system.
+   Blot BLOT is a graphics program for post-processing of finite element
+   analyses output in the EXODUS database format. BLOT produces mesh plots
+   with various representations of the analysis output variables. The
+   major mesh plot capabilities are deformed mesh plots, line contours,
+   filled (painted) contours, vector plots of two/three variables (e.g.,
+   velocity vectors), and symbol plots of scalar variables (e.g., discrete
+   cracks). Pathlines of analysis variables can also be drawn on the mesh.
+   BLOT's features include element selection by material, element birth
+   and death, multiple views for combining several displays on each plot,
+   symmetry mirroring, and node and element numbering. BLOT can also
+   produce X-Y curve plots of the analysis variables. BLOT generates
+   time-versus-variable plots or variable-versus-variable plots. It also
+   generates distance-versus-variable plots at selected time steps where
+   the distance is the accumulated distance between pairs of nodes or
+   element centers.
+   MUSTAFA MUSTAFA is a Motif GUI driven, full-featured data visualizer
+   for unstructured grid data in the EXO-DUS II database format. MUSTAFA
+   is built with the Express application development environment (AVS
+   Inc.) which makes it fairly easy to modify and extend to support other
+   data formats, special vi-sualization methods, etc. MUSTAFA supports
+   both nodal and element based data.
+
+   MUSTAFA has four main components: (1) data readers, which actually read
+   the data from disk and set up data structures; (2) data filters, which
+   only manipulate the data or mesh; (3) visualization methods, which
+   actually produces a viewable object; and (3) viewers, which display the
+   results of the visualization methods onto the computer screen and
+   provide for user specified geometric transforma-tions. Multiple
+   simultaneous data readers and viewers are supported. MUSTAFA's
+   visualization tools are divided into four primary groups depending upon
+   what kind of data they work on:
+    1. mesh visualization tools: these tools require no data, just the
+       mesh structure. Tools are available to view the mesh, element
+       blocks, side sets, and node sets.
+    2. scalar visualization tools: these tools work on scalar data. Tools
+       presently available for scalar data are paint cells, multi-material
+       map, external edges, external faces, slice plane, iso lines, iso
+       surface, and iso volume.
+    3. vector visualization tools: these tools work on vector data. Since
+       the EXODUS II database specification does not support vector style
+       data, each of the tools in this category have a vector construction
+       popup control panel which lets the user define which of the scalar
+       components in the database make up the individual vector
+       components. Tools presently available for vector data are hedge
+       hog, streamlines, and particle advection.
+    4. annotation tools: These tools don't really work on any data. They
+       allow the user to add simple annotations to the viewer. These tools
+       include the EXODUS II time value, the SNL logo, and any user text.
+
+   Contact: Mike Glass (mwglass@sandia.gov).
+   Cubit [See the Cubit web page for more information.] The CUBIT mesh
+   generation environment is a two- and three-dimensional finite element
+   mesh generation tool which is being developed to pursue the goal of
+   robust and unattended mesh generation-effectively automating the
+   generation of quadrilateral and hexahedral elements. It is a
+   solid-modeler based preprocessor that meshes volume and surface solid
+   models for finite element analysis. A combination of techniques
+   including paving, mapping, sweeping, and various other algorithms being
+   developed are available for discretizing the geometry into a finite
+   element mesh. CUBIT also features boundary layer meshing specifically
+   designed for fluid flow problems. Boundary conditions can be applied to
+   the mesh through the geometry and appropriate files for analysis
+   generated. CUBIT is specifically designed to reduce the time required
+   to create all-quadrilateral and all-hexahedral meshes. Contact: CUBIT
+   Mailing List (cubit-dev@sandia.gov).
+   ExoSym EXOSYM helps analysts produce more realistic looking
+   visualizations of analysis results and models. EXOSYM reads as input a
+   three-dimensional finite element mesh or results file in EXODUS [1]
+   format and will mirror the geometry and results about the specified
+   coordinate planes.
+   GenShell GENSHELLis a three-dimensional shell mesh generation program.
+   The three-dimensional shell mesh is generated by mapping a
+   two-dimensional quadrilateral mesh into three dimensions according to
+   one of several types of transformations: translation, mapping onto a
+   spherical, ellipsoidal, or cylindrical surface, and mapping onto a
+   user-defined spline surface. The generated three-dimensional mesh can
+   then be reoriented by offsetting, reflecting about an axis, revolving
+   about an axis, and scaling the coordinates. GENSHELL can be used to
+   mesh complex three-dimensional geometries composed of several sections
+   when the sections can be defined in terms of transformations of
+   two-dimensional geometries.
+   Gen3D GEN3D is a three-dimensional mesh generation program. The
+   three-dimensional mesh is generated by mapping a two-dimensional mesh
+   into three-dimensions according to one of four types of
+   transformations: translating, rotating, mapping onto a spherical
+   surface, and mapping onto a cylindrical surface. The generated
+   three-dimensional mesh can then be reoriented by offsetting, reflecting
+   about an axis, and revolving about an axis. GEN3D can be used to mesh
+   geometries that are axisymmetric or planar, but, due to
+   three-dimensional loading or boundary conditions, require a
+   three-dimensional finite element mesh and analysis. More importantly,
+   it can be used to mesh complex three-dimensional geometries composed of
+   several sections when the sections can be defined in terms of
+   transformations of two-dimensional geometries.
+   GJoin GJOIN is a two- or three-dimensional mesh combination program.
+   GJOIN combines two or more meshes written in the GENESIS mesh database
+   format into a single GENESIS mesh. Selected nodes in the two meshes
+   that are closer than a specified distance can be combined The geometry
+   of the mesh databases can be modified by scaling, offsetting,
+   revolving, and mirroring. The combined meshes can be further modified
+   by deleting, renaming, or combining material blocks, sideset
+   identifications, or nodeset identifications.
+   Grepos GREPOS is a mesh utility program that repositions or modifies
+   the configuration of a two-dimensional or three-dimensional mesh.
+   GREPOS can be used to change the orientation and size of a
+   two-dimensional or three-dimensional mesh; change the material block,
+   nodeset, and sideset IDs; or "explode" the mesh to facilitate viewing
+   of the various parts of the model.
+   Grope GROPE is a program that examines the input to a finite element
+   analysis (which is in the GENESIS database format) or the output from
+   an analysis (in the EXODUS database format). GROPE allows the user to
+   examine any value in the database. The display can be directed to the
+   user's terminal or to a print file.
+   Mapvar MAPVAR is designed to transfer solution results from one finite
+   element mesh to another. MAPVAR draws heavily from the structure and
+   coding of MERLIN II, but it employs a new finite element data base,
+   EXODUS II [3], and offers enhanced speed and new capabilities not
+   available in MERLIN II. In keeping with the MERLIN II documentation,
+   the computational algorithms used in MAPVAR are described. User
+   instructions are presented. Example problems are included to
+   demonstrate the operation of the code and the effects of various input
+   options.
+   Numbers NUMBERS is a program which reads and stores data from a finite
+   element model described in the EXODUS database format. Within this
+   program are several utility routines which calculate information about
+   the finite element model.
+   nem_slice nem_slice reads in a FEM description of the geometry of a
+   problem from an ExodusII file, exoIIfile , generates either a nodal or
+   elemental graph of the problem, calls Chaco to load balance the graph,
+   and outputs a NemesisI load-balance file.
+   nem_spread nem_spread reads it's input command file (default name
+   nem_spread.inp), takes the named ExodusII and spreads out the geometry
+   (and optionally results) contained in that file out to a parallel disk
+   system. The decomposition is taken from a scalar Nemesis load balance
+   file generated by the companion utility nem_slice. Here is an example
+   nem_spread input file.
+   nem_join nem_join reads it's input command file (default name
+   nem_join.inp), takes the parallel file description and the named
+   ExodusII, combines the results (located in the paral- lel files) and
+   writes them to the ExodusII file. Here is an example nem_join input
+   file.
+   Libraries
+   ExodusII EXODUS II is a model developed to store and retrieve data for
+   finite element analyses. It is used for preprocessing (problem
+   definition), postprocessing (results visualization), as well as code to
+   code data transfer. An EXODUS II data file is a random access, machine
+   independent, binary file that is written and read via C, C++, or
+   Fortran library routines which comprise the Application Programming
+   Interface. (exodusII is based on netcdf)
+   Netcdf The netCDF software functions as an I/O library, callable from C
+   or FORTRAN, which stores and retrieves data in self-describing,
+   machine-independent files. Each netCDF file can contain an unlimited
+   number of multi-dimensional, named variables (with differing types that
+   include integers, reals, characters, bytes, etc.), and each variable
+   may be accompanied by ancillary data, such as units of measure or
+   descriptive text. The interface includes a method for appending data to
+   existing netCDF files in prescribed ways, functionality that is not
+   unlike a (fixed length) record structure. However, the netCDF library
+   also allows direct-access storage and retrieval of data by variable
+   name and index and therefore is useful only for disk-resident (or
+   memory-resident) files.
+
+   An HTML version of the documentation is available for the C Interface
+   and the Fortran Interface Additional netcdf information is available
+   from Unidata (http://www.unidata.ucar.edu/packages/netcdf/index.html).
+
+   Man pages for the ncgen and ncdump utilities are also available. (These
+   can be used to convert an exodusII file from/to a text representation.)
+   Nemesis NEMESIS I is an enhancement to the EXODUS II nite element
+   database model used to store and retrieve data for unstructured
+   parallel nite element analyses. NEMESIS I adds data structures which
+   facilitate the partitioning of a scalar (standard serial) EXODUS II le
+   onto parallel disk systems found on many parallel computers. Since the
+   NEMESIS I application programming interface (API) can be used to append
+   information to an existing EXODUS II database, any existing software
+   that reads EXODUS II les can be used on les which contain NEMESIS I
+   information. The NEMESIS I information is written and read via C or C++
+   callable functions which compromise the NEMESIS I API.
+   SUPES SUPES is a col lection of subprograms which perform frequently
+   used non-numerical services for the engineering applications
+   programmer. The three functional categories of SUPES are: (1) input
+   command parsing, (2) dynamic memory management, and (3) system
+   dependent utilities. The subprograms in categories one and two are
+   written in standard FORTRAN-77, while the subprograms in category three
+   are written to provide a standardized FORTRAN interface to several
+   system dependent features.
+     __________________________________________________________________
+
+                                   counter
+
+
+    Greg Sjaardema
+
+   Last modified: Tue Feb 10 11:33:07 MST 1998
+     __________________________________________________________________
+
+   CAPTION:
+     __________________________________________________________________

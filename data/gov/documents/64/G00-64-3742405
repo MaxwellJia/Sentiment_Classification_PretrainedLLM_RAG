@@ -1,0 +1,54 @@
+http://snfactory.lbl.gov/followup_pipeline.html
+
+                        SNfactory follow-up pipeline
+
+     * The output of the search pipeline at LBL will be a list of
+       candidates with various scores indicating any potential problems.
+     * Candidates (perhaps 10) will be inspected and rated by a human
+       supervisor. This will occur at LBL, but all collaboration sites
+       should develop experience in this area.
+     * Based on the final ratings, an observing scheme for follow-up
+       telescopes will be composed and sent from LBL. The details of the
+       observing scheme will depend strongly on the scheduling constraints
+       at the telescopes and the amount of control we have at that
+       telescope. Where we have the most control, the observing scheme
+       will be composed of self-contained scripts that obtain all the
+       observations and calibration for each target. For telescopes with
+       less control (e.g. YALO) a request for observations will be issued.
+     * At the follow-up telescopes a night assistant will execute the
+       observing script or observing request.
+     * The script will send the resulting data to the collaboration sites.
+       Since the amount of follow-up data taken each night should be small
+       (of order 500 MB), several sites should receive the raw data
+       (perhaps from each other rather than the observatory) and maintain
+       database and analysis tools.
+     * There will be a master database which keeps track of what
+       observations have been taken. This will be consulted by the
+       observing scheme script running at LBL to plan subsequent
+       observations.
+     * All follow-up will be reduced automatically (provided the observing
+       scheme was executed successfully and completely). Partial
+       observations (hopefully rare) may need to be treated with some
+       interaction. (The requirements here are very extensive, and will
+       need to be given in more detail elsewhere.)
+     * Once reduced, the results can proceed to the analysis stage. For
+       newly discovered SNe, the first analysis stage will be to classify
+       the SN and to rank it relative to other SNe being monitored. There
+       may be cases when the observing queue is too full to accept new
+       SNe, or in which follow-up for a SN has faltered and that SN is
+       therefore abandoned in favor of a more interesting candiate.
+     * The initial results of the analysis will be sent to the master
+       database, and used to update the observing plan for the next night.
+       For screening observations, the SN redshift, type and lightcurve
+       phase must be determined. In addition information on intrinsic
+       luminosity, metallicity, host galaxy properties is desirable so
+       that SN parameter-space is well explored by the experiment.
+     * Initial results also will be used to determine preliminary
+       lightcurves and spectral series. These will be monitored
+       automatically and by humans to make sure observations are on track
+       (again, with feedback to the observing scheme planner) and to issue
+       alerts of unusual behavior.
+     * Since each site will have follow-up data, further analysis and
+       research can proceed according to the collaboration plan then in
+       place, with each science group undertaking whatever additional work
+       is required for publication.

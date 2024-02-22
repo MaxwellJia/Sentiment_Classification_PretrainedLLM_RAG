@@ -1,0 +1,40 @@
+http://lnx21.wwb.noaa.gov/index.old.html
+
+                            Linux Web Server: lnx21
+
+   Red Hat Linux uses the Apache web server to provide WWW services.
+
+  Dropped Raobs
+
+   When a plot of roab counts by month, by latitude band, for the years
+   1968-1996 revealed that the band 60-90S had fewer raobs, rather than
+   the expected extra, for the FGGE year, 1979, a review of the data
+   preprocessing codes was initiated. The review revealed an insidious
+   error in the program that entered climatological events into the
+   prepbufr files. From what appears to be a side effect of a compiler
+   optimization, the first bufr message was not written to the output
+   file. Since the prepbufr processing always begins with "ADPUPA"
+   (raobs/pibals/dropsondes), we had systematically lost soundings. The
+   particular code was one introduced in August 1995 in response to the
+   conversion to the J916's from the YMP-8, in order to multitask the
+   processing to make-up for the slower single processor clock speed of te
+   J916's compared to the YMP. In order assess the loss of data, we have
+   run monthly summaries and created grads compatible grids of raob
+   counts. We chose to bin the counts in 3x3 lat-lon bins. The 3x3
+   resolution was chose to be close to the 2.5x2.5 deg resolution of much
+   of the output, and to make the plots easier to view and interpret.
+
+  Jan Plots
+
+   The plots take the difference of monthly counts of missing data and
+   remaining data. The red areas are boxes where the missing counts exceed
+   the reamining data by 10. The cutoff of 10 was chosen to eliminate
+   isolated and travelling sites that may have been omitted but are less
+   conseqential than regularly reporting fixed sites.
+
+   [dir.gif] Missing-Notmissing Plots
+
+   Questions or Comments? Bob Kistler - bkistler@noaa.gov
+          ________________________________________________________
+
+         [ Powered By Red Hat Linux ] This server is running Apache

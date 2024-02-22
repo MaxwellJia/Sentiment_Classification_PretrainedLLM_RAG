@@ -1,0 +1,107 @@
+http://www1.etl.noaa.gov/theory/scat.htm
+
+   Commerce / NOAA / OAR / ETL / Oceans / Scattering
+
+                       Rough-Surface Scattering Theory
+
+                                [3dline.gif]
+
+     WHY? NOAA's climate-change and weather-prediction models require
+     measurements of wind speed and direction, as well as heat and
+     moisture fluxes, over the global ocean surface. Since the required
+     number of in-situ instruments would be impossibly expensive to
+     deploy and maintain, remote sensors that could do the job from
+     satellites are being developed. Prototype passive (radiometric) and
+     active (radar) ocean sensors have already been placed in orbit by
+     several nations. However, preliminary results from these instruments
+     reveal gaps in our understanding, both of the detailed structure and
+     dynamics of the ocean surface itself, and the physics of how
+     electromagnetic waves interact with it.
+
+     Because the desired sea-surface properties cannot be measured
+     directly by radars, and because the scattering of radar signals is
+     determined almost entirely by sea-surface roughness, the first
+     problem is to find out what statistical properties of sea-surface
+     roughness are most closely related to wind and fluxes. This problem
+     lies in the realm of hydrodynamics, and is under study in another
+     related ETL project. The second problem is to find out how these
+     statistical properties of the sea surface can be extracted from
+     backscattered radar echoes. Before this inverse problem can be
+     solved, however, the direct problem (what is the scattering from a
+     sea-like surface?) must first be well in hand.
+       _______________________________________________________________
+
+  What is the Direct Scattering Problem?
+
+     [scat.jpg] The main reason this problem has not yet been
+     satisfactorily solved is the very complex nature of the sea-surface
+     roughness. The short, centimeter-scale waves that are responsible
+     for backscattering microwave radar signals are superimposed on a
+     continuum of longer waves, ranging in scale from tens of centimeters
+     to hundreds of meters, which travel in various directions. Even
+     numerical solutions of this statistical problem in three dimensions
+     are beyond the abilities of today's computers.
+
+     To simplify the problem, "two-scale" or composite-surface models
+     have been tried. This approach combines two "classical" methods of
+     wave-propagation theory: the method of small perturbations and the
+     semi-classical approximation. However, in addition to lacking the
+     necessary accuracy for quantitative predictions, this method uses a
+     somewhat arbitrary scale-dividing parameter that makes the solution
+     of the inverse problem ambiguous. Many important characteristics of
+     scattering, such as polarization, angle, and dependence of cross
+     sections on wind speed, cannot be accounted for over realistic
+     ranges of parameter values. A more accurate theory is required that
+     is free of fitting parameters.
+
+     For a long time, no solutions to this problem were known. During the
+     last decade, a number of new "unified" theories were advanced, in
+     particular by D. Winebrenner and A. Ishimaru (the "phase
+     perturbation approach"), M. Milder ("operator expansion"), E. Bahar
+     ("full-wave approach"), and A. Fung and K. Chen ("integral equation
+     model"). Numerical simulations have shown that these approaches
+     extend the utility of "classical" methods significantly. However,
+     validity regimes of these approaches are not always clear, and their
+     applicability to real sea roughness is not well established.
+       _______________________________________________________________
+
+  What have we done?
+
+     The method developed at ETL uses surface slope as a small parameter.
+     (Sea roughness slopes usually do not exceed 0.1-0.2.) A. Voronovich
+     uses the "small-slope approximation," and V. Tatarskii uses the
+     "quasi-slope expansion." The small-slope approximation was recently
+     generalized to incorporate the case of multiple reflections
+     ("non-local small-slope approximation"). The quasi-slope expansion
+     was developed by V. Tatarskii and M. Charnotskii in "tilt-invariant"
+     form, which is not restricted to small slopes and is associated
+     instead with small roughness curvatures.
+       _______________________________________________________________
+
+  Present research areas
+
+     These methods now have to be applied to realistic models of the sea
+     surface, i.e., ones that are expressed in terms of a wave
+     directional spectrum. The problem here is that the "unified" models
+     require subtle statistical characteristics of the sea waves that are
+     not easily calculated for non-Gaussian height distributions. Now, a
+     statistical model of sea surface roughness is being developed by V.
+     I. Tatarskii and V. V. Tatarskii, which will permit calculation of
+     the required statistical functions from empirical information about
+     sea-wave spectra. This model is being tested in numerical
+     simulations.
+
+     We are also working on the problem of scattering at small grazing
+     angles of incidence, which is important practically but difficult to
+     treat theoretically. Present models disagree greatly with
+     observations, possibly because diffraction by long ocean waves is
+     being ignored. Preliminary calculations suggest that such effects
+     may be important for grazing angles less than about 20 deg.
+       _______________________________________________________________
+
+     For further information, please send an e-mail to
+     Valeryan.I.Tatarskii@noaa.gov or to Alexander.Voronovich@noaa.gov.
+       _______________________________________________________________
+
+               Ocean Remote Sensing Home Page | ETL Home Page
+       _______________________________________________________________

@@ -1,0 +1,283 @@
+http://medusa.fnal.gov/e-log_about.html
+
+   <-- Home
+
+                 The Electronic Logbook Project at Fermilab
+
+
+                      Thomas S. Meyer, Walter F. Kissel
+
+   Fermi National Accelerator Laboratory, PO Box 500 M.S. 306 Batavia, IL.
+                                  60510 USA
+
+
+                       Need for an Electronic Logbook
+
+
+   In the fall of 1996 the two operations groups at Fermilab, Accelerator
+   and Research, were merged. Along with the confusion of merging two
+   groups with different operational philosophies came the question of
+   what the Main Control Room (MCR) logbook should be. The Research
+   Divisions Operations group had long ago switched to an electronic
+   logbook. It was based on the VMS-TPU platform and was therefore text
+   only in its content. The Accelerator Division Operations group had
+   maintained a paper logbook and depended greatly on the ability to
+   include graphs, pictures and prewritten memoranda into the logbook in
+   order to pass on information from one shift to the next. The obvious
+   collision of cultures forced a reexamination of the technology of
+   electronic logbooks.
+
+
+   Requirements of an electronic logbook
+
+   When the discussion of electronic logbooks began the requirements came
+   out of the operator’s preferences of paper and electronic logbooks
+   currently in use by the two groups.
+
+   The list of preferences included:
+     * One button start of shift; includes shift roster, day/date and type
+       of shift automatically filled in.
+     * One button logbook entry; includes timestamp, author initials. To
+       be appended onto current shift.
+     * Ability to enter graphic files easily. Comments to accompany
+       graphics should be included.
+     * Entire shift viewable from one page, scrollable if necessary.
+     * Must use framed CGI interface so that action buttons are viewable
+       at all times while reading logbook.
+     * One button end of shift; includes end of shift numbers and summary.
+     * One button for Table of Contents. TOC will include hyperlinks to
+       actual logbook files.
+     * Search capabilities to search within dates specified or through
+       entire year of logbook files. Search results will include
+       hyperlinks to actual logbook files.
+     * Ability to add comments to an entry.
+     * Ability for supervisory personnel to remove entries.
+     * Must be hosted from reliable machine with UPS and automated backups
+
+
+
+   ORNL’s DOE2000 project
+
+   To avoid reinventing the wheel we searched the Web for other electronic
+   logbook projects. We found Oak Ridge National Laboratory’s DOE2000
+   project, a project to create an electronic notebook. The application
+   called "enote" was a Web based application written by Al Geist and Noel
+   Nachtigal [1]. The enote application allowed entry of text and
+   graphics. It also had timestamped entries, a text search engine, a
+   simple list table of contents and other desirable traits. Last, enote,
+   being a government-funded project, provided free access to the source
+   code, which we could then modify.
+
+
+                            The E-Log Application
+
+
+   The version of enote that we used was written with a single user or
+   single project in mind. It was based on creating a new file each time a
+   user sat down to make an entry. For an operational logbook to be useful
+   the files had to be based on shifts. Multiple entries, all timestamped
+   and authored had to be allowed. The inclusion of graphics in enote was
+   too difficult for a novice and therefore had to be streamlined.
+
+   The ability to copy graphics off of the current console applications
+   was needed for inclusion of accelerator data. This became a function of
+   the accelerator consoles and not E-Log. The ability to collect multiple
+   graphics for later inclusion was a goal for an operations logbook. This
+   allows work to progress on vital matters like quench recovery so that
+   entries can be made at a later time. The ability to review collected
+   graphics and select only those needed was also added to E-Log’s
+   capabilities.
+
+   Once files were based on shifts, rather than simply times of first
+   entry, it was decided to change the Table of Contents form from a list
+   to a weekly calendar. An HTML (HyperText Markup Language) table, in the
+   form of a week’s worth of shifts, is populated with links to each
+   week’s worth of files. Capabilities were added to search from one date
+   to another to allow the narrowing of text searches.
+
+   While adding the ability to add comments to an existing entry we also
+   decided to allow links from one entry, in any file, to another. This
+   allows an entry to be linked to a previous entry in the same logbook or
+   any other HTML document.
+
+
+   Written in Perl
+
+   The E-Log application is written in the Perl programming language. This
+   is an interpreted language that runs on the server and has a robust CGI
+   interface readily available. Perl is a very strong language for text
+   and file manipulation. Text matching, replacement and translation are
+   all amazingly simple in Perl. It seems designed for this type of
+   application.
+
+
+   HTML\CGI interface
+
+   E-Log uses an HTML\CGI interface with the client. HTML is also used in
+   writing the files for the logbook. This allows E-Log to easily create
+   an HTML document to be viewed by the client. Special fields, embedded
+   in the logbook file via HTML comments, are interpreted by E-Log as
+   markers to add other items such as roster tables and comment buttons.
+   CGI, or Common Gateway Interface, is the Web’s language of data
+   transfer. Whenever information is gathered from a client and
+   transferred back to a server’s application it is done through the CGI.
+
+
+   Use of Javascript
+
+   Javascript is used in E-Log to increase client side functionality. It
+   is embedded in the HTML file sent to the client. It allows the checking
+   of items such as text input and authors initials before the CGI data is
+   ever sent back to the server. It also allows the creation of the "Quick
+   Entry" and clock windows that appear at the bottom of the client’s
+   screen. The "Quick Entry" window allows for a client to effectively put
+   a timestamp in the log without a long message. For example; when a fire
+   alarm occurs the Crew Chief may not have the time or desire to fill out
+   a long form. The entry of "Fire alarm at MI60" in the "Quick Entry"
+   window followed by a simple carriage return will make the entry with a
+   timestamp that can later be commented upon or referenced.
+
+
+           [Image1.gif] Figure 1. A shift’s file viewed in E-Log
+
+
+                              Workings of E-Log
+
+
+   All functions of the E-Log, except for "Quick Entry" are initiated
+   through the Navigation bar (fig. 1) at the top of the logbook page.
+   This Navigation bar is in a separate frame from the actual logbook so
+   that it is visible at all times and is able to update without
+   interrupting the viewing of the logbook files.
+
+
+   Start/End Shifts
+
+   Each shift file is created by pressing the "Start Shift" button. This
+   will bring up a form requesting crew names and opening comments. The
+   crew names will be displayed in a roster at the top of the shift file
+   along with the day/date and shift information.
+
+   Ending a shift is not a necessity, but if wanted is available. The "End
+   Shift" button will bring up a form requesting a shift summary and
+   optionally shift numbers to record the statistics of the accelerators
+   at Fermilab.
+
+
+
+   Make Entries
+
+   Making entries is the bread and butter function of the E-Log. When
+   selected this function brings up a form that allows text entry and
+   authors name. It allows you to add text in either HTML form or plain
+   text. Plain text allows users to input tabular data without the
+   automatic formatting of HTML. Selecting either "HTML" or "Plain" will
+   bring up another window with a preview of the entry made in the format
+   selected.
+
+
+   Adding Graphics
+
+   Adding graphic files to the E-Log can be done in a number of ways. When
+   the user selects the "Add Graph" button a multipart form is returned
+   that allows the capture of files, and the selection of one or more
+   files, to put in the logbook. When a file is captured the user has the
+   choice to either enter the graphic into the logbook immediately, to
+   continue capturing files, or to select multiple files for a single
+   entry. If the user selects the listing of files then the last eight, or
+   all if selected, graphic files will be shown in thumbnail view.
+   Selecting the thumbnail adds that file to a list to be included in the
+   logbook entry. Previewing and reselection is also available. With all
+   graphic entries selecting the graphic will bring up a full sized
+   version of the file with a close button below the file. The capture of
+   graphics files to the server’s local drive is only available because of
+   Netscape’s inclusion of a file upload feature implemented in Navigator
+   2.0 [2].
+
+
+   Navigating through the files
+
+   The "Prev" and "Next" buttons are fairly self-explanatory. The
+   "Current\Latest" button is actually four buttons with the decision of
+   which button to display being made depending on the shift being viewed
+   and the time of the last entry. If the user is viewing the latest shift
+   the button will read "Current" and will do nothing when selected. If
+   the user is viewing an earlier shift the button will read "Latest" and
+   will take the user to the most recent file when selected. When a user
+   makes and entry into the logbook all other browsers displaying the
+   logbook will be updated with "Current/Latest" buttons that have yellow
+   text. This is to inform other users that an entry has been made without
+   interrupting their present use of the logbook.
+
+   The "Contents" button brings up the Table of Contents page discussed
+   earlier.
+
+
+   Search capabilities
+
+   When a search is initiated a form with start and end dates and a string
+   field is created. When the form is submitted the start and end dates
+   are checked. If non-existent or in error, the entire years worth of
+   files is searched. E-Log returns a list of links, not only to the files
+   containing the string, but also to the entry made that contains the
+   string. This is done by using HTML anchors created dynamically from the
+   logbook file each time that file is viewed.
+
+
+                    Troubles with Web based applications
+
+
+   Ending cleanly on each request
+
+   When you write a Web based application you have to remember how people
+   use the Web. In a normal application the application has immediate
+   interaction with the user. The application can wait for the users next
+   key stroke. Web interactions come in bunches. The user fills out and
+   submits a form. That form has to carry not only the user’s information
+   but also the server’s URL, the application’s name on the server, and
+   any other options that might have been selected during the course of
+   the users interaction. The application on the server has to restart
+   from scratch each time a user makes a submission. The server has no
+   record of what was done previous to this submission. The user could be
+   at a different URL, with a different request on a different file.
+   Everything in the current transaction has to be decided each time a
+   request is made.
+
+
+   Testing your software on the Web
+
+   The testing of E-Log on the Web was a harrowing experience. There were
+   the usual bugs that were found by operators eager to put code through
+   the ringer. With Web based applications, which allow text input to be
+   viewed later, you also run into the problem of users using your
+   software for HTML practice. Operators quickly learned that HTML code
+   used in their entries would show up in the E-Log. This was followed by
+   a nearly endless stream of large, italicized, blinking and colored font
+   messages as well as HTML links to operators various favorite locations.
+   An HTML filter was discussed but never implemented because of the
+   usefulness that this ability can have when used appropriately. It was
+   decided that problems with the HTML practice sessions would best be
+   solved not by a programmatic but instead by an administrative solution.
+
+
+                                 Conclusions
+
+
+   The Electronic Logbook project will be implemented for a wet run this
+   spring. The hope is to have it replace the paper log completely by the
+   beginning of the Main Injector startup in late summer. An Electronic
+   Fixlist is already being tested and other electronic books are being
+   developed. Although the entry of graphics should be simpler, we are at
+   the mercy of Netscape or other browser developers in just how easy it
+   will become. This, as well as every Web based application, will have to
+   evolve with the industries technological advances.
+
+
+                                 References
+
+
+
+    1. Al Geist, and Noel Nachtigal, "Enote.pl", DOE2000 Electronic
+       notebook project (Oak Ridge National Laboratory, 1996)
+    2. Shishir Gundavaram, CGI Programming on the World Wide Web (O’Reilly
+       & Associates, Inc., Sebastopol, CA, 1996) Ch 4.

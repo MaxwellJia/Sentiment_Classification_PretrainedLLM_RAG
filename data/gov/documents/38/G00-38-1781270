@@ -1,0 +1,91 @@
+http://lnx21.wwb.noaa.gov/images/psfc/psfc.html
+
+                       Reanalysis PSFC problem 1948-1967
+
+   [new_btn.gif] Evaluation - Reruns for Jan, Jul 1953
+
+   By pure serendipitity, a problem has been uncovered with the encoding
+   of surface and mean sea level pressure that affect the period
+   1948-1967. The problem originated in the erroneous conversion of a
+   portion of the TD13 dataset into the bufr ADPSFC type messages. Surface
+   pressures in the past have suffured from a "Y2K" like problem in that
+   values were stored with 3 digits ,pp.p, and a flag that inicated which
+   hundreds units should be added (700,800,900,1000,etc). The discovery
+   arose from a case study of the Reanalysis handling of the North Sea
+   Gale of Jan 31:Feb 2, 1953 In addition to the forecast and verication
+   grids, Suru made observation plots where the data rejected by the Reanl
+   were plotted in red. The PSFC 03Z Feb 1, 1953 revealed the problem.
+   Most of the obs within the 1000mb contour were rejected for being
+   unphysically high pressure values. The increment plots revealed they
+   were ~100 mb too large. If one mentally replaces the leading "10" with
+   a "9", the values create a reasonable picture of the cyclone.
+
+   Once we saw that pattern, we told Jack Woollen what we had found, so
+   that he could research the origin of these reports and the decoding
+   procedures. Jack called back the next day and said he had found a
+   tell-tail error in translating dataset TD13. Furthermore, it apeared
+   that 4-6% of the surface obs in the set were affected.
+
+   In order to assess the geographical distribution over time, I have made
+   two sequences maps. I had created grib files of the obs with surface
+   pressures greater than 1050mb. I then used these in conjuction with the
+   files Wesley has made available for plot and for download, and computed
+   the percentages of obs <1050mb. This approach gives a sense of the
+   location and volume of obs that were miscoded.
+   I sampled all the January files for each year 1948-1968. Dataset TD13
+   ended in 1967. To see that the problem ended there see the file for Jan
+   1968.
+     __________________________________________________________________
+
+   CAPTION: PLOTS of % January ADPSFC obs with psfc < 1050mb
+
+   '40s Jan 1948 Jan 1949
+   '50s Jan 1950 Jan 1951 Jan 1952 Jan 1953 Jan 1954 Jan 1955 Jan 1956 Jan
+   1957 Jan 1958 Jan 1959
+   '60s Jan 1960 Jan 1961 Jan 1962 Jan 1963 Jan 1964 Jan 1965 Jan 1966 Jan
+   1967 Jan 1968
+     __________________________________________________________________
+
+   CAPTION: PLOTS of % monthly 1953 ADPSFC obs with psfc < 1050mb
+
+   Jan 1953 Feb 1953 Mar 1953 Apr 1953 May 1953 Jun 1953
+   Jul 1953 Aug 1953 Sep 1953 Oct 1953 Nov 1953 Dec 1953
+
+   This error has good news and bad news. The good news is that the "bad
+   data" were omitted. The analyses are not contaminated. The error is one
+   of omission, not comission.
+
+   The bad news is that the omission of data is correlated with Northern
+   Hemispere extratropical cyclones, thereby requiring the dynamics of the
+   data assimilation process to completely determine the details of the
+   surface pressure without the benefit of direct measurement when the
+   pressure lowered below 1000 mb. In addition (and the source of the
+   serendipity) European obs seems to bear the brunt of the problem,
+   unlike US obs which were unaffected. Evaluation - Reruns for Jan, Jul
+   1953
+
+[new_btn.gif] Evaluation - Reruns for Jan, Jul 1953
+
+   A methodology to identify the miscoded sfc press and mslp obs proved
+   more involved that I first thought.
+    1. Read all sfc obs for all synoptic times
+    2. Store sfc obs sorted by observed hour and location
+    3. Do a time series analysis of locations that reported either
+       pressure value over 1049.9 mb.
+    4. Look for tendencies of adjacent times (restricted to no more than
+       24 hrs) of 75mb. This kept cold Siberian highs from being viewed as
+       mis-coded.
+    5. Flag the "excesive" sequence.
+    6. When flagged mslp/ unflagged sfc press found, check the mslp
+       d-value minus sfcp d-value difference.
+         a. Small (<25mb): flag psfc for correction
+         b. Large (>75mb, usually ~100mb) psfc is ok
+         c. Indeterminate (>25 and <75): flag for rejection.
+    7. Write a synoptically time sorted file for the assimilation bufr
+       editor to read and apply
+
+   In order assess the impact of encoding error, a winter and summer month
+   were rerun with corrected values of surface pressure. We chose Jan 1953
+   and July 1953 arbitrarily. An assessment of the impact on the monthly
+   mean surface presure fields is given here. It is my opinion that the
+   error does not warrant a rerun.

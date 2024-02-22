@@ -1,0 +1,101 @@
+http://wesley.wwb.noaa.gov/wgrib.html
+
+                                    wgrib
+
+   WGRIB is a program to manipulate, inventory and decode GRIB files. The
+   program is known to work on machines ranging from 486s to Cray
+   supercomputers. (One fellow even ported it to a 286!) The program is
+   Y2K friendly (NCO Y2K testing procedure).
+
+   wgrib (gributil) is an operational NCEP program. On the IBM/SP, it can
+   be found at /nwprod/util/exec/wgrib,
+
+   Highlights for v1.7.x:
+     * scans entire file for grib messages (D. Haalman)
+     Added German Weather Service (DWD) tables 201, 202, 203 and 2
+       Support for triangular grid (Helmut P. Frank, DWD)
+     fractional mb (NCEP local extension)
+     added new levels
+     updated NCEP operational GRIB table
+     fixed thinned grids with bitmap
+     NCEP ensemble support
+     fixed -H option
+     Support for the 3/6/12 hour forecast time units
+     Fixed a bug with bitmap when the precision is greater than 24 bits.
+       This is more of a theoretical problem as most people (NCEP and
+       ECMWF) limit the precision to 16 bits and I can't imagine anyone
+       using more than 24 bit of precision for any meteorological data.
+       Thanks LB for finding the bug.
+     Source code in a tar file. For people who want to read the source
+       code before it is combined into wgrib.c.
+     more time codes like SECONDS
+     New or updated ECMWF grib tables: 128 129 130 131 140 150 160 170 180
+
+   Highlights for v1.6.x:
+     * fixed a problem with identifying 1997 Reanalysis files.
+     fixed a problem with the GDS header in the -H option
+     optional binary output of PDS and GDS (-H option)
+     -d all (decode entire file)
+     thinned grid support
+     fix of my mis-interpretation on how year 2000 is stored in GRIB
+     NCEP operational table
+     updated documentation
+
+   Under testing:
+     * beta version
+
+   Note: there were two definitions for SNOC and CWAT in the operational
+   and Reanalysis grib tables. For the time being, I'm calling snow cover
+   "SNOWC" and canopy water "CNWAT."
+
+   To do:
+     * ECMWF ensemble information
+
+   Documentation:
+     * Changes
+     Introduction
+     For DOS users
+     User-defined parameter tables
+     NCEP/NCAR Reanalysis user-defined parameter table
+     NCEP Operational user-defined parameter table
+     ECMWF user-defined parameter table (#128)
+     ECMWF user-defined parameter table (#160)
+     howto: grib -> ieee
+     some tricks
+     Output formats and -H update
+     operational vs reanalysis parameter table
+     Previous Notices (mailing list) Mainly bug notices
+     How to Compile and (misc files)
+
+   Source code:
+     * C source code Netscape: shift+left_mouse_button, (If your browser
+       alters the code, use anonymous ftp to download /pub/wgrib/wgrib.c)
+     ftp://wesley.wwb.noaa.gov/pub/wgrib (FTP access: documentation, test
+       files, etc.)
+     wgrib.tar See above for source code. (For people who want to read or
+       re-use the source code.)
+
+   Compiled versions:
+     * not all links are valid and compiled versions tend to be older
+       versions
+     Macintosh (thanks Franco)
+     MS-DOS (compiled with gcc)
+     Windows (compiled with gcc)
+     SunOS (compiled with acc)
+
+   Windows: find vs. grep and egrep
+
+   You should use grep or egrep instead of the MS-DOS "find" command.
+   The (e)grep command is more flexible and it is consistent with the
+   documentation. Public domain versions exist for ms-dos, windows and
+   Win32 machines. Personally I would look for a grep based on GNU source
+   code. In your favorite internet search engine look for
+   "+grep +gnu +windows".
+
+   Future attractions:
+     * gribw grib decode/encode library (beta testing)
+     ECMWF ensemble meta data
+
+   back
+
+                     comments: Wesley.Ebisuzaki@noaa.gov

@@ -1,0 +1,91 @@
+http://ftp.ee.lbl.gov/ftp.html
+
+The Major Software Packages available via anonymous ftp from the Network
+Research Group at the Lawrence Berkeley Laboratory
+
+   Unless otherwise noted, the latest version of each package is named
+   &ltpackage>.tar.Z (a compressed tarchive) and is found in the top level
+   directory of the host ftp.ee.lbl.gov (131.243.1.10). Don't forget to
+   set binary mode before retrieving. For each package, send bug reports
+   and questions to &ltpackage>@ee.lbl.gov.
+
+   arpwatch
+          An ethernet monitor program that keeps track of ethernet/ip
+          address pairings. This package requires the bpf and libpcap
+          packages.
+
+   bootbootp
+          A secondary bootstrap program used to boot a client over
+          Ethernet. It uses the BOOTP protocol to obtain client and server
+          info and NFS to load the boot image. This package is
+          experimental and only supports SPARCstations (sun4c and sun4m).
+          It can only be built on a SPARC runing 4.4 BSD.
+
+   bpf
+          The Berkeley Packet Filter. Contains kernel modules for HP BSD
+          and SunOS 3 and 4. NB: Full OS kernel source is required for
+          installation.
+
+   cslip
+          Compressed serial line ip package. Currently, the only supported
+          systems are SunOS 3, SunOS 4 and 4 BSD.
+
+   dexpire
+          Dynamic expire replacement for the netnews expire program.
+
+   flex
+          A fast scanner-generator compatible with POSIX lex.
+
+   glish
+          A language, interpreter, and C++ class library for building
+          loosely-coupled distributed systems.
+
+   libpcap
+          Packet Capture library. An uniform library interface to the
+          packet capture systems including the Berkeley Packet Filter (BSD
+          and SunOS), Data Link Provider Interface (Solaris and SYSV),
+          Stanford Enetfilter (IBM RT/4.3BSD), Network Interface Tap
+          (SunOS 3), Streams Network Interface Tap (SunOS 4), Packet
+          Filter, and Snoop (IRIX).
+
+   nslint
+          A lint program for dns files. It performs various consistency
+          and error checks on named(8) input files.
+
+   papers
+          A directory containing a collection of papers on networking.
+
+   ppsclock
+          Pulse per second Streams module for SunOS 4. Allows accurate
+          timestamping of timecodes for use with XNTP and other
+          applications.
+
+   sd
+          Session Directory. An X11-based audio teleconferencing tool.
+
+   tcpdump
+          A protocol packet capture and dumper program. This package
+          requires requires the libpcap package.
+
+   testbase
+          Tests decimal <-> binary floating-point conversion for IEEE
+          compliance.
+
+   tftpd
+          A tftp daemon that handles multiple clients in a single server
+          process.
+
+   traceroute
+          Prints the route packets take to a network host.
+
+   vat
+          Visual Audio Tool. An X11-based audio teleconferencing tool.
+
+   wb
+          Distributed whiteboard. An X11-based multicast tool.
+
+   Return to [ the Network Research Group].
+
+
+    Maintained by www@ee.lbl.gov
+    Last modified: July 1998

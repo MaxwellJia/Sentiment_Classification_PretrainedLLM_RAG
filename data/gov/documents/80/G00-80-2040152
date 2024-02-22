@@ -1,0 +1,217 @@
+http://acweb.fsl.noaa.gov/floyd/
+
+   The Effect of Hurricane Floyd on ACARS and RAOB Soundings: A First Look
+
+                                Bill Moninger
+                      NOAA, Forecast Systems Laboratory
+
+                           [floyd-15-Sep-1345.jpg]
+
+   Hurricane Floyd impacted the East Coast between Sept 15th and 17th,
+   1999. There has been considerable interest in how this may have
+   affected the number of ACARS soundings at airports in the region.
+
+   Because the number of soundings, particularly at smaller airports,
+   varies by day and week as equipment is shifted among routes, I thought
+   it best to study this question by looking at a three week period
+   bracketing the hurricane. I looked at several airports along the east
+   coast: Jacksonville and Orlando, FL, Greensboro, NC, La Guardia, NY and
+   Newark, NJ.
+
+   When Floyd was near major airports such as Orlando or Newark the daily
+   number of soundings was cut roughly in half, but this effect didn't
+   appear to linger after the storm moved away. At regional airports, such
+   as Jacksonville, effects of the hurricane were more long-lasting. The
+   number of soundings were lower than normal even when the storm was not
+   nearby, presumably because flights had been cancelled or diverted due
+   to current or recent (previous day) weather problems elsewhere in the
+   route system.
+
+Regional Overview
+
+   The storm track shows that Floyd moved from the Jacksonville area on
+   Sept 15th to north of New York on the 17th. It reached its maximum
+   intensity between 12Z on the 15th and 12Z on the 16th as it moved up
+   the GA, SC, NC coast. Here are some images of Floyd at various times
+   during its history, taken from NOAA's Operational Significant Event
+   Imagery Server. (Further information about Floyd may be found at the
+   USGS Hurricane Floyd site.)
+     * 1247 UTC 14 Sep 99
+     * 1220 UTC 15 Sep 99
+     * 2030 UTC 15 Sep 99
+     * 1350 UTC 16 Sep 99
+
+Radiosondes
+
+   [raob-sites.gif] Several radiosonde sites along the east coast were
+   effected by Floyd. I looked at 12 sites, 11 of which normally report at
+   0 and 12 UTC and one of which (APB) reports at only 12 UTC. The table
+   below shows what soundings were taken.
+     * + indicates a sounding was released at a synoptic time.
+     * M indicates a missing sounding at a synoptic time.
+     * e indicates an extra sounding, launched at 6 or 18 UTC.
+     * P indicates a partial sounding.
+     * A number indicates the hour of the sounding, if it was not 0, 6,
+       12, or 18. In generating summary statistics, these soundings are
+       associated with the hour of the column in which they appear.
+
+Date 9/14        9/15        9/16        9/17        9/18
+Hour 0  6 12 18  0  6 12 18  0  6 12 18  0  6 12 18  0  6 12
+
+MIA  +  e  +  e  +     +  e  +     +     +     +     +     +
+XMR  M     M     M     M    22    10    22    10 15 22    11
+JAX  +  e  +  e  +  e  +  e  +     +     +     +     +     +
+CHS  1  e  +  e  +  e  +  e  1  e  +     +     +     P     +
+RNK  +     +     +  e  +  e  +  e  +     +     +     +     +
+GSO  +     +     +  5  +  e  P  5  +     +     +     +     +
+MHX  +     +     +  e  +  e  1  5  +     P     +     P     +
+IAD  +     +     +  e  +  e  +  P  +     +     +     +     +
+WAL  +     +     +     +  e  +  e  +     +     +     +     +
+APG        +           M           M           M           M
+OKX  +     +     +     +     +  e  +  P  +     +     +     +
+CHH  +     +     +     +     +  e  +  e  +     +     +     +
+GYX  +     +     +     +     +  e  +     +     +     +     +
+
+   To summarize this table: Of the 125 possible radiosondes at synoptic
+   times, 8 were missing and 4 were partial (only ascended to a limited
+   altitude or had missing humidity information). However, 31 additional
+   soundings were taken at non-synoptic times when the storm was nearby.
+
+ACARS
+
+   ACARS flights were affected most obviously on Thursday, Sept 16th in
+   North Carolina):
+   [16-Sep-99-Greensboro.gif]
+
+   ACARS data for Thursday, Sept 9th, show a typical pattern:
+   [9-Sep-99-Greensboro.gif]
+
+   Below is a detailed look at soundings at individual airports.
+
+JACKSONVILLE, FL:
+
+   JAX appears to have been directly impacted by Floyd on the 15th.
+   However, the hurricane had moved substantially to the north by the
+   16th, yet JAX still has no soundings on the 16th and 17th.
+
+   A look at three Fridays: the 10th, 17th and 24th, reveals the
+   following. The previous Friday, the 4 soundings were by flights to and
+   from O'Hare and Atlanta; the following Friday, the 3 soundings at JAX
+   were by flights from or to O'Hare and Philadelphia. On Fri the 17th,
+   Philadelphia was experiencing bad weather but Atlanta and O'Hare were
+   not. I therefore surmise that the absence of any soundings at JAX on
+   the 17th was due mostly to general backups in the route system more
+   than to specific weather problems in any particular region.
+Soundings at JAX (Summary):
+         09/05    09/06    09/07    09/08    09/09    09/10    09/11
+ tot:        0        0        3        3        6        4        4
+         09/12    09/13    09/14    09/15    09/16    09/17    09/18
+ tot:        1        2        7        0        0        0        2
+         09/19    09/20    09/21    09/22    09/23    09/24    09/25
+ tot:        1        2        2        8        3        3        4
+
+GREENSBORO, NC:
+
+   GSO was north of Floyd on the 15th, and shows a normal number of
+   soundings that day. It appears to have been most impacted on the 16th
+   and 17th. Although Floyd had moved considerably to the north by the
+   17th, GSO still shows fewer soundings than normal.
+
+   For comparison, on the following Friday, the 24th, GSO's soundings are
+   taken by flights to and from O'Hare, Louisville, and Roanoak. None of
+   these airports was affected by Floyd on the 17th, so it is hard to see
+   why there are so few soundings on the 17th. As with JAX, I surmise the
+   storm had so disturbed air travel by the 17th that airlines were moving
+   equipment to major hubs rather than small airports in order to serve
+   the maximum number of stranded passengers.
+Soundings at GSO (Summary):
+         09/05    09/06    09/07    09/08    09/09    09/10    09/11
+ tot:        2        2        4        7        7        6        2
+         09/12    09/13    09/14    09/15    09/16    09/17    09/18
+ tot:        2        2        3        4        1        2        3
+         09/19    09/20    09/21    09/22    09/23    09/24    09/25
+ tot:        2        1        4        4        5        4        6
+
+ORLANDO:
+
+   At a major airport like Orlando, secondary effects are small. The
+   soundings were cut in half on the 15th. but on the 16th and 17th were
+   back to normal.
+Soundings at MCO (Summary):
+         09/05    09/06    09/07    09/08    09/09    09/10    09/11
+ tot:        6        7        6        9       10        5        5
+         09/12    09/13    09/14    09/15    09/16    09/17    09/18
+ tot:        5        7        9        4       11        9        6
+         09/19    09/20    09/21    09/22    09/23    09/24    09/25
+ tot:        5        6        8       10       12        9        7
+
+LA GUARDIA, NY
+
+   On the 15th and 16th, Floyd is considerably to the south, yet the
+   number of soundings at LGA is approximately half the normal number.
+   Perhaps, LGA, being more of a feeder airport for the East Coast than,
+   for instance, Newark (see below), is affected by the problems to the
+   south. On the 17th, LGA is impacted directly by Floyd, with
+   approximately half the normal number of soundings.
+Soundings at LGA (Summary):
+         09/05    09/06    09/07    09/08    09/09    09/10    09/11
+ tot:        5        7       13       14       15       12        9
+         09/12    09/13    09/14    09/15    09/16    09/17    09/18
+ tot:        8       13       12        9        5        6        9
+         09/19    09/20    09/21    09/22    09/23    09/24    09/25
+ tot:        7       12       16       14       11       11        9
+
+NEWARK, NJ
+
+   This major hub is only affected by Floyd on the 17th when it is nearby,
+   even though the storm had lost force by then, with maximum sustained
+   winds of only 50 kts. Problems further south on the East Coast on the
+   15th and 16th have no effect on EWR, presumably because aircraft from
+   airports in that area do not represent an appreciable fraction of
+   flights into EWR. (Currently, I have no explanation for the large
+   number of soundings on the 23rd.)
+Soundings at EWR (Summary):
+         09/05    09/06    09/07    09/08    09/09    09/10    09/11
+ tot:       12        9       10       19       15       14       19
+         09/12    09/13    09/14    09/15    09/16    09/17    09/18
+ tot:       13       13       17       17       15        7       15
+         09/19    09/20    09/21    09/22    09/23    09/24    09/25
+ tot:       14       10       14       16       26       13       13
+
+Final remarks
+
+   The number of ACARS soundings at an airport can vary for several
+   reasons.
+     * Day of the week: both package and passenger carriers have different
+       flight patterns on weekends than on weekdays.
+     * Changes of equipment: even when the daily number of flights to an
+       airport remains constant, the number of ACARS-equipped aircraft
+       will change due to operational equipment rotation patterns.
+     * Weather-related problems at other airports can disrupt the entire
+       airline route system, and this study suggests that regional
+       airports remain disrupted longer than do major hubs.
+     * Finally, weather-related problems at the airport itself can of
+       course limit the number of arriving and departing flights.
+
+   This study suggests strongly that weather at a single airport alone is
+   not a sufficient predictor of whether that airport will have a
+   decreased number of soundings. Rather, the impact of weather on entire
+   regions must be considered.
+
+   When this is done, the data presented here suggest that a major weather
+   event such as Hurricane Floyd can decrease the number of soundings in a
+   region for two or three days, with the decrease being more pronounced
+   and longer lasting at regional airports than at major hubs.
+
+   I consider these results provisional. I'm sure airline meteorologists
+   and weather forecasters can point out many effects that I have missed.
+   I solicit comments to the ACARS forum (restricted to NOAA and other
+   authorized users of real-time ACARS data), or directly to me, and I
+   hope that together we can expand and develop this study.
+     __________________________________________________________________
+
+                            [USEMAP:btn-bar.gif]
+       [ FSL | What's New | Organization | Weather | Data | Projects |
+                     Publications | Software | Search ]
+              Prepared by Bill Moninger, moninger@fsl.noaa.gov
+                   Last modified: Thu Nov 4 17:42:08 1999

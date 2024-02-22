@@ -1,0 +1,267 @@
+http://laps.fsl.noaa.gov/LAPB/AWIPS_WFO_page.htm
+
+                              AWIPS/WFO LAPS Page
+
+   The purpose of this page is to describe the major differences between
+   the WFO LAPS release and the more general LAPS that is described on
+   FSL's LAPS branch web pages.  Progress on LAPS improvements and bug
+   fixes relevant to AWIPS are outlined. This page also provides specific
+   links to other information sources that may be of use to the WFO/AWIPS
+   LAPS application.
+
+   AWIPS LAPS runs using NOAAPORT (nationally distributed) and LDAD
+   (locally distributed) data that has generally been translated into
+   NetCDF on the AWIPS platform for use by the LAPS ingest processes.
+
+Product Issues:
+
+   Products in the AWIPS sched.pl are
+
+     * lga.exe
+     * obs_driver.x
+     * sfc_qc.exe
+     * ingest_pro.exe
+     * wind.exe
+     * lvd_sat_ingest.exe
+     * laps_sfc.x
+     * temp.exe
+     * cloud.exe
+     * lq3driver.x
+     * deriv.exe
+     * accum.exe
+     * lsm5.exe
+
+
+
+Cron Issues:
+
+   The lvd_sat_ingest.exe is run by laps_driver.pl under a seperate cron
+
+
+Data Issues:
+
+     * Ingest Flow Chart [slide2_small.gif]
+       The blue colored data are what we are using in AWIPS LAPS. The
+       other data are being used in our "full-blown" LAPS and can
+       potentially be added to AWIPS/LAPS if the data becomes available.
+     * Surface: We are using METARS for the surface observations. LDAD and
+       Maritime surface observations are also being used if available.
+       There are some deficiencies in 'obs_driver.x', partly related to
+       time windows, that cause only around 10% of the available LDAD data
+       to make it into LAPS. We have fixed this for version 5.1.2. Surface
+       observations from mesonet, wind profiler, and GPS stations should
+       all be getting into the surface LDAD files. The data paths for
+       surface data are specified in 'nest7grid.parms' prior to 5.1.2 and
+       'obs_driver.nl' for 5.1.2 and later. There are three separate paths
+       for METAR, LDAD, and Maritime files. Surface observations are now
+       used from a time window between 15 minutes before and 15 minutes
+       after the top of the hour.
+     * Background: We are using the RUC model as the default background,
+       with a failover to Eta if RUC is not available. Some coastal sites
+       may be better served by using Eta for the default; this can
+       probably be done on-site by editing the 'background.nl' namelist
+       file.
+     * Satellite: The satellite interface for AWIPS depends on (8-bit)
+       image data only, (those acquired via the Satellite Broadcast
+       Network).  The satellite interface in "regular" LAPS is capable of
+       this plus interfacing to GVAR full resolution image data (10-bit)
+       and sounder radiance data (13-bit). More information regarding
+       AWIPS satellite application can be found here.
+       In terms of the analyses, the IR image data feeds into the cloud
+       analysis as well as the surface temperature analysis. The VIS data
+       (used in clouds and snow cover) is currently inactive pending
+       further calibration efforts.
+       LAPS Satellite ingest processes the image closest to the top of the
+       hour, up to a range of H-15 to H+15 minutes.
+     * Radar: The LAPS VAD wind interface (ingest_vad.exe) is currently
+       inactive.
+       The presence or absence of reflectivity data affects the cloud
+       analyses and precipitation estimates. The absence of Doppler
+       velocity data affects the quality of the 3-d wind analysis.
+       We are currently utilizing low-level radar reflectivity data
+       (Level-III RPG) for input into LAPS. The strategy is to process
+       low-level reflectivity data in polar form into a NetCDF file that
+       is readable by the LAPS ingest program 'remap_polar_netcdf.exe'.
+       Ideally we prefer full volume (or layer composite) radar data for
+       LAPS, though LAPS can function to a degree with the
+       two-dimensional, single-radar input.
+       LAPS uses the low-level tilt scanned closest to the top of the
+       hour, up to a range of H-20 to H+20 minutes.
+       In the future, we hope to use multiple radars. Towards this end a
+       new mosaicing executable will be developed as part of the LAPS
+       suite to combine individual 'vrc' files generated for each radar
+       using 'remap_polar_netcdf.exe' into a composite 'vrc'.
+       To improve ground clutter rejection, we hope to use either the DHS
+       (Digital Hybrid Scan), or multiple low-level tilts.
+       In the more distant future, wideband (Level-II) reflectivity and
+       velocity data would be attractive for use in AWIPS/LAPS.
+     * Wind Profiler/RASS: We are currently interfacing to the WFO
+       profiler data (WPDN 404 MHz network) via 'ingest_pro.exe'. Profiler
+       data will be read in from the current hour's NetCDF file, if that
+       file is created by :25 past the hour. If the file arrives later
+       than :25 after then no profiler data gets in. The boundary layer
+       915 MHz profiler network interface is inactive. The RASS ingest
+       also is inactive (ingest_lrs.exe). These can be activated if
+       appropriate NetCDF data becomes available in the AWIPS database.
+     * ACARS/Pireps: The interfaces to acars (ingest_acars.exe) and pireps
+       (ingest_pireps.exe) are inactive for now. These can be activated if
+       NetCDF data becomes available in the AWIPS database. One method of
+       obtaining this data might be to use the FSL ACARS Web site, which
+       is designed for downloading ACARS NetCDF data.
+     * RAOB: The interface to RAOB data (ingest_raob.exe) is being
+       activated for verstion 5.2.2. RAOBs are only available sporadically
+       so most hours LAPS runs would not see them being used within the
+       +/- 1 hour data cutoff.
+
+Analysis Issues:
+
+   An overall description of analysis processes is in Section 3.3 of our
+       README file.
+     * Helicity: LAPS helicity is calculated as a mean value through the
+       column, (i.e. "integrated helicity") over 0-3 km AGL. This is what
+       most of the community uses.
+       For additional information, see our README file in the section on
+       "deriv.exe". The README document discusses the newest version of
+       helicity, while the paper on the LAPS Wind Analysis mentioned
+       therein discusses an older version.
+       Note that LAPS helicity may differ from that given by the Skew-T
+       program since the assumed storm motion is somewhat different. We
+       are considering changing the LAPS storm motion algorithm to use
+       Bunkers et. al. or some other more "standard" method to help ensure
+       consistency with other helicity calculations in AWIPS.
+     * Lifted Index:
+       There are two LI selections on the workstation. LAPS LI is a
+       regular LAPS product (in the LAPS big file). It is computed from a
+       surface parcel taken from the LAPS T and Td sfc analyses. Surface
+       (terrain following) pressure and 500mb temps are also taken from
+       LAPS.
+       Computed LI is an intrinsic on the fly workstation function that
+       calculates LI from the state LAPS variables.
+
+   [colorbar.gif]
+
+   [slide18_small.gif]
+
+Overview of AWIPS 4.3 LAPS improvements:
+
+     * Improved surface analyses (T, Td, Wind, P, Etc).
+     * Improved use of METARS in cloud analysis and surface precip type.
+     * Improved diagnosis of freezing rain.
+
+Overview of AWIPS 5.0 LAPS improvements:
+
+     * Surface Stations
+
+     * More local (LDAD) station data
+     * Blacklist capability
+
+     Graphical User Interface (under LAPS Tools on the workstation)
+     * Displays what data got into the analyses
+     * Domain Relocatability
+
+     Profiler ingest probably does not work
+
+Overview of AWIPS 5.1.1 LAPS improvements:
+
+     * None
+
+Overview of AWIPS 5.1.2 LAPS improvements:
+
+     * Wind Profiler
+
+     * Fixed profiler ingest so that it runs again
+     * Improved QC thresholding
+
+     Surface Stations
+     * Significant increase in the number of accepted LDAD (mesonet, etc.)
+       observations. This entails improved handling of time windows, blank
+       station names, along with other bug fixes.
+
+     Surface Obs QC
+     * MSLP background model QC comparison (laps_sfc.x)
+
+     Graphical User Interface (under LAPS Tools on the workstation)
+     * May not be working?
+
+Overview of AWIPS 5.2.1 LAPS improvements:
+
+     * Surface Analysis
+          + Reduction of bulls-eye effects, even with valid stations.
+     * Improved Pressure analysis consistency
+          + MSL, Reduced, Unreduced (terrain following)
+
+Overview of AWIPS 5.2.2 LAPS improvements:
+
+     * Additional background models such as AVN
+     * Surface Analysis
+          + Improvement of fit between analysis and observations
+
+Candidate future improvements:
+
+     * Graphical User Interface (under LAPS Tools on the workstation)
+
+     * Domain Resizability
+     * Graphical Product Monitor
+
+     Surface Obs QC
+     * Turning On Kalman Filter QC (sfc_qc.exe)
+     * Handling of surface stations with known bias
+
+     Stability Indices: Wet Bulb Zero, K, Total Totals, Showalter, LCL
+
+     Additional background models such as Hi-res Eta.
+
+     Improved use of radar data
+     * Multiple radars
+     * Wide-band full volume scans
+     * Improved accounting for sub-cloud precipitation evaporation
+       occuring below the radar horizon. This is most important in western
+       mountainous areas.
+     * Use of Doppler velocities.
+
+     Wind Profiler
+     * add observations just outside the domain (implies restructuring the
+       wind analysis)
+
+     ACARS data interface
+
+     Use of visible satellite in cloud analysis
+
+     Use of 3.9 micron satellite in cloud analysis
+
+     LI/CAPE/CIN with different parcels in boundary layer
+
+     New ( Bunkers et. al. ) method for computing storm motions feeding to
+   helicity determination
+
+     Run and display LAPS forecasts ( initialized via hot start ).
+
+   [colorbar.gif]
+
+Other Links:
+
+     LAPB home page
+
+     LAPS Presentations:
+
+     LAPS Training (from Central Region SOO)
+
+     FSL WFO-Advanced Project.
+
+     AWIPS OPS: FAQ
+
+     LAPS FAQ
+
+     WFO/AWIPS LAPS Documentation
+
+     AWIPS Program Information
+
+     AWIPS LAPS Evaluation Cases
+
+     LAPS "Bigfile" Generation
+
+   [colorbar.gif]
+
+Feedback: LAPS Users Mailing List/Discussion Forum
+
+   Updated 9/20/2001

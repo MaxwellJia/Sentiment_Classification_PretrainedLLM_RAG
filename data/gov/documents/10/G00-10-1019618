@@ -1,0 +1,45 @@
+http://hdl.loc.gov
+
+Handle System Logo
+
+                         Handle System Proxy Server
+
+   The web form below will enable you to resolve individual handles and
+   view their associated values. It uses a proxy server, which understands
+   both the Handle System protocol and HTTP protocol.
+
+   If you type a handle into the text box, and that handle has a URL
+   associated with it as one of its values, the proxy server will instruct
+   your browser to display the location of that URL.  If you select "Don't
+   Redirect to URLs", the proxy will simply list the value. You may select
+   other value types from the pick list, although most handles will not
+   have all of the listed administrative values associated with them.
+
+   The Handle System uses caching to speed handle resolution. If you check
+   "Authoritative Query", the proxy will bypass the cache, go directly to
+   the responsible handle server, and then refresh the cache with the data
+   for that handle.
+
+   Simply appending a handle to the URL http://hdl.handle.net/ and giving
+   the string to a browser as a location will also resolve that handle,
+   but using this form will enable  you to see all of the handles values.
+
+            Handle: _____________________________________________
+            Value types:
+            [ ] URL
+            [ ] HS_ADMIN
+            [ ] HS_ALIAS
+            [ ] HS_SITE
+            [ ] HS_SERV
+            [ ] HS_SECKEY
+            [ ] HS_PUBKEY
+            [ ] HS_DSAPUBKEY
+            [ ] HS_VLIST
+            [ ] INET_HOST
+            [ ] URN
+                            [ ] Authoritative Query
+                            [ ] Don't Redirect to URLs
+                            [ ] Don't Follow Aliases
+                            Submit
+
+   Handle System Web Site

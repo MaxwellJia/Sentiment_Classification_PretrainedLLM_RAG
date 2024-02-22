@@ -1,0 +1,276 @@
+http://nls3.nlm.nih.gov/MetaMap/variants.96.pdf
+
+   The Effect of Textual Variation on Concept Based Information Retrieval
+   Alan R. Aronson National Library of Medicine Bethesda, MD 20894
+   Accounting for textual variation in the documents and case, stemming,
+   and even the use of stop words some- queries processed by information
+   retrieval systems is times degrades performance in IR and related
+   systems considered essential for achieving good retrieval. [3,4].
+   MetaMap normalization can be thought of as Recent research has called
+   into question several of the generalized stemming. It is related to
+   several studies techniques used to support this endeavor. This paper
+   which also map biomedical text to the Metathesaurus reports on
+   experiments with a concept based informa- for various purposes [5-10].
+   The major distinguishing tion retrieval system which relies on a
+   program called features of MetaMap are its use of high-level parsing,
+   MetaMap to account for textual variation in the pro- its use of
+   knowledge based, linguistically motivated cess of mapping biomedical
+   text such as MEDLINE® variant generation, and its principled evaluation
+   func- bibliographic citations to the UMLS® Meta- tion for ranking
+   results. It is MetaMap's variant gener- thesaurus®. The experiments
+   confirm that the effort ation process which is directly affected by
+   textual expended in handling textual variation is well-spent variation
+   and which is the focus of this paper. for at least one type of concept
+   based information retrieval. MetaMap uses three kinds of variation in
+   the process of mapping to the Metathesaurus: acronyms and
+   abbreviations, synonyms, and derivational variants. INTRODUCTION
+   Spelling and inflectional variants are not considered here since the
+   MetaMap variant generation algorithm Word based information retrieval
+   (IR) systems have uses a quasi-canonicalization approach which col-
+   long dealt with the problem of textual variation by lapses all spelling
+   and inflectional variants into a sin- using a range of methods from
+   ignoring the case of gle variant. Thus spelling and inflectional
+   variation text to performing stemming in order to treat minor are
+   intrinsic to MetaMap and not susceptible to exam- textual variants of
+   the same word as a single form. ination. Thus Hospital becomes
+   hospital; medicine, medicines and medical become medic; and,
+   unfortunately, bat- Experiments were performed by completely or par-
+   tery may become bat. IR systems in which the focus tially eliminating
+   one of the three kinds of variation is on concepts rather than words
+   have an identical from the MetaMap variant generation process and need
+   to account for such textual variation. The computing the effect on IR
+   performance. The study approach to concept based IR taken here is to
+   normal- was done using the 1995 release of the Metathesaurus ize both
+   document text and queries, replacing text on the NLM Test Collection
+   [11] which consists of words with concepts discovered by a program
+   called some 150 actual user queries, 3,000 MEDLINE cita- MetaMap which
+   maps biomedical text such as MED- tions, and relevancy judgements for
+   each query. LINE citations to the concepts in the UMLS Meta- The
+   current study has implications for previous work thesaurus, a knowledge
+   base of biomedical concepts using MetaMap as a fundamental component:
+   developed at NLM [1]. Actual retrieval is accom- research in semantic
+   processing in general [12,13], plished by processing the normalized
+   text using a tra- ambiguity resolution in particular [14]; and, most
+   ditional statistical IR system, SMART [2]. The directly, previous
+   experimentation using all forms of distinct separation of MetaMap
+   normalization from MetaMap variation which produced a modest 4%
+   retrieval in this approach facilitates experimentation increase in
+   average precision [15]. by using the existing evaluation capabilities
+   of SMART while allowing independent exploration of the normalization
+   process. METHODOLOGY Recent research has shown that universal
+   application The process of determining the effect of textual varia- of
+   traditionally accepted techniques such as ignoring tion on IR
+   performance consists of mapping the entire NLM Test Collection to the
+   Metathesaurus for several simple noun phrases in text, and the tagger
+   variant generation strategies, normalizing the text of improves
+   accuracy even more. the collection based on the mapping results, and
+   then 2. For each phrase, variants are generated where a evaluating the
+   resulting normalized collections using variant essentially consists of
+   one or more phrase SMART. words together with all of its acronyms,
+   abbrevia- tions, synonyms, derivational variants and mean- MetaMap
+   Processing ingful combinations of these; 3. The candidate set of all
+   Metathesaurus strings con- The task of mapping from biomedical text to
+   concepts taining at least one of the variants is retrieved; in the
+   Metathesaurus consists of the following five 4. Each Metathesaurus
+   candidate is evaluated by first steps (see Figure 1): computing a
+   mapping from the phrase words to the candidate's words and then
+   calculating the strength of the mapping using a linguistically prin-
+   cipled evaluation function consisting of a Arbitrary Text weighted
+   average of four metrics: centrality, varia- tion, coverage and
+   cohesiveness. The candidates are ordered according to mapping strength;
+   and 5. Complete mappings are constructed by combining Parsing
+   candidates involved in disjoint parts of the phrase, and the strength
+   of the complete mappings is com- puted just as for candidate mappings.
+   The highest scoring complete mappings represent MetaMap's best
+   interpretation of the original phrase. Variant Generation An example of
+   the mapping process is given in the next section. Details of MetaMap's
+   algorithms can be found at http://nls3.nlm.nih.gov. Candidate Retrieval
+   MetaMap Variant Generation Because of its importance in determining how
+   textual variation affects MetaMap processing, MetaMap's variant
+   generation algorithm is described in more Candidate Evaluation detail.
+   The approach taken in computing variants is a quasi-canonicalization
+   approach. This simply means that a variant represents not only itself
+   but all of its inflectional and spelling variants. Collapsing inflec-
+   tional and spelling variants results in significant com- Mapping
+   Construction putational savings. Actual variant generation begins by
+   computing the set of generators for a phrase. A variant generator is
+   any meaningful subsequence of words in the phrase where a subsequence
+   is meaning- Concept Mapping ful if it is either a single word or occurs
+   in the SPE- CIALIST lexicon [18]. For example, the variant generators
+   for the noun phrase of liquid crystal ther- Figure 1. MetaMap
+   processing mography are liquid crystal thermography, liquid crystal,
+   liquid, crystal and thermography (preposi- 1. Arbitrary text is parsed
+   into simple noun phrases; this limits the scope of further processing
+   and tions, determiners, conjunctions, auxiliaries, modals, thereby
+   makes the mapping effort more tractable. pronouns and punctuation are
+   ignored). Note the Parsing is accomplished using the SPECIALISTTM
+   multi-word generators. Variants are computed for minimal commitment
+   parser [16] which produces each of the variant generators according to
+   the scheme a high-level syntactic analysis rather than a full pictured
+   in Figure 2. The computation for each gener- syntactic analysis. The
+   parser optionally uses the ator proceeds as follows: Xerox
+   Part-of-speech tagger [17] which assigns 1. Compute all acronyms,
+   abbreviations and syn- syntactic labels (e.g., noun, verb) to all
+   textual onyms of the generator. This results in the three items. The
+   parser is very good at determining the sets Generator,
+   Acronyms/Abbreviations, and ocular [0 = ""] Derivational oculus [3 =
+   "d"] Generator Variants + eyepiece [2 = "s"] Synonyms eye [2 = "s"]
+   optic [4 = "ss"] optical [7 = "ssd"] Derivational vision [9 = "ssds"]
+   Variants Acronyms/ + optically [10 = "ssdd"] Abbreviations Synonyms
+   ophthalmic [4 = "ss"] ophthalmia [7 = "ssd"] Synonyms ophthalmiac [7 =
+   "ssd"] complications [0 = ""] Derivational complicate [3 = "d"]
+   Variants + Synonyms Synonyms Figure 3. Variants of Ocular complications
+   empty history because they are the generators, them- Acronyms/ selves.
+   Similarly, vision has distance score 9 and his- Abbreviations tory
+   "ssds" meaning that it is a synonym of a derivational variant (optical)
+   of a synonym (optic) of a Figure 2. Variant generation synonym (eye) of
+   ocular. The Metathesaurus candi- dates for Ocular complications are
+   shown in Figure 4. Synonyms which are highlighted with boxes in Figure
+   2; 861 Complications (Complication, NOS) 2. Augment the elements of the
+   three sets by comput- ing their derivational variants and the synonyms
+   of 861 complications <1> the derivational variants; 3. For each member
+   of the Acronyms/Abbreviations 777 Complicated set, compute synonyms;
+   and 638 Eye 4. For each member of the Synonyms set, compute
+   acronyms/abbreviations. 611 Optic (Optics) Derivational variants and
+   synonyms are recursively 588 Ophthalmia (Endophthalmitis) generated
+   since this generally produces meaningful 579 Vision variants. However,
+   acronyms and abbreviations are not recursively generated since doing so
+   almost Figure 4. Metathesaurus candidates for Ocular always produces
+   incorrect results. For example, the complications abbreviation na of
+   sodium is also an acronym of both nurse's aide and nuclear antigen
+   which are unrelated The candidates are shown in order of mapping to
+   sodium. strength which has been normalized to a score between 0 and
+   1,000 and is displayed before the can- Consider the utterance Ocular
+   complications of Myas- didate. If the candidate is not the preferred
+   name of thenia Gravis, a query from the NLM Test Collection. the
+   concept it represents, the preferred name is dis- The parser detects
+   two noun phrases, Ocular compli- played in parentheses. The best
+   complete mappings cations and of Myasthenia Gravis. A simplified syn-
+   for the phrase consist of the Metathesaurus concept tactic analysis for
+   Ocular complications is `Eye' and either the concept `Complication,
+   NOS' or [mod(ocular), head(complications)]. Vari- the concept
+   `complications <1>'. ants for the phrase are shown in Figure 3. The
+   variants are arranged hierarchically according to their deriva-
+   Normalization tion history. Each variant is followed by its distance To
+   make use of MetaMap's results, the Test Collec- score from its
+   generator and its history. For example, tion is normalized by replacing
+   text with matching ocular and complications have distance score 0 and
+   Metathesaurus concepts subject to the following con- straint. In order
+   for a concept to replace text, it must uments, and the 3-point average
+   precision (i.e., aver- have the correct UMLS semantic type. Correctness
+   is aging the precision values corresponding to recall of determined by
+   a version of the Xerox tagger designed 0.2, 0.5 and 0.8) was used to
+   compare results (see to handle semantic tags (semantic types) in
+   addition to [19,20]). syntactic tags. Use of a semantic tagger in this
+   way allows for choosing between competing concepts with different
+   semantic types and also for disqualifying RESULTS concepts with
+   inappropriate semantic types. The results of the experiments are shown
+   in Table 1. An example will illustrate this notion of disambigu- ated
+   concept normalization. The original text of a Test Improvement
+   Collection query is shown below followed by its nor- Average over
+   malization. Corresponding words and concepts are Precision Unprocessed
+   underlined. All Variants 0.5968 5.0% * Original text: Adaptation of
+   physical environment in No A/A 0.5907 3.9% hospitals to care for
+   Alzheimer patients (model Unique A/A 0.5887 3.5% Alzheimer units). No
+   Synonyms 0.5887 3.5% * Normalized text: Adaptation of Physical Environ-
+   No Derivations 0.5822 2.4% ment in Hospitals to Caring for Alzheimer
+   Patients (model Alzheimer units). Table 1. Average precision and
+   improvement over Note that no normalization occurs for Alzheimer since
+   unprocessed Alzheimer only appears in the Metathesaurus as a sub- part
+   of concepts, e.g., `Alzheimer's Disease'. Also, They are expressed both
+   as raw average precision val- even though units maps to the concept
+   `Genes' ues and as percentage improvement over the average (because of
+   an infelicitous synonymy relationship precision obtained without
+   processing the text at all between unit and gene which is only valid in
+   a molec- (0.5686). The best results are obtained when all varia- ular
+   biology context), normalization does not occur tion is allowed. since
+   the semantic tagger chooses a tag for units dif- ferent from that of
+   `Genes'. CONCLUSION IR Experiments The experiments described above show
+   that all forms Five versions of MetaMap output differing in the type of
+   variation used by MetaMap enhance retrieval per- of allowable variation
+   were used in the IR experi- formance albeit in varying degrees. The
+   contribution ments: to retrieval performance of each type of variation
+   can * All Variants-the baseline version in which all be seen by
+   comparing its average precision to that of types of MetaMap variation
+   are allowed; the All Variants case: the greater the difference, the *
+   No A/A-no acronym or abbreviation variants are greater the
+   contribution. Thus derivational variation used; contributes the most,
+   followed by synonymy and then * Unique A/A-only acronyms and
+   abbreviations acronyms and abbreviations. Restricting acronyms with
+   unique expansions are used. Thus, the acro- and abbreviations to unique
+   ones is slightly better nym ICU (Intensive Care Unit) is used, but the
+   than allowing them all. abbreviation na (sodium, nurse's aide, nuclear
+   The most interesting result is the one favoring unique antigen, ...) is
+   not; acronyms and abbreviations over arbitrary ones. This * No
+   Synonyms-no synonymy variants are used; confirms an intuition that
+   while all forms of variation and are good in general, it is
+   nevertheless useful to try to * No Derivations-no derivational
+   morphology vari- discover practical ways of limiting variation to ants
+   are used. increase accuracy. Further experiments such as Each version
+   of MetaMap output was used to normal- exploring the recursive depth
+   allowed during variant ize the Test Collection. The resulting versions
+   of the generation or applying semantic restrictions to the test
+   collection were processed straightforwardly using process may lead to a
+   better understanding of textual SMART. The SMART weighting scheme atc
+   (a vari- variation in order to enhance information retrieval ant of the
+   standard term frequency-inverse document performance. frequency scheme)
+   was used for both queries and doc- Acknowledgments 10. Miller RA,
+   Gieszczykiewicz FM, Vries JK and I want to thank Tom Rindflesch and Zoë
+   Stavri for Cooper GF. "CHARTLINE: Providing bibliographic many helpful
+   discussions during the writing of this references relevant to patient
+   charts using the UMLS paper. Metathesaurus knowledge sources." In
+   Frisse ME (ed.) Proceedings of the 16th Annual SCAMC, 86-90, 1992.
+   References 11. Schuyler PL, McCray AT and Schoolman HM. "A test
+   collection for experimentation in bibliographic 1. Lindberg DAB,
+   Humphreys BL and McCray AT. retrieval." Barber B, Cao D, Qin D and
+   Wagner G "The Unified Medical Language System." Methods of (eds.)
+   MEDINFO 89, Amsterdam: North-Holland, Information in Medicine
+   32:281-291, 1993. 810-912, 1989. 2. Salton G (ed). The SMART retrieval
+   system: Exper- 12. Rindflesch TC and Aronson AR. "Semantic pro- iments
+   in automatic document processing. Englewood cessing in information
+   retrieval." In Safran C (ed.) Cliffs, NH: Prentice-Hall, Inc, 1971.
+   Proceedings of the 17th Annual SCAMC, 611-615, 3. Church KW. "One Term
+   or Two?" In Fox E, Ingw- 1993. ersen P, and Fidel R (eds) Proceedings
+   of the 18th 13. Sneiderman C, Rindflesch TC and Aronson AR. Annual
+   International ACM SIGIR Conference on "Extracting Physical Findings
+   from Free-Text Patient Research and Development in Information
+   Retrieval, Records." 1995 AMIA (American Medical Informatics 310-318,
+   1995. Association) Spring Congress, Cambridge, Massachu- 4. Riloff E.
+   "Little Words Can Make a Big Difference setts, June 25-28, 1995. for
+   Text Classification." In Fox E, Ingwersen P, and 14. Rindflesch TC and
+   Aronson AR. "Ambiguity Res- Fidel R (eds) Proceedings of the 18th
+   Annual Interna- olution while Mapping Free Text to the UMLS Meta-
+   tional ACM SIGIR Conference on Research and thesaurus." In Ozbolt JG
+   (ed.) Proceedings of the 18th Development in Information Retrieval,
+   130-136, Annual SCAMC, 240-244, 1994. 1995. 15. Aronson AR, Rindflesch
+   TC and Browne AC. 5. Canfield K, Bray B, Huff S and Warner H. "Data-
+   "Exploiting a Large Thesaurus for Information base capture of natural
+   language echocardiographic Retrieval." In RIAO (Computer aided
+   information reports: a Unified Medical Language approach." In
+   retrieval) 94 Conference Proceedings, 197-216, 1994. Kingsland LC, III
+   (ed.) Proceedings of the 13th Annual SCAMC, 559-563, 1989. 16. McCray
+   AT, Aronson AR, Browne AC, Rindfle- sch TC, Razi A and Srinivasan S.
+   "UMLS knowledge 6. Chute CG, Yang Y, Tuttle MS, Sherertz DD, Olson for
+   biomedical language processing." Bulletin of the NE and Erlbaum MS. "A
+   preliminary evaluation of Medical Library Association 81:184-194, 1993.
+   the UMLS Metathesaurus for patient record classifi- cation." In Miller
+   RA (ed.) Proceedings of the 14th 17. Cutting D, Kupiec J, Pedersen J
+   and Sibun P. "A Annual SCAMC,161-165, 1990. practical part-of-speech
+   tagger." In Proceedings of the Third Conference on Applied Natural
+   Language Pro- 7. Hersh WR, Hickam DD and Leone TJ. "Words, cessing,
+   1992. concepts, or both: Optimal indexing units for auto- mated
+   information retrieval." Frisse ME (ed.) Pro- 18. McCray AT, Srinivasan
+   S and Browne AC. "Lexi- ceedings of the 16th Annual SCAMC, 644-648,
+   1992. cal methods for managing variation in biomedical ter-
+   minologies." In Ozbolt JG (ed.) Proceedings of the 8. Lin R, Lenert L,
+   Middleton B and Shiffman S. "A 18th Annual SCAMC, 235-239, 1994.
+   free-text processing system to capture physical find- ings: Canonical
+   phrase identification system 19. Tague JM. "The pragmatics of
+   information (CAPIS)." In Clayton PD (ed) Proceedings of the 15th
+   retrieval experimentation." In Jones KS (ed.) Informa- Annual SCAMC,
+   168-172, 1991. tion Retrieval Experiment, 59-102, 1981. 9. Wagner MM.
+   "An automatic indexing method for 20. Salton G. "The Smart environment
+   for retrieval medical documents." In Clayton PD (ed.) Proceedings
+   system evaluation-advantages and problem areas." of the 15th Annual
+   SCAMC, 1011-1017, 1992. In Jones KS (ed.) Information Retrieval
+   Experiment, 316-329, 1981.

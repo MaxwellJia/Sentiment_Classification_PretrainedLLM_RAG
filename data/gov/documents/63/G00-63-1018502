@@ -1,0 +1,115 @@
+http://www.dase.nist.gov/documentation.html
+
+   Group Logo
+
+
+
+   [  Home |  CIS Home  |  ITL Home  |  NIST Home  |  FAQ |  Download |
+   Documentation |  Symposium ]
+
+
+     GENERAL
+    Home
+    Project Slides
+    Disclaimer
+    FAQ
+    DASE Symposium
+    Archive
+     PRODUCTS
+    Download
+    STB Simulation
+    API Implementation
+    DASE Applications
+    Tools
+    Documentation
+     SUPPORT
+    Contact Us
+    Related Sites
+    E-support
+    NIST Information
+     PUBLICATIONS
+
+    DASE 2000 Proceedings
+    DASE 2001 Proceedings
+    DASE 2000 Slides
+    DASE 2001 Slides
+
+   Documentation
+
+    JavaDoc
+     DASE org.atsc APIs JavaDoc (January 2002)  [ZIP File]
+     NIST DASE STB Simulation JavaDoc (June 2001)
+     NIST DASE PAE API Implementation JavaDoc (June 2001)
+
+   NIST Documentation
+    User's Guide
+    Quick Reference Guide
+    Implementation Guide
+    Parser User's Guide
+
+    Distribution Tree Hierarchy
+     In general, the implementation of the API is isolated to the gov/nist
+   branch of the tree. Classes that are defined as part of the
+   specification have thier implementation at that location (i.e., JavaTV
+   classes are implemented in the javax.tv.* branch of the tree, where as
+   the JavaTV interfaces are implemented under the gov.nist.* branch of
+   the tree).
+
+
+   Item  Location (relative from the nist_ri directory)
+   ATSC STB Simulation simulation/javalib/src/stb/*
+   Java TV Interfaces and Classes api/javalib/src/java/tv/*
+   ATSC Interfaces and Classes api/javalib/src/org/atsc/*
+   HAVI Interfaces, Classes, Implementation api/javalib/src/org/havi/*
+   W3C Interfaces and Classes api/javalib/src/org/w3c/*
+   Implementation Classes api/javalib/src/gov/nist/*
+   Hardware Abstract Layer api/javalib/src/gov/nist/hwabstract
+   Xlets devkit/src/applications/xlets/*
+   Native Applications devkit/src/applications/nativeapps/*
+   Tools devkit/src/tools/*
+   API Testsuite devkit/src/testsuite/api/*
+   Jar Files simulation/runtime
+   Data simulation/data
+
+    Release Notes
+     The NIST DASE Development Environment PAE prototype implementation
+   adheres to the ATSC DASE specification (version T3-531 R4) dated
+   November 20, 2001.
+     __________________________________________________________________
+
+     The Simulation platform requires JDK 1.2 and a C compiler (for
+   certain features). The NIST system uses GNU C 2.8.1. The API
+   implementation only uses classes defined in the DASE pJava
+   specification ( i.e., pJava plus some additional classes). However, the
+   entire NIST Development Environment (API implementation and STB
+   simulation) is built and ran using the JDK version 1.2 which is not
+   pJava only. Specifically, the simulation platform makes use of classes
+   that are not found in DASE pJava. NIST has produced its own internal
+   version of the DASE pJava libraries for testing the API implementation.
+   However, due to copyright and IP issues, we can not distribute this jar
+   file.
+
+     The implementation of data carousels required modification to the
+   Java Runtime Envoronment (JRE). Specifically, functionality was added
+   to several java.io classes. Because changes were made to the Java
+   source code, they are not included as part of the NIST DASE Development
+   Environemnt distribution. Instructions to make these modifications can
+   be found in the User's Guide and in the README file that comes with the
+   source code distribution.
+
+     The stubs org.atsc.dom and org.w3c.dom packages exist in the
+   distribution tree. However, none of these classes are implemented.
+     __________________________________________________________________
+     __________________________________________________________________
+
+                      Privacy Statement/Security Notice
+                              Disclaimer | FOIA
+
+                          NIST is an agency of the
+                         U.S. Commerce Department's
+                         Technology Administration.
+
+              Web page comments to: webmaster@cmr.ncsl.nist.gov
+
+                           Date created: 4/18/2001
+                          Last updated: 01/11/2002

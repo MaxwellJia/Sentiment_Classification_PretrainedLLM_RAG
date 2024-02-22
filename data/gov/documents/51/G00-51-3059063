@@ -1,0 +1,337 @@
+http://bidug.pnl.gov/presentations/baer1999/BAER99_MacLellanJA_StromDJ.PDF
+
+   JA MacLellan and DJ Strom , BAER '99 PNNL-SA-32146 Page 1 Traditional
+   Formulas For Decision Level Are Wrong For Small Numbers of Counts Jay
+   A. MacLellan1 and Daniel J. Strom2 1Radiation and Health Technology and
+   2Risk Analysis and Health Protection, Process Technology &
+   Environmental Management Resources, Pacific Northwest National
+   Laboratory, Richland, Washington 99352-0999 USA jay.a.maclellan@pnl.gov
+   or daniel.j.strom@pnl.gov Abstract: Traditional formulas for decision
+   level (DL) and and reanalyses. The sampled population may also loose
+   minimum detectable amount (MDA) are given in numerous confidence in the
+   program if they suspect the internal sources, including the recent
+   HPS.ANSI N13.30-1995, dosimetrist is "fishing" for the right answer. It
+   is therefore Performance Standard for Radiobioassay and the
+   Multi-Agency important to verify that the decision level (DL; also
+   known as Radiation Survey and /Site Investigation Manual (MARSSIM). the
+   critical level, LC ) employed is providing the desired results. These
+   formulas do not adequately account for the discrete It is given by
+   nature of the Poisson distribution for paired blank (equal count 2 2
+   times for background and sample) measurements, especially at DL (Nn ) =
+   k + = k N + N g b g b low numbers of counts. We calculate the false
+   positive rates (Eq. 4) that occur using the traditional DL formula as a
+   function of and when there is no activity in the sample acceptable
+   false positive rate and Poisson mean µ = t, where is the underlying
+   Poisson rate and t is the counting time. DL = k 2 2 = k N b 2 b , False
+   positive rates exceed by significant amounts for 0.2 (Eq. 5) and µ <100
+   counts, peaking at 25% at µ 0.71, nearly as shown in Eq. (1).
+   independent of . Calculations were verified by Monte Carlo simulations.
+   The original 1968 derivation of the DL was based Methods on knowing a
+   good estimate of the mean and standard deviation of background, ad case
+   that does not hold for paired blanks and Two methods were used to
+   determine the actual false positive low background rates. We propose
+   and evaluate several rates when Eq.(1) is used for the paired blank
+   counting alternative decision levels. Many regulations, national
+   problem. standards, guidance documents, and texts will have to be
+   corrected. Monte Carlo Simulation. The first method was a Monte Carlo
+   simulation. For each of 57 values of µ (0.01 through 100), a
+   Introduction Poisson distribution was randomly sampled. This value was
+   stored as the background observation. Then the same When counting
+   particles, such as in alpha spectroscopy for distribution, this time
+   representing an unknown containing no measurement of 239Pu, one
+   typically subtracts an estimate of analyte, was sampled again and
+   stored as the unknown. A DL background counts from the counts of an
+   unknown. The was computed using Eq.(1), and the net rate (i.e., unknown
+    resulting difference or net count value can then be compared to
+   background) was compared to it. If the net result was greater a
+   statistic called decision level, DL. If the net count value is than or
+   equal to the DL, for that , then the decision was greater than the DL,
+   then one makes the decision that there is "activity was detected above
+   background." All such decisions activity present above background. are
+   false positives, since there is no net activity present. This procedure
+   was repeated 106 times for each mean and for each of The traditional
+   formula for the decision level DL for the paired blank scenario as a
+   function of N 18 values of (0.5, 0.2, 0.1, 0.05, etc., down to 10-6).
+   The b observed background counts results were slightly noisy, but were
+   in exact agreement with the and the acceptable false positive rate is
+   analytical method described below. ( DL N, ) = k 2 b N , (Eq. 1)
+   Analytical Solution. The cumulative Poisson distribution up through M
+   is the sum of the Poisson distribution values: where k is found from
+   the cumulative Normal distribution: M k CumulPoi(M, µ) = Poi(N,µ) (Eq.
+   6) - 1 1 - = x e 2 /2dx (Eq. 2) 2 N=0 - The function Trunc(x) returns
+   the integer part of nonnegative The Poisson distribution for Poisson
+   mean µ = t, where is real number x. The false positive rate for a
+   Poisson mean µ and the underlying Poisson rate (e.g., counts per
+   second) and t is the so-called Type I error probability is given by
+   summing over counting time (e.g., seconds), is nonnegative integers N
+   of the product of two probabilities: the -µ N probability of observing
+   a background value of N counts given Poi( | ) e N µ µ = (Eq. 3) a
+   Poisson mean of µ; and the probability of observing more ! N than N
+   plus the expected background counts in the sample Note that while N is
+   an integer, µ is a non-negative real number. count. The later
+   probability is simply one minus the cumulative Poisson distribution up
+   to (N + DL(N, )). In symbolic terms, Setting the decision level for
+   bioassay excreta analyses is an we have the actual false positive rate
+   as important function of the internal dosimetry program. If it is too
+   high, potentially significant intakes will be missed. If it is too low,
+   resources will be wasted on unnecessary resampling (µ, ) = Poi(N,µ 1 )(
+   - Trunc( CumulPoi([ N + ( DL N, ))],µ) (Eq. 7) N=0 JA MacLellan and DJ
+   Strom , BAER '99 PNNL-SA-32146 Page 2 Results good estimate of either
+   one. Currie's treatment of the "paired bland" case attempted to account
+   for the increased uncertainty Actual false positive rates from Eq. (5),
+   when counting blanks, in the background when it was counted for only as
+   long as the are plotted in Figure 1. The horizontal axis is the
+   long-term sample (as opposed to the well-known blank). But when the
+   number of mean background counts µb = btb that one is trying background
+   rate is estimated form a measurement that is below to estimate when one
+   counts a reagent blank. When subsequent the long-term mean, the use of
+   Currie's DL (termed "critical blanks are counted, of course, any and
+   all decisions that activity level," Lc, in his 1968 paper) causes a
+   large number of false has been detected are wrong decisions, i.e.,
+   "false positives." If positive decisions that are not offset by the
+   fewer false positive the decision that activity has been detected is
+   based on the use decisions that result when the background rate is
+   estimated form of the ANSI N13.30 decision level, the false positive
+   rates are a measurement that is above the long-term mean. In
+   particular, shown on the vertical axis for various levels of the
+   acceptable if the background is estimated from an observation of zero,
+   one Type I error rate . If the ANSI N13.30 formula were correct, must
+   decide that any result 1 results in a decision of "activity each curve
+   would be horizontal line equal to the value of , has been detected
+   above background." independent of background rate. Clearly, the ANSI
+   N13.30 decision level formula is not correct. Currie stated on page 22
+   of his NUREG document (1984) that an assumption underlying the DL rule
+   is that the estimated net Figure 1 shows that the false positive rate
+   is essentially signal is an independent random variable having a known
+   independent of below 0.3 counts, and if 0.2, this is true distribution.
+   Thus, knowing (or having a statistical estimate almost up to µ for) the
+   standard deviation of the estimated net signal, one can b = 1. Figure 1
+   also shows that for values of of 0.1 or less, the claimed false
+   positive rate, that is, , is not even calculate the DL given the
+   distribution and alpha. He also achieved with a background rate µ
+   stated on page 49 of the same document that if there are at least b of
+   100! For very tiny values of , the rate is not even close. For equal
+   10-6, the 5 counts in the background estimate, use of the Poisson false
+   positive rate at 100 background counts is 25.1 × 10-6. For variance as
+   the estimate of the population variance is valid. Applying the rule to
+   very low background count rates violates 0.1, the maxima of the curves
+   are about 0.25, and occur Currie's own assumptions for the DL. However,
+   even at higher near 0.7 to 0.72 counts, depending only weakly on the
+   value of background levels, Currie's DL gives a false positive rate > .
+   In the interval 0.3 µ 1.3, the false positive rate is above because the
+   estimate of the mean (and therefore the estimate 0.2 regardless of the
+   value of . of the variance) of the distribution is biased low. The
+   background count is more like to give an estimate of the mean The false
+   positive rate for very low background rates using the that is less than
+   the true mean, than one that is larger than the Currie DL is due almost
+   entirely to the probability of observing true mean. The factor by which
+   using Currie's DL zero background counts. Regardless of the value
+   applied the square root of zero is zero, and the DL will be zero.
+   Therefore, overestimates is particularly large for small . any observed
+   count will be interpreted as "detected." For very low background rates,
+   e.g., 0.01, one observes zero in about Other Decision Rules 99% of
+   cases, and one in the other 1% of cases. Similar rates pertain for a
+   blank about which one is trying to make an Following our conclusion
+   that Currie's formula does not give an inference. Thus for those 1 in
+   100 blanks for which one unbiased estimate of false positive results,
+   other methodologies observes 1 count, the probability is 99% that the
+   paired were investigated. background measurement will have been 0, and
+   that a false positive decision will be made. The false positive rate is
+   then Most Probable Value of Mean and Variance 0.99 × 0.01, or
+   approximately 0.01. For very low background Rainwater and Wu (1947)
+   showed that the most probable values rates the probability of observing
+   a false positive with Currie's of the mean and variance are not the
+   observed value of the rule is approximately equal to the probability of
+   observing one mean, but a value larger than the observed value.
+   Although not or more counts in the counting period. intuitively
+   obvious, an example was given for clarification. If zero is observed,
+   the mean is not necessarily also zero; therefore How Can So Many People
+   Have Been Wrong For Over 30 the average value of the mean that produces
+   zero observations Years? must be greater than zero, and the most
+   probable value of the mean is larger than the observed value. One
+   formal way of Eq. (1) was popularized by, and is generally ascribed to,
+   Currie addressing this is to use an uninformative Bayesian prior
+   (1968). It appeared earlier in a more general form for count rate
+   probability distribution, which yields the result that the with count
+   times not necessarily equal, as Rule D2 in Nicholson expectation value
+   of background when N counts are observed is (1963): N + 1 (Friedlander
+   and Kennedy 1955; Friedlander et al. 1963; N 1 1 Stevenson 1966; Little
+   1982). The variance is also N + 1. This leads to a decision level for
+   the net count rate of Currie DL ( n R ) = b k + Eq.(9) t t t b b g (N )
+   1 b + 1 1 and has appeared in one form or another in countless Currie
+   DL N (R ) k +1 n = + Eq.(10) t t t publications since, including
+   ANSI/HPS N13.30-1996 and b b g MARSSIM (Brodsky 1986; Currie 1968;
+   Currie 1984; Health If the observed value N is much greater than one,
+   the distinction Physics Society (HPS) 1996; Hickey et al. 1993; Lochamy
+   between N and N + 1 is not important. One approach we took 1976; Strom
+   and Stansbury 1992; MARSSIM 1997). was to modify the Currie/ANSI N13.30
+   rule by using N + 1 as the estimate of the variance, instead of N. The
+   problem arose from the basic assumption that one has a well-known
+   estimate of the mean and standard deviation of the Binomial
+   Distribution background. With low background rates one does not have a
+   JA MacLellan and DJ Strom, BAER '99 p. 3 Nicholson (1963) and Sumerling
+   and Darby (1981) describe -µg Ng equivalent processes for determining a
+   decision level using the e µ P( µ g N | g) g = (Eq. 11) binomial
+   distribution. As described in Sumerling and Darby g N ! (1981), if the
+   background is not well known, the observation on the sample may be
+   compared with the background observation, The joint probability of
+   making independent observations Ng N and N b counts in time tb, to see
+   if they are consistent with any single b when the respective means are
+   µg and µb is given by true count rate. They, and others, argue that
+   using both the -µg Ng -µb Nb e µ background and gross sample
+   measurements to estimate the P( e µ µ µ g N , Nb | g, b) g b = (Eq. 12)
+   background increases the power of the test. g N ! b N ! The probability
+   of observing value N Transforming to new variables Ng and Ntotal = Ng +
+   Nb, g, when the mean of the quantity being measured is µg, is given by
+   the Poisson distribution -µtotal Ntotal e total N total Ng Ntotal -Ng
+   P( g N , Ntotal | total,Q) = µ µ Q 1 ( - Q) (Eq. 13) N ! g N total
+   where µtotal = µg + µb and Q = µg/(µg + µb). The probability of
+   observing Ng conditional on a particular value of Ntotal is given by P(
+   µ g N , Ntotal | total,Q) N total Ng Ntotal -Ng P( µ g N | Ntotal,
+   total,Q) = = Q 1 ( - Q) (Eq. 14) P(N µ Q N total | , ) g total Here,
+   the binomial coefficient is denoted by Ntotal Ntotal N N i Q0 1 ( -
+   Ntotal -i Q0) (Eq. 16) total total! = . This distribution is N i= N g g
+   g N g N ( ! Ntotal - g N )! To use this rule in practice, one may
+   simply compute the known as the binomial distribution with probability
+   of success function on the left hand side of Eq. 16 to give the
+   probability Q. If the sample is blank and Ng and Nb are both
+   measurements that the observed Ng was drawn from the same population as
+   Nb of some unknown background with true count rate b, then Q = for a
+   given Q0. Qo where Confidence Interval of the Net Activity btg tg Qo =
+   = (Eq. 15) t + t t + t b g b b g b The decision level may also be
+   defined in terms of the For example, Q confidence interval of the net
+   activity. In his book Atoms, 0 = ½ when tg equals tb. Radiation, and
+   Radiation Protection Turner (1995) describes a The inference about the
+   presence of activity in the sample is decision level similar to one
+   originally proposed by Altshuler based on the conditional distribution
+   of N and Pasternack, (1963). In this process, the decision is made on g
+   given Ntotal. Hence, the null hypothesis that the sample is blank is
+   rejected if a blank the basis of the difference in the gross (Rg) and
+   background (Rb) sample would have produced a gross count as large or
+   larger count rates, the net count rate Rn: than the observed 100 % of
+   the time or less, that is, if Ng N 2 2 Rn + R R b b b - = R g - Rb = Rn
+   = k + = k gr br + (Eq. 17) t t t t g b g b Here, 2 2 gr and br are the
+   variances of the gross and background count rates, respectively. This
+   is equivalent to Currie's detection level (minimum detectable count),
+   when the decision level is set to zero. Solving the expression for Rn
+   gives 2 2 k k k t t DL R = + R g + + b Turner ( n ) 4 b . (Eq. 18) 2t t
+   t t g 2 2g g b When tb = tg, the minimum significant count difference,
+   1, is Nicholson states that D1 uses the "obvious unbiased estimate of 2
+   the variance with no restriction on" n = g - b. = k N k k b + + 1 2 1 .
+   (Eq. 19) 8N 8N Nicholson's D 3 Rule b b Nicholson's D1 Rule Nicholson's
+   D3 Rule (1963) is k times the sum of the counts divided by the product
+   of the count times: Nicholson (1963) gives two other decision rules for
+   the net count rate. Nicholson's D N + N 1 Rule (1963) is k times the
+   standard b g DL (R ) = k deviation of the net count rate: Nicholson D3
+   n Eq.(21) tbtg N N b g DL (R ) = k Nicholson states that D3 "optimally
+   weights information about Nicholson D + Eq.(20) 1 n 2 2 t t b in both
+   tb and tb," but that its variance estimate is only b g JA MacLellan and
+   DJ Strom, BAER '99 p. 4 unbiased if the underlying net rate (due to
+   activity in the Currie, L.A. Limits for Qualitative Detection and
+   Quantitative sample), n = 0. Determination. Application to
+   Radiochemistry. Analytical Chemistry 40(3):586-593; 1968. Decision Rule
+   Comparisons Currie, L.A. Lower Limit Of Detection: Definition And Each
+   decision rule described above was evaluated with the Elaboration Of A
+   Proposed Position For Radiological Effluent Monte Carlo simulation
+   method described for the Currie And Environmental Measurements.
+   NUREG/CR-4007. decision rule. However, only six values of (0.05, 0.02,
+   0.01, Washington, DC: U.S. Nuclear Regulatory Commission; 1984. 0.005,
+   0.002, and 0.001) were used. The results are shown in Figures 2 through
+   7. Friedlander, G.; Kennedy, J.W. Nuclear and Radiochemistry. New York:
+   John Wiley & Sons, Inc.; 1955. For the ANSI N13.30 rule using N + 1 as
+   the estimator of the background mean and variance, the nominal alpha
+   values Friedlander, G.; Kennedy, J.W.; Miller, J.M. Nuclear and
+   consistently underestimate the observed false positive rates for
+   Radiochemistry. 2nd edition. New York: John Wiley & Sons, all µ Inc.;
+   1963. b > 2. At background means less than one, the rule overestimates
+   the false positives. This test is considered inadequate. Health Physics
+   Society (HPS). Performance Criteria for Radiobioassay. An American
+   National Standard. HPS N13.30- For the Nicholson/Sumerling and Darby
+   binomial decision rule, 1996. New York: American National Standards
+   Institute; the nominal alpha values overestimate the observed false
+   1996. positive rates for all background means, and grossly overestimate
+   the false positives for µ Hickey, E.E.; Stoetzel, G.A.; Strom, D.J.;
+   Cicotte, G.R.; Wiblin, b < 10. That is, using this decision rule
+   results in a far smaller proportion of false C.M.; McGuire, S.A. Air
+   Sampling in the Workplace. Final positives than . This test is
+   considered inadequate for low Report. NUREG-1400. Washington, DC: U.S.
+   Nuclear background counting. Regulatory Commission; 1993. The Turner
+   decision rule produces false positive rates that are Little, R.J.A. The
+   Statistical Analysis of Low-Level relatively unbiased estimates of down
+   to µ Radioactivity in the Presence of Background Counts. Health b = 4
+   for the lowest evaluated (0.001), and down to µ Phys. 43(5):693-703;
+   1982. b = 2 with = 0.05. For µb < 2 , using the Turner decision rule
+   results in a far smaller proportion of false positives than . For equal
+   count times, Lochamy, J.C. The Minimum-Detectable-Activity Concept.
+   Nicholson's D pp. 169-172 in: Fivozinsky, S.P., ed. Measurements for
+   Safe 3 rule produces identical results, but not for unequal count
+   times. Use of Radiation. NBS Special Publication 456; Washington,D.C.:
+   National Bureau of Standards; 1976. We have not completed our
+   evaluation of Nicholson's D1 rule, but it gives lower decision levels
+   than D Nicholson, W.L. Fixed Time Estimation of Counting Rates 3 or the
+   binomial rule although greater decision levels than Currie's rule. with
+   Background Corrections. AEC R and D Report HW- 76279; 1963. See also
+   Nicholson, W.L. Statistics of Net- Recommendations Counting-Rate
+   Estimation with Dominant Background Corrections. Nucleonics
+   24(8):118-121; 1966. None of the rules evaluated provides an unbiased
+   estimate of the false positive rate at all background means. Turner's
+   Rainwater, L.J.; Wu, C.S. Applications of Probability Theory to Nuclear
+   Particle Detection. Nucleonics 1(October):60-69; decision rule comes
+   the closest, but is much greater than the 1947. actual proportion of
+   false positives at the lowest background means. We are therefore
+   presented with the conundrum in that Stevenson, P.C. Processing of
+   Counting Data. NAS-NS-3109. our lowest background detectors may not be
+   the most sensitive. Livermore, California: National Academy of Sciences
+   -- Future work will investigate: National Research Council; 1966. *
+   Other existing decision rules Strom, D.J.; Stansbury, P.S. Minimum
+   Detectable Activity * The effect of varying the background and sample
+   count when Background Is Counted Longer than the Sample. Health time
+   ratios Phys. 63(3):360-361; 1992. * Bayesian applications * The effect
+   on minimum detectable activity Sumerling, T.J.; Darby, S.C. Statistical
+   Aspects of the Interpretation of Counting Experiments Designed to
+   Detect References Low Levels of Radioactivity. NRPB-R113. Chilton UK:
+   National Radiological Protection Board; 1981. Altshuler, B.;
+   Pasternack, B. Statistical Measures of the Lower Limit of Detection of
+   a Radioactivity Counter. Health Phys. Turner, J.E. Atoms, Radiation,
+   and Radiation Protection. 2nd 9:293-298; 1963. edition. New York: John
+   Wiley & Sons; 1995. Brodsky, A. Accuracy And Detection Limits For
+   Bioassay U.S. NRC; U.S. EPA; U.S. DOE; U.S. DoD. Multi-Agency
+   Measurements In Radiation Protection - Statistical Radiation Survey and
+   Site Investigation Manual (MARSSIM; Considerations. NUREG-1156.
+   Washington, DC: U.S. Nuclear http://www.epa.gov/radiation/marssim/).
+   Washington, DC: Regulatory Commission; 1986. U.S. Government Printing
+   Agency; 1997 JA MacLellan and DJ Strom , BAER '99 PNNL-SA-32146 Page 5
+   1 1 = 0.5 1 1 = 0.2 0 .1 0 .1 = 0.1 = 0.05 = 0.02 0.1 0.1 = 0.01 =
+   0.005 0 .0 1 0 .0 1 = 0.002 = 0.001 0.01 0.01 = 0.00 05 Sumerling &
+   Darby = 0.00 02 Turner = 0.0001 Currie, N13.30 0 .0 0 1 0 .0 0 1 N13.30
+   (N+1) = 0.0000 5 0.001 0.001 = 0.0000 2 "Observed" False Positive
+   Fraction = 0.0000 1 = 0.0000 05 "Observed" False Positive Rate = 0.0000
+   02 0 .0 0 01 0 .0 0 01 = 0.0000 01 0.0001 0.0001 y = x 0.00001 0.00001
+   0 .0 0 00 1 0 .0 0 00 1 0.01 0.1 1 10 100 0 .0 1 0 .1 1 1 0 1 00 Mean
+   of Background Poisson Distribution, µµµµ (counts) M e a n o f B ac k g
+   ro u n d P o is s o n D istrib u tio n , µ µ µ µ (co u n ts ) Figure 1
+   "Observed" False Positives with Given ANSI N13.30 Alpha Values Figure 2
+   "Observed" False Positives with Various Decisi on Rules ( = 0.05) 1 1 1
+   1 0.1 0.1 0.1 0.1 e 0.01 0.01 0.01 0.01 Sum erling & Darby Sum erling &
+   D arby Turner Turner Currie, N13.30 Currie, N13.30 N13.30 (N+1) N13.30
+   (N +1) 0.001 0.001 0.001 0.001 "Observed" False Positive Rate
+   "Observed" False Positive Rat 0.0001 0.0001 0.0001 0.0001 0.00001
+   0.00001 0.00001 0.00001 0.01 0.1 1 10 100 0.01 0.1 1 10 100 M ean of
+   Background Poisson Distribution, µµµµ (counts) Mean of Background
+   Poisson Distribution, µµµµ (counts) Figure 3 "Observed" False Positives
+   With Various Decision Rules ( = 0.02) Figure 4 "Observed" False
+   Positives With Various Decision Rules ( = 0.01) JA MacLellan and DJ
+   Strom, BAER '99 p. 6 1 1 1 1 0.1 0.1 0.1 0.1 0.01 0.01 0.01 0.01
+   Sumerling & Darby Sumerling & Darby Turner Turner Currie, N13.30
+   Currie, N13.30 N13.30 (N+1) N13.30 (N+1) 0.001 0.001 0.001 0.001
+   "Observed" False Positive Rate "Observed" False Positive Rate 0.0001
+   0.0001 0.0001 0.0001 0.00001 0.00001 0.00001 0.00001 0.01 0.1 1 10 100
+   0.01 0.1 1 10 100 Mean of Background Poisson Distribution, µµµµ
+   (counts) Mean of Background Poisson Distribution, µµµµ (counts) Figure
+   5 "Observed" False Positives With Various Decision Rules ( = 0.005)
+   Figure 6 "Observed" Fase Positives With Various Decision Rules ( =
+   0.002) 1 1 0.1 0.1 e 0.01 0.01 Sumerling & Darby Turner Currie, N13.30
+   N13.30 (N+1) 0.001 0.001 "Observed" False Positive Rat 0.0001 0.0001
+   0.00001 0.00001 0.01 0.1 1 10 100 Mean of Background Poisson
+   Distribution, µµµµ (counts) Figure 7 "Observed" False Positives With
+   Various Decision Rules ( = 0.001)

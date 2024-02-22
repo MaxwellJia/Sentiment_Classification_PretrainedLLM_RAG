@@ -1,0 +1,691 @@
+http://tccr.oar.noaa.gov/Meetings/10-23-95minutes.html
+
+                 Technical Committee on Computing Resources
+                             4th Annual Meeting
+                            Oct 23rd, 24th, 1995
+                            Princeton, New Jersey
+
+   Present:
+   Kevin Kelleher (NSSL),
+       John Parker(ERL/OD),
+       Rich Beeler (ETL),
+       Gary Spalding(GLERL),
+       Stan Wilkison(ARL),
+       Walt Harrop(AL),
+       Sandy Wine(NOAA/IRM),
+       Bob Kidwell(NOAA/IRM),
+       Don Mock(CDC),
+       Joan Brundage(FSL),
+       John Calder(ERL/OD),
+       Paul Lu(PMEL),
+       Chris Labbe(AOML),
+       Larry Lewis(GFDL),
+       Paul Quicker(PMEL/OAR),
+       Joyce Harris(CMDL),
+       Bruce Ross(GFDL),
+       Jerry Malman(GFDL),
+       Dave Lewis(SEC)
+
+   Host's Comments
+   Kevin greeted the group and Larry Lewis welcomed us to  GFDL.
+
+   Introduction of Visitors
+   Paul Quicker introduced himself. He is on loan from PMEL  to HQ and is
+       setting up the OAR WWW page.
+       Jerry Mahlman introduced himself and welcomed the group to  GFDL.
+       He expressed his lab's interested in the TCCR and ERL  computing.
+       Bruce Ross, the assistant director of GFDL was introduced.
+       Cliff Schoenberger will tele-conference with us tomorrow  to
+       discuss video conferencing.
+       John Calder was introduced as the assistant director of  ERL and
+       the interface to the CMAC.
+       Bob Kidwell and Sandy Wine from the NOAA IRM office were
+       introduced.
+
+   Approval of Agenda
+   Aspects of the agenda were discussed but no changes were  made.
+       Minutes of the previous meeting were approved.
+
+   Site Reports
+
+   AL (Walt Harrop)
+   Walt reviewed the AL's current computer systems. The  Aeronomy
+       Laboratory maintains a distributed network of  computing systems to
+       support its research programs. The  primary components are a
+       SPARCcenter 2000 with 8 CPUs, 15  desktop UNIX workstations, 25
+       PCS, 120 high-end Macintosh  systems, and the network components to
+       tie them together. The  backbone is thin-wire 10MHz Ethernet and
+       most segments off  this backbone are 10MHz 10BaseT on category 5
+       copper twisted  pair lines. Our traffic load still doesn't warrant
+       a move to  faster cabling yet. We still have a few segments that
+       run on  shielded twisted pair Apple Local Talk lines that support
+       only printers. We maintain a full-time leased 56K DDS line to  our
+       Fritz Peak Observatory west of Boulder in the mountains  near
+       Rollinsville and this is now all on underground fiber  except for
+       the last one mile of copper. Getting most of this  line underground
+       has drastically reduced down time and  maintenance costs due to
+       snow loading and lightning hits. We  still setup remote temporary
+       field measurement missions. This  allows our field researchers to
+       appear to be in the Boulder  Aeronomy Laboratory LAN. All of our
+       staff (100%) have e-mail  accounts with full SMTP/MIME Internet
+       access using QuickMail  on PCS and Macs and various Unix SMTP or
+       POP mail interfaces  on other machines. We maintain our own gateway
+       to SMTP/MIME  and X.400. We maintain eight 14.4 modem channels each
+       of  which offer both secure Telnet and Apple Remote Access (ARA)
+       services  to users connect via dial-up phone lines. The ARA
+       connections  include full TCP/IP Internet access for Macs. We have
+       determined that V.34 modems are essentially useless over U.S.  West
+       public telephone lines and do not intend to upgrade to  them. We
+       almost have one ISDN dial-in line working after more than  one year
+       of hassle with the telephone companies. We maintain  an anonymous
+       FTP server. We provide SMTP/MIME, POP3, DNS,  NIS, and NIS+
+       services. Our WWW server is not operational but  it will not be
+       available on the net until about mid November.  The move to the
+       al.noaa.gov domain is complete and the old  al.bldrdoc.gov domain
+       and all aliases to it no longer exist.  We have replaced our old
+       Cisco GIS routers with Cisco 4500s.  We have a full bastion
+       firewall in place but do not have all  of it turned on as there is
+       not current need for that level  of isolation. We do control where
+       SMTP, WWW, NFS, FTP and  telnet connections can come into the local
+       net. Because of  our geographical location we currently access the
+       Internet  via the Boulder NIST backbone. Since NIST security is in
+       the  process of implementing a very rigid full firewall for all of
+       their network, we will probably be forced to move off of the  NIST
+       backbone in the next year. Their firewall will not allow  our field
+       networks and Appletalk tunnels to operate without  serious
+       degradation and will make negotiation of the setup of  the field
+       networks nearly impossible. We have already begun  preparations to
+       move into 140.172.x.x and to bypass the NIST  backbone to join the
+       Internet at the point where the campus  connects to MCI and NSI.
+       The SPARCcenter 2000 has been very  cost effective at supporting
+       our particular brand of  modeling. It has also served well to
+       support our users who  have other near supercomputer problems on
+       this system that were  the result of a low bidder situation onto a
+       high-end Alpha  and that has also been very successful. Our most
+       difficult  problem remains that of maintaining a high degree of
+       cooperation, trust, and communications with our user  community.
+       Since we attempt to support all 117 of our users  with a staff of
+       two full time people and one half time  student, we absolutely must
+       have the help and trust of all of  our research staff and our
+       administrative staff in order to  be successful.
+
+   ARL (Stan Wilkison)
+   Stan described the structure of ARL, which is distributed  throughout
+       the U.S. Because of the distributed nature of the  lab they are not
+       using a standard naming convention. All  divisions are e-mail
+       capable. SRRB has procured a DEC Alpha  to provide Internet
+       services for this Boulder Division and  expects to link their http
+       server to the OAR home page.
+
+   AOML (Chris Labbe)
+   The transition away from VMS to Unix is continuing. AOML  currently
+       has:
+
+     * 10 Unix Servers
+     * 30 Unix Workstations
+     * 7 Next Workstations
+     * 28 X-terminals
+     * 40 Macs
+     * 68 PCs
+     * Several VAX/VMS
+
+   AOML is using Crays at the Air Force and Alaska  Facilities.
+
+   The Lab is moving away from older graphics systems to  off-the-shelf
+   software.
+
+   There are four divisions in AOML. Information is available  through
+   their home page (www.aoml.noaa.gov).
+
+   University of Florida is providing Internet access for  AOML and others
+   via 2 T1 lines. Remote sites are connected  via 56kps links.
+
+   HPCC funding is providing support for better connections,  firewall,
+   routing services and WWW server.
+
+   CDC (Don Mock)
+   Don described the CDC network topology. They have been  redistributing
+       functionality across the laboratory.  X-terminals have been
+       replacing Macs/PCS at user's desktops  to interface to larger
+       Servers in CDC. This freed up a number  of Sun Workstations which
+       were upgraded to Sparc 20s.
+
+       An optical jukebox was purchased to store data and this  has worked
+       out well. It was discovered that the cost of  magnetic disk was
+       actually lower than the optical jukebox, so  CDC purchased 450
+       Gbytes of magnetic disks. Backup of these  disks was a problem, but
+       was solved by purchasing Exebyte  210T tape libraries.
+       An IBM compatible 3490E was purchased for ingesting the  NMC
+       re-analysis data. The Internet connection through CU is  not
+       sufficient and a switch will be made to the NOAA network  soon.
+
+   CMDL (Joyce Harris)
+   Joyce gave an overview of the Lab. Their lab decreased in  size last
+       year. CMDL is tracing their computer spending by  using the 2816
+       object class and has noted a drop in spending  each year over the
+       last 4 years.
+       The computer distribution in CMDL is very diverse and  distributed.
+       FY 95 accomplishments include a new Workstation  dedicated to FTP
+       services and WWW, software has been upgraded  on two servers, web
+       development is being worked on to provide  quicker and friendlier
+       service, and more data acquisition is  being accomplished via the
+       Internet.
+       Plans are in place to install a new CMDL router and  upgrade
+       workstations.
+       Problems were encountered trying to obtain a version of  CA-DISSPLA
+       graphics software that is compatible with the new  Solaris Fortran.
+       Also a 5-gig disk under warranty from  Pacific Computer Expansions
+       has not been repaired.
+
+   ERL Headquarters (John Parker)
+   John Parker gave an overview of the ERL headquarters  network. OAR/ERL
+       headquarters have connected all their  workstations to the Internet
+       via TCP/IP. They have also  installed a Sun Workstation for
+       providing Internet services.  Modifications have been made to the
+       ERL CISCO router to  connect to the Silver Springs FDDI backbone
+       network. A  PowerMac has been procured for use of visitors who come
+       to  Silver Spring.
+       Headquarters continues to be primarily a Banyan network.  There are
+       currently 8 Banyan servers. These have been  upgraded this year
+       (Ethernet and memory) to provide better  service. Cubix hardware
+       was purchased to provide remote  communications to the network.
+       Netscape browser software was purchased  for Headquarters.
+       Plans for FY 96 include the upgrade of 1/3 of the 486 PC  computers
+       to 90 MHZ pentiums with larger monitors, disk and  tape upgrades to
+       several of the Banyan servers, replacement  of Network Interface
+       Cards (NIC) and upgrades to the current  Sun server system.
+       Other projects planned for FY 96 include providing a  windows-based
+       e-mail system, connecting ARL to the Internet,  migration from
+       DRDOS to MSDOS, complete testing and user  access to the Cubix
+       hardware, consideration of moving to  Windows NT, and
+       implementation of switching hubs and fax  server.
+
+   ETL (Rich Beeler)
+   During FY 95 ETL purchased several new high-performance  workstations
+       including a SGI PowerChallange and an IBM 39H.  These new systems
+       will be added to the current arsenal to  improve modeling efforts
+       in ETL. In addition, disk and memory  upgrades to a current DEC
+       3000/500S and SGI Challenge L were  performed.
+       The System Demonstration and Integration Division has  purchased a
+       data management system including a Sun Sparc  1000, HP Optical
+       Jukebox, high-speed RAID 5 caching disk  system, and Objectstore
+       object oriented database. This system  will serve as the data
+       management system for ETL and is being  tested with the current
+       COPE experimental data.
+       ETL is also implementing a 2 stage WWW server with the  information
+       and administrative home pages located on a  high-performance
+       Windows NT server that will interface with a  Microsoft SQL server
+       to initially provide laboratory  information on personnel and
+       publications. The second stage  is providing scientific data
+       services via the data management  system described above.
+       ETL is in the process of upgrading its Cisco AGS+ router  to a
+       Cisco 7010 router. We have installed an eight-port  dial-up router
+       to provide remote access to Internet users. In  addition, several
+       ETL has expanded our network to include the  Boulder Atmospheric
+       Observatory (BAO) field site (at 56kps)  and the ETL Erie Radar
+       Site (at T1 speeds).
+       ETL has completed the conversion to a Windows NT server,  Windows
+       for Workgroups and Windows 95 PC-based network. The  conversion has
+       gone smoothly and has greatly reduced PC  system problems.
+
+   FSL (Joan Brundage)
+   FSL acquisitions in FY95 included 58 HP workstations, 1  SGI
+       workstations, 1 SGI server, 5 Sun workstations, 7  x-terminals, and
+       6 PCS. Approximately $300K was spent on  networking equipment
+       during the year.
+       FSL has implemented a structured wiring system (FY 94),  routing
+       equipment (FY 95), and planning for network software  maintenance
+       (FY 96). Significant upgrades and milestones are  planned for FY 96
+       including a data storage and retrieval  system, WFO advanced
+       workstation, facility information and  control system and
+       implementation of Solaris 2.3.
+
+   GFDL (Larry Lewis)
+   Larry gave an overview of the systems installed at GFDL  and their use.
+       GFDL is heavily committed to the use of SGI  equipment and
+       purchased 17 SGI Indigo2 workstations in FY 95.  During the year
+       GFDL achieved a record number of user CPU  hours on their Cray
+       Y-MP. A new 63-month contract was awarded  to Cray Research and a
+       Cray C90 was delivered in August  delivering 6 times of performance
+       of the Y-MP8. The  transition to the new Cray had only minor
+       problems due to a  change in operating system.
+       All SGI workstations were upgraded to IRIX 5.3, with one  of the
+       new SGI workstations set up to be a compute server.
+       An Ethernet-FDDI switching hub was purchased to support 3  older
+       servers. Two color and 4 black/white laser printers were  purchased
+       for network printers.
+       FY 96 plans include dropping the Y-MP from maintenance and  using a
+       time and materials maintenance approach, the delivery  of a Cray
+       T90 system in April 1996, delivery of a Cray T3E  MPP system in
+       August, purchase of additional SGI  workstations, and multiple
+       network upgrades.
+
+   GLERL (Gary Spalding)
+   There continues to be controlled growth in GLERL. The 8  MicroVaxes are
+       still being used, but are being ramped down.  Several Unix systems
+       are on order including SGI and HP  workstations. Overall there is
+       100 Gbytes of disks on all  systems and a 4mm DAT/DDS tape
+       autochanger is used for  backups.
+       GLERL provides backup DNS service for the Eastern Region.  The
+       private disk packs have been converted to optical and  these have
+       been placed online. T1 is being installed for  Internet service
+       from Merit Network.
+
+   NSSL (Kevin Kelleher)
+   CSS made significant progress in networking, data  management, library
+       automation, and migrating to open systems  architecture from the
+       legacy VAX systems during FY 95.
+       A Sun workstation was purchased to provide WWW HomePage  and DNS
+       services. The NSSL WWW services currently run on the  lab's IBM
+       data server and the University of Oklahoma provides  the host
+       table. CSS will migrate both services to the new Sun  during the
+       1st quarter FY 96.
+       The incredible popularity of WWW browsers such as NetScape  and
+       Mosaic resulted in a sharp increase in LAN traffic during  the past
+       summer. Consequently, CSS installed a 10baseT,  switched Ethernet
+       LAN to replace the existing coax Ethernet  facilities. As part of
+       the migration from the legacy VAX  system, CSS installed the
+       Windows-NT server to replace the  existing DEC VAX Pathworks
+       system. The NOS integrates PC, Macintosh  and Unix platforms and
+       provides additional remote access  capability to mobile users on
+       travel and users accessing the  LAN from home.
+       For the second year in a row, CSS personnel participated  in the
+       data collection and data processing for the VORTEX-95.  CSS
+       personnel played a critical role in the development of a
+       computerized data collection system that was installed in  each
+       field vehicle. Several CSS personnel also participated  directly in
+       the data collection. The third and final year of  ESDIM funds
+       allowed CSS to rescue the remaining "at risk"  NSSL Doppler Radar
+       data. The CODIAC software package, which  provides a catalog for
+       NSSL's data holdings, was populated  with VORTEX data. The NSSL
+       data management strategy was integrated  with the SPC and data was
+       shared between organizations.
+       Automation of the NSSL library was enhanced with the  addition of
+       the AMS conference proceedings on CD-ROM. The  associated software
+       allows searches by author, title, date,  etc., from a PC in the
+       library. At present, a catalog of all  NSSL holdings are online and
+       available through the MOLLI software  systems. A catalog of all
+       NOAA holdings are available via a  CD-ROM subscription service and
+       associated software package  that resides on a library computer.
+       The final phase of a multi-year plan to migrate from  legacy
+       VAX/VMS systems to Unix-based, open systems  architecture was
+       completed with the purchase of a high-end  CPU server. The
+       state-of-the-art SGI PowerChallange  workstation will host large
+       numerical models. Visualization of  3D model output was also
+       improved with the purchase of AVS  software for the lab's
+       general-use Indigo workstation.
+
+   PMEL (Paul Lu)
+   Paul gave an overview of the PMEL Computer and Network  System, which
+       uses a FDDI backbone and a Ethernet Switch  providing 16 segments.
+       Enhancements will be made to the  current LAN by adding another
+       switch (LanPlex 2500). The new  switch has the capability of
+       switching both Ethernet and FDDI,  and with IP routing. This will
+       permit the creation of a 2nd  FDDI ring using one of the subnets in
+       the 161.55 (NOAA West  Regional Network). (One of the problems that
+       PMEL is facing  is the exhaustion of its 192.68.161. address
+       space.) The  addition of another switch also provides an additional
+       16 Ethernet  segments to help reduce the number of hosts per
+       segment. The  new switch will also provide some level of failover
+       capability should either of the switches fail. PMEL's  firewall
+       router will also be upgraded from an old Cisco CGS/3  to a Cisco
+       4500.
+       Remote Access Servers were installed to allow dial-in  access to
+       PMEL's LAN for Mac, PC, and workstation users at  remote sites.
+       There are now four dial-in/out phone lines for  accessing the ARA
+       server and six dial-in phone lines for the  SLIP remote access
+       server at PMEL. Over 50 IP addresses with designated  usernames and
+       passwords have been issued to enforce dial-in  security. Last month
+       NOAA's CoastWatch program staff gave  demonstrations during a
+       Remote Sensing Conference held in a  downtown hotel in Seattle, and
+       used the local dialup phone  line to access the Internet through
+       PMEL's remote access  server. The demonstrations thru the dial-up
+       link to the  Internet were very successful. They also helped check
+       out our  newly acquired V.34 modem which provides dialup access
+       speed  of 28.8 Kb/s. The ISDN link implemented between a
+       scientist's  workstation at home and the PMEL's LAN works out quite
+       well.  In June, U.S.West announced a new charging structure for
+       ISDN link,  which includes an option of a monthly flat rate of $63.
+       (In  California, the Pacific Bell charges a monthly flat fee of
+       $23 at the Bay area.)
+       As for the central servers, a DEC Alpha workstation  running
+       Digital Unix was installed to replace the WAN gateway  server, a
+       MicroVAX. This system supports the following  services: Domain Name
+       Server for pmel.noaa.gov domain, NTP  server for PMEL machines,
+       HTTP server for PMEL Home Page, WAIS  server, Anonymous FTP, and
+       remote access telnet gateway. A  Sun SPARCstation 20 Model 61 was
+       installed with 224 MB of  memory for booting and serving about 30
+       X-terminals. The  central Unix application server (SPARCserver
+       1000) has also  been configured as a backup server for X-terminals
+       to be  available during down-time of the SPARCstation 20/61. The
+       $62K allocation from the ERL's Computer Initiative (NIST/ERL)
+       funds was used to help with the purchase of PMEL modelers'  new
+       compute server, an Alpha AXP Model 2100-4/275 with 2  processors
+       (each processor is capable of 275 MHZ), 128 MB  memory and 9 Gbytes
+       of disk storage. Because of the modeling  codes' large memory
+       requirements, additional 512 MB memory  has been purchased using
+       funds from the lab. PMEL modelers  still need about 1000 SU ($200K
+       to be requested from the ERL  Computing Initiative (NIST/ERL)
+       funds) of the Cray Y-MP at  the ARSC (Arctic Regional
+       Supercomputing Center, the  University of Alaska at Fairbank,AK)
+       for their modeling  computing requirements in FY96.
+       One of the major activities during FY95 is to support the  rapid
+       deployment of the World Wide Web (WWW) browsers  software at PMEL
+       and the development, implementation, and  operation of the PMEL
+       Home page. Consulting and training have  been provided to PMEL
+       staff and scientists regarding the use  of web technology for
+       project and individual scientific  purposes. Some of you are
+       familiar with the development of the  TOGA-TAO, EPIC, Ferrat Web
+       Pages at PMEL. A new EPIC Web Page  was developed for the CO2
+       project. It is available for  researchers to access 'Bottle Data'
+       with on-the-fly graphics  and data download
+       (http://www.pmel.noaa.gov/epic/co2/select_cruise.html).  Besides
+       helping with the Web Page development for the  scientific projects,
+       the Computing and Network Services  Division (CNSD) has developed a
+       prototype CNSD Home Page to  provide PMEL users on-line access to
+       the computing and  network systems information and resources. A
+       user request  form has also been provided on the Home Page for PMEL
+       users  to easily submit their work order requests. In the past few
+       years, CNSD staff was looking into tools like Lotus Notes for
+       administrative functions such as internal information  exchange.
+       Because of the cost and other issues, Paul and his  staff turned to
+       Web Page instead. So CNSD staff has begun the  development and
+       implementation of an internal CNSD Home Page  for improving data
+       sharing and information flow in the  division. For instance, staff
+       can fill out the on-line expense  form provided via the internal
+       Home Page. (Paul called the  use of the Web Page for this purpose
+       "the poor man's  Lotus Notes").
+       PMEL continued to provide support for the ESDIM Concept
+       Demonstration and the HPCC's NOAA West Regional Network  Projects,
+       which include: I) adding organizations to the  campus network: NOAA
+       Library LAN, Pacific Tide Group  (pactide.noaa.gov), Education
+       Office, Pacific Hydrographic  Section (pachydro.noaa.gov), and PMC
+       (pmc.noaa.gov), ii)  setting up a Network Operation Center, iii)
+       beginning the implementation  of the campus network's migration to
+       FDDI backbone, and iv)  developing and presenting a series of eight
+       informal training sessions  at the NOAA WRC for NOAA West Network
+       member technical staff.
+
+   SEC (Dave Lewis)
+   SEC continues to use the several computers purchased with  "Off the
+       Cray and Cyber" funds. The HP 755  workstations are used
+       extensively for execution of both the  Coupled Thermosphere
+       Ionosphere Model (CTIM) and the new  extended version including a
+       self-consistent plasmasphere (CTIP).  CTIM has been used to
+       understand the seasonal response of the  mid-latitude upper
+       atmosphere to geomagnetic storms. The  emphasis for CTIP is to
+       address the coupling of dynamics,  plasma density, energetics, and
+       electrodynamics at low and  equatorial latitudes. Much of this work
+       has been published or  presented at international conferences, and
+       will lead to  operationally useful products.
+       The LAN upgrade addressed with the FY95 infrastructure  money is
+       progressing. The hardware (Hubs, Connectors, Cable,  ...) has been
+       purchased. Carpentry and cable-pulling is  imminent. The result
+       will be a UTP-based switched Ethernet  replacing thin coax. The LAN
+       supports all of our 146 heterogeneous  platforms - PC, Mac, HP,
+       DEC, UNIX, QNX 4, NT, printers, etc.
+       We are installing a "Networker" file backup  system comprising a
+       100GB DAT "jukebox" and  software. This will provide automatic (but
+       configurably selective)  file backup and user-initiated recovery
+       for (potentially) all  computers on the LAN.
+       We are extending our LAN to our field site (10 miles away)  using a
+       pair of "Netblazer PN4" dial-in routers and  a dedicated phone
+       line.
+       Work continues in moving the operational Space Environment
+       Services Systems from the old Data General MV10000 mainframe
+       system to POSIX workstation platforms. Management has set
+       September 30, 1996 as the "Drop Dead Date" for the  MV10000. The
+       real time data management system (DMS) originally  on the MV10000
+       is fully operational on two DEC5000 platforms.  The migration of
+       data ingest and distribution applications  from QNX 2 to
+       POSIX-compliant QNX 4 on networked PC's is  nearly complete.
+       Two new HP workstations have been acquired. One  (HP-9000/K100,
+       160MB Ram, 16GB Raid Tower) is the Research  Division's Data
+       Analysis platform (SELRAS). The other  (HP-9000/J200, 64 MB Ram,
+       16GB disk, ATM Internet connection)  is our "Outside User System".
+       Although not a true  "firewall", it is on its own LAN segment and
+       provides some separation between the Internet and the  operational
+       database platforms.
+       Our Web site now offers updating documents providing real  time
+       Solar x-ray, Satellite Environment, and Wind/Swim data  plots.
+
+       We are exploring the use of Web technology for  distributing
+       internal documentation, using Interleaf's  Cyberleaf tools to
+       convert documents and images (Interleaf,  WinWord, WP, ASCII, GIF,
+       TIF, ...) to HTML format.
+       Most of the Center's PCS are now networked, using  MicroSoft's
+       Windows for Workgroups. Three Windows NT server  platforms support
+       this network, providing e-Mail, SQL  database services, LASS
+       access, and User Authentication. One  new server (dual Pentium) was
+       acquired to replace the oldest  of the existing three. Another is
+       contemplated (item 2c in  our FY96 proposal) to provide some of the
+       "product  generation" functions being moved from the old MV10000.
+
+   IRM Update (Bob Kidwell)
+
+   Procurement Issues
+   The current SCIWOC contract is nearing its end and $19.2M  has been
+       spent to this point. The IRM office has been working  on SCIWOC II
+       and proposals will be opened next week. SCIWOC  II will be supplied
+       by 4 different 8A contractors. These four  were selected from a
+       field of 10 vendors that made presentations  to a NOAA committee.
+       The companies are Pulsar, McBride,  Sylvest and Data Procurement
+       Corporation. The minimum  guaranteed to each vendor is $100K, with
+       the maximum on the  contract of 20 million dollars. Orders will
+       probably be  accepted in December.
+       SEWP II is under way and will be a $2 Billion contract  with NOAA's
+       portion being $75 million over three years. The  contract is
+       expected to be signed in August 1996.
+       Bob discussed a concept called "Virtual Computer  Store" that will
+       provide computer equipment, with vendor  offerings being provided
+       on-line. On-line orders would be  accepted. The IRM staff is
+       proceeding to set up a store of  this type for NOAA.
+       Orders can be placed on GSA contracts up to the maximum  limit for
+       each individual contract. Individual contracts  should be checked
+       to determine the maximum amount allowed for  each line item and
+       order limit.
+
+   Government Issues
+   The Data Center Consolidation idea from GSA is dead.  Arguments were
+       made by members of DOC to exclude scientific  research
+       organizations from consolidation.
+       A proposed change to the FIRMR has been made to exclude  purchases
+       under $100K.
+       The Cohen bill is being considered in congress.
+
+   NOAA Issues
+   Budget cuts are being considered for administrative  functions
+       including the IRM staff and ASC functions. There  was considerable
+       discussion of the possible cuts to the IRM  staff. The TCCR agreed
+       that the function of the IRM staff was  critical to each lab's
+       computer needs. The TCCR will issue a  memo to John Calder
+       immediately to stress the need to not cut  the IRM staff.
+
+   NIST/ERL Funding Proposals
+   The proposals for NIST/ERL funding need to be submitted;  approximately
+       $100K for this year. A one paragraph proposal  needs to be prepared
+       by each lab for this years funding.
+       A summary for last year's spending of $62K/lab and  proposals for
+       next year's funding was discussed.
+
+   Massively Parallel Processing (Joan Brundage)
+   FSL is using MPP for high resolution modeling. In the next  decade
+       requirements will increase to 150 Gflops sustained  performance and
+       50 Gbytes of memory. MPP offers the best  price/performance, but
+       are harder to program. The FSL  development of the Scalable
+       Modeling System (SMS) is aiding computer  scientists in developing
+       models on MPP systems. Its purpose  is to provide a high level
+       message passing library for scalable  geophysical modeling.
+       Several popular models have or are being ported to the FSL  Intel
+       Paragon system including the CSU RAMS and MM5 models.
+
+   NARB Networking Issues
+   There was a discussion of the idea of a national IP  management
+       structure. The Washington Region is looking for an  additional
+       class B address for their region. They have  approached GFDL and
+       FSL and asked for there class B  addresses. Both labs have
+       initially refused.
+       It was agreed that the impact of changing IP addresses  would be
+       very great. Areas that would be affected are DNS,  NIS, IP-address
+       specific reference, router changes, etc. FSL  estimates that if
+       changes to their address space occurred it  would take 8 or more
+       months to recover.
+       The TCCR should follow up with Eric Davis (the ERL  representative
+       to NARB) to keep us informed of the activities  of the NARB.
+       Any proposal to reconfigure NOAA IP space should delineate  likely
+       impacts and the estimated costs of these impacts. Such  a proposal
+       should include sufficient resources to fully  implement these
+       changes.
+
+   ERL Internetworking Plan (Paul Lu)
+   Paul reviewed the Plan with the TCCR. Corrections were  made to the
+       Appendix A tables by several labs. Paul reported  that the major
+       goal of revising the plan was to eliminate  redundancy. Kevin
+       rewrote the executive summary to provide  clarity and specific
+       recommendations. The Labs were  encouraged to submit any
+       corrections to Paul and/or Kevin.
+
+   HPCC Networking Issues
+   The funding process for HPCC in FY 96 was discussed. The  HPCC network
+       group is attempting to freeze regional funding  levels at the
+       initial years distribution levels. This would  be contrary to the
+       plan presented last year that outlying  regional site's needs would
+       be addressed. There was a great  deal of discussion about this
+       issue and the TCCR would like  to see a better rational for
+       distribution of funding.
+       Joan Brundage agreed to draft a TCCR position statement on  the
+       HPCC funding distribution and NOAA NIC performance during  the past
+       year. Walt Harrop will assist Joan.
+
+   NWS Video Conferencing Session (Cliff Schoenberger)
+   Cliff Schoenberger from the National Weather Service  joined our
+       meeting via tele-conference to discuss NWS's  implementation of a
+       National Weather Service Video  conferencing system. NWS currently
+       has 17 systems installed  at 15 sites nationwide, including their
+       regional centers. The  communications circuits are dial-up ISDN
+       through the FTS 2000  system. They are currently using PictureTel
+       systems and have standardized  on this system. It is possible to
+       interface with non-standard  systems via bridges, but some
+       functionality is lost. Cliff is  encouraging any new installations
+       within NOAA to continue to  use the PictureTel system.
+       The basic costs of installation for each site is $37K for
+       equipment, $5K for installation and first year maintenance,  $1.7K
+       per month connection costs in the continental U.S.
+       The TCCR is going to test a two or three way link via this  system
+       before the CMAC meeting and encourage CMAC members to  attend. It
+       was determined that Boulder, Silver Spring and  Norman have systems
+       installed at there sites. John Parker  will lead this effort and
+       coordinate it from Silver Springs.
+       The TCCR is considering the formulation of a video  conference
+       proposal (which would be forwarded to the CMAC) to  use a portion
+       of the $500K that has been set aside for  cross-ERL improvements
+       for video conference equipment. The  essence of the proposal is for
+       ERL to fund the installation  of video conference nodes in ERL
+       locations that do not  currently have access to a NWS video
+       conference hub, ie.,  PMEL, GFDL, and GLERL. All other labs have
+       access to a NWS  video conference site. Cliff Schoenberger from NWS
+       indicated  he does not anticipate a negative impact on the existing
+       NWS  system (e.g., bandwidth limitations, etc.) by adding the
+       additional nodes and encouraged ERL to proceed with the plan.
+
+   ERL World Wide Web Issues
+   Don Mock described current Web activities within NOAA and  discussed
+       some of the oversight plans being developed. The  major question to
+       be answered is "Who should be  responsible to verify the content of
+       information that is  conceived in joint ventures of NOAA, ERL and
+       other Government  offices, universities and other research groups?
+       We reviewed  the summary of recommendations of the NOAA Internet
+       Information Policy.
+       The TCCR formed a four member Web Advisory Subcommittee  (WAS)
+       whose purpose is to give feedback on the draft NOAA  Internet
+       Information Policy and to make further  recommendations to ERL
+       management. The initial members of the  Web working group are Don
+       Mock (chair), Rich Beeler, Walt  Harrop and Stan Wilkison. Paul
+       Quicker from ERL also  volunteered as an ex-efficio member. It was
+       agreed that this working  group should hold "open" meetings to
+       address ERL  Web issues.
+       The WAS was directed (1) to review the draft NOAA Internet
+       Information Policy and (2) make recommendations of possible  ERL
+       wide policy before the lab directors meeting in January  1996.
+
+   ERL Headquarters Issues
+    1. John Calder addressed the TCCR on ERL headquarter's  computing and
+       communication issues. The following issues  were discussed:
+    2. ERL headquarters would like to be compatible with  functionality
+       described in the ERL Internetworking Plan.  Discussion covered
+       e-mail server hubs being installed at  Silver Spring and Seattle
+       and telecommuting issues.
+    3. ERL requires high performance access to the Internet,  both
+       incoming and outgoing (routine performance tests and  comparison
+       with other ERL sites).
+    4. ERL desktop systems need to allow full access to network
+       capabilities.
+    5. Capable and reliable support is needed for installed  systems and
+       software.
+    6. Headquarters needs to be a full participant in ERL-wide  planning
+       process.
+    7. Headquarters recognizes their need to have an information
+       coordinator and webmaster.
+    8. Headquarters desires to move to new ERL and community  standards in
+       a timely manner (e-mail via Internet, high  level languages (JAVA),
+       searching services, etc). John  expressed a desire to rely on the
+       TCCR members for  advice, services, etc.
+       OAR Silver Springs has formed a committee (Computer  Systems
+       Management Advisory Group (COMSYSMAG)) to address  local
+       headquarters computer issues.
+       Conclusion
+        Kevin closed the meeting by thanking Larry Lewis for his
+            hospitality. The next meeting will be held in Boulder in
+            Nov/Dec 1996 and hosted by Joan Brundage of FSL.
+       Suggestions for Next TCCR Meeting
+        It was decided provide to provide written site reports  prior to
+            the meeting and to limit the site reports at the  next meeting
+            to 5 minutes with 5 minutes for questions. TCCR  members would
+            be encouraged to send site reports in WP format  to the
+            Vice-Chair to minimize retyping.
+            Security seminar or talk from an expert.
+            A one hour block of time will be set aside at the next
+            meeting to discuss "hot" topics.
+       ACTION ITEMS
+        Members of the TCCR should submit comments or changes to  the ERL
+            Internetworking Plan to Paul Lu or Kevin Kelleher by  November
+            1, 1995.
+            Members of the TCCR should submit a summary how they spent
+            the $62K from last years computer funds and a proposal of how
+            to spend the $62K-$100K for FY 96.
+            Kevin will draft a memo in support of Bob Kidwell and his
+            importance to ERL in the NOAA IRM function. This memo will be
+            forwarded to John Calder.
+            Paul Lu will contact Eric Davis (the ERL representative to
+            the NARB) and request that he keep the TCCR members informed
+            of NARB activities. We will also inform the NARB that any
+            proposal to reconfigure NOAA IP space should delineate likely
+            impacts and the estimated costs of these impacts. Such a
+            proposal  should include sufficient resources to fully
+            implement these  changes.
+            Joan Brundage and Walt Harrop will draft a TCCR position
+            statement on the HPCC funding distribution and NOAA NIC
+            performance during the past year. This position statement
+            will be forwarded through the chain-of-command by Kevin
+            Kelleher (Chair of TCCR).
+            Don Mock will convene the newly formed Web Advisory
+            Subcommittee to review the NOAA "Internet Information  Policy"
+            statement and return comments to the Policy Task  Group and
+            make recommendations of possible ERL-wide policy  before the
+            Lab Directors meeting in January 1996.
+            The TCCR, through John Parker, will suggest to the ERL
+            Director that a video conference demonstration/meeting
+            between Maddox (NSSL), Rasmussen (HQ), and MacDonald (FSL) be
+            arranged to test capabilities for ERL use.
+            Kevin Kelleher will formulate a proposal for CMAC
+            consideration to install three additional nodes to the NWS
+            video conferencing network.
+            Walt Harrop and Rich Beeler will relinquish their
+            responsibilities on the TCCR Networking Subcommittee
+            immediately following  the completion of the ERL
+            Internetworking Plan (second draft)  to serve on the TCCR WWW
+            Subcommittee for recommending policy  within ERL. The TCCR
+            Chair will appoint replacements to serve  on the Networking
+            Subcommittee. Don Mock will serve as chair  of the WWW
+            Subcommittee. The committee will also include Stan Wilkison,
+            Rich Beeler, Walt Harrop, and Paul Quicker (ex-efficio).

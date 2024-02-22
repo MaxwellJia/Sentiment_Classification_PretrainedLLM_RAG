@@ -1,0 +1,196 @@
+http://image.llnl.gov/image/html/image_faq.shtml
+
+                    [logo_sml.gif] The I.M.A.G.E. Consortium
+
+    "Sharing resources to achieve a common goal - the discovery of all genes "
+
+   [blue_green_line.gif]
+
+The I.M.A.G.E. Frequently Asked Questions Page
+
+   [blue_green_line.gif]
+
+    1. Does I.M.A.G.E. have an FTP site?
+    2. How can I get a I.M.A.G.E. Consortium clone sent to me?
+    3. Which number in a database entry is the I.M.A.G.E. CloneID?
+    4. Why are there so many accession numbers and IDs associated with
+       each clone? What do they all mean?
+    5. Now that I have a clone, where can I find information about the
+       vector, cDNA library, antibiotics, etc.?
+    6. Am I restricted in what I can do with an I.M.A.G.E. clone?
+    7. Are there restrictions on inventions (ie patents) using these
+       clones?
+    8. How can I get aliquots of the library from which a given I.M.A.G.E.
+       clone is derived?
+    9. Is there a bibliographic reference for the I.M.A.G.E. effort?
+   10. How can I check for reported problems on a clone?
+   11. What if I have further questions?
+
+   [blue_green_line.gif]
+
+  Does I.M.A.G.E. have an FTP site?
+
+   Yes. Just ftp to image.llnl.gov and change to the image directory to
+   get to the I.M.A.G.E. ftp site. Or, if your browser supports it, just
+   click on the following link: ftp://image.llnl.gov/image
+
+   This is an anonymous ftp server so use "anonymous" to login and your
+   email address as password.
+
+   Some files of interest include:
+   "Master" files -- listed by IMAGEne build, these give the "best"
+   representative clone for each IMAGEne cluster. A new file is generated
+   with each new IMAGEne build.
+   "Candidate_gold" files -- also listed by IMAGEne build, these give only
+   the full-coding "best" representative clones. A new file is generated
+   with each new IMAGEne build.
+   "Cumulative_plates" files -- in the outgoing directory and listed by
+   date, these files contain the following information for every
+   I.M.A.G.E. clone in the collection: cloneID, clone collection, plate,
+   row, column, I.M.A.G.E. library ID, species, and any Genbank accession
+   numbers for sequences generated from that clone. A new file is
+   generated monthly.
+   "libr_desc" files -- in the outgoing directory and listed by date,
+   these files contain general information about each library, including
+   I.M.A.G.E. library ID (note this is NOT the same as the Genbank library
+   ID), library name, species, I.M.A.G.E. vector ID, and host strain.
+   "vector_id_to_name" files -- in the outgoing directory and listed by
+   date, these files contain general vector information, including
+   I.M.A.G.E. vector ID, vector name, and antibiotic-resistance.
+
+   If you have additional data requests, please send an email to
+   help@image.llnl.gov.
+     __________________________________________________________________
+
+  How can I get an I.M.A.G.E. Consortium clone sent to me?
+
+   Simply contact one of our authorized distributors and order the
+   clone(s) from them, using the I.M.A.G.E. CloneID to specify which
+   clone(s) you are interested in. Note that distributors are also
+   offering clone-associated products (for example, high-density colony
+   filters for hybridization screening and rearrayed clone sets) in
+   addition to other services.
+     __________________________________________________________________
+
+  Which number in a database entry is the I.M.A.G.E. CloneID?
+
+   This depends a bit on which database you are retrieving sequence data
+   from...
+
+   In dbEST entries, the I.M.A.G.E. CloneID is the number given in the
+   "CloneID" field.
+
+   In GenBank entries, the I.M.A.G.E. CloneID is the number on the
+   "/clone=" field found in the Features listing. The same number appears
+   in the Source field, following "human clone=", and on the Definition
+   line following the word "clone".
+     __________________________________________________________________
+
+  Why are there so many accession numbers and IDs associated with each clone?
+  What do they all mean?
+
+   The I.M.A.G.E. cloneID is a unique identifier assigned by I.M.A.G.E. to
+   each clone. All sequences derived from a given clone will reference the
+   same I.M.A.G.E. cloneID, and there may be more than one Genbank entry
+   for a given I.M.A.G.E. cloneID (ie one for the 5' EST, one for the 3'
+   EST, one for the full-insert sequence, etc). Each sequence entry gets a
+   unique Genbank accession number and a unique GI number (both assigned
+   by the NCBI). All full-length MGC sequence entries are also assigned a
+   unique MGC ID by the Mammalian Gene Collection project. All mouse
+   clones are assigned an MGI ID from the Jackson Laboratory. The
+   I.M.A.G.E. distributors may also assign internal tracking IDs to the
+   clones. When in doubt, you can ALWAYS use the I.M.A.G.E. cloneID to
+   order the clone you want and as this is the simplest and most
+   straightforward option, this is what we encourage everyone to do.
+     __________________________________________________________________
+
+  Now that I have a clone, where can I find information about the vector, cDNA
+  library, antibiotics, etc.?
+
+   The I.M.A.G.E. homepage, under the "resources" link, contains a vector
+   webpage which includes - to the extent we know them - vector sequences,
+   polylinker sites, appropriate sequencing primers, and the like. There
+   are also links to library pages, which are organized by species, or you
+   can use the Library Navigator to select libraries by tissue or library
+   name. Your clone distributor may also be contacted.
+     __________________________________________________________________
+
+  Am I restricted in what I can do with an I.M.A.G.E. clone?
+
+   Only by your imagination - almost ... the key is that we are providing
+   clones to advance the public interest. A Good Faith Agreement governs
+   the usage of I.M.A.G.E. clones. Basically you may use an I.M.A.G.E.
+   clone for any purpose so long as you submit sequence, map, and
+   expression data derived from the use of this clone to an appropriate
+   public database, and you associate this information with the
+   pre-existing unique identifier (I.M.A.G.E. CloneID). To prevent the
+   selling of data, you may not disclose or transfer sequence or map data
+   to any external commercial enterprise before depositing it into the
+   public database. You may not sell the clone either, but you may pass it
+   on for free on to anyone else as long as the person receiving it agrees
+   with these same stipulations. In general, we discourage secondhand
+   distribution since clone quality suffers (deleted clones, contaminated
+   stocks, etc.) unless quite a bit of care is taken. We also encourage
+   you to sequence (at least the ends of) any clone you receive, and to
+   immediately inform the distributor of any discrepancies.
+     __________________________________________________________________
+
+  Are there restrictions on inventions (ie patents) using these clones?
+
+   No. Any invention based on the use of these clones belongs solely to
+   the inventing party. You may take any reasonable steps necessary to
+   protect your proprietary interests before submitting information to
+   public databases.
+     __________________________________________________________________
+
+  How can I get aliquots of the library from which a given I.M.A.G.E. clone is
+  derived?
+
+   This depends on the source of the original (unarrayed) library. Send an
+   e-mail to help@image.llnl.gov indicating which library you are
+   interested in. We will forward the name of the appropriate contact
+   person. Please be aware that some libraries are not available.
+     __________________________________________________________________
+
+  Is there a bibliographic reference for the I.M.A.G.E. effort?
+
+   Yes: Lennon, G.G., Auffray, C., Polymeropoulos, M., Soares, M.B. The
+   I.M.A.G.E. Consortium: An Integrated Molecular Analysis of Genomes and
+   their Expression. Genomics 33:151-152 [1996].
+     __________________________________________________________________
+
+  How can I check for reported problems on a clone?
+
+   A problem database is queriable from an interface off the main
+   I.M.A.G.E. web page. Up to 500 clone ids can be entered at a time as
+   criteria of the search. This database integrates all problems reported
+   to or by the I.M.A.G.E. Consortium. As always, any problems you
+   encounter with a clone should be reported to the distributor from which
+   it was obtained. You may also enter the problem yourself although we
+   encourage you to report it to the distributor first.
+     __________________________________________________________________
+
+  What if I have further questions?
+
+   Our goal of being able to help integrate genome studies - using
+   publicly available data, from royalty-free cDNA clones - is being
+   reached thanks to your support and enthusiasm, and we always welcome
+   questions, comments, and suggestions to:
+
+
+    E-Mail Address: help@image.llnl.gov
+
+   [blue_green_line.gif]
+
+    [home_icon_sml.gif] I.M.A.G.E. Consortium home page
+    [home_icon_med.gif] BBRP home page
+    [home_icon_med.gif] LLNL Programs, Projects, Centers and Consortia
+
+   LLNL Disclaimer
+
+   Web page maintained by
+
+
+    webmaster@image.llnl.gov
+
+   UCRL-MI-119848

@@ -1,0 +1,128 @@
+http://t16web.lanl.gov/theory-computing.html
+
+                        Theory-Side Software & Computing
+   __________________________________________________________________
+
+      Accessing outside machines from LANL
+        * ssh  is preferred,  use scp to copy files from external sites
+          e.g.,  scp 'otherhost:otherdir/files.*' localdir
+        * Telnet is available to outside machines
+        * It is also possible to use ftp through portal. For general
+          instructions, see the LANL help page.
+
+      Accessing T16 machines from external sites
+        * ssh is required, along with a smartcard. You must go through
+          portal.lanl.gov and from there to one of the local machines. Note
+          we run version 1 of the protocol.
+
+   Sun Documentation
+
+     Programming and Languages, including Fortran, C, C++, Performance
+   Library, etc.
+
+     Desktop, including Solaris 2.6, Solaris 7 answerbooks, Common Desktop
+   Environment, etc.
+
+Compilers/Languages
+
+   Fortran
+     * Sun Workshop (including f77/f90/c/c++, debuggers, etc.) info
+     * Fortran: Sun f77/f90 compiler and debugger; type 'man f77' or 'man
+       f90' or 'man workshop' for help, respectively.
+     * Fortran 90: Fujitsu F90 compiler, debugger, etc.; type 'man frt',
+       'man fdb', or 'man workbench' for help. Note that frt compiles f90
+       or f77 codes. fdb is a terminal-mode debugger, the screen-oriented
+       version is available as xfd or through workbench.  Timing tools are
+       available as samp or xsamp.
+
+   C/C++
+     * Sun C/C++: (cc/CC) See sun workshop info
+     * C: Gnu c compiler and debugger; type 'man gcc' for help. 'gdb' is
+       the Gnu debugger. Help for Gnu products is also available via
+       'info'.
+     * C++: Gnu c++ compiler and debugger; type 'man g++' for help. 'gdb'
+       is the Gnu debugger. Help for Gnu products is also available via
+       'info'.
+
+   Other:
+     * Perl: a very useful scripting language; type 'man perl' for help.
+       The  Tk perl module is also available.
+     * Tcl: another scripting language; type 'man Tcl' for help.
+     * Tk: a window creation/manipulation language; type 'man wish' for
+       help.
+
+Libraries (netlib is a good source of other libraries)
+
+     * BLAS: different versions are available, all in /opt/local/lib
+
+     * blas - same as blasf77 below
+     * blasf77 - f77 compiler, standard precision
+     * blasf77_r8 - f77 compiler, double precision, double aligned (-r8
+       -dalign -O4)
+     * blas_frt - frt (Fujitsu) compiler, standard precision (-Fixed -X7
+       -O2 -Kdalign -Kunroll=4 -KULTRA)
+     * blas_frt_r8 - frt (Fujitsu) compiler, double precision
+
+     SUNPERF: sun version of blas, slatec, etc. in
+   /opt/local/sun/SUNWspro/lib
+   This library should be faster than the others, though no -r8 version is
+   available. Use -xlic_lib=sunperf on the command line.
+     * sunperf, standard precision
+
+     LAPACK: A general purpose linear algebra package (f77)
+     * lapack - f77 compiler, use -L/opt/local/lib -llapack -lblas
+     * lapack_frt - fujitsu compiler, use -L/opt/local/lib -llapack_frt
+       -lblas_frt
+     * lapack_fuj_r8 - fujitsu compiler, with double precision option, use
+       -L/opt/local/lib -llapack_fuj_r8 -lblas_frt_r8
+
+     SLATEC: in /opt/local/lib/slatec - same as slatecf77 below
+     * slatecf77 - f77 compiler, standard precision, double aligned
+       (-dalign -O4)
+     * slatecf77_r8 - f77 compiler, double precision, double aligned (-r8
+       -dalign -O4)
+     * slatec_frt - frt compiler, double precision, double aligned (-Fixed
+       -X7 -O2 -Kdalign -Kunroll=4 -KULTRA, except psifn.f had to be
+       compiled -g to pass tests
+
+Plotting Packages
+
+     * XY-Plotting: xvgr Manual or xmgr (a newer motif version of xmgr)
+       Manual
+     * 2- or 3-D Plotting: gnuplot Quick Reference or Manual
+
+Drawing Packages
+
+     * xfig:  simple drawing program, can import postscript (eps), etc.
+       Help is available within the application
+     * IslandDraw:  (old) drawing program
+
+Text Packages
+
+     * teTeX version of Tex and Latex
+     * Star Office:  Text Processor, drawing program, presentation
+       program, spreadsheet, etc. Claims to be able import Microsoft Word
+       files.
+     * IslandDraw:  (old) drawing program
+
+Symbolic Manipulation
+
+     * Maple: Algebraic manipulation and some graphics, invoke as 'maple'
+       for terminal interface or 'xmaple' for x-windows version.
+     * Mathematica: similar to maple  ('math' or 'mathematica' for
+       x-windows version)
+
+WWW Browsers
+
+     * mosaic: ancient NCSA browser
+     * netscape: (old version available as netscape-old)
+
+System Info
+
+     * proctool: shows information about system status and processes
+   __________________________________________________________________
+
+      L O S   A L A M O S   N A T I O N A L   L A B O R A T O R Y
+   Operated by the University of California for the US Department of
+                                Energy
+             LANL Home - Copyright © UC 1998 - Disclaimer

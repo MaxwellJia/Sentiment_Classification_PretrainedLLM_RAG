@@ -1,0 +1,657 @@
+http://www.ostpxweb.dot.gov/gps/docs/tp_4_5_final.doc
+
+   Potential Interference to GPS from UWB Transmitters: Test Plan --
+   Version 4.5 Phase 1: Accuracy Test for Aviation Receivers and
+   Reacquisition Time Test for Land Receivers Ming Luo, Dennis Akos, Sam
+   Pullen, Per Enge Stanford University Table of Contents 1.0 Background 2
+   2.0 Introduction to Test Plan
+   .......................................................................
+   . ...................................................6 3.0 Test Scope 8
+   Appendices: A.
+   Figures................................................................
+   . ..................................................................17
+   B.
+   Calibration............................................................
+   . ................................................................24
+   1.0 Background The Global Positioning System (GPS) is fundamental to
+   the critical infrastructure of the United States (US) and
+   internationally. GPS is a fully operational service that provides a
+   global source for accurate timing and positioning, 24 hours a day. GPS
+   is presently used by aviation for the en-route and non-precision
+   landing phases of flight. GPS is currently used within the US for
+   precision approach and landings and is in the final stages of approval
+   as a national and international standard. Companion GPS-based
+   applications for runway incursion and ground traffic management are
+   also underway. Additionally, GPS-based public safety systems and
+   services are fielded. Planned or newer systems, such as Enhanced 911
+   (E911) and personal location and medical tracking devices are soon to
+   be commercially available. Additional future systems are planned for
+   land, marine and space applications. The US telecommunications and
+   power distribution systems are dependent upon GPS for network
+   synchronization timing. Further, GPS is a powerful enabling technology
+   that has created new industries and new industrial practices fully
+   dependent upon GPS signal availability and continuity. Several critical
+   industries, both aviation and non-aviation, would incur adverse impact
+   if there were degradation to GPS signal continuity and availability.
+   UWB technology is based on very short pulses of radio energy. Its wide
+   signal bandwidth yields excellent multipath immunity. UWB technology
+   has potential in a variety of applications including communication and
+   ranging, and is expected to see increased civil use in the future. The
+   UWB technology was the focus of the Notice of Inquiry (NOI) of the
+   Federal Communications Commission (FCC) under the Office of Engineering
+   and Technology (OET) entitled "Notice of Inquiry in the Matter of
+   Revision of Part 15 of the Commission's Rules Regarding Ultra-Wideband
+   Transmission Systems", FCC Docket Number (No.) 98-208/ET No. 98-153.
+   Because GPS has a pivotal role in so many critical systems that the
+   public depends upon for its safety and well being, it is necessary to
+   determine what the potential for interference is from ultra-wideband
+   (UWB) systems to GPS. Preliminary analysis and testing has indicated a
+   potential for interference from some types of UWB sources to GPS
+   reception. These preliminary findings call for the performance of
+   controlled testing to determine the nature and extent of the potential
+   for interference to GPS from selected UWB parameters in order to assure
+   public safety and safety-of-life. Without test results, such an
+   assurance cannot be made with full confidence since preliminary
+   analysis has shown a potential for interference from UWB to GPS and
+   other systems, including fielded aviation systems. The aviation
+   community has a large body of developed and published technical
+   standards for GPS and defined interference criteria making it logical
+   to initiate the first phase of testing for aviation based on this large
+   body of work. Additionally, due to the critical role of many
+   non-aviation GPS-based applications, this test phase also addresses
+   some issues of land receivers. This test phase selects the metric of
+   accuracy performance and GPS signal reacquisition time. Aviation
+   receivers meeting published specifications are used in the accuracy
+   measurement phase; a land receiver will be used for the reacquisition
+   testing. A GPS simulator provides the GPS input and the UWB parameters
+   are provided by a prototype UWB waveform generator where the various
+   UWB waveform parameters can be varied independently in a controlled
+   manner. These metrics were considered appropriate for the first phase
+   of testing. Accuracy measurements also include the deleterious effects
+   of cycle slips, and are an appropriate metric not only for precision
+   approach but other demanding applications as well, for example, machine
+   guidance. Reacquisition, while important to many aviation applications,
+   is a critical performance metric for dynamic, real-time land
+   applications, such as emergency medical response vehicles, other public
+   safety vehicles and in-vehicle navigation. Reacquisition is also a
+   critical performance metric for marine applications in harbor and
+   harbor-approach areas. Particularly under extreme weather conditions,
+   these systems can be the lifeline of a successful search-and-rescue
+   situation or can be the measure preventing the initial event of the
+   accident. A full testing program would include not only aeronautical
+   systems, but systems critical to land and sea operations. We note that
+   systems such as radio astronomy and private sector systems should be
+   looked at to determine whether there is potential for interference from
+   UWB systems operating under any proposed rules. Test results can be
+   inculcated into the technical rules, support appropriate regulatory
+   actions and other associated decisions. It is also important to
+   consider the current role that GPS plays in the consumer market. Since
+   many UWB proposals are for consumer-grade products, it is important to
+   assure that already existing GPS-based consumer products are included
+   in an appropriate manner in the analysis and decision-making process.
+   The first phase of the test program concentrates on the aeronautical
+   applications of GPS L1 signal, centered at 1575.42 MHz. These tests are
+   necessary to evaluate the impact that UWB device emissions could have
+   on safety-of-life aeronautical systems that are based on the GPS
+   Standard Positioning Service (SPS), the Wide Area Augmentation System
+   (WAAS), and the Local Area Augmentation System (LAAS). Allowable levels
+   of interference are already specified in the LAAS Minimum Performance
+   Standards (MASPS) and the WAAS and LAAS Minimum Operating Performance
+   Standards (MOPS) interference ``masks''. Appropriate reference
+   documents include: Assessment of Radio Frequency Interference Relevant
+   to the GNSS, January 27, 1997 (RTCA DO-235). Minimum Aviation
+   Performance Standards for the Local Area Augmentation System, September
+   28,1998 (RTCA/DO-245). Minimum Operational Performance Standards for
+   Global Positioning System/Wide Area Augmentation System Airborne
+   Equipment, October 6, 1999 (RTCA DO-229B or the GPS/WAAS MOPS). Minimum
+   Operational Performance Standards for GPS Local Area Augmentation
+   System Airborne Equipment, January 11, 2000, (RTCA DO-253 or the
+   GPS/LAAS MOPS). Technical and Performance Characteristics of Current
+   and Planned RNSS (space-to-earth) and ARNS Receivers to be Considered
+   in Interference Studies in the 1559 to 1610MHz, International
+   Telecommunications Union (ITU) Document 8/83-E, April 29,1999
+   International Civil Aviation Organization (ICAO) Global Navigation
+   Satellite System Panel (GNSSP) SARPs, Resistance to Interference
+   Section B.3.7 Technical Standard Order C129, Airborne Supplemental
+   Navigation Equipment Using the Global Positioning System (GPS), TSO
+   C129, USDOT Federal Aviation Administration, December 1992. Global
+   Positioning System - Standard Position System Signal Specification; 2nd
+   Edition; June 2, 1995. Table 1 highlights the parameters used to derive
+   the limits on out-of-band (OOB) emissions from Mobile Satellite Service
+   (MSS) Mobile Earth Terminal (MET) in order to protect aeronautical GPS
+   receivers used for Cat I precision approaches. Table 1. GPS L1 Receiver
+   RFI Susceptibility Link Budget for Single MSS MET Interference for
+   Category I Landings Parameter Value Units MSS Emissions Limit1 -70
+   dBW/MHz 100 ft Path Loss2 -66.1 dB GPS Antenna Gain in Direction of
+   RFI3 -10 dB MSS RFI @GPS Receiver -146.1 -206.1 dBW/MHz dBW/Hz
+   Aeronautical Services Margin4 ?5.6 dB GPS Receiver RFI Susceptibility
+   Limit -140.5 -200.1 dBW/MHz dBW/Hz 1 This value was determined for
+   Mobile Satellite Services (MSS) only, for the 1559-1610 MHz band. 2, 3
+   This parameter was determined for one MSS emitter and one GPS receiver
+   onboard an aircraft for Category I; it may not be appropriate for all
+   pertinent aviation or non-aviation operational scenarios. 4 This margin
+   will be absorbed by other aeronautical services. As noted in Table 1,
+   the total RFI susceptibility limit is -140.5 dBW/MHz. RTCA SC-159 is
+   currently finalizing the link budget for Category II/III approaches and
+   landings that will be similar in nature. It is expected that
+   aeronautical interference sources external to GPS and the additional
+   receiver hardening required for Category II/III approach and landings
+   will consume the entire 5.6 dB aeronautical services margin. This 5.6
+   dB margin results in a C/N0 margin of only 3.2 dB for the LAAS
+   application (as detailed in Reference 5, Annex 5). Due to the adoption
+   of a -70 dBW/MHz limit by the FCC for the MSS MET, the total level of
+   -146.1dBW/MHz is taken up by the MSS earth-to-space services leaving no
+   margin for the UWB emissions or other new technologies that may be
+   proposed in the future. In order to appreciate why the GPS Category I
+   link budget has a lack of margin it is necessary to provide additional
+   background on the allowed RFI allocation process and the integrity
+   monitoring design of the GPS receiver. For a MOPS-compliant GPS
+   receiver (i.e., the receiver operates at the minimum standard), the
+   significance of the susceptibility limit is that any combined
+   non-aeronautical RFI exceeding -146.1dBW/MHz is likely to cause an
+   alert leading to loss of continuity. In other words, the performance of
+   minimally MOPS-compliant receivers will fall short of requirements and
+   may generate Harmful and Misleading Information (HMI) in the absence of
+   navigation alert. The MOPS specifies that all combined non-aeronautical
+   RFI below -146.1 dBW/MHz shall not cause a loss of continuity. GPS
+   receivers that surpass the MOPS requirements must issue a
+   loss-of-continuity alert when RFI exceeds -146.1 dBW/MHz and a
+   navigation hazard is present; the hazard must be detected and alerted
+   so that users are not threatened by it. The aeronautical community is
+   concerned because there is no margin available in the -140.5dBW/MHz
+   susceptibility limit for non-aeronautical RFI from other sources such
+   as UWB devices since all available margins were allotted to a single
+   MSS MET. For instance, there also is no margin for the World
+   Radiocommunication Conference of 1997 (WRC- 97) Inmarsat proposal to
+   operate space-to-Earth MSS satellites in the 1559-1567 MHz band. The
+   issue is still on the WRC-2000 agenda. These statements are true even
+   for a device that conforms to Part 15 limits. For example, the FCC
+   spurious emissions of a Part 15 device must be below -71 dBW/MHz in the
+   GPS band. This results in an RFI level of -147.5 dBW/MHz at 100 feet.
+   See Table 1. Since MSS METs and UWB device emissions may combine at the
+   aircraft, the resulting RFI level would be -143.56 dBW/MHz. After
+   including 5.6 dB of aeronautical signals, the RFI level would be -138
+   dBW/MHz, or 2.5 dB above the allowed level of -140.5 dBW/MHz. This
+   reduces the safety margin reserved for aviation use to an unacceptable
+   level. Furthermore, the above RFI scenario does not include any effects
+   from multiple MSS METs, multiple UWB devices, VHF harmonics, or other
+   systems. It identifies a receiver-emitter proximity for a single,
+   critical aeronautical application i.e. Category I precision approach
+   and landing. The range of aeronautical use of GPS has evolved and
+   requires examination of the range of the receiver-emitter proximity to
+   assure that this range and the other parameters listed (see Table 1)
+   protect all aeronautical use of GPS. Further, these parameters must be
+   examined for appropriate non-aviation operational scenarios to assure
+   that appropriate public safety services will be protected. To achieve
+   this work, the appropriate operational scenarios must be developed to
+   provide the framework into which the technical results of testing can
+   be applied. This is true for any service, aviation or non-aviation. It
+   is planned to include study of the aggregate effect of multiple UWB
+   emitters in a later study phase, pending funding. Certainly to
+   determine the appropriate protection limits for systems that may be
+   potentially affected, the aggregate effect must be somehow determined.
+   The above discussions described the link-budget margin for receivers
+   used in a given aeronautical safety-of-life scenario. For
+   non-aeronautical applications the scenarios are under discussion.
+   Critical scenarios also include non-aviation safety-of-life and public
+   safety services, such as ambulance and E911 services. In the ambulance
+   scenario the possibility arises where terrestrial GPS receivers, MSS
+   hand-held cell phones and UWB devices may operate simultaneously at
+   very close ranges. If interference between these systems occurs, all
+   services can be adversely impacted not only technically but
+   economically as well. Importantly, appropriate operational scenarios be
+   developed for aviation and non-aviation applications. The test plan
+   will collect interference effects data using both aeronautical and
+   non-aeronautical receivers that when combined with the appropriate
+   protection limits will allow the analysis of any appropriate scenario.
+   2.0 Introduction to Test Plan The goal of this test plan is to
+   characterize the interference effects of UWB emissions on various types
+   of aviation and non-aviation GPS receivers in a controlled test
+   environment. Some UWB emissions could be quite noise-like while others
+   may have more discrete spectral lines in the vicinity of GPS. An RFI
+   equivalence concept was developed to relate the interference impact of
+   UWB signals on GPS over this range of UWB emissions to that of a known
+   and well understood RFI source, i.e., broadband noise. The method
+   chosen for this test plan is to determine the UWB interference effect
+   for a given set of emission parameters that is equivalent to a known
+   portion of the broadband noise input which causes the GPS receiver to
+   just meet its performance criterion. A significant level of broadband
+   noise is input to give a representation of the actual GPS environment.
+   The test criteria consist of pseudorange measurement accuracy for
+   aviation receivers and reacquisition time for non-aviation receivers.
+   The pseudorange accuracy criterion for aeronautical GPS receivers is a
+   standard deviation of less than 15cm. The equivalence concept test
+   methodology consists of inserting broadband noise into the GPS receiver
+   and increasing its level until 15 cm of pseudorange standard deviation
+   is indicated. The broadband noise source is then reduced 2 dB and the
+   UWB emission level is increased by varying one of the UWB parameters
+   (e.g. power) until there is a 15 cm pseudorange standard deviation
+   indication. The above procedure is repeated with the broadband noise
+   source reduced by 4 dB instead of 2 dB. Another UWB parameter (e.g.
+   PRF) is chosen and the entire sequence repeated until all UWB
+   parameters have been investigated. From this interference effect data,
+   a profile of those UWB parameters that have the most significant effect
+   on GPS accuracy performance will emerge. This process provides accuracy
+   data at three different levels of broadband noise (100%, 63%, and 40%
+   of the critical noise input) in combination with three different levels
+   of UWB RFI (0%, 37%, 60%). These data capture the RFI effects on the
+   GPS receiver that can be used in external derivations of the UWB
+   protection level appropriate for GPS. An equivalent process is used for
+   a non-aeronautical receiver with a one second acquisition time as the
+   test criterion. Three potential benefits from determining the
+   equivalence of UWB transmissions with broadband noise are: a simple
+   test procedure; interference effects data that can use information from
+   specific interference encounters (e.g., range, antenna orientation and
+   gain, source motion) and UWB source information to determine compatible
+   UWB scenarios that satisfy the protection limit; and, if during the
+   broadband noise equivalence test, a 4 dB increase in broadband noise
+   also corresponds to a 4 dB increase in the UWB transmitter power, for
+   the same accuracy degradation value (15 cm) then UWB source may be
+   classified as noise-like. In such cases a simple calculation of
+   broadband noise sources can determine UWB protection limit. It should
+   be noted that this test plan does not: define the UWB protection
+   limits; or, define the interference scenarios. Also a separate effort,
+   not a part of this test, is necessary to determine effective UWB
+   emission measurement techniques, since existing methods (e.g., FCC Part
+   15) tailored for older technologies are likely inadequate. As testing
+   proceeds, detailed notes will be taken and developed into appendices if
+   warranted to clarify the details of the various aspects of this testing
+   approach. Further testing for GPS must include at a minimum other
+   receiver types such as fielded aviation equipment based on TSO C129
+   standard, include the aggregate effect of multiple UWB emitters, and
+   address the additive affect of other systems and their out-of-band
+   emissions. Note that it is important to test with actual UWB equipment
+   to validate these results and add additional parameters reflective of
+   current UWB technology. Future testing should be accomplished to look
+   at discrete and continuous spectra, noting that some UWB equipment is a
+   combination of the two. 3.0 Test Scope The test plan for this phase of
+   testing includes an accuracy test for aviation receivers and a
+   reacquisition time test for land receivers, and these tests will be
+   sequenced as follows: Accuracy test for aviation receiver #1 Accuracy
+   test for aviation receiver #2 Reacquisition time test for land receiver
+   #3 Accuracy test for aviation receiver #1 with a pseudolite sharing the
+   channel Reacquisition time test for land receiver #4 Reacquisition time
+   test for land receiver #3 (or #4) with a pseudolite sharing the channel
+   In all cases, the tests will quantify the RFI impact of UWB signals
+   relative to that of a known amount broadband random noise. In this
+   plan, broadband random noise will refer to continuous noise from a
+   noise diode that has power spectral density much broader than the RF/IF
+   bandwidth of the GPS receiver. Such noise is used to model thermal
+   noise in the receiver, sky noise and any other wideband interference
+   process other than UWB. UWB signals also have bandwidths that are
+   greater than the front end of the GPS receiver, but they have an
+   additional structure that may cause their RFI effect to be very
+   different than broadband random noise. The receiver's C/N estimator
+   will not be used to estimate total noise power for the following
+   reasons. First, any given GPS receiver's C/N estimator may respond
+   differently to broadband random noise than another receiver's
+   estimator. Second, the estimators may respond differently depending on
+   the UWB signal parameters. Pseudorange measurement accuracy,
+   acquisition/reacquisition times, and loss-of-tracking threshold are the
+   four important performance metrics to GPS users. For this test phase,
+   the metric selected is accuracy performance in an aviation receiver.
+   The most demanding precision approach operations require a pseudorange
+   measurement standard deviation of less than 15cm. Pseudorange
+   measurement accuracy is influenced by degradations from both code and
+   carrier tracking. As such it is the most sensitive metric for the
+   aviation applications. Acquisition/reacquisition time is an important
+   metric for most land users. For example, in-vehicle navigation and
+   emergency vehicles need to quickly reacquire GPS after signal loss and
+   develop a new position estimate. For this reason, emergency land
+   applications require reacquisition times of approximately 1 second. The
+   reacquisition tests described here assume that only one satellite is
+   lost and must be reacquired. These tests are crafted to provide input
+   to a separate process that considers the operational scenarios that
+   might place UWB and GPS equipment in proximity. Such scenarios may
+   include the use of GPS to provide position reports with all E911 calls.
+   They may also include the use of GPS to avoid runway incursions, or the
+   use of GPS during the precision approach of aircraft. Each scenario has
+   a link budget that assumes that the presence of certain types of
+   interference. The test described will not develop the scenarios or the
+   associated link budgets. Rather, they will provide data on the
+   interference effects of various combinations of UWB signal parameters.
+   The RFI effect of the UWB signal will be sensitive to the details of
+   the UWB signal design. Some of these trends are depicted in Figure 1.
+   We anticipate that our interference measurements will reflect the
+   following quantitative trends: Pulse Repetition Frequency (PRF): If the
+   pulses are sent at a very low rate compared to the front end bandwidth
+   of the GPS receiver, then the interference will be smaller than that
+   due to UWB operation at high PRFs. Most GPS receivers have bandwidths
+   between 2 MHz and 24 MHz. If the UWB PRF is less than 2 million pulses
+   per second (MPPS), then the pulses will still be distinct at the output
+   of the receiver front end and interference will probably be relatively
+   small. If the UWB PRF is higher than the bandwidth, then the GPS front
+   end will smear the pulses together and the interference effect will
+   probably be larger. GPS receivers are well known to have lower
+   sensitivity to pulsed interference and higher sensitivity to continuous
+   interference. No Modulation: If the PRF is high, then the interference
+   effect will depend on the UWB modulation. Some UWB signals may not be
+   modulated. In this case, the signal is a pulse train with a constant
+   time between pulses. This case is shown in Figure 2 and results in the
+   line spectrum also shown in Figure 2. The GPS spectrum for the C/A code
+   also has a line spectrum. UWB interference will be greatest when the
+   UWB lines fall on top of the GPS spectral lines. UWB interference will
+   be small when the UWB lines fall between the GPS lines. This spectral
+   coincidence is difficult to predict and the UWB effect on GPS will be
+   very variable. Pulse Modulation: If the UWB pulses are modulated
+   randomly or with a long code, then the line spectrum will disappear.
+   This effect is shown in Figure 3, which shows the amplitude spectrum
+   for a UWB pulse train without modulation, with on-off-keying (OOK) and
+   with pulse position modulation (PPM). If modulation is used with
+   sequences that are continuous and have high PRFs, then the interference
+   effect will be similar to white noise of equal power. Pulse Bursting:
+   As shown in Figure 2, UWB pulses may be transmitted in bursts with a
+   prescribed on-time and off-time. If the duty cycle (fractional on-time)
+   is less than 40 percent or so, then we expect that the effect of one
+   UWB transmitter on a GPS receiver will be reduced. The interference
+   effect will also depend on the on-time of the pulse bursts. Pulse
+   Shaping: As shown in Figure 4, the overall UWB spectrum depends on the
+   pulse shape. The pulse can be crafted so that the UWB spectrum avoids
+   certain critical bands. All of these trends must be validated and
+   quantified. To that end, these tests will vary the UWB signal
+   parameters and determine how the UWB to broadband random noise
+   equivalence depends on the UWB signal parameters. This test philosophy
+   is depicted in Table 2 and Figure 5, which show four loops on the UWB
+   signal parameters. The first loop simply varies the modulation from: no
+   modulation to random OOK to random PPM. The second loop transmits pulse
+   bursts with varying duty cycle. The third loop varies the UWB pulse
+   repetition frequency (PRF). The final loop captures the effect of pulse
+   shaping by varying the UWB power. These tests simply treat the UWB
+   power level in the GPS band as an independent parameter. Table 2: UWB
+   Signal Parameters to be tested.1 UWB Signal Parameter Range Power
+   (dBW/MHz) As need to introduce the interference effects described
+   below2 Pulse Repetition Frequency (MHz) 0.1, 1.0, 20.0 Modulation None,
+   random OOK, random PPM3 Burst Duty Cycle (%) 10, 50, 100 Burst On-Time
+   0.1 millisecond (msec), 1 msec, 10 msec 1 The permutations listed in
+   the table represent the current plan. Different values may be selected
+   based on the early test results. 2 The UWB test pulse spectra are
+   depicted in Figure 4, where the pulse amplitude is controlled to
+   introduce a known amount of UWB noise power in the GPS band. 3 The
+   random PPM will be such that no spectral lines remain and the spectrum
+   is continuous. 4.0 Overview of Test Procedure 4.1 Calibration We now
+   describe the overall test procedure that is depicted in Figures 6
+   through 8. As shown in Figure 6, the test begins with calibration of:
+   the GPS signal generator and signal path, the broadband random noise
+   source and the UWB signal source. This procedure is described in the
+   Appendix and will not be further detailed in the body of the test plan.
+   4.2 Receiver Normalization Next, the receiver is normalized using the
+   Test Setup shown in Figure 9. Accuracy and reacquisition time are
+   measured as a function of input noise where the noise is entirely due
+   to broadband random noise with no UWB component. This step establishes
+   receiver performance in the absence of UWB noise and provides a
+   baseline for later comparison. All noise power measurements will be
+   made using a bandpass filter that is based on the interference masks in
+   the WAAS and LAAS Minimum Operational Performance Standards (MOPS).
+   This measurement filter has a noise bandwidth of approximately 20 MHz.
+   All accuracy and reacquisition time measurements will be made as a
+   function of the noise power (N0) as measured at the output of this
+   standard filter. A current NTIA test program will relate increase in
+   receiver noise using various receiver bandwidths as a function of UWB
+   parameters. The results from the receiver normalization will sample the
+   curves shown in Figures 10 and 11. As shown, both accuracy and
+   reacquisition time will degrade with increasing noise power. Each data
+   point will require many measurements to establish statistical
+   confidence. For the accuracy normalization, the number of measurements
+   per sample will be large enough to provide a 95% confidence at the
+   1-centimeter level. For the reacquisition time normalization, the
+   number of measurements will be large enough to provide a 95% confidence
+   at the 0.5-second level. The time required to establish these levels of
+   confidence is receiver dependent. The samples must be statistically
+   uncorrelated, and the time between such uncorrelated samples depends on
+   the bandwidth of the receiver's tracking loop. Hence, this tracking
+   bandwidth will be determined for each receiver under test and used to
+   determine the time required to test each receiver. To minimize test
+   time, the accuracy tests will use code minus carrier measurements,
+   where the code will not be smoothed by the carrier. These unsmoothed
+   errors are greater than the errors using carrier smoothing. Moreover,
+   the 15-centimeter (cm) requirement is based on 100 seconds of carrier
+   smoothing. Hence, the 15-cm requirement must be inflated by the factor,
+   k, shown in Figure 9. This factor is given by the noise equivalent
+   bandwidth of the loop providing the unsmoothed measurements divided by
+   the noise equivalent bandwidth with 100 seconds of carrier smoothing.
+   This factor must be determined with care, because the ratio of these
+   noise bandwidths is not necessarily given by the inverse of the ratio
+   of their stated time constants. 4.3 Receiver Operating Points . The
+   reacquisition test will be operated near the noise power required for a
+   reacquisition time of 1 second. This power is denoted N*REACQ. These
+   operating points shall be determined to an accuracy of +/- 0.5 dB. For
+   accuracy, the UWB interference tests are initiated at broadband random
+   noise powers given by N*ACC - 2dB and N*ACC - 4dB. For reacquisition
+   time, the UWB interference tests are initiated at broadband random
+   noise powers given by N*REACQ - 2dB and N*REACQ - 4dB. 4.4 UWB
+   Interference Measurements The UWB interference measurements are shown
+   in Figure 7 and the Test Setup is shown in Figure 12. For future
+   testing, the setup also has the capability to include signals from a
+   pseudolite. As shown, UWB noise power is added to the broadband random
+   noise. These tests are designed to provide data points on curves such
+   as those shown in Figure 13 for accuracy and Figure 14 for
+   reacquisition time. In both cases, the broadband random noise power
+   (N0) is decreased so that the noise power is at the operating points
+   discussed above. From that operating point, UWB power is introduced to
+   increase the total noise power (N0+NUWB). As shown in Figures 13 and
+   14, this degradation may or may not cause the performance curves to
+   follow the curves for broadband random noise alone, and the exact
+   trajectory will depend on the UWB signal parameters. If the specific
+   UWB waveform has a more deleterious effect than broadband random noise,
+   then the UWB trajectory will be higher than the broadband random noise
+   curve. If the parameters are such that the UWB signal is less damaging
+   than broadband random noise, then the UWB trajectory will fall under
+   the broadband random noise curve. Both situations are depicted in
+   Figures 13 and 14. The UWB portion of the total noise power (N0+NUWB)
+   will be changed in 1 dB steps. UWB noise power will be measured in the
+   same standard filter described above. This practice requires that the
+   UWB PRF be less than 20 Mpps. If the pulse rate is greater, then the
+   UWB spectral lines may fall outside of the filter passband and the
+   results will be unreliable. As before, each sample will require many
+   measurements to establish statistical confidence. For the accuracy
+   tests with UWB, the number of measurements per sample will be large
+   enough to provide a 95% confidence at the 1-centimeter level. For the
+   reacquisition time tests with UWB, the number of measurements will be
+   large enough to provide a 95% confidence at the 0. 5-second level. The
+   time required for the UWB interference measurements will be receiver
+   dependent and the bandwidth of the receiver under test will be used to
+   determine the test time. Once again, code-carrier measurements will be
+   used to minimize the time required for the accuracy tests. 4.5
+   Reporting For each set of UWB signal parameters, we will report the
+   following parameters of significance: UWB power (NUWB) portion of the
+   total noise power (N0+NUWB) required to degrade the accuracy to k15 cm.
+   Accuracy as measured by code minus carrier when N0 + NUWB = N*ACC. In
+   other words, record the accuracy when the noise power including UWB
+   noise is equal to the previously determined threshold for broadband
+   random noise only. UWB portion (NUWB) of the total power (N0+NUWB)
+   required to degrade the reacquisition time to 1 second. Reacquisition
+   time when N0 + NUWB = N*ACC. In other words, record the reacquisition
+   time when the signal to noise ratio including the UWB noise is equal to
+   the previously determined threshold for reacquisition for broadband
+   random noise only. The above listed parameters will be determined for
+   both starting points N* - 2dB and N* - 4dB. We will provide timely
+   inputs to the processes that are developing the operational scenarios.
+   5.0 Accuracy Test Procedure for Aviation Receivers The accuracy test
+   procedure is described in the following two subsections. This test
+   procedure is adapted from Section 2.5.8 of RTCA DO-229B, the Minimum
+   Operational Performance Standard for Avionics Using the Wide Area
+   Augmentation System (WAAS). As described above, it includes the
+   following steps: calibration, normalization with white noise only, UWB
+   interference measurements, and reporting. The calibration is described
+   in the Appendix. Sections 4.1 and 4.2 detail the broadband random noise
+   normalization and the UWB interference measurements respectively. 5.1
+   Broadband Random Noise Normalization Set up the test equipment as shown
+   in Figure 9. The GPS receiver is operated with the minimum rated
+   received satellite signal level. Compensation is applied to adjust for
+   room temperature, satellite simulator noise output, or the effects of a
+   remote antenna preamplifier as needed. In other words, set the GPS
+   power (C) to -134.5 dBm+GLNA where GLNA is the gain of any equipment
+   that might nominally appear between the antenna and the receiver under
+   test. Broadband random noise is added to the simulated GPS satellite
+   signal at the receiver input. Set the center frequency of the broadband
+   noise to 1575.42 MHz. The starting value is the RTCA/DO-229B MOPS level
+   for initial acquisition. Adjust the broadband noise power such that the
+   noise power is -103.5 dBm+GLNA as measured in the standard filter
+   described earlier. The gain GLNA accounts for the gain that appears
+   between the antenna and the receiver under test. As a rough check on
+   power levels, measure the carrier to noise density (C/N0) as reported
+   by the receiver. This (C/N0) should be approximately 33 dB-Hz. Let the
+   GPS receiver track the satellite and reach steady state (for at least
+   10 seconds). Measure the unsmoothed pseudorange and estimate the
+   one-sigma pseudorange error by computing the standard deviation (r of
+   the code-minus-carrier test statistic after removing a 2nd-order
+   polynomial fit of the mean. Use the sample size required to achieve the
+   confidence levels described above. Also recall that the unsmoothed
+   pseudorange error is larger than the smoothed pseudorange error by a
+   factor of k. This factor is the ratio of the noise bandwidth for the
+   code loop to the noise bandwidth when 100 seconds of carrier smoothing
+   is used. 6) Increase the broadband random noise power in 1 dB steps
+   until the variance just exceeds the k15 cm accuracy limit. Record the
+   noise power setting (N*ACC). Record also the C/N indicator from the GPS
+   receiver. 5.2 Procedure for Testing Potential UWB Impact on GPS
+   Accuracy Setup the test equipment as shown in Figure 12 without the
+   pseudolite. Set the noise attenuator to 2 dB below the value obtained
+   in Section 4.1, Step 6 (N*ACC). Select one set of UWB signal parameters
+   from the test matrix described earlier and set the UWB noise power
+   (NUWB) 10 dB below the broadband random noise power (N0). Let the GPS
+   receiver track the satellite and reach steady state (for at least 10
+   seconds). Measure the unsmoothed pseudorange and estimate the one-sigma
+   pseudorange error by computing the standard deviation (r of the
+   code-minus-carrier test statistic after removing a 2nd-order polynomial
+   fit of the mean. Use the sample size required to achieve the confidence
+   levels described above and recall that the unsmoothed pseudorange error
+   is larger than the smoothed pseudorange error by a factor of k.
+   Increase the UWB power until the k15 cm pseudorange variance is just
+   exceeded. Record that power setting. Record also the C/N indicator from
+   the GPS receiver. Also find and record the accuracy when the total
+   power (UWB plus broadband) equals the threshold power for broadband
+   noise alone. Change the UWB signal parameters to the next values in the
+   test matrix and repeat steps 3) through 6) until all n combinations of
+   UWB signal parameters are exhausted. For this initial test phase, n=81.
+   Set the noise attenuator to 4 dB below the value obtained in Section
+   4.1, Step 6 (N*ACC) and repeat steps 3) through 6) to obtain a second
+   set of data points for the n cases. 6.0 Reacquisition Time Test
+   Procedure for Land Receivers The reacquisition time test procedure is
+   described in the following two subsections. This test procedure is
+   adapted from Section 2.5.6 of RTCA DO-229B, the Minimum Operational
+   Performance Standard (MOPS) for Avionics Using the Wide Area
+   Augmentation System (WAAS). These tests assume that only one satellite
+   is lost and needs to be reacquired. As such, the receiver is assumed to
+   have a good estimate of its time offset relative to GPS time and the
+   expected Doppler offset of the lost satellite. However, the receiver
+   must search over all possible values of code phase. Similar to the
+   accuracy test, the reacquisition time test includes the following
+   steps: calibration, normalization with broadband random noise only, UWB
+   interference measurements, and reporting. The calibration is described
+   in the Appendix. Sections 5.1 and 5.2 detail the broadband random noise
+   normalization and the UWB interference measurements. 6.1 Broadband
+   Random Noise Normalization Set up the test equipment as shown in Figure
+   9. Connect the simulator clock to the receiver clock. This connection
+   provides the time information to the receiver that is assumed in the
+   reacquisition time tests described in Section 2.5.6 of the MOPS. The
+   GPS receiver is operated with the minimum rated received satellite
+   signal level. Compensation is applied to adjust for room temperature,
+   satellite simulator noise output, or the effects of a remote antenna
+   preamplifier as needed. In other words, set the GPS power (C) to -134.5
+   dBm+GLNA where GLNA is the aggregate gain of any equipment that might
+   nominally appear between the antenna and the receiver under test. Add
+   broadband random noise to the simulated GPS satellite signal at the
+   receiver input. Set the center frequency of the broadband noise to
+   1575.42 MHz. The starting value is the RTCA/DO-229B MOPS level for
+   initial acquisition. Adjust the broadband random noise power such that
+   the noise power is -103.5 dBm+GLNA as measured in the standard filter
+   described earlier. The gain GLNA accounts for the gain that nominally
+   appears between the antenna and the receiver under test. As a rough
+   check on power levels, measure the carrier to noise density (C/N0) as
+   reported by the receiver. This (C/N0) should be approximately 33 dB-Hz.
+   Let the GPS receiver track the satellite and reach steady state (for at
+   least 10 seconds). Attenuate the GPS signal so that the receiver loses
+   lock. Introduce a 50 meter step in simulated pseudorange over 10
+   seconds while the signal is not being tracked by the receiver under
+   test. Remove the attenuation of the GPS signal and measure the time
+   until the receiver reports code phase lock continuously for 10 seconds.
+   Repeat steps 4) through 7) until the sample size provides the
+   confidence levels described above. for the reacquisition time
+   specification of 1 second. 6.2 Reacquisition Time Test with UWB Noise
+   Setup the test equipment as shown in Figure 12 without the pseudolite.
+   Set the noise power to 2 dB less than the threshold noise power
+   (N*REACQ) determined in the broadband random noise tests described in
+   Section 5.1. Select one set of UWB signal parameters from the test
+   matrix described earlier and set the UWB noise power (NUWB) 10 dB below
+   the broadband random noise power (N0). Let the GPS receiver track the
+   satellite and reach steady state (for at least 10 seconds). Attenuate
+   the GPS signal so that the receiver loses lock. Introduce a 50 meter
+   step in simulated pseudorange over 10 seconds while the signal is not
+   being tracked by the receiver under test. Remove the attenuation of the
+   GPS signal and measure the time until the receiver reports code phase
+   lock continuously for 10 seconds. Repeat steps 4) through 7) until the
+   sample size provides the confidence levels described earlier for
+   reacquisition time. Increase the UWB noise power by 1 dB and repeat
+   steps 4) through 9) until the total noise power (N0+NUWB) is slightly
+   greater than the power required to obtain a 1 second reacquisition
+   time. Record the UWB power (NUWB). Also find and record the
+   reqcauisition time when the total power (UWB plus broadband) equals the
+   threshold power for broadband noise alone. Change the UWB signal
+   parameters to the next values in the test matrix and repeat steps 4)
+   through 9) until all UWB signal parameters are exhausted. Set the
+   broadband random noise power to N*REACQ - 4 dB and repeat steps 4)
+   through 10) to obtain a second set of n values of UWB power settings.
+   Appendix A: Figures Figure 1: UWB Signaling Figure 2: Different UWB
+   Signals Figure 3: UWB Amplitude Spectrum Figure 4: A UWB Signal Figure
+   5: Loops for UWB Signal Parameters Figure 6: Overall Test Flow (1 of 3)
+   Figure 7: Overall Test Flow (2 of 3) Figure 8: Overall Test Flow (3 of
+   3) Figure 9: Test Setup for Receiver Normalization Figure 10: Receiver
+   Normalization for Pseudorange Accuracy Test Figure 11: Receiver
+   Normalization for Reacquisition Time Figure 12: Full Test Setup Figure
+   13: Pseudorange Accuracy as UWB Power is Added to Increase the Total
+   Noise Figure 14: Reacquisition Time Increase as UWB Power is Added to
+   Increase the Total Noise Power Appendix B: Calibration B.1 GPS signal
+   calibration B.1.1 Measure signal power at the output of the GPS
+   simulator This step calibrates the GPS simulator and the cable. It
+   provides the relationship between the simulator's specified power lever
+   and the readings at the power meter or spectrum analyzer. If a spectrum
+   analyzer is used, calibrate the spectrum analyzer with a power meter as
+   necessary. Procedure: Turn off the PRN code of the GPS simulator. Sweep
+   the power level setup of the GPS simulator. Measure the signal strength
+   at the spectrum analyzer. Plot the calibration chart (see Figure B2 for
+   an example). B.1.2 Calibrate GPS Power with splitters and combiners As
+   shown in Figure B3, the test setup will use splitters and combiners.
+   Hence, we need to calibrate their effects. It is assumed that the
+   impedance of a GPS receiver is 50 (; thus there is no power reflection.
+   Procedure: Select PRN code at the GPS simulator. Sweep the power level
+   of the simulator. Plot received power vs. simulator setup power (to
+   generate a plot like Figure B2). Rotate the location of the spectrum
+   analyzer to calibrate each port (for each receiver). It may be
+   preferable to just check a few points instead of sweeping the entire
+   power range. Notes: We can also calibrate the setup as an equivalent
+   6-port net using the network analyzer. To maintain the characteristics
+   of the net close to their calibrated status, we plan to build an
+   enclosure to keep the above components and their connections fixed. 3)
+   The circuit can be balanced by adding calibrated pads. B.2 UWB
+   calibration B.2.1 Snapshots of UWB transmitted signal Record pulse
+   shape in the time domain and spectrum in the frequency domain for each
+   transmitter (for the selected parameters only). B.2.2 UWB transmitted
+   power vs. setup power This procedure calibrates the measured UWB output
+   power vs. the transmitter setup power. Procedure: Set the UWB to the
+   no-modulation mode and PRF = 20MHz (TBC). Sweep the UWB power level by
+   adjusting the attenuator. Measure the signal strength at the spectrum
+   analyzer. Plot the calibration chart (for an example, see Figure B5).
+   B.2.3 UWB transmitted power through splitter and combiner This setup
+   takes into account component losses (and other effects) in the
+   automatic measurement setup (see Figure 12). This step is similar to
+   Figure B3. As noted before, calibration using the network analyzer may
+   be equivalent. Figure B6: UWB Power through Splitter and Combiner
+   Procedure: Sweep the power level of the UWB transmitter. Plot received
+   power vs. simulator setup power (to generate a plot similar to Figure
+   B5). Rotate the location of the spectrum analyzer to calibrate each
+   port (for each receiver) We may be able to just check a few points
+   instead of sweeping the entire power range. Reference Document 4,
+   paragraph 2.3.6.8.1, page 34 Test Plan: Potential Interference to GPS
+   from UWB Transmitters Version 4.5 May 1, 2000 50( terminator 50(
+   terminator 50( terminator #3 #2 #1 Splitter #1 Fig. B3: Calibration
+   with Splitter and Combiner Splitter #2 GPS Simulator Attenuator GPS
+   Signal Generator 50( terminator Spectrum Analyzer Combiner Figure B2:
+   GPS Simulator Power Level Calibration Plot UWB transmitter Pattern
+   Generator Pulse Generator Programmable Attenuator Splitter #2 50(
+   terminator 50( terminator 50( terminator 50 ohm Cable #1 #3 #2 #1
+   Splitter #1 50( terminator Spectrum Analyzer Combiner UWB transmitter
+   Pattern Generator Pulse Generator Programmable Attenuator Cable Figure
+   B4: UWB Transmit Power vs. Setup Spectrum Analyzer GPS Simulator
+   Attenuator GPS Signal Generator Spectrum Analyzer Figure B1: Measured
+   Signal Power Generated by GPS Simulator Figure B5: Plot of UWB Power
+   vs. Setup power ?????????????????

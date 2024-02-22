@@ -1,0 +1,12 @@
+http://info.texas.gov/banner.js.jsp
+
+   function doSelectBannerImage() { var imgs = new Object; imgs['eng'] =
+   ['images/eng/banners/banner01.jpg','images/eng/banners/banner02.jpg','i
+   mages/eng/banners/banner03.jpg']; imgs['esp'] =
+   ['images/esp/banners/banner-main-image-1.jpg','images/esp/banners/banne
+   r01.jpg','images/esp/banners/banner02.jpg','images/esp/banners/banner03
+   .jpg']; var thisImgs = imgs[language]; if (thisImgs) { var
+   selectedBannerIndex = Math.floor(thisImgs.length * Math.random());
+   document.images['banner'].src = thisImgs[selectedBannerIndex]; } } if
+   (document.layers) { window.onload = doSelectBannerImage; } else {
+   doSelectBannerImage(); }

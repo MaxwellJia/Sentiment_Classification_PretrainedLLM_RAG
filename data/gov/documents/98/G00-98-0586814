@@ -1,0 +1,185 @@
+http://geonames.usgs.gov/cdanswer.html
+
+   Small USGS icon and to USGS Home Page
+   Geographic Names Information System (GNIS)
+     __________________________________________________________________
+
+CD Answer Trouble Shooting Guide from Dataware
+
+   CAUTION: Always backup the config.sys and autoexec.bat files before
+   editing them. Call Dataware Customer Support at 617-577-2844 if you
+   have any questions about the installation process.
+    1. Did CD Answer finish installation?
+          + If it finished installing, skip to 2.
+          + If it did not finish, at what point in the installation did it
+            fail? What was the error message you received?
+            Contact Dataware Customer Support at 617-577-2844
+    2. Are you able to start CD Answer?
+          + If you could start CD Answer, skip to 3.
+          + If you could not start CD Answer, are you trying to run CD
+            Answer from a network workstation?
+          + If you are not on a network workstation, skip to 3.
+          + If you are on a network workstation, is CD Answer installed on
+            the workstation or on the server?
+          + If CD Answer is installed on the workstation and the CD-ROM
+            resides on the workstation what is the error message you
+            receive? Call Dataware Customer Support at 617-577-2844.
+          + IF CD Answer is installed on the workstation and the CD ROM
+            resides on the server, make sure the CD-ROM drive is mapped to
+            the workstation.
+          + If the CD Answer is installed on the server, the CD-ROM must
+            also reside on the server, or on a network CD-ROM drive (such
+            as CD-Net or Opti_net), to which the server has a drive letter
+            mapped. And in order for workstations to be able to run CD
+            Answer, the full path to the CD Answer executable file,
+            dw.exe, must be flagged as read/write/sharable on the server.
+            In addition, the CD Answer configuration file, _dw_.cfg, must
+            also be read/write/shareable. If these things are done and you
+            can't start CD Answer, what is the error message you receive?
+            Call Dataware Customer Support at 617-577-2844.
+    3. Is CD Answer able to read from the CD?
+          + If CD Answer can read from the CD, but you cannot run CD
+            Answer, please note exactly any error messages that you
+            receive, and call Dataware Customer Support at 617-577-2844.
+          + If CD Answer cannot read from the CD, did you choose to use a
+            CD-ROM driver or a CD-ROM drive letter while you were going
+            through the installation?
+          + If you chose to use a CD-ROM driver name and are running
+            Windows 95 or Window NT 4.0, you may not have config.sys and
+            autoexec.bat files. CD Answer relies on getting it's
+            information about a CD-ROM driver from these files. You can
+            fix this problem by using a CD-ROM drive letter in place of
+            the CD-ROM driver name. This will have no affect on CD
+            Answer's performance or ability to read the CD-ROM drive,
+            unless your CD-ROM drive letter changes (due to addition of
+            network drive, protable drives, etc.). You can replace your
+            CD-ROM driver name in one of two ways:
+            Go through the installation program again, this time when you
+            are prompted to choose whether to use a driver name or drive
+            letter, make sure that the drive letter that appears in the
+            heading above the options is your CD-ROM drive letter, and
+            select option that allows you to use a drive letter. If the
+            drive letter in the heading above the options is not your
+            CD-ROM drive letter, or if you wish to use a different CD-ROM
+            drive than the one listed in the heading, select the option
+            that allows you to use another drive letter, enter the drive
+            letter of your CD-ROM drive in the box to the right of the
+            words "Database Location", and proceed with the installation.
+            Open the directory that CD Answer was installed to and look
+            for a file called _dw_.cfg. This is the CD Answer
+            configuration file. It is a text file that can be edited using
+            MS_DOS edit or Windows Notepad. Open this file and look for
+            the line that says Driver =" ". In between the quotes you will
+            probably see something like "FS_MSCDX=MSCDEX00" or
+            "FS_ISGEN=MSCDEX00". MSCDEX00 is the false driver name that is
+            used by Windows 95/NT 4.0 in place of the standard driver name
+            that would be loaded in the config.sys and autoexec.bat files.
+            Simply delete the text between the quotations marks and
+            substitute your CD-ROM drive letter. The final line should
+            look similar to Driver = "D:\", where D:\ is your CD-ROM drive
+            letter. Close the file, making sure to save it.
+    4. If you chose to use a CD-ROM driver name and you are running MS_DOS
+       or Window 3.x, check your config.sys file. You can find it on the
+       root directory of your hard drive. It is an editable text file that
+       you can open with MS-DOS edit or Windows Notepad. Look for a line
+       similar to DEVICE=C:\TEAC\TEAC_CDI.SYS /D:TEAC_CDI. This line loads
+       your CD-ROM driver (TEAC_CDI.SYS) into the computer's memory, and
+       assigns it a driver name (in this case, TEAC_CDI). Now check your
+       autoexec.bat file. Similarly, it is a text editable file and will
+       also be located in the root directory of your hard drive. Look for
+       a line similar to C:\TEAC\MSCDEX.EXE /D:TEAC_CDI. This line runs
+       the Microsoft CD-ROM extensions (MSCDEX) on your CD-ROM dirver (the
+       device driver that was loaded in your config.sys file, and is
+       represented by the driver name TEAC_CDI), and will assign your
+       CD-ROM drive the next available drive letter.
+       If either of these lines (or something similar to them) does not
+       appear in your config.sys and autoexec.bat files, your CD-ROM drive
+       is probably not loaded on your computer, and CD Answer will not be
+       able to read from your CD-ROMs. If you have a driver disc that came
+       with your CD-ROM drive, attempt to run the installation from the
+       disc. If this does not work, contact the manufacturer of your
+       CD-ROM drive to find out how to correctly install your CD-ROM
+       drivers.
+       If these lines do appear, and are correct, and your CD-ROM drive is
+       loaded, note the CD-ROM driver name assigned to the CD-ROM driver
+       in your config.sys file (in the example, TEAC_CDI). Did this CD-ROM
+       driver name appear in the heading above the options as the CD-ROM
+       device during the installation process? If you do not know or
+       cannot remember, you can find out in one of two ways:
+       Go though the installation program again, this time when you are
+       prompted to choose whether to use a driver name or drive letter,
+       look at the heading above the options. Does the CD-ROM driver name
+       that appears in your config.sys file match what is in the heading
+       as the CD-ROM device? If not, select the option that allows you to
+       use another CD-ROM driver; in the next screen, select the option
+       that allows you to enter your CD-ROM device manually; enter your
+       CD-ROM driver name in the box to the right of the words CD-ROM
+       Device Name; and then proceed with the installation.
+       Open the directory that CD Answer was installed to and look for the
+       file called _dw_.cfg. This is the CD Answer configuration file. It
+       is a text file that can be edited using MS-DOS edit or Windows
+       Notepad. Open this file and look for the line that says Driver = "
+       ". In between the quotes you will probably see something like
+       "FS_MSCDX=TEAC_CDI" or "FS_ISGEN=TEAC_CDI". Does the CD-ROM driver
+       name that appears in your config.sys file match what is on the
+       right hand side of the equals sign in the quotation marks? If not,
+       change the driver name on the right hand side of the equals sign to
+       match your CD-ROM driver name. Close the file, making sure to save
+       it.
+    5. If you chose to use a CD-ROM drive letter, when you were prompted
+       to choose whether to use a CD-ROM driver or a drive letter, was the
+       drive letter that appeared in the heading above the options the
+       same as the drive letter of your CD-ROM drive, and did you select
+       the option that said use this drive letter?
+       If you are positive that the drive letter in the heading above the
+       options was the same as the drive letter of your CD-ROM, and you
+       did select the option that said Use this drive letter, verify that
+       the configuration file was correctly written. Open the directory
+       that CD Answer was installed to and look for a file called
+       _dw_.cfg. This is the CD Answer configuration file. It is a text
+       file that can be edited using MS-DOS edit or Windows Notepad. Open
+       this file and look for the line that says Driver = " ". In between
+       the quotes you will probably see something like "D:\". Does the
+       CD-ROM drive letter that was assigned to your CD-ROM drive match
+       what is in the quotation marks? If not , change the drive letter in
+       the quotation marks to match your CD-ROM drive letter. Close the
+       file, making sure to save it.
+       If you are not sure if the drive letter in the heading above the
+       options was the same as your CD-ROM drive letter, or if you
+       selected the option that said Use this drive letter, you can
+       replace your CD-ROM drive letter in one of two ways:
+       Go through the installation program again, this time when you are
+       prompted to choose whether to use a driver name or drive letter,
+       check in the heading above the options. Does the CD-ROM drive
+       letter that was assigned to your CD-ROM drive match the drive
+       letter listed in the heading? If not, select the option that allows
+       you to use another drive letter, enter the drive letter of your
+       CD-ROM drive in the box to the right of the words Database
+       Location, and proceed with the installation.
+       Open the directory that CD answer was installed to and look for a
+       file called _dw_.cfg. This is the CD Answer configuration file. It
+       is a text file that can be edited using MS-DOS edit or Windows
+       Notepad. Open this file and look for the line that says Driver = "
+       ". In between the quotes you will probably see something like
+       "D:\". Does the CD-ROM drive letter that was assigned to your
+       CD-ROM drive match what is in the quotation marks? If not, change
+       the drive letter in the quotation marks to match your CD-ROM drive
+       letter. Close the file, making sure to save it.
+    6. If you get to this point and cannot run CD Answer, please note
+       exactly any error messages that you receive and contact Dataware
+       Customer Support at 617-577-2844.
+       If you wish to contact the U.S. Geological Survey about the
+       Geographic Names Information System, telephone 703-648-4544, or
+       reach us at GNIS_Manager@usgs.gov.
+         ______________________________________________________________
+
+                | GNIS Page | Mapping Information Home Page |
+         ______________________________________________________________
+
+
+    U.S. Department of the Interior | U.S. Geological Survey
+    523 National Center, Reston, VA 20192, USA
+    URL: http://geonames.usgs.gov/cdanswer.html
+    Maintainer: GNIS Manager
+    Last modified: 10:43:28 Wed 09 May 2001
+    USGS Privacy Policy and Disclaimers

@@ -1,0 +1,59 @@
+http://www.otaywater.gov/menucontext.js
+
+   function showToolbar() { // AddItem(id, text, hint, location,
+   alternativeLocation); // AddSubItem(idParent, text, hint, location);
+   menu = new Menu(); menu.addItem("otayhome", "Otay Water District",
+   "Otay Water Home", null, null); menu.addItem("departments",
+   "Departments", "Departments", null, null); menu.addItem("jobs", "Jobs",
+   "Jobs", "http://www.otaywater.gov/whatsnew/jobs_home2.htm");
+   menu.addItem("water garden", "Water Conservation Garden", "Water
+   Conservation Garden", "http://www.thegarden.org");
+   menu.addItem("services", "Services", "Services", null, null);
+   menu.addSubItem("otayhome", "Otay Home", "Otay Home",
+   "http://www.otaywater.gov/index.htm"); menu.addSubItem("otayhome",
+   "Contact Us", "Contact Us",
+   "http://www.otaywater.gov/about/contact_home2.htm");
+   menu.addSubItem("otayhome", "About Otay", "About Otay",
+   "http://www.otaywater.gov/about/about_home2.htm");
+   menu.addSubItem("otayhome", "What's New", "What's New",
+   "http://www.otaywater.gov/whatsnew/whatsnew_home2.htm");
+   menu.addSubItem("otayhome", "District Board", "District Board",
+   "http://www.otaywater.gov/about/board_home2.htm");
+   menu.addSubItem("otayhome", "Board Agendas & Minutes", "District
+   Board", "http://www.otaywater.gov/whatsnew/agenda.htm");
+   menu.addSubItem("otayhome", "Employees Only", "Employees Only",
+   "http://www.otaywater.gov/departments/employee_home2.htm");
+   menu.addSubItem("departments", "Administrative Services",
+   "Administrative Services",
+   "http://www.otaywater.gov/departments/adminserv_home2.htm");
+   menu.addSubItem("departments", "Engineering & Contracts",
+   "Engineering",
+   "http://www.otaywater.gov/departments/engineering_home2.htm");
+   menu.addSubItem("departments", "Finance & Accounting", "Finance",
+   "http://www.otaywater.gov/departments/finance_home2.htm");
+   menu.addSubItem("departments", "General Manager", "General Manager",
+   "http://www.otaywater.gov/departments/general_manager_home2.htm");
+   menu.addSubItem("departments", "Human Resources", "Human Resources",
+   "http://www.otaywater.gov/departments/human_resources_home2.htm");
+   menu.addSubItem("departments", "Information Technology", "Information
+   Technology",
+   "http://www.otaywater.gov/departments/info_tech_home2.htm");
+   menu.addSubItem("departments", "Operations", "Operations",
+   "http://www.otaywater.gov/departments/operations_home2.htm");
+   menu.addSubItem("departments", "Purchasing", "Purchasing",
+   "http://www.otaywater.gov/departments/purchasing_home2.htm");
+   menu.addSubItem("departments", "Safety", "Safety",
+   "http://www.otaywater.gov/departments/safety_home2.htm");
+   menu.addSubItem("departments", "School Education", "School Education",
+   "http://www.otaywater.gov/school/schooleducation_home.htm");
+   menu.addSubItem("departments", "Water Conservation", "Water
+   Conservation",
+   "http://www.otaywater.gov/conservation/water_conservation_home2.htm");
+   menu.addSubItem("services", "Customer Services", "Customer Services",
+   "http://www.otaywater.gov/services/services_home2.htm");
+   menu.addSubItem("services", "Library", "Library",
+   "http://www.otaywater.gov/lib/lib_home2.htm");
+   menu.addSubItem("services", "Links", "Links",
+   "http://www.otaywater.gov/links/links_home2.htm");
+   menu.addSubItem("services", "Common Questions", "Common Questions",
+   "http://www.otaywater.gov/about/faq_home2.htm"); menu.showMenu(); }

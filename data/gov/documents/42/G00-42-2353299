@@ -1,0 +1,20 @@
+http://fast.nist.gov/317fix.html
+
+   There are three fixes in this update
+
+     1) The number of points in a time history has been increased. This
+     is to allow editing of the examples, which default to 21 intervals.
+
+     2) Fix a printout error: the size of the fire was reported
+     incorrectly in some cases. The calculation was done correctly, but
+     the output from Report and ReportSS was incorrect. The problem
+     occurs if there are two fires in a compartment, with one of them in
+     the upper layer, and one in the lower layer. Once again, the report
+     was incorrect, but the value used in subsequent calculations was
+     correct.
+
+     3) The workspace for the solver was not dimensioned correctly, so
+     CFAST could not do 30 compartments. This has been fixed.
+
+   This update applies to version 3.1.6 of CFAST/FAST which is on the
+   distribution disk, dated: November 1, 1999.

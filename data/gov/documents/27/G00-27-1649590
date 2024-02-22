@@ -1,0 +1,80 @@
+http://cammp.nos.noaa.gov/spo/prodlist.taf?alltype=3
+
+   banner.jpg (19758 bytes)
+
+   Home
+   Home
+   Line Graphic
+   Site Map
+   Search
+   Line Graphic
+   News & Events
+   Projects
+   Programs
+   Line Graphic
+   Publications & Products
+   cd-roms
+   datasets
+   publications
+   webpages
+   Line Graphic
+   SPO Employees
+   Contact Us
+
+                           Datasets and GIS Files
+
+                                    1999
+
+     * Counties Geographic Information System (GIS) Files
+     * States Geographic Information System (GIS) Files
+     * Rivers and Lakes Geographic Information System (GIS) Files
+     * Salinity Zones Geographic Information System (GIS) Files
+     * Cities Geographic Information System (GIS) Files
+     * US Lower 48 Outline GIS File
+     * NOAA's National Status and Trends (N&T) Stations Geographic
+       Information System (GIS) Files
+     * ZipCode Centroides Geographic Information System (GIS) Files
+     * ZipCode Polygons Geographic Information System (GIS) Files
+     * Coastal Assessment Framework Geographic Information System (GIS)
+       Files
+
+                                    1998
+
+     * ESDIM Estuarine Bathymetry Geographic Information System (GIS)
+       Files
+
+                                    1995
+
+     * The 1995 National Shellfish Register of Classified Growing Waters
+       (SQL Data)
+
+                                    1991
+
+     * Benthic habitats of the Floriday Keys Geographic Information System
+       (GIS) Files
+
+                                    1987
+
+     * Agricultural Lands and Pesticide-Use Estimates SQL Data
+
+                                    1960
+
+     * Coastal Trends: Population and Development in Coastal Areas SQL
+       Data
+     __________________________________________________________________
+
+   [Application File] START /spo/prodlist.taf alltype=3
+   [Results Action] Results
+   [Changed Vars] user$type=3
+   [Search Action] Search
+   [Query] SELECT
+   C1.OFFERING_CODE,C1.DATA_DISPLAY_NAME,C1.ON_LINE,C1.OFFERING_TYPE,C1.OR
+   GANIZATIONAL_UNIT,C1.FIRST_YEAR FROM ORCA_LIB.CATALOG C1 WHERE
+   (C1.OFFERING_TYPE=3 AND C1.ORGANIZATIONAL_UNIT=:v1) ORDER BY 6 DESC,1
+   ASC
+   [BoundVals] [v1='SEA']
+   [ActionResults] 3_SEA_99-03 Counties Geographic Information System
+   (GIS) Files Y 3 SEA 1999
+   [Changed Vars] user$pastyear=1960
+   [user$ Vars] pastyear=1960 type=3 variabletimeout=240
+   [local$ Vars] resultset=[Array:15x6] variabletimeout=240

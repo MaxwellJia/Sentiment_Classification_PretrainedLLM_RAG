@@ -1,0 +1,80 @@
+http://math.lanl.gov/projects/campbell.01.pdf
+
+   Mathematical Modeling & Analysis, T-7 Theoretical Division Artificial
+   Viscosity for Multidimesional Special Feature Hydrodynamics Codes 2001
+   James C. Campbell (T-7/CNLS) Special methods are required to allow a
+   hydrodynam- results. In the first figure, a cylindrical expansion is
+   cal- ics algorithm to model shock waves, or else the simu- culated on a
+   square mesh. The results should show a lation will develop unphysical
+   oscillations in the circular area of high density, but the viscosity in
+   [1] has shocked flow. A widely used method for correcting instead
+   caused jets to form along the mesh axes.The ob- this is the addition of
+   an artificial viscosity, which ject of this research is to develop an
+   artificial viscosity spreads the shock wave over three or four mesh
+   points and so 0.3 Time: 0.600E+00 regularizes the discontinuity. In
+   one-dimensional flow, the arti- Density ficial viscosity is added to
+   the 23.3623 21.9935 physical pressure, where it helps 20.6247 to
+   diffuse sharp structures in the 19.2559 flow and dissipates energy. In
+   0.2 17.8872 16.5184 one dimension, the magnitude 15.1496 of viscosity
+   can be defined 13.7808 12.412 clearly, but the extension to mul- Y
+   11.0432 tiple dimensions is considerably 9.67444 more difficult as then
+   there is no 8.30565 6.93686 such clear definition. 0.1 5.56807 4.19929
+   2.8305 Practical problems commonly involve complex geometry, meaning
+   that the simulation must be performed in multiple dimensions, and that
+   it is often 0 impractical to align the compu- 0 0.1 0.2 0.3 tational
+   mesh with the flow. X Figure 1: Artificial viscosity in [1] develops
+   unphysical jets along the Designing an artificial viscosity axes for
+   the cylindrical Noh problem on an initially square mesh. for
+   multidimensional flows first requires formulating a list of desirable
+   properties. Re- that retains the desirable properties, and succeeds on
+   a cent research at Los Alamos has codified several prop- set of common
+   test problems, including the problem erties that help to minimize the
+   effects of the viscosity where the previous viscosity fails. The
+   research can be away from shock waves; an artificial viscosity was then
+   split into two sections: developing the discrete operators developed
+   that satisfied these properties and was shown required to calculate the
+   viscosity, and actually design- to be successful for many problems [1].
+   However, there ing the viscosity term using these operators. is a
+   second issue arising in multidimensional flows: the need to preserve
+   physical symmetries of the flow. The It is common to store different
+   quantities at separate formulation in [1] does a good job when the
+   computa- locations on the grid: velocity is stored at the nodes of
+   tional mesh itself embodies the symmetries of the flow. the grid while
+   pressure and density are stored in the cells. When this is not the case
+   the viscosity can give incorrect This results in an improved algorithm.
+   The cell edges Los Alamos 22 Theoretical Division - Self-Assessment -
+   Special Feature offer an additional location, and storing the viscosity
+   there provides useful properties. In order to solve the problem, we
+   need discrete operators that allow us to calculate the required values
+   at the correct locations. These operators were found using the mimetic
+   finite difference 0.25 Time: 0.600E+00 approach [2], where the
+   derivation of the discrete functions ensures that they mimic crucial
+   properties Density 15.5418 of the physical problem. One 0.2 14.6613
+   property is conservation of total 13.7808 12.9004 energy; using the
+   mimetic 12.0199 approach results in exact 11.1394 10.259 conservation
+   of total energy, to 0.15 9.37849 within numerical error. This is a
+   8.49802 Y 7.61756 property that many other numerical 6.73709 schemes do
+   not deliver. 0.1 5.85662 4.97616 4.09569 The form of viscosity used is
+   based 3.21522 loosely on physical viscosity, and 2.33476 the viscosity
+   coefficient is chosen 0.05 to ensure that the final viscosity has the
+   desirable properties. As the choices made in designing the vis- 0
+   Figure 2: The new tensor viscosity gives good results cosity have a
+   strong effect on its 0 for the cylindrical Noh problem. 0.05 0.1 0.15
+   0.2 0.25 reliability, testing over a range of X problems is required to
+   ensure that the viscosity is suitable for practi- Figure 2: The new
+   tensor viscosity gives good results cal applications. The new viscos-
+   for the cylindrical Noh problem. ity gives good results for the test
+   problems considered. For the cylindrical expansion This research was
+   performed in collaboration with problem discussed above, the second
+   figure shows the Mikhail Shashkov, T-7. expected circular area of high
+   density, and gives a smooth mesh within this area. The object of this
+   research is to develop an artificial viscosity that retains the [1] E.
+   J. Caramana, M. J. Shashkov, and P. P. Whalen, desirable properties,
+   and "Formulations of artificial viscosity for multi-dimensional
+   succeeds on a set of common shock wave computations," Journal of
+   Computational Physics 144, 70-97 (1998). test problems.... [2] J. M.
+   Hyman and M. J. Shashkov, "Natural discretizations for the divergence,
+   gradient, and curl on logically rectangular grids," International
+   Journal of Computers & Mathematics with Applications 33, 81-104 (1997).
+   This paper is a portion of LA-UR-01-1847, May 2001.jamesc@lanl.gov A U.
+   S. Department of Energy Laboratory Los Alamos

@@ -1,0 +1,171 @@
+http://maps.fsl.noaa.gov/Welcome2.cgi
+
+   [RUCMAPS.gif]
+
+MAPS/RUC Information
+     __________________________________________________________________
+
+  Regional Analysis and Prediction Branch -- NOAA /ERL / FSL /FRD
+
+   RUC-2 is now running operationally at the National Centers for
+   Environmental Prediction (NCEP) as of 6 April 1998.
+   See forum for latest news.
+     * [new.gif] Real-time counts for observational data used in RUC-2 or
+       for 40km MAPS
+     * [new.gif] MAPS participation in the GEWEX/GCIP project
+     * Real-time analysis/forecast loops available for selected MAPS
+       fields. (up to 60 h with 1 h resolution)
+     * Turbulence data from 40km MAPS. See where you might get bumped
+       around on your flights.
+     * Soundings from 40km MAPS analysis.
+     * Interactive soundings from MAPS forecasts (requires JAVA enabled
+       browser)
+     * RUC-2 Technical Procedures Bulletin - detailed description of RUC-2
+     * Bulletin board forum for RUC-2 questions/answers, includes info on
+       real-time runs. Subscribe for email updates.
+     * Evaluation results for RUC-2 field test by NWS - Nov 97 - Jan 98
+     * Converting from 40-km conus RUC-2 to 60-km polar stereo RUC-1
+       domain
+     * How to access RUC-2 grids from the OSO server
+
+   Info on 40-km RUC/MAPS
+   Publications on all aspects of RUC/MAPS
+
+   [40kmplots_btn.fm.gif] National and regional ( NW , SW , N Central , S
+   Central , Great Lakes , NE , SE)
+
+   [40kmruc2plots_btn.fm.gif] National and regional ( NW , SW , N Central
+   , S Central , Great Lakes , NE , SE)
+
+   The RAP Branch focuses on the development of the
+     * Mesoscale Analysis and Prediction System (MAPS), a regional data
+       assimilation and forecast system, and the
+     * Rapid Update Cycle (RUC), the operational version of MAPS running
+       at the National Centers for Environmental Prediction (NCEP).
+
+   The key features of RUC2/MAPS include:
+     * high-frequency (every 1 h) 3-d objective analyses over the
+       contiguous United States
+     * high-frequency short-range model forecasts (out to 12 h) in support
+       of aviation and other mesoscale forecast users
+     * currently assimilates data from
+          + commercial aircraft (relayed primarily through ACARS -
+            Aircraft Communications, Addressing, and Reporting System)
+          + wind profilers (404 and boundary-layer 915 MHz)
+          + rawinsondes
+          + surface reporting stations (including some mesonet)
+          + buoys
+          + RASS (Radio Acoustic Sounding System) - experimental
+          + VAD (velocity-azimuth display) winds from NWS WSR-88D radars
+          + GOES total precipitable water estimates from Univ. of
+            Wisconsin - CIMSS
+            And at NCEP
+          + SSM/I total precipitable water estimates
+          + GOES high-density visible, IR, and water vapor cloud-top cloud
+            drift winds
+     * uses a hybrid isentropic-sigma vertical coordinate.
+     __________________________________________________________________
+
+MAPS/RUC Information and Real-Time Data
+
+     * Verification statistics for 40-km MAPS - updated for 28 May - 15
+       September 1997 period
+     * Use of GOES precipitable water data every 3 hours. Data from
+       CIMSS/Univ. Wisconsin - 11 June 1997 Precipitable water products on
+       this page added below.
+     * Snow accumulation products from 40-km MAPS now available - 1 Apr
+       1997
+     * Introduction of snow accumulation and melting with snow cover and
+       temperature cycling - 30 Jan 1997
+     * Introduction of explicit cloud microphysics in 40-km MAPS with
+       cycling of cloud variables - 2 Jan 1997
+       Microphysics from NCAR/Penn State MM5 model includes explicit
+       forecasts of mixing ratios of cloud water, rain water, snow, ice,
+       and graupel, and also a forecast of the number concentration of ice
+       particles.
+
+   Information on RUC/MAPS display variables
+
+     * Model topography maps
+       [40kmtopocol_sm.gif]
+     * 40-km topography -- current RUC
+     * 60-km topography -- previous RUC
+     * Download ASCII 40-km and 60-km topography or latitude/longitude
+     * Change log for previous 60-km version of Rapid Update Cycle
+
+  Other places to get a piece of the operational RUC
+
+     * Storm Prediction Center composite map using RUC data -- can overlay
+       different fields in a Java script - 5 stars!
+     * RUC Graphics from COLA/IGES
+     * Other RUC Graphics from Purdue Weather Processor.
+     * Other RUC Graphics from NCAR/RAP/Greg Thompson
+     * S.E. U.S. RUC Graphics and soundings from Univ. N.
+       Carolina-Charlotte/Duke Power
+     * RUC Graphics in Vis5D from Texas A&M
+     * RUC experimental icing forecasts from Aviation Weather Center
+       http://www.met.utah.edu/cgi-bin/wx/model_ruc2.cgi
+     * Univ. Utah RUC-2 analyses and forecasts
+
+  More RUC information
+
+     * 60-km RUC description.
+       A detailed description of the 60-km Rapid Update Cycle and the
+       60-km/3-h version of MAPS from a September 1994 National Weather
+       Service Technical Procedures Bulletin. Includes information and
+       even some pictures on
+
+     * Domain, including the hybrid-b isentropic-sigma vertical coordinate
+     * Analysis, including data used and analysis variables
+     * Forecast model, including numerics and physics
+     * Output fields available
+
+     Access to real-time RUC-2 grids from the OSO server at NCEP
+
+     RUC/MAPS 40-km and 60-km domain information
+   terrain elevation and latitude/longitude data is available for
+   downloading in ASCII and NetCDF formats.
+
+     Interpolation/transformation software to download -- FORTRAN code
+     * Interpolate from RUC/MAPS hybrid-b levels/variables to isobaric
+       levels/standard variables
+     * Transform from hybrid-b variables (virtual potential temperature,
+       condensation pressure) to temperature and water vapor mixing ratio
+       at a single point. (RUC2 variables are much easier to work with.)
+     __________________________________________________________________
+     __________________________________________________________________
+
+  Information about research performed by the branch
+
+     * Recent publications
+     * Plans
+     __________________________________________________________________
+
+  MAPS/RUC staff:
+
+   Stan Benjamin, Branch Chief, a little model and analysis development on
+   the side, benjamin@fsl.noaa.gov
+
+   John Brown, model development / parameterizations, jmbrown@fsl.noaa.gov
+   Kevin Brundage, applications software/graphics, kevb@fsl.noaa.gov
+   Susan Carsten, secretary, carsten@fsl.noaa.gov
+   Dezso Devenyi, analysis development, devenyi@fsl.noaa.gov
+   Georg Grell, model development / parameterizations, grell@fsl.noaa.gov
+   Dongsoo Kim, analysis development, dkim@fsl.noaa.gov
+   Barry Schwartz, observations / evaluation, schwartz@fsl.noaa.gov
+   Tanya Smirnova, model development / parameterizations,
+   smirnova@fsl.noaa.gov
+   Tracy Smith, observation ingest / data impact, traine@fsl.noaa.gov
+
+   Geoff Manikin, RUC implementation/evaluation, NCEP/Environmental
+   Modeling Center, geoffrey.manikin@noaa.gov
+
+   Current FRD staff listing with phone numbers
+     __________________________________________________________________
+
+   (Back to FRD homepage)
+
+   Prepared by Stan Benjamin, images by Kevin Brundage,
+   benjamin@fsl.noaa.gov, 303-497-6387
+
+   Last updated: Feb 26 1999

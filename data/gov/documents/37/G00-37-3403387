@@ -1,0 +1,319 @@
+http://nls3.nlm.nih.gov/MetaMap/ambiguity.94.pdf
+
+   Ambiguity Resolution while Mapping Free Text to the UMLS Metathesaurus
+   Thomas C. Rindflesch and Alan R. Aronson National Library of Medicine
+   Bethesda, MD 20894 We propose a method for resolving ambiguities
+   examples are [5] (mapping to MeSH), [6] (mapping to encountered when
+   mapping free text to the UMLS® MeSH), [7], [8], [9], [10], [11], and
+   [12]. Metathesaurus.® Much of the research in medical informatics
+   involves the manipulation of free text. The Regardless of the method
+   used for mapping to the Metathesaurus contains extensive information
+   which Metathesaurus, ambiguous mappings result. Such supports solutions
+   to problems encountered while mappings, which occur when a text phrase
+   maps cor- processing such text. After discussing the process of rectly
+   to more than one Metathesaurus concept, have mapping free text to the
+   Metathesaurus and describ- to be resolved before further processing can
+   be reli- ing the ambiguities which are often the result of such ably
+   pursued. In this paper, after discussing the pro- mapping, we provide
+   examples of rules designed to cess of mapping free text to
+   Metathesaurus concepts eliminate mapping ambiguities. These rules refer
+   to and elucidating the resulting ambiguity, we describe a the context
+   in which the ambiguity occurs and cru- pilot study which investigates
+   an approach to resolv- cially depend on semantic types obtained from
+   the ing such ambiguity. Metathesaurus. We have conducted a preliminary
+   test of the methodology and the results obtained indicate MAPPING
+   PHRASES IN FREE TEXT TO THE that the rules successfully resolve
+   ambiguity around UMLS METATHESAURUS 80% of the time. An example of a
+   general and robust algorithm for mapping to a controlled vocabulary is
+   described in INTRODUCTION [6]. This algorithm has a number of
+   characteristics As automated methods in medical informatics mature,
+   which ensure that the concepts identified accurately researchers are
+   increasingly addressing the problems represent the source text. The
+   algorithm first identifies inherent in manipulating free text. Due to
+   the com- noun phrases in the input text and then maps to con- plexity
+   of natural language, such processing poses a cepts within each noun
+   phrase. It further produces particular challenge to system developers.
+   The Uni- morphological variants, and deals with various kinds fied
+   Medical Language System® (UMLS) ([1]) pro- of partial matches,
+   including permutation of words, vides extensive support for processing
+   natural synonymy, intervening unimportant words, partial language.
+   matches, and complex matches. Several studies ([2], [3], and [4], for
+   example) discuss We have developed a program for mapping free text to
+   projects which exploit the UMLS Metathesaurus in the Metathesaurus
+   which has most of the desirable natural language processing. In
+   addition to its value characteristics found in [6], but which differs
+   consid- for such research, [1] summarizes research using erably in
+   implementation and in our treatment of par- UMLS for a variety of
+   purposes involving the manip- tial and complex matches. Our program,
+   which is ulation of text, including information retrieval, index-
+   described in more detail in [4], first identifies simple ing, and data
+   creation applications. noun phrases in free text. This syntactic
+   analysis relies on the SPECIALIST lexicon ([13]) and the Xerox In order
+   to effectively use the information contained Part-of-Speech Tagger
+   ([14]). The following exam- in the 4th (1993) Experimental Edition of
+   the Meta- ples demonstrate the crucial characteristics of our thesaurus
+   it is first necessary to map the text being mapping program as it
+   identifies Metathesaurus con- processed to Metathesaurus concepts. Many
+   research- cepts for each noun phrase. ers have proposed various methods
+   for such mapping. (The early projects map to the MeSH® vocabulary, We
+   employ intensive variant generation, which, in but the principles
+   involved are identical to those addition to accommodating purely
+   string-based vari- involved in mapping to the Metathesaurus.) Some
+   ants, such as upper and lower case distinctions and inflectional
+   variants, establishes a relationship between variants based on
+   derivational morphology, given in brackets to indicate the two meanings
+   of dial- synonymy, and abbreviation. For example, although ysis. the
+   term renal transplant does not occur in the Meta- thesaurus, our
+   variant generation determines that (5) a. lymph dialysis renal is a
+   synonym of kidney and thus the text renal b. "Lymph" transplant maps to
+   the Metathesaurus term "KIDNEY TRANSPLANT", one of the terms for the
+   concept c. "Dialysis <1>" [`Natural Phenomenon or "Kidney
+   Transplantation". Similarly, thermogram is Process'] not in the
+   Metathesaurus; however, morphological d."Dialysis <2>" [`Therapeutic or
+   Preventive variant generation allows this term to map to "Ther-
+   Procedure'] mography". Finally, our treatment of abbreviations and
+   acronyms allows us to map ICU to "Intensive Care Unit". AMBIGUOUS
+   MAPPINGS We also allow complex matches, in which more than Regardless
+   of the effectiveness of the algorithm one Metathesaurus concept
+   represents the text of a employed for mapping free text to concepts in
+   the noun phrase. For example, the noun phrase in (1a) Metathesaurus,
+   ambiguities will result. Ambiguous maps to the Metathesaurus concepts
+   (1b) and (1c). mappings to the Metathesaurus fall into two general
+   categories: those caused by variant generation (this (1) a. digoxin
+   overdose may be due to morphological variants, synonyms, or
+   abbreviations), and those caused by ambiguity inher- b. "Digoxin" ent
+   in a Metathesaurus concept itself, as illustrated in c. "Overdose" (5)
+   above. It should be noted that the mapping algorithm does With regard
+   to variant generation, morphology not itself specify the relationship
+   between the Meta- together with synonymy conspire to produce multiple
+   thesaurus concepts in a complex match; further pro- mappings which must
+   be resolved in a particular con- cessing is required to determine the
+   relationship text. For example, these phenomena cause the word between
+   concepts in complex matches. fundamental to map infelicitously to the
+   Meta- thesaurus concepts "Foundation" (with semantic type For those
+   cases in which only part of the noun phrase `Organization') and "base"
+   (with semantic type "Inor- has a mapping to the Metathesaurus, we
+   distinguish ganic Chemical"). Abbreviations cause particular between
+   instances in which the head is involved in problems due to the fact
+   that they often have several mapping (2), and those in which it is not
+   (3). (The expansions, none of which are semantically related to head of
+   a noun phrase is the rightmost noun in the each other. For example, the
+   single letter c matches structure.) Metathesaurus concepts including:
+   "Carbon", "Com- plement", Cytidine", and "Cytosine". (2) a. liquid
+   crystal thermography Ambiguous words and phrases are distinguished in
+   b. "Thermography" the Metathesaurus either by integers in angled brack-
+   (3) a. cochlear implant subjects ets or by a note in parentheses. The
+   ambiguous word dialysis, for example, is represented by the preferred
+   b. "Cochlear Implant" term "Dialysis <1>", which has semantic type
+   `Natu- A further sub-type of partial match involves a map- ral
+   Phenomenon or Process' and by the preferred term ping to Metathesaurus
+   concepts which do not contigu- "Dialysis <2>", which has semantic type
+   `Therapeutic ously cover the text of the noun phrase, as in (4). or
+   Preventive Procedure'. Inhibition is represented as "Inhibition
+   (Psychology)" with semantic type `Mental (4) a. adjuvant-induced
+   arthritis Process' and as "Inhibition <2>" with semantic type
+   `Molecular Function'. b. "Arthritis, Adjuvant" Ambiguities, of whatever
+   type, have to be resolved if (5) illustrates the problem of ambiguous
+   terms in the the Metathesaurus concepts obtained by the mapping
+   Metathesaurus. The noun phrase in (5a) has a com- algorithm are to
+   accurately support further processing plete mapping to the
+   Metathesaurus as indicated in of the input text. We have decided to
+   first address the (5b-d). However, dialysis maps to the two concepts
+   type of ambiguity which is due to ambiguous con- shown, where the
+   corresponding semantic types are cepts in the Metathesaurus itself. The
+   technique being developed can then serve as the basis for resolving
+   cept associated with that type is selected and the other ambiguity due
+   to variant generation. (Also see [2] for candidates are rejected. An
+   important characteristic of an example of ambiguity resolution in the
+   context of a the entire approach is that it is probabilistic; the suc-
+   natural language processing system.) cessful application of a rule in
+   favor of a particular semantic type indicates that there is a certain
+   likeli- AMBIGUITY RESOLUTION hood that the ambiguity should be resolved
+   in favor of that semantic type, but the determination is not cate- The
+   type of ambiguity exemplified by ambiguous gorical. Metathesaurus
+   concepts is often referred to as word sense ambiguity. The general
+   principle which sup- As an example of the application of the
+   disambigua- ports the resolution of this ambiguity is the notion that
+   tion rules first note that immunology ambiguously a particular sense of
+   a term occurs in a definable tex- maps to the Metathesaurus concepts
+   shown in (6). tual context. Beginning with [15] a number of (6) a.
+   "immunology <1>" [`Biologic Function'] researchers in computational
+   linguistics have pro- posed various systems for exploiting contextual
+   infor- b. "Immunology <2>" [`Biomedical Occupation mation for the
+   purposes of word sense disambiguation or Discipline'] (for example
+   [16], [17], and [18]). We would like to take advantage of the insights
+   these systems offer with c. "Immunology <3>" [`Laboratory Procedure']
+   regard to the general approach to word sense disam- One of the rules
+   for the semantic type `Laboratory biguation, especially with regard to
+   what kinds of Procedure' is: information can contribute to the
+   disambiguation and the general ways in which this information can be
+   (7) Evidence in favor of `Laboratory Procedure': exploited. One of the
+   following list of words occurs to A further consideration is how much
+   context has to be the right of the ambiguous concept: classify,
+   specified for effective ambiguity resolution. That is, indicate,
+   procedure, reveal, show, analysis, experiment, finding, method,
+   technique. the context might be the sentence in which the word occurs,
+   or it might be the paragraph, or it might be In the text given in (8),
+   rule (7) applies to select some larger text unit, for example the
+   entire document semantic type `Laboratory Procedure' and its associ- in
+   which the ambiguous term occurs. ated concept "Immunology <3>" since
+   the word anal- As a pilot study, we have implemented a word sense ysis
+   follows the word in the text which is involved in disambiguation
+   algorithm in a Prolog program and the mapping ambiguity. (In this and
+   the following have tested it on the NLM Test Collection ([19]). Our
+   examples, the textual material which is involved in a system has been
+   influenced in particular by [18]; how- mapping ambiguity is underlined,
+   and the textual con- ever, in this prototype system, we limit the
+   context text which contributes to the resolution of the ambigu- used
+   for disambiguation to that occurring in the sen- ity is given in bold
+   type.) tence in which the ambiguous term occurs. Within this context,
+   the rules which resolve ambiguity may (8) Immunological analysis of the
+   released fibronec- refer either to the presence of patterns of
+   particular tin indicated that LTA was the only surface com- words or to
+   patterns of UMLS semantic types associ- ponent which could be detected
+   as a soluble ated with the Metathesaurus concepts which consti- complex
+   with the released fibronectin. tute the mapping of the sentence in
+   which the The following rule describes some of the evidence ambiguous
+   term occurs. Either of these pattern types which supports selection of
+   the type `Biologic Func- may be defined as occurring in a particular
+   syntactic tion'. (Reference to a semantic type in a rule is to be
+   structure. In the discussion that follows we provide interpreted as
+   also referring to all the children of that examples of the process of
+   ambiguity resolution using semantic type in the UMLS Semantic Network.)
+   partial, informal statements of the rules involved. (9) Evidence in
+   favor of `Biologic Function': The disambiguation process is driven by
+   rules which A prepositional phrase occurs to the right of are
+   associated with semantic types. Each semantic the ambiguous concept,
+   the preposition is in type has associated with it a disambiguation rule
+   or of, and the head of the object of the prepo- which specifies the
+   evidence that supports selection of sition maps to a concept which has
+   the this semantic type. Upon selection of a semantic type, semantic
+   types `Plant' or `Animal'. The ambiguity is resolved in that the
+   Metathesaurus con- prepositional phrase occurs "close" to the ambiguous
+   concept but need not be immedi- than tricyclic antidepressants in
+   relieving sleep ately contiguous. disorders in depressed patients. OR A
+   phrase which maps to a concept having Additional rules might enhance
+   the evidence in sup- the semantic type `Disease or Syndrome' port of
+   either `Organic Chemical' or `Pharmacologic occurs to the right of the
+   ambiguous concept. Substance' but could not contradict the elimination
+   of `Laboratory Procedure'. Alternatively, after the elimi- nation of
+   `Laboratory Procedure', it could be the case In the following examples,
+   rule (9) chooses the cor- that there is also no evidence to support
+   either rect mapping for immunology. In both (10) and (11) `Organic
+   Chemical' or `Pharmacologic Substance'. In this is the concept
+   "immunology <1>", which has the such a case the ambiguity must be left
+   unresolved. semantic type `Biologic Function'. In (10) the ambig- uous
+   term is followed by one which has the semantic type `Animal'. In (11)
+   the contextual evidence sup- TESTING THE METHODOLOGY porting selection
+   of `Biologic Function' is a term hav- In order to determine the
+   viability of our general ing the semantic type `Disease or Syndrome'.
+   approach to ambiguity resolution, we conducted a (10) The immunological
+   responses of owl monkeys to pilot study limited to instances of
+   immunology in the L. b. panamensis were similar in many respects to NLM
+   Test Collection. We extracted 110 sentences those observed in humans
+   with localized cutane- containing instances of morphological variants
+   of ous leishmaniasis. immunology. As noted above immunology maps
+   ambiguously to three Metathesaurus concepts, which (11) This nonhuman
+   primate model should be useful have semantic types `Biologic Function'
+   ("Immunol- for future studies involving the immunology and ogy <1>"),
+   `Biomedical Occupation or Discipline' chemotherapy of cutaneous
+   leishmaniasis. ("Immunology <2>"), and `Laboratory Procedure' There is
+   a general principle that if the evidence which ("Immunology <3>"). This
+   experiment thus tests the could support a particular semantic type does
+   not in viability of the rules relevant to these three semantic fact
+   occur in the text, then that semantic type is disfa- types. vored and
+   the alternatives are favored. Imipramine (as Our disambiguation rules
+   resolved 86 of the 110 shown in (12)) is one of the Metathesaurus terms
+   instances correctly (78.2%). The program resolved which belong to the
+   ambiguity class having one immunology to `Biologic Function'
+   ("Immunology semantic type `Laboratory Procedure', and one or <1>") 95
+   times, 75 of which were correct (78.9%). more additional semantic types
+   which are children of Four instances were resolved to `Biomedical
+   Occupa- `Substance' in the Semantic Network. tion or Discipline'
+   ("Immunology <2>"), two of (12) a. "Imipramine <1>" [`Organic
+   Chemical', which were correct; and eleven instances were `Pharmacologic
+   Substance'] resolved to `Laboratory Procedure' ("Immunology <3>"), nine
+   of which were correct (81.8%). b. "Imipramine <2>" [`Laboratory
+   Procedure'] In examples (13) and (14), although the rule for `Lab-
+   CONCLUSION oratory Procedure' has a chance to apply (since that In
+   conclusion, we would like to suggest that the meth- semantic type
+   occurs associated with one of the possi- odology for ambiguity
+   resolution which we propose ble mappings), there is no evidence to
+   support selec- can make a significant contribution to increased preci-
+   tion of `Laboratory Procedure'. Thus, this semantic sion in an
+   information retrieval system. Additional type is eliminated in favor of
+   the alternative semantic research which we have recently conducted
+   supports types (`Organic Chemical' and `Pharmacologic Sub- this
+   conclusion. As noted earlier this methodology is stance') and
+   "Imipramine <1>" is selected to resolve part of a general algorithm for
+   mapping free text to the ambiguity. the UMLS Metathesaurus. In [20] we
+   describe an (13) Moreover, imipramine, an inhibitor of protein
+   experiment to test our general mapping algorithm kinase C, had little
+   effect. with regard to retrieval effectiveness. (14) Fluoxetine has
+   overall therapeutic efficacy com- In that study we report that our
+   mapping algorithm parable with imipramine, amitriptyline and dox-
+   chooses the correct Metathesaurus concept around epin in patients with
+   unipolar depression treated 90% of the time, without word sense
+   disambiguation. for 5 to 6 weeks, although it may be less effective
+   Document retrieval conducted on the basis of that mapping resulted in
+   about 60% average precision. Since incorrect mappings detract from
+   precision and mated information retrieval." Frisse ME (ed.) Pro- since
+   a significant number of the incorrect mappings ceedings of the 16th
+   Annual SCAMC, 644-648, 1992. are due to ambiguity, resolving ambiguity
+   will con- 10. Lin R, Lenert L, Middleton B and Shiffman S. "A tribute
+   to increased precision. Given that the work free-text processing system
+   to capture physical find- described in this paper suggests that our
+   method for ings: Canonical phrase identification system resolving
+   ambiguous mappings is effective around (CAPIS)." In Clayton PD (ed)
+   Proceedings of the 15th 80% of the time, we feel that this method shows
+   con- Annual SCAMC, 168-172, 1991. siderable promise for continued
+   research aimed at increasing precision in information retrieval
+   systems. 11. Wagner MM. "An automatic indexing method for medical
+   documents." In Clayton PD (ed.) Proceedings of the 15th Annual SCAMC,
+   1011-1017, 1992. References 12. Miller RA, Gieszczykiewicz FM, Vries JK
+   and Cooper GF. "CHARTLINE: Providing bibliographic 1. Lindberg DAB,
+   Humphreys BL and McCray AT. references relevant to patient charts using
+   the UMLS "The Unified Medical Language System." Methods of
+   Metathesaurus knowledge sources." In Frisse ME Information in Medicine
+   32:281-291, 1993. (ed.) Proceedings of the 16th Annual SCAMC, 86-90, 2.
+   Johnson SB, Aguirre A, Peng P and Cimino J. 1992. "Interpreting natural
+   language queries using the 13. Browne AC, McCray AT and Srinivasan S.
+   The UMLS." In Safran C (ed.) Proceedings of the 17th SPECIALIST
+   Lexicon. National Library of Medicine, Annual SCAMC, 294-298, 1993.
+   Report No. NLM-LHC-93-01 (available from NTIS, 3. McCray AT, Aronson
+   AR, Browne AC, Rindflesch Springfield VA: PB93-217248), 1993. TC, Razi
+   A and Srinivasan S. "UMLS knowledge for 14. Cutting D, Kupiec J,
+   Pedersen J and Sibun P. "A biomedical language processing." Bulletin of
+   the Med- practical part-of-speech tagger." In Proceedings of the ical
+   Library Association 81:184-194. Third Conference on Applied Natural
+   Language Pro- 4. Rindflesch TC and Aronson AR. "Semantic pro- cessing,
+   1992. cessing in information retrieval." In Safran C (ed.) 15. Wilks
+   YA. "An artificial intelligence approach to Proceedings of the 17th
+   Annual SCAMC, 611-615, machine translation." In Schank RC and Colby KM
+   1993. (eds) Computer Models of Thought and Language, 5. Moore GW,
+   Hutchins GM, Boitnott JK, Miller RE 114-151. San Francisco: W. H.
+   Freeman and Co., and Polacsek RA. "Word root translations of 45,564
+   1973. autopsy reports in MeSH titles." In Stead WW (ed.) 16. Hirst GJ.
+   Semantic interpretation against ambigu- Proceedings of the 11th Annual
+   SCAMC, 128-132, ity. Brown University Doctoral dissertation, 1984.
+   1987. 17. Stallard D. "The logical analysis of lexical ambi- 6. Elkin
+   PL, Cimino JJ, Lowe HJ, Aronow DB, Payne guity." In Proceedings of the
+   25th Annual Meeting of TH, Pincetl PS and Barnett GO. "Mapping to MeSH:
+   the Association for Computational Linguistics, 179- The art of trapping
+   MeSH equivalence from within 185, 1987. narrative text." In Greenes RA
+   (ed) Proceedings of the 12th Annual SCAMC, 185-190, 1988. 18. McCroy
+   SW. "Using multiple knowledge sources for word sense disambiguation."
+   Computational Lin- 7. Canfield K, Bray B, Huff S and Warner H. "Data-
+   guistics 18:1-30, 1992. base capture of natural language
+   echocardiographic reports: a Unified Medical Language approach." In 19.
+   Schuyler PL, McCray AT and Schoolman HM. "A Kingsland LC, III (ed.)
+   Proceedings of the 13th test collection for experimentation in
+   bibliographic Annual SCAMC, 559-563, 1989. retrieval." Barber B, Cao D,
+   Qin D and Wagner G (eds.) MEDINFO 89, Amsterdam: North-Holland, 8.
+   Chute CG, Yang Y, Tuttle MS, Sherertz DD, Olson 810-912, 1989. NE and
+   Erlbaum MS. "A preliminary evaluation of the UMLS Metathesaurus for
+   patient record classifi- 20. Aronson AR, Rindflesch TC, Browne AC.
+   cation." In Miller RA (ed.) Proceedings of the 14th "Exploiting a large
+   thesaurus for information Annual SCAMC,161-165, 1990. retrieval."
+   Proceedings of RIAO-94, to appear. 9. Hersh WR, Hickam DD and Leone TJ.
+   "Words, concepts, or both: Optimal indexing units for auto-

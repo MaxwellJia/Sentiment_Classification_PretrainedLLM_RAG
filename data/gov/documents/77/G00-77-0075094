@@ -1,0 +1,89 @@
+http://hypermail.fnal.gov/fixcvsroot/fixcvsroot.html
+
+                                   fixcvsroot
+
+NAME
+
+   fixcvsroot - Change CVS root of a checked out module
+
+SYNOPSIS
+
+   fixcvsroot [ -f from_host.dom ] [ -t to_host.dom ] [-p] [-a]
+
+DESCRIPTION
+
+   fixcvsroot is a shell script which Converts checked out CVS trees from
+   from_host.dom (default fndaub.fnal.gov ) to to_host.dom (default
+   cdcvs.fnal.gov )
+
+OPTIONS
+
+   -p
+          Says to use a cvs pserver style CVS root
+          (:pserver:user@cdcvs.fnal.gov:/...).
+   -a
+          Says to use an anonymous cvs pserver style CVS root
+          (:pserver:anonymous@cdcvs.fnal.gov:/...).
+
+   So for example:
+
+fixcvsroot
+
+
+   will do the usual conversion, whereas if you are switching from, say,
+   rsh access to cvs pserver access, you would do:
+
+fixcvsroot -p
+
+
+   And if you were instead doing a move from the cvs server on joe.mit.edu
+   to project.sourceforge.net you would use:
+
+fixcvsroot -f joe.mit.edu -t project.sourceforge.net
+
+
+
+
+AUTHOR
+
+   Marc Mengel
+
+SEE ALSO
+
+   cvs(1), sh(1), perl(1)
+
+DIAGNOSTICS
+
+   No intentional ones.
+
+
+BUGS
+
+   The -f and -t options if given, must be the first two options in order.
+
+   There is no provision for a different directory path on the different
+   servers.
+     __________________________________________________________________
+
+
+
+Index
+
+   NAME
+
+   SYNOPSIS
+
+   DESCRIPTION
+
+   OPTIONS
+
+   AUTHOR
+
+   SEE ALSO
+
+   DIAGNOSTICS
+
+   BUGS
+     __________________________________________________________________
+
+   This document was created by man2html.

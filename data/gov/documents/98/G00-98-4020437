@@ -1,0 +1,401 @@
+http://hn.usatlas.bnl.gov/doc/root/htmldoc/ClassIndex.html
+
+                                     Index
+     __________________________________________________________________
+
+
+     * TApplication ......... GUI application singleton
+     * TApplicationImp ...... ABC describing application implementation
+       protocol
+     * TArc ................. Arc of a circle
+     * TArray ............... Abstract array base class
+     * TArrayC .............. Array of chars
+     * TArrayD .............. Array of doubles
+     * TArrayF .............. Array of floats
+     * TArrayI .............. Array of ints
+     * TArrayL .............. Array of longs
+     * TArrayS .............. Array of shorts
+     * TArrow ............... one arrow --->
+     * TAtt3D ............... 3D attributes
+     * TAttAxis ............. Axis attributes
+     * TAttCanvas ........... Canvas attributes
+     * TAttFill ............. Fill area attributes
+     * TAttFillCanvas ....... A specialized dialog canvas to set fill
+       attributes.
+     * TAttLine ............. Line attributes
+     * TAttLineCanvas ....... A specialized dialog canvas to set line
+       attributes.
+     * TAttMarker ........... Marker attributes
+     * TAttMarkerCanvas ..... A specialized dialog canvas to set marker
+       attributes.
+     * TAttPad .............. Pad attributes
+     * TAttText ............. Text attributes
+     * TAttTextCanvas ....... A specialized dialog canvas to set text
+       attributes.
+     * TAxis ................ Axis class
+     * TAxis3D .............. 3-D ruler painting class
+     * TBaseClass ........... Description of a base class
+     * TBasket .............. the TBranch buffers
+     * TBenchmark ........... ROOT utility to help benchmarking
+       applications
+     * TBox ................. Box class
+     * TBranch .............. Branch descriptor
+     * TBranchClones ........ Branch in case of an array of clone objects
+     * TBranchObject ........ Branch in case of an object
+     * TBRIK ................ TBRIK shape
+     * TBrowser ............. ROOT Object Browser
+     * TBrowserImp .......... ABC describing browser implementation
+       protocol
+     * TBtree ............... A B-tree
+     * TBtreeIter ........... B-tree iterator
+     * TBuffer .............. Buffer base class used for serializing
+       objects
+     * TButton .............. A user interface button.
+     * TCanvas .............. Graphics canvas
+     * TCanvasImp ........... ABC describing main window protocol
+     * TChain ............... A chain of TTrees
+     * TChainElement ........ A chain element
+     * TCint ................ Interface to CINT C/C++ interpreter
+     * TClass ............... Dictionary containing class information
+     * TClassTable .......... Table of known classes
+     * TClassTree ........... Manager class to draw classes inheritance
+       tree and relations
+     * TClonesArray ......... An array of clone objects
+     * TCollection .......... Collection abstract base class
+     * TColor ............... Color defined by RGB or HLS
+     * TCONE ................ CONE shape
+     * TCONS ................ CONS shape
+     * TContextMenu ......... Context sensitive popup menu
+     * TContextMenuImp ...... Context sensitive popup menu implementation
+     * TControlBar .......... Control bar
+     * TControlBarButton .... The Control bar button
+     * TControlBarImp ....... GUI independent controlbar abc
+     * TCTUB ................ The Cut Tube shape
+     * TCurlyArc ............ a curly arc
+     * TCurlyLine ........... A curly polyline
+     * TCut ................. A specialized string object used for TTree
+       selections
+     * TCutG ................ A Graphical cut.
+     * TDataMember .......... Dictionary for a class data member
+     * TDataType ............ Basic data type descriptor
+     * TDatime .............. Date and time 950130 124559
+     * TDialogCanvas ........ A specialized canvas to set attributes.
+     * TDiamond ............. Diamond class
+     * TDictionary .......... ABC defining interface to dictionary
+     * TDirectory ........... Describe directory structure in memory
+     * TDrawPanelHist ....... Class used to control histogram drawing
+       options
+     * TEllipse ............. An ellipse
+     * TELTU ................ ELTU shape
+     * TEnv ................. Handle ROOT configuration resources
+     * TEventList ........... A list of selected entries in a TTree.
+     * TExec ................ To execute a CINT command
+     * TExMap ............... Map with external hash
+     * TF1 .................. The Parametric 1-D function
+     * TF2 .................. The Parametric 2-D function
+     * TF3 .................. The Parametric 3-D function
+     * TFile ................ ROOT file
+     * TFileHandler ......... Handles events on file descriptors
+     * TFitPanel ............ Class used to control histograms fit panel
+     * TFitPanelGraph ....... Class used to control graphs fit panel
+     * TFitter .............. The ROOT standard fitter based on TMinuit
+     * TFormula ............. The formula base class f(x,y,z,par)
+     * TFrame ............... Pad graphics frame
+     * TFree ................ Description of free segments on a file
+     * TFunction ............ Dictionary for global function
+     * TGaxis ............... Graphics axis
+     * TGButton ............. Button widget abstract base class
+     * TGCanvas ............. A canvas with two scrollbars and a viewport
+     * TGCheckButton ........ A check button widget
+     * TGClient ............. Class making connection to display server
+     * TGColumnLayout ....... Column layout manager
+     * TGComboBox ........... Combo box widget
+     * TGComboBoxPopup ...... Combobox popup window
+     * TGCompositeFrame ..... Base class for composite widgets (menubars,
+       etc.)
+     * TGDimension .......... Dimension object (width, height)
+     * TGDoubleHSlider ...... Horizontal double slider widget
+     * TGDoubleSlider ....... Double slider widget abstract base class
+     * TGDoubleVSlider ...... Vertical double slider widget
+     * TGeometry ............ Structure for Matrices, Shapes and Nodes
+     * TGFileContainer ...... Container containing file system objects
+     * TGFileDialog ......... File selection dialog
+     * TGFrame .............. Base class for simple widgets (button, etc.)
+     * TGGroupFrame ......... A composite frame with border and title
+     * TGHorizontal3DLine ... A horizontal 3D separator line
+     * TGHorizontalFrame .... Composite frame with horizontal child layout
+     * TGHorizontalLayout ... Horizontal layout manager
+     * TGHotString .......... Graphics string with hot character
+     * TGHScrollBar ......... Horizontal scrollbar widget
+     * TGHSlider ............ Horizontal slider widget
+     * TGIcon ............... Icon GUI class
+     * TGLabel .............. A label GUI element
+     * TGLayoutHints ........ Class describing GUI layout hints
+     * TGLayoutManager ...... Layout manager abstract base class
+     * TGLBContainer ........ Listbox container
+     * TGLBEntry ............ Basic listbox entry
+     * TGListBox ............ Listbox widget
+     * TGListDetailsLayout .. Layout manager for TGListView details
+     * TGListLayout ......... Layout manager for TGListView widget
+     * TGListTree ........... Show items in a tree structured list
+     * TGListTreeItem ....... Item that goes into a TGListTree container
+     * TGListView ........... List view widget (iconbox, small icons or
+       tabular view)
+     * TGlobal .............. Global variable class
+     * TGLVContainer ........ Listview container
+     * TGLVEntry ............ Item that goes into a TGListView container
+     * TGMainFrame .......... Top level window frame
+     * TGMatrixLayout ....... Matrix layout manager
+     * TGMenuBar ............ Menu bar class
+     * TGMenuTitle .......... Menu title class
+     * TGMimeTypes .......... Pool of mime type objects
+     * TGMsgBox ............. A message dialog box
+     * TGObject ............. ROOT GUI base class
+     * TGPicture ............ Pictures and icons used by the GUI classes
+     * TGPictureButton ...... A picture button widget
+     * TGPicturePool ........ Picture and icon cache
+     * TGPopupMenu .......... Popup menu
+     * TGPosition ........... Position object (x and y)
+     * TGRadioButton ........ A radio button widget
+     * TGraph ............... Graph graphics class
+     * TGraphAsymmErrors .... a Graph with asymmetric error bars
+     * TGraphErrors ......... a Graph with error bars
+     * TGroupButton ......... A user interface button in a group of
+       buttons.
+     * TGRowLayout .......... Row layout manager
+     * TGScrollBar .......... Scrollbar widget
+     * TGScrollBarElement ... Scrollbar element (head, tail, slider)
+     * TGSelectedPicture .... Selected looking picture
+     * TGSlider ............. Slider widget abstract base class
+     * TGStatusBar .......... Status bar widget
+     * TGString ............. Graphics string
+     * TGTab ................ Tab widget
+     * TGTabElement ......... Little tab on tab widget
+     * TGTabLayout .......... Layout manager for TGTab widget
+     * TGText ............... Text used by TGTextEdit
+     * TGTextBuffer ......... Text buffer used by widgets like
+       TGTextEntry, etc.
+     * TGTextButton ......... A text button widget
+     * TGTextEntry .......... The TGTextEntry widget is a simple line
+       editor for inputting text
+     * TGTextFrame .......... Frame containing (multi-line) text
+     * TGTextLBEntry ........ Text listbox entry
+     * TGTextView ........... Text view widget (contains a text frame and
+       vertical scrollbar)
+     * TGTileLayout ......... Tile layout manager
+     * TGToolBar ............ A bar containing picture buttons
+     * TGToolTip ............ One line help text
+     * TGTRA ................ GTRA shape
+     * TGTransientFrame ..... Frame for dialog (transient) windows
+     * TGuiFactory .......... Abstract factory for GUI components
+     * TGVerticalFrame ...... Composite frame with vertical child layout
+     * TGVerticalLayout ..... Vertical layout manager
+     * TGViewPort ........... Viewport through which to look at a frame
+     * TGVScrollBar ......... Vertical scrollbar widget
+     * TGVSlider ............ Vertical slider widget
+     * TGWidget ............. Widget base class
+     * TGWindow ............. GUI Window base class
+     * TGX11 ................ Interface to X11
+     * TH1 .................. 1-Dim histogram base class
+     * TH1C ................. 1-Dim histograms (one char per channel)
+     * TH1D ................. 1-Dim histograms (one double per channel)
+     * TH1F ................. 1-Dim histograms (one float per channel)
+     * TH1S ................. 1-Dim histograms (one short per channel)
+     * TH2 .................. 2-Dim histogram base class
+     * TH2C ................. 2-Dim histograms (one char per channel)
+     * TH2D ................. 2-Dim histograms (one double per channel)
+     * TH2F ................. 2-Dim histograms (one float per channel)
+     * TH2S ................. 2-Dim histograms (one short per channel)
+     * TH3 .................. 3-Dim histogram base class
+     * TH3C ................. 3-Dim histograms (one char per channel)
+     * TH3D ................. 3-Dim histograms (one double per channel)
+     * TH3F ................. 3-Dim histograms (one float per channel)
+     * TH3S ................. 3-Dim histograms (one short per channel)
+     * THashList ............ Doubly linked list with hashtable for lookup
+     * THashTable ........... A hash table
+     * THashTableIter ....... Hash table iterator
+     * THelix ............... A Helix drawn as a PolyLine3D
+     * THtml ................ Convert class(es) into HTML file(s)
+     * THYPE ................ HYPE shape
+     * TInetAddress ......... Represents an Internet Protocol (IP) address
+     * TInspectCanvas ....... The canvas Inspector
+     * TInspectorImp ........ GUI independent inspector abc
+     * TInterpreter ......... ABC defining interface to generic
+       interpreter
+     * TIter ................ Iterator wrapper
+     * TIterator ............ Iterator abstract base class
+     * TKey ................. Header description of a logical record on
+       file
+     * TKeyMapFile .......... Utility class for browsing TMapFile objects.
+     * TLatex ............... The Latex-style text processor class
+     * TLazyMatrix .......... Lazy matrix
+     * TLeaf ................ Leaf: description of a Branch data type
+     * TLeafB ............... A TLeaf for an 8 bit Integer data type.
+     * TLeafC ............... A TLeaf for a variable length string.
+     * TLeafD ............... A TLeaf for a 64 bit floating point data
+       type.
+     * TLeafF ............... A TLeaf for a 32 bit floating point data
+       type.
+     * TLeafI ............... A TLeaf for an Integer data type.
+     * TLeafObject .......... A TLeaf for a general object derived from
+       TObject.
+     * TLeafS ............... A TLeaf for a 16 bit Integer data type.
+     * TLegend .............. Legend of markers/lines/boxes to represent
+       obj's
+     * TLegendEntry ......... Storage class for one entry of a TLegend
+     * TLine ................ A line segment
+     * TLink ................ Link: hypertext link to an object
+     * TList ................ Doubly linked list
+     * TListIter ............ Linked list iterator
+     * TMap ................. A map
+     * TMapFile ............. Memory mapped directory structure
+     * TMapIter ............. Map iterator
+     * TMarker .............. Marker
+     * TMarker3DBox ......... a special 3-D marker designed for event
+       display
+     * TMaterial ............ Materials used in the Geometry Shapes
+     * TMath ................ Interface to math routines
+     * TMatrix .............. Matrix class
+     * TMatrixColumn ........ One column of a matrix
+     * TMatrixDiag .......... Diagonal of a matrix
+     * TMatrixRow ........... One row of a matrix
+     * TMemberInspector ..... ABC for inspecting class data members
+     * TMessage ............. Message buffer class
+     * TMessageHandler ...... Generic message handler
+     * TMethod .............. Dictionary for a class member function
+       (method)
+     * TMethodArg ........... Dictionary for a method argument
+     * TMethodCall .......... Method calling interface
+     * TMinuit .............. The MINUIT minimisation package
+     * TMixture ............. Mixtures used in the Geometry Shapes
+     * TMonitor ............. Monitor activity on a set of TSocket objects
+     * TNamed ............... The basis for a named object (name, title)
+     * TNetFile ............. A ROOT file that reads/writes via a rootd
+       server
+     * TNode ................ Description of parameters to position a 3-D
+       geometry object
+     * TNodeDiv ............. Description of parameters to divide a 3-D
+       geometry object
+     * TNtuple .............. A simple tree with only one branch of
+       floats.
+     * TObjArray ............ An array of objects
+     * TObjArrayIter ........ Object array iterator
+     * TObject .............. Basic ROOT object
+     * TObjectTable ......... Table of active objects
+     * TObjString ........... Collectable string class
+     * TOrdCollection ....... An ordered collection
+     * TOrdCollectionIter ... Ordered collection iterator
+     * TPad ................. A Graphics pad
+     * TPARA ................ PARA shape
+     * TPave ................ Pave. A box with shadowing
+     * TPaveClass ........... A TPaveLabel specialized for TClassTree
+       objects
+     * TPaveLabel ........... PaveLabel. A Pave with a label
+     * TPaveStats ........... a special TPaveText to draw histogram
+       statistics.
+     * TPavesText ........... Stacked Paves with text strings
+     * TPaveText ............ PaveText. A Pave with several lines of text.
+     * TPCON ................ PCON shape
+     * TPGON ................ PGON shape
+     * TPoints .............. 2-D graphics point
+     * TPoints3DABC ......... A 3-D Points
+     * TPolyLine ............ A PolyLine
+     * TPolyLine3D .......... A 3-D PolyLine
+     * TPolyMarker .......... An array of points with the same marker
+     * TPolyMarker3D ........ An array of 3-D points with the same marker
+     * TPostScript .......... PostScript driver
+     * TProcessEventTimer ... Process pending events at fixed time
+       intervals
+     * TProfile ............. Profile histogram class
+     * TProfile2D ........... Profile2D histogram class
+     * TRandom .............. Random number generators
+     * TRandom2 ............. Random number generators with periodicity >
+       10**14
+     * TRandom3 ............. Random number generator: Mersenne Twistor
+     * TRealData ............ Description of persistent data members
+     * TRegexp .............. Regular expression class
+     * TRint ................ ROOT Interactive Application Interface
+     * TROOT ................ Top level (or root) structure for all
+       classes
+     * TRootApplication ..... ROOT native GUI application environment
+     * TRootBrowser ......... ROOT native GUI version of browser
+     * TRootCanvas .......... ROOT native GUI version of main window with
+       menubar and drawing area
+     * TRootContextMenu ..... ROOT native GUI context sensitive popup menu
+     * TRootControlBar ...... ROOT native GUI implementation of
+       TControlBar
+     * TRootDialog .......... Native GUI method argument prompt dialog box
+     * TRootEmbeddedCanvas .. A ROOT TCanvas that can be embedded in a
+       TGFrame
+     * TRootGuiFactory ...... Factory for ROOT GUI components
+     * TRootHelpDialog ...... Dialog to display help text
+     * TRotMatrix ........... Rotation Matrix for 3-D geometry objects
+     * TSeqCollection ....... Sequenceable collection ABC
+     * TServerSocket ........ This class implements server sockets
+     * TShape ............... Basic shape
+     * TSignalHandler ....... Signal event handler
+     * TSlider .............. A user interface slider.
+     * TSliderBox ........... The moving box of a TSlider
+     * TSocket .............. This class implements client sockets
+     * TSortedList .......... A sorted list
+     * TSpectrum ............ Peak Finder, background estimator,
+       Deconvolution
+     * TSPHE ................ SPHE shape
+     * TSpline ..............
+     * TSpline3 .............
+     * TSpline5 .............
+     * TSplinePoly ..........
+     * TSplinePoly3 .........
+     * TSplinePoly5 .........
+     * TSQLResult ........... SQL query result
+     * TSQLRow .............. One row of an SQL query result
+     * TSQLServer ........... Connection to SQL server
+     * TStopwatch ........... A stopwatch which times real and cpu time
+     * TStorage ............. Storage manager class
+     * TString .............. Basic string class
+     * TStringLong .......... Long string class (more than 255 chars)
+     * TStyle ............... A collection of all graphics attributes
+     * TSysEvtHandler ....... ABC for handling system events
+     * TSystem .............. ABC defining a generic interface to the OS
+     * TSystemDirectory ..... A system directory
+     * TSystemFile .......... A system file
+     * TTabCom .............. Perform comand line completion when hitting
+       <TAB>
+     * TText ................ Text
+     * TTime ................ Basic time type with milli second precision
+     * TTimer ............... Handle timer event
+     * TToggle .............. Facility for toggling datamembers on/off
+     * TToggleGroup ......... Group of contex-menu toggle objects
+     * TTRAP ................ TRAP shape
+     * TTRD1 ................ TRD1 shape
+     * TTRD2 ................ TRD2 shape
+     * TTree ................ Tree descriptor (the main ROOT I/O class)
+     * TTreeResult .......... TTree query result
+     * TTreeRow ............. One row of an TTree query result
+     * TTUBE ................ TUBE shape
+     * TTUBS ................ TUBS shape
+     * TUnixSystem .......... Interface to Unix OS services
+     * TUrl ................. Represents an URL
+     * TVector .............. Vector class
+     * TView ................ 3-D View
+     * TVirtualFitter ....... Abstract interface for fitting
+     * TVirtualHistPainter .. Abstract interface for histogram painters
+     * TVirtualPad .......... Abstract base class for Pads and Canvases
+     * TVirtualPS ........... Abstract interface to a PostScript driver
+     * TVirtualTreePlayer ... Abstract interface for Tree players
+     * TVirtualX ............ ABC defining a generic interface to graphics
+       system
+     * TWbox ................ A window box (box with 3-D effects)
+     * TWebFile ............. A ROOT file that reads via a http server
+     __________________________________________________________________
+
+   Last update: Tue May 16 18:11:33 2000
+
+      ________________________________________________________________
+
+                  ROOT page - Class index - Top of the page
+     __________________________________________________________________
+
+   This page has been automatically generated. If you have any comments or
+   suggestions about the page layout send a mail to ROOT support, or
+   contact the developers with any questions or problems regarding ROOT.

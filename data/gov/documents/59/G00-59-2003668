@@ -1,0 +1,70 @@
+http://pilc.grc.nasa.gov/descr.txt
+
+   BOF Description: Name: Performance Implications of Link Characteristics
+   (PILC) Chairs: Aaron Falk and Mark Allman adalk@mail.hac.com,
+   mallman@lerc.nasa.gov Description: The Internet network-layer and
+   transport-layer protocols are designed to accommodate a very wide range
+   of networking technologies and characteristics. Nevertheless,
+   experience has shown that the particular properties of different
+   network links can have a significant impact on the performance of
+   Internet protocols operating over those links, and on the performance
+   of connections along paths that include such links. Some examples of
+   possibly problematic characteristics: - Long delay links. Affects timer
+   estimation, congestion adaptation. - Links with high bandwidth-delay
+   product. Difficult to fully utilize and still respond to congestion. -
+   Links with variable bandwidth-delay products (such as multi-channel
+   ISDN, or LEOs). Difficult to track how much throughput a connection
+   should try to attain. - Links with varying delay. Delays due to link
+   level signalling may affect the accuracy of RTO estimation. - Links
+   with link layer flow control. May have adverse interactions with
+   congestion control. - Links with asymmetric bandwidth. Can lead to
+   throughput limitations such as ACK starvation. - Links with unusually
+   high error rates. Can lead to loss of performance due to inappropriate
+   perception of congestion. Can impair protocols that do not protect
+   their data with strong checksums. - Links with inconsistent error
+   rates. Can defeat attempts to distinguish between congestive loss and
+   corruption loss. - Links with significant monetary, resource-scarcity,
+   or delay cost for establishing connections and/or keeping connections
+   open. These encourage not only bandwidth-efficient protocols, but also
+   protocols that cluster their packet exchanges together rather than
+   spacing them out in time, and can increase the cost of using standard
+   soft-state mechanisms such as periodic state refresh messages. -
+   Significantly low bandwidth links. Creates pressure for mixing together
+   otherwise separate elements (such as transport and network layers, or
+   multiple transport connections) in an effort to reduce bandwidth
+   requirements via compression. - Unidirectional. Can make link-layer
+   request/response, such as ARP, impossible. (UDLR already addresses the
+   routing elements of this.) - Non-transitive reachability (A can reach
+   B, and B can reach C, but A can't reach C). Breaks assumptions about
+   subnet properties. - Shared-channel broadcast to huge numbers of
+   receivers. Such links stress the notion of using them for unicast
+   traffic and the viability of protocols that require a backchannel such
+   as IGMP. Such links also incur a danger of major broadcast reply
+   implosions. - Links that reorder packets. Can erroneously trigger TCP
+   fast retransmission. Impairs protocols that adapt based on timing
+   analysis. Can stress reassembly code if not well tuned. - Multipathing.
+   Can complicate protocol adaptation since there is no longer a single
+   path property to estimate, but more than one. Diminshes efficiency of
+   header compression algorithms. - Links with intermittent outages.
+   Timers may fail to adapt to outage and either falsely signal lost
+   connectivity, or back off so far that response once the outage resolves
+   is highly delayed. - Small MTU links. Can lead to "black holes" if PMTU
+   discovery mechanism fails. This BOF will explore the size of this
+   problem space: what sort of link characteristics prove problematic,
+   what sort of Internet protocols are adversely affected? One goal is to
+   assess the utility of forming a working group to produce informational
+   document(s) detailing how link characteristics interact with different
+   IETF protocols - what well-established and less-well-established steps
+   can be taken to ameliorate these problems. Another goal is to assess
+   the utility forming a working group(s) to develop modifications or
+   extensions to IETF protocols to address the most pressing performance
+   issues. Note that the BOF focusses on link *characteristics* and not on
+   link layer *technologies* such as Frame Relay, ATM or Ethernet.
+   Discussing particular characteristics present in some of these (e.g.,
+   capture effect) is in scope; discussing aspects of the technology as a
+   whole (e.g., CIR) is out of scope. A mailing list for discussing the
+   issues related to this BOF has been setup. Notes to the list should be
+   sent to pilc@lerc.nasa.gov. To subscribe to the mailing list, send a
+   note to majordomo@lerc.nasa.gov with the words "subscribe pilc" in the
+   body of the note. The mailing list archive is available at
+   http://pilc.lerc.nasa.gov/pilc/.

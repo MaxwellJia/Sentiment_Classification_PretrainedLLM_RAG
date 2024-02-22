@@ -1,0 +1,226 @@
+http://wsg6.ngdc.noaa.gov
+
+                                ESG Build 2.
+
+   The Environmental Scenario Generator project is sponsored by the
+   Defense Modeling and Simulation Office, under the direction of the
+   Executive Agent for Air and Space Natural Environment. The
+   Environmental Scenario Generator is intended to provide an integrated,
+   physically consistent environmental data set meeting a Modeling and
+   Simulation (M&S) customer's requirements for an authoritative and
+   realistic representation of atmospheric, oceanic, and/or space natural
+   environment elements for specified regions, time frames, and
+   conditions.
+
+   The ESG is being constructed in a series of "builds" each of which
+   builds, expands or adds capabilities to the overall ESG system. This
+   site contains the first demo release of build 2.
+
+   ESG Build 2 key features:
+
+   Multi-DB searching Ocean DB PIM IONSCINT MEL RSS BugRat Importance NCEP
+   99 Prod/Devel Bug Fixes
+
+Multi-DB Searching
+
+   The ESG organizes data sets into databases (DB) where each DB is some
+   logical collection of data. It can be data that is related by topic,
+   resolution, sample rate , etc.. . Using ESG B2 it is now possible to
+   select multiple databases for plotting and searching. This would allow
+   ,for example, a user to connect to and search the Ocean database
+   simultaneously with a terrestrial weather archive. The advantage of
+   separating the databases is that while it is possible to search related
+   regions in both it is also possible to search totally disjoint regions
+   as well. For example the user could impose conditions on the Persian
+   Gulf sea and the weather in Germany. The ESG status bar now contains a
+   Database marker (see below). All other tabs function as before but
+   relative to this database. So in order to use the system the user must
+   for each DB specify a ROI, Time Range, probes and parameters. The
+   appropriate tabs are all based on the selected database and so changes
+   dynamically with DB selection. In order to change between selected
+   databases simply click the arrow. To add or remove new databases visit
+   the Database tab and check or uncheck the DB. One thing to be aware of
+   is that if the databases have no overlapping data, the search and plot
+   functions will have no ability to plot/search simultaneous archive.
+
+   [ocean.jpg]
+
+Ocean Database
+
+   The addition of the Ocean DB is important to the ESG project in several
+   ways . Firstly it gives representation to a crucial part of the Earth's
+   environment by providing global coverage for the earth's oceans.
+   Secondly the database is the first to demonstrate the network access
+   capabilities of ESG to a remote database. The Ocean DB is developed by
+   and housed at SAIC in Virginia and accessed through the main ESG site
+   at NGDC in Boulder. The database functions exactly the same as other
+   ESG data sets, with a list of parameters as shown below. One thing to
+   note is that because the data is global 1.0 degree the mapplet starts
+   zoomed out beyond where individual individual probes can be seen. The
+   user can either zoom in to see them or select using the pop-up dialog
+   (diagram 3).
+
+[ocean2.jpg]
+
+   (diagram 2 Ocean Parameter List)
+
+[ocean3.jpg]
+
+   (diagram 3 Ocean Probe Selection)
+
+Parameterized Ionospheric Model (PIM)
+
+   The Parameterized Ionospheric Model (PIM) is a fast global ionospheric
+   and plasmaspheric model based on the combined output of regional
+   theoretical ionospheric models and a plasmaspheric model. . For
+   specified geophysical conditions and spatial coordinates, PIM produces
+   electron density profiles (EDPs) between 90 and 25000 km altitude,
+   corresponding critical frequencies and heights for the ionospheric E
+   and F2 regions, and Total Electron Content (TEC).
+   The ionospheric portion of PIM is a parameterization of the results of
+   several regional theoretical ionospheric models. This allows PIM to be
+   computationally fast while retaining the physics of the theoretical
+   ionospheric models. The parameterization compresses the output from the
+   theoretical ionospheric models while to a large extent it preserves
+   important characteristics such as density peaks and scale heights. The
+   large base of data used by PIM contains coefficients from the
+   parameterization.
+   PIM considers the following geophysical parameters:
+   · Year
+   · Day of the year
+   · Universal Time
+   · Solar activity indices F10.7 and Sunspot Number (SSN)
+   · Magnetic activity index Kp
+   · Orientation of the y and z components of the interplanetary magnetic
+   field (IMF By and IMF Bz)
+   and the following spatial parameters:
+   · Coordinate system (geographic or corrected geomagnetic)
+   · Latitude and longitude
+   · Azimuth and elevation
+   · Altitude
+   PIM offers a number of ionospheric parameters on output:
+   · Ionospheric E-region parameters foE and hmE
+   · Ionospheric F2-region parameters foF2 and hmF2
+   · TEC
+   · EDPs
+   on several types of output grid:
+   · Rectangular latitude/longitude
+   · Latitude/longitude pairs
+   · Azimuth/elevation with a ground-based observer (origin)
+   In the ESG application the output is always taken on the Rectangular
+   latitude/longitude grid.
+
+   [pim.jpg]
+
+   (Figure 4 Sample PIM Output)
+
+IONSCINT
+
+   The High Fidelity Ionospheric Scintillation Simulation Algorithm
+   (IONSCINT) is a software program for realistic simulation of
+   disruptions in trans-ionospheric radio wave communications due to
+   equatorial scintillations. Near the geomagnetic equator,
+   ground-to-satellite links frequently encounter signal fading during the
+   nighttime due to instabilities in the ionospheric F-region related to
+   equatorial spread-F plumes which develop after sunset when conditions
+   are favorable. The precise conditions necessary for the development of
+   these instabilities are currently not well understood, although
+   statistically speaking, communications interference follows a regular
+   seasonal and diurnal pattern with a strong dependence on solar cycle.
+   Superimposed on these dependencies, however, is a high degree of
+   day-to-day variability. It is not uncommon for a particular link at a
+   particular location to exhibit a night of completely clear
+   communication followed by a night with several hours of intense
+   scintillation, effectively prohibitive to communication completely.
+   Prior to the development of IONSCINT, the only tools available for the
+   prediction of scintillation for simulation purposes were statistical
+   (climatological) models, most notably the Wide Band model (WBMOD).
+   Although expressing the seasonal, daily and solar cycle variability of
+   equatorial scintillations on average, these models did not allow for
+   the introduction of day-to-day variability in scintillations, even in
+   an average sense. Since equatorial scintillations are in fact extremely
+   variable from day-to-day at a given location, simulation results based
+   only on the average scintillation levels were necessarily lacking in a
+   critical feature of the spread-F phenomenon itself. The IONSCINT
+   program was developed to overcome the limitations of climatological
+   models for simulations by reproducing both the climatological and the
+   day-to-day variability of equatorial scintillations, thereby producing
+   a simulation result which is much more in line with actual expected
+   conditions for any particular simulation scenario.
+   IONSCINT generates simulated scintillation results by "replaying"
+   measured scintillation scenarios for a specified season and set of
+   geophysical conditions, drawing on nightly data measured over the past
+   four years in the South America sector. These nightly measured
+   scenarios are used to drive a model for spread-F plume development and
+   evolution that was developed as part of the Scintillation Network
+   Decision Aid (SCINDA) model, from extensive experience with
+   scintillation data. The scenarios are selected pseudo-randomly to
+   conform to the correct average seasonal behavior yet preserve the
+   day-to-day variability. The South America data set is extrapolated to
+   arbitrary positions on the Earth through the use of average climatology
+   predictions (WBMOD). The basic result is a simulated prediction of
+   scintillation intensity throughout a specified theater for
+   communication with a specified satellite at a specified time of day and
+   year and under specified geophysical conditions. The result is suitable
+   for the production of geographic maps of satellite outages.
+
+   [ionscint.jpg]
+
+   (Figure 5. IONSCINT Model of Communications Outage)
+
+   IONSCINT was prepared by: Radex, Incorporated, Three Preston Court,
+   Bedford, Mass. 01730
+
+   Prepared for: AFRL/VSB, 29 Randolph Road, Hanscom AFB, Mass. 01731
+
+MEL
+
+   [mel.jpg]
+
+   The Environmental Scenario Generator MEL site is now open. It provides
+   MEL access to 20 years of NCEP/NCAR parameters totaling well over 100
+   GB's. The user can sub select for any region of the world and any
+   specific parameters of interest. In addition two custom databases
+   created for the project are now available on-line. The South West Asia
+   and Korea databases provide access to a higher spatial resolution
+   database for specific times and regions. This new MEL site provides a
+   very solid foundation for the MEL environmental resources.
+
+BugRat
+
+   [bugrat.jpg]
+
+   BugRat is a Java based 100% open source system for accepting and
+   tracking bug reports over the Internet. It allows users to fill out a
+   form based request to report bugs, request features or make specific
+   design requests. The report is then added to the database where a
+   administrators interface allows the project manager to review the
+   report and then assign an action. In this way bug reports can be
+   tracked from first report through to solution. The system was heavily
+   modified by the ESG team to include features lke automated e-mail,
+   automatic system detection, etc.. This system will have multiple uses
+   both in the ESG project and beyond.
+
+Importance
+
+   [importance.jpg]
+
+   One of the most requested features for ESG fuzzy searching has been the
+   addition of "importance of parameters". Far from being trivial
+   mathematically the addition of this feature required extensive research
+   to implement. The ESG team finally decided on a paper by Dubois and
+   Prade, "Using fuzzy sets in flexible querying: Why and how? " and thier
+   method for importance assignment. This new interface and system gives
+   the ESG user the ability to ask for something like "It must be hot, but
+   windy would be nice too.". This new capability will transition into the
+   weather scenario system very easily providing un-rivaled search
+   capability.
+
+NCEP 1999
+
+   The 1999 NCEP/NCAR data was loaded for better correspondence between
+   the weather and ocean data.
+
+PROD/DEVEL
+
+   ESG now supports a production server and a development server.

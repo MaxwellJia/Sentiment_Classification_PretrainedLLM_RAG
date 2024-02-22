@@ -1,0 +1,94 @@
+http://hpcf.nersc.gov/accounts/storage/srus.html
+
+   NERSC High Performance Computing
+
+   You are here: hpcf / accounts / storage / srus You came from:
+     __________________________________________________________________
+
+   Storage Resource Units
+
+   * About SRUs
+
+   * Usage for username
+   ________
+   Get User Info
+
+   * Usage for repository
+   ________
+   Get Repo Info
+
+   * SRU Calculator
+
+   * FY 2000 Interface
+
+   * FY 2001 Interface
+
+About SRUs
+
+   NERSC uses SRUs to help manage HPSS storage. The goal is to provide a
+   balanced computing environment with appropriate amounts of storage and
+   adequate bandwidth to keep the compute engines fed with data.
+   Performance and usage tracking allows NERSC to anticipate demand and
+   maintain a responsive storage environment. Storage management also
+   recognizes storage as a distinct resource, in support of an increasing
+   amount of data intensive computing. Finally, storage management and the
+   quota system are intended to encourage efficient usage by the user
+   community.
+
+Calculating SRUs
+
+   Three measures of use are included in computing Storage Resource Units
+   (SRUs):
+    1. the the number of files stored (files)
+    2. GB of space used in the archive (space)
+    3. GB of I/O transferred (I/O).
+
+   SRUs are monitored on a monthly basis. The formula used to compute the
+   number of SRUs each month is:
+
+     SRUs = 0.0012 x files + 0.4 x space (GB) + 4.0 x I/O (GB)
+
+   Yearly usage is the sum of monthly usage.
+
+SRU Allocations
+
+   The allocation process for storage quotas is very similar to the
+   allocation process for CPU time: in every fiscal year DOE's Office of
+   Science provides NERSC with storage allocations for each project funded
+   through the ERCAP process. In addition to a storage allocation, each
+   project may also have an associated MPP repository and/or an associated
+   PVP repository.
+
+SRU management and tracking
+
+   Monitoring SRU usage is available only through this web interface.
+
+   Each month a SRU charge is calculated for each user using the formula
+   given above. The SRUs used by each user in a repo are subtracted from
+   that repo's allocation.
+
+   If a single username belongs to more than one repo, that user's monthly
+   SRU charge is apportioned among the repos. Each user can assign a
+   percentage of his or her SRU usage to each of his or her repos. To do
+   so, first enter a username in the "Usage for username" box above and
+   click "Get User Info." Changes apply only to future SRU calculations.
+   At the start of every fiscal year default percentages are assigned
+   based on the size of each repo's storage allocation.
+
+   If a user exhausts his or her quota, s/he receives an email to that
+   effect. After two monthly email warnings the user's access to HPSS may
+   be turned off. NERSC reviews repos that are over their yearly SRU
+   allocation and handles them on a case-by-case basis.
+
+   If a user belongs to multiple repos, and one or more of the repos has
+   exhausted its SRU quota, the user's SRUs will be charged against the
+   remaining repositories.
+
+   Each user has access to 100% of the SRUs allocated to each of his or
+   her repositories.
+     __________________________________________________________________
+
+   Page last modified: Tuesday, 02-Oct-01 15:47:36
+   Page URL: http://hpcf.nersc.gov/accounts/storage/srus.html
+   Contact: Webmaster <webmaster@nersc.gov>
+   Privacy and Security Notice

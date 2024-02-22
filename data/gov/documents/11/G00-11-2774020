@@ -1,0 +1,83 @@
+http://snfactory.lbl.gov/search_pipeline.html
+
+                          SNfactory search pipeline
+     __________________________________________________________________
+
+   This is the v0.1 description of SNfactory search pipeline based on NEAT
+   facility at Haleakala, Maui.
+   Full use of Palomar cameras will easily triple these requirements.
+     * NEAT selects fields to observe, with nominal 18 day run and revisit
+       every 6 days. Nominal observations take place on meridian, and NSCP
+       only wants SNe that can be followed for three months above airmass
+       1.8. The later requirement means that NSCP/NEAT observations don't
+       start until typically 2 hrs after the end of evening twilight.
+       Then, assuming a 9 hr night, there will be roughly 7 hrs worth of
+       high-priority data.
+     * NEAT field list is sent to LBL and the retrieval of suitable
+       reference images from HPSS is begun (as needed; reference images
+       from the same month may be storaged on the PC cluster disk farm).
+     * SFTP set-up file is established with relative priorities for all
+       fields planned for the night. A baseline transfer scheme is
+       composed with the goal of getting the highest priority fields to
+       LBL on time. This transfer scheme is updated during the night,
+       based on observing and file transfer conditions.
+     * Observations begin at NEAT. Nominal 20 second exposures and 20
+       second readout, with each field visited 3 times per night.
+     * SFTP driver runs on Maui Sun, keeping track of what data have been
+       obtained, and then sending it to LBL (either direct or via JPL).
+       Assuming 2x lossless compression, there is (2 bytes/pixel * 4096^2
+       pixels)*(7 hrs * 3600 s/hr)/(20s + 20s)/2 = 11 GByte of
+       high-priority data to send per night. This will be composed by
+       roughly 630 images of 210 fields of size 32 MB (uncompressed) per
+       night. Realtime compressed transfer requires 3.4 Mbs. The total
+       transfer/storage amounts to 200 GByte per month.
+     * At LBL, database ingests images and sends desired images to 32 node
+       PC cluster and cluster processes images, as follows:
+          + select darks and construct dark correction images (perhaps w/
+            interpolation in the time domain). (0.5 hr)
+          + group sky images and construct sky flats. (0.5 hr)
+          + flatten with sky flat. (1.5 hr)
+          + ISOFIND all data. (2 hr)
+          + subtract and scan all (roughly 200) fields. (2 hr)
+          + check candidates against known stars (variable star check) and
+            known asteroids. (0.5 hr)
+          + interactive scan. (goal is < 1 hr)
+       This results in full processing in roughly 8 hrs. The pipeline is
+       well-matched to the transfer speed since the fastest all the images
+       can come over to LBL is 7 hrs (the data-taking time).
+     * Once all processing is completed a SFTP driver ships raw data to
+       JPL (if it hasn't come through JPL already).
+     * Periodically, raw and processed data are off-loaded to HPSS.
+       Assuming the raw data, the coadded frames, and the subtractions are
+       saved, the total will be about 18*(11 GB (raw compressed) + 22 GB
+       (reduced uncompressed) + (4/3)*22 GB (subtraction outputs
+       uncompressed)) = 1.1 TB per month.
+     * PC cluster requirements:
+          + File server:
+               o short NFS hop to cluster
+               o 1-2 DEDICATED file server computers
+               o minimum GB ethernet into file server computers
+               o 1-2 TB raid array to hold 18 night's data, including room
+                 for previous month's reference images if needed.
+          + Nodes:
+               o good, single, CPU (Pentium III-600, 512K cache)
+               o 100 base-T ethernet
+               o IDE, 9 GB local storage
+               o minimum 512 MB RAM
+               o 32 nodes required
+          + Networking Switch:
+               o 100 base-T port for each node.
+               o Gigabit port for each file server.
+               o Gigabit port for cluster server.
+          + Misc. Cluster Hardware:
+               o Serial consoles for all nodes.
+               o Remote power control.
+               o UPS for entire cluster.
+               o Cables, etc.
+          + Facilities:
+               o Physical space for cluster (assuming rack-mount) nodes,
+                 monitor, and keyboard for cluster server.
+               o Power and networking hook-up for cluster.
+     * HPSS:
+          + 1 TB/month
+          + write once, read twice

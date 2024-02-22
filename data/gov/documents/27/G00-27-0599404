@@ -1,0 +1,47 @@
+http://vicksburg.nssl.noaa.gov/kfnew_test/info.html
+
+CASE STUDY WRF model runs from NSSL
+
+   CASE STUDY OF 11 JUNE 2001 EVENT: RUN WITH NEW VERSION OF KF
+
+   Daily, real-time runs of the new Weather Research and Forecasting (WRF)
+   model are being produced at NSSL on an 8 processor SGI02 model domain
+   and resolution are very similar to those of our Eta model output .
+
+   The current WRF configuration is:
+
+     Modified KF convective parameterization
+
+     MRF PBL scheme
+
+     Lin et al. microphysics
+
+     RRTM longwave radiation
+
+     Dudhia shortwave radiation
+
+     Thermal diffusion surface physics
+
+     34 km grid length, 31 vertical levels
+
+     Time step 180s
+
+   Output fields include surface pressure/temperature, total
+   precipitation, convective precipitation, CAPE/CIN, 850/700/500/250 mb
+   maps. Plots have been updated to create a larger image on screen for
+   easier viewing. Updated May 23, 2001 by LJW
+
+                                [terrain.gif]
+
+   As with our local Eta model runs, initial and boundary conditions are
+   obtained from interpolation of the routinely available 80km/45layer Eta
+   Model fields obtained from EMC/NCEP.
+
+   This version of WRF and NSSL's Realtime runs of the 32km Eta all use
+   the same version of the Kain-Fritsch convective parameterization.
+
+   We share this busy workstation with daily runs of the MM5 including
+   short range ensembles. Check out those pages also.
+
+   For more info on these experimental mesoscale model forecasts, email
+   Jack Kain at kain@.nssl.noaa.gov, Mike Baldwin at baldwin@nssl.noaa.gov

@@ -1,0 +1,222 @@
+http://ncem.lbl.gov/frames/software.htm
+
+     [smallncem.gif]
+
+                    Software
+       _______________________________________________________________
+
+     The National Center for Electron Microscopy is pleased to announce
+     the availability of software developed at the NCEM for distribution
+     to the microscopy community. The software available at this time is
+     listed below and can be downloaded to your local computer. As other
+     programs are developed and considered useful to the EM community,
+     they will be added to the list. At the moment there is no specific
+     support mechanism in place and none is envisioned. However bug
+     reports are encouraged (email r_kilaas@lbl.gov) and bugs will be
+     attended to as time permits. No guarantees can be made to the
+     accuracy of the code and no responsibility is taken with respect to
+     the usage of the programs. However, the programs are used at the
+     NCEM and no known problems exist at the time of posting. A
+     description of the programs is also given below.
+       _______________________________________________________________
+
+Macintosh based Image processing and utility routines
+
+     The package below consists of a number of Macintosh based extensions
+     to the commercial software "Digital Micrograph" from Gatan, Inc. The
+     software is only intended for use with Digital Micrograph Version
+     2.5 or later. After downloading the software, double-click on the
+     file NCEMPackage.sea. The folder that is created on your computer
+     contains two folders, one for 68K and one for PPC machines, plus a
+     read me file explaining the installation procedure. There is also
+     on-line help available for the software as part of package. Program
+     development by Dr. Roar Kilaas and Dr. Sidnei Paciornik. A set of
+     routines for holographic reconstruction developed by Dr. John
+     Bonevich is included in the package.
+     Click to download NCEM Image Processing Extension Package
+
+     CustomFunctionManual.pdf
+
+     Last updated May 1999.
+
+     Users of this package are encouraged to email comments (email:
+     roar@lbl.gov) on the software.
+       _______________________________________________________________
+
+     The Focus Determination Package is designed to facilitate the
+     determination of the defocus of the objective lens from a single
+     HRTEM image containing some amorphous material and to also determine
+     the defocus of each image and the focus step between images in a
+     through-focus series. Written by Dr. Roar Kilaas.
+
+     Click to download NCEM Focus Determination Package
+
+     FocusDeterminationManual.pdf
+
+     Last updated October 1999.
+
+     Users of this package are encouraged to email comments (email:
+     roar@lbl.gov) on the software.
+       _______________________________________________________________
+
+     A new set of routines for creating digital Moire patterns,
+     displacement maps and strain images can be downloaded by clicking on
+     the link below. These routines use the concept of the geometric
+     phase to calculate deviations in local lattice parameters from
+     variations in reciprocal space around chosen spatial frequencies
+     (Bragg reflections). On-line help on the routines is available from
+     the menu-bar.
+
+     Download Phase-Extension routines.
+
+     PhaseManual.pdf
+
+     Last updated May 1999.
+
+     Users of this package are encouraged to email comments (email:
+     roar@lbl.gov) on the software.
+       _______________________________________________________________
+
+NCEM HRTEM Image Simulation Software
+
+     NCEM scientist Dr. Roar Kilaas has developed a general X-window
+     implementation of the program NCEMSS which calculates HRTEM images
+     based on the multislice approximation. The program is quite flexible
+     and supports input of structures, viewing of unit cells, calculation
+     of images and diffraction patterns, various layout options, CTFs,
+     Pendellossung plots, etc. In general, we try to support as many
+     platforms as possible, and the platforms presently supported are
+     indicated below. The program and its datafiles together with some
+     examples can be obtained through the ftp connections below. On Unix
+     machines, the files are contained in tar files while the openVMS
+     version consists of a backup file "ncemss.bck". After bringing the
+     file across to your machine and saving the file to your disk,
+     execute the following: tar xf "filename" - on Unix machines backup -
+     under openVMS On Unix systems the executable may have been
+     compressed with the gzip utility (extension .gz or .z) in which case
+     the file must be decoded using the program "gunzip" which can be
+     found on various ftp sites in case your machine does not have a
+     local version. Also, the mode of the program must be changed to
+     'executable' using the command 'chmod +x ncemss' after decompression
+     procedure.
+     Comments are encouraged and should be addressed to Roar Kilaas
+     (email: roar@lbl.gov).
+       _______________________________________________________________
+
+NCEMSS Version 1.6 - October 1996
+
+     NCEMSS has been upgraded to version 1.6. However, the program has
+     not yet been compiled for all platforms mentioned above. We will
+     make an effort to support all possible unix platforms, but we don't
+     always have access to the appropriate computer, hence the lack of
+     availability for all the platforms at this moment.
+
+     ncemss1.6.alpha.osf -ncemss for DEC Alpha Systems running OSF.
+
+     ncemss1.6.sun -ncemss for SUN workstations
+
+     ncemss1.6.ibm -ncemss for the IBM RISC platform
+
+     ncemss1.6.sgi -ncemss for the Silicon Graphics platform
+
+     ncemss1.6.linux -ncemss for running under linux. This version
+     compiled on Pentium Cyrix.
+
+     Main differences between the old version and the new
+
+     - Changed how the look up table is being used. This results in a
+     much better behavior of the program, it no longer makes all the
+     windows outside of the program black.
+
+     - Changed the way images are stored when read back from the display
+     and stored as an image. The image files created are now TIFF images.
+     There is no longer a need to use the program ImToTiff as for version
+     1.4
+       _______________________________________________________________
+
+NCEMSS Version 1.8 - December 2000
+
+     NCEMSS has been upgraded to version 1.8. However, the program has
+     not yet been compiled for all platforms mentioned above. We will
+     make an effort to support all possible unix platforms, but we don't
+     always have access to the appropriate computer, hence the lack of
+     availability for all the platforms at this moment.
+
+     Read Me installation instructions (.pdf)
+
+     ncemss1.8.linuxppc -ncemss for the Mac Linux PPC platform
+
+     ncemss1.8.sun -ncemss for SUN workstations
+
+     ncemss1.8.linux -ncemss for running under linux. This version
+     compiled on Pentium Cyrix.
+
+     Main differences between the old version and the new
+
+     - Added support for true color
+       _______________________________________________________________
+
+Supplied Datafiles:
+
+     The following files are supplied with the executable program after
+     downloading and extractiing the individual files.
+     spcgrp.dat - file containing information on the 230 spacegroups.
+     microscope.dat - file containing information on predefined
+     microscopes. New microscopes can be added by the user.
+     scatt.dat - file containing information on the scattering factors
+     for the atomic elements.
+     lprint.ps - file containing postscript information for use in saving
+     data as postscript files or routing of output to a postscript
+     laserprinter.
+     Read Me files: - ReadMe file or correct installation and operation
+     of the program on your platform.
+       _______________________________________________________________
+
+     Manuals:
+
+     There are two versions of the manual currently available. One is a
+     FrameMaker 4.0 document, the other is in the form of a Adobe
+     Portable Document Format file (PDF). We hope to add different
+     formats in the near future.
+     NCEMSS Manual - FrameMaker 4.0 NCEMSS Manual
+     NCEMSS Manual PDF - Adobe Portable Document Format
+
+     Some users find that it is difficult to download the entire document
+     in its entire length. Therefore, the manual has been split into
+     various sections. There are two groups of files below. The first set
+     is in the Adobe Portable Document Format for automatic viewing and
+     printing if your netbrowser has been configured to automatically
+     launch Adobe Acrobat Reader for files with the extension ".pdf". The
+     second set consists of PDF files that have been stuffed and
+     bin-hexed and is suitable for either automatic ftp download through
+     your web-browser or your favorite ftp program.
+
+     PDF Files
+     * Cover Page
+     * Table of Content
+     * Manual Part 1
+     * Manual Part 2
+     * Manual Part 3
+     * Manual Part 4
+     * Manual Part 5
+     * Manual Part 6
+
+     BinHexed Files
+     * Cover Page
+     * Table of Content
+     * Manual Part 1
+     * Manual Part 2
+     * Manual Part 3
+     * Manual Part 4
+     * Manual Part 5
+     * Manual Part 6
+       _______________________________________________________________
+
+   About NCEM | Microscopes and Facilities | Staff | Becoming an NCEM User
+
+   NCEM Fellowship | Workshops and Seminars | Assistance and Collaboration
+                                 | Software
+
+   Publications | New Research | On-line Microscopy | Gallery | Microscopy
+                                    Links
+     __________________________________________________________________

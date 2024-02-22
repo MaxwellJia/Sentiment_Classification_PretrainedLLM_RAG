@@ -1,0 +1,44 @@
+http://library.msha.gov/basisbwdocs/isbnhlp.htm
+
+                            The MSHA Library Search
+
+Field Name: ISBN
+
+   International Standard Book Number. Use an asterisk (*) for a wildcard.
+
+   The following list describes the test operators that appear in the
+   droplist box to the right of the ISBN field label.
+
+   contains the phrase
+       Searches for all keywords and stopwords in exact order and
+       position.
+   contains in order
+       Searches for all keywords in exact order and position.
+   contains all
+       Searches for all keywords in any order.
+   contains any
+       Searches for any keywords in any order.
+   equals
+       Searches for a value that matches your search value.
+   is not
+       Searches for a value that does not match your search value. (This
+       test operator is for short text fields only.)
+
+   Search Examples
+
+   Searching multiple fields:
+   Choose appropriate field connector from droplist box at the bottom of
+   the search form.
+
+   Sort Options:
+   You may sort your search results by any of the fields in the droplist
+   box at the bottom of the search form. You may also sort them in either
+   ascending or descending order. If you select $RANK as the sort
+   criterion, then the documents will be sorted according to how many hits
+   were found in each. (A hit is a term in the document that matches the
+   search value you specified.) If you keep the default value of NONE,
+   then the documents will not be sorted.
+
+   Note: When you specify $RANK for the Sort By box, the system will list
+   the documents in descending order no matter what value you have
+   selected in the Sort Order box.

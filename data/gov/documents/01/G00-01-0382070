@@ -1,0 +1,107 @@
+http://www-sage1.larc.nasa.gov
+
+   [SAGE-I-logo.gif]
+
+                                      [SAGE-1%20Re-Analysis%20Project.gif]
+
+Overview
+
+   Measurements of ozone and aerosol by the Stratospheric Aerosol and Gas
+   Experiment (SAGE I) span a period (1979-1981) prior to significant
+   increases in human-derived stratospheric reactive chlorine and a period
+   noted for very low stratospheric aerosol loading. These data are a
+   valuable tool for understanding the onset of heterogeneous processes
+   that have led to significant decreases in ozone, particularly in the
+   lower stratosphere, since that time. Unfortunately, problems are known
+   to exist with the current publicly archived version of the data,
+   particularly associated with ephemeris and altitude registration
+   calculations. In order to improve the value of the SAGE I data set to
+   the atmospheric sciences community, the SAGE I processing algorithm is
+   being updated to correct these problems. The algorithm is also being
+   modified to reflect an improved understanding of instrument
+   performance, to improve species separation, and to update correlative
+   spectroscopic and atmospheric databases.
+
+Elements
+
+   Several independent investigations into SAGE I/II ozone trends conclude
+   that the SAGE I data retrieval has a seasonally and spatially dependent
+   altitude registration error relative to SAGE II [Wang and Cunnold,
+   1996]. At this time, there is at least one "unofficial" SAGE I data set
+   which has been empirically corrected for this altitude bias, and other
+   less sophisticated corrections have been applied in some revised ozone
+   trend estimates. The accuracy of SAGE I altitude registration is
+   limited by the generally poor quality (compared to SAGE II) of the
+   platform ephemeris data. In the original processing code, altitude
+   registration was supplemented by the high altitude measurements in the
+   385 nm channel where measured molecular scattering could be matched to
+   a model temperature/pressure profile. Based upon the engineering model
+   of the SAGE I instrument, it is now believed that 385-nm channel may
+   actually have been centered near 382 nm. We hope to improve altitude
+   registration by revising the meteorological data used to estimate the
+   Rayleigh scattering contribution and by improving the orbital ephemeris
+   of SAGE I. Part of this effort will focus on re-assessing the central
+   wavelength of the nominal 385-nm channel.
+
+   A number of calibration issues, including scan mirror calibration and
+   electronic transients, have been addressed in the 13+ years of data
+   obtained with the SAGE II instrument. Similar effects may be present in
+   the SAGE I data set, but have never been investigated. In fact,
+   calibration deficiencies may explain why SAGE I has reported a more
+   limited altitude range of coverage for ozone than that of SAGE II since
+   they act to reduce the quality of the retrievals at the extremes of the
+   altitude range. We will investigate these effects for SAGE I as part of
+   this project.
+
+   We will also attempt to improve the species seperation algorithm. While
+   this is a very clean period relative to aerosol, the measurement of
+   nitrogen dioxide is difficult and can probably be improved. In
+   addition, improvements in the spectroscopy of all of the species
+   measured by SAGE I will improve the quality of the ozone and aerosol
+   products.
+
+   The ultimate goal of this work is to transform the SAGE I retrieval
+   algorithm into a process more closely linked to the SAGE II algorithm.
+   In fact, we wish to produce a SAGE I processing code that utilizes a
+   substantial amount of the SAGE II code. In doing so, we will assure
+   that future improvements to either code result in simultaneous,
+   tractable improvements in both data sets. Additionally, new techniques
+   being developed for SAGE III will be considered for use in this effort.
+
+   Periodic progress reports will be posted at this site.
+
+Personnel
+
+   Larry W. Thomason, Principal Investigator
+   Atmospheric Sciences Division
+   Mail Stop 475
+   NASA Langley Research Center
+   Hampton, Virginia 23681
+   Phone: 757-864-6842
+   FAX: 757-864-2671
+   E-Mail: l.w.thomason@larc.nasa.gov
+
+
+   Joseph M. Zawodny
+   Atmospheric Sciences Division
+   Mail Stop 475
+   NASA Langley Research Center
+   Hampton, Virginia 23681
+   Phone: 757-864-2681
+   FAX: 757-864-2671
+   E-Mail: j.m.zawodny@larc.nasa.gov
+
+
+   Randal L. VanValkenburg
+   Atmospheric Sciences Division
+   Mail Stop 475
+   NASA Langley Research Center
+   Hampton, Virginia 23681
+   Phone: 757-864-7933
+   FAX: 757-864-2671
+   E-Mail: r.l.vanvalkenburg@larc.nasa.gov
+
+   Top
+
+   Last updated: 21-Sep-1998. NASA Langley Research Center - Aerosol
+   Research Branch

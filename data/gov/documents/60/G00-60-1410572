@@ -1,0 +1,169 @@
+http://xtesof.nascom.nasa.gov/FITS.html
+
+     __________________________________________________________________
+
+                                    HOME
+
+   FITS files of all data
+   for GO observations FITS
+   FAQ
+     __________________________________________________________________
+
+New Announcement:
+
+    WARNING: Attitude Uncertainty in Public TOOs from 2000, September 6 through
+    13 (mission days 2440-2447)
+
+   During this period, a problem with the onboard star trackers resulted
+   in significant (and not yet well modeled) satellite pointing errors of
+   up to one degree. Data from public TOOs performed during this period
+   have been made immediately public, despite the fact that all attitude
+   information is uncertain. GOs analyzing affected obsids might
+   erroneously conclude that their source is up to a factor of five
+   fainter than it actually is, due to the pointing offset at the time of
+   the observation. Be EXTREMELY cautious before drawing any scientific
+   conclusions from the affected observations.
+
+   The following public TOO obsids are affected:
+
+   50418-01-04-00
+   50418-01-04-00A
+   50418-01-04-00Z
+   50418-01-04-01
+   50418-01-04-01A
+   50418-01-04-01Z
+   50404-01-06-00
+   50404-01-06-00A
+   50404-01-06-00Z
+   50415-01-13-00
+   50415-01-13-00A
+   50415-01-13-00Z
+   50415-01-13-01
+   50415-01-13-01A
+   50421-01-02-00
+   50421-01-02-00A
+   50415-01-13-01Z
+   50418-01-05-00
+   50418-01-05-00A
+   50418-01-05-00Z
+   50421-01-02-01
+   50421-01-02-01Z
+   50417-01-05-00
+   50417-01-05-00A
+   50417-01-05-00Z
+   50417-01-05-010
+   50417-01-05-01A
+   50417-01-05-01
+   50417-01-05-01H
+   50417-01-05-01I
+   50417-01-05-01Z
+
+Announcement:
+
+    The SOF has switched to automatically making FITS files with all data modes
+    for every observation. Thus it is no longer necessary to request GO mode
+    data because it will be included in the FITS files with the Standard mode
+    data. Also, when it becomes available, production data will be used to
+    create a second, possibly better copy of the FITS data. This production data
+    will also be on the ftp server in the directory pub/FITS/production .
+
+Overview:
+
+     * As a convenience to guest observers, the RXTE SOF is providing a
+       FITS package of all data products made from the realtime and
+       production data. Note that this is a change from the past in which
+       only standard mode products were provided by default.
+     * This data is proprietary, please do not attempt to download and
+       decrypt any data not owned by you.
+     * The realtime FITS creation is run throughout the day. Data that is
+       complete at the time the process runs is made into FITS via XFF,
+       then encrypted using PGP, and put on the anonymous ftp server.
+       Realtime FITS packages of GO data will only remain on this server
+       for 7 days. The realtime FITS files may be deleted after the
+       production version arrives.
+     * The production FITS creation is run twice per day, once in the
+       morning and once in the afternoon. Production FITS files will be
+       kept for about 20 days.
+     * Public-owned observations are available, the encryption key is
+       'publictoo'.
+     * This service is completely independent of the RXTE GOF; PIs will
+       continue to get their data from the GOF in the usual way.
+     * Please contact the SOF(xtesof@xtesof.nascom.nasa.gov) with
+       questions about getting data through this service, and contact the
+       GOF at xtehelp@athena.gsfc.nasa.gov with questions about reducing
+       data.
+     __________________________________________________________________
+
+Specifics:
+
+     * XFF is run as follows on the realtime data:
+xff -r -f $obsid -l $obsid/$obsid.log -s $stmet -t $endmet -n 0
+     -a 1 14 15 16 17 20 21 24 55 59 63 70 74 79 80 86 90 91 92 93 94
+     82 84 85 88 200 237 238 239 240 241 242 243 251 252 253 254
+       NOTE: apids 16, 17, 20, and 24 were added on 2/5/97.
+       where
+          + $obsid is the observation id, e.g. 10101-01-01-00,
+          + $stmet is the starting MET of the observation (includes the
+            slew to the target)
+          + $endmet is the ending MET of the observation,
+          + the numbers after '-a' are the apids that are processed: 14,
+            15, 16, 17, 20, 24, and 237 - 254 contain spacecraft
+            orientation information. 70 and 74 contain PCA standard 1 and
+            2. 82 and 88 contain HEXTE Archive (standard) modes for
+            clusters A and B. Finally, 90 - 94 contain PCA housekeeping
+            data.
+     * PGP is a popular encryption package, and is used here to protect
+       the privacy of your data. In this case, it is not run in public-key
+       mode, due to the impossibility of getting all the PI/Co-I's public
+       keys in advance of their observation. Instead, it is run in its
+       conventional encryption mode: 'pgp -c filename'. If PGP version
+       2.6.2 is not installed on your system (just type 'pgp' to find
+       out), you must install it in order to decrypt your data. US
+       citizens in the United States, or Canadian citizens in Canada may
+       download PGP from the MIT distribution site. Others may download
+       the international version from the International PGP page. The two
+       versions are completely compatible.
+       NOTE: Some countries prohibit or regulate the use of cryptography,
+       so please check your country's policies before attempting to
+       download or use PGP!
+     __________________________________________________________________
+
+How to access your data:
+
+     * Either :
+          + point your browser to ftp://xtesof.nascom.nasa.gov/pub/FITS/
+            for realtime data or to
+            ftp://xtesof.nascom.nasa.gov/pub/FITS/production/ for
+            production data,
+          + save your data to a file on your computer (netscape users do
+            this by holding the right mouse button while pointing to the
+            dataset, and selecting 'save link as'.).
+       Or
+          + ftp to xtesof.nascom.nasa.gov, login as 'anonymous', give your
+            email address as your password.
+
+          + cd pub/FITS/ (or cd pub/FITS/production)
+          + binary
+          + get obsid.tar.pgp
+          + quit
+     * To decrypt your data, type:
+
+       pgp obsid.tar.pgp You will be prompted for the pass phrase, which
+       is simply the 'access key' which was sent to you in your schedule
+       notification email. You can have the access key redelivered to you
+       via this form.
+     * Un-tar the data:
+
+       tar -xvf obsid.tar Now you have a directory which has the same
+       structure as the production data the RXTE GOF will be sending you.
+     * Files with the '.gz' extension have been gzipped for conservation
+       of disk space, you will need to 'gunzip' them for analysis.
+     * See the RXTE GOF guide to data analysis and processing, especially
+       the recipe Working with Realtime Data.
+     __________________________________________________________________
+
+   XTE SOF - xtesof@xtesof.nascom.nasa.gov
+   This page was last modified on Friday, 29-Sep-2000 07:29:21 EDT.
+     __________________________________________________________________
+
+                [ISMAP:HEASARCMenuBar3.gif]-HEASARC Menu Bar

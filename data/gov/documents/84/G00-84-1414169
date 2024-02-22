@@ -1,0 +1,128 @@
+http://www.llnl.gov/IPandC/op96/04/4e-spe.html
+
+   Opportunities for Partnership—Technology Profiles
+
+Speech Recognition Using New Electromagnetic Sensors
+
+Revolutionary Way to Characterize Speech with Many Applications
+
+   [fig-e.gif]
+   Human vocal system showing locations of electromagnetic radar sensors.
+   The sensors can be built into microphone housings and other convenient
+   devices.
+     __________________________________________________________________
+
+                                                    APPLICATIONS
+
+                                                      * Speech recognition
+     * Speaker verification
+     * Speech synthesis
+     * Speech diagnostics
+
+   Our group at Lawrence Livermore National Laboratory has recently
+   described methods of using low-power electromagnetic (EM) sensorssuch
+   as miniature radarsin conjunction with acoustic speech to improve the
+   accuracy, speed, and quality of speech signal recognition for a variety
+   of applications. The output from one or more sensors can be combined
+   with acoustic sound versus time information to describe each "frame" of
+   human speech. The radar sensors can be miniaturized and placed into
+   hand-held microphone housings or near the speaker in many typical
+   appliances or computer-related devices.
+
+  EM sensor measurements
+
+   EM radar sensors can be positioned around the human vocal system in
+   several ways (as seen in the above view of the vocal system), and can
+   be incorporated into several standard instruments such as microphone
+   housings, microphone booms, electronic jewelry, and computer housings.
+   The processing of the radar and acoustic data uses several new, but
+   easily implemented algorithms. The data shown in the figure below are
+   illustrative of the information available from two micropower radars
+   (sensors 1 and 2 in the above figure) when used in conjunction with an
+   acoustic microphone, as the word "print" is spoken. Trace (a) below
+   shows the audio signal and trace (b) shows the glottal radar signal,
+   which detects the motions of the vocal folds as "print" is articulated.
+   These data provide heretofore unavailable information describing the
+   excitation of speech, the start of speech, as well as procedures for
+   noise removal and for accurate algorithm timing. Traces (c) and (d)
+   show jaw and tongue motions obtained using radar sensor 2. The upward
+   jaw motion precedes the formation of the "p" in the word "print," then
+   downward motion takes place as the "p" is spoken. Trace (d) shows the
+   tongue moving down for "ri" and then upward to say the "n" sound. Such
+   sequences can be used to identify patterns of speech sounds (e.g.,
+   words or phrases) The lowest trace (e) shows the running vocalized
+   pitch of the speaker, which is useful for intonation and language
+   decisions.
+
+   [fig-f.gif]
+   (a) Raw data from microphone, (b) vocal folds, (c) jaw, (d) tongue, and
+   (e) simple instant pitch processing as the word "print" is spoken.
+
+  Processed data
+
+   The data from signals illustrated above also make possible very clear
+   descriptions of the vocal tract configurations, which include the
+   shapes of air paths from above the vocal folds, where a split occurs
+   into the nose and past the tongue, and out the nose and lips. These are
+   called transfer functions and are used by current automated speech
+   recognizers to identify the sounds being spoken. The transfer
+   functions, illustrated in the figure below, show the quality of data
+   obtained using these methods.
+
+   [fig-g.gif]
+   As "print" is spoken, transfer function data are obtained for each time
+   frame, which is defined as every two vocal fold open and close cycles
+   (e.g., frame numbers 4 to 18 equal 30 glottal cycles). To estimate the
+   transfer function, the Fourier transform of the audio (top trace) is
+   divided by the Fourier transform of the glottal radar signaltrace (b)
+   in second figure.
+
+  Applications and markets
+
+   The low-cost electromagnetic radar sensors and the algorithms that we
+   have developed make possible many important technical devices for a
+   wide variety of speech-related markets. They range from lower volume
+   medical markets of $10 million per year (such as the production of
+   special diagnostic instruments for people with speech disorders), to
+   the several billion dollar per year market associated with the sale of
+   a low cost "radar/microphones" attached to a significant fraction of
+   the 60 million personal computers sold each year. Other applications
+   are for noise-immune and reduced bandwidth cellular telephones,
+   personalized speech synthesizers, noise suppression microphones, speech
+   disability diagnosis and correction, and teaching, as well as many
+   other applications.
+
+   Availability: We are presentating and publishing our work at
+   conferences and for expert groupsmore information on this technology
+   is also available at our Speech Technology Web site. Patents on the
+   radar technologies have already issued and patents on the speech
+   processing methods are in progress. We welcome interest from industry
+   in developing new speech recognition technologies.
+
+   CAPTION: Contacts
+
+          John Holzrichter (technical)  Norma Dunipace (licensing)
+              Phone: (925) 423-7454       Phone: (925) 422-5995
+               Fax: (925) 424-4820         Fax: (925) 423-8988
+          E-mail: holzrichter1@llnl.gov E-mail: dunipace1@llnl.gov
+                Mail code: L-003             Mail code: L-795
+     __________________________________________________________________
+
+          Top of Page || Table of Contents || Industrial Partnering
+
+   The Industrial Partnerships and Commercialization Office at Lawrence
+   Livermore National Laboratory invites industries to explore the
+   possibility of a match between their technological needs and our
+   Laboratory's multidisciplinary capabilities. Our specialists know how
+   to connect industry representatives with researchers in their field of
+   interest. To start, simply complete our Company Contact Form.
+     __________________________________________________________________
+
+         Return to Home Page Lawrence Livermore National Laboratory
+     Operated by the University of California for the U.S. Department of
+                                   Energy
+
+    For Web-related questions about this page, please contact: ipandc.web
+                    UCRL-TB-110794-95, LLNL & Disclaimer
+               September 17, 1998. This page has been accessed
+      [Count.cgi?df=op97-4e-spe.dat|ft=0|pad=0|tr=T|trgb=ffffff] times.

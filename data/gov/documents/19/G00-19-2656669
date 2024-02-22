@@ -1,0 +1,114 @@
+http://www-oss.fnal.gov/policy/security_req.html
+
+
+In mid December we held an audit within OSS. THis is the
+document that was used for the audit and outlines the current
+state of OSS security requirements as of Dec 14, 2000.
+
+Below I will describe my evaluation checklist and expectations. We will
+surely be talking about other concerns you have and difficulties
+uncovered, so please feel free to point out your concerns either
+beforehand or during the walkthrough. You should be familiar with the
+current version of the FNAL Policy on Computing and be sure to point
+out sections that you don't understand, cannot comply, or are
+concerned about. We need to be in compliance or request an
+exemption/interpretation.
+
+I've divided the list into two sections, Requirements and Best Practices,
+for items that are current required policy and practices we've discussed
+but not yet made policy or described. My expectation is that you will all
+get 100% on the Requirements and somewhat less on the Best Practices. You
+can expect to explain exceptions from the Requirements to your supervisor
+and to have a dialog on intents/instructions/clarification of Best
+Practices. Extra Credit is just that.
+
+I plan on publishing the results of the walkthrough to the department
+and summarizing the results to Division management and Computer
+Security Team for planning purposes.
+
+Requirements:
+
+        All persons with priveleged access (root/Admin or equiv) on 3 or
+                more machines will have registered as sysadmins.
+                (FNAL Computing Policy) http://miscomp.fnal.gov/sysadmindb
+        No restricted central services will be running on unregistered
+                machines. (FNAL Computing Policy) Expect remotely
+                accessible IMAP/POP to join this list soon.
+        All systems will have a backup plan published to the users.
+                (FNAL Computing Policy) This includes a list of coverage,
+                frequency, restoration procedure, and policies (retention,
+                etc.)
+        Banners will be installed on all machines for login access.
+                (FNAL Computing Policy)
+        SSH shall be running on all Unix machines and used for all root
+                priveleged password exchanges. (OSS policy)
+        Domain Administrator logins shall not be used to read email or
+                run a web browser. (OSS policy)
+        TCPwrappers will be installed and operable on all Unix systems.
+                (OSS policy)
+        No NULL password logins (passwordless) will exist on the
+                machines. (FNAL Computing Policy)
+
+Best Practices:
+
+        (This group will join the requirements section after this
+         audit.)
+
+        All web pages directly accessible (1 hop) from the main CD page
+                will have the required "Legal Notices" at the foot of the
+                page (recent Division instruction).
+        All OSS Department desktop machines will have a kerberos client
+                installed and membership in the FNAL Strong Authentication
+                Realm. (OSS policy)
+
+        (This group needs training/discussion/clarification before
+         becoming requirement.)
+
+        All Windows file/application servers will be at the current patch
+                release. (OSS policy)
+        All remote access to Windows machines as Domain Administrator will
+                use strong encryption methods for password exchange.
+        All Unix machines will have their list of offered services
+                reviewed and unnecessary services removed.
+        All 24x7 Unix machines will have tripwire installed and checkpoint
+                files run within the past month. A sampling covering at
+                least 3 months will be maintained.
+        All electronic storage of passwords will be encrypted and access
+                restricted to the appropriate priveleged persons.
+        All 24x7 systems will have multiple (>=2) system disks with
+                recent fallback version of the OS readily available.
+        All 24x7 systems will have an online disk storage as sysadmin
+                reserve >= the largest partition on the machine.
+        The list of systems to which the person has priveleged access
+                should be current (within 1 month). (FNAL Computing
+                Policy)
+        Core FUE will be installed on all OSS supported Unix systems.
+
+
+Extra Credit:
+
+        (This group we've not discussed at all generally, but I'd
+         like to have.)
+
+        All OSS supported Unix systems will be timesynced to the FNAL
+                standard clock, broadcast by the routers, via xntp or
+                AFS (OSS policy) (Can we do this on Window too ?)
+        All Very High Availability Services will have a service level
+                plan in place describing minimum service level, planned
+                fault condition responses, security plans, and change
+                control mechanisms.
+        All 24x7 systems will have a functioning monitoring system for
+                critical services that includes an alarm mechanism that
+                can result in a page afterhours.
+        All 24x7 systems will have a usage summary history showing a
+                summary of usage of critical resources over the past
+                day, week, month and year.
+        All Windows machines will run a virus scanner regularly and have
+                regular updates of filters.
+
+Dane Skow, OSS Dept. Head
+Fermilab, MS369, Kirk and Pine St., Batavia, IL 60510
+
+     __________________________________________________________________
+
+   Security, Privacy, Legal

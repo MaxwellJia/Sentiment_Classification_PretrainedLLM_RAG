@@ -1,0 +1,48 @@
+http://www-rfi.fnal.gov/Acnet/ACNet-LabVIEW.html
+
+
+
+   Welcome to RFI Web Server
+   .
+   Introduction
+   [bar.gif]
+
+   An interface has been written to enable the use of a LabVIEW system in
+   the Fermilab Accelerator Control Network. The interface is twofold:
+
+   1. Front-end capabilities: Others, e.g. consoles, can request or set
+   data from the LabVIEW program according to the RETDAT,SETDAT, and
+   FTPMAN protocols.
+   2. Console capabilities: The LabVIEW program can request or set remote
+   Acnet devices.
+
+   The software can be downloaded from this page (password required)
+   Front-end Interface
+   [bar.gif]
+   The interface is completely written in LabVIEW and therefore useable
+   across all of the LabVIEW supported platforms. Documentation on the
+   interface can be found here in HTML or PDF format. See the
+   Macintosh-only older version HTML document for more details on the
+   older version that support Ethernet and Tokenring
+   Console Interface
+   [bar.gif]
+   The console interface is written in LabVIEW itself and is therefore
+   portable to any other LabVIEW platform. This interface uses the TCPORT
+   server on one of the VAXes communicating using TCP/IP over ethernet.
+   Through special LabVIEW VIs the program can ask for data from any other
+   Acnet device in the control system and set any Acnet device given this
+   device is on the permission list on the VAX. A small LabVIEW program is
+   available that emulates a console parameter page. As compensation for
+   the lacking of Fast Time Plot and Snapshot support, it is able to plot
+   and index array devices once or at intervals. You can use this to check
+   the operation of your ACNet/LabVIEW system. See the TCPORT manual
+   (local only) for more details. A beta version of TCPORT supports binary
+   mode transfers, see TCPORT2 (local only). The server for this version
+   only runs on request.
+   [bar.gif]
+   For any comments send mail to Wim Blokland
+
+                                                  Page modified 07/30/2001
+
+
+                                                  Security, Privacy, Legal

@@ -1,0 +1,171 @@
+http://nssdc.gsfc.nasa.gov/cdf/cdf_home.html
+
+   CDF logo
+
+   NOTE: For those users who prefer to or are used to download CDF files
+   directly from the CDF FTP site, please note that the CDF files in the
+   pub/cdf directory on nssdc.gsfc.nasa.gov have been transferred to the
+   standards/cdf directory on nssdcftp.gsfc.nasa.gov.
+
+                          The Common Data Format (CDF)
+
+   The National Space Science Data Center's (NSSDC) Common Data Format
+   (CDF) is a self-describing data abstraction for the storage and
+   manipulation of multidimensional data in a discipline-independent
+   fashion. When one first hears the term "Common Data Format" one
+   intuitively thinks of data formats in the traditional (i.e.
+   messy/convoluted storage of data on disk or tape) sense of the word.
+   Although CDF has its own internal self describing format, it consists
+   of more than just a data format. CDF is a scientific data management
+   package (known as the "CDF Library") which allows programmers and
+   application developers to manage and manipulate scalar, vector, and
+   multi-dimensional data arrays. The irony of the term "FORMAT" is that
+   the actual data format which CDF utilizes is completely transparent to
+   the user and accessible through a consistent set of interface (known as
+   the "CDF Interface") routines. Therefore, programmers are not burdened
+   with performing low level I/O's to physically format and unformat the
+   data file. This is all done for them. The development of CDF arose out
+   of the recognition by the NSSDC for a class of data models that is
+   matched to the structure of scientific data and the applications (i.e.
+   statistical and numerical methods, visualization, and management) they
+   serve.
+
+   Please send inquiries to cdfsupport@nssdca.gsfc.nasa.gov for technical
+   questions or assistance and contact Joe King at
+   king@nssdca.gsfc.nasa.gov for policy related questions.
+
+Java and Perl APIs Now Available with CDF 2.7
+
+   The NSSDC's Common Data Format (CDF) Office has completed the
+   development of the CDF Java Application Program Interfaces (APIs), and
+   the APIs are available to the general public, in addition to the
+   current C and Fortran APIs, as part of the CDF 2.7 package. The advent
+   of the CDF Java APIs significantly benefits the CDF user community
+   since a CDF application can now be written in platform-independent Java
+   language and can run on any of the Java-supported platforms (Java is
+   supported virtually on all platforms today) without any modifications
+   (but make sure that platform is supported by the core CDF library).
+   This encourages sharing of scientific data analysis code among
+   scientists and promotes science. The document for Java-CDF APIs is
+   available on-line.
+
+   Java versions of the CDF tools (e.g. SkeletonCDF, SkeletonTable,
+   CDFConvert, etc.) are also available as part of CDF 2.7. CDF 2.7 is
+   backward compatible with the previous CDF releases, and it includes a
+   more robust CDF library and some features that weren't available in CDF
+   2.6.x such as ability to copy a variable with or without data. Click
+   here for a more detailed CDF 2.7 features.
+
+   In addition to Java APIs, the CDF Perl APIs are now available as an
+   optional package.
+
+   NOTE: The CDF Java APIs and tools are not available for the MS-DOS (not
+   Windows 3.1/95/98/2000/NT) operating system. The APIs and tools are not
+   fully tested for the OpenVMS operating sytem, and they'll be made
+   available at the place where the new CDF 2.7 library is located once
+   fully tested. The improved CDF 2.7 library for OpenVMS is available
+   now.
+
+CDF Embraces XML New
+
+   The CDF office realizes that scientific progress is often impeded by
+   the lack of, or excessive multiplicity of, available standards for data
+   formats and structures and/or data format translators. In a bid to
+   facilitate and promote data sharing with other data formats, the CDF
+   office has recently decided to adopt Extensible Markup Language (XML)
+   as the basis for establishing interoperability with other scientific
+   data formats. XML is a language defined by the World Wide Web
+   Consortium (W3C), and it is an emerging technology for describing
+   digital information. XML is a method for putting structured data in a
+   text file, and it is gaining support from a wide spectrum of users
+   including academia, various government organizations, various technical
+   committees, and commercial software companies such as Sun Microsystems
+   and Microsoft.
+
+   The CDF office has developed an XML-based markup language called CDF
+   Markup Language (CDFML) to describe CDF data and metadata. The CDFML
+   employs some of the basic building blocks/objects defined in eXtensible
+   Data Format (XDF), a XML-based scientific data format, within CDF tags
+   to describe CDF data and metadata. The use of these XDF objects allowed
+   the CDF office to capitalize on the existing infrastructure code
+   already developed by the Astronomical Data Center (ADC). To date,
+   software has been developed and tested to convert CDF data and metadata
+   stored in CDFML into XDF. The CDF office plans to develop software to
+   export the contents a CDF file into the CDFML format and vice versa in
+   the near future.
+
+CDF Evolution Plans
+
+   The CDF Office has set as a long-term goal to work with NSSDC's
+   NASA/Science Office of Standards and Technology (NOST) in facilitating
+   a process for reviewing community requirements for science data formats
+   and associated software and to work with such format groups as HDF,
+   netCDF, and FITS to establish interoperability across, and mutually
+   complementary evolution paths for, these and related formats. The CDF
+   office is participating in the Formats Evolution Process Committee
+   (FEPC), chaired by NOST, representing CDF.
+
+  Congratulations to the CDF Team
+
+   * CDF was selected as one of the five runners-up in the 1995 NASA
+   Software of the Year Award.
+     __________________________________________________________________
+
+Introductory Information about CDF
+
+   What's New? What's New?
+   CDF copyright statement CDF copyright statement
+   CDF FAQ CDF Frequently Asked Questions (FAQ)
+   CDF NASA Tech Brief CDF NASA Tech Brief
+   Conversion Conversion of non-CDF files to CDF and vice versa
+   CDF Examples Examples of CDF Applications
+
+Space Physics Users of CDF
+
+   * To make ISTP compliant CDFs look at Space Physics Use of CDF
+
+Obtaining CDF software and documentation
+
+   Access to CDF software and documentation is available via anonymous FTP
+   on nssdcftp.gsfc.nasa.gov. Below is a listing of the various platforms
+   and operating systems supported by CDF:
+
+     DEC Alpha/OSF1 & OpenVMS
+     DECstation/ULTRIX & VMS
+     HP 9000 series/HP-UX
+     PC MS-DOS/Windows 3.x, Windows 95/98/2000/NT, Linux, Solaris, Cygwin,
+       & QNX
+     IBM RS600 series/AIX
+     Macintosh OS 8/9/X
+     NeXT/Mach
+     SGI Iris, Power series and Indigo/IRIX
+     Sun/SunOS & SOLARIS
+     VAX/VMS
+
+   * CDF Documentation and Information
+   * Get latest version of CDF Software Distribution (V2.7)
+   * Get official ISTP version of CDF Software Distribution (V2.5)
+   * CDF Anonymous FTP Site
+
+User Support and Help Desk
+
+   * Submit comments or suggestions
+   * Submit questions to CDF Support
+   * CDF Mailing List
+   * How to contact CDF Support
+     __________________________________________________________________
+
+   * NSSDC Home Page
+
+   * Space Physics Use of CDF
+     __________________________________________________________________
+
+   NASA/GSFC Security and Privacy Statement
+
+
+    Code 633, NASA Goddard Space Flight Center
+    Greenbelt, MD 20771, USA
+     __________________________________________________________________
+
+        Last Update: January 13, 2002, NASA Official: Dr. Joseph H. King, Head,
+        NSSDC.

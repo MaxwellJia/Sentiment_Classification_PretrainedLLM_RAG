@@ -1,0 +1,9 @@
+http://troe.dot.ca.gov/scripts/oe.js
+
+   //Get Date/////////////////////////////////////// function initArray()
+   { for(i=0;i 0) { begin = dc.indexOf(cname); if (begin != -1) { begin +=
+   cname.length; end = dc.indexOf(";", begin); if (end == -1) end =
+   dc.length; return unescape(dc.substring(begin, end)); } } return null;
+   } function specialNotice() { if (GetCookie('special') != update) {
+   SetCookie('special', update, expiration, '/'); openWin(special_loc); }
+   } ///////////////////////////////////////////////

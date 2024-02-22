@@ -1,0 +1,248 @@
+http://www-aig.jpl.nasa.gov/public/mls/aspire/aspire.html
+
+         Autonomous Small Planet In situ Reaction to Events (ASPIRE)
+
+Science Objectives
+
+   The particular mission demonstrated in ASPIRE is a Close-Proximity
+   Rendezvous of a Low-Activity Comet. Comets are the solar system objects
+   thought to contain materials that have undergone the least processing
+   since the formation of the solar system, so our current lack of
+   detailed information about their compositions and formative processes
+   are key impediments to understanding how the solar system formed. We
+   would like to visit a comet to answer several important questions about
+   them.
+
+
+   Compositional questions call for direct sampling of a comet's nucleus,
+   with either onboard analysis or sample return to Earth for analysis in
+   ground-based laboratories. Structural questions are addressed by
+   imaging, gravity field measurement, and possibly radar sounding or deep
+   drilling. Evolutionary processes can be studied via imaging of events
+   that are evidence of those processes, or sampling (by direct sample
+   collection or nearby remote sensing) of solid, gaseous, or ionic
+   products of the processes.
+
+   Fresh, fully active comets have the highest science priority for these
+   investigations. Of all comets, fresh comets have been least processed
+   by the sun, so their constituents are materials that are the least
+   altered since the birth of the solar system. Samples from the deep
+   interior of such a comet would have tremendous scientific value,
+   preserving the ice crystal morphology, dust grain structure, and
+   compositional record from the time of the comet's formation.
+   Unfortunately, fresh comets present an extreme hazard to spacecraft in
+   their vicinity, especially as they near the sun and all the sublimation
+   processes reach full activity. A spacecraft that attempts to maneuver
+   to within a few km of an active nucleus finds itself immersed in a
+   Maelstrom of rushing gas and high-speed particles.
+
+   An alternative is to to achieve significant progress in our
+   understanding of comets and their formation by targeting a less active
+   comet and collecting samples of dust, mantle material, and possibly
+   some processed ices, and by monitoring evolutionary processes such as
+   jet formation, mantle ejection or collapse, surface fracturing, and
+   particle ejection. Such evolutionary processes are very common for
+   comets and where observed in the past. All of them have one important
+   characteristic: they expose fresh materials from inside of the nucleus.
+
+   Of particular importance is fracturing event. It is likely to look like
+   "comet quake", followed by the outrash of gases, followed by the comet
+   break up. Detecting this event early will present a number of
+   spectacular opportunities. First of all, the spacecraft located at more
+   then 1 km away from the comet can track the fragments in order to avoid
+   collisions. The other opportunities are of even greater importance due
+   to numerous scientific benefits: by measuring the composition of gases
+   evolved from freshly exposed areas of both the fragment and the main
+   nucleus, we can learn about the processes involved in the comet's
+   origin; and by measuring the profile of recession velocity of the
+   fragment vs. distance from the nucleus, we can learn much about the
+   mechanism of ejection.
+
+Autonomy Objectives
+
+   The efforts to study comet events can be fruitless if done through
+   communications to Earth. The jet formation event, the mental collapse
+   event, the surface fracturing event, and the particle ejection event
+   are likely to be a short-term events. The opportunity to replan,
+   refocus, and study such events in detail will be missed entirely if
+   downlink, uplink and ground-based processing are required. The
+   capability to handle comet events in-situ via fully autonomous
+   processing is necessary to make investigations of short-term events
+   possible. Therefore, the objective of the ASPIRE mission is to develop
+   and demonstrate an autonomous science processing technology which
+   enables in-situ detection, capture and analysis of a scientifically
+   interesting short-term comet events. This technology should be
+   integrated with autonomous on-board capability to replan science
+   observations from the nominal mission. Such capability consists of
+   three parts: close proximity navigation planning and execution; onboard
+   pointing and propulsive planning and execution; onboard mission
+   planning and sequencing. Once the scientific event of interest is
+   detected, these capabilities allow replanning, repointing and close
+   observation of the event.
+
+
+   Our goals are:
+     * To develop a suitable mission and science observation scenario.
+     * To build a S/W model of the science processing unit capable of
+       detecting short-term comet events.
+     * To integrate autonomous science processing unit with other
+       autonomous spacecraft components, and to install integrated version
+       in Flight System Testbed.
+
+Mission Scenario
+
+   The target for ASPIRE, Comet duToit-Hartley, is in a near-ecliptic
+   orbit, with a perihelion of 1.23 a.u. and aphelion just beyond
+   Jupiter's orbit. Its five-year period brings it to a perihelion
+   February 15, 2003, for which this mission was designed. The nearly
+   2.5-year cruise culminates with the spacecraft approaching from the
+   sunward side, and entering orbit through a series of approach maneuvers
+   that nullify the nearly 3.2km/s relative velocity at arrival.
+
+   The main goal of the mission is to demonstrate quick reaction to
+   scientific event, therefore the main mission phases constitute the
+   quick reaction mode. This mode consists of three states: Parking,
+   Orbiting, and Hovering. The Parking state is when the spacecraft is in
+   a parking orbit around the comet. The Orbiting state is when the
+   spacecraft flies over a sequence of orbits to capture a set of targets.
+   The Hovering state is when the spacecraft flies closely over the comet
+   surface to investigate detected targets. The spacecraft is initially in
+   the Parking state. In this state, the spacecraft can immediately
+   execute next command and transfer to any other state. But in Orbiting
+   or Hovering state, the spacecraft has to finish executing the current
+   command before it can transfer to another state. The exception is an
+   event of comet break up, it is a dangerous event which causes immediate
+   escape (Escape state) of the spacecraft and the end of the mission.
+   This exception is handled by the escape mode.
+
+   The picture below shows the spacecraft maneuvering in sequence of
+   orbits around comet. The trajectory is plotted in red and yellow line,
+   and coordinate systems for spacecraft and comet are plotted in red
+   yellow and blue lines.
+   [nav3.gif1]
+
+   There are two science cameras on-board the spacecraft. The first one is
+   wide-field of view camera, and the second is narrow field-of view
+   camera. The first camera is used for the detection of scientifically
+   interesting events. Once such event is detected the second camera is
+   commanded to point at the location of an interesting event for close
+   investigation. The interesting events which are candidates for
+   detection are: jet formation, mental collapse, surface fracturing,
+   particle ejection and comet break-up.
+
+Demo Scenario
+
+   The ASPIRE demo starts with the spacecraft being parked in an orbit
+   around comet 20 km away. At this point some images of the comet surface
+   have been taken and pre-stored in science data-base. Then the surface
+   of the comet cracks in two places resulting in surface fracturing event
+   (sub-pixel level). The science module detects this not-visible to an
+   eye event. Two pictures below display the surface fracturing event and
+   the changes detected by the Science unit. The first picture is the
+   comet surface before fracturing, the second picture is the comet
+   surface after fracturing. The change is not visible by an eye, but the
+   science unit successfully detects an event, indicated by red boxes in
+   the second picture.
+   [comet011.gif1]
+   [twoRedBox.gif1]
+   Following the science unit detection of an event the narrow field of
+   view camera is pointed to investigate the surface movement processes in
+   the crack region. The image seen by the narrow field of view camera is
+   displayed below.
+   [NFOV.gif1]
+   The spacecraft receives the coordinates of the crack event from the
+   science module and proceeds with the close fly-by of the area of
+   interest. No more changes happen during close observation and the
+   spacecraft gets back to it's previous orbit. Following this, two
+   particles separate from the comet's body and are flying away (fragment
+   ejection event). The science module detects this event early, providing
+   enough time for replanning and repointing the narrow field of view
+   camera. The ejected pieces are detected and observed during their
+   departure from the screen. Close fly by maneuver follows to investigate
+   the area from which the particles were separated. This maneuver is
+   interrupted by complete comet break up, which causes an immediate
+   escape of the spacecraft.
+
+The Science Module
+
+   One of the most important ASPIRE modules is the science processing
+   module which is capable of detecting events of scientific interest. For
+   the given mission these events are the changes in the appearance of the
+   comet surface, detected by comparing two images. These changes can be
+   very small (sub-pixel level), or larger (as specified by algorithm
+   parameter). Also, these changes can be short-term, as detected by
+   comparing consecutive images, or long term as detected by comparing the
+   current image with the image stored in data-base.
+
+   The Science Module consists of 7 conceptual parts. First the mode
+   handler receives the current mode of the process. The mode can be
+   Initialize, which resets all parameters and frees all storage space; or
+   the mode can be Store Image, which stores the current image in the
+   internal data base without processing it; or the mode can be Compare
+   Images, which compares two images in order to detect a change, and then
+   stores these images in internal database. The viewing angles
+   calculation part converts position of the spacecraft and tilt of the
+   camera, both given in rectangular coordinates to three angles
+   (conversion from six parameters to three parameters). These angles are
+   used for direct accessing of internal data-base, containing pre-stored
+   images. Direct accessing is necessary during New Image Storing as well
+   as for image location. New Image Storing stores current image in the
+   data base using direct accessing techniques if space still remains in
+   the data base, or if space is not available it replaces the oldest
+   image with the newly received one. The heart of the Science Processing
+   unit is a state of the art Change Detection algorithm (QuakeFinder).
+   This algorithm detects the changes by dividing the image into small
+   tiles and then using correlation and interpolation techniques to detect
+   the displacement of each tile (if such exist). The detected
+   displacements can be of sub-pixel magnitude and not-visible to the eye,
+   or they can be larger as specified by the algorithm parameters.
+   Associated with displacement of each tile is the confidence measure.
+   The thresholding part sets the threshold to ignore the displacements
+   with weak confidence measures, and give equal considerations for
+   displacements of high confidence. Then the Clustering part clusters
+   displacements of similar magnitude and direction into the regions. The
+   motion and other attributes of these regions are examined to classify
+   (Classification part) the change into jet formation, mental collapse,
+   surface fracturing, fragment ejection, and comet break-up. And the
+   detected change, it's position, size, direction of motion and type
+   (type is not implemented yet) are reported to the planning and
+   scheduling module.
+
+Current Status
+
+   Currently, the first version of the ASPIRE demo is implemented and
+   installed in Flight System Testbed. The Science module is integrated
+   with Planning and Scheduling, Navigation, Tracking and Comet Modeling
+   modules. The functioning of all the modules is fully autonomous. The
+   Demo can run according to predetermined script, or in Interactive Mode,
+   where events are inserted through user interface. The events of
+   Interactive mode should be in the bounds of designed mission, and in
+   accordance with spacecraft geometry. At this point interactive mode
+   needs assistance of the export, but the plan is to make it fully robust
+   and export-independent. The classification part of the science module
+   is not integrated yet. Therefore, only the coordinates, direction, and
+   magnitude of change are reported so far. The ASPIRE demo proves the
+   concept that integrated autonomous spacecraft is feasible, and that
+   automatic in-situ detection of scientific events and a quick reaction
+   to such events can enable new scientific missions (which were not
+   possible before) to be achieved by lighter and cheaper spacecraft.
+
+People representing Science Processing in ASPIRE
+
+   Paul Stolorz
+
+   Victoria Gor
+
+ASPIRE team members whose documents were used in production of this WEB page.
+
+   Thomas Spilker (Science Objectives)
+
+   Tooraj Kia (Autonomy Objectives)
+
+   Daniel Scheeres (Mission Scenario)
+
+   Jimmy Shih (Mission Scenario, Demo Scenario)
+
+   William Lincoln (Demo Scenario, Comet Images)
+
+   [Projects Page] [Onboard Science Data Analysis Task Page]

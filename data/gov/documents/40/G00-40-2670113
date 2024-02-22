@@ -1,0 +1,122 @@
+http://worf.eh.doe.gov/queryhlp.htm
+
+
+  Tips on How to Perform Searches
+
+                                Types of Queries
+         The Marshall Islands Collection Search page allows you to find
+        documents via a field query, full-text query, or some combination
+     thereof. A fielded query searches the collection's metadata for matches
+     whereas a full-text query searches the documents' content. To find the
+     documents you're interested in, you can fill in as few as one field on
+     the search page or as many as four. Keep in mind that, in general, the
+     more search criteria you specify, the more relevant your search results
+                                    will be.
+
+                                 Using Operators
+      You can use operators and modifiers to apply logic to your query and
+       pinpoint the exact information you are interested in. The operator
+     defines the relationship among the search criteria you've specified and
+     thus affects the results that are returned. You can change your search
+                        results by changing the operators
+
+       The Concept Operators,"AND," "NOT," "OR," and "ACCRUE," are used to
+               connect fielded as well as full-text search terms.
+
+
+  AND    Using AND (the default) as the operator returns documents that
+         contain all search terms specified.
+  NOT    Returns documents that do not contain the term that follows the NOT
+         operator.
+  OR     Returns documents that match at least one of the criteria specified.
+  ACCRUE Essentially the same as using OR, except that the returned
+         results will be ranked according to relevancy.  That is, documents with
+         a higher score contain more of the search criteria than do documents
+         with a lower score.
+
+  Fielded Query versus Full-Text Query
+    To connect fielded terms, select one of the four operators (AND, OR,
+   NOT, or ACCRUE) from the drop down list.    (Remember that the operator
+     applies to the term entered in the field that follows the selected
+       operator.)  To connect terms entered in the full-text (document
+      content) field, type in the operator between each word or phrase
+   entered. Because these operators are interpreted as query language, you
+             need not surround the operator with angle brackets.
+
+                  Operators Specific to Full Text Searching
+       You may find documents by searching the content of each of the
+    documents in the collection (known as a "full-text" search). You can
+    expand a full-text search by using Evidence Operators or specify the
+       relative location of search terms by using Proximity Operators.
+
+                             Evidence Operators
+   Evidence operators must be enclosed in angle brackets and placed before
+                              the search term.
+
+   &ltStem> By default a full-text search returns documents that contain
+   one or more variations of the search term specified
+   &ltWord> Returns documents that contain the exact search term
+   specified. Enclosing the search term in double quotation marks is
+   equivalent to using the &ltWord> operator. Use double quotes when you
+   want to search for a phrase containing a word normally used as an
+   operator; for example, bread "and" butter will return only those
+   documents containing the phrase "bread and butter."
+   &ltThesaurus> Returns documents that contain the search term specified
+   as well as documents that contain one or more synonyms of the that term
+   &ltWildcard> Returns documents that contain matches to a search string
+   containing one or more variables such as * (any character) or ? (a
+   single character)
+   &ltSoundex> Returns documents that contain one or more words that sound
+   like, or whose letter pattern is similar to, the word specified
+
+   Proximity Operators
+   Proximity operators are used to specify the relative location of words
+   in a document. To perform such a search, you need to use angle brackets
+   around your operator and place it between two search terms.
+
+   &ltNear> Returns a list of documents where the word following the
+   &ltNear> operator is in close proximity to the word preceding the
+   operator. The results items are ranked according to the relative number
+   of words between search terms; the closer the search terms, the higher
+   the score. To find documents where the specified search terms occur
+   within a specific number of words of eachother, use &ltNear/n>, where n
+   is an integer representing the maximum number of words appearing
+   between the two search terms.
+   &ltSentence> Returns a list of all documents where the words specified
+   are contained in the same sentence
+   &ltParagraph> Returns a list of all documents where the words specified
+   are contained in the same paragraph
+
+   Interpreting Results
+   After you've filled in the fields as desired, click the Search button.
+   A new screen will appear, listing your results.    The number of
+   documents matching your criteria is shown at the top of the page,
+   followed by the actual list of matching documents. Each document listed
+   provides the document name, author, title, and number of pages, and is
+   assigned a score, which is based on the number of matches the document
+   contains and the density of those matches.
+     82 of 1281 documents matched query (82 shown)
+
+     Search results....
+          0.96    DATA/ihp1/1202_.pdf
+          Author: NONE
+          Title: DOSE REASSESSMENT FOR POPULATION ON RONGELAP AND UTIRIK
+          FOLLOWING EXPOSURE TO FALLOUT FROM THE BRAVO INCIDENT (MARCH 1, 1954)
+          Pages: 0073
+
+   Opening/Saving a File
+   To view a document, you must have either Adobe Acrobat Exchange or
+   Adobe Acrobat Reader installed on your desktop. To open a file listed
+   in the results, click on its link (underlined and in blue). The web
+   browser will launch an Acrobat reader (if installed on your local
+   computer), which allows you to look at, navigate through, and print the
+   document. If you wish to edit or annotate the document, you must save
+   it to your hard drive or another destination.    Because the file is in
+   pdf format, you must have Acrobat Exchange installed on your computer
+   in order to annotate the document or do hit-to-hit searching
+   (sequentially find highlighted occurrences of terms entered in the
+   full-text field. Note: In the near future, you will be able to do
+   hit-to-hit searching from within your browser.
+     __________________________________________________________________
+
+     OHP Marshall Islands Document Search Marshall Islands Program Home

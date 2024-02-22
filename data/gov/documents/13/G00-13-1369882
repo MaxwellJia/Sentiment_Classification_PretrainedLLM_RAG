@@ -1,0 +1,638 @@
+http://redgarden.cr.usgs.gov/RGOPubs/ranking.pdf
+
+   PROCESSES AND PROCEDURES TO RANK ALTERNATIVE COAL MINING TRACTS by R.
+   G. Osborn, J. M. Bartholow, J. E. Gross, and P. N. Strong Systems
+   Applications Group Western Energy and Land Use Team U.S. Fish and
+   Wildlife Service Drake Creekside 2625 Redwing Road Fort Collins,
+   Colorado 80526 CONTENTS Page FIGURES iii TABLES v INTRODUCTION 1
+   DESCRIPTION OF METHODS 4 Agency Compatibility 4 Cumulative Hierarchies
+   7 Incremental Exclusion 12 Fuzzy Value Analysis 19 DESCRIPTION OF
+   WORKSHOPS 23 RESULTS AND EVALUATION 26 REFERENCES 35 APPENDIXES A.
+   Technical Information 36 Software Environment 36 Description of Ranking
+   Table 37 How to Operate the STRIP Command and Produce a Ranking Table
+   42 How to Operate the RANK Command (Ranking Section for Cumulative
+   Hierarchies) 44 How to Operate INCX (Incremental Exclusion Organizer)
+   46 Description of FUZZ (Fuzzy Value Analysis) 47 How to Operate FUZZ
+   (Fuzzy Value Analysis) 48 Computing Environment 50 Costs of Ranking 51
+   The Limited Technology Alternative 51 B1. List of Digitized Maps Used
+   in the Montana Ranking Methods Workshops 53 B2. List of Digitized Maps
+   Used in the Utah Ranking Methods Workshops 58 B3. List of Digitized
+   Maps Used in the Wyoming Ranking Methods Workshops 61 C. Ranking
+   Methods Workshops Evaluation Questionnaire 65 ii FIGURES Number Page 1
+   Three perspectives of areas suitable for coal mining (the shaded areas)
+   used during the Utah workshops for the Agency Compatibility method. 5 2
+   Composite maps using data of Figure 1 and representing: A. Areas where
+   all groups agree that mining is acceptable to their management
+   objectives; B. Areas where all groups agree that mining is not
+   acceptable to their management objectives; C. Areas where one or more
+   groups are in disagreement over the suitability of mining. 6 3
+   Breakdown of conflict areas depicted in Figure 2C. are where any one,
+   but only one, group views mining to be suitable; are where any two of
+   the three groups view mining to be suitable; blank areas are where all
+   three groups are in agreement either that the area is suitable or that
+   it is unsuitable. 8 4 Schematic that represents cumulative process in
+   producing final ranking. 10 5 Mine tracts used during the
+   Decker-Birney, Montana workshops for the Cumulative Hierarchies method.
+   13 6 Hypothetical situation used in the Incremental Exclusion example.
+   = riparian habitat; = cliffs for potential raptor nesting; = strippable
+   coal deposits. 16 7 Fuzzy Value Analysis example based on data in Table
+   4. Tract D is more suitable than Tract A, which in turn is better than
+   Tract E. Since the bands for Tract B and Tract C overlap, it can not be
+   assessed which Tract is better for mining. Similarly, Tract B is no
+   better or worse than any other tract, and Tract C is only noticeably
+   less suitable for mining than Tract D. 21 8 Fuzzy Value Analysis
+   example based on data in Table 4, except that the most important
+   criteria became seam thickness (weights changed to a range of 4 to 5).
+   Notice that most conclusions from Figure 7 hold except that the
+   relative positions of Tract A and Tract C have switched. 22 9 Schedule
+   of five stages for the ranking methods workshops in each test area. 25
+   iii FIGURES (continued) Number Page 10 Intrusive Competitive Index
+   examples: Values are calculated as the area of overlap between mineable
+   coal resources (horizontal line shading) and criteria (vertical line
+   shading) divided by the area overlain by either coal resources or
+   criteria. Using logical operators it is the area: COAL CRITERIA / COAL
+   CRITERIA. 32 11 Schematic representation of the information processed
+   to generate a Ranking Table. S1 and S2 represent different strippable
+   coal deposits. B1 and B2 represent different biological resources. W is
+   the window. Shaded areas represent conflict areas between biological
+   resources and coal. (BOOLEAN expressions and their corresponding areas
+   that are used in Table 7 are shown in Table 6). 40 iv TABLES Number
+   Page 1 Ranks for each of 13 mine tracts for each of 15 ranking
+   criteria, the sum of the ranks for each mine tract across major
+   criteria blocks and their resulting rank, and the sum of the ranks for
+   each mine tract across all criteria blocks and the resulting final
+   rank. 11 2 Incremental Exclusion example. T = million tons of
+   economically recoverable coal (stripping ratio < 4.5 ft overburden per
+   ft coal) which remains to be mined in a tract's economically
+   recoverable coal tonnage that is not overlain by exclusion area. 17 3
+   Incremental Exclusion example. Dotted and dashed lines are the "trade
+   off" decision lines that show which tracts should be leased to attain a
+   production goal of 650 and 1000 million tons, respectively, under
+   various sets of criteria. MT = million tons of economically recoverable
+   coal (stripping ratio < 4.5 ft overburden per ft coal) which remains to
+   be mined in a tract's unexcluded areas. % = percent of a tract's
+   economically recoverable coal tonnage that is not overlain by exclusion
+   area. CT = cumulative million tons of economically recoverable coal in
+   all unexcluded areas of tracts of equal or more preferred rank (i.e.,
+   cumulative down columns). 18 4 Type of information required for the
+   Fuzzy Value Analysis. Criterion and tract selections were made for
+   demonstration purposes only. Values were derived during workshops. 20 5
+   Agendas used in Workshops. 27 6 BOOLEAN Expressions and their
+   corresponding areas from Figure 11 that are used to create the Ranking
+   Table shown in Table 7. 38 7 Example of the Ranking Table associated
+   with Figure 11 and acreages given in Table 6. The thickness of
+   strippable deposit S1 in Figure 11 is 15 feet; S2 is 25 feet thick. 39
+   v PROCESSES AND PROCEDURES TO RANK ALTERNATIVE COAL MINING TRACTS
+   INTRODUCTION Over the last two years, the U.S. Fish and Wildlife
+   Service (FWS) has been reviewing and modifying processes and procedures
+   to evaluate and rank coal bearing lands for their mining desirability.
+   We have focused our attention on mining desirability from the
+   standpoint of minimizing impacts to ecological components contained
+   within the coal bearing lands. Our efforts have resulted in identifying
+   and developing four separate processes. In addition, the strengths and
+   weaknesses of these processes have been explored in a "real world"
+   context during workshops by subjecting them to data, attitudes, and
+   policies that are both available and operating in three widely
+   different coal bearing areas: Montana, Wyoming, and Utah. This report
+   will present both the information that is required to understand and
+   use these ranking processes and procedures and how to organize and
+   execute ranking workshops similar to ours. It will not discuss how the
+   results could be implemented operationally. We believe that this is a
+   decision to be made by the reader or workshop participant in context
+   with their particular organizational constraints. Nearly all ranking
+   schemes require the evaluation of one or more rules at two or more
+   locations followed by a method of combining these results to form an
+   ordered set of locations. The variety of methods by which each of these
+   steps is accomplished has led to the plethora of ranking schemes
+   described in the literature. It is clear that the four methods that we
+   will describe here are merely variations on themes found elsewhere. In
+   addition, we have discovered that some ranking schemes may be very data
+   dependent and require specific information before ranking can occur.
+   Their results can be very precise and reliable over large areas, but
+   their data requirements are rigid. Others may be very data independent
+   or generalized in their information requirements. They are adaptive to
+   available data, but may sacrifice their generality over large areas to
+   retain reliability and usefulness locally. We have also noted several
+   problems that any definitive ranking process may be required to
+   address. These problems relate to a host of externalities including,
+   but not limited to: 1. Data are variable in quality; 2. Inconsistencies
+   in data exist over large geographic areas; 3. Ranking criteria do not
+   have unequivocally accepted values; 1 4. Ranking criteria represent a
+   wide yet incomplete spectrum of ecological components; 5. Nearly all
+   information available and inventoried is of a static (i.e., fixed in
+   time and space) rather than a dynamic nature; 6. Understanding of the
+   functional relationships among components is poor, thereby defying
+   prediction; and 7. Conflicting interests exist among agencies. These
+   result in incompatible management objectives in adjacent or overlapping
+   jurisdictional areas. We believe that these problems contribute to the
+   following three phenomena that a ranking scheme must address to be
+   useful: 1. There are always more potential data than can be effectively
+   brought to bear on tract ranking; 2. There is never enough data for
+   rational tract ranking; and 3. Discretion will be extensive in any
+   ranking process. As an outgrowth of the above lists, we used a number
+   of strategic considerations to guide the development of the four
+   ranking processes. First, it was considered mandatory that a ranking be
+   done rapidly and with minimal manpower. It would not be used if a
+   ranking could not be produced within about one month. Also, during the
+   ranking process many alternatives representing different sets of
+   underlying assumptions and diverse perspectives will be identified.
+   Many viable options will be dropped from further consideration if rapid
+   processing is not possible. Second, it was considered mandatory that a
+   ranking be developed from existing data. Again, because of time
+   constraints, additional data collection could prevent rapid response. A
+   ranking scheme requiring a fixed set of data ensures that ranking will
+   not occur in the absence of those data. To effectively use existing
+   data, the methods would be required to handle information of variable
+   quantity (not available everywhere), variable quality (from the
+   subjective to the precise), and variable importance. A partial list of
+   importance factors that we have experienced includes: 1. Legal
+   mandates; 2. Economics of harvestable resources; 3. Long term versus
+   short term impacts; 4. Secondarily connected to one of the above; and 2
+   5. Quantity, quality, and intensity of minority group interests. Third,
+   it was considered mandatory that diverse and extensive information be
+   collapsed into a digestible summary whose rationale is preserved and
+   which can be replicated. The technique must, therefore, be quantitative
+   even though the data may not be. Fourth, it was considered mandatory
+   that the decisionmaking community, i.e., the individuals who would be
+   using the results, evaluates the method's usefulness. Otherwise, the
+   methods might be scientifically sound, but completely useless to the
+   decisionmaker. Next, we developed a number of tactics to support the
+   methods and strategic considerations. Rapid response and processing
+   would be handled by an automated system. A Geographic Information
+   System (GIS) would be an integral part of the overall system. The
+   capability of rapid map based data entry and updating, as well as
+   analytical capabilities, would be required of the GIS. The GIS really
+   would be the tool that delivered information to the ranking processes
+   and allowed for rapid response. To further reduce response time, a
+   preliminary or prototype data base would be available to draw on to get
+   the ranking exercise going. This data base would not be intended to be
+   complete, but rather available to be supplemented, updated, and
+   modified by the participants doing the ranking as deemed necessary
+   during the course of the ranking exercise. Another tactic would allow
+   the participants in a ranking exercise to use data as they see fit.
+   This necessitates a data independent ranking scheme as described
+   earlier. It guarantees the flexibility to accommodate different agency
+   perspectives. There is no guarantee, however, that data will be
+   available to meet those perspectives or that those perspectives are
+   good for the particular resource that they represent. An arena would be
+   provided to allow participants to select criteria, become familiar with
+   ranking concepts, and evaluate a ranking scheme's usefulness from their
+   point of view. This tactic of ranking workshops was decided on early.
+   It was also deemed necessary that participants be drawn from a broad
+   cross section of private and governmental organizations. The final
+   tactic would be to draw on several methods, specifically four. Our
+   methods were intended to represent different levels of data
+   requirements, different levels of complexity, and different operational
+   philosophies. This tactic ensured comparisons of good and bad points of
+   each method. It also allowed the identification of situations where one
+   method was more useful than another was. 3 DESCRIPTION OF METHODS
+   Ranking methods are ways to manipulate information about alternatives
+   and compare one alternative with another. The information used in the
+   process depends to a great extent on available data, what the issue is,
+   and why alternatives are being ranked. Our concerns here are related to
+   evaluating and ranking alternative leasing sites for their
+   environmental suitability for coal mining. Even so, our emphasis has
+   been placed on methods to accomplish this and not on what the data
+   requirements should be. Our methods are generalized to use data
+   elements the user is concerned with. It will be his responsibility to
+   develop criteria to be used, to determine what measure of each
+   criterion will be evaluated, and to assess his rationale to support
+   these activities. The methods, however, do not prevent the user from
+   selecting indices with definitive data requirements. For instance, the
+   FWS has also developed an ecological characterization index based on
+   terrestrial vegetation and cover types (Asherin et al. 1979) which is
+   well suited for ranking lands. Each of the four processes described
+   here may be perceived to address a different level of data intensity,
+   understanding, and problem entry. Nevertheless, there are situations
+   when more than one method is appropriate or where several methods can
+   be used either sequentially or in combination. Agency Compatibility
+   This method is an attempt to address each agency's needs and desires,
+   communicate the implications of these needs and ' desires to others,
+   and use the results to aid in ranking lands. This is accomplished as
+   follows. Each agency or interest group identifies two types of areas on
+   maps - first, those areas suitable for mining and, second, those areas
+   unsuitable for mining. Note that an agency's suitable areas may not
+   necessarily be the complement of unsuitable areas. One way this may
+   occur is through defining additional areas that are suitable with
+   qualifications or restrictions applied. At this stage, there is no need
+   to publicize or explain either one's rationale or the quality and type
+   of data used to delineate the areas. The use of explicit rationale and
+   precise information is encouraged, but not- mandatory. If information
+   is sparse and agency discretion is high, these suitable and unsuitable
+   areas can still be represented and compared to those of other agencies.
+   The results at this point are maps as shown in Figure 1. Overlaying
+   these maps makes initial comparisons and identifying areas where all
+   groups agree that mining is suitable (Figure 2A). In a parallel
+   fashion, map overlays of unsuitable areas can be used to distinguish
+   areas where all groups agree that mining should not take place. For our
+   example, it is assumed that unsuitable areas are the compliment of
+   suitable areas. Figure 2B represents those unsuitable areas. The
+   remaining areas (Figure 2C) represent areas of disagreement among one
+   or more groups about whether or not mining is acceptable. This method
+   can be viewed as an 4 Figure 1. Three perspectives of areas suitable
+   for coal mining (the shaded areas) used during the Utah workshops for
+   the Agency Compatibility method. 5 Figure 2. Composite maps using data
+   of Figure 1 and representing: A. Areas where all groups agree that
+   mining is acceptable to their management objectives; B. Areas where all
+   groups agree that mining is not acceptable to their management
+   objectives; C. Areas where one or more groups are in disagreement over
+   the suitability of mining. 6 initial screening process. Areas where
+   agreement is unanimous may not require further analysis, thus resulting
+   in time and manpower savings. Another approach may be to use the
+   consensus areas as the first cut for the delineation of lease tracts.
+   While this method does not specifically require lease tracts, the other
+   three methods to be discussed do. Using this method first may prevent
+   the delineation of tracts that are not really acceptable alternatives,
+   e.g., where industry may not have an interest. The conflict areas
+   themselves (Figure 2C) also may be focused on. A density map of
+   agreement can be produced to indicate the number of groups that agree
+   in various areas (Figure 3). This information can be used to rank lands
+   based on consensus or to supply information to be used in one of the
+   other three methods. It may be desirable to determine which parties
+   agree with a particular assessment and thus serve as the basis for a
+   coalition. In addition, questions may be explored as to why
+   disagreements occur after the areas of conflict have been identified.
+   Such improved communications may aid in strategic bargaining with
+   information being conveyed incrementally until a solution or compromise
+   is gained. Finally, coal reserve information may be calculated for any
+   of the areas discussed above if coal resource data are available. This
+   is accomplished in the same program using the STRIP command (see
+   Appendix A). Cumulative Hierarchies Cumulative Hierarchies is the
+   descriptive term that has been given a ranking process having two basic
+   features: (1) the ordering of land tracts according to their
+   "mineability" based on individual "ranking criterion"; and (2) the
+   accumulation of these ordered sets into an overall hierarchical
+   ordering or ranking. The Cumulative Hierarchies process applies to
+   ranking situations where a large number of individual ranking criteria
+   must be included in the analysis, but where a single ranking is desired
+   as the final product. Perhaps the process's most attractive feature is
+   its capability to integrate a mixed bag of ranking criteria. Since the
+   values for an individual criterion are used only to generate the
+   ordering for that criterion, the intermediate results are
+   "dimensionless" and, as such, may be accumulated without regard to the
+   values from which they were derived. Thus, the spectrum of criteria
+   used in any ranking exercise may carry various degrees of quantitative
+   or qualitative data. A second utilitarian feature of the process is its
+   continuous scale ranking. This feature eliminates the necessity to
+   establish definitive thresholds, bounds, or other arbitrary values that
+   are intended to represent an acceptable or unacceptable level of
+   mineability for a criterion. 7 Figure 3. Breakdown of conflict areas
+   depicted in Figure 2C. are where any one, but only one, group views
+   mining to be suitable; are where any two of the three groups view
+   mining to be suitable; blank areas are where all three groups are in
+   agreement either that the area is suitable or that it is unsuitable. 8
+   Finally, the criteria may be clustered into sets representing important
+   decision components (i.e., environmental, socioeconomic, and coal
+   characteristic factors) which may in turn be combined at a third level
+   without biasing the final results by the number of criteria used in
+   each set. This feature is illustrated in Figure 4 where each node may
+   be considered as an intermediate ranking or hierarchy. Three steps are
+   involved in the Cumulative Hierarchies process if the tracts to be
+   ranked have already been delineated. The first step involves the
+   definition of each criterion and a determination of how a criterion
+   will be evaluated at each tract with respect to "mineability." For
+   instance, the presence of flood plains within a tract may be an
+   important environmental criterion, but it must also be decided what
+   measures will be used to evaluate this criterion on each tract. Should
+   those tracts with the least acreage of flood plains be most "mineable"?
+   Or should those tracts having the least percentage of their total areas
+   as flood plains be most "mineable"? Given that the tracts differ in
+   size, the resulting orderings or intermediate rankings of these two
+   measures will also differ. Other ways that criteria may be evaluated
+   and the implications of that evaluation will be discussed in the
+   Results Section of this paper. Suffice it to say here that criteria
+   must be established and suitable measures must be selected to evaluate
+   a tract's "mineability" with this method. The second step involves the
+   evaluation of each tract with respect to each measure and criterion.
+   Also included in this step is the ordering of tracts based on each of
+   these criterion values. The orderings are the individual and
+   "dimensionless" rankings that will be accumulated in the third and
+   final step to produce a hierarchical or summary ranking. Again, as
+   shown in Figure 4, these summary rankings can, in turn, be combined to
+   form additional hierarchies as the need arises. For clarity, an example
+   of this method is given which shows how 13 tracts were ranked using 15
+   individual criterion measures which, in turn, were clustered into five
+   criterion categories (Table 1). The first criterion selected in this
+   example is lands that represent medium rehabilitation potential after
+   mining (Packer 1974), and the measure on which the tracts are to be
+   ranked is the acreage of criterion that occurs within each tract. For
+   this criterion, the tract with the smallest acreage of lands with
+   medium rehabilitation potential is ranked number one indicating that,
+   for the criterion under analysis, the tract is the first that should be
+   mined. Likewise, the tract with the largest acreage of medium
+   rehabilitation potential lands is ranked last and would be the last
+   tract to be mined, based on this criterion only. The rank of each of
+   the 13 tracts for this criterion is illustrated in the first column of
+   Table 1. This would be the final rank and the ranking exercise would be
+   finished if medium rehabilitation potential were the only criterion for
+   ranking. However, such would seldom be the case since ordinarily more
+   than one criterion is required for evaluation in the ranking exercise.
+   If additional criteria are required, a rank for each criterion is
+   calculated in the same manner as described for the medium
+   rehabilitation criterion. In each case, the user designates what the
+   ranking criterion 9 (NODE 8) FINAL RANKING (NODE 5) (NODE 6) (NODE 7)
+   CUMULATIVE FOR CRITERION 5 CUMULATIVE FOR CRITERION 4 CRITERIA 1, 2 & 3
+   MEASURE 1 MEASURE 2 MEASURE 1 (NODE 4) CRITERION 3 (NODE 3) CUMULATIVE
+   FOR CRITERIA 1 & 2 MEASURE 1 (NODE 1) (NODE 2) CUMULATIVE FOR CRITERION
+   2 CRITERION 1 MEASURE 1 MEASURE 2 MEASURE 1 Figure 4. Schematic that
+   represents cumulative process in producing final ranking 10 Table 1.
+   Ranks for each of 13 mine tracts for each of 15 ranking criteria, the
+   sum of the ranks for each mine tract across major criteria blocks and
+   their resulting rank, and the sum of the ranks for each mine tract
+   across all criteria blocks and the resulting final rank. ENVIRONMENTAL
+   SOCIO ECONOMIC LANDS UNSUITABLE COAL CRITERIA MISCELLANEOUS OVERALL
+   CRITERIA CRITERIA CRITERIA CRITERIA RANKS t ins k k k t k k m la ns loc
+   d in ral ac loc ble loc ac loc loc diu ai lan um t pl nd m in tr uita
+   ia oodp ia b la n- fede ia b nds ia b oal ia b ia b s of me l edi ac fl
+   m ood n- riter riter far no nds riter la riter c oal in tr riter riter
+   by ia l m by l fl by l far by ership l no la by ng ds uns by l c ll c
+   ney ed tent ota ed ota ed ota ed own ota ed ni t ed ota ecker land in
+   tr ross c e ross c ross c ross c ross c ross rank ross a cupi n po of t
+   n cupi of t ac k rank cupi of t cupi of t ership ac k rank cupi or mi
+   ac k rank cupi of t ac k rank om Bir ac k rank ac ks ac oc io io oal
+   from D age oc age als loc oc age oc urfac age als loc oc age of lan loc
+   loc loc ng in trac als oc age als e e fr als als ilitat ilitat t tot ia
+   b al s e own tot ia b able f ni tot ia b of c tot ia b tot ia b tot ia
+   bloc ank cent cent cent t cent uit cent cent l r ks TRACT reage reage
+   iter reage reage iter reage mi iter reage iter tanc tanc iter Ac rehab
+   Per rehab Ac Per in trac Rank Cr Ac Per trac Ac feder Per surfac Rank
+   Cr Ac uns Per for Rank Cr Ac Per Tons Rank Cr Dis Dis Rank Cr Rank
+   criter Fina bloc Deck er A 1 7 3 4 15 4 5 10 1 5 21 5 5 10 15 6 12 12
+   12 36 12 9 3 12 7 34 8 Dec ker B 4 12 2 2 20 5 1 1 2 2 6 1 10 12 22 9
+   13 13 13 39 13 11 1 12 7 35 9 Dec ker C 2 1 1 1 5 1 1 1 3 7 12 3 12 11
+   23 10 11 11 11 33 11 10 2 12 7 32 7 Dec ker D 5 5 1 1 12 3 3 5 4 9 21 5
+   13 13 26 11 9 7 7 23 7 8 2 10 6 32 7 D og Creek 9 9 6 5 29 7 1 1 8 1 11
+   2 1 1 2 1 5 3 3 11 4 7 6 13 8 22 1 Hanging Woman A 13 11 11 11 46 11 9
+   8 13 10 40 11 9 8 17 7 1 4 4 9 2 7 5 12 7 39 12 Hanging Woman B 12 10 8
+   7 37 9 8 6 11 6 31 9 7 5 12 5 2 5 5 12 5 7 5 12 7 37 10 Moorhead A 10 4
+   9 9 32 8 10 11 12 11 44 12 8 7 15 6 3 6 6 15 6 6 4 10 6 38 11 Moorhead
+   B1 7 13 4 3 27 6 6 7 7 3 23 7 3 3 6 3 7 9 9 25 8 5 3 8 5 29 6 Moorhead
+   B2 3 2 1 1 7 2 4 4 6 12 26 8 4 6 10 4 8 10 10 28 10 4 2 6 3 27 4 O tter
+   Cre ek A 11 8 10 10 39 10 2 2 10 8 22 6 6 4 10 4 4 1 1 6 1 3 4 7 4 25 3
+   O tter Cre ek B 8 6 7 8 29 7 3 3 9 4 19 4 11 9 20 8 6 2 2 10 3 1 1 2 1
+   23 2 O tter Cre ek C 6 3 5 6 20 5 7 9 5 13 34 10 2 2 4 2 10 8 8 26 9 2
+   2 4 2 28 5 11 will be, what measure the tracts are to be ranked on, and
+   the direction of the ranking, i.e., whether the ranking is to be from
+   low value to high value or from high value to low value. The essence of
+   the Cumulative Hierarchies concept is the accommodation of many
+   criteria in the ranking exercise. As the tracts are ranked by
+   individual criteria, the results are saved and can be accumulated as
+   illustrated in Table 1. The resulting sums may, in turn, be ranked. For
+   example, in Table 1, the tract called Decker A (Tract 1 in Figure 5)
+   was ranked first, seventh, third, and fourth for environmental
+   criteria; fifth, tenth, first, and fifth for socioeconomic criteria;
+   and so forth across the other criteria. The format of rankings for
+   individual criteria in Table 1 provides for the accumulation of
+   rankings. Individual rankings are accumulated into an overall ranking
+   by the simple process of adding the rank values - for all criteria for
+   each individual tract. For example, for a cumulative ranking based on
+   environmental criteria only as depicted in Table 1, the Decker A rank
+   values of one, seven, three, and four are added together to provide an
+   overall value of 15 (Column 5 in Table 1). The same process is repeated
+   for the other tracts, so that a column of accumulated rank totals
+   across environmental criteria is created. These values are then ordered
+   from smallest to largest and become the summarized ranks. For the
+   environmental criteria block, this value appears in Column 6 of Table
+   1. Five other accumulations of ranks are shown in Table 1: one each for
+   the socioeconomic criteria, the lands unsuitable criteria, the coal
+   criteria, the miscellaneous criteria, and one final ranking across all
+   criteria block ranks. However, as previously explained and illustrated
+   in Figure 4, the ranks for individual criteria may be accumulated in a
+   variety of patterns. For example, the coal criteria and the
+   socioeconomic criteria could be accumulated to illustrate some specific
+   perspective of ranking or one or two criteria could be accumulated from
+   each of the major blocks. The final point to be discussed is the
+   weighting of the individual ranks. Although not illustrated in this
+   example, individual criteria can be assigned weighting values that
+   allow the criterion to exert an above average influence on the
+   accumulated ranking. This is done by multiplying a tract's ranking for
+   each criterion by the weight given that criterion before criteria are
+   accumulated into a ranking hierarchy. Incremental Exclusion Ranking by
+   Incremental Exclusion is a goal-directed process aimed at getting the
+   coal from the ground to meet the expressed needs and taking into
+   consideration the most important environmental concerns. This method
+   has a built-in rationale in that a user is channeled into working with
+   acres of environmental criteria and tons (or BTU'S) of coal. Other
+   measures, as well as other criteria such as distance to 12 TRACT NAME 1
+   DECKER A 2 DECKER B 3 DECKER D 4 DECKER C 5 DOG CREEK 6 HANGING WOMAN A
+   7 HANGING WOMAN B 8 MOORHEAD A 9 MOORHEAD B1 10 MOORHEAD B2 11 OTTER
+   CREEK A 12 OTTER CREEK B 13 OTTER CREEK C Figure 5. Mine tracts used
+   during the Decker-Birney, Montana workshops for the Cumulative
+   Hierarchies method. 13 transportation, cannot be incorporated. The
+   assumption is that tracts, which emerge from the planning process for
+   ranking by other agencies, will have already been screened for
+   "unsuitability" and other high priority socioeconomic considerations.
+   Incremental Exclusion is termed "exclusion" because it is based on the
+   principle that that portion of each tract's coal reserve called into
+   question by the application of each environmental criterion will either
+   be excluded from surface mining or, more likely, have a set of
+   restrictions imposed by the appropriate resource agency to safeguard
+   that criterion. The philosphy here is that rather than a strict "go" or
+   "no- go" decision on a particular tract, we are talking about a go on
+   all tracts if certain restrictions are met. However, tracts will still
+   be ranked in order of preference, based on the extent of restrictions
+   and the potential loss in coal reserves underlaying those restricted
+   areas. The degree to which this is realistic will be discussed later in
+   the Results Section. Incremental Exclusion is termed "incremental"
+   because the criteria are applied in a series of consecutive additions
+   from most important to least important. Each additional criterion, as
+   applied, will be added to all preceding criteria. That is, the most
+   important criterion is applied, then the second and first, then the
+   third, second and first, and so on until all the criterion are applied
+   together. Since we are talking about a hierarchy of importance, the
+   environmental criteria must themselves be ranked. Though not a trivial
+   step, this initial ranking should be fairly easy to accomplish. It is
+   worth pointing out here that the criteria can not be weighted with this
+   method as with some of the other processes. Rather, they can only be
+   ranked. It is suggested that the decisions for ranking the
+   environmental criteria be based on simple factors. Examples might
+   include: (1) the probability of a group of decisionmakers accepting the
+   criterion; (2) the ability of field-level people to enforce exclusions
+   of, or restrictions on, mining activity within the tracts; (3) long
+   term impacts; and (4) rare species or habitats. If an ordering of
+   environmental criteria cannot be accomplished, or if coal reserve data
+   are unavailable, no further effort should be devoted to the Incremental
+   Exclusion process. The actual "ranking" that is done is based on the
+   quantity of coal within each tract that is not in conflict with one or
+   more environmental criteria. This may be either tons of coal, BTU'S, or
+   percentage of the tract's total tonnage or BTU's remaining to be mined.
+   As will be partially illustrated later, ranking on the basis of tons or
+   BTU's will "bias" the results against the smaller tracts. In terms of
+   minimizing red tape, this may be a good rationale. Again, if coal
+   reserve information is not available, no further effort should be
+   devoted to the Incremental Exclusion process. The final result of the
+   Incremental Exclusion process is a matrix of opportunities. This matrix
+   will enable the user to display a "trade-off" line showing the various
+   options available to reach the region's production goals in tons or
+   BTU's of coal. These options allow the user to choose that combination
+   of the number of tracts 14 necessary and the number of criteria
+   allowable to meet the specified production goals. A simple example is
+   clearly in order. Suppose we have two tracts delineated within a given
+   study area, as in Figure 6. If we look at the coal reserves underlying
+   each tract we see that the North tract contains 125 million tons of
+   coal and the South tract contains 100 million tons of coal. Now suppose
+   that our most important ecological concern is riparian habitat
+   preservation. If we overlay those riparian areas that overlay coal
+   within each tract, the conflict area accounts for 10 million tons in
+   the North tract and 5 million tons in the South tract. These areas will
+   either be excluded from mining or restricted in how mining will occur.
+   If we rank based on the percentage of tons of coal remaining in each
+   tract, we would end up with a ranking in Column 1 of Table 2. The South
+   tract, with 95% of its reserves remaining, is ranked first, followed by
+   the North tract with 92% of its reserves remaining. Notice that the
+   North tract actually would have more tons of coal remaining. Now
+   suppose that cliffs were our next most environmentally valuable
+   resource, being potential sites for raptor nests. When both cliffs and
+   riparian areas are considered, we find that the North tract Tow-ranks
+   first, followed by the South tract. The right side of Table 2 shows
+   this new ranking and the supporting information. This example
+   illustrates both how the order of applying criteria and how the ranking
+   measure (in this case, percent of tract reserves remaining to be mined)
+   effect the final outcome. It should be pointed out that specific
+   engineering considerations necessary to actually bypass the restricted
+   areas are not taken into consideration during the ranking. An
+   abbreviated example from a workshop is presented in Table 3. The five
+   criteria used, in order from most important to least important, are: 1)
+   endangered species; 2) ungulate winter ranges; 3) water sources; 4)
+   grouse leks; and 5) raptor nesting sites. The table shows the ranking
+   order down the page. For instance, if only endangered species are
+   considered, the ranking would be as listed in the first column. Also,
+   if we had a goal of 1,000 million tons, we would have to lease seven
+   tracts (through Tract A) to achieve this goal. In this case, we would
+   actually exceed our goal slightly, since the cumulative total for the
+   first seven tracts is 1,099 million tons. Note that if we consider
+   ungulate winter ranges, in addition to endangered species, our ranking
+   changes. Tract C replaces Tract G in third place. This is because Tract
+   C has a larger portion excluded that is not already covered by the
+   endangered species criterion than Tract G does. It may be, however,
+   that there is actually more ungulate winter range on Tract G. Notice
+   also that to meet a 1,000 million ton goal, all nine tracts must be
+   ]eased. Considering the matrix as a whole points out at least two other
+   interesting facts. First, the presence of leks does not change the
+   ranking or the tonnage figures at all. 15 NORTH TRACT Total Coal
+   Reserves = 125 Million Tons Riparian Exclusions Alone = 10 Million Tons
+   With Additional Cliff Exclusions = 20 Million Tons SOUTH TRACT Total
+   Coal Reserves = 100 Million Tons Riparian Exclusions Alone = 5 Million
+   Tons With Additional Cliff Exclusions = 20 Million Tons Figure 6.
+   Hypothetical situation used in the Incremental Exclusion example. =
+   riparian habitat; = cliffs for potential raptor nesting; = strippable
+   coal deposits. This means that leks must already be completely covered
+   by one of the preceding criteria, probably winter range. Thus, we gain
+   "protection" for leks for "free", so to speak. Note also that once we
+   include raptor nesting sites, we can no longer reach our goal of 1,000
+   million tons. In fact, we would have to lease more tracts than have
+   been delineated to attain this goal. The "trade-off" line clearly shows
+   how much coal you get for a variety of combinations of lease tracts and
+   environmental criteria. Consideration of this line should enable
+   agencies with these kinds of environmental concerns to see how those
+   concerns stack up against the energy-minded production goals. 16 Table
+   2. Incremental Exclusion example. T = million tons of economically
+   recoverable coal (stripping ratio < 4.5 ft overburden per ft coal)
+   which remains to be mined in a tract's economically recoverable coal
+   tonnage that is not overlain by exclusion area. Rank Exclusions
+   Riparian Only Riparian and Cliffs 1 South Tract North Tract 95T 105T
+   95% 84% 2 North Tract South Tract 115T 80T 92% 80% 17 Table 3.
+   Incremental Exclusion example. Dotted and dashed lines are the "trade
+   off" decision lines that show which tracts should be leased to attain a
+   production goal of 650 and 1000 million tons, respectively, under
+   various sets of criteria. MT = million tons of economically recoverable
+   coal (stripping ratio < 4.5 ft overburden per ft coal) which remains to
+   be mined in a tract's unexcluded areas. % = percent of a tract's
+   economically recoverable coal tonnage that is not overlain by exclusion
+   area. CT = cumulative million tons of economically recoverable coal in
+   all unexcluded areas of tracts of equal or more preferred rank (i.e.,
+   cumulative down columns). Criteria for Exclusions Tract Endangered
+   Ungulate Water Grouse Leking Raptor Rank Species Winter Range Sources
+   Grounds Nesting Sites 1 Tract C Tract E Tract E Tract E Tract E 259 MT
+   202 MT 193 MT 193 MT 193 MT 100% 100% 95% 95% 95% 259 CT 202 CT 193 CT
+   193 CT 193 CT 2 Tract E Tract G Tract G Tract G Tract G 202 MT 193 MT
+   188 MT 188 MT 188 MT 100% 100% 97% 97% 97% 461 CT 395 CT 381 CT 381 CT
+   381 CT 3 Tract G Tract C Tract C Tract C Tract H 193 MT 135 MT 135 MT
+   135 MT 127 MT 100% 52% 52% 52% 97% 654 CT 530 CT 516 CT 516 CT 508 CT 4
+   Tract H Tract H Tract H Tract H Tract C 131 MT 131 MT 127 MT 1'27 MT
+   111 MT 100% 100% 97% 97% 43% 785 CT 661 CT 643 CT 643 CT 619 CT 5 Tract
+   F Tract F Tract F Tract F Tract F 108 11T 108 MT 108 MT 108 MT 108 MT
+   9511, 95% 95% 951, 95% 893 CT 769 CT 751 CT 751 CT 727 CT 6 Tract D
+   Tract A tract A Tract A Tract A 105 MT 93 MT 93 MT 93 MT 93 MT 100% 92%
+   92" 92% 92% 998 CT 862 CT 844 CT 844 CT 820 CT 7 Tract A Tract I Tract
+   I Tract I Tract I 101 MT 54 MT 54 MT 54 MT 54 MT 100% 100% 100% 100%
+   100% 1099 CT 916 CT 898 CT 898 CT 898 CT 8 Tract B Tract B Tract 8
+   Tract 8 Tract 0 57 MT 43 MT 41 MT 44 MT 37 MT 100% 77% 72% 72% 36% 1156
+   CT 959 CT 939 CT 939 CT 935 CT 9 Tract I Tract D Tract D Tract 0 Tract
+   B 55 MT 37 MT 37 MT 37 MT 36 MT 100% 36% 36% 36% 63% 1211 CT 1096 CT
+   1076 CT 1076 CT 971 CT 18 Fuzzy Value Analysis One of the major
+   arguments against any quantitative ranking scheme is that values are
+   arbitrarily placed on the importance of information. Nevertheless, in
+   our experience, these arbitrary values may change markedly and still
+   have only minor effects on the ranking outcome. Emphasis is too
+   commonly placed on differences, which may be trivial, rather than on
+   overall similarities. The Fuzzy Value Analysis is an attempt to assess
+   variable attitudes about the importance of criteria and their combined
+   effect on the ranking outcome. To this end, it is very similar to the
+   totality indices discussed by Odum et al. (1976). In addition to the
+   effect that variable importance values have in the ranking outcome,
+   Fuzzy Value Analysis accommodates uncertainty in the ranking values of
+   individual criteria. As a result, the implications of missing or
+   imprecise information at one or more sites can be explored. The
+   following conditions are required for analysis. First, alternative
+   sites must be identified. Second, one or more criteria must be defined
+   and a suitable measure for each criterion selected. Each site must then
+   be evaluated for all criteria. In our workshops, we have accomplished
+   this rapidly using map-based information and a GIS. In a few instances,
+   sites have been evaluated intuitively by field personnel. In either
+   case, a single ranking measure value or a range of likely ranking
+   measure values (specified by an upper and lower bound') is identified
+   for each criterion and site (Table 4). Next, importance weightings are
+   determined for each criterion. Again, these can be either a single
+   value or a range of likely values. In our workshops, the range for a
+   criterion's weight was determined both by an individual when he was
+   uncertain what weight he really wanted and by extremes generated from a
+   group of "experts" in a Delphi approach. The final step before analysis
+   starts is to define criteria requiring a scale reversal so that they
+   will rank in a parallel fashion with other criteria. This is required
+   when there is a mixture of criteria where a high ranking measure value
+   is best for mining for some criteria and a low ranking measure is best
+   for mining for other criteria. Analysis starts by generating random
+   samples within the range of specified values and calculating a sample
+   of index values for each site. The results are displayed as a 95%
+   confidence interval around the mean index value for each site (Figure
+   7). The results are inspected to assess the sensitivity of the ranking
+   outcome to the fuzziness or uncertainty contained in the data. Sites
+   that cluster together cannot be reliably ranked relative to each other.
+   However, several clusters that do not overlap can be ranked even in
+   spite of the arbitrariness of the importance weights or the uncertainty
+   of the information used in the ranking values. Many "what if" games can
+   be played to assess the consequence to the ranking outcome by changing
+   importance values, adding or dropping criteria, and specifying more
+   precise information. Figure 8, for example, shows how little the
+   overall ranking results in the example above change as a consequence of
+   dramatically 19 Table 4. Type of information required for the Fuzzy
+   Value Analysis. Criterion and tract selections were made for
+   demonstration purposes only. Values were derived during workshops.
+   Ranking Measure Values Criteria Importance Reversal of Weights1 Index
+   Scale2 Tract A Tract B Tract C Tract D Tract E Seam Thickness 1.5 - 2.5
+   yes 19 ft 55 ft 80 ft 80 ft 72 ft Reclamation Potential3 1.25 - 1.75
+   yes 2.2 1.3 2.0 2.0 2.7 Alluvial Valley Floors4 0.5 - 1.0 no 3% 8% 0%
+   7% 5% Important Habitat5 2.0 - 3.0 no 207 196 1666 523 1165 acres acres
+   acres acres acres 1 Importance weights on a scale of 0 to 3 with 3
+   being most important. 2 Makes each component of the index parallel so
+   that a lower index will always indicate greater suitability for mining.
+   3 Average values calculated from Packer (1974). On a scale of 1 to 3, 3
+   is most reclaimable. 4 Percents are of total tract area. 5 Habitats
+   include cliffs, wetlands, riparian areas and stands of pine and
+   juniper. 20 TRACT E TRACT D TRACT C TRACT B TRACT A MOST SUITABILITY
+   FOR MINING LEAST Figure 7. Fuzzy Value Analysis example based on data
+   in Table 4. Tract D is more suitable than Tract A, which in turn is
+   better than Tract E. Since the bands for Tract B and Tract C overlap,
+   it can not be assessed which Tract is better for mining. Similarly,
+   Tract B is no better or worse than any other tract, and Tract C is only
+   noticeably less suitable for mining than Tract D. 21 TRACT E TRACT D
+   TRACT C TRACT B TRACT A MOST SUITABILITY FOR MINING LEAST Figure 8.
+   Fuzzy Value Analysis example based on data in Table 4, except that the
+   most important criteria became seam thickness (weights changed to a
+   range of 4 to 5). Notice that most conclusions from Figure 7 hold
+   except that the relative positions of Tract A and Tract C have
+   switched. 22 changing the importance weight of seam thickness to a
+   range of from 3 to 4. This is pointed out to show that results may be
+   counterintuitive. DESCRIPTION OF WORKSHOPS Workshops have an important
+   role in our group's operational philosophy. The major com

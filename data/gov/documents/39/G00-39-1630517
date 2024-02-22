@@ -1,0 +1,248 @@
+http://www.daps.lanl.gov/genie/
+
+                    Rapid Feature Identification Project
+
+        LANL | DAPS | Home | Gallery | Publications | People | Links
+
+                              [genieTitle.jpg]
+
+   GENIE rapidly evolves image processing tools for reducing imagery data
+                           to features of interest
+
+   Introduction | Background | GENIE | Applications | References | Contact
+                                   Details
+
+   Introduction
+
+   GENIE is a software system for rapidly evolving image-processing
+   algorithms. With current sensor platforms collecting a flood of
+   high-quality data, automatic feature extraction (AFE) has become a key
+   to enabling human analysts to keep up with the flow. GENIE uses an
+   evolutionary computational approach to produce AFE tools for broad-area
+   features in multispectral imagery (MSI). The software features an
+   interactive browser-type graphical user interface, and a
+   parallel/scalable processing backend. In the longer term, the system
+   may take advantage of new hardware acceleration technology.
+
+   GENIE was invented for the Rapid Feature Identification Project (RFIP),
+   a project of Los Alamos National Laboratory's Nonproliferation and
+   International Security (NIS) Division.
+
+   Back to Top
+
+   Background
+
+   Extraction of features of interest from large and possibly
+   multi-instrument imagery data sets is a crucial task facing many
+   communities of end-users and researchers. With new distribution
+   technologies and data formats making dissemination and storage of huge
+   amounts of data progressively cheaper and easier, the bottle-neck to
+   successful exploitation of this information rests more than ever on the
+   availability of suitable analysis tools. From change detection for
+   broad-area environmental monitoring, to terrain catergorization for
+   cartographers and remote sensing scientists, development of
+   image-processing tools is an expensive business, often requiring a
+   significant investment of time by highly skilled analysts. With the
+   advent of multi-spectral sensors platforms such as LANDSAT and IKONOS,
+   the analyst can now search for spectral, spatial, and possibly hybrid
+   spatio-spectral signatures, requiring development of whole new
+   tool-kits. Our own work in the field of remote sensing has led us to
+   seek an accelerated toolmaker. Since creating and developing individual
+   algorithms is so important and yet so expensive, we have recently begun
+   investigating an evolutionary approach to this problem.
+
+   Over the last two decades, ideas taken from the theory of evolution in
+   natural systems have inspired the development of a group of powerful
+   yet extraordinarily flexible optimization methods known collectively as
+   evolutionary computation (EC). The modern synthesis derives from work
+   performed in the 60s and 70s by researchers such as Holland [1],
+   Rechenberg [2], and Fogel et al [3]. While the various schools founded
+   by these pioneers have differences, their approaches share the common
+   themes of optimization performed by a competing population of
+   individuals in which a process of selection and reproduction with
+   modification is occurring. The beauty of EC is its flexibility: if we
+   can derive a fitness measure for a problem, then the problem might be
+   solved using EC. Many different problems from different domains have
+   been successfully tackled using EC, including: optimization of dynamic
+   routing in telecommunications networks[4]; designing
+   finite-impulse-response digital filters [5]; designing protein
+   sequences with desired structures [6]; and many others.
+
+   A crucial issue when using EC is how to represent candidate solutions
+   so that they can be manipulated by EC effectively. We wish to evolve
+   individuals that represent possible image processing algorithms, and so
+   we use a system based upon genetic programming [7]. Genetic programming
+   (GP) is essentially a framework for developing executable programs
+   using EC methods. GP has been the subject of a huge amount of research
+   this decade and has been applied to a wide range of applications, from
+   circuit design [7], to share price prediction [8]. With particular
+   relevance to the current project, GP has also been applied to
+   image-processing problems, including: edge detection [9]; face
+   recognition [10]; image segmentation [11]; image compression [12]; and
+   feature extraction in remote sensing images [13-19].
+
+   Back to Top
+
+   GENIE
+
+   GENIE [14-17] is an evolutionary computation (EC) software system,
+   using a genetic algorithm (GA) to assemble image-processing tools from
+   a collection of low-level image operators (e.g., edge detectors,
+   texture measures, spectral operations, various morphological filters).
+   Each candidate tool generates a number of feature planes, which are
+   then combined using a supervised classifier (Fisher linear
+   discriminant) to generate a final boolean feature mask. A population of
+   candidate tools is generated, ranked according to a fitness metric
+   measuring their performance on some user-provided training data, and
+   fit members of the population permitted to reproduce. Several standard
+   fitness metrics have been implemented, including Euclidean distance and
+   Hamming distance. The process cycles until the population converges to
+   a solution, or the user decides to accept the current best solution.
+   The user is also able to modify the training data as Genie reports its
+   initial results, to help refine the search. The burden of low-level
+   programming is thus shifted to the genetic algorithm, leaving the
+   analyst free to concentrate on the critical task of making judgements.
+   GENIE is free to ignore the spatial information in the image and rely
+   wholly on spectral operations and the supervised classifier module, but
+   in practice GENIE will construct integrated spatio-spectral algorithms.
+   These have been shown to be effective in looking for complex terrain
+   features, such as golf courses [16].
+
+          Two examples: evolving a water finder and a beach finder
+
+   As shown in the above figure, training data replaces detailed
+   programming in a machine learning system. GENIE requires a limited
+   amount of analyst-supplied training data, provided via a
+   point-and-click interface. For the water-finding task shown (top left),
+   example true pixels are painted green, and example false pixels are
+   painted red. GENIE used this to evolve the mask shown (top right:
+   red/green boolean mask overlaid on a greyscale reference image). The
+   user is able to influence the evolution of algorithms by providing
+   additional information, and by interactively providing additional
+   training data. Previous results can be reused and built upon. The lower
+   panels show a beach-finding task, which used the evolved waterfinder's
+   result as part of its algorithm. See our briefing document (PDF) for
+   further details. Output from existing algorithms (e.g., road or
+   building finders) can also be incorporated.
+
+   GENIE can derive multiple features for the same scene to produce
+   terrain classifications [18]. GENIE has been applied to Landsat 7 ETM+,
+   Landsat 5 TM, and MODIS Airborne Simulator multispectral imagery, and
+   AVIRIS hyperspectral imagery, and to standard color/infrared aerial
+   photography. GENIE is currently being tested for use with
+   high-resolution panchromatic imagery from NASA planetary missions.
+
+                            Work flow with GENIE
+
+   GENIE's system architecture has been designed to provide a flexible and
+   powerful computing paradigm (see figure above). GENIE can search a rich
+   and complex feature space using its gene pool of standard primitive
+   image processing operators and the results of additional
+   analyst-selected algorithms. The system employs both spectral and
+   spatial image analysis techniques in combination, and can in principal
+   simultaneously exploit data from different sensors (e.g., optical
+   imagery plus multi-spectral imagery plus altimeter data or digital
+   elevation models). The ability to combine diverse datasets requires
+   that the data be co-registered, which requires use of some other
+   package (e.g., RSI's ENVI or ERDAS Imagine commercial software
+   packages). The code is written in a combination of Perl (for the GA),
+   Java (for the graphical user interface, or GUI), and IDL, and augmented
+   by our own C/C++ libraries for fitness evaluation of candidate tools.
+   The code was developed in an Intel/Linux environment.
+
+   The prototype system typically requires a few hours to evolve a
+   high-fitness image-processing algorithm running on a single, fast
+   Linux/Intel workstation. The GENIE system is parallelizeable and
+   scalable, and we are developing a version of our system for a cluster
+   of 10's to 100's of commercial off-the-shelf Linux workstations.
+
+   Back to Top
+
+   References
+   1. J. H. Holland, Adaptation in Natural and Artificial Systems,
+   University of Michigan, Ann Arbor, 1975.
+   2. I. Rechenberg, Evolutionsstrategie: Optimierung technischer Systeme
+   nach Prinzipien der biologischen Evolution, Fromman-Holzboog,
+   Stuttgart, 1973.
+   3. L. Fogel, A. Owens and M. Walsh, Artificial Intelligence through
+   Simulated Evolution, Wiley, New York, 1966.
+   4. L. A. Cox Jr., L. Davis, and Y. Qiu,, "Dynamic anticipatory routing
+   in circuit-switched telecommunications networks," in Handbook of
+   Genetic Algorithms, L. Davis, ed., pp. 124-143, Van Nostrand Reinhold,
+   New York, 1991.
+   5. J. D. Schaffer and L. J. Eshelman, "Designing multiplierless digital
+   filters using genetic algorithms," in Proceedings of the Fifth
+   International Conference on Genetic Algorithms, S. Forrest, ed., pp.
+   439-444, Morgan Kaufmann, San Mateo, 1993.
+   6. T. Dandekar and P. Argos, "Potential of genetic algorithms in
+   protein folding and protein engineering simulations," Protein
+   Engineering 5(7), pp. 637-645, 1992.
+   7. J. R. Koza, Genetic Programming: On the Programming of Computers by
+   Natural Selection, MIT, Cambridge, 1992.
+   8. G. Robinson and P. McIlroy, "Exploring some commercial applications
+   of genetic programming," in Evolutionary Computing, Volume 993 of
+   Lecture Notes in Computer Science, T.C. Fogarty, ed., Springer-Verlag,
+   Berlin, 1995.
+   9. C. Harris and B. Buxton, "Evolving edge detectors", Research Note
+   RN/96/3, University College London, Dept. of Computer Science, London,
+   1996.
+   10. A. Teller and M. Veloso, "A controlled experiment: Evolution for
+   learning difficult image classification" in 7th Portuguese Conference
+   on Artificial Intelligence, Volume 990 of Lecture Notes in Computer
+   Science, Springer-Verlag, Berlin, 1995.
+   11. R. Poli and S. Cagoni, "Genetic programming with user-driven
+   selection: Experiments on the evolution of algorithms for image
+   enhancement," in Genetic Programming 1997: Proceedings of the 2nd
+   Annual Conference, J. R. Koza, et al., editors, Morgan Kaufmann, San
+   Francisco 1997.
+   12. P. Nordin, and W. Banzhaf, "Programmatic compression of images and
+   sound," in Genetic Programming 1997: Proceedings of the 2nd Annual
+   Conference, J. R. Koza, et al., editors,, Morgan Kaufmann, San
+   Francisco, 1996.
+   13. J. M. Daida, J. D. Hommes, T. F. Bersano-Begey, S. J. Ross, and J.
+   F. Vesecky, "Algorithm discovery using the genetic programming
+   paradigm: Extracting low-contrast curvilinear features from SAR images
+   of arctic ice," in Advances in Genetic Programming 2, P. J. Angeline
+   and K. E. Kinnear, Jr., editors, chap. 21, MIT, Cambridge, 1996.
+   14. S. P. Brumby, J. Theiler, S. J. Perkins, N. R. Harvey, J.J.
+   Szymanski, J. J. Bloch, and M. Mitchell, "Investigation of Feature
+   Extraction by a Genetic Algorithm", Proc. SPIE 3812, pp 24-31, 1999.
+   15. J. Theiler, N. R. Harvey, S. P. Brumby, J. J. Szymanski, S.
+   Alferink, S. Perkins, R. Porter, and J. J. Bloch, "Evolving Retrieval
+   Algorithms with a Genetic Programming Scheme", 1999, Proc. SPIE 3753,
+   in press.
+   16. N.R. Harvey, S. Perkins, S.P. Brumby, J. Theiler, R.B. Porter, A.C.
+   Young, A.K. Varghese, J.J. Szymanski, and J.J. Bloch, "Finding Golf
+   Courses: The Ultra High Tech Approach", To appear in the proceedings of
+   EvoIASP 2000: The Second European Workshop on Evolutionary Computation
+   in Image Analysis and Signal Processing, Edinburgh, April 17th, 2000.
+   17. S. Perkins, J. Theiler, S. P. Brumby, N. R. Harvey, R. B. Porter,
+   J. J. Szymanski, and J. J. Bloch, "GENIE - A Hybrid Genetic Algorithm
+   for Feature Classification in Multi-Spectral Images", 2000, Proc. SPIE
+   4120, in press.
+   18. S.P. Brumby, N.R. Harvey, S. Perkins, R.B. Porter, J.J. Szymanski,
+   J. Theiler, and J.J. Bloch, "A genetic algorithm for combining new and
+   existing image processing tools for multispectral imagery", 2000, Proc.
+   SPIE 4049, 480.
+   19. K. Lewis Hirsch, S. P. Brumby, N. R. Harvey, and A. B. Davis, "The
+   MTI Dense-Cloud Mask Algorithm Compared to a Cloud Mask Evolved by a
+   Genetic Algorithm and to the MODIS Cloud Mask", 2000, Proc. SPIE 4132,
+   in press.
+
+   Back to Top
+
+   Contact Details
+
+   RFIP Project Leader: John J. Szymanski
+   Email: szymanski@lanl.gov Phone: 505-665-9371
+   Additional Point-of-Contact: Jeffrey J. Bloch
+   Email: jbloch@lanl.gov
+   Questions about this website: webmaster
+
+      LANL | DAPS | RFIP Home | Gallery | Publications | People | Links
+
+         L O S   A L A M O S   N A T I O N A L   L A B O R A T O R Y
+      Operated by the University of California for the US Department of
+                                   Energy
+                        Copyright © UC 1998-2001/A>
+                    For conditions of use, see Disclaimer

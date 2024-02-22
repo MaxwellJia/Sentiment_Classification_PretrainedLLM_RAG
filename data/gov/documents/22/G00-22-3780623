@@ -1,0 +1,207 @@
+http://mtp.jpl.nasa.gov/instrument/instrument.html
+
+                          MTP Instrument Descriptions
+   _______________________________________________________________________
+
+    [Top of Page] [Introduction] [DC8]  [ER2]  [WB57]  [Back to MTP Home
+   Page]
+   _______________________________________________________________________
+
+   Introduction An MTP is a passive microwave radiometer that measures
+   the  thermal emission and absorption from oxygen molecules in the
+   atmosphere along the instrument's line of sight, and then uses this
+   information to retrieve a vertical profile of temperature by assuming
+   horizontal temperature stratification and by using an atmospheric
+   microwave opacity model. [In this link, the three altitudes of 0 km, 10
+   km, and 20 km are representative of ground based, DC8 and ER2/WB57
+   projects. This absorption model is from P.W. Rosenkranz, Ch. 2 and
+   Appendix, in Atmospheric Remote Sensing  By Microwave Radiometry, M.A.
+   Janssen, Editor, New York : Wiley, 1993. ]. Because any oxygen emission
+   is absorbed in proportion to its distance from the radiometer, the
+   integrated emission can be represented by a "weighting function" which
+   characterizes the weighted mean distance of the emission. In the
+   special case where the temperature lapses at a constant rate with
+   distance, it is easy to show that the brightness temperature measured
+   by the radiometer is exactly equal to the physical temperature at the
+   e-folding distance for the absorption. More complicated situations
+   require more detailed treatment.
+
+   An MTP generally consists of two assemblies: a sensor unit (SU), which
+   receives and detects the signal, and a data unit (DU), which controls
+   the SU and records the data. In addition, on some platforms there may
+   be a third element, a real-time analysis computer (RAC), which analyzes
+   the data to produce temperature profiles and other data products in
+   real time. The SU is connected to the DU with power, control, and data
+   cables. In addition the DU has interfaces to the aircraft navigation
+   data bus and the RAC, if one is present.
+
+   Navigation data is needed so that information such as altitude, pitch
+   and roll are available. Aircraft altitude is needed to perform
+   retrievals (which are altitude dependent), while pitch and roll are
+   needed for controlling the position of a stepper motor which must drive
+   a scanning mirror to predetermined elevation angles. Generally, the
+   feed horn is nearly normal to the flight direction and the scanning
+   mirror is oriented at 45-degrees with respect to receiving feed horn to
+   allow viewing from near nadir to near zenith. At each viewing position
+   a local oscillator (LO) is sequenced through two or more frequencies.
+   Since a double sideband receiver is used, the LO is generally located
+   near the "valley" between two spectral lines, so that the upper and
+   lower sidebands are located near the spectral line peaks to ensure the
+   maximum absorption. This is especially important at high altitudes
+   where "transparency" corrections become important if the lines are too
+   "thin."
+
+   Because each frequency has a different effective viewing distance, the
+   MTP is able to "see" to different distances by changing frequency. In
+   addition, because the viewing direction is also varied and because the
+   atmospheric opacity is temperature and pressure dependent, different
+   effective viewing distances are also achieved through scanning in
+   elevation. If the scanning is done so that the applicable altitudes
+   (that is, the effective viewing distance times the sine of the
+   elevation angle) at different frequencies and elevation angles are the
+   same, then inter-frequency calibration can also be done, which improves
+   the quality of the retrieved profiles. For a two-frequency radiometer
+   with 10 elevation angles, each 15-second observing cycle produces a set
+   of 20 brightness temperatures, which are converted by a linear
+   retrieval algorithm to a profile of air temperature versus altitude,
+   T(z).
+
+   Finally, radiometric calibration is performed using  the outside air
+   temperature (OAT) and a heated reference target to determine the
+   instrument gain. However, complete calibration of the system to include
+   "window corrections" and other effects, requires tedious analysis and
+   comparison with radiosondes near the aircraft flight path. This is
+   probably the most important single factor contributing to reliable
+   calibration. For stable MTPs, like that on the DC8, such calibrations
+   appear to be reliable for many years. Such analysis is always performed
+   before MTP data are placed on mission archive computers.
+   _______________________________________________________________________
+
+    [Top of Page] [Introduction] [DC8]  [ER2]  [WB57]  [Back to MTP Home
+   Page]
+   _______________________________________________________________________
+
+   DC8 The JPL DC8 Microwave Temperature Profiler (MTP/DC8) is a passive
+   microwave radiometer that measures the natural thermal emission from
+   oxygen molecules at three frequencies (55.51, 56.66 and 58.79 GHz). The
+   instrument views ten elevation angles between -80 and +80 degrees by
+   using a scanning mirror, located behind a microwave window on the
+   sensor unit, to change the viewing direction. The sensor unit is
+   located in a window just aft of the forward starboard exit door. This
+   window has always been considered inaccessible for science instruments
+   or inlets because it is immediately behind the Mission Manager's
+   console. The sensor fairing is far enough ahead of other useable
+   windows that it should not interfere with any future sampler inlets.
+   The control and analysis electronics for the MTP are located in the
+   Mission Manager's rack. The MTP retrieves profiles of air temperature
+   versus altitude, which it displays on a dedicated color LCD display
+   beside the Mission Manager's console; a video signal is also available
+   for distribution to DADS monitors throughout the aircraft.
+
+   Comments on Molecular Oxygen Rotational Spectrum
+
+  Paper on DC8 MTP Performance
+
+  Photo Gallery of DC8-related Images
+
+   Some FAQs on DADS-related Parameters
+   _______________________________________________________________________
+
+    [Top of Page] [Introduction] [DC8]  [ER2]  [WB57]  [Back to MTP Home
+   Page]
+   _______________________________________________________________________
+
+ER2
+
+  Introduction
+
+   The airborne MTP/ER2 instrument is a passive microwave radiometer that
+   measures thermal emission from oxygen molecules along the viewing
+   direction. A stepper motor rotates a 45-degree shaped reflector so that
+   radiation entering a receiving horn is sequenced through a set of 10
+   elevation angles, ranging from +58 to +60 degrees (within a vertical
+   plane that is offset l5 degrees in azimuth from the direction of
+   flight). At each viewing position a local oscillator is sequenced
+   through two frequencies: 56.66 and 58.80 GHz. Each 14-second observing
+   cycle produces a set of 20 brightness temperatures, which are converted
+   by a linear retrieval algorithm to a profile of air temperature versus
+   altitude. Altitude coverage is 15 to 25 km while flying at 19 km. T(z)
+   profiles are obtained every 2.9 km along the flight path.
+
+  Science
+
+   T(z) data can be used to derive a "curtain cross-section" of the
+   temperature field along the flight path . Regions cold enough to
+   condense water vapor, or nitric acid, can be identified (with mixing
+   ratio assumptions). The temperature field is also used to derive
+   cross-sections of isentrope surface altitudes, which can be used to
+   locate mountain waves. "Waviness" of the isentrope surface altitudes
+   can also be used to quantify the mesoscale vertical motions of air
+   parcels and their associated temperature fluctuations. Temperature
+   fluctuations are needed to determine an effective temperature for those
+   chemical reactions and solubilities which vary in a strongly non-linear
+   manner with temperature. The tropopause altitude can be located along
+   the flight path when the aircraft is within about 3 km of the
+   tropopause, which often occurs during brief descent/ascents midway in a
+   flight.
+
+  History
+
+   The MTP/ER2 was used during the 1987 Airborne Antarctic Ozone
+   Experiment, AAOE, the 1989 Airborne Arctic Science Experiment, AASE,
+   the 1992 Airborne Arctic Science Experiment, AASE II, and the 1994
+   Airborne Southern Hemisphere Ozone Experiment. Measurements for
+   Assessing the Effects of Stratospheric Aircraft, ASHOE/MAESA, based in
+   New Zealand and Hawaii. AAOE measurements led to the discovery and
+   quantitative characterization of mountain waves in the lower
+   stratosphere over the Antarctic Peninsula. AASE measurements led to the
+   discovery and quantification of an ever-present component of mesoscale
+   vertical motions in the lower stratosphere, which has implications for
+   polar stratospheric cloud formation and drop size evolution. AASE II
+   measurements were used to validate a model for mountain wave production
+   (and CAT breakdown), which has implications for momentum flux transfer
+   to the stratosphere. ASHOE/MAESA measurements led to the discovery that
+   filaments sometimes produce a distortion to the temperature field, and
+   this may provide a means for studying filament entrainment and
+   transport.
+
+  Performance
+
+   Profile Accuracy (for flight at 19 km)
+     * < I K from 18 to 20.5 km
+     * < 2 K from16.2 to 23.2 km
+     * < 3 K from 15 to 25 km
+
+    Tropopause altitude accuracy
+     * 0.2 km when within 1 km of the tropopause
+     * 0.3 to 0.5 km when 2 to 3 km away
+
+   Temporal Response: new profile every 14 seconds  Location: Right engine
+   "cheek"
+   Mass: 11 kg Power: 100 W
+
+  ER2-Related Photo Gallery
+
+  ER2 Navigation Data Recorder Output Format Specification
+   _______________________________________________________________________
+
+    [Top of Page] [Introduction] [DC8]  [ER2]  [WB57]  [Back to MTP Home
+   Page]
+   _______________________________________________________________________
+
+WB57
+
+   MTP will fly for the first time on the NCAR WB57 in March 1998 on the
+   WB57 Aerosol Mission (WAM). The sensor unit and data unit are the ER2
+   instrument. An old superpod fairing has been modified to allow scanning
+   from +70 to -70 degrees. In addition, a real time analysis computer
+   (WAC) has been added and DC8 realtime analysis code modified so that
+   the back seat scientist can have realtime tropopause altitude guidance.
+
+
+  WB57 -Related Photo Gallery
+   _______________________________________________________________________
+
+    [Top of Page] [Introduction] [DC8]  [ER2]  [WB57]  [Back to MTP Home
+   Page]
+   _______________________________________________________________________

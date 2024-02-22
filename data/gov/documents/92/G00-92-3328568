@@ -1,0 +1,68 @@
+http://solve.lanl.gov/html_resolve/index.html
+
+
+          SOLVE/RESOLVE home
+
+                            RESOLVE examples
+
+                                            RESOLVE on-line manual
+
+   [resolve_bright.jpg]
+
+                                           RESOLVE
+
+                           Maximum-likelihood density modification
+
+                            Prime-and-switch minimal-bias phasing
+
+                                  Automated model-building
+
+                       Tom Terwilliger, Los Alamos National Laboratory
+
+
+
+                              What is resolve?
+
+   RESOLVE is a program that improves electron density maps.
+
+   RESOLVE uses a maximum-likelihood approach to combine experimental
+   X-ray diffraction information with knowledge about the expected
+   characteristics of an electron density map of a macromolecule.
+
+   You can run RESOLVE to improve your maps right after using SOLVE or
+   another program to solve your structure.
+
+   Version 2.01 and higher of RESOLVE will build a main-chain model of
+   your structure automatically.
+
+     How is RESOLVE different than other density-modification programs?
+
+   RESOLVE uses a new mathematical formulation to directly maximize the
+   total likelihood of the phases. Other approaches rely on phase
+   recombination where the optimal statistical weighting of experimental
+   and modified phases is not known.
+
+    What is prime-and-switch phasing and how does it minimize model bias?
+
+   Prime-and-switch phasing primes density modification with biased model
+   phases, then switches entirely to an independent source of phase
+   information (the likelihood of the map) to remove the model bias.
+   Prime-and-switch phasing can give excellent unbiased maps even for
+   crystals with very low solvent content (provided that the biased model
+   did have substantial correct phase information!)
+
+            What are other new features of version 2 of resolve?
+
+   In addition to prime-and-switch phasing, version 2.0 of RESOLVE can
+   find non-crystallographic symmetry in your heavy-atom sites and apply
+   it automatically.  Version 2.01 and higher can build a main-chain model
+   for you as well.
+
+                     How can I read more about resolve?
+
+   The mathematics behind RESOLVE and examples of its use are described in
+   the article "Maximum likelihood density modification," appearing in
+   Acta Cryst. D56, 965---972 (2000).
+
+
+    Last updated: 14-Dec-2001 (version 2.01)

@@ -1,0 +1,416 @@
+http://forum2000.boulder.nist.gov/F2kJCED.pdf
+
+   1002 J. Chem. Eng. Data 2001, 46, 1002-1006 Forum 2000: Fluid
+   Properties for New Technologies, Connecting Virtual Design with
+   Physical Reality James C. Rainwater,* Daniel G. Friend, Howard J. M.
+   Hanley, Allan H. Harvey, Cynthia D. Holcomb, Arno Laesecke, Joseph W.
+   Magee, and Chris Muzny Physical and Chemical Properties Division,
+   National Institute of Standards and Technology, 325 Broadway, Boulder,
+   Colorado 80305-3328 Forum 2000 was held at the 14th Symposium for
+   Thermophysical Properties, with all symposium attendees invited. The
+   forum addressed the present needs and priorities for thermophysical
+   properties measurements and the challenges facing the experimental
+   community. Seven distinguished panelists presented brief overviews of
+   issues related to a wide variety of subjects, and three discussion
+   periods were held. Topics included whether simulation can replace
+   experiment, properties needs for new miniaturization techniques, real
+   problems such as nuclear waste cleanup, data needs for electrolyte
+   systems and new generations of electric power plants, and data needs
+   for unconventional materials such as molten metals and soft solids.
+   Introduction This report is one of a number of documentations of the
+   forum. Another paper expands on themes from the forum The future roles
+   and priorities of experiment and simu- and offers ideas on the future
+   opportunities and challenges lation, as well as theory and correlation,
+   for thermophysical for fluid property research.2 A more detailed report
+   will be properties research were the topics of Forum 2000, held
+   released as a NIST Special Publication,3 and further on June 29, 2000,
+   as part of the Fourteenth Symposium information is available at the
+   forum website, http:// on Thermophysical Properties in Boulder,
+   Colorado. All forum2000.boulder.nist.gov. participants in the symposium
+   were invited to attend the forum, which was organized by the authors of
+   the present Presentations of Panelists paper. Meetings with similar
+   agendas1 have been held before, but the forum was unique in bringing
+   together a The forum was moderated by Howard Hanley of NIST. panel of
+   authorities from academic, government, and Each of the seven panelists
+   presented a 10-min talk. There private research institutions and
+   funding agencies. were discussion periods after the second and fourth
+   talks; the last talk was followed by a summary from the modera- The
+   advance abstract for the forum read as follows: tor and a final
+   discussion period. "Advances in miniaturization, decentralization,
+   demand- controlled production, flexible feedstocks, and information
+   Professor Peter T. Cummings with the University of technology will
+   catalyze dramatic changes in the fluid- Tennessee, Knoxville, and Oak
+   Ridge National Laboratory, based industries in the 21st century. New
+   technologies are first pointed out how his own career, in which he had
+   emerging in areas such as waste minimization, advanced started as a
+   theorist, was an example of the trend of the fuels, modular power
+   plants, and high-value chemicals. displacement of theory by simulation.
+   Cummings noted the Accelerated design, evaluation, and optimization of
+   these remarkable progress in computational power, citing Moore's
+   processes require virtual tools based on robust information. law that
+   computing speeds double every 18 months, which Essential to these tools
+   are physical property models, which is about an order of magnitude
+   every 5 years. There is must be validated with accurate data.
+   "tremendous leverage out of the consumer market for computers", driven
+   by demands for computer games and "All stakeholders in technology
+   development reap the word processing. He asserted that, by comparison,
+   experi- benefits from accurate measurements and improved prop- ment and
+   theory are much more labor-intensive. erty models. However, economic
+   realities prevent single entities from committing substantial resources
+   to such The term "molecular modeling" describes molecular research.
+   This forum will identify strategic needs for dynamics where one solves
+   equations of motion for a system collaborative efforts between
+   experimentalists and develop- of molecules, Monte Carlo methods where
+   the thermody- ers of database and process modeling tools with direct
+   input namics is computed stochastically, and quantum chemistry from the
+   end users to respond to their fluid property needs. where
+   Schro¨dinger's equation is solved numerically. There The intent is to
+   bring together competence from industry, are a variety of scales
+   involved, from the lowest (electronic academia, and government research
+   with representatives structure) level, through fluid thermodynamic
+   properties, of the funding organizations to assist in the realization
+   of through scales appropriate to polymer modeling. these collaborative
+   efforts. These efforts will result in a The two key aspects of
+   molecular modeling are force stronger connection between virtual design
+   tools and fields and computational methods. Cummings noted that
+   physical reality." far more funding has gone into force fields for
+   pharmaceu- tical drug design than into force fields suitable for
+   chemical processing. Drug design applications involve a small range *
+   Corresponding author. E-mail: james.rainwater@nist.gov. Fax: (303)-
+   497-5224. of temperatures, 25 to 35 °C, and low pressures. In
+   10.1021/je010002e This article not subject to U.S. Copyright. Published
+   2001 by the American Chemical Society Published on Web 07/11/2001
+   Journal of Chemical and Engineering Data, Vol. 46, No. 5, 2001 1003
+   contrast, chemical processing requires density ranges (for "pretty
+   bad." In one instance, Hanford engineers needed example, between liquid
+   and vapor) of orders of magnitude, an estimate of the cooling
+   requirements for a tank. From pressure ranges of several decades, and
+   temperature the amount of water used in cooling, the estimate was
+   ranges of hundreds of kelvins. However, the state of the 100 000 Btu/h
+   (29 kW), but the estimate from heat gener- art has improved to the
+   extent that simulations are ated by waste samples was 30 000 to 40 000
+   Btu/h (8.8 to predicting data subsequently confirmed by experiment and
+   11.7 kW). It was necessary to assume the larger figure, but are
+   locating errors in databases, and some properties such in the end the
+   smaller figure was closer to the truth, as enthalpies of formation and
+   reaction are now routinely possibly because the ventilation system may
+   not have been obtained by some companies through computational chem-
+   accounted for properly in the model. istry. A recent multiagency study
+   (see http://www.itri.loy- In another instance, they needed a state
+   permit for the ola.edu/molmodel/welcome.htm) discusses current appli-
+   atmospheric emissions resulting from a transfer of radio- cations of
+   molecular modeling. active waste from a single-shell to a double-shell
+   tank. A Cummings concluded with a prediction that, by 2020, model
+   provided an initial estimate of 20 parts per million many properties of
+   pure low molecular weight systems will of organic carbon, and the site
+   got a permit for 50 parts be predictable computationally with better
+   accuracy and per million. However, in the first hour of the actual
+   higher precision than from experiment. Certain problems transfer, 500
+   parts per million was released. The problem will remain a challenge to
+   simulation, for example when was subsequently corrected, but the
+   original model had quantum effects are important or when there are
+   dispari- failed to account for a radiolysis reaction that produced ties
+   in time scales. His conclusion was that "I don't think volatile
+   byproducts including heptene. These examples theory is gone by any
+   stretch of the imagination, or showed that there are important
+   real-life problems where experiment," but that molecular modeling has
+   become a experts in fluids and chemistry can contribute. very powerful
+   and important tool for thermophysical Dr. Andrzej Anderko, Vice
+   President, Properties of Fluids properties prediction. and Materials at
+   OLI Systems, Inc. (Morris Plains, NJ), Dr. Ward TeGrotenhuis, Chief
+   Engineer, Environmental discussed research and development involving
+   the proper- Technology Division of the Pacific Northwest National ties
+   of electrolyte systems. This is an area in which the Laboratory
+   (Richland, WA), spoke about research on min- current database is
+   inadequate, particularly at high tem- iaturized devices and the
+   associated physical property perature. More experimental work on
+   thermophysical needs. A goal is to develop chemical process equipment
+   properties will be necessary, because molecular simulation typically 2
+   orders of magnitude smaller in size than cannot yet handle the complex
+   interactions realistically. traditional equipment, without sacrificing
+   capacity. Typical The particular technologies of interest were
+   corrosion length scales are microchannel widths ranging from 1 µm
+   simulation, crystallization simulation, flow assurance soft- to 1 mm,
+   pumps and valves at the centimeter scale, reactors ware, and
+   environmental simulation. and heat exchangers of 10 cm, and an entire
+   system 1 m Anderko described corrosion as a complex process involv- in
+   length. As a specific example, he cited a recently ing thermodynamic
+   and transport properties, speciation, developed vaporizer for an
+   automotive fuel processor that surface electrochemical processes, and
+   the breakdown of could process 1400 standard liters of gasoline vapor
+   per passive films on metals. Speciation is the most important; minute
+   in a volume of only one-third of a liter. Other the pH of the fluid is
+   the simplest characterization, but projects included one for NASA to
+   develop a miniature the presence of other complexing agents must also
+   be plant to produce propellants from carbon dioxide in the considered.
+   As an example, anhydrous hydrogen fluoride Martian atmosphere and a
+   project for the Department of is noncorrosive, but when mixed with
+   water it becomes very Defense on a portable system for cooling a
+   soldier in the corrosive. Anderko discussed other processes such as
+   field. supercritical water oxidation and the production of in-
+   TeGrotenhuis noted that property issues have not been organic
+   materials, in particular piezoelectric ceramics. of much importance to
+   date in the exploratory stages of There are many thermophysical
+   property needs in these the devices but will become more important with
+   actual areas. Transport properties are poorly known, and diffu- design
+   and development. Conventional properties such as sivity and viscosity
+   are needed to compute mass transfer density, thermal conductivity, and
+   electrical conductivity effects in corrosion. Modeling phase
+   equilibria, densities, will be useful. Additionally, at these small
+   length scales, and enthalpies in multicomponent systems is important
+   wall effects can dominate, so there is a greater need for in designing
+   supercritical water oxidation processes. An such properties as surface
+   tension, surface energy, and accurate equation of state is available
+   for this purpose, but wettability. The flows may involve multiphase
+   fluids, and parameters are established for only a few systems due to
+   the dynamics will be at small time and length scales. New lack of
+   experimental data. For ceramics, the main limita- models and
+   instrumentation will be required to measure tion is lack of
+   thermochemical data for the multiple solid properties in small channels
+   and to characterize what is phases involved. Phenomena such as
+   adsorption, ion happening. exchange, and surface complexation are also
+   important. Dr. James A. Poppiti, Team Leader of In-Tank Charac- Dr.
+   Thomas J. O'Brien of the Department of Energy, terization, Department
+   of Energy, Office of River Protec- National Energy Technology
+   Laboratory (Morgantown, tion, discussed an urgent practical problem,
+   the cleanup WV), discussed a DOE program for electrical power gen- of
+   radioactive waste at the Hanford, WA, site. He first eration from
+   fossil fuels. The program, known as Vision reviewed the history of the
+   site, back to its contribution to 21, sets the ambitious goal of
+   increasing power plant the first nuclear weapon detonated at
+   Alamogordo, NM. efficiencies to 75%, compared with 60% for current
+   state- He also reviewed the geography of the site, which is 560
+   of-the-art designs and 35% for typical coal-fired plants now mi2 (1450
+   km2) in area and has a west and an east area in operation, while at the
+   same time preserving the separated by 5 mi (8 km), across which large
+   amounts of environment. Coal and natural gas will continue to be
+   contaminated fluid must be transferred. important fuels, although
+   opportunities to use biofuels will This project calls for models, but
+   Poppiti said that, to be considered. Envisioned technologies include
+   upstream date, his experience with models from contractors has been
+   separation of oxygen from air, gasification of the initial 1004 Journal
+   of Chemical and Engineering Data, Vol. 46, No. 5, 2001 materials into a
+   higher-intensity fuel, a cascade of conver- point of an experimentalist
+   and data provider. He also sion devices first with fuel cells at high
+   temperature and spoke of conventional and unconventional properties.
+   Within pressure and then with more fuel cells at lower tempera- the
+   conventional, he said that the oil and gas industries, ture and
+   pressure, and a turbine to burn the reject fuel. and combustion, will
+   continue to be very important. In There will be serious control
+   problems as different stages studying combustion, part of the problem
+   is obtaining in the cascade are integrated. properties of reacting
+   mixtures where some species are Related to the new plant technologies
+   is a DOE project short-lived and cannot be studied in isolation. For
+   oil and to model plants by computer. O'Brien noted that, in gas
+   production, the process of thermal diffusion in near- previous years,
+   the U.S. government provided billions of critical hydrocarbon mixtures
+   could be an important factor dollars for demonstration plants but that
+   support will not in determining the phase distribution in reservoirs.
+   The continue indefinitely, so that simulation must at least so-called
+   "mushy" region of metals in which solid and liquid partly replace
+   expensive demonstration plants. The fossil- phases coexist in a
+   nonequilibrium state is important, but fuel power industry, which has
+   not had extensive experi- the ill-characterized nature of the state
+   meant that much ence in scientific computing, will use as models other
+   of the existing work was not useful. Other multiphase efforts, such as
+   the simulation of nuclear explosions by the systems were also important
+   to study, especially those DOE weapons program and the simulation of
+   space explo- involving membranes and multiple fluid phases. ration by
+   NASA. There will also be interactions with Wakeham noted that the
+   health and food industries process simulation and computer graphics
+   companies. He would always be important. There are property needs for
+   ended by noting that science, previously based on analysis "soft
+   solids", such as soap, food, powders and pastes, and and experiment, is
+   now a "three-legged stool" based on cosmetics. He also mentioned tissue
+   engineering, where analysis, experiment, and simulation. bone can be
+   grown now, and scientists will be able to grow Dr. Paul M. Mathias,
+   Principal Advisor with Aspen lung lobes within the next 5 years and
+   liver tissue shortly Technology (Cambridge, MA), gave a process
+   engineering thereafter. Because the processes involved are essentially
+   perspective on thermophysical properties research and those involved in
+   any chemical reactor, there is an op- reviewed how data are used in the
+   simulation of industrial portunity for the thermophysical properties
+   community to plants of various kinds. He described the stages of plant
+   contribute to the description of such processes, although development,
+   from conceptual design to operation. He they have done little so far.
+   commended NIST (and the National Bureau of Standards, Wakeham showed
+   widely varying predictions from sev- as it was called until 1988) for
+   standardization of thermo- eral structure-based estimation techniques
+   of the phase dynamic models for simple fluids. He emphasized the
+   diagram of a hydrocarbon system, none of which was in importance of
+   education and offered his opinion that close agreement with reality. He
+   noted that the cor- companies do not understand their processes in
+   great detail respondence of virtual reality to physical reality can
+   only anymore and some previous core compentencies have be determined by
+   experiment. But he asserted that we can drifted away. He felt that
+   often when something important never conduct all necessary experiments.
+   Even if there is missed, it is due to lack of education rather than
+   lack of were only 15 pure components in the world, the experi-
+   capability. On the other hand, the emergence of the mental effort
+   required to study all possible mixtures would Internet will allow more
+   institutions to participate in the be astronomical. For the tens of
+   thousands of substances field of thermodynamic modeling. actually in
+   use, the task is clearly impossible. In conclusion, Mathias spoke of
+   "conventional" properties, where at Wakeham called for a balance
+   between simulation, theory, least most of the concepts are in place,
+   and unconventional and experiment. properties. For the former, he noted
+   that transport property After Wakeham's talk, Hanley, as moderator,
+   gave an research had been unduly neglected because of the greater
+   impromptu summary. He commented that two important importance of phase
+   equilibria. He felt that molecular gaps existed, first between
+   simulation and experiment, and modeling of condensed phase properties
+   was currently second between property information and process demands.
+   weak and questioned whether some modeling was really He mentioned
+   nanotechnology, surfactants, and colloids as just a sophisticated
+   data-fitting exercise. The role of areas that perhaps should be
+   considered within the realm molecular modeling, in his view, was to
+   understand trends of thermophysical properties to a greater extent than
+   they and build hybrid models. He also regarded as important currently
+   are. He also stated the importance of multidis- the kinetics of
+   solid-liquid equilibrium and, echoing ciplinary studies and of contact
+   with industrial experts, Anderko, speciation in electrolyte systems. He
+   saw an mentioning an example from his own research where a opportunity
+   for sensors that would relate the variable that phone call to the right
+   person at a clay products company one really wanted to control in a
+   process (such as molecular clarified questions that had concerned him
+   for 3 years. weight in a polymerization reaction) to a property that
+   could be more easily measured on-line. Discussion Unconventional
+   properties, for example those of poly- The discussion periods covered a
+   variety of topics. More mers, are often history-dependent, and even the
+   conceptual details will be given in the Special Publication;3 here we
+   frameworks are not yet established. Mathias noted that it summarize the
+   main themes. Most of the discussion can is difficult to set up a
+   reasonable simulation when proper- be categorized in terms of four
+   challenges facing the ties are history-dependent. He concluded that
+   much work thermophysical properties community. The first came from is
+   needed in this area, including databases for history- simulation and
+   the question of whether simulations could dependent processes. supplant
+   experiment for obtaining accurate property data. Professor William A.
+   Wakeham, Pro Rector (Research) Second were structural issues, including
+   funding avail- of the Imperial College of Science, Technology, and
+   Medi- ability. Third was the challenge to help solve "real-life" cine
+   (London), whose plenary lecture for the 14th Sympo- problems, and
+   fourth was the need to move toward new sium on Thermophysical
+   Properties on the history and materials and new properties. future
+   prospects of the profession had generated consider- Simulations. An
+   audience member noted that advances able discussion throughout the
+   week, presented the view- in algorithms were a greater factor in
+   improvement of the Journal of Chemical and Engineering Data, Vol. 46,
+   No. 5, 2001 1005 speed of simulations than improvements in computing
+   Poppiti seconded this on the basis of his experience with a speed
+   itself, and while Moore's law predicted increases in problem
+   universally regarded as urgent, where he had speed of 2 orders of
+   magnitude per decade, the improve- extensive funding at his disposal
+   but had difficulty finding ment of algorithms made the overall
+   simulation speed go how and where to spend it to get the needed
+   answers. up by 4 or 5 orders of magnitude, an observation with
+   Real-Life Problems. The challenges provided by for- which Cummings
+   agreed. midable "real-life" problems were addressed. Poppiti com- It
+   was asked what error bars could be put on simulated mented that his
+   stories of modeling failures were just two property data. Cummings
+   commented that real validation that he picked out, and he could tell
+   many more. Modeling comes from experiments that are performed after the
+   deficiencies have already had a significant negative impact,
+   simulations and agree with them. He agreed that simula- including the
+   temporary shutdown of a major activity. tion data are ultimately useful
+   to an engineer only if they Hanley said that "academic people", loosely
+   defined, who come with error bars, that the largest uncertainties come
+   from the force fields but are hard to quantify, and that the wanted to
+   contribute should visit sites and see firsthand simulation community
+   has not done very much in this area. large tanks rotting away and other
+   evidence of the prob- Another audience member pointed out that, like
+   experi- lems. He also commented that these problems are gigantic ments,
+   simulations could be subject to systematic errors and complex and might
+   make a good subject for a proposal, and that there were published
+   examples where this had but people in the room hardly know what
+   questions to ask happened. and are not informed of what data are
+   needed. On such problems, it was suggested that there is probably some
+   The measurement of properties of alternative refriger- basic research
+   that would help, but somebody has to ants was brought up as an example.
+   These fluids had been provide a bridge between the basic science and
+   engineering largely ignored until about 15 years ago, but when ozone
+   needs, and it was unclear who would be in a position to do depletion
+   became a major concern, their properties were that. measured
+   extensively worldwide. The question was posed whether, in a similar
+   situation, the simulation community New Materials and Technologies. The
+   talks by Te- today would say experiments were unnecessary and all
+   Grotenhuis and Wakeham brought up challenges and data could be
+   simulated. Cummings replied that simulated opportunities in new areas
+   such as microtechnology and properties are useful in the early design
+   stages of a plant, soft solids. It was clarified that usual bulk
+   properties are but at the final design and production stages, almost
+   still useful in microtechnology, the construction of devices everyone
+   agrees that real experimental data are necessary. about 2 orders of
+   magnitude less in size than conventional Structural Issues. Discussion
+   of structural issues devices, as opposed to nanotechnology that
+   involves much echoed the remark of Mathias that lack of education and
+   smaller size scales at the molecular level. Hanley asked expertise was
+   more often an impediment than lack of TeGrotenhuis if his miniaturized
+   devices used ordinary capability. The near disappearance of corporate
+   engineer- bulk property information or if new information was ing
+   groups was lamented. Pressures to cut costs and the needed, while
+   pointing out that at some scale use of bulk availability of software
+   and specialized services from properties would break down. TeGrotenhuis
+   replied that, vendors have largely changed the role of engineers in so
+   far, traditional properties from standard chemical refer- industry from
+   specialists to generalists. Engineering spe- ence sources worked, but
+   at some point with further cialists, often with Ph.D.s, provided
+   essential expertise to miniaturization there would be nonidealities
+   associated their companies and a link to academic and government with
+   scale. researchers. Process simulation software has replaced them
+   TeGrotenhuis was asked what fluid-surface interaction in part, but key
+   decisions are now made by people with studies would be useful to him
+   and what specific surface limited thermodynamics education. Companies
+   rely on material was of interest. He replied that his group mostly
+   consultants but may not be able to judge their competence worked with
+   metals, because of high-temperature applica- properly. Product design
+   knowledge, the ability of a person tion, but that others in the
+   microtechnology world used in industry to know what data are needed for
+   a given glass, silicon, or plastic. Wakeham reiterated his recom-
+   product, is something of a lost art, and it is even unclear if
+   mendation for studies of thermal properties of tissues, and it is being
+   taught anymore. there was some discussion as to whether this area was
+   Wakeham's comment about the huge data needs for only appropriate for
+   traditional thermophysical properties labo- 15 pure components prompted
+   some discussion. O'Brien ratories. noted that it would also be a huge
+   job to do all the needed simulations for the mixtures. It was noted
+   that theory had Conclusions been rather underemphasized in the
+   discussion, and esti- mating properties of all the mixtures called for
+   some good Overall, the forum raised many questions, but there was
+   mixture theorists, but that funding agencies are not doing some
+   consensus. While there were differences of opinion a particularly good
+   job of encouraging theory. on the capabilities of simulation, it was
+   clear that it has Although not envisioned as a primary concern of the
+   not rendered experiment obsolete and that experiments will forum,
+   issues of research funding inevitably arose. The way need to be
+   continued for, among other reasons, the valida- in which "turf battles"
+   inhibit cross-agency funding was tion of simulation predictions. Still,
+   simulation is now an mentioned, as was the way agencies such as DOE
+   were important player in the determination of thermophysical stretched
+   thin between basic and applied research and user properties and will
+   become more so with improvements in facilities, with political
+   pressures as an added complication. computer speed and algorithms.
+   Clearly there are op- Frustrations were expressed that funding agencies
+   some- portunities in new materials and properties, microtechnol- times
+   fail to inform researchers of what they really want, ogy, soft solids,
+   and elsewhere. The profession can contrib- saying they want to support
+   science but instead focusing ute to complex problems such as nuclear
+   waste cleanup, on short-term fixes. It was mentioned that the problems
+   but important liaisons between properties experts and in areas such as
+   environmental cleanup were so complex those tasked with solving
+   practical problems, such as that even identifying the basic science
+   needs was difficult. corporate engineering groups, have been
+   disappearing. 1006 Journal of Chemical and Engineering Data, Vol. 46,
+   No. 5, 2001 NIST hopes to continue its leadership in fostering (3)
+   Rainwater, J. C.; Friend, D. G.; Hanley, H. J. M.; Harvey, A. H.;
+   dialogue on the future of thermophysical properties re- Holcomb, C. D.;
+   Laesecke, A.; Magee, J. W.; Muzny, C. Report on search and is
+   considering organizing more such events. Forum 2000: Fluid Properties
+   for New Technologies, Connecting Virtual Design with Physical Reality;
+   Special Publication; Na- tional Institute of Standards and Technology:
+   Boulder, CO, in Literature Cited review. (1) Assael, M. J. Minutes of
+   Workshop W1: Major challenges for fluid transport property research in
+   the next century. High Temp.- Received for review January 2, 2001.
+   Accepted May 14, 2001. High Pressures 2000, 32, 159-162. (2) Harvey, A.
+   H.; Laesecke, A. Fluid Properties and New Technolo- gies: Connecting
+   Design with Reality. Chem. Eng. Prog., in press. JE010002E

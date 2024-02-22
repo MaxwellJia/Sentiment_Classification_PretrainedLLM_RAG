@@ -1,0 +1,329 @@
+http://www.kepler.arc.nasa.gov/Tech_results.html
+
+                                                         Updated 11/15/01
+
+                          Technology Demonstration:
+
+                                   Results
+
+                              [Test105T09a.gif]
+
+     The following describes the results of the tests that demonstrate
+     meeting of the criteria -- the ability to detect Earth-size transits
+     with an end-to-end system that performs as closely as possible to
+     the way the actual space mission will perform.
+
+     Interpretation of the Performance Plots
+     Baseline Test
+     Rotation-Translation
+     Bright Stars
+     Spacecraft Jitter of 3x Baseline
+     Cosmic Rays
+     Long-Duration Tests
+     Testing Summary
+     Conclusions
+
+Interpretation of the Performance Plots
+
+     Figure 2 (and Figure 5) contain the information for the 138 stars
+     that were measured in each test. Fifty-four of the stars are located
+     in the crowded region representing the star density of the galactic
+     plane.The typical test duration was about 48 hours, except for the
+     long duration tests, which ran for 10-14 days. Figure 1 display the
+     1-hour to 1-hour precision versus star magnitude after the data were
+     processed by our "standard analysis" procedure. (The long duration
+     tests had enough data samples to compute 5-hour to 5-hour precision
+     as in Figure 5.) The processing consists of analyzing the raw fluxes
+     with the "optimal aperture program" (optapflux) followed by
+     decorrelating the relative fluxes (decorr).
+
+     The fractional precision values for normal stars (round holes in the
+     star plate) are depicted by circles, while the stars capable of
+     transits (rectangular stars crossed with a tiny wire) are depicted
+     by "W"s. The green "x"s depict the calculated fractional shot-noise.
+     The red "x"s denote the instrument noise calculated from the
+     background variations. The solid red line denotes the required limit
+     on the fractional noise exclusive of stellar variability (compare
+     with values on line 5a of Table 1 for 12th, 13th and 14th magnitude
+     stars.)
+
+     A common feature seen in all of the tests was that almost all of the
+     stars that are above the max-allowed line (the Ws) are 9th, 12th,
+     and 14th magnitude stars with transit wires. Whereas those without
+     wires (the Os), which includes all of the 11th and 13th magnitude
+     stars almost always remain below the max-allowed red line. It is
+     apparent that the wires add extra noise and can therefore be
+     justifiably ignored when evaluating the system noise.
+
+Baseline Test
+
+     Prior to introducing external confounding factors, the effects of
+     several common factors were measured in a Baseline test, since these
+     are incorporated in the star plate. These included: dynamic range
+     (m[v]=9-14 stars), crowded field (1540 stars in one local region)
+     and smearing (multiple stars in the same CCD columns). The
+     photometric precision of the Baseline test run at -60°C for 46 hours
+     are presented in Figure 2.
+
+                          [Fig_2_Baseline-60C.gif]
+
+         Figure 2. 1-Hr to 1-Hr Precision Versus Stellar Magnitude.
+     The fractional noise for normal stars (round holes) is depicted by
+   circles. The noise for stars with rectangular holes crossed with a tiny
+    wire are depicted by "W"s. The green "x"s depict the shot-noise. The
+   red "x"s denote instrument noise calculated from background variations.
+     The solid red line denotes the required limit on the noise shown on
+         line 5a of Table 1 for 12th, 13th and 14th magnitude stars.
+
+     An earlier Baseline test was run at -50°C for 55 hours producing
+     almost the same noise, indicating that -50°C was a sufficiently cold
+     temperature (and hence, used for all subsequent testing). Sample
+     transits from the -50°C test are shown in Figure 3. Note that
+     although the transit signals for the fainter 14th magnitude stars
+     were typically 10 Earth-area, the noise was sufficiently small to
+     detect transits of a few Earth area. The Kepler Mission photometry
+     and the projected results are based on and scaled from being able to
+     detect a one-Earth-area transit of a 12th magnitude star at 4 sigma.
+     The center column of transit signals clearly demonstrates this.
+
+                        [Fig_3_Transits_baseline.gif]
+
+               Figure 3 Sample of Transits from Baseline Test.
+    Transits for 9th (left column), 12th (middle column) and 14th (right
+     column) magnitude stars. The vertical scale is relative brightness
+    changes in units of Earth-areas. The blue lines are the 15-min. data.
+     The red lines are the 5 hour averages. The data have been processed
+    using the opaptflux (optimum aperture), decorr and polynorm programs.
+   The location of the scheduled transits are indicated by the error bars.
+    The error bars are the plus and minus one sigma variance for the data
+                          exclusive of the transit.
+
+Rotation-Translation
+
+     During the mission the spacecraft is rotated 90° about the
+     photometer axis every three months to maintain the side of the
+     spacecraft with the solar panels pointed towards the Sun and the
+     opposite side with radiator panels pointed to deep space. In between
+     these rotations the spacecraft attitude remains fixed with the
+     solar-vector slowly rotating through only a single quadrant of the
+     spacecraft. This provides for a very slowly changing and otherwise
+     benign thermal environment. The effect of the rotation on the
+     operations is to move the star field image to different CCDs within
+     the focal plane every three months and then begin a new three-month
+     period with the stars imaged on a new fixed set of pixels. This
+     causes only a small loss of transit data during the time of the
+     rotation and restabilization (about a day). There is no requirement
+     for the trend lines before and after the rotation to match. To
+     demonstrate that the noise and ability to detect transits is not
+     dependent on any one unique set of pixels or location on the CCD,
+     the image was translated from one end of the CCD furthest from the
+     readout registers to the end nearest the readout registers. The
+     resulting performance, which was actually better than the Baseline
+     test. For the remainder of the tests the image was shifted back to
+     the far end of the CCD.
+
+Bright Stars
+
+     For the large star field viewed during the Kepler Mission there are
+     15 stars as bright as 4th to 6th magnitude. To test the impact of
+     these bright stars, a 4th magnitude bright star was introduced into
+     the test image. The bright star only adversely affected a few
+     columns of the CCD and thereby increased the noise slightly for only
+     a few nearby stars. However, one star that was particularly close to
+     the column containing the bright star not only had significantly
+     more noise, but its apparent brightness was about one stellar
+     magnitude brighter. Aside from a few stragglers, the overall noise
+     was still well below the max-allowed as defined in Table 1. The
+     general performance was similar to the Baseline test.
+
+Spacecraft Jitter of 3x Baseline
+
+     Based on previous spacecraft performance data and engineering
+     modeling done by Ball Aerospace & Technologies Corporation for the
+     Kepler Mission, a conservative estimate of the three-sigma pointing
+     stability of ±0.1 arcsec has been derived. We define this to be the
+     baseline jitter. The PZTs in the Testbed were driven at the
+     frequencies and at three times the baseline amplitude prescribed by
+     this attitude control system model. Except for a few stragglers, the
+     overall noise was still well below the max-allowed even at three
+     times baseline spacecraft jitter.
+
+Cosmic Rays
+
+     Cosmic ray hits have nearly always been detrimental to photon
+     detectors. They cause both radiation damage and deposit energy. Over
+     an extended period of time, CCDs produce traps, hot pixels,
+     increased dark current and reduce the charge transfer efficiency
+     (CTE). They also deposit unwanted charge when they interact.
+     Radiation damage is a common problem for all CCD uses, has been a
+     topic of continual study and may be mitigated to some extent by
+     charge injection sometimes called a "fat zero". The fat zero also
+     adds extra shot noise, which is an issue in low-flux situations. For
+     the Kepler Mission, there is no shutter. Hence, the smearing of
+     stars acts like a fat zero and has the beneficial side effect of
+     keeping the traps filled. Long-term radiation damage was not
+     incorporated into this Testbed.
+
+     Charge deposited by cosmic rays is particularly problematic when
+     using a CCD to measure very low fluxes. A cosmic ray may deposit
+     more charge in one instant than is normally expected for a long
+     exposure of a faint object. However, to achieve the low shot-noise
+     level for the Kepler Mission, >3x10^8 electrons per five hour
+     integration are required for even the faintest star (m[v]=14), so
+     that cosmic rays do not appear to be a major source of additional
+     noise.
+
+     To test this, the equivalent of a Baseline test was run in which
+     simulated cosmic rays were injected into the 3-second readouts but
+     not rejected (Figure 1), based on a model for the comic ray flux
+     seen in the LASCO/SOHO instrument. The cosmic-ray flux corresponded
+     to 6 /cm^2/sec with 2500 e^- on average deposited in a pixel. Again,
+     aside from a few stragglers, the overall noise for this test was
+     still well below the max-allowed.
+
+     Another cosmic-ray test was done in which a simple threshold
+     algorithm was used to reject all 3-sec. integrations for any star
+     that exceeded a threshold by more than a preset amount (e.g. 4x the
+     sigma of the threshold value) and the flux for each star was
+     corrected for the deleted data. The results were better than the
+     case without rejecting the cosmic rays. However, when later tests
+     were performed, in which image motion was introduced, this simple
+     algorithm caused far too many false detections. The good results
+     without cosmic ray rejection demonstrates that it is probably not
+     necessary to delete the cosmic ray events.
+
+Long-Duration Tests
+
+     After performing the various tests to identify any adverse effects
+     of any individual source of noise, several long-duration tests were
+     performed. First a 14-day Baseline test was performed. Then two
+     tests were run incorporating all of the confounding factors. That
+     is, in addition to those incorporated in the Baseline test, the
+     tests included a bright star at 4th magnitude, spacecraft jitter and
+     cosmic rays. In these tests the cosmic rays were injected but not
+     removed.
+
+     For the 14-day Baseline test, the overall noise level is somewhat
+     higher than in any other test with several stars deviating above the
+     max-allowed line. However, these few stragglers did not raise the
+     ensemble average above the max-allowed line.
+
+     A ten-day test was conducted with the all the confounding noise
+     factors: 4th magnitude bright star, spacecraft jitter at 1/3 the
+     baseline value (best estimate of performance) and cosmic rays added
+     but not deleted. The overall noise level is somewhat higher than in
+     any other test with several stars deviating above the max-allowed
+     line. However, these few stragglers did not raise the ensemble
+     average above the max-allowed line. Sample transits from this test
+     are shown in Figure 4.
+
+                         [Fig_4_Long_Dur_trans.gif]
+   Figure 4 Transits from Long Duration Test (10 Days) with a Bright Star,
+     1/3 Spacecraft Jitter and Cosmic Rays. Star 5 (upper left) has a 12
+     hour transit. All others are 5 hour transits. The locations of the
+     scheduled transits are indicated by the error bars. The green error
+    bars are the plus and minus one sigma variance for the data exclusive
+                               of the transit.
+
+     The final long duration test was a six-day test with the 4th
+     magnitude star, spacecraft jitter at one-times baseline and cosmic
+     rays added but not deleted. The precision versus stellar magnitude
+     plot, Figure 5, shows that the performance was generally within the
+     required limits. The average measured noise was well below the
+     required level at all star magnitudes. This test demonstrates the
+     ability to achieve the required precision photometry in a
+     realistically simulated space environment.
+
+                        [Fig_5_6dayw_confounding.gif]
+
+   Figure 5 5-Hour to 5-Hour Precision for the 6-Day Test with 1x Baseline
+     Spacecraft Motion, Cosmic Rays and a 4th Magnitude Star. All of the
+    usual disturbances were also present throughout this 6-day test. The
+       precision was within the requirement for all 9th, 13th and 14th
+    magnitude stars (Table 1 line 5). The average precision for 11th and
+    12th magnitude stars is very close to the required limit. Note that W
+      stars were inherently more noisy due to the presence of the wire.
+
+Testing Summary
+
+     In all of the tests performed, the noise level was at or below the
+     maximum allowed, with the exception of those stars that had transit
+     wires. A tabular summary of the average fractional measured noise in
+     units of 10^-5 is given in Table 3 for 5-hour binning. The max
+     allowed noise is from Table 1 line 5, except that the required value
+     for stars brighter than 12th magnitude is taken to be no better than
+     that for 12th. The 13th mw and 14th mw are those stars that are in
+     the crowded region representative of the star field density in the
+     Milky Way where the Kepler Mission observes.
+
+                      Table 3 Summary of Test Results,
+         Average Measured Total (Shot and Instrument) Noise (x10^-5)
+       Note that all measurements are below the required noise limit.
+
+   Test
+
+                                                         Stellar magnitude
+   9 11 12 13 14 13 mw 14 mw
+   Required noise limit (Table 1, line 5) 1.73 1.73 1.73 3.35 6.93 3.35
+   6.93
+   Baseline test (-50 C) 0.48 0.80 1.52 2.96 3.76 3.28 5.36
+   Baseline test (-60 C) 0.40 0.72 1.28 1.76 3.12 1.92 3.04
+   Cosmic rays (added, not deleted) 0.72 1.44 1.60 2.08 3.84 2.48 4.40
+   Bright star test 0.32 0.72 1.68 1.36 4.16 1.84 3.60
+   Motion at 3x Baseline 0.48 1.20 1.12 3.04 4.88 3.36 6.48
+   Rotation/translation test 0.56 1.04 1.04 1.52 2.72 2.08 2.96
+   Long duration Baseline test (14 days) 0.80 1.20 1.60 2.40 6.40 3.20
+   5.12
+   Long duration + 1/3x motion, CR, & Brt. star 0.56 1.20 1.44 2.56 6.16
+   3.20 4.80
+   6 day Baseline motion + C.R. and Bright star 0.88 0.88 1.60 1.36 5.44
+   1.84 3.12
+
+Conclusions
+
+     The Kepler Mission is designed to detect hundreds of Earth-size
+     planets by looking for transits. To demonstrate the technology to be
+     utilized, a Testbed Facility was built and operated with a
+     flight-type CCD. The facility simulates all of the features of the
+     sky and the spacecraft/photometer that are important for the success
+     of the mission. Optimum operating conditions for the PSF,
+     photometric aperture size versus stellar brightness and maximum
+     operating temperature were measured. Proto-flight software necessary
+     for processing the data was used throughout. The required
+     photometric precision was demonstrated while operating without a
+     shutter during readout, having some saturated pixels in the
+     brightest stars, working in a crowded field with a star density the
+     same as planned for the mission, inclusion of spacecraft jitter and
+     over a dynamic range of five stellar magnitudes. Additional tests of
+     comic-ray hits and field rotation also did not have detrimental
+     effects. Transits were injected and detected at the required
+     statistical significance under all operating conditions during all
+     tests.
+
+     In long duration tests the Camera was simultaneously subjected to
+     normal tracking errors, uncorrected cosmic ray hits, a 4th magnitude
+     star in the CCD field and all of the other confounding factors
+     expected under realistic operating conditions. These tests
+     demonstrated that SNRs of 4.6 are achievable for Earth-size transits
+     of 9th to 12th magnitude stars without stellar variability,
+     permitting SNRs of 4.0 when stellar variability is included. For
+     13th and 14th magnitude stars the SNRs (including variability) are
+     2.3 and 1.1, respectively, due to the higher level of shot noise.
+
+     While the achievement of 10^-5 precision had already been
+     demonstrated in earlier tests, the results presented here provide
+     ample evidence for the ability of existing commercially available
+     CCDs in an end-to-end test with realistic operating conditions to
+     consistently achieve a fractional precision of better than 1x10^-5
+     and to consistently detect simulated Earth-size transits at the
+     require SNR. The very successful test results should greatly reduce
+     any perceived risk in the Kepler approach to planet detection.
+     _______________________________________________________________
+
+   [finger.gif] Go to The Next Topic
+
+                                [bumper.gif]
+                     Return to Kepler Mission Home Page
+
+
+   Curator: David Koch, dkoch@mail.arc.nasa.gov [mail.box.gif]

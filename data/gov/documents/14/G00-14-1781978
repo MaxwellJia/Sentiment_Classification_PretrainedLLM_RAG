@@ -1,0 +1,84 @@
+http://www.t4.lanl.gov/dfvj/quantumcomp.html
+
+   T-4 Home
+
+                               Quantum Computing
+     __________________________________________________________________
+
+   A quantum computer is a device in which data can be stored in a network
+   of quantum mechanical two-level systems, such as spin-1/2 particles or
+   two level atoms. The quantum mechanical nature of such systems allows
+   the possibility of a powerful new feature to be incorporated into data
+   processing, namely the capability of performing logical operations upon
+   quantum mechanical superpositions of numbers. In a conventional digital
+   computer each data register is, throughout any computation, always in a
+   definite state "1" or "0"; however in a quantum computer each data
+   register (or "qubit") will be in an undetermined quantum superposition
+   of two states |1> and |0>. Calculations would then be performed by
+   external interactions with the various two-level systems that
+   constitute the device, in such a way that logic gate operations
+   involving two or more different qubits can be realized. The final
+   result would be obtained by measurement of the quantum mechanical
+   probability amplitudes at the conclusion of the calculation. The
+   "killer application" for quantum computers is a quantum algorithm
+   called Shor's algorithm after its inventor, Peter Shor of AT&T Bell
+   Labs. This algorithm allows the determination of the prime factors of
+   large composite numbers efficiently, which has tremendous potential
+   applications. So far, the most promising hardware proposed for
+   implementation of such a device seems to be the cold-trapped ion system
+   devised by Ignacio Cirac and Peter Zoller of the University of
+   Innsbruck, Austria.
+
+   Fig.1
+
+   Figure 1.
+
+   Their design, which is shown schematically in figure 1, consists of a
+   string of ions stored in a linear radio-frequency trap and cooled
+   sufficiently that their motion, which is coupled together due to the
+   Coulomb force between them, is quantum mechanical in nature. Each qubit
+   would be formed by two internal levels of each ion, a laser being used
+   to perform manipulations of the quantum mechanical probability
+   amplitudes of the states; conditional two-qubit logic gates being
+   realized with aid of the excitation or de-excitation of quanta of the
+   ions' collective motion. At Los Alamos we are building a prototype
+   quantum computer based on this scheme. For various reasons, singly
+   ionized Calcium seems to be the best choice of ion. A simplified energy
+   level diagram is shown in figure 2, with transition wavelengths and
+   decay times. The engineering problems associated with making such a
+   device work are formidable. Firstly an ion trap had to be designed and
+   built; in January of 1997, Calcium ions were confined in the ion trap
+   that has been built by the quantum information group here at Los
+   Alamos. Next the ions have to be cooled down to their ground state; we
+   are currently performing numerical simulations of the laser cooling
+   procedure to establish the optimum laser powers and wavelengths to do
+   this job. Once the ions are cooled, the computation will be performed
+   by a series of laser pulses directed at one or other of the ions; each
+   pulse must transfer population from one level of the ion to a different
+   level, without exciting any third level, or affecting any of the
+   adjacent ions. Sometimes the laser will be used to excite a quantum of
+   the ions' oscillations, requiring the that the laser be in a standing
+   wave. Chosing the best combination of lasers and energy level of the
+   ion, and then inventing ways in which these operations can be performed
+   reliably with the available technology is a complicated problem of
+   atomic and optical physics. Of course, it will be impossible to perform
+   all of the operations required to execute a quantum algorithm
+   completely reliably, and so there is also a lot work being done here on
+   the theory of fault tolerant quantum computation.
+
+   Fig.2
+
+   Figure 2.
+     __________________________________________________________________
+
+   Address scientific comments and questions to
+
+
+    Daniel James <dfvj@t4.lanl.gov>
+     __________________________________________________________________
+
+   Return to T-4 home page
+     __________________________________________________________________
+
+
+    T-4 Webmaster <webmaster@t4.lanl.gov>

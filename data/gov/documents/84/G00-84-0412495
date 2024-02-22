@@ -1,0 +1,632 @@
+http://tccr.oar.noaa.gov/Meetings/10-03-96minutes.html
+
+                 Technical Committee on Computing Resources
+                             5th Annual Meeting
+                               October 3, 1996
+                                 Boulder, CO
+
+
+   Where: Boulder, CO Room 274 in RL3
+
+   When: Thursday Oct 3, 1996 Host: FSL, Joan Brundage
+
+   Suggested Hotel: Regal Harvest House
+
+   Present
+   Kevin Kelleher (NSSL - chair)
+       Rich Beeler (ETL - vice chair),
+       Gary Spalding (GLERL)
+       Stan Wilkison (ARL)
+       Walt Harrop (AL)
+       Don Mock (CDC)
+       Joan Brundage (FSL)
+       John Calder (ERL/OD),
+       Paul Lu (PMEL)
+       Jerry Momplaisir (AOML)
+       Larry Lewis (GFDL)
+       Paul Quicker (ERL/OD),
+       Joyce Harris (CMDL)
+       Dave Lewis (SEC)
+
+   Host's Comments
+   Joan Brundage greeted everyone and introduced the  facilities and
+       discussed eating arrangements for this evening.
+
+   Introduction of Visitors
+   John Fenton from GLERL
+       Bob Kidwell,
+       Sandy Wine,
+       Amy Holman and Cayhill Converse
+
+   Approval of Agenda
+
+   08:00 - 08:15        Coffee & Goodies
+   08:15 - 08:20        Welcome
+   08:20 - 09:20        CMAC meeting preparation (part 1)
+   08:20 - 08:30          Video conferencing desktop-to-desktop demo
+   status
+   08:30 - 08:45          FY97 Site requirements ($100K level)
+   08:45 - 09:20          Internetworking priorities (possibly using
+   NIST/ERL funds?
+   09:20 - 09:30        Break (10 minutes) ** Begin Video Conference **
+   09:30 - 10:00        Year 2000 problem (is it a problem for ERL?)
+   10:00 - 11:15        Updates (session via video conference)
+   10:00 - 10:10          NARB (Amy Holman)
+   11:10 - 11:20          ESDIM (Don Mock)
+   11:20 - 11:00          IRM (Bob Kidwell via video conference)
+   11:00 - 11:15          HPCC (Britt Bassett)
+   11:15 - 11:25        Break (10 minutes)
+   11:25 - 12:15        CMAC meeting preparation (part 2)
+                   ERL-wide priorities for NIST/ERL funds (need to develop
+   options)
+   12:15 - 01:15        Lunch (On your own)
+   01:15 - 03:00        New Issues
+   01:20 - 01:40          ESDIM Central Region Demo Project (Don Mock)
+   01:40 - 02:00          Firewalls - overview (Britt Bassett)
+   02:00 - 02:20          Java (Paul Lu)
+   02:20 - 02:30          Mail*Hub progress (ALL/ Britt Bassett)
+   02:30 - 02:45          HQ network status (Paul Quicker)
+   02:45 - 03:00        Break (15 minutes)
+
+   03:00 - 04:30        TCCR Administrative
+   03:00 - 03:30          TCCR homepage: status, what else is needed?
+   (Rich Beeler)
+   03:30 - 04:15          Election of new officers (KK)
+   04:15 - 04:30          Review of subcommittees (goals, members, status)
+   04:30 - 04:45          Next meeting
+   04:45 - 05:30        FSL Tour
+   06:30                 Organized Dinner (Boulder Cork)
+
+   Site Reports
+       AL (Walt Harrop)
+       ARL (Stan Wilkison)
+       AOML (Jerry Momplaisir)
+       CDC (Don Mock)
+       CMDL (Joyce Harris)
+       ERL Headquarters (Paul Quicker)
+       ETL (Rich Beeler)
+       FSL (Joan Brundage)
+       GFDL (Larry Lewis)
+       GLERL (Gary Spalding)
+       NSSL (Kevin Kelleher)
+       PMEL (Paul Lu)
+       SEC (Dave Lewis)
+
+   CMAC Meeting Preparation
+   Video conferencing desktop-to-desktop demo status
+       Kevin gave an update on the progress of the video  conferencing
+       project. The proposal has changed to include a high-end PC capable
+       of  supporting this function. The following features are proposed:
+
+   Pentium PC
+       Network Card
+       Sound Card
+       CU/seeMe software (White Pine Supported)
+       Talkshow Whiteboard software
+       Microphone
+       Connectix Camera
+       Cost ~ $K per unit x 14 units = $54K
+       NSL would pre-configure units
+       Cost is ~ $4.5K x 15 =
+       TCCR approved.
+
+   FY97 Site requirements ($100K level)
+
+   AL
+   Result of FY96 Allocation -- 40K
+
+   In 1996 we put $20K together with other internal funding  and external
+       funding from CU to purchase a new CPU server for the modelers in
+       the lab.  This consists of an UltraSparc 3000 with 4 processors
+       which ties via a 400MHZ connection  to the SparcCenter 2000 which
+       it uses as an I/O handler. The other $20K went into a  100BaseT
+       Switch to tie these to the SUN, SGI, and Alpha systems that utilize
+       them.
+
+   FY97 Proposal (100K)
+   For 1997 we would anticipate using the entire $100K to  increase the
+       network bandwidth so that all systems that can utilize a 100MHz
+       network will  have one. We find it impossible to backup current
+       systems, and to succeed in operating our  distributed data handling
+       systems at 10MHz.
+
+   AOML
+   Result of FY96 Allocation -- 40K
+
+   Replaced 4 year old workgroup printers with 12 HP printers  ( 7 - 4MV
+       and 5 - 4M Plus). These printers support Postscript level 2 and
+       provides 600 dpi  output (21k).
+       Replaced the PC file server (Pathworks) on the VAX with a  Pentium
+       and
+       a Alpha PC running Windows NT (13K).
+       Purchased an Apple color Laser printer. (7K)
+
+   FY97 Proposal (100K)
+   DECstation Trade-ins (35K)
+
+   We purchased 16 DECstations in 1990, which use 25MHz MIPS  processors,
+       and are now obsolete. DEC no longer plans any software upgrades for
+       them,  their Unix requires an Alpha processor. One limitation is
+       that the DECstations don't  support shared libraries (needed for
+       some of our IDL procedures). We'd like to trade them  in for newer
+       machines.
+
+   Fiber (70K)
+   Our current network cabling system is based on thinwire  (10Base2)
+       Ethernet. We have many problems with bad connectors, users
+       disconnecting a chain  in the middle, etc. AOML has placed and a
+       P.O. was awarded for cables, connectors and  racks to replace the
+       infrastructure from thinwire to Fiber (100BaseFX). Electronics is
+       now  needed for on the fiber infrastructure -- repeater hubs, Fiber
+       switch, and network cards  for servers and high power workstations.
+
+   ARL
+   Result of FY96 ($40K)
+
+   I do not have access to information on how last years funds  were spent
+       at this time. I am trying to get that information from ARL HQ
+       currently.  Allocation -- 40K
+
+
+   FY97 Proposal (100K)
+   1. PC refreshment - various division PC upgrades $25K
+       2. New Workstations for SORD and ATDD (both need more  processing
+       power) $50K
+       3. NAWIPS workstation (meteorological data ingest, display  system
+       for FRD $25K
+
+   CDC
+   CDC Result of FY96 Allocation ($40K):
+
+   - CDC used the $40K from the CSCS funds to purchase an UltraSPARC 2
+       with  dual 200-Mhz processors and 512-MB of physical memory. At
+       272-MFLOPS, the aggregate  performance of this machine should
+       exceed the performance of the eight processor,  220-MFLOPS,
+       SPARCcenter 2000's. CDC plans to install LSF to help users make
+       more efficient  use of this compute server for batch jobs.
+
+
+   FY97 Proposal ($100K):
+   The $100K would be used to supplement the existing on-line storage
+       capacity with a tape jukebox in the 2-4 terabyte range. Although
+       CDC is evaluating an 8mm  Mammoth, it seems more likely that this
+       jukebox would be based on the new DLT 7000 tape  technology, which
+       provides 35-GB per tape, uncompressed, and a transfer rate around
+       2.5-MBps, uncompressed.
+
+   CMDL
+   How we spent FY96 $40K:
+       - Tektronix Phaser 550 color laser printer - Video conference
+       Pentium with  software
+       - SPSS maintenance
+       - Fast SCSI-2 card for CMDL3 Server
+       - Hyper Sparc 150 MHz CPU with 512 kByte cache - 4 x 32 MByte SIMMS
+       memory
+       - UPS
+       - miscellaneous supplies (printer cartridges, paper, etc)
+       - .5 salary for systems administrator
+       FY 97 Proposal ($100K)
+
+   1. Ethernet switch/hardware for network $20K
+       2. Upgrade for FTP and Web server $15K
+       3. Upgrade Carbon Cycle Group's server $15K
+       4. Digital linear tape drive for backups $ 6K
+       5. Additional memory for CCG1 workstation $ 2K
+       6. 4Gb disk drives for CCG1 workstation $ 2K
+       7. Upgrade HP-UX operating system $ 2K
+       8. Upgrade observatory computers and peripherals $15K
+       9. Two x-terms $ 6K
+       10. Recordable CD drive $ 2K
+       11. Supplies $ 5K
+       12. Hardware/software maintenance $10K
+       TOTAL $100K
+
+
+   ETL
+   ETL Result of FY96 Allocations ($40K)
+
+   Like the rest of the ERL labs ETL received $40K of TCCR funds for FY
+       96. Rather than  spend this money we are saving it to combine with
+       the $100K we plan to receive early next  fiscal year. Our original
+       intent was to invest in a larger 64-bit computer system and
+       improve the ETL network. However, this wasn't possible with $40K.
+       The $40K we received  wasn't enough to purchase the compute server
+       and we felt compelled to await the new  building contract award
+       before making an investment in a high-speed network.
+
+   FY97 Proposal ($100K):
+   Several important events have occurred recently. 1) The new
+       NOAA/Boulder building  contract has been awarded with ground
+       breaking scheduled for later in 1996. This settles  the issue of
+       whether ETL will be moving (most likely within two years) and gives
+       us the  opportunity to implement a partial high-speed network. We
+       anticipate using ~ $30K of our  allocation to implement a
+       high-speed network that will be transferable to the new NOAA
+       building. This test bed will consist of selected NT servers, Unix
+       workstations and  printers and will be based on switched
+       technology.
+       Because we have experienced a lack of commitment to technology
+       refreshment of RISC  systems and a reluctance to pay for
+       hardware/software maintenance we will be using ~5K to  test the
+       feasability of using PC/Intel Linux systems as alternatives to Unix
+       Workstations  in the future. The test will include performance,
+       software availability and ease-of-use.
+       The remaining $110K will be used to purchase/upgrade one of our
+       compute servers to a  larger 64-bit system to meet the needs of ETL
+       scientific researchers who require high  performance computing and
+       I/O.
+
+   FSL
+   Result of FY96 allocation:
+
+   The FY96 allocation was targeted at upgrading our UniTreesoftware
+       license from 1.4TB to  10TB. The cost of this was ~$80K. FSL went
+       ahead and purchased this early in the year  using our equipment
+       fund. When the $40K arrived late in the year it was put into the
+       equipment fund to partially replace the money spent earlier.
+
+   FY97 Proposal
+   We plan to use this allocation to purchase a Central Facility Media
+       Center. The Media  Center is inteded to provide a reliable,
+       consistance method for backing up larger volumes  of data (mostly
+       software) residing on FSL servers and workstations. It will also be
+       used  to translate Mass Store data into a format usable for FSL
+       staff.
+       Possible configuration:
+
+   Sun Enterprise 4000 Departmental Server
+       FDDI interface
+       DLT tape stacker
+       8mm tape stacker
+       CD rom
+       ~12GB disk
+       Legato software
+
+
+   The estimated cost is ~150K. FSL will fill in the remaining amount from
+   its equipment  fund.
+
+   GFDL
+   Use of FY 1996 NIST/ERL Funds
+
+   Last year GFDL proposed to use FY 1996 NIST/ERL funds to upgrade the
+       network as  described below. It was felt that such an upgrade would
+       remedy the poor network  performance that was being experienced,
+       especially during file transfers. Upon further  testing and
+       monitoring of the network, it was determined that the poor
+       performance was  caused by old fiber-optic repeaters that predated
+       the Ethernet standard. These repeaters  were replaced with new
+       units that significantly improved network performance at a much
+       lower cost than an upgrade.
+       In addition to the new fiber-optic repeaters, FY 1996 NIST/ERL
+       funds were used to  purchase new networked printers and two Silicon
+       Graphics Indigo2 workstations.
+
+   GFDL Proposal for NIST/ERL Funds (FY 1997)
+   As researchers scale their models up to the processing capabilities of
+       the new Cray  T90, massive amounts of data are expected to be
+       regularly transferred from the  supercomputer to desktop
+       workstations. The internal GFDL 10 Mbps Ethernet network will  need
+       to be upgraded to handle the increased network traffic.
+       The upgrade would take place in two phases:
+
+   Phase 1 (FY 1997):
+       Install a 100 Mbps network backbone that incorporates 10/100 Mbps
+       Ethernet switches;  install Category 5 wiring from the switches to
+       each workstation. This will result in each  workstation having
+       dedicated, rather than shared, 10 Mbps bandwidth to the network.
+       Phase 2 (FY 1998 and beyond):
+       Install 100 Mbps network interface cards in as many workstations as
+       possible. No  upgrades to the 10/100 Mbps Ethernet switches should
+       be necessary. The remaining  workstations for which 100 Mbps cards
+       are not available would continue to operate with  dedicated 10 Mbps
+       bandwidth. These older workstations will eventually be replaced
+       with  units capable of 100 Mbps network connections.
+
+   GLERL
+   Use of FY 1996 NIST/ERL Funds
+
+
+       Gary Spalding asked me to submit the following proposal for FY97.
+       From the FY96 fund of  $40K we spent $26K on our T1 Internet
+       connection and banked the remaining $14K for FY97.
+
+   Proposal for NIST/ERL Funds (FY 1997)
+   So what follows is based on a $114K total. $79K upgrade SMP system with
+       4 CPUs and  additional memory. $35K purchase a more powerful single
+       CPU workstation to support the  CHARMS project.
+
+   NSSL
+   NSSL Result of FY96 Allocation ($40K):
+
+   - Increased capacity of new RAID subsystem, added 3 new disks ($7.5K).
+       - Upgraded general-use data visualization SGI computer. Purchased
+       new CPU and high-end  graphics card ($13.4K).
+       - Purchased an automated, dual-drive, DLT tape backup unit for RAID
+       ($22.7K).
+       Total spent: $43.6K
+
+   FY97 Proposal ($100K):
+   Upgrade NSSL's only data server. Current processor is over 4 years old
+       and  has only 1/20th the compute rating of some of the newer chips.
+       Unfortunately, this IBM  model does not have a convenient upgrade
+       path, so will require a "forklift"  upgrade replacing cabinet, CPU,
+       and internal disk drives. Peripheral disk and tape drives  will
+       remain ($100K).
+
+   PMEL
+   FY96 Request:
+
+   Upgrade local computing and information infrastructure Result:
+       Purchased  additional CPU for the compute server DEC AXP 2100 4/275
+       system, on-line 9 GB disks for  moderlers, 20 GB DLT tape drive for
+       backup, and a UltraSPARC 1/200E (192MB memory, 11 GB  disk storage)
+       desktop workstation for a modeler to perform analysis of modeling
+       data sets  ($44.4K)
+
+   FY97 Proposal:
+   1) Upgrade local modeling capabilities:
+
+   The current compute server is a DEC AXP 2100 Model 4/275 with 3 CPUs,
+       512  MB memory, and 75 GB disk. Plan an upgrade to include 4 CPUs
+       with the newer generation  Alpha CPU running at 300 MHz (63%
+       floating-point performance improvement over current  CPU). The
+       upgrade will also add additional PCI slots for greater expansion
+       potential.  Cost: $61K
+
+   2) NFS file-server:
+   An Ultra Enterprise 1 Model 170 with 60-80 GB disk with FDDI
+       attachment  will provide lab-wide file-storage. The server will
+       also host a recently purchased 7xDLT  tape stacker (280 GB capacity
+       with compression) and network backup software to serve as a
+       network backup server. Cost: $35K
+
+   3) Network printer:
+   Sun SparcPrinter-E w/32 MB, with support for common Sun fonts to
+       1200x1200  DPI, and additional tray. Cost: $4K
+
+   SEC
+   FY96 Request:
+
+   In FY96 SEC channeled most of its computer funding resources, including
+       the TCCR $40k  Allocation, into the "Off-the- MV" project, an
+       effort to eliminate the  dependency of SEC's primary real-time data
+       analysis and display system on an outdated MV  10000 minicomputer
+       system.
+
+   FY97 Proposal:
+   In FY97 SEC will continue to modernize its operational and research
+       systems, improving  performance, supportability, reliability, and
+       adding needed capabilities. Added  functionality will include image
+       processing, archiving and access capabilities, the  ability to run
+       operational real-time models and enhanced data displays.
+       To accomplish these goals SEC will use the TCCR Allocation and
+       other funds towards:
+
+     * High speed network interface cards for critical data servers
+     * Spare switching hub
+     * Network test equipment
+     * Upgrade data display hardware and software
+     * UPS systems for new display hardware
+     * Second/backup DMS server
+     * Antivirus software for added system security
+     * A mirror Outside User System (OUS)
+     * Upgrade all PC users to W95/NT
+     * Purchase public PC for use by visitor and lab personnel
+     * Replace older Apollo Domain systems with UNIX platforms and PCs
+     * A UNIX work station capable of supporting large scale real-time
+       model applications
+     * Convert SEC's existing magnetic tape archives to CD-ROM
+     * Add capacity and capability to our network backup system
+
+   ERL-wide priorities for NIST/ERL funds (need to develop options)
+
+   Review of the Internetworking Plan for FY 97.
+       We discussed the revisions to the ERL Internetworking Plan  for FY
+       97. What ERL-wide proposals should we submit for this fiscal year.
+       There is  approximately $555K available.
+
+   *Video Conferncing testbed
+       56K pc-to-pc test
+       *Supplement Internet connectivity (as HPCC backs out of
+       maintenance role)
+
+   $26K GLERL (non-HPPC request)
+       $15K increase to all other labs and HQ
+       $191K total
+
+   *Internet services across ERL (Administrative info-  supplement ESDIM
+   proposal)
+
+   *Intranet services (assist in development at each lab -  Paul Quicker's
+   email?)
+
+   Request for Labs not benefitting from HPCC funding --
+   NSSL - none
+       GLERL - $26K for T1 charges.
+       ARL / ASMD requests upgrades for its current DEC 2100  server in
+       two parts. One is $30K for additional disk capacity for the server.
+       Second is  $40K for additional CPU SRRB requests $25K funding for a
+       RAID disk system to protect the  integrity of its data
+       dissemination server.
+       ARL requests ~$30K for desktop videoconferencing for each  of its
+       divisions, allowing them to participate in ARL wide meetings
+       (division chiefs,  scientific staff cooperatively working on a
+       project, etc.).
+
+   $200K has been allocated to the Alaska Cray deal. This  investment has
+   bought us $1M in Artic Research funding from Alaska. The cost to the
+   labs  is $200 per SU. John Calder will check with the ERL director to
+   see if a call for  proposals for using this fund is going to occur this
+   year. Labs should call for proposals  for this computer time.
+
+   Year 2000 problem (is it a problem for ERL?)
+   Kevin discussed the problem of the date change at the turn of the
+       century.  The question we need to answer is: Is it a problem for
+       ERL? NOAA met this summer and  determined that the cost of this
+       problem for us would be $184M. Management at all levels  are
+       requiring information of this problem. OAR needs to submit it's
+       needs to NOAA on  October 4, 1996 and to OMB in January 1997. There
+       will be no additional money appropriated  for correcting problems,
+       so we need to take it out of current funding.
+       Action Item: A suggestion was made that each lab  set up testbed
+       systems with their clocks set to years past 2000 to determine the
+       real  issues. This inventory needs to include PCs, Macs, Unix
+       system clocks, legacy software  systems and field data collection
+       systems. The lab's agreed that we will work with NOAA  IRM to
+       purchase year 2000 compliant systems in the future.
+       Dave Lewis volunteered as of date/time algorithms with test
+       software. We  will be making this software available through the
+       TCCR web page.
+
+   Updates (We were joined by Bob Kidwell, Sandy Wine, Amy Holman and
+   Cayhill Converse.)
+   NARB (Amy Holman)
+
+   The last NARB meeting was in July 31, 1996 and the  Washington, D.C.
+       network IP address issue was discussed. This issue is being dealt
+       with  locally. The Year 2000 issue was also presented. Amy has put
+       up a NARB page on the OAR  server. The next meeting will be held on
+       October 31, 1996; she briefly presented the  proposed agenda.
+       Regional network councils and there relationship to the NARB will
+       be  discussed.
+
+   ESDIM (Don Mock)
+   Don Mock is the OAR representative to the ESDIM program.  Funding has
+       remained level for the past 3 years; FY 97 funding levels are not
+       known at  this time. A major change which occured this year is a
+       shift toward "ESDIM Directed  Projects" which are more closely
+       managed. Requirements for granting proposals include  ties like
+       FGDC compliant metadata and NOAAserver connections. Hot topics are
+       data fusion  and JAVA projects. The ESDIM team is also moving
+       toward more involvement in data and web  policy and management.
+
+   IRM (Bob Kidwell via video conference)
+   Bob discussed the OAR liaison to the NOAA IRM Office. See  memo dated
+       August 9, 1996.
+       The IRM has established a Web page containing useful  information.
+       The URL is at: http://www.rdc.noaa.gov/~irm. Sandy Wine requests
+       information  for improvements to the page.
+       Information Technology Reform Act became active in August.  This
+       law repealed the Brooks Act and required DOC to appoint an IRM.
+       This law implements  major changes by transferring procurement
+       authority to individual Departments (i.e. DOC).  All DOC policies
+       and procedures remain in effect. There are efforts at the DOC level
+       to  revise current policies and procedures including the IRM
+       handbook, Capitol Planning and  Investments, Acquisition Process
+       and establishing a Chief Information Officer (CIO).
+       Bob reviewed the procurement vehicles available to us and  the
+       amount of money spent on each contract. $10M of the $20M on the
+       SCIWOC II contract has  been spent. SEWP II has been awarded, but
+       specifics are forth coming. The NIH virtual  store is available for
+       our use for personal computer equipment. Bob's group is working on
+       a NOAA virtual store to purchase personal computer equipment.
+       Bob discussed site licenses. Paul Quicker is the OAR
+       representative to the NOAA committee. They are currently working on
+       a Office Automation  Suite site license. They have met with
+       Microsoft and Corel and both are interested in  establishing a site
+       license. Cost determination will be made upon a survey that is
+       currently being made. Only one suite will be chosen.
+
+   HPCC (Britt Bassett)
+    Britt handed out a set of guidelines for HPCC proposals for FY 97.
+       The regional managers are working with the NOAA NIC to create
+       regional NOAA NICs. The  purpose is to coordinate and implement new
+       features.
+
+   New Issues
+       ESDIM Central Region Demo Project (Don Mock)
+
+   This proposal is in the competition with other regional  proposals and
+       is intended as a intranet prototype. As a new proposal it is
+       competing with  established projects; the outcome is unsure at this
+       time.
+
+   Firewalls - overview (Britt Bassett)
+   Britt gave an overview of firewall issues focused on  corporate
+       security policy, physical security, network security and dial-up
+       security. A URL  with a list of certified firewall is:
+       http://www.ncsa.com/fpfs/fwindex.html
+       The security policy is the key to planning and them  implementing
+       network security. Consider:
+
+    1.
+    2. Know the technology.
+    3. Know the organizations' network needs.
+    4. Mediate between what is possible, what is needed, and  what is
+       requested.
+    5. Don't forget remote users and staff on travel.
+    6. The scientific/research environment has different needs  than a
+       business.
+    7. Once implemented, requires continuing changes.
+    8. Don't allow the typical overreaction to an incident to  occur.
+
+   Kevin discussed a network security attack that recently  occurred on
+   the NSSL network.
+
+   Java (Paul Lu)
+   Paul Lu gave an overview JAVA.
+       There was a Java workshop in Seattle in Jun 1996. Regions  are
+       working on implementing Java processes that can be placed into a
+       common library.  Several ERL labs are implementing Java programming
+       in their web pages. Paul showed  examples of Java applets for the
+       TAO system that have been implemented on the PMEL web  page.
+
+   NOAA Mail*Hub progress (Britt Bassett / All)
+   We discussed the Mail*Hub project and its purpose. This hub  is
+       currently running and is through its testing phase. It works quite
+       well for  attachments.
+       Names are inconsistent. Lookup of a person's name is  required
+       because of this consistancy problem. There is currently no common
+       method of input  to the system of user names. PMEL and AL currently
+       input their names on a daily basis.  Britt Bassett inputs the
+       remainder of the Boulder names from his CSO database.
+
+   ERL HQ network status (Paul Quicker)
+   John Parker has left ERL and there is no longer systems  support person
+       in the organization. This raises the issue of whether he should be
+       replaced  and what the new position will be.
+       A systems analyst was contracted to reccommend how/if  OAR/ERL
+       would be able to move away from Banyan. The report is due within a
+       month and  should bring change.
+
+   TCCR Administrative
+
+       TCCR homepage: status, what else is needed? (Rich  Beeler)
+
+   We discussed and displayed the TCCR home page. Paul Quicker  is the
+       keeper of the page. Access is currently restricted by domain name
+       to TCCR members.  The URL is http://tccr.erl.noaa.gov/TCCR/. The
+       URL for the TCCR minutes and  membership/meeting information is
+       currently on an ETL system which is linked to Paul's  page.
+       We decided to move the minutes, membership and meeting  information
+       to Paul's page to consoladate the information and create an
+       archive.
+
+   Election of new officers (Kevin Kelleher)
+   We held elections. The chair nominations were restricted to  Boulder
+       Lab members. The vice chair nominations were restricted to
+       non-Boulder Lab  members. This is in accordance with our original
+       decision to alternate the chair position  between Boulder and
+       non-Boulder Labs. We used secret ballots to elect officers. Larry
+       Lewis was absent during voting.
+       Chair nominations: Rich Beeler. Approved unanimus.
+       Vice Chair nominations: Stan Wilkinson, Kevin  Kelleher. Their was
+       a tie vote and Kevin withdrew his nomination. Stan was approved
+       unanimus.
+
+   Review of subcommittees (goals, members, status)
+   We currently have a two Sub-committees:
+
+   Networking Sub-committee - Paul Lu (chair), Kevin Kelleher,  Jerrold
+       Momplais, Britt Bassett (ex-officio), Russ Richards (ex-officio).
+       Web Advisory Sub-committee (WAS) - Don Mock (chair), Rich  Beeler,
+       Stan Wilkinson, Walt Harrop and Paul Quicker.
+
+   Paul Quicker and Amy Holman are working on the NOAA Web  Committee to
+   create policy. The WAS will review their work when it comes up for
+   review.
+
+   Next meeting
+   The next annual meeting will be held in Seattle in ~ 1  year. We
+       decided on a early September meeting.

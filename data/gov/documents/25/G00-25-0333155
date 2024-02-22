@@ -1,0 +1,155 @@
+http://www-itg.lbl.gov/grid/projects/GPDK/
+
+                       The Grid Portal Development Kit
+
+     * Introduction
+     * Architecture
+     * Grid Service Beans
+     * Download
+     * Resources
+
+  Introduction
+
+   One of the most exciting areas of Grid application development is the
+   construction of portals to allow computational scientists, researchers
+   and high performance computer/application users access to resources via
+   an easy to use web page interface. The goal is to develop common
+   components that can be used by portal developers to build a website
+   that can securely authenticate users to remote resources and help them
+   make better decisions for scheduling jobs by allowing them to view
+   pertinent resource information obtained and stored on a remote
+   database. In addition, profiles are created and stored for portal users
+   allowing them to track and monitor jobs submitted and view results.
+
+   The Grid Portal Development Kit provides both a portal development
+   environment for the creation of new portals as well as a collection of
+   Grid service beans used to accomplish basic operations such as job
+   submission, file transfer and querying of information services.
+
+  Architecture
+
+                          GPDK Architecture Diagram
+
+   The envisoned portal architecture is a standard three tier model, where
+   a client browser securely communicates to a web server over an https
+   connection. The web server is capable of accessing various Grid
+   services using the Globus infrastructure. The Globus toolkit provides
+   mechanisms for securely submitting jobs to a Globus gatekeeper,
+   querying for hardware/software information using LDAP, and a secure PKI
+   infrastructure using GSI.
+
+   By taking advantage of the Myproxy package, also distributed as part of
+   the Grid Portal Collaboration, users can use the portal to gain access
+   to remote resources from anywhere without requiring their certificate
+   and private key be located on the same machine/device running a web
+   browser. The Myproxy server is responsible for maintaing user's
+   delegated credentials, proxies, that can be securely retrieved by a
+   portal for later use.
+
+   The Grid Portal Development Kit is designed to provide access to Grid
+   services by using Java Server Pages (JSP) and Java Beans using Tomcat,
+   an open source web application server developed by Sun microsystems as
+   the latest reference implementation of Java Servlets v2.2 and Java
+   Server Pages v1.1. Tomcat can be easily configured to work with an
+   existing web server e.g. Apache, Microsoft IIS, or Netscape as well as
+   its own simple web server that can be used for development purposes.
+   The GPDK is packaged as a web application as defined by the Java
+   Servlet 2.2 specification, consisting of web pages (HTML), Java server
+   pages (JSP), and Java beans. A web application can be easily packaged
+   and deployed as a Web application ARchive (WAR) file similar to a Java
+   ARchive file containing Java classes.
+
+   The GPDK Java beans derive most of their functionality from the Globus
+   Java Commodity Grid (CoG) toolkit. CoG provides a Globus API in pure
+   Java including the GSI using the IAIK Java SSL libraries to delegate
+   credentials. The CoG kit provides API's for submitting jobs to Globus
+   gatekeepers, transferring files using GSIFTP implemented in Java and
+   querying LDAP servers using the Java Naming and Directory Interface
+   (JNDI). GPDK Java beans merely present an easier interface for web
+   developers to use the CoG kit when developing portal server pages.
+
+  Grid Service Beans
+
+   GPDK Java Beans are grouped into the following five categories,
+   discussed below: Security, User Profiles, Job Submission, File Transfer
+   and Information Services.
+
+   Security
+   The sole security bean, MyproxyBean, is responsible for obtaining a
+   delegated credential from a valid Myproxy server. The MyproxyBean has a
+   few simple methods for setting the username, password, and designated
+   lifetime of the proxy on the web server. In addition, the MyproxyBean
+   also allows delegated credentials to be uploaded securely to the web
+   server.
+
+   User Profiles
+   User profiles are controlled by three User Beans: UserLoginBean,
+   UserAdminBean and the UserProfileBean. The UserLoginBean provides an
+   optional service to authorize users to a portal. Currently, it only
+   sets a username and password and checks a password file on the
+   webserver to validate access. The UserAdminBean provides methods for
+   serializing a UserProfileBean and validating a user's profile that is
+   password protected. In the future, the UserAdminBean will securely
+   store user profiles to a remote database, LDAP or DBMS. The
+   UserProfileBean maintains user information including preferences,
+   credential information, submitted job history, computational resources
+   etc. The UserProfileBean is generally instantiated with session scope
+   to persist for the duration of the user's transactions on the portal.
+
+   Job Submission
+   The JobBean is a very simple bean that contains all the necessary
+   properties used in submitting a job including memory requirements, name
+   of executble, arguments, number of processors, maximum wall clock or
+   cpu time, queue to submit to, etc. A JobBean is passed to a
+   JobSubmissionBean that is responsible for actually launching the job.
+   Two varieties of the JobSubmissionBean currently exist. The
+   GramSubmissionBean will submit a job to a Globus gatekeeper that can
+   run either interactively or to a scheduling system if one exists. The
+   GSISSHSubmissionBean is supported for hosts that have installed GSISSH
+   and is used to submit interactive jobs. After a job is sumitted, a
+   JobInfoBean can be retrieved that contains various submit information
+   including timestamp of job submitted, a Job ID that can be used to
+   identify an active job, the status of the job, job output, etc. The
+   JobHistoryBean is intended to store multiple JobInfo beans providing a
+   history of information from jobs that have been submitted and can be
+   stored in the user's profile.
+
+   File Transfer
+   Currently, the ability to transfer files is provided by the
+   FileTransferBean interface. Both GSIFTPTranferBean and the
+   GSISCPTransferBean securely copy files from source to destination hosts
+   using the user's delegated credential. The GSISCPTransferBean requires
+   that GSISSH be deployed on machines to which file transfer via GSI
+   enhanced scp is desired. The GSIFTPTransferBean implements a GSI
+   enhanced FTP in pure Java and is also capable of third-party file
+   transfers.
+
+   Information Services
+   The MDSQueryBean provides methods for querying an LDAP server by
+   setting and retrieving object classes and attributes such as operating
+   system type, memory, cpu load for various resources. Currently, the
+   MDSQueryBean takes advantage of the Mozilla Directory SDK for
+   communicating LDAP and creating an MDSPool which maintains a pool of
+   open LDAP connections.
+
+  Download
+
+   The latest release of the GPDK is accessible off CVS. To download a
+   copy of the latest version issue the following:
+
+   cvs -d :pserver:anonymous@portnoyc.lbl.gov:/home/g5/repository login
+   (hit return)
+   cvs -d :pserver:anonymous@portnoyc.lbl.gov:/home/g5/repository co gpdk
+
+   Please contact me if you decide to use GPDK. In addition, please
+   subscribe to the extreme-portals mailing list for cvs updates and other
+   GPDK information.
+
+  Resources
+
+   GPDK developer tutorial slides were presented at the Grid Portal
+   Developer Workshop
+     __________________________________________________________________
+
+
+   Last modified: Mon Jun 18 12:11:02 PDT 2001

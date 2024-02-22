@@ -1,0 +1,42 @@
+http://impi.nist.gov/ImpiTT.html
+
+                                  IMPI logo
+
+               National Institute of Standards and Technology
+
+                          Interoperable MPI Testing
+
+   The NIST IMPI test tool enables developers to test their IMPI
+   implementations for conformance to the IMPI protocol standard.
+   The test tool consists of four major components:
+
+   Test Interpreter
+          This is a program (sutInterp) that you download from this site.
+          You compile it and link it with the interoperable implementation
+          of MPI that you want to test. It is then run in coordination
+          with the test tool applet. It executes test scripts delivered to
+          it by the NIST test server.
+
+   Test Tool Applet
+          This is the user interface to the NIST IMPI test system. It
+          coordinates the execution of the test interpreter and the test
+          server.
+
+   Test Scripts
+          The test scripts are selected by the user through the test tool
+          applet and are exectuted by the test interpreter and test
+          server. These scripts are designed to exercise and verify
+          aspects of the IMPI protocol. The scripts are written in a
+          C-like language.
+
+   Test Server
+          This program resides entirely on a NIST host. It implements the
+          Interoperable MPI protocols for the purpose of testing. Through
+          the use of the test applet, it executes tests scripts in concert
+          with the test interpreter. It is running all of the time,
+          listening for a connection from the test applet.
+
+                                  IMPI Home
+     __________________________________________________________________
+
+                             NIST/ITL/HPSS logos

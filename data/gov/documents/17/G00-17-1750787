@@ -1,0 +1,213 @@
+http://tsdis.gsfc.nasa.gov/tsdis/Ephemstat.html
+
+                            Ephemeris Status Page
+     __________________________________________________________________
+     __________________________________________________________________
+
+   This page contains information on all non-nominal daily FDF TRMM
+   satellite ephemeris files for the life of the TRMM mission. The listing
+   is divided into two sections, one for files that were replaced, and one
+   for files with minor flaws that were not replaced. Within each section,
+   the data is arranged in chronological order. In both sections, to
+   download notes on the analysis of the ephemeris file(s) for a
+   particular date, click on the "*" for that date.
+
+   In the section for files that were replaced, the version numbers that
+   appear in the column headings ("V5","V6") refer to the algorithm
+   reprocessing version. The version numbers listed under the algorithm
+   reprocessing version columns and under the "VERSIONS" column heading
+   refer to the ephemeris file versions. (For example: TSDIS was given
+   three versions of the 06-06-98 ephemeris file. TSDIS used the version 1
+   file in algorithm version 5 reprocessing and will use the version 2
+   file in algorithm version 6 reprocessing. NASDA used the version 2 file
+   in algorithm version 5 reprocessing.)
+
+   Ephemeris files are in binary format and so cannot be "displayed" using
+   a web browser. To download a particular ephemeris file, place the mouse
+   arrow over the file version number link under the "VERSIONS" column,
+   bring up a menu, click on "Save Link As..." (for Netscape users), and
+   then enter a local file name for storage.
+     __________________________________________________________________
+     __________________________________________________________________
+
+   CAPTION: REPLACED EPHEMERIS FILES
+
+     DATE      VERSIONS    TSDIS - V5 NASDA - V5 TSDIS - V6 NOTES
+   06-06-98 V1 V2 V3
+                               V1         V2         V2       *
+   07-29-98 V1 V2
+                               V1         V2         V2       *
+   08-27-98 V1 V2
+                               V2         V2         V2       *
+   09-01-98 V1 V2
+                               V2         V2         V2       *
+   09-07-98 V1 V2
+                               V2         V2         V2       *
+   09-12-98 V1 V2
+                               V2         V2         V2       *
+   09-22-98 V1 V2
+                               V2         V2         V2       *
+   09-26-98 V1 V2
+                               V2         V2         V2       *
+   10-01-98 V1 V2
+                               V2         V2         V2       *
+   10-06-98 V1 V2
+                               V2         V2         V2       *
+   10-10-98 V1 V2
+                               V2         V2         V2       *
+   10-15-98 V1 V2
+                               V2         V2         V2       *
+   10-19-98 V1 V2
+                               V2         V2         V2       *
+   10-24-98 V1 V2
+                               V2         V2         V2       *
+   10-30-98 V1 V2
+                               V2         V2         V2       *
+   11-04-98 V1 V2
+                               V2         V2         V2       *
+   11-08-98 V1 V2
+                               V2         V2         V2       *
+   11-11-98 V1 V2
+                               V2         V2         V2       *
+   11-16-98 V1 V2
+                               V2         V2         V2       *
+   11-22-98 V1 V2
+                               V2         V2         V2       *
+   12-31-98 V1 V2 V3
+                               V3         V3         V3       *
+   01-12-99 V1 V2
+                               V1         V1         V1       *
+   08-26-99 V1 V2
+                               V2         V2         V2       *
+   02-11-00 V1 V2
+                               V1         V1         V2       *
+   02-12-00 V1 V2
+                               V1         V1         V2       *
+   03-15-00 V1 V2
+                               V2         V2         V2       *
+   04-06-00 V1 V2
+                               V2         V2         V2       *
+   05-23-00 V1 V2
+                               V2         V2         V2       *
+   06-23-00 V1 V2
+                               V2         V2         V2       *
+   06-30-00 V1 V2 V3 V4 V5     V5         V5         V5       *
+   07-01-00 V1 V2 V3 V4
+                               V4         V4         V4       *
+   07-02-00 V1 V2 V3 V4
+                               V4         V4         V4       *
+   07-03-00 V1 V2 V3
+                               V3         V3         V3       *
+   07-04-00 V1 V2 V3
+                               V3         V3         V3       *
+   08-13-00 V1 V2
+                               V2         V2         V2       *
+   11-23-00 V1 V2 V3
+                               V1         V1         V1       *
+   11-24-00 V1 V2
+                               V2         V2         V2       *
+   04-05-01 V1 V2
+                               V2         V2         V2       *
+   08-07-01 V1 V2
+                               V1         V1         V2       *
+   08-11-01 V1 V2
+                               V1         V1         V1       *
+     __________________________________________________________________
+     __________________________________________________________________
+
+                  CAPTION: EPHEMERIS FILES WITH MINOR FLAWS
+
+    DATE                             MINOR FLAW                           NOTES
+   descent  one ephemeris file (descent.definitive) for 11-27-97 to
+            12-06-97                                                        *
+   12-07-97 epoch, start, and GHA times not aligned. duplicate of 12-06-97
+            ephemeris data (descent.definitive)                             *
+   12-08-97 along track error of -4.147 km at overlap with 12-07-97
+            ephemeris file                                                  *
+   07-16-98 minor single point inconsistancy in x-pos, y-pos (-1.09 km),
+            and z-pos                                                       *
+   08-21-98 minor single point inconsistancy in x-pos, y-pos (-1.65 km),
+            z-pos, and z-dot                                                *
+   08-27-98 (Version 2) epoch, start, and GHA times not aligned. minor
+            single point inconsistancy in y-pos and z-pos                   *
+   09-01-98 (Version 2) epoch, start, and GHA times not aligned             *
+   09-07-98 (Version 2) epoch, start, and GHA times not aligned             *
+   09-12-98 (Version 2) epoch, start, and GHA times not aligned             *
+   09-14-98 along track & radial errors of -0.793 & -0.127 km at overlap
+            with 09-13-98 ephemeris file                                    *
+   09-15-98 radial error of 0.109 km at overlap with 09-14-98 ephemeris
+            file                                                            *
+   09-18-98 minor single point inconsistancy in x-dot                       *
+   09-22-98 (Version 2) epoch, start, and GHA times not aligned             *
+   09-25-98 along track error of -0.619 km at overlap with 09-24-98
+            ephemeris file                                                  *
+   09-26-98 (Version 2) epoch, start, and GHA times not aligned             *
+   10-01-98 (Version 2) epoch, start, and GHA times not aligned             *
+   10-06-98 (Version 2) epoch, start, and GHA times not aligned             *
+   10-10-98 (Version 2) epoch, start, and GHA times not aligned             *
+   10-15-98 (Version 2) epoch, start, and GHA times not aligned             *
+   10-19-98 (Version 2) epoch, start, and GHA times not aligned             *
+   10-24-98 (Version 2) epoch, start, and GHA times not aligned             *
+   10-30-98 (Version 2) epoch, start, and GHA times not aligned             *
+   11-04-98 (Version 2) epoch, start, and GHA times not aligned             *
+   11-08-98 (Version 2) epoch, start, and GHA times not aligned. minor
+            single point inconsistancy in x-pos and z-pos                   *
+   11-11-98 (Version 2) epoch, start, and GHA times not aligned             *
+   11-13-98 radial error of 0.152 km at overlap with 11-12-98 ephemeris
+            file                                                            *
+   11-14-98 radial error of -0.149 km at overlap with 11-13-98 ephemeris
+            file                                                            *
+   11-16-98 (Version 2) epoch, start, and GHA times not aligned             *
+   11-22-98 (Version 2) epoch, start, and GHA times not aligned             *
+   12-09-98 minor single point inconsistancy in x-pos                       *
+   12-31-98 (Version 3) along track error of 0.501 km at overlap with
+            12-30-98 ephemeris file                                         *
+   01-13-99 along track error of 0.919 km at overlap with 01-12-99
+            ephemeris file                                                  *
+   01-20-99 minor single point inconsistancy in y-dot                       *
+   01-29-99 minor single point inconsistancy in y-pos                       *
+   03-10-99 minor single point inconsistancy in y-pos                       *
+   04-02-99 minor single point inconsistancy in y-pos                       *
+   08-18-99 minor single point inconsistancy in y-pos                       *
+   09-05-99 along track error of 0.708 km at overlap with 09-04-99
+            ephemeris file                                                  *
+   09-30-99 minor single point inconsistancy in x-pos                       *
+   10-03-99 along track error of -0.584 km at overlap with 10-02-99
+            ephemeris file                                                  *
+   10-22-99 radial error of -0.112 km at overlap with 10-21-99 ephemeris
+            file                                                            *
+   10-23-99 minor single point inconsistancy in x-pos                       *
+   11-24-99 along track error of -0.559 km at overlap with 11-23-99
+            ephemeris file                                                  *
+   12-04-99 along track error of -0.564 km at overlap with 12-03-99
+            ephemeris file                                                  *
+   12-25-99 along track error of -0.630 km at overlap with 12-24-99
+            ephemeris file                                                  *
+   01-28-00 along track error of -0.514 km at overlap with 01-27-00
+            ephemeris file                                                  *
+   01-29-00 minor single point inconsistancy in y-pos                       *
+   02-19-00 minor single point inconsistancy in y-pos                       *
+   03-24-00 minor single point inconsistancy in x-dot                       *
+   03-26-00 minor single point inconsistancy in z-pos                       *
+   04-17-00 minor single point inconsistancy in x-pos                       *
+   05-03-00 minor single point inconsistancy in x-pos                       *
+   05-26-00 minor single point inconsistancy in x-pos                       *
+   06-12-00 minor single point inconsistancy in y-pos                       *
+   07-17-00 radial error of -0.118 km at overlap with 07-16-00 ephemeris
+            file                                                            *
+   08-12-00 minor single point inconsistancy in x-pos                       *
+   08-18-00 minor single point inconsistancy in y-pos                       *
+   10-14-00 along track error of -0.566 km at overlap with 10-13-00
+            ephemeris file                                                  *
+   10-28-00 minor single point inconsistancy in x-dot                       *
+   02-12-01 minor single point inconsistancy in x-pos                       *
+   02-18-01 minor single point inconsistancy in y-pos                       *
+   03-18-01 minor single point inconsistancy in y-pos                       *
+   03-31-01 minor single point inconsistancy in x-pos, y-pos, and z-pos     *
+   04-01-01 minor inconsistency between the 3/31/01 and 4/1/01 ephemeris
+            files                                                           *
+   04-12-01 minor single point inconsistancy in x-pos                       *
+     __________________________________________________________________
+     __________________________________________________________________
+
+   [back.gif] Return to TSDIS Homepage

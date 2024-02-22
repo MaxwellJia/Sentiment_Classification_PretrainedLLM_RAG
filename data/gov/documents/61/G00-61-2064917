@@ -1,0 +1,298 @@
+http://sposerver.nos.noaa.gov/bathy/
+
+
+
+   Homepage Link
+   Find Data Link
+   Caveats & FAQ's Link
+   Metadata Link
+   Related Sites Link
+   Send us Comments Link
+   Credits Link
+   National Ocean Service Link
+
+   Estuarine Bathymetry
+     __________________________________________________________________
+
+   Introduction
+
+   CapeCod3d.gif (35893 bytes) The National Ocean Services (NOS)
+   Estuarine Bathymetry is a digital raster compilation of NOS
+   hydrographic survey data for selected U.S. estuaries. These data
+   provide an important piece of the mapping puzzle to those managing our
+   Nations valuable estuarine resources. Although bathymetric data are
+   most commonly used to create nautical charts, they are a crucial
+   component in many fields of marine research, and a useful enhancement
+   for 2D and 3D mapping.
+
+   The 70 estuarine bathymetry data setsr are available in both 30 meter
+   and 3 arc second resolutions. The gridded bathymetry are an
+   interpolated data set representing the most up-to-date depth sounding
+   information that was available at the time of publication (1998). In a
+   few cases the most up-to-date information was surveyed more than a
+   century ago. Although the original data are the same source data used
+   to create Nautical Charts, these data sets should not be used for
+   navigation.
+
+   In addition to the data itself, a number of supporting files are also
+   included on this site and within the compressed download files. These
+   files are intended to help the user understand the possible uses of the
+   data, and how the data sets were created. The downloadable files on
+   this site can take a long time to download, and may take up
+   considerable amounts of disk space. Please see the "Available Estuarine
+   Bathymetry " section of this page for assistance with large files and
+   downloading.
+
+   Description:
+
+   Estuarine Bathymetry was developed by the Special Projects Office of
+   the National Ocean Service (NOS) as part of a project to produce
+   readily available bathymetry. Seventy of the approximately 130
+   estuaries within the conterminous U.S. are available from this site.
+   These estuaries represent some of the Nations most important
+   estuaries. Those estuaries which are not included, were those that had
+   less than 80% coverage of digital sounding data needed to support
+   detailed bathymetric processing.
+
+
+                       bathycoverage.gif (3280 bytes)
+
+
+   Bathymetric data are best known as navigational tools. However, on its
+   own, or in conjunction with other geographic data, bathymetric data
+   adds another dimension to geographic mapping and modeling and can be
+   used either as a background layer or as a 3D surface for draping
+   thematic maps such as benthic habitats, marine organism habitats or
+   geologic data. Bathymetric data are a critical component for
+   hydrodynamic models and serve as the lower boundary of the water column
+   for computing water circulation and movement. These models are
+   necessary to understand or predict movement of oil and hazardous
+   materials, temperature and salinity distributions, migration of
+   animals, and modeling storm surge and tsunami effects, to name a few.
+
+   The bathymetry data sets offered here are a digital gridded depth data
+   product offered in the Digital Elevation Model (DEM) format in both 30
+   meter, and 3 arc second resolutions, derived from source soundings
+   collected by NOS Hydrographic Surveys Division. The extent of the
+   bathymetry data for each estuary are defined by the water boundary
+   component of the NOS Coastal Assessment Frameworks, Estuarine Drainage
+   Area. Elevations do not extend beyond the high water line.
+
+   hydrosurvey.gif (36528 bytes) Source hydrographic surveys are soundings
+   collected by NOS over the last 150 years, (these data are housed in the
+   national archives of the National Geophysical Data Center, Boulder,
+   CO). Bathymetric elevations are referenced to the local tidal datum,
+   typically Mean Lowest Low Water (MLLW) averaged over a 19 year tidal
+   epoch.
+
+   In addition to the bathymetric DEM data found on this site, supporting
+   information is also included with each compressed file. These include
+   views depicting the coverage of the original and interpolated
+   soundings, graphical indexes which show the outlines of the DEM files
+   contained in the compressed file sets, information on the content and
+   use of the files, and metadata.
+
+   Background:
+
+   The source depth soundings for this project were obtained from the
+   Hydrographic Surveys Division of NOS. These surveys represent data
+   collected from the 1840s to present day. The principle objective of
+   hydrographic surveys is to obtain basic data for the compilation of
+   nautical charts with emphasis on features that may effect safe
+   navigation. Nautical charts include information beyond depth soundings,
+   such as rocks, hazards, and maintained channels, and are updated
+   regularly. Although the bathymetric data offered on this site are
+   derived from the same original data sets as NOAA's Nautical Charts,
+   these data have not been put through the same selection process that
+   the nautical charting requires. Therefore, this data should not be used
+   for navigation. Please see the Hydrographic Surveys product page, for
+   more information on the source data.
+
+   Because the source data are simply a sampling of points representing
+   depth values for specific locations, the raw data are not immediately
+   useful without interpolation. The estuarine bathymetry was derived
+   using a Triangulated Irregular Network (TIN) interpolation process.
+   Original data were combined with shoreline data points attributed with
+   mean high water elevations. These composite data files were
+   interpolated using a linear TIN process.
+
+   A filter of 30 meters was applied to the resulting TIN file to find the
+   closest data values to the center of the each of the 30 meter cells.
+   The resulting files are 30 meter digital grids, UTM projected units
+   containing position, and depth information for each grid cell. A second
+   grid filter of 3 arc seconds per grid was then applied to the 30 meter
+   grid file to find average data values within each of the 3 arc second
+   grids. Center point values from the 3 arc second grids were exported,
+   re-combined with shoreline data points, projected to a Geographic
+   coordinate system, and re-triangulated to create the 3 arc second DEM
+   file. 3 arc second grids are rectangular and vary in size depending on
+   latitude. 3 arc second grids in Florida are approximately 90m(h) x
+   81m(w), while they are approximately 90m(h) x 71m(w) in Maine.
+
+   sidebyside.gif (32233 bytes)
+
+   These files were then converted to DEM format and split into 7.5 minute
+   (for 30m DEMs) or 1 degree (for 3 arc second DEMs) sections. For those
+   interested in large portions of estuaries, or entire estuaries, "BIG",
+   non standard, DEMs for each resolution are also provided. These "Big"
+   DEMs contain all the information in one tile where extents are that of
+   the estuary. It should be noted that these files, when uncompressed,
+   can be more than 100Mb in size. For a more complete description of the
+   data, see the metadata files for Estuarine Bathymetry.
+
+   Present Status:
+
+   At this time, the Special Projects Office does not plan to produce any
+   additional estuarine bathymetry. However, in the event that other
+   organizations make data available, which meet the processing criteria
+   set for this project, every effort will be made to offer it on this
+   site.
+
+   Available Estuarine Bathymetry Products:
+
+   Five individual product types are immediately available this site for
+   70 selected estuaries:
+
+     * 30m and 3 arc second DEM Bathymetry data sets
+     * Sounding Capture Images
+     * DEM Index Maps
+     * Metadata
+     * Supporting information
+
+   Many of the estuaries included on this site, cover large geographic
+   areas. The resulting DEM file sizes for some of these estuaries are
+   very large. To speed downloading, the files have been compressed to
+   approximately one tenth their original size, and put into archive files
+   for each estuary. Most of these archives are less than a megabyte.
+   However, some of the larger estuary archives can be greater than 10Mb.
+   See the Bathymetry File Size Chart for specific file sizes.
+
+   The compressed data files contain all the supporting information that
+   is viewable from the data pages, as well as some additional text
+   information. Five types of compressed files are available.
+
+   They are:
+
+     Standard format, tiled DEMs for 30m gridded bathymetry [eda_D30.zip]
+
+     Standard format, tiled DEMs for 3 arc second [90m] gridded
+     bathymetry [eda_D90.zip]
+
+     A single BIG DEM for 30m gridded bathymetry [eda_B30.zip]
+
+     A single BIG DEM for 3 arc second gridded [90m] bathymetry
+     [eda_B90.zip]
+
+     An image(s) showing the original soundings over nautical chart(s)
+     [eda_SC.zip]
+
+   "EDA" is a unique four character Code assigned by NOAA's Coastal
+   Assessment Framework (CAF) to each estuary. The first character of this
+   code is a letter: N, North Atlantic; M, Mid Atlantic; S, South
+   Atlantic; G, Gulf of Mexico; L, Great Lakes; and P, Pacific. The
+   remaining three characters are digits assigned in increasing clockwise
+   order from Maine to Washington.
+
+   Data files (#s 1-4 on list) are available in standard USGS format (#s
+   1 &2), split into separate data tiles depending on the spatial coverage
+   of the estuary. They are also available in a non-standard "Big" format
+   (#s 3 & 4). Standard DEMs are tiled so that their footprints
+   correspond to standard USGS quadrangle boundaries; either 7.5 minute
+   size for 30m grids, or 1 degree size for 3 arc second grids. The "Big"
+   DEM files cover all the data for a selected estuary in a single DEM
+   file, rather than in a number of separate DEM files. These "Big" files
+   are limited to the spatial extent of the estuary. The standard DEM
+   files complete the tile space around the extents of the estuary with
+   null values. For 3 arc second DEM files, this space can be a
+   considerable.
+
+   In cases where an estuary is located within a single 1 degree area, the
+   3 arc second standard DEMs and the BIG 3 arc second DEM will contain
+   the same data. However, the BIG DEM will only cover the extent of the
+   actual data, while the standard DEM will fill in null values for all
+   the blank space beyond the extents of the estuary to fill the 1 degree
+   space. Thus, a BIG DEM file may have a smaller file size. In these
+   cases, if your software is able to use them, we recommend downloading
+   the BIG DEM file. Please see the annotated example for more details on
+   downloading DEM files.
+
+   A separate archive file for each estuary [eda_SC.zip] contains visual
+   GIF images showing the locations of soundings used to generate these
+   bathymetric products superimposed on NOAA Nautical chart backgrounds.
+   The annotated example shows a reduced size example of a Sounding
+   Capture image.
+
+   The DEM Index file allows the user to view the geographic location of
+   each of the files contained in either of the "standard" DEM zipped data
+   files. This image is available from each data page and is included with
+   the compressed file.
+
+   Metadata
+   and supporting information are also available from this site. There is
+   a separate metadata file for 3 arc second and for 30 meter bathymetry.
+   The supporting information is on the page in the form of graphics and
+   special notes, and also included within the compressed files.
+
+   Other Programs and Products of the Special Projects Office:
+
+   The mission of the Special Projects Office is to provide expertise,
+   products and services that help the National Ocean Service (NOS) to
+   design and implement an effective program of coastal stewardship
+   throughout the agency. This includes exploring ways to leverage the
+   agency's considerable expertise to support and influence the sound
+   management and protection of coastal areas. NOS Special Projects
+   dedicated to bridging the gap between NOS scientific efforts and
+   coastal management policy issues.
+
+   Selected products of the Special Projects Office are listed below. For
+   more information of these products, click on their titles.
+
+     NOAA's State of the Coast Report
+
+     National Estuarine Eutrophication Survey
+
+     NOS MapFinder Service
+
+     Sustainable Seas Expeditions
+
+     National Coastal Assessment and Data Synthesis Capability
+     __________________________________________________________________
+
+   For more information about Estuarine Bathymetry, contact:
+
+   Mr. Peter Grose
+
+   Special Projects Office - National Ocean Service
+
+   National Oceanic & Atmospheric Administration
+
+   1305 East West Highway, SSMC4
+
+   Silver Spring, MD 20910
+
+   (301) 713-3000 x132
+
+   peter.grose@noaa.gov
+
+
+   Fore more information on the Special Projects Office and its offerings,
+   contact:
+
+   Ms. Pamela Rubin
+
+   Special Projects Office - National Ocean Service
+
+   National Oceanic & Atmospheric Administration
+
+   1305 East West Highway, SSMC4
+
+   Silver Spring, MD 20910
+
+   (301)713-3000 x121
+
+   pamela.rubin@noaa.gov
+
+   Last updated: January 15, 2002
+
+   |Find Data| |Caveats & FAQ's| |Metadata| |Related Sites| |User
+   Comments| |Credits|

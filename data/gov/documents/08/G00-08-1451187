@@ -1,0 +1,83 @@
+http://doogis.dis.anl.gov
+
+   Security notice | Disclaimer
+
+   DOOGIS
+                 ________________________________________________________
+
+          Dynamic
+          Object
+          Oriented
+          Geographic
+          Information
+          System
+                 ________________________________________________________
+
+   Thanks for visiting the DOOGIS homepage. These pages are best accessed
+   using a Java compatible browser.
+   New!! To find out what's new with DOOGIS, click here.
+
+     * The basic idea of DOOGIS is that the entire internet is your
+       database and, using object technology, you get intelligent spatial
+       objects. Spatial objects can live anywhere on the internet, in
+       spatial data servers, or they can be located on your local
+       computer. They can be accessed with a Java applet as if they were
+       in a single coherent database located on your computer. Objects can
+       be downloaded to a Java applet as complete objects with all their
+       data and behaviors, in a simplified form with limited
+       functionality, or a collection of objects can be summarized into an
+       image with no functionality. Even if a summary is downloaded, the
+       functionality may still be available on the spatial data server.
+     * What is an intelligent object? Its an object that performs some
+       behavior or supplies data, be that a simple road with address data,
+       a tank driving across a battlefield, or a simulation of the Earth's
+       atmosphere.
+     * How do we make objects intelligent? Using our object-oriented GIS,
+       GeoViewer, as the spatial data server for DOOGIS, we can
+       dynamically couple to models, simulations, and/or applications
+       producing behaviors and data. The GeoViewer is both a framework to
+       be included in modeling infrastructures and a standalone product.
+       It has been used in a number of such frameworks including DOOGIS.
+       For more information about the GeoViewer take a look at our paper
+       (320Kb with images) and slide presentation.
+     __________________________________________________________________
+
+   This is version 2.0 Beta of the DOOGIS system connected to a spatial
+   data server written in Smalltalk. This version demonstrates the basic
+   capabilities needed to provide typical GIS functionality such as
+   zooming, panning, and getting information via the World Wide Web. There
+   is some limited capability to download complete objects. It also
+   demonstrates the ability to create objects within the Java applet and
+   send them back to the spatial data server, in this case, objects that
+   represent a URL. More work needs to be done on the Java end of things
+   to bring it up to speed with the capabilities provided by the spatial
+   data server, especially the GUI. This has been enhanced since the
+   previous version, but could still use some improvement.
+
+   We currently have TIGER data loaded for Champaign, Dupage, and Will
+   counties in Illinois, and Duval County in Florida (near Jacksonville).
+   The Illinois counties also include Census Tracts that can be brought
+   over local to the client. There is also data loaded for a portion of
+   Champaign county showing water wells, they show up as dots and then
+   water drops when you zoom in far enough. There is also an mm5 weather
+   model output grid shown over Pennsylvania and neighboring states. It
+   shows wind speed by default.
+
+   The current version of DOOGIS now works with most, possibly all
+   Java-enabled browsers. If you run into any problems with the applet,
+   please email with a description of the problem, and your browser name
+   and version number and operating system and OS version.
+     __________________________________________________________________
+
+                                 The Crew...
+
+      Java Programming:     Tom Taxon, Peter A. Korp
+
+      Smalltalk GIS Engine: Gordon R. Lurie, Peter A. Korp, Guy Pandola
+
+      WWW Gurus:            Guy Pandola
+
+      Gainful Employer:     Argonne National Laboratory   Decision and
+                            Information Sciences Division
+
+                         Security Notice,Disclaimer

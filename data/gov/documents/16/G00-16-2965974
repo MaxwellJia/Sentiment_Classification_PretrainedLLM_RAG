@@ -1,0 +1,104 @@
+http://www-email.fnal.gov/march22_fnal.htm
+
+What Happened to Email the Week of March 22nd, 1999 ?
+
+   Overview
+
+   The Computing Division apologizes for the trouble caused by the
+   slowness of the FNAL mail gateway on Tuesday and Wednesday, March 23
+   and 24. A more complete explanation follows. A mail loop set up by one
+   person caused a chain of events which eventually clogged FNAL. It took
+   two days to clear because of the complicated nature of the clogged
+   queues. We are doing all we can to prevent this in the future, by
+   educating people about proper mail use, improving the automated problem
+   handling in the system, and long-term planning for the FNAL gateway. We
+   realize how important fast and reliable email is to the laboratory.
+
+   Detailed Explanation
+
+   A user at the lab had 3 places that they could read email- imapserver1,
+   a vax cluster on site, and a Quickmail server. The user also had an
+   account and a mail alias on FNAL, the lab mail gateway. The mail alias
+   forwarded mail back to the user account on the mail gateway. The user
+   account then forwarded mail to the VAX cluster. The user had also
+   configured their account on IMAPserver1 to forward mail to their VAX
+   account as well as their Quickmail account. (Yes, forwards to two
+   separate systems) Mail forwarding on the IMAP servers will leave a copy
+   of the message in the users account before sending it on to the
+   forwarded address(s).
+
+   On the evening of Monday, March 22nd, the user changed their forwarding
+   on one of their accounts and created an email loop between the users
+   VAX account and their IMAP account. The user than sent a test message
+   that looped between the two systems. Remember every time the message
+   came through the IMAP server it left a copy in the users directory
+   before sending it back to the VAX account. Once their account filled
+   up, the IMAP server began returning these messages to the sender
+   notifying the sender that the message couldnt be delivered to the IMAP
+   server because the account was over quota. The sender account
+   immediately looped the message back to the IMAP server. The IMAP server
+   is configured to also send a message to `postmaster@fnal.gov notifying
+   the lab postmaster that a user account was over quota. In a very short
+   period of time the email postmaster account on FNAL received thousands
+   of mail messages regarding quota problems and many more were waiting in
+   queue to be delivered. This slowed down FNAL, the mail gateway.
+
+   Initially, the Email support group tried to eliminate the numerous
+   messages in the Postmaster account by deleting them and increasing the
+   users mail quota on the IMAP server. To try and break the loop the
+   forward on the FNAL mail gateway was changed. When we realized this
+   didnt fix the situation we investigated the issue further and found the
+   loop was not through the FNAL gateway but between the IMAPserver and
+   VAX account. These forwards were deleted and the loop was broken!
+   Cleanup of the systems began. The users IMAP account was flushed of
+   over 12,000 messages. FNAL had over 6000 messages in one directory
+   waiting to be delivered to the postmaster and the postmaster mail
+   account had another 6000 messages in it! Removing 6000 files from a
+   single directory takes a long time on any system, especially when the
+   system is busy doing other things, like delivering email. By Tuesday
+   afternoon the mail gateway was moving at a faster pace and by night
+   time it was back to normal.
+
+   Tuesday night (around midnight) the IMAP server looked in its mail
+   queue for mail it hadnt delivered during the day. Though the
+   Postmasters had cleaned up the users area, they overlooked the spool
+   area which had thousands of messages regarding the users quota waiting
+   to be sent to the Postmaster at FNAL. These messages then started to
+   deliver themselves early Wednesday morning! The Postmasters discovered
+   this when they came to work in the morning. Mail delivery was
+   temporarily stopped on the IMAP server and any messages remaining were
+   removed from the spool area. Howevr, many messages had been delivered
+   during the night and once again FNAL was slow with mail delivery. The
+   Postmasters discussed about turning off mail routing on the gateway to
+   speed up the removal of files but it was decided that the lab would be
+   without a mail gateway for 2-4 hours. Instead we decided to clean up
+   the messages while letting the system continue to route mail even
+   though the system was performing slowly. By early Thursday morning the
+   mail systems were back to normal.
+
+   Prevention
+   What have the Postmasters done to help prevent this in the future?
+
+    1. The Postmasters have met and discussed what happened. We have a
+       better understanding of how to try and identify this type of
+       problem in the future and prevent it from spreading.
+    2. FNAL the mail gateway has been configured to spread mail across
+       many subdirectories. This will prevent the build up of thousands of
+       messages in one single directory.
+    3. Both IMAP servers have had forwarding disabled. Users no longer
+       have the ability to set forwarding on the IMAP server. (Mail
+       forwarding should be done directly off FNAL.) Forwards that were
+       present on the IMAP servers have been deleted.
+    4. The user in question had an alias and a username on the mail
+       server. The Postmasters are identifying aliases on the mailserver
+       to help prevent this.
+
+   What can Users do to help prevent this?
+    1. Limit the number of active mail accounts!
+    2. If you must set a forward on systems where you get mail, please
+       forward all mail on systems you wont read mail on to the mail
+       gateway, FNAL. Set your forward on FNAL to point to the system
+       where you plan on reading mail.
+    3. Keep the same username across systems. If the user in question had
+       the same username the mail systems would have immediately
+       identified the loop and prevented it!

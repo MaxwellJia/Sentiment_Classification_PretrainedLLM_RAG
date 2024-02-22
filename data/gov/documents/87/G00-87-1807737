@@ -1,0 +1,430 @@
+http://lupus.gsfc.nasa.gov/core/final1.html
+
+   CORE
+   / IVN:
+
+   Geodetic VLBI for the New Millennium
+
+
+   C
+   ontinuous
+
+   O
+   bservations
+
+   of the
+
+   R
+   otation
+
+   of the
+
+   E
+   arth
+
+
+   using the
+
+
+   I
+   nternational
+
+   V
+   LBI
+
+   N
+   etwork
+
+
+
+                                               Goddard Space Flight Center
+
+                                                     Space Geodesy Program
+
+                                                              June 2, 1997
+
+   1. Summary
+
+   This paper describes the program for continuous observations of the
+   rotation of the Earth (CORE) initiated by the geodetic very long
+   baseline interferometry (VLBI) community. The International VLBI
+   Network (IVN) will execute the program using geodetic VLBI stations for
+   data acquisition and VLBI analysis centers for data processing and
+   analysis. The CORE program will evolve over the period 1997-2001.
+
+   The CORE program will generate an Earth rotation data set of
+   unprecedented time resolution and accuracy for Earth science and global
+   change research. The program will produce basic observational data for
+   studies of the continuous momentum exchange among the solid Earth, the
+   atmosphere, and the hydrosphere, enabling exciting research areas that
+   heretofore have been impossible.
+
+   The full CORE program has the potential for a typical precision of
+   1 msec in UT1 and 25 marcsec in pole position, for daily sessions with
+   a 5-station network. These values are three times better than those
+   measured weekly with the NEOS network and could be available daily.
+
+   The breakthrough in the availability of continuous, high accuracy Earth
+   rotation data is possible due to the Mark IV technology that will
+   become fully available in 1999. Improved sensitivity in the Mark IV
+   data acquisition system together with the high playback efficiency of
+   the Mark IV correlator are both necessary to produce the proposed data.
+
+
+   2. Scientific Objectives
+   Figure 1. Geophysical Effects on UT1
+
+   Earth system science. The CORE data set will be a significant
+   contribution to Earth system science. The data can be used to address
+   numerous Earth science research areas across a broad spectrum of
+   disciplines. With the proposed data set researchers can study
+   continuous momentum exchange among oceans, atmosphere (wind), and solid
+   Earth. Periodic signals such as tides, non-periodic signals such as
+   atmospheric angular momentum (AAM), and episodic signals such as
+   earthquakes may be studied effectively with continuous Earth rotation
+   data. The VLBI data will provide a continuous recording of the
+   integrated effect of all geophysical sources on the Earth’s rotation.
+   Since the sum of the effects of all geophysical changes must equal the
+   measured Earth rotation variation, VLBI provides definitive
+   constraints.
+
+   Geophysical Effects. The chart in Figure 1 illustrates schematically
+   the types of geophysical phenomena that affect the Earth’s rotation and
+   the accuracies of various measurement techniques. A similar chart for
+   polar motion is shown in Figure 2. Phenomena with time scales from 15
+   minutes to 30 years are shown. The effects are color-coded, with blue
+   for atmospheric phenomena, green for the oceans, and red for the solid
+   Earth. Each colored curve indicates the approximate range in time scale
+   and size for the measured or predicted effect.
+   Figure 2. Geophysical Effects on Polar Motion
+
+   Measurement accuracies for current VLBI and GPS systems as well as for
+   the proposed CORE system are shown as dotted black lines. Any effects
+   that occur above these lines could be detected by these systems. The
+   VLBI accuracy limits were calculated using current and projected 1-s
+   formal errors for VLBI sessions with 24 hours of data. The current VLBI
+   system is insensitive to times shorter than about a week because there
+   are only 2 or 3 measurement days per week. The line for the GPS
+   accuracy in UT1 uses the formula by Ray [1996]. The GPS accuracy for
+   polar motion is an estimate. The dashed line with a discontinuity at
+   time scales around 1 day shows the sensitivity of GPS to retrograde
+   signals. The continuous CORE data set in principle will be sensitive to
+   all time scales, although routine analysis produces hourly values. The
+   black gray line on each graph is an estimate of the sensitivity to
+   coherent phenomena achievable by averaging 2 years of CORE data.
+
+
+   3. Approach
+
+   Our approach to producing continuous VLBI Earth orientation data is to
+   acquire data using the Mark IV-equipped stations of the IVN, and to
+   process the data with the Mark IV correlators. We will produce hourly
+   and daily estimates of Earth orientation and make the results available
+   to the scientific community.
+
+   IVN. Today’s International VLBI Network of 15-20 high performance VLBI
+   stations will be the foundation for the continuous observing system. We
+   will organize the entire network into subnetworks, each having four or
+   more stations; one such subnetwork will be the NEOS network. A
+   subnetwork will acquire data for 24 hours, followed immediately by the
+   next subnetwork for 24 hours, and so on. Some participating stations
+   would observe several times a week, forming an element in different
+   subnetworks on different observing days. This simple organization will
+   lead to minimized operational requirements and reduced costs. The
+   subnetworks may be designated as the "Monday" network, the "Tuesday"
+   network, and so on.
+
+                   Table 1. Comparison of Recording Modes
+
+
+   CORE
+
+   Mark IIIA Geodetic
+
+   Recording format
+
+   Mark IV, fanout 1:4
+
+   Mark III Mode C
+
+   Sampling
+
+   1 bit
+
+   1 bit
+
+   Number of recorded channels
+
+   14
+
+   14
+
+   Channel bandwidth
+
+   16 MHz
+
+   2 MHz
+
+   Total bandwidth
+
+   224 MHz
+
+   28 MHz
+
+   Total data rate
+
+   448 Mb/s
+
+   56 Mb/s
+
+   Number of tracks recorded
+
+   56 tracks at 8 Mb/s
+
+   14 tracks at 4 Mb/s
+
+   Number of tapes/station/day
+
+   4 or 5 thin tapes
+
+   3 or 4 thick tapes
+
+   Correlator speed-up factor
+
+   2
+
+   1
+
+   Mark IV technology. The Mark IV system technology is the key to
+   achieving the accuracy goals as well as making the data acquisition and
+   processing practical. The truly continuous observing system requires
+   the use of Mark IV correlators and VLBI stations with Mark IV
+   capability. Table 1 compares the current observing mode and the planned
+   CORE observing mode, showing the dramatic increase in data rate that
+   will be possible.
+
+   Performance standards.
+   Each station that participates in the CORE program must have Mark IV
+   capability and must commit to maintaining high performance standards.
+   Critical to the success of the CORE program will be the assurance that
+   each day’s data achieves the accuracy goals for the program, and the
+   initial step in this process is that the acquired data be of high
+   quality.
+
+   International collaboration. The CORE program will require continuing
+   strong collaboration among all of the U.S. and international partners.
+   No one country or agency alone can make the program work. We have
+   obtained commitments from many partners now engaged in geodetic VLBI
+   who are interested in being a part of the new program. In this program
+   we anticipate that each country will contribute according to its
+   resources and scientific/technical interest. With different daily
+   networks, no undue burden should be placed on any single country or
+   agency.
+
+   Analysis. We will analyze the processed data using the Mark IV Analysis
+   System and produce the best possible estimates for daily and hourly
+   values of Earth orientation parameters. The data will be made available
+   to the scientific community as soon as the analysis is completed. All
+   of the existing VLBI geodetic analysis centers will participate in this
+   activity.
+
+   4. Resources Required
+
+   If continuous EOP data from the CORE network is to become a reality,
+   substantial resources will be required of U.S. agencies and
+   international partners in VLBI. The Mark IV technology makes this
+   project technically feasible, but the resources to operate the stations
+   and the correlator and to coordinate the enterprise will be the key
+   factor in its success.
+
+   Assigning budgetary values to the resources is difficult because of the
+   international character of the network. Contributions to the network
+   from international partners may take the form of antenna observing time
+   and staff support, correlator time, tape purchases, tape shipping
+   costs, and data analysis support. The most significant increase
+   required for the CORE program over the resources used today is in the
+   number of station days. A possible division of resources among the U.S.
+   agencies and international partners is suggested in Table 2, based on
+   observing with daily 4-station networks.
+
+                  Table 2. Possible Allocation of Resources
+
+                                 NASA (U.S.)
+
+                                 USNO (U.S.)
+
+                                International
+
+   Mark IV correlator operations (45%)
+
+   Mark IV correlator operations (45%)
+
+   Mark IV correlator operations (10%)
+
+   Fairbanks and Westford operations and maintenance, for 3 days/week each
+   (total 6 days)
+
+   Kokee and Green Bank operations and maintenance, for 3 days/week each
+   (total 6 days)
+
+   Station operations and maintenance for a total of 16 days/week
+
+   Shipping 30 tapes per station to the correlator per week.
+
+   Shipping 30 tapes per station to the correlator per week.
+
+   Ship 80 tapes from the stations to the correlators per week.
+
+   Network coordination and scheduling, performance monitoring
+
+   Ship 125 tapes from correlator to stations per week.
+
+   Ship 15 tapes from correlator to stations per week.
+
+   Purchase 150 thin tapes.
+
+   Purchase 150 thin tapes.
+
+   Purchase 120 thin tapes.
+
+   Data analysis
+
+   Data analysis
+
+   Data analysis
+
+   Future technology development
+
+   Operational support
+
+   Operational support
+
+   Station observing time. Sufficient station resources must be committed
+   so that there are at least four VLBI stations operating continuously
+   simultaneously. Annually this is a commitment of a minimum of 1,460
+   station days (or 1,040 if weekends are not covered). One "station day"
+   is a 24-hour period of one station observing time.
+
+   Correlators. Sufficient Mark IV correlator time to process continuous
+   data would be provided by sharing the load among several correlators,
+   as is done now among the Mark IIIA correlators. Estimates of correlator
+   capacity for the CORE program assume that the level of correlator
+   support will be the same as currently available.
+
+   Tape shipping. It will be desirable for the stations to ship tapes to
+   the correlator in a timely manner, so that the pipeline of data can be
+   maintained smoothly. Regular shipping arrangements will have to be set
+   up to achieve this goal.
+
+   Station upgrades and performance. Each station that desires to
+   participate in the network will make a commitment 1) to upgrade to Mark
+   IV data acquisition system, 2) to maintain continuing good technical
+   performance, 3) to provide 24 hours of observing time at least once per
+   week (or on a regular but less frequent basis), and 4) to ship tapes to
+   the correlator in a timely manner. Station performance will be
+   monitored through analysis of processed data and field log files and
+   will be continually compared against the standards established for the
+   network. Assistance will be provided to those stations that cannot
+   improve their performance on their own.
+
+
+   5. Evolution
+
+   The CORE program will evolve over the period 1997-2001. Figure 3 shows
+   the planned evolution of the CORE program. The blue and green colored
+   bars show the capacity of the correlators compared to the data
+   production of the VLBI network, in units of numbers of observations per
+   week (blue scale). The correlator capacity is the number of
+   observations, acquired in the current typical geodetic mode, that can
+   be processed given the efficiency of the correlator and the resources
+   to operate it. Until the Mark IV correlator is available (in late 1998)
+   we will continue to use the existing Mark IIIA correlators.
+
+   Figure 3. CORE/IVN Evolution: Network Growth Also shown in Figure 3 is
+   the gradual upgrading of geodetic stations to be Mark IV-equipped (red
+   scale). Note however that we cannot take advantage of the higher data
+   rate possible with Mark IV station equipment until the Mark IV
+   correlators are operating.
+
+   During 1997 and 1998 we will average nearly 3 observing days per week,
+   which is the maximum that the Mark IIIA correlators can handle with
+   current resources. We anticipate that 1999 will be a checkout period
+   for the Mark IV correlator during which we will conduct some
+   operations. We plan to observe up to 4 days per week and include a mix
+   of both Mark III and Mark IV data acquisition modes (shown in Table 1).
+   The dramatic increase in correlator capacity in 1999 reflects the Mark
+   IV correlator’s ability to process Mark III data extremely efficiently.
+   The jump in data production in 2000 occurs because we will be using the
+   Mark IV data acquisition systems.
+
+   By the year 2000 the full Mark IV correlator capacity will be available
+   and will remain constant thereafter. If the station resources are
+   available, we hope to be able to increase the observing days to 5 per
+   week, using the Mark IV data rate. The ultimate goal is continuous
+   7-day observing by the year 2001.
+
+   Figure 4. CORE/IVN Evolution: UT1 Precision Figure 4 shows the
+   projected improvement in the determination of daily UT1 as the CORE
+   program evolves. The red curve is an estimate of UT1 precision with a
+   "perfect" terrestrial reference frame (TRF), i.e. a reference frame in
+   which the station positions are known perfectly. The blue curve is an
+   estimate of UT1 precision for a "realistic" reference frame that has
+   the uncertainties of the motions of the stations taken into account. It
+   is difficult to make more than a qualitative assessment of how the TRF
+   will improve over time because so many factors must be considered. Some
+   of these factors include the composition of the networks that acquire
+   data, how many sessions a station participates in each year and the
+   total span of data for the station, the number of observations in a
+   session, and the SNR of individual observations. When the Mark IV
+   correlators and data acquisition systems are fully available by the
+   year 2000, the daily VLBI sessions will produce the most precise Earth
+   orientation data ever. The values plotted in Figure 4 are for typical
+   5-station networks. With larger networks and correspondingly more
+   resources even higher precision is possible.
+
+
+   Acknowledgments
+
+   We would like to thank the group of scientists who met with us in
+   November, 1996, and contributed substantially to the definition of the
+   CORE program scientific objectives. The scientists are: James Carton
+   (University of Maryland), Ben Chao (NASA/Goddard Space Flight Center),
+   David Crossley (St. Louis University), Jean Dickey (Jet Propulsion
+   Laboratory), Marshall Eubanks (U.S. Naval Observatory), David Salstein
+   (Atmospheric and Environmental Research, Inc.), John Wahr (University
+   of Colorado), and Clark Wilson (University of Texas and NASA
+   Headquarters).
+
+
+   References
+   Ray, J. R., "Measurements of length of day using the Global Positioning
+       System", 1996, JGR, 101, 20141.
+
+   For More Information
+
+   This paper and other information about the international geodetic VLBI
+   program are available on the VLBI group’s home page at
+   http://lupus.gsfc.nasa.gov/vlbi.html. Please feel free to contact any
+   of the people listed below for further information.
+
+   Thomas A. Clark, Space Geodesy Program, NASA Goddard Space Flight
+   Center, Greenbelt, MD 20771 USA
+
+   clark@tomcat.gsfc.nasa.gov
+
+   Chopo Ma, Space Geodesy Program, NASA Goddard Space Flight Center,
+   Greenbelt, MD 20771 USA
+
+   cma@virgo.gsfc.nasa.gov
+
+   Nancy R. Vandenberg, NVI, Inc/GSFC, Greenbelt, MD 20771 USA
+
+   nrv@gemini.gsfc.nasa.gov
+
+   John M. Gipson, NVI, Inc/GSFC, Greenbelt, MD 20771 USA
+
+   jmg@leo.gsfc.nasa.gov
+
+   Arthur E. Niell, Haystack Observatory, Westford, MA 01886 USA
+
+   aen@dopey.haystack.edu

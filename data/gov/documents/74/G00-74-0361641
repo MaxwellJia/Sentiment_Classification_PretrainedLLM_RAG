@@ -1,0 +1,514 @@
+http://seawifs.gsfc.nasa.gov/SEAWIFS/SOFTWARE/major_changes.html
+
+                    SeaWiFS Project Software - Major Changes
+
+   This is a logfile to record major changes to the SeaWiFS data
+   processing software.
+     __________________________________________________________________
+
+
+Date:   2/20/97
+Desc:   Update to Anly.  This change to removes many of the large chlorophyll
+        values that are seen in the level-2 to level-3 data.  There are
+        now checks put in to fail the pixel id the total radiance is <= 0
+        or if the total - Rayleigh is <= 0.  In either case, the atmospheric
+        correction failure flag is set.  It was also discovered that for
+        GAC data, the 2 pixel uncorrectable distance did not supercede
+        the stray light distance sent in.  Thus, to mask out the uncorrectable
+        pixels in the GAC, we must now use a stray light distance of 8.
+
+        (note that the stray light distance change will be fixed in the inputs
+        to anly: 8, .25 for GAC )
+
+
+Date:   2/17/97
+Desc:   Updated the c_chlor_v1p3.dat files used by Anly.  The new file sets the
+        'pk' factor used in the Carder algorithm to 0 instead of 3, which
+        should make a chlorophyll product that is closer to the SeaBAM
+        chlorophyll.  This will only affect the QC product.
+
+        The c_chlor_v1p3.c source file was updated to fix the Carder chlorophyll
+        routine so it will work with all the different packaging options.  Befor
+e,
+        a bug fixed it to only use pk = 0 always.
+
+
+Date:   12/30/97
+Desc:   Update to SWl01.  This change will limit the occurrences of 999 values
+        in the elon, elat, slon, slat, clon, clat fields, correct averaging
+        logic, set larger smoothing interval for LAC and HRPT data, and
+        increase the consistency tolerance for the Sun sensor data.
+
+
+Date:   12/19/97
+Desc:   Update to anly8d.  This is a change to modify the chlorophyll
+        algorithm and to treat negative water leaving radiances differently.
+        The chlorophyll algorithm has 2 changes.  First, if either nLw490 or
+        nLw555 are < 0, set the chlorophyll to 0 rather than .01 as was done
+        before this change.  Second, if the computed chlorophyll is < .01,
+        set the CZCS pigment to 1.34 * .01 ^ 0.98 instead of the value .01
+        as was done before.
+
+        The treatment of the negative water leaving radiances has 2 parts.
+        First, if a pixel has the negative water leaving radiance flag on,
+        look at the shallow water flag for that pixel.  If it is not shallow,
+        set the cloud / ice flag.  In open ocean, the most likely cause for
+        negative water leaving radiances is cloud contamination.  In coastal
+        (shallow) areas, the turbid water can confuse the atmospheric correction
+        into overestimating the aerosol radiance and giving negative water
+        leaving radiance.  With this scheme, the likely cloud areas will be
+        flagged while coastal areas will not end up haloed by a false cloud
+        signal.
+        Second, to accomplish this, we have gone to a better (hopefully) shallow
+        water mask.  This mask is the same format as the land mask: 128 X 128
+        samples per degree.  The ETOPO5 data was mapped into this format.
+        Although the ETOPO5 data is only 5 minute resolution, we expect to
+        fill in, where possible with higher resolution bathemetery data in
+        the future.  The data was also modified so that if any land occurred
+        in the 5 minute square area, that area would be designated as shallow
+        water.  This had to be done because the ETOPO5 has the average depth
+        and it is possible that an area of ocean with a small island will
+        end up with an average depth < 30 m.
+
+
+Date:   12/10/97
+Desc:   Updates to the SeaWiFS navigational software were installed to address
+        the following issues:
+
+        - minor changes to the SeaWiFS instrument alignment
+        - updates to the sensor scan geometry
+        - corrected a bug which was
+          interfering with the detection of noisy data; should have no
+          effect on clean data.
+        - added a check to prevent noisy tilt telemetry from being used in
+          the tilt state logic.
+
+Date:   12/8/97
+Desc:   New calibration table was installed (SEAWIFS_SENSOR_CAL.TBL-199712).
+        The new table is based on the current vicarious calibration analysis
+        and contains the latest calibration coefficients, so the Anly8d flags
+        CALMOD_FLG and CALMOD_OFF should be set to 0 until further notice
+        when using this table.
+
+Date:   12/4/97
+Desc:   The level-2 browse-generating program was modified, so that level-2
+        browse files can be created for LAC data.
+
+Date:   12/2/97
+Desc:   Installed updated unit for the navigational software, navtlm.f, to
+        correct the tilt indexing logic for the case when a scan with no tilt
+        telemetry (one out of every three scan lines) occurs at the start of
+        a tilt change.  It should otherwise have no effect on navigation.
+
+Date:   11/28/97
+Desc:   Installed new version of SeaWiFS Level-0 to Level-1A processing software
+        called SWl01.  This new version is much more robust than the original
+        version, implementing new logic that deals with many of the real-data
+        problems that have caused the original L01 software to fail.  The
+        level-1A file created by SWl01 differ from those created by l1agen in
+        the following ways:
+                - No more filled frames
+                - The following L1A fields are no longer used:
+                        - Filled Scan Lines
+                        - FF Missing Frames
+                        - SDPS Missing Frames
+                        - NORAD Line 1
+                        - NORAD Line 2
+                - HRPT passes and GAC orbits will never be broken into
+                  multiple frames.
+                - Navigation may differ, as SWl01 does some quality filtering
+                  of the data that it passes to the orbit fitting and attitude
+                  determination routines.
+                - "Station Name" may not be "Wallops" for GAC data
+                - "Software ID" is "1.0.1"
+                - "Processing Control" contains a new commandline sequence
+                  reflecting the new program.
+
+        This software is subject to frequent update while it is in its early
+        testing phase.  A log file that lists the change history for SWl01 can
+        be viewed here.
+
+Date:   11/25/97
+Desc:   Installed new version of Anly.  The new version flags an atmospheric-
+        algorithm failure.  If La_670 < 0, set the atmospheric algorithm failure
+        flag.  It will also set La_670 = -1 if this happens.
+
+Date:   11/20/97
+Desc:   Installed new version of the level-1, true-color, tile-mapper software t
+hat
+        incorporates changes similar to those made to the level-1 browse program
+        (make_tc_browse) described on 11/14/97.
+
+        Installed updated version of the level-1 browse program to fix potential
+        bugs and increase optimization.
+
+Date:   11/20/97
+Desc:   Installed new versions of the level-2 browse and level-2 PGM programs.
+        The stray-light mask is now no longer applied when generating these
+        products.
+
+Date:   11/19/97
+Desc:   Installed new version of Anly.  This is a change to modify the chlorophy
+ll
+        algorithm behavior.  For chlorophyll failure not > 32, set the chlorophy
+ll
+        and CZCS chlorophyll to .01.  Low chlor failure is the condition of
+        chlorophyll <.01.  The following input parameters for Anly were modified
+:
+
+                HIGHTAU1 = .3
+                SATZEN1 = 56.
+                LOWLW1 = .15
+
+
+Date:   11/14/97
+Desc:   Installed a new version of the Level-1 Browse software.  The new version
+        calibrates the level-1a data using Lakshmi and Wayne's
+        calibrate_l1a() routine.  It then Rayleigh corrects the calibrated
+        data with some code that I got from Eric Vermote.  The calibrated,
+        Rayleigh-corrected data are finally logarithmically scaled, combined
+        into an RGB image, and quantized down to 256 colors or less before
+        being written into the HDF browse file as an 8-bit raster-plus-palette.
+
+Date:   11/14/97
+Desc:   Installed a new version of the Level-2 Browse software.  The new version
+        causes the following masks to the chlorophyll data in the order shown.
+
+        l2_flags bits set               resulting pixel value
+        -----------------               ---------------------
+        LAND1                           253
+
+        EPSILON1,HIGHLT1,
+        STRAYLIGHT1,CLDICE1,
+        CHLOR1                          254
+
+        SUNGLINT1                       252
+
+
+        If the computed chlorophyll concentration is less than 0.01,
+        then the pixel value is set to 251.
+
+        All other values are logarithmically scaled to values between
+        0 and 250.
+
+
+Date:   11/13/97
+Desc:   Installed new version of navigation software.  These modifications
+        incorporate corrections to the tilt angles, which were determined to
+        be needed following the nadir tilt test on Day 300.
+
+Date:   11/12/97
+Desc:   Added a renavigation step for the standard HRPT processing recipe to
+        ensure that the HRPT files have the best possible navigation.  Apparentl
+y
+        not all of the remote sites have the l1agen built against the most-
+        recent navigational software library.
+
+Date:   11/12/97
+Desc:   Installed a new version of the level-2 browse software.  This new
+        version treats the stray-light bit in the l2_flags field of the
+        level-2 data the same as the cloud-ice bit when generating browse
+        imagery.
+
+Date:   11/10/97
+Desc:   Installed a new version of Anly (anly8dbl.rat).  This is a change to
+        fix a bug found in anly by a SeaDAS user!  The computation of the
+        solar radiance correction for time of year was not being done right
+        because the hour of day, not the fraction of a day, was being added
+        to the day of year to do the F0 correction.  Estimates are that this
+        may lead to 1% errors in Lt.  A small GAC file (day 297) was processed
+        and the nLw increased by 2.7 - 4.9 % and the chlor increased by 4.4%
+        for a 12 Z file.  This would be doubled at the end of the day, where
+        the MOBY data lies.
+
+Date:   11/7/97
+Desc:   Installed a new version of the Straylight software used by Anly.
+        This is a change to have a modifiable stray light flag
+        distance.  before, the first value in the stray light control
+        was overridden by the value 14 and all uncorrectable pixels plus
+        the corrected pixels out to 14 LAC pixels were flagged.  Now,
+        the user has control over how many corrected pixels will be let
+        through (be flagged).
+
+Date:   11/7/97
+Desc:   Modified the following parameter values for Anly
+        STRAYLIGHT1 = (3, 0.25)
+        CLDICE1 = 1.1
+        MSKFLG = EPSILON1,LAND1,SUNGLINT1,HIGHLT1,CLDICE1
+        CALMOD_FLAG = 0
+
+        And the following ssbin-hdf parameters:
+        FLAGUSE = "EPSILON1,LAND1,SUNGLINT1,HIGHLT1,SATZEN1,NEGLW1,STRAYLIGHT1,\
+                   CLDICE1,COCCOLITH1,SOLZEN1,HIGHTAU1,LOWLW1,CHLOR1
+
+Date:   11/3/97
+Desc:   Installed new version of anly8d that processes data through the tilt
+        changes.
+
+        The old anly would not do any processing if the tilt state was 3
+        (changing tilt) or not a valid tilt state (not 0 - 3).  The
+        atmospheric correction algorithm failure flag would get set in
+        these cases.  For a pixel in tilt state 3, the flag for atmospheric
+        correction is not set -- thus, it will survive for further processing.
+
+        Note that the current binner will exclude tilt state 3 so the tilt
+        information will not get to the binned files, only the level-2.
+
+
+Date:   10/16/97
+Desc:   Installed new Anly source code that works with a new high-resolution
+        land mask (~1 km), which was also installed.
+
+Date:   10/16/97
+Desc:   Changed the CLDICE1 flag for anly8d to 0.85 from its previous setting
+        of 1.1.
+
+Date:   10/16/97
+Desc:   Installed new version of MOPS navigation routines earth.f and sunwgt.f
+        to correct a minor bug in Earth oblateness and improve the weighting of
+        the Sun sensor data respectively.  A new version of the navctl.dat
+        navigation parameter file was installed that includes refinements to
+        all sensor alignment matrices.
+
+Date:   10/16/97
+Desc:   Installed new level-1A browse software that makes true-color browse
+        files from bands 1, 5, and 6 instead of just sampling band 8.  New
+        metadata fields were added.
+
+Date:   10/16/97
+Desc:   Installed new level-2 browse software that puts additional metadata
+        fields (navigation coordinates) in the browse file.
+
+Date:   10/13/97
+Desc:   Installed updated statistical-check tables for level-1A GAC and LAC
+        that are less stringent with respect to line-to-line navigational
+        thresholds.
+
+Date:   10/10/97
+Desc:   Installed updated statistical-check tables for level-1A GAC and LAC
+        that are more stringent with respect to line-to-line navigational
+        thresholds.
+
+Date:   10/7/97
+Desc:   Installed new version of MOPS navigation routine runfit3t.f to fix a
+        bug introduced in the 10/3/97 installation.
+
+Date:   10/6/97
+Desc:   Modified Timebin GUI so that NDVI and Biosphere (BIOS) SMI images are
+        created for binning periods > daily.
+
+Date:   10/6/97
+Desc:   Installed new version of MOPS navigation routine fit3t.f to fix a bug
+        introduced in the 10/3/97 installation.
+
+Date:   10/6/97
+Desc:   Installed new hdf_io2.c routine for anly8d that correctly updates the
+        solar-zenith angle in the level-2 QC file.
+
+Date:   10/3/97
+Desc:   Modified the CLDICE1 parameter for anly8d to 1.1 from 0.85 to improve
+        chlorophyll retrieval through clouds.
+
+Date:   10/3/97
+Desc:   Updated MOPS navigation source files runfit3t.f and fit3t.f to improve
+        performance for sliced GAC and LAC data.
+
+Date:   9/24/97
+Desc:   New version of anly8d installed.  This is a change to make sure that
+        the level-2 write routines know the actual # of output records.  Before
+        this change, put_l2_open derived the # of lines from the start and end
+        time of the level-1 file.  This is not always the case and for 1 HRPT,
+        caused the level2 generation program to fail because it thought there
+        were fewer lines than there actually were.  The fix will add the # lines
+        as an input to put_l2_open and will issue a warning if there is a
+        difference in the # of lines, but it will continue and not bomb.
+
+Date:   9/23/97 - 10/3/97
+Desc:   Updates to navigation parameters during this period have improved the
+        level-0 to level-1A process' performance with respect to deriving valid
+        corner coordinates.  Frequent updates to the HRPT version of l1agen were
+        made available via anonymous FTP.
+
+Date:   9/20/97
+Desc:   HRPT Filtering program implemented prior to level-0 to level-1A processi
+ng
+        to help filter out excess noise in the level-0 file.
+
+Date:   9/18/97 - 9/23/97
+Desc:   Additional changes in navigation and calibration were made that resulted
+ in
+        global reprocessing of all data received since 9/4/97.
+
+Date:   9/18/97
+Desc:   First operational day for SeaWiFS
+
+Date:   9/16/97
+Desc:   New version of anly8d installed.  This is a change to use the average
+        of the dark restore in computing the radiances.  It gets applied to the
+        anly program and the level-1b program.
+
+Date:   9/10/97
+Desc:   New version of anly8d installed that repairs the seabam_chlor.c routine
+        to not allow chlorophyll.  This also fixes  the CZCS chlorophyll calcula
+tion
+
+Date:   9/4/97 - 9/17/97
+Desc:   Received additional test data from SeaWiFS.  Many changes in navigation
+        and calibration were made during this time.
+
+Date:   9/4/97
+Desc:   Received first engineering test image from SeaWiFS
+
+Date:   8/97
+Desc:   New version of anly8d received from Cal/Val that includes NDVI (land)
+        information in the level-2 QC file.
+
+Date:   8/97
+Desc:   Added the ability to assign specific recipes to HRPT stations.
+
+Date:   8/97
+Desc:   Level-1 and level-2 mapping program implemented for all production
+        recipes.  The output files are in PGM and PPM formats are for internal
+        use only.
+
+Date:   8/97
+Desc:   NDVI Mapping software implemented to create level-3 standard-map files
+        for NDVI from the level-2 QC files.
+  ___________________________________________________________________________
+
+
+Below are listed the current set of processing parameters:
+
+Ancillary Data Product Generation Parameters:
+
+OZONE
+-----
+set param = "OZONE"
+set thresh1 = "40.0"
+set thresh2 = "50.0"
+set thresh3 = "60.0"
+set maxmiss = "700"
+set loval = "100"
+set hival = "500"
+set outmax = "200"
+set slat = "-55."
+set nlat = "65."
+
+
+NMC
+---
+set param1 = "z_wind"
+set param2 = "m_wind"
+set param3 = "press"
+set param4 = "rhum"
+set param5 = "p_water"
+set t1 = "15.0"
+set t2 = "25.0"
+set t3 = "35.0"
+set maxmiss = "20000"
+set lozwind = "-30.0"
+set hizwind = "30.0"
+set lomwind = "-30.0"
+set himwind = "30.0"
+set lopress = "850.0"
+set hipress = "1100.0"
+set lorelhum = "0.0"
+set hirelhum = "100.0"
+set lopwater = "0.0"
+set hipwater = "150.0"
+set outmax = "200"
+
+
+
+SeaWiFS Data Product Generation Parameters:
+
+ANLY
+----
+With calibration table: SEAWIFS_SENSOR_CAL.TBL (Nov 10 05:55)
+CALMOD_FLG=1
+CALMOD_GAIN=( 1.02, .99, .958, .98, .99, .987, .94, 1.0 )
+CLDICE1=1.1
+COCCOLITH1=(1.1,0.81,1.0,2.0,1.0,1.6,0.95,1.5)
+HIGHTAU1=0.3
+I_10=2
+LOWLW1=0.15
+MSKFLG="EPSILON1,LAND1,SUNGLINT1,HIGHLT1,CLDICE1"
+NOWANG=0
+OUTBAND=-1
+SATZEN1=56.0
+SEABAM_THRESH=32
+SOLZEN1=70.0
+STRAYLIGHT1=(3,0.25)
+SUNGLINT1=0.005
+TURBIDW1=3.42
+
+With calibration table: SEAWIFS_SENSOR_CAL.TBL-9712 (Dec  8 14:48)
+
+CALMOD_FLG=0
+CLDICE1=1.1
+COCCOLITH1=(1.1,0.81,0.60,0.90,0.90,1.20,0.60,0.90)
+HIGHTAU1=0.3
+I_10=2
+LOWLW1=0.15
+MSKFLG="EPSILON1,LAND1,SUNGLINT1,HIGHLT1,CLDICE1"
+NOWANG=0
+OUTBAND=-1
+SATZEN1=56.0
+SEABAM_THRESH=32
+SOLZEN1=70.0
+STRAYLIGHT1=(8,0.25)
+SUNGLINT1=0.005
+TURBIDW1=3.42
+
+
+SSBIN
+-----
+BINMODEL=1
+ENGQUSE=00000000000000000000000000000000
+FLAGUSE="EPSILON1,LAND1,SUNGLINT1,HIGHLT1,SATZEN1,NEGLW1,STRAYLIGHT1,\
+         CLDICE1,COCCOLITH1,SOLZEN1,HIGHTAU1,LOWLW1,CHLOR1"
+GRID=(8,8)
+GSFCQUAL=2
+ONEBIN=T
+RESOLVE=9
+SEAMLON=-180.0
+
+
+STBIN (example)
+-----
+REP=ORIGINAL
+TFLAG=M
+SYEAR=1997
+SDAY=32
+EYEAR=1997
+EDAY=59
+ORBIT1=77401
+ORBIT2=77794
+GSFCQUAL=2
+
+
+SMAP9
+-----
+STAT=M
+GSFCQUAL=2
+QUAL=A
+OUTX=4096
+OUTY=2048
+OLON=0.0
+OLAT=0.0
+OROT=0.0
+LONC=0.0
+LATC=0.0
+WIDTH=0.0
+HEIGHT=180.0
+
+
+                                rainbow line
+
+                           SeaWiFS biosphere globe
+
+                          SeaWiFS Project Home Page
+     __________________________________________________________________
+
+
+    Gene Carl Feldman (gene@seawifs.gsfc.nasa.gov) (301) 286-9428

@@ -1,0 +1,96 @@
+http://www.awips.noaa.gov/racc/tips8-29.html
+
+   RACC Tips - August 29, 2001 by Paul Kirkwood, SR
+Per the Last RACC Meeting call...Here are the performance tips that are
+used at some sites.
+
+1. Every Day shift (And every shift prior to Svr Wx).
+Log out of all D2D and applications running (Including Text).
+In the Options of the DtLogin Screen select Restart Login Screen.
+This cleans up the X Server, which can end up using up a lot of memory
+as it grows over a shift (Max I have seen is 250MB).
+
+2. Before a Svr Wx shift, restart all processes on the DS's and AS's, If
+the ESA, SOO, or AFP are not in the office staff (Lead Forecaster
+Decision) can call NCF and ask them to restart the processes. We also
+stop and restart the Notification Server.  Have all the processes be
+fresh and newly started before the SVR wx occurs.  Also Reset the XServers
+before the event.
+
+3. (We also have NCF put us in Critical Weather Watch.)
+
+4. To speed up the DS, For all triggers, we only use the textdb -w if
+necessary, We do not use the textdb -r option on any of them.  We also
+only run a trigger once per PIL.  If you need to run multiple
+applications on the Same PIL, we use on C-Shell or Posix shell script to
+run all applications.  This way your number of triggers is much smaller.
+
+5. Tweaking the number of frames to loop in the small panes of D2D, helps
+free up memory, but does take longer to reload after swapping panes.  I
+am currently running metrics on the difference.
+
+There have been some comments that the WarnGen text window takes some
+time to pop up on the text workstation during a severe weather event.
+Here is a list of performance tips to try to speed up the text
+window/workstations.
+
+6.  If you have time before the weather reaches your area.  Close all
+windows and programs running on the text workstation.  Logout of the workstation
+and power off the text workstation, then turn the power
+back on.
+
+7.  Exit out of the Monitoring and Controller window.  Do not have this running
+on your warning workstation.
+
+8.  Make sure that you do not have the Update Obs feature turned on in
+any of your text windows.
+
+9.  Recommend not running any other local applications on your text workstation.
+
+10.  Limit the number of looping frames in your D2D windows.  If you
+can, do not loop your products in the small panes.
+
+11.  Limit the number of alerts you send to that text workstation.
+
+12.  If your Aplication Server is being impacted you can do the
+following to disable SCAN/FFMP.
+
+  as user fxa on AS1,
+
+  To stop:
+
+  cd /awips/fxa/bin
+  ./stopFFMPprocessor
+  ./stopSCANprocessor
+  chmod 444 startFFMPprocessor
+  chmod 444 startSCANprocessor
+  chmod 444 SCANprocessor
+  chmod 444 FFMPprocessor
+  remsh as2 "chmod 444 /awips/fxa/bin/startFFMPprocessor"
+  remsh as2 "chmod 444 /awips/fxa/bin/startSCANprocessor"
+  remsh as2 "chmod 444 /awips/fxa/bin/SCANprocessor"
+  remsh as2 "chmod 444 /awips/fxa/bin/FFMPprocessor"
+
+  To start:
+
+  cd /awips/fxa/bin
+  chmod 775 startFFMPprocessor
+  chmod 775 startSCANprocessor
+  chmod 775 SCANprocessor
+  chmod 775 FFMPprocessor
+  remsh as2 "chmod 775 /awips/fxa/bin/startFFMPprocessor"
+  remsh as2 "chmod 775 /awips/fxa/bin/startSCANprocessor"
+  remsh as2 "chmod 775 /awips/fxa/bin/SCANprocessor"
+  remsh as2 "chmod 775 /awips/fxa/bin/FFMPprocessor"
+  ./startFFMPprocessor
+  ./startSCANprocessor
+
+ PLEASE remember to notify the NCF if do this so that they
+ will not restart these processes for you.  You can also
+ have the NCF put your site in critical watch mode during
+ active weather and they will be able to monitor your system.
+
+ Thanks,
+ Paul K.
+
+

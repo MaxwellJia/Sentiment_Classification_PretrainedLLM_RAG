@@ -1,0 +1,86 @@
+http://www-didc.lbl.gov/Linux-tcp-bug.html
+
+    Information on critical Linux TCP bug for high-speed WAN applications
+
+                                Brian Tierney
+                 Data Intensive Distributed Computing Group
+                    Lawrence Berkeley National Laboratory
+
+   This page describes recently discovered a serious TCP sending bug in
+   Linux. I'm surprised that this bug was not know until now, as I've seen
+   TCP performance 50 times slower than it should be, but it only occurs
+   under somewhat unusual conditions. Before describing the problem, I
+   will describe the conditions where you are likely to encounter this
+   bug.
+
+   The bug shows up only when:
+     * Linux sending to non-linux system
+     * end systems separated by a WAN with at least a 25 ms RTT (round
+       trip time: ie: ping time)
+     * wide area network speed of at least 10 Mbps
+     * some congestion on the network
+     * Higher latency and/or higher congestion makes the problem worse.
+
+   If your environment includes all of the above, read on!
+
+   Here are some test results:
+ANL to LBL (45 ms RTT; bottleneck link: 100 Mbps):
+           Linux to Linux: 50 Mbps
+           Solaris to Linux: 50 Mbps
+           Linux to Solaris: 3 Mbps  ( >15 times slower!)
+
+LBL to CERN: (180 ms RTT: bottleneck link: 45 Mbps):
+           Linux to Linux: 25 Mbps
+           Solaris to Linux: 25 Mbps
+           Linux to Solaris: .5 Mbps ( 50 times slower!)
+           Linux to FreeBSD: .5 Mbps
+           Solaris to solaris: 25 Mbps
+
+   I have tested this with Linux senders runing the following kernels, all
+   with the same results: 2.2.12, 2.2.14, 2.2.16, 2.2.17, 2.4.0-test10
+
+   I used iperf for all throughput testing, and used the following
+   options:
+server: iperf -s -l 256000 -w 1000000
+client: iperf -c hostname -i 5 -t 100 -l 128000 -w 1000000
+
+   After discovering this performance anomoly, I used the NLANR TCP
+   Testrig package to try to figure out what was going on. testrig is a
+   easy to use packaging of the tcpdump, tcptrace, and xplot tools.
+
+   Here are the results:
+   tcpdump output: (This file has 2 simultaneous streams from a linux box,
+       1 to a linux and the other to a solaris host)
+       The important tcptrace output files for this run are: Linux to
+       Linux and Linux to Solaris
+       Some sample xplot outputs are: Linux to Linux and Linux to Solaris
+
+   You have to be a serious TCP expert to really understand these plots
+   (which I am not), but its pretty clear that something strange is going
+   on in the Linux sender. So I sent these results to Vern Paxson, and
+   this is his response:
+   "Well, the problem is that the sender is miscomputing its RTO, setting
+       it to a value that's much too low (according to the standard). This
+       appears to work Linux-Linux because the Linux delayed ack is very
+       small (also not a good idea!). Solaris uses a larger delayed ack
+       (looks like around 50 msec, still quite small) and that's enough to
+       push the RTT above the RTO. This just needs to happen once when you
+       have a lot of data in flight and its disaster, the entire flight
+       gets retransmitted and the congestion response is drastic."
+
+   Using this data as evidence, I was quickly able to convince the Linux
+   TCP developers that there was a bug here, and there are updates to both
+   the 2.2 and 2.4 kernel that have fixed the problem! See:
+
+     Linux 2.2.18 or higher
+
+     Linux 2.4.0-test12 or higher
+     __________________________________________________________________
+
+   Please send comments or additions  for this page to
+   (BLTierney@lbl.gov).
+
+      Back to DIDC HOME PAGE
+     __________________________________________________________________
+
+   This page last modified: Tuesday, 12-Dec-2000 07:58:29 PST

@@ -1,0 +1,50 @@
+http://www-sdd.fsl.noaa.gov/~fxa/FX-Linux/
+
+                                  FX-Linux
+
+   To demonstrate a technology path for evolution of the National Weather
+   Service's (NWS) Advanced Weather Interactive Processing System (AWIPS),
+   FSL began an effort to port the D2D (Display 2-Dimensions) code to run
+   under Linux on a commodity PC in 1999. In late 2000, the NWS fielded
+   the first demonstration systems, and plans to have one PC-based Linux
+   system in each of its field offices by early 2002.
+
+   FSL has continued its Linux development work, including porting the
+   data ingest/decoding subsystem. An updated description of this work was
+   prepared in mid 2001. Elsewhere, PRC Inc., under contract to NWS, has
+   developed a Linux version of the communications processor that provides
+   the interface between the satellite broadcast and FSL's decoders. This
+   is currently being tested at PRC, NWS headquarters, and FSL. The
+   diagram below (prepared by NWS) approximates the current test
+   configuration.
+
+   Current work at FSL includes exploration of new network technology,
+   including a multicast of the data to the user workstations, and some
+   experiments with a high-availability cluster for failover management.
+   [network.jpg]
+
+   Currently at FSL, we have only one preprocessor (PP1), and only
+   satellite images are being processed by it. All other data are still
+   being ingested by the old HPRT Communications Processor.
+
+   The following notes are provided by NWS, keyed to the numbers on their
+   diagram.
+    1. acq_client feeds incoming grid data to instances of acqserver
+       running on both PP1 and PP2.
+    2. Grid acquisition and storage processes (from acqserver (acqdata) to
+       GribDecoder) run in parallel on both PP1 and PP2. Grid data stored
+       redundantly in netCDF format on local disks on each node.
+    3. The /data/fxa hierarchy is visible to software on both DS nodes,
+       both AS nodes, and all workstations. The /data/fxa/Grid
+       subhierarchy actually resides on PP1 and PP2 (duplicate copies).
+       Details for implementing this remain TBD.
+    4. Issue: To limit the interruption of operations that might be caused
+       by the failure of one of the PPs, we have the grid ingest processes
+       running in parallel on both. That will cause the notification
+       server to receive two notifications of each incoming product, one
+       from each GribDecoder.
+     __________________________________________________________________
+
+      Page maintained by Joe Wakefield.
+
+        Last updated 11 Oct 01

@@ -1,0 +1,152 @@
+http://hrdd.grc.nasa.gov/nextgenarch.shtml
+
+   Space Communications Home Page
+
+
+
+   Index corner   Index corner
+     Next Generation Architectures
+
+   Bullet Space Communication Architectures
+   Bullet Integrated Architecture Framework and its Elements
+   Bullet High Rate Backbone Networks
+   Bullet Flexible Access Networks
+   Bullet Inter-spacecraft Cooperative Networks
+   Bullet Proximity Wireless Networks
+   Bullet Intelligent Communication Architectures
+     Index corner   Index corner
+   Space Communication Architectures
+   NASA, DoD, and Industry are developing several communications
+   architectures.   Capabilities are added to these architectures as new
+   requirements in space communication are addressed and as new ideas and
+   innovation permit.  We are developing an integrated architectural
+   framework that can continually adapt to the upgrading of requirements
+   that are expected in the future.  The architectural elements of this
+   framework are the reference for identifying the critical technologies
+   needed for the implementation of the networks and the future
+   missions.  While it is NASAs intent that future missions will be
+   implemented with networked communications technologies and common
+   interfaces, it is a goal of the Space Communication Project to ensure
+   that the networks and technologies can appropriately address the needs
+   of the future missions. Thus, the recent advances in Internet based
+   technologies have significant impact on future space communication
+   architectures.
+   Integrated Architecture Framework and its Elements
+   The architectural elements are further developed by system engineering
+   methodologies, usage scenarios debated in extensive workshops, and by
+   inputs received from enterprise technologists and scientists. The
+   technology roadmaps to achieve the desired architectural
+   implementations are also developed.
+   These architectures are based on current Internet like technologies and
+   include several layers including:
+          + Application
+          + Transport
+          + Network
+          + Data Link
+          + Physical
+
+   Currently we have divided the architectures into the following
+   architectural elements.
+   High Rate Backbone Networks
+   High Rate Backbone Networks - Click to enlarge. The backbone elements
+   of the Space Internet are entities that handle the passing of data to
+   other infrastructure entities. These entities include the Tracking and
+   data Relay Satellites, the ground side (LANs and WANs) of the rest of
+   the Space Network, the ground side (LANs and WANs) of the Ground
+   Networks and the Deep Space Networks, the other NASA/CSOC LANs and WANs
+   used to pass data to the operations centers, and the Internet itself.
+   Future backbone elements will include any commercial communication
+   satellite that moves NASA satellite data and any other in-space relay
+   entity that augments or replaces the Space Network or Deep Space
+   Network.
+   Backbone elements have the following characteristics:
+          + 10Gbps to GEO, 100Mbps to L1 or L2, 10Mbps to Mars, 1 Mbps to
+            Jupiter
+          + 10-20 year life
+          + Includes RF and optical communications systems
+          + New in-space elements will incorporate server capabilities,
+            intelligence, and the ability to provide service on-demand of
+            the user mission entity.
+
+   Flexible Access Networks
+   Flexible Access Networks - Click to enlarge. The access elements are
+   those entities that enable a spacecraft or other mission entity to
+   connect to and communicate through the backbone. Access elements
+   residing on the spacecraft include the main communications system used
+   for sending data to Earth and  for receiving instructions from Earth.
+   Access elements also include the communications packages at the edges
+   of the backbone networks that send instructions to and receive data
+   from the mission elements. The spacecraft s on-board LAN is an access
+   element as it enables the individual instrument to access the backbone
+   as well as on-board services. The user s ISP is his access point to the
+   Internet and also to the backbone.
+   Access elements have the following characteristics:
+          + 10Gbps from GEO, 100Mbps from L1 or L2, 10Mbps from Mars, 1
+            Mbps from Jupiter
+          + 5-7 year life
+          + Includes RF and optical communications systems
+          + Low power (1-10W), mass (.5-5kg), and ($5k-$50k) cost hardware
+            items.
+          + New in-space elements will incorporate intelligence and the
+            ability to request service when necessary.
+
+   Inter-spacecraft Cooperative Networks
+   Inter-spacecraft Cooperative Networks - Click to enlarge.
+   Inter-spacecraft: Inter-spacecraft elements are those communications
+   packages used for intercommunications between spacecraft flying in
+   formation, in clusters, or in constellations.  These packages are used
+   to pass data between spacecraft for the coordination of activities such
+   as maintenance of relative positions, performance of formation
+   maneuvers, distribution of data processing, triggering and
+   synchronization of measurement events, timing of event reception, and
+   aggregation of data at a spacecraft that has access to the backbone and
+   that passes that data to the users. These packages may also provide the
+   measurement capabilities needed to support the coordination of relative
+   positioning.
+   Inter-spacecraft elements have the following characteristics:
+          + 100Mbps over 100 meters, 50Mbps over 1km, 1Mbps over 100km
+          + 5-7 year life
+          + Includes RF and optical communications systems
+          + Low power (1-10W), mass (.1-2kg), and ($0.5k-$5k) cost
+            hardware items.
+          + New in-space elements will incorporate intelligence, ad hoc
+            structure building capability, and multi-casting capability
+
+   Proximity Wireless Networks
+   Proximity Wireless Networks - Click to enlarge. Proximity: The
+   proximity elements are those very short range, very low power, very low
+   cost, somewhat shortlived communications packages that are used to
+   inter-communicate between small science packages such as individual
+   sensors spread about an area, rovers, landers and other landed entities
+   that are closely spaced. Proximity elements are typically connected
+   together in an ad hoc communications structure where data is relayed
+   between elements until it is received by a landed entity that can
+   provide access to a backbone element.
+   Proximity elements have the following characteristics:
+          + 1Mbps over 10 meters, 100kbps over 30m, 10kbps over 100m
+          + 0.1-1 year life
+          + Low power (10-100mW), mass (2-50g), and ($5-$50) cost hardware
+            items.
+          + New in-space elements will incorporate intelligence and ad hoc
+            structure building capability.
+
+   Intelligent Communication Architectures
+   The space Internet architectures will handle autonomous access
+   on-demand of the user or user spacecraft. Whatever scheduling of
+   communications services that remains to be done will be handled with
+   smart software systems that take into account availability of assets as
+   well as those issues of priority of backbone access that remain after
+   access on-demand is implemented. The architecture will also include
+   in-space facilities such as servers that will be used to implement
+   in-space email, video and voice streaming, Java, and XML services. The
+   architecture will provide those network and protocol services that are
+   of general use to all missions.
+
+   NASA Meatball with link to NASA Home Page
+
+                    Responsible NASA Official: Kul Bhasin
+     To report problems with this site, please contact the curator: Greg
+                                   Sloane
+                 NASA Glenn Research Center, Cleveland Ohio
+                           NASA Privacy Statement
+                                      .

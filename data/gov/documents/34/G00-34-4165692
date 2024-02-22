@@ -1,0 +1,645 @@
+http://is2.antd.nist.gov/cerberus/
+
+   [up.xbm] Advanced Networking Technologies Division Projects [up.xbm]
+   Computer Security Division Projects
+     __________________________________________________________________
+
+           NIST Cerberus, An IPsec Reference Implementation for Linux
+     __________________________________________________________________
+
+Contents:
+
+     * News, Patches, Upgrades, & Bug Reports
+     * Implementation Description
+     * User Interface Description
+     * PlutoPlus, An IKE Reference Implementation for Linux
+     * How To Obtain Software
+     * Copyright Statement
+     * IPsec-WIT, WWW-based IPsec and IKE Interoperability Testing Tool
+     * Acknowledgements
+     * Contact
+     __________________________________________________________________
+
+News, Patches, Upgrades
+
+   This section is dedicated to recent news and software developments.
+     * 05/12/00 - Cerberus 0.5 release
+       The most current versions of the Cerberus 0.5 IPsec software and
+       the PlutoPlus 0.1 IKE software will soon be available via WWW
+       download. Go to the How To Obtain Software section for more
+       information regarding obtaining the source code.
+       Cerberus 0.5 Changes include:
+          + Default build is now for Redhat 6.2 and Slackware 7.0 2.2.14
+            kernels. Other 2.2.x kernels may work and other distributions
+            of Linux may work but only these have been tested.
+          + The rfc1828, rfc1829, rfc1852, ah_hmacsha192, and
+            ah_hmacmd5128 transforms have been removed.
+          + Algorithm/transform options have been removed when configuring
+            the kernel. All algorithms are now included.
+          + AES finalist algorithms are included for static SA management
+            only.
+          + Change to Copyright statement.
+          + Change to Export Controls statement.
+       A new version of the PlutoPlus software will be available shortly.
+     * 08/31/99 - ip.h patch missing from Cerberus 0.4 release
+       After getting reports that the current release of the Cerberus code
+       was not encapsulating in router mode, it was discovered that the
+       patch for linux/include/net/ip.h was missing from the release (a
+       reference was in the install.pl file but the file itself was
+       missing). Here is a link to the patch file, ip.h.diff.
+       There are a couple of ways to install this file. You can simply put
+       it in the nist/cerberus-0.4/include/net directory and re-install
+       the cerberus software. If you do this, don't forget to use a copy
+       of the linux 2.2.5 kernel not already patched with Cerberus.
+       The other way is to put ip.h.diff in /usr/src (or where ever the
+       root of your kernel source tree is) and type patch < ip.h.diff (for
+       RedHat users use patch -p0 < ip.h.diff).
+       Without this patch, IP will forward packets without applying IPsec
+       security (whether a SA exists or not). End-to-End IPsec does work
+       without the patch.
+       Copies of the Cerberus & PlutoPlus software shipped on/after 8/31
+       will have this file included. You can verify this by looking for it
+       in nist/cerberus-0.4/include/net/ip.h.diff. With this patched
+       version of the software, you will still need to appy the kernel and
+       app patches from 06/30/99 below. Given the time, I will come up
+       with a jumbo patch in the near future.
+     * 06/30/99 - Slackware and RedHat 5.x Patch for Cerberus 0.4 released
+       This set of patches include minor bug fixes and will correct the
+       problem of not being able to build the kernel with both Cerberus
+       and the Linux Firewall software. Testing is still needed to
+       determine if the Cerberus software interferes with operation of the
+       Linux Firewall software. These patches also include the makefile
+       patch mentioned below. The patches are contained in the two files,
+       kernel-patch and app-patch (which can be downloaded by
+       shift-clicking on the file name links).
+       To install the patches you should be in the directory containing
+       the top-level kernel and top-level ./nist directory (e.g.
+       /usr/src). You should have already installed the NIST Cerberus
+       software (i.e. ./nist/cerberus-0.4/install.pl). No patches are
+       applied to the PlutoPlus software. Then type: patch -p0 <
+       kernel-patch and then: patch -p0 < app-patch. Assuming everything
+       went well, you should now be able to compile the kernel, kernel
+       IPsec module, manual sadb user interface, and the PlutoPlus daemon.
+     * 06/30/99 - RedHat 6.0 Patch released
+       These patches make corrections to a few #include files that will
+       allow RedHat 6.0 systems to compile the NIST IPsec kernel and user
+       applications. This set of patches also includes minor bug fixes and
+       will correct the problem of not being able to build the kernel with
+       both Cerberus and the Linux Firewall software. Testing is still
+       needed to determine if the Cerberus software interferes with
+       operation of the Linux Firewall software. These patches also
+       include the makefile patch mentioned below. The patches are
+       contained in the two files, redhat60-kernel-patch and
+       redhat60-app-patch (which can be downloaded by clicking on the file
+       name links).
+       RedHat 6.0 comes with a version of the 2.2.5 kernel. Some of the
+       patches contained in these files will NOT work with this kernel.
+       You are strongly encouraged to go to your favorite linux kernel ftp
+       site and download the stock version of the 2.2.5 kernel.
+       To install the patch you should be in the directory containing the
+       top-level kernel and top-level ./nist directory (e.g. /usr/src).
+       For the RedHat 6.0 patch you should have already installed the NIST
+       Cerberus software (i.e. ./nist/cerberus-0.4/install.pl) and
+       un-tar'ed the PlutoPlus softare. Then type: patch -p0 <
+       redhat60-kernel-patch and then: patch -p0 < redhat60-app-patch.
+       Assuming everything went well, you should now be able to compile
+       the kernel, kernel IPsec module, manual sadb user interface, and
+       the PlutoPlus daemon.
+     * 5/21/99 CONFIG_FIREWALL bug
+       There is a section of code in net/ipv4/ip_output.c that was heavily
+       modified for Cerberus that created a compile time error when you
+       turn on CONFIG_FIREWALL. I'll try to have a solution for this in
+       the next week or so. In the mean time, don't configure the kernel
+       to use the firewall code.
+     * 5/21/99 Makefile patch
+       net/ipsec/Makefile has a bug that prevents people from compiling
+       Cerberus as an integral part of the kernel. Compiling as a module
+       works fine. makefile_patch is a patch to the Makefile to corrects
+       this. Do the following to install.
+         1. Save above makefile_patch link to a file.
+         2. Change to the kernel source directory (e.g. cd /usr/src/linux)
+         3. cd net/ipsec
+         4. patch < (directory where you downloaded the patch
+            to)/makefile_patch
+     * 5/99 - Cerberus 0.4 Released
+     * 5/99 - PlutoPlus 0.1 Released
+       See http://www.antd.nist.gov/plutoplus for more information.
+     __________________________________________________________________
+
+NIST Cerberus Description
+
+   The NIST Cerberus IPsec Reference Implementation for Linux was
+   developed based on the current ESP and AH specifications and several of
+   the current algorithm drafts including the AES draft. A list of the
+   RFCs and Internet Drafts for which this implementation is based are
+   included below.
+
+   For the most part, this is a fully operational IPsec implementation
+   that provides, host-to-host, host-to-router, and router-to-router IPsec
+   services. The remainder of this document briefly describes the
+   implementation architecture, some comments on changes made to IPv4, and
+   a list of what is included with this implementation. How to install the
+   implementation can be found in the INSTALL document that comes with the
+   distribution. How to setup associations and use this implementation can
+   be found in README.sadb, the sadb.n man page, and the xsadb.html page.
+
+   Architecturally the code is made up of four components, the Security
+   Association database (SADB) management routines, the IPsec protocol
+   engine, the cryptographic transforms and algorithms, and the interface
+   to IP. [cerberus.gif]
+
+   The SADB management routines process database requests (add, delete,
+   get) from user space via a Linux netlink socket. The file /dev/ipsec
+   which is associated with a netlink socket (defined in
+   /usr/src/linux/include/net/netlink.h) is used for this purpose.
+
+   The IPsec protocol engine is made up of a set of functions that process
+   in-bound and out-bound ESP and AH requests as well as perform some
+   simple policy checks.
+
+   The transforms (now known as algorithms in the current IPsec
+   documentation) are defined internally as an object with four functions.
+   An in-bound processing function, an out-bound processing function, a
+   SADB add function and a SADB undelete function.
+
+   The cryptographic algorithms (e.g. DES-CBC, Blowfish-CBC, HMAC-MD5,
+   etc.) are the set of functions that the transforms use to encrypt and
+   decrypt data, as well as generate and verify authentication data.
+
+   The interface to IP required rewriting part of the IP output code and
+   modifying the TCP routines that use the IP header size in its MSS and
+   PMTU calculations.
+   SADB Management Routines
+
+   For purposes of this implementation, a Security Association is defined
+   by the following set of attributes. This set of attributes can be used
+   to represent either a one-way or two-way association. Note: some of
+   these fields are specific to dynamic KM and are ignored for static
+   entries.
+    destination address:  destination of packets for which security
+                          is being applied or removed.
+    prefix length:        number of relevant bits of the destination
+                          address allows the specification of subnets
+                          and networks.
+    local SPI:            index into local SADB
+    IPsec peer address:   address of the system providing IPsec security
+                          services for the above destination
+    Peer SPI:             Remote (peer) systems SPI
+    sequence number:      current sequence number for outgoing packets
+    replay window bit map:internally maintained 64-bit bitmap
+    last sequence number received: highest valid sequence number received
+    flags:                M (manual or static SA),
+                          C (check for replay),
+                          T (tunnel-mode),
+                          I (Inbound SA),
+                          O (Outbound SA),
+                          P (Partial SA - Dynamic KM specific),
+                          K (KM Kicked - Dynamic KM specific),
+                          N (Negotiated SA - Dynamic KM specific),
+    protocol:             ESP, AH, NULL_SA
+    if protocol == ESP
+        crypto algorithm identifier: identifier specified in ipsec.h
+                                     (needs aligned with DOI)
+        crypto initialization vector length: number of IV bytes to
+                                             randomly generate
+                                             and place in packet
+        rypto key: secret key for encrypting and decrypting data
+        auth algorithm identifier: identifier specified in ipsec.h
+                                   (needs aligned with DOI)
+        auth initialization vector length: number of IV bytes to
+                                           randomly generate and
+                                           place in packet
+        auth key:secret key for generating and verifying auth data
+        auth data length:  length in 32-bit words of auth data
+                           to be appended to packet
+    if protocol == AH
+        auth algorithm identifier: identifier specified in ipsec.h
+                                   (needs aligned with DOI)
+        auth initialization vector length: number of IV bytes to
+                                           randomly generate and
+                                           place in packet
+        auth key: secret key for generating and verifying auth data
+        auth data length:   length in 32-bit words of auth data
+                            to be included in AH header of packet
+    if protocol == NULL_SA
+        no other data is needed
+                NULL_SA is used to assist in setting system policy.
+                This is discussed in greater detail below.
+
+    linked protocol: Next IPsec protocol to be applied to IP packet.
+                     Allows for a chain of SAs to be applied to each packet.
+
+    linked spi:  Next SPI of SA to be applied to IP packet.
+
+    Lifetime bytes:  Number of bytes that can be processed by SA before
+                     it expires (Dynamic KM specific).
+
+    Lifetime time:  Time at which SA expires.
+
+   SA Management
+
+   Security Associations (SAs) are stored in two sorted chained hash
+   tables as a single piece of data with two sets of pointers. The
+   out-bound table is hashed on the destination address. The in-bound
+   table is hashed on the IPsec peer address. The SADB management routines
+   receive requests through a Linux Netlink socket in the form of an sadb
+   message. There are 4 common message types, SADBM_SET, SADBM_DELETE,
+   SADBM_GET, and SADBM_FLUSH. There are an additional 5 message types
+   specific to dynamic KM, SADBM_REGISTER, SADBM_UNREGISTER,
+   SADBM_ACQUIRE, SADBM_GETSPI, SADBM_UPDATE.
+
+   Upon receipt of a SADBM_SET message the appropriate transform is looked
+   up and the transform sadb add function is called. This function
+   verifies the syntactic and semantic correctness of the SA and creates
+   pre-processed data to assist in improving performance (e.g.
+   pre-processes the crypto graphic keys). Once the transform sadb add
+   function successfully exits, the SA is added to the two hashed tables.
+
+   SADBM_SET is also used by the dynamic KM process to add partial SAs to
+   the SADB. A partial SA is a place holder in the SADB to be filled in
+   upon completion of the negotiation.
+
+   Upon receipt of a SADBM_DELETE message, the appropriate transform is
+   looked up and the transform sadb delete function is called. This
+   function primarily is used to free up any memory used to hold the
+   pre-processed data setup from the transform sadb add function. Once the
+   transform sadb delete function successfully exits, the SA is deleted
+   from the two hashed tables.
+
+   Upon receipt of a SADBM_GET message a specified SA is looked up and
+   sent back through the Netlink socket as a SADBM_GET message. If no
+   specific SA is being requested, the entire SADB is sent back.
+
+   Upon receipt of a SADBM_FLUSH message every SA is deleted as if a
+   SADBM_DELETE message for each SA was received.
+
+   SADBM_REGISTER is a signal to the IPsec portion of the kernel that
+   there is a dynamic KM process running and connected to the kernel via a
+   netlink socket.
+
+   SADBM_UNREGISTER is a signal to the IPsec portion of the kernel that
+   the dynamic KM process is no longer connected to the kernel.
+
+   SADBM_ACQUIRE is used by the IPsec output routine to signal the dynamic
+   KM process that it needs to negotiate an SA for a given destination.
+
+   SADBM_GETSPI is sent by the dynamic KM process to request a unique,
+   legal, and randomly generated SPI from the kernel.
+
+   SADBM_UPDATE is used to fill in the details for a partial SA after the
+   dynamic KM process finishes its negotiation.
+
+   Dynamic SAs (i.e. those added by the dynamic KM process) contain
+   lifetime fields. SAs can expire based on time, bytes processed by the
+   cryptographic algorithms or both. In the SA lookup function, if a SA is
+   about to expire, a SADBM_ACQUIRE message is sent to the dynamic KM
+   process to start re-negotiating for a new SA. Expired SAs are ignored
+   by the SA lookup function. An interrupt driven kernel timer is use to
+   periodically delete expired SAs.
+   System Policy Management
+
+   System policy is also managed through the SADB management routines.
+   System policy is defined by the type of information a system is willing
+   to send or receive. System policy is setup to be specified in both
+   directions independently. By default, the system will always allow
+   IPsec protected packets in and out of the system (as long as they have
+   a relevant SA). In addition, through the system policy mechanism, allow
+   non-protected packets to be sent or received. In this mode, if an SA is
+   specified for a particular host, IPsec protected packets will be sent
+   and in-bound IPsec protected packets will be decapsulated. At the same
+   time, non-protected packets will be sent and received if no SA is
+   specified. This mode is good for testing SAs and learning how to use
+   the software and how is fits within you network architecture.
+   Unfortunately, it does little to protect your system. For better
+   control an additional policy mode allowing the user to specify NULL SAs
+   is provided. A NULL SA is a place holder within the SADB that allows
+   non-protected packets to be sent and received. This allows a user to
+   poke small holes that will allow the system to communicate with other
+   non-ipsec systems (e.g. DNS, NFS, etc). When using this mode (without
+   the non-protected mode) the system will only communicate to those
+   systems with SAs or NULL SAs. The README.sadb file and sadb.n man page
+   contains instructions how users can set and change both their in-bound
+   and out-bound policy. By default it is set to allow all traffic in and
+   out of the system (this may change in future releases).
+
+   IPsec Protocol Engine
+
+   The IPsec protocol engine is comprised of two sets of functions, input
+   and output.
+
+   IPsec Output processing
+
+   Before IP can send data, whether it originated from this system or is
+   being forwarded, the data is passed to the ipsec output function. The
+   following steps are then taken to process the data.
+    Lookup an appropriate SA
+
+    If no SA, check policy and either return packet, send an SADBM_ACQUIRE
+    to the KM process or drop and log failure.  If the packet
+    is a dynamic KM packet, return packet for forwarding.
+
+    Check for sequence number wrapping
+        If nearing wrap, log warning, also, if KM exists, send SADBM_ACQUIRE
+        if wrapped drop and log failure
+
+    If SA specifies ESP (any failure results in drop and log failure)
+        lookup crypto transform
+        perform transform output function
+        lookup authentication transform
+        perform transform output function
+
+    If SA specifies AH (any failure results in drop and log failure)
+        lookup authentication transform
+        perform transform output function
+
+    If SA specifies NULL_SA (any failure results in drop and log failure)
+        check policy and return packet to IP for sending
+
+    re-package IP header
+
+    If Linked SA next protocol == AH or ESP then recursively send through
+        IPsec Output
+    else
+        return packet back to IP for sending
+
+
+   IPsec Input processing
+
+   Once IP has received data destined for this system the data is passed
+   to the ipsec input function. The following steps are then taken to
+   process the data.
+    if data is not protected, check policy and either return packet
+           or drop and log failure - dynamic KM packets are always
+           returned
+
+    Verify correctness of protocol information
+
+    lookup SA
+
+    Check for replay if appropriate
+        drop and log failure if necessary
+
+    if ESP (any failure results in drop and log failure)
+        lookup authentication transform
+        perform transform input function
+        lookup crypto transform
+        perform transform input function
+
+    if AH (any failure results in drop and log failure)
+        lookup authentication transform
+        perform transform output function
+
+    if the packet was sent using TUNNEL mode
+        remove outer IP header
+
+    if Next protocol == AH or ESP (linked SA) then recursively send
+        through IPsec Input
+    else
+        return packet for further IP processing
+
+
+   Transforms
+
+   Several transforms are included with this implementation. Transforms
+   are tied closely with the cryptographic algorithms and actually provide
+   most of the functionality needed to encapsulate and decapsulate IPsec
+   protected packets. Transforms are stored in a small hash table indexed
+   by the individual transform (algorithm) identifiers. This was done so
+   that transforms themselves could be compiled and run as complete and
+   separate Linux run-time modules if so desired.
+
+   As mentioned above, a transform can be thought of as an object with
+   four parts: an in-bound processing function, an out-bound processing
+   function, a SADB add function and a SADB undelete function. The SADB
+   functions are described above.
+
+   The out-bound processing function creates a new packet with the
+   necessary IPsec protocol information (e.g. AH header, SPI,
+   initialization vector, etc.) If the data is to be sent through an IPsec
+   tunnel an additional IP header is included. The data portion of the new
+   packet is then processed through the relevant cryptographic algorithm
+   (i.e. encrypt or generate authentication data) and returned.
+
+   The in-bound processing function first removes the protocol specific
+   data. The protected data is then processed through the relevant
+   cryptographic algorithm (e.g. decrypt or verify authentication data).
+   Finally the IP header is adjusted to reflect the changes and returned.
+
+   Once again, in both functions, any failure results in dropping the
+   packet and logging the failure.
+
+   Cryptographic Algorithms
+
+   The included cryptographic algorithms were not developed as part of
+   this implementation. These routines were obtained from outside sources,
+   but in some cases, were slightly modified to improve their performance.
+   Also, some of the routines were taken from a larger cryptographic
+   library that contained much more functionality that was needed for this
+   prototype. Most of the algorithms have copyright notices which must be
+   adhered to. See the Copyright section for more information. The
+   following is the list of algorithms included and the person or
+   organization which implemented the code.
+     * blowfish-CBC - Eric Young I made modifications to the core CBC
+       functions to make it less generalized and improve performance.
+     * DES-CBC - The basic DES engine was developed by Phil Karn. It is
+       written in both C and assembly. The assembly code appears to be
+       enhanced to run on Pentium systems and is the default for Pentiums.
+       The C code runs better for all other systems (486 and Pentium Pros
+       have been tested) and is the default for these and all other
+       systems.
+       Most of the remaining portion of the DES code was developed by Eric
+       Young and included as part of libdes.a
+       I made modifications to the core CBC functions to make it less
+       generalized and improve performance.
+     * RC5-CBC - Jeremy Nimmer The CBC code comes from Eric Young with
+       modifications to make it less generalized and improve performance.
+     * IDEA-CBC - Eric Young I made modifications to the core CBC
+       functions to make it less generalized and improve performance.
+     * MD5 - Colin Plumb
+     * SHA1 - NIST
+
+   The 5 AES finalist algorithms are included with Cerberus to enable
+   development and testing of AES IPsec implementations. A short
+   description on the included AES source code follows: CBC mode has not
+   been defined for use with AES algorithms at the time of this release.
+   However, because of its history and its use with IPsec protocols, CBC
+   mode was specified in the current AES IPsec draft
+   (draft-ietf-ipsec-aes-cbc-00.txt) and used in this release. The CBC
+   routine included in this release was developed by NIST from the NIST
+   modified versions of Eric Young's CBC routine. For more infomation on
+   AES, see the NIST AES WWW page An additional source of AES information,
+   including performance calculations can be found at
+   http://www.btinternet.com/~brian.gladman/cryptography_technology/aes2/i
+   ndex.html Most of the AES code used in this release came from Dr. Brian
+   Gladman's site. With a exceptions noted below and on the AES WWW page,
+   the submitters of the candidate algorithms have initially made their
+   candidate algorithms (including the reference and mathematically
+   optimized implementations), publicly available for AES testing and
+   evaluation purposes only. Unless otherwise specified by the submitter,
+   these algorithms are protected and may not be otherwise used (e.g., in
+   commercial or non-commercial products).
+     * MARS - Algorithm developed and proposed by IBM. Code used in
+       Cerberus release is that submitted to the NIST AES program by IBM.
+       Code interface was modified slightly for use with Cerberus.
+       Effective 1/18/2000 - "MARS is available on a royalty-free basis,
+       worldwide, regardless of AES outcome."
+       Source code copyright information:
+       copyright held by IBM - no other information available.
+     * RC6 - Algorithm developed and proposed by RSA Security. Code used
+       in Cerberus release is an independent implementation developed by
+       Dr. Brian Gladman. Patent applications have been applied for by RSA
+       and are discussed in detail in
+       http://csrc.nist.gov/encryption/aes/round2/AESAlgs/RC6/rc6-ip-updat
+       e.pdf
+       Source code copyright information:
+       "Copyright in this implementation is held by Dr B Gladman but I
+       hereby give permission for its free direct or derivative use
+       subject to acknowledgment of its origin and compliance with any
+       conditions that the originators of the algorithm place on its
+       exploitation."
+     * Rijndael - Algorithm developed and proposed by Joan Daemen and
+       Vincent Rijmen. Code used in Cerberus release is an independent
+       implementation developed by Dr. Brian Gladman. Effective 2/11/2000
+       - "...there are no patents or patent applications covering the
+       practice of the algorithm, reference implementation, or the
+       mathematically optimized implementations."
+       Source code copyright information:
+       "Copyright in this implementation is held by Dr B Gladman but I
+       hereby give permission for its free direct or derivative use
+       subject to acknowledgment of its origin and compliance with any
+       conditions that the originators of the algorithm place on its
+       exploitation."
+     * Serpent - Algorithm developed and proposed by Ross J. Anderson, Eli
+       Biham, and Lars R. Knudsen. Code used in Cerberus release is an
+       independent implementation developed by Dr. Brian Gladman.
+       Effective 2/3/2000 - "...there is no longer to our knowledge any
+       present or pending patent encumbrance on the Serpent algorithm."
+       Source code copyright information:
+       "Copyright in this implementation is held by Dr B Gladman but I
+       hereby give permission for its free direct or derivative use
+       subject to acknowledgment of its origin and compliance with any
+       conditions that the originators of the algorithm place on its
+       exploitation."
+     * Twofish - Algorithm developed and proposed by Bruce Schneier, John
+       Kelsey, Doug Whiting, David Wagner, Chris Hall, and Niels Ferguson.
+       Code used in Cerberus release is an independent implementation
+       developed by Dr. Brian Gladman. Effective 2/10/2000 - "...the
+       Twofish algorithms is and will always be available royalty-free for
+       world-wide use."
+       Source code copyright information:
+       "Copyright in this implementation is held by Dr B Gladman but I
+       hereby give permission for its free direct or derivative use
+       subject to acknowledgment of its origin and compliance with any
+       conditions that the originators of the algorithm place on its
+       exploitation."
+
+   The output of these functions were verified against test data found in
+   a variety of places. A test program for each algorithm can be found in
+   each crypto algorithm directory (except for the AES algorithms). More
+   information about the test data can be obtained by sending email to
+   ipsec-dev@antd.nist.gov.
+   Miscellaneous Functions
+
+   A few other functions included in this prototype that are not covered
+   above include those that allow the implementation to run as a Linux
+   run-time module, some logging routines for debugging, error reporting,
+   re-keying, interoperability testing assistance, and protocol
+   initialization.
+   Current IPsec Documentation
+
+   The following is a list of the RFCs and Internet Drafts that were used
+   in the development of Cerberus.
+   Security Architecture for the Internet Protocol (RFC 2401)
+   IP Security Document Roadmap (RFC 2411)
+   IP Encapsulating Security Payload (ESP) (RFC 2406)
+   IP Authentication Header (RFC 2402)
+   HMAC: Keyed-Hashing for Message Authentication (RFC 2104)
+   The ESP CBC-Mode Cipher Algorithms (RFC 2451)
+   The Use of HMAC-MD5-96 within ESP and AH (RFC 2403)
+   The Use of HMAC-SHA-1-96 within ESP and AH (RFC 2404)
+   The ESP DES-CBC Cipher Algorithm With Explicit IV (RFC 2405)
+   The NULL Encryption Algorithm and Its Use With IPsec (RFC 2410)
+   IP Authentication using Keyed MD5 (RFC 1828)
+   The ESP DES-CBC Transform (RFC 1829)
+   HMAC-MD5 IP Authentication with Replay Prevention (RFC 2085)
+   The Candidate AES Cipher Algorithms and Their Use With IPsec
+     __________________________________________________________________
+
+SADB User Interface
+
+   The sadb user interface (sadb), a command-line interface, was
+   originally based on the BSD route command. The sadb is used to allow
+   systems and network administrators to manually manage security
+   associations stored and used by the Linux kernel. The sadb reads the SA
+   arguments from the command line, performs some simple syntax checking,
+   and sends the SADBM message (see the file README.ipsec for more
+   information pertaining to SADBM messages) via a Linux netlink socket to
+   the kernel for processing. Some messages will then invoke a response
+   back from the kernel, which is then displayed to the user.
+
+   A man page, sadb.n, is included with the distribution which briefly
+   covers the syntax of the sadb program. Because of the complexity and
+   number of arguments used to represent an SA, it is easier to use a
+   shell script to run a set of sadb requests.
+
+   xsadb is a tcl/tk front-end for the sadb user interface. Follow the
+   xsadb link for a complete description and snapshots.
+     __________________________________________________________________
+
+How to obtain the software
+
+   The NIST IPsec Reference Implementation, Cerberus, and IKE Reference
+   Implementation, PlutoPlus, contain cryptographic algorithm software.
+   Because of recent changes in US Export control laws, this code will be
+   available via WWW download in August, 2000. Until this distribution
+   mechanism is in place, we have temporarily stopped distributing the
+   software. All existing requests for receiving the software via a floppy
+   will be processed. We appologize for the inconvenience and ask that you
+   check back periodically to see if the WWW download is available. This
+   will be identified in the news section.
+     __________________________________________________________________
+
+Copyright Information
+
+   Copying and Copying.others are links to the current copying and
+   copyright restrictions for the Cerberus and PlutoPlus software.
+     __________________________________________________________________
+
+Acknowledgements
+
+   This project is part of the research and development program of the
+   NIST Internetworking Technology Group (ITG) and the NIST Systems and
+   Network Security Group (SNS). Project support and technical
+   collaborations were provided by:
+
+   The NIST Information Technology Laboratory (ITL) [banner2.gif]
+   The National Security Agency (NSA)               [newseal.gif]
+   The NIST Advanced Technology Program (ATP)
+   Digital Video in Information Networks Project    [atplogo2.gif]
+     __________________________________________________________________
+
+CONTACT
+
+
+    Rob Glenn
+    National Institute of Standards and Technology
+    NIST North
+    Room 455, Bldg. 820
+    Gaithersburg, MD 20899
+    [phone2.gif] 301/975-3667
+    [fax1.gif] 301/590-0932
+    [email0.gif] ipsec-dev@antd.nist.gov
+
+
+    Sheila Frankel
+    National Institute of Standards and Technology
+    NIST North
+    Room 426, Bldg. 820
+    Gaithersburg, MD 20899
+    [phone2.gif] 301/975-3297
+    [email0.gif] ipsec-dev@antd.nist.gov
+     __________________________________________________________________
+
+   Last Updated:
+
+   Page Access Count: [Count.cgi?dd=B|df=ipsec-dev.dat]

@@ -1,0 +1,894 @@
+http://www.diabetes.ihs.gov/Adt2001Instructions.pdf
+
+   AUDIT01 Diabetes Care and Outcomes Chart Audit for Quality Assurance
+   and Quality Improvement Contents Preface and Quick-Start Directions . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 1.
+   Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . 4 2. Chart Audits for Quality Assessment &
+   Improvement Activities . . . . . . . . 4 3. Adapting Diabetes Audit to
+   Meet JCAHO/AAAHC Requirements . . . . . . . 5 4. Sample Size
+   Calculations . . . . . . . . . . . . . . . . . . . . . . . . . . .. . .
+   . . . 6 5. Chart Selection . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . .. 8 6. Completing the Audit Form . . .
+   . . . . . . . . . . . . . . . . . . . . .. . . . . .. 8 7. Item
+   Description (Definitions) . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . .. . 9 8. Local Option Question . . . . . . . . . . . . . . . .
+   . . . . . . . . . . .. . . . . . . . 13 9. Instructions for Data Entry
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14 10.
+   Cleaning your Data . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . .. . . 15 11. Printing a Summary Report . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . 16 12. Printing a Summary
+   Report in the "Old" Format . . . . . . . . . .. . . . . . . . . 16 13.
+   Printing a Renal Preservation Report . . . . . . . . . . . . . . . . .
+   . . . . .. . . . 17 14. Printing a Cardiovascular Disease Report . . .
+   . . . . . . . . . . . . . . . . . . 17 Sample Audit Form . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . A
+   Standards of Care for Patients with Type 2 Diabetes . . . . . . . . ..
+   . . . . . B Technical Notes . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . C Upgrading Epi Info. . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . D
+   IHS Diabetes Program April, 2001 Preface Welcome to AUDIT01! If you are
+   already familiar with the IHS Diabetes Chart Audit process, read the
+   information below for a brief summary of this year's changes followed
+   on the next page by quick-start directions. More detailed instructions
+   for any of the steps are available on the pages referred to in
+   parentheses. If you have not previously participated in the annual
+   Diabetes Audit, please take time to read carefully through Sections 1-9
+   before beginning your audit activities. What's new in AUDIT01? U New
+   items Two optional demographic items have been added for your
+   convenience: * Tribal Affiliation * Community (for further information
+   on both of these items, see Section 7). No new clinical elements have
+   been added to the audit this year. UModified items PAP SMEAR: Choice 3
+   was changed from "Unknown" to "Refused" on the audit form, to match the
+   listed choices in prior audit years. UNew report A Cardiovascular
+   Disease Report, describing cardiovascular risk status and risk
+   reduction opportunities, is now available (see Section 14 for further
+   details). U A note on Epi Info Epi Info 2000, the Windows version of
+   Epi Info, is now available. HOWEVER, for the FY 2001 diabetes chart
+   audit, we will continue to use the most recent DOS versions of Epi Info
+   (6.04b-to-c or 6.04d). Epi Info 2000 has many nice features. It also is
+   more complex, requires faster computers, takes up more space (the
+   install program uses the equivalent of 27 diskettes in contrast to 3
+   for the DOS version), and at present there are an insufficient number
+   of individuals trained in the new program to provide adequate technical
+   support. You are welcome, even encouraged, to download Epi Info 2000
+   and begin to learn its features, but keep in mind that the AUDIT01
+   files were written for the DOS version of Epi Info, and they are not
+   entirely compatible with the Windows version. (See Appendix D for
+   information on upgrading Epi Info). 2 Quick Start Directions: 1. Check
+   with your Area Diabetes Consultant to see if an Area-wide Local Option
+   Question has been developed. If a local option question will be used,
+   print it onto the audit form (refer to pg 12). 2. Select in random
+   fashion the appropriate number of charts to review (pg 6-8). 3. Review
+   the audit form, definitions and criteria with all chart reviewers (pg
+   9-11). 4. Perform the chart audit. If a PC is available to you, you may
+   proceed through the following steps. Confirm that your computer has an
+   upgraded version of Epi Info (i.e., version 6.04c or 6.04d) that
+   permits dates with 4 digit years. If necessary, refer to Appendix D
+   Upgrading Epi Info. 5. Load the files from the AUDIT01 package into the
+   computer subdirectory that contains Epi Info, usually \EPI6 (pg 15,
+   step 1). 6. Enter the audit data into the AUDIT01.REC file, by going to
+   Epi Info's ENTER Program and typing in AUDIT01 when prompted for the
+   name of the data (.REC) file (pg 15, step 4). 7. If a Local Option
+   question was used, modify the report file to correctly display the
+   results. This is done by making changes to the AUDIT01.RPT file (pg 13,
+   bottom half). 8. Print out a summary report by entering Epi's ANALYSIS
+   program, typing READ AUDIT01, pressing to send the report to your
+   printer, and then typing RUN AUDIT01 (pg 16, section 13). 9. A
+   supplemental Renal Preservation Report can be printed in a similar
+   fashion: begin at Epi's main menu, enter the ANALYSIS program, type
+   READ AUDIT01, press to send the report to your printer, then type RUN
+   RENAL2K (pg 17, section 14). 10. Forward a copy of your data file (.REC
+   file) to your Area diabetes consultant. 3 Instructions for Assessment
+   of Diabetes Care and Health Status 2001 1. INTRODUCTION The
+   instructions that follow describe a standardized method for assessing
+   the diabetes care and the health status of diabetes patients at your
+   facility. Using a unifor m process and standardized definitions
+   provides consistency as you monitor patient care patterns over time. It
+   allows valid comparison of your facility with other IHS, tribal and
+   urban facilities. During the chart audit, diabetes care is compared to
+   the IHS Standards of Care for Patients with Type 2 Diabetes (see
+   Appendix B). Instructions for sample size calculations, selecting
+   charts for the audit, and standard definitions for each item are given
+   on the next few pages. Additional assistance, if necessary, can be
+   obtained from your Area Diabetes Consultant. 2. CHART AUDITS FOR
+   QUALITY ASSESSMENT AND IMPROVEMENT ACTIVITIES For any facility to
+   provide quality diabetes care, on-going self-assessment and improvement
+   activities are necessary. A number of techniques or methods to pursue
+   improvement may be employed. A central feature of each of these systems
+   is some form of an improvement cycle: Surveillance Implementation
+   Identification of a Problem Plan for Improvement With respect to
+   diabetes, the basic questions to be answered are straightforward: "Are
+   we doing those things that we agreed were important for maximizing the
+   health of our patients with diabetes?" and "Are there ways that we
+   could do better?" Getting accurate and reliable answers is more
+   complex, of course, but the diabetes audit program is designed to make
+   it easier to do just that. The IHS Diabetes Program recommends annual
+   or more frequent medical record review to monitor care patterns and
+   changes over time at your facility. You should select in a random
+   manner a large enough sample of medical records so that you can be
+   reasonably certain that observed changes are significant and not just
+   due to chance (see sections 4 and 5). All of the indicators on the
+   audit form, which reflect compliance with the Standards of Care for
+   Patients with Type 2 Diabetes, should be completed as outlined in
+   section 6. The staff at your facility may be asked to participate in
+   the audit process. While this process may seem tedious at first, many
+   providers have found that participating in the chart audit provides a
+   review of the standards of care for diabetes and identifies trends in
+   diabetes care at their facility. Through the audit, the providers often
+   have a better idea of what changes they can make to improve the outcome
+   for people who suffer from this potentially devastating disease. Once
+   the chart audit is complete, the data may be entered into the Epi Info
+   program, from which you can easily print a summary report. The report
+   shows the percentage of charts having documentation of compliance with
+   each of the indicators. Your Area Diabetes Consultant can assist you in
+   obtaining reports and comparison data. In addition, your Area Diabetes
+   Consultant can assist you in identifying program strengths and
+   deficiencies. Facilities are encouraged to review the recommendations
+   in a team setting, establish priorities together, and develop an action
+   plan with a timetable for re-evaluation. 3. ADAPTING THE DIABETES CHART
+   AUDIT TO MEET JCAHO/AAAHC REQUIREMENTS The health care environment
+   continues to evolve, both within and outside of IHS. In keeping with
+   recent changes, both Joint Commission on Accreditation of Healthcare
+   Organizations (JCAHO) and Accreditation Association for Ambulatory
+   Health Care (AAAHC) emphasize patient centered, performance-based
+   evaluations. Health centers are asked to demonstrate the efficacy and
+   appropriateness of the care they provide. JCAHO and AAAHC both seek to
+   determine whether a health facility is actually carrying out those
+   functions that reasonably can be expected to improve the health of the
+   patients they serve. If JCAHO or AAAHC accreditation is important to
+   your facility, you will be pleased to find that the diabetes audit
+   process described here can serve as an excellent example of the type of
+   performance oriented clinical self-assessment and improvement activity
+   that both of these organization require. The diabetes audit is based on
+   consensus-derived standards of care. These standards are reviewed
+   regularly and then widely disseminated. The audit looks at your
+   facility's actual performance on a number of key processes that are
+   known to (or considered likely to) improve the health of people with
+   diabetes. Outcome measures, such as blood pressure control and glycemic
+   control, are also monitored. Because the diabetes audit is designed to
+   be performed on a regular basis, it can be extremely useful in
+   documenting performance trends that JCAHO or AAAHC find of interest.
+   Additionally, when the diabetes audit results are routinely
+   incorporated into multidisciplinary diabetes care planning activities,
+   they provide a clear illustration of interdepartmental coordination to
+   improve patient care. Table 1 - Sample Size Calculations (see next page
+   for explanation) Sample size needed to be 90% or 95% certain that the
+   rate you find is within 10% or within 5% of the true rate, for
+   populations up to 2000. Population 90% Certainty 95% Certainty (# of DM
+   Patients) Within 10% Within 5% Within 10% Within 5% <30 all all all all
+   30 21 27 23 28 40 25 35 28 36 50 29 42 33 44 60 32 49 37 52 70 34 56 40
+   59 80 37 62 44 66 90 39 68 46 73 100 40 73 49 79 110 42 78 51 86 120 43
+   83 53 91 130 44 88 55 97 140 46 92 57 103 150 47 96 59 108 160 48 101
+   60 113 170 48 104 61 118 180 49 108 63 123 190 50 112 64 127 200 51 115
+   65 132 220 52 121 67 140 240 53 127 69 148 260 54 133 70 155 280 54 138
+   72 162 300 55 142 73 168 320 56 147 74 175 340 56 151 75 180 360 57 154
+   76 186 380 57 158 77 191 400 58 161 77 196 420 58 165 78 201 440 59 168
+   79 205 460 59 170 79 209 480 59 173 80 213 500 60 176 81 217 525 60 179
+   81 222 550 60 181 82 226 575 61 184 82 230 600 61 186 83 234 650 61 191
+   84 241 700 62 195 84 248 750 62 199 85 254 800 62 199 86 260 900 62 202
+   87 269 1000 63 208 88 278 2000 65 213 92 322 > Minimum Number of Charts
+   Recommended 7 4. SAMPLE SIZE CALCULATIONS The number of charts you will
+   need to select depends on the number of active patients in your
+   diabetes register. Table 1 on the previous page outlines the minimum
+   number of charts you will need to audit to be reasonably sure (90%
+   confident) that a 10% difference noted from a previous or subsequent
+   audit is a real change and not just due to chance. If, for example,
+   your facility has 1000 active patients with diabetes, you will need to
+   audit a total of 63 charts (see Table 1). The diabetes register will
+   often include people who are not considered active patients of the
+   clinic and thus do not need to be audited. These charts should be
+   identified early in the audit process and excluded. Table 2 outlines
+   the charts which are to be included and excluded. Table 2 Patients to
+   Include and Exclude in the Chart Audit
+   _______________________________________________________________________
+   _____ Include patients who: * Attend regular clinics or diabetes
+   clinics. * Refuse care or have special motivational problems (e.g.,
+   alcoholism). * Are not attending clinic, but you do not know if they
+   have moved or have found another source of care. Exclude patients who:
+   * Receive primarily referral or contract care, paid by IHS * Have
+   arranged other MD care, paid with non-IHS monies. * Receive their
+   primary care at another IHS or Tribal health facility. * Live in a
+   jail, and receive care there. * Live in a nursing home, and receive
+   care there. * Attend a dialysis unit (if on-site dialysis not
+   available) * Have gestational diabetes. * Have impaired glucose
+   tolerance (IFG or IGT) only. * Have moved -- permanently or temporarily
+   (should be documented) * You are unable to contact, defined as 3 tries
+   in 12 months (should be documented in the chart). * Have died. Keep in
+   mind that unless your diabetes register is frequently updated, up to
+   10% of the people in the diabetes registry may not qualify to be
+   included in the audit. To make sure you have an adequate sample at the
+   end of the audit, increase the chart sample by at least 10%. In the
+   example of 63 charts used above, this would mean an additional 6
+   charts, or a total of 69, would need to be pulled for the audit. 8 5.
+   CHART SELECTION The systematic random sampling technique will provide
+   the best representative sample for audit. This is done in the following
+   fashion: Suppose you need to select 69 charts from a registry list of
+   1000 patients. First, divide 1000 by 69, which yields the number 14.4.
+   You now know that you must select one chart out of fourteen. However,
+   don't automatically start with the first person. Use any method of
+   random chance to determine which one of the first 14 people on the list
+   should be selected. Use your imagination... Number 14 pieces of paper
+   with 1 through 14 and have someone draw one, or simply ask someone to
+   pick a number between 1 and 14. Then use that number to select your
+   first name for chart audit. Proceed through the entire list, selecting
+   every 14th person on the list. Please note that it is important to
+   track down the charts which are missing from Medical Records as these
+   are likely to belong to patients who have been seen recently and have
+   high compliance with the Standards of Care. 6. COMPLETING THE AUDIT
+   FORM Using the instructions that follow, review the medical record to
+   see if each of the indicators are satisfied. If you cannot find a
+   result in the chart, then for the purposes of the audit, apply the old
+   dictum, "If it is not documented, it did not happen." Finally, please
+   remember that all medical records are confidential documents and need
+   to be handled accordingly. 9 7. QUALITY ASSESSMENT OF DIABETES CARE,
+   FY2001 ITEM DESCRIPTION For the purposes of this audit, a VISIT is
+   defined as any primary care visit, including ER and walk-in clinics. Do
+   not include dental, eye care, patient education, surgery clinics, etc.
+   DEMOGRAPHIC DATA AUDIT DATE, CHART NUMBER, DATE OF BIRTH, SEX:
+   Self-explanatory. AREA, SERVICE UNIT and FACILITY codes - use the
+   2-digit official IHS codes ("ASUFAC" codes). Contact your Area diabetes
+   consultant if you are unsure about your correct ASUFAC numbers.
+   FACILITY NAME: Enter your facility's name or abbreviation. # OF PTS IN
+   DIABETES REGISTRY: Enter the number of active patients in your diabetes
+   register. If your service unit has multiple facilities participating in
+   the audit, make sure you use the correct sample size (number of active
+   DM patients) for each component. [This is a very important item! Please
+   take care to assure accuracy.] [Optional Demographic Items] TRIBAL
+   Affiliation: Enter the patient's 3 digit tribal code. COMMUNITY of
+   Residence: Enter the 7 digit code for the patient's home community.
+   DATE of Diabetes Diagnosis: If only the year of diagnosis is stated,
+   enter "07/01" of that year. If only the month and year are stated,
+   enter the 15th of that month. Leave blank if date is unknown. TYPE of
+   Diabetes: Specify if the patient has (1) Type 1 (a.k.a. IDDM, juvenile
+   onset diabetes), or (2) Type 2 (a.k.a. NIDDM, adult-onset diabetes).
+   Keep in mind that not all insulin-using patients have type 1 diabetes
+   in fact, most of them have type 2 diabetes. If uncertain, mark as (2)
+   Type 2. TOBACCO USE: Current status of tobacco use (cigarettes, chewing
+   tobacco, snuff, etc) taken from the health summary, problem list or
+   flow sheet. Mark (1) Currently uses tobacco, (2) Does not currently use
+   tobacco, or (3) Tobacco use undocumented. Referred for cessation
+   counseling? [to be completed only if currently uses tobacco]. (1) Yes,
+   if provider documents cessation counseling or referral for cessation
+   counseling during the past 12 mo, (2) No, if no cessation counseling in
+   past year, or (3) Refused, if documented that pt. declines/refuses
+   cessation counseling efforts. VITAL STATISTICS HEIGHT: Enter height in
+   inches, or in feet and inches. LAST RECORDED WT: Record in pounds. If
+   pregnant, use last non-pregnant weight. A note to re- confirm the value
+   appears during data entry if an adult weight is <60 lbs or >600 lbs.
+   HTN documented (Dx or Rx): (1) Yes, hypertension diagnosis is on the
+   problem list or visit assessment, or medication for hypertension is
+   prescribed. (2) No documented hypertension diagnosis or meds. Last 3
+   BLOOD PRESSURES: Record the last 3 blood pressures obtained within the
+   last year. If a value falls outside of the expected range (e.g., >240
+   systolic or >140 diastolic) it will not be accepted; a cautionary note
+   to confirm the level appears if systolic BP is >210 or diastolic BP is
+   >130. 10 EXAMINATIONS (in past year) FOOT EXAM: Exam must include
+   evaluation of sensation and vascular status. EYE EXAM: Exam must
+   include a dilated eye exam or fundus photograph. DENTAL EXAM: Must
+   include examination of the gingiva and mucosal surfaces. Dental records
+   may be kept separate from medical records at your facility. EDUCATION
+   in past year From flow sheets, progress notes, PHN referral or
+   consults. DIET INSTRUCTION: Note any mention of diet instruction in the
+   past year and code by provider type: (1) Registered dietitian, (2)
+   Non-R.D. (3) Both, or (4) None. If it is documented that pt. refused
+   diet counseling, select (5) Refused. EXERCISE INSTRUCTION: Note any
+   mention of exercise instruction in the past year. Any GENERAL DM
+   EDUCATION: Note any recorded patient education in the past year on any
+   topic(s) related to diabetes, other than diet or exercise. TREATMENT
+   (at time of audit) DM THERAPY: Current treatment consists of (select as
+   many as apply): (1) Diet & Exercise Alone (2) Insulin (all forms,
+   including lispro (Humalog) and glargine (Lantus) insulin) (3)
+   Sulfonylureas, including the following: Tolazamide (Tolinase) Glyburide
+   (DiaBeta, Micronase, Glynase) Tolbutamide (generic) Glipizide
+   (Glucotrol, Glucotrol XL) Chlorpropamide (Diabinese) Glimepiride
+   (Amaryl) Also included in this category, for purposes of the audit:
+   Repaglinide (Prandin) Nateglinide (Starlix) (4) Metformin (Glucophage)
+   Note: Select choices 3 and 4 for Glucovance (glyburide + metformin) (5)
+   Acarbose (Precose) or miglitol (Glyset) (6) Glitazones, including
+   pioglitazone (Actos) or rosiglitazone (Avandia) (9) Refuses therapy, or
+   unknown. ACE INHIBITOR/ARB* use: (1) Currently uses (is prescribed) an
+   ACE inhibitor, (2) does not currently use an ACE inhibitor, or (3)
+   Undetermined. *Both ACE inhibitors and angiotensin II receptor blockers
+   (ARB) are included here. Examples of ACE inhibitor drugs include:
+   Benazepril (Lotensin) Moexipril (Univasc) Captopril (Captoten)
+   Perindopril (Aceon) Enalapril (Vasotec) Quinapril (Accupril) Fosinopril
+   (Monopril) Ramipril (Altace) Lisinopril (Prinivil, Zestril)
+   Trandolapril (Mavik) Examples of angiotensin II receptor blockers
+   include: Candesartin (Atacand) Losartin (Cozaar) Eprosartin (Teveten)
+   Valsartan (Diovan) Irbesartin (Avapro) Telmisartin (Micardis) If
+   unsure, check with your pharmacist regarding the ACE inhibitors and
+   angiotensin II receptor blockers used at your facility. 11 ASPIRIN use:
+   (1) Currently uses (is prescribed) chronic aspirin, (2) does not
+   currently use chronic aspirin, including those who use aspirin only
+   occasionally ("prn"), or (3) Undetermined. LIPID LOWERING AGENT* use:
+   (1) Currently uses (is prescribed) a lipid lowering agent, (2) does not
+   currently use a lipid lowering agent, or (3) Undetermined. *Lipid
+   lowering agents include: HMG-CoA Reductase Inhibitors ("statins")
+   Atorvastatin (Lipitor) Lovastatin (Mevacor) Cerivastatin (Baychol)
+   Pravastatin (Pravachol) Fluvastatin (Leschol) Simvastatin (Zocor)
+   Fibric Acid Derivatives Fenofibrate (Tricor) Gemfibrozil (Lopid) Bile
+   Acid Sequestrants Colestipol (Colestid) Cholestyramine (LoCholest,
+   Questran) Nicotinic acid/niacin If unsure, check with your pharmacist
+   regarding the antilipemic agents used at your facility. IMMUNIZATIONS
+   FLU VACCINE past year: (1) Yes, if administered in the past year. If
+   the chart audit is conducted between September and December, give
+   credit for an immunization administered during the previous flu season.
+   PNEUMOVAX ever: Self-explanatory. Td in past 10 years:
+   Self-explanatory. TB STATUS TB Status (PPD): (1) Last PPD skin test
+   result was positive, or patient has known history of TB, (2) Last PPD
+   was negative, (3) Refused PPD skin testing, or (4) Unknown. If PPD Pos,
+   is INH Tx Complete: (1) Yes, if the patient has documentation of at
+   least 6 months of prophylactic INH or at least 12 months of multiple
+   drug therapy documented for active TB, (2) No, if patient has not
+   completed therapy. Include individuals for whom INH therapy was
+   contraindicated. (3) Refused, if the patient declined therapy. (4)
+   Unknown treatment status. If PPD Neg, Date of last negative PPD:
+   Self-explanatory. ECG DATE OF LAST ECG: Self-explanatory. Leave blank
+   if no EKG recorded. WOMEN"S HEALTH PAP SMEAR: (Females only) (1) Yes,
+   Pap smear was performed during the preceding 12 months, (2) No, Pap
+   smear not performed in the preceding 12 months (include those in whom
+   Pap not indicated due to hysterectomy or other reason), or (3) Refused,
+   if Pap smear offered but declined. 12 LABORATORY DATA Hemoglobin A1c:
+   First, record the most recent HbA1c value and the date it was drawn.
+   Then record the next most recent HbA1c value (Note: assure that the
+   most recent value is listed first) or, (if no HbA1c was done in the
+   past 12 mo)... Last 3 BLOOD SUGARS: Record the last 3 blood sugars
+   obtained in the past year. It is not necessary to record blood sugars
+   if one or more HbA1c values have been recorded. CREATININE, CHOLESTEROL
+   (TOTAL, HDL, LDL), TRIGLYCERIDES: For each test, enter most recent
+   value in past year. If the last value is more than 12 months old, do
+   not record it. Caution: avoid inadvertent entry of LDH value for LDL
+   Cholesterol value. For patients on renal dialysis, enter a creatinine
+   value of "99.9". URINALYSIS in past 12 months: Self-explanatory.
+   PROTEINURIA: (For those who had a urinalysis obtained in the past year
+   only). Most recent dipstick protein test showed: (1) 1+ (30 mg/dl) or
+   more, (2) No protein (or trace only). MICROALBUMINURIA: (For patients
+   without dipstick proteinuria) A test for the presence of albumin in the
+   urine was: (1) Positive, microalbuminuria present, i.e., one of the
+   following criteria is met: * $30 mg albumin/L urine * urine
+   albumin/creatinine ratio $30 mg/g * albumin excretion rate $30 mg/24hrs
+   (>20 µg/min) (2) Neg, test did not show microalbuminuria, or (3) Not
+   tested or unknown. MONITORING Self Monitoring of Blood Glucose
+   documented in chart: (1) Yes, if provider has made note of or assessed
+   SMBG results, (2) No, if no mention of SMBG results, or (3) Refused, if
+   SMBG has been recommended to patient, but declined. [Optional  only for
+   sites that have SDM] Is Patient Participating in Staged Diabetes
+   Management? (Only for sites that have SDM): (1) Yes, SDM stage or phase
+   documented at least once in the last 4 diabetes visits, (2) No SDM
+   documentation in the past 4 diabetes visits, or (3) Unable to determine
+   (include pts. with no SDM documentation, but fewer than 4 diabetes
+   visits in past 12 months). LOCAL OPTION QUESTION A LOCAL OPTION
+   QUESTION, if present, will be found at the end of the audit. Read the
+   question carefully and then select the appropriate response. (For more
+   information on the Local Option Question, see Section 8). 13 8. LOCAL
+   OPTION QUESTION Areas and facilities have the ability to formulate
+   their own supplemental audit question, if desired. This permits each
+   Area to analyze an additional aspect of diabetes care that may be of
+   special interest, or to "test run" a question that might be a useful
+   future addition to the national diabetes audit. The procedure for
+   developing and incorporating a local option question is explained
+   below. Although separate facilities within an Area may not necessarily
+   be required to use the same question, it is highly recommended that
+   this be discussed and coordinated with your Area Diabetes Consultant.
+   The first step is to develop a question that can be answered through a
+   review of individual medical charts. The question can relate to
+   demographics (Indian blood quantum, location of residence, etc), a
+   particular aspect of care (examinations, lab studies, other
+   medications, and so forth), co-morbid condition (history of stroke or
+   MI, for example), a clinic related parameter (such as the number of
+   visits in the preceding month or year), or other auditable element of
+   interest. The local option question needs to be posed in a multiple
+   choice format. The choices may be as simple as 'Yes' or 'No', or may
+   have many possible answers. There can be up to 9 choices, although for
+   ease of answering and reporting it is usually best to limit choices to
+   no more than 4 or 5. Each choice needs to have an assigned number, just
+   like other parts of the audit. After the question and response choices
+   are formulated, print or type them onto the lower righthand side of the
+   audit form. If there is insufficient room, a separate sheet can be
+   stapled to the audit form. Be sure to precede each choice with its
+   associated one-digit number. Data entry for a local option question is
+   easy. A special "Local Option" field is provided at the very end of the
+   audit, and is clearly identified on the data entry screen. Responses
+   from the audit form can be entered there in the same manner as all
+   other data is entered. LL Modifying the Report File In order for the
+   results of the local option question to appear in the final printed
+   report, it must be included in the report file (AUDIT01.RPT). To do
+   this, first assure that all the AUDIT01 files are loaded into the Epi
+   Info subdirectory (if necessary, refer to section 9 for directions).
+   Then use the following steps to place the local option question into
+   the report file: 1. From Epi Info's main menu, press (Open). An "Edit a
+   file" box will appear and prompt you for a Name. Type AUDIT01.RPT . The
+   AUDIT01.RPT file will appear. 2. Press the key 9-10 times, or use the
+   down-arrow (9) key to get to the last part of the AUDIT01.RPT file. You
+   will see the line *#USES LOCAL. Delete the asterisk (*) from the
+   beginning of the line. 3. Immediately below the #USES LOCAL line,
+   substitute your question for the sample question, being careful not to
+   go beyond mid-page. Use multiple lines if necessary. Delete the
+   asterisk (*) from the beginning of each line that you use. 14 4. Type
+   in each of the possible responses, again substituting for the sample
+   answers. Be sure to delete the initial asterisk (*), but only on the
+   lines that are actually used. Lines with an initial asterisk remain
+   "invisible" when printing the report (If you wish, any extra lines may
+   be deleted by placing the cursor anywhere on the line and pressing -
+   y). 5. Check the alignment of the bracketed numbers to the right of the
+   responses. Add or delete spaces until the first brackets of the
+   bracketed numbers line up in a vertical column. 6. Press to save these
+   changes, then to return to the main menu. 7. The report file has now
+   been modified to give the results of your local option question. Enter
+   your audit data if you have not already done so (refer to section 10),
+   "clean" your data (optional, see section 11) and then print your
+   customized summary report(s) (sections 12 and 13). 9. INSTRUCTIONS FOR
+   AUDIT01 DATA ENTRY These instructions assume your computer uses the A:
+   drive to receive your audit diskette, and that Epi lnfo is loaded onto
+   hard drive C: in a subdirectory named EPI6, as this is most often the
+   case. If this is not the case in your particular situation, you will
+   need to modify the instructions accordingly. For example, if you are
+   using an old computer in which the diskette goes into a B: drive,
+   substitute "B:" for "A:" when typing the commands below. 1. Insert the
+   AUDIT01 diskette into your A: drive. Copy all the audit files into the
+   Epi Info program by typing: COPY A:*.* C:\EPI6 2. Start the Epi Info
+   program in the usual way (from your computer's main menu or by going to
+   the \EPI6 subdirectory and then typing EPI6). 3. If you chose not to
+   audit one or more of the elective items, these items should be removed
+   from the data entry screens. To do this, begin at Epi Info's main menu.
+   Press (Open). An "Edit a file" box will appear and prompt you for a
+   Name. Type AUDIT01.CHK . The AUDIT01.CHK file will appear on the
+   screen. You will notice that each of the elective items has its own
+   HIDE line, preceded by an asterisk. Delete the asterisk from each line
+   containing an item that you did not audit (i.e., use the arrow keys to
+   place the cursor under the asterisk, then press the key). When
+   finished, press to save the changes, then to return to Epi Info's main
+   menu. 4. When the Epi Info menu appears, select Programs, then "ENTER
+   data". When the program asks for the ____.REC file, type: AUDIT01
+   followed by 1 and then Y . The data entry form will appear on the
+   screen. 5. Enter your data into the program. You can set the "NumLock"
+   button on your keyboard to "on", and enter most of the data using the
+   keyboard pad. Note several features: Automatic jumps: Where
+   appropriate, the computer will automatically skip certain sections. For
+   instance, it skips "Pap smear" if the patient is a male. 15 Must Enter:
+   Certain items, such as audit date, service unit, number of active
+   patients in the registry, and patient's sex are required by the audit
+   program. You must enter data for these items. However, after the
+   initial record, most of these items will be automatically entered for
+   you, and only need to be re-entered if their value changes. Automatic
+   calculations: The program automatically calculates several items for
+   you. For example, you can enter the height in feet and inches and the
+   program will calculate the total height in inches. If you already have
+   the height in inches, you may enter that under "inches". Other items
+   automatically calculated include patient's age, duration of diabetes,
+   BMI, mean systolic and mean diastolic blood pressure. Data entry
+   messages: The program will give you an error message if you enter a
+   value that is outside of the expected range for that field. If your
+   entry is clearly incorrect it may erase what you entered and require
+   you to re-enter the value. At other times it merely asks you to double
+   check to be sure that your entry was what you intended. 6. MAKE A
+   BACKUP COPY OF YOUR DATA!!! It's a good idea to make a backup copy of
+   your audit file EVERY TIME you finish entering data. This can save you
+   considerable time and grief if something should happen to your original
+   data. You can easily make a backup by copying your data back onto the
+   same diskette that contained the original AUDIT01 programs. To do this,
+   exit the Epi Info program, get to any DOS prompt (such as C:\>) and
+   type the following command: COPY C:\EPI6\AUDIT01.REC A:\.REC You can
+   name anything you wish (up to 8 characters). If you call it
+   "AUDIT01.REC", the program will write your data over the empty data
+   file on the diskette, which is fine. 10. "CLEANING" YOUR DATA An
+   optional program, CLEAN01, is available if you wish to scan your data
+   for possible inadvertent data entry errors. The main AUDIT01 program is
+   designed to identify and permit correction of many errors at the time
+   of data entry, but nevertheless some may occur. The CLEAN01 program
+   creates a number of error-checking tables or lists. It begins by
+   producing frequency tables on items that should have only a single
+   answer per facility (such as the number of active patients on the
+   diabetes registry, the name of the facility, or the codes for the Area
+   and Service Unit). It also produces a listing by chart number of
+   records having values that are atypical or outside of the usual range
+   for a given item. These listings may or may not represent actual
+   errors, but may be reviewed for accuracy. To "clean" your data, go to
+   Epi Info's main menu and select ANALYSIS from the listing of Programs.
+   Put your data file into the ANALYSIS program by typing at the EPI>
+   prompt: READ AUDIT01.REC Next, turn on your printer, then press the key
+   to send output to the printer [Note: you can skip this step if you wish
+   and have the results appear only on screen, although most people find
+   it easier to have a printout in hand]. Now, type at the EPI> prompt:
+   RUN CLEAN01 16 11. PRINTING A SUMMARY REPORT You will probably want to
+   print a report after entering and (optionally) cleaning your data.
+   [Note: Before printing, if you entered data on a Local Option Question,
+   you should first modify the AUDIT01.RPT file so that the results of
+   your question appear on the report -- see bottom of pg 10]. To print a
+   report, go to Epi Info's main menu and select ANALYSIS from the listing
+   of Programs. Put your data file into the ANALYSIS program by typing:
+   READ AUDIT01.REC Next turn on your printer, then press the key. A
+   message should appear that says "ROUTE PRINTER", meaning that the
+   output from the ANALYSIS program will be sent to your printer (if you
+   wish to have the output appear only on your computer screen, skip this
+   step). Finally, type: RUN AUDIT01.PGM The computer will immediately
+   begin to analyze your data, and will then print the report (or simply
+   display it on your screen, if you did not push ). 12. PRINTING A
+   SUMMARY REPORT IN THE "OLD" FORMAT If you want to make a direct
+   comparison of your 2001 audit results with those of prior years, you
+   may wish to print a summary report in the format used earlier for
+   glucose and BP control categories. To print a report that lists the
+   blood glucose control categories and blood pressure control categories
+   in the "old" format, make a simple modification to the AUDIT01.PGM
+   file. You delete a single asterisk. The modification can be easily made
+   from Epi's ANALYSIS program: At the EPI6> prompt, type: EDIT
+   AUDIT01.PGM The AUDIT01.PGM file will appear on the screen. On line 23
+   (which may appear as the last line on the initial screen), you will see
+   the statement *GOTO OLDREPORT. Delete the asterisk from the beginning
+   of the line, then press to save the modified file. Press to return to
+   ANALYSIS, and then follow the instructions outlined earlier in Section
+   11 to print a report. Please note that if you have already run a
+   report, you must re-READ your .REC file in order to produce an accurate
+   summary report in the "old" format. 17 13. THE RENAL PRESERVATION
+   REPORT A supplemental audit report, referred to as the Renal
+   Preservation Report, is available to you. It provides more detail
+   regarding diabetic kidney disease screening and treatment efforts at
+   your facility. To print the Renal Preservation Report, go back to Epi
+   Info's main menu and then select ANALYSIS from the list of Programs.
+   (It is important to do this, even if you were already in ANALYSIS, as
+   it "resets" certain variables). At the EPI> prompt, type: READ AUDIT01
+   Press if you wish the output to go to the printer, or skip this step if
+   you want it to go to your computer screen only. At the next EPI>
+   prompt, type: RUN RENAL01 The Renal Preservation Report will now be
+   printed (or will appear only on your screen, if you did not push ). 14.
+   THE CARDIOVASCULAR DISEASE REPORT Beginning this year an additional
+   supplemental audit report, the Cardiovascular Disease Report, is also
+   available. The report helps identify and target opportunities to
+   decrease the risks for cardiovascular disease in your patients with
+   diabetes. To print the Cardiovascular Disease Report, go to Epi Info's
+   main menu and select ANALYSIS from the list of Programs. (It is
+   important to do this, even if you were already in ANALYSIS, as it
+   "resets" certain variables). At the EPI> prompt, type: READ AUDIT01
+   Press if you wish the output to go to the printer, or skip this step if
+   you want it to go to your computer screen only. At the next EPI>
+   prompt, type: RUN CVD01 The Cardiovascular Disease Report will now be
+   printed (or will appear only on your screen, if you did not push ). 18
+   ASSESSMENT OF DIABETES CARE, FY 2001 AUDIT DATE (mm/dd/yyyy):
+   ____/____/_______ FACILITY NAME: __________________________________
+   AREA: ____ SERVICE UNIT: ____ FACILITY: ____ # OF PTS IN REGISTRY:
+   _______ TRIBAL AFFIL: _____ COMMUNITY:_______ REVIEWER: ____ CHART
+   NUMBER: _____________ DATE OF BIRTH: ____/____/_______ SEX: G1 Male G2
+   Female DM The rapy DATE of Diabetes Diagnosis: Select all that
+   currently apply: Laboratory Data ____/____/______ G1 Diet & Exercise
+   Alone HbA1c (most recent): _____.___ % Date obtained: ____/____/_____
+   DIABETES TYPE: G1 Type 1 G2 Insulin G2 Type 2 G3 Sulfonylurea
+   (tolbutamide, HbA1c (next most recent): ____.___% chlorpropamide,
+   glyburide, TOBACCO USE: glipizide, [repaglinide, or, if no HbA1c
+   available... G1 Current User neteglinide], others) Last 3 BLOOD SUGARS:
+   G2 Not a Current User G4 Metformin (Glucophage®) _____ mg/dl G3 Not
+   Documented G5 Acarbose (Precose®) or _____ mg/dl Referred for (or
+   provided) miglitol (Glyset®) _____ mg/dl cessation counseling? G6
+   Glitazone (Actos®, G 1 Yes Avandia®) Most recent serum value in the
+   past 12 G2 No G9 Unknown/Refused months: G3 Refused ACE Inhibitor/ARB
+   Use Creatinine: ____.__ mg/dl Vital Statistics G1 Yes G3 Unknown G2 No
+   Total Cholesterol: ______ mg/dl HEIGHT: ____ft ____ in Chronic Aspirin
+   Therapy HDL Cholesterol: ______ mg/dl Last WEIGHT: ________ lbs. G1 Yes
+   G3 Unknown G2 No LDL Cholesterol: ______ mg/dl HTN (documented Dx or
+   Rx): Lipid Lowering Agent Triglycerides: ______ mg/dl G1 Yes G1 Yes G3
+   Unknown G2 No G2 No URINALYSIS: Last 3 BLOOD PRESSURES: Immunizations
+   G1 Yes G3 Refused ______/_____ mm Hg G2 No ______/_____ mm Hg FLU
+   VACCINE (past year): G1 Yes G3 Refused PROTEINURIA: ______/_____ mm Hg
+   G2 No G1 Yes (1+ or more) Examinations (in past year) PNEUMOVAX ever:
+   G2 No (Neg or trace) G1 Yes G3 Refused FOOT EXAM - complete:
+   MICROALBUMINURIA: G2 No G1 Yes G3 Refused G1 Pos G2 No Td in past 10
+   years: G2 Neg G1 Yes G3 Refused G3 Not tested EYE EXAM
+   (dilated/fundus): G2 No G1 Yes G3 Refused Is self monitoring of blood
+   glucose G2 No TB Status (PPD): documented in chart? G1 Yes DENTAL EXAM:
+   G1 Pos G3 Refused G2 No G1 Yes G3 Refused G2 Neg G4 Unknown G3 Pt
+   refuses to monitor G2 No If PPD Pos, INH Tx Complete: Education (in
+   past year) G1 Yes G3 Refused Is pt participating in SDM? G1 Yes DIET
+   INSTRUCTION: G2 No G4Unknown G2 No G1 RD G3 Unable to determine G2
+   Other G3 Both If PPD Neg, Last PPD: Date: ___/___/______ G4 None G5
+   Refused Local Option question: EXERCISE INSTRUCTION: Date of last
+   EKG:___/___/______ G1 Yes G3 Refused G2 No (Females only) Pap Smear in
+   past 12 months: DM Education (Other) G1 Yes G3 Refused G1 Yes G3
+   Refused G2 No G2 No IHS Standards of Care for Patients with Type 2
+   Diabetes April, 2001 The Standards of Care for Type 2 diabetes have
+   been developed and updated by the IHS National Diabetes Program to help
+   provide consistent, quality care to patients with diabetes. 1. Baseline
+   Studies Height- Measure once and record on PCC Health Summary. If PCC
+   is not available, record on diabetes flowsheet. For children <18 years
+   of age, height and weight should be recorded at each visit. Use to
+   calculate body mass index and ideal or reasonable body weight. Date of
+   Diabetes Diagnosis - Record on PCC Health Summary. If PCC is not
+   available, record on diabetes flowsheet. Longer duration of diabetes
+   correlates with increased risk of complications. ECG - Obtain baseline
+   then repeat every 1-5 years as clinically indicated (for those age 40
+   and above, or with diabetes duration over 10 years, every 1-2 years is
+   recommended). PPD - Should be documented once after diagnosis of
+   diabetes (Offer INH prophylaxis to patients according to protocol
+   refer to Section 9). 2. Each Clinic Visit Blood Pressure - Target BP is
+   < 130/80. Additional protection against complications, including renal
+   failure, may be obtained by lowering BP further. Weight - Compare with
+   measurements from prior visits to identify trends. Blood Glucose -
+   Results of lab determinations and self-monitoring should be available
+   for timely discussion with the patient. Hemoglobin A1c (HbA1c) at 3-4
+   month intervals. ! Fasting/casual glucose measurement and
+   self-monitoring records should be available for timely discussion with
+   the patient at each visit. Self-monitoring BG records are vital to
+   diabetes management decisions. ! Determine if HbA1c has been performed
+   within the past 3-4 months, and order if due. Patients in acceptable
+   glycemic control (HbA1c < 7.0%) should be tested at least every 6
+   months. HbA1c estimates the average degree of glycemic control over the
+   preceding 3 months. HbA1c is the standard way to measure glycemic
+   control. ! HbA1c results should be discussed with the patient at the
+   time of the patient visit. If in-house measurement is unavailable,
+   blood sample should be obtained several days before the clinic visit.
+   At each clinic visit, the appropriate education, intervention,
+   referral, and or follow-up will be provided as indicated. Foot Check -
+   Inspection of feet and nails. Check for ingrown toenails, calluses,
+   deformities, pressure points, ulcers, and cellulitis. 3. Annual
+   Creatinine - Screen for renal insufficiency. Complete
+   UA/Microalbuminuria - A test for urine protein should be performed
+   yearly. If negative, a screening test for microalbuminuria should be
+   performed (by A/C ratio or dipstick test). Dipstick-positive
+   microalbuminuria should be confirmed on a separate specimen using an
+   A/C ratio (abnormal >30mg/gm) or 24 hour urine. ACE inhibitors should
+   be considered in patients with microalbuminuria or proteinuria, even if
+   normotensive. Lipid Profile Risk factors for atherosclerosis include
+   LDL >100, HDL <40 in men and <45 in women, and TG >200. Even lower LDL
+   and TG values represent increased risk in persons with previously
+   documented atherosclerosis. These risk factors, especially elevated
+   LDL, should be treated aggressively. Caution should be used when
+   considering agents that aggravate hyperglycemia. A lipid panel should
+   be performed annually (TC, LDL, HDL, TG). Consider direct LDL
+   measurements, especially if TG >250 or if the specimen is to be
+   obtained non-fasting. Elevated TC, LDL, TG and low HDL confer greater
+   risk for atherosclerosis. Optimal LDL cholesterol levels for adults
+   with diabetes are <100. All patients with LDL >100 require medical
+   nutrition therapy and other lifestyle modifications. Pharmacologic
+   intervention is recommended if dietary interventions and lifestyle
+   modifications are ineffective in lowering LDL to <100. Aspirin Therapy
+   - Aspirin has been used as a primary and secondary prevention strategy
+   to prevent cardiovascular events. Men and women with diabetes have a
+   2-4 fold increase in risk of dying from complications of cardiovascular
+   disease (CVD). Aspirin in doses of 162-325 mg/day is recommended for
+   patients with diabetes. Strongly consider aspirin therapy as a primary
+   prevention strategy in high risk men and women age 30 and above with
+   diabetes. This includes individuals with family history of CVD,
+   cigarette smoking, hypertension, obesity, albuminuria and dyslipidemia.
+   Use aspirin therapy as a secondary prevention strategy in diabetic men
+   and women who have evidence of large vessel disease, such as history of
+   MI, stroke, peripheral vascular disease, claudication or angina. Eye
+   Exam - Retinal exam through dilated pupils or fundus photo. Individuals
+   with type 1 diabetes should receive an initial exam within 3-5 years of
+   diagnosis once they are > 10 years of age. People with type 2 diabetes
+   should receive an initial exam at diagnosis and yearly thereafter.
+   Dental Exam - Annual screen for periodontal disease and other oral
+   pathology. Foot Exam - Risk assessment to include pulse check and
+   sensory evaluation with monofilament, identification of foot deformity,
+   and documentation of history of foot ulcers. Screen for Neuropathy - By
+   history and physical; include sensory, motor and autonomic evaluation.
+   4. Immunizations and Skin Tests Flu Vaccine - Yearly Pneumovax -
+   Vaccinate everyone at the time of diagnosis. Revaccination should be
+   strongly considered five (5) years after the first dose for those
+   patients at highest risk of fatal pneumococcal infection (e.g.,
+   asplenic patients) or those at highest risk of rapid decline in
+   antibody levels (e.g., those with chronic renal failure, nephrotic
+   syndrome, or transplanted organs). Revaccinate all patients > age 65
+   years if it has been >5 years since initial vaccination. Td - Every 10
+   years. Hepatitis B - Vaccinate persons whose renal disease is likely to
+   lead to dialysis or transplantation (serum creatinine > 2.0). PPD -
+   Once after diagnosis unless known positive. PPD-positive people with
+   diabetes, including AI/AN with Type 2 diabetes, have 5 times the risk
+   of reactivating TB. All diabetic patients with positive PPD including
+   those over age 35 should be given INH chemoprophylaxis according to
+   current guidelines (see Section 9). 5. Special Aspects of Diabetes Care
+   Lab Tests - C-peptide, the other half of pro-insulin, can evaluate a
+   patient's endogenous insulin secretion and help distinguish between
+   Type 1 and Type 2 diabetes. The test can be useful in at least two
+   clinical situations: 1. Solving a clinical problem about using oral
+   agents vs. insulin. 2. Evaluating a patient with history of
+   ketoacidosis when stable (useful in setting of ETOH, acidosis, and
+   diabetes to determine ongoing need for insulin). 6. Self-Care Education
+   - Use of the PCC education codes to document education is encouraged.
+   Nutrition Education - Meal planning, nutrition education, and exercise
+   are the primary treatment strategies for Type 2 diabetes. The Indian
+   Health Service Diabetes Program supports the American Diabetes
+   Association position that all persons with diabetes receive regular
+   nutrition counseling and are seen by an RD/nutritionist every six
+   months to 1 year. Some people may require more frequent evaluation and
+   counseling. Diabetes Education - All patients with diabetes and their
+   families should have diabetes self-care information. The National
+   Standards for Diabetes Care and Patient Education provide guidelines
+   for education program development with criteria specific for AI/AN
+   health care facilities. Every facility should work towards providing
+   systematic mechanisms to make culturally relevant self-care information
+   available for patients. Exercise Education - Exercise is associated
+   with improvement in both short- and long-term metabolic control.
+   Exercise counseling should be provided to all persons with diabetes.
+   The appropriate type of activity, including frequency, duration, and
+   intensity, should be individualized for each patient. Education and
+   Glycemic Control ! Self monitoring results should be discussed with the
+   patient at each visit. ! HbA1c results should be discussed with the
+   patient within 2 weeks of the test, preferably at the patient visit.
+   Self-Blood Glucose Monitoring (SBGM) - The purpose of SBGM is to
+   determine the pattern of blood glucose throughout the day. This pattern
+   provides information for selection and adjustments in therapy.
+   Frequency of monitoring must be individualized and may vary as
+   day-to-day circumstances require. 7. Routine Health Maintenance
+   Physical Exam Complete exam as baseline, then routine. Pap Smear/Pelvic
+   Exam Yearly Breast Exam Yearly Mammogram Every 1-2 years in women ages
+   40-49, yearly thereafter. Rectal Exam/Stool Guaiac Yearly in adults >
+   40 years of age. Tobacco Use Current tobacco use should be documented
+   and a referral made for cessation of tobacco use. 8. Pregnancy and
+   Diabetes All women who are in their childbearing years should receive
+   pre-pregnancy counseling for optimizing metabolic control prior to
+   conception. Counseling for family planning is essential to achieve this
+   goal. American Indian women are at increased risk for developing
+   gestational diabetes (GDM), as are women with certain other risk
+   factors, including but not limited to the following: * previous
+   gestational diabetes * obesity * previous fetal macrosomia * insulin
+   resistance syndrome * unexplained stillbirth * polycystic ovarian
+   syndrome (PCOS) * congenital anomaly * family history of diabetes These
+   women should be screened for GDM early in pregnancy. If early screening
+   is negative, the screen should be repeated at 24-28 weeks gestation.
+   Women with GDM are at increased risk of developing type 2 diabetes
+   (about one third of all AI/AN women with GDM will develop diabetes
+   within 5 years). These women should be re-tested by OGTT at least 6-12
+   weeks post delivery to determine their glycemic status. Women with a
+   normal postpartum OGTT should be re-tested every 1-3 years. Bear in
+   mind that diagnostic standards for diabetes in breastfeeding women have
+   not been established. Blood glucose should be monitored in the
+   postpartum and lactating period, including regular self blood glucose
+   testing, as clinically appropriate. All women with a history of GDM
+   should receive counseling/education regarding lifestyle modifications
+   that will reduce or delay the development of type 2 diabetes. Moreover,
+   the importance of maintaining optimal glucose control prior to and
+   during any subsequent pregnancy should be stressed. Mothers should be
+   made aware that children of GDM pregnancies should be monitored for
+   obesity and abnormalities of glucose utilization. Further
+   recommendations and guidelines for the screening, diagnosis and
+   treatment of GDM may be found in the most recent Clinical Practice
+   Recommendations of the American Diabetes Association (published
+   annually), Management of Diabetes in Pregnancy, 3rd Edition (ADA),
+   2000, and Metzger BE, Coustan DR (Eds.): Proceedings of the Fourth
+   International Workshop-Conference on Gestational Diabetes Mellitus.
+   Diabetes Care 21 (Suppl. 2): B1-B167, 1998 9. Tuberculosis and Diabetes
+   Patients* A-positive PPD skin test (i.e., >10 mm in duration 48-72
+   hours after administration) means that a person either has latent
+   tuberculosis infection (LTBI) or active tuberculosis (TB) disease.
+   Active TB disease needs to be ruled out prior to starting patients with
+   LTBI on treatment. Treatment for active TB and LTBI are different*.
+   Patients with diabetes and LTBI are at high risk of progressing to
+   active TB, if they are not treated for LTBI. Studies have shown that
+   the risk is 2 to 6 times greater than in patients without diabetes.
+   Other factors that further increase the risk for TB include: recent PPD
+   conversion within 2 years, intravenous drug use, chest film showing
+   prior active disease that was never treated, immunosuppressive drugs,
+   and ESRD. Cutaneous anergy increases as patients age and develop
+   complications of diabetes such as ESRD. Anergy may lead to false
+   negative PPD test results. *Recommendations for targeted tuberculin
+   testing and treatment of LTBI in MMWR, June 09, 2000/ 49(RR06); 1-54 or
+   at www.cdc.gov/mmwr//indrr_2000.html Or at: Treatment for active TB
+   disease is detailed in: CDC Core Curriculum in TB: What the Clinician
+   Should Know. CDC, 2000 (4th edition). In most cases progression of LTBI
+   to active TB can be prevented by treatment with INH. In general,
+   patients with diabetes who have a positive PPD (accurately read by a
+   provider trained in interpretation of PPD) should receive treatment for
+   LTBI, except in the following circumstances: * severe liver disease *
+   suicidal ideation * adverse reaction to INH. Patients receiving
+   treatment for LTBI should be followed and monitored for potential
+   hepatotoxicity. While national recommendations emphasize monitoring
+   hepatotoxicity through systematic repetitive patient education and
+   clinical evaluation for signs and symptoms of hepatotoxicity, baseline
+   measurement of liver function tests and after one month should be
+   considered, especially in patients receiving other potentially
+   heptotoxic medications. Some experts recommend that INH be discontinued
+   if transaminase levels exceed three times the upper limit of normal
+   when associated with symptoms or five times the upper limit of normal
+   if the patient is asymptomatic. IHS TB Protocol for Patients with
+   Diabetes: * Check the PPD status of all patients with diabetes. * If
+   the PPD status is negative or unknown: - PPD testing should be done
+   within one year of initial work up for diabetes diagnoses, and treated
+   if they have LTBI. - If no PPD has been placed since the diagnosis of
+   diabetes, and the patient's PPD status is negative or unknown, a PPD
+   status needs to be ascertained. - Subsequent PPD testing is done only
+   if there is contact with an active TB case. * If the PPD status is
+   positive: - Check for completion of past treatment for active TB or
+   LTBI (6-9 months of INH for LTBI or multiple drug therapy for active
+   disease). - If the patient has not been adequately treated, search for
+   active disease by history (weight loss, etc), fever (record
+   temperature) and recent chest x-ray (within 6 months). If there is no
+   evidence of active disease, recommend treatment for LTBI (9 mos. of INH
+   300 mg daily) to all patients with diabetes, regardless of age, unless
+   the patient has liver disease, suicide ideation or a previous adverse
+   reaction to INH. Patients with diabetes should be given pyridoxine
+   (10-50 mg/day) with their INH. Consider directly observed therapy of
+   LTBI when possible, especially for patients on dialysis. APPENDIX C
+   Technical Notes IHS Diabetes Care and Outcomes Audit FY2001 This
+   document is intended to accompany the 2001 audit summary report. The
+   report contains data on diabetes-related care, and the health status of
+   American Indians and Alaska Natives with diabetes who receive care from
+   IHS, Tribal or Urban health facilities. The data is obtained from an
+   annual chart audit conducted under the auspices of the IHS Diabetes
+   Program. A random sample is drawn from the health facility's list of
+   active diabetic patients in sufficient number to provide an estimate
+   "10% of the true rate. Summary reports from each Area and for all IHS
+   Areas are weighted by the size of the diabetic population of the health
+   facility or Area, respectively. The percentages reported represent
+   either the proportion of the sample population having a particular
+   attribute, in the case of demographic data, or the percentage in
+   compliance with a specific standard of care*. The reported rates are
+   calculated using the total audit sample as the denominator for each of
+   the standards, with the following exceptions: Standard or Test
+   Denominator Tobacco cessation counseling All current tobacco users.
+   Chronic aspirin use All individuals age 30. ECG All individuals age 30.
+   Pap smear All females. Creatinine 2.0 All individuals who had
+   creatinine tested in the past year. Microalbuminuria All individuals
+   who had a urinalysis in the past year and no proteinuria by standard
+   dipstick. Definitions Eye Exam: A dilated fundoscopic exam conducted by
+   a primary care provider, optometrist or ophthalmologist, or a dilated
+   fundoscopic photograph. Foot Exam: An examination of the feet that
+   includes neurologic and vascular evaluation as well as visual
+   inspection for deformities or lesions. Dental Exam: The dental
+   examination is one that includes evaluation of the teeth (if present),
+   gingiva and mucosal surfaces. ___________________ *IHS Standards of
+   Care for Patients with Type 2 Diabetes, April 2001 Technical Notes, IHS
+   Diabetes Audit Page 2 Glycemic Control: Based on last HbA1c level, if
+   one was recorded in the past year. If no HbA1c was recorded, then based
+   on the average of the last 3 blood glucoses drawn within the past year.
+   For records without an HbA1c value, the mean blood glucose is converted
+   to the analogous HbA1c level, using the formula: HbA1c = Mean BS +
+   60.16 30.9 Be aware that in the audit reports from 1998 and earlier,
+   mean blood glucose values were not converted to HbA1c values. Instead,
+   glycemic control categories included separtate HbA1c and blood glucose
+   ranges, as shown in Table 1. Table 1 Glycemic Control Categories ("Old"
+   Format) Control level HbA1c Mean BG Acceptable #7.5 #165 Fair 7.6 -10.0
+   166-250 High 10.1-12.0 251-340 Very high >12.0 >340 Blood Pressure
+   Control: Based on the mean of the last 3 blood pressure determinations
+   taken within the preceding 12 months. Under the new format, there are 5
+   BP categories, ranging from "Ideal" (<120/<80) to "Markedly poor"
+   (160/95 or greater). Under the "old" format, hypertension was defined
+   as systolic BP 140 or diastolic BP 90, and severe hypertension was
+   defined as systolic BP 160 or diastolic BP 95. PPD Status: A negative
+   PPD is considered current if it was placed after the date of diabetes
+   diagnosis. INH treatment is noted only if the treatment course was
+   completed. Proteinuria: Considered to be present if the most recent
+   urine dipstick test in the past year showed 1+ (30 mg/dl) or more
+   protein. Because the color difference between a "Negative" and a
+   "Trace" reading can be subtle and misread, a Trace reading is not
+   sufficient to constitute proteinuria for audit purposes.
+   Microalbuminuria: Considered to be present if the urine specimen is
+   without gross proteinuria (as defined above) and meets one of the
+   following criteria: ! urine albumin/creatinine (A/C) ratio is $30
+   mg/gm. ! urine albumin excretion rate (AER) >20 Fg/min, or 30 mg/24hrs.
+   ! 30 mg albumin/L of urine. Self Monitoring of Blood Glucose
+   documented: Considered to be present if a provider made note of or
+   assessed SMBG results at least once in the last 4 diabetes visits.
+   APPENDIX D UPGRADING EPI INFO Epi Info is the CDC software package that
+   is used to enter audit data and obtain audit reports. It is now
+   available in both DOS and Windows versions. For the current (FY 2001)
+   audit, the DOS version will be used. Epi Info versions 6.04c and 6.04d
+   are the most recent DOS versions of Epi Info. Both are capable of
+   correctly handling dates with 4 digit years, whereas 6.04b and earlier
+   versions are not. The AUDIT01 programs use dates with 4-digit years and
+   will run properly only on the two most recent versions of Epi Info.
+   Confirm whether you have a recent version of Epi Info. This is easily
+   done by looking at Epi's main menu page. The version number is located
+   immediately below the large blue "Epi Info 6". If it says "Version
+   6.04b to c Upgrade" or "Version 6.04d", you are all set: you have a
+   recent version. If not, you will need to upgrade. Either of the upgrade
+   options listed below are acceptable if you have Epi Info version 6.04b.
+   For earlier versions, only the latter option is appropriate. To upgrade
+   from Epi Info version 6.04b to version 6.04c 1. Obtain the file
+   4BUPDATE.EXE and copy it into the \EPI6 subdirectory. The 4BUPDATE.EXE
+   file is available on last year's AUDIT2K diskette (it is in the \UPDATE
+   subdirectory), or from the IHS Diabetes Program office (505) -248-4182.
+   2. From Epi's Program menu, select Analysis, then press which will take
+   you to a DOS prompt (usually C:\EPI6>). At the DOS prompt, type
+   4BUPDATE This begins the extraction of the update file. 3. You will be
+   asked: Continue extraction? Type Y . 4. There are 23 files that the
+   program will modify. For each file, the program will ask if you wish to
+   overwrite the existing file. For example, it will say, "Analysis.exe
+   exists, Overwrite?" Type Y 5. Repeat step 4 for the remaining 22 files.
+   After the last file (EPITENG.RES) has been overwritten, you will be
+   returned to a DOS prompt. Type exit, then press twice to leave Epi
+   Info. This completes the upgrade to version 6.04c. To upgrade to Epi
+   Info 6.04d 1. Create a temporary subdirectory (for example,
+   C:\EPITEMP). 2. Go to CDC's Epi Info website (www.cdc.gov/epiinfo/),
+   and select Epi Info 6. 3. Download the following 3 compressed files
+   into the temporary subdirectory: EPI604_1.EXE EPI604_2.EXE EPI604_3.EXE
+   4. Execute the 3 files, then run Install.exe. 5. Follow and respond to
+   the installation questions and prompts.

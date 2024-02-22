@@ -1,0 +1,61 @@
+http://octlcam.jpl.nasa.gov/pub/ppp/index.html
+
+Installation using PPP
+
+   The camera server supports the Point to Point Protocol (PPP) which is a
+   mechanism for creating and running the Internet Protocol and other
+   network protocols over a serial link. This can be either:
+     * a direct serial connection that uses a null-modem cable, or
+     * a connection established using modems and telephone lines
+       (including digital lines such as ISDN).
+
+   PPP can transport any IP based protocol and allows the camera server to
+   be remotely accessed almost as if it were directly connected to the
+   network. However, the major difference between PPP and an Ethernet
+   connection is of course speed. A standard Ethernet connection operates
+   at 10 Mbps (maximum theoretical throughput), whereas an analog modem
+   only operates at speeds up to 56 kbps.
+
+Configuration of camera server
+
+   You need to enable PPP support in your camera server. By default the
+   serial port is disabled.
+    1. Use a Web browser to view your camera server's home page over
+       Ethernet, (such as http://mycam). You can do this even if you do
+       not have access to Ethernet, look here.
+    2. Click on Settings at the bottom of the picture.
+    3. Select Host Mode in the Serial Mode pop-up on the Modem page.
+    4. Select Autodetect Modem in the Modem Type pop-up.
+    5. Choose a baud rate, 19200 or 38400 is recommended.
+
+  UNIX users
+
+   Simply treat the camera server as any other remote PPP host. No userid
+   or password is required. You can also assign the camera server a
+   temporary IP address for the duration of the connection.
+
+   Instructions for setting up and establishing a connection in UNIX.
+
+  Windows users
+
+   Instructions for setting up and establishing a connection in Windows
+   95.
+
+  Limitations
+
+   The currently known limitations in the PPP support:
+     * When used with a GSM/cellular phones, always set the baud rate to
+       9600.
+     * The product is optimized for US Robotics(tm) modems, since these
+       are the most common. It will work with other modems as well, but
+       for best result we recommend the use of US Robotics(tm).
+     * From Windows there is no method of setting the remote IP address.
+       This is a limitation in the Windows PPP implementation. If you
+       install a camera server on a remote site, make certain to set the
+       IP address in advance. If you forget the address, while at a remote
+       location, you can use a terminal to call the camera server, and
+       issue the 'ip' command on the camera server's console.
+     __________________________________________________________________
+
+
+    Tech-Support@axis.com

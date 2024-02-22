@@ -1,0 +1,479 @@
+http://www.fema.gov/search/advsrch.htm
+
+  Please refer to text links below.
+
+     [ home | feedback | library | privacy policy | search | site help |
+                                site index ]
+
+                   Using the Inquery Structured Query Language
+                           to Perform Advanced Queries
+
+     Please enter search term(s):
+     __________________________________________________ Search Clear
+     Get the first [10_] documents
+
+                         Descriptions of Query Operators
+
+     The InQuery search engine supports two different types of queries:
+       * Natural language
+       * Structured
+
+     The natural language queries enables the user to type the information
+     request as an English (or other language) sentence. The InQuery
+     query-processor transforms these queries into a structured form which
+     can then be processed by the query engine.
+
+     The structured queries require the user to input the query in a
+     structured format. By directly inputting a structured query, the user
+     is able to provide more exact information about the relationship of
+     terms in the query. This can improve performance, but requires a
+     knowledgeable user to properly formulate the query using the special
+     operators provided.
+
+     The INQUERY search engine developed by the Center for Intelligent
+     Information Retrieval.
+
+     Note: In the following examples, the query operators may be shown as
+     upper or lower case. The operator input is not case sensitive.
+
+     The available operators (in the general order of common usage) are as
+     follows:
+       * Sum Operator: #sum (T1 ...Tn )
+
+     The terms or nodes contained in the sum operator are treated as having
+     equal influence on the final result. The belief values provided by the
+     arguments of the sum are averaged to produce the belief value of the
+     #sum node.
+
+     This is the default operator used by InQuery. When you type a sentence
+     like "vacationing in Florida" the system converts this to:
+
+
+  Example:
+
+          #sum(vacation Florida)
+
+          Notice the "in" is gone; it's a stop word.
+       * Weighted Sum Operator: #wsum (Ws W1 T1 ... Wn Tn)
+
+     The terms or nodes contained in the WSUM operator contribute unequally
+     to the final result according to the weight associated with each (Wx).
+     The final belief value is scaled by Ws, the weight associated with the
+     #wsum itself.
+
+
+  Example:
+
+          #wsum(1.0 10.0 vacation 50 Florida)
+
+          This example will weight Florida 5 times as heavily as vacation.
+       * Ordered Distance Operator: #N (T1 ... Tn) or #odN (T1 ... Tn)
+
+     The terms within an ordered distance operator must be found within N
+     words of each other in the text in order to contribute to the
+     document's belief value. The #N version is an abbreviation of #odN,
+     thus #3(health care) is equivalent to #od3(health care).
+       * And Operator: #and(T1 ... Tn)
+
+     The more terms contained in the AND operator which are found in a
+     document, the higher the belief value of that document. This operator
+     is very similar to the #sum operator, it is not a Boolean operator. Not
+     all of the terms listed in the #and must be found for the group to
+     contribute to the overall relevance score.
+       * Boolean And Operator: #band(T1 ... Tn)
+
+     All of the terms within a BAND operator must be found in a document in
+     order for this operator to contribute to the belief value of that
+     document.
+
+
+  Example:
+
+          #band(vacationing Florida)
+
+          Both terms must exist for the group to contribute to the belief score.
+       * Boolean And Not: #bandnot (T N)
+
+     Search for document matching the first argument but not the second.
+       * Or Operator: #or(T1 ... Tn)
+
+     One of terms within the OR operator must be found in a document for
+     that document to get credit for this operator.
+       * Negation Operator: #not(T1 ... Tn)
+
+     The terms or nodes contained in this operator are negated so that
+     documents which do not contain them are rewarded.
+       * Unordered Window Operator: #uwN(T1 ... Tn)
+
+     The terms contained in a UWN operator must be found in any order within
+     a window of N words in order for this operator to contribute to the
+     belief value of the document.
+       * Phrase Operator: #phrase(T1 ... Tn)
+
+     Terms within this operator are evaluated to determine if they occur
+     together frequently in the collection. If they do, the operator is
+     treated as an ordered distance operator of 3 (#od3). If the arguments
+     are not found to co-occur in the database, the phrase operator is
+     turned into a SUM operator. In ambiguous cases the phrase becomes the
+     MAX of the SUM and the OD3 operators.
+
+     Basically, this function will maximize the belief score of the items
+     contained in the operator.
+       * Passage Operator: #passageN(T1 ... Tn)
+
+     The passage operator looks for the terms or nodes within the operator
+     to be found in a passage window of N words. The document is rated based
+     upon the score of its best passage.
+
+
+  Example:
+
+          If you have a database of news articles, some section of each document
+          will be the best or most relevant passage in the document.
+
+          #passage50(vacation Florida) will only use the belief score from the
+          best passage of each document in scoring the documents.
+       * Synonym Operator: #syn(T1 ... Tn)
+
+     The terms of the operator are treated as instances of the same term.
+
+
+  Example:
+
+          #syn(computer pc) will treat the words computer and pc as the same
+          thing. If computer exists 3 times in a document and pc exists 4 times,
+          the #syn operator will result in a belief score based on the term
+          existing 7 times.
+       * Maximum Operator: #max(T1 ... Tn)
+
+     The maximum belief value of all the terms or nodes contained in the MAX
+     operator is taken to be the belief value of this operator.
+       * Weight Plus Operator: #+ T1
+
+     The effect of the term or node T1 is increased relative to the rest of
+     the query.
+
+
+  Example:
+
+          vacation (#+ Florida) will weight the term Florida more heavily than
+          the term vacation in all searched documents.
+       * Weight Minus Operator: #- T1
+
+     The effect of the term or node T1 is decreased relative to the rest of
+     the query.
+
+
+  Example:
+
+          vacation (#- Florida) will weight the term Florida less heavily than
+          the term vacation in all searched documents.
+       * Literal Operator: #lit(T1 ... Tn)
+
+     This operator preserves the original forms of the terms contained
+     within it. No stemming or stopping is performed and capitalization is
+     preserved.
+
+     This is the operator you'd use to search for exact strings: #lit(Four
+     score and seven years ago) will only contribute to the score of an
+     evaluated document if that exact phrase is encountered.
+
+     The #lit operator is especially useful when searching on a DOCID field.
+
+
+  Example:
+
+          #field(DOCID #lit(weird-xid_string))
+       * Filter Require: #filreq(arg1 arg2)
+
+     Use the documents returned (belief list) for the first argument if and
+     only if the second argument would return documents. The value of the
+     second argument does not effect the belief values of the first
+     argument, only whether they will be returned or not.
+       * Filter Reject: #filrej(arg1 arg2)
+
+     Use the documents returned by the first argument if and only if there
+     were no documents returned by the second argument. The value of the
+     second argument does not effect the belief values of the first
+     argument, only whether they will be returned or not.
+       * Field Operator: #field( FIELD-NAME #REL-OP T1 ... Tn)
+
+     The terms contained in a FIELD operator are searched only within the
+     FIELD-NAME specified. The relational operator (REL-OP) allows fields to
+     be searched for ranges of values. If the REL-OP is missing, equality is
+     used by default.
+
+     Range Operators Used with #field
+
+
+  Equivalent Forms
+
+                  Meaning
+
+  #gt #>
+
+                  greater than
+
+  #gte #>=
+
+                  greater than or equal to
+
+  #lt #<
+
+                  less than
+
+  #lte #<=
+
+                  less than or equal to
+
+  #ne #neq #!=
+
+                  not equal to
+
+  #eq #==
+
+                  equal to (default and may be omitted)
+
+     These operators can be combined and nested to produce the desired
+     result. For example a simple structured query might be a sum of a term
+     and an ordered distance operator:
+
+     #sum( reform #2(health care) )
+
+     This query would find documents which contained the term reform and the
+     two terms health and care occurring at most 2 words apart.
+
+     A primary rule in formulating structured queries is that "belief
+     operators" may not occur inside of "proximity operators". This is
+     because proximity lists (the basic unit of InQuery knowledge) can be
+     converted to a belief list (a score or weight), but belief lists may
+     not be converted to proximity lists.
+
+     Unranked Boolean Operators
+
+     The following operators are "pure" Boolean operators, that is, they do
+     not cause a belief value to be calculated for a document. Instead,
+     their belief values are either 0 or 1; they either satisfy the query
+     conditions or they dont. These operators do not include the concept of
+     how well the query is satisfied.
+
+     When using unranked Boolean operators, the result set is not ranked
+     since there are no varying belief scores to sort by. Since belief
+     scores are not calculated and results are not sorted, unranked Boolean
+     operators are faster than ranked operators.
+
+     In those situations where only the top N documents are needed, unranked
+     Boolean operators are much faster. In these situations, once N
+     documents are found during query evaluation, the documents can be
+     returned. It is not necessary to look for all the possible document
+     "hits" and rank them before selecting the top N documents to return.
+
+     Since the same queries can be done using ranked Boolean operators (with
+     the added advantage of probabilistic evaluation), the unranked Boolean
+     Operators should only be used when their added speed is important and
+     the query can be phrased in such a way that the results will, as much
+     as possible, only include those documents which are meaningful. Or,
+     they can be used in cases where the user is performing a more general
+     search and any set of documents with the indicated terms will be
+     considered by the user.
+
+     Note: Unranked Boolean operators should not be mixed with ranked
+     operators except for the #filreq (filter require) and the #filrej
+     (filter reject) operators.
+
+     Wrong mix of operators, ranked and unranked:
+
+     #sum(#uband(California vacationing) #uband(Florida vacationing))
+
+     Right mix of operators, all unranked:
+
+     #ubor(#uband(California vacationing) #uband(Florida vacationing))
+
+     Right mix of operators, unranked are part of a filter reject operator:
+
+     #filrej( #sum(rafting kayaking #phrase (water sports))
+
+     #ubor (Florida California)))
+       * Unranked Boolean And Operator: #uband(T1Tn)
+
+     All of the terms within a UBAND operator must be found in a document
+     for it to be selected. This operator is similar to the BAND operator,
+     but, unlike BAND, belief values are not calculated and therefore the
+     returned documents are not ranked. Instead, all of the documents
+     returned will have a belief score of 1.0.
+
+
+  Example:
+
+          #uband(vacationing Florida)
+          Both vacationing and Florida must exist for the document to be
+          selected.
+       * Unranked Boolean And Not Operator: #ubandnot(T1 T2)
+
+     The operator searches for documents whose terms match the first
+     argument (T1) but not the second (T2). It is similar to the BANDNOT
+     operator but, unlike BANDNOT, belief values are not calculated and
+     therefore the returned documents are not ranked. Instead, all of the
+     documents returned will have a belief score of 1.0.
+
+
+  Example:
+
+          #ubandnot(vacationing Florida)
+          To be selected, the document must include vacationing but it cannot
+          include the term Florida.
+       * Unranked Boolean Or Operator: #ubor(T1Tn)
+
+     The operator searches for documents whose terms match any of the
+     arguments (T1 through Tn). It is similar to the OR operator but, unlike
+     OR, belief values are not calculated and therefore the returned
+     documents are not ranked. Instead, all of the documents returned will
+     have a belief score of 1.0.
+
+
+  Example:
+
+          #ubor(rafting kayaking canoeing)
+          To be selected, the document only needs to include one of the three
+          terms: rafting, kayaking, or canoeing. It can include more than one
+          term.
+
+     Examples of Nested Unranked Boolean Operators
+
+     The following query will get documents about either rafting or
+     kayaking, but not about Florida or California:
+
+     #ubandnot (#ubor(rafting kayaking) #ubor (Florida California))
+
+     The following query will get documents about both rafting and kayaking
+     in either Florida or California:
+
+     #uband (#uband(rafting kayaking) #ubor (Florida California))
+
+     Filter Require Example Using Ranked and Unranked Operators
+
+     As stated before unranked Boolean operators should not be mixed with
+     ranked operators except when used with the #filreq (filter require)and
+     the #filrej (filter reject) operators . In the case of the filter
+     operators, the second argument is not used for ranking; it is only used
+     to determine if the documents should be returned at all.
+
+     In the following example, the user wants articles about rafting or
+     kayaking or anything that mentions water sports, but the user does not
+     want articles that deal with these topics in Florida or California
+     since the user has already vacationed there.
+
+     #filrej( #sum(rafting kayaking #phrase (water sports))
+
+     #ubor (Florida California)))
+
+     List of Query Operators by Type
+
+     Below is a list of InQuery structured language operators by their type.
+
+
+  Belief List Operators
+
+                                   Proximity List Operators
+
+  #sum
+
+                                   term
+
+  #or
+
+                                   #syn
+
+  #and
+
+                                   #n (same as #od)
+
+  #not
+
+                                   #uw (same as #uwn)
+
+  #max
+
+                                   #phrase
+
+  #wsum
+
+  #passageN
+
+  #band
+
+  #field
+
+  #bandnot
+
+  #filreq (same as #filter-require)
+
+  #filrej (same as #filter-reject)
+
+  #lit
+
+  Unranked Boolean Operators
+
+  #uband
+
+  #ubandnot
+
+  #ubor
+
+                               Examples Using the
+                             Ranked Query Operators
+
+  Simple Queries
+
+       * Find information about Bart Simpson (general OR type logic)
+
+     #sum(Bart Simpson) = #sum(bart simpson)
+
+     Note: The InQuery engine is case insensitive.
+
+     This will find documents about bart simpson, or documents about anyone
+     or anything named bart or anyone/anything named simpson.
+       * Find information about only Bart Simpson (AND type logic)
+
+     #1(Bart Simpson))
+
+     This will find documents where the word bart and simpson occur within
+     one word of each other. Again this is case insensitive.
+       * Find information about anything but bart simpson (NOT type logic)
+
+     #sum(#not(Bart Simpson) lisa)
+
+     This will find documents that talk about lisa but don't mention bart
+     simpson.
+
+     Note: This will cause documents about lisa simpson to be given a low
+     score because they include the word simpson.
+
+  Complex Queries
+
+       * Information about the last British Open won by Jack Nicklaus
+
+     #sum(last british open won by #1(Jack Nicklaus))
+
+     This will rank documents talking about the last british open won by
+     Jack Nicklaus highest, but will also find documents mentioning Jack
+     Nicklaus or the British open.
+
+     Note: Remember InQuery is a probabilistic engine, it will do the best
+     it can with your query. In this method of operating, a document about
+     Britain is better than no document at all.
+       * Find a document mentioning all three terms: elvis presley
+         graceland, and the document must also include something about
+         country or rock.
+
+     #sum(#filter_require(#band(elvis presley graceland)) #syn(country
+     rock))
+
+     This query will require that all three terms elvis presley and
+     graceland appear in the document. It will also score documents with the
+     word country or rock higher than documents without those terms.
+
+
+      Updated: September 17, 1997
+
+                   Footer: Federal Emergency Management Agency

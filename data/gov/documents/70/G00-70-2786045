@@ -1,0 +1,20 @@
+http://www-angler.larc.nasa.gov/inca/buttons.js
+
+   function hardReload() { location.reload(true) } function setImage() {}
+   if (navigator.appVersion.charAt(0) > 2) { var B1NormImg = new
+   Image(100,20) var B1UpImg = new Image(100,20) var B2NormImg = new
+   Image(100,20) var B2UpImg = new Image(100,20) var B3NormImg = new
+   Image(100,20) var B3UpImg = new Image(100,20) var B4NormImg = new
+   Image(100,20) var B4UpImg = new Image(100,20) var B5NormImg = new
+   Image(100,20) var B5UpImg = new Image(100,20) var B6NormImg = new
+   Image(100,20) var B6UpImg = new Image(100,20) var B7NormImg = new
+   Image(100,20) var B7UpImg = new Image(100,20) B1NormImg.src =
+   "images/B1Norm.gif" B1UpImg.src = "images/B1Up.gif" B2NormImg.src =
+   "images/B2Norm.gif" B2UpImg.src = "images/B2Up.gif" B3NormImg.src =
+   "images/B3Norm.gif" B3UpImg.src = "images/B3Up.gif" B4NormImg.src =
+   "images/B4Norm.gif" B4UpImg.src = "images/B4Up.gif" B5NormImg.src =
+   "images/B5Norm.gif" B5UpImg.src = "images/B5Up.gif" B6NormImg.src =
+   "images/B6Norm.gif" B6UpImg.src = "images/B6Up.gif" B7NormImg.src =
+   "images/B7Norm.gif" B7UpImg.src = "images/B7Up.gif" } function
+   setImage(imgName, type) { var imgFile = eval(imgName + type +
+   "Img.src") document.images[imgName].src = imgFile return false }

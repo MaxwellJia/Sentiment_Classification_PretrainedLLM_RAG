@@ -1,0 +1,210 @@
+http://www-mipl.jpl.nasa.gov/PAG/public/vug/vugfinal.html
+
+   [title.gif]
+
+                                   Version 3
+
+   Elizabeth Duxbury
+   Danika Jensen
+
+   Oct. 14, 1994
+
+   National Aeronautics and
+   Space Administration
+
+   [jpl.gif]
+   Jet Propulsion Laboratory
+   California Institute of Technology
+   Pasadena, California 91109
+
+   D-4186 Rev B
+
+    Copyright © 1994, California Institute of Technology. All rights reserved.
+    U.S. Government sponsorship under NASA Contract NAS7-1270 is acknowledged.
+     __________________________________________________________________
+
+PREFACE TO VERSION THREE
+
+   VICAR is an evolving software system constantly being updated with
+   contributions from general users and flight projects. This makes it
+   difficult to keep a document such as this VICAR User's Guide
+   up-to-date. Part of the purpose in putting this latest version online
+   is to enable revisions in VICAR to be more quickly reflected in this
+   Guide.
+
+   Several significant changes have been made in this version of the
+   Guide. An attempt has been made to keep the current format as similar
+   as possible to past versions of the Guide, but for the online version,
+   some changes have been made to take advantage of the cross-referencing
+   capabilities of the NCSA Mosaic format. It is hoped that most of these
+   changes will be transparent to anyone reading a hardcopy version. An
+   attempt has been made once again to make the Index more useful in
+   quickly finding critical information.
+
+   There have also been significant changes to VICAR since Version 3 was
+   published. Perhaps most important are those changes due to the
+   conversion of VICAR to enable it to run on UNIX systems. (These changes
+   are detailed in Section 3.1.1 for the benefit of the experienced
+   VMS-VICAR user.) The content of the VICAR applications libraries has
+   changed with the addition of many new procs and the deletion of several
+   obsolete or redundant ones. Finally, the Menu mode and the New User's
+   Tutorial are undergoing significant changes, and have not yet been
+   implemented for UNIX VICAR.
+
+   This version of the VICAR User's Guide applies to:
+
+        VICAR Version 12.1
+                using TAE Version 5B/16B
+                under UNIX Version SunOS 4.1.3 or Solaris 2.3
+        or      under VMS Version 5.4-2
+
+ACKNOWLEDGEMENTS
+
+   This Guide would not have been completed if not for the assistance of
+   many members of the Image Processing Laboratory. The authors extend
+   special thanks to Ray Bambery, Nevin Bryant, Bob Deen, Sandy Dumarr,
+   Greg Earle, Tom Greer, Dave Hodges, Steve Hwan, Sue LaVoie, Alan Mazer,
+   Helen Mortensen, Steve Pohorsky, Niles Ritter, Allan Runkle, Cesar
+   Vasquez, Lisa Wainio, Mitch White, and Gary Yagi for their assistance.
+     __________________________________________________________________
+
+CONTENTS
+
+1   Introduction
+    1.1   Document Purpose
+    1.2   Document Organization
+    1.3   Conventions, Acronyms and Terms
+        1.3.1   Conventions
+        1.3.2   Acronyms and Terms
+2   VICAR  Documentation and References
+3   Overview of VICAR
+    3.1   Background
+        3.1.1   VICAR Changes Under UNIX
+    3.2   Applications of VICAR
+    3.3   System Acquisition
+4   BASIC VICAR Concepts
+    4.1   Entering/Exiting VICAR
+    4.2   Getting Started
+    4.3   VICAR Datasets
+        4.3.1   Dataset Names
+            4.3.1.1   Temporary Datasets
+        4.3.2   Dataset Structure
+        4.3.3   Pixel Data Formats
+    4.4   VICAR  Labels
+        4.4.1   VICAR Label Structure
+    4.5   Procs
+5   The VICAR Environment
+    5.1   VICAR Libraries
+    5.2   Processing Modes
+        5.2.1   Interactive or Synchronous Processing Mode
+            5.2.1.1   VICAR DCL Mode - VMS Systems
+            5.2.1.2   VICAR USH Mode - UNIX Systems
+        5.2.2   Asynchronous Processing
+            5.2.2.1   Asynchronous Processing - VMS Systems
+            5.2.2.2   "Background" Processing - UNIX Systems
+        5.2.3   Batch Processing Mode
+            5.2.3.1   Batch Processing - VMS Systems
+            5.2.3.2   Batch Processing - UNIX Systems
+    5.3   VICAR Use of Subprocesses
+    5.4   Session Customizing Procedures
+        5.4.1   Logon Procedures
+        5.4.2   Logoff Procedures
+    5.5   Aborting a VICAR Command
+6   VICAR User Aids
+    6.1   VICAR Help
+        6.1.1   HELP Command
+    6.2   VICAR TUTOR Mode
+        6.2.1   General TUTOR Information
+        6.2.2   TUTOR-SCREEN Mode
+        6.2.3   TUTOR-NOSCREEN Mode
+    6.3   VICAR MENU Mode
+        6.3.1   General Menu Information
+        6.3.2   The MENUTREE
+        6.3.3   Creating a Menu
+    6.4   Syntax Checking
+    6.5   Message Interpretation
+        6.5.1   General Message Information
+        6.5.2   HELP-MESSAGE
+        6.5.3   "?"
+7   The VICAR Image Processing Executive
+    7.1   Introduction to the TAE Command Language (TCL)
+        7.1.1   TCL Command Line Rules
+            7.1.1.1   Abbreviations
+            7.1.1.2   Line Continuation
+            7.1.1.3   Labels
+            7.1.1.4   Special Characters
+            7.1.1.5   Special VT100 Terminal Keys
+            7.1.1.6   Command Line Editor
+        7.1.2   Variables
+            7.1.2.1   Local Variables
+            7.1.2.2   Global Variables
+            7.1.2.3   Assignment
+            7.1.2.4   Intrinsic Variables
+            7.1.2.5   Substitution and  Dereferencing
+        7.1.3   Expressions
+        7.1.4   Built-In Functions
+        7.1.5   Error Handling
+    7.2   VICAR Command Line Structure
+        7.2.1   Command Line Syntax
+            7.2.1.1   Commands and Proc Names
+            7.2.1.2   Subcommands
+            7.2.1.3   Command Qualifiers
+            7.2.1.4   Parameter List
+            7.2.1.5   Comments
+        7.2.2   Parameters
+        7.2.3   Parameter Value Specification
+            7.2.3.1   Parameter_name=value Format
+            7.2.3.2   Keyword Format
+            7.2.3.3   Positional Format
+            7.2.3.4   Parameter Qualifiers
+        7.2.4   Missing or Invalid Parameter Values
+        7.2.5   Dynamic Parameters
+    7.3   Proc Definition Files (PDFs)
+        7.3.1   Procedure Definition Files (PDFs)
+        7.3.2   Process Definition Files (PDFs)
+        7.3.3   Executing a PDF
+        7.3.4   HELP Files
+        7.3.5   Global PDFs
+        7.3.6   Compiled PDFs
+    7.4   Script Files
+    7.5   Tape Handling
+    7.6   Session Logging
+    7.7   Sample Interactive Session
+8   Non-Standard Items
+    8.1   Proprietary Software
+    8.2   Facility-specific Hardware
+    8.3   VICAR I/O Formats
+        8.3.1   Input/Output of VICAR Datasets
+        8.3.2   Output of Non-VICAR Datasets
+        8.3.3   Input of Non-VICAR Datasets
+9   Advanced VICAR Concepts
+    9.1   Dataset Structure
+    9.2   VICAR Label Structure
+10  Appendix
+    10.1   VICAR Proc Function Definitions
+    10.2   Classification of VICAR Procs by Function
+    10.3   Standard VICAR Procs and their Functions
+    10.4   VICAR Intrinsic Commands
+    10.5   VICAR Command Qualifiers
+    10.6   VICAR Intrinsic Global Variables
+    10.7   MENU Mode User Operations
+    10.8   TUTOR Mode User Operations
+    10.9   TUTOR Mode Line Editing Keys
+    10.10  Command Line Editing Keys
+    10.11  Examples of Proc Definition Files (PDFs)
+    10.12  Examples of VICAR Labels
+    10.13  VICAR Message Explanations
+    10.14  The VICAR New User's Tutorial
+        10.14.1   New User Tutorial Listing
+11  Index
+     __________________________________________________________________
+
+   [fwd.gif]
+
+   Version 3 of the VICAR User's Guide is an update of previous versions,
+   and the authors relied heavily on those earlier versions for its
+   content. The authors of Version 2 of the Guide are Susan LaVoie, Doug
+   Alexander, Charles Avis, Helen Mortensen, Carol Stanley, and Lisa
+   Wainio. The writing and HTML formatting of Version 3 were done by
+   Elizabeth.D.Duxbury@jpl.nasa.gov and Danika.Jensen@jpl.nasa.gov. Last
+   modified May 21, 1996.

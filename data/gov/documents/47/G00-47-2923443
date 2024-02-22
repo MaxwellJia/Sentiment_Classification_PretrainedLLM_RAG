@@ -1,0 +1,91 @@
+http://eitv2.nascom.nasa.gov/new_leaks.html
+
+SOHO EIT light leaks, 1998 February 4
+
+   It appears that the SOHO was struck by a micrometeorite shower in the
+   early morning hours (UT) of 1998 February 4. As a result, all four EIT
+   sectors now show light leaks,apprently the result of pinholes in the
+   front filters. (Formerly, only Fe XV 294 Å and, to a lesser extent, Fe
+   IX, X 171 Å showed light leaks.)
+
+           [eit_19980204_1249_195.gif] [eit_19980204_1342_284.gif]
+           [eit_19980204_1334_171.gif] [eit_19980204_1314_304.gif]
+     __________________________________________________________________
+
+  Thermal response
+
+   There is no indication that any mechanism overheated during the 03:05 -
+   03:25 UT period in which the LASCO electronics box (the LEB) stopped
+   taking images.
+
+                           [EIT temperatures plot]
+
+   From this, it appears that the LEB behavior, as well as the appearance
+   of new light leaks in EIT, are due to external sources, e.g., a
+   micrometeorite impact.
+     __________________________________________________________________
+
+So where do we go from here?
+
+   EIT is equipped with an internal filter wheel that allows us to insert,
+   for example, an additional thin Al filter to counteract exactly this
+   sort of failure. This will require exposures 2 - 3 times as long as our
+   current exposures (wavelength dependent). The greatest challenge will
+   be flat-fielding the new, dual grid, so for some months, our images
+   will show a (new) grid pattern.
+     __________________________________________________________________
+
+Quicklook Analysis - Still ongoing...
+
+   It is obviously important to understand the calibration between the
+   Clear and Al+1 filter. Comparisons have been made (both pre- and post-
+   launch) to obtain the filter ratios. As a double check we obtained a
+   sequence of Clear and Al+1 exposures (full field, full resolution and
+   2x2x binned) in each of the 4 bands. The images were taken on Feb. 4,
+   1998 between 15:40 and 17:00 UT.
+   A quick comparison of their histograms can be viewed at:
+   Raw 171 Clear and. Al +1
+   Raw 195 Clear and. Al +1
+   Raw 284 Clear and. Al +1
+   Raw 304 Clear and. Al +1
+   Prep 171 Clear and. Al +1
+   Prep 195 Clear and. Al +1
+   Prep 284 Clear and. Al +1
+   Prep 304 Clear and. Al +1
+   The relevant parameters are:
+
+   Wave Filter Exp. time Median Bgrd/off limb? Median DN/on limb? DN/sec
+   Pre-flight Ratio Al+1/Clear
+   171 Clear 5.6 45 170 31
+   171 Al +1 7.1 25 105 15 0.49
+   195 Clear 9.1 40 120 13
+   195 Al +1 12.1 25 70 6 0.49
+   284 Clear 62.1 25 25 <1
+   284 Al +1 152.1 15 15 <1 0.33
+   304 Clear 25.1 35 240 9
+   304 Al +1 52.1 15 140 3 0.29
+
+   What does this tell us? This table addresses 3 issues, stray light,
+   filter ratios, exposure times. First, examining the background levels
+   we see that the stray light has been reduced with the Al +1 filter.
+   This is also very apparent in the images. Second we have verified the
+   filter ratios (factor of 2 for 171, 195 and ~3 for 284,304) are indeed
+   correct.
+   The answer in terms of exposure times is a little more difficult. If
+   one were looking to obtain the same absolute DN level with the Al+1
+   filter as the Clear then we need to increase our exopsure times. This
+   is not a problem with 171 and 195 but it begins to get long for 304 and
+   especialy 284. HOWEVER, if one cares about obtaining the same level of
+   signal to noise, then the above exposure times already achieve this.
+     __________________________________________________________________
+
+
+    Web curator: Joseph B. Gurman
+    Responsible NASA official: Joseph B. Gurman, Facility Scientist,
+    Solar Data Analysis Center
+    joseph.b.gurman@gsfc.nasa.gov
+    +1 301 286-4767
+    NASA Goddard Space Flight Center
+    Solar Physics Branch / Code 682
+    Greenbelt, MD 20771
+    Last revised - J.B. Gurman

@@ -1,0 +1,1100 @@
+http://sfablueprint.ed.gov/pdf/Mb_ch3.pdf
+
+   A. Chapter Overview We are currently working on initiatives for
+   redesigning the following core business processes: ! Title IV
+   Origination and Disbursement ! Human Resource Management ! Contract and
+   Acquisition Management ! Facilities Management The Revised business
+   models and high-level processes for these initiatives are found in
+   Sections B trough D. These models and processes are still under
+   discussion with the community. Therefore, the detailed business
+   requirements remain as they were in the previous edition of the
+   Blueprint until further details are defined and agreed upon This
+   chapter describes the capabilities SFA needs to achieve its mission of
+   helping to put America through school. These capabilities are described
+   as business requirements. Business requirements are used in the
+   Modernization Blueprint to identify specific components of the target
+   technical architecture described in the next chapter; they are
+   presented in this chapter in several levels of detail. Section B of
+   this chapter describes how the SFA business requirements were
+   developed. A summary of the major improvements to SFA business
+   processes that will occur through modernization is also presented.
+   These improvements will affect how students, schools, and financial
+   partners interact with SFA. Some of the activities, currently performed
+   by SFA employees will change as well. In Section C, SFA business
+   requirements are described at the highest level. In the beginning of
+   this section, a new SFA business model is presented. This business
+   model is a conceptual representation of how SFA business processes will
+   be organized in the future. The business model outlines five functional
+   areas that the target technology architecture must support: Student
+   Services, School Services, Financial Partner Services, Performance
+   Management, and Enterprise Services. Each of these functional areas is
+   described in this section and then divided into groups of activities
+   that are described as businesses processes and supporting functions. In
+   Section D, business requirements are described in greater detail. Each
+   business process or supporting function is reduced into subprocesses. A
+   graphical depiction of each business process is provided to show SFA's
+   view of business relationships. In Chapter IV a more technical
+   depiction of business processes is presented. Detailed business
+   requirements are then presented in tables for each of the subprocesses.
+   In Section E, implementation requirements statements for SFA Release
+   1.0 are provided. This section contains Level III requirements
+   statements and specifications for five initiatives/projects that SFA is
+   planning on implementing within fiscal year 2000. The five projects are
+   Ombudsman Call Tracking System, Links to Financial July 15, 2000 Page
+   III.A-1 Planning Sites, FAFSA Web Changes, SFA Financial Management
+   System, and Digital IDs Registration. Level III design statements and
+   specifications for the same five initiatives/projects appear in Chapter
+   IV. Together these documents will serve as a high-level guide and
+   project plan to facilitate rapid and successful implementation of these
+   projects. Objectives for the Chapter ! Describe how the SFA business
+   requirements were developed ! Summarize the key improvements to SFA
+   business processes to be made possible through modernization ! Present
+   a new SFA business model to serve as an organizing framework for the
+   business requirements ! Describe SFA operations as set of business
+   processes ! Provide a detailed list of business requirements for
+   specific subprocesses Chapter Contents Page A. Chapter Overview III.A-1
+   B. Summary of New Business Requirements III.B-1 C. Business Process
+   Requirements-Level I III.C-1 D. SFA Subprocess Requirements-Level II
+   III.D-1 Student Services * Aid Awareness III.D-2 * Aid Application
+   III.D-9 * Loan Repayment III.D-15 School Services * Program Eligibility
+   III.D-30 * Program Support III.D-35 * Common Origination and
+   Disbursement III.D-46 * Financial Transactions III.D-62 Financial
+   Partner Services * Program Eligibility III.D-67 * Program Support
+   III.D-71 July 15, 2000 Page III.A-2 Chapter Contents Page * Financial
+   Transactions III.D-78 Performance Management * Customer Satisfaction
+   Management III.D-82 * Employee Satisfaction Management III.D-88 *
+   Financial Management III.D-93 Enterprise Services * Human Resources
+   Management III.D-116 * Information Technology Management III.D-127 *
+   Facilities Management III.D-134 * Contract and Acquisition Management
+   III.D-139 E. SFA Release 1.0 Project Implementation Requirements
+   III.E-1 Statement * Ombudsman Call Tracking System III.E-2 * Links to
+   Financial Planning Sites III.E-4 * FAFSA Web Changes III.E-6 * SFA
+   Financial Management System III.E-8 * Digital IDs Registration III.E-11
+   July 15, 2000 Page III.A-3 Overview of the Modernization Blueprint 7KLV
+   FKDSWHU GHVFULEHV WKH 0RGHUQL]DWLRQ 5HTXLUHPHQWV Modernization
+   Modernization Modernization Requirements Architecture Sequencing Plan
+   Process Technical Business Process Process Program System Level I
+   Requirements Flows Systems Sequencing Subprocess Business Subprocess
+   Subsystem Level II Flows Subsystem Requirements Sequencing Level III
+   Subrelease Subrelease Subrelease Requirements Design Planning Level IV
+   CI CI CI Development Requirements Design Planning 10044162-022 July 15,
+   2000 Page III.A-4 B. Summary of New Business Requirements SFA's current
+   operations are hampered by out-of-date technology. A "tangled hairball"
+   of stovepipe systems limit SFA's ability to serve students, work with
+   schools and the financial community, and provide the accountability
+   that taxpayers demand. Fortunately, technologies have been developed
+   over the past 5 to 10 years that SFA can use to untangle this
+   "hairball" of systems. Dramatic service improvements can be made by
+   leveraging the Internet and new technology to improve the way
+   information is shared and managed. As information flows more easily
+   within and among SFA, its business partners, schools, and students,
+   business processes can be streamlined for students, schools, and
+   financial partners. In addition, new services can be provided for SFA's
+   customers and partners. SFA cannot streamline its processes without
+   developing new operational capabilities. These capabilities are
+   required if SFA is to fulfill its mission. In this chapter, these new
+   capabilities are described as a set of business requirements. In the
+   Modernization Blueprint, business requirements are used to identify
+   specific components of the target technical architecture. How Were
+   These Business Requirements Developed? Over the past 4 years, many
+   individuals have been involved in the process of identifying future SFA
+   business requirements. Their efforts culminate in the development of
+   the Modernization Blueprint. The primary sources of information used to
+   define the business requirements described in this chapter include: !
+   Project EASI (Easy Access for Students and Institutions) has been a
+   joint effort among the Department of Education, students, educators,
+   and the business community over the past several years to document
+   current processes and to determine what functional areas should be
+   reengineered. Business requirements were identified in Project EASI for
+   five critical sets of activities including Aid Application, Aid
+   Origination and Disbursement, Loan Repayment, Financial Services, and
+   Program Management and Oversight. Business requirements identified in
+   the Modernization Blueprint build on this core set of requirements. !
+   Access America for Students is a pilot project to provide common
+   electronic access and service delivery for federal agencies, schools,
+   and other entities serving postsecondary students. The Access America
+   project builds on some of the ideas generated in Project EASI. As new
+   concepts are tested in Access America pilots and adopted by SFA,
+   business processes are likely to change. Business requirements that may
+   change as a result of the Access America pilots are identified in the
+   Modernization Blueprint. ! Workshops held with SFA management to review
+   the Project EASI documentation and to identify any new business
+   requirements. These workshops were organized around specific functional
+   areas and involved groups of July 15, 2000 Page III.B-1 10-15 managers.
+   In some of the workshops, new sub-processes were identified and
+   business requirement definitions were edited. These changes are
+   reflected in the Modernization Blueprint. ! The Joint Financial
+   Management Improvement Program (JFMIP) is a joint and cooperative
+   undertaking of the U.S. Department of the Treasury, the General
+   Accounting Office, the Office of Management and Budget, and the Office
+   of Personnel Management to improve financial management practices in
+   government. JFMIP has developed a number of reports, which establish
+   standards for financial system requirements across government agencies.
+   These reports formed the basis for the financial management business
+   requirements defined in the Modernization Blueprint. ! Output from a
+   number of ongoing initiatives was also used to define SFA business
+   requirements. Some of these initiatives include the SFA Customer
+   Service Task Force, the SFA Ombudsman project, and the current SFA
+   Organizational Redesign project. To the extent possible, feedback from
+   current pilot projects such as the California and New York Mentor
+   project and the Colorado PEPPER project were incorporated in the
+   business requirements. The business requirements may change as SFA
+   learns from these initiatives over the coming months. ! SFA will adopt
+   industry best practices in a number of functional areas through
+   modernization. As the Modernization Blueprint has been developed,
+   research has been conducted to identify best practices from both the
+   public and private sectors. This research has shaped many of the
+   business requirements, particularly those functional areas where less
+   analysis had been performed previously (e.g., Performance Management
+   and Enterprise Services). The Modernization Blueprint serves as a
+   management tool to integrate all process and technology improvement
+   projects. As new business requirements are identified, they will be
+   folded into the Modernization Blueprint. As a result, the business
+   requirements listed in this chapter are likely to converge with the
+   future state of our vision over time. Summary of Major Improvements to
+   Business Processes In the future, students and their parents, schools,
+   and financial partners will find it easier to do business with SFA.
+   Students and their parents will be able to make more informed decisions
+   about education financing. Once they make the decision to seek
+   financial aid, students and their families will find it much easier to
+   apply for and obtain aid. Schools will have improved access to the
+   information they need to serve their students. Schools will be able to
+   provide better services to students at a lower cost as result of the
+   paperless exchange of funds and information with the federal
+   government. The financial community will be able to leverage the
+   investments they have already made in commercial technologies to
+   streamline their interaction with SFA. Modernization will not only
+   benefit SFA's customers and partners, but SFA July 15, 2000 Page
+   III.B-2 employees as well. Employees will be given the tools they need
+   to be productive in a high performance work environment within
+   Government's first Performance-Based organization. As a result, SFA
+   employees will be given the opportunity to develop personally and
+   professionally in the modernized SFA. Some of the major changes to SFA
+   business processes are described below. Major Changes From the
+   Student's Perspective Students and their families will be provided
+   earlier education about financial aid. From elementary school onward,
+   children and their families will be informed that post- secondary
+   education is readily accessible and affordable given the vast array of
+   financial aid programs available. They will have access to information
+   and educational materials directly through their schools and at their
+   fingertips on the Web. Students and families will be able to choose the
+   communication method that is best for them as they begin the financial
+   aid planning and application process. While the primary focus will
+   always be self-service, aid information through the school financial
+   aid administrators will be facilitated by a modernized SFA. SFA will
+   provide easy-to- use technology through the Internet as well as call
+   systems, available 24 hours daily, to answer financial aid questions
+   and simplify the application process. Self-servicing options through
+   the Web and sophisticated telephone systems will allow students to get
+   the financial aid information they need, when they need it, day or
+   night. A few examples of the tools and assistance available include: !
+   Online "Personal Assistant" Help-As students enter the SFA Web site,
+   this handy automated search engine will quickly direct them to
+   resources, provide answers to their questions, and will point out
+   helpful hints to speed the financial aid process. For students who do
+   not have access to a personal computer or the Internet, a toll-free
+   number will be available. A call to this number will link students to a
+   customer service representative who will use the "personal assistant"
+   to help provide answers. ! Online Financial Planning Tools-No longer
+   will students have to wait for someone else to tell them what options
+   are available to finance their education. By providing access from
+   SFA's site to other sites' existing online tools, students will be able
+   to build aid and repayment scenarios at home with their parents, so
+   they can truly understand how aid decisions will impact their financial
+   future. Ongoing alternative outreach efforts will continue to target
+   students and families without access to the Internet. ! Electronic
+   Forms Signature and Submission-A Modernized SFA will not only provide
+   easy access to information but quick, no-hassle aid application as
+   well. An electronic signature on a student's Web-created aid
+   application will eliminate the need for submission of paper forms.
+   Electronic submission of the FAFSA, as well as electronic signing of
+   loan promissory notes, will mean students will not only be able to do
+   preliminary estimates but will also be able to link schools and lenders
+   who will provide actual financial aid packages and delivery of funds.
+   July 15, 2000 Page III.B-3 Major Changes From the Schools' Perspective
+   Through the use of portal technology, students and schools will deliver
+   targeted, up- to-date information and assistance based on the specific
+   needs of each student and school. Other changes include: ! A student
+   account history, providing a view all title IV aid information, that
+   can be accessed either by school administrators or directly by
+   students. The account tracks enrollment, disbursement, and repayment
+   transaction information. The account displays information from various
+   lending sources and presents this data seamlessly to applicants and
+   students. ! Paperless interaction between SFA and schools, providing a
+   streamlined aid process. FAFSAs, SARs and cohort default rate review
+   information will all be provided electronically. ! Automated enrollment
+   verification, solving the problem of students not receiving loan
+   deferments to which they are entitled. This will help reduce "technical
+   defaults." ! Self-service and performance-based reviews, alleviating
+   burdensome review processes for schools. School administrators will
+   have appropriate access to their SFA profile. SFA supplied risk
+   management tools will enable schools to identify performance trends
+   including delinquency and default based on current and historic data.
+   With these tools, schools will have the ability to help current and
+   former students, as well as to proactively improve their SFA standings
+   using data that reconciles directly with SFA records. Performance-based
+   reviews will reduce the number and frequency of SFA program reviews of
+   schools. Instead, the SFA and its partners will agree to a limited
+   number of key performance indicators and tolerance levels. Schools that
+   meet or exceed these targets through pro-active self- auditing efforts
+   and corrective action will be less subject to SFA audits-thereby
+   focusing SFA resources on the schools in most need of guidance and
+   support. ! Dedicated School Service Representatives. This ensures a
+   human element is not lost as SFA expands access to technology-based
+   tools for schools. Aid experts will be on hand to address special
+   issues or problems that can not be resolved by the school financial aid
+   administrator or through SFA supported technology tools. July 15, 2000
+   Page III.B-4 Major Changes From the Financial Partners' Perspective SFA
+   and its financial partners will take advantage of commercially
+   available systems and services to: ! Create common business rules for
+   origination and disbursement ! Share data related to the status of the
+   loan portfolio as well as individual borrower records ! Automatically
+   create deferments as borrowers transfer among schools ! Implement
+   electronic signature technology to eliminate paper processing of
+   critical financial aid forms Self-service through the Internet will
+   allow financial partners to communicate with and obtain information
+   from SFA quickly and easily. Electronic reporting will reduce the
+   burden to lenders through less paperwork. Speedier turnaround on these
+   reports translates into quicker payments to the institutions. Finally,
+   SFA's guaranty agency and lender reviews will be based on shared data
+   about the institution's loan portfolio, thereby reducing the time and
+   effort needed to reconcile information. Improved debt management tools
+   reduce total system costs for financial partners, schools, and SFA.
+   Students will be linked to the lenders that hold their loans via an
+   online network. A customized Web site, linking SFA to lender,
+   guarantor, and servicer sites, will provide proactive debt management
+   tools that: ! Inform borrowers of all their repayment options,
+   including standard, graduated, extended, and income-contingent payment
+   plans ! Enable the student to link to online providers which calculate
+   estimated monthly payments based on loans held across lenders !
+   Dynamically factor in non-student loan debt to augment the debt
+   management plan ! Provide information on available payment methods,
+   including automatic debit, payroll deduction, or debit card
+   transactions ! Offer information related to loan consolidation
+   alternatives July 15, 2000 Page III.B-5 Major Changes From the SFA
+   Employee's Perspective Technology will facilitate communication through
+   all levels and parts of the organization. SFA will regularly
+   communicate its vision, mission, strategies and goals to ensure a
+   common direction. Communication systems will be geared toward providing
+   employees with up-to-the-minute information on everything from SFA
+   overall performance data to the date of the office picnic. Plus,
+   employees will have an open line to the COO and other senior managers
+   so that their concerns and ideas get a quick response. Employees will
+   work together in new ways enabled by new technological tools. Team
+   members from headquarters and the regions will work together on
+   projects through a Web-based collaborative workspace. Discussions on
+   different topics will be held in various chat rooms with everyone's
+   work products available online. Video- conferencing will allow the team
+   to meet face-to-face. One of the simplest and most useful new tools
+   will be an online directory of employee knowledge and skill sets. This
+   will allow employees to find an SFA expert on any topic. Employees will
+   be able to use this new system to select team members for special
+   projects. Career Enhancement-Employees will not be left behind in the
+   rush to modernize. Everyone will get the basic training they need-from
+   business writing to high-tech computer applications. Tailored training
+   for specialized SFA jobs will also be available. Performance
+   Evaluation-As a Performance Based Organization (PBO), SFA will measure
+   its business success in terms of customer satisfaction, employee
+   satisfaction and cost minimization. Automated systems will provide
+   employees and managers with current feedback on many measures,
+   including SFA's internal program costs. Information technology will
+   give employees easy access to cost accounting data and analytical tools
+   that will enable them to identify and pursue potential savings.
+   Implementing these improvements will affect most of SFA's current
+   business processes. The next section describes at a high level how each
+   functional area will change as a result of modernization. July 15, 2000
+   Page III.B-6 C. Business Process Requirements-Level I In this section,
+   business requirements are presented at the highest level. The SFA
+   Business Model is introduced and then used as an organizing framework
+   for the rest of this chapter. High level requirement descriptions are
+   provided for SFA's five critical functional areas as well as the
+   processes and support functions that make up the five functional areas.
+   In Section D, these processes are divided into subprocesses. Detailed
+   lists of business requirements are then provided for each subprocess.
+   Overview of the SFA Business Model The SFA business model shown in the
+   graphic following this section is a conceptual representation of all
+   activities performed by SFA employees. Activities are grouped into key
+   processes and supporting functions. These processes and functions are
+   then logically grouped into five critical functional areas that the
+   technical architecture must support. The five functional areas include:
+   Student Services, School Services, Financial Partner Services,
+   Performance Management, and Enterprise Services. Proper understanding
+   of the business model involves two key points. First, the business
+   model is simply the framework that is used to describe the SFA business
+   requirements to be fulfilled through modernization. While the business
+   model graphic depicts several key organizational concepts, it is NOT an
+   organizational structure. In the future, groups of SFA employees may
+   perform activities in multiple processes and support functions. Second,
+   the business model represents current thought on how SFA activities
+   should be logically grouped in the future. This point of view will
+   likely evolve as SFA modernizes and begins to reengineer key business
+   processes and support functions. As the business model is continually
+   improved, the business requirements presented in the Modernization
+   Blueprint will be reevaluated and, in some cases, edited. Changes to
+   SFA business requirements will then drive changes to the target
+   technical architecture. In this way, the Modernization Blueprint will
+   serve as a management tool used to define at any given point in time
+   how ongoing technology initiatives are linked to the SFA business
+   requirements. The SFA business model was developed in a series of
+   workshops with SFA senior management. In these workshops, SFA
+   management was presented with descriptions of the five functional areas
+   defined in Project EASI: Aid Application, Aid Origination and
+   Disbursement, Repayment, Financial Services and Program Management and
+   Oversight. Workshop participants were then asked to identify activities
+   that SFA will likely perform in the future and that were not documented
+   in Project EASI. Some of these activities includes: work done to
+   increase public awareness of the availability of financial aid, ongoing
+   measurement of customer and employee satisfaction, and many of the
+   activities that go on each day to keep the SFA "business" running
+   (Human Resource Management, IT Management, Facilities Management and
+   Contract and Acquisition Management activities). Each of these groups
+   of activities is included in this new business model. July 15, 2000
+   Page III.C-1 In workshops, SFA management decided that the SFA business
+   model should communicate several key organizational concepts. These
+   concepts, which are represented in the business model, include: !
+   Activities grouped into two general categories: core business processes
+   and supporting functions. Core business processes include the
+   activities SFA employees perform each day to directly serve students,
+   schools and financial partners. In the business model, core business
+   processes are represented as three "process rings" on top of the
+   graphic. Support functions are the activities SFA employees perform to
+   monitor SFA performance and to manage SFA's critical assets: employees,
+   investments in technology and facilities and vendor relationships. In
+   the business model, support functions are represented by two "blocks"
+   supporting the three process rings. ! Core business processes aligned
+   along three service channels. Student Services are the services SFA
+   provides directly to students. School Services and Financial Partner
+   Services are the services SFA provides to its business partners.
+   Services provided to schools and financial partners indirectly benefit
+   students. This concept is represented by the three process rings. !
+   Services provided within the three service channels as represented by
+   circular flows in each of the process rings. This depiction graphically
+   demonstrates the dynamic nature of the services SFA provides to
+   students and partners. Many students apply for and repay multiple loans
+   in their lifetime. In many cases, SFA provides support to schools and
+   financial partners continuously throughout the year. ! As government's
+   first Performance-Based Organization (PBO), SFA will measure more than
+   just financial performance. SFA will measure its performance against
+   three primary objectives: increasing customer satisfaction, increasing
+   employee satisfaction, and reducing the overall cost of student
+   financial assistance. To reflect this concept, the SFA business model
+   includes three processes within the Performance Management functional
+   area. ! Many best practice organizations in the private and public
+   sectors are consolidating administrative activities into shared service
+   organizations. These shared service organizations then provide high
+   quality support services to organizational entities focused on customer
+   segments, distribution channels, product groups, etc. In the future,
+   SFA will need to tailor the support services available to groups of
+   employees focused on one of the three service channels. To reflect the
+   idea that SFA will adopt this best practice, support activities have
+   been grouped into the Enterprise Services functional area. July 15,
+   2000 Page III.C-2 SFA Target Business Model 3U 3URJU RJ DP UDP (OL
+   (OLJLELOLW JLELO \ LW\ 3UR 3U JU RJ DP UDP 6XSS 6XS RU SR WUW )LQDQFLDO
+   )LQDQFLDO $LGÃ 7U 7 DQV UDQ DFWLRQV VDFWLRQV $LGÃ $LGÃÃ 3URJ 3UR UDP
+   JUDP $LGÃÃ $L $LGG $SSOLF $SSOL DW FDWLR LRQQ 3U 3URJU RJ DP UDP
+   2ULJLQDWLRQÃDQG 6XS 6X SR SSRUWUW 2ULJLQDWLRQÃDQG $ZDUHQ $ZDU HVV HQHVV
+   (OLJ (OL LELOLW JLELO \ LW\ 'L 'L VEXU VEX VHPHQ UV W HPHQW /R / DQÃ
+   RDQÃ )LQDQ )LQD FLDO QFLDO 5HSD\PHQ 5HSD\PHQWW 7U 7UDQVDF DQV WLRQV
+   DFWLRQV 6WXGHQW 6FKRRO )LQDQFLDO 6HUYLFHV 6HUYLFHV 3DUWQHU 6HUYLFHV
+   3HUI 3HUIR RUUPDQF PDQFH 0D H 0 QD DQ JH DJ PHQ HPH W QW
+   &XVWRPHUÃ6DWLVIDFWLRQ (PSOR\HHÃ6DWLVIDFWLRQ )LQDQFLDOÃ0DQDJHPHQW
+   (QWHUSU (QWHUSU LVH 6HUYL LVH 6HU FH YLFHV V ,QIRUPDWLRQ
+   +XPDQÃ5HVRXUFHV &RQWUDFWÃDQG 7HFKQRORJ\ )DFLOLWLHV 0DQDJHPHQW
+   $FTXLVLWLRQ 0DQDJHPHQW 0DQDJHPHQW 0DQDJHPHQW 10044162-107 In the
+   future, SFA will adopt many best practices currently employed in
+   private industry and by other government agencies. These best practices
+   are reflected in the following descriptions of SFA's five functional
+   areas. Overview of SFA Functional Areas ! Student Services For direct
+   loans, Student Services handles all SFA interactions with students,
+   providing them with convenient access to aid application information,
+   forms, and account data. Student Services' core processes are designed
+   to facilitate the coordination of relationships with lenders,
+   guarantors, state agencies, schools, and July 15, 2000 Page III.C-3 SFA
+   with a virtual student account, providing a consolidated view for each
+   student to facilitate his or her interactions with education service
+   providers. Equipped with user- friendly financial planning tools,
+   students will be able to understand their financial needs for
+   postsecondary education. Upon school completion, debt management
+   counseling will help students understand the overall impact of their
+   debt on their future financial goals. Services provided include
+   increasing awareness of financial aid availability among youth,
+   providing easy access to user-friendly application forms, just-in-time
+   disbursement of funds and an efficient repayment process. ! School
+   Services SFA School Services manages the relationship with schools from
+   program eligibility through training and performance review. Using
+   sophisticated performance and risk analysis tools, schools are
+   categorized by their effectiveness in managing Federal funds and
+   achieving performance-based outcomes as defined by SFA. Schools will
+   have access to these tools directly so they can perform self-audits and
+   take action to improve performance before corrective action is
+   necessary. Other services include financial transaction processing,
+   training/education and program/eligibility reviews. ! Financial Partner
+   Services Financial Partners Services supports lenders and guaranty
+   agencies in their delivery of aid to students. SFA receives information
+   from and provides information to these entities related to SFA programs
+   and individual student participants. The types of services provided to
+   financial partners include training and education, eligibility
+   processing, informational updates, financial transactions and program
+   performance analysis and review. Financial partners require accurate,
+   up-to-date information and real-time shared access to transaction data
+   on their loan portfolios. This commitment to access and shared
+   performance data drives the technical architecture. ! Performance
+   Management Performance Management encompasses the collection and
+   analysis of performance information, which is used by management to
+   assess how well SFA is performing as a PBO, and the prioritization of
+   improvement projects. It also provides a tool-set to link SFA's vision,
+   strategy objectives, and key performance measures. This functional area
+   includes three functions: Financial Management, Customer Satisfaction
+   Management, and Employee Satisfaction Management. Also included in this
+   functional area are the traditional accounting and finance activities
+   that ensure SFA successfully manages the flow of funds between itself
+   and external parties. SFA is focused on achieving three primary goals:
+   increasing customer satisfaction, decreasing the cost of delivering
+   financial assistance, and increasing employee satisfaction. Processes
+   will be put in place to continuously measure progress against these
+   goals and to insure that the momentum that has been generated by
+   initiatives like the Customer Service Task Force will be maintained in
+   the future. July 15, 2000 Page III.C-4 ! Enterprise Services SFA will
+   improve the way it manages its critical assets: its people, technology,
+   facilities, and its relationships with vendors. These "Enterprise
+   Services" provide the foundation for services provided both internally
+   and externally. Enterprise Services performs best in business Human
+   Resources Management, IT Management, Facilities Management, and
+   Contract and Acquisition Management across SFA's operation to provide a
+   consolidated, channel-driven approach to support services. Enterprise
+   Services create and deliver value for SFA and support processes in the
+   business model by capitalizing on economies of scale, pooled expertise,
+   reduced overhead, and program/system integration. In a modernized SFA,
+   the internal customer drives the level and type of services performed
+   by Enterprise Services. Enabled by technology, Enterprise Services can
+   partner with each channel to reduce costs and streamline operations for
+   all parties. July 15, 2000 Page III.C-5 Student Services...Divided into
+   Three Processes Aid Awareness Aid Awareness is dedicated to increasing
+   awareness of financial aid availability and counseling. This process
+   identifies and educates potential program participants, including
+   students and their families. Aid Awareness provides information and
+   guidance to assist in the postsecondary school planning and decision
+   making process. The target age to reach potential program participants
+   is increasingly younger, to allow ample forethought and analysis for
+   the student and his or her family. This process includes the management
+   of special SFA initiatives including the "College is Possible" campaign
+   and may include future co-branding or sponsorship opportunities
+   designed to reach the target market through popular media. Aid
+   Awareness targets markets that may be good candidates for SFA programs
+   and develops awareness programs with these targets in mind. SFA
+   executes awareness through the implementation of its programs and
+   initiatives. The enhanced outreach services for under-served market
+   segments is one such initiative. Throughout the process, SFA monitors
+   program effectiveness and makes changes where needed. Aid Application
+   Aid Application will provide a streamlined, user friendly means to
+   apply for financial aid through various media and will provide support
+   during the application process. This process collects and organizes
+   application information, verifies this information and assists in the
+   creation of aid packages for schools and students. Aid Application is
+   responsible for the design of the physical application form. Aid
+   Application enables potential students to apply through the
+   communication medium of their choice, including the Internet (such as
+   FAFSA application renewal on the Web) or traditional mail channels. As
+   information comes in to SFA, it is organized and automatically
+   verified. This information is then used to calculate and report the
+   participant's Expected Family Contribution (EFC) to schools who put
+   together aid packages. Decisions on the acceptance or rejection of aid
+   packages are reported back to SFA. Loan Repayment Loan Repayment
+   counsels borrowers on debt management and repayment options. It also
+   provides an easy, streamlined process to repay loans and consider
+   repayment alternatives. For Direct Loans, this process offers
+   counseling to and collects money July 15, 2000 Page III.C-6 from
+   borrowers who have entered into repayment, provides invoices, processes
+   loan consolidation requests and attempts collection on defaulted loans.
+   Loan Repayment provides students with different media through which
+   loans can be paid. As borrowers enter repayment, they will be offered
+   advice on which repayment options best suit their circumstances and on
+   the overall financial impact of their debt. Repayment options
+   selection, bill dates changes and repayment calculation tools are
+   available on the Web. Loan Repayment looks to leverage commercial
+   systems to process bill presentation and payment. Loan monitoring will
+   be automated, defaulted loans will be identified, and Loan Repayment
+   will choose how to deal with defaults (from wage garnishment to
+   collection agencies). Loan Repayment will also manage consolidation
+   loan information and originate consolidation loans upon receipt of
+   borrower requests. All requirements related to the Direct Loan System,
+   Debt Collection Systems, and Guaranteed Loan System will be compliant
+   with JFMIP requirements. These specific requirement needs will be
+   mapped primarily at Levels III and IV of the Modernization Blueprint.
+   July 15, 2000 Page III.C-7 School Services...Divided into Four
+   Processes Program Eligibility Program Eligibility evaluates schools'
+   administrative capabilities and demonstrated need for participation in
+   Title IV programs. This process monitors eligibility requirements
+   throughout a school's involvement with Title IV Aid programs. Program
+   Eligibility includes the activities needed to certify schools for
+   participation in Title IV programs, to define the scope of their
+   participation and to discontinue eligibility, as needed. Statutory
+   eligibility, administrative capability and financial capability are key
+   determinants of school eligibility. When a school is certified, SFA
+   determines participation levels based on type of program, length of
+   program, method of disbursement and other dimensions that may vary from
+   school to school. Schools' participation may also be deactivated,
+   either voluntarily by the school or involuntarily by SFA. This process
+   also manages the transactions related to discontinuing eligibility.
+   Program Eligibility activities represent the first line of interaction
+   between SFA and schools, so it is critical that these processes are
+   executed efficiently and accurately. The information collected here
+   will initiate the school profile and will be used as the basis of
+   performance analysis and program support efforts throughout the
+   school's tenure as a Title IV program participant. Program Support
+   Program Support educates and trains schools on regulatory requirements,
+   enabling computer tools and performance measure calculations for
+   effective management of funds and risk. This process ensures that
+   schools have the tools and assistance they need to effectively manage
+   Title IV Aid programs. Program Support includes the sets of activities
+   that characterize the relationship and exchange of information between
+   SFA and Title IV schools. Program Support starts with training and
+   technical support and collection/maintenance of program information.
+   This information is then used to analyze school performance across a
+   number of indicators, including financial, administrative, and
+   outcomes-based measures. Performance analysis will be driven by
+   predictive risk profiling tools that alert SFA to aberrant performance
+   behavior across and among schools. Performance analysis and
+   segmentation of schools across a risk continuum results in various
+   actions by SFA ranging from regulatory relief for low risk, high
+   performing schools to additional training/technical assistance, fines
+   or participation discontinuance for high risk, low performing schools.
+   Program Support in a modernized SFA will enable schools to access,
+   manipulate and self-monitor their July 15, 2000 Page III.C-8
+   performance through the use of sophisticated technology tools that can
+   reside on an aid administrator's desktop. These tools will help schools
+   identify corrective action options and improve performance levels
+   relative to their peers. Common Origination and Disbursement
+   Origination and Disbursement authorizes and releases Pell Grant and
+   Direct Loan funds to schools as well as receives and confirms
+   eligibility information related to specific recipients. This process
+   ensures the proper funds are distributed for disbursement to eligible
+   students. Origination and Disbursement starts by receiving records from
+   schools indicating students to whom they intent to disburse funds. Key
+   edits are then performed to confirm eligibility for the funds, at the
+   school and student level. Upon confirmation of eligibility, the
+   appropriate funds are released to the school for immediate payment to
+   the student. Origination and Disbursement activities are the primary
+   mechanism by which Title IV funds are delivered to students. Therefore,
+   it is critical that these processes are executed efficiently and
+   accurately. The information collected here will become the basis for
+   borrower records which support a view of a student history of Title IV
+   disbursements. Financial Transactions Financial Transactions maximizes
+   the accuracy and speed of administration and tracking of financial
+   flows between schools and SFA. This process coordinates the execution
+   of financial activities conducted at the school level versus the
+   student level. Financial Transactions includes the activities necessary
+   to complete and track disbursement and reconciliation of funds to
+   schools for Pell and Campus-Based programs. These activities include
+   various adjustments, reimbursements, and closeout transactions needed
+   to ensure that SFA's integrated financial management system reflects
+   accurate and complete financial data related to school programs.
+   Financial Transactions is also responsible for payment of cost
+   allowances to schools for administering Pell and Campus-Based programs.
+   Several of the requirements included in Financial Transactions will
+   change or become obsolete in a just-in-time payment environment for
+   school disbursements. The subprocesses that will be affected are noted
+   in the appropriate sections. All Financial Transaction requirements
+   will be JFMIP compliant as detailed in the Financial Management process
+   later in Chapter III. July 15, 2000 Page III.C-9 Financial Partner
+   Services...Divided Into Three Processes Program Eligibility This
+   process maintains the activation and deactivation of eligibility for
+   financial partners, namely lenders and guaranty agencies. The process
+   determines eligibility through the review of applicable certifications
+   and requirements, application information, and reporting. If a lender
+   or guaranty agency fails to meet the requirements set forth by SFA in
+   terms of reporting, financial health or participation, SFA may
+   discontinue eligibility of said institution. Shared access to data for
+   lenders and guaranty agencies will significantly improve the program
+   eligibility process by eliminating process steps and speeding
+   eligibility verification. Additionally, Program Eligibility receives
+   and evaluates States applications for the LEAPP program (a Federal
+   contributions program) and maintains related performance reports.
+   Program Support Program Support provides financial partners with
+   assistance and continuous training on changes to program guidelines,
+   thus maximizing the efficient exchange of information and knowledge
+   between SFA and its partners. This process maintains and supports the
+   financial partner in all aspects of the aid programs. Program Support
+   provides technical assistance and guidance to institutions in program
+   specifics and changes to program guidelines. SFA maintains and monitors
+   performance data and reportings from the financial partners including
+   information such as number and size of loans, and distribution of funds
+   by school or region. This information may be provided, upon request, to
+   program participants. This process uses this information to conduct
+   periodic financial partner program reviews. If a financial partner's
+   performance is significantly better or worse than a baseline, SFA takes
+   action to either expand the lender/guaranty agency's participation
+   levels or sanction the financial partner (through decreases in
+   participation levels or other methods). Access to and use of data
+   across SFA to predict risk and potential performance issues for
+   financial partners will be critical to improving program support
+   efforts in a modernized SFA. July 15, 2000 Page III.C-10 Financial
+   Transactions Financial Transactions maximizes the accuracy and speed of
+   administration and tracking of financial flows between financial
+   partners and SFA. This process manages the flow of funds between
+   financial partners and SFA. The process makes payments to lenders and
+   guaranty agencies such as reimbursements, special allowances and
+   payments. Once a state has been accepted to the LEAPP program, this
+   process manages the authorization and disbursement processes for funds,
+   keeping track of contribution levels for each state. July 15, 2000 Page
+   III.C-11 Performance Management...Divided into Three Functions Customer
+   Satisfaction Management The need for service agencies to measure
+   outcomes has never been greater. Agencies must find economical, yet
+   effective, methods to demonstrate the impact of their programs on both
+   clients and the community. Funders of programs want outcome measures
+   that satisfy user needs, add value to programs and measure results. The
+   Customer Satisfaction Management process includes a systematic series
+   of activities to measure and report customer/partner service
+   perceptions and outcomes. This process begins with identifying
+   customer/partner needs and satisfaction levels, and developing
+   objectives and plans to support them. Next, data is gathered and
+   collected for analysis and processing to identify critical customer
+   trends, performance gaps and opportunity areas. Finally, with this
+   information, decision-makers can take responsive action to enhance
+   customer satisfaction. Employee Satisfaction Management This process
+   includes activities that enable proactive collection and analysis of
+   employee feedback, enable management to build an accurate picture of
+   how employees perceive the organization and highlight causes of
+   employee dissatisfaction. The Employee Satisfaction Management process
+   identifies SFA's most pressing employee concerns and improves morale by
+   responding to employee feedback. It facilitates setting improvement
+   goals, monitoring progress against those goals, benchmarking
+   performance, and increasing productivity through improved employee
+   motivation, lower absenteeism, and reduced staff turnover. Financial
+   Management The Government Performance and Results Act of 1993 required
+   all government agencies to manage by results. In response to this act,
+   the Chief Financial Officers Council adopted the following vision for
+   financial management: Enabling government to work better and cost less
+   requires program and financial managers, working in partnership using
+   modern management techniques and integrated financial management
+   systems, to ensure the integrity of information, make decisions and
+   measure performance to achieve desirable outcomes and real cost
+   effectiveness. July 15, 2000 Page III.C-12 This process contains all of
+   the activities SFA must perform to fulfill this vision. Included in the
+   financial management process are the traditional accounting activities
+   necessary to manage the flow of funds between students, SFA, schools,
+   financial partners and other government agencies, as well as the
+   activities SFA must perform to manage one of the largest portfolios of
+   consumer loans. The financial management process will produce the
+   reports that SFA management will use to monitor how well the SFA
+   organization is performing relative to one of its three primary
+   objectives: to reduce the overall cost of student financial assistance.
+   As specified in the CFO Council's vision, a key business requirement of
+   the financial management function is an integrated financial management
+   system which manages the flow of financial information across all of
+   SFA's information systems. In the future, SFA will leverage all
+   financial systems in the Department of Education's CFO office as much
+   as possible. However, to perform new PBO-specific financial management
+   processes mandated by legislature, SFA will need its own best in
+   business integrated financial management system. July 15, 2000 Page
+   III.C-13 Enterprise Services...Divided into Four Functions Human
+   Resources (HR) Management SFA is committed to building a strategic,
+   best-in-business Human Resources capability that focuses on SFA's most
+   important asset, its people. As a business enabler and strategic
+   partner, Human Resources management will address SFA's critical people
+   challenges: ! Aligning the organization and workforce with defined
+   performance objectives ! Developing a workforce with the composition
+   and competence required to perform ! Supporting the workforce's ongoing
+   performance efforts ! Reinforcing the workforce's efforts and
+   performance results Ultimately, SFA Human Resources seeks to address
+   its people challenges to improve the welfare, and morale of SFA
+   employees, thereby contributing to a positive culture that promotes
+   success and delivers results. Information Technology (IT) Management IT
+   Management includes processes which SFA performs to maximize return on
+   current and future investments in information technology. IT Management
+   activities enable SFA to prioritize investments, purchase the correct
+   technology and operate and maintain its systems. In addition, IT
+   Management ensures that SFA's systems have common standards, are
+   secure, readily integrate and interface with channel partners, and keep
+   pace with new technologies and technology requirements. Effective IT
+   Management will improve efficiencies, reduce costs, and facilitate the
+   easy access of information for SFA's internal and external customers.
+   July 15, 2000 Page III.C-14 Facilities Management Facilities Management
+   coordinates the physical workplace with the organization's people and
+   work. SFA will use best practice principles in business administration,
+   architecture and behavioral and engineering sciences to ensure that
+   procedures are fixed and that mobile assets are inventoried, insured,
+   and continually meet or exceed code. Also, Facilities Management will
+   ensure that SFA facilities are safe and secure and have the best, most
+   up-to-date, comfortable, and ergonomic equipment available. Effective
+   Facilities Management will improve the comfort, welfare, and morale of
+   SFA employees and reduce SFA costs through decreases in fraud and waste
+   while promoting an environmentally friendly workplace. Inventory
+   control systems, computer-aided design software, logistics planning,
+   and control programs are possible systems that could be implemented to
+   achieve these goals. Contract and Acquisition Management This process
+   identifies, selects, and manages external vendors who supply goods and
+   services to SFA. SFA partners with vendors and suppliers to provide
+   high-value goods and services that can be used to supplement or
+   substitute existing roles and capabilities critical to operating the
+   business. These vendors are integral to SFA's delivery of service to
+   students, schools and financial partners. Thus, their involvement and
+   integration with SFA decision planning efforts is critical for
+   effective Contract and Acquisition Management. Effective Contract and
+   Acquisition Management provides SFA access to public and private best
+   practice and subject matter expertise in cost reduction and improved
+   service levels for both internal and external customers. IT supports
+   Contract and Acquisition Management with robust procurement and project
+   management software that contains built-in tracking and performance
+   measures. July 15, 2000 Page III.C-15 This page intentionally left
+   blank. July 15, 2000 Page III.C-16 D. SFA Subprocess Requirements-Level
+   II In this section, the Level I business requirements presented in the
+   prior section are broken down in further detail to subprocesses in
+   Level II. Within each Level I Process Requirements are the subprocesses
+   that add clarity and structure to the process definition. The
+   descriptions that follow include business requirements associated with
+   these subprocesses and flow diagrams to help the reader understand the
+   high-level interactions between SFA and the educational community.
+   These business requirements will drive the technical architecture of
+   the Modernization Blueprint. In the business requirement definitions
+   that follow in this section, 4-digit business requirement IDs (####)
+   indicate that the requirement was identified during Project EASI.
+   Alphanumeric business requirement IDs (XX-##.##) indicate that the
+   business requirements were identified in workshops and meetings with
+   SFA staff and members of the community. All subprocesses and
+   requirements are ordered to enhance readability. July 15, 2000 Page
+   III.D-1 Student Services  Aid Awareness Process Description This
+   process identifies and educates potential program participants,
+   including students and their families. Aid Awareness provides
+   information and guidance to assist in the postsecondary school planning
+   and decision making process. This subprocess includes special SFA
+   initiatives and partnerships such as the "College is Possible" campaign
+   and may include future co-branding or sponsorship opportunities
+   designed to reach the target market through popular media. Aid
+   Awareness targets markets that may be good candidates for SFA programs
+   and develops awareness programs with these targets in mind. The
+   enhanced outreach services for under-served market segments initiative
+   is focusing on special needs accessibility and Puerto Rico Partnership.
+   SFA executes awareness through the implementation of its programs and
+   initiatives. As an additional educational tool for students, Aid
+   Awareness facilitates access to other non-SFA resources, including
+   informational materials (e.g., books, Web sites) and financial
+   simulation and modeling (via the Web). Throughout the process, SFA
+   monitors program effectiveness and makes changes where needed. Aid
+   Awareness manages several points of contact between the public and SFA.
+   The primary vehicle is the "1-800-4-FEDAID" toll-free number.
+   Additional points of contact include debt collection phone-in numbers
+   and correspondence (both paper and e-mail). In addition, SFA maintains
+   substantial Web resources for students and an array of paper products
+   ranging from Fact Sheets to multi-page publications, a Student Aid
+   Inquiry P.O. Box and a correspondence system (paper and electronic)
+   that provide responses to inquiries about student aid. Aid Awareness
+   leverages best practices in marketing and distribution to successfully
+   reach its target markets. At present, electronic media (a major SFA
+   thrust) are convenient and easy to keep current. However, the students
+   most in need of SFA programs, the truly needy, do not always have easy
+   access to computers or the Internet. Thus, Aid Awareness will draw upon
+   unique and innovative methods to bring its message to this market or to
+   increase access to technology (or educate about the availability of
+   access to this technology, e.g., libraries, schools). Aid Awareness
+   must take into consideration these constraints as well in developing
+   awareness plans. July 15, 2000 Page III.D-2 Process Depiction The
+   following process flow illustrates the subprocesses within Aid
+   Awareness. Student Services  Aid Awareness 7DUJHWÃ0DUNHWV $: 0RQLWRU
+   'HYHORS 3URJUDP $ZDUHQHVV (IIHFWLYHQHVV 3URJUDPV $: $LGÃ$ZDUHQHVV $:
+   )DFLOLWDWHÃ$FFHVVÃWR ([HFXWH )LQDQFLDOÃ6LPXODWLRQ $ZDUHQHVV
+   DQGÃ0RGHOLQJ 3URJUDPV 10044162-413_v1 $: $$ 3DUWLFLSDQWV Lenders
+   Students and Families Schools Guaranty Agencies Other Government
+   Agencies July 15, 2000 Page III.D-3 Aid Awareness Subprocess
+   Descriptions Subprocess Name Description Target Markets This subprocess
+   determines which segments of the student AW-01 population (both
+   students and families) to target for Aid Awareness programs and
+   develops profiles to distinguish markets from one another. Develop
+   Awareness This subprocess structures Aid Awareness programs to suit the
+   Programs characteristics of each target market. Any target market may
+   have AW-02 one or more programs associated with it. Development
+   includes action planning, resource planning, implementation planning
+   and coordination with other initiatives. Execute Awareness This
+   subprocess executes the Awareness Programs for each target Programs
+   market. AW-03 Provide Access to This subprocess facilitates access to
+   models of various simulations Financial Simulation of financial aid,
+   which may include cost of attendance and student Modeling financial aid
+   information for a given school, estimated salaries given AW-04 a
+   specific career path, and state aid program information. Monitor
+   Program This subprocess analyzes data collected around the success
+   Effectiveness measurement of each Aid Awareness program and
+   distribution AW-05 mechanisms. Analysis identifies drivers of success
+   and failure. Recommendations are structured and shared with the Develop
+   Awareness Programs subprocess. July 15, 2000 Page III.D-4 Aid Awareness
+   Business Requirements This section contains the subprocesses for Aid
+   Awareness and the supporting business requirements. Business
+   Requirement ID Business Requirement Definition Target Markets This
+   subprocess identifies which segments of the student population AW-01
+   (both students and families) to target for Aid Awareness programs and
+   develops profiles to distinguish markets from one another. AW-01.01
+   Target Markets collects data on current and potential aid recipients
+   through multiple sources (e.g., census data, commissioned surveys,
+   NPSAS, existing SFA databases, grant reports, etc.). AW-01.02 Target
+   Markets collects data on current and potential product distribution
+   (including publications) through multiple sources (e.g., Application
+   Ordering System, the Public Inquiry Contract and other order
+   fulfillment systems, etc.). AW-01.03 Target Markets analyzes data on
+   current and potential aid recipients. Analysis tools include
+   statistical packages, marketing models and comparisons to prior
+   results. AW-01.04 Target Markets conducts usage studies and demand
+   analysis based on distribution data. Analysis tools include statistical
+   packages, marketing models and comparisons to prior results. AW-01.05
+   Target Markets identifies unique segments to receive SFA messages
+   (e.g., age, degree of need, language preference, etc.). AW-01.06 Target
+   Markets builds profiles of target segments. AW-01.07 Target Markets
+   maps program characteristics and benefits to target segments. AW-01.08
+   Target Markets receives from ED divisions or other government offices
+   information about initiatives or priorities within or outside the
+   Department of Education which should be reflected in SFA program
+   targets. AW-01.09 Target Markets collects and compiles performance
+   measurement data. Develop Awareness This subprocess structures Aid
+   Awareness programs to suit the Programs characteristics of each target
+   market. Any target market may have one AW-02 or more programs
+   associated with it. Development includes action planning, resource
+   planning, implementation planning and coordination with other
+   initiatives. AW-02.01 Develop Awareness Programs receives program
+   information from legislative, policy and regulatory divisions. 2942
+   Develop Awareness Programs develops Title IV program information for
+   current and prospective students and their families. This shall include
+   general information about post-secondary education and each program in
+   addition to specific rules and regulations applying to each program and
+   information materials/alternatives related to the programs. July 15,
+   2000 Page III.D-5 Business Requirement ID Business Requirement
+   Definition AW-02.02 Develop Awareness Programs identifies other ED and
+   non-SFA awareness programs which may be leveraged to support SFA
+   initiatives. AW-02.03 Develop Awareness Programs identifies delivery
+   mechanisms (written, oral presentations, secondary-school counseling,
+   Web postings, events, etc.) with the most impact for each target
+   segment. AW-02.04 Develop Awareness Programs develops and updates
+   educational and promotional printed and electronic publications,
+   presentations, videos, sound products and other alternative formats for
+   students, parents, secondary schools, college counselors and other
+   student educators. AW-02.05 Develop Awareness Programs identifies
+   potential partners (e.g., lenders, guaranty agencies, state
+   associations, trade associations, corporate/business partners etc.)
+   with access to appropriate media or with similar awareness goals.
+   AW-02.06 Develop Awareness Programs negotiates with potential partners
+   to jointly finalize awareness program plans. AW-02.07 Develop Awareness
+   Programs nominates and appoints a panel of advisors annually consisting
+   of students and parents to identify useful non-SFA college or financial
+   resources for students. AW-02.08 Develop Awareness Programs facilitates
+   meetings and other group interactions with the panel of advisors, focus
+   groups, testees, and others. AW-02.09 Develop Awareness Programs
+   conducts pilot testing of program initiatives. AW-02.10 Develop
+   Awareness Programs develops performance measurement criteria for each
+   program. AW-02.11 Develop Awareness Programs sets target levels for
+   performance measurement criteria for each program (including outcome
+   targets and process targets. AW-02.12 Develop Awareness Programs
+   develops quality control processes (technical quality and content
+   quality). AW-02.13 Develop Awareness Programs coordinates with media
+   relations to develop communications (e.g., launches of new products and
+   services, announcements and facilitation of outside communication).
+   AW-02.14 Develop Awareness Programs collects and compiles performance
+   measurement data. Execute Awareness This subprocess executes the
+   Awareness Programs for each target Programs market. AW-03 AW-03.01
+   Execute Awareness Programs disseminates awareness information and tools
+   through conventional mechanisms (e.g., mail, fax, electronic media, Web
+   sites, video/television, conferences/teleconferences, meetings, etc.).
+   AW-03.02 Execute Awareness Programs receives inquiries directly from
+   students, parents and others via telephone (e.g., 800-4-FEDAID),
+   writing, electronically or by other means. AW-03.03 Execute Awareness
+   Programs produces, distributes and warehouses awareness products and
+   publications. July 15, 2000 Page III.D-6 Business Requirement ID
+   Business Requirement Definition AW-03.04 Execute Awareness Programs
+   receives and fulfills orders for products and publications inquiries
+   from other interested secondary school participants. AW-03.05 Execute
+   Awareness Programs tracks and maintains inventory levels for products
+   and publications. AW-03.06 Execute Awareness Programs posts "Web
+   Resource Guidance Panel" recommendations for quality educational
+   student aid Web-sites on the SFA Web sites. AW-03.07 Executes Awareness
+   Programs administers quality control processes (technical quality and
+   content quality). AW-03.08 Execute Awareness Programs coordinates with
+   media relations to execute communications (e.g., launches of new
+   products and services, announcements and facilitation of outside
+   communication). AW-03.09 Execute Awareness Programs will be consistent
+   with Coded Federal Regulations 99.5, 668.41, 668.42, and 668.43.
+   AW-03.10 Execute Awareness Programs collects and compiles performance
+   measurement data. Provide Access to This subprocess facilitates access
+   to models of various simulations of Financial Simulation financial aid,
+   which may include cost of attendance and student Modeling financial aid
+   information for a given school, estimated salaries given a AW-04
+   specific career path, and state aid program information. 1060 Provide
+   Access to Financial Simulation Modeling facilitates students' access to
+   financial planning sites to request simulations of possible financial
+   aid packages and financing options, which may include: * Simulating the
+   students' likely eligibility for Federal financial aid * Simulating
+   costs that would be incurred in attending a particular program at a
+   given school * Simulating the financial aid package options that may be
+   available to the student * Simulating the financing options that may be
+   available to the student 1080 Provide Access to Financial Simulation
+   Modeling provides students with access (references to other sites or
+   materials) to information on long term debt management, including: *
+   Projected potential earnings after graduation by school program *
+   Projected monthly payments after graduation, based on different types
+   of aid packages available AW-04.01 Provide Access to Financial
+   Simulation Modeling which collects and compiles performance measurement
+   data. July 15, 2000 Page III.D-7 Business Requirement ID Business
+   Requirement Definition Monitor Program This subprocess analyzes data
+   collected around the success Effectiveness measurement of each Aid
+   Awareness program and distribution AW-05 mechanisms. Analysis
+   identifies drivers of success and failure. Recommendations are
+   structured and shared with the Develop Awareness Programs subprocess.
+   AW-05.01 Monitor Program Effectiveness analyzes application data
+   (demographics, volume, accuracy in completion, etc.), production
+   volumes, distribution performance data, routine feedback loops, focus
+   groups, special studies, phone statistics, cost data,
+   usage/understanding of products and other data. AW-05.02 Monitor
+   Program Effectiveness identifies drivers of success and failure in Aid
+   Awareness programs and distribution mechanisms. AW-05.03 Monitor
+   Program Effectiveness recommends actions to improve program and
+   distribution performance from the target segments. AW-05.04 Monitor
+   Program Effectiveness coordinates and exchanges information with
+   external partners (e.g., schools, guaranty agencies, state licensing
+   and accreditation agencies) to improve service delivery to students.
+   AW-05.05 Monitor Program Effectiveness develops action plans resulting
+   from the quality control process (technical quality and content
+   quality). AW-05.06 Monitor Program Effectiveness collects and compiles
+   performance measurement data. July 15, 2000 Page III.D-8 Student
+   Services  Aid Application Process Description This process collects and
+   organizes application information for direct loans, verifies this
+   information, and assists in the creation of aid packages for schools
+   and students. Aid Application is responsible for the design of the
+   physical application form. Aid Application enables potential students
+   to apply through the communication medium of their choice, including
+   the Internet (e.g., FAFSA renewal application on the Web) or
+   traditional mail channels. As information comes in to SFA, it is
+   organized and automatically verified. This information is then used to
+   calculate and report the participant's Expected Family Contribution
+   (EFC) to schools who put together aid packages. Decisions on the
+   acceptance or rejection of aid packages are reported back to SFA.
+   Process Depiction The goal of the Aid Application process is to
+   efficiently collect information from potential students in an effort to
+   rapidly determine their financial needs and notify them of their aid
+   package choices. Students rely on the financial aid decision as their
+   choice of school often hinges on its outcome. The following diagram
+   illustrates the subprocesses within Aid Application. Student Services
+   Aid Application 'HVLJQÃDQGÃ'LVWULEXWLRQÃRI $SSOLFDWLRQÃ)RUPV $$ 0DQDJH
+   $SSOLFDWLRQ $$ 0DQDJHÃ$LG 3DFNDJH $LGÃ$SSOLFDWLRQ $$ 2EWDLQÃ(OLJLELOLW\
+   $VVHVVÃ3DUWLFLSDQW $VVHVVPHQW (OLJLELOLW\ ,QIRUPDWLRQ $$ $$
+   10044162-412 3DUWLFLSDQWV Students Schools Other Government Agencies
+   July 15, 2000 Page III.D-9 Aid Application Subprocess Descriptions
+   Subprocess Name Definition Design and This subprocess reflects changes
+   to the law, regulation, and Distribution of community input resulting
+   in redesigned application and renewal Application Forms application
+   forms. This activity is also responsible for the AA-01 production and
+   distribution of these forms across a number of distribution channels.
+   Manage Application This subprocess collects the information on the
+   financial aid AA-02 application (for loans and grants disbursed by ED)
+   received from the participant (including PLUS loans). Other information
+   maintained by this activity includes, corrections to the application,
+   financial aid applications, borrower signature of Direct Loan
+   promissory note(s), and the waiver to release information from other
+   external entities. The creation and maintenance of PINs and/or digital
+   signatures is also managed by this subprocess. Obtain Eligibility This
+   subprocess requests and receives information from other Assessment
+   external entities to confirm information contained in the Information
+   participant's financial aid application. AA-03 Assess Participant This
+   subprocess calculates estimated family contribution (EFC); Eligibility
+   determines eligibility; and notifies the participant and other AA-04
+   authorized parties (e.g., schools, state agencies) of eligibility
+   determination. The Student Aid Report (SAR) is an output to Schools
+   Manage Aid Package This subprocess supports packaging, including
+   providing AA-05 applicant aid history to schools to assist them in
+   creating aid packages, and forwarding aid package information to the
+   participant. July 15, 2000 Page III.D-10 Aid Application Business
+   Requirements This section contains the subprocesses for Aid Application
+   and the supporting business requirements. Business Requirement ID
+   Business Requirement Definition Design and This subprocess reflects
+   changes to the law, regulation and Distribution of community input
+   resulting in redesigned application and renewal Application Forms
+   application over the Web forms. This subprocess is also responsible
+   AA-01 for the production and distribution of these forms across a
+   number of distribution channels. AA-01.01 Design and Distribution of
+   Application Forms supports the creation of a core design team,
+   including members of the Education community and the Department of
+   Education, states, and schools. AA-01.02 Design and Distribution of
+   Application Forms collects legal and policy requirements and user
+   suggestions as inputs in the creation of the Application Form. AA-01.03
+   Design and Distribution of Application Forms translates legal and
+   policy changes and user inputs into specific information items to be
+   requested from participants. AA-01.04 Design and Distribution of
+   Application Forms maintains a series of drafts of applications that are
+   submitted for continuous refinement and review from the education
+   community. AA-01.05 Design and Distribution of Application Forms allows
+   for the input of additional requirements from the Office of Management
+   and Budget (OMB). AA-01.06 Design and Distribution of Application Forms
+   receives final clearance on Application format and information needs
+   from the Office of Management and Budget. AA-01.07 Design and
+   Distribution of Application Forms allows for subsequent development of
+   various application formats including renewal and electronic formats.
+   AA-01.08 Design and Distribution of Application Forms supports
+   production and distribution of the paper application to the educational
+   community through various channels. AA-01.09 Design and Distribution of
+   Application Forms will be consistent with Coded Federal Regulation
+   668.42. AA-01.10 Design and Distribution of Application Forms collects
+   and compiles performance measurement data. Manage Application This
+   subprocess collects and coordinates the information on the AA-02
+   financial aid application received from the participant. Information
+   that is also maintained by this subprocess includes the corrections to
+   the application and borrower authorization to endorse financial aid
+   application, borrower signature of promissory note(s), and the waiver
+   to release information from other external entities. 1090 Manage
+   Application allows individuals to authorize the release of specified
+   data to specific schools and lenders. July 15, 2000 Page III.D-11
+   Business Requirement ID Business Requirement Definition AA-02.01 Manage
+   Application provides a single point of interface, through the
+   generation, distribution, and management of PIN numbers or interfaces
+   with external authentication sources. These authentication sources are
+   used to securely access and receive student aid data and payment
+   history for federal loans and Title IV aid. 1690 Manage Application
+   enables participants to apply for Federal financial aid with
+   application mechanisms available 24 hours a day, 7 days a week.
+   AA-02.02 Manage Application receives completed applications from
+   students (both electronic and paper based). 1711 Manage Application
+   generates promissory notes for Direct Loans. 1713 Manage Application
+   sends promissory notes to schools to allow schools to obtain borrower
+   signatures. 1714 Manage Application sends promissory notes to borrowers
+   for Direct Loans. 1715 Manage Application receives promissory notes
+   from schools, sent on a borrower's behalf. 1742 Manage Application
+   receives a signature/authentication from borrowers to endorse an aid
+   application, promissory note, or waiver to release information to or
+   from external databases. 1860 Manage Application receives up-to-date
+   information on applicant's aid applications from schools. 1982 Manage
+   Application provides information on the financial aid application
+   process to participants. 6070 Manage Application uses the PIN number
+   for confidentiality, authentication, integrity, and non-repudiation
+   where required. AA-02.03 Manage Application initiates the automatic aid
+   re-application process by providing the prior year aid application
+   information to the participant for confirmation and/or update. The
+   participant, or the school on behalf of the participant, submits the
+   renewal application, as well as corrections to renewal application
+   information. 1760 Manage Application renews the participant's aid
+   eligibility, as required, based on data obtained from the participant's
+   prior-year aid application information, corrections from the
+   participant, and data from the SSA, IRS, HHS, third-party repositories,
+   state agencies, and HUD CAIVRS. Manage Application also ensures
+   validity of all data. AA-02.04 Manage Application obtains prior aid
+   award information for each applicant. AA-02.05 Manage Application will
+   be consistent with Coded Federal Regulations 668.53-668.57. AA-02.06
+   Manage Application collects and compiles performance measurement data.
+   July 15, 2000 Page III.D-12 Business Requirement ID Business
+   Requirement Definition Obtain Eligibility This subprocess requests and
+   receives information from other external Assessment entities to confirm
+   information contained in participant's financial aid Information
+   application. AA-03 1692 Obtain Eligibility Assessment Information
+   provides the ability to register participants for the Selective Service
+   if the participant requests to do so. 1750.01 Obtain Eligibility
+   Assessment Information verifies with the Selective Service if the
+   participant has complied with draft registration. 1750.02 Obtain
+   Eligibility Assessment Information verifies the immigration status of a
+   participant who is not a US citizen with the Immigration and
+   Naturalization Service (INS). 1750.03 Obtain Eligibility Assessment
+   Information verifies the participant's name, social security number,
+   citizenship status and mortality with the Social Security
+   Administration (SSA). 1750.04 Obtain Eligibility Assessment Information
+   obtains application information from the Internal Revenue Service
+   (IRS). 1750.05 Obtain Eligibility Assessment Information verifies the
+   participant's non- taxable income information with Health and Human
+   Services (HHS). 1750.06 Obtain Eligibility Assessment Information
+   verifies the participant's veteran's benefits income information with
+   the Veteran's Administration (VA). 1750.07 Obtain Eligibility
+   Assessment Information obtains a participant's personal information
+   from third party repositories created by private and state
+   organizations for the purpose of maintaining student information.
+   1750.10 Obtain Eligibility Assessment Information verifies the
+   participant's drug conviction sentence with the D

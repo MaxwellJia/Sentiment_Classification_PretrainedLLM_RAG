@@ -1,0 +1,100 @@
+http://tsdis.gsfc.nasa.gov/tsdis/tsdis_redesign/SelectedDocs.html
+
+     __________________________________________________________________
+
+   [documentationPageBanner.gif]
+   _______________________________________________________________________
+     __________________________________________________________________
+
+  The following documents are available in PDF. Adobe's Acrobat Reader program
+  is available for all the major platforms and can be downloaded at Adobe Home
+  Page.
+     __________________________________________________________________
+
+   The following documents can be located on this page:
+
+   TRMM Realtime File Specification
+       Tutorial for Reading TRMM Data Products
+       TSDIS-TSU Interface Control Specification
+       User's Guides for Algorithms
+   _______________________________________________________________________
+   _______________________________________________________________________
+
+   TRMM Realtime File Specification This document defines the file content
+   and format for the TRMM Realtime Level-1 and Level-2 TRMM Products.
+   TRMM Realtime File Specification
+   _______________________________________________________________________
+
+   Tutorial for Reading TRMM Data Products This tutorial summarizes the
+   TRMM data products and gives example programs to read them.
+   Tutorial for Reading TRMM Data Products
+
+   Sample Programs:
+
+     * HDF_read.c shows how to read TRMM 2A25 data from C using HDF
+       routines.
+     * HDF_F_read.f shows how to read TRMM 1B11 data from FORTRAN using
+       HDF routines.
+     * TK_read.c shows how to read TRMM 2A25 data from C using the TSDIS
+       Toolkit.
+     * IDL_read.pro shows how to read TRMM 2A25 data from IDL.
+        -- TRMM 2A25 data in HDF format
+        -- TRMM 1B11 data in HDF format
+   _______________________________________________________________________
+
+   TSDIS-TSU Interface Control Specification
+   This document defines the specific software interfaces for science
+   algorithms to enable integration of the algorithms into the TSDIS
+   environment. It does not address the algorithm development efforts
+   themselves, nor does it address TSDIS software development efforts. The
+   ICS is divided into six volumes.
+
+   Volume 1 - Algorithm Software Development and Delivery defines and
+   describes the various software interfaces required for science
+   algorithm integration into TSDIS.
+
+   Volume 2 - Toolkit User's Guide provides the programmer user's guide
+   for the TSDIS toolkit routines. Note: The Toolkit Parameter Dictionary
+   is now included as Section 4.
+
+   Volume 3 - Level 1 File Specifications provides the data format and
+   content for all Level 1 TSDIS data products.
+
+   Volume 4 - Levels 2 and 3 File Specifications provides the data format
+   and content for all Level 2 and Level 3 TSDIS data products.
+
+   Volume 5 - Browse File Specifications provides the data format and
+   content for all TSDIS Browse products.
+
+   Volume 6 - Metadata for TRMM Products provides the metadata for TRMM
+   products.
+   _______________________________________________________________________
+
+   User's Guides for Algorithms
+
+     2A21 User's Guide
+
+     2A23 User's Guide
+
+     2A25 User's Guide
+
+     3A25 User's Guide
+
+     3A26 User's Guide
+
+     3B31 User's Guide
+
+     3B42 User's Guide
+
+     3B43 User's Guide
+   _______________________________________________________________________
+
+                     [back.gif] Return to TSDIS Homepage
+                     ___________________________________
+
+   Responsible NASA Official: Erich Stocker, Code 902, NASA/GSFC
+
+   This page is maintained by: Craig Jamieson, Mentor Technologies, Inc.
+   Send comments to: jamieson@tsdis.gsfc.nasa.gov
+
+   Last updated on June 17, 1999

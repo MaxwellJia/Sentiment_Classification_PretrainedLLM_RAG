@@ -1,0 +1,399 @@
+http://image.gsfc.nasa.gov/image_early_ops.html
+
+     __________________________________________________________________
+
+                           Early Operations Events
+     __________________________________________________________________
+
+   The following table is a listing of the various events which have
+   occurred (as of 25 April 2000) and which are planned to occur during
+   operations of the IMAGE spacecraft.
+
+   GMT MET IOC Orbit Script
+       ** LAUNCH DAY **
+   3/25/2000 (Day 085) L+0
+   10:04 (-11:26) FOT shift-1 Arrives
+       PRE-LAUNCH ACTIVITIES
+       verify launch configuration
+       PRE-CONTACT ACTIVITES
+       Initialize SMOC for DSS-66 operations
+       Verify Fanout router configuration for DSN Operations
+   19:00 (-02:36) BOA voice check-prepass brie w/DSN Madrid DSS-66,
+       DSS-54 backup
+   19:10 (-02:20) send noop command to DSS-66 and verify echo
+   19:15 (-02:15) 44 kbps test data placed on-line
+   19:25 (-02:05) Turn limits On for ASIST TAYLORB
+   20:35 (-00:56) Launch @ 2000/085 20:34:43
+   SEPARATION VERIFICATION ACTIVITIES Separation @ 2000/085 21:30:34
+   21:30 000-00:00 Separation from the third stage
+   21:45 000-00:15 AOS-Madrid DSS-66 Prime, DSS-54 Backup
+   21:50 000-00:20 Verify telemetry reception in SMOC
+   21:55 000-00:25 Setup SMOC for commanding
+   22:00 000-00:30 Verify PDU On and Battery Charging
+   22:00 000-00:30 Perform Thermal evaluation using expected S/C mnemonics
+   page
+   22:00 000-00:30 Verify MMM On and Recording
+   22:00 000-00:30 Verify MET Relative to Separation Time
+       Separation from the third stage Activities complete
+   SPIN DOWN TO 0.75 RPM ACTIVITIES
+   22:00 000-00:30 Set S/C Initialization Parameters:Change Boot Address,
+       Alignment settings, Set error width parameters, Set Inertia
+   22:15 000-00:45 Verify TAM On
+   22:15 000-00:45 Enable Sun Sensor Processing:Enable HDP, Set TZERO,
+       Set initial Attitude Conditions from injection vector, Enable SSP
+       Processing
+   22:15 000-00:45 Determine Spin Rate
+   22:30 000-01:00 Turn CIDP On:1553 Bus Enabled, HTR On, CIDP A/B PWR On,
+       RPI Xmit Bus Power On
+   23:00 000-01:30 CIDP SFF:Noop CMD Check, HTR Test,
+   3/26/2000 (Day 086) L+1
+   00:10 000-02:40 Send Test Command to DSS-16
+   01:00 000-03:30 AOS-Goldstone DSS-16 Prime, DSS-24 Backup
+   01:05 000-03:35 Verify telemetry reception in SMOC
+   01:15 000-03:45 Turn S/C EEPROM Dump Off with command
+   01:15 000-03:45 Turn Torque Rod On:Select Pri coils, Gnd CMD Mode, I=7,
+   MCS to
+       Enable)
+   01:30 000-04:00 Contact MMNAV verify Orbit Solution
+   02:30 000-05:00 Record Mag. Field for Torque bar Max and CIDP On
+   02:45 000-05:15 Power Down CIDP:PWR Off RPI Xmit Bus, CIDP A/B PWR Off,
+       1553 Bus Off
+   02:45 000-05:15 Record Mag. Field for Torque bar Max
+   03:00 000-05:30 Power Torque Rod Off:Set I=0, Gnd Cmd Mode, Off
+   03:00 000-05:30 Record Raw Mag. Field Signature
+   03:15 000-05:45 Turn CIDP On:1553 Bus Enabled, CIDP HTR On, CIDP A/B
+   PWR On,
+       RPI Xmit Bus Power On
+   07:10 000-09:40 TAM Seq_Prt_Off
+   07:15 000-09:45 CMD SI Temps to Operational limits:(242,236)
+   07:15 000-09:45 Power AST On:AST On, AST to Standby
+   07:30 000-10:00 Power On RPI:RPI Pwr On, Load Latest FSW (31) from
+   Block 2, Xmit
+       Pwr On, RPI to Nominal Pwr
+   08:00 000-10:30 CMD RPI to Untuned Listen Mode command
+   15:10 000-17:40 Develop Ground Attitude Solution
+
+   15:15 000-17:45 Command HENA On, monitor and control limits on
+   15:45 000-18:15 Open HENA Doors
+
+   17:45 000-20:15 Turn HENA Decontamination HTR On command
+   18:00 000-22:30 Cmd HENA Off, command
+   20:00 000-22:30 Perform MCS SFF:SSP Check, MCS Check, MCS to GND CMD
+   Mode,
+       Choose Torque Rod Pri, Perform I settings test, Choose Torque
+       Rod Red, perform I settings test, Select Torque Rod Pri, Set I to
+       Max, Change Polarity 180 degrees, Redo test, Set to Pri, Set
+       I=7, Set Polarity to Default
+   20:15 000-22:45 Configure Torque Rod for Spin/Attitude Control:Set TAM
+       LSB=0.0024, Set H_ERR to 0, Enable TAM Safe Mode Tests, Set
+       S/C Inertia, Set Torque Rod Scale Vector, /MAG_TEST_ENABLE
+       Tolerance = 0
+   20:30 000-23:00 Uplink Attitude to ACS
+   20:45 000-23:15 Uplink new TAM calibration coefficients:MCS Enable,
+   Enter Bias,
+       load Biases
+   22:30 001-01:00 Send Spin Down CMD to 0.75 RPM:Enter Spin, MCS
+   Disabled,
+       Load Spin Rate, Enable MCS, MCS to Acq. Mode
+   3/27/2000 (Day 087) L+2
+   05:00 001-07:30 Develop Ground Attitude Solution
+   05:30 001-08:00 Command LENA On:PWR LENA On, Load FSW from RAM, built
+   in
+       test
+   06:30 001-09:00 LENA SFF:Internal Test, CMD Tests
+   19:00 001-21:30 Uplink Attitude to ACS
+   19:00 001-21:30 Develop Ground Attitude Solution
+   19:15 001-21:45 Power FUV On:PWR On FUV, WIC 1/2 Rate, f_init, Sci PWR
+       Services On, WIC Distortion lookup table loaded
+   19:45 001-22:15 FUV SFF:Verify HK data, CMD Test, HTR Test, Setup for
+   Science
+       Tests (f_init, DLUT Distortion Lookup Table Loaded), WIC LV
+       Tests, SI13 LV Tests, SI12 LV Tests, Turn Sci Pwr Services Off
+   21:00 001-23:30 CMD Geo On
+   22:30 002-01:00 Perform RPI SFF:PWR Limits Update, SST Update, Schedule
+   16,
+       Loopback Pattern Mode, Test Program Mix, Schedule 10,
+       Schedule 0, RPI Listen Only Mode Test, Schedule 16, Schedule 0,
+
+       Verify Low Power Mode, Verify Nominal PWR Mode, Schedule 0,
+       Schedule 16
+   3/28/2000 (Day 088) L+3
+   01:45 002-04:15 Uplink Attitude to ACS
+   09:30 002-12:00 Develop Ground Attitude Solution
+   10:00 002-12:30 CMD EUV On:EUV PWR On, Boot EUV FSW from EEPROM, EUV to
+       Normal Mode
+   11:00 002-13:30 EUV SFF:Sensors to Map Mode, Set Sensors to Raw (WSZ)
+   Mode
+   13:00 002-15:30 HENA On
+   14:00 002-16:30 HENA SFF:HTR Test, MCP Sensor Test, SSD Sensor Test
+   15:00 002-17:30 Power HENA Decontamination HTR On
+   15:15 002-17:45 RPI EMI/EMC Test:Schedule 11, Passive Mode, Schedule 0,
+       payload_noop_cmds, schedule 16, schedule 0, Xmit Mode,
+       Schedule 10, Sweep Receiver thorugh all f's, payload_noop_cmds,
+       schedule 16
+   16:45 002-19:15 CMD EUV Off
+   17:15 002-19:45 Cmd HENA Off
+   17:45 002-20:15 Cmd LENA Off
+       Verify Spin Rate = 0.75 RPM
+   18:15 002-20:45 Uplink Attitude to ACS
+   3/29/2000 (Day 089) L+4
+   00:00 003-02:30 Develop Ground Attitude Solution
+   08:00 003-10:30 Set Torque Rod to its Max Setting for HTR purposed
+   08:00 003-10:30 Turn PC db Dump On
+   09:00 003-11:30 Uplink Attitude to ACS
+   14:15 003-16:45 Develop Ground Attitude Solution
+   19:30 003-22:00 CMD OBS to Re-orient to Orbit Normal
+   3/30/2000 (Day 090) L+5
+   13:00 004-15:30 Uplink Attitude to ACS
+
+   17:00 004-19:30 Develop Ground Attitude Solution
+   3/31/2000 (Day 091) L+6
+   04:00 005-06:30 Uplink Attitude to ACS
+   09:00 005-11:30 Develop Ground Attitude Solution
+
+   4/1/2000 (Day 092) L+7
+       Uplink Attitude to ACS
+       Develop Ground Attitude Solution
+
+       Contact DSN to inform of possible signal strength change due to
+   03:30 006-06:00 grounding of -Z Omni antenna
+   19:30 006-22:00 Ground -Z Omni Antenna
+   21:20 006-23:50 Uplink Attitude to ACS
+   21:30 007-00:00
+   23:00 007-01:30
+   4/2/2000 (Day 093) L+8
+   05:00 007-07:30 Open FUV SI and WIC Doors
+   05:00 007-07:30 Develop Ground Attitude Solution
+   06:30 007-09:00 Turn FUV Off
+   06:30 007-09:00 Turn RPI Off
+   22:00 008-00:30 Verify Spin Axis is -Normal to Orbit Plane
+   4/3/2000 (Day 094) L+9
+   04:00 008-06:30 Uplink Attitude to ACS
+   22:05 008-00:35 Inform DSN of possible change in downlink signal
+   strength due to switch to MGA
+   20:00 008-22:30 Develop Ground Attitude Solution
+
+   4/4/2000 (Day 095) L+10
+   08:00 009-10:30 Uplink Attitude to ACS
+   12:00 009-14:30 Develop Ground Attitude Solution
+
+   4/5/2000 (Day 096) L+11
+   06:00 010-08:30 Uplink Attitude to ACS
+   16:30 010-19:00 Develop Ground Attitude Solution
+
+
+   4/6/2000 (Day 097) L+12
+   03:00 011-05:30 Uplink Attitude to ACS
+   21:00 011-23:30 Develop Ground Attitude Solution
+   4/7/2000 (Day 098) L+13
+   07:00 012-09:30 Uplink Attitude to ACS
+   09:45 012-12:15 Develop Ground Attitude Solution
+   4/8/2000 (Day 099) L+14
+   21:45 013-00:15 Uplink Attitude to ACS
+   03:15 013-05:45 Develop Ground Attitude Solution
+
+
+
+   4/9/2000 (Day 100) L+15
+   06:00 014-28:30 Verify OBS Spin Rate = 13 RPM
+   SPIN UP OBS TO 13 RPM
+   06:15 014-08:45 Spinrate= , Nutation=0.005!!
+
+
+   4/10/2000 (Day 101) L+16
+       Ra=201.2,Dec=61.7,Spin=0.75,Nut=1.3
+   4/11/2000 (Day 102) L+17
+       Ra=267.0,Dec=32.5,Spin=0.75,Nut=1.3
+   4/12/2000 (Day 103) L+18
+       Ra=277.0,Dec=25.1,Spin=0.75,Nut=1.3
+   4/13/2000 (Day 104) L+19
+       Ra=286.2,Dec=9.2,Spin=0.75,Nut=0.2
+   4/14/2000 (Day 105) L+20
+   4/15/2000 (Day 106) L+21
+   4/16/2000 (Day 107) L+22
+   4/17/2000 (Day 108) L+23
+   4/18/2000 (Day 109) L+24
+   4/19/2000 (Day 110) L+25
+   4/20/2000 (Day 111) L+26
+   06:00 014-28:30 Verify OBS Spin Rate = 13 RPM
+   SPIN UP OBS TO 13 RPM
+   06:15 014-08:45 Turn MCS Off
+   06:30 014-09:00 Deploy RPI Radial Antennae to 120m
+   10:30 014-13:00 Verify RPI Radial Antennae deployed to 120m
+   11:00 014-13:30 Set Magenetic Field Filter to Default Parameters
+   11:00 014-13:30 Setup PC for MCS DB Dump
+   DEPLOY RPI RADIAL ANTENNAE TO 120M
+   11:30 014-14:00 Change S/C Inertia Settings
+   11:30 014-14:00 Setup PC for MCS DB Dump
+   12:00 014-14:30 Set SI's to Ops Temp Control
+   12:30 014-15:00 Turn RPI On
+   13:00 014-15:30 Set RPI to Listen Mode
+   13:30 014-16:00 Set EUV to Normal Mode
+   14:00 014-16:30 Turn HENA On
+   14:30 014-17:00 Turn HENA Decontamination HTR On command
+   19:00 014-21:30 Turn MENA On
+   19:30 014-22:00 Perform MENA SFF at LV
+       MENA SFF LV
+   20:30 014-23:00 Turn LENA On
+   21:00 014-23:30 Turn FUV On
+   21:30 015-00:00 Perform RPI Untuned EMI/EMC Test
+       RPI Untuned EMI/EMC Test
+   4/21/2000 (Day 112) L+27
+   11:00 016-13:30 Uplink Attitude to ACS
+   14:30 016-17:00 Develop Ground Attitude Solution
+   15:00 016-17:30 Open MENA Shutters
+   4/22/2000 (Day 113) L+28
+   01:00 017-03:30 Uplink Attitude to ACS
+   19:30 017-22:00 Develop Ground Attitude Solution
+
+   4/23/2000 (Day 114) L+29
+   06:00 018-08:30 Uplink Attitude to ACS
+   10:00 018-12:30 Develop Ground Attitude Solution
+   12:00 018-14:30 Verify Spin Rate = 1.4 RPM
+   12:30 018-15:00 Turn MCS Off
+   SET OBS SPIN RATE TO 1.4 RPM, OPEN MENA SHUTTERS
+   13:00 018-15:30 CMD RPI Radial Antennae to 160m
+   14:00 018-16:30 Verify RPI Radial Antennae deployed to 160m
+   DEPLOY RPI RADIAL ANTENNAE TO 160M
+   14:15 018-16:45 Uplink New OBS MOI
+   14:15 018-16:45 Setup PC for MCS DB Dump
+   14:30 018-17:00 Perform RPI Untuned EMI/EMC Test
+   PERFORM RPI UNTUNED EMI/EMC TEST
+   4/24/2000 (Day 115) L+30
+   00:00 020-00:00 Set OBS Spin rate to 0.96 RPM
+   10:00 019-12:30 Uplink Attitude to ACS
+   12:45 019-15:15 Develop Ground Attitude Solution
+   4/25/2000 (Day 116) L+31
+   00:00 020-02:30 Uplink Attitude to ACS
+   17:00 020-19:30 Develop Ground Attitude Solution
+   22:00 021-00:30 Ramp FUV HV to Science Level
+   4/26/2000 (Day 117) L+32
+   05:00 021-07:30 Verify FUV at Science HV Level
+   05:00 021-07:30 Uplink Attitude to ACS
+   09:00 021-11:30 Ramp EUV HV to Sun Safe
+   20:00 021-22:30 Verify EUV HV at Sun Safe
+   23:00 022-01:30 Develop Ground Attitude Solution
+   4/27/2000 (Day 118) L+33
+   09:00 022-11:30 Uplink Attitude to ACS
+   20:00 022-00:00 Verify OBS Spin Rate = 0.96 RPM
+   RAMP OBS TO 0.96 RPM, RAMP FUV TO HV SCIENCE LEVEL, RAMP EUV HV TO SS
+   22:00 023-00:30 Turn MCS Off
+   04:00 023-06:30 Deploy RPI Radial Antennae to 210m
+   4/28/2000 (Day 119) L+34
+   08:00 023-10:30 Verify RPI Radial Antennae to 210m
+   DEPLOY RPI RADIAL ANTENNAE TO 210M
+   08:15 023-10:45 Uplink MOI
+   08:15 023-10:45 Set Spin Rate to 0.5 RPM
+   08:30 023-11:00 Uplink Ephemeris to CIDP
+   08:45 023-11:15 Payload Safing Off
+   09:00 023-11:30 Set CIDP to Nominal Mode
+   09:00 023-11:30 Develop Ground Attitude Solution
+   09:30 023-12:00 Perform TAS Test
+   SET SPIN RATE TO 0.5 RPM, PERFORM TAS Test
+   11:00 023-13:30 Perform RPI Untuned EMI/EMC Test
+   PERFORM RPI UNTUNED EMI/EMC TEST
+   19:00 023-21:30 Uplink Attitude to ACS
+   4/29/2000 (Day 120) L+35
+   00:00 024-02:30 Perform FUV SFF HV
+   09:00 024-11:30 Develop Ground Attitude Solution
+   18:00 024-20:30 Uplink Attitude to ACS
+   21:30 025-00:00 Set CIDP to Spin Mode
+   22:00 025:00:30 Initialize AST
+   22:30 025-01:00 Set OBS Spin Rate to 0.77 RPM
+   23:30 025-02:00 Turn HENA Decontamination HTR Off
+   23:45 025-02:15 ** CONTINGENCY **
+       If HENA Door was not opened on IOC day three perform script
+       hena_shut_capture_backup
+   4/30/2000 (Day 121) L+36
+   12:00 025-14:30 Develop Ground Attitude Solution
+   5/1/2000 (Day 122) L+37
+   02:00 026-04:30 Set HENA sun safe
+   02:15 026-04:45 Set HENA auto sun safe
+   02:30 026:05:00 Load HENA Ops Macros (allows L-Shell macro triggers)
+   03:00 026-05:30 Develop Ground Attitude Solution
+   03:00 026-05:30 Ramp HENA HV to Sun Safe Level
+   21:00 026-23:03 Ramp MENA HV to Sun Safe Level
+   23:00 027-01:30 Uplink Attitude to ACS
+   5/2/2000 (Day 123) L+38
+   06:00 027-08:30 Develop Ground Attitude Solution
+   18:00 027-20:30 Uplink Attitude to ACS
+   19:00 027-21:30 Verify MENA HV at Sun Safe Level
+   5/3/2000 (Day 124) L+39
+   08:00 028-10:30 Uplink Attitude to ACS
+   22:00 029-00:30 Develop Ground Attitude Solution
+   5/4/2000 (Day 125) L+40
+   02:00 029-04:30 Develop Ground Attitude Solution
+   12:00 029-14:30 Uplink Attitude to ACS
+   5/5/2000 (Day 126) L+41
+   06:00 030-08:30 Develop Ground Attitude Solution
+   17:00 030-19:30 Uplink Attitude to ACS
+   5/6/2000 (Day 127) L+42
+   10:00 031-12:30 Develop Ground Attitude Solution
+   22:00 032-00:30 Uplink Attitude to ACS
+   5/7/2000 (Day 128) L+43
+   15:00 032-17:30 Develop Ground Attitude Solution
+   5/8/2000 (Day 129) L+44
+   00:00 033-02:30 Turns off HENA collimator HV for RPI Deploy
+   02:00 033-04:30 Uplink Attitude to ACS
+   10:00 033-12:30 Measure Magnetic Field Signature
+   16:00 033-18:30 Verify OBS Spin Rate = 0.77 RPM
+   19:00 033-21:30 Develop Ground Attitude Solution
+   SET OBS SPIN RATE TO 0.77, HENA SHUTTER OPEN, HENA HV TO SUN SAFE
+   LEVEL, MENA HV TO SUN SAFE LEVEL
+   21:00 033-23:30 Deploy RPI Radial antennae to 250m
+   22:00 034-00:30 Verify RPI Radial Antennae deployed to 250m
+   23:00 034-01:30 Deploy RPI Axial Antennae to 10m
+   23:15 034-01:45 Verify RPI Axial antennae deployed to 10m and deploy
+   circuit off
+   23:30 034-02:00 Uplink new TAM calibration coefficients
+   5/9/2000 (Day 130) L+45
+   00:00 034-02:30 Set Spin Rate to 0.5 RPM
+   00:30 034-03:00 Perform RPI SFF Tuned
+   01:30 034-04:00 Perform RPI Tuned EMI/EMC Test
+   PERFORM RPI SFF AND TUNED EMI/EMC TEST
+   03:00 034-05:30 Uplink Ephemeris to CIDP
+   03:30 034-06:00 Place AST in Operational Mode
+   03:45 034-06:15 Turn Payload Safing Off
+   04:00 034-06:30 Put CIDP in Nominal Mode
+   04:30 034-07:00 Perform TAS Test
+       PERFORM TAS Test WITH AST
+   10:00 034-12:30 Ramp EUV HV to Science Level
+   5/10/2000 (Day 131) L+46
+   00:00 035-02:30 Perform EUV SFF HV
+   05:00 035-07:30 Obtain EUV HV Magnetic Field Signature
+   RAMP EUV HV TO SCIENCE LEVEL, PERFORM EUV HV SFF
+   10:00 035-12:30 Set SS Azimuth offset
+   10:15 035-12:45 Set MCS to Science Mode
+   10:30 035-13:00 Set HENA HV back to HV collimators
+   14:00 035-16:30 Ramp HENA to Science Level HV
+   15:00 035-17:30 Verify HENA HV at Science Level HV
+   15:00 035-17:30 Perform HENA HV SFF
+   RAMP HENA HV TO SCIENCE LEVEL, PERFORM HENA HV SFF
+   5/11/2000 (Day 132) L+47
+   05:00 036-07:30 Ramp MENA HV to Science Level
+   13:00 036-15:30 Verify MENA HV at Science Level
+   13:30 036-16:00 Perform MENA SFF at HV
+   RAMP MENA HV TO SCIENCE LEVEL, PERFORM MENA HV SFF
+   21:00 036-23:30 Ramp LENA HV to Science Level
+   5/12/2000 (Day 133) L+48
+   02:00 037-04:30 Perform LENA SFF HV
+       PERFORM LENA SFF HV
+   09:00 037-11:30 Develop Ground Attitude Solution
+   10:00 037-12:30 Perform RPI Tuned EMI/EMC Test
+   14:00 037-16:30 Set SS Azimuth offset
+     __________________________________________________________________
+
+    Return to IMAGE home page
+     __________________________________________________________________
+
+                              The IMAGE Mission
+                             Author and Curator:
+
+
+    Dr. E. V. Bell, II, ed.bell@gsfc.nasa.gov , +1-301-286-1187
+    NSSDC, Mail Code 633, NASA/Goddard Space Flight Center, Greenbelt, MD
+    20771
+     __________________________________________________________________
+
+           NASA Approval: J. L. Green, james.l.green@gsfc.nasa.gov
+                           Rev. 2.0, 27 April 2000

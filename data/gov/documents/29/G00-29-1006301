@@ -1,0 +1,90 @@
+http://www.isbr.lanl.gov/brain_imaging/humanbp/humanbp.html
+
+                               [MEG_fMRI.gif]
+
+                             Human Brain Project
+   _______________________________________________________________________
+
+   The goal of our research is to develop experimental, theoretical and
+   computational procedures to combine anatomical MRI, functional MRI, and
+   MEG into an integrated structural/functional imaging technique that
+   provides spatial and temporal resolution superior to any available
+   imaging technique.
+
+    Neural electromagnetic measurements (in particular MEG and EEG)
+   provide a number of advantages for the noninvasive characterization of
+   neural function.  These techniques measure direct physical correlates
+   of the currents associated with neural activation, and provide temporal
+   resolution adequate for the study of neural population responses.
+   However, the general computational problem of source localization from
+   such surface measurements is ill-posed and ambiguous:  multiple current
+   configurations can account for any given set of surface measurements.
+   By employing models of neuronal current configurations that limit the
+   space of possible inverse solutions it is possible to obtain useful
+   source reconstructions.  The reliability and accuracy of such
+   techniques can be significantly enhanced and by employing external
+   information from alternative imaging modalities such as anatomical and
+   functional MRI, however the use of rigid constraints based on such data
+   may introduce errors under some circumstances.
+
+   We have developed a probabilistic Bayesian framework for neural source
+   localization that effectively deals with the ambiguity of the neural
+   electromagnetic inverse problem, while providing a powerful method for
+   integrated analyses incorporating multiple disparate sources of data.
+   This framework provides a useful and general method for describing
+   extended neural sources that can exploit probabilistic maps of
+   functional architecture.  This might serve as a useful construct for
+   the development of database schemes that incorporate probabilistic
+   descriptions of neural temporal response.
+
+   Aims of future work include:
+
+   Continued development of the theoretical framework and computational
+   methods for integrated analysis of multi-modality image data:  Bayesian
+   probabilistic analyses hold promise for useful solutions to the MEG
+   /EEG inverse problem, and for integration of disparate forms of image
+   data.  Probabilistic constraints on source location and spatial extent
+   will be developed, based on functional neuroimaging data (fMRI or PET)
+   or drawn from databases.  A second area of work will be development and
+   evaluation of detailed finite difference forward models based on MRI
+   techniques that produce volumetric estimates of tissue conductivity,
+   allowing assessment of the effect of anisotropy and inhomogeneity of
+   brain conductivity on magnetic field and electric potential
+   distributions.
+
+   Enhanced experimental and analytical methods for functional
+   neuroimaging:  Event related fMRI can employ the same experimental
+   designs routinely used for studies with MEG and EEG.  Extensions to
+   visual stimulus generation, timing capability and analysis tools will
+   be implemented to conduct such experiments.  Relevant physiological
+   data (cardiac cycle, respiratory cycle, blood pressure and blood
+   oxygenation) will be collected to allow assessment of the roles of
+   these variables in modulating the fMRI BOLD response and to correct for
+   such effects.  Investigation and development of an MR technique for
+   movement monitoring and correction will continue.
+
+   Computational tool development:  A primary goal of proposed work is to
+   build a consolidated package for multimodality functional neuroimaging
+   based on computational modules developed in our laboratory, including
+   MRIVIEW (a tool for structure/function correlation and MRI volume
+   processing) and MEGAN (a tool for the analysis of neural
+   electromagnetic (NEM) data).  The consolidated package include a series
+   of electromagnetic forward calculations of increasing anatomical
+   realism, and will provide an extensive (and extendible) suite of
+   inverse procedures with proven utility and merit. A public domain
+   version of this package will be produced,  however, avenues for
+   commercial development and continuing support of the software will also
+   be pursued.
+   _______________________________________________________________________
+
+   Related Pages
+
+   Brain Imaging And Modeling
+   Human Brain Project
+   Bayesian Inference
+   MEGAN
+   NetMEG File
+   MRIVIEW
+   _______________________________________________________________________
+
+      Please send email correspondence to John George at:  jsg@lanl.gov

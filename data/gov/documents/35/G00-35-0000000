@@ -1,0 +1,251 @@
+http://anatline.nlm.nih.gov/GenInfo/MainPage.html
+
+   ANATLINE GENERAL INFORMATION
+
+                                  Introduction
+
+   AnatLine is a prototype system consisting of an anatomical image
+   database and an online browser. This prototype was developed by the
+   Lister Hill National Center for Biomedical Communications at the
+   National Library of Medicine to provide a client/server Internet
+   interface to access gross anatomy images of the human body. During its
+   beta phase, AnatLine stores a subset of the Visible Human Data Set.
+   This version of AnatLine consists of image records of thoracic cross
+   sectional planes, thoracic voxel structures, and rendered bitmap
+   images. Access to the Anatomical Database during its beta test phase
+   requires registration with the Lister Hill National Center for
+   Biomedical Communications. AnatLine's Anatomical Browser provides
+   online viewing of low resolution surface rendered images of the human
+   thoracic region.
+
+                              Anatomical Database
+
+   AnatLine's database is a Java based object-oriented database which uses
+   an eXcelon ObjectStore persistent engine. AnatLine data structure is
+   based on anatomical and spatial relationships of gross anatomy
+   components and physiological systems. The underlying structure for
+   these relationships is the Database UMLS Terms Authority.
+
+   Users query and retrieve image records via the Anatomical Database.
+   Available image records consist of anatomical data and gross anatomy
+   images. Image records are stored in NLM's prototype .vhi format and its
+   internal data and bitmaps may be extracted or displayed using AnatLine
+   support software.
+
+                                     Images
+
+   AnatLine, in its prototype phase, stores images processed from
+   anatomical structures of the Visible Human male thorax. These images
+   were scanned from the 70mm film cross section data set and digitized in
+   a 4096x2700 pixel frame size. This digitized collection of cross
+   section images was aligned and segmented into 434 thoracic structures
+   by Engineering Animation Inc.
+
+   Image data retrieved from the database are returned as image records.
+   Each image record contains bitmaps, image data, and anatomical data.
+   Image records are enclosed within a prototype .vhi image format. This
+   format contains a file specifier and internal data encoded to be
+   machine readable by the user's client system. Presently four image file
+   format types available; Cross Section files, Volume of Interest (VOI),
+   Segmented Byte Masks, and Rendered Images. Image record data may be
+   displayed using NLM's VHDisplay software, or image data may be
+   extracted using NLM's VHParser.
+
+   AnatLine queries of stored anatomical structures return data which
+   specify the image type and file size for available image records. Cross
+   section records are stored with color bitmaps, and graphical overlay
+   labels. Two types of voxel volumes are stored. First are Volume of
+   Interest (VOI) records, which are full color z-plane stacks of the
+   structures region of interest (ROI), and z-plane stacks of segmented
+   masks. VOI files are limited in size to 1GB. Second are Segmented Byte
+   masks, which contain z-plane stacks of the segmented masks without the
+   color ROI. Byte mask files contain compressed images, therefore the
+   file size increases when uncompressed. Rendered Images are 2D
+   representations of anatomical 3D structures.
+
+Query Functions
+
+   The Web interface provides a query engine with retrieval access to
+   high-resolution anatomical images that range in size from 100KB for
+   browser viewable rended images, to 1GB for anatomical structures in
+   voxel file format. The query and retrieval client/server system is
+   composed of applet GUIs, servlets, and RMI application modules which
+   communicate with each other to allow users to query for specific
+   anatomical structures, and retrieve image data as well as associated
+   anatomical images.
+
+   Pull-down menus allow the user to select the gender and media type of
+   the image. For the purposes of this prototype, only digital color
+   images relating to the male specimen thorax are available.
+
+   A spell-assist GUI inteface helps users to formulate database queries.
+   The spell asssist window contains a scrollable lexicon of unique human
+   anatomical keywords. Users may enter the anatomical name of the query
+   into the text field above the list, or may scroll the spell assist
+   window and select from among the listed entries. As the user types each
+   query character, the spell assist window scrolls to a recognized
+   anatomical term, thus permitting the user to select the highlighted
+   term. If searching for a term that contains two or more words, the
+   spell assist window will repeat the scroll and selection process for
+   each entry. Use of the spell assist word selection is optional, its
+   purpose is to assist with terminology spelling. The spell assist will
+   not restrict the user's entry, nor does it display a table of known
+   images within the database.
+
+   Upon typing or selecting the desired query term (pressing the
+   RETURN-key or selecting "Search") the system provides a listing of all
+   UMLS anatomical terms which contain the entry. The user may select a
+   more accurate term which represents the desired query and query the
+   database.
+
+   Queries may be unreconized by AnatLine for several reasons: the entry
+   may be mispelled or the entry may not exist as a preferred UMLS term.
+   If an entire term is unrecognized by AnatLine, an error message box
+   displays instructing the user to retype the query or select from the
+   recognized terms from the spell assist.
+
+   If there is a partial match of the queried term, an Extended Search
+   message box will display prompting the user to query on a partial match
+   or cancel the query. Extended Searches map several terminology
+   databases to AnatLine recognized terms. The user may then opt to query
+   for the returned terms.
+
+Query Results
+
+   Successful queries return results containing embedded hyperlinks to
+   retrievable image types, and links related to anatomical objects for
+   the queried structure (i.e. anatomical parent, substructures,
+   physiological system and body region).
+
+                                Query Results
+
+   Specimen No. Age Weight Height AV Type No. of Images Required Disk
+   Storage History
+
+                                      1
+                              (Caucasian Male)
+
+                                     38
+
+                                     199
+
+                                     71
+
+                                DIGITAL COLOR
+
+                                     225
+
+                                   7.8 GB
+
+                            Appendectomy (1976...
+
+                       Specimen No. 1 - Caucasian Male
+
+DIGITAL COLOR Images for the left lung :
+
+       Click to download image(s)      No. of Files Required Disk Storage
+   Volume of Interest                        1            928.2 MB
+   Cross Section                            223            6.9 GB
+   Segmented Byte Mask
+   (Cross Section files are required.)       1            1018.0 KB
+
+  Related Anatomical Data for the left lung :
+
+  Body Region
+
+     * thorax
+     * thoracic cavity
+
+  Substructures
+
+     * left upper lobe of lung
+     * left lower lobe of lung
+
+Specimen No. 1 - Caucasian Male
+
+   History Cause of Death
+   Appendectomy (1976) Left Orchiectomy (1970) Number 14 tooth extracted
+   (1993) Lethal injection
+
+   To retrieve images, the user must select the Image Type within the
+   Query Results table. The Image Retrieval Results table lists available
+   image files for the structure and image type.
+
+                           Image Retrieval Results
+
+                                                    Required Browser Settings
+
+                                                      Download multiple files
+
+Click on a link below to download a single file:
+
+
+            File Name           Image Type         File Size
+         DRC10S001301.vhi
+
+                                                      Cross Section
+
+                                                     31.8 MB
+         DRC10S001302.vhi
+
+                                                      Cross Section
+
+                                                     31.8 MB
+         DRC10S001303.vhi
+
+                                                      Cross Section
+
+                                                     31.8 MB
+         DRC10S001304.vhi
+
+                                                      Cross Section
+
+                                                     31.8 MB
+         DRC10S001305.vhi
+
+                                                      Cross Section
+
+                                                     31.8 MB
+         DRC10S001306.vhi
+
+                                                      Cross Section
+
+                                                     31.8 MB
+         DRC10S001307.vhi
+
+                                                      Cross Section
+
+                                                     31.8 MB
+
+Download Procedures
+
+   Selected images may be downloaded individually as single files via HTTP
+   or downloaded in batch-mode. Please note: To download .vhi image files,
+   the user's browser must be configured to accept the .vhi file type.
+   Browser configurations are provided on the FAQ page.
+
+   Single File Download
+
+   To download a single file, the user selects a file via the hyperlink
+   within the File Name column of the Image Retrieval Results table. File
+   download process begins, and the user must define the download path for
+   local storage.
+
+   Batch-mode Download (Netscape Object Signing)
+
+   To download multiple files, the user may select the "download Multiple
+   Files" option from the Image Retrieval Results table. This option
+   writes files in batch-mode to the user's hard disk. The user has the
+   option to select/deselect files for download. If no files are
+   individually selected, all files will download.
+
+   Downloading multiple files uses Netscapes Object Signing technology
+   developed by Netscape and VeriSign, Inc. Users who choose not to accept
+   the Netscape VeriSign certificate, or who are not using Netscape must
+   download files using the Single File Download option. Use of Object
+   Signing technology displays a security pop-up window requesting the
+   user to grant or deny the program's request to read or modify the
+   user's hard disk. Clicking the "Grant" button displays, in the browser,
+   an applet that consists of a text entry field, a table and buttons. The
+   text field contains the path to the user's home directory. The user can
+   manually change the default path.

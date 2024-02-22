@@ -1,0 +1,83 @@
+http://majorana.pnl.gov/masslimits.pdf
+
+   Prediction of Majorana Project Sensitivity Craig Edward Aalseth
+   University of South Carolina 501 S. Main St., Columbia, SC 29208 This
+   is an ad-hoc calculation of the expected sensitivity of the proposed
+   Majorana Project experiment. It extends previous experimental results
+   obtained by the collaborating institutions to predict the effective
+   neutrino mass limits reachable by the Majorana Project. Ground-State
+   Transition First, the parameters of the proposed experiment are set
+   forth. The germanium mass, M = 500 kg ; the run-time of the experiment,
+   t = 10 yr; and the expected detector resolution at 2038 keV, FWHM = 3
+   keV. The confidence level CL = 90 % will be used for the sensitivity
+   limits. Previous experiments suggest[Bro95] a conservative background
+   rate 1 bprevious = 0.20 . From this we may define a background rate for
+   keV kg yr the Majorana Project using two reduction factors, discussed
+   below: 1 1 1 b = b - previous , which gives b = 1.0 × 10 2 . 10 2 keV
+   kg yr For bprevious , cosmogenic backgrounds from the germanium
+   accounted for the total observed background in the region of interest
+   near 2 MeV. This identification was possible by observing the intensity
+   of 68Ga X-rays, allowing the intensity of the 68Ge beta spectrum to be
+   known. The first factor, 1 , comes from the long 10 count-time of the
+   experiment, allowing the 271-day half-life 68Ge to decay away, leaving
+   the dominant background as internal 60Co, whose intensity is calculated
+   to be 1 that of internal 68Ge. The second factor, 10 1 , comes from a
+   conservative combination of factors: 2 * the count-time of the
+   experiment and the 5.7-year half-life of 60Co. * self-shielding between
+   adjacent detectors in the array, not explicitly modeled in this
+   calculation. * conservative assumptions of pulse-shape discrimination
+   (PSD) efficacy. Next, we calculate the number of active atoms: M 86 %
+   6.02 1023 N = gm mol 75.49 mol This gives N = 3.429 1027 × atoms of
+   76Ge. The atomic weight is adjusted for 86% enrichment. Now we can
+   calculate an upper limit on number of 0 -decay events: FWHM An optimal
+   energy window (single-sided) is 1.4 sigma: E = 1.4 , E = 1.784keV 2.354
+   This will catch 77.5% of 0 -decay events. Now the total background, B:
+   B = b E 2 M t This gives B = 178 counts. Now we find the largest total
+   number of counts consistent with our stated confidence limit. L = ( , )
+   This inverse cumulative probability gives C qpois CL B LC = 196
+   counts[Cur68]. A check of the false-positive probability gives 1 -
+   ppois(LC,B) = 8.9%, as expected. The integer nature of Poisson
+   statistics prevents exact agreement with the desired confidence limit,
+   this is a slightly conservative limit. The maximum number of candidate
+   events consistent with a null measurement is then L - C C B = 77.5%
+   giving C = 23 events. This number of candidate events corresponds to a
+   "conventional" germanium experiment. The techniques of pulse-shape
+   discrimination and detector segmentation allow the rejection of a
+   substantial fraction of background events, with only a small loss in
+   efficiency for events of interest. The efficacy of these techniques can
+   be described by a figure-of-merit (FOM) of the form FOM = , where and
+   background background are the acceptance fractions of the discriminator
+   for double-beta decay events and background events, respectively. This
+   FOM makes use of the dependence of the number of possible candidate
+   events on the square root of the background and thus can be correctly
+   used as a multiplier onto the standard expression for the resulting
+   half-life limit, giving ln(2) N T t 0 = FOM . From our analysis of
+   experimental C PSD results and Monte-Carlo segmentation results we
+   have: 0.8018 0.907 FOM = , PSD FOM = and PSD 1.6 FOM = , seg FOMseg =
+   2.4 0.2645 0.138 Page 2 Majorana Project Sensitivity Projection so the
+   total effect is FOM = FOMPSD FOMseg, giving a total FOM = 3.806 . This
+   gives a half-life limit for the experiment of: ln(2) N T t 0 = FOM , T
+   = C 0 4.0 1027 × yr Now the effective neutrino mass limits can be
+   calculated using published nuclear form factors[Aal99]. 1.56 10- 13
+   0.020 9.67 10-15 0.082 1 m F - e N = 1.21 10 13 m = m = 0.023 eV yr FN
+   T0 1.12 0.024 10- 13 0.068 1.41 10- 14 Discarding an unfavored QRPA
+   form factor gives a range for the expected effective neutrino mass
+   limits of m = 0.020eV - m = 0.068eV. 0 4 Page 3 Majorana Project
+   Sensitivity Projection 0+ Excited-State Transition Using the same
+   experimental parameters, the sensitivity resulting from observation of
+   decay to the 0+ excited state may be projected. In this case, the
+   expected background is essentially zero due to the coincidence
+   requirements imposed. We further assume an experimental efficiency of
+   50% for this process. This gives a half-life limit of ln(2) N 50% T t 0
+   = , T = 1.2 0 9.9 1027 × yr The nuclear form factors must also be
+   adjusted by a phase-space suppression factor of ~14[Sin88]. This gives
+   1.56 10- 13 0.049 9.67 10-15 0.195 1 1 m F - e N = m = m = 0.055 eV 14
+   1.21 10 13 yr FN T0 1.12 0.057 10- 13 0.162 1.41 10- 14 Discarding an
+   unfavored QRPA form factor gives a range for the expected effective
+   neutrino mass limits of m = 0.049eV - m = 0.162eV for observation of
+   the decay to the excited state. 0 4 References [Bro95] Brodzinski, R.
+   L., et al., J. of Radioanalytical and Nuclear Chemistry, Articles, 193,
+   No.1 (1995) 61-70. [Cur68] Currie, L. A., Analytical Chemistry, 40, No.
+   3 (1968) 586-593. [Aal99] Aalseth, C. E., et al., Phys. Rev. C 59
+   (1999) 2108, Table 1. [Sin88] Sinatkas, J., et al., Phys. Rev. C 37,
+   N0. 3 (1988) 1229. Page 4 Majorana Project Sensitivity Projection

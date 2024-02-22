@@ -1,0 +1,115 @@
+http://hpcf.nersc.gov/storage/ibm/
+
+   NERSC High Performance Computing
+
+   You are here: hpcf / storage / ibm / index You came from:
+     __________________________________________________________________
+
+Summary
+
+   The General Parallel File System (GPFS) provides a large amount of fast
+   data storage, which is available to all nodes. User home directories
+   and a large amount of scratch space are both provided by GPFS. In
+   addition, scratch space on local disk is also available.
+
+IBM SP File Systems
+
+     * Your home directory
+     * Using scratch (temporary) directories
+     * Using Mass Storage
+
+Related Information
+
+     * NERSC SP Home Page
+     * Software on the SP
+     * Working with f90 modules on the NERSC SP
+     __________________________________________________________________
+
+  Your home Directory on the NERSC SP
+
+   When you login to the SP, you are put into your home directory by
+   default.
+
+   Your home directory can (and should) always be referred to by the
+   environment variable $HOME. The absolute path to your home directory
+   (e.g., /u4/joe/) may change at any time without notice, but the value
+   of $HOME will always be correct.
+
+   Home directories are not backed up. Please save all your important
+   files to HPSS.
+
+   In your home directory are various login control files (e.g. ".login",
+   ".cshrc", ".profile"). These are links to common files that contain
+   definitions shared by all users. Please do not remove the links in your
+   home directory. If you wish to customize your login behavior, please
+   place all your personal customizations in extension files with names
+   such as .login.ext, .cshrc.ext, and .profile.ext.
+
+   The home directories are part of the General Parallel File System
+   (GPFS). The file space quota for individual GPFS accounts is large - 10
+   GBytes of file space per user. Each user has a separate quota for the
+   number of inodes. Each file or directory that you own counts as one
+   inode against your quota. The myquota command (with no options) will
+   give you information on the limits in your $HOME directory. For
+   example:
+% myquota
+            ------- Block (MB) ------  --------- Inode ---------
+FileSystem   Usage    Quota   InDoubt   Usage    Quota   InDoubt
+----------  -------  -------  -------  -------  -------  -------
+/u4            4525    10240       75     6038    15000      175
+/scratch        388   122880        0      143    25000        0
+
+   The output shows the limit on file space (Block Quota) and inodes
+   (Inode Quota), as well as the current usage. If you reach the "Quota"
+   value, you will not be able to save anything else to disk in that file
+   system. In this example the home directory is in /u4. The "InDoubt"
+   columns tells you that the reported "Usage" may be off by that amount.
+   This occurs because GPFS does not update this information immediately
+   upon change.
+
+   The home directories are available from all nodes.
+
+  Using temporary directories on the SP
+
+   NERSC provides a scratch directory referred to by the environment
+   variable $SCRATCH. Please only use the directories described below.
+
+   $SCRATCH
+          The environment variable $SCRATCH refers to a directory in GPFS.
+          $SCRATCH, which is available from all nodes, provides 12.7
+          TBytes of space that is shared by all users. The contents of
+          $SCRATCH may be deleted at any time after the job finishes if
+          the system's disks near capacity. In general, files in $SCRATCH
+          will persist for at least 7 days, but users are "taking chances"
+          by using $SCRATCH to store after the job finishes and should not
+          rely on it to be "semi-permanent" file storage space.
+
+          There is a (large) quota for users on the /scratch file system.
+          Use the myquota command to check your usage and quota.
+
+   /tmp
+          The /tmp file system is local to each node and is 2 GB in size.
+          User are urged not to use /tmp. If /tmp is filled, your job will
+          certainly crash and may take the node with it. In most
+          circumstances the GPFS file system ($SCRATCH) will give better
+          performance than /tmp.
+
+          Files in /tmp on a given node are invisible to all other nodes.
+          Interactive parallel jobs can not be run from /tmp since other
+          nodes will not be able to find the executable, which resides on
+          the /tmp of the login node.
+     __________________________________________________________________
+
+  Using NERSC Mass Storage Systems
+
+   The mass storage system HPSS provides permanent, high-capacity archival
+   file storage. Files in HPSS are not backed up. Users are advised to
+   keep two copies of critical files such as source code. HPSS can be
+   accessed interactively or from within batch scripts using the HSI or
+   pftp utilities.
+     __________________________________________________________________
+
+   Page last modified: Friday, 04-Jan-02 12:57:42
+   Page URL: http://hpcf.nersc.gov/storage/ibm/index.html
+   Contact: Webmaster <webmaster@nersc.gov>
+   Privacy and Security Notice

@@ -1,0 +1,75 @@
+http://ssd.jpl.nasa.gov/horizons.html
+
+                 [horizons_cartoon-t.gif] JPL's HORIZONS System
+
+   The JPL HORIZONS On-Line Solar System Data and Ephemeris Computation
+   Service provides access to key solar system data and flexible
+   production of highly accurate ephemerides for solar system objects
+   (71000+ asteroids and comets, 91 natural satellites, 9 planets, the
+   Sun). HORIZONS is provided by the Solar System Dynamics Group of the
+   Jet Propulsion Laboratory. This page is part of the JPL Solar System
+   Dynamics WWW site.
+
+   The HORIZONS system can be accessed using any of the following methods:
+     * WWW (see note below)
+     * telnet (how to use the telnet method)
+     * email (how to use the email method)
+
+   NOTE: The WWW interface to HORIZONS provides a subset of capabilities
+   that should be sufficient for most observers needing topocentric
+   ephemerides. Additional functions available only from the telnet and
+   email interfaces include:
+     * Small-body PARAMETER-MATCHING population searches
+     * OSCULATING ELEMENT ephemerides
+     * CARTESIAN VECTOR ephemerides
+     * Integration of USER-INPUT ORBITS
+     * SPK BINARY FILE production (telnet interface only)
+     * Ephemerides for SITES ON BODIES OTHER THAN THE EARTH
+     * CLOSE-APPROACH TABLES
+    HORIZONS Documentation New users may want to consult the instructions
+       for using the WWW interface to HORIZONS. Complete documentation
+       (updated 2001 November 5) is available:
+
+     * as an HTML document,
+     * as a PostScript document, and
+     * on-line from HORIZONS.
+
+   The latest HORIZONS system news is also available. Although the
+   HORIZONS system will best serve most ephemeris requests, JPL's
+   ephemeris files DE-200, DE-405, and DE-406 are available via ftp and
+   CD-ROM.
+     __________________________________________________________________
+
+Using the telnet Method
+
+   The HORIZONS system can be accessed using telnet to connect to host
+   ssd.jpl.nasa.gov on port 6775. If the direct telnet link does not work
+   on your browser, you may be able to connect manually. For example, from
+   most UNIX systems you would type:
+        telnet ssd.jpl.nasa.gov 6775
+
+   Most MacOS and Windows telnet programs have a dialog box in which the
+   port number (6775) should be entered. If after connecting to
+   "ssd.jpl.nasa.gov" you are prompted for a login name (which is not
+   required for HORIZONS), your telnet port is probably not set to 6775.
+   Please contact your local computer system administrator or consult your
+   telnet program documentation if you need more help. If your connection
+   is refused, either the maximum number of connections are being used, or
+   the system is temporarily off line. In either case, please try again
+   later.
+     __________________________________________________________________
+
+Using the email Method
+
+   The HORIZONS system can be accessed using email to submit batch-style
+   input files. Instructions on how to access the email server, including
+   a complete detailed example, is available by sending an email message
+   to horizons@ssd.jpl.nasa.gov with the subject ``BATCH-LONG''.
+     __________________________________________________________________
+
+   JPL/SSD Home Credits/Awards
+
+
+    Contact: Webmaster (webmaster@ssd.jpl.nasa.gov)
+
+   Last modified: 2001 November 8 09:27

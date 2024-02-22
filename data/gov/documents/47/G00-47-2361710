@@ -1,0 +1,96 @@
+http://www-phys.llnl.gov/Research/OPAL/index.html
+
+   [opal images]
+
+   * OPAL home *
+
+   existing opacity tables
+   generate new opacity tables
+
+   EOS
+   EOSPLUS
+   new EOS_2001 new
+
+   references
+   links to other sites
+
+   Privacy & Legal Notice
+
+THE OPAL OPACITY CODE
+
+   The OPAL code was developed at the Lawrence Livermore National
+   Laboratory to compute opacities of low- to mid-Z elements. Briefly, the
+   calculations are based on a physical picture approach that carries out
+   a many-body expansion of the grand canonical partition function. The
+   method includes electron degeneracy and the leading quantum diffraction
+   term as well as systematic corrections necessary for strongly-coupled
+   plasma regimes. The atomic data are obtained from a parametric
+   potential method that is fast enough for in-line calculations while
+   achieving an accuracy comparable to single configuration Dirac-Fock
+   results. The calculations use detailed term accounting; for example,
+   the bound-bound transitions are treated in full intermediate or pure LS
+   coupling depending on the element. Degeneracy and plasma collective
+   effects are included in inverse bremsstrahlung and Thomson scattering.
+   Most line broadening is treated with a Voigt profile that accounts for
+   Doppler, natural width, electron impacts, and for neutral and singly
+   ionized metals broadening by H and He atoms. The exceptions are one-,
+   two-, and three-electron systems where linear Stark broadening by the
+   ions is included.
+
+Rosseland Mean Opacity Tables
+
+   The monochromatic opacities for a mixture of 21 elements have been
+   computed assuming local thermodynamic equilibrium and archived as a
+   function of photon frequency on a R-T[6] mesh where T[6] is the
+   temperature in millions of degrees, and R=r/T[6]^3 with r the density
+   in g/cm^3. The elements included are: H, He, C, N, O, Ne, Na, Mg, Al,
+   Si, P, S, Cl, Ar, K, Ca, Ti, Cr, Mn, Fe, and Ni. Although the
+   calculations were done for a specific composition, opacities for
+   different element abundances can be readily generated from the same
+   monochromatic data by the principle of corresponding states.
+
+   It is anticipated that most needs for astrophysical opacities can be
+   met with a standard set of tables. Those currently available can be
+   obtained by following this link to existing OPAL Opacity Tables.
+   Requests for new tables can be made by following this link to Generate
+   New OPAL Opacity Tables.
+
+Equation of State Tables
+
+   Tabulation of thermodynamic variables poses different problems compared
+   to opacity. Whereas heavier elements are crucial for the latter,
+   elements heavier than O generally play a minor role in astrophysical
+   equations of state. Nevertheless, analysis of helioseismic data
+   requires highly accurate derivatives of the equation of state. To
+   minimize the computer requirements, the astrophysical mixture was
+   reduced to H, He, C, O and Ne where the abundance of Ne accounts for
+   all heavier elements. More complete calculations were performed to
+   verify that only small errors result from the reduced composition.
+
+   The equation of state data is tabulated on a temperature-density grid.
+   Three sets of data, along with interpolation codes, are available. The
+   EOS and EOSPLUS sets where calculated with an earlier version of the
+   OPAL equation of state code. These two sets differ only in the grid
+   density; EOSplus has the denser grid. The EOS_2001 set was calculated
+   with an improved version of the OPAL code. The main physics differences
+   are that the electrons are now treated relativistically and the
+   activity expansion method has been improved for repulsive
+   inter-particle interactions. The spacing of the EOS_2001
+   temperature-density grid is similar to EOSplus, but covers a
+   significantly larger range in temperature and density.
+     __________________________________________________________________
+
+   For more information about OPAL, contact:
+
+
+    Forrest Rogers -- rogers4@llnl.gov
+
+          or
+
+
+    Carlos Iglesias -- iglesias1@llnl.gov
+
+   Information date 2001 December 14.
+
+   V Division   Physics   LLNL
+   UCRL-MI-130190

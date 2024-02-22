@@ -1,0 +1,30 @@
+http://octlcam.jpl.nasa.gov/pub/zmodem.html
+
+Dialup using Zmodem
+
+   In order to use the camera server at a remote site using a modem,
+   follow these steps:
+    1. Enable your camera server for Zmodem support by setting the
+       SERIAL_MODE parameter to FULL_SUPPORT. Use the Settings page
+       (recommended), or FTP (see the Users Manual.)
+    2. Make sure to have a modem software that has a scripting language
+       and has support for the Zmodem file transfer protocol (Telix,
+       ProComm or similar.)
+    3. Connect a standard modem to the camera server's RS232 connector
+       (28.8 kbit/s or higher is recommended.)
+    4. Connect the modem to the phone line.
+    5. Dial up the modem by ATDT<nnnnnn> where <nnnnnn> is the modem phone
+       number.
+    6. Log in to the camera server.
+    7. Run the command sz fullsize.jpg to start the file transfer.
+    8. Run logout terminate the session.
+
+   The above procedure describes the manual operation  for automated
+   operation, you need to write a script that performs steps 5-8.
+
+   For more information on the modem function, please refer to the Users
+   Manual.
+     __________________________________________________________________
+
+
+    Tech-Support@axis.com

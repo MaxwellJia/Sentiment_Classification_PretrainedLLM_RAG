@@ -1,0 +1,999 @@
+http://wsom.nws.noaa.gov/manual/CHAPTERA/NA218809.HTML
+
+   commerce logo         U.S. DEPARTMENT OF COMMERCE
+                                                                  National
+   Oceanic and Atmospheric Administration
+                                                                 NATIONAL
+   WEATHER SERVICE
+                                                                  Silver
+   Spring, Md. 20910
+
+                                                                  October
+   20, 1988             W/OSO1
+
+   TO:                 All Holders of Operations Manual
+
+   SUBJECT:      Transmittal Memorandum for Operations Manual Issuance
+   88-9
+
+   1. Material Transmitted:
+
+   WSOM Chapter A-21, "NWS Configuration Management for Operational
+   Systems," 22 pages.
+
+   2. Summary:
+
+   This chapter has been substantially rewritten to reflect changes in
+   roles and responsibilities in the configuration management of NWS
+   commissioned, operational systems. The responsibilities for
+   configuration management of major system improvements in NWS programs
+   are established by the appropriate program manager. The scope of
+   configuration management defined in this document includes only those
+   NWS-commissioned operational systems so authorized by the NWS
+   Configuration Management Board. The most significant aspects of the
+   chapter are summarized below:
+
+           a. All references to "Change Management" and "Change Management
+   Board" have been retitled "Configuration Management" and "Configuration
+   Management Board" respectively, to reflect standard Government and
+   industry naming conventions.
+
+           b. Redefines the scope of NWS Configuration Management for all
+   NWS-commissioned operational systems.
+
+           c. Redefines the roles and responsibilities for management of
+   the NWS Configuration Management process at the national, regional, and
+   site levels.
+
+   3. Effect on Other Instructions:
+
+   Cancels WSOM Chapter A-21, transmittal issuance 83-23, dated December
+   30, 1983.
+
+
+   Elbert W. Friday, Jr.
+   Assistant Administrator
+   for Weather Services
+     __________________________________________________________________
+
+            NWS CONFIGURATION MANAGEMENT FOR OPERATIONAL SYSTEMS
+
+   Table of Contents:
+
+     1. Purpose
+
+     2. Definitions
+
+     3. Scope of Configuration Management
+
+     4. Configuration Management Events
+             4.1 Configuration Identification
+             4.2 Configuration Baseline
+             4.3 Configuration Documentation
+             4.4 Change Initiation
+             4.5 Change Administration
+             4.6 Change Review
+             4.7 Change Implementation
+             4.8 Change Verification
+             4.9 Configuration Modification
+             4.10 Configuration Validation
+
+     5. Authorities, Roles, and Responsibilities
+
+     5.1 National Headquarters
+             5.1.1 Assistant Administrator for Weather Services
+             5.1.2 NWS Configuration Management Board
+             5.1.3 Director, Office of Systems Operations
+             5.1.4 Systems Integration Manager
+             5.1.5 Systems Configuration Manager
+             5.1.6 Systems Change Manager
+             5.1.7 Office Directors
+             5.1.8 Office Program Focal Point
+             5.1.9 Special Review Groups
+             5.1.10 Implementation Focal Point
+     5.2 Regional Headquarters
+             5.2.1 Regional Director
+             5.2.2 NWS Regional Systems Manager
+     5.3 Field Offices
+
+     6. Configuration Management Procedures Handbook
+
+   Exhibit:
+
+     A-21-1 NWS Configuration Management Events
+
+   Appendices:
+
+     A - NWS Configuration Management Board Terms of Reference
+
+     B - Data Review Group Terms of Reference
+     __________________________________________________________________
+
+   1. Purpose. This chapter establishes policy and defines the
+   organizational roles and responsibilities for the Configuration
+   Management (CM) of the National Weather Service's (NWS) commissioned,
+   operational systems that collect, process, or disseminate weather data
+   and service products.
+
+   2. Definitions. CM is a discipline applying technical and
+   administrative direction and surveillance to identify and document the
+   functional and physical characteristics of a system, control changes to
+   those characteristics, and record and report the status of change
+   processing and implementation.
+
+   A system is defined as the integrated physical and logical elements,
+   including facility, hardware, software, communications, and
+   documentation, that meet or define a set of functional specifications
+   based on established service requirements related to the collection,
+   processing, and/or dissemination of weather data and service products.
+
+   A new system becomes operational when it has successfully completed a
+   formal test in a field environment coordinated by or through the Office
+   of Systems Operations (OSO) and has been formally commissioned by the
+   NWS.
+
+   Configuration identification is the compilation and formal release of
+   complete technical documentation which defines the original approved
+   configuration (baseline). It also defines and documents approved
+   changes to the individual configuration items. Configuration
+   identification assures that all elements of a system's configuration
+   and its supporting documentation are related to ensure continued
+   integrity and compatibility for the operational life of the system.
+
+   A baseline is an approved reference point for control of future changes
+   to the form, fit, or function of a particular system.
+
+   Configuration control is the systematic evaluation, coordination, and
+   approval or disapproval of proposed changes to the design and
+   construction of a baseline item whose configuration has been formally
+   approved. Configuration control begins in the initial phase of the
+   operation and continues through the operational life of the system.
+
+   Proposed changes (i.e., Requests for Change) are classified as "major"
+   or "minor." Requests for Change which require changes to operational
+   NWS system program schedules, which require significant expenditure of
+   resources, or are controversial in nature, are usually referred to as
+   "major" changes. Requests for Change that do not meet any of the
+   criteria for "major" changes are referred to as "minor" changes.
+
+   Configuration accounting is the creation of accurate information on the
+   status of a system or any of its discrete parts which satisfies an end
+   use function and is designated for CM. This reporting activity
+   continues during the operational life of the item, continuously
+   reflecting changes authorized for implementation. Configuration status
+   accounting establishes records that include the location of an element,
+   its identification by part number and sometimes by serial number, and
+   its current modification status. This information is necessary for
+   proper management of a system and to support engineering, logistics,
+   and maintenance operations.
+
+   Configuration validation is the process of verification of a system's
+   configuration items as to their documentation, specifications,
+   drawings, and requirements.
+
+   3. Scope of Configuration Management. CM shall be applied to those
+   systems, so authorized by the NWS Configuration Management Board (CMB)
+   (see section 5.1.2), that are newly commissioned operational systems
+   and to those existing operational systems that are expected to continue
+   in the modernized NWS. For these systems, the NWS CM discipline shall
+   encompass:
+
+           a. All configuration items that comprise the physical or
+   logical elements of any operational NWS field system, including
+   facilities, hardware, software, communications, and documentation:
+
+     - Facilities include system floor plans or physical layout, power
+     specifications, grounding specifications,
+             and air conditioning.
+
+     - Hardware comprises data input, processing, storage, and output
+     devices; cables; and communication
+             equipment.
+
+     - Software comprises the operating system, utility programs, firm
+     ware, algorithms, and data base
+             management functions.
+
+     - Communications includes the physical network, the data/products
+     that are routed through the network,
+             and those directories or schedules that manage the additions
+     and deletions of data products.
+
+     - Documentation includes system designs, specifications, drawings,
+     technical manuals, test procedures,
+             directories, and parts lists.
+
+           b. All direct interfaces from any commissioned, operational NWS
+   field subsystem to a system already under the NWS CM discipline shall
+   automatically come under NWS CM. Changes to the established
+   configuration items of the subsystem shall follow the CM policies and
+   procedures established for the system it directly interfaces.
+
+           c. Operational systems funded and maintained by the NWS regions
+   that are interfaced to a system under the NWS CM discipline shall be
+   subject to NWS CM policies and procedures for their communications
+   interface and those products transmitted over that interface to the
+   host NWS CM system. Any candidate system for NWS CM requiring unique
+   policies and procedures shall require formal approval of the NWS CMB.
+   Prerequisites for approval include a "Terms of Reference" document
+   listing the CM policies and procedural guidelines applicable to that
+   system, a definition of the CM baseline elements, the approval
+   authority for proposed changes to each class of baseline elements, and
+   the establishment of appropriate CM data bases.
+
+   4. Configuration Management Events. The CM process requires that
+   approval be given before a change is implemented to a system under CM
+   control. The events that occur during the CM process are presented as
+   Exhibit A-21-1, "NWS Configuration Management Events." The major events
+   in this process are:
+
+           a. Configuration Identification -- from the initial definition
+   of design through physical identification of as-built parts,
+   subassemblies, assemblies, and facilities, as well as the assignment of
+   CM identifiers and unique serial numbers.
+
+           b. Configuration Baseline -- from configuration identification
+   through the establishment and maintenance of a systematic automated
+   data base of the baselines comprising a system.
+
+           c. Configuration Documentation -- from the creation through
+   formal release to routine maintenance of the technical documentation,
+   including specifications, drawings, and parts lists.
+
+           d. Change Initiation -- from change concept through
+   coordination to submission of the Request for Change.
+
+           e. Change Administration -- from submission of the Request for
+   Change through analysis and cataloging to distribution for review.
+
+           f. Change Review -- from distribution of the Request for Change
+   for review through the review decision.
+
+           g. Change Implementation -- from decision through planning,
+   procurement, development, test and evaluation, production, and
+   implementation.
+
+           h. Change Verification -- from implementation of the change
+   through verification that the change was implemented.
+
+           i. Configuration Modification -- from initial baseline
+   configuration through approved change or repair replacement transaction
+   in the automated data base.
+     __________________________________________________________________
+
+   [a211.gif]
+     __________________________________________________________________
+
+           j. Configuration Validation -- from initial identification of
+   site-specific configuration through field site validation of existing
+   baseline items, approved modifications, approved deviation or waiver,
+   and repair depot transactions.
+
+   The following sections establish the policies for each phase of the CM
+   process.
+
+   4.1 Configuration Identification. Configuration items, their components
+   and parts, shall be identified uniquely by part number, configuration
+   item number, and serial number or, in the case of software, by
+   assembled modules, modules, and source elements. Newly commissioned,
+   operational NWS systems must provide acceptance requirements,
+   specifications, engineering drawings and lists, technical manuals,
+   initial site and depot spares, and approved configuration
+   identification records as part of the deliverable items when
+   commissioned. The proper level of identification and serialization
+   shall be determined as an element of the system's acceptance testing.
+
+   For those existing operational systems that are approved for the NWS CM
+   discipline, CM baseline components and parts shall be identified,
+   inventoried, documented, and assigned unique identifiers for
+   configuration item baseline control.
+
+   4.2 Configuration Baseline. Configuration baselines shall be developed
+   containing each configuration item comprising the physical and logical
+   elements of a commissioned, operational NWS system. Each configuration
+   item shall be tabulated in relation to the item's higher assembly. This
+   structure shall be established in an automated NWS CM relational data
+   base system as the definitive current configuration baseline.
+
+   4.3 Configuration Documentation. All documentation, including design
+   requirements, specifications, engineering drawings, software
+   documentation, and parts lists shall be retained in the CM Technical
+   Reference Library and, where appropriate, entered into an automated NWS
+   CM data base. The original physical document (e.g., paper copy,
+   magnetic tape, disk cartridge) and any subsequent modifications shall
+   be maintained in the NWS CM Technical Reference Library.
+
+   4.4 Change Initiation. Changes to an operational NWS system shall be
+   governed by the level of approval authority (local, regional, or
+   national) for the requested action as defined in the policies and
+   procedures for the specific system (see NWS Configuration Management
+   Procedures Handbook, Chapter 6, "Systems Controlled by Configuration
+   Management," specific system approval authority matrix). Notification
+   of all approved changes at any level shall be forwarded to the next
+   higher approval authority, as specified. A formal Request for Change
+   shall be submitted whenever the requested action will result in a
+   change (i.e., form, fit, or function) to a baseline element of an
+   operational NWS system that is not under the control of the local or
+   regional authority. The change must be documented on a standard Request
+   for Change form and must include the details necessary for a reviewer
+   to make an informed decision on the change.
+
+   Changes initiated to solve emergencies may be implemented as necessary
+   but only in the framework of established standard operating procedures,
+   guidelines, or policy for the specific system. Immediate notification
+   to the proper authority of these emergency changes is required. The
+   proper authority for notification shall be defined by the specific
+   system approval authority matrix. The approval for emergency changes
+   will be valid only during the resolution of the emergency. Chronic
+   problems must be resolved through a Request for Change.
+
+   Requests for Change can be initiated within the NWS at field, regional
+   headquarters, and national Headquarters offices. Requests initiated at
+   River Forecast Centers (RFC) shall be reviewed by the hydrologist in
+   charge (HIC); requests initiated by Weather Service Offices (WSO) and
+   Weather Service Forecast Offices (WSFO) shall be reviewed by the area
+   manager (AM) who is the WSFO meteorologist in charge (MIC). These
+   requests shall be transmitted to the regional systems manager (RSM) for
+   proper coordination (see section 5.2.2) with other field, regional
+   headquarters, and national Headquarters offices, as appropriate. The
+   Regional Director, or designee signing for the Regional Director, shall
+   approve all Requests for Change for transmittal to the Systems
+   Integration Manager (SIM) for formal review and decision (see section
+   5.1.4).
+
+   Requests for Change initiated by an NWS Headquarters office, or an NWS
+   Center within an NWS Headquarters office, shall be coordinated by that
+   office's NWS focal point with the office's divisions. The Office
+   Director, or designee signing for the Office Director, shall approve
+   the Request for Change for transmittal to the SIM for formal review and
+   decision.
+
+   Requests for Change initiated outside the NWS shall be prepared for
+   submission to the NWS CM process by the receiving NWS office and
+   forwarded along normal organizational channels to the NWS Headquarters
+   for formal review and decision by the appropriate authority level as
+   defined by the specific system approval authority matrix.
+
+   4.5 Change Administration. A Request for Change shall be classified as
+   a "major" change or a "minor" change. A Request for Change of a
+   specialized nature (i.e., requiring specific expertise) shall be
+   assigned the responsibility of a special CM review group (see section
+   5.1.9).
+
+   Each Request for Change form shall be cataloged in the automated CM
+   data base. The Request for Change shall be examined to ensure that all
+   information, necessary for the reviewers to understand the change, is
+   included. Additional information shall be solicited from the requester
+   and others and analyzed, as appropriate.
+
+   The formal review process shall be determined by the following
+   criteria:
+
+           a. Requests for Change that follow preestablished policy (i.e.,
+   precedent set by prior Requests for Change) shall be reviewed for
+   technical adherence to the policy only.
+
+           b. Requests for Change that are deemed "minor" shall be
+   distributed to special focal areas for review and recommendation.
+
+           c. Requests for Change of a specialized nature shall be
+   distributed to the appropriate special CM review group chairman and
+   each member of that group. For example, Requests for Change for data
+   products shall be distributed to the Data Review Group (see appendix
+   B).
+
+           d. Requests for Change that are deemed "major" shall be
+   distributed to all NWS Headquarters offices and regions for review and
+   recommendation.
+
+   4.6 Change Review. All Requests for Change that are distributed for
+   review shall be assigned a return date for recommendation. The reviewer
+   is expected to provide detailed comments resulting from a thorough
+   review related to his/her area of technical expertise. If a coordinated
+   action cannot be determined from this review, the Request for Change
+   shall be prepared for review by the NWS CMB. Requests for Change
+   requiring the NWS CMB's action shall be presented with background
+   information, a summary of the reviews, and a recommended course of
+   action.
+
+   When a Request for Change is not scheduled for CMB action, the NWS CMB
+   shall be informed of the action taken. The information shall be
+   transmitted to the CMB in a report issued biannually. The report shall
+   also catalog the Requests for Change that are in review.
+
+   A formal NWS CMB meeting shall be convened for those "major" Requests
+   for Change that cannot be resolved based on the recommendations
+   presented to the CMB. Requests for Change which cannot be resolved by
+   the CMB will be brought to the attention of the Assistant Administrator
+   for Weather Services.
+
+   4.7 Change Implementation. Implementation of changes approved by the
+   CMB shall be performed as directed by the CMB. All other changes shall
+   be acted upon by the SIM or by the appropriate offices through
+   agreement with the SIM. The originator of a Request for Change shall be
+   notified when it has been either approved or rejected. Notification of
+   approval or rejection of each Request for Change shall be through
+   memorandum transmitted to the requesting office or regional director.
+   Notification of approval or rejection of "major" changes shall occur by
+   memorandum upon acceptance of the CMB meeting minutes by the CMB
+   members.
+
+   Notification of approval or rejection of "minor" changes shall occur by
+   memorandum upon formulation of the decision and coordination with
+   affected offices. Notification of approval or rejection of special CM
+   review group items shall occur by memorandum upon action by the
+   appropriate special CM review group.
+
+   The Systems Integration Division (SID) shall coordinate the necessary
+   actions for the implementation of all approved changes. The
+   notification of approval memorandum shall contain the identification of
+   the focal point for implementation of the change actions, an outline of
+   the actions to be taken to implement the change, and the organizational
+   element responsible for the performance of the actions. Data product
+   changes shall be announced to the field in an NWS administrative
+   message (e.g., Change Notice or GENOT) prior to the time of
+   implementation.
+
+   4.8 Change Verification. A verification process shall occur to
+   determine that the change has been implemented as defined. Verification
+   of the change action of "major" and "minor" Requests for Change shall
+   be performed by the implementation focal point using existing
+   information systems as the data source whenever possible. The
+   implementation focal point will usually be a SID staff member or RSM in
+   the case of "major" and "minor" changes, and a review group member in
+   the case of special OM review group changes. This verification
+   completion shall be reported to the Systems Change Manager, who is
+   responsible for the maintenance of the Request for Change information
+   system. When the implemented change cannot be verified through existing
+   information systems, the coordinator shall contact the originator of
+   the Request for Change to solicit the verification data.
+
+   4.9 Configuration Modification. When the change has been verified, the
+   baseline configuration items shall be changed in the automated data
+   bases to reflect the approved change. The status code of the Request
+   for Change in the CM information system shall indicate the completion
+   date.
+
+   A current accounting of all configuration items, their locations, part
+   numbers, serial numbers, and modification status, shall be reported
+   routinely and available to users upon demand.
+
+   4.10 Configuration Validation. Several integrated report processes
+   shall be performed routinely to provide a methodical update to CM data
+   from information supplied by National Logistics Supply Center
+   transactions, various Engineering Division automated inventory
+   processes, and approved configuration changes. Periodic validations
+   augment these processes to provide a definitive configuration baseline.
+   These validations shall be initiated by the creation and transmission
+   of configuration baseline validation packages to selected field
+   offices, centers, or NWS Headquarters focal points for verification.
+   These validation packages shall include a status accounting of all
+   approved site-specific configuration changes for review.
+
+   5. Authorities, Roles, and Responsibilities. This section describes the
+   authorities, roles, and responsibilities for the CM of operational NWS
+   systems at the national, regional, and local levels.
+
+   5.1 National Headquarters. At the national Headquarters level, the
+   major NWS CM functions are executed by the Assistant Administrator for
+   Weather Services; the Director, OSO; the SIM; the Systems Configuration
+   Manager; the Systems Change Manager; the office directors; and the
+   office focal points.
+
+   5.1.1 Assistant Administrator for Weather Services. The Assistant
+   Administrator for Weather Services is the authorizing official for NWS
+   CM. The Assistant Administrator shall be the ultimate approval
+   authority for: (1) the establishment of any changes to the CM process
+   within the NWS and (2) changes that have a major impact on service
+   requirements, the NWS organization, NWS budget, or previously approved
+   program schedules and those changes that cannot be resolved by the NWS
+   CMB.
+
+   5.1.2 NWS Configuration Management Board. The CMB has been established
+   by the Assistant Administrator for Weather Services to govern the NWS
+   CM program; he has delegated authority to that body to ensure the
+   proper management of the NWS CM process. The Assistant Administrator
+   for Weather Services has redelegated authority to the CMB for the
+   integration of additional systems to the NWS CM process. To provide
+   maximum breadth of responsibility and authority, the CMB comprises the
+   NWS Headquarters office directors and the NWS regional directors and
+   reports to the Assistant Administrator for Weather Services. The
+   Director, OSO (see section 5.1.3), chairs the CMB.
+
+   Specific responsibilities of the CMB are:
+
+           a. Authorizes the inclusion of an NWS system under the
+   provisions of the NWS CM process.
+
+           b. Establishes specialized management mechanisms for handling
+   recurring CM tasks or functions (e.g., administrative management and
+   review groups).
+
+           c. Reviews CM activities, according to its discretion, and
+   redirects activities, if appropriate.
+
+           d. Allocates resources (staff, funds, and facilities) necessary
+   to accomplish all tasks assigned by the CMB.
+
+           e. Defines and clarifies CM roles and responsibilities within
+   the NWS.
+
+           f. Reviews and acts upon "major" Requests for Change.
+
+           g. Resolves any "minor" Requests for Change that cannot be
+   resolved by the SIM (see section 5.1.4).
+
+           h. Recommends options for any changes that significantly affect
+   service requirements, NWS organization, budget, or a previously
+   approved CM change to the Assistant Administrator for Weather Services.
+
+           i. Refers decisions on "major" Requests for Change which the
+   CMB cannot resolve to the Assistant Administrator for Weather Services.
+
+           j. Ensures proper documentation of CMB decisions on Requests
+   for Change and issues presented for action.
+
+           k. Approves transmittal of any Request for Change originating
+   within the respective office or region.
+
+           l. Designates the CM focal point or RSM, as appropriate.
+
+           m. Designates representatives to serve on formal CM review
+   groups, as appropriate.
+
+   The terms of reference governing the activities of the CMB are
+   presented as Appendix A, "NWS Configuration Management Board Terms of
+   Reference." Those terms of reference are supplemented by this chapter.
+
+   5.1.3 Director, Office of Systems Operations. The Assistant
+   Administrator for Weather Services has delegated authority for the
+   management of operational NWS systems to the Director, OSO (W/OSO).
+
+   Specific responsibilities of the Director, OSO, with respect to CM are:
+
+           a. Serves as chairman of the CMB. Informs the Assistant
+   Administrator for Weather Services of any major issues that cannot be
+   resolved by the Board.
+
+           b. Approves the issuance and changes to the NWS Configuration
+   Management Procedures Handbook (see section 6).
+
+   5.1.4 Systems Integration Manager. The CMB has redelegated authority to
+   the SIM to act as its agent, across organizational lines, for the
+   general management of all Requests for Change to commissioned,
+   operational NWS systems. The SIM is the Chief, SID (W/OSO1).
+
+   Specific responsibilities of the SIM with respect to CM are:
+
+           a. Manages, coordinates, and tracks the configuration control
+   process.
+
+           b. Receives all formal CM Requests for Change.
+
+           c. Analyzes and evaluates Requests for Change in terms of
+   potential effects on resources, service requirements, and the NWS
+   organization.
+
+           d. Classifies formal Requests for Change as "minor" or "major."
+   (These decisions may be reviewed at the discretion of the CMB.)
+
+           e. Approves "minor" Requests for Change. "Minor" Requests for
+   Change do not require CMB approval but must be approved by the SIM
+   before action or implementation is initiated.
+
+           f. Recommends action to the CMB for "major" Requests for
+   Change.
+
+   5.1.5 Systems Configuration Manager. The SIM has delegated the
+   authority for the operation of the configuration identification,
+   configuration baseline modification, and configuration validation
+   processes to the Systems Configuration Manager. The Systems
+   Configuration Manager is also the Chief, Configuration Management
+   Section (W/OSO113).
+
+   Specific responsibilities of the Systems Configuration Manager with
+   respect to CM are:
+
+           a. Applies consistent and systematic methods to the
+   identification of facilities, hardware, software, and communications
+   items, and the identification of baselines, as well as documents,
+   drawings, and data lists that support and define precise system
+   baselines.
+
+           b. Designs an integrated record system containing configuration
+   identification data.
+
+           c. Issues configuration identification numbers for items under
+   a standard controlled process.
+
+           d. Receives, itemizes, processes, and maintains configuration
+   item transactions (deliverables, sparing, approved changes, and
+   engineering modifications) in an automated on-line data base.
+
+           e. Maintains appropriate data files within the automated data
+   base that record significant data on parts lists, specifications,
+   engineering change proposals, specification control drawings, data
+   lists, and other technical procedures or manuals.
+
+           f. Compiles and publishes configuration reports, including
+   baseline reports, to the format and schedule specified by the SID, CMB,
+   National Oceanic and Atmospheric Administration, General Services
+   Administration, or system contractors.
+
+           g. Initiates periodic validations of configuration baseline
+   items at system sites to maintain the quality of the baseline data base
+   and the definitive facility design manual of each site.
+
+   5.1.6 Systems Change Manager. The SIM has delegated the authority for
+   the operation of the change control process to the Systems Change
+   Manager. The Systems Change Manager is also the Chief, Change
+   Management Section (W/OSO112).
+
+   Specific responsibilities of the Systems Change Manager with respect to
+   configuration management are:
+
+           a. Receives Requests for Change from the SIM and verifies that
+   they contain adequate information.
+
+           b. Requests additional detail from the originator if the
+   information provided is incomplete.
+
+           c. Analyzes the Request for Change to determine its effect on
+   hardware, software, communications, procedures, the significance of the
+   resources required, the areas of technical expertise, and interactions
+   with other systems.
+
+           d. Coordinates the design of alternative approaches to satisfy
+   requirements stated in the Request for Change. Provides rationale and
+   decision parameters to enable evaluators to select the best approach.
+   Coordinates the cost information for each of the alternatives.
+
+           e. Specifies test plans and procedures to evaluate the selected
+   approach. Coordinates the performance of the test with the technical
+   experts and the field, or central test sites and other systems, the
+   collection of test data, and the preparation of the test report.
+
+           f. Distributes Requests for Change to regions and offices for
+   review and recommendation.
+
+           g. Performs secretariat functions for the CMB, including
+   scheduling meetings, preparing the agenda and supporting information,
+   assisting the chairman in the conduct of meetings, and preparing and
+   distributing meeting minutes.
+
+           h. Prepares memoranda of notification of approval or rejection
+   of Requests for Change, prepares implementation status information,
+   maintains the Request for Change information system, and verifies
+   completed changes.
+
+           i. Provides limited administrative support to special CM review
+   groups.
+
+   5.1.7 Office Directors. The Directors of the offices of Meteorology
+   (OM), Hydrology (OH), Systems Development (OSD), and Systems Operations
+   (OSO), Management and Budget (MB), the Transition Program Office (TPO),
+   and the National Meteorological Center (NMC) are voting members of the
+   NWS CMB. Office directors have the responsibility for approval of each
+   Request for Change originating within their office and for transmittal
+   of approved Requests for Change to the SIM.
+
+   5.1.8 Office Program Focal Point. Program focal points for OM, OH, OSD,
+   OSO; MB, TPO, and NMC shall be designated by each office's director.
+   Focal points shall serve as the working level contact point for their
+   office for all Requests for Change concerning operational systems under
+   CM. All Requests for Change originated by an office shall be reviewed
+   and coordinated at the office level by the focal point. All coordinated
+   Requests for Change shall be submitted by the focal point to the
+   office's director for approval.
+
+   The focal point shall be responsible for the coordination and tracking
+   of Requests for Change received from the Systems Change Manager for
+   review.  The focal point shall be responsible for submitting the
+   coordinated recommendation of the office to the Systems Change Manager
+   for each Request for Change. The focal point shall assist in
+   determining national applicability of a Request for Change and shall
+   coordinate this applicability with the regions. The focal point is,
+   therefore, a key element in the interface between national Headquarters
+   and the regions and is vital to the successful performance of the CM
+   process.
+
+   5.1.9 Special Review Groups. Special CM review groups may be
+   established by the CMB to provide an orderly, logical, and expeditious
+   review and processing of Requests for Change where specific technical
+   expertise is required. These groups shall be comprised of
+   representatives who provide maximum breadth of responsibility and depth
+   of technical expertise and shall be directed by a group chairman.
+
+   Each of these groups receives its administrative direction from the SIM
+   and receives the Requests for Change from the Systems Change Manager
+   only.
+
+   The terms of reference governing the activities of these groups shall
+   be approved by the CMB and provided as appendices to this document.
+   Appendix B, for example, is the "Data Review Group Terms of Reference."
+
+   5.1.10 Implementation Focal Point. The implementation focal point
+   designated in the Request for Change approval memorandum shall carry
+   out the action(s) assigned and report the completion of the change to
+   the Systems Change Manager.
+
+   5.2 Regional Headquarters. At the regional headquarters level, the
+   major NWS CM roles shall be assumed by the regional director and the
+   NWS RSM (see section 5.2.2). The NWS RSM is also the (regional) Chief,
+   Systems Operations Division or designee, acting and signing for the
+   Chief, Systems Operations Division.
+
+   5.2.1 Regional Director. The regional directors shall be voting members
+   of the NWS CMB. In the absence of the regional director, the deputy
+   regional director may serve as the CMB voting member. Regional
+   directors or designees signing for the director, shall be responsible
+   for the approval of each Request for Change originating in their
+   region. Approved Requests for Change shall be transmitted to the SIM.
+
+   5.2.2 NWS Regional Systems Manager. The RSM is delegated regional
+   responsibility and authority for system operations and support
+   activities. The RSM serves as the regional focal point for Requests for
+   Change. All Requests for Change originated by an NWS field office shall
+   be reviewed and coordinated by the RSM with other field offices and
+   regional headquarters offices, as appropriate. Requests for Change
+   involving RFC-unique software, hardware, or data products shall be
+   reviewed by the regional hydrologist and coordinated at the regional
+   level by the RSM of the region. All coordinated Requests for Change
+   shall be submitted by the RSM to the regional director for approval.
+
+   The RSM shall be responsible for the coordination and tracking of
+   Requests for Change received from the Systems Change Manager for
+   regional review. The RSM shall be responsible for submitting the
+   coordinated recommendation of the region for each Request for Change to
+   the Systems Change Manager. The RSM is a key element in the interface
+   between national Headquarters and the regions and is vital to the
+   successful performance of the CM process. The RSM shall be responsible
+   for regional adherence to CM policies and procedures.
+
+   The RSM shall be responsible for the timely review and return to the
+   Systems Configuration Manager of completed validation packages received
+   from the AM.
+
+   Other responsibilities of the RSM are enumerated in Chapter A-20.
+
+   5.3 Field Offices. The field office HIC or AM is responsible for the
+   initial review and transmittal of all Requests for Change to the RSM.
+   The HIC or AM is responsible for the field office's adherence to CM
+   policy and procedures.
+
+   Periodic configuration baseline validation packages issued by the
+   Systems Configuration Manager shall be given a timely response. The
+   details of these packages shall be thoroughly coordinated by the HIC or
+   AM to ensure that the validation reflects an accurate up-to-date
+   accounting of the configuration baseline. The HIC or AM shall return
+   the validation package, with annotated corrections, to the RSM for
+   review and forwarding to the Systems Configuration Manager.
+
+   6. Configuration Management Procedures Handbook. NWS CM for operational
+   systems procedures for, and a description of, each authorized system's
+   CM baseline elements shall be included in a National Weather Service
+   Office of Systems Operations Configuration Management for Operational
+   Systems Procedures Handbook. The handbook shall specifically include
+   standard CM procedures applicable to all operational systems; document
+   the CM subsystems (i.e., data base management system, forms,
+   specialized procedures, and associated activities) required in the
+   daily administration of the CM process; provide a broad description of
+   the functions, configuration, and location of each component system;
+   and provide a matrix of the baseline elements and depiction of the
+   approval authority for changes to each class of baseline elements.
+
+   The approval and issuance of changes to this handbook remain the
+   responsibility of the Director, OSO.
+     __________________________________________________________________
+
+   APPENDIX A
+
+                     NWS CONFIGURATION MANAGEMENT BOARD
+
+                             TERMS OF REFERENCE
+
+                          Revised November 25, 1987
+
+   A. Purpose
+
+           The purpose of the National Weather Service (NWS) Configuration
+   Management Board (CMB) is to organize and manage the development and
+   operation of a configuration management program for the NWS.
+
+   B. Composition
+
+           The members of the CMB are the Directors of the NWS Office of
+   Meteorology, Office of Hydrology, Office of Systems Development, Office
+   of Systems Operations, National Meteorological Center, Transition
+   Program Office, Management and Budget Office, and the Directors of all
+   NWS regions. The Chairman is the Director, Office of Systems
+   Operations.
+
+   C. Functions
+
+           The functions of the CMB encompass those necessary to
+   accomplish its purpose, including explicitly:
+
+   1. Identifying all major tasks that are essential to effective
+   management of NWS changes and clarifying the responsibility and
+   authority within the NWS for these tasks.
+
+   2. Establishing specialized management mechanisms necessary to
+   accomplish recurring tasks or functions, including NWS configuration
+   management.
+
+   3. Serving as the governing body for NWS configuration control.
+
+   4. Allocating the resources (staff, funds, and facilities) necessary to
+   accomplish all tasks assigned by the CMB or, if required resources are
+   unavailable, requesting and justifying additional resources.
+
+   5. Documenting and reporting all major decisions and their rationale.
+
+   6. Recommending changes that have a major effect on service
+   requirements, the NWS organization, NWS budget, or previously approved
+   NWS schedule to the Assistant Administrator for Weather Services.
+
+   7. Referring any major issues that cannot be resolved by the CMB to the
+   Assistant Administrator for Weather Services.
+
+   D. Operating Rules and Procedures
+
+   The CMB will operate under the following rules and procedures:
+
+   1. Members are expected to participate personally and normally will not
+   designate an alternate to represent them at meetings. If this should be
+   necessary, the alternate will be delegated full authority.
+
+   2. The CMB will operate on the basis of consensus; any member can
+   insist on the resolution of an issue by the Assistant Administrator for
+   Weather Services. The chairman will obtain the resolution.
+
+   3. Meetings of the CMB will be announced at least 2 weeks in advance,
+   longer if possible, and an agenda and brief summary of major issues to
+   be decided or discussed will be provided at that time.
+
+   4. The chairman, in consultation with members of the CMB, will invite
+   other persons to participate in each CMB meeting as is necessary to
+   facilitate the work planned for that session.
+
+   5. The CMB will identify any continuing staff roles needed to support
+   its work and will designate appropriate persons from within their
+   offices to carry out these roles.
+
+   6. Written summaries of major decisions will be submitted to members
+   for approval before further distribution, normally within 1 week after
+   the meeting unless the CMB allocates a longer period to allow time for
+   required staff work. Decisions will go into effect, with necessary
+   corrections or clarifications, 1 week after such submissions for final
+   approval.
+     __________________________________________________________________
+
+   APPENDIX B
+
+                              DATA REVIEW GROUP
+
+                             TERMS OF REFERENCE
+
+                          Revised November 25, 1987
+
+   A. Purpose
+
+   The purpose of the Data Review Group (DRG) is to provide for an
+   orderly, logical, and expeditious review and processing of Requests for
+   Change to data products on communication systems under NWS
+   Configuration Management.
+
+   B. Authority
+
+   The National Weather Service (NWS) Configuration Management Board (CMB)
+   has authorized the establishment of the DRG under the administrative
+   control of the Systems Integration Manager (SIM), who is the Chief,
+   Systems Integration Division, Office of Systems Operations. The DRG is
+   authorized to approve or reject Requests for Change affecting data
+   products which have been referred to the group by the SIM. The DRG will
+   return those requests that require a change in NWS policy or new
+   budgetary support to the SIM for referral to the CMB.
+
+   The determination of the scientific merit of new products (those in
+   development or having just completed development and checkout) remains
+   with the Committee on Analysis and Forecast Technique Implementation
+   (CAFTI). Requests for Change for new products are referred to the DRG
+   after CAFTI recommendations are approved by the Director, Office of
+   Meteorology (OM), and/or the Director, Office of Hydrology (OH).
+
+   The validation of requirements for product changes remains the
+   authority of the OM and/or OH. Requests that involve new or changing
+   requirements are referred to the DRG after the validation of
+   requirements is reviewed by the Meteorological Requirements Review
+   Group and approved by the Director, OM, and/or the Director, OH.
+
+   The distribution of data products over the Family of Services (FOS)
+   network remains the authority of the FOS Internal Review Committee
+   (IRC). The OM and the Office of Systems Operations' Telecommunications
+   and Dissemination Branch represent the interests of the FOS IRC on the
+   DRG.
+
+   C. Composition
+
+   The DRG will be composed of at least one member from the OM, OH,
+   National Meteorological Center, Office of Systems Development, and
+   Office of Systems Operations, selected by those organizational
+   elements. The group will not exceed 10 members. The office of chairman
+   will be rotated through each represented office on an annual basis. The
+   term of the chairman will begin at the start of each fiscal year. Any
+   office may pass its turn to provide a chairman.
+
+   D. Functions
+
+   The functions of the DRG are those necessary for effective and
+   efficient management of data products. These functions include, but are
+   not limited to, the following:
+
+   1. Review requested changes to determine the feasibility of their
+   implementation.
+
+   2. Provide thorough coordination with the members' offices before and
+   after decisions by the group, each member being responsible for such
+   coordination and prepared to brief the group, as necessary.
+
+   3. Return requests to originators and request additional information
+   and/or supporting rationale whenever necessary.
+
+   4. Approve or reject requests that fall within the purview of the
+   group.
+
+   5. Inform the SIM through memorandum of decisions taken by the group
+   together with the accompanying rationale for each.
+
+   6. Inform the SIM through memorandum of tasks to be performed as a
+   result of decisions taken by the group.
+
+   7. Return requests upon which the group cannot agree and requests which
+   are determined to severely impact the system to the SIM for
+   consideration by the CMB.
+
+   E. Operating Rules and Procedures
+
+   The DRG will operate under the following rules and procedures:
+
+   1. Members are expected to participate personally and normally will not
+   designate an alternate to represent them at meetings. If an alternate
+   is necessary, the alternate will be delegated full authority. If a
+   member cannot attend a meeting or arrange for an alternate, the
+   representative may give the chairman an instructed proxy, and should
+   provide a summary to the DRG Chairman on the status of items assigned
+   to the representative.
+
+   2. A quorum will consist of 50 percent of the membership of the group
+   representing at least three of the offices. Proxies to be voted by the
+   chairman will not count in establishing a quorum.
+
+   3. The group will operate on the basis of majority rule but will strive
+   for unanimity.
+
+   4. The schedule for regular meetings of the group will depend on their
+   work load, timeliness, and other considerations and will be at the
+   discretion of the chairman. An agenda and brief summary of major issues
+   to be decided or discussed will be provided at least 7 working days in
+   advance.
+
+   5. The chairman, in consultation with members of the group, will invite
+   other persons to attend any group meeting as deemed useful to the work
+   of the group.
+
+   6. All Requests for Change to data products are to be submitted to the
+   SIM. Upon receipt at the SIM office, they will be logged and
+   distributed to the DRG members for review.
+
+   7. Written summaries of major decisions will be submitted to members
+   for approval before becoming final, as part of the meeting minutes.
+   These summaries will be issued within 1 week after the meeting unless a
+   longer time is necessary for required staff work. Decisions will become
+   effective immediately following final approval.
+
+   8. Requests for Change which correct simple errors may be approved by
+   chairman between meetings and documented at the next meeting.
+
+   WSOM Issuance
+   89-9-10-20-88

@@ -1,0 +1,922 @@
+http://ctas.arc.nasa.gov/project_description/tma.html
+
+                       Center-TRACON Automation System
+
+   CAPTION: Navigation Menu
+
+   CTAS Home Page CTAS News CTAS Description Publications Acronyms
+   blank space decoration
+   You are on the Traffic Management Advisor (TMA) page.
+   Descent Advisor (DA) Final Approach Spacing Tool (FAST) title= User
+   Preferred Routing (UPR) Direct-To Tool Expedite Departure Path (EDP)
+   Collaborative Arrival Planning (CAP) Pseudo Aircraft Systems (PAS) CTAS
+   Software Overview
+   blank space
+   Facilities Gallery CTAS in the Media Personnel Job Opportunities Links
+   to other CTAS-related websites
+
+   [ CTAS Home | CTAS News | CTAS Description | Publications | Acronyms |
+         Facilities | Gallery | CTAS in the Media | Personnel | Job
+                           Opportunities | Links ]
+
+      [ TMA | DA | FAST | UPR | Direct-To | EDP | CAP | PAS | Software
+                                 Overview ]
+     __________________________________________________________________
+
+   TMA - Traffic Management Advisor
+
+Contents
+
+     * Overview
+     * Planning
+          + Scheduling Events
+          + Sequencing
+          + Scheduling
+          + Runway Allocation Events
+          + Runway Allocation
+     * Graphical User Interfaces
+          + Timelines
+          + Overlays
+          + Load Graphs
+          + Rush Alert
+          + Data Degradation Alert - ``Big Red X''
+          + Panels
+          + Planview Display
+          + Sequence List
+          + Watch Window
+     * Field Activities
+          + TMA Operational Evaluations at ZFW & DFW (June 17-21)
+          + TMA Operational Evaluations at ZFW & DFW (June 14)
+     __________________________________________________________________
+
+Overview
+
+   The Center air traffic controllers and Traffic Management Coordinators
+   (TMCs) control arriving aircraft that enter the Center from an adjacent
+   Center or depart from feeder airports within the Center. On the basis
+   of the current and future traffic flow, the TMC creates a plan to
+   deliver the aircraft, safely separated, to the TRACON at a rate that
+   fully subscribes, but does not exceed, the capacity of the TRACON and
+   destination airports. The TMC's plan consists of sequences and
+   scheduled times of arrival (STAs) at the meter fix, published points
+   that lie on the Center-TRACON boundary. The Center air traffic
+   controllers issue clearances to the aircraft in Center so that they
+   cross the meter fixes at the STAs specified in the TMC's plan. Near the
+   TRACON, the Center controllers hand the aircraft off to the TRACON air
+   traffic controllers.
+
+                      TMA Scheduling Reference Points D
+                                  Figure 1
+
+   The Traffic Management Advisor (TMA) assists, but does not replace, the
+   Center TMCs and air traffic controllers in several ways. TMA increases
+   situational awareness through its graphical displays and alerts. TMA
+   also generates statistics and reports about the traffic flow. In
+   addition, TMA computes the undelayed estimated time of arrival (ETA) to
+   the outer meter arc, meter fix, final approach fix and runway threshold
+   for each aircraft. Furthermore, TMA computes the sequences and
+   scheduled times of arrival (STAs) to the outer meter arc, meter fix,
+   final approach fix, and runway threshold for each aircraft to meet the
+   sequencing and scheduling constraints entered by the TMC. The TMA also
+   assigns each aircraft to a runway to optimize the STAs. Although the
+   TMA computes the STAs and runway assignments for each aircraft in
+   Center, FAST may overrule these STAs and runway assignments when the
+   aircraft enters the TRACON airspace. TMA continually updates its
+   results at a speed comparable to the live radar update rate in response
+   to changing events and controller inputs.
+
+   The TMA software suite consists of the following CTAS processes.
+   Communications Manager (CM)
+
+     The CM provides the communication and common database between each
+     of the processes.
+
+   Radar Daemon
+
+     The Radar Daemon serves as the interface between CTAS and the air
+     traffic control facility's host computer.
+
+   Weather Daemon
+
+     The Weather Daemon receives and processes live weather information
+     from the National Oceanic and Atmospheric Administration (NOAA) or
+     the National Weather Service (NWS).
+
+   Timeline Graphical User Interface (TGUI)
+
+     The TGUI receives input from and displays information to the TMCs.
+
+   Planview Graphical User Interface (PGUI)
+
+     The PGUI receives input from and displays information to the
+     controllers and TMCs.
+
+   Route Analyzer (RA)
+
+     The RA computes the projected horizontal route that each aircraft
+     will follow. This information is then passed to the Trajectory
+     Synthesizer (TS).
+
+   Trajectory Synthesizer (TS)
+
+     The TS computes the ETAs and 4-D trajectory, including both the
+     horizontal route and descent profile, for each aircraft.
+
+   Dynamic Planner (DP)
+
+     The DP computes the runway assignment for each aircraft and computes
+     the sequences and STAs to the outer meter arcs, meter fixes, final
+     approach fixes, and runway thresholds.
+
+   Go To Top
+     __________________________________________________________________
+
+Planning
+
+   An important feature of TMA is its ability to sequence and schedule
+   aircraft to the outer fix, meter fix, final approach fix, and runway
+   threshold in such a way as to maximize airport and TRACON capacity
+   without compromising safety. In addition, TMA will assign the aircraft
+   to runways to optimize the schedule. All of this activity takes place
+   while the aircraft is in the Center's airspace (approximately 40 to 200
+   miles from the arrival airport). Moreover, scheduling of some aircraft
+   takes place before the aircraft have even entered the Center's airspace
+   as long as that aircraft's flight plan is received by CTAS. TMA will
+   schedule aircraft based on the aircraft's flight plan information that
+   may be received as much as 90 minutes before the aircraft enters the
+   Center's airspace. TMA will update these sequences, schedules, and
+   runway assignments constantly to adapt to changes in the traffic
+   situation, changes in the environment, or in response to inputs by the
+   TMCs. This process of sequencing, scheduling, and assigning runways is
+   described below.
+
+  Scheduling Events
+
+   TMA will reschedule all or some of the aircraft in response to various
+   events. Some of these events will trigger a reschedule immediately.
+   These immediate scheduling events are as follows.
+     * Addition/deletion of a gate blocked interval
+     * Addition/deletion of a meter fix blocked interval
+     * Airport acceptance rate change
+     * Change in the occupancy time or required separation distance at a
+       runway
+     * Gate acceptance rate change
+     * Meter fix acceptance rate change
+     * Super stream class redefinition or separation distance change
+     * TRACON acceptance rate change
+     * Addition of a meter fix sequence constraint
+     * A Find Slot operation initiated by the TMC
+     * A meter fix STA manually set for an aircraft by the TMC
+     * A runway STA manually set for an aircraft by the TMC
+     * A request by the TMC to reschedule one or more aircraft
+     * Time passage of at least 6 seconds since the last schedule
+
+   In addition, other events are placed in a pending list for rescheduling
+   later. Events in the pending list trigger a reschedule when an
+   immediate rescheduling event is received. Pending rescheduling events
+   also trigger a reschedule when a pending event of a different type is
+   received. The pending list is processed and subsequently flushed.
+   Pending rescheduling events are as follows.
+     * Flight plan amendment that changes an aircraft's runway
+     * Flight plan amendment that changes an aircraft's coordination fix
+     * Aircraft's ETA is ``hovered'' (see description below)
+
+     CTAS receives the flight plans for aircraft before they become
+     active, and an aircraft becomes active when its radar track is
+     received. An active or inactive aircraft's Scheduled Time of Arrival
+     (STA) is constantly updated until the aircraft's meter fix ETA is
+     less than or equal to 19 minutes in the future. At that point, the
+     aircraft's STA is frozen. This point 19 minutes in the future is
+     known as the freeze horizon.
+
+     Example: Suppose it is 12:00 noon. The freeze horizon is located 19
+     minutes in the future at 12:19pm. Delta flight #678 has a meter fix
+     ETA of 12:18pm which is less than 19 minutes in the future.
+     Therefore, its STA is frozen. However, United flight #525 has a
+     meter fix ETA of 12:20pm. This is more than 19 minutes in the
+     future, so its STA is not frozen.
+     One minute later, at 12:01pm, United flight #525 has its STA frozen
+     because its meter fix ETA of 12:20pm is now 19 minutes in the
+     future.
+
+     If the aircraft was supposed to become active before it reaches the
+     freeze horizon, but it is still inactive, then the aircraft's meter
+     fix ETA is increased by a few minutes to keep it outside of the
+     freeze horizon. When the aircraft's meter fix ETA is modified in
+     this manner, the aircraft is said have had its ETA ``hovered.'' When
+     the aircraft finally becomes active, its STA will be frozen when its
+     meter fix ETA becomes less than or equal to 19 minutes in the
+     future.
+
+  Sequencing
+
+   An important part of the scheduling process is the construction of the
+   sequence of aircraft. Aircraft are sequenced in first-come first-served
+   (FCFS) order within each super stream class according to their meter
+   fix ETA. A super stream class is a group of aircraft that share similar
+   scheduling characteristics. Super stream classes are typically based on
+   engine type (jet or prop), destination airport, and meter fix.
+
+   In addition, sequence constraints entered by the controllers and TMCs
+   will override the FCFS order. Each sequence constraint involves two
+   aircraft in the same super stream class, and each sequence constraint
+   can be one of two types. The first type of sequence constraint is a
+   direct sequence constraint. Such a constraint restricts one aircraft
+   directly behind another aircraft in the sequence. The second type of
+   sequence constraint is an indirect sequence constraint. This is a
+   weaker constraint than a direct sequence constraint, and it restricts
+   one aircraft anywhere behind another aircraft in the sequence. Other
+   aircraft may be sequenced between these two aircraft without violating
+   the indirect sequence constraint.
+
+   TMA also contains code to resolve sequence constraint conflicts. If
+   sequence constraints are found to conflict with one another, then the
+   sequence constraint with the lower priority at the time of the
+   scheduling is ignored. If the sequence constraints are of equal
+   priority, then the older sequence constraint is ignored. Note that
+   conditions may change from scheduling cycle to scheduling cycle and may
+   affect which sequence constraints are in conflict with each other.
+   Thus, a sequence constraint might be obeyed during one scheduling
+   cycle, but may be ignored during a later scheduling cycle due to
+   changes in the situation.
+
+  Scheduling
+
+   Once a sequence to the meter fix has been determined, the scheduled
+   time of arrival (STA) at the meter fix is computed for each aircraft.
+   No aircraft is assigned an STA that is earlier than its nominal ETA to
+   the meter fix. Moreover, the aircraft may be assigned an STA that is
+   later than its ETA due to the scheduling constraints and its position
+   in the sequence. The difference between the STA and the ETA is known as
+   the aircraft's delay. The aircraft have their preliminary meter fix
+   STAs computed in the order that they appear in the meter fix sequence
+   computed above. For each aircraft, the aircraft's meter fix STA is set
+   equal to the aircraft's nominal meter fix ETA. The aircraft's STA is
+   then increased (thus delaying the aircraft) so that the aircraft's STA
+   complies with all of the following scheduling constraints set by the
+   TMC.
+   TRACON Acceptance Rate
+
+     The maximum number of aircraft per hour that can be scheduled to
+     enter the TRACON.
+
+   Meter Fix Acceptance Rate
+
+     The maximum number of aircraft per hour that can be scheduled to
+     cross a meter fix. Each meter fix has its own meter fix acceptance
+     rate.
+
+   Gate Acceptance Rate
+
+     The maximum number of aircraft per hour that can be scheduled to
+     cross any of the meter fixes contained within a gate. Each gate has
+     its own gate acceptance rate.
+
+   Super Stream Class Miles In Trail Separation
+
+     Separation, in nautical miles, between aircraft as they cross the
+     meter fix. Each super stream class has its own miles in trail
+     restriction.
+
+   Meter Fix Blocked Intervals
+
+     Time intervals during which aircraft may not be scheduled to cross
+     the meter fix.
+
+   Note that an aircraft's meter fix STA will be computed to comply with
+   all of the scheduling constraints. This effectively means that the most
+   stringent constraint will have the greatest effect on an aircraft's
+   STA. However, which constraint is the most stringent one will vary from
+   aircraft to aircraft.
+
+   Next, aircraft have their runway STAs computed according to an ``order
+   of consideration.'' This order of consideration is based on the order
+   of preliminary meter fix STAs and the runway ETAs. The aircraft with
+   the earliest meter fix STA within each super stream class is examined.
+   From this set of aircraft, the aircraft with the earliest runway ETA is
+   considered for scheduling to the runway. A rigid sequence at the runway
+   is not possible because, under certain conditions, the runway sequence
+   may conflict with the meter fix sequence. The order of consideration
+   maintains the sequence at the meter fixes and gives preference to
+   aircraft with earlier runway ETAs when computing the runway STAs.
+
+   For each aircraft in the order of consideration, the STA is computed to
+   the runway such that the STA is no earlier than the sum of the meter
+   fix STA plus the TRACON transition time. The TRACON transition time is
+   the nominal time to fly from the meter fix to the runway if there were
+   no other aircraft in the airspace. This is computed according to:
+    TRACON Transition Time = (Runway ETA) - (Meter Fix ETA)
+
+   The aircraft's STA is increased, thus adding delay, as necessary to
+   comply with the following scheduling constraints. Airport Acceptance
+   Rate
+
+     The maximum number of aircraft per hour that can be scheduled to
+     land at a particular airport.
+
+   Runway Acceptance Rate
+
+     The maximum number of aircraft per hour that can be scheduled to
+     land on a particular runway.
+
+   Wake Vortex Separation
+
+     Separation, in nautical miles, between aircraft as they land. The
+     amount of separation varies depending on the engine type and weight
+     class of the two aircraft to be separated from each other.
+
+   Runway Occupancy Time
+
+     Additional time between arriving aircraft to account for various
+     stopping conditions and the amount of time required by a landed
+     aircraft to clear the runway.
+
+   Runway Blocked Intervals
+
+     Time intervals during which aircraft may not be scheduled to land.
+
+   These runway scheduling constraints are applied either at the runway
+   threshold or at the final approach fix (FAF) depending on the airport
+   configuration. For configurations associated with Instrument Flight
+   Rule (IFR) conditions, the scheduling constraints are applied at the
+   runway threshold. For configurations associated with Visual Flight Rule
+   (VFR) conditions, the scheduling constraints are applied at the final
+   approach fix. The other runway STA is computed by adding or subtracting
+   (as appropriate) the nominal flight time between the two points. For
+   example, under IFR, the STA at the runway threshold is computed to
+   comply with the scheduling constraints. The STA at the final approach
+   fix is then set to the runway threshold STA minus the nominal time to
+   fly from the final approach fix to the runway threshold.
+
+   Heavy traffic conditions and bad weather can contribute to delays
+   within the TRACON. The TRACON can absorb only so much of this delay.
+   Therefore, some of this delay must be fed back into the Center
+   airspace. An aircraft's delay at the runway is computed according to:
+    delay = (Runway STA) - [(Meter Fix STA) + (TRACON Transition Time)]
+
+   If this delay exceeds an amount preset for a particular TRACON, then
+   the excess delay is added to the aircraft's meter fix STA. This will
+   most likely delay other aircraft in the Center that are sequenced
+   behind this aircraft. Their meter fix STAs will be increased as
+   appropriate to meet all of the scheduling constraints while maintaining
+   their position in the sequence.
+
+   Finally, once the final meter fix, runway threshold, and final approach
+   fix STAs have been computed for all aircraft, the Outer Meter Arc (OMA)
+   STAs are computed. There are no scheduling constraints at the OMA.
+   Therefore, the OMA STA for each aircraft is computed according to:
+    OMA STA = (Meter Fix STA) - [(Meter Fix ETA) - (OMA ETA)] - AMDT,
+
+   where AMDT is the amount of delay to be absorbed in the low altitude
+   approach sector.
+
+  Runway Allocation Events
+
+   TMA will assign aircraft to runways which reduce the delay of all
+   aircraft in the system in a process known as Runway Allocation. From
+   the TMC's point of view, it is undesirable to have an aircraft switch
+   runways constantly even if this would continually optimize the
+   schedule. Therefore, only certain events trigger the runway allocation
+   process. Some of these events will cause an immediate runway
+   allocation. These immediate allocation events are as follows.
+     * Addition/deletion of a runway blocked interval
+     * Change in the acceptance rate of one or more runways
+     * Departure of an aircraft from an airport in Center
+     * Aircraft is about to have its STA frozen
+     * Change in an aircraft's priority status
+     * Aircraft has been reset
+     * Resumption of an aircraft that has been suspended from scheduling
+     * A flight plan is received which changes an aircraft's gate
+     * A flight plan is received which changes an aircraft's meter fix
+     * A flight plan is received which changes an aircraft's destination
+       airport
+     * Receipt of the initial set of flight plans when TMA is first
+       brought up
+     * Manual request by the TMC to reallocate one, some, or all aircraft
+
+   In addition, other events are placed in a pending list for later runway
+   allocation. Events in the pending list trigger a runway allocation when
+   an immediate runway allocation event is received. Pending runway
+   allocation events also trigger a runway allocation when a pending event
+   of a different type is received. The pending list is processed and
+   subsequently flushed. Pending runway allocation events are as follows.
+     * Change in the airport configuration of an aircraft
+     * Receipt of the first ETA for a new flight plan or newly active
+       aircraft
+
+  Runway Allocation
+
+   The schedules computed by TMA can be optimized by allocating runways to
+   aircraft to reduce delay. Although FAST will overrule any runway
+   assignments made by TMA, TMA's runway assignments and schedules ensure
+   that the Center schedules apply the right amount of pressure on the
+   TRACON so that the TRACON's scheduling constraints are met but not
+   exceeded.
+
+   The following describes TMA's allocation process in response to a given
+   event. The event may either be a current event that requires immediate
+   allocation, or an event that was taken from the pending list. (See
+   Runway Allocation Events.)
+   Determine which aircraft require allocation.
+
+     Which aircraft are involved depends on the time of the allocation
+     event, the type of event, and which runways have an increasing,
+     decreasing, or steady acceptance rate as a result of the event.
+
+     If the event changes the acceptance rate of one or more runways,
+     then the algorithm will allocate aircraft which were previously
+     assigned to runways which now have a decreasing acceptance rate. The
+     goal is to reduce overall delay by moving aircraft off of a runway
+     with a reduced capacity. In addition, the algorithm will try to
+     allocate aircraft from their previously assigned runways to runways
+     whose acceptance rates are increasing. The goal in this case is to
+     take advantage of a runway's increased capacity to reduce overall
+     delay.
+
+   CAPTION: Runway Allocation Example
+
+   Runway Acceptance Rate Before Event
+   (aircraft/hour) Acceptance Rate After Event Acceptance Rate Change
+   Considered for Allocation
+   A 54 aircraft/hour 36 aircraft/hour Decreasing Yes
+   B 27 aircraft/hour 36 aircraft/hour Increasing No
+   C 40 aircraft/hour 40 aircraft/hour Steady Yes
+
+     The table above shows an example where various runway acceptance
+     rates are changed as part of an allocation event. As a result of the
+     allocation event, Runway A has a decreasing acceptance rate, Runway
+     B has an increasing acceptance rate, and Runway C has an unchanged
+     acceptance rate. Aircraft assigned to Runway A are considered for
+     allocation since Runway A has a decreasing acceptance rate. At the
+     same time, aircraft assigned to Runway C are considered for
+     allocation because Runway B has an increasing acceptance rate.
+     However, aircraft on Runway B are not considered for allocation at
+     all since no other runway has an increasing acceptance rate.
+
+     The addition or deletion of of a runway blocked interval will
+     trigger a runway allocation. The algorithm treats adding a blocked
+     interval to a runway the same as decreasing the acceptance rate of
+     that runway. Similarly, the deletion of a runway blocked interval is
+     treated the same as increasing the acceptance rate of that runway.
+
+     Finally, there are some events which trigger runway allocation for a
+     single aircraft. For instance, when an aircraft is new to the system
+     and it's runway ETAs have just been computed, then an allocation
+     event is triggered for this aircraft. In this case, all available
+     runways are considered during the runway allocation of a single
+     aircraft.
+
+   Determine Allocation Mode.
+
+     The Allocation Mode is dependent on the event type. The mode directs
+     the allocation algorithm to follow specific rules when allocating
+     aircraft to runways.
+
+   For each aircraft, follow the site-specific allocation rules.
+
+     The first step is to determine the runway allocation category for
+     the current aircraft. The runway allocation category depends on the
+     aircraft's destination airport and the airport's configuration since
+     these two pieces of data indicate which runways are available. The
+     runway allocation category also depends on the aircraft's assigned
+     meter fix because some runways are favored more when the aircraft
+     crosses over one meter fix than when it crosses over another.
+     Finally, the runway allocation category depends on the aircraft's
+     engine type (jet, turbo-prop, or piston) and the runway allocation
+     mode determined in the previous step.
+
+     Once the runway allocation category has been determined, the
+     site-specific runway allocation rules corresponding to that category
+     are followed. These rules give the order in which each runway is
+     examined for the current aircraft. The aircraft is temporarily
+     assigned to the runway which the rules say should be examined next.
+     Subsequently, that aircraft and all aircraft following it are
+     rescheduled (see Scheduling). The STAs of all of these aircraft are
+     added together to arrive at the System Schedule Time. The allocation
+     rules specify how much this System Schedule Time must be better than
+     the System Schedule Time for the best runway trial-assignment seen
+     so far. If this runway assignment is sufficiently better than the
+     best seen so far, then this runway assignment becomes the best
+     assignment seen so far. Note that the amount by which the current
+     trial-runway assignment must be better allows the runway allocation
+     algorithm to favor some runways over others within a runway
+     allocation category. For instance, if it is determined that Runway X
+     should be favored over Runway Y, then the rules for the current
+     allocation category may specify that Runway Y may only be selected
+     over Runway X if the savings in System Schedule Time is over M
+     minutes.
+
+                     Runway Allocation Considerations D
+                                  Figure 2
+
+     The rules also specify which runways to consider for allocation.
+     This is particularly important in cases where the acceptance rates
+     of one or more runways have changed as a result of an allocation
+     event. Referring to Figure 2, the aircraft on Runway A will consider
+     both Runway B and Runway C for allocation because Runway A has a
+     decreasing acceptance rate. Also, the aircraft on Runway C will
+     consider Runway B because the acceptance rate of Runway B is
+     increasing.
+
+     The rules work in a similar manner for runway blocked intervals. In
+     this case, adding a runway blocked interval results in the same
+     allocation rules as when the acceptance rate of that runway is
+     decreasing. Also, removing a blocked interval has the same set of
+     rules as when the acceptance rate of that runway is increased.
+
+   Compute a schedule using the newly assigned runways.
+
+     A schedule is computed for the aircraft affected by the allocation
+     event (see Scheduling). During this scheduling process, the newly
+     assigned runways are used.
+
+   A Schedule message is sent out containing the STAs just computed.
+   Each aircraft's airport configuration is updated.
+
+     As a result of the allocation and reschedule, the aircraft may end
+     up on the other side of a configuration change event.
+
+   Flight plan amendments are sent to the other CTAS processes.
+
+     As a result of allocation and scheduling, the aircraft's airport
+     configuration and assigned runway may have changed. For those
+     aircraft that have changed, a flight plan is assembled and sent to
+     the other CTAS processes informing them of the change in
+     configuration, runway assignment, or both.
+
+   Go To Top
+     __________________________________________________________________
+
+Graphical User Interfaces
+
+   What follows is only a brief summary of TMA's graphical user interface.
+   More detailed information may be found in the TMA Procedures Summaries.
+
+   TMA provides a number graphical features that improve situational
+   awareness while accepting inputs from the controllers and TMCs. The
+   graphical features that improve situational awareness include
+   timelines, load graphs, planview displays, sequence lists, traffic
+   count overlays, aircraft watch windows, rush alerts, data degradation
+   alerts, and other text overlays. The TMCs and controllers can interact
+   with TMA through control panels, buttons, sliders, pop-up menus as well
+   as clicking and dragging various graphical entities on the displays.
+   These graphical features are displayed by the TGUI, PGUI, and, to a
+   limited extent, the CM.
+
+  Timelines
+
+   The timeline, a basic feature of TMA, improves situational awareness
+   and accepts input from controllers and TMCs. Full featured timelines, a
+   portion of one is shown in Figure 3, appear on the TGUI while partial
+   featured timelines appear on the PGUI (see Figure 4). Each timeline
+   displays its own time scale and reference point type. A reference point
+   type can be a meter fix, final approach fix or runway threshold. An
+   abbreviation below the timeline indicates the reference point type. For
+   example, the reference point type for the timeline shown in Figure 3 is
+   a meter fix as indicated by the green ``MF.'' The abbreviations below
+   this timeline also indicate that only aircraft assigned to any runway
+   and the meter fix ACTON (as indicated by ``AQ'') are displayed on this
+   timeline. The TMC can configure the timeline to display whichever
+   aircraft is desired. The bottom of the timeline represents the current
+   time, and each tick mark represents a minute after the hour. Timelines
+   also show the ETAs and STAs of arriving air traffic. The sample
+   timeline shown in Figure 3 displays the ETAs along the left side and
+   the STAs along the right side of the timeline.
+
+   CAPTION:
+
+                  TGUI Timeline D
+              Figure 3 - TGUI Timeline     PGUI Timeline D
+                                       Figure 4 - PGUI Timeline
+
+   Each aircraft is represented by an aircraft tag that contains the
+   airline company and the flight number. For example, the TMC can view
+   the timeline in Figure 3 and see that American Airlines flight number
+   652 (AAL652) has an ETA of almost 5 minutes after the hour and an STA
+   of almost 7 minutes after the hour. The green ``2'' next to the STA
+   indicates that TMA's scheduler has delayed this aircraft by 2 minutes
+   (rounded to the nearest minute) to meet certain scheduling constraints
+   entered by the TMC. The aircraft tags along the timelines convey
+   additional information. The symbol next to the flight number indicates
+   the wake vortex class of the aircraft. For example, DAL1991 is a heavy
+   aircraft, NTS172 is a small aircraft, EGF586 is a large aircraft, and
+   AAL652 is a Boeing 757 (a large aircraft creating a wake like a heavy).
+   The symbol for DAL1991 is orange indicating that CTAS has not received
+   any radar tracks for that aircraft, and TMA has computed the ETA and
+   STA using the filed flight plan of the aircraft. The color of each
+   aircraft tag is also significant. ETAs are displayed in green. Unfrozen
+   STAs are displayed in yellow while frozen STAs are displayed in
+   turquoise. A frozen STA means that the aircraft is close enough to the
+   meter fix that TMA's scheduler will not change that aircraft's STA
+   except in response to extraordinary events.
+
+   The TMC can also input information to the TMA via the timeline. When
+   the TMC clicks on an aircraft tag, a pop up menu (see Figure 5) allows
+   the TMC to select from a set of operations on that particular aircraft
+   or on that particular aircraft plus all aircraft following that
+   aircraft. Aircraft sequences and schedules can also be manually changed
+   by clicking and dragging the aircraft tag to the desired position in
+   the sequence or location on the timeline. In addition, blocked
+   intervals during which TMA's scheduler will not schedule any aircraft
+   can be indicated by dragging a line on the timeline. Additionally, a
+   TMC can create a blocked slot by clicking on a point on the timeline
+   and selecting, from the pop-up menu (see Figure 6), the aircraft type
+   (specified by wake vortex category and engine type) of the blocked
+   slot.
+
+   CAPTION:
+
+         TGUI Aircraft Dwell Menu D
+       Figure 5 - Aircraft Dwell Menu TGUI Timeline Menu screenshot D
+                                      Figure 6 - Timeline Menu
+
+  Overlays
+
+   An overlay feature is available to allow the TMC access to detailed
+   information about a particular aircraft. With this featured switched
+   on, the TMC can point to an aircraft tag, and a display (see Figure 7)
+   shows the aircraft's type, stream class, assigned meter fix and runway,
+   and various ETA and STA information. In the example shown in Figure 7,
+   DAL135 is a Boeing 767, its weight class is ``heavy'', it has been
+   assigned to the meter fix BUJ and the runway 18R, and its stream class
+   is DFW_BLUERIDGE_JETS. The various ETAs and STAs are also visible.
+
+                             Aircraft Overlay D
+                         Figure 7 - Aircraft Overlay
+
+   TMCs are often called upon to record the number aircraft that have
+   landed or crossed a meter fix during various intervals in time. TMA
+   assists with this process by displaying a Traffic Count Overlay.
+   Displayed on this overlay are the number of ETAs and STAs to the runway
+   threshold and the number of meter fix crossings during various time
+   intervals in the past, present, and future. Figure 8 shows an example
+   of this overlay where the current time is somewhere between 1700 and
+   1709. The time intervals are each 10 minutes in size, and the numbers
+   indicate the number of aircraft that have threshold ETAs, threshold
+   STAs, and have crossed the meter fixes (Fdg is an abbreviation for
+   Feeder Gate which is the same thing as a meter fix) in each 10 minute
+   interval.
+
+                     Traffic Count Overlay screenshot D
+                      Figure 8 - Traffic Count Overlay
+
+  Load Graphs
+
+   Another TMA feature that improves situational awareness is the Load
+   Graph. The Load Graph can be configured to show present and future
+   traffic flow to various reference points. The example shown in Figure 9
+   shows the traffic flow to the DFW airport. The vertical axis is the
+   number of aircraft in a 10 minute period while the horizontal axis
+   represents time in the future in a manner similar to the timelines. The
+   numbers on the horizontal axis represent the number of minutes after
+   the hour. The green line is based on ETA data, and it shows the
+   expected traffic demand in 10 minute periods. In this example, the
+   expected demand peaks at 33 aircraft in a 10 minute period (198
+   aircraft per hour). The red line shows the airport acceptance rate that
+   has been set in TMA by the TMC. In this example, the airport acceptance
+   rate has been set at 18 aircraft per 10 minute period (108 aircraft per
+   hour). The yellow line shows the planned arrivals to DFW as computed by
+   TMA's scheduling algorithms based on the desired airport acceptance
+   rate. In this example, we see that the scheduling algorithm has
+   scheduled aircraft so as to come as close as possible to the airport
+   acceptance rate without exceeding it. Far in the future, the demand
+   decreases, and hence the number of planned arrivals does not fully
+   subscribe the airport acceptance rate.
+
+                        TGUI Load Graph screenshot D
+                            Figure 9 - Load Graph
+
+  Rush Alert
+
+   Air traffic often arrives in bunches in a manner similar to rush hour
+   traffic on the roadways in any major city. In air traffic control
+   terms, this is called a ``Rush.'' TMA contains a graphical display
+   known as a Rush Alert that informs a TMC that such a rush has been
+   detected and when the rush will occur. The TMC can specify the interval
+   size in minutes and the number of aircraft within that interval size
+   which constitutes a rush. When the number of aircraft during any
+   interval of the specified size equals or exceeds this threshold level,
+   a pair of red brackets is displayed showing the earliest time when a
+   rush has been detected (see Figure 10).
+
+                           Rush Alert screenshot D
+                           Figure 10 - Rush Alert
+
+  Data Degradation Alert - ``Big Red X''
+
+   The TMA's TGUI can also detect when the data it expects from other CTAS
+   processes is missing or is incomplete. The TMC is alerted to this via a
+   large red ``X'' across the TGUI display. A dialog box is displayed
+   which indicates which pieces of data are missing. For example, in
+   Figure 11, the TGUI has detected that no scheduled times (STAs) have
+   been received for 3 minutes. It has also detected that ETA updates for
+   less than 80% (61% in this case) of the aircraft have been received.
+
+               Data Degradation Alert 'Big Red X' longdesc= D
+              Figure 11 - Data Degradation Alert ``Big Red X''
+
+  Panels
+
+   Figure 12 shows the panel used to enter an airport acceptance rate
+   change. In this example, the user is about to set the airport
+   acceptance rate for Dallas/Fort Worth to 108 aircraft per hour. The
+   user has indicated that the time of the acceptance rate change is 0010
+   Zulu. The airport acceptance rate panel is representative of the many
+   panels that allow the TMC to alter CTAS parameters to meet current and
+   future air traffic control needs.
+
+                        (F4) Flow Parameters panel D
+                   Figure 12 - TGUI Flow Parameters Panel
+
+  Planview Display
+
+   Figure 13 shows a portion of the PGUI. It shows the tracks, headings,
+   speeds, altitudes, and IDs of arriving traffic. In this example, the
+   traffic shown is arriving over the Bridgeport (BPR) meter fix at Fort
+   Worth ARTCC.
+
+               Screenshot showing aircraft tracks on a PGUI D
+                   Figure 13 - Aircraft Tracks on the PGUI
+
+  Sequence List
+
+   The PGUI can also display timelines as shown in Figure 4. This same
+   information can be displayed in text form in the sequence list (see
+   Figure 14). This overlay example shows the aircraft's ID, weight class,
+   CID, assigned meter fix, and its meter fix ETA and STA. Across the top
+   of the overlay is displayed the time of day, airport configuration, and
+   airport acceptance rate.
+
+                     Screenshot of PGUI Sequence List D
+                       Figure 14 - PGUI Sequence List
+
+  Watch Window
+
+   Figure 15 shows a watch window for a particular aircraft. A number of
+   watch windows for individual aircraft may be brought up on the CM.
+   Since CM serves as a central database for TMA, most of the information
+   about an aircraft may be viewed via CM's watch window. The watch window
+   shows the aircraft identification, type, and flight plan. It also shows
+   the current track information such as the flight level (FL), true
+   airspeed (TAS), heading, and area (Center or TRACON). The aircraft's
+   assigned gate, meter fix, runway and sectors are also shown. Near the
+   bottom are the various ETAs that CTAS has computed to various reference
+   points.
+
+                  Screenshot of CM Aircraft Watch Window D
+                    Figure 15 - CM Aircraft Watch Window
+
+   Go To Top
+     __________________________________________________________________
+
+Field Activities
+
+  TMA Operational Evaluations at ZFW & DFW
+
+    June 17-21, 1996
+
+   A full operational evaluation of the CTAS tool known as the Traffic
+   Management Advisor (TMA) was conducted for eleven rushes during the
+   week of June 17 - 21, 1996. In all evaluated rushes the TMA reduced
+   advisory delays from ZFW into DFW by at least 1 -2 minutes when
+   compared to ASP. The TMA advisory delays in three of the rushes
+   evaluated were on the order of 4 to 5 minutes less than ASP. Feedback
+   from the sector controllers indicates that not only were the advisory
+   delays reduced but also control delays reduced. This control delay
+   reduction is attributed to the decreased metering sector controller
+   workload when using the TMA generated crossing time and countdown delay
+   advisories. The overall feedback from this first week of evaluations is
+   that the TMA reduces advisory delays, control delays and has proved
+   that the delay benefits predicted by Dr. Heinz Erzberger are highly
+   conservative estimates. Feedback from the Traffic Management
+   Coordinators, sector controllers and ZFW and DFW Traffic Management
+   Officers is that the TMA system is significantly better than the
+   existing ASP tool and should be used regularly.
+
+   A brief synopsis of each TMA scheduled (metered) rush is as follows:
+
+   Monday, June 17, 1996, 8:30 p.m. rush
+          DFW was recovering from an airport shutdown due to thunderstorms
+          during the 6:30 PM rush. The thunderstorms were also in the area
+          and closed down the BUJ arrival gate. BUJ later reopened and the
+          SCY gate closed. The TMA was used to schedule and provide
+          controller advisories to meet a 96 airport rate requiring
+          approximately 12 minutes of delay. The rate was low because the
+          airport was experiencing approximately 1 hour ground delays.
+          During the post evaluation debrief the TMC lead congratulated
+          the TMA evaluation team stating that the ASP system is not
+          usable with a gate closed due to weather. Without TMA the TMU
+          would have resorted to an antiquated miles-in-trail plan to meet
+          the TRACON restrictions.
+
+   Tuesday, June 18, 1996, 6:30 p.m. rush
+          The 6:30 p.m. rush was a more nominal situation, the rate was
+          102 and ASP was advising 8 minutes maximum delay and the TMA a
+          maximum of 6 minutes. The TMA advised free-flow for the 8:30 PM
+          rush while ASP was advising 2-3 minutes of delay. The TMC lead
+          decided on TMA free-flow.
+
+   Wednesday, June 19, 1996, 9:00 a.m. rush
+          During the 9:00 a.m. rush, an extremely heavy east side rush was
+          evaluated. The TMA was advising 3-5 minutes of delay and ASP 5 -
+          7 minutes. The sector controllers did not follow their sector
+          advisory lists very closely (the controllers were sending
+          aircraft in 2 - 3 minutes early). The impact on the TRACON was
+          that they came very close to shutting off the Center over BUJ.
+          The positive feedback from the evaluation was that the TMCs had
+          the information real-time due to the fact that the delay
+          advisories will count up as well as count down. The ZFW TMC
+          evaluation team and CTAS NATCA representative plan to resolve
+          this issue through further education regarding the accuracy of
+          TMA advisories and how overall delays and workload are reduced
+          if the advisories are followed.
+
+   Wednesday, June 19, 1996, 11:30 a.m. rush
+          During the 11:30 rush (noon balloon), TMA required maximum
+          delays of 8-9 minutes and ASP (prior to its termination) 10 - 11
+          minutes. The TMC in-charge of the metering position commented
+          that without the TMA the Center would be in a NAPRS delay
+          reporting situation.
+
+   Thursday, June 20, 1996
+          The TMA was used operationally from 6:30 a.m. until 3:00 p.m.
+          for all rushes, and sector times were displayed for the 8:00
+          a.m., 9:00 a.m., 11:30 a.m., 1:00 p.m. and the 2:30 p.m. rushes.
+          In each rush the TMA delay advisories were 1-2 minutes less that
+          ASP and during the 2:30 p.m. rush ASP was advising 6-8 minute
+          delays while the TMA was advising only 1-3 minutes.
+
+   Friday, June 21, 1996, 9:00 a.m. rush
+          The TMA was used for the 9:00 a.m. rush prior to the NASA TMA
+          evaluation team departing for the weekend. For this rush the ASP
+          system was advising 6-8 minutes and the TMA was advising 2-4
+          minutes of delay.
+
+   Go To Top
+
+  TMA Operational Evaluations at ZFW & DFW
+
+    June 14, 1996
+
+   The CTAS tool known as the Traffic Management Advisor (TMA) was
+   operated in its full operational mode during the noon rush from the Ft.
+   Worth Air Route Traffic Control Center (ZFW) to the Dallas Ft. Worth
+   (DFW) TRACON on Friday June 14, 1996. The noon rush is often
+   characterized as an extremely heavy rush with typical delays of 5 - 10
+   minutes per aircraft. It is also considered to have heavy sector
+   controller workload due to the predominance of flights from the West
+   coast.
+
+   At 11:00 a.m. CDT the TMA Traffic Management Coordinator Lead advised
+   the Traffic Management Unit and the Traffic Management Officer of the
+   intention of the NASA/FAA TMA evaluation team to run the TMA as the
+   primary flow control and advisory system for ZFW. The TMC lead
+   coordinated with the DFW TRACON advising them of the fact that the TMA
+   was to be used operationally for the noon rush. The DFW TRACON gave ZFW
+   the approval and a DFW airport arrival rate of 108 (nominally the AAR
+   is 102). The CTAS NATCA Technology representative and TMC controller
+   coordinator advised ZFW's operational floor of the use of TMA for the
+   noon rush. The NASA TMA engineering team placed the appropriate
+   configurations and settings into the TMA as per instructions by the TMC
+   lead. After observing the TMA and ASP system for a few minutes the
+   decision was made to run the TMA operationally instead of ASP. The
+   delays indicated by the TMA were on the order of 2-3 minutes and 3-4
+   minutes for ASP. At 11:15 the TMA sector advisories were transmitted to
+   the sector Plan View Displays (PVDs). The sector controllers were
+   advised to start using the TMA generated advisories at 11:25 for the
+   high altitude controllers and 11:33 for the low. The CTAS NATCA
+   representative took the initiative to coordinate and advise his
+   counterpart at DFW TRACON as well as coordinating throughout the
+   operational floor at ZFW.
+
+   The evaluation was successfully conducted from 11:25 until 12:05 CDT
+   when the last aircraft in the rush was placed into the TMA sequence.
+   The feedback from the ZFW floor, as reported by the CTAS NATCA
+   representative, was once the controllers had sequenced the aircraft,
+   the vast majority of the TMA sequences and crossing advisories fell
+   right into place. The CTAS TMC lead indicated that the decision to
+   issue the TMA advisories was based upon the information from the TMA
+   and that for this situation it could have gone either way. The DFW
+   TRACON indicated that the flow supplied from ZFW was workable. Once the
+   evaluation was completed at 12:05 a return to normal ZFW operations was
+   initiated with the normal post noon demand drop-off. The initial data
+   analysis indicated that the airlines were saved one to two minutes per
+   aircraft.
+
+   The TMA first operational evaluation is considered an unqualified
+   success by the NASA/FAA evaluation team.
+
+   See list of TMA papers.
+
+   Go To Top
+     __________________________________________________________________
+
+   This page was last updated on 08/14/01.
+   Webmaster: Gregory L. Wong
+   Responsible Official: Dr. Dallas Denery - Deputy Division Chief for Air
+   Traffic Management
+
+   See the NASA privacy statement.
+
+   To request information on this web site in a Section 508 accessible
+   format, please contact access@mail.arc.nasa.gov.

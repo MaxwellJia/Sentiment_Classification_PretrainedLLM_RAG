@@ -1,0 +1,1469 @@
+http://eitv2.nascom.nasa.gov/ar7986_paper.ps
+
+   The Astrophysical Journal, To be submitted, Version 1998 May 5
+   3D-Stereoscopic Analysis of Solar Active Region Loops: I. SoHO/EIT
+   Observations at Temperatures of 1.0-1.5 MK Markus J. Aschwanden
+   Department of Astronomy, University of Maryland, College Park, MD
+   20742, USA; e-mail: markus@astro.umd.edu Jeffrey S. Newmark Space
+   Applications Corp., Vienna, VA 22180 Jean-Pierre Delaboudini`ere
+   Institute d'Astrophysique Spatiale, Universit'e Paris XI, 91405 Orsay
+   Cedex, France Werner M. Neupert Hughes SXT Corp., Lanham, MD 20706 J.
+   A. Klimchuk Space Science Division, Code 7675, Naval Research
+   Laboratory, Washington, DC 20375-5352 G. Allen Gary ES82-Solar Physics
+   Branch, Space Science Laboratory, NASA/MSFC, Huntsville, AL 35812
+   Fabrice Portier-Fozzani Laboratoire d'Astronomie Spatiale, CNRS, BP 8,
+   13376 Marseille Cedex 12, France and Arik Zucker ETH, Inst.Astronomy,
+   H"aldeliweg 15, CH-8092 Zurich, Switzerland ABSTRACT The
+   three-dimensional (3D) structure of solar active region NOAA 7986
+   observed on 1996 August 30 with the Extrem-ultraviolet Imaging
+   Telescope (EIT) onboard the Solar and Heliospheric Observatory (SoHO)
+   is analyzed. We develop a new method of Dynamic Stereoscopy to
+   reconstruct the 3D geometry of dynamically changing loops, which allows
+   us to determine the orientation of the loop plane with respect to the
+   line-of-sight, a prerequisite to correct properly for projection
+   effects in 3D loop models. With this method and the filter-ratio
+   technique applied to EIT 171 *A and 195 *A images we determine the 3D
+   coordinates [x(s); y(s); z(s)], the loop width w(s), the electron
+   density ne(s), and the electron temperature Te(s) as function of the
+   loop length s for 30 loop segments. Fitting the loop densities with an
+   exponential density model ne(h) we find that the mean of inferred scale
+   height temperatures, T *e = 1:22 \Sigma 0:23 MK, matches closely that
+   of EIT filter-ratio temperatures, T EITe = 1:21 \Sigma 0:06 MK. We
+   conclude that these cool and rather large-scale loops (with heights of
+   h ss 30 \Gamma 225 Mm) are in hydrostatic equilibrium. Most of the
+   loops show no significant thickness variation w(s), but we can measure
+   for most of them a positive temperature gradient (dT =ds ? 0) across
+   the first scale height above the footpoint. Based on these temperature
+   gradients we find that the - 2 - conductive loss rate is about two
+   orders of magnitude smaller than the radiative loss rate, which is in
+   strong contrast to hot active region loops seen in SXR. We infer a mean
+   radiative loss time of o/rad ss 40 minutes. For steady state models,
+   the heating rate has to balance the radiative loss, i.e. the heating
+   rate has to scale with the squared density (EH / n2e). No correlation
+   between the heating rate EH and the magnetic field B is found. The
+   potential field model (computed from MDI magnetograms) is found to
+   represent well the coronal magnetic field traced out by EIT loops. The
+   thermal pressure is found to be smaller than the magnetic pressure
+   everywhere in the EIT loops. The Alfv'en velocity is highest near the
+   loop footpoints (vA ss 2000 \Gamma 6000 km s\Gamma 1) and reaches
+   asymptotic values (vA ss 500 \Gamma 1000 km s\Gamma 1) in the upper
+   parts of the loops. Subject headings: Sun: corona -- Sun : active
+   regions -- Sun: EUV -- Techniques: 3D stereoscopy 1. INTRODUCTION The
+   evolution of coronal plasma loops, beginning from the well-kept secret
+   of the elusive heating mechanism, to the somewhat better understood
+   conductive and radiative cooling processes, and the various transitions
+   from steady-state to non-equilibrium states, still represents a key
+   problem of coronal plasma physics. Because the average temperature of
+   the solar corona ranges around Te ss 1:5 MK, this temperature seems to
+   reflect the most likely steady-state condition of coronal structures,
+   demarcating at the same time a watershed where cooling and heating
+   processes start to lose equilibrium. It is therefore a physically
+   meaningful choice to distinguish between cool and hot loops with
+   respect to this maximum likelyhood temperature Te ss 1:5 MK, which also
+   separates roughly the line formation temperatures in the EUV/XUV and
+   SXR wavelength regimes. Coronal loops in EUV/XUV wavelengths could only
+   be studied with few instruments, mainly from the two spacecraft
+   missions SKYLAB and SoHO, and from a few short-duration rocket flights
+   (e.g. AS&E, HRTS, or SERTS). The scarce EUV observations before the
+   launch of SoHO provided little systematic information on the physical
+   structure of cooler active region loops in the temperature regime of Te
+   !, 1:5 MK, opposed to the much more frequently studied hotter loops (Te
+   ?, 1:5 MK) in soft X-rays (with OSO-8, P78-1, Hinotori, SMM/XRP,
+   Yohkoh/SXT, Coronas, SoHO/EIT and CDS, etc.). A number of statistical
+   studies exist on hot active region loops observed in SXRs (e.g.
+   Pallavicini, Serio, & Vaiana 1977; Rosner, Tucker, & Vaiana 1978;
+   Porter & Klimchuk 1995; Klimchuk & Gary 1995; Kano & Tsuneta 1995,
+   1996), but there is no comparable statistics available on cooler active
+   region loops observed at temperatures of Te = 1:0 \Gamma 1:5 MK in EUV.
+   Moreover, not much effort has been invested in the 3-dimensional
+   reconstruction of coronal loops at any wavelength so far (although the
+   technology is ready, see e.g. Gary 1997). This study represents a first
+   comprehensive statistical study on physical parameters of cool active
+   region loops in the Te = 1:0 \Gamma 1:5 MK temperature range, measured
+   with unprecedented accuracy using a newly developed 3-dimensional
+   reconstruction method called Dynamic Stereoscopy. Let us shortly review
+   some highlights of earlier work on EUV loops in the Te ss 1:0 \Gamma
+   1:5 MK temperature range. A comprehensive account on literature before
+   1991 can be found in Bray et al. (1991). The Skylab XUV
+   spectroheliograph provided images with 2"-3" resolution at wavelengths
+   of 180-630 *A , including the Mg IX line with a formation temperature
+   of Te = 0:9 MK. Dere (1982) analyzed such XUV loops and found (1) that
+   they are close to hydrostatic equilibrium (within the uncertainties of
+   the unknown 3D geometry) and (2) that hot (Te ? 1 MK) loops do not have
+   a cool core structure as suggested by Foukal - 3 - (1975). Sheeley
+   (1980) studied the temporal variability of EUV loops and found
+   lifetimes of ss 1:5 hours for 1 MK loops, somewhat longer than those of
+   0.5 MK loops. This lifetime of 1 MK loops, estimated by Sheeley from
+   time-lapse movies, is actually close to the value we infer for the
+   radiative cooling time from SoHO/EIT data. Observations with SERTS
+   revealed that the brightest structures seen in Mg IX are not spatially
+   coincident with hotter coronal loops seen in SXR, but are rooted in
+   chromospheric He II features, and thus seem to trace out cooler coronal
+   loops with apex temperatures of Te !, 1 MK (Brosius et al. 1997). The
+   existence of numerous cooler loops has also been postulated from the
+   observed discrepancy between SXR-inferred temperatures of active
+   regions and simultaneous radio brightness temperature measurements,
+   because the former include only the contributions from hot loops, while
+   the latter are sensitive to the combined free-free opacity of both hot
+   and cool loops (Webb et al. 1987; Nitta et al. 1991; Schmelz et al.
+   1992, 1994; Brosius et al. 1992; Klimchuk & Gary 1995; Vourlidas &
+   Bastian 1996). The most recent work on EUV loops comes from SoHO/EIT
+   (Neupert et al. 1998; Aschwanden et al. 1998a,b) and SoHO/CDS (Fludra
+   et al. 1997; Brekke et al. 1997). Neupert et al. (1998) analyzed a
+   long-lived loop structure and an open-field radial feature and found
+   (1) that they are close to hydrostatic equilibrium (within the
+   uncertainties of the unknown 3D geometry), and (2) that radiative
+   energy loss strongly dominates conductive energy loss at these loop
+   temperatures of Te = 1:0 \Gamma 1:5 MK, requiring a heating function
+   that scales with the squared density, EH / n2e. The temporal
+   variability and lifetime of EUV loops can now best be studied from
+   SoHO/EIT movies (Newmark et al. 1997). What progress can we expect from
+   a new analysis of active region loops, using the most recent EUV data
+   available from SoHO/EIT? To accomplish sensible tests of theoretical
+   models on heating and cooling processes, accurate physical parameters
+   from resolved single loops are needed. However, most of previous
+   literature deals with line-of-sight averaged quantities without
+   discriminating between single loops. For a proper determination of
+   physical parameters from single active region loops, a number of
+   analysis problems have to be overcome:\Gamma geometric loop
+   definition,\Gamma identification and tracing of loops in images,\Gamma
+   disentangling of nested loops,\Gamma separation of overlying or
+   closely-spaced loops,\Gamma discrimination of mulitple loops along the
+   line-of-sight,\Gamma 3-dimensional reconstruction of loop geometry and
+   de-projection,\Gamma temperature discrimination along the
+   line-of-sight,\Gamma reliable temperature and emission-measure
+   determination. Most of these problems have not been treated in a
+   systematic way in previous studies. Here we present the results of a
+   new approach, making use of the principle of dynamic stereoscopy to
+   reconstruct the 3-dimensional orientation of loops, which provides a
+   reliable method to obtain more accurate physical parameters as function
+   of the loop length, which can be used to test theoretical loop models
+   and coronal heating models. Future studies with the same method are
+   planned for hotter loops (using SoHO/EIT, CDS, and Yohkoh/SXT data). In
+   Section 2 we describe the stereoscopic data analysis of 30 loops
+   observed with SoHO/EIT at a wavelength of 175 *A . In Section 3 we
+   apply physical loop models to the data and investigate loop scaling
+   laws. A summary and conclusions are given in Section 4. - 4 - 2.
+   STEREOSCOPIC DATA ANALYSIS 2.1. Data Set The investigated active region
+   is a long-lived coronal structure that was present during several solar
+   rotations, from its apparition in July 1996 until its disappearance in
+   September 1996 (Hudson et al. 1998; Harvey & Hudson 1998;
+   Portier-Fozzani et al.1998), numbered as NOAA 7978, 7981, 7986 during
+   consecutive rotations. We concentrate here on the central meridian
+   transit on 1996 Aug 30, when the dipolar magnetic field structure
+   offered the most favorable perspective to disentangle the "jungle" of
+   nested loops. An Fe IX/X image recorded with SOHO/EIT (Delaboudini`ere
+   et al. 1995) at a wavelength of 171 *A on 1996-Aug-30, 0020:14 UT, is
+   shown in Fig.1 (top). For stereoscopic correlations we will use also
+   EIT images from the previous (1996-Aug-29, 0015:15 UT) and following
+   day (1996-Aug-31, 0010:14 UT). The multi-loop structure of this active
+   region is clearer visible in the high-pass filtered rendering shown in
+   Fig.1 (bottom) The filtered image is simply created by subtracting a
+   smoothed image (with a boxcar average over 3 \Theta 3 pixels) from the
+   original image. The original (full disk) image has a pixel size of
+   2.616" and was recorded with an exposure time of 3.5 s. The absolute
+   coordinate system of the full-disk image was established by fitting a
+   circle to the solar limb (at 30 limb positions). The accuracy of the
+   so-defined Sun center position is estimated to be oex ss 1 pixel=p30 ss
+   0:2 pixel. The offset of the Sun center position (x00; y00) provided
+   (by an automatic limb fitting routine) in the FITS header of the
+   archive EIT image with respect to our value (x0; y0) is found to be
+   (x00 \Gamma x0) = +0:5 and (y00 \Gamma y0) = \Gamma 3:9 pixels. For the
+   solar radius we find a difference of (r00 \Gamma r0) = \Gamma 1:2
+   pixels. The EIT pixel size of \Delta x = 2:616" is corrected for
+   spacecraft orbit (by a factor of 1:01) and the chromospheric height of
+   the limb (by a factor of 1:0036). 2.2. Dynamic Stereoscopy Method In
+   order to analyze the 3-dimensional structure of coronal loops we
+   develop a new technique we might call "Dynamic Stereoscopy", opposed to
+   "Static Stereoscopy", where the solar rotation is used to vary the
+   aspect angle of otherwise static structures (e.g. Loughhead, Chen &
+   Wang 1984; Berton & Sakurai 1985; Aschwanden & Bastian 1994a,b; Davila
+   1994; Aschwanden et al. 1995; Aschwanden 1995). The innovative feature
+   of this new technique is that spatial structures, e.g. coronal loops,
+   are allowed to evolve dynamically during the time interval over which
+   the stereoscopic correlation is performed. In the Dynamic Stereoscopy
+   method we take advantage of the fact that the global magnetic field is
+   slowly evolving (say during a day) compared with heating and cooling
+   processes in coronal loops. Consequently, the coronal magnetic field
+   B(x; t) can be considered as invariant over short time scales, while
+   the confined plasma can flow through "magnetic conduits" in a highly
+   dynamic manner. If a specific coronal fluxtube following a field line
+   B(x; t1) is loaded with bright plasma at time t1, the same fluxtube may
+   be cooled down at time t2 (say a day later) and invisible at the same
+   observed wavelength, while heating may occur in an adjacent fluxtube
+   B(x + \Delta x; t2), which was dark at time t1 and appears now bright
+   at time t2. For adjacent fluxtubes, the two field lines B(x) and B(x +
+   \Delta x) will run almost parallel, a property we will exploit in our
+   dynamic stereoscopy method. Our method is applicable to coronal
+   structures that meet the following two conditions: 1. The global
+   magnetic vector field B(x; t) is static (or slowly-varying) during the
+   time interval over - 5 - which stereoscopic correlations are performed
+   (typically 1 day). The magnetic field can be traced out by
+   optically-thin emission (e.g. in soft X-ray or EUV wavelengths). 2. At
+   least one footpoint of an observed coronal loop is identifiable, which
+   can be used as a reference level of the altitude. For EUV emission we
+   assume that the altitude of a loop footpoint is located in the lower
+   corona above the chromosphere, at an altitude of hfoot ss 2500 km above
+   the photosphere. We outline briefly the numerical procedure of our
+   implementation of the dynamic stereoscopy method, while the
+   mathematical coordinate transformations are given in Appendix A. The
+   projected geometry of a loop segment in an image at time t1 is traced
+   out by a series of image coordinates (xi; yi); i = 1; :::; n, starting
+   at footpoint position (x1; y1), assumed to be anchored at height hfoot
+   (Fig.2). Two additional variables to characterize the 3D geometry of
+   the loop segment are the azimuth angle ff of the footpoint baseline,
+   and the inclination angle # of the mean loop plane (intersecting the
+   footpoint baseline, see Fig.2). The procedure of stereoscopic
+   correlation (illustrated in Fig.3) includes the following steps: 1.
+   Measuring of positions (xi; yi); i = 1; :::; nj by tracing a loop
+   segment in an image recorded at time t1, starting with the primary
+   footpoint at (x1; y1). 2. Estimating the position of the secondary
+   footpoint (xF2; yF2) to obtain the azimuth angle ff of the footpoint
+   baseline. If the full length of the loop can be traced, the secondary
+   footpoint is just given by the last point xn; yn, and the tangens of
+   the azimuth angle ff corresponds to the ratio of the latitude (bF2
+   \Gamma bF1) and longitude difference (lF2 \Gamma lF1 ) of the two
+   footpoints, i.e. tan(ff) = (bF 2 \Gamma bF1) (lF2 \Gamma lF1) : (1)
+   However, most of the loops analyzed here extend over several density
+   scale heights, so that only a segment above the primary footpoint can
+   be traced out, while the location of the secondary footpoint has to be
+   estimated based on the general dipole characteristic of the ambient
+   magnetic topology. We repeat the localization of the secondary
+   footpoint 5 times and obtain from these estimates ffj; j = 1; :::; 5 a
+   mean and standard deviation ff \Sigma dff. 3. The loop positions (xi;
+   yi) measured in the image at time t1 are then transformed into
+   heliographic longitude and latitude coordinates (lij; bij) and
+   altitudes (hij), based on the azimuth angle ff of the footpoint
+   baseline and the variable inclination angle #j, which is varied over a
+   range of\Gamma 900 ! #j ! +900 in increments of \Delta # = 10. 4. The
+   heliographic coordinate lij(t1) is then transformed to the time t2 of
+   the second stereoscopic pair image, l0ij(t2), using the solar
+   differential rotation rate applied to the time interval (t2 \Gamma t1).
+   We use the differential rotation rate specified by Allen (1973), l0(t2)
+   = l(t1) + [13:450 + 30 sin2(B)] (t2 \Gamma t1)1 day : (2) The
+   heliographic latitude bij and altitude hij are assumed to be constant
+   during the considered time interval. 5. In the stereoscopic pair image
+   at time t2 we calculate the image coordinates (x0ij; y0ij) of the
+   projected loop structure. Parallel to these loop curves (with typical
+   lengths of ns = 50 \Gamma 200 pixels) we extract image stripes of some
+   width (nw = 16 pixels) by interpolating the image brightness F (x; y)
+   at the positions of the curved coordinate grid. - 6 - 6. The stretched
+   2D image stripes (ns \Theta nw pixels) are then scanned for parallel
+   brightness ridges, caused by "dynamic" structures that are co-aligned
+   (or parallel-displaced) to the loop projection in image t2 (for
+   illustration see examples shown in lower panels of Fig.3). This
+   scanning process is numerically performed by measuring the total length
+   L(#k) of coaligned brightness ridges that are detected in each stripe k
+   associated with each angle #j. The maximum of this quantity
+   (max[L(#k)]) is used to infer the most likely value of the inclination
+   angle # of the loop plane. 7. The same procedure is repeated in forward
+   and backward direction in time. The mean and standard deviation of #
+   \Sigma d# is determined by averaging the two stereoscopic solutions
+   (\Sigma 1 day). The independent stereoscopic correlation in forward (+1
+   day) and backward (\Gamma 1 day) direction provides a useful redundancy
+   of the solution. The time difference of \Sigma 1 day corresponds to an
+   aspect angle change of\Sigma 13:50. Except for steps 1-2, which
+   constitute the definition of a selected loop feature, all other steps
+   (3-7) of the stereoscopic correlation are performed automatically by a
+   numeric code without human interaction. The determination of the loop
+   inclination angle # is therefore achieved in a most objective way,
+   within the principle of dynamic stereoscopy. 2.3. Loop Geometry With
+   the dynamic stereoscopy method described above we analyzed the
+   3-dimensional (3D) coordinates of 30 loops from the EIT 171 *A image on
+   1996-Aug-30 (Fig.4, middle column). The true 3D geometry of (the
+   central axis) of a coronal loop can be characterized with three
+   orthogonal spatial coordinates [x(si); y(si); z(si)]; i = 1; :::; n,
+   parametrized by the loop length parameter si. When we trace a loop
+   structure in an image (see Fig.4, panels in middle column), we can
+   accurately measure the two coordinates [x(si); y(si)], without imposing
+   any geometric constraint on its shape, opposed to a method that fits a
+   predefined geometric model (e.g. a circular geometry or its elliptic
+   projection). We impose only some constraints on the third coordinate
+   z(si), namely assuming that the loop segment is confined into a plane,
+   whose orientation we quantify with two free parameters (Fig.2): with
+   the azimuth angle ff (of the loop footpoint baseline) and the
+   stereoscopically measured inclination angle # (with respect to the
+   vertical). One additional constraint is also introduced by the
+   reference level h(s1) of the first footpoint position, assumed to be
+   located at a fixed height of h(s1) = hfoot ss 2:5 Mm. Some geometric
+   elements of the analyzed 30 loops are listed in Table 1: the
+   heliographic longitude (l1) and latitude (b1) position of the primary
+   footpoint [x(s1); y(s1); h(s1) = hfoot], the azimuth angle ff of the
+   footpoint baseline measured at the primary footpoint, and the
+   inclination angle # of the loop plane. The average heliographic
+   position of the 30 loop footpoints is ! lF1 ?= 251:00; ! bF1 ?= \Gamma
+   11:80, which is slightly southward of the Sun center position at this
+   time, l0 = 255:80, b0 = 7:20. The average azimuth angle (modulo 1800)
+   of the 30 loop footpoint baselines is ff = \Gamma 30 \Sigma 100, which
+   represents the global orientation of the large-scale dipolar magnetic
+   field that dominates the active region, that was used as a guide to
+   estimate the azimuth angle of the footpoint baseline for individual
+   loop segments. The only complete loop that could be traced out (without
+   gaps between the footpoints) is Loop #1, which has an azimuth angle of
+   ff = 150 \Sigma 10. The inclination angles # of the loop planes cover a
+   large range from # = \Gamma 560 to # = +690, having an average of ! #
+   ?= 70 \Sigma 370. The southern loops (Loops #1-11, 23-30) show all an
+   inclination toward south (with # negative if the primary footpoint is
+   to the East), while the northern loops (Loops #12-22) - 7 - show a
+   systematic inclination toward North (with # positive if the primary
+   footpoint is to the East). This fan-shaped divergence of loop planes is
+   consistent with the overall magnetic dipolar field, having the dipole
+   axis aligned to the East-West direction. We visualize the 3D structure
+   of the stereoscopically reconstructed 30 loops in Fig.5, where
+   different perspectives and viewing angles are displayed. The traced
+   segments (Fig.4) of the reconstructed loops are marked with thick lines
+   in Fig.5, while the thin lines represent circular segments in the loop
+   plane, constrained by the two footpoints and the endpoint of the traced
+   segment. We rotated these reconstructed 30 loops by -7.2 days to the
+   East (Fig.5 bottom left), in order to illustrate the distribution of
+   inclination angles. The group of loops that are inclined to the South
+   in our EIT image of 1996-Aug-30, are also found to have a similar
+   configuration (with similar loop heights and loop plane inclinations)
+   in an EIT image observed 7.2 days earlier, when this active region
+   crossed the East limb (Fig.5 top left). 2.4. Loop Background
+   Subtraction We parametrize the positions of the traced loop segments
+   from the image coordinates [x(si); y(si)] as function of the
+   (projected) loop length parameter si, by interpolating the coordinates
+   with a constant resolution of \Delta si = si+1 \Gamma si = 1 pixel in
+   the image plane. These positions mark the central axes of the analyzed
+   loops. For single-loop analysis it is convenient to introduce a
+   coordinate grid [si; tj] that is stretched out along the loop axis,
+   with tj a coordinate orthogonal to the loop axis. The projections
+   [x(si; tj); y(si; tj)] of these curved coordinate grids are shown in
+   Fig.6 (top right panel). We parametrized both coordinates [si; tj] with
+   a uniform resolution of 1 pixel, and have chosen a width of 16 pixels
+   for the width of the stripes (tj), symmetrically bracketing the central
+   loop axis. We show the flux F (tj) as function of the loop
+   cross-section tj for each loop (#1\Gamma 30), and for each position si
+   along the central loop axis with an incremental step of \Delta si = 1
+   pixel in Fig.6, measured from the EIT 171 *A image of 1996-Aug-30. In a
+   next step we attempt to separate the loop-associated fluxes from the
+   loop-unrelated background. This is a very crucial step to determine the
+   correct emission measure and electron density in a given loop. This
+   task is difficult because most of the loops are very closely spaced and
+   separated only by a few pixels at their primary footpoint (see Fig.6).
+   Very few loops occur in an isolated environment (e.g. such as loop #25,
+   see Figs.4-6). For many cross-sections there is not enough separation
+   between adjacent loops to model the loop-unrelated background properly.
+   The fact that the flux-unrelated background makes up typically 50-90%
+   of the total EUV flux measured at a given line-of-sight (see Fig.7),
+   indicates that we can separate out only a fraction of super-imposed and
+   nested loops, like the top-most elements on the topological surface of
+   a "strang of spaghettis". We tested various methods and found the
+   following to be least susceptible to confusion by adjacent loops. We
+   calculated the background profile FB(tj) to the observed flux F (tj) by
+   cubic spline interpolation between various cross-section intervals [t1;
+   t2], which were varied over a range of t0 \Gamma t1 = 1:::4 and t2
+   \Gamma t0 = 1:::4 pixels (or 2-7 Mm for the half width of the loop
+   cross-section) on both sides of the central loop axis (at t0). From the
+   varied loop boundaries [t1; t2] those were used for the background
+   envelope that maximize the flux of the loop cross-section, i.e. which
+   yield the maximum ofR [F (tj) \Gamma FB(tj)]dtj. This method has the
+   advantage to adjust for loop thickness variations, for offsets in
+   tracing of the central axis, and for co-alignment errors between the
+   171 and 195 *A image in the use of the filter-ratio technique. The
+   so-determined loop-associated fluxes are shown with grey areas for each
+   cross-section F (tj)js=si in Fig.6. The results show that the allowed
+   loop half-width range of \Sigma 1 \Gamma 4 pixels separates most of the
+   loops reasonably, except for occasional double loop detections near the
+   primary footpoint. Such loop segments where the loop separation fails
+   will be excluded in further analysis. - 8 - 2.5. Loop Cross-Sections We
+   measured the loop width w(s) as function of the loop length parameter
+   s, using the definition of the equivalent width w(s), w(s) = R F (s;
+   tj) \Gamma FB(s; tj) dtjmax[F (s; t j) \Gamma FB(s; tj)] : (3) These
+   loop widths w(s) are shown as function of the loop length s in Fig. 8
+   for the 10 loops that are least confused by adjacent loops, as it can
+   be judged from the cross-sections F (tj)js=si shown in Fig.6 (Loop #1,
+   8, 11, 14, 15, 19, 20, 21, 25, 28). Performing a linear regression fit
+   to the observed values w(s) we find a significant variation of the loop
+   thickness only for two of them (Loop #20 and 28). To quantify the
+   variation of the loop thickness we calculated a loop divergence factor,
+   defined by the average width in the upper part (smax=2 ! s ! smax) to
+   the lower part (0 ! s ! smax=2) of the traced loop segment. We remind
+   that the traced loop segments generally extend over about one density
+   scale height, but do often not reach the loop top (except for the
+   smallest loop, #1). The loop divergence factors and their uncertainties
+   are shown in Fig.8 (bottom right panel) for each loop. We caution that
+   some of the loop thickness variation near the footpoints is due to
+   separation problems of closely-spaced adjacent loops (as it can be
+   judged from Fig.6). A histogram of average loop widths is shown in
+   Fig.8 (top right panel), while the individual values w and their mean
+   and standard deviation (w = 7100 \Sigma 800 km) are also listed in
+   Table 1. The preference for such a narrow range of loop diameters is
+   perhaps an instrumental resolution bias, because the finest
+   recognizable structures are most likely to be seen at a scale
+   corresponding to the size of a few pixels. 2.6. Loop Densities and
+   Scale Heights For electron density and temperature diagnostics we are
+   using a filter ratio technique applied to the EIT 171 *A and 195 *A
+   wavelength images, based on the most recent EIT standard software
+   (status of February 1989). The resulting emission measures EM and
+   temperatures T EITe are based on the calculation of synthetic spectra
+   using the CHIANTI data base, containing some 1400 emission lines in the
+   150-400 *A wavelength range (Dere et al. 1997). For details of the EIT
+   calibration the reader is referred to Delaboudini`ere et al. (1995),
+   Moses et al. (1997), and Neupert et al. (1998). Further
+   cross-calibrations of the EIT instrument with NRL rocket flights
+   carrying an EIT duplicate instrument are in progress (led by Dan
+   Moses). To determine the electron density ne(s) along individual loops,
+   we use the background-subtracted EIT fluxes Floop(s) = F (s) \Gamma
+   FB(s) in the filter ratios and the loop widths w(s). An additional
+   important loop parameter is the line-of-sight angle (s), which provides
+   a correction factor of the effective column depth for a loop with
+   circular cross-section specified by a diameter w(s), i.e. wz(s) = w(s)=
+   cos[(s)] (see Appendix B). With this parametrization we define the
+   density ne(s) along a loop (normalized to a filling factor of unity) by
+   ne(s) = sEM (s)w z(s) = s EM (s) cos[(s)] w(s) ; (4) with the loop
+   length s(x; y) parametrized as a function of the image position (x; y),
+   from where the EIT emission measure EM (x; y) is measured. Because the
+   line-of-sight angle (s) is very sensitive to the loop orientation,
+   correct values of the electron density ne(s) can only be obtained from
+   an appropriate 3D model of the loop (constrained by stereoscopic
+   correlations here). The projection effect of the loop curvature on - 9
+   - the effective column depth wz(s), and the effect of the inclination
+   angle # of the loop plane on the inferred density scale height *(#) are
+   illustrated in Fig.9 (see also discussion in Alexander & Katsev 1996).
+   The electron density ne(s) calculated from Eq.4 is shown graphically
+   for the 10 least-confused loops (# 1,8,11,14,15,19,20,21,25,28) in
+   Fig.10 (left panels). Because the height dependence s(h) of the loop
+   length is known from our stereoscopic reconstruction (displayed in
+   Fig.5), we can directly obtain the parametrization ne[s(h)] 7! ne(h)
+   and fit an exponential density model, ne(h) = ne0 exp(\Gamma h*(T e) )
+   (5) to obtain a scale-height temperature T *e , which is defined by
+   (e.g. Lang 1980, p.285) *(Te) = kBTe_ m H g ss 46( Te 1M K ) [Mm] ; (6)
+   with kB the Boltzmann constant, _ the mean molecular weight (_ ss 1:4
+   for the solar corona), mH the mass of the hydrogen atom, and g the
+   acceleration of gravity at the solar surface. The so obtained scale
+   height *, with a mean of * = 55 \Sigma 10 Mm, and the inferred scale
+   height temperature T *e , with a mean of T *e = 1:22 \Sigma 0:23, are
+   listed in Tables 1 and 2 for each of the analyzed 30 loops. Loop
+   segment ranges that are obviously confused by adjacent or crossing
+   loops (as it can be judged from Fig.6), have been excluded in the
+   fitting of the scale height model. We find that most of the analyzed
+   loop segments fit closely an exponential density model (see Fig.10
+   left). Deviations from an exponential density model can often be
+   explained by uncertainties in the background subtraction, or by
+   confusion from adjacent or overlying loops. 2.7. Loop Temperatures
+   Independently of the scale height temperature T *e , we can also
+   determine the temperature directly from the EIT filter ratio, which
+   moreover provides a temperature differentiation along the loop, T EITe
+   (s). Since our loop definitions are based on tracing of an EIT 171 *A
+   image, we use only the filter ratio of EIT 171 *A (Fe IX,X) and 195 *A
+   (Fe XII), which is sensitive in the temperature regime of Te = 1:0
+   \Gamma 1:5 MK. We are using the spatial loop definition [x(s); y(s)]
+   based on the 171 *A image, and apply the same background-subtraction
+   technique to the 195 *A image, before we determine the temperature from
+   the filter ratio (F 171 \Gamma F 171B )=(F 195 \Gamma F 195B ). Because
+   our background-subtraction technique has some tolerance (of\Sigma 1
+   \Gamma 4 pixels) in the localization of the loop cross-section (by
+   maximizing the flux integrated over the loop cross-section), the
+   filter-ratio is not susceptible to small co-alignment errors between
+   the 171 and 195 *A image. The employed background-subtraction technique
+   requires also a correlated structure (with a width of 2-8 pixels) in
+   both wavelengths, while larger or diffuse structures with possibly
+   different temperatures are safely subtracted out. The filter-ratio
+   temperatures T EITe averaged over the loop segments are tabulated in
+   Table 2, with a mean of T EITe = 1:21 \Sigma 0:06 MK. The distribution
+   of filter-ratio temperatures N (T EITe ) is shown in Fig.11 (bottom
+   left), along with the distribution of scale height temperatures N (T *e
+   ) (Fig.11 top left), both having almost identical means. The range of
+   scale height temperatures (\Sigma 0:23 MK) is broader than the range of
+   EIT filter-ratio temperatures (\Sigma 0:06 MK), probably because of
+   systematic errors in background subtraction and loop separation. This
+   is also consistent with the scatterplot of the two temperature
+   definitions (Fig.11 top right), where no obvious correlation is seen.
+   Despite of these unavoidable uncertainties in the background
+   subtraction, it is remarkable that the means of the two independently
+   determined temperatures coincide so closely. - 10 - 2.8. Loop
+   Temperature Gradients The detailed variation of the temperature T EITe
+   (s) along the loop length s is shown for the 10 least-confused loops in
+   Fig.10 (right panels). We note that the filter-ratio temperature varies
+   sometimes discontinuously along the loop, e.g. there is a jump from Te
+   = 1:35 MK to Te = 1:1 MK at s = 70 Mm in Loop #1 (Fig.10, top right),
+   which may be caused by contamination from a hotter loop that is located
+   almost parallel to Loop #1 at s ! 70 Mm (see cross-sections in Fig.6).
+   Such confusion problems can only be identified in hindsight. Despite of
+   such confusion problems, there seems to be a trend of a positive
+   temperature gradient dT =ds ? 0 above the footpoint for most of the
+   loops (Table 1). To estimate these average temperature gradients
+   (without correcting for multi-loop confusion) we performed a linear
+   regression Te(s) for all loops. The most significant temperature
+   gradients are found for Loop #11 (dT =ds = +0:0049 MK/Mm), for Loop #20
+   (dT =ds = +0:0012 MK/Mm), and for Loop #25 (dT =ds = +0:0054 MK/Mm),
+   see examples in Fig.10 and Table 1. The distribution of temperature
+   gradients N (dT =ds) is shown in Fig.11 (bottom right), revealing that
+   ss 75% of the loops have a positive temperature gradient dT =ds ? 0
+   across the first scale height above their footpoints. Higher parts (h
+   ?, 1*) of these loops are not detectable in EIT images due to
+   unsufficient density contrast (one scale height corresponds to a factor
+   of ss 3 in density or a factor of ss 10 in emission measure or EIT
+   flux). 2.9. Magnetic Field, Plasma-fi Parameter, and Alfv'en Velocity
+   There is no accurate method available yet to determine the
+   height-dependence of the coronal magnetic field, nor to trace the
+   magnetic field along a particular active region loop. Some attempts are
+   in progress to match loop geometries observed in SXR or EUV with
+   potential field models (constrained by the photospheric boundary and
+   projections of coronal loops; Gary 1997, Gary & Alexander 1998). As a
+   first approximation to investigate the magnetic field along the
+   observed EUV loops, we calculate here a potential field model of
+   AR7986, using the code of Sakurai (1982) applied to a SoHO/MDI
+   (Michelson-Doppler Imager) magnetogram, recorded at the same day as the
+   EIT image (with a time difference of 20 hours). The potential field
+   model is shown in Fig.12, overlaid on the MDI magnetogram, and
+   coaligned with the traced EIT loops (by transforming the 3D field lines
+   according to the solar rotation rate during the time difference). Note
+   that the EUV loops represent independent tracers of the plasma along
+   magnetic field lines, and thus convey an important test how good the
+   coronal magnetic field is represented with a potential field model. The
+   match of the traced EUV loops with the potential field shown in Fig.12
+   is remarkably good, given the time difference of 20 hours and the
+   non-potential structure implied by currents that are likely to be
+   present in this active region, imposed by the observed filament along
+   the neutral line. Detailed modeling with potential and force-free
+   magnetic fields and investigating the best match with individual loops
+   traced from EIT and SXT images will be pursued in a subsequent study.
+   To estimate the magnetic field along the traced EIT loops we localize
+   those potential field lines that have the closest footpoints to the EIT
+   loop footpoints, and take the height-dependence of their magnetic field
+   strength B(h) as a proxy for the EIT loops. The height-dependence of
+   the magnetic field B(h) of the 30 potential field lines closest to the
+   analyzed EIT loops is shown in Fig.13 (top). It can be approximated
+   with a dipole model, B(h) = Bfoot\Gamma 1 + hh D \Delta \Gamma 3 ; (7)
+   with a mean dipole depth of hD = 75 Mm and a range of footpoint field
+   strenghts Bfoot ss 20:::150 G (dashed lines in Fig.13 top), or a mean
+   of Bfoot ss 100 G. - 11 - With the potential field B(h) and the
+   measured density ne(h) and temperature profiles Te(h) we can now
+   determine the height-dependence of the plasma fi-parameter for each of
+   the 30 analyzed loops, fi(h) = n(h)kTe(h)[B(h)2=8ss] ss 3:47 \Theta
+   10\Gamma 15 ne(h)Te(h)B(h)2 ; (8) which quantifies the ratio of the
+   thermal to the magnetic pressure, and thus provides a crucial criterion
+   for magnetic confinement. The plasma-fi parameter is shown in Fig.13
+   (middle), ranging typically at fi !, 0:1 in the entire coronal range (h
+   !, 200 Mm ) of the EUV loops. We find only 2 (out of 30 loops) that
+   exceed the critical limit of fi * 1, possibly implying currents and
+   non-potential magnetic fields along the loops. Gary & Alexander (1998)
+   found such regimes with fi ?, 1 in the upper corona h ?, 0:2Rfi from
+   analysis of SXR loops, in contrast to the common belief that the
+   coronal value is always fi o/ 1 (Priest 1981; Tandberg-Hanssen & Emslie
+   1988; Yokoyama & Shibata 1997; Sakurai 1989; Gary 1990; McClymont,
+   Jiao, & Miki'c 1997). Reliable measurements of the plasma-fi parameter
+   require fully resolved structures, such as single loops analyzed here
+   (save for unknown filling factors), while line-of-sight averaged
+   densities are expected to underestimate the density in loop structures,
+   and thus are biased towards too low fi-values. A further plasma
+   parameter that is of interest for coronal loop dynamics is the Alfv'en
+   velocity, which can be computed along individual loops thanks to the
+   knowledge of the magnetic field B(h) and density ne(h), vA(h) =
+   B(h)p4ssn i(h)mi ss 2:18 \Theta 10 11 B(h)p ne(h) cm s \Gamma 1 : (9)
+   This quantity is shown in Fig.13 (bottom). The Alfv'en velocity is
+   found to be hightest near the footpoints of the analyzed EUV loops,
+   ranging from vA(h = 0) ss 1000 to 7000 km/s, and is dropping off
+   steadily with larger height, to a characteristic value of vA(h ?, 100
+   Mm) ss 500 \Gamma 800 km/s. 3. PHYSICAL MODELS AND DISCUSSION The
+   density and temperature diagnostics obtained as function of 3D space
+   coordinates allows us to investigate the physical conditions in the
+   analyzed loops and to test some theoretical loop models and scaling
+   laws. The major benefit of this study is that the loop geometry is
+   well-determined by the data, so that no geometric assumptions have to
+   be made in the application of theoretical loop models. 3.1. Loop Length
+   Parametrization Because the thermal energy is generally much smaller
+   than the magnetic energy in the corona (plasma parameter fi =
+   nekBTe=(B2=8ss) o/ 1), energy transport in coronal loops can be reduced
+   to one dimension, as function of the loop length parameter s. In our
+   analysis we detected, except for one complete loop, only segments of
+   loops that extend about one scale height above the primary footpoint.
+   We will denote the start of the traced loop segments at the primary
+   footpoint with s = 0, the end of the traced loop segment with s = L1,
+   and the full loop length extending all the way to the secondary
+   footpoint with s = L. By localizing the secondary footpoint of traced
+   loops from the global dipolar magnetic field of the active region, we
+   obtained the approximate azimuth angle and length of the footpoint
+   baseline. Using the stereoscopically determined inclination angle # and
+   the azimuth angle ff of the footpoint baseline (Fig.2), we were able to
+   project the 3D loop coordinates into the loop plane X-Z (Eq.A5). In
+   this loop plane we can approximate - 12 - the loop geometry with a
+   circular function, by interpolating the 3 loop positions (s = 0; L1; L)
+   with the circle parametrization [X(OE); Y (OE)], X = R0 cos(') (10) Z =
+   R0 sin(') + Z0 (11) yielding the circular loop radius R0 and the offset
+   Z0 of the circle center from the footpoint baseline. The loop length
+   s(') can now be parametrized as function of the circular angle ', s(')
+   = R0 (' + '0) ; \Gamma '0 ^ ' ^ (ss + '0) ; (12) where the starting
+   angle '0 is defined by the loop radius R0 and center offset Z0, '0 =
+   arcsin( Z0R 0 ) : (13) The full loop length L is then L = R0(ss + 2'0)
+   : (14) The geometric elements R0, Z0, L1, and L are listed in Table 1
+   for all 30 loops. The same circular geometry was also used to visualize
+   the extrapolated loop segments in Fig.5. For the application of the
+   hydrostatic equilibrium equation we need also to quantify the height
+   dependence h(s) of the loop length, which is determined by the loop
+   plane inclination angle # and Eqs.8-10, h(s) = Z cos(#) = [Z0 + R0 sin(
+   sR 0 + ' 0)] cos(#) : (15) The apexes or loop tops, htop = [Z0 + R0]
+   cos(#), have a range of htop = 30 \Gamma 225 Mm in our sample of 30
+   loops, and thus extend up to 4 scale heights (with * = 55 \Sigma 10
+   Mm). 3.2. Static Loop Model In static loop models it is assumed that
+   mass flows can be neglected, leading to the basic energy balance
+   equation (e.g. Rosner, Tucker, & Vaiana 1978), EH(s) + ER(s) \Gamma
+   rFC(s) = 0 (16) where EH denotes the rate of heat deposition, ER the
+   energy radiated from the loop, and FC is the thermal conductive flux,
+   to be balanced in at each location s of the loop in a static model. The
+   conductive flux term can be expressed in one-dimensional form (with the
+   Spitzer thermal conductivity ^ = 0:92 \Theta 10\Gamma 6 erg s\Gamma 1
+   cm\Gamma 1 K\Gamma 7=2; Spitzer 1962) by rFC(s) = dds [\Gamma ^T 5=2(s)
+   dT (s)ds ] ss \Gamma 52 ^T 3=2(s)\Theta dT (s)ds \Lambda 2 erg cm\Gamma
+   3 s\Gamma 1 ; (17) where the approximation on the right-hand-side
+   includes only the linearized temperature dependence T (s). The
+   linearized temperature dependence can be written in terms of our
+   measured temperature gradients (dT =ds) and mean temperatures T EITe
+   listed in Table 2 by T (s) = T EITe + ( dTds )(s \Gamma L12 ) : (18) -
+   13 - The conductive flux term rFC(s) in the energy balance equation
+   (17) is calculated for s = 0 in Table 2, having a mean of ! r(Fc) ?=
+   \Gamma 0:003 \Sigma 0:005 \Theta 10\Gamma 3 erg cm\Gamma 3 s\Gamma 1.
+   The radiative loss term ER(s) can be written in terms of the electron
+   density ne(s) and the radiative loss function \Lambda (T ), ER(s) =
+   \Gamma ne(s)2\Lambda [T (s)] ergs cm\Gamma 3 s\Gamma 1 ; (19) which can
+   be approximated with a constant value in our relatively narrow
+   temperature range of interest (Te = 0:5 \Gamma 2:0 MK), \Lambda [T ] =
+   10\Gamma 21:94 erg cm3s\Gamma 1 (105:75 ! T ! 106:3); (20) as
+   calculated by Raymond, Cox, and Smith (1976) for solar abundances
+   (Rosner et al. 1978). The radiative loss rate ER(s) is calculated for s
+   = 0 in Table 2, having a mean of ! ER ?= \Gamma 0:46 \Sigma 0:29 \Theta
+   10\Gamma 3 erg cm\Gamma 3 s\Gamma 1 for our 30 analyzed loops,
+   surpassing the conductive loss rate by about two orders of magnitude
+   (under the assumption of a filling factor of unity). The required
+   heating rate has to balance essentially the radiative loss rate, i.e.
+   EH ss \Gamma ER. The heating rate requirement EH is also listed in
+   Table 2, with a mean of ! EH ?= +0:45 \Sigma 0:29 \Theta 10\Gamma 3 erg
+   cm\Gamma 3 s\Gamma 1. Because the radiative loss rate is proportional
+   to the squared density (Eq.19), for which we found an exponential
+   decrease with height (Eq.5), the heating rate requirement follows a
+   similar exponential relation, EH(s) ss \Gamma ER(s) ss n2e0\Lambda (T )
+   exp[\Gamma 2h*(T ) ] ; (21) with an exponential scale height that
+   equals half the density scale height. Such an exponential heating scale
+   height sH , has been introduced, for instance in loop models of Serio
+   et al. (1981), EH(s) = EH0 exp[\Gamma ss H ] ; (22) which has the
+   following mean value for our group of EUV loops, sH = *=2 = 28 \Sigma 5
+   Mm (see Table 1). The finding of hydrostatic equilibrium in all of our
+   analyzed loops sheds some light on their thermal stability. While
+   uniform-pressure loops were found to be thermally unstable under some
+   conditions (e.g. if the base heat flux is too small), the influence of
+   gravity (or hydrostatic equilibrium) has a stabilizing effect (Wragg &
+   Priest 1982), which may partially explain the numerous existence of
+   hydrostatic EUV loops observed by EIT during four solar rotations in
+   this active region. 3.3. Loop Lifetime To investigate the lifetime of
+   loops we have to consider the fastest of the energy loss time scales.
+   The conductive loss time, o/cond = EthdE C=dt = 3nekbTer FC ss 1:1
+   \Theta 10 \Gamma 9 ne T \Gamma 5=2L2 0 [s]; (23) is found to be o/cond
+   ss 9 \Theta 105 s (or 10 days), using the average parameters from Table
+   1, ne = 1:92 \Theta 109 cm\Gamma 3, T EITe = 1:22 \Theta 106 K, and L0
+   = L=2 = 2:2 \Theta 1010 cm. The conductive loss time of EUV loops is
+   therefore substantially longer than for SXR loops, for two reasons: (1)
+   the temperature is cooler, and (1) the loop length is somewhat larger.
+   If we compare typical SXR loops as observed with Yohkoh/SXT, where
+   typical temperatures of T SXRe = 5 MK, densities of ne = 3 \Theta 109
+   cm\Gamma 3, and loop lengths of LSXR = 1010 - 14 - cm were measured
+   (Kano & Tsuneta 1995), we find conductive loss times of o/ SXRcond ss 8
+   \Theta 103 s (or 2.4 hours). The huge difference in the conductive loss
+   times of EUV and SXR loops comes mainly from the temperature factor, (T
+   SXR=T EUV ) ss 5, which raised to the T \Gamma 5=2 power yields a ratio
+   of o/ EUVcond o/ SXRcond ss \Gamma T EUV T SXR \Delta \Gamma 5=2 ss 55
+   ; (24) i.e. a 55 times longer conductive loss time for EUV loops. Let
+   us now estimate the radiative loss time of EUV loops (under the
+   assumption of a filling factor of unity). The radiative lifetime is
+   o/rad = EthdE R=dt = 3nekbTe n2e\Lambda (Te) ; (25) yielding a mean
+   lifetime of o/rad ss 2:3 \Theta 103 s or about 40 minutes, based on our
+   mean values ! ne ?= 1:92 \Theta 109 cm\Gamma 3, ! Te ?= 1:22 MK, and
+   \Lambda (T ) = 10\Gamma 21:94 erg cm3 s\Gamma 1. Comparing the
+   radiative lifetime of EUV loops with SXR loops, there is less of a
+   difference than for the conductive loss time. The mean electron
+   densities are similar, i.e. nEUVe ss 2 \Theta 109 cm\Gamma 3 versus
+   nSXRe ss 3 \Theta 109 cm\Gamma 3 (Kano & Tsuneta 1995), and the
+   radiative loss function has a somewhat smaller value at SXR
+   temperatures, i.e. \Lambda (T EUV ) ss 10\Gamma 21:94 erg cm3 s\Gamma 1
+   (Eq.17) versus \Lambda (T SXR) ss 10\Gamma 22:18 erg cm3 s\Gamma 1
+   (Kano & Tsuneta 1995), while the temperatures differ by a linear factor
+   T SXR=T EUV ss 5. This temperature ratio dominates the radiative loss
+   time, o/ EUVrad o/ SXRrad ss \Gamma T EUV T SXR \Delta ss 0:2 ; (26)
+   yielding a radiative cooling time of o/ SXRrad ss 104 s (or about 3
+   hours). The mean physical loop parameters of EUV and SXR loops and the
+   resulting time scales are also summarized in Table 3 for convenience.
+   From these average physical parameters of our 30 analyzed EIT loops we
+   find therefore that the conductive cooling time is at least 2 orders of
+   magnitude larger than the radiative cooling time, a result that we have
+   already noticed by comparing conductive loss rates versus the radiative
+   loss rates in Table 2. This extreme ratio for EUV loops is in marked
+   contrast to SXR loops, where the ratio o/ SXRcond =o/ SXRrad = 8 \Theta
+   103=104 ss 1 is close to unity according to the mean loop parameters of
+   Kano & Tsuneta (1995). This is also consistent with numerical solutions
+   of the static energy equation in coronal loops, where the conductive
+   energy loss was found to be about twice the radiative loss (e.g.
+   Vesecky, Antiochos, & Underwood 1979). Because this theoretical ratio
+   does apparently not apply to EUV loops, a possible explanation is that
+   EUV loops are not in steady-state condition, but rather in the cooling
+   phase far off the equilibrium. We have only limited information on the
+   lifetime of the analyzed loops. The fact that stereoscopic correlations
+   over time intervals of \Sigma 24 hours clearly show spatial
+   displacements of loops (as localized with our dynamic stereoscopy
+   method), indicates that the identity of static loop structures is
+   generally not warranted over a time interval of 24 hours. It is
+   therefore conceivable that the heating function is not co-spatial over
+   24 hours, but rather could affect multiple neighboured field lines,
+   while individual loop strands could cool off on time scales as short as
+   the radiative cooling time (ss 40 minutes). A conceivable scenario is
+   quasi-periodic microflare heating as simulated by Peres (1997). - 15 -
+   3.4. Loop Scaling Laws Rosner, Tucker & Vaiana (1978) derived a (RTV)
+   scaling law between physical loop parameters, i.e. Tmax ss 1:4 \Theta
+   103(pL)1=3, under the assumption of a constant pressure p, which
+   restricts the application to loops that are essentially smaller than a
+   density scale height. Serio et al. (1981) generalized the RTV-law (1)
+   for larger loops with a length L0 greater than the pressure scale
+   height sp, and (2) for a heating deposition scale height sH , i.e. T ss
+   1:4 \Theta 103(p0L0)1=3 exp[\Gamma 0:04L( 2s H + 1 sp )] ; (27) where
+   L0 = L=2 corresponds to the half loop length L. Because we find that
+   heating has in first order to balance radiative energy loss, and thus
+   scales with the half pressure scale height, we can substitute sH ss
+   sp=2 in the law of Serio et al. (1981), T ss 1:4 \Theta 103(p0L)1=3
+   exp[\Gamma 0:2( Ls p )] : (28) We apply Serio's scaling law to our set
+   of 30 loops, using the loop base pressure p0, p0 = p(s = 0) = 2ne0kBT
+   EITe ; (29) inferred from the loop lengths L (Table 1), the loop base
+   densities ne0 and EIT filter ratio temperatures T EITe (Table 2). A
+   scatterplot of the two temperatures is provided in Fig.14. It shows
+   that the mean loop temperature predicted by the law of Serio et al.
+   (1981), i.e. T Serioe = 1:39 \Sigma 0:30 MK matches closely the mean
+   observed EIT temperature T EITe = 1:21 \Sigma 0:06, while the RTV law
+   would overestimate the loop temperature by a factor of ss 2 due to the
+   breakdown of the constant-pressure assumption. Deviations from the
+   RTV-law have also been reported by Kano & Tsuneta (1995) for SXR loops,
+   where the temperature bias of Yohkoh/SXT for higher temperatures or
+   uncertainties in the loop length determination were suspected to be
+   responsible for the discrepancy. In this context we like to emphasize
+   that the consideration of the loop pressure decrease p(h) with height,
+   as it was done in the generalized law of Serio et al. (1981), was
+   sufficient to reconcile the theoretically predicted scaling law
+   temperatures with the observed values here. Rosner, Tucker, & Vaiana
+   (1978) derive also a scaling law for the base heating energy rate, E0
+   ss 105p7=60 L\Gamma 5=60 , under the assumption that the conductive
+   flux vanishes at the temperature maximum (assumed to be at the loop
+   top). This energy scaling law was also generalized by Serio et al.
+   (1981) for large loops with a length L greater than the pressure scale
+   height sp, and for a heating deposition scale height sH , E0 ss 105
+   p7=60 L\Gamma 5=60 exp[0:5L( 1s H \Gamma 1 sp )] : (30) From our result
+   that the heating scale height equals half the pressure scale height, sH
+   ss sp=2, we can substitute sH , E0 ss 105 p7=60 L\Gamma 5=60 exp[0:5 Ls
+   p ] : (31) Plotting this quantity E0 versus the heating rate EH
+   calculated from the energy balance equation (Eq.13), we find that both
+   the RTV as well as the Serio energy scaling law roughly matches the
+   calculated heating rate. The heating rate is found to have a mean of EH
+   = 10\Gamma 3:6\Sigma 0:3 erg cm\Gamma 3 s\Gamma 1, while the RTV
+   scaling law yields a mean of ERTV0 = 10\Gamma 3:8\Sigma 0:2 erg
+   cm\Gamma 3 s\Gamma 1, and the Serio scaling law a systematically
+   smaller mean of ESerio0 = 10\Gamma 2:9\Sigma 0:3 erg cm\Gamma 3 s\Gamma
+   1 (Fig.14 right). - 16 - Kano & Tsuneta (1996) derived an energy
+   scaling law for loop-top heating, in which the total energy input
+   (=conductive and radiative loss) scales as E0 = 4:0 \Theta 103(p0T 1=2m
+   )L0 erg cm\Gamma 3 s\Gamma 1 (32) with Tm the maximum temperature at
+   the loop top. Setting this maximum loop temperature to Tm = 1:5 MK for
+   our 30 loops detected in the EIT 171 *A filter (sensitive in a range of
+   Te = 1:0 \Gamma 1:5 MK), we find an equal good agreement of the mean
+   energy estimated by this scaling law, EKano0 = 10\Gamma 3:8\Sigma 0:2
+   erg cm\Gamma 3 s\Gamma 1 as with the RTV energy scaling law (see
+   Fig.14). For comparison with other work (e.g. for parameters of SXR
+   loops in Porter & Klimchuk 1995, Klimchuk & Porter 1996), we show
+   relationships between heating rates EH, loop lengths L, loop pressures
+   p, and magnetic footpoint fields Bfoot for our sample of 30 EUV loops
+   in Fig.15. The footpoint field strengths Bfoot have been measured from
+   the MDI magnetograms by taking the maximum field values among the
+   nearest MDI pixels to the EIT loop footpoints, (see values of Bfoot
+   listed in Table 1). Linear regression fits reveal the following
+   correlations: p / L\Gamma 0:41\Sigma 0:12 (33) B / L\Gamma 1:02\Sigma
+   0:43 (34) EH / L\Gamma 0:73\Sigma 0:23 (35) EH / p1:89\Sigma 0:07 (36)
+   We do not find a significant correlation between the loop pressure p
+   and the magnetic field B (Fig.15 middle right), or between the heating
+   rate EH and the magnetic field B (Fig.15 bottom right). These
+   correlations can be used to test functional dependences of the heating
+   rate EH(p; L) predicted by theoretical models. For instance, Galeev et
+   al. (1981) proposes a magnetic field-related heating model involving
+   nonlinear tearing-mode, predicting for steady-state the relation EH /
+   p1:2L\Gamma 0:83 (37) which is consistent with Eq.35, but rather
+   inconsistent with Eq.36. Another model proposed by Cargill (1993)
+   predicts EH / L\Gamma 2, which is not consistent with Eq.35. For models
+   where loop heating is accomplished by dissipation of magnetic energy
+   (e.g. nanoflare heating model of Parker 1988), one would expect a
+   relation EH / B2, which is also not consistent with our findings. A
+   wave heating model with resonant Alfv'en waves predicts in quasi-static
+   equilibrium a relation (Ofman, Klimchuk, & Davila 1998), EH / n7=5e ss
+   p1:4 ; (38) which is not fare from our findings (Eq.36) for EUV loops.
+   In heating models with twisted magnetic field lines, a threshold value
+   of the magnetic field B is related to the loop length L. This relation
+   constitutes a correlation B / Lfi ; (39) which was narrowed down to a
+   (90%-confidence) range of \Gamma 1:55 ^ fi ^ \Gamma 0:40 from the
+   analysis of SXR loops (Porter & Klimchuk 1995). This value obtained
+   from SXR loops is fully consistent with our findings from EUV loops,
+   ffi ss \Gamma 1:02 \Sigma 0:42 (Eq. 34). This agreement is expected,
+   because this relation is independent of - 17 - loop temperatures, and
+   thus should not discriminate between plasma radiating at the cooler EUV
+   or hotter SXR temperatures. However, this relation may not apply to
+   large-scale magnetic fields that extend beyond dipolar structures, such
+   as the global coronal field extending out to the heliosphere, where no
+   correlation is found between Bfoot and L (Wang et al. 1997). 3.5. Loop
+   Filling Factors So far we assumed a filling factor of unity in our
+   derivation of physical loop parameters. However, there is some indirect
+   evidence that coronal loops may consist of many unresolved thin strands
+   (Golub et al. 1990), suggesting a higher electron density inside the
+   strands than obtained from the volume-averaged emission measure across
+   a macroscopic loop diameter. If we denote the true density inside the
+   strands with n\Lambda e and the volume filling factor of strands by f,
+   the two densities relate by n\Lambda e(s) = s EM (s)w z(s) 1 f = ne(s)p
+   f : (40) This filling factor affects the radiative loss rate (Eq.16),
+   but not the conductive loss rate (Eq.14). Numerical solutions of the
+   static energy equation in coronal loops have shown that the conductive
+   energy loss to the chromosphere is about twice as much as radiative
+   loss in the corona (Vesecky, Antiochos, & Underwood 1979). Based on
+   this argument, the filling factor can be derived by equating twice the
+   conductive loss rate with the radiative loss rate, 2rFC(s) ss ER(s)
+   (Porter & Klimchuk 1995). However, because we found that the radiative
+   energy loss surpasses the conductive energy loss by two orders of
+   magnitude, the introduction of a filling factor would increase the
+   density in loop strands, and thus their radiative energy loss, so that
+   there exists no physical solution for filling factors f ^ 1 to equate
+   radiative with conductive energy loss. Therefore, our finding of
+   dominant radiative loss in EUV loops in the temperature regime of Te =
+   1:0 \Gamma 1:5 MK does neither require nor support the hypothesis of a
+   filling factor less than unity. A similar conclusion was drawn by
+   Cargill & Klimchuk (1997) that the nanoflare heating model cannot
+   explain the steady-state of cool loops Te !, 2 MK, because it would
+   lead to unphysical filling factors. 3.6. Implications for Coronal
+   Heating Theories There are two simple cases that can be discussed for
+   the interpretation of our cool EUV loops: (1) either they are just
+   cooling off without additional heat input, or (2) the energy loss is
+   balanced by heating input, i.e. a steady-state situation. In the first
+   case, an immediat prediction would be that the lifetime of the loops is
+   just the radiative cooling time (ss 40 minutes), which can only be
+   tested by tracking their temporal evolution (which is beyond the scope
+   of this paper). In the second case, the energy balance equation (Eq.16)
+   can be applied, and some statements can be made about the required
+   heating function, which may convey some constraints on theoretical
+   heating theories. Since our cool EUV loops were found in hydrostatic
+   equilibrium, radiative energy loss is stronger in the denser parts near
+   the footpoints than in greater heights. The observed loop segments
+   extend roughly over one scale height. The radiative cooling time, which
+   scales reciprocally with the density (for a constant temperature),
+   o/rad ss n\Gamma 1e (Eq.25), would therefore differ by a factor e ss
+   2:7 over a scale height. Based on our average radiative loss time of
+   o/rad(s = 0) ss 40 min at the loop base, we expect a longer radiative
+   loss time of o/rad(s = *) ss 40 \Theta e ss 110 min at an altitude of
+   one scale height. However, if we try to explain the - 18 - observed
+   temperature gradient of dT =ds ss 10\Gamma 3 K/m by differences of
+   radiative cooling times, for a loop that cools off from a temperature
+   of Tmax ? 1:5 MK, the approximate time to produce such a temperature
+   gradient dT =ds would be tcool ! o/rad(s = 0) (dT =ds)(T max=*) (1
+   \Gamma 1 e ) ; (41) i.e. tcool !, 4 min for our parameters (o/rad(s =
+   0) = 40 min, * = 55 Mm). Such a short cooling time would be a far too
+   strong constraint on the loop lifetime to explain the frequent
+   occurrence of observed EIT loops in this temperature regime. This
+   implies that these loops are not just cooling off, but that radiative
+   energy loss is balanced to a large fraction by a heating source, i.e.
+   the energy balance has to be in near steady-state. It is difficult to
+   infer the spatial structure of the heating function. The fact that the
+   density profile ne(s) is found to be consistent with hydrostatic
+   equilibrium (within the uncertainties resulting from background
+   subtraction and loop separation), requires that the heating function
+   either adjusts to this barometric density profile, EH(s) / ne(s), which
+   is a rather strong constraint, or the heating function redistributes
+   quickly along the loop, e.g. with Alfv'enic or electromagnetic wave
+   speed. Regardless of the spatial structure inside a particular loop,
+   the heating function has to have an efficiency that scales with the
+   density squared among different loops, EH / n2e, because our sample of
+   loops have almost identical temperatures and scale heights. In all of
+   our analyzed cool EUV loops we found that radiative loss exceeds
+   conductive energy loss by far, so that the required energy input in a
+   steady-state cannot be provided by a heating source near the loop-top
+   that supports the radiative energy loss by thermal conduction, an
+   argument that was used by Neupert et al. (1998) against the
+   heat-deposition model at large heights (e.g. Wheatland, Sturrock, &
+   Acton 1997). A consequence of this argument is that thermal conduction
+   cannot explain the temperature structure of cool EUV loops at all,
+   requiring a nonthermal heating source. Such a nonthermal heating model,
+   for instance, is offered by the nanoflare concept (Parker 1988), but
+   dominant radiation loss (with a ratio of o/rad=o/cond ss 10\Gamma 2),
+   as observed for the EIT loops here, is only possible in the final
+   cooling phase of a nanoflare event, according to a model of Cargill
+   (1994). In the discussion of heating requirements we neglected mass
+   flows, which could play a significant role. Downflows were found from
+   Doppler shift measurements at EUV temperatures of Te ss 1 MK that carry
+   an energy flux comparable with radiative energy loss (Foukal 1978).
+   Upflows with (Doppler-shift) velocities of 50 km s\Gamma 1 have been
+   reported in Mg IX and Mg X lines (Te ss 1 MK) in an active region
+   recently observed with SoHO/CDS (Brekke et al. 1997). Brown (1996)
+   performed hydrodynamic simulations of loops that cool down an initial
+   temperature of Te = 2 MK down to temperatures of Te = 0:1 MK, with
+   subsequent heating back to the original temperatures of Te = 2 MK (in
+   cycles of 3000 s). These simulations demonstrate that downflows with
+   velocities of 7-45 km s\Gamma 1 occur during the cooling phase due to
+   coronal condensation. From the large number of analytical and numerical
+   simulations of (hydrodynamic) loop evolutions in literature, we were
+   not able to find cases that reproduce the physical properties of the
+   EUV loops observed here: in particular, loops with dominant radiative
+   loss in the cooling phase with hydrostatic equilibrium, but having
+   longer lifetimes than the radiative cooling time. The closest
+   simulations are perhaps those of Brown (1996) with cooling cycles
+   between Te = 2 MK and Te = 0:1 MK. Brown (1996) varies the loop half
+   length from 7.5 to 50 Mm and finds that the evolution time scale
+   increases with loop length, from 10 minutes for loops with a length
+   around 10 Mm to well over 30 minutes for loops with lengths of 50 Mm.
+   Although the largest loops simulated by Brown (1996) still fall short
+   of the average length (L = 433 \Sigma 136 Mm) of EUV loops observed
+   here, his conclusion that larger loops tend to have their evolution
+   paths closer - 19 - to the static equilibrium path is likely to apply
+   to our large-scale EUV loops, which were all found in hydrostatic
+   equilibrium. 4. SUMMARY AND CONCLUSIONS We developed a 3D-analysis
+   method designed to determine geometric and physical parameters of loop
+   structures in solar EUV or SXR images. This method, called Dynamic
+   Stereoscopy, makes use of stereoscopic correlations of dynamically
+   evolving loop structures that can be traced from high-pass filtered
+   images. The method is designed to separate closely-spaced, nested
+   loops, in the plane of the sky as well as along the line-of-sight, by
+   suitable background subtraction. With this method we analyzed SoHO/EIT
+   171 *A observations of active region AR 7986, obtained on 1996 Aug 30.
+   We traced 30 loop segments of this active region and determined the 3D
+   cartesian space coordinates [x(s); y(s); z(s)], the loop widths w(s),
+   the electron density ne(s), and the electron temperature Te(s) as
+   function of the loop length s. The vertical density scale height * of
+   these loops was properly corrected for the inclination angle # of the
+   loop plane to the vertical, and the column depth wz(s) of loops was
+   corrected for the projection angle (s) between the loop axis and the
+   line-of-sight, which enters the conversion of emission measures EM (s)
+   into electron densities ne(s). From potential field lines neighboured
+   to the selected EUV loops we estimated also the magnetic field B(h),
+   the plasma-fi parameter fi(h), and the Alfv'en velocity vA(h) along the
+   loops. The physical parameters obtained with this stereoscopic
+   3D-method have therefore an unprecedented accuracy. The statistical
+   results of geometric and physical parameters of the analyzed 30 EUV
+   loops of AR 7986 are: - 20 - \Gamma Loop radius R0 = 93 \Sigma 23
+   Mm\Gamma Offset of circular loop center from baseline Z0 = 62 \Sigma 27
+   Mm\Gamma Loop height h = 128 \Sigma 56 Mm\Gamma Loop length L = 433
+   \Sigma 136 Mm\Gamma Length of traced loop segments L1 = 89 \Sigma 29
+   Mm\Gamma Loop width w = 7:1 \Sigma 0:8 Mm\Gamma Loop aspect ratio L=w =
+   61 \Sigma 20\Gamma Azimuth angle of loop baselines ff = \Gamma 30
+   \Sigma 100\Gamma Inclination angle of loop planes # = 70 \Sigma
+   370\Gamma Base emission measure EM0 = 1027:61\Sigma 0:61 cm\Gamma
+   5\Gamma Base electron density ne0 = 1:92 \Sigma 0:56 \Theta 109
+   cm\Gamma 3\Gamma Base pressure p = 0:61 \Sigma 0:17 dyne cm\Gamma
+   2\Gamma Density scale height * = 55 \Sigma 10 Mm\Gamma Scale height
+   temperature T *e = 1:22 \Sigma 0:23 MK\Gamma EIT 171/195 *A
+   filter-ratio temperature T EITe = 1:21 \Sigma 0:06 MK\Gamma Temperature
+   gradient dT =ds = 0:96 \Sigma 4:26 K/km\Gamma Conductive loss rate rFC
+   = \Gamma 0:003 \Sigma 0:005 10\Gamma 3 erg cm\Gamma 3 s\Gamma 1\Gamma
+   Radiative loss rate ER = \Gamma 0:458 \Sigma 0:285 10\Gamma 3 erg
+   cm\Gamma 3 s\Gamma 1\Gamma Steady-state heating rate EH = +0:455 \Sigma
+   0:283 10\Gamma 3 erg cm\Gamma 3 s\Gamma 1\Gamma Conductive cooling time
+   o/cond = 9 \Theta 105 s (10 days)\Gamma Radiative cooling time o/rad =
+   2 \Theta 103 s (40 min)\Gamma Ratio of conductive to radiative loss
+   time o/cond=o/rad = 450\Gamma Magnetic field strength at footpoints
+   jBfootj = 20; :::; 230 G\Gamma Magnetic dipole depth hD ss 75 Mm\Gamma
+   Ratio thermal/magnetic pressure fi(h = 0) = 0:001; :::; 0:01\Gamma
+   Ratio thermal/magnetic pressure fi(h = 100 Mm) = 0:04; :::; 0:15\Gamma
+   Alfv'en velocity vA(h = 0) = 2000; :::; 6000 km s\Gamma 1\Gamma Alfv'en
+   velocity vA(h = 100 Mm) = 500; :::; 1000 km s\Gamma 1 The major
+   findings and conclusions of this analysis are: 1. The analyzed cool EUV
+   loops are in hydrostatic equilibrium, i.e. the mean scale height
+   temperature is identical to the filter-ratio temperature, T *e ss T
+   EITe , and the density profile ne(h) is nearly exponential. The high
+   accuracy of this result could only be accomplished by proper
+   reconstruction of the 3D loop geometry, in particular by the
+   stereoscopic measurement of the inclination angle # of the loop planes.
+   2. The loop width w(s) is found to be almost constant for most of the
+   analyzed loops. Only 4 out 30 loops show a significant divergence with
+   height, as it is expected for dipolar fields. The constant thickness of
+   EUV loops indicates the presence of current-induced non-potential
+   magnetic fields (Wang & Sakurai 1998), consistent with the findings
+   from SXR loops (Klimchuk et al. 1992). 3. The conductive loss rate rFC
+   is found to be about 2 orders of magnitude smaller than the radiative
+   loss rate ER for these cool EUV loops, a fact that is in marked
+   difference to hot SXR loops, where both loss rates are comparable, rFC
+   ss ER. The dominance of radiative cooling over conductive cooling is
+   mainly an effect of the cooler temperature of EUV loops. As a
+   consequence, the heating rate has to balance mainly the radiative loss
+   in steady-state, implying that the heating rate scales - 21 - with the
+   squared density, EH / n2e, and that the heating scale height sH
+   corresponds to the half density scale height *, sH = *=2. 4. The
+   temperature scaling law of RTV fails for these cool EUV loops, because
+   the constant-pressure assumption breaks down due to their large height
+   extent over several scale heights, but the generalized temperature
+   scaling law of Serio et al. is found to be consistent with the data.
+   The energy scaling laws of RTV, Serio et al., and Kano & Tsuneta all
+   match the data reasonably well. Furthermore, we find the following
+   scaling laws with loop length L and loop pressure p:\Gamma p / L\Gamma
+   0:41\Sigma 0:12\Gamma B / L\Gamma 1:02\Sigma 0:43\Gamma EH / L\Gamma
+   0:73\Sigma 0:23\Gamma EH / p1:89\Sigma 0:07 5. The relatively short
+   radiative cooling time (ss 40 min) with respect to the used
+   stereoscopic time intervals (\Sigma 1 days) suggests that radiative
+   loss is supported by a near steady-state energy input. Coronal heating
+   models with a dependence EH / n2e are favored. Heating models with
+   downward conduction of heat input from a large height are not
+   consistent with the density and temperature structure of these cool EUV
+   loops. 6. The potential magnetic field is found to convey a fair
+   representation of the coronal magnetic field traced out by EIT loops.
+   The ratio of the thermal to the magnetic pressure is found to be always
+   fi ?, 1 up to the apexes of the EIT loops, garantueing magnetic
+   confinement in all parts of the EUV loops. The Alfv'en velocity is
+   found to be highest near the loop footpoints, and reaches
+   asymptotically values in the range of vA ss 500 \Gamma 1000 km s\Gamma
+   1 in the upper parts of the loops. In future work we will analyze the
+   hotter loops Te ?, 1:5 MK of this active region with stereoscopic
+   methods. A further goal is to investigate the time variability of cool
+   and hot active region loops, their steady-state phases and transitions
+   to non-equilibrium states. Acknowledgments: We thank Dr. Stephen White
+   for many helpful discussions. SoHO is a project of international
+   cooperation between ESA and NASA. The work of MJA was supported by NASA
+   grants NAG-54551 and NAG-57233 through the SoHO Guest Investigator
+   Program. WMN was supported by NASA Contract NAS5-32350 with the Hughes
+   STX Corporation. AZ was supported by a summer internship at GSFC
+   through grant NCC5-83 with the Catholic University of America (CUA). A.
+   (APPENDIX) Heliographic Coordinate Systems and Transformations For
+   analysis of observed images, for time-dependent coordinate
+   transformations that take the solar rotation into account (as needed in
+   stereoscopic correlations), and for convenient definitions of loop
+   geometries we define 3 different coordinate systems: Image Coordinate
+   System (x,y,z): The (x; y) coordinates refer to the x-axis and y-axis
+   of an observed image, while the coordinate (z) is orthogonal to the
+   image, or parallel to the line-of-sight direction, defined positive
+   toward the observer. The origin (x; y; z) = (0; 0; 0) of this
+   coordinate system is most conveniently assumed at the Sun center
+   position. A solar FITS image should contain the position of the Sun
+   center in pixel units (ix0; jy0) (in FITS header CRPIX1, CRPIX2 or E
+   XCEN, E YCEN), the pixel size (\Delta x; \Delta y) - 22 - in units or
+   arcseconds (in FITS header CDELT1, CDELT2), and the solar radius ir0 in
+   pixel units (in FITS header SOLAR R, or E XSMD, E YSMD if the
+   semi-diameters of an ellipse are fitted). With this information, a
+   pixel position (i; j) can then be converted into the coordinate system
+   (x; y) by xi = \Delta x (i \Gamma ix0) (A1) yi = \Delta y (j \Gamma
+   jx0) ; (A2) where \Delta x=arcseconds/pixel for (x; y) in units of
+   arcseconds, or \Delta x = Rfi=ir0, with Rfi = 696; 000 km, if physical
+   length units (km) are preferred. Heliographic Coordinate System
+   (l,b,r): The heliographic coordinate system is co-rotating with the
+   solar surface. A position on the solar surface is generally specified
+   by heliographic longitude and latitude coordinates (l; b) (in units of
+   heliographic degrees), with reference to the Carrington rotation grid.
+   The heliographic longitude and latitude [l0(t); b0(t)] of the Sun
+   center and the position angle P (t) of the solar rotation axis for a
+   given time t are published in The Astronomical Almanac (Nautical
+   Almanac Office, NRL, Washington DC). The 2-dimensional spherical
+   coordinate system (l; b) can be generalized into a 3-dimensional
+   coordinate system by incorporating the height h above the solar
+   surface, which can be expressed as a dimensionless distance to the Sun
+   center (in units of solar radii), r = (1 + hRfi ) : (A3) The
+   transformation from the 3D heliographic coordinate system (l; b; r)
+   into image coordinates (x; y; z) can be accomplished by applying a
+   series of 4 rotations to the (normalized) vector (0; 0; r) (see also
+   Loughhead, Wang, & Blows 1983),0 @ x=Rfi y=Rfi z=Rfi 1A = 0@ cos(P +
+   P0) \Gamma sin(P + P0) 0 sin(P + P0) cos(P + P0) 0 0 0 1 1A 0@ 1 0 0 0
+   cos(b0) \Gamma sin(b0) 0 sin(b0) cos(b0) 1A 0@ cos(l 0 \Gamma l) 0
+   \Gamma sin(l0 \Gamma l) 0 1 0 sin(l0 \Gamma l) 0 cos(l0 \Gamma l) 1A 0@
+   1 0 0 0 cos(\Gamma b) \Gamma sin(\Gamma b) 0 sin(\Gamma b) cos(\Gamma
+   b) 1A 0@ 0 0 r 1A ; (A4) where (l0; b0) are the heliographic longitude
+   and latitude of the Sun center, P is the position angle of the solar
+   rotation axis with respect to the North-South direction (defined
+   positive towards East), and P0 is the image rotation (roll) angle with
+   respect to the North-South direction, (P + P0 = 0 for images rotated to
+   solar North). In stereoscopic correlations, only the longitude of the
+   Sun center, l0(t), is time-dependent in first order (according to the
+   solar rotation rate), while b0(t) and P (t) are slowly-varying, and
+   thus almost constant for short time intervals. Loop Plane Coordinate
+   System (X,Y,Z): To parametrize coronal loops it is also convenient to
+   introduce a cartesian system that is aligned with the loop footpoint
+   baseline (X-axis) and coincides with the loop plane (X\Gamma Z plane, Y
+   = 0). For instance, a circular loop model defined in the X\Gamma Z
+   plane is specified in Eqs.7-8. The transformation of loop coordinates
+   (X; Y = 0; Z) into cartesian coordinate system (X0; Y 0; Z0) that is
+   aligned with the heliographic coordinate system (l; b; r) can simply be
+   accomplished with help of two rotations, 0@ X0 Y 0 Z0 1A = 0@ cos(ff)
+   \Gamma sin(ff) 0 sin(ff) cos(ff) 0 0 0 1 1A 0@ 1 0 0 0 cos(#) sin(#) 0
+   \Gamma sin(#) cos(#) 1A 0@ X Y Z 1A ; (A5) - 23 - where the azimuth
+   angle ff denotes the angle between the loop footpoint baseline and the
+   East-West direction, and # represents the inclination or tilt angle
+   between the loop plane and the vertical to the solar surface (Fig.2).
+   Placing the origin of the loop coordinate system [X = 0; Y = 0; Z = 0]
+   (which is also the origin of the rotated coordinate system [X0 = 0; Y 0
+   = 0; Z0 = 0] at heliographic position (l1; b1) at an altitude hFoot
+   above the solar surface, the transformation into heliographic
+   coordinates is then given by0 @ l b r 1A = 0@ l1 + arctan[X0=(Z0 +
+   hFoot + Rfi)] b1 + arctan[Y 0=(Z0 + hFoot + Rfi)]p [X02 + Y 02 + (Z0 +
+   hFoot + Rfi)2]=Rfi 1A : (A6) B. (APPENDIX) Line-of-Sight Correction on
+   Loop Column Depth Column depth of loops with constant cross-section: In
+   order to convert observed emission measures EM (x; y) = R n2e(x; y;
+   z)dz into local electron densities ne(x; y; z) we need information on
+   the column depthR dz. An approximation that is often useful are coronal
+   loops with a constant cross-section w, which can be measured from the
+   FWHM as it appears perpendicular to the line-of-sight in the plane of
+   the sky. For 3-dimensional models of loops parametrized by coordinates
+   (xi; yi; zi), the angle between the line-of-sight and a loop segment
+   can then directly be derived by the ratio of the projected to the
+   effective length of a loop segment [i; i + 1]. cos([xi; yi; zi]) =
+   p(xi+1 \Gamma xi) 2 + (yi+1 \Gamma yi)2p (xi+1 \Gamma xi)2 + (yi+1
+   \Gamma yi)2 + (zi+1 \Gamma zi)2 (B1) yielding the column depth wz along
+   the line-of-sight axis z, wz[xi; yi; zi] = wcos([x i; yi; zi]) : (B2) -
+   24 - C. REFERENCES Alexander.D. and Katsev,S. 1996, SP 167, 153
+   Allen,C.W. 1973, Astrophysical Quantities, London:Athlone
+   Aschwanden,M.J. 1995, Lecture Notes in Physics 444, 13 Aschwanden,M.J.
+   and Bastian,T.S. 1994a, ApJ 426, 425 Aschwanden,M.J. and Bastian,T.S.
+   1994b, ApJ 426, 434 Aschwanden,M.J., Bastian,T.S., Nitta,N.,
+   Newmark,J., Thompson,B.J. and Harrison,R.A. 1998, in Proc. 2nd Advances
+   in Solar Physics Euroconference (ASPE), Three-Dimensional Structure of
+   Solar Active Regions, (eds. C.Alissandrakis and B.Schmieder), PASP,
+   subm. Aschwanden,M.J., Lim,J., Gary,D.E., and Klimchuk,J.A. 1995, ApJ
+   454, 412 Aschwanden,M.J., Neupert,W.N., Newmark,J., Thompson,B.J.,
+   Brosius,J.W., Holman,G.D., Harrison,R.A., Bastian,T.S., Nitta,N.,
+   Hudson,H.S., and Zucker,A. 1998, in Proc. 2nd Advances in Solar Physics
+   Euroconference (ASPE), Three-Dimensional Structure of Solar Active
+   Regions, (eds. C.Alissandrakis and B.Schmieder), PASP, subm. Berton,R.
+   and Sakurai,T. 1985, SP 96, 93 Bray,R.J., Cram,L.E., Durrant,C.J., and
+   Loughhead, R.E. 1991, Plasma Loops in the Solar Corona, Cambridge:
+   Cambridge University Press Brekke,P., Kjeldseth-Moe,O., Brynildsen,N.,
+   Maltby,P., Haugan,S.V.H., Harrison,R.A., THompson,W.T., Pike,C.D. 1997,
+   SP 170, 163 Brosius,J.W., Davila,J.M., Thomas,R.J., Saba,J.L.R.,
+   Hara,H. and Monsignori-Fossi,B.C., 1997, ApJ 477, 969 Brosius,J.W.,
+   Willson,R.F., Holman,G.D., and Schmelz,J.T. 1992, ApJ 386, 347
+   Brown,S.F. 1996, AA 305, 649 Cargill,P.J. 1994, ApJ 422, 381
+   Cargill,P.J. and Klimchuk,J.A. 1997, ApJ 478, 799 Davila,J.M. 1994, ApJ
+   423, 871 Delaboudini`ere,J.P., et al. 1995, SP 162, 291 Dere,K.P. 1982,
+   SP 75, 189 Dere,K.P., Landi,E., Mason,H.E., Monsignori-Fossi,B.F., and
+   Young,P.R. 1997, AASS, in press Fludra,A., Brekke,P., Harrison,R.A.,
+   Mason,H.E., Pike,C.D., Thompson,W.T., and Young,P.R. 1997, SP 175, 487
+   Foukal,P. 1975, SP 43, 327 Foukal,P. 1978, ApJ 223, 1046 Galeev,A.A.,
+   Rosner,R., Serio,S., and Vaiana,G.S. 1981, ApJ 243, 301 - 25 -
+   Gary,G.A. 1990, "Concerning the Extrapolation of Solar Non-Linear
+   Force-Free magnetic Fields", Memorie della Societa Astronomica
+   Italiana, 61, 457 Gary,G.A. 1997, SP 174, 241 Gary,G.A. and
+   Alexander,D. 1998, SP, subm. Golub,L., Herant,M., Kalata,K., Lovas,I.,
+   Nystrom,G., Pardo,F., Spiller,E., Wilczynski,J. 1990, Nature 344, 842
+   Harvey,K.L. and Hudson,H.S. 1998, in "Observational Plasma
+   Astrophysics: Five Years of Yohkoh and Beyond", Proc. Yohkoh Workshop,
+   Yoyogi, Tokyo, Japan, Nov. 6-8, 1998, (eds. T.Watanabe, T.Kosugi, and
+   A.C.Sterling), Astrophys. and Space Science Library, Dordrecht:Kluwer,
+   229, 315 Hudson,H.S., LaBonte,B.J., Sterling,A.C., and Watanabe,T.
+   1998, in "Observational Plasma Astrophysics: Five Years of Yohkoh and
+   Beyond", Proc. Yohkoh Workshop, Yoyogi, Tokyo, Japan, Nov. 6-8, 1998,
+   (eds. T.Watanabe, T.Kosugi, and A.C.Sterling), Astrophys. and Space
+   Science Library, Dordrecht:Kluwer, 229, 237 Kano,R. and Tsuneta,S.
+   1995, ApJ 454, 934 Kano,R. and Tsuneta,S. 1996, Publ.Astron.Soc.Japan
+   48, 535 Klimchuk,J.A., and Gary,D.E. 1995, ApJ 448, 925 Klimchuk,J.A.,
+   Lemen,J.R., Feldman,U., Tsuneta,S., and Uchida,Y. 1992, PASJ 44, L181
+   Klimchuk,J.A. and Porter,L.J. 1995, Nature, 377, 131 Lang,K.R. 1980,
+   Astrophysical Formulae, Berlin:Springer Loughhead,R.E., Wang,J.L., and
+   Blows,G. 1983, ApJ 274, 883 Loughhead,R.E., Chen,C.L., and Wang,J.L.
+   1984, SP 92, 53 McClymont,A.N., Jiao,L., and Miki'c,Z. 1997, "Problems
+   and Progress in Computing Three-Dimensional Coronal Active Region
+   Magnetic Fields from Boundary Data", SP 174, 191 Moses,D. and 34
+   co-authors 1997, SP 175, 571 Neupert,W.M. and 21 co-authors 1998, SP,
+   submitted Newmark,J.S., Thompson,B., Gurman,J.B., Delaboudini`ere,J.P.,
+   Aschwanden,M.J., and Mason,H. 1997, BAAS 29/5, 1321, #73.07 Nitta, N.,
+   White, S.M., Kundu, M.R., Gopalswamy, N., Holman, G.D., Brosius, J.W.,
+   Schmelz, J.T., Saba, J.L.R., and Strong, K.T. 1991, ApJ 374, 374
+   Ofman,L., Klimchuk,J.A. and Davila,J.M. 1998, ApJ 493, 474
+   Pallavicini,R., Serio,S., and Vaiana,G.S. 1977, ApJ 216, 108
+   Parker,E.N. 1988, ApJ 330, 474 Peres,G. 1997, in Proc. 5th SoHO
+   workshop on The Corona and Solar Wind Near Minimum Activity, Oslo,
+   Norway, 17-20 June 1997, ESA SP-404, in press - 26 - Porter,L.J. and
+   Klimchuk,J.A. 1995, ApJ 454, 499 Portier-Fozzani,F., Neupert,W.,
+   Aschwanden,M.J., Sheeley,N.R., Thompson,B., Maucherat,A.J., Newmark,J.,
+   Klimchuk,J., and EIT Team 1998, in Proc. 2nd Advances in Solar Physics
+   Euroconference (ASPE), Three-Dimensional Structure of Solar Active
+   Regions, (eds. C.Alissandrakis and B.Schmieder), PASP, in press
+   Priest,E.R. 1981, "Solar Flare Magnetohydrodynamics", Gordon and Breach
+   Science Publishers Raymond,J.C., Cox,D.P, and Smith,B.W. 1976, ApJ 204,
+   290 Rosner,R., Tucker,W.H., and Vaiana,G.S. 1978, ApJ 220, 643
+   Sakurai,T. 1989, Computational Modeling of Magnetic Fields in Solar
+   Active Regions, Space Science Reviews 51, 11 Schmelz,J.T., Holman,G.D,
+   Brosius,J.W., and Gonzalez,R.D. 1992, ApJ 399, 733 Schmelz,J.T.,
+   Holman,J.D., Brosius,J.W., and Willson,R.F. 1994, ApJ 434, 786
+   Serio,S., Peres,G., Vaiana,G.S., Golub,L., and Rosner,R. 1981, ApJ 243,
+   288 Sheeley,N. 1980, SP 66, 79 Spitzer,L. 1962, Physics of Fully
+   Ionized Gases (Interscience, New York), p.144 Tandberg-Hanssen,E. and
+   Emslie,G.A. 1988, "The physics of solar flares", Cambridge and New
+   York, Cambridge University Press Vesecky,J.F., Antiochos,S.K., and
+   Underwood,J.H. 1979, ApJ 233, 987 Vourlidas,A. and Bastian,T.S. 1996,
+   ApJ 466, 1039 Yokoyama,T. and Shibata,K. 1997, ApJ 474, L61 Wang,H. and
+   Sakurai,T. 1998, PASJ, in press Wang,Y.M., Sheeley,N.R.Jr.,
+   Hawley,S.H., Kraemer,J.R., Brueckner,G.E., Howard,R.A., Korendyke,C.M.,
+   Michels,D.J., Moulton,N.E., and Socker,D.G. 1997, ApJ 485, 419
+   Webb,D.F., Holman,G.D., Davis,J.M., Kundu,M.R., and Shevgaonkar,R.,K.
+   1987, ApJ 315, 716 Wheatland,M.S., Sturrock,P.A., and Acton,L.W. 1997,
+   ApJ 482, 510 Wragg,M.A. and Priest,E.R. 1982, AA 113, 269 - 27 - Table
+   1. Geometric Parameters of 30 Coronal Loops (1996-Aug-29, EIT 171 *A)
+   Loop Heliographic Azimuth Inclination Loop Center Loop Loop Scale Loop
+   # coordinates angle angle radius offset trace length height width l1;
+   b1 ff # R0 Z0 L1 L * w [deg] [deg] [deg] [Mm] [Mm] [Mm] [Mm] [Mm] [Mm]
+   1 247.9, -15.4 15\Sigma 1 -42\Sigma 1 56 -14 149 149 49 6.8 2 247.7,
+   -15.5 13\Sigma 1 -49\Sigma 5 62 18 91 234 50 6.1 3 247.4, -15.6
+   12\Sigma 1 -34\Sigma 1 68 31 89 282 57 7.4 4 247.3, -15.0 8\Sigma 2
+   -26\Sigma 1 77 45 104 338 57 6.9 5 247.1, -14.9 8\Sigma 3 -49\Sigma 1
+   73 37 121 309 56 6.3 6 247.0, -13.9 2\Sigma 2 -56\Sigma 1 84 53 80 381
+   42 7.0 7 246.1, -14.7 4\Sigma 2 -36\Sigma 1 89 51 125 389 62 7.1 8
+   245.2, -14.7 9\Sigma 2 -33\Sigma 2 113 80 124 534 57 7.1 9 247.0, -12.2
+   -3\Sigma 3 -12\Sigma 1 86 44 41 366 60 8.1 10 245.8, -13.3 1\Sigma 2
+   -23\Sigma 1 124 95 90 609 53 7.9 11 244.9, -12.2 1\Sigma 3 -31\Sigma 2
+   144 116 56 725 66 6.8 12 247.3, -10.7 -6\Sigma 2 10\Sigma 1 116 94 153
+   585 60 7.8 13 250.6, -10.1 -9\Sigma 7 11\Sigma 1 73 60 62 373 60 6.4 14
+   247.1, -9.8 -8\Sigma 3 10\Sigma 1 113 87 70 554 33 6.4 15 247.5, -9.0
+   -8\Sigma 1 12\Sigma 1 125 105 103 643 47 6.8 16 248.1, -8.5 -11\Sigma 3
+   25\Sigma 1 85 59 63 400 53 6.7 17 248.5, -8.0 -14\Sigma 4 32\Sigma 1 93
+   71 52 455 47 7.4 18 249.0, -7.4 -9\Sigma 4 40\Sigma 3 92 79 109 483 93
+   5.6 19 249.6, -6.9 -18\Sigma 3 39\Sigma 1 116 95 130 590 65 7.9 20
+   250.7, -6.6 -24\Sigma 6 52\Sigma 6 78 64 103 399 56 7.7 21 251.5, -6.1
+   -21\Sigma 6 58\Sigma 3 67 47 85 318 45 7.6 22 251.9, -5.7 -25\Sigma 5
+   58\Sigma 3 49 29 53 217 58 7.2 23 259.1, -10.7 -4\Sigma 4 0\Sigma 1 102
+   71 69 479 60 8.0 24 258.6, -11.4 -1\Sigma 4 14\Sigma 6 114 90 106 568
+   64 8.7 25 263.2, -16.6 -1\Sigma 5 43\Sigma 1 138 70 59 582 42 8.1 26
+   259.9, -13.8 -8\Sigma 4 13\Sigma 2 100 60 39 446 59 5.1 27 259.1, -13.4
+   -2\Sigma 3 50\Sigma 2 101 68 72 471 58 7.1 28 258.0, -13.4 0\Sigma 2
+   27\Sigma 2 90 63 86 423 57 7.5 29 257.9, -13.7 5\Sigma 2 36\Sigma 1 78
+   45 88 344 60 6.0 30 257.5, -13.8 -2\Sigma 3 69\Sigma 1 76 44 86 336 38
+   7.4 average 251.0 -11.8 -3 7 93 62 89 433 55 7.1 \Sigma 5.4,\Sigma 3.3
+   \Sigma 10 \Sigma 37 \Sigma 23 \Sigma 27 \Sigma 29 \Sigma 136 \Sigma 10
+   \Sigma 0.8 - 28 - Table 2. Physical Parameters of 30 Coronal Loops
+   (1996-Aug-29, EIT 171 *A) Loop Emission Electron Scale height Filter
+   ratio Temperature Conductive Radiative Steady-State Magnetic # measure
+   density temperature temperature gradient loss rate loss rate heating
+   rate field EM0 ne=109 T *e T EITe dT=ds rFc \Theta 103 ER \Theta 103 EH
+   \Theta 103 Bfoot log[cm \Gamma 5] [cm\Gamma 3] [MK] [MK] [K/km]
+   [erg/cm3 s] [erg/cm3 s] [erg/cm3 s] [G] 1 27.71 2.5 1.08\Sigma 0.07
+   1.25\Sigma 0.09 2.2\Sigma 0.5 -0.001 -0.718 0.716 -413 2 27.93 2.3
+   1.09\Sigma 0.12 1.27\Sigma 0.10 1.7\Sigma 1.0 -0.001 -0.607 0.607 -413
+   3 27.79 2.1 1.25\Sigma 0.13 1.22\Sigma 0.10 -0.1\Sigma 0.8 -0.000
+   -0.506 0.506 -285 4 27.60 2.6 1.26\Sigma 0.14 1.27\Sigma 0.11 3.7\Sigma
+   0.8 -0.004 -0.776 0.773 -285 5 27.34 2.5 1.22\Sigma 0.33 1.23\Sigma
+   0.10 -1.1\Sigma 0.4 -0.000 -0.718 0.718 -270 6 29.68 3.7 0.93\Sigma
+   0.08 1.30\Sigma 0.12 7.9\Sigma 2.7 -0.015 -1.572 1.557 -298 7 27.88 1.7
+   1.36\Sigma 0.17 1.19\Sigma 0.09 0.9\Sigma 0.3 -0.000 -0.332 0.332 -261
+   8 27.45 2.2 1.26\Sigma 0.10 1.23\Sigma 0.06 0.9\Sigma 0.2 -0.000 -0.556
+   0.555 -114 9 27.52 2.1 1.32\Sigma 0.53 1.15\Sigma 0.03 0.6\Sigma 1.0
+   -0.000 -0.506 0.506 -333 10 27.49 1.4 1.16\Sigma 0.30 1.21\Sigma 0.11
+   2.2\Sigma 0.5 -0.001 -0.225 0.224 -148 11 27.11 1.6 1.44\Sigma 0.18
+   1.20\Sigma 0.09 4.9\Sigma 0.4 -0.006 -0.294 0.288 7 12 27.56 2.0
+   1.31\Sigma 0.07 1.10\Sigma 0.06 0.5\Sigma 0.2 -0.000 -0.459 0.459 -208
+   13 27.41 1.8 1.31\Sigma 0.17 1.21\Sigma 0.11 4.6\Sigma 1.3 -0.006
+   -0.372 0.366 -252 14 27.18 1.7 0.73\Sigma 0.08 1.12\Sigma 0.05
+   1.2\Sigma 0.7 -0.000 -0.332 0.331 -157 15 27.48 2.0 1.04\Sigma 0.08
+   1.18\Sigma 0.09 1.8\Sigma 0.3 -0.001 -0.459 0.458 -294 16 27.28 1.4
+   1.15\Sigma 0.32 1.24\Sigma 0.12 -6.4\Sigma 0.7 -0.000 -0.225 0.225 -269
+   17 27.04 1.7 1.03\Sigma 0.30 1.18\Sigma 0.04 2.2\Sigma 0.6 -0.001
+   -0.332 0.330 -178 18 26.90 1.1 2.03\Sigma 0.41 1.30\Sigma 0.06
+   0.7\Sigma 0.6 -0.000 -0.139 0.139 -159 19 27.28 1.3 1.43\Sigma 0.17
+   1.18\Sigma 0.04 0.0\Sigma 0.4 -0.000 -0.194 0.194 -129 20 27.43 1.8
+   1.22\Sigma 0.05 1.22\Sigma 0.04 1.2\Sigma 0.2 -0.000 -0.372 0.372 -140
+   21 27.51 2.1 0.98\Sigma 0.11 1.15\Sigma 0.04 0.8\Sigma 0.3 -0.000
+   -0.506 0.506 -97 22 27.32 1.0 1.27\Sigma 0.82 1.22\Sigma 0.12
+   -4.5\Sigma 1.9 -0.000 -0.115 0.115 -159 23 27.61 2.3 1.31\Sigma 0.28
+   1.23\Sigma 0.15 11.4\Sigma 1.0 -0.024 -0.607 0.584 54 24 28.29 1.3
+   1.41\Sigma 0.22 1.20\Sigma 0.08 -7.3\Sigma 4.0 -0.000 -0.194 0.194 951
+   25 27.38 1.8 0.93\Sigma 0.04 1.18\Sigma 0.11 5.4\Sigma 0.5 -0.007
+   -0.372 0.365 76 26 26.95 1.4 1.30\Sigma 0.36 1.15\Sigma 0.08 5.9\Sigma
+   1.8 -0.009 -0.225 0.216 60 27 27.20 1.5 1.26\Sigma 0.30 1.21\Sigma 0.07
+   -1.7\Sigma 0.5 -0.000 -0.258 0.258 61 28 27.79 2.6 1.24\Sigma 0.05
+   1.12\Sigma 0.04 0.0\Sigma 0.3 -0.000 -0.776 0.776 128 29 27.76 2.4
+   1.31\Sigma 0.06 1.36\Sigma 0.07 -1.2\Sigma 0.6 -0.000 -0.661 0.661 128
+   30 29.48 1.7 0.84\Sigma 0.10 1.16\Sigma 0.08 -9.7\Sigma 4.8 -0.000
+   -0.332 0.332 142 average 27.61 1.92 1.22 1.21 0.960 -0.003 -0.458 0.455
+   -108 \Sigma 0.61 \Sigma 0.56 \Sigma 0.23 \Sigma 0.06 \Sigma 4.265
+   \Sigma 0.005 \Sigma 0.285 \Sigma 0.283 \Sigma 257 - 29 - Table 3.
+   Comparison of Mean Physical Loop Parameters in EUV and SXR Parameter
+   EUV SXR (This work) (Kano & Tsuneta 1995;1996) Objects Cool loops Hot
+   loops Observations SoHO/EIT 171 *A Yohkoh/SXT Electron temperature Te
+   1:2 MK 5 MK Electron density ne0 2 \Theta 109 cm \Gamma 3 3 \Theta 109
+   cm\Gamma 3 Loop half length L 2 \Theta 1010 cm 1 \Theta 1010 cm Loop
+   pressure p0 0.6 dyne cm \Gamma 2 4 dyne cm\Gamma 2 Conductive loss time
+   o/cond 9 \Theta 105 s 8 \Theta 103 s Radiative loss time o/rad 2 \Theta
+   103 s 1 \Theta 104 s Ratio o/cond=o/rad 450 1 - 30 - Fig. 1.-- SoHO/EIT
+   Fe IX/X image of active region AR 7986, recorded on 1996-Aug-30,
+   0020:14 UT, at a wavelength of 171 *A, sensitive in the temperature
+   range of Te = 1:0 \Gamma 1:5 MK (top). The greyscales of the image is
+   scaled logarithmically in flux, the contours correspond to increments
+   of 100 DN (data numbers). The heliographic grid has a spacing of 50.
+   The filtered image (lower panel) was created by subtracting a smoothed
+   image (using a boxcar of 3\Theta 3 pixels) from the original image, in
+   order to enhance the loop fine structure. Fig. 2.-- Definition of loop
+   parameters: loop point positions (xi; yi); i = 1; :::; n starting at
+   the primary footpoint at height h1 = hfoot, the azimuth angle ff
+   between the loop footpoint baseline and heliographic East-West
+   direction, and the inclination angle # between the loop plane and the
+   vertical to the solar surface. Fig. 3.-- The principle of Dynamic
+   Stereoscopy is illustrated here with an example of two adjacent loops,
+   where a thicker loop is bright at time t1, while a thinner loop is
+   brightest at time t2. From the loop positions (xi; yi) measured at an
+   intermediate reference time t, i.e. t1 ! t ! t2 (middle panel in middle
+   row), projections are calculated for the previous and following days
+   for different inclination angles # of the loop plane (left and right
+   panel in middle row). By extracting stripes parallel to the calculated
+   projections # = 100; 200; 303 (panels in bottom part) it can be seen
+   that both loops appear only coaligned with the stripe axis for the
+   correct projection angle # = 200, regardless of the footpoint
+   displacement \Delta x between the two loops. The coalignment criterion
+   can therefore be used to constrain the correct inclination angle #,
+   even for dynamically changing loops. Fig. 4.-- Projections of 30
+   stereoscopically reconstructed loop segments (numbered white curves)
+   are shown overlaid on the SoHO/EIT 171 *A images (top panels) and the
+   filtered images (bottom panels) of 1998-Aug-29, 30, and 31. The 30 loop
+   segments were traced from the filter image of Aug 30 (bottom middle
+   panel), while the projections on the previous and following day were
+   calculated from the inclination angles # obtained from the dynamic
+   stereoscopy method. Note that the overall magnetic field structure is
+   almost invariant during the 3 days, but dynamic changes of the loops
+   produce slight displacements between the calculated projections forward
+   and backward in time and the actually observed fine structure. Fig.
+   5.-- Three different projections of the stereoscopically reconstructed
+   30 loops of AR 7986 are shown. The loop segments that were traced from
+   the 96-Aug-30 171 *A image are marked with thick solid lines, while the
+   extrapolated segments (marked with thin solid lines) represent circular
+   geometries extrapolated from the traced segments. The three views are:
+   (1) as observed from Earth with l0; b0 (bottom right panel), (2)
+   rotated to North by b00 = b0 \Gamma 1000 (top right panel), and (3)
+   rotated to East by l00 = l0 +97:20 (corresponding to -7.2 days of solar
+   rotation; bottom left panel). An EIT 171 *A image observed at the same
+   time (-7.2 days earlier) is shown for comparison (top left panel),
+   illustrating a similar range of inclination angles and loop heights as
+   found from stereoscopic correlations a week later. The heliographic
+   grid has a spacing of 50 degrees or 60 Mm. - 31 - Fig. 6.-- The
+   positions of the curved coordinate grids of the 30 analyzed loop
+   segments are shown in the top right panel, which has the same
+   orientation as the 1996-Aug-30 map shown in Fig.4 (middle). The
+   coordinate grid of loop #1 is represented with 1-pixel resolution,
+   while only the outer borders and central axes are indicated for the
+   other loop segments. - The vertically oriented panels represent the
+   coordinate grids of the analyzed 30 loops, stretched out along the loop
+   axis. The top of the panels corresponds to the primary footpoint (see
+   positions l1; b1 in Table 1). In each panel we show the EIT 171 *A flux
+   loop cross-sections measured perpendicularly to the loop axes.
+   Successive cross-sections are separated by a distance of 1 pixel along
+   the loop axis. The flux associated with each loop is marked with a grey
+   area, obtained by background subtraction with a cubic spline
+   interpolation between both sides of the loop cross-section. Fig. 7.--
+   The loop-associated EUV flux (Floop(s), thick line), the total EUV flux
+   (Ftotal(s), thin line), and the background (Ftotal(s) \Gamma Fflux(s),
+   dotted line) measured along the loop is shown for Loop #1 (left panel).
+   A histogram of the relative fractions Floop=Ftotal (integrated over the
+   traced loop lengths) is shown from all 30 analyzed loops in right
+   panel. Fig. 8.-- The variation of the loop thickness is shown for the
+   10 loops with the least confusion by adjacent loops (see cross-sections
+   in Fig.6) as function of the loop length s (left panels). A linear
+   regression fit is indicated (solid line in left panels). The average
+   (equivalent) width w is histogrammed for all 30 analyzed loops (top
+   right). A loop divergence factor is calculated from the ratio of the
+   average width in the upper half and lower half (traced) loop segments
+   (right bottom). Note that most of the loops show no significant loop
+   thickness variation. Fig. 9.-- Left panel: The effect of the variable
+   column depth wz(s) measured parallel to the line-of-sight z is
+   illustrated as function of the loop length parameter s, for a loop with
+   a constant diameter w. Right panel: The effect of the inclination angle
+   # of the loop plane on the inferred density scale height *(#) is shown.
+   Both effects have to be accounted for the determination of the electron
+   density ne(s) along the loop. Fig. 10.-- The electron density ne(s)
+   (left panels) and the EIT filter-ratio electron temperature Te(s)
+   (right panels) as function of the loop length s for the same 10 loops
+   selected in Fig.8. An exponential model ne(h) is fitted, yielding the
+   density scale height * and scale height temperature T *e indicated in
+   the left panels. The average EIT filter-ratio temperature T EITe
+   (obtained from 171/195 *A images) is indicated in the right panels. A
+   temperature gradient dTe=ds is listed if the gradient is significant.
+   Fig. 11.-- Statistics of scale height temperatures T *e (left top
+   panel), EIT filter-ratio temperatures T EITe (left bottom panel),
+   scatter plot of these two temperatures (right top panel), and EIT
+   temperature gradients dT =ds (right bottom panel) for all analyzed 30
+   loops. Fig. 12.-- SoHO/MDI Magnetogram recorded on 96-Aug-30, 2048 UT,
+   rotated to the time of the analyzed EIT image (96-Aug-30 0020:14 UT),
+   with contour levels at B = \Gamma 1050; :::; \Gamma 150; \Gamma 50; 50;
+   150; ::::; 1050 G. Magnetic field lines calculated from a potential
+   field model are overlaid (thin lines) onto the 30 loops (thick lines)
+   traced from the SoHO/EIT image. - 32 - Fig. 13.-- The magnetic field
+   B(h) (top), the plasma fi-parameter or ratio of thermal to magnetic
+   pressure, fi(h) (middle), and the Alfv'en velocity vA(h) (bottom)
+   determined as function of height h h for the 30 analyzed EIT loops. The
+   magnetic field B(h) is taken from the nearest potential field line (see
+   Fig.12). The vertical density scale height * = 55 Mm is marked with a
+   dotted line. A potential field model is indicated with dashed curves
+   (top). Fig. 14.-- Test of loop scaling laws for our sample of 30 EIT
+   loops. The loop temperature predicted by the RTV-law (diamonds) and the
+   scaling law of Serio et al. (1981), see Eq.22 in text, (triangles), are
+   shown. Note that the scaling law of Serio et al. predicts the correct
+   mean loop temperature compared with the observed EIT temperatures (thin
+   line). Fig. 15.-- Scaling laws between the steady-state heating rate
+   EH, loop pressure p, loop length L, and magnetic field strength Bfoot
+   for our sample of 30 EUV loops. Linear regression fits are indicated
+   with solid lines, the standard deviations of the slopes are marked with
+   dashed lines. - 33 - -0.05 0.00 0.05 -0.16 -0.14 -0.12 -0.10 -0.08
+   -0.06 -0.04 deg 96/ 8/30 0:20:14.881 -0.05 0.00 0.05deg -0.16 -0.14
+   -0.12 -0.10 -0.08 -0.06 -0.04 deg 96/ 8/30 0:20:14.881 EIT 171 A EIT
+   171 A filtered Figure 1 : AR 7986 (Aschwanden et al. 1998) - 34 - 0.00
+   0.05 0.10 0.15 0.20 0.25 0.30East-West distance from Sun center x-x 0
+   [deg] 0.00 0.05 0.10 0.15 0.20 0.25 0.30 North-South distance from Sun
+   center y-y 0 [deg] (x1,y1)(x2,y2) (x3,y3) h1=hfoot (xn,yn) Azimuth
+   angle a Inclination angle q Footpoint baseline Vertical Definition of
+   Loop Parameters Figure 2 : AR 7986 (Aschwanden et al. 1998) - 35 -
+   B(x,t1) B(x+\Delta x,t2) Principle of Dynamic Stereoscopy B(x,t1)
+   B(x+\Delta x,t2) Principle of Dynamic Stereoscopy B(x,t1) B(x+\Delta
+   x,t2) Principle of Dynamic Stereoscopy Previous day -0.14 -0.12 -0.10
+   -0.08 -0.06 -0.04EW distance [deg]-0.14 -0.12 -0.10 -0.08 -0.06 -0.04
+   NS distance [deg] Previous day -0.14 -0.12 -0.10 -0.08 -0.06 -0.04EW
+   distance [deg]-0.14 -0.12 -0.10 -0.08 -0.06 -0.04 NS distance [deg]
+   B(x,t1) B(x+\Delta x,t2) Principle of Dynamic Stereoscopy Previous day
+   -0.14 -0.12 -0.10 -0.08 -0.06 -0.04EW distance [deg]-0.14 -0.12 -0.10
+   -0.08 -0.06 -0.04 NS distance [deg] Previous day -0.14 -0.12 -0.10
+   -0.08 -0.06 -0.04EW distance [deg]-0.14 -0.12 -0.10 -0.08 -0.06 -0.04
+   NS distance [deg] q=-100 100 200 900 Reference day -0.06 -0.04 -0.02
+   0.00 0.02EW distance [deg]-0.14 -0.12 -0.10 -0.08 -0.06 -0.04 Reference
+   day -0.06 -0.04 -0.02 0.00 0.02EW distance [deg]-0.14 -0.12 -0.10 -0.08
+   -0.06 -0.04 (x1,y1) (xn,yn) Following day -0.00 0.02 0.04 0.06 0.08
+   0.10EW distance [deg]-0.14 -0.12 -0.10 -0.08 -0.06 -0.04 Following day
+   -0.00 0.02 0.04 0.06 0.08 0.10EW distance [deg]-0.14 -0.12 -0.10 -0.08
+   -0.06 -0.04 q=900 200 100 -100 Stripe aligned with projection q=100
+   Stripe aligned with projection q=200 Stripe aligned with projection
+   q=300 Stripe aligned with observed projection Stripe aligned with
+   projection q=100 Stripe aligned with projection q=200 Stripe aligned
+   with projection q=300 Figure 3 : AR 7986 (Aschwanden et al. 1998) - 36
+   - -0.12 -0.10 -0.08 -0.06 -0.04 -0.02 -0.14 -0.12 -0.10 -0.08 -0.06
+   -0.04deg 96/ 8/29 0:15:15.006 -0.06 -0.04 -0.02 0.00 0.02 -0.14 -0.12
+   -0.10 -0.08 -0.06 -0.04 96/ 8/30 0:20:14.881 0.00 0.02 0.04 0.06 0.08
+   -0.14 -0.12 -0.10 -0.08 -0.06 -0.04 96/ 8/31 0:10:14.130 -0.12 -0.10
+   -0.08 -0.06 -0.04 -0.02 deg -0.14 -0.12 -0.10 -0.08 -0.06 -0.04deg 96/
+   8/29 0:15:15.006 -0.06 -0.04 -0.02 0.00 0.02 deg -0.14 -0.12 -0.10
+   -0.08 -0.06 -0.04 96/ 8/30 0:20:14.881 0.00 0.02 0.04 0.06 0.08 deg
+   -0.14 -0.12 -0.10 -0.08 -0.06 -0.04 96/ 8/31 0:10:14.130 -0.12 -0.10
+   -0.08 -0.06 -0.04 -0.02 -0.14 -0.12 -0.10 -0.08 -0.06 -0.04 -0.12 -0.10
+   -0.08 -0.06 -0.04 -0.02 -0.14 -0.12 -0.10 -0.08 -0.06 -0.04 -0.06 -0.04
+   -0.02 0.00 0.02 -0.14 -0.12 -0.10 -0.08 -0.06 -0.04 1 1 2 2 3 3 4 4 5 5
+   6 6 7 7 8 8 9 910 10 11 11 12 12 13 1314 14 15 15 16 16 17 17 18 18 19
+   19 20 2021 2122 22 23 23 24 2425 25 26 26 27 27 28 28 2929 3030 -0.06
+   -0.04 -0.02 0.00 0.02 -0.14 -0.12 -0.10 -0.08 -0.06 -0.04 1 1 2 2 3 3 4
+   4 5 5 6 6 7 7 8 8 9 910 10 11 11 12 12 13 1314 14 15 15 16 16 17 17 18
+   18 19 19 20 2021 2122 22 23 23 24 2425 25 26 26 27 27 28 28 2929 3030
+   0.00 0.02 0.04 0.06 0.08 -0.14 -0.12 -0.10 -0.08 -0.06 -0.04 0.00 0.02
+   0.04 0.06 0.08 -0.14 -0.12 -0.10 -0.08 -0.06 -0.04 1996-Aug-29
+   1996-Aug-30 1996-Aug-31 Figure 4 : AR 7986 (Aschwanden et al. 1998) -
+   37 - OBSERVED 7.2 DAYS EARLIER -0.35 -0.30 -0.25 -0.10 -0.05 0.00 deg
+   96/ 8/22 20:10:13.008 VIEW FROM EARTH -0.10 -0.08 -0.06 -0.04 -0.02
+   0.00 0.02 0.04EW [deg] -0.16 -0.14 -0.12 -0.10 -0.08 -0.06 -0.04 -0.02
+   1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 910 10 11 11 1212 13131414 1515 16 16
+   1717 18 18 19 19 20 20 21 21 22 22 23 2324 2425 25 26 26 27 27 28 28 29
+   29 30 30 ROTATED TO NORTH -0.10 -0.08 -0.06 -0.04 -0.02 0.00 0.02 0.04
+   0.24 0.26 0.28 0.30 0.32 0.34 0.36 0.38 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8
+   9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 20
+   21 21 22 22 23 23 24 24 25 25 26 26 27 27 28 28 29 29 30 30 ROTATED TO
+   EAST (-7.2 DAYS) -0.35 -0.30 -0.25EW [deg] -0.10 -0.05 0.00 NS [deg] 1
+   1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 1212 1313 14 14 15 15 16
+   16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 25 25 26 26 27 27 28
+   28 29 29 30 30 Figure 5 : AR 7986 (Aschwanden et al. 1998) - 38 - AR
+   7986, Loop Stripe Projections #1-30 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9
+   10 10 11 11 12 12 13131414 1515 16 16 17 17 18 18 19 19 20 20 21 21 22
+   22 23 23 24 24 25 25 26 26 27 27 28 28 29 29 30 30 Loop #1#2 #3 #4 #5
+   #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17 #18 #19 #20 #21 #22 #23 #24
+   #25 #26 #27 #28 #29 #30 Figure 6 : AR 7986 (Aschwanden et al. 1998) -
+   39 - Loop #1 0 20 40 60 80 100Loop length [pixels] 0 200 400 600 800
+   1000 Flux [DN] Total flux Background Background-subtracted Flux ratio
+   Floop/Ftotal=0.29 Loops #1-30 0.0 0.2 0.4 0.6 0.8 1.0Flux ratio F
+   loop/Ftotal 0 2 4 6 8 Number of loops Figure 7 : AR 7986 (Aschwanden et
+   al. 1998) - 40 - 0 50 100 150 200 46 8 1012 Loop # 1: w= 6.8 Mm 0 20 40
+   60 80 100 120 46 8 1012 Loop # 8: w= 7.2 Mm 0 10 20 30 40 50 60 46 8
+   1012 Loop #11: w= 6.7 Mm 0 10 20 30 40 50 4 6 8 1012 Loop #14: w= 6.3
+   Mm 0 20 40 60 80 46 8 1012 Loop #15: w= 6.8 Mm 0 20 40 60 80 46 8 1012
+   Loop #19: w= 8.1 Mm 0 20 40 60 80 4 6 8 1012 Loop #20: w= 7.7 Mm 0 10
+   20 30 40 50 60 46 8 1012 Loop #21: w= 7.6 Mm 0 10 20 30 40 50 60 4 6 8
+   1012 Loop #25: w= 8.1 Mm 0 20 40 60 80Loop length [Mm] 46 8 1012 Loop
+   #28: w= 7.6 Mm Loop width w[Mm] Loops #1-30 0 2 4 6 8 10Loop width
+   w[Mm]0 2 4 6 8 Number of loops Loops #1-30 0 10 2

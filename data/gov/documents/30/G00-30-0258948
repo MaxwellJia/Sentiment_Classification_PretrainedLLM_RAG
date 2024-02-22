@@ -1,0 +1,51 @@
+http://brw-stealth.cmdl.noaa.gov/settingflows.html
+
+                           Setting the Sample Flows
+
+         Constant and adequate sample flows are required for reproducible
+      results on the CATS system. Adequate sample flow is required to insure
+            that the sample loop is flushed clean of previous gases and
+       contaminates. Constant flow between all four sample loop positions is
+      needed to reduce any systematic problems with loading the sample loops.
+                    Below is a method for setting sample flows:
+       1. Shut down the data acquisition software by pressing CTRL-C in the
+          rungc screen and then typing "quit" in the "chroms" screen.
+       2. Start-up the "labdoit" program by opening a new shell and typing
+          labdoit. labdoit is a program very similar to the standard data
+          acquisition software but it does not do injections. The operator
+          also has control of the GC via the commands at the bottom of the
+          "chroms" screen.
+       3. To check a flow, simply step the stream selection valve (SSV) to
+          the port of interest. You may have to wait for up to a minute for
+          the flow to register on the "chroms" screen.
+
+
+   Sample Stream
+
+                Port #
+
+   Cal 1
+
+                2
+
+   Air 1
+
+                4
+
+   Cal 2
+
+                6
+
+   Air 2
+
+                8
+
+       4. To change a cal tank flow rate, adjust the cal tank regulator
+          pressure. To change the air flow rate, adjust the back-pressure
+          regulator on the pump board.
+       5. Once all of the flows have been set to approximately the same value
+          quit the labdoit program. Simply type quit in the "chroms" screen.
+       6. To start the data acquisition software again. Type "rungc" in an
+          open shell window.
+
+                                Return to Index

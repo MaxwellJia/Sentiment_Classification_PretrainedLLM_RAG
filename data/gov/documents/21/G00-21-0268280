@@ -1,0 +1,99 @@
+http://xdb.lbl.gov/Section5/Sec_5-5.pdf
+
+   X-Ray Data Booklet Section 5.5 USEFUL EQUATIONS The following pages
+   include a number of equations useful to x-ray scientists, either
+   expanding on subjects covered in this booklet or addressing topics not
+   covered here. The equations have been drawn from D. T. Attwood, Soft
+   X-Rays and Extreme Ultraviolet Radiation: Principles and Applications
+   (Cambridge Univ. Press, Cambridge, 1999) [http://www.coe.
+   berkeley.edu/AST/sxreuv], and the equation numbers refer to that
+   volume, which should be consulted for further explanation and
+   discussion. That reference also expands on the discussions in this
+   booklet on zone plate optics, synchrotron radiation, and other topics.
+   General X-Ray Formulas Wavelength and photon energy relationship: ¯h ·
+   = hc = 1239.842 eV · nm (1.1) Number of photons required for 1 joule of
+   energy: 1 joule 5.034 × 1015 [nm] photons (1.2a) X-Ray Scattering and
+   Absorption Thomson cross section for a free electron: 8 e = r2 3 e
+   (2.45) e2 re = = 2.82 × 10-13cm (2.44) 4 0mc2 and re is the classical
+   electron radius. Scattering cross section for a bound electron: 8 4 =
+   r2 (2.51) 3 e ( 2 - 2s)2 + ( )4 Rayleigh cross section ( 2 2s): 8 4 8 4
+   s R = r2 = r2 (2.52) 3 e e s 3 Scattering by a multi-electron atom: d (
+   ) = r2 d e |f |2 sin2 (2.68) 8 ( ) = |f|2r2 3 e (2.69) where the
+   complex atomic scattering factor represents the elec- tric field
+   scattered by an atom, normalized to that of a single electron: Z 2e-i k
+   · rs f( k, ) = (2.66) ( 2 - 2 s=1 s + i ) For forward scattering or
+   long wavelength this reduces to Z 2 f0( ) = = f0 ( 2 - 2 1 - if 0 2
+   (2.72 & 2.79) s=1 s + i ) Refractive index for x-ray radiation is
+   commonly written * as n n( ) = 1 - + i = 1 - are 2 (f0 2 1 - if 0 2 )
+   (3.9 & 3.12) where n = are 2 f0 2 1 ( ) (3.13a) n = are 2 f0 2 2 ( )
+   (3.13b) Absorption length in a material: 1 abs = = (3.22 & 3.23) 4
+   2nare f02( ) Mass-dependent absorption coefficient: 2r µ = e f0 Am 2 (
+   ) (3.26) u Atomic absorption cross section: abs = 2re f02( ) = Amuµ( )
+   (3.28a&b) Relative phase shift through a medium compared to a vacuum: 2
+   = r (3.29) where r is the thickness or propagation distance. * The
+   choice of +i is consistent with a wave description E = E0 exp[-i( t -
+   kr)]. A choice of -i is consistent with E = E0 exp[i( t - kr)]. Snell's
+   law: sin sin = (3.38) n Critical angle for total external reflection of
+   x-rays: c = 2 (3.41) n are 2f 0 1 ( ) c = 2 = (3.42a) Brewster's angle
+   (or polarizing angle): B - (3.60) 4 2 Multilayer Mirrors Bragg's law: m
+   = 2d sin (4.6b) Correction for refraction: 2¯ 4¯ d2 m = 2d sin 1 - = 2d
+   sin 1 - sin2 m2 2 where ¯ is the period-averaged real part of the
+   refractive index. t t = H = H (4.7) tH + tL d Plasma Equations Electron
+   plasma frequency: e2n 2 e p = (6.5) 0m Debye screening distance: 1/2 0
+   Te D = (6.6) e2n2e No. of electrons in Debye sphere: 4 ND = 3 3 Dne
+   (6.7) Electron cyclotron frequency: eB c = (6.8) m Maxwellian velocity
+   distribution for electrons characterized by a single-electron
+   temperature Te: 1 f(v) = e-v2/2v2e (6.1) (2 )3/2v3e where T 1/2 v e e =
+   (6.2) m Electron sound speed: T 1/2 a e e = (6.79) m Critical electron
+   density: n 0m 2 c = 1.11 × 1021 e/cm3 (6.112a & b) e2 2(µm) Refractive
+   index of plasma is n n = 1 - e (6.114b) nc Ratio of electron energy in
+   coherent oscillations to that in ran- dom motion: 2 vos e2E2 I/c = =
+   (6.131a) v e m 2 Te nc Te 2 vos 0.021I(1014 W/cm2) 2 (µm) = (6.131b) v
+   e Te(keV) Spectral brightness of blackbody radiation within / = 0.1%BW:
+   B / = T 3 (¯h / T )3 photons/sec 3.146 × 1011 eV (e¯h / T - 1)
+   (mm)2(mr)2(0.1%BW) (6.136b) Photon energy at peak spectral brightness:
+   ¯h |pk = 2.822 T (6.137) where is the Boltzmann constant.
+   Stefan-Boltzmann radiation law (blackbody intensity at any in-
+   terface): I = T 4 (6.141b) where the Stefan-Boltzmann constant is 2 4 =
+   60c2¯h3 (6.142) With T in eV: I = ( T )4 (6.143a) where is the modified
+   Stefan-Boltzmann constant 2 = = 1.027 × 105 watts (6.143b) 60¯h3c2
+   cm2(eV)4 Coherence Longitudinal coherence length:* coh = 2/2 (8.3)
+   Spatial or transverse coherence (rms quantities): d · = /2 (8.5) or in
+   terms of FWHM values d · 2 |FWHM = 0.44 Spatially coherent power within
+   a relative spectral bandwidth / = N for an undulator with N periods: ¯
+   e ¯h P uI 0 coh,N = · - 1 f(¯h /¯h 8 0) (8.7c) 0dxdy x y 2 ¯h where ¯h
+   0 corresponds to K = 0, and where 7 5 ¯h 1 ¯h 2 f(¯h /¯h 0) = + - + . .
+   . (8.8) 16 8 ¯h 0 16 ¯h 0 When the undulator condition ( cen) is
+   satisfied, the co- herent power within a relative spectral bandwidth /
+   < 1/N, is ¯ e ¯h P uI ( / )N 2 coh, / = · 1 - f(¯h /¯h 8 0) 0dxdy ¯h 0
+   ( 2 2cen) (8.10c) where is the combined beamline and monochrometer
+   effi- ciency. * The factor of two here is somewhat arbitrary and
+   depends, in part, on the definition of . Equation (26) on page 2-14
+   omits this factor. See Attwood, op.cit., for further discussion.
+   Spatially coherent power available from a laser is ( /2 )2 Pcoh = P (d
+   laser (8.11) x x) (dy y) where Plaser is the total laser power.
+   Normalized degree of spatial coherence, or complex coherence factor: E
+   µ 1(t)E 2 (t) 12 = (8.12) |E1|2 |E2|2 The van Cittert-Zernike theorem
+   for the complex coherence fac- tor is e-i I( , )eik( x+ y) d d µOP =
+   (8.19) I( , ) d d For a uniformly but incoherently illuminated pinhole
+   µOP( ) = e-i 2J1(ka ) (8.27) (ka ) which has its first null (µOP = 0)
+   at ka = 3.832, which for d = 2a corresponds to d · = 1.22 . EUV/Soft
+   X-Ray Lasers Growth of stimulated emission: I = eGL (7.2) I0 where L is
+   the laser length and G is the gain per unit length. For an upper-state
+   ion density nu and a density inversion factor F ( 1) G = nu stimF (7.4)
+   where the cross section for stimulated emission is 3A u stim = (7.16) 8
+   c( / ) r g e stim = f ( / ) g u (7.18) u where Au is the spontaneous
+   decay rate, f u is the oscillator strength and g /gu is the ratio of
+   degeneracy factors. Laser wavelength scaling goes as 1/ 4: P 16 2c2¯h(
+   / )GL = (7.22) A 4 Doppler-broadened linewidth: ( ) v 2 2 ln 2 T = i =
+   i (7.19a) FWHM c c M where vi is the ion thermal velocity, Ti is the
+   ion temperature, and M is the ion mass. With Ti expressed in eV and an
+   ion mass of 2mpZ ( ) 1/2 T = 7.68 × 10-5 i (7.19b) FWHM 2Z Lithography
+   Minimum printable line width: Lw = k1 (10.1) NA where k1 is a constant
+   dominated by the optical system, but affected by pattern transfer
+   processes. Depth of focus: DOF = ±k2 (10.2) (NA)2 Degree of partial
+   coherence: NA = cond (10.3) NAobj where the subscript cond refers to
+   the condenser or illumina- tion optics, and obj refers to the objective
+   lens of the reduction optics. International Technology Road Map for
+   Semiconductors Years 2005 2008 2011 2014 1:1 lines (nm) 100 70 50 35
+   Isolated lines (nm) 65 45 30 20 http://www.sematech.org

@@ -1,0 +1,142 @@
+http://www-fsli.fsl.noaa.gov/download.html
+
+   LDAD graphical user interface download website and installation
+   instructions.
+
+   Step 1) ReadMe contains the installation instructions in text format.
+
+     HTTP: Download ReadMe
+
+   Step 2) Determine your operating system and download the appropriate
+   setup.
+
+     HTTP: Windows NT/95/98 setup.exe
+
+     or
+
+     HTTP: UNIX setup.sh
+
+   Step 3) Execute "setup" on your computer. Setup will create
+   installation directories at "C:\Program Files\webDissem". It will also
+   create a desktop icon and a Start menuitem named "sync". It will also
+   create a desktop icon and a Start menuitem named webDissem. The
+   download must be synchronized before it is possible to run webDissem
+   since the "sync" downloads the webDissem application along with
+   localization information. Synchronizing in the future will allow the
+   application, menus, and static datasets such as maps to be updated on
+   your hard drive with the version on the website. If setup cannot find
+   Java version 1.1.7B or newer on your system, it will be necessary to
+   download the Java Runtime Environment, JRE, version 1.1.7B and expand
+   it.
+
+     HTTP: Download jre.exe 1.1.7B
+
+   Step 4) Log off the internet and connect your computer to the website
+   via dial-in terminal server or via your internet service provider. In
+   general, a dial-in connection is more reliable due to the dedicated
+   line which is not impacted by internet traffic and bandwidth loading.
+
+     Connect via DIAL-IN TERMINAL SERVER from Windows NT using Java JRE
+     application.
+
+     1.Request Phone numbers, DNS number and Web site URL from local WFO.
+     2.Phone Number = _________________________
+     3.DNS (Domain Name Server) Number = __________________________
+     4.Web site URL = See contents of "c:\Program
+     Files\webDissem\websiteName.txt".
+     5.Select the START menu from the bottom left corner of the screen.
+     6.Select PROGRAMS
+     7.Select ACCESSORIES
+     8.Select DIAL UP NETWORKING 9.Type in the phone number to call.
+     10.Select MORE
+     11.Select EDIT PHONEBOOK ENTRY
+     12.Select SERVER TAB
+     13.Check the TCP/IP check box.
+     14.Select TCP/IP SETTINGS
+     15.Select SERVER ASSIGNED IP ADDRESS
+     16.Select SPECIFY NAME SERVER ADDRESSES
+     17.Enter DNS number as PRIMARY DNS
+     18.Click on OK
+     19.Click on OK
+     20.Click on Dial
+
+     Connect via DIAL-IN TERMINAL SERVER from Windows 95 using Java JRE
+     application.
+
+     1.Request Phone numbers, DNS number and Web site URL from local WFO.
+     2.Phone Number = _________________________
+     3.Web site URL = See contents of "c:\Program
+     Files\webDissem\websiteName.txt".
+     4.Select the START menu from the bottom left corner of the screen.
+     5.Select PROGRAMS
+     6.Select ACCESSORIES
+     7.Select DIAL UP NETWORKING
+     8.Double click on MAKE NEW CONNECTION
+     9.Click Next
+     10.Type in the phone number to call.
+     11.Click on Next
+     12.Click on Finish
+     13.Click on the new connection icon just created.
+     14.Click on CONNECT
+
+     Connect via INTERNET SERVICE PROVIDER from Windows NT using Java JRE
+     application.
+
+     1.Request Phone numbers, DNS number and Web site URL from Internet
+     Service Provider.
+     2.Phone Number = _________________________
+     3.DNS (Domain Name Server) Number = __________________________
+     4.Web site URL = See contents of "c:\Program
+     Files\webDissem\websiteName.txt".
+     5.Select the START menu from the bottom left corner of the screen.
+     6.Select PROGRAMS
+     7.Select ACCESSORIES
+     8.Select DIAL UP NETWORKING
+     9.Type in the phone number to call.
+     10.Select MORE
+     11.Select EDIT PHONEBOOK ENTRY
+     12.Select SERVER TAB
+     13.Check the TCP/IP check box.
+     14.Select TCP/IP SETTINGS
+     15.Select SERVER ASSIGNED IP ADDRESS
+     16.Select SPECIFY NAME SERVER ADDRESSES
+     17.Enter DNS number as PRIMARY DNS
+     18.Click on OK
+     19.Click on OK
+     20.Click on Dial
+
+     Connect via INTERNET SERVICE PROVIDER from Windows 95 using Java JRE
+     application.
+
+     1.Request Phone numbers, DNS number and Web site URL from Internet
+     Service Provider.
+     2.Phone Number = _________________________
+     3.Web site URL = See contents of "c:\Program
+     Files\webDissem\websiteName.txt".
+     4.Select the START menu from the bottom left corner of the screen.
+     5.Select PROGRAMS
+     6.Select ACCESSORIES
+     7.Select DIAL UP NETWORKING
+     8.Double click on MAKE NEW CONNECTION
+     9.Click Next
+     10.Type in the phone number to call.
+     11.Click on Next
+     12.Click on Finish
+     13.Click on the new connection icon just created.
+     14.Click on CONNECT
+
+   Step 5) Start the website synchronization by double clicking on the
+   "sync" desktop icon or select "StartMenu->Programs->sync".
+
+   Step 6) Start the application by double clicking on the "webDissem"
+   desktop icon or select "StartMenu->Programs->webDissem".
+
+     1.The netscape with a "Start" button should appear.
+     2.Click on the start button.
+     3.The LDAD Frame should appear.
+
+   Note: You may add your own menuitems which integrate in your shapefiles
+   and GIF images by creating a menu file in "c:\Program
+   Files\webDissem\localConfig" with the same name as a menu file in
+   "c:\Program Files\webDissem\localizations\WFO\wkspace". See help
+   documentation.

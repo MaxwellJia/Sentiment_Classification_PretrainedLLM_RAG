@@ -1,0 +1,75 @@
+http://www.noaa.inel.gov/Capabilities/radar/
+
+   [USEMAP:arlfrd.gif]
+
+
+   _______________________________________________________________________
+
+                    Radar Wind Profiler and Doppler Sodar
+
+Abstract
+
+   In recent years, remote sensing has played an increasingly important
+   role in atmospheric boundary layer studies.  Ground-based remote
+   profilers have gained a reputation as effective tools for acquiring
+   upper air information.  FRD employs a two unique remote sensors used to
+   acquire wind profiles in the atmospheric boundary layer.
+
+Introduction
+
+   A 915-MHz Radian phased-array Doppler radar wind profiler transmits has
+   a range of approximately 150 to 4000 m with a vertical resolution of 60
+   to 100 m.  The remotely-sensed measurements include horizontal wind
+   speed (U) and direction (2), the standard deviation of the horizontal
+   wind direction (
+   F[2]), and vertical wind speed (W).  In addition, the radar estimates
+   the refractive index structure parameter (C[N]^2).  This value is a
+   direct measurement of the turbulent intensity of humidity fluctuations
+   in the atmospheric boundary layer and is useful for estimating the
+   mixed layer height (z[i]). [radar1.jpg] A Radian 600PA phased-array
+   Doppler sodar transmits a 1.5 to 3 KHz acoustic signal and has a range
+   of about 50 to 800 m with a resolution of about 10 to 50 m.  The sodar
+   acquires the same wind field data (U, 2, F[2], W) as well as the
+   standard deviation of the vertical wind speed (F[w]).  The backscatter
+   information acquired by the sodar is directly related to the
+   temperature structure function (C[T]^2).  This measurement is useful in
+   depicting inversion layers and other regions were temperature gradients
+   exist.
+
+   Both systems transmit their respective signals in pulses.  Each pulse
+   is both reflected and absorbed by the atmosphere as it moves upwards.
+   The vertical range of each pulse is determined by how high it can go
+   before the signal becomes so weak that the energy reflected back to the
+   antenna can no longer be detected.  That is, as long as the reflected
+   pulses can be discerned from background noise, meaningful wind
+   velocities can be obtained by comparing the Doppler shift of the output
+   signal to that of the return signal.  The attenuation of the pulses are
+   functions of signal type, signal power, and atmospheric conditions.
+
+   The radar and sodar are mounted on a 7-m flatbed trailer.  The radar
+   sits on the front end of the trailer with the sodar in the rear.
+   Leveling of the trailer and sensors is accomplished with seven jacks
+   mounted along the sides and front of the trailer.  All of the
+   electronics are sheltered in an enclosed trailer.  The heated and
+   cooled trailer is 2.4 m wide and 5.5 m long.
+
+   The radar and sodar are each operated by their own PC.  These two
+   computers are networked into a "hub" computer using NodeRunner 2000/C
+   self-describing Internet cards with LANtastic 6.0 network software.
+   Remote access into the hub computer is possible via telephone line and
+   a high speed modem.  Data from the hub computer can also be downloaded
+   by File Transfer Protocol (FTP) through an Internet connection.
+
+Contact Information
+
+   Jerry H. Crescenti
+   U.S. Dept. Commerce / NOAA
+   Air Resources Laboratory
+   1750 Foote Drive
+   Idaho Falls, ID 83402
+   Tel: (208) 526-2328
+   Fax: (208) 526-2549
+   e-mail: jerry.crescenti@noaa.gov
+
+   Updated: October 16, 2001
+   _______________________________________________________________________

@@ -1,0 +1,489 @@
+http://expect.nist.gov/doc/bgpasswd.ps
+
+   Introduction Shell scripts cannot automate interactive processesexcept
+   in the simplest of ways. In particular, data can be written to a
+   process but only following one paththrough the program. Responding to
+   programs is not possible. Problems such as timing and buffering canmake
+   automation difficult if not impossible. It is possible to reliably
+   automate interactiveprocesses with a variety of tools including C,
+   Perl, and Emacs. For simplicity, I will present examples inExpect
+   [Libes94], but other tools are similarly applicable. Indeed, both
+   Perl's "chat2" [Schwartz90] andthe C/C++ Expect library were modelled
+   after the Expect program. Automating ftp is a common problem. The
+   usualsolutions are to use an .ftprc file or an in-line "<<"script.
+   Unfortunately, these sacrifice both reliability and security.
+   Reliability is lost because these mecha-nisms offer no way to verify
+   that the commands succeed. Security is lost when passwords are storedas
+   cleartext in a file or passed as cleartext through command-line
+   arguments. (For simplicity, from nowon I will refer to all sensitive
+   information as "passwords".) Security systems such as
+   Kerberos[Miller87] do not address these problems. This paper does not
+   address the simple cases whereapplications are entirely under your
+   control and can be modified or otherwise forced to run without
+   pass-words. sudo [Nieusma] and similar programsprovide a direct
+   solution to these problems. In contrast, the problems addressed by this
+   paperdemand a password. A simple case might be that of designing a
+   means to use a service from a commercialprovider in the background. An
+   automated solution requires you to log in and supply the password.
+   Thecommercial service is not under your control. This paper describes
+   several techniques that can beused to handle passwords in background
+   processes in a secure way. The techniques are non-traditional
+   yetrelatively simple to implement. These techniques will be
+   demonstrated using Expect. Expect - An Overview Because the examples in
+   this paper are written inExpect, an overview of the language is
+   provided here. The implementation and philosophy of Expectis described
+   at length in the literature [Libes90, Libes91]. Briefly, scripts are
+   written in an interpretedlanguage. Commands are provided to create
+   interactive processes and to read and write their output andinput.
+   Expect is named after the specific command which waits for output from
+   a program. The language of Expect is based on Tcl[Ousterhout94]. Tcl is
+   actually a subroutine library, which becomes embedded into an
+   application andprovides language services. The resulting language looks
+   very much like a typical shell language. Thereare commands to set
+   variables ( set), control flow( if, for, continue, etc.), and perform
+   the usualmath and string operations. Of course, UNIX programs can be
+   called (exec). All of these facilitiesare available to any Tcl
+   application. Tcl is completely described by Ousterhout. Expect is built
+   alongside of Tcl and provides addi-tional commands. The spawn command
+   invokes aUNIX program for interactive use. send sendsstrings to a
+   process. expect waits for strings from aprocess. expect supports
+   regular expressions andcan wait for multiple strings at the same time,
+   executing a different action for each string. expectalso understands
+   exceptional conditions such as timeout and end-of-file. Handling
+   Passwords withSecurity and Reliability in Background Processes Don
+   Libes - National Institute of Standards and Technology ABSTRACT
+   Traditionally, background automation of interactive processes meant
+   giving up security and reli-ability. With the advent of software such
+   as Expect for controlling interactive processes, it has become possible
+   to improve reliability and security with relative ease. This paper
+   reviews the reliability aspects but focuses primarily on the security
+   aspects, presentingseveral non-obvious techniques for dealing with
+   passwords and other sensitive information in background processes.
+   These techniques require no changes to existing programs and no new
+   securitysystems are necessary. With the appropriate tools and examples,
+   these techniques can be applied with surprisingly little effort to a
+   wide variety of problems. Using Expect it is possible to script telnet,
+   ftp, rlogin, rz/sz, and numerous other programs.Many of these tasks
+   fall in the domain of system administration. For example, a system
+   administratorcreating thousands of accounts each semester will find an
+   automated passwd program much moreconvenient than having to type in
+   each password manually. The following script is another example,
+   driving the fsck program so that one class of questions isanswered
+   "yes" while another is answered "no". If anything else appears, control
+   is temporarily turnedover to a user to answer it. while 1 { expect {
+   eof {break} "UNREF FILE*CLEAR\\?" {send "y\r"} "BAD INODE*FIX\\?" {send
+   "n\r"} "\\? " {interact +} } } Using a script like this one can
+   substantially raise thereliability of tasks that normally require
+   interactive use. Expect and related programs can be put to a
+   widevariety of uses as others have found [Woodson91, Morrison92,
+   Stevens92, Caffrey92, Dichter93]solving problems which were not even
+   recognized as problems only because there were no good solutions. A
+   particularly common problem addressed by interac-tion automation
+   software is entering passwords. Passwords are usually entered by hand.
+   Mostprograms ( rlogin, crypt, etc.) use getpass, aUNIX library
+   function, which reads the password from /dev/tty. Since /dev/tty cannot
+   be redi-rected from the shell, the user must enter keystrokes manually.
+   A variety of kludges have appeared overthe years to defeat such
+   security measures. Why? Because entering passwords manually is
+   tiresome.Consider having to enter the same passwords every day to make
+   use of a service. The remainder of this paper will focus on
+   automatingthe handling passwords with special regard to background
+   processes. Background processes are ageneral goal - if you can run a
+   process in the background, it is completely automated. You can turnyour
+   attention to other things. In many cases, everything in a process can
+   be auto-mated except for the password entry. Were this automated, the
+   process as a whole could be made intoa background process. So how do we
+   fix this problem? I will describe several common scenarios
+   involvinghandling passwords. In each case, I will explain how to
+   automate the handling, usually resulting in acompletely automated and
+   backgroundable process. I will use the term script to refer to that
+   whichperforms the automation and may indirectly run the true program of
+   interest. Of course, the program mayindeed be a script. Similarly, the
+   role of the script may be played by a compiled program. However,
+   theterms I will use are accurate for most applications. Technique 1: In
+   the Foreground, Prompt For Pass-words Ahead Of Time The technique
+   described in this section is appropriatefor a user who decides at the
+   spur of the moment to schedule a background task for a later time.
+   (Spur ofthe moment is not meant to imply the command is trivial or
+   light-hearted. Virtually all interactivecommands are spur of the
+   moment.) For example, imagine a user wants to automate a telnet session
+   toanother host. The session must occur several hours later, however.
+   The user will not be present to supplythe password. One solution is to
+   write a script that prompts for thepassword immediately when the user
+   makes the request. The script begins running interactively. Thefirst
+   thing it does is prompt for passwords. Once all sensitive information
+   has been gathered, the scriptdisconnects from the terminal and
+   continues in the background, perhaps sleeping if necessary until
+   anappropriate time. The script then starts the program, interactively
+   answering the program's requests forpasswords. Below is a sample of
+   such a script using Expect. Thescript is not setuid and may be readable
+   to others since no passwords are embedded within. # prompt and collect
+   password for later stty -echo send "password? " expect -re "(.*)\n"
+   send "\n" set password $expect_out(1,string) # got the password, now go
+   # into the background if {[fork] != 0} exit disconnect # now in
+   background, sleep (or wait # for event, etc) sleep 3600 # now do
+   something requiring the password spawn rlogin $host expect "password:"
+   send "$password\r" . . . This script can be extended as necessary.
+   Forexample, the task might telnet to multiple hosts or a additional
+   hosts from the first telnet. Each ofthese in turn requires more
+   passwords. These can be prompted for and collected when the script has
+   begun. The prompt should make clear what the passwordsare for. It may
+   be helpful to explain why the password is needed, or that it is needed
+   for later.Consider the following prompts: send "password for $user1 on
+   $host1: " send "password for $user2 on $host2: " send "password for
+   root on hobbes: " send "encryption key for $user3: " send "sendmail
+   wizard password: " It is a good idea to force the user to enter the
+   pass-word twice. It may not be possible to authenticate it immediately
+   (for example, the machine it is for maynot be up at the moment), but at
+   least the user can lower the probability of the script failing later
+   due toa mistyped password. stty -echo send "root password: " expect -re
+   "(.*)\n" send "\n" set passwd $expect_out(1,string) send "Again:"
+   expect -re "(.*)\n" send "\n" if {[string compare $passwd \
+   $expect_out(1,string)] != 0} { send "mistyped password?" exit } You can
+   even offer to display the password justtyped. This is not a security
+   risk as long as the user can decline the offer or can display the
+   password inprivacy. Remember that the alternative of passing it as an
+   argument allows anyone to see it if they run psat the right moment.
+   Even without the disconnect command, this is avaluable technique. For
+   example passmass is anExpect script that changes passwords on multiple
+   machines simultaneously. This is useful if you haveaccounts on several
+   machines that do not share password databases yet you want to use the
+   samepassword on all of them. While this sounds like an obvious security
+   hole, passmass can actuallyincrease security. Because passmass makes it
+   somuch easier to change your passwords on all your accounts, you are
+   much more likely to change themmore frequently. And by keeping them the
+   same, you are less likely to have to resort to writing them downin
+   places that you shouldn't. Note that passmass isnot recommended for
+   widely distributed sites where communications over public networks
+   provides littledefense against password exposure. Nor is passmass
+   recommended for root, where this idea is toosimplistic and additional
+   precautions should be taken. Technique 2: From the Background, Prompt
+   ForPasswords When Needed This technique described in this section is
+   appropriatefor commonly occurring tasks such as those that are
+   scheduled at boot time or are regularly scheduledthrough cron. One
+   solution is to write a simple script which runs theprogram until it
+   requests a password. The script then tracks down a user (possibly from
+   a list) and requeststhe user talk to it (using " talk" or "write").
+   Onceconnected, the script explains what it wants and why, and then asks
+   the user for a password. The usersupplies it, the script disconnects
+   and returns to the background to continue its processing. In the
+   following example, the script communicatesonly with a single user. The
+   script uses kibitz[Libes93] to communicate. kibitz is a
+   talk-likeprogram notable in that it allows sharing of a process (e.g.,
+   shell) between multiple users. With the -noproc flag, kibitz supports
+   communicationwithout a shared process. spawn kibitz -noproc $user Once
+   connected, the user can interact with the Expectprocess or can take
+   direct control of the spawned process. The following Expect fragment,
+   run from cron, implements the latter possibility. The variable proc is
+   initialized with the spawn id of the errantprocess while kibitz is the
+   currently spawnedprocess. When the user presses the tilde key, control
+   is returned to the script. spawn some-process; set proc $spawn_id . . .
+   . . . # script now has question or problem # so it contacts user spawn
+   kibitz -noproc some-user interact -u $proc -o ~ { close wait return }
+   If proc refers to a shell, then you can use it to runany UNIX command.
+   You can examine and set the environment variables interactively. You
+   can runyour process inside a debugger or while tracing system calls
+   (i.e., under trace or truss). And thiswill all be under cron. This is
+   also an ideal way ofdebugging programs that work in the normal
+   environment but fail under cron. Figure 1 shows the processrelationship
+   created by this bit of scripting. Those half-dozen lines (above) are a
+   complete, albeitsimple, solution. A more professional touch might
+   describe to the user what is going on. For example,after connecting,
+   the script could send an explanation such as: send "Host frisbee.net is
+   requesting a password when I tried to login in as user ferdy. Can you
+   tell me what the password is (p) or should I let you interact (i) or
+   kill me (k)?" The script describes the problem and offers the user
+   achoice of possibilities. Here is how the response might be handled:
+   expect { k { send "ok, I'll kill myself... thanks" exit } p { send -i
+   $proc [get_password] send "thanks!" } i { send "press X to give up
+   control, A to abort everything" interact -u $proc -o X return A exit
+   send "ok, thanks for helping. I'll take over now" } } close wait #
+   script continues from here This technique can also be used for
+   non-essentialinformation, such as if the script has a question about
+   what to do in a certain situation, or is performing abackup and needs
+   another tape. Technique 3: Protect Cleartext Passwords inScripts by
+   Permission The scenario described in the remaining techniquesapplies
+   when a user does not know a password but needs a service performed that
+   requires the password.For example, mounting devices and initiating
+   backups are typical operations that users need to perform butwhich
+   require root permission on many hosts. An obvious solution is to embed
+   the cleartext pass-word in a heavily-protected script. For example:
+   spawn su expect "Password:" send "ak3KuIO3\r" . . Schemes to do this
+   without root involvement are wellknown, such as by using setgid scripts
+   to artificial users and groups created just for the purpose ofrunning
+   such scripts. However, this is difficult to make secure and impossible
+   on some systems whenusing scripts. Even when using compiled programs,
+   secure handling of passwords is tricky and prone tomishap. The storing
+   of cleartext passwords on a public system is a bad idea. There are too
+   many possi-bilities for lapses of security. These issues are described
+   at length in the literature [Garfinkel91]. This technique is very
+   insecure. Do not use it! Technique 4: Protect Cleartext Passwords
+   inScripts by Login It is possible to embed cleartext passwords in
+   scriptsand protect the scripts more securely than in the previous
+   technique by placing password-containingscripts on an entirely
+   different host (called the admin kibitz kibitz expect cron logicaldata
+   flow during interact spawnedprocess Figure 1: Process hierarchy and
+   data flow established when Expect script running aspawned process under
+   cron decides that it needs assistance from a user. host from hereon),
+   thereby avoiding file systemaccess holes. Rather than using file system
+   permissions, general shell access is not permitted to theadmin host.
+   Instead, each different script is run by logging in to a different
+   account. Their are no normaluser accounts - only root has access to a
+   generalpurpose shell on the admin host. Writing such a login script to
+   provide a service takeslittle extra skill than writing any script.
+   Programmers must avoid the obvious pitfalls such as allowing usersto
+   invoke a shell or write arbitrary files. However, these are a small
+   subset of the usual concerns inwriting setuid scripts. For example,
+   without a shell, users can not change the IFS definition or play
+   gameswith symbolic links. The key concept here is that scripts can
+   literally storepasswords in them with no fear of them being exposed.
+   They cannot be exposed because userscannot read them. They cannot read
+   them because they cannot even log in to the machine in any butextremely
+   restricted ways. With this technique it is possible to write scripts
+   thatlog in and connect to other machines which require passwords. For
+   instance, a user may indirectlyconnect back to their own machine.
+   Imagine a user is working late and wants to suspend the
+   automaticbackups that normally run every night at 3AM. The user logs in
+   to the admin host as, say, "backupsuspend". The login script for
+   backup-suspendlogs into the user's host as root and suspends thebackup.
+   The user might see this interaction: lion% telnet admin-host login:
+   backup-suspend Backup suspended on host lion lion% This particular
+   interaction could be simplified by anemail interface since there is
+   nothing interactive here but one might imagine interactions that are
+   muchmore complex, perhaps even popping up a window on the user's
+   system. An obvious drawback of this approach is that asecond host is
+   required. However, this is not a big deal because computer are cheap.
+   Realistically, mostenvironments have unused computers sitting idle -
+   oftentimes shunned just because they are slow.These slow hosts are
+   entirely suitable for this job since the significant processing occurs
+   on the user'shost after the password-containing script has logged in.
+   Although the admin host is executing a script, theadmin host is not
+   actually doing the cpu-intensive work, the admin host is merely telling
+   the user hostwhat to do. The user host is where the significant work is
+   being done. A second drawback of this technique is that the pass-word
+   is made available for exposure by network sniffing. However, this is a
+   problem for any supe-ruser that logs in over the network. Finally, it
+   should be obvious that the admin machinemust be physically off-limits
+   and its backup tapes must be secure. If either of these are not the
+   case,then obviously the machine is not a safe place to store passwords.
+   One may draw the analogy that this is akin to placingall of your eggs
+   in one basket. This is quite accurate, however this is a very small
+   basket and easy to keepwatch over. Many sites have the analogy of such
+   a basket already, but without realizing or admitting it.Indeed, sites
+   with servers that are kept behind locked doors are treating their
+   computers as such baskets. Technique 5: Protect Cleartext Passwords
+   inScripts by Using Daemons In the previous technique, the script is
+   invoked byremotely logging in to another host. An unfortunate attribute
+   of that technique is that some minimal inter-action is hard to avoid.
+   In particular, programs such as telnet will prompt for the user name.
+   If the useris on a UNIX-like host, they can use rlogin whichavoids the
+   prompt for the username. If no password is demanded, the invocation is
+   not interactive. Thismay seem to be a convenience, but is really a
+   necessity when scripts are invoked by other scripts,background
+   processes, or in other situations where the user is not conveniently
+   available to answer theprompts. For instance, in heterogenous
+   environments, users cannot necessarily depend on the presence of
+   rlogin.The rlogin program simply is not available frommany PCs and Macs
+   for example. Many programs designed to operate on the heteroge-nous
+   Internet stick to the lowest common denominator for communications
+   functionality. Forexample, Mosaic and Gopher are information systems
+   that follow links of information that may lead fromone machine to
+   another.1 The Gopher daemon does not support the ability to run
+   interactive programs.For instance, suppose you have a telnet
+   interface(using the normal telnetd) to a valuable resourcesuch as a
+   database. You can make it available through Gopher but only in an
+   uncontrolled way. TheGopher daemon is incapable of running interactive
+   processes itself so it passes the telnet informationto the Gopher
+   client. Then it is up to the Gopher client to run telnet and log in.
+   This means that the client system has to do somethingwith the account
+   information. By default, the Gopher client displays the information on
+   the screen and asksusers to type it back in. Besides being redundant,
+   this interaction means that accounts and passwords are 1.While the
+   Mosaic interface is different thanGopher, both have the same
+   restrictions on handling interactive processes and both can
+   takeadvantage of the approach described here. necessarily exposed to
+   users. Unfortunately, Gopherclients cannot perform interaction
+   automation. And even if they could, the accounts and passwords
+   wouldstill be made available to the Gopher client. By substituting
+   their own Gopher client, users couldobtain the passwords and then
+   interact by hand, doing things you (as the advertiser of the service)
+   may notwant. One solution is to use the technique I described in
+   theprevious section but modified specifically to run as a telnet
+   daemon. telnet itself does not demand anyaccount or password, so
+   security is entirely up to the daemon. It is possible to make a
+   non-interactivescript simply by not querying for accounts or passwords.
+   A trivial Expect script to run a non-interactiveprogram as a daemon
+   takes no special adaptation. The script merely handles the passwords as
+   beforeand then runs the program. The client's invocation becomes
+   simply: telnet host service Unfortunately, invocation of interactive
+   programsdemands more work because telnet clients defaultto
+   communications with rather peculiar characteristics. Characters are
+   echoed locally and not sent untila carriage-return is entered.
+   Carriage-returns are received by the daemon with a linefeed
+   appended.This peculiar character handling has nothing to do with cooked
+   or raw mode. In fact, there is noterminal interface between telnet and
+   telnetd. This translation is a by-product of telnet itself. telnet uses
+   a special protocol to talk to its daemon.If the daemon does nothing
+   special as in the case of the script that spawned the non-interactive
+   applica-tion), telnet assumes these peculiar
+   characteristics.Unfortunately, they are inappropriate for most
+   interactive applications. For example, the following Expectscript will
+   not work correctly as a daemon: spawn /bin/sh interact Fortunately, a
+   telnet daemon can modify thebehavior of telnet. A telnet client and
+   daemoncommunicate using an interactive asynchronous protocol. An
+   implementation of a telnet daemon inExpect is short and efficient. The
+   basic idea is to make sure that the daemon is always ready to respondto
+   telnet commands at all times. This is easilyaccomplished with an
+   expect_before statement. expect_before provides patterns that are
+   testedbefore any explicit patterns. Thus, they do not have to be
+   repeated for each expect command in aninteraction. A fragment of the
+   Expect dialogue to handle the telnet protocol is shown below. Variables
+   such as IAC contain the relevant protocol values. The scriptbegins by
+   offering to do echoing instead of the local client. SGA is also
+   offered. SGA (Suppress GoAhead) means that communication is
+   asynchronous instead of synchronous. The script also offers tosupport
+   the terminal type. send "$IAC$WILL$ECHO" send "$IAC$WILL$SGA" send
+   "$IAC$DO$TTYPE" The expect_before command defines actions foreach
+   command that can be sent from the client. For instance, the first
+   pattern matches an acknowledgmentby the client that the server should
+   do echoing. The second pattern is similar but for SGA. The thirdpattern
+   refuses requests from the client to do anything else. The last pattern
+   matches the offer by the clientto send the terminal type. In response,
+   the daemon acknowledges by requesting that the client go aheadand send
+   the information. expect_before { -re "^$IAC$DO$ECHO" { # accept as
+   acknowledgment exp_continue } -re "^$IAC$DO$SGA" { # accept as
+   acknowledgment exp_continue } -re "^$IAC$DO\(.)" { # refuse anything
+   else send_user \ "$IAC$WONT$expect_out(1,string)" exp_continue } -re
+   "^$IAC$WILL$TTYPE" { # respond to acknowledgment send_user \
+   "$IAC$SB$TTYPE$SEND$IAC$SE" exp_continue } This is not a complete
+   definition to handle the entire telnet protocol, but it suffices to
+   give the flavor ofit. Indeed, there are near a dozen extensions to
+   telnet and more are added frequently. Most telnet daemons do not handle
+   most of the telnetprotocol commands. A richer implementation of the
+   protocol is shown in [Libes94]. Once the protocol handling is defined,
+   a more typicalExpect script can follow. As an example, suppose you want
+   to let people log into another host - such asa commercial service for
+   which you pay real money - and run a single program there but without
+   knowingwhich host it is or what your account and password are. Then,
+   the server would spawn a telnet (or tipor whatever) to the other host.
+   log_user 0 ;# turn output off spawn telnet secrethost expect
+   "Username:" send "8234,34234\r" expect "Password" send "jellyroll\r"
+   expect "% " send "ncic\r" expect -re "ncic\r\n(.*)" log_user 1 ;# turn
+   output on ;# send anything that ;# appeared just after ;# command was
+   echoed send_user "$expect_out(1,string) Additional protocol commands
+   can be exchanged atany time, however in practice, none of the earlier
+   ones ever reoccur. Thus, they can be removed. Theprotocol negotiation
+   typically takes place very quickly, so the patterns can be deleted
+   after the first expect command that waits for real user data.
+   expect_before -i $user_spawn_id One data transformation that cannot be
+   disabled isthat the telnet client appends a null character toevery
+   return character sent by the user. This can be handled in a number of
+   ways. The followingcommand does it within an interact commandwhich is
+   what the script might end with. interact "\r" { send "\r" expect_user
+   null } Additional patterns can be added to look forcommands or real
+   user data, but this suffices in the common case where the user ends up
+   talking directlyto the process on the remote host. Ultimately, the
+   connection established by the Expectdaemon resembles what is shown in
+   figure 2. Notice that the usual telnet daemon, telnetd, is not partof
+   the figure. Rather, the Expect script plays the role of the daemon.
+   Similarly, the pty and the interactiveprocess replace the pty and login
+   shell normally allocated and created by the telnet daemon. The daemon
+   could then do any operation involvingpasswords. For instance, the
+   daemon could telnetto yet another host. But in this case the user would
+   get only what the intermediate server allowed. Bycontrolling the
+   dialogue from the server rather than the client, passwords and other
+   sensitive pieces ofinformation do not have a chance of being exposed.
+   There is no way for the user to get information fromthe server if the
+   server does not supply it. Another advantage is that the server can do
+   much more sophis-ticated processing. The server can shape the
+   conversation using all the power of Expect. WithoutExpect, the user has
+   full access to the spawned interactive program. In practice, elements
+   of the earlier script (containingthe long expect_before definition) can
+   be stored inanother file that is sourced as needed. For instance, all
+   of the commands starting with the telnetprotocol definitions down to
+   the bare expectcommand could be stored in a file (say, expectd. proto)
+   and sourced by a number of similar servers. xinetd [Tsirigotis92], a
+   freely-available version of inetd provides control on the basis of
+   hosts/networks and time-of-day over access to the services. xinetd is
+   strongly recommended over inetd. Summary and Conclusion Shell scripts
+   and redirection are so easy to use thatusers ignore the fact that they
+   provide no reliability or security when it comes to handling passwords
+   in thebackground. Even users who practice "safe computer sex" in other
+   ways, are negligent when it comes toautomation of interactive
+   processes. This paper hopes to enlighten users and save them from the
+   holesinto which they will inevitably fall if they stick to the tools
+   and techniques of the past. The solutions outlined here avoid the
+   historic prob-lems with automating interactive processes in the
+   background. The first two techniques avoidsupplying passwords from the
+   command-line (avoiding the well-known "ps" hole) or from files(avoiding
+   the "look at the backup tape" and other holes). The last two techniques
+   store cleartext pass-words in files but in such a way that they are
+   inaccessible yet usable by normal users. Expect-style scripting also
+   offers the ability of reli-able control over processes. Scripts can
+   verify responses and can retry or take alternative actionsupon failure
+   or unexpected results. When dealing with users, scripts can also shape
+   the dialogueshowing users only parts of the dialogue that are
+   appropriate, or making substitutions in what the usersees. Expect has
+   been available for several years, yet thesetechniques are
+   non-intuitive, and for this reason, not telnet Expect interactivepty
+   local host remote host script process Figure 2: Expect Playing the Role
+   of Telnet Daemon known. This paper has shown that each of these
+   tech-niques requires only a few lines of code with the result that
+   interactive background processes can beautomated with security and
+   reliability. All of the tools mentioned in this paper are
+   freelyavailable and widely portable. Availability Since the design and
+   implementation of this softwarewas paid for by the U.S. government, it
+   is in the public domain. However, the author and NIST wouldappreciate
+   credit if this software, documentation, ideas, or portions of them are
+   used. The scripts and programs described in this documentmay be ftp'd
+   as pub/expect/expect.tar.Z1from ftp.cme.nist.gov. The software will
+   bemailed to you if you send the mail message " send
+   pub/expect/expect.tar.Z" (without quotes) to library@cme.nist.gov.
+   Acknowledgments Portions of this work were inspired by Sandy Resslerand
+   the NIST Virtual Library Project, and funded by the NIST Scientific and
+   Technical Research Services. Thanks to W. Richard Stevens, Henry
+   Spencer,Bennett Todd, Miguel Angel Bayona, Brent Welch, Danny Faught,
+   Paul Kinzelman, Barry Johnston, RobHuebner, Todd Bradfute, Jeff Moore,
+   and Susan Mulroney for providing suggestions that greatlyenhanced the
+   readability of this paper. Author Information Don Libes is a computer
+   scientist at the National Insti-tute of Standards and Technology where
+   he does research related to interaction automation and occa-sionally
+   logs in as root to "fix things" much to the consternation of the real
+   system administrators there.For the development of Expect, he received
+   the International Communications Association InnovationAward and the
+   Federal 100 Award. He has written over 85 papers and articles as well
+   as two books: LifeWith UNIX (co-author Sandy Ressler, publisher
+   Prentice-Hall) and Obfuscated C and Other Mysteries(Wiley). He is
+   presently working on a book called Exploring Expect: A Tcl-Based
+   Toolkit for AutomatingInteractive Programs (O'Reilly). He can be
+   reached at libes@nist.gov. References [Caffrey92] Paul Caffrey, "User
+   Interfaces and Auto-mating Computer Human Interaction", MSc. Thesis,
+   Amdahl Ireland Ltd., 1992. 1. The ".Z" file is compressed. A ".gz"
+   version isalso available which is gzipped. [Dichter93] Carl Dichter,
+   "Surviving Software Test-ing", UNIX Review, pp. 29-36, V11, #2,
+   February 1993. [Garfinkel91] Simson Garfinkel and Gene
+   Spafford,Practical UNIX Security, O'Reilly & Associates, Inc., June
+   1991. [Libes90] Don Libes, "Expect: Curing Those Uncon-trollable Fits
+   of Interaction", Proceedings of the Summer 1990 USENIX Conference,
+   pp.183-192, Anaheim, CA, June 11-15, 1990. [Libes91] Don Libes,
+   "Expect: Scripts for ControllingInteractive Programs", Computing
+   Systems, pp. 99-126, Vol. 4, No. 2, University of Cali-fornia Press
+   Journals, CA, Spring 1991. [Libes93] Don Libes, "Kibitz - Connecting
+   MultipleInteractive Programs Together", Software - Practice &
+   Experience, John Wiley & Sons,West Sussex, England, Vol. 23, No. 5, May
+   1993. [Libes94] Don Libes, Exploring Expect: A Tcl-basedToolkit for
+   Automating Interactive Programs, O'Reilly & Associates, Inc., to
+   appear. [Miller87] S. P. Miller, B. C. Neuman, J. I. Schiller,and J. H.
+   Saltzer, "Section E.2.1: Kerberos Authentication and Authorization
+   System",M.I.T. Project Athena, Cambridge, Massachusetts, December 21,
+   1987. [Morrison92] Brad Morrison & Karl Lehenbauer, "Tcland Tk: Tools
+   for the System Administrator", 1992 LISA VI Proceedings, Long Beach,
+   CAOctober 19-23, 1992. [Nieusma] Jeff Nieusma and David Hieb,
+   "sudo"manual page, The Root Group, Boulder, CO, undated. [Ousterhout94]
+   John K Ousterhout, Tcl and the TkToolkit, Addison-Wesley, April 1994.
+   [Schwartz90] Randal Schwartz, "Expect.pl", Usenetarticle id
+   1990Nov2.003228.22744@iwarp. intel.com, comp.lang.perl, November
+   2,1990. [Stevens92] W. Richard Stevens, Advanced Program-ming in the
+   UNIX Environment, AddisonWesley, pp. 635, 653-655, 716, September1992.
+   [Tsirigotis92] Panagiotis Tsirigotis, "xinetd" manualpage, University
+   of Colorado, 1992.

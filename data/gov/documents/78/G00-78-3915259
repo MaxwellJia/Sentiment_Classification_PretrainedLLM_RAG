@@ -1,0 +1,182 @@
+http://hpcf.nersc.gov/storage/hpss/ftp_nopass.html
+
+   NERSC High Performance Computing
+
+   You are here: hpcf / storage / hpss / ftp_nopass You came from:
+     __________________________________________________________________
+
+                  Remote Automatic FTP Authentication to HPSS
+
+   The primary way files are transferred between NERSC's HPSS and remote
+   systems (outside the NERSC domain) is via the ftp protocol. Ftp
+   authentication is insecure because usernames and passwords are sent in
+   plain text across the internet.
+
+   In an effort to help protect its users' data, NERSC has developed a
+   more secure method of remote automatic authentication to HPSS. Your
+   username and password are still sent in plain text across the internet,
+   but they are now sent in an encrypted form linked to a site. If you ssh
+   into the authentication server from Brookhaven and encrypt your
+   username/password combo, you can only use this combo from machines on
+   the Brookhaven network. If you are coming from a NERSC machine, e.g.,
+   Killeen, you will need to generate a different combo.
+
+   Additional security is provided because it is now more difficult for
+   potential hackers to gain access to your HPSS account even if your
+   special username and password are sniffed over the internet.
+
+  Overview
+
+   The process described here requires the use of two windows (xterms are
+   recommended) on the machine from which access to HPSS is desired. (In
+   the example to follow, this machine is named "highline".) Special
+   encrypted username/password strings (called "identity strings" below)
+   are generated and put into a file named ".netrc".
+
+   Please note:
+     * The encrypted identity strings can be inserted in .netrc files, or
+       entered manually (either directly in interactive ftp sessions or
+       edited into ftp "here-docs" in shell scripts). They can also be
+       used in ftp access via web browsers.
+     * On PC's, GUI-based ftp clients may not use .netrc files; thus, the
+       encrypted strings must be entered manually.
+     * An HPSS user can generate multiple encrypted identities for use on
+       different machines. For example, you will need an identity string
+       for your workstation in your office and another one for access from
+       the NERSC supercomputers. Other combinations may be necessary
+       depending on the topology of your network.
+     * Encrypted identity strings generated on a particular workstation
+       can be used in accessing all NERSC Production Mass Storage systems
+       from that workstation.
+     * You can use the encrypted identity strings as often as you want. At
+       any time, you can re-generate a new encrypted identity string.
+     * This procedure does not prevent the use of ftp with your usual
+       NERSC HPSS login and password. However, that may change in the
+       future.
+
+  Generating and Using Encrypted Identity Information
+
+   In the following steps, all text the user must type is shown in red.
+
+   Step 1: In a window (xterm) on your workstation, connect via ssh to
+   "auth.nersc.gov"; For the login name and password, load the module
+   "www" on any major NERSC system.
+
+   highline 10: ssh -l auth auth.nersc.gov auth@mover2.nersc.gov's
+   password: Last login: Thu Mar 15 15:29:38 2001 from highline.lbl.gov
+   ***********************************************************************
+   * * * * NOTICE TO USERS * * * * * * * This computer is a Federal
+   computer system and is the property of * * the United States
+   Government. It is for authorized use only. * * Users (authorized or
+   unauthorized) have no explicit or implicit * * expectation of privacy.
+   * * * * Any or all uses of this system and all files on this system may
+   * * be intercepted, monitored, recorded, copied, audited, inspected, *
+   * and disclosed to authorized site, Department of Energy, and law * *
+   enforcement personnel, as well as authorized officials of other * *
+   agencies both domestic and foreign. By using this system, the * * user
+   consents to such interception, monitoring, recording, * * copying,
+   auditing, inspection and disclosure at the discretion * * of authorized
+   site or Department of Energy personnel. * * * * Unauthorized or
+   improper use of this system may result in * * administrative
+   disciplinary action and civil and criminal * * penalties. BY CONTINUING
+   TO USE THIS SYSTEM YOU INDICATE YOUR * * AWARENESS OF AND CONSENT TO
+   THESE TERMS AND CONDITIONS OF USE. * * * * LOG OFF IMMEDIATELY IF YOU
+   DO NOT AGREE TO THE CONDITIONS STATED * * IN THIS WARNING. * * *
+   ***********************************************************************
+   You are in an authentication shell Type help to list the commands you
+   can run [auth]:
+
+   Now you are in a restricted shell that will accept only a few commands.
+   Among them is "ftppass", which will be used in step 2. You can see the
+   allowed commands via the "help" command:
+
+   [auth]: help The following commands are the only ones recognized:
+   ftppass chpass help h quit q exit For abbreviated help on commands type
+   'help commandname' The commands: q, quit and exit will all exit auth
+   [auth]:
+
+   Step 2: Use the "ftppass" command to generate an encrypted identity
+   combo of you HPSS username and password; these will be used to access
+   ftp instead of your usual HPSS login id and password.
+
+   [auth]: ftppass DCE Principal: your_HPSS_username DCE Password:
+   your_HPSS_password login [encrypted string] password [encrypted string]
+   [auth]: exit Bye Connection to auth.nersc.gov closed.
+
+   The encrypted identity strings are those returned in the lines
+   beginning with "login" and "password"; these lines will be used in step
+   3.
+
+   Step 3: In another window (xterm) on your workstation, edit a file
+   named "~/.netrc", and insert three lines for each of the storage
+   systems you wish to connect to:
+
+    a. the first of the three lines specifies the name of a storage
+       system;
+    b. the next two lines are the "login" and "password" lines returned by
+       storage_auth, in step 2. The easiest thing to do is to copy and
+       paste the two identity lines into this file. The file's contents
+       should look something like this:
+
+       machine hpss.nersc.gov login = [encrypted string] password [encrypted
+       string] machine archive.nersc.gov login = [encrypted string] password
+       [encrypted string]
+       Save the file.
+
+   Step 4: Change the permissions for the ".netrc" file to "600
+   " or "Owner Read-Write"; if they are anything else, the file will not
+   be used by ftp and the process will not work:
+
+   highline 9: chmod 600 .netrc highline 10: ls -l .netrc -rw------- 1
+   user staff 75 Mar 16 10:03 .netrc
+
+   This completes the generation of an encrypted identity. Now, whenever
+   ftp is used by this user from this workstation to connect to either of
+   the HPSS systems, the encrypted identity strings in the ".netrc" file
+   will provide authentication, as shown in the next step.
+
+   Step 5: Connect to one of the HPSS systems via FTP from the workstation
+   that was used in the previous steps. For example:
+
+   highline 11: ftp hpss.nersc.gov Connected to hpss-g0.nersc.gov.
+   220-220-
+   220-*******************************************************************
+   **** 220-* * * * NOTICE TO USERS * * * * 220-* * 220-* This computer is
+   a Federal computer system and is the property of * 220-* the United
+   States Government. It is for authorized use only. * 220-* Users
+   (authorized or unauthorized) have no explicit or implicit * 220-*
+   expectation of privacy. * 220-* * 220-* Any or all uses of this system
+   and all files on this system may * 220-* be intercepted, monitored,
+   recorded, copied, audited, inspected, * 220-* and disclosed to
+   authorized site, Department of Energy, and law * 220-* enforcement
+   personnel, as well as authorized officials of other * 220-* agencies
+   both domestic and foreign. By using this system, the * 220-* user
+   consents to such interception, monitoring, recording, * 220-* copying,
+   auditing, inspection and disclosure at the discretion * 220-* of
+   authorized site or Department of Energy personnel. * 220-* * 220-*
+   Unauthorized or improper use of this system may result in * 220-*
+   administrative disciplinary action and civil and criminal * 220-*
+   penalties. BY CONTINUING TO USE THIS SYSTEM YOU INDICATE YOUR * 220-*
+   AWARENESS OF AND CONSENT TO THESE TERMS AND CONDITIONS OF USE. * 220-*
+   * 220-* LOG OFF IMMEDIATELY IF YOU DO NOT AGREE TO THE CONDITIONS
+   STATED * 220-* IN THIS WARNING. * 220-* *
+   220-*******************************************************************
+   **** 220-* NERSC HPSS USER SYSTEM(hpss) *
+   220-*******************************************************************
+   **** 220- 220 hpss-g0 FTP server (HPSS 4.1 PFTPD V1.1.48 Fri Mar 9
+   17:12:28 PST 2001) ready. 331 User: user - Password Required. 230 User
+   /.../dce.nersc.gov/user logged in. Remote system type is UNIX. Using
+   binary mode to transfer files. ftp>
+
+   At this point, any ftp command may be given, interactively or via a
+   here-doc in a script.
+
+   When you have stored your encrypted identity in your .netrc file, you
+   will not need to type in your username/password combination to gain ftp
+   access to HPSS.
+     __________________________________________________________________
+
+   Page last modified: Thursday, 08-Nov-01 15:58:06
+   Page URL: http://hpcf.nersc.gov/storage/hpss/ftp_nopass.html
+   Contact: Thomas Deboni <TMDeBoni@lbl.gov>
+   Privacy and Security Notice

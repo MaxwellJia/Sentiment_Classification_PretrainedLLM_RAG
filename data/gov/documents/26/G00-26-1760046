@@ -1,0 +1,270 @@
+http://cuadra.nwrc.gov/usl_students.htm
+
+   EE-IR Center / UL Student Page
+
+
+   This page is dedicated to serving the UL students who are involved in
+   the with the EE-IR Center project. Here are examples of some of the
+   activities taking place.
+
+   CS^3 Concept-Set Structuring System [LJRT99]
+   The CS^3 system is a rule-based information retrieval system designed
+   to provide ranked output by associating Retrieval Status Values(RSVs)
+   to textual documents. A rule-tree is constructed based on an input set
+   of rules.
+
+   The system allows users to create and/or modify a rule base by
+   providing an interface in which a set of related rules are represented
+   by an AND/OR tree. The edges in the tree can be assigned weights that
+   reflect the degree to which the left hand side of an IF/THEN rule
+   implies the concept in the right hand side. This system can be used
+   both for setting up canned Boolean queries and Concept Based Retrieval.
+   The software is written in a way that it can be added on as a top layer
+   to an existing Boolean Search Engine. Our current efforts are in the
+   direction of demonstrating our ideas in the context of DOE's
+   InfoBridge. The software is implemented using a Java applet.
+
+   CS^3Power Point Presentation
+
+   http://www.cacs.louisiana.edu/~ahafez/demos/cs3.ppt
+   _______________________________________________________________________
+
+                  Slides Database Management System (SDMS)
+
+   This system manages the slides database of the National Wetland
+   Research Center (NWRC). This work represents a reengineering of the
+   system that was used before. The current system, unlike its
+   predecessor, can be accessed using an Internet browser.
+
+   Each slide in the database is described by a set of keywords/formatted
+   attributes. By using those keywords in queries, the system allows users
+   to search the Slide Database. A user friendly interface is also
+   provided to support other functions such as insertion and editing.
+
+   Perl, CGI and MS-Access are used to implement the system. It has access
+   controls to where scientists can propose changes to descriptions, but
+   only library personnel can make the actual updates.
+
+   Online access to Slides Database Management System:
+
+   http://lincpc04.cacs.louisiana.edu/cgi-bin/aladdin/nwrcslides/index.htm
+
+   Power Point Presentation on Slide Database System
+
+   http://www.cacs.louisiana.edu/~ahafez/demos/slide-db.ppt
+   _______________________________________________________________________
+
+                Web to Bayou Periodical Index (WBPI) [ELR98]
+
+   The system enhances the search capabilities of legacy internet
+   resources (e.g. old-style pre-existing resources developed prior to the
+   advent of more modern methods). Two approaches are modeled and
+   implemented. The first approach uses structured databases and the other
+   approach uses HTML documents enhanced with content tags that are
+   managed by the Isite retrieval engine.
+
+   Both implementations enable users to specify search terms in particular
+   fields of the resource in order to obtain only that small portion of
+   the resource that match the specified search field values. The URL
+   below is for the approach based on creating a structured DB. We use
+   Pro-C, CGI programs and Oracle DB.
+
+   http://www.cacs.usl.edu/cgi-bin/vvrres/bayou/bayou.cgi
+   _______________________________________________________________________
+
+                       Aerial Photography Index System
+
+   The Aerial Photography Index System includes a search engine that
+   allows an Internet user of the RAC's aerial photography website
+   (www.rac.louisiana.edu) to search for aerial photographs by place name,
+   by longitude and latitude, or by the photograph's roll and frame
+   number. The development of the search engine entailed the development
+   of an internet link to the Geographic Names Information System (GNIS)
+   developed by the Census Bureau and maintained by the USGS to retrieve
+   the geographic coordinates for place name specified in a user query.
+   The system uses a metadata file with the corner coordinates for each
+   frame of aerial photography to determine the match between coordinates
+   returned by the GNIS and the aerial phtographies stored in our website.
+   Future plans include the development of a map based search interface
+   that will allow the user to click on an area of a map and retrieve the
+   photography covering that region, along with the capability to retrieve
+   all frames of aerial photography within an arbitrary region that a user
+   can sketch.
+
+   Multiple demonstrations of the Aerial Photography Indexing System have
+   been provided to the USGS-National Mapping Division, Louisiana
+   Geographic Information Council (LAGIC), USGS-National Wetlands Research
+   Center, Louisiana State Foresters Annual Meeting, Eros Data Center,
+   Louisiana Department of Natural Resources, and at the 15th Annual
+   Louisiana Remote Sensing/GIS Workshop. In accordance with the Aerial
+   Photography Index System, the EE-IR Center's GIS Specialist has
+   developed metadata for the aerial photography within the system. These
+   data are then served online with the photographs via the EE-IR Center
+   metadata repository.
+
+   Java and CGI are used in the implementation of the Aerial Photography
+   Index System.
+
+   Power Point Presentation on Aerial Photography Indexing
+   Systemhttp://www.cacs.louisiana.edu/~ahafez/demos/gnis.ppt
+   _______________________________________________________________________
+
+                         Meta-Data Conversion system
+
+   The Metadata Converter/Crawler System is designed to translate
+   metadata from the Federal Geographic Data Committee standard to the
+   MARC21 and XML/RDF standards (with an ISO mapping coming in a later
+   stage of development). The importance of conversion lies in producing a
+   standard representation for heterogeneous metadata formats to enable
+   better classification quality and search performance for Web content
+   management. By extracting the semantic content of the metadata records
+   and transforming it automatically into other formats, our process
+   greatly increases the value of the original, high quality resources. In
+   addition, our system builds in a mechanism for tracking and managing
+   online linkages back to the original full metadata record by way of
+   persistent uniform resource locators. Once records are registered with
+   our converter, they are then indexed automatically with a web crawler
+   for inclusion in our global metadata search engine. Taken as a whole,
+   our system is a comprehensive alternative to the existing Z39.50-based
+   FGDC Clearinghouse model managed by the U.S. government. The system is
+   implemented using C, Java, and CGI.
+
+   Online access to the Converter
+
+   http://cuadra.nwrc.gov/converter
+
+   Power Point Presentation for Meta-Data Conversion System
+
+   http://www.cacs.louisiana.edu/~ahafez/demos/convert.ppt
+   _______________________________________________________________________
+
+                         Web to Database System(WDB)
+
+   The system is an enhanced version of a general purpose tool for linking
+   tables in a relational database system to the Web, for searching via
+   standard Web browsers. NWRC has two bibliographic databases stored as a
+   MiniSQL DB that are provided Web access by means of this software:
+   Wetlands Values Database and Duckdata, a waterfowl and wetlands
+   information database. The user-interface has been enhanced to allow
+   more versatile query specifications. Also, some update functions are
+   added. WDB was written in Perl.
+
+   http://www.nwrc.gov/duckdata/duckdata.html
+
+   http://www.nwrc.gov/cgi-bin/wetvalues/form.pl
+   _______________________________________________________________________
+
+                 Catalog Acquisition and Search Tool (CAST)
+
+   This is a search engine for electronic product catalogs on the
+   internet. The system is designed and developed to access multiple
+   catalogs from multiple distributors of a given class of products. It is
+   assumed that the critical information that needs to be indexed appears
+   in an HTML document in a tabular form. The needed catalog pages are
+   downloaded to our site and enhanced by the (automatic) insertion of
+   content tags. This downloading is carried out by our own extension of a
+   public domain spider, called the MOM-Spider.
+
+   Flexible searches of the catalogs are made possible by using the Isite
+   retrieval engine called ISITE, which is capable of exploiting the
+   content tags that have been inserted into the HTML catalogs. We also
+   enhance ISITE with a concept based retrieval capability (using ideas
+   described  in the CS^3 project). Most of the programming or software
+   modifications we did involves the Perl language.
+   _______________________________________________________________________
+
+       Content-based Image Retrieval(CBIR) [ChRa97a, ChRa97b, ChRa97c]
+
+   An Image Retrieval System that enables the retrieval of images by
+   content. Depending on the color contents of the query image, the system
+   retrieves images that are closest to an image from the database chosen
+   as the query. The goal of this work is to improve the efficiency of
+   content based image retrieval by using what we call an Estimated
+   Distance, rather than the more expensive Real Distance that users would
+   prefer to adopt. The improvement in efficiency will yield the benefit
+   that the system can deal with an image database consisting of a very
+   large number of images. The current demo shows that, for a chosen small
+   collection of images, the Estimated Distance based on color indeed
+   allows the user to find the images in the "right" order. Java and CGI
+   are used to implement this system.
+   _______________________________________________________________________
+
+                 Personalizing the Web Page of EE-IR center
+
+   NWRC is developing an organization-specific portal that channelizes
+   information from various information resources. Users accessing the
+   EE-IR center's Home page may be interested in displaying only parts of
+   the information contained in some channels (sub-channels).
+
+   In this system, we provide a tool that is used to tailor different
+   views of the information on EE-IR center's Home page. The tool is
+   enhanced with an interface that allows those users accessing the EE-IR
+   center's Web page, to personalize and customize the layout and
+   channels/sub-channels of the information provided by the EE-IR center.
+
+   The system is implemented using Javascript, Pro C, CGI, and Oracle.
+
+   Power Point Presentation:
+
+   http://www.cacs.louisiana.edu/~ahafez/demos/personalize.ppt
+   _______________________________________________________________________
+
+                           Project Management Tool
+
+   Project Management Tool is a web based tool that lets users track
+   progress of various projects. It is fully integrated, web-enabled tool
+   that helps in efficient monitoring of the projects and searching for
+   the details of a single or multiple projects. The functionalities of
+   this tool includes browsing through the existing projects, searching by
+   the fields of team members or project title or date, adding new
+   project, and updating the information for each project. This software
+   helps in project planning, tracking the projects, and multi project
+   management. Security is provided through limited access for
+   searching/browsing the data, and adding information to the projects.
+
+   Detailed and timely updation of each project's information helps in
+   keeping track of the team members involved, the status of the project,
+   the location, implementation ideas, software used and the summary of
+   each project. Further advantages of this tool can be in analyzing the
+   project progress versus the initial planning. It can also helps in
+   assigning the resources to the projects, and depending on a person's
+   availability reschedule the person to a different project.
+
+   C and CGI are use to implement the system.
+   _______________________________________________________________________
+
+                                 References
+
+   [ChRa97a]
+   S. K. Choubey and V. V. Raghavan. Generic and fully automatic content
+   based image retrieval architecture. In Proc. of the 12th International
+   Symposium on Methodologies for Intelligent Systems, Charlotte, NC, Oct.
+   1997. document.
+
+   [ChRa97b]
+   S. K. Choubey and V. V. Raghavan. Generic and fully automatic content
+   based image retrieval using texture. In International Conf. on Imaging
+   Science, Systems, and Technology, pages 228--237, Las Vegas, NV, June-
+   July 1997. document.
+
+   [ChRa97c]
+   S. K. Choubey and V. V. Raghavan. Generic and fully automatic
+   content-based image retrieval using color. Pattern Recognition Letters,
+   18:1233--1240, Nov. 1997. document.
+
+   [ELR98]
+   M. C. Erie, S. M. LeBlanc, and V. V. Raghavan. Enhancing search
+   capabilities of legacy internet resources. In InForum 98- Science at
+   the Desktop: Synergy through Sharing, Oak Ridge, TN, May 1998.
+
+   [LJRT99]
+   F. Lu, T. D. Johnsten, V. V. Raghavan, and D. Traylor. Enhancing
+   internet search engines to achieve concept-based retrieval. In
+   InForum'99-Improving the Visibility of R & D Information, Oak Ridge,
+   TN, May 1999.
+   _______________________________________________________________________
+
+
+   __________________________________________________________________
+
+        Last modified: 8 January 2002,   by Judy Buys judy_buys@usgs.gov

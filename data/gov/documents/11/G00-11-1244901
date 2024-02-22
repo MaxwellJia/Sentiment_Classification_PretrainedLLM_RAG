@@ -1,0 +1,47 @@
+http://ares.fedworld.gov/exodus.js
+
+   newWindow = "" disclaim = "
+     __________________________________________________________________
+
+   Please note   " disclaim += "that by clicking on this link, you will
+   leave the IRS web site and enter a privately owned web site created,
+   operated and maintained by a private business." disclaim += "
+
+   The information that this private business collects and maintains as a
+   result of your visit to its web site may differ from the information
+   that the IRS collects and maintains " disclaim += "(please see the IRS
+   web site privacy and security notice for privacy protections IRS
+   provides to web site visitors)." disclaim += "
+
+   By linking to this private business, the IRS is not endorsing its
+   products, services, or privacy or security policies." disclaim += "We
+   recommend you review the business\'s information collection policy or
+   terms and conditions to fully understand what information is collected
+   by this private business." govdisc = "
+     __________________________________________________________________
+
+   Please note   " govdisc += "that by clicking on this link, you will
+   leave the IRS web site and enter another government web site created,
+   operated, and maintained by that agency." govdisc += "
+
+   The information that another government agency/bureau/office collects
+   and maintains as a result of your visit to its web site may differ from
+   the information " govdisc += "that the IRS collects and maintains
+   (please see the IRS web site privacy and security notice for privacy
+   protections " govdisc += "IRS provides to web site visitors). We
+   recommend you review the other agencys information collection policy or
+   terms " govdisc += "and conditions to fully understand what information
+   is collected." function viewHelp(pgURL) { newWindow = window.open('',
+   'newWin', 'width=300,height=375,top=10,left=10,scrollbars=yes') if
+   (pgURL.indexOf(".gov") > -1){ newWindow.document.write(govdisc) } else
+   { newWindow.document.write(disclaim) } newWindow.document.write("
+
+                [BUTTON Input] (not implemented)__________")
+             newWindow.document.write("\ \  [BUTTON Input] (not
+                   implemented)_______<\/FORM><\/CENTER>")
+                    newWindow.document.writeln("<\/FONT>
+     __________________________________________________________________
+
+     <\/BODY><\/HTML>") newWindow.document.close() newWindow.status = ""
+         newWindow.focus() } function closeHelp() { if (newWindow &&
+                 !newWindow.closed) { newWindow.close() } }

@@ -1,0 +1,185 @@
+http://is2.antd.nist.gov/nistnet/
+
+                                    NIST
+
+NIST Net Home Page
+
+   This is the NIST Net home page. NIST Net is a network emulation package
+   that runs on Linux. NIST Net allows a single Linux PC set up as a
+   router to emulate a wide variety of network conditions. Here is a brief
+   blurb about NIST Net:
+
+     The NIST Net network emulator is a general-purpose tool for
+     emulating performance dynamics in IP networks. The tool is designed
+     to allow controlled, reproducible experiments with network
+     performance sensitive/adaptive applications and control protocols in
+     a simple laboratory setting. By operating at the IP level, NIST Net
+     can emulate the critical end-to-end performance characteristics
+     imposed by various wide area network situations (e.g., congestion
+     loss) or by various underlying subnetwork technologies (e.g.,
+     asymmetric bandwidth situations of xDSL and cable modems).
+
+     NIST Net is implemented as a kernel module extension to the Linux
+     operating system and an X Window System-based user interface
+     application. In use, the tool allows an inexpensive PC-based router
+     to emulate numerous complex performance scenarios, including:
+     tunable packet delay distributions, congestion and background loss,
+     bandwidth limitation, and packet reordering / duplication. The X
+     interface allows the user to select and monitor specific traffic
+     streams passing through the router and to apply selected performance
+     "effects" to the IP packets of the stream. In addition to the
+     interactive interface, NIST Net can be driven by traces produced
+     from measurements of actual network conditions. NIST Net also
+     provides support for user defined packet handlers to be added to the
+     system. Examples of the use of such packet handlers include: time
+     stamping / data collection, interception and diversion of selected
+     flows, generation of protocol responses from emulated clients.
+
+   Note: NIST Net is basically beta level code, except when it is alpha!
+   It has undergone an amount of testing, but I am sure various bugs or
+   misfeatures still remain. The documentation is still a little sparse as
+   well.
+
+  NIST Net Links
+
+     * Installing NIST Net Getting and installing the package (Last
+       updated 13 March, 2001)
+     * Using NIST Net How to use what you installed (Partially updated 31
+       January, 2001)
+     * NIST Net FAQ Why it does or doesn't do what you expect (Last
+       updated 13 March, 2001)
+     * NIST Net bug list Yet more of those unexpected things, and what I'm
+       planning on doing about them (Last updated 13 March, 2001)
+     * NIST Net slide presentation September 1997 slide show on NIST Net
+
+  NIST Net News
+
+     * New! 14 March 2001 - 2.0.10 released. This one overhauls the
+       library and statistics routines, adds some support for other
+       protocols, and fixes various bugs. (Note: as usual, there was a
+       "prerelease" on the 13th which had some minor problems. If you got
+       that one, I'd suggest downloading again.)
+     * 9 February 2001 - 2.0.9 released. This one fixes compile bugs for
+       2.2.18 kernels, plus a few other miscellaneous changes.
+     * 31 January 2001 - 2.0.8 released. Major overhaul, using the
+       real-time clock as the timer source, making NIST Net entirely
+       modular - i.e., no kernel patches required! Various other
+       convenience updates as well. (Note: there was an abortive 2.0.7
+       release, which unfortunately was missing a crucial line in
+       flush_fast_timer_list().)
+     * 19 October 2000 - 2.0.6 released. This merely fixes an install
+       problem on Red Hat systems. If you didn't have install problems
+       with 2.0.5, you don't have to bother with this one.
+     * 16 October 2000 - 2.0.5 officially released! (Note: if you got the
+       Friday the 13th prerelease, I'd suggest getting it again - the
+       prerelease had a couple of flubs.) Click here for install and
+       download
+     * 3 May 2000 - 2.0a rev 4 released. A minor update.
+     * 27 April 2000 - 2.0a rev 3 released. This fixes a number of bugs
+       and misfeatures with the X user interface and library. Every alpha
+       user should move to this release.
+     * 17 April 2000 - 2.0a rev 2 released. This fixes a bug with CoS
+       bits.
+     * 12 April 2000 - 2.0a rev 1 released. This one now should install on
+       both 2.0.xx kernels (2.0.27-2.0.38) and 2.2.xx kernels (2.2.5 -
+       2.2.14).
+     * 11 April 2000 - All the new releases are out, albeit in pretty raw
+       form. Expect a little rockiness, as I get the install stuff
+       straightened out a little bit. The details:
+          + Version 1.3bis - stable version for 2.0.xx kernels - released
+            22 March, click here to download (Small install bug fixed 31
+            March; fetch again if you had install problems with the
+            earlier one.)
+          + Version 1.4a - alpha version for 2.0.xx kernels - released 31
+            March. Note: this one has now been merged into the 2.0a
+            release
+          + Version 2.0a - alpha version for 2.2.xx kernels - released 11
+            April.
+     * New! 11 April 2000 - The alpha bug list is open for business (and
+       already looks a bit too busy, hmm....)
+     * 22 March 2000 New versions are rolling out!
+          + Version 1.3bis - bug fix update to version 1.3, otherwise
+            identical
+          + Version 1.4 - entire revamp of the basic emulator code:
+              1. New selection code (taken from NIST Switch) allows
+                 emulator packet selection based on source and/or
+                 destination IP address, port, protocol, and CoS/ToS bits.
+                 Any or all of these may be wildcarded; the emulator picks
+                 the best matching entry. (The matching done is controlled
+                 through an array of bitmasks which may be set as
+                 desired.)
+              2. New emulator table structure (also from NIST Switch)
+                 allows for truly enormous numbers (tens of thousands) of
+                 emulator points.
+              3. New statistical code allows setting linear correlation
+                 between successive delay, drop, or duplication events.
+                 This allows for more realistic modeling of actual
+                 observed delays, packet loss, and so on.
+              4. New statistical tools allow you to extract the
+                 distribution and statistical properties of experimentally
+                 observed values (e.g., a series of observed delay values)
+                 and insert these into the emulator. This is a fairly
+                 simple method for getting the emulator to reproduce
+                 "real" network conditions.
+              5. Revamped user interface gets rid of a lot of the old
+                 Athena text widget annoyances.
+          + Version 2.0 - straight port of the 1.4 code to the 2.2.xx
+            Linux kernel stream (as found in Red Hat 6 or Slackware 7, for
+            example).
+       What's the schedule? Um, well...
+          + Version 1.3bis is released
+          + Version 1.4 alpha (i.e., highly buggy!) to be released by this
+            Friday (24 March) (may slip until Monday)
+          + Version 2.0 alpha alpha [sic] to be released by next Friday
+            (31 March).
+       More news later, after I emerge from the next two weeks of fun.
+     * 4 June 1998 - New version (1.3) with the following features:
+          + Support for (the router part of) explicit congestion
+            notification, as in draft-shivkuma-ecn-diffserv-00.txt and
+            draft-kksjf-ecn-00.txt
+          + Fixes to (finally) compile and install properly on RedHat 5.0
+          + Timer improvements
+          + User interface improvements
+          + Various other bug fixes
+     * 30 Jan 1998 - Here is a patch to enable compilation against glibc
+       2.0.6. (Patch is superseded by new release.)
+     * 14 Jan 1998 - initial beta release
+
+  NIST Net Mailing Lists
+
+   There are two mailing lists associated with NIST Net:
+     * nistnet-dev@antd.nist.gov - developer's mailing list, for bug
+       reports and the like (write-only to the public)
+     * nistnet@antd.nist.gov - public NIST Net discussion/announcement
+       list
+
+   You are given an opportunity to sign up for the latter list when you
+   download the software. If you don't choose to at that point, you may do
+   so at any time by sending mail to nistnet-request@antd.nist.gov with
+   the word "subscribe" in the body of the message. As usual, to
+   unsubscribe, send mail to nistnet-request@antd.nist.gov with the word
+   "unsubscribe" in the body of the message.
+
+   Click here for more information (including archives) on NIST Net
+   mailing lists. (Last updated 14 March, 2001)
+     __________________________________________________________________
+
+Acknowledgements
+
+   This project is part of the research and development program of the
+   NIST Internetworking Technology Group (ITG).
+
+   Project support was provided by:
+
+   The Defense Advanced Research Projects Agency (DARPA)
+   Intelligent Collaboration and Visualization Project  DARPA Logo
+   The NIST Information Technology Laboratory (ITL)     ITL Logo
+   The NIST Advanced Technology Program (ATP)
+   Digital Video in Information Networks Project        ATP Logo
+     __________________________________________________________________
+
+   Comments? Questions? Let us know at nistnet-dev@antd.nist.gov.
+     __________________________________________________________________
+
+   [ NIST Net Home Page] [Installing NIST Net] [Using NIST Net] [NIST Net
+   FAQ]

@@ -1,0 +1,85 @@
+http://www.ctcms.nist.gov/php/oof/
+
+
+   Curves Image
+
+      Home | Projects | People | Opportunities | Calendar | Register |
+   Search
+   [mid_blue_10x10.gif]
+   NIST Materials Science and Engineering Laboratory / NIST Center for
+   Theoretical and Computational Materials Science
+     NIST Home Page
+
+   CTCMS watermark
+
+                   [topleft02.gif]
+
+                   [clear.gif] Home
+                   [clear.gif] Registration
+                   [clear.gif] Workshops
+                   [clear.gif] Code
+                   [clear.gif] Online Manual
+                   [clear.gif] OOF2
+                   [clear.gif] OOF2ABAQUS
+                   [clear.gif] Newsletters
+                   [clear.gif] Awards
+                   [clear.gif] Credits
+
+                   Working Group [clear.gif] Steve Langer
+                   [clear.gif] Craig Carter
+                   [clear.gif] Ed Fuller
+                   [clear.gif] Andy Roosen
+
+   [groupname.gif]
+
+   OOF: Object-Oriented Finite Element Analysis of Real Material
+   Microstructures
+
+   A micrograph of a thermal barrier coating Materials assigned in ppm2oof
+
+   Start with a micrograph...
+
+   ... select features in the image and assign material properties to
+   them...
+   schematic of a virtual experiment image of stresses in the thermal
+   barrier coating
+
+   ... then perform a virtual experiment...
+
+   ... and measure and visualize the internal stresses.
+
+   Background
+
+   OOF is designed to help materials scientists calculate macroscopic
+   properties from images of real or simulated microstructures. It is
+   composed of two cooperating parts: ppm2oof and oof. ppm2oof reads
+   images in the ppm (Portable Pixel Map) format and assigns material
+   properties to features in the image. oof conducts virtual experiments
+   on the data structures created by ppm2oof to determine the macroscopic
+   properties of the microstructure. Currently, the programs calculate
+   stresses and strains, but someday we hope to include thermal, electric,
+   and magnetic field calculations.
+
+   The programs are written in C++ and benefit from an object-oriented
+   design. The underlying numerical solutions rely on finite element
+   technology. Hence the name OOF, for object-oriented finite element
+   analysis.
+
+   There are now two separate versions of OOF available. The original
+   version solves elasticity problems. The new thermal version solves
+   elasticity and thermal diffusion problems. Compiled executables and
+   source code are available on the download page.
+
+   A program to convert OOF data files to ABAQUS input files is now
+   available on the OOF2ABAQUS page.
+
+   Industry Week logo
+
+   OOF was named one of the top 25 Technologies of the Year by Industry
+   Week magazine in December 1999.
+
+   [clear.gif]
+   [lit_blue_10x10.gif] [clear.gif] NIST is an agency of the U.S. Commerce
+                        Department's Technology Administration
+
+                         Last updated: Dec 11, 2001

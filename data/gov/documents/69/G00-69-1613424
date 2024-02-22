@@ -1,0 +1,161 @@
+http://www-aig.jpl.nasa.gov/public/planning/rover_command/
+
+   [jpllogo.gif] Projects: Distributed Rovers, Planning and Scheduling,
+   Artificial Intelligence Group [Nasalogo.gif]
+
+   nothing
+
+   artificial intelligence group [_line.gif] planning and scheduling
+   [_line.gif] machine learning systems [_line.gif] jpl [_line.gif]
+   caltech [_line.gif] nasa
+
+   [dot.gif] [earth.gif]
+   nothing
+   background description impact technology status significance problem
+   sponsors moreinfo publications the team contacts
+
+   sojourner2.gif (17761 bytes) mars01.jpg (55933 bytes)
+
+   Background top
+
+   Unlike more traditional deep space missions, surface roving missions
+   must be operated in a reactive mode, with mission planners waiting for
+   an end of day telemetry downlink, including critical image data, in
+   order to plan the next days worth of activities. Communications time
+   delays over interplanetary distances preclude simple 'joysticking' of
+   the rover. A consequence of this approach to operations is that the
+   full cycle of telemetry receipt, science and engineering analysis,
+   science plan generation, command sequence generation and validation,
+   and uplink of sequence, must typically be performed in twelve hours or
+   less. Yet current rover sequence generation is manual, with limited
+   ability to automatically generate valid rover activity sequences from
+   more general activities/goals input by science and engineering team
+   members.
+
+   AI Technology top
+
+     * Planning and scheduling
+     * Mission operations automation
+     * Rover autonomy
+
+   Problem top
+
+   Because it is a largely manual process, rover engineers are not able to
+   perform "what-if" analysis on their daily activity sequences.  This
+   limits what activities the rover can perform.
+
+   Impact top
+
+   Enabling goal-driven commanding of planetary rovers by engineering and
+   science personnel greatly reduces the requirements for highly skilled
+   rover engineering personnel and Rover Science Team time. This in turn
+   greatly reduces mission operations costs. In addition, goal-driven
+   commanding permits a faster response to changes in rover state (e.g.,
+   faults) or science discoveries by removing the time consuming manual
+   sequence validation process, allowing rapid what-if analyses, and thus
+   reducing overall cycle times.
+
+   Status top
+
+     * Initial model completed
+     * Integration work with Rover Control Workstation in progress
+
+   Description top
+
+   This system is a proof-of-concept prototype for automatic generation of
+   validated rover command sequences from high-level science and
+   engineering activities. This prototype is based on ASPEN, the Automated
+   Scheduling and Planning Environment. This AI-based planning and
+   scheduling system will automatically generate a command sequence that
+   will execute within resource constraints and satisfy flight rules.
+   Commanding the rover to achieve mission goals requires significant
+   knowledge of the rover design, access to the low-level rover command
+   set, and an understanding of the performance metrics rating the
+   desirability of alternative sequences. It also requires coordination
+   with external events such as orbiter passes and day/night cycles. An
+   automated planning and scheduling system encodes this knowledge and
+   uses search and reasoning techniques to automatically generate
+   low-level command sequences while respecting rover operability
+   constraints, science and engineering preferences, and also adhering to
+   hard temporal constraints.
+
+   Significance top
+
+   Automated planning/scheduling technologies have great promise in
+   reducing operations cost and increasing the autonomy of rover
+   operations. By automating the command sequence generation process and
+   by encapsulating the operation specific knowledge, ASPEN will enable
+   rover commanding by a small operations team without subsystem experts.
+   It will also provide scientists with immediate, more informed feedback
+   on the feasibility of their science requests.
+
+   More Information top
+
+     * ASPEN
+     * Mars 2003 Lander
+     * Mars 2003 Marie Curie Rover
+     * Rover Control Workstation
+
+   Publications top
+
+   Please Note:
+   This material is provided for your personal use only and may not be
+   retransmitted or redistributed without permission in writing from the
+   paper's publisher and/or author. You may not upload this material to
+   any public server, on-line service, network, or bulletin board without
+   prior written permission from the publisher and/or author. You may not
+   make copies for any commercial purpose. This material is not public
+   domain. Reproduction or storage of materials retrieved from this web
+   site are subject to the U.S. Copyright Act of 1976, Title 17 U.S.C.
+
+   R. Sherwood, T. Estlin, S. Chien, G. Rabideau, B. Engelhardt, A.
+   Mishkin, B. Cooper , "An Automated Rover Command Generation Prototype
+   for the Mars 2003 Marie Curie Rover," SpaceOps 2000, Toulouse, France,
+   June 2000.
+
+   A. Mishkin, J. Morrison, T. Nguyen, H. Stone, B. Cooper, B. Wilcox,
+   "Experiences with Operations and Autonomy of the Mars Pathfinder
+   Microrover," proceedings of the 1998 IEEE Aerospace Conference, March
+   21-28 1998, Snowmass at Aspen, Colorado.
+
+   Contacts top
+
+   JPL Technical Contact:
+   Rob Sherwood,
+   Rob.Sherwood@jpl.nasa.gov, (818) 393-5378
+
+   ASPEN Licensing Information:
+   Click here for more info
+
+   The Project Team top
+
+   Rob Sherwood
+   Rob.Sherwood@jpl.nasa.gov
+
+   Andrew Mishkin
+   Andrew.Mishkin@jpl.nasa.gov
+
+   Tara Estlin
+   Tara.Estlin@jpl.nasa.gov
+
+   Steve Chien
+   Steve.Chien@jpl.nasa.gov
+
+   Scott Maxwell
+   Scott.Maxwell@jpl.nasa.gov
+
+   Barbara Engelhardt
+   Barbara.Engelhardt@jpl.nasa.gov
+
+   Brian Cooper
+   Brian.Cooper@jpl.nasa.gov
+
+   Gregg Rabideau
+   Gregg.Rabideau@jpl.nasa.gov
+
+   Sponsors top
+
+   Sponsored By:
+   TMOD Technology Program, James Lesh, Manager
+
+   [jpllogo.gif] Questions: www@www-aig.jpl.nasa.gov

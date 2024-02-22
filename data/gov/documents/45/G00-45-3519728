@@ -1,0 +1,89 @@
+http://t14web.lanl.gov/Research/TDAC2000/dienes.00.pdf
+
+   Theoretical Division - Self-Assessment Special Feature Detonation
+   Theory & Application, T-14 April 2000 Statistical Crack Mechanics:
+   Recent Progress and Prospects for the New Millennium John K. Dienes In
+   the ductile state, large deformations of materials can be modeled with
+   a relatively Comparison of opening q1 and radius q2. simple rule
+   relating stress and strain rate. However, no corresponding rule is
+   known for brittle behavior, and it seems unlikely 100 MPa that one
+   exists since the defects respon- sible for brittle behavior are
+   unstable*. In Statistical CRAck Mechanics (SCRAM) we simulate brittle
+   behavior by combin- ing the response of various sets of defects
+   (cracks) whose individual behavior is un- derstood. In addition, SCRAM
+   shows that it is valid to combine different kinds of material behavior,
+   including brittle, vis- coelastic, porous, and ductile deformation, as
+   well as the high-pressure equation of state. An ad hoc superposition
+   principle of this kind has been used since the thir- ties to combine
+   elastic and plastic flow, but the one used in SCRAM is more gen- eral
+   in several respects: it has been derived from first principles, it is
+   valid for arbi- Comparison of opening q1 and radius q2. trarily large
+   deformations, and it applies to many kinds of material behavior, not
+   just the small elastic-plastic deformations 400 MPa originally
+   envisioned by Prandtl and Reuss. The current SCRAM effort in- volves
+   both formulation of the theoreti- cal basis for our materials algorithm
+   and application to practical problems of brittle behavior, including
+   the dynamics of ceramic armor and the sensitivity of explosives. Both
+   of these have resisted standard theoretical treatments. The ul- timate
+   goal is to take SCRAM from a fea- sibility study to a robust,
+   self-consistent algorithm suitable for three-dimensional calculations
+   of complex material flow and failure. recent work, crack dynamics is
+   represented by a pair of In the first versions of SCRAM, crack behavior
+   was rep- Lagrange equations with crack opening and size as the resented
+   by a quasi-static theory, and crack growth was generalized coordinates
+   and internal pressure and far-field prescribed at a rate known from
+   empirical rules. In more Los Alamos Theoretical Division -
+   Self-Assessment - Special Feature stress as the generalized forces.
+   These equations provide There has been considerable emphasis in recent
+   years behavior in agreement with conventional fracture theory, on the
+   ability to compute three-dimensional processes. including the
+   transition from stable to unstable crack be- In recognition of this, a
+   three-dimensional version of havior, and they account for the variation
+   in crack speed SCRAM has been developed and tested as a stand-alone
+   with stress in both the dynamic and creep regimes. These package. We
+   are planning to incorporate it into the three- equations form a part of
+   the new SCRAM algorithm. dimensional CFDLIB, PRONTO, and EPIC codes.
+   Sim- plified versions have previously been incorporated into One of the
+   principal applications of SCRAM has been to DYNA and CTH. provide an
+   understanding of the sensitivity of explosives to low-speed impact.
+   Though we have predicted that A major outstanding question is: how much
+   theory is nec- interfacial crack friction is the probable initiation
+   mecha- essary to deal with the practical issues that face us? We nism
+   since the 70s, only recently has this become accepted are continuing to
+   examine the underlying tensor theory of by experimentalists. Following
+   ignition, explosives burn. deformations, though the main demand seems
+   to be for Recently, we have accounted for the burn in crack interiors
+   quick, practical results and, consequently, scalar theories using a
+   classical multiphase treatment akin to flame theory. are sought and
+   favored by many users. Nevertheless, it Some confirmation of the SCRAM
+   algorithm with burn seems likely that in the long run tensor theories
+   will be has been obtained by comparisons of computed material
+   predictive, while scalar theories will not. velocities with very
+   accurate measurements in a reactive multiple-shock experiment. These
+   velocity histories indi- cate shock coalscence and burn, but not
+   detonation. Crack burning is a very complex process involving both
+   crack dynamics and multiphase chemistry. Rather than attempt a full
+   finite-difference simulation we have mod- One of the principal
+   applications of SCRAM has been to provide an under- standing of the
+   sensitivity of explosives to low-speed impact. elled the process with
+   the Lagrange equations and a one- dimensional burn model that assumes
+   heat flow perpen- dicular to the crack plane, as described above. This
+   algo- rithm can be introduced into multi-dimensional hydrocodes to
+   represent the behavior at the mesoscale without an unrealistic
+   computational burden. The behav- ior of an isolated crack is highly
+   nonlinear, as illustrated by a comparison of the response to driving
+   pressures of 100 and 400 MPa in the figures. The former shows a stable
+   response while the latter is highly unstable. Thus, *The simplicity of
+   the flow rules for plasticity arises from the slow burn in cracks does
+   not cause a violent reaction stability of dislocations which are
+   responsible for ductile flow. because the rate of crack growth is
+   normally so high that Since brittle failure is due to unstable cracks,
+   it is not possible the pressure in the crack interior rapidly drops to
+   a level to construct a theory akin to thermodynamics or standard
+   statis- at which the burn rate is negligible. Hence, our tentative
+   tical mechanics wherein the degrees of freedom are in some kind of
+   equilibrium. conclusion is that crack interactions are responsible for
+   violent explosions caused by certain low-speed impacts rather than
+   isolated cracks acting as hot spots. A U. S. Department of Energy
+   Laboratory jkd@lanl.gov This paper is a portion of LA-UR-00-1. Los
+   Alamos

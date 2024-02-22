@@ -1,0 +1,98 @@
+http://www.scheck.nist.gov
+
+   [rd100.logo.gif] Welcome to project S-Check, NIST's novel tool for
+   assaying and improving performances of parallel and networked
+   (PVM-type) programs. S-Check is a highly-automated sensitivity analysis
+   tool for programs that extends benchmarking and conventional profiling.
+   It predicts how refinements in parts of a program are going to affect
+   performance by making local changes in code efficiencies and
+   correlating these against overall program performance. This analysis is
+   a sophisticated comparison that catches interactions arising from
+   shared resources or communication links. These can easily be studied by
+   an investigator. S-Check should be of interest to developers and
+   vendors engaged in obtaining top performances quickly.
+   S-Check Team Wins R&D 100 Award
+
+   S-Check Version 3.0 is available for parallel SGI systems, IBM's SP
+   machines, homogenous SUN, SGI, and RS6000 workstation clusters using
+   PVM or MPI, and PCs running Linux. S-Check ML supports multiple
+   languages, including FORTRAN and C, however, advanced editing features
+   are only available in C.
+     __________________________________________________________________
+
+                              Why use S-Check?
+
+   Today's multiprocessors provide unprecedented performance potential,
+   yet all too often the actual performance obtained is far less
+   impressive. Since their inception, a deficiency of multiprocessor
+   computers has been the lack of adequate performance measurement and
+   debugging tools. The inherent complexity of parallel programs makes it
+   far more difficult to capture true performance measurements on parallel
+   and networked (PVM) architectures. In the absence of such performance
+   tools, obtaining reasonable parallel program performance is no small
+   undertaking. S-Check aims to alleviate these short comings by providing
+   performance information that directs the programmer's focus to the most
+   important bottlenecks.
+
+   In practice, S-Check code analysis has yielded faster parallel
+   programs. For example, a large image processing benchmark (the authors
+   of which stating it would be almost impossible to tune) quickly was
+   improved by 18% with simple modifications guided by S-Check.
+     __________________________________________________________________
+
+                           How does S-Check work?
+
+   S-Check use involves: a specimen program; a response to be improved,
+   e.g., overall runtime; benign delays inserted into the test program to
+   change local efficiencies; and mathemathical methods from the
+   statistical design of experiments.
+
+   S-Check starts with your original source code and points suspected of
+   being bottlenecks. It adds artificial delays at the specific points
+   throughout the parallel code. These delays can be switched ON or OFF.
+   The switched delays generate numerous new versions of the program, with
+   the delays simulating adjustments in code efficiency. S-Check
+   methodically executes the many variants, recording delay settings and
+   corresponding run times. S-Check analyzes the recorded entries against
+   a linear response model using techniques from statistics. The results
+   are a sensitivity analysis from which program problem areas can be
+   identified. This provides a portable, scalable, and generic basis for
+   assaying parallel and network based programs.
+
+   [spsflow.small.gif] S-Check flow diagram
+     __________________________________________________________________
+
+                                S-Check Tool
+
+   S-Check is a software tool that automates the techniques described
+   above; the methodology demands laborious experiment setup and execution
+   procedures. S-Check performs much of the drudgery via an easy to use
+   graphical user interface. S-Check Version 3.0 is available for parallel
+   SGI systems, IBM's SP machines, homogenous SUN, SGI, and RS6000
+   workstation clusters using PVM or MPI, and PCs running Linux. S-Check
+   ML supports multiple languages, including FORTRAN and C, however,
+   advanced editing features are only available in C.
+
+     Contacts
+
+     Disclaimer
+
+                         Software and Documentation
+
+   Download S-Check
+   User's Guide
+   Publications
+     __________________________________________________________________
+
+   S-Check is a project of the Scalable Parallel Systems and Applications
+   Group at the National Institute of Standard and Technology (NIST). The
+   project is supported by NIST task number 40131 and ARPA task number
+   7066.
+     __________________________________________________________________
+
+   High Performance Systems and Services Division
+     __________________________________________________________________
+
+   "Created on":04/17/96 - "Last modified":10/16/97 - Contact:
+   webmaster@cmr.ncsl.nist.gov
+     __________________________________________________________________

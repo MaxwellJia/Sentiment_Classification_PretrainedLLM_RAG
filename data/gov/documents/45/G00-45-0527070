@@ -1,0 +1,129 @@
+http://impi.nist.gov/impi-report/index.html
+
+   #next
+
+   next up previous contents
+   Next: Contents
+
+                     \epsfig{file=impi.2d.eps,width=9cm}
+
+                                    IMPI:
+                   Interoperable Message-Passing Interface
+                           IMPI Steering Committee
+                                January, 2000
+                            Protocol Version 0.0
+
+                                  Abstract
+
+   This document describes the industrial led effort to create a standard
+   for an Interoperable Message-Passing-Interface (MPI). The first
+   steering committee meeting was held on March 4, 1997.
+
+   Cover IMPI logo by Mike Mott (MottGrafix@aol.com)
+     __________________________________________________________________
+
+
+     * Contents
+     * List of Figures
+     * List of Tables
+     * 1. Introduction to IMPI
+          + 1.1 Overview
+          + 1.2 Conventions
+               o 1.2.1 Protocol Types
+               o 1.2.2 Data Format
+               o 1.2.3 Host Identifiers
+          + 1.3 Organization of this Document
+     * 2. Startup/Shutdown
+          + 2.1 Introduction
+          + 2.2 User Steps
+               o 2.2.1 Launching A Server
+               o 2.2.2 Launching Clients
+               o 2.2.3 Examples
+               o 2.2.4 Security
+          + 2.3 Startup Wire Protocols
+               o 2.3.1 Introduction
+               o 2.3.2 The IMPI Server
+               o 2.3.3 The AUTH command
+               o 2.3.4 The IMPI command
+               o 2.3.5 The COLL command
+                    # 2.3.5.0.1 Reserved labels.
+                    # 2.3.5.0.2 IMPI_NO_LABEL
+                    # 2.3.5.0.3 Client labels.
+                    # 2.3.5.0.4 IMPI_C_VERSION
+                    # 2.3.5.0.5 IMPI_C_NHOSTS
+                    # 2.3.5.0.6 IMPI_C_NPROCS
+                    # 2.3.5.0.7 IMPI_C_DATALEN
+                    # 2.3.5.0.8 IMPI_C_TAGUB
+                    # 2.3.5.0.9 IMPI_C_COLL_XSIZE
+                    # 2.3.5.0.10 IMPI_C_COLL_MAXLINEAR
+                    # 2.3.5.0.11 Host labels.
+                    # 2.3.5.0.12 IMPI_H_IPV6
+                    # 2.3.5.0.13 IMPI_H_PORT
+                    # 2.3.5.0.14 IMPI_H_NPROCS
+                    # 2.3.5.0.15 IMPI_H_ACKMARK
+                    # 2.3.5.0.16 IMPI_H_HIWATER
+                    # 2.3.5.0.17 Proc labels.
+                    # 2.3.5.0.18 IMPI_P_IPV6
+                    # 2.3.5.0.19 IMPI_P_PID
+               o 2.3.6 The DONE command
+               o 2.3.7 The FINI command
+               o 2.3.8 Shall We Dance?
+          + 2.4 Shutdown Wire Protocols
+          + 2.5 Client and Host Attributes
+     * 3. Data Transfer Protocol
+          + 3.1 Introduction
+          + 3.2 Process Identifier
+          + 3.3 Context Identifier
+          + 3.4 Message Tag
+          + 3.5 Message Packets
+          + 3.6 Packet Protocol
+          + 3.7 Message Protocols
+               o 3.7.1 Short-Message Protocol
+               o 3.7.2 Long-Message Protocol
+               o 3.7.3 Message-Probing Protocol
+               o 3.7.4 Message-Cancellation Protocol
+          + 3.8 Finalization Protocol
+          + 3.9 Mandated Properties
+     * 4. Collectives
+          + 4.1 Introduction
+          + 4.2 Utility functions
+          + 4.3 Context Identifiers
+               o 4.3.1 Context ID Creation
+          + 4.4 Comm_create
+          + 4.5 Comm_free
+          + 4.6 Comm_dup
+          + 4.7 Comm_split
+          + 4.8 Intercomm_create
+          + 4.9 Intercomm_merge
+          + 4.10 Barrier
+          + 4.11 Bcast
+          + 4.12 Gather
+          + 4.13 Gatherv
+          + 4.14 Scatter
+          + 4.15 Scatterv
+          + 4.16 Reduce
+          + 4.17 Reduce_scatter
+          + 4.18 Scan
+          + 4.19 Allgather
+          + 4.20 Allgatherv
+          + 4.21 Allreduce
+          + 4.22 Alltoall
+          + 4.23 Alltoallv
+          + 4.24 Finalize
+          + 4.25 Constants
+          + 4.26 Future work
+     * 5. IMPI Conformance Testing
+          + 5.1 Summary
+          + 5.2 Test Tool Applet
+          + 5.3 Test Interpreter
+          + 5.4 Test Manager
+     * Bibliography
+     * About this document ...
+     __________________________________________________________________
+
+   next up previous contents
+   Next: Contents
+
+
+    IMPI protocol version 0.0
+    document date: January, 2000

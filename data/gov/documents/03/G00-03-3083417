@@ -1,0 +1,158 @@
+http://threecornersat.jpl.nasa.gov
+
+   [jpllogo.gif] Projects: 3CS, CASPER, Planning and Scheduling,
+                 Artificial Intelligence Group                  [Nasalogo.gif]
+
+   nothing
+
+   artificial intelligence group [_line.gif] planning and scheduling
+   [_line.gif] machine learning systems [_line.gif] jpl [_line.gif]
+   caltech [_line.gif] nasa
+
+   [dot.gif] [earth.gif]
+   nothing
+   background description impact technology status significance problem
+   sponsors moreinfo publications the team contacts
+
+       [3cs-individual.gif]              [3cs-unseparated.jpg]
+   Single 3 Corner Sat spacecraft Undeployed Stack of all 3 spacecraft
+
+   Background top
+
+   The Three Corner Sat (3CS) satellite project is a mission being
+   developed jointly by Arizona State University (ASU), The University of
+   Colorado, Boulder (CU), and New Mexico State University (NMSU). 3CS
+   consists of three coordinated satellites that will be deployed in a
+   stack configuration from the Space Shuttle and will then separate to
+   form a "virtual formation." The constellation will orbit at
+   approximately 380 km with a 40-degree angle of inclination. The mission
+   lifetime is estimated to be 2-4 months. The goals of the 3CS mission
+   include the demonstration of stereo imaging, formation flying and
+   innovative command and data handling.
+
+   The principal instrument on 3CS are digital cameras onboard each of the
+   three spacecraft. A total of twelve cameras (resolution 640 x 480)
+   reside within the 3CS constellation, four onboard each of the three
+   spacecraft. It takes on the order of 1/30th of a second to take each
+   image. Images will only be collected during daylight periods. Nominally
+   we expect to collect 24 images per orbit resulting in 2.4 MB of image
+   data per orbit. Storage capacity for the images is still being
+   determined, but the current plan is to allow for onboard storage of 3
+   orbits worth of images. 3CS will utilize a PowerPC 750 flight
+   processor.
+
+   AI Technology top
+
+   3CS will be demonstrating a number of autonomy technologies. First, the
+   onboard execution system for 3CS is the Spacecraft Command Language
+   (SCL) which has been flow previously by CSGC on the DATA-CHASER shuttle
+   payload and was used for automation of Clementine and FUSE as well as
+   other missions. SCL provides a rule and script-based procedural
+   language for encoding robust execution procedures as well as basic
+   coordination constructs (locking, blocking, and run-time resource
+   management). Second, 3CS will be flying the CASPER [Chien et al. 2000]
+   onboard planning system. CASPER will demonstrate onboard continuous
+   planning to enable the 3CS constellation to respond to mission
+   anomalies as well as validate science data onboard. Finally, 3CS will
+   be flying the SELMON monitoring system, to enable context-sensitive
+   anomaly detection.
+
+   Onboard planning enables integration of the planning process with
+   execution to provide feedback. However, in an onboard planning context,
+   the planner is an embedded entity that makes the batch-oriented model
+   of planning inappropriate. Specifically, such an embedded planner must
+   be anytime and responsive. It must be anytime in that at any point in
+   time there must be an executable plan. This means that generative
+   planning techniques [Jonsson et al 2000] are less suitable because they
+   do not have the "anytime" property.
+
+   In order to address this issue, 3CS will be flying the Continuous
+   Activity Scheduling Planning Execution and Replanning (CASPER) [Chien
+   et al. 2000] system - a soft, real-time version of the ASPEN planning
+   system. Rather than considering planning a batch process in which a
+   planner it is presented with goals and an initial state, CASPER has a
+   current goal set, a current state and projections into the future, and
+   a current plan. At any time an incremental update to the goals or
+   current state (an unexpected event or simply time progressing forward)
+   may update the planner process. The planner is then responsible for
+   maintaining a consistent, satisficing plan for the most current
+   information. Incremental changes to the goals, initial state, or
+   executed activities trigger iterative repair conflicts with the plan.
+
+   Within the 3CS mission parameters, CASPER will be able to respond to
+   activity and state updates on the 10 second timescale. This will enable
+   more up to date information regarding the execution status of
+   activities as well as monitored state and resource values to influence
+   planning. For the 3CS mission, CASPER will be managing the onboard
+   execution including: engineering activities (such as communications,
+   calibration, power and other resources), science imaging activities
+   (including data validation, prioritization for downlink), as well as
+   interacting with downlink activities. CASPER will be integrated with
+   the SCL execution system allowing for tight feedback from SCL rules and
+   scripts to be reflected and acted upon within the CASPER plans. In the
+   full paper we will focus on issues in integrating the planning and
+   execution in the context of the 3CS mission, CASPER, and SCL.
+
+   Problem top
+
+   Operating spacecraft in a ground-based mode prevents rapid response to
+   science opportunities or anomalies due to transmission delays, contact
+   schedules, and limited commuications bandwidth.
+
+   Impact top
+
+   Onboard decision-making enables rapid response to science events to
+   improve science, anomalies to reduce downtime. Onboard processing also
+   enables low priority science data to be discarded, meaning that limited
+   downlink can be more effectively used.
+
+   Status top
+
+   3CS critical design review scheduled for March 2001. CASPER is
+   currently being integrated with the remainder of the 3CS flight
+   software. Hardware is due for integration in the Fall of 2001, with
+   software delivered later. Nominal launch date for the 3CS mission is
+   Fall 2002.
+
+   Description top
+
+   The 3CS mission is scheduled for launch in the summer of 2002, with the
+   software design, development, and integration already underway with
+   integration milestones continuously throughout the spring and summer of
+   2001. As part of this effort, the CASPER software is already being
+   integrated with the SCL execution system.
+
+   The 3CS mission will demonstrate significant onboard autonomy
+   including: robust execution using SCL, onboard planning using CASPER,
+   and onboard anomaly detection using SELMON. This aggressive technology
+   demonstration will provide valuable lessons learned in the long term
+   quest for more capable, autonomous space systems for the 21st century.
+
+   Publications top
+
+   S. Chien, B. Engelhardt, R. Knight, G. Rabideau, R. Sherwood, E.
+   Hansen, A. Ortiviz, C. Wilklow, S. Wichman , "Onboard Autonomy on the
+   Three Corner Sat Mission," Proceedings of the 2001 International
+   Symposium on Artificial Intelligence, Robotics, and Automation for
+   Space, Montreal, Canada, June 2001. (PDF)
+
+   Contacts top
+
+   Dr. Steve Chien, JPL, chien@aig.jpl.nasa.gov
+
+   The Project Team top
+
+   E. Hansen, C. Koehler, B. Sanders, C. Wilklow, University of Colorado,
+   Space Grant
+
+   S. Chien, R. Knight, R. Sherwood, B. Engelhardt, G. Rabideau,
+   Artificial Intelligence Group, JPL
+
+   Sponsors top
+
+   The 3CS flight demonstration of CASPER is sponsored by the Thinking
+   Systems Thrust Area of the Cross Enterprise Technology Development
+   Program and the JPL Telecommunications and Mission Operations
+   Technology Program.
+
+   [jpllogo.gif] Questions: www@www-aig.jpl.nasa.gov

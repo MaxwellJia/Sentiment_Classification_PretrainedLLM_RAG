@@ -1,0 +1,272 @@
+http://www-aig.jpl.nasa.gov/public/mls/diamond_eye/body.html
+
+   [DiamondEye.jpg]
+
+   Overview
+
+   [de_hilevel_quarter.gif] Two trends developing within JPL and NASA are
+   fueling the demand for systems that can automatically extract
+   semantically meaningful information (knowledge) from image data. First,
+   the amount of data returned from spacecraft missions has greatly
+   increased due to improvements in image acquisition, communications, and
+   storage technology, but the ability of humans to manually analyze the
+   data has remained constant. Second, it has been recognized that placing
+   intelligent algorithms onboard a spacecraft or autonomous platform will
+   enable new science opportunities that could not be realized with
+   existing technology.
+   The Diamond Eye Project targets development of a suite of algorithms
+   that will enable both scientists and remote systems to find, analyze,
+   and catalog spatial objects and dynamic events in large scientific
+   datasets and real-time image streams. The algorithms will be integrated
+   into an innovative image data mining architecture that is also being
+   developed within the project. The Diamond Eye system will provide a
+   low-resistance pathway for the science community to evaluate and gain
+   confidence in new image mining, computer vision, and machine learning
+   technology. Success in the ground-based scenario will be leveraged to
+   form partnerships with flight projects and bring advanced capabilities
+   into the onboard setting, enabling a new era of exploration using
+   highly autonomous spacecraft, rovers, and sensors.
+   Keywords: image data mining, knowledge discovery, onboard science
+   analysis, autonomy, thinking space systems, computer vision, machine
+   learning, object recognition, information retrieval, ad hoc queries,
+   content, infrastructure, software architectures, parallel computing,
+   object-oriented databases, large image collections, digital libraries,
+   automatic cataloging, geological features, crater counting, satellite
+   detection.
+
+   Architecture
+
+   [system_small.gif] The Diamond Eye system uses a distributed software
+   architecture that enables users (scientists) to analyze large image
+   collections by interacting with one or more custom data mining servers
+   via a Java applet interface. The server, which acts as a centralized
+   coordinater, takes requests from users and interfaces with image
+   sources, algorithms, and databases to satisfy user requests. Each
+   server is coupled with an object-oriented database and a computational
+   engine such as a network of high-performance workstations. The database
+   provides persistent storage for user and system data and supports
+   querying of the ``mined'' information. The computational engine
+   provides parallel execution of expensive image processing, object
+   recognition, and query-by-content operations.
+   Key benefits of the Diamond Eye architecture are: (1) the design
+   promotes trial evaluation of advanced data mining and machine learning
+   techniques by potential new users (all that is required is to point a
+   web browser to the appropriate URL), (2) software infrastructure that
+   is common across a range of science mining applications is factored out
+   and reused, and (3) the system facilitates closer collaborations
+   between algorithm developers and domain experts. This portion of the
+   Diamond Eye Project is being supported by the NASA Office of Space
+   Science Applied Information Systems Research Program.
+
+   Algorithm Development
+
+   Many science applications stand to benefit from the existence of robust
+   recognition and mining algorithms. The fundamental technical challenge
+   is to determine what mathematical processing should be applied to the
+   low-level, pixel representation contained in a raw image (or image
+   sequence) in order to identify spatial objects, such as volcanoes and
+   craters, and dynamic events, such as eruptions and satellite motion.
+   The Diamond Eye algorithm development effort is directed toward
+   providing robust solutions for this problem in the face of varying
+   degrees of a priori knowledge.
+   Adaptive Recognition:
+   Adaptive recognition algorithms that can be easily customized to new
+   domains without reprogramming are a core component in Diamond Eye.
+   Typically, these algorithms rely on machine learning techniques to
+   automatically abstract a model from user-defined training examples.
+   Efforts in this direction draw upon the extensive experience gained
+   during development of the JARtool volcano cataloging system; however,
+   conceptual breakthroughs since JARtool have greatly expanded the range
+   of problems that can be addressed. Current avenues of development
+   include continuously-deformable templates and probabilistic shape
+   models.
+   Ad Hoc Queries:
+   The use of learning techniques to construct precise recognizers usually
+   depends on an abundant supply of training examples. In many
+   circumstances, however, it is desirable to search for objects based on
+   a single example or even a notional concept of how an object should
+   look. We are developing novel techniques that enable a user to
+   formulate and execute queries for objects within large image
+   collections based on models that are bootstrapped from single examples
+   and/or sketches.
+   Discovery:
+   As spacecraft venture to new environments where we cannot know what to
+   expect in advance (e.g., Pluto, subsurface of Europa, Titan,
+   microscopic views of Mars), generic discovery algorithms that can
+   autonomously identify "interesting" objects with no prior model will be
+   invaluable for improving scientific return. A seed project is underway
+   that uses several broad assumptions to approach this difficult problem.
+   Dynamic Events:
+   Algorithms for detecting and tracking dynamic events in image sequences
+   can exploit both spatial and temporal behavior. For applications with
+   significant spatial structure, the adaptive recognition techniques
+   described above can be modified to incorporate temporal aspects (e.g.,
+   using Kalman filters, HMMs, etc.). However, in some circumstances the
+   spatial information is limited or unstructured. For example, in
+   satellite detection, the object may occupy only a single pixel; in
+   comet analysis, outgassing events ("jets") may be exceptionally complex
+   in structure. For these cases, processing techniques based on temporal
+   motion coherence and/or change detection are appropriate.
+
+   Science Applications
+
+   The working model that we have adopted in the project involves close
+   collaboration between algorithm developers and domain scientists, who
+   help identify "hot spots" where new computer vision, image mining, and
+   machine learning techniques potentially can be applied to produce the
+   greatest science impact. Several planetary scientists from the
+   Southwest Research Institute (SwRI) in Boulder, CO serve as a
+   scientific steering committee for development of the Diamond Eye
+   architecture. One aspect of their job is to insure that the end-product
+   is a "science-driven tool" as opposed to "tool-driven science". Over
+   the past year, our collaboration with SwRI has focused on two science
+   applications: automated crater counting and satellite detection (both
+   applications are described in more detail below). However, we are
+   always on the lookout for new domains. If you have an interesting image
+   mining problem, please contact us.
+   Automated crater detection and analysis:
+   Craters are a nearly ubiquitous landform on the surfaces of planets,
+   satellites, asteroids, and other solar system bodies. Since they form
+   by fairly well understood hypervelocity impact processes, their initial
+   shapes and topographies ("fresh" morphologies) are a given, so their
+   subsequent evolution reflects the variety of processes that shape
+   landforms in general. Hence, craters serve to calibrate studies of most
+   planetary topography. Spatial densities of craters also form the
+   primary basis for assessing the relative and absolute ages of
+   geological units on planetary surfaces. Unfortunately, manual
+   tabulation of craters in a set of images is slow and tedious. (Careful
+   human labeling of a heavily-crater image may take ten hours or more.)
+   Preliminary automatic crater detection results were obtained on a set
+   of ten Viking Mars images using a multi-resolution principal components
+   analysis approach. The set of training craters was partitioned into
+   subsets according to size; a separate JARtool-type model was learned
+   for each subset. We ignored the fact that the lighting direction varies
+   from image to image (and even within images because the images are
+   actually mosaics!), hence variations due to lighting had to be absorbed
+   by the PCA and classifier.
+   Look here to get an idea of the detection on a typical image. (In this
+   quick experiment, the same images were used for training and testing so
+   the results may be slightly optimistic.) Note that we did not attempt
+   to detect the largest craters because the number of training examples
+   in this subset of images was insufficient to build a model. (There are
+   not that many big craters and those that do exist tend to straddle the
+   image edges.) Overall, the detection performance looks quite good.
+   There are a few craters that we would have expected to detect that are
+   missed; however, there are almost no false alarms. Hence, it may be
+   appropriate to lower the classification threshold to try to recover
+   some of the missed craters.
+   Satellite Detection:
+   Two developments this past year have made the search for satellites an
+   area of intense interest. Planetary scientists revisiting the archived
+   Voyager dataset discovered a new satellite of Uranus that had been
+   missed in the original analysis. Also, one of our collaborating science
+   partners (B. Merline), using an adaptive optics technique from a
+   ground-based telescope, identified the second instance of a natural
+   satellite orbiting an asteroid. The first such example was the
+   Ida-Dactyl pair, which was imaged serendipitously by the Galileo
+   spacecraft in 1993. Prior to the discovery of Ida-Dactyl, the
+   possibility of asteroid satellites had been widely debated in the
+   planetary science community with predictions ranging from such
+   satellites being commonplace to being all but impossible. The popular
+   belief now is that formation of small satellites may be fairly common
+   in catastrophic collisions. Observations of asteroid satellites are
+   important scientifically because they hold significant clues to the
+   origin and age of the asteroid and have broader implications for
+   understanding asteroids as a group and their role in the evolution of
+   our solar system.
+   A prototype algorithm has been developed for identifying candidate
+   satellites in situations in which they consist of a very small number
+   of image pixels (perhaps only one) that barely register above
+   background. This is the situation as a spacecraft approaches a known
+   asteroid at far-field. In this regime, satellites can only be detected
+   (and discerned from cosmic ray hits) by analysis of temporal image
+   sequences. A test was conducted on a sequence of NEAR images of
+   Mathilde. No satellites were detected, however, the system did flag an
+   interesting optical artifact (known to the imaging team). Because the
+   artifcat generates an image plane behavior very much like that of a
+   true satellite, it provided a valuable sanity check for the algorithm.
+   In December 1998, a soft real-time test was performed using downlinked
+   images from the NEAR/Eros encounter, but no satellites were detected.
+   (Manual analysis of the Mathilde and Eros imagery by planetary
+   scientists has also failed to produce satellite discoveries.)
+
+   Autonomous Agents
+
+   Algorithms that can extract semantically meaningful information from
+   images will greatly enhance analyses of NASA's existing image archives,
+   but some of the most exciting possibilities involve coupling these
+   advanced algorithms with an autonomous agent that is able to mine and
+   react in real-time. The techniques are applicable to a broad class of
+   future missions, including orbiters, landers, fly-bys, rovers,
+   aerobots, hydrobots, etc. By closing the loop with an onboard
+   executive, autonomous spacecraft will be able to recognize and respond
+   to features of interest and dynamic planetary processes such as
+   volcanic eruptions and outgassing from comets. On deep space missions
+   characterized by long light-time delays and limited data communication
+   bandwidth, moving the intelligence to the sensors will enable more
+   extensive exploration and provide a dramatic improvement in the return
+   of science value. For example, infrequent events can be captured and
+   windowed without returning all the data. Intelligent selection and
+   prioritization can be used to identify targets for in-situ data
+   collection.
+   Plans are underway to couple high-level visual recognition capabilities
+   being developed within the Diamond Eye project with a mobile agent
+   (robot) that can actively explore its environment. This subproject will
+   bring ground-based capabilities closer to the onboard setting where
+   real-time analysis of image streams is fundamental. The initial target
+   demo involves enabling a user, through the Diamond Eye client
+   interface, to interactively define a recognition model that can be
+   uploaded through the server to a mobile agent. Effectively, the user
+   instructs the agent, "Look for one of these and tell me when you find
+   one." We believe this process could closely mirror the way in which a
+   PI will interact with future highly-intelligent autonomous exploration
+   platforms. We also note that there are strong parallels between an
+   autonomous mobile agent for space exploration and the Consumer
+   Telepresence Project being pursued by Caltech and Tennessee State
+   University, and a collaborative effort may emerge.
+
+   Publications
+
+  Please Note:
+
+   This material is provided for your personal use only and may not be
+   retransmitted or redistributed without permission in writing from the
+   paper's publisher and/or author. You may not upload this material to
+   any public server, on-line service, network, or bulletin board without
+   prior written permission from the publisher and/or author. You may not
+   make copies for any commercial purpose. This material is not public
+   domain. Reproduction or storage of materials retrieved from this web
+   site are subject to the U.S. Copyright Act of 1976, Title 17 U.S.C.
+
+   Autonomous Visual Discovery, M.C. Burl, D. Lucchetti In SPIE AeroSense
+   Conf. on Data Mining and Knowledge Discovery, (Orlando, FL), April
+   2000. (abstract) (paper)
+   Distant Autonomous Recognizer of Events (DARE) as an On-board Science
+   Processing System for Spacecraft, V. Gor, W.Colwell, B. Merline, P.
+   Stolorz, and T. Mann, To appear in AIAA Space Technology Conference and
+   Exposition, September 1999. (abstract) (paper)
+   Distant Autonomous Recognizer of Events (DARE) as a Data Mining and
+   Discovery Tool, V. Gor, W.Colwell, B. Merline, P. Stolorz, and T. Mann,
+   To appear in AIAA Space Technology Conference and Exposition, September
+   1999. (abstract) (paper)
+   Mining for Image Content, M.C. Burl, C. Fowlkes, J. Roden, In
+   Systemics, Cybernetics, and Informatics / Information Systems: Analysis
+   and Synthesis, (Orlando, FL), July 1999. (abstract) (paper)
+   The Diamond Eye Image Mining System, J. Roden, M.C. Burl, and C.
+   Fowlkes, Demo for the Scientific and Statistical Database Management
+   Conf., (Cleveland, OH), June 1999. (abstract) (paper)
+   Diamond Eye: A Distributed Architecture for Image Data Mining, M.C.
+   Burl, C. Fowlkes, J. Roden, A. Stechert, and S. Mukhtar, In SPIE
+   AeroSense Conf. on Data Mining and Knowledge Discovery, (Orlando, FL),
+   April 1999. (abstract) (paper)
+   Probabilistic Affine Invariants for Recognition, T.K. Leung, M.C. Burl,
+   and P. Perona, In IEEE Comp. Society Conf. on Computer Vision and
+   Pattern Recognition , (Santa Barbara, CA), June 1998. (abstract)
+   (paper)
+   A Probabilistic Approach to Object Recognition Using Local Photometry
+   and Global Geometry, M.C. Burl, M. Weber, and P. Perona, In European
+   Conf. on Computer Vision , June 1998. (abstract) (paper)
+   Learning to Recognize Volcanoes on Venus, M.C. Burl, L. Asker, P.
+   Smyth, U. Fayyad, P. Perona, J. Aubele, and L. Crumpler, Machine
+   Learning , April 1998. (abstract) (paper)
+     __________________________________________________________________

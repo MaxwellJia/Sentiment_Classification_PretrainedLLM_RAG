@@ -1,0 +1,239 @@
+http://www.alw.nih.gov/WWW/quick-ref.html
+
+   [logo-ALW.gif]
+
+        NIH Advanced Laboratory Workstation System Quick Reference Guide
+
+Getting Started on an Advanced Laboratory Workstation (ALW) System
+
+   The Advanced Laboratory Workstation (ALW) System Quick Reference Guide
+   is designed as an easy to use reference aid for novice users. This
+   document covers:
+    1. Logging on and off an ALW
+    2. Passwords and authentication procedures
+    3. Requesting disk space
+    4. Further ALW system information and assistance available
+
+Using This Document
+
+   This document uses the following conventions to guide you as to how you
+   enter UNIX commands and how you distinguish these commands from
+   information displayed by the ALW system.
+
+   bold face text
+          Variable information and UNIX commands or information you type
+          or action you perform.
+
+   Typewriter face text
+          Any information displayed on screen that you do not enter, such
+          as your system's prompt, or information displayed in response to
+          your entries.
+
+   normal face text
+          Symbols and conventions used by this document to explain the
+          command or response.
+
+How to Login to an ALW
+
+   Respond to the login prompt by entering your user name and password in
+   the steps outlined below.
+    1. login: user-name
+    2. Password: password (NOTE: This is not visible to you as it is
+       typed)
+
+   A successful login by an ALW user to any ALW results in:
+     * an X-window session or a UNIX shell session,
+     * provides ALW authentication for access to ALW protected files,
+     * begins a login shell session with the user's home directory as the
+       current working directory
+
+   The UNIX pathname for your home directory has this format:
+
+   /afs/alw.nih.gov/nih/institute/user-name
+
+   If your user name and password do not allow a successful login call
+   496-UNIX for assistance.
+
+Logging Out of an ALW
+
+   You have three choices available when you have finished your work
+   session:
+    1. Destroy your tokens
+    2. Exit from the X-Windows environment only and return to the UNIX
+       shell.
+    3. Completely leave the UNIX environment.
+
+   You can exit from X-Windows at any time you desire. However, in order
+   to log out from the UNIX environment you must first exit from X-Windows
+   as shown below.
+
+  STEP 1: To exit from the X-windows environment,
+
+    1. Click on the terminate button on the X-Window-System`s icon or
+       dialogue box displayed on screen.
+       [xterminate.gif]
+    2. Click on the terminate button displayed on the resulting pop-up
+       confirmation box.
+       [xterminate-confirm.gif]
+
+  STEP 2: To log out from a UNIX shell session
+
+    1. Terminate the X-Windows session (step 1 above).
+    2. Enter the logout command.
+
+Changing an Account Password
+
+   For the security of the individual account and the system as a whole,
+   every ALW account must have a password. Choose a password that is easy
+   for you to remember, but not easy for someone else to guess.
+
+   To change the password for an ALW account use the kpasswd command as
+   shown below.
+
+    1. hostname% kpasswd (NOTE: The actual hostname that appears as part
+       of the prompt will be your system's name)
+    2. Old-password: OLD-PASSWORD
+       (NOTE: This is not visible to you as it is typed.)
+    3. New password: NEW-PASSWORD
+       (NOTE: This is not visible to you as it is typed.)
+    4. Please re-enter new password: NEW-PASSWORD
+       (NOTE: This is not visible to you as it is typed.)
+
+   You will know that you have successfully changed your password when the
+   ALW returns with a:
+
+     hostname%
+
+   prompt after you have verified your new password.
+
+     NOTE: Here and throughout the rest of this document you will see the
+     system prompt given as: hostname%
+
+     This is used as a convention in this document for illustratation.
+     The actual name you will see displayed will depend on your machine's
+     actual name.
+
+Renewing/Cancelling Andrew File System (AFS) Authentication -- klog/unlog
+
+   The Andrew File System (AFS) authentication you obtain at login lasts
+   for about 25 hours. To renew authentication for an ALW account use the
+   klog command..
+    1. hostname% klog
+    2. Password: PASSWORD
+       (NOTE: This is not visible to you as it is typed.)
+
+   When you leave your ALW unattended we STRONGLY recommend that, you
+   cancel the authentication when you leave and re-authenticate when you
+   return.
+
+   To cancel authentication for an ALW account use the unlog command.
+
+    1. hostname% unlog
+
+Security under AFS
+
+   AFS allows the owner of a directory to set permissions for all the
+   files the directory contains. The most common permissions are listed
+   below.
+        PERMISSION        ALLOWS
+           read      read and lookup access
+           write     read and write access
+           all       write and administer access
+           none      no access
+
+   When access is set on a directory it does not propagate to
+   subdirectories that currently exist only to subsequently created
+   subdirectories.
+
+   Set the Access Control List (ACL) on an AFS directory with the fs
+   command.
+
+   For example, to allow a colleague to read, but not write, your files
+   follow the sequence outlined below while at the hostname% prompt.
+    1. hostname% cd your-directory
+    2. hostname% fs seta . -acl user-name write colleague-name read
+    3. hostname% fs lista .
+Access list for . is
+Normal rights:
+  colleague-name rl
+  user-name rlidwk
+
+     NOTE: all files in a new user's home directory, except those in the
+     private subdirectory, are initially readable by everyone.
+
+Requesting ALW System Disk Space
+
+   Every ALW user gets a home area limited to about 20 Megabytes. Requests
+   for additional disk space should be submitted via the ptr utility.
+   Requests for disk space for very large files should be limited to 200
+   Megabytes per request.
+
+UNIX Documentation
+
+   To read on-line documentation for a UNIX command use the man command.
+
+   For example, to list the manual page for the ls command use the command
+   below.
+
+          hostname% man ls
+
+   Refer to (vendor supplied) UNIX man pages for hard-copy information
+   about UNIX commands.
+
+Andrew Tools Documentation
+
+   In the X-windows environment, use the help command for on-line
+   information about "Andrew applications" (e.g. messages, ez):
+
+   For example, enter the following commands at the hostname% prompt.
+        help           to browse all help
+        help messages   to browse for help on messages
+        help ez        to browse for help on ez
+
+   All on-line UNIX documentation is also available in the help browser.
+
+AFS Documentation
+
+   Refer to the AFS User's Guide or AFS Command Reference for hardcopy
+   information about the AFS System.
+
+   Call 496-UNIX for information about availability.
+
+ALW System Documentation
+
+   PostScript versions of most ALW system documentation can be found on
+   any ALW in the directory /usr/local/alwpub/doc. These can be printed on
+   a local PostScript printer with the lpr command.
+
+   ALso, the document you are viewing can most likely be printed directly
+   from your current viewing application. Refer to your application's
+   documentation for output instructions.
+
+ALW User Assistance
+
+   Use the ptr command to submit written requests for help and/or written
+   problem reports.
+
+          hostname% ptr
+
+   To report immediate and/or complex problems call DCRT's Technical
+   Assistance and Support Center (TASC) at (301) 594-DCRT or e-mail
+   4dcrt@nih.gov.
+     __________________________________________________________________
+
+
+    Last updated: Tue Jan 23 11:26:57 EST 1996
+
+   Credits:
+   Content by ALW staff members.
+   Title logo by John Pfeifer.
+     __________________________________________________________________
+
+   To more ALW system documentation
+   [logo-intro-ALW.gif] To ALW Home Page
+
+   Send comments to www-alw@alw.nih.gov
+   Disclaimer of Endorsement
+   Copyright
+
+   Last updated: Tue Jan 23 10:16:53 EST 1996

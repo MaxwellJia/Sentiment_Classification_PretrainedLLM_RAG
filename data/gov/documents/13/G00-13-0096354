@@ -1,0 +1,494 @@
+http://speclab.cr.usgs.gov/aboutimsp.html
+
+   U.S. Geological Survey home page
+
+About Imaging Spectroscopy
+
+   http://speclab.cr.usgs.gov
+
+  IMAGING SPECTROSCOPY/SPECTROSCOPY INFORMATION
+
+   (The information described here is specifically written for USGS
+   scientists to understand imaging spectroscopy and what it takes to
+   analyze the data for USGS programs using our currently developed
+   methods. However, the information should be generally useful to all
+   those interested in imaging spectroscopy.)
+
+  EXECUTIVE SUMMARY
+
+   WHAT IS IMAGING SPECTROSCOPY?
+          Imaging spectroscopy is a new tool that can be used to map
+          specific materials by detecting specific chemical bonds. As a
+          result it is an excellent tool for environmental assessments,
+          mineral mapping and exploration, vegetation communities/species
+          and health studies, and general land management studies.
+
+          The premier imaging spectrometer is the NASA/JPL AVIRIS system,
+          covering a 10.5 km swath with 17-meter pixel spacing. AVIRIS
+          collects data at a rate of 2 square kilometers per second!
+
+   DATA ACQUISITION PLANNING
+          Normally, AVIRIS data acquisition must be planned well in
+          advance, up to approximately a year. However, as paying
+          customers some acquisitions can be planned a few months in
+          advance.
+
+   COST
+          AVIRIS data cost about $10 per square kilometer, but must be
+          funded in full flights ($64k per flight + $6k per flight hour).
+          A full flight can cover up to about 8,000 square kilometers
+          spread over multiple sites.
+
+   CALIBRATION
+          AVIRIS data require ground support information to calibrate the
+          data to surface reflectance for mapping materials. It takes
+          about 30 to 60 person days to calibrate an AVIRIS data set from
+          one area (up to 8,000 sq km) for one flight-day. Calibration
+          uses a combinations of field spectrometers and laboratory
+          spectrometers, as well as radiative-transfer calculations.
+
+   WHAT IT TAKES TO ANALYZE IMAGING SPECTROMETER DATA
+          Computer analysis takes a trained person only a few days per
+          couple of hundred square kilometers' worth of data. This can
+          include creating maps of many minerals. Current standard
+          analysis produces materials maps for more than 260 materials and
+          is expected to grow to hundreds of materials in the near future
+          (note not all materials may be found in a given area).
+
+   WHAT IT TAKES TO VERIFY IMAGING SPECTROMETER DATA
+          Imaging spectroscopy analysis can be done with only a few days
+          of work per couple of hundred square kilometers of data. The
+          analysis can produce a several-hundred-layer GIS database. The
+          various layers can be assembled into materials maps which must
+          begeometrically corrected and verified in the field to ensure
+          the data were analyzed correctly and all relevant materials were
+          included in the mapping process. It can take a couple of weeks
+          or more to verify the results and begin to understand the
+          complexities mapped, and depends on the scientific questions
+          being posed. Minerals, environmental materials, man-made
+          materials, and vegetation species/communities maps are a new
+          paradigm and understanding this new technology and what science
+          questions can be answered with it will take training and effort.
+
+   PUTTING IT ALL TOGETHER, FROM PLANNING TO COMPLETED ANALYSIS AND
+          REPORTS
+          Complete analysis of a full flight of AVIRIS data, from flight
+          planning, calibration, materials mapping and verification,
+          laboratory analyses of samples, data registration, map
+          production, and science reports takes on the order of seven
+          person years of effort. Smaller areas take less time, depending
+          on the science to be done.
+
+   UNIQUE FACILITIES
+          Specialized facilities are required to successfully map
+          materials with imaging spectroscopy. Laboratory and field
+          spectrometers are required to calibrate imaging spectroscopy
+          data, measure reference samples, and verify mapping results.
+
+   TRAINING BY THE SPECTROSCOPY GROUP
+          The USGS Denver spectroscopy group can train about six
+          scientists per year, covering a maximum of three new AVIRIS
+          sites per year.
+
+  WHAT IS IMAGING SPECTROSCOPY?
+
+   Imaging spectroscopy is the application of reflectance/emittance
+   spectroscopy to every pixel in a spatial image. Spectroscopy can be
+   used to detect individual absorption features due to specific chemical
+   bonds in a solid, liquid, or gas. Solids can be either crystalline
+   (i.e. minerals) or amorphous (like glasses). Every material is formed
+   by chemical bonds, and has the potential for detection with
+   spectroscopy. Actual detection is dependent on the spectral coverage,
+   spectral resolution, and signal-to-noise of the spectrometer, the
+   abundance of the material and the strength of absorption features for
+   that material in the wavelength region measured. In remote sensing
+   situations, the surface materials mapped must be exposed in the optical
+   surface (e.g., to map surface mineralogy it must not be covered with
+   vegetation), and the diagnostic absorption features must be in regions
+   of the spectrum that are reasonably transparent to the atmosphere (the
+   atmosphere can be corrected for all but the strongest absorptions). The
+   optical surface is the same as what the geologist sees in the field
+   with his or her eyes. Spectroscopy can be used in laboratories on hand
+   samples, in the field with portable field spectrometers (spatial
+   resolution in the millimeter to several meter range), from aircraft,
+   and in the future from satellites. The aircraft systems now operational
+   can image large areas in short time (~2 sq. km per second!), producing
+   spectra for each pixel that can be analyzed for specific absorption
+   bands and thus specific materials.
+
+   The premier sensor is the NASA/JPL AVIRIS system (Airborne Visual and
+   Infra-Red Imaging Spectrometer). AVIRIS currently covers the wavelength
+   region from 0.38 to 2.50 microns with 17-meter pixel spacing (20-meter
+   spot) and a 10.5-km swath. AVIRIS is flown on an ER-2 (U2) aircraft at
+   65,000 feet. Next year AVIRIS should have capability to fly on a C130
+   aircraft and have 5-meter pixel spacing and a 2.5 km swath. While
+   AVIRIS data can be used to make any scale maps, the data from ER-2
+   altitudes makes excellent 1:24,000-scale maps.
+
+   The AVIRIS spectral range is excellent for detecting electronic
+   transitions in minerals (e.g., iron oxides, Fe2+ bearing minerals,
+   etc.), vegetation (vegetation species, health, green leaf water
+   content), and vibrational absorptions due to lighter elements (OH, SO4,
+   CO3, CH, etc., so OH-bearing minerals, carbonates, sulfates and
+   organics are mappable). Diagnostic absorptions also exist due to other
+   processes. For example, Rare Earth ions involve deep-lying electrons
+   and are not diagnostic of mineralogy but of the presence of the ions in
+   the mineral, thus specific Rare Earth Elements are detectable with the
+   AVIRIS spectral range. Vibrational absorptions from heavier elements
+   such as Si-O (quartz) occur in the mid-infrared and are not covered by
+   AVIRIS. Currently, only broad-band sensors (e.g., TIMS) are available
+   in the mid-IR, although new mid-IR systems are under development.
+
+   The NAVY/Civilian HYDICE imaging spectrometer has AVIRIS like
+   capabilities but 1-meter to 3-meter spatial resolution, is currently
+   flying in a testing mode, and should become available for use in the
+   next year.
+
+  DATA ACQUISITION PLANNING
+
+   A NASA ER-2 flight is like launching a rocket through commercial
+   airspace and requires significant advance planning on their part. Thus,
+   NASA plans the whole spring/summer/fall flight season the previous
+   year. The ER-2 is only deployed from several (continental United
+   States) places: Moffet Field near San Francisco, Whollops Island on the
+   east coast, and occasionally Topeka, Kansas, or Spokane, Washington.
+   Depending on the data requests, the aircraft may be deployed out of one
+   of these locations for a several week period to acquire data near that
+   base.
+
+   As paying customers, we do not need to give exact sites a year in
+   advance, but NASA would like our best ideas so they may plan
+   accordingly (e.g., what bases they need to deploy from). Each year,
+   AVIRIS acquires data equivalent to an area greater than the size of the
+   State of Nevada to provide data for numerous research programs, ranging
+   from geology, ecosystems, water/ocean, to clouds/atmosphere. Sites
+   generally are found all over the United States. One year AVIRIS was
+   deployed in Europe; this year it went to Alaska and South America.
+
+   Consequently, as soon as we can after a project's budget is approved,
+   we must give NASA an idea of how much data we might want in the coming
+   year. For example, we may want 3 sites in the western United States
+   (deployment from Moffet Field) covering X sq km in states A, B, and C.
+   Then approximately next March, at the latest, we would need to finalize
+   the sites and give NASA coordinates of specific flight lines.
+
+   As part of the data-acquisition planning stage, it is also necessary to
+   plan for ground calibration. When NASA flies the requested sites
+   (usually the May-July time frame), a team must obtain ground
+   calibration data as near as possible to the day of the overflight.
+   Depending on the ER-2 schedule and weather, the ground crew could be
+   sitting in the field for days waiting for the flight, or do a
+   last-minute scramble to get to another site. (See CALIBRATION below.)
+
+   AVIRIS data are recorded on a tape that vholds 70 minutes of data. The
+   ER-2 aircraft travels at 734 km/hr (12.233 km/minute). Pre-calibration
+   plus post calibration for each flight takes up about 5 minutes of data
+   tape, leaving about 65 minutes of flight data (about 795 km in length).
+   Some tape movement occurs at the beginning and end of each line of
+   data, so about 1.25 minutes are lost for each flight line (equivalent
+   to 15.3 km). Thus the achievable flight data lengths = 795 - lines*15.3
+   km.
+
+   Thus the following table shows in practice what can be covered per
+   flight:
+
+   Line Segments Total km of data
+   1             780
+   2             764
+   3             749
+   4             734
+   5             718
+   6             703
+   7             688
+   8             673
+   9             657
+   10            642
+   11            626
+   12            611
+   13            596
+   14            581
+   15            565
+
+   Finally, a flight can be no longer than 6.5 hours without special
+   permission. So you must plan how long it takes to get to and from your
+   site, and plan on about 15 minutes per turn.
+
+  COST
+
+   AVIRIS data cost about $10.00 per sq. km when large areas are covered.
+   AVIRIS covers a 10.5 km swath and about 800 km of data can be flown per
+   day (~8,000 sq km). No cost has been set for HYDICE data.
+
+   In practice, NASA requires whole flights funded (the cost for a flight
+   is mostly fixed, regardless of how much data are collected). Cost
+   sharing with other researchers is possible if multiple requests are
+   made to fit together into a single flight. One full flight of data
+   costs $64,000 plus $6,000 per flight hour of the ER-2. Fortunately, at
+   a speed of 734 km/hr, only 1.1 hours of data collection time are needed
+   to acquire a full data tape (10 Gbytes; ~8,000 sq km). Additional
+   flight time involves getting to and from the site, and in making turns
+   for each flight line.
+
+   Note: one full AVIRIS tape is 10 gigabytes of raw data, but when
+   converted to 16-bit calibrated data for delivery, this becomes about 14
+   GBytes!
+
+   An additional requirement to getting a full flight's worth of data is
+   that the sites covered must be near each other (like a few hundred
+   miles) so that there is reasonable time for the plane to get to each
+   one. For example, when launching from Moffet Field, a site in Nevada,
+   Utah and Colorado might be feasible because they could be on a general
+   line from the base. An example that would not work would be something
+   like the New World Mine near Yellowstone and a site in Arizona (we
+   would be charged for 2 flights: $64k each + flight hours).
+
+  CALIBRATION
+
+   Imaging spectroscopy data come in radiance, and thus have the solar
+   flux spectrum, the earth's atmospheric absorption bands (you can map
+   atmospheric gas abundances), and surface reflectance in the data. The
+   surface reflectance is what we need for land-management studies. The
+   data are calibrated by a combination radiative transfer atmospheric
+   transmission model and by measuring the reflectance of relatively large
+   homogeneous areas on the ground with a field spectrometer (a playa,
+   rock outcrop or grassy field have all been used; playas work best). The
+   effort to calibrate one site (one day's worth of data in one region up
+   to ~8,000 sq km) requires a minimum of 2 people to visit the
+   calibration site(s) near the time of the overflight (within a couple of
+   weeks; before any rainstorm). The field spectrometer data are obtained
+   by walking over the site collecting a few hundred spectra averaging the
+   site as much as possible. Samples are obtained and measured on a
+   laboratory spectrometer to confirm the field data. Spectra from the
+   imaging spectrometer data are extracted over the calibration site(s),
+   and compared with the field and lab data. A set of correction
+   multipliers and offsets are derived and applied to the data.
+
+   The entire calibration process takes about ~30 PERSON DAYS OF WORK (1.5
+   person-months), for each day/site of imaging spectrometer data, whether
+   the site is a small area of only a hundred sq. km, or large ~8,000 sq
+   km). If the calibration is complex with no uniform areas, it could take
+   longer.
+
+  WHAT IT TAKES TO ANALYZE IMAGING SPECTROMETER DATA
+
+   Although many groups around the country are developing methods for
+   analyzing imaging spectrometer data, the USGS imaging spectroscopy
+   group is currently leading the world in capability. The USGS Tricorder
+   algorithm can analyze for hundreds (or thousands) of materials
+   simultaneously solving for what is present on the surface, whether it
+   be minerals, environmental materials, land, water, or ecosystems
+   related. Note that not all materials may be found in a given area, but
+   that too can be important information, especially environmental
+   contamination.
+
+   We group AVIRIS data in 10.5-km wide by 17.5-km long segments (614x1024
+   pixels), covering 184 sq. km. Called a double segment, it takes less
+   than 2 hours to analyze for 250 materials on a 140 MFLOP workstation
+   (like our HP 9000/K250). The analysis is fairly routine in that command
+   files exist to automatically do such analyses. One double segment of
+   imaging spectrometer data takes up 598 megabytes of disk space (282
+   Mbytes of radiance data, 282 Mbytes of calibrated data, and ~34 Mbytes
+   of ancillary data = 598 Mbytes).
+
+   The output products comprise 3 files per material mapped, so if 300
+   materials were mapped, 566 Mbytes of results (614*1024*300*3) are
+   obtained (we compress them, so the output is 3 to 10 times less space).
+   Results of mapping for 300 materials in essence makes a 300 layer GIS
+   data base. Note that current GIS systems only use uncompressed data (to
+   our knowledge) and we are not aware of any that can handle this many
+   layers.
+
+   The biggest bottleneck in producing final products is the scientist
+   evaluating and understanding what was mapped and not data processing.
+   After all, these mineral/material maps are a new paradigm providing
+   unprecedented new information. For each data set, images of all the
+   materials must be reviewed. We have clustering analysis tools and the
+   system builds a set of image display commands to quickly go through
+   such a huge amount of images. Typically, once you have experience in an
+   area with the data, you can setup, analyze, and review the data for
+   about 1 double segment per day (184 sq. km per day).
+
+   Another day is required to construct color composite map images, and
+   yet another is required to register the data to a map base. Thus about
+   3 days of work by a trained, experienced person are required per double
+   segment to analyze. This does not not include detailed evaluation or
+   verification of results. That depends on the area complexity and the
+   science questions being asked.
+
+  WHAT IT TAKES TO VERIFY IMAGING SPECTROMETER DATA
+
+   Verification is the most time intensive aspect. Such large areas are
+   covered (even one double segment of 184 sq. km) that field checking can
+   require a significant amount of time. The materials maps steer you to
+   the interesting areas, and with the help of a field spectrometer, the
+   mapped minerals can, in most cases, be verified real time in the field.
+   A final verification will sometimes require study of hand samples from
+   the field using laboratory X-ray diffraction analysis or other methods
+   as appropriate. Verification depends on the complexity of the scene,
+   remoteness and topography. Basic verification can take a couple of
+   weeks, or more, depending on how much area needs to be checked.
+
+   Verification may result in additional minerals being identified which
+   were not included in the original imaging spectroscopy analysis. Thus,
+   a second round of analysis and verification is required (this again
+   depends on the site complexity, what is already in the standard
+   Tricorder mapping, and what science questions are being asked).
+
+  PUTTING IT ALL TOGETHER, FROM PLANNING TO COMPLETED ANALYSIS AND REPORTS
+
+   Complete analysis of a full flight of AVIRIS data, from flight
+   planning, calibration, materials mapping and verification, laboratory
+   analyses of samples, data registration, map production, and science
+   reports takes on the order of seven person years of effort. Smaller
+   areas take less time, depending on the science to be done. Below is a
+   list of the generalized steps. Verification steps take the majority of
+   the time.
+     * 1) Flight planning, Data acquisition support and field calibration.
+       This effort is valid for a "site" which could be one entire flight,
+       or a single region of a multi- region flight.
+     * 2) Apply calibration to AVIRIS radiance data to derive surface
+       reflectance.
+     * 3) Materials mapping (e.g. tricorder),
+     * 4) Verification of mapping results, including field work and
+       laboratory analyses. Science analyses.
+     * 5) Data registration and map generation for more detailed field
+       verifications.
+     * 6) Laboratory spectroscopy of additional materials. Sometimes
+       special research may need to be done to characterize and understand
+       samples and observed spectra.
+     * 7) Revised materials mapping based on above verification. Science
+       analyses.
+     * 8) Data registration and final map production.
+     * 9) Reports and papers
+
+  WHAT IS POSSIBLE
+
+    Small Area (~100 to 400 sq. km)
+
+   A team of 3 trained in imaging spectroscopy could calibrate the data in
+   about 1.5 person-months and then map the surface mineralogy,
+   vegetation, and environmental materials for a small area (100-400 sq
+   km) for about 200-400 materials in about 0.5 person-month. Verification
+   and field studies would take an additional couple of months.
+
+   Data volume for 2 double segments (368 sq km) would be 564 Mbytes of
+   radiance data, 564 Mbytes of calibrated data, about 68 Mbytes of
+   ancillary data, and about 761 Mbytes of uncompressed data products (for
+   400 materials). All data are stored on read/write optical disks, each
+   with a 1.3 Gbyte capacity. Three optical disks would be needed ($200
+   data storage costs). Data acquisition costs would be a few thousand
+   dollars, depending on cost sharing other sites covered by the AVIRIS
+   flight. Note: a full AVIRIS flight ($64k + flight hours) must still be
+   funded.
+
+   An example of a study of this size is the one we completed at
+   Leadville, the California Gulch Superfund Site, where we mapped mine
+   drainage, finding the most hazardous waste piles, saving time and
+   dollars in the remediation process. Leadville took a couple of
+   person-years of effort.
+
+    Medium area: Lessons from Summitville (12 AVIRIS double segments)
+
+   A team of 3 trained in imaging spectroscopy could map the surface
+   mineralogy for a Summitville class area (~2,000 sq km) including
+   calibration and first mapping pass of 200 to 400 materials in about 2.5
+   months (5 person-months). Verification and field studies would take
+   several months.
+
+   Data volume would be about 7.2 Gbytes (12 double scenes). Data
+   acquisition costs would be about $20-40k assuming cost sharing with
+   another study in the area. Cost per sq. km: $10 to $20, depending on
+   the cost sharing for the flight. Note: a full AVIRIS flight ($64k +
+   flight hours) must still be funded.
+
+    Large area: 1x2-degree sheet (~19,600 sq km, 115 AVIRIS double segments)
+
+   A team of 6 trained people could map a 1x2-degree area with 2 to 2.5
+   AVIRIS flights, and about 6 weeks of processing on a dedicated
+   computer. A 1x2-degree data base would comprise a data set of about 68
+   Gbytes for data (32 Gbytes for raw, 32 Gbytes for calibrated, and 4
+   Gbytes of ancillary) PLUS 87 Gbytes for 400 [uncompressed] materials,
+   for a total of approximately 155 GBytes. Compression of results should
+   bring products down to about 30 Gbytes, for a total of 98 Gbytes.
+   Approximately 85 1.3 GB optical disks would be required (storage cost
+   about $5k). AVIRIS data acquisition costs would be about $240k. Cost
+   per sq. km: ~$12 (in this scenario, there is about 0.5 AVIRIS flight of
+   capacity that could be used for additional areas).
+
+   Such a large area, complete with registered materials maps, verified
+   and scientific papers written would involve about 20 person-years of
+   effort.
+
+    Very large area (several 1x2-degree sheets up to a state or more)
+
+   Studies of this size would require special negotiation with NASA and
+   JPL. A large study of this size would be a significant portion of the
+   AVIRIS program. The AVIRIS group is interested in doing such large
+   projects, even if spread over a couple of years. Such a large-scale
+   effort could add enough money into the AVIRIS system that components
+   like ground computers and airplane tape recorders could be upgraded so
+   the cost per sq. km could be substantially less, perhaps as low as
+   about $5 per sq. km.
+
+   Total time for field verification and registered maps and scientific
+   reports would be substantial but possible within the scope of the USGS.
+
+  LIMITS TO WHAT PRESENT STAFF CAN DO
+
+   The spectroscopy group staff is currently limited and believes a
+   maximum of 3 new AVIRIS sites (in one AVIRIS flight) can be calibrated,
+   mapped and verified per year without additional staff. See training
+   issues section below. Laboratory and field spectrometers are another
+   limitation; see unique facilities section below.
+
+  UNIQUE FACILITIES
+
+   Successful imaging spectroscopy analysis requires high quality spectra
+   of reference materials. Development of the reference database requires
+   laboratory spectrometers that can match (or better) the spectral
+   resolution and signal to noise of the flight instruments. In addition,
+   field spectrometers are needed for calibration of the data, and for
+   verification of the results. The USGS has these facilities, but the
+   project load is very high.
+
+  TRAINING BY THE SPECTROSCOPY GROUP
+
+   The central region spectroscopy group could probably train about 6
+   scientists per year in imaging spectroscopy if the trainees worked on
+   cooperative projects where all were interested in the results. Our best
+   estimates indicate that minimum training would take about 6 weeks,
+   including fundamentals of spectroscopy, familiarization with computer
+   software, calibration, and field verification. The training would be
+   broken up with 3 to 4 periods in 1- to 1.5-week segments. Training to
+   become an expert in imaging spectroscopy, such that you can lead
+   projects and research can take 2 or more years.
+
+   The best way to make training a success is as follows. Choose 3 sites
+   for which the USGS programs would like imaging spectroscopy mapping
+   each year. Have up to six scientists plus support people who are
+   interested in the 3 areas agree to learn imaging spectroscopy. We
+   believe that scientists will learn more and be able to apply imaging
+   spectroscopy to their problems if they can work directly with the
+   imaging spectroscopy group on sites all are interested in and on
+   problems that benefit all those involved. Scientists in the MRS Program
+   seem to have a lot of common interests so cooperative research should
+   not be a problem.
+
+   If suitable sites and scientific problems can be addressed, then the
+   imaging spectroscopy group and students will learn together how to
+   solve interesting scientific problems with these new tools.
+
+  FOR FURTHER INFORMATION CONTACT:
+
+     * Roger N. Clark (303) 236-1332 rclark@speclab.cr.usgs.gov
+     * Trude V.V. King (303) 236-1373 tking@speclab.cr.usgs.gov
+     * Gregg A. Swayze (303) 236-0925 gswayze@speclab.cr.usgs.gov
+     __________________________________________________________________
+
+   link to speclab home page   link to speclab table of contents
+
+   U.S. Geological Survey, a bureau of the U.S. Department of the Interior
+   This page URL= http://speclab.cr.usgs.gov/aboutimsp.html
+   This page is maintained by: Dr. Roger N. Clark
+   rclark@speclab.cr.usgs.gov
+   Last modified Oct 26, 2001.

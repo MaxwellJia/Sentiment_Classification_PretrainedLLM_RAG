@@ -1,0 +1,319 @@
+http://srb-swlw.larc.nasa.gov/model_doc.html
+
+                              Model Documentation
+
+     * SW Technique
+     * LW Technique
+     * Total Flux
+     * Validation
+     * Error Analysis
+     * Acronyms
+     * References
+
+SW Technique
+
+   The shortwave algorithm was developed at NASA LaRC by W. F. Staylor. It
+   is a parameterized/physical model which utilizes ISCCP-C1 data (Rossow
+   et al., 1988) as its primary input data. The current model is a
+   modified version of an earlier model by Darnell et al. (1988). A recent
+   application of the method is given in Darnell et al. (1992).
+
+   The shortwave algorithm was developed at NASA LaRC by W. F. Staylor.
+   Instantaneous downward SW flux (SWDWN) at the surface (insolation) can
+   be The shortwave algorithm was developed at NASA LaRC by W. F. Staylor.
+   estimated using the model presented in Darnell et al. (1988). Downward
+   SW flux at the surface is the product of insolation at the TOA,
+   clear-sky atmospheric transmittance and cloud transmittance. Daily
+   insolation requires time integration of the instantaneous values from
+   sunrise to sunset. Insolation at the TOA is a product of the cosine of
+   the solar zenith angle and the distance-corrected solar flux, which is
+   calculated daily using 1365 W/m**2 as the solar flux and 1 Astronomical
+   Units as the Earth-Sun distance.
+
+   Atmospheric transmittance is a function of surface pressure, surface
+   albedo, aerosols, and the effective clear-sky atmospheric optical
+   depth. The first three terms account for the atmospheric backscatter of
+   surface reflected rays. The effective clear-sky atmospheric optical
+   depth is a vertical attenuation factor for solar energy and it is the
+   sum of all absorption and scattering processes. These processes include
+   absorption and scattering due to gases and aerosols. The broadband
+   absorption due to water vapor and ozone, and Rayleigh attentuation are
+   estimated using the method of Lacis and Hansen (1974). The broadband
+   absorption due to oxygen and carbon dioxide are approximated using the
+   method of Yamamoto (1962). Aerosol attenuation is based on World
+   Climate Program aerosol models (World Climate Research Program, 1983).
+   It should be noted that the Rayleigh and aerosol attenuation terms are
+   concerned only with backscattering and/or absorption, but not with
+   forward scattering of flux which reaches the surface.
+
+   Cloud transmittance is based on a threshold technique which relates
+   boundary values of TOA reflectances for overcast and clear-sky
+   conditions and actual measured conditions (from ISCCP). Overcast
+   reflectances are estimated from a model by Staylor (1985) using the
+   cosines of viewing zenith angle and solar zenith angle, and overcast
+   coefficients. These coefficients are determined monthly for each ISCCP
+   satellite using data for non-snow covered, totally overcast regions
+   having mean cloud optical depths within the top 5 percent of all
+   observations. Clear-sky reflectances are determined by one of several
+   methods depending on the snow cover and surface type. Over oceans, the
+   cosines of viewing zenith angle and solar zenith angle, along with
+   clear-sky coefficients are used. These coefficients are determined for
+   totally-clear oceans for each satellite every month. For snow-free land
+   regions or land regions in which the snow cover does not fluctuate by
+   more than 10 percent during the month, daily TOA clear-sky reflectance
+   values are computed from the clear-sky pixels. The monthly minimum
+   value is used for the entire month. If the snow cover changes by more
+   than 10 percent during the month (determined for 5-day intervals), then
+   the above procedure is applied to the 5-day periods. Measured
+   instantaneous reflectances are the pixel-weighted average of the clear
+   and cloudy reflectances. If no value exists for a day (occurs most
+   frequently in polar regions), a fill value is provided by one of two
+   methods. If a value exists for a longitudinally adjacent region for
+   that day, it is used. If it does not exist, then the previous day's
+   value is used. This procedure is expanded spatially, then temporally
+   until a non-fill value is found.
+
+   Daily surface albedo for all-sky conditions is a function of the daily
+   overcast albedo, the daily clear-sky albedo and cloud transmittance.
+   Data from Budyko (see Payne 1972) and Ter-Markariantz (see Kondratyev
+   1973) were used to estimate clear-sky surface albedos over oceans.
+   Estimates of daily overcast albedos over oceans are based on the fact
+   that under overcast conditions the effective zenith angle of the
+   diffuse rays is about 53 degrees for all zenith angles (cosine = 0.6)
+   and therefore is a constant value of 0.065. Monthly average clear-sky
+   ERBE TOA albedos were used to estimate surface albedos over
+   snow/ice-free land. This approach avoided the need for spectral
+   conversions from narrowband to broadband and from radiances to albedos
+   (Staylor and Wilber 1990). The ERBE data cover the period March 1985
+   through December 1988 and were used as such for those months. The ERBE
+   derived surface albedos were found to vary less than 1 percent
+   interannually. Therefore, a multi-year monthly average ERBE clear-sky
+   TOA albedo was used to derive surface albedo for the corresponding
+   months outside the ERBE period.
+
+   SW cloud forcing is the difference between the total-sky net SW flux
+   and the clear-sky net SW flux.
+
+Return to the Top of the Document
+
+LW Technique
+
+   The LW radiative fluxes (both LWDWN and LWNET) are computed using a
+   fast parameterization which is based on detailed radiative transfer
+   computations (Gupta 1989; Gupta et al. 1992). The inputs for the
+   computation are taken from the ISCCP-C1 datasets. LWDWN is computed as
+
+                           LWDWN = LWCS + F2 * AC,
+
+   where LWCS is the clear-sky LWDWN, F2 is the cloud forcing factor, and
+   AC is the fractional cloud cover. LWNET is computed as
+
+                       LWNET = LWDWN - SIGMA * TS**4,
+
+   where SIGMA is the Stefan-Boltzman constant (5.67E-08 W/(m**2 K**4)),
+   and TS is the surface temperature.
+
+   Details of the development and application of the parameterizations of
+   LWCS and F2 in terms of the meteorological parameters are given in
+   Gupta (1989) and Gupta et al. (1992). A very brief description of the
+   parameterizations is presented here.
+
+   The clear-sky LWDWN (LWCS) is computed as
+
+          LWCS = ( A0 + A1 * V + A2 * V**2 + A3 * V**3 ) * TE**3.7,
+
+   where V = ln W, and W is the total water vapor burden of the
+   atmosphere. TE is an effective emitting temperature of the lower
+   troposphere, and is computed as
+
+                         TE = KS*TS + K1*T1 + K2*T2,
+
+   where TS is the surface temperature, T1 is the mean temperature of the
+   first layer in the ISCCP-C1 data (surface to 800mb), and T2 is the same
+   for the second layer (800mb to 680mb). KS, K1, and K2 are weighting
+   factors with values of 0.60, 0.35, and 0.05 respectively. The
+   regression coefficients A0, A1, A2, and A3 have the following values:
+
+                               A0 = 1.791E-07,
+                               A1 = 2.093E-08,
+                              A2 = -2.748E-09,
+                               A3 = 1.184E-09.
+
+   The cloud forcing factor (F2) is computed as
+
+          F2 = TCB**4 / ( B0 + B1 * WC + B2 * WC**2 + B3 * WC**3 ),
+
+   where TCB is the cloud-base temperature, WC is the water vapor burden
+   below the cloud base, and B0, B1, B2, and B3 are regression
+   coefficients with the following values:
+
+                               B0 = 4.990E+07,
+                               B1 = 2.688E+06,
+                              B2 = -6.147E+03,
+                               B3 = 8.163E+02.
+
+   All fluxes represented here are in W/m**2, temperatures in K, and water
+   vapor burdens in kg/m**2. Cloud-base pressure is obtained by combining
+   cloud-top pressure (available from ISCCP-C1 data) with climatological
+   estimates of cloud thickness which depend upon cloud height and
+   latitude. TCB and WC are computed from the available ISCCP-C1 data
+   using the procedure described in Gupta (1989). The above equation for
+   F2 is used as such when pressure difference between the surface and
+   cloud base is greater than 200 mb. When pressure difference is less
+   than or equal to 200 mb, a modified form of this equation as described
+   in Gupta et al. (1992) is used.
+
+   LW cloud forcing is the difference between the total-sky net LW flux
+   and the clear-sky net LW flux.
+
+Total Flux
+
+   Total net flux and total cloud forcing are the sum of LW and SW
+   components. For further information, the user is referred to Darnell et
+   al. (1992).
+
+Return to the Top of the Document
+
+Validation
+
+   Model results have been validated extensively (Darnell et al., 1986,
+   1988, 1992; Gupta 1989; Gupta et al., 1992; Whitlock et al., 1995).
+   Recent validation have included ground measurements obtained from the
+   Swiss Federal Institute of Technology's Global Energy Balance Archive
+   (GEBA) and NOAA's Climate Montitoring and Diagnostics Laboratory
+   (CMDL). Monthly average SW and LW radiative fluxes were compared.
+   Results showed that generally flux errors are within 10 W/m**2. Larger
+   errors were found where there are larger uncertainties in the input
+   data such as over snow/ice covered surfaces and where the site data did
+   not represent the entire grid box. Larger errors in downward SW flux
+   were also found over African and South American locations where
+   aerosols from biomass burning are not accounted for in the SW model
+   (Konzelman et al., 1995).
+
+Return to the Top of the Document
+
+Error Analysis
+
+   Errors in the fluxes come from the radiation modeling and from the
+   meteorological data. Modelling errors are systematic and are generally
+   small. Errors from meteorological data are both random and systematic.
+   For a detailed analysis of errors the reader is referred to Gupta et
+   al. (1993). While larger sources of errors are identified and
+   quanitfied, smaller sources, e.g. the occurrence of fog, are difficult
+   to quantify. These definitely contribute some to the bias in the
+   fluxes.
+
+Return to the Top of the Document
+
+Acronyms
+
+   CMDL - Climate Monitoring and Diagnostics Laboratory
+       DAAC - Distributed Active Archive Center
+       ERBE - Earth Radiation Budget Experiment
+       GEBA - Global Energy Balance Archive
+       ISCCP - International Satellite Cloud Climatology Project
+       LaRC - Langley Research Center
+       LW - longwave
+       LWCS - clear-sky downward longwave flux
+       LWDWN - downward longwave flux
+       LWNET - net longwave flux
+       NASA - National Aeronautics and Space Administration
+       NOAA - National Oceanography and Atmospheric Administration
+       SRB - surface radiation budget
+       SW - shortwave
+       SWCS - clear-sky downward shortwave flux
+       SWDWN - downward shortwave flux
+       SWNET - net shortwave flux
+       TOA - top-of-atmosphere
+       TOTNET - net total flux
+
+Return to the Top of the Document
+
+References
+
+   Darnell, W. L., S. K. Gupta, and W. F. Staylor, 1986: Downward longwave
+   surface radiation from Sun-synchronous satellite data: Validation of
+   methodology. J. Clim. Appl. Meteorol., 25, 1012-1021.
+
+   Darnell, W. L., W. F. Staylor, S. K. Gupta, and F. M. Denn, 1988:
+   Estimation of surface insolation using Sun-synchronous satellite data.
+   J. Climate, 1, 820-835.
+
+   Darnell, W. L., W. F. Staylor, S. K. Gupta, N. A. Ritchey, and A. C.
+   Wilber, 1992: Seasonal variation of surface radiation budget derived
+   from ISCCP-C1 data. J. Geophys. Res., 97, 15741-15760.
+
+   Gupta, S. K., 1989: A parameterization for longwave surface radiation
+   from Sun-synchronous satellite data. J. Climate, 2, 305-320.
+
+   Gupta, S. K., W. L. Darnell, and A. C. Wilber, 1992: A parameterization
+   of longwave surface radiation from satellite data: Recent
+   improvements. J. Appl. Meteorol., 31, 1361-1367.
+
+   Gupta, S. K., A. C. Wilber, W. L. Darnell, and J. T. Suttles, 1993:
+   Longwave surface radiation over the globe from satellite data: An
+   error analysis. Int. J. Remote Sens., 14, 95-114.
+
+   Lacis, A. A. and J. E. Hansen, 1974: A parameterization for the
+   absorption of solar radiation in the earth's atmosphere. J.
+   Atmos. Sci., 31, 118-133.
+
+   Kondratyev, K. Y., 1973: Radiation characteristics of the atmosphere
+   and the Earth's surface. NASA TTF-678, 580pp.
+
+   Konzelman, T., D. R. Cahoon, and C. H. Whitlock, 1995: Impact of
+   biomass
+   burning in equatorial africa on the downward surface shortwave
+   irradiance:
+   Observations versus calculations. Submitted to J. Geophys. Res. May
+   1995.
+
+   Payne, R. E., 1972: albedo of the sea surface. J. Atmos. Sci., 29,
+   959-970.
+
+   Rossow, W. B. L. C. Garder, P. J. Lu and A. Walker, 1988. International
+   Satellite Cloud Climatology Project (ISCCP): Documentation of cloud
+   data, Tech. Doc. WMO/TD 266, 75 pp., World Climate Research Programme,
+   Geneva.
+
+   Rossow, W. B., and R. A. Schiffer, 1991: ISCCP cloud data products.
+   Bull. Amer. Meteor. Soc., 72, 2-20.
+
+   Staylor, W. F., 1985: Reflection and emission models for clouds
+   derived from Nimbus 7 Earth radiation budget scanner
+   measurements. J. Geophys. Res., 90, 8075-8079.
+
+   Staylor, W. F., and A. C. Wilber, 1990: Global surface albedos
+   estimated
+   from ERBE data. Proceedings of AMS Conf. on Atmospheric
+   Radiation, July 23-27, 1990, San Francisco, CA, pp 231-236.
+
+   Whitlock, C. H., T. P. Charlock, W. F. Staylor, R. T. Pinker, I.
+   Laszlo,
+   R. C. DiPasquale, and N. A. Ritchey, 1993: WCRP Surface Radiation
+   Budget Shortwave Data Product Description - Version 1.1. NASA
+   Technical Memo 107747, NTIS, Springfield, Virginia.
+
+   Whitlock, C. H., T. P. Charlock, W. F. Staylor, R. T. Pinker, I.
+   Laszlo,
+   A. Ohmura, H. Gilgen, T. Konzelman, R. C. DiPasquale, C. D. Moats,
+   S. R. LeCroy, and N. A. Ritchey, 1995: First global WCRP shortwave
+   surface radiation budget dataset. Bull. Amer. Met. Soc., 76, 905-922.
+
+   World Climate Research Program, 1983: Experts meeting on aerosols
+   and their climate effects. A. Deepak and H. E. Gerber editors,
+   WCP-55, 107 pp.
+
+   Yamamoto, G., 1962: Direct absorption of solar radiation by
+   atmospheric water vapor, carbon dioxide, and molecular oxygen.
+   J. Atmos. Sci., 19, 182-188.
+
+Return to the Top of the Document
+     __________________________________________________________________
+
+   Refer all questions to:
+
+
+    S.K.Gupta@LaRC.NASA.GOV
+
+   Last revision: 26 June 1998

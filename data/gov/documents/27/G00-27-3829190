@@ -1,0 +1,52 @@
+http://pii3.brahms.bnl.gov/~olchansk/cluster/config.html
+
+                           BRAHMS Cluster Status Page
+
+   Last updated: Wed Jan 30 07:45:00 2002
+
+Node Configuration
+
+   Hostname Uptime CPU RAM Swap OS AFS RPMs
+   bnlpc13.hirg.bnl.gov 27 days 1x348 123 501 RH-7.1 2.4.2-2 arla-0.33.1-5
+   i386_redhat61 805
+   localhost.localdomain 13:50 2x448 251 305 RH-7.0 2.2.16-22smp
+   arla-0.33.1-5 ERROR 849
+   pii10.hirg.bnl.gov 15 days 2x448 249 603 RH-7.1 2.4.2-2smp unknown
+   i386_redhat61 956
+   pii2.hirg.bnl.gov 5 days 2x448 123 847 RH-7.1 2.4.12
+   openafs-1.2.2-rh7.1.1 i386_redhat61 884
+   pii3.brahms.bnl.gov 40 days 2x448 251 1027 RH-7.0 2.2.16-22smp 464
+   pii4.brahms.bnl.gov 13 days 2x797 251 1004 RH-6.2 2.2.17-14smp
+   arla-0.33.1-5 i386_redhat61 811
+   pii5.brahms.bnl.gov RH-6.2 2.2.17-14smp 807
+   pii6.brahms.bnl.gov 7 days 2x447 251 1004 RH-6.2 2.2.17-14smp
+   arla-0.33.1-5 i386_redhat61 728
+   pii7.brahms.bnl.gov 13 days 2x447 251 1004 RH-6.2 2.2.17-14smp
+   arla-0.33.1-5 i386_redhat61 813
+   pii8.brahms.bnl.gov 40 days 2x497 249 1004 RH-7.1 2.4.2-2smp
+   arla-0.33.1-5 i386_redhat61 864
+   pii9.hirg.bnl.gov 40 days 2x497 249 1004 RH-7.1 2.4.2-2smp
+   arla-0.33.1-5 i386_redhat61 867
+
+Breakdown by OS
+
+   OS     RPMs /etc files
+   RH-6.2  893       1580
+   RH-7.0  898       1908
+   RH-7.1 1138       2366
+
+Installed and missing files
+
+         Hostname          OS            RPMs                 /etc files
+                                installed missing extra installed missing extra
+   pii4.brahms.bnl.gov   RH-6.2       811      82     0      1328     252    62
+   pii5.brahms.bnl.gov   RH-6.2       807      86     1         0    1580     0
+   pii6.brahms.bnl.gov   RH-6.2       728     165    74      1255     325   177
+   pii7.brahms.bnl.gov   RH-6.2       813      80     1      1319     261    47
+   localhost.localdomain RH-7.0       849      49   434      1764     144   818
+   pii3.brahms.bnl.gov   RH-7.0       464     434    49      1090     818   144
+   bnlpc13.hirg.bnl.gov  RH-7.1       805     333    66      1640     726   113
+   pii10.hirg.bnl.gov    RH-7.1       956     182   132      1824     542   234
+   pii2.hirg.bnl.gov     RH-7.1       884     254    25      1778     588   145
+   pii8.brahms.bnl.gov   RH-7.1       864     274     0      1728     638    45
+   pii9.hirg.bnl.gov     RH-7.1       867     271     4      1705     661    48

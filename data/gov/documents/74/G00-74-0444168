@@ -1,0 +1,58 @@
+http://space.jpl.nasa.gov/history.html
+
+  [swsss.gif] [USEMAP:swmenu.gif]
+              Solar System Simulator
+              History of the Simulator - how this all got started.
+[swstrip.gif] [space1.jpg] The Solar System Simulator originated as
+              JPL's SPACE software package, which consisted of a set of computer
+   graphics programs designed to simulate spacecraft trajectories and
+   produce various photographic and video products. The SPACE package was
+   specifically designed for animating space missions and was uniquely
+   suited to JPL mission design.
+
+   For the Voyager encounters, SPACE provide realistic encounter
+   visualizations, graphical bases for the analyses of high-level problems
+   and visual aids to trajectory design. The Jupiter, Saturn, Uranus and
+   Neptune flyby movies which SPACE developed were greeted with great
+   excitement, shown on NOVA programs and major TV networks, and fostered
+   much enthusiasm for the space program around the world.
+
+   To create a mission simulation, SPACE used a spacecraft model,
+   scientific instrument characteristics, and a conic elements file that
+   described spacecraft and celestial body states. Planetary texture maps,
+   observer orientation routines and orbit propagation capabilities were
+   included in the SPACE software set. The simulation occured on the host
+   computer and is presented to the user in a mode called wireframe,
+   wherein only black-and-white outlines of objects are displayed.
+   Commands and viewpoint geometry data were shown on a second reference
+   monitor in an easy-to-understand graphical user interface. Wireframe
+   movies could be shown in real time at rates of up to 15 frames per
+   second and were typically used for movie construction and debugging.
+
+   [space2.jpg] Any wireframe or frames could then be color rendered in
+   ray-shaded form and stored as files or displayed on a separate monitor.
+   Typical scenes could be color rendered in 20 seconds, depending on
+   scene content. Movies were created by generating a series of key
+   frames; SPACE propagated from one key frame to the next autonomously,
+   making movie generation relatively simple. Color rendering used
+   dithering, simple antialiasing, careful color space encoding and a high
+   order depth priority algorithm.
+
+   Initially developed in the late 1970's and 80's by highly acclaimed
+   computer graphics expert Jim Blinn, SPACE continued to serve as an
+   outstanding mission design tool for many years. In April through June
+   of 1997, David Seal rebuilt the SPACE software set in ANSI C,
+   standardized its interface, input and output file formats, added some
+   new features, and installed it on the World Wide Web. The new software
+   now drives the web-based Solar System Simulator, which can create a
+   color image of any planet or satellite as seen from any point in the
+   Solar System. The Simulator is currently being used in JPL's Mission
+   Architecture section. The software is also being employed by the
+   Shuttle Radar Topography, Cassini, Galileo, and other missions for
+   trajectory animation and mission visualization. Feedback on the
+   simulator is welcome via the feedback form.
+     __________________________________________________________________
+
+   David Seal
+   seal@samadhi.jpl.nasa.gov
+   Jet Propulsion Laboratory

@@ -1,0 +1,88 @@
+http://mcstweb.gsfc.nasa.gov/IOT/iotschedule.html
+
+                    MODIS IOT Unofficial Mission Schedule
+
+         UNOFFICIAL
+
+         UNOFFICIAL Schedule as of February 4, 2000
+
+
+   Mission         Calender Day GMT
+   Day
+         Pending successful 60s burn
+   55   MOD MOD_STBY_TXTN_B Transition to Standby Mode Feb 11th, 2000
+   morning
+   55   MOD MOD_SVD_TO_OPEN Move SVD to open position Feb 11th, 2000
+   morning
+   55   MOD MOD_SCI_TXTN_B Transition to Science Mode Feb 11th, 2000
+   55   ATC MOD_OA27_PV_ECAL Run PV Ecal with warm FPAs Feb 11th, 2000
+   55   MOD MOD_BB_ON ('B','B') Blackbody "On" "B" Feb 11th, 2000
+   55   MOD MOD_SET_BB_TEMP(1703)
+   55     Re-enable BB yellow low limits   Feb 11th, 2000
+   55 mod200a MOD MOD_SDD_OPEN('SCREENED','B') Open SDD to screened Feb
+   11th, 2000 afternoon
+   55 mod200b MOD MOD_SDD_CLOSE('B','N') Close SDD Feb 11th, 2000
+   55     wait at least 5 minutes
+   55 mod200c MOD MOD_SDD_OPEN('OPEN','B') Open SDD to full open Feb 11th,
+   2000
+   55     wait at least 5 minutes
+     mod200d MOD MOD_SDD_CLOSE('B','N') Close SDD Feb 11th, 2000
+   57   MOD MOD_ALL_OFF Turn off MODIS Feb 13th, 2000 morning
+   57   MOD MOD_ON_TXTN_A Turn on MODIS on A-side Feb 13th, 2000
+   57   MOD MOD_SCI_TXTN_A Transition to Science Mode Feb 13th, 2000
+         wait at least 2 orbits
+   57   MOD MOD_SDSM_FUNC_A SDSM functional test Feb 13th, 2000 about
+   18:00 GMT
+         Re-Enable RC Cold Focal Plane Derived Limits
+       FS1 Upon successful completion of SDSM functional test, reset
+   Inhibit Ids 31, 32, 33, 53 and 58 (SDSM, SDD, CP, BB)   Feb 13th, 2000
+
+   57   ATC MOD_OA13_EDS_BOTH EDS to support OA16 Feb 13th, 2000
+   57   ATC MOD_OA16: SD/SDSM SCREENED SDSM calibration Feb 13th, 2000
+   57   ATC MOD_OA13_EDS_BOTH EDS to support OA15 Feb 13th, 2000
+   57   ATC MOD_OA15: SD/SDSM OPEN SDSM calibration Feb 13th, 2000
+       ATC MOD_OA28_PC_ECAL PC Electronics calibration Feb 13th, 2000
+   during real-time contact preferred
+     mod100 ATC MOD_OA27_PV_ECAL PV Electronics calibration Feb 13th, 2000
+
+   58   MOD MOD_SET_BB_DCYCLE('FULL') Set BB duty cycle to 100% Feb 14th,
+   2000
+   58   ATC MOD_OA26_BB_ON_A Blackbody functional test (8hrs) Feb 14th,
+   2000
+   58 mod120 ATC MOD_OA26_BB_OFF Blackbody turn off Feb 14th, 2000
+   58   MOD MOD_SET_BB_DCYCLE('THIRD') Set BB duty cycle to 33% Feb 14th,
+   2000
+   59   ATC MOD_OA26_BB_ON_A Blackbody functional test (8hrs) Feb 15th,
+   2000
+   59 mod120 ATC MOD_OA26_BB_OFF Blackbody turn off Feb 15th, 2000
+   60 mod110 MOD MOD_PC17_A_1OF2 1W Spatial Test Feb 16th, 2000 morning
+         wait 15 minutes, but still same contact
+   60 mod111 MOD MOD_PC17_A_2OF2 1W Spatial Test Feb 16th, 2000
+   60 mod140 ATC MOD_OA03_DAY_RATE (at night) Delete 2 Day & 1 Night
+   transition in Feb 16th, 2000
+   60 mod140 ATC MOD_OA04_NIGHT_RATE (during day) the BAP and add these 2
+   activities. Feb 16th, 2000
+         wait 4 hours since successful completion of macro 24   Feb 16th,
+   2000
+   60   FS1 Upon assurance of contact for OA19, reset Inhibit ID 54 (MODIS
+   SRCA)   Feb 16th, 2000
+   60 mod150 ATC MOD_OA19_SRCA_FULL_RAD_A Radiometric Functional test Feb
+   16th, 2000 First 10 min during real-time contact preferred
+         wait at least 6 hours since successful completion of macro 15
+
+   61 mod170 ATC MOD_OA23_SRCA_FULL_SPAT_A Spatial Functional Test Feb
+   17th, 2000 First 10 min during real-time contact preferred
+         wait at least 6 hours since successful completion of macro 23
+
+   62 mod160 ATC MOD_OA22_SRCA_FULL_SPECT_1A Spectral Functional Test part
+   1 Feb 18th, 2000
+   62 mod160 ATC MOD_OA22_SRCA_FULL_SPECT_2A Spectral Functional Test part
+   2 Feb 18th, 2000
+   62 mod160 ATC MOD_OA22_SRCA_FULL_SPECT_3A Spectral Functional Test part
+   3 Feb 18th, 2000
+   62 mod160 ATC MOD_OA22_SRCA_FULL_SPECT_4A Spectral Functional Test part
+   4 Feb 18th, 2000
+
+   Return to MCST Home Page
+
+   Last Updated on 2/4/00

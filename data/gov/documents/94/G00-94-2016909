@@ -1,0 +1,95 @@
+http://www.ccs.lanl.gov/pdfs/feng_cyber_security.pdf
+
+   Cyber-Security for Computational Grids and Virtual Supercomputers
+   RADIANT: Research And Development In Advanced Network Technology
+   http://www.lanl.gov/radiant With our national security coming
+   Application Layer Applications / Middleware Applications / Middleware
+   under increasing scrutiny, there is a heightened awareness of the
+   impor- HTTP, FTP, SMTP HTTP, FTP, SMTP Kerberos Kerberos Transport
+   Layer tance of securing our cyber infrastructure. To SSL / TLS SSL /
+   TLS this end, we propose an inter-realm infrastruc- TCP TCP UDP UDP
+   ture for security (IRIS) and active wardens to IP (IPsec) IP (IPsec)
+   Network Layer proactively protect against cyberattacks. IP IP IRIS:
+   Inter-Realm Infrastructure Device drivers Device drivers for Security
+   Figure 1: Relative Location of Security Mechanisms in the Protocol
+   Stack The rapid growth in high-speed networks and the ubiquity of
+   computers have converged to cause the widespread deployment of compu-
+   enhance global interconnectivity and provide tational grids involves
+   using the Internet the foundation for a new kind of computing as the
+   communication backbone, the cyber- infrastructure-computational grids
+   (also security infrastructure must also seamlessly known as virtual
+   supercomputers). These deal with the heterogeneous nature of the grids
+   consist of computational nodes that are Internet. distributed
+   throughout geographically dis- Background persed areas and institutions
+   and are inter- Many security mechanisms have been de- connected through
+   a reliable internetwork; vised to retrofit security into the Internet
+   and they harvest significant processing power, existing distributed
+   systems. While Kerberos, memory, and resources by utilizing the capa-
+   SSL, IPsec, and other similar technologies bilities offered at the end
+   nodes. provide security services at various places in Securing a
+   computational grid (that may be the protocol stack, as shown in the
+   shaded accessed by tens, hundreds, or even thou- boxes of Figure 1,
+   many of these security sands of users) will be critical to its future.
+   To services only offer security as an "all-or- address this issue, we
+   present a cyber-secu- nothing" option. Another common problem, rity
+   infrastructure called IRIS: Inter-Realm particularly in the use of SSL
+   and IPsec Infrastructure for Security that provides highly tunneling
+   over different realms, is the introduc- customizable and dynamically
+   reconfigurable tion of security gaps. services to proactively secure
+   communica- While the current standard in grid security, the tions
+   between these grid nodes.* And be- Grid Security Infrastructure (GSI),
+   provides secure authentication and communication for *Realms are areas
+   with similar network characteristics e.g., a grids, it does not
+   discover middleboxes and campus network. To handle this diversity
+   between realms, negotiate security with them. As a result, middleboxes
+   are introduced at the realm boundaries for mobility support, network
+   address translation, packet filtering, security gaps could surface,
+   particularly in firewalls, wireless gateways, etc. cases where some
+   grid resources and nodes Active Wardens exist in a local network behind
+   a firewall. In Research in the area of steganography, as addition, the
+   adaptability of GSI may be lim- well as the state of the art for
+   security sys- ited because of the difficulty in porting it to tems, is
+   dominated by a reactive paradigm of lightweight devices (e.g., PDAs) in
+   support of detection and response. However, by the time ubiquitous grid
+   computing. this reaction occurs, substantial damage may The Vision have
+   already occurred. To proactively stifle We advocate a cyber-security
+   infrastructure steganography, covert channels, and other that
+   incorporates greater flexibility, adaptabil- network attacks, the
+   RADIANT team is devel- ity, and customizability. When it comes to oping
+   "active warden" security systems. Using security, one size does not fit
+   all. Hence, the our model, all network traffic is routed through
+   security architecture deployed must be able to active wardens, which
+   modify communica- adapt to environments with varying conditions. tions
+   as to preserve overt communications, Further, with many different
+   security technolo- yet prevent the propagation of extraneous or gies
+   surfacing and being deployed, the as- ambiguous information that can be
+   used for sumption that a particular security mechanism exploitation,
+   such as covert channels, sublimi- will eventually prevail is flawed.
+   For that rea- nal channels, and certain forms of intrusion son, it is
+   necessary to support multiple secu- detection and intrusion detection
+   evasion. This rity mechanisms and negotiate security re- is done by
+   perturbing possible carriers to the quirements. We also aim to reduce
+   or elimi- level of their "Minimal Requisite Fidelity" nate security
+   gaps. (MRF), which represents the degree of signal fidelity that is
+   both acceptable to end users To this end, we have implemented a
+   prototype but destructive to covert channels. For a class of the
+   aforementioned cyber-security infra- of "unstructured" carriers, MRF is
+   defined by structure called IRIS: Inter-Realm Infrastruc- human
+   perception, but for a class of "struc- ture for Security. Our current
+   implementation tured" carriers, well-known semantics give us is in
+   Java. We used Java for its cross-platform high assurance that a warden
+   can completely compatibility, which allows IRIS to be ported eliminate
+   any subliminal or covert channels. easily to the heterogeneous nodes
+   that consti- tute a computational grid. Additionally, Java is For
+   future information on IRIS, please visit our gaining ground in the
+   mobile world allowing team Web site at http://www.lanl.gov/radiant.
+   IRIS to be ported to mobile devices, handheld computers and embedded
+   devices in support of ubiquitous grid computing. Contact Information
+   Send e-mail to: radiant-info@lanl.gov. RADIANT: Research And
+   Development in Advanced Network Technology
+   (http://www.lanl.gov/radiant) Los Alamos National Laboratory Los
+   Alamos, NM 87545 Los Alamos National Laboratory, an affirmative
+   action/equal opportunity employer, is operated by the University of
+   California for the United States Department of Energy under contract
+   W-7405-ENG-36. November 2001 LALP-01-244 A US DEPARTMENT OF ENERGY
+   LABORATORY

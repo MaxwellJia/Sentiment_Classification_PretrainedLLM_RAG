@@ -1,0 +1,191 @@
+http://sergey.bio.aps.anl.gov/x0h.html
+
+                               X0h on the Web!
+
+
+              Introduction FAQ Conditions of use Access to X0h
+
+Introduction
+
+   This page is an interface to my program X0h calculating crystal
+   susceptibilities X[0] , X[h] (chi-zero , chi-h) for x-ray scattering
+   and Bragg diffraction. The program also provides the associated values
+   of the Bragg diffraction peak halfwidth, extinction and absorption
+   lengths, which can be helpful in the analysis of respective
+   experiments.
+
+   The calculation consists of 5 steps:
+    1. Calculation of scattering factors f(s).
+    2. Calculation of dispersion corrections df' and df".
+    3. Calculation of dipole and quadrupole absorption cross sections.
+    4. Calculation of Debye-Waller temperature factors.
+    5. Finally, calculation of X[0] and X[h] by summation of atomic
+       scattering over crystal unit cell.
+
+   For step-1 X0h uses the 9-factors interpolation formula and the data
+   from the International Tables for X-ray Crystallography [1].
+
+   For step-2 the International Tables contain data for characteristic
+   x-ray lines only (Cr-Ka1, Fe-Ka1, Cu-Ka1, Mo-Ka1, and Ag-Ka1).
+   Therefore, X0h interpolates them for intermediate wavelengths with the
+   help of algorithm published in [2]. This algorithm evaluates the
+   oscillator strengths of atoms at their absorption edges for each atom
+   constituting the crystal unit cell. Then, Don Cromer's formula [3] for
+   df' and df" is applied.
+
+   Please, note:
+    1. Because of the interpolation, the data cannot reproduce XAFS and
+       must be treated with care in a close vicinity of absorption edges.
+       For user's reference X0h prints the closest absorption edge in
+       structures at given x-ray energy.
+    2. Since the characteristic x-ray lines are located in the energy
+       range from 5 to 25 keV (from 0.5 to 2.5 Angstrom), strictly
+       speaking, the applicability of the above interpolation technique is
+       restricted by that range. However, due to using the efficient
+       interpolation technique, in many cases the X0h data can be used in
+       a wider range up to 0.1 -- 10 Angstrom. In addition, the interface
+       is provided to the two freeware databases of dispersion corrections
+       df' and df" -- the ones by Henke-Gullikson-Davis [5] and
+       Brennan-Cowan [6], respectively. When one chooses to use external
+       databases for df' and df", X0h replaces the data for 5
+       characteristic X-ray lines by that from the external database for
+       five x-ray wavelengths nearest to the specified x-ray wavelength.
+       Then, the same interpolation procedure [2] as described above is
+       applied.
+
+   For those who are interested, the Henke-Gullikson-Davis data file is
+   downloadable from the LBL and the Brennan-Cowan code is available
+   through the SSRL. Also, both of those data files can be found at the
+   ESRF DABAX server.
+
+   For step-3 the method of calculating the absorption cross sections by
+   Hildebrandt et al [4] is used for the most of elements with Z={6-54}.
+   This works well for the 5-25 keV range and Hildebrandt technique is
+   recommended for the calculations of Bragg diffraction from crystals
+   since the dipole and quadrupole parts of absorption are provided.
+   Once the cross sections are calculated, they are used to evaluate the
+   Im(X[0]) and Im(X[h]) values.
+   For heavy and light elements as well as outside the 5-25 keV energy
+   range the dipole part of absorption cross section is calculated through
+   df" or several other techniques are applied [2], while the quadrupole
+   part is taken zero.
+   With the option to use external database for df' and df" the cross
+   section is always calculated from df".
+
+   For step-4 the input is taken from [1] either via the Debye temperature
+   T[D] , or the room-temperature value for the Debye coefficient B
+   (depending on what is available in the references).
+
+   For step-5 X0h makes use of a simple expandable database containing the
+   coordinates of atoms in unit cells for a number of crystal structures.
+   User are welcome to submit new structures and normally they can be
+   added to the database within a day.
+
+   Some more information about X0h and several sample screens of local
+   version can be found at   Radicon Radicon Ltd page.
+
+   The expansion plans of this X-ray Server include designing the WWW
+   interface to the advanced version of X0h called X0p (or X0h+).
+   Currently existing as a MS DOS program only, X0p provides several tools
+   for planning x-ray experiments like calculating crystal stereo
+   projection diagrams with graphical presentation of relative X[h]
+   values, searching for the Bragg reflections under various conditions,
+   and simulating Laue patterns of crystals with different surface
+   orientations.
+
+   New of June'2001: The Bragg planes search tool of X0p has been made
+   available for the WWW access. The parameters defining the search are:
+    1. Miller indices range,
+    2. Bragg angles range,
+    3. Minimum intensity of Bragg reflection defined as |xh|/|x0|,
+    4. Range of angles with respect to given plane (e.g. surface).
+
+   The following 3 options are provided to search for the Bragg planes
+   making certain angles with given crystallographic plane:
+    1. Vary the Bragg planes indices, compute the angle Q with the
+       surface, then verify the condition:
+
+                                 Q1 < Q < Q2
+       where Q1 and Q2 are the parameters defining the search range.
+
+    2. Vary the Bragg planes indices, compute their Bragg angle QB and the
+       angle Q with the surface, then verify the condition:
+
+                              Q1 < Q < QB - Q2
+       If Q1=Q2=0, this mode gives all the possible Bragg-case
+       reflections.
+
+    3. Vary the Bragg planes indices, compute their Bragg angle QB and the
+       angle Q with the surface, then verify the condition:
+
+                            QB - Q1 < Q < QB - Q2
+       If the values of Q1 and Q2 are small, this option is very effective
+       to search for extremely asymmetric reflections.
+
+   Other possible applications of the search tool are:
+     * Find all the planes with the Bragg angles from QB1 to QB2,
+     * Find all strong reflections,
+     * Find any planes in crystal which make angles from Q1 to Q2 with
+       given plane...
+
+   Acknowledgments: The idea of this site appeared under the influence of
+   excellent x-ray server at LBL maintained by Eric Gullikson. Some part
+   of the X0h code was written in collaboration with Olga Lugovskaya.
+   Finally, very systematic practical tests to this program were carried
+   out by my wife and collaborator Elena Kondrashkina.
+
+   References
+    1. International Tables for X-ray Crystallography, vol.C - Kluwer
+       Acad. Publ., Dordrecht/Boston/London, 1992.
+    2. O.M.Lugovskaya and S.A.Stepanov -- Sov. Phys. Crystallogr., vol.36
+       (1991) p.478-481.
+    3. D.T.Cromer -- Acta Crystallogr. vol.18 (1965) p.17-23.
+    4. G.Hildebrandt, J.D.Stephenson, and H.Wagenfeld -- Z.Naturforschung,
+       vol.30a (1975) p.697-707.
+    5. B.L.Henke, E.M.Gullikson, and J.C.Davis -- Atomic Data and Nuclear
+       Data Tables, vol.54 (1993) p.181-342.
+    6. S.Brennan and P.L.Cowan -- Rev. Sci. Instrum., vol.63 (1992) p.850.
+     __________________________________________________________________
+
+Frequently asked questions
+
+    1. Why x[i0] is positive?
+       The sign of x[i0] depends on the choice of exponent representing
+       x-ray waves in the media. One can present the waves as either
+       exp(ikr) or exp(-ikr) and both of these choices can be found in the
+       literature. In the former case X[i0] is positive and in the latter
+       one it is negative. The X0h provides the susceptibilities for the
+       former case. Please check which expansion you are using before
+       applying the X0h data.
+
+    2. Why X0h only gives the absolute values |x[rh]|, |x[ih]| together
+       with their phase difference? What it the sign of these numbers?
+       Both of x[rh] and x[ih] are generally complex numbers with the
+       phase dependent on the choice of the origin of coordinate system in
+       the unit cell. However, the scattered x-ray intensity is invariant
+       with respect to this phase factor and therefore it is not
+       important. The only important parameter is the phase difference
+       between x[rh] and x[ih]. X0h provides this value under the name
+       "Phase difference (x[rh] - x[ih])" and it is divided by
+       PI=3.1416...
+
+    3. What equations are used to calculate the absorption factor of
+       x-rays, the critical angle for total external reflection, etc?
+       Click here to see the equations used for x[0]-related parameters.
+
+    4. What equations are used to calculate the extinction length of
+       x-rays, the FWHM of Bragg peaks, etc?
+       Click here to see the equations used for x[h]-related parameters.
+
+    5. Why the Bragg and Laue case extinction lengths are so different?
+       Click here to see the equations used for x[h]-related parameters.
+
+     __________________________________________________________________
+
+   Click here to proceed to X0h and X0h-search input forms.
+     __________________________________________________________________
+
+   Beta Please, report problems and send comments to
+        sergey@bio.aps.anl.gov
+   X    Site navigation: [Home page________________________________] [BUTTON
+        Input] (not implemented)___

@@ -1,0 +1,63 @@
+http://obsidian.lbl.gov
+
+                    Welcome to Your New Home in Cyberspace!
+     __________________________________________________________________
+
+   This is a placeholder page installed by the Debian release of the
+   Apache Web server package, because no home page was installed on this
+   host. You may want to replace this as soon as possible with your own
+   web pages, of course....
+
+     This computer has installed the Debian GNU/Linux operating system
+     but has nothing to do with the Debian GNU/Linux project. If you want
+     to report something about this host's behavior or domain, please
+     contact the ISPs involved directly, not the Debian Project.
+
+     See the Network Abuse Clearinghouse for how to do this.
+
+   Unless you changed its configuration, your new server is configured as
+   follows:
+     * Configuration files can be found in /etc/apache.
+     * The DocumentRoot, which is the directory under which all your HTML
+       files should exist, is set to /var/www.
+     * CGI scripts are looked for in /usr/lib/cgi-bin, which is where
+       Debian packages will place their scripts.
+     * Log files are placed in /var/log/apache, and will be rotated daily.
+       The frequency of rotation can be easily changed by editing
+       /etc/apache/cron.conf.
+     * The default directory index is index.html, meaning that requests
+       for a directory /foo/bar/ will give the contents of the file
+       /var/www/foo/bar/index.html if it exists (assuming that /var/www is
+       your DocumentRoot).
+     * User directories are enabled, and user documents will be looked for
+       in the public_html directory of the users' homes. These dirs should
+       be under /home, and users will not be able to symlink to files they
+       don't own.
+
+   All standard Apache modules are available with this release and can be
+   chosen with the apacheconfig script. Installing a new module on your
+   system is just a matter of compiling it (with the apache-dev package)
+   and adding a line to your httpd.conf configuration file.
+
+   More documentation on Apache can be found on:
+     * The Apache documentation stored on your server.
+     * The Apache Project home site.
+     * The ApacheWeek newsletter.
+     * The Debian Project Documentation which contains HOWTOs, FAQs, and
+       software updates.
+
+   You can also consult the list of World Wide Web Frequently Asked
+   Questions for information.
+
+   If you find a bug in this Apache package, or in Apache itself, please
+   file a bug report on it. Instructions on doing this, and the list of
+   known bugs of this package, can be found in the Debian Bug Tracking
+   System.
+
+   Thanks for using this package, and congratulations for your choice of a
+   Debian system!
+
+                                Debian Apache
+     __________________________________________________________________
+
+   Johnie Ingram, Treasure Island, California    13 October 2001.

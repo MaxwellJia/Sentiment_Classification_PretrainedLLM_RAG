@@ -1,0 +1,181 @@
+http://nfirs.fema.gov/vendor_faq.htm
+
+   CAPTION:
+
+                                  USFA Seal
+
+      NFIRS 5.0
+
+   NFIRS 5.0
+   arrow bullet News
+   arrow bullet System Features
+   arrow bullet Reference Guide
+   arrow bullet Design Documentation
+   arrow bullet Specification Cycle
+   arrow bullet Incident Type/Module Rules
+   arrow bullet Hardware Requirements
+   Vendor Section
+   arrow bullet Vendor FAQs
+   arrow bullet Vendor Software Development Procedures
+   arrow bullet Vendor Registration
+   arrow bullet Vendor Login
+   arrow bullet Active Vendors
+   Data Center
+   USFA
+   FEMA
+   NFIC
+   NFIRS Support Center
+
+   Comments or questions on New NFIRS?
+             E-mail them to:
+           nfirshelp@fema.gov
+
+   Vendors' Frequently Asked Questions
+
+      Does the USFA supply test data?
+      No, Vendors must create their own test data.
+      __________________________________________________________________
+
+      How do I check edits?
+      Vendors must use the Design Documentation and related documentation
+      posted on the Design Documentation web page to design their software
+      and check relational edits. Registered Vendors may download the Vendor
+      Validation Tool version 4.03 to validate their flat files. For further
+      information about the go to the Vendor Software Development Procedures
+      page.
+      __________________________________________________________________
+
+      Some fire departments have data in the 4.1 format. Can they use a
+      vendor's conversion utility to convert 4.1 data to 5.0 format?
+      4.1 Data converted with vendor software can be processed and stored at
+      the fire department and state level only. For imports to the National
+      Database, 4.1 data must be converted to 5.0 format with the USFA
+      software. Fire Departments must follow their state's policy on
+      converting 4.1 data.
+      Refer to the NFIRS 5.0 News Page for complete information.
+      __________________________________________________________________
+
+      How do I obtain a Vendor ID? How do obtain a Software ID?
+      When a Vendor Registers on the NFIRS Vendor Registration Form and the
+      registration is submitted, a page will be returned noting the Vendor
+      ID. This Vendor ID is used to login to the Vendor site and this ID MUST
+   be entered in the second record of the Transaction files.
+   For further information on Vendor and Software Identification, refer to
+   the Design Documentation.
+   __________________________________________________________________
+
+   Is there a naming convention for the data files?
+   The suggested naming convention is: stateFDIDdate.txt (example:
+   MD565650300). If the .txt file extension is not used, a conventional
+   three character file extension is suggested.
+   __________________________________________________________________
+
+   Must fields be formatted to be adjustable or variable in length?
+   Each coded field in the system can expand 1 extra digit to accommodate
+   the Plus One Codes. These fields have a fixed maximum size to handle
+   the potential extra digit but will be always that size or one less
+   which is the default National standard size for the field. They are not
+   variable length in the traditional sense.
+
+   For example, the Property Use field will always be 3 characters in
+   length unless the plus one code is used by the state or the department
+   to categorize the entry at a more specific level, in which case it will
+   be 4 characters in length. It can never be any length other than 3 or 4
+   characters.
+   __________________________________________________________________
+
+   Does the file need to be comma delimited?
+   No. The first record in the file contains the delimiter that is used.
+   Please see the description of the Flat File Transfer Format in the
+   NFIRS 5.0 Design Documentation on the Design Documentation page.
+   __________________________________________________________________
+
+   Is the file required to be sorted by Incident Number or Record Type?
+   The file must be sorted by the NFIRS 5.0 header key fields. These
+   include:
+
+     FDID
+
+     State
+
+     Alarm Date
+
+     Incident Number
+
+     Exposure Number
+
+     Record Type
+
+     Transaction Type
+
+   See the description of the Flat File Transfer Format 1000 Record Type
+   in the Design Documentation.
+   __________________________________________________________________
+
+Miscellaneous Questions
+
+   Should the clients only be submitting incidents one month at a time?
+   No, they can submit transactions as often as they like. They should,
+   however, submit at least once a month.
+   If a Fire Department has had no incidents during the month, a 'No
+   Activity' report should be submitted monthly.
+   __________________________________________________________________
+
+   How far back can clients go for reporting changes and deletes?
+   The USFA does not impose a limit on how far back one can post changes
+   and deletes using the NFIRS 5.0 system; however, some states do.
+   Vendors must take into consideration that clients will report according
+   to their state's policy and that software must provide for them the
+   capability to do so.
+   __________________________________________________________________
+
+   If a call is Action Taken = Cancelled Enroute, how should it be coded?
+   Should it be handled like a stand-by incident? Should I just not run an
+   audit on it at all and thereby not transmit it?
+   This situation should be coded as an Incident Type 611 - "Dispatched
+   and cancelled enroute." These incident types should be transmitted just
+   as all other incident types are transmitted.
+   __________________________________________________________________
+
+   If Mutual Aid was given, does the user only report the required
+   information through G1 on the Basic Module? If so, do we have to
+   include Apparatus Records Types (2020) if the Apparatus Used box is
+   checked on the form or module?
+   Yes, completion through G1 is all that is required and/but completion
+   of the rest of the Basic and other modules is optional. Any modules
+   completed optionally for Mutual Aid given beyond the G1 block should be
+   kept locally for department use only and not passed on via transaction
+   file.
+   __________________________________________________________________
+
+   When is the Arson form required?
+   The Arson/Juvenile Firesetter Fire module is always optional; users are
+   never required to complete it. When the proper conditions exist, the
+   Arson Module becomes active and may be completed if desired. Otherwise,
+   the module is not active and cannot be completed. The user cannot
+   complete the Arson module if the fire was clearly not something
+   arson-related or juvenile-firesetter related.
+
+   For the Arson Module to become available for the user to compete it,
+   the conditions below must be in effect (Relational edit rule #148):
+
+   [The Arson Module] is active only if the Cause of Ignition field in the
+   Fire Module is equal to 1,2,5, or U or if the Wildland Fire Cause is
+   equal to 7. (If the Wildland Module is used instead of the Fire
+   Module.) If the Fire Module's Cause of Ignition is equal to 2, then
+   only Block A and Block M fields are allowed and active.
+   __________________________________________________________________
+
+   When validating the Fire Department Header transaction (Record Type
+   2000), the Validation Tool generates the message:
+
+        Coded Field Invalid^Critical^Fire Department FIPS Code^
+
+   How do vendors resolve this error?
+   FIPs codes are state-specific. The Vendor Validation Tool does not
+   validate state-specific information, therefore the error will be
+   generated and exist when using the Vendor Validation Tool even if a
+   three character, text entry exists in the FIPs Code field.
+   __________________________________________________________________
+
+   Posted: June 27, 2001 FOOTER: UNITED STATES FIRE ADMINISTRATION

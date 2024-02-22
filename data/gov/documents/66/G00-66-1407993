@@ -1,0 +1,748 @@
+http://www.nstb.tc.faa.gov/glonass/PAN_LAST.PDF
+
+   Global Positioning System (GPS) Standard Positioning Service (SPS)
+   Performance Analysis Report Submitted To Federal Aviation
+   Administration GPS Product Team AND 730 1284 Maryland Avenue SW
+   Washington, DC 20024 Report #35 October 31, 2001 Reporting Period: 1
+   July  30 September 2001 Submitted by William J. Hughes Technical Center
+   NSTB/WAAS T&E Team ACT 360 Atlantic City International Airport, NJ
+   08405 EXECUTIVE SUMMARY The GPS Product Team (AND 730) has tasked the
+   Navigation Branch (ACT 360) at the William J. Hughes Technical Center
+   to document Global Positioning System (GPS) Standard Positioning
+   Service (SPS) performance in quarterly GPS Performance Analysis (PAN)
+   Reports. The report contains the analysis performed on data collected
+   at the following NSTB and Wide Area Augmentation System (WAAS)
+   Reference Station locations: Anderson, Atlantic City, Columbus, Denver,
+   Elko, Great Falls, Atlantic City (FVS), Bangor (FVS), Kansas City
+   (WAAS), Salt Lake City (WAAS), Miami (WAAS) and Atlanta (WAAS). This
+   analysis verifies the GPS SPS performance as compared to the
+   performance parameters stated in the SPS Specification Annex A. This
+   report, Report #35, includes data collected from 1 July through 30
+   September 2001. The next quarterly report will be issued 31 January
+   2002. Analysis of this data includes the following categories: Coverage
+   performance, Service Availability Performance, Position Performance,
+   Range Performance, Solar Storm Effects on GPS SPS performance,
+   GPS/GLONASS performance and WAAS performance. Coverage performance was
+   based on Position Dilution of Precision (PDOP). Utilizing the weekly
+   almanac posted on the US Coast Guard navigation web site, the coverage
+   for every 5o grid point between 180W to 180E and 80S and 80N was
+   calculated for every minute over a 24-hour period for each of the weeks
+   covered in the reporting period. For this reporting period, the
+   coverage based on PDOP less than six for the CONUS was 99.9% or better.
+   Availability was verified by reviewing the "Notice: Advisory to Navstar
+   Users" (NANU) reports issued between 1 July and 30 September 2001 and
+   by calculating the satellite availability from the data obtained from
+   the nine sites. A total of sixteen outages were reported in the NANU's.
+   Eleven of the outages were scheduled and five were unscheduled. The
+   quarterly availabilities for Anderson, Atlantic City, Columbus, Denver,
+   Elko, Grand Forks, Great Falls, Atlantic City (FVS), Bangor (FVS),
+   Atlanta, Kansas City, Salt Lake City and Miami were 100%, 99.989%,
+   99.997%, 99.994%, 100%, 99.999%, 100%, 100%, 99.999%, 99.999%, 99.993%,
+   99.997% and 99.974% respectively. Each of these availabilities is
+   within the SPS value of 99.85%. In this quarter, SPS specifications
+   were exceeded. These availability percentages were calculated using DOP
+   data collected at one-second intervals. The statistics on the days of
+   significant solar activity met all GPS Standard Positioning Service
+   (SPS) specifications. Position accuracies were verified by calculating
+   the 95% and 99.99% values of horizontal and vertical errors. Due to the
+   failure of PRN22 on 28 July 2001, the 99.99% values for all sites
+   tracking the satellite at the time of failure have been severely
+   affected. Both the vertical and horizontal 95% values failed for the
+   day of the PRN22 failure (28 July 2001). This problem is addressed
+   further in the problem section of this report. Range performance was
+   verified for each satellite using the data collected from the NSTB
+   Anderson site. The data was collected in one-second samples. All of the
+   satellites met the range error specifications except for PRN22 on 28
+   July 2001. This is addressed separately in the problem section of this
+   report. The maximum range error recorded was 22.377 meters on Satellite
+   PRN 9. The SPS specification states that the range error should never
+   exceed 150 meters. The maximum range rate error recorded was 0.74953
+   Meters/second on Satellite PRN 9. The SPS specification states that the
+   range rate error should never exceed 2 meters/second. The maximum range
+   acceleration error recorded was 7.50 Millimeters/second2 on Satellite
+   PRN 9. The SPS specification states that the range acceleration error
+   should never exceed 19 Millimeters/second2. A GLONASS/GPS performance
+   section was added to the PAN report. In April 1999, ACT-360 was tasked
+   to monitor, analyze and characterize GLONASS and GPS/GLONASS system
+   performance. The objective of this task is to evaluate the ability of
+   GLONASS to provide navigation by itself and with SPS GPS and to assess
+   the incremental benefit to WAAS obtained from using GLONASS. A
+   GPS/GLONASS receiver was used in the NSTB laboratory at the FAA
+   Technical Center. The GPS/GLONASS performance (from an Ashtech GG24)
+   was compared against GPS-only performance (collected from a Novatel
+   receiver). The 95% horizontal error and vertical error for the
+   GPS/GLONASS solution were 4.785 Meters and 8.893 Meters, respectively.
+   From the analysis performed on data collected between 1 July and 30
+   September 2001, the GPS performance did not meet all SPS requirements
+   that were evaluated. Please view the problem section of this report for
+   a further explanation of the problems that occurred this quarter. FAA
+   GPS Performance Analysis Report October 31, 2001 TABLE OF CONTENTS 1.0
+   INTRODUCTION...........................................................
+   ..................................1 1.1 Objective of GPS SPS
+   Performance Analysis Report...........................................1
+   1.2 Summary of Performance Requirements and
+   Metrics..........................................1 1.3 Report
+   Overview...............................................................
+   ......................1 2.0 Coverage
+   Performance............................................................
+   ............................5 3.0 Service Availability
+   Performance............................................................
+   ...............8 3.1 Satellite Outages from NANU
+   Reports.............................................................8
+   3.2 Service Availability
+   .......................................................................
+   ..........10 4.0 Service Reliability
+   Performance............................................................
+   ...............12 5.0 Accuracy
+   Characteristics........................................................
+   ...........................13 5.1 Position
+   Accuracy...............................................................
+   ....................14 5.2 Repeatable
+   Accuracy...............................................................
+   .................16 5.3 Relative
+   Accuracy...............................................................
+   .....................16 5.4 Time Transfer
+   Accuracy...............................................................
+   .............16 5.5 Range Domain
+   Accuracy...............................................................
+   .............18 6.0 Solar
+   Storms.................................................................
+   ...................................24 7.0 GLONASS/GPS
+   Performance............................................................
+   ..................28 7.1
+   Introduction...........................................................
+   ...............................28 7.2
+   Approach...............................................................
+   ..............................28 7.3 Quarter
+   Results................................................................
+   .......................29 Appendix A: Performance
+   Summary................................................................
+   ..........33 Appendix B: Geomagnetic
+   Data...................................................................
+   ..............35 Appendix C: Performance Analysis (PAN) Problem
+   Report.............................................37 Appendix D:
+   Glossary...............................................................
+   ..............................38 Appendix E: WAAS Performance Analysis
+   Report.........................................................43
+   Report 35 i FAA GPS Performance Analysis Report October 31, 2001 LIST
+   OF FIGURES Figure 2-1 SPS Coverage (24-Hour Period: 30 July
+   2001)....................................... 6 Figure 2-2 Satellite
+   Visibility Profile for Worst-Case Point: 30 July
+   2001.................... 7 Figure 5-1 Combined Vertical Error
+   Histogram................................................... 15 Figure
+   5-2 Combined Horizontal Error
+   Histogram................................................ 15 Figure 5-3
+   Time Transfer
+   Error..................................................................
+   .... 17 Figure 5-4 Distribution of Daily Max Range Errors: 1 July  30
+   September 2001........... 21 Figure 5-5 Distribution of Daily Max Range
+   Error Rates: 1 July 30 September 2001...... 21 Figure 5-6 Distribution
+   of Daily Max Range Acceleration Error: 1 July  30 September
+   2001............................................................. 22
+   Figure 5-7 Maximum Range Error Per
+   Satellite................................................... 23 Figure
+   5-8 Maximum Range Rate Error Per
+   Satellite............................................. 23 Figure 5-9
+   Maximum Range Acceleration Per
+   Satellite.......................................... 23 Figure 6-1
+   K-Index for 15-17 August
+   2001......................................................... 25 Figure
+   6-2 K-Index for 23-25 September
+   2001..................................................... 25 Figure 6-3
+   K-Index for 4-6 August
+   2001............................................................ 26
+   Figure 7-1 Receivers with Corresponding
+   Solutions.............................................. 28 Figure 7-2
+   Horizontal Position Error Histograms for GPS/GLONASS
+   Solution.............. 30 Figure 7-3 Vertical Position Error Histograms
+   for GPS/GLONASS............................. 30 Figure 7-4 Satellite
+   Visibility Based on GG24
+   Data............................................... 31 Figure E-2.1 95%
+   Horizontal Accuracy at
+   LNAV/VNAV........................................ 50 Figure E-2.2 95%
+   Vertical Accuracy at
+   LNAV/VNAV........................................... 51 Figure E-2.3
+   Horizontal Triangle Chart for
+   Denver................................................ 53 Figure E-2.4
+   Vertical Triangle Chart for
+   Denver................................................... 54 Figure
+   E-2.5 2-D Histogram for
+   Denver............................................................. 55
+   Figure E-2.6 Horizontal Triangle Chart for Kansas
+   City.......................................... 56 Figure E-2.7 Vertical
+   Triangle Chart for Kansas
+   City............................................. 57 Figure E-2.8 2-D
+   Histogram for Kansas
+   City....................................................... 58 Figure
+   E-3.1 95% VPL, and LNAV/VNAV
+   Availability.......................................... 61 Figure E-3.2
+   APV-I Horizontal Availability
+   Trends............................................... 62 Figure E-3.3
+   GLS/APV-II Horizontal Availability
+   Trends....................................... 63 Figure E-3.4 APV-I
+   Vertical Availability
+   Trends.................................................. 64 Figure
+   E-3.5 APV-II Vertical Availability
+   Trends................................................. 65 Figure E-3.6
+   GLS Vertical Availability
+   Trends.................................................... 66 Figure
+   E-4.1 WAAS Coverage: July,
+   2001......................................................... 68 Figure
+   E-4.2 WAAS Coverage: August,
+   2001..................................................... 69 Figure
+   E-4.3 WAAS Coverage: September,
+   2001................................................. 70 Figure E-4.4
+   Daily WAAS LNAV/VNAV CONUS Coverage....................................
+   71 Figure E-5.1 IGP and SV Quarterly Alert
+   Trends.................................................. 74 Report 35
+   ii FAA GPS Performance Analysis Report October 31, 2001 LIST OF TABLES
+   Table 1-1 SPS Performance
+   Requirements...........................................................
+   . 3 Table 2-1 Coverage
+   Statistics.............................................................
+   .............. 6 Table 3-1 NANU's Affecting Satellite
+   Availability................................................... 8 Table
+   3-2 NANU's Forecasted to Affect Satellite
+   Availability...................................... 9 Table 3-3 NANU's
+   Canceled to Affect Satellite
+   Availability........................................ 9 Table 3-4 GPS
+   Block II/IIA Satellite RMA Data.
+   ................................................... 9 Table 3-5 DOP
+   Statistics.............................................................
+   ................... 10 Table 3-6 Maximum PDOP
+   Statistics.............................................................
+   .... 11 Table 3-7 PDOP > 6
+   Statistics.............................................................
+   ............. 11 Table 4-1 Service Reliability Based on Horizontal
+   Error............................................ 12 Table 5-1
+   Horizontal & Vertical Accuracy
+   Statistics................................................ 14 Table 5-2
+   Repeatability
+   Statistics.............................................................
+   .......... 16 Table 5-3 Range Error
+   Statistics.............................................................
+   ........... 18 Table 5-4 Range Rate Error
+   Statistics.............................................................
+   ..... 19 Table 5-5 Range Acceleration Error
+   Statistics........................................................ 20
+   Table 6-1 PDOP
+   Statistics.............................................................
+   .................. 26 Table 6-2 Horizontal & Vertical Accuracy
+   Statistics................................................ 27 Table 7-1
+   PDOP Statistics for Two Solutions.
+   ....................................................... 29 Table 7-2
+   Position Accuracy Statistics for Two
+   Solutions........................................... 29 Table B-1
+   Current Quarter Daily Geomagnetic
+   Data................................................. 35 Table E-1.1
+   NSTB and WAAS Reference Station
+   Receivers........................................ 46 Table E-1.2 WAAS
+   Performance
+   Parameters......................................................... 47
+   Table E-1.3 Test
+   Events.................................................................
+   ................. 47 Table E-2.1 Operational Service
+   Levels...............................................................
+   49 Table E-2.2 95% Horizontal and Vertical
+   Accuracy................................................. 49 Table
+   E-3.1 95% Protection
+   Level..................................................................
+   .... 59 Table E-3.2 Availability
+   Statistics.............................................................
+   .......... 60 Table E-5.1
+   Continuity.............................................................
+   ....................... 72 Table E-6.1 Safety Margin Index and HMI
+   Statistics................................................. 75 Table
+   E-7.1 Range Error and 3.29 Sigma
+   Bounding................................................... 77 Report
+   35 iii GPS SPS Performance Analysis Report October 31, 2001 1.0
+   Introduction 1.1 Objective of GPS SPS Performance Analysis Report In
+   1993, the FAA began monitoring and analyzing Global Positioning System
+   (GPS) Standard Positioning Service (SPS) performance data. At present,
+   the FAA has approved GPS for IFR and is developing Wide Area
+   Augmentation System (WAAS) and Local Area Augmentation (LAAS), both of
+   which are GPS augmentation systems. In order to ensure the safe and
+   effective use of GPS and its augmentation systems within the NAS, it is
+   critical that characteristics of GPS performance as well as specific
+   causes for service outages be monitored and understood. To accomplish
+   this objective, GPS SPS performance data is documented in a quarterly
+   GPS Analysis report. This report contains data collected at the
+   following National Satellite Test Bed (NSTB) and WAAS reference station
+   locations: Anderson, SC Atlantic City, NJ (FVS) Atlantic City, NJ
+   Bangor, ME (FVS) Columbus, NE Kansas City, KS Denver, CO Salt Lake
+   City, UT Elko, NV Miami, FL Grand Forks, ND Atlanta, GA Great Falls, MT
+   (Future reports will include all WAAS sites but a database that can
+   handle all that data needs to be developed. ACT-360 is in the process
+   of setting up an Oracle database for this purpose.) The analysis of the
+   data is divided into the four performance categories stated in the
+   Standard Positioning Service Performance Specification (SPS) Annex A
+   (June 2, 1995). These categories are: Coverage Performance Satellite
+   Availability Performance Service Reliability Standard Positioning,
+   Ranging and Timing Accuracy Standard. The results were then compared to
+   the performance parameters stated in the SPS. 1.2 Summary of
+   Performance Requirements and Metrics Table 1-1 lists the performance
+   parameters from the SPS and identifies those parameters verified in
+   this report. Appendix E Table 1.2 contains the performance parameters
+   evaluated for the WAAS in this report. 1.3 Report Overview Section 2 of
+   this report summarizes the results obtained from the coverage
+   calculation program called SPS_CoverageArea developed by ACT-360. The
+   SPS_CoverageArea program uses the GPS satellite almanacs to compute
+   each satellite position as a function of time for a selected day of the
+   week. This program establishes a 5-degree grid between 180 degrees east
+   and 180 degrees west, and from 80 degrees north and 80 degrees south.
+   The program then computes the PDOP at each grid point (1485 total grid
+   points) every minute for the entire day and stores the results. After
+   the PDOP's have been saved the 99.99% index of 1-minute PDOP at each
+   grid point is determined and plotted as contour lines (Figure 2-1). The
+   program also saves the number of satellites used in PDOP calculation at
+   each grid point for analysis. Report 35 1 GPS SPS Performance Analysis
+   Report October 31, 2001 Section 3 summarizes the GPS availability
+   performance by providing the "Notice: Advisory to Navstar Users" (NANU)
+   messages to calculate the total time of forecasted and actual satellite
+   outages. This section also includes the maximum and minimum of the
+   PDOP, HDOP and VDOP for each of the thirteen NSTB/WAAS sites. Section 4
+   summarizes service reliability performance. It will be reported at the
+   end of the first year of this analysis because the SPS standard is
+   based a measurement interval of one year. Data for the quarter is
+   provided for completeness. Section 5 provides the position and
+   repeatable accuracies based on data collected on a daily basis at one-
+   second intervals. This section also provides the statistics on the
+   range error, range error rate and range acceleration error for each
+   satellite. The overall average, maximum, minimum and standard
+   deviations of the range rates and accelerations are tabulated for each
+   satellite. In Section 6, the data collected during solar storms is
+   analyzed to determine the effects, if any, of GPS SPS performance.
+   Section 7 provides the analysis on GPS/GLONASS performance. A
+   GPS/GLONASS receiver was used in the NSTB laboratory at the FAA
+   Technical Center. Appendix A provides a summary of all the results as
+   compared to the SPS specification. Appendix B provides the geomagnetic
+   data used for Section 6. Appendix C provides a PAN Problem Report. The
+   SPS specification was not met in several instances during the entire
+   quarter due to the failure of PRN22 on 28 July 2001. Appendix D
+   provides a glossary of terms used in this PAN report. This glossary was
+   obtained directly from the GPS SPS specification document. Appendix E
+   provides the WAAS performance analysis report. Report 35 2 GPS SPS
+   Performance Analysis Report October 31, 2001 Table 1-1 SPS Performance
+   Requirements Coverage Standard Conditions and Constraints Evaluated in
+   This Report 99.9% global average Probability of 4 or more satellites in
+   view over any 24 hour interval, averaged over the globe 4 satellites
+   must provide PDOP of 6 or less 5 mask angle with no obscura Standard is
+   predicated on 24 operational satellites, as the constellation is
+   defined in the almanac 96.9% at worst-case Probability of 4 or more
+   satellites in view over any 24 point hour interval, for the worst-case
+   point on the globe 4 satellites must provide PDOP of 6 or less 5 mask
+   angle with no obscura Standard is predicated on 24 operational
+   satellites, as the constellation is defined in the almanac Satellite
+   Availability Conditions and Constraints Standard 99.85% global
+   Conditioned on coverage standard average Standard based on a typical 24
+   hour interval, averaged over the globe Typical 24 hour interval defined
+   using averaging period of 30 days 99.16% single point Conditioned on
+   coverage standard average Standard based on a typical 24 hour interval,
+   for the worst-case point on the globe Typical 24 hour interval defined
+   using averaging period of 30 days 95.87% global Conditioned on coverage
+   standard average on worst-case Standard represents a worst-case 24 hour
+   interval, day averaged over the globe 83.92% at worst-case Conditioned
+   on coverage standard point on worst-case day Standard based on a
+   worst-case 24 hour interval, for the worst-case point on the globe
+   Service Availability Conditions and Constraints Standard 99.97% global
+   Conditioned on coverage and service availability average standards 500
+   meter NTE predictable horizontal error reliability threshold Standard
+   based on a measurement interval of one year; average of daily values
+   over the globe Standard predicated on a maximum of 18 hours of major
+   service failure behavior over the sample interval Report 35 3 GPS SPS
+   Performance Analysis Report October 31, 2001 99.79% single point
+   Conditioned on coverage and service availability average standards 500
+   meter Not-to-Exceed (NTE) predictable horizontal error reliability
+   threshold Standard based on a measurement interval of one year; average
+   of daily values from the worst-case point on the globe Standard based
+   on a maximum of 18 hours of major service failure behavior over the
+   sample interval Accuracy Standard Conditions and Constraints
+   Predictable Accuracy Conditioned on coverage, service availability and
+   100 m horz. error service reliability standards 95% of time Standard
+   based on a measurement interval of 24 156 m vert. error hours, for any
+   point on the globe 95% of time 300 m horz. error 99.99% of time 500 m
+   vert. error 99.99% of time Repeatable Accuracy Conditioned on coverage,
+   service availability and 141 m horz. error service reliability
+   standards 95% of time Standard based on a measurement interval of 24
+   221 m vert. error hours, for any point on the globe 95% of time
+   Relative Accuracy Conditioned on coverage, service availability and 1.0
+   m horz. error service reliability standards 95% of time Standard based
+   on a measurement interval of 24 Future Reports 1.5 m vert. error hours,
+   for any point on the globe 95% of time Standard presumes that the
+   receivers base their position solutions on the same satellites, with
+   position solutions computed at approximately the same time Time
+   Transfer Conditioned on coverage, service availability and Accuracy
+   service reliability standards 340 nanoseconds time Standard based upon
+   SPS receiver time as transfer error 95% of computed using the output of
+   the position solution time Standard based on a measurement interval of
+   24 hours, for any point on the globe Standard is defined with respect
+   to Universal Coordinated Time, as it is maintained by the United States
+   Naval Observatory Range Domain Conditioned on satellite indicating
+   healthy status Accuracy Standard based on a measurement interval of 24
+   150 m NTE hours, for any point on the globe range error Standard
+   restricted to range domain errors allocated 2 m/s NTE to space/control
+   segments range rate error Standards are not constellation values --
+   each 8 mm/s2 satellite is required to meet the standards range
+   acceleration Assessment requires minimum of four hours of data error
+   95% of time over the 24 hour period for a satellite in order to 19
+   mm/s2 NTE range evaluate that satellite against the standard
+   acceleration error Report 35 4 GPS SPS Performance Analysis Report
+   October 31, 2001 2.0 Coverage Performance Coverage: The percentage of
+   time over a specified time interval that a sufficient number of
+   satellites are above a specified mask angle and provide an acceptable
+   position solution geometry at any point on or near the Earth. Dilution
+   of Precision (DOP): A Root Mean Square (RMS) measure of the effects
+   that any given position solution geometry has on position errors.
+   Geometry effects may be assessed in the local horizontal (HDOP), local
+   vertical (VDOP), three-dimensional position (PDOP), or time (TDOP) for
+   example. Coverage Standard Conditions and Constraints 99.9% global
+   average Probability of 4 or more satellites in view over any 24 hour
+   interval, averaged over the globe 4 satellites must provide PDOP of 6
+   or less 5 mask angle with no obscura Standard is predicated on 24
+   operational satellites, as the constellation is defined in the almanac
+   96.9% at worst-case point Probability of 4 or more satellites in view
+   over any 24 hour interval, for the worst-case point on the globe 4
+   satellites must provide PDOP of 6 or less 5 mask angle with no obscura
+   Standard is predicated on 24 operational satellites, as the
+   constellation is defined in the almanac Almanacs for GPS weeks 97-109
+   used for this coverage portion of the report were obtained from the
+   Coast Guard web site (www.navcen.uscg.mil). Using these almanacs, an
+   SPS coverage area program developed by ACT-360 was used to calculate
+   the PDOP at every 5o point between longitudes of 180W to 180E and 80S
+   and 80N at one-minute intervals. This gives a total of 1440 samples for
+   each of the 2376 grid points in the coverage area. Table 2-1 provides
+   the global averages and worst-case availability over a 24-hour period
+   for each week. Table 2-1 also gives the global 99.9% PDOP value for
+   each of the thirteen GPS Weeks. The PDOP was 3.866 or better 99.9% for
+   each of the 24-hour intervals. The GPS coverage performance evaluated
+   met the specifications stated in the SPS. Report 35 5 GPS SPS
+   Performance Analysis Report October 31, 2001 Table 2-1 Coverage
+   Statistics GPS Week Global 99.9% PDOP Value* Global Average* Worst-Case
+   Point (Spec: 99.9%) (Spec: 96.9%) 97 3.100 100% 99.792% 98 3.100 100%
+   99.792% 99 3.080 100% 99.722% 100 3.056 100% 99.722% 101 3.866 99.972%
+   98.194% 102 3.866 99.972% 98.194% 103 3.858 99.972% 98.194% 104 2.957
+   100% 99.722% 105 2.959 100% 99.722% 106 3.313 99.992% 99.167% 107 2.969
+   100% 99.722% 108 2.991 100% 99.722% 109 3.003 100% 99.722% Report 35 6
+   GPS SPS Performance Analysis Report October 31, 2001 Report 35 7 GPS
+   SPS Performance Analysis Report October 31, 2001 3.0 Service
+   Availability Performance Service Availability: Given coverage, the
+   percentage of time over a specified time interval that a sufficient
+   number of satellites are transmitting a usable ranging signal within
+   view of any point on or near the Earth. 3.1 Satellite Outages from NANU
+   Reports Satellite availability performance was analyzed based on
+   published "Notice: Advisory to Navstar Users" messages (NANU's). During
+   this reporting period, 1 July through 30 September 2001, there were a
+   total of seventeen reported outages. Twelve of these outages were
+   maintenance activities and were reported in advance. Five were
+   unscheduled outages. A complete listing of outage NANU's for the
+   reporting period is provided in Table 3-1. A complete listing of the
+   forecasted outage NANU's for the reporting period can be found in Table
+   3-2. Canceled outage NANU's are provided in Table 3-3. Table 3-1 NANUs
+   Affecting Satellite Availability NANU # PRN Type Start Date Start Time
+   End Date End Time Total Total Total Unscheduled Scheduled 1086 24 S
+   10-Jul 4:37 10-Jul 16:17 11.67 11.67 1089 20 S 12-Jul 17:59 13-Jul 0:51
+   6.70 6.70 1092 15 S 13-Jul 17:53 13-Jul 23:39 5.77 5.77 1093 7 U 15-Jul
+   14:37 N/A N/A N/A N/A N/A 1094 7 U 15-Jul 14:37 15-Jul 15:49 1.20 1.20
+   1095 24 S 20-Jul 4:00 20-Jul 12:18 8.30 8.30 1100 9 S 27-Jul 4:29
+   27-Jul 8:28 3.98 3.98 1101 22 U 28-Jul 23:58 N/A N/A N/A N/A N/A 1104 1
+   U 6-Aug 15:35 6-Aug 16:16 0.68 0.68 1106 22 U 28-Jul 23:58 11-Aug 4:13
+   316.25 316.25 1107 17 S 21-Aug 14:36 21-Aug 18:32 3.93 3.93 1111 7 S
+   28-Aug 18:48 28-Aug 22:01 3.21 3.21 1112 30 U 29-Aug 21:02 N/A N/A N/A
+   N/A N/A 1113 6 S 31-Aug 6:00 31-Aug 9:02 3.03 3.03 1114 30 U 29-Aug
+   21:02 4-Sep 20:55 23.88 23.88 1116 26 S 5-Sep 1:22 5-Sep 6:55 5.55 5.55
+   1117 15 S 11-Sep 14:45 11-Sep 15:57 1.20 1.20 1119 11 U 13-Sep 0:30 N/A
+   N/A N/A N/A N/A 11120 11 U 13-Sep 0:30 13-Sep 5:30 5.00 5.00 1122 4 S
+   20-Sep 6:42 20-Sep 17:23 10.68 10.68 Total Actual Unscheduled and
+   Scheduled Downtime and Total Actual Downtime 323.13 87.90 411.03 Type:
+   S = Scheduled U = Unscheduled Report 35 8 GPS SPS Performance Analysis
+   Report October 31, 2001 Table 3-2 NANUs Forecasted to Affect Satellite
+   Availability NANU # PRN Type Start Date Start Time End Date End Time
+   Total Comments 1083 24 F 10-Jul 4:30 7/10/2001 16:30 12 See NANU 1086
+   1084 20 F 12-Jul 17:45 13-Jul 5:45 12 See NANU 1089 1085 15 F 13-Jul
+   16:30 14-Jul 4:30 12 See NANU 1092 1087 18 F 20-Jul 19:00 21-Jul 7:00
+   12 See NANU 1096 1088 9 F 20-Jul 4:15 20-Jul 16:15 12 See NANU 1091
+   1090 24 F 20-Jul 4:00 20-Jul 16:00 12 See NANU 1095 1097 9 F 27-Jul
+   4:15 27-Jul 16:15 12 See NANU 1100 1098 6 F 2-Aug 7:30 2-Aug 19:30 12
+   See NANU 1102 1099 18 F 3-Aug 16:00 4-Aug 4:00 12 See NANU 1103 1105 17
+   F 21-Aug 14:00 22-Aug 2:00 12 See NANU 1107 1108 7 F 28-Aug 18:30
+   29-Aug 6:30 12 See NANU 1111 1109 6 F 31-Aug 6:00 31-Aug 18:00 12 See
+   NANU 1113 1110 26 F 5-Sep 1:00 5-Sep 13:00 12 See NANU 1116 1115 15 F
+   11-Sep 14:00 12-Sep 2:00 12 See NANU 1117 1121 4 F 20-Sep 6:30 20-Sep
+   18:30 12 See NANU 1122 Total Forecast Downtime 168 Table 3-3 NANUs
+   Canceled NANU# PRN Type Start Date Start Time Comments 1091 9 C 20-Jul
+   4:15 See NANU 1088 1096 18 C 20-Jul 19:00 See NANU 1087 1102 6 C 2-Aug
+   7:30 See NANU 1098 1103 18 C 3-Aug 16:00 See NANU 1099 Satellite
+   Reliability, Maintainability, and Availability (RMA) data is being
+   collected based on published "Notice: Advisory to Navstar Users"
+   messages (NANU's). This data has been summarized in Table 3-4. The
+   "Total Satellite Observed MTTR" was calculated by taking the average
+   downtime of all satellite outage occurrences. Schedule downtime was
+   forecasted in advance via NANU's. All other downtime reported via NANU
+   was considered unscheduled. The "Percent Operational" was calculated
+   based on the ratio of total actual operating hours to total available
+   operating hours for every satellite. Table 3-4 GPS Block II/IIA
+   Satellite RMA Data Satellite Reliability/Maintainability/Availability
+   (RMA) Parameter 1 Jul - 12 December, 30 Sep, 1998- 31 March, 2001 2001
+   (qtrs = 9.21) Total Forecast Downtime (hrs): 168 3116.47 Total Actual
+   Downtime (hrs): 411.03 5407.86 Total Actual Scheduled Downtime (hrs):
+   87.9 1628.57 Total Actual Unscheduled Downtime (hrs): 323.13 3755.31
+   Total Satellite Observed MTTR (hrs): 25.69 44.48 Scheduled Satellite
+   Observed MTTR (hrs): 7.99 16.85 Unscheduled Satellite Observed MTTR
+   (hrs): 64.63 112.93 # Total Satellite Outages: 16 219 # Scheduled
+   Satellite Outages: 11 172 # Unscheduled Satellite Outages: 5 47 Percent
+   Operational -- Scheduled Downtime: 99.86% 99.79% Percent Operational --
+   All Downtime: 99.37% 98.92% Report 35 9 GPS SPS Performance Analysis
+   Report October 31, 2001 3.2 Service Availability Service Availability
+   Standard Conditions and Constraints 99.85% global average Conditioned
+   on coverage standard Standard based on a typical 24 hour interval,
+   averaged over the globe Typical 24 hour interval defined using
+   averaging period of 30 days 99.16% single point average Conditioned on
+   coverage standard Standard based on a typical 24 hour interval, for the
+   worst- case point on the globe Typical 24 hour interval defined using
+   averaging period of 30 days 95.87% global average on worst-case
+   Conditioned on coverage standard day Standard represents a worst-case
+   24 hour interval, averaged over the globe 83.92% at worst-case point on
+   worst- Conditioned on coverage standard case day Standard based on a
+   worst-case 24 hour interval, for the worst-case point on the globe To
+   verify availability, the data collected from receivers at the nine
+   NSTB/WAAS sites was reduced to calculate DOP information and reported
+   in Tables 3-5 to 3-7. The data was collected at one-second intervals
+   between 1 July and 30 September 2001. Table 3-5 PDOP Statistics
+   NSTB/WAAS Site Min Max VDOP at Mean 99.99% 99.99% Number of PDOP PDOP
+   Max PDOP PDOP PDOP VDOP Samples Anderson 1.315 5.711 5.472 2.191 5.500
+   5.187 758519 Atlantic City 1.256 6.844 6.110 1.837 6.327 5.651 7944430
+   Columbus 1.236 7.636 7.117 1.852 5.640 4.993 6493572 Denver 1.200 6.713
+   3.558 1.827 5.727 4.816 7788160 Elko 1.178 5.668 4.963 1.867 5.041
+   4.424 757013 Grand Forks 1.240 7.622 7.238 1.804 5.546 5.172 7941857
+   Great Falls 1.321 3.530 2.645 2.062 3.519 2.741 751721 Atlantic City
+   (FVS) 1.274 4.401 4.030 1.870 4.352 4.064 758504 Bangor (FVS) 1.192
+   20.871 17.113 1.822 5.656 5.182 2606166 Atlanta 1.284 6.273 5.860 1.845
+   5.213 4.588 4872316 Kansas City 1.265 7.755 7.072 1.823 5.904 5.206
+   4535897 Salt Lake City 1.154 6.448 5.761 1.775 4.928 4.486 4821025
+   Miami 1.205 6.964 6.572 1.785 6.794 6.285 4677306 Tables 3-6 and 3-7
+   show the statistics related to maximum PDOP and PDOP greater than six,
+   respectively. Table 3-6 shows the PDOP statistics for the worst-case
+   point on the worst-case day. NOTE: Global in this report refers to the
+   nine sites used. Although future reports will have all WAAS sites, a
+   true global availability cannot be determined since there aren't
+   reference stations around the world. Whenever the PDOP goes above six
+   and an SPS requirement is not met, an investigation is performed to
+   determine what caused the PDOP to go above six. The following is a list
+   of programs/procedures used during times of high PDOP: Notice of
+   Advisory to Navstar Users (NANU's) messages are used to verify that
+   satellite outages did occur. (See Section 3.1 for more details about
+   NANU's for this quarter.) Report 35 10 GPS SPS Performance Analysis
+   Report October 31, 2001 A satellite outage detection program developed
+   by ACT-360 verifies satellite outages that are not verified through a
+   NANU. For example, a satellite outage can occur for just a few seconds
+   during an upload. This satellite detection program monitors all the
+   receivers and keeps track of what satellites the receiver should be
+   tracking versus what satellites the receiver is actually tracking. At
+   least six receivers need to be tracking the satellite prior to the
+   outage and no receiver can be tracking the satellite for the program to
+   detect an outage. This program is also being enhanced so that false
+   locks and late ephemeris problems can also be detected. This program
+   will also output flags from the receivers so that problems with the
+   receiver or TRS software, if any, can be tracked more easily. Data from
+   co-located receivers is analyzed for times that the PDOP goes above
+   six. This helps in determining whether the problem is due to the
+   environment. The instance of worst performance where the PDOP went
+   above six is reported in Table 3-6. The column labeled "NANU/SOD"
+   reports whether the outage was detected via a NANU or the Satellite
+   Outage Detection (SOD) program along with the Satellite PRN number that
+   had the outage. Table 3-6 Maximum PDOP Statistics Site GPS Week/ Max
+   Number of NANU/SOD, Number Availability Day PDOP Seconds of Whole
+   Satellite PRN of on days when Day PDOP > 6 Number Samples PDOP > 6
+   Miami 103_1 6.964 1213 86395 98.595 Worst-Case Point on Worst-Case Day
+   = 98.595% (SPS Spec. > 83.92%) Global Average on Worst-Case Day =
+   99.815 % (SPS Spec. > 95.87%) Table 3-7 PDOP > 6 Statistics NSTB/WAAS
+   Site Total Number of Seconds Total Seconds with Overall of PDOP
+   Monitoring PDOP > 6 % Availability Anderson 758519 0 100% Atlantic City
+   7944430 834 99.989% Columbus 6493572 191 99.997% Denver 7788160 406
+   99.994% Elko 757013 0 100% Grand Forks 7941857 52 99.999% Great Falls
+   751721 0 100% Atlantic City (FVS) 758504 0 100% Bangor (FVS) 2606166 10
+   99.999% Atlanta 4872316 29 99.999% Kansas City 4535897 293 99.993% Salt
+   Lake City 4821025 105 99.997% Miami 4677306 1213 99.974% Worst Single
+   Point Average = 99.974% (SPS Spec. > 99.16%) Global Average over
+   Reporting Period = 99.995% (SPS Spec. > 99.85%) Report 35 11 GPS SPS
+   Performance Analysis Report October 31, 2001 4.0 Service Reliability
+   Standard Service Reliability: Given coverage and service availability,
+   the percentage of time over a specified time interval that the
+   instantaneous predictable horizontal error is maintained within a
+   specified threshold at any point on or near the Earth. Service
+   Reliability Standard Conditions and Constraints 99.97% global average
+   Conditioned on coverage and service availability standards 500 meter
+   NTE predictable horizontal error reliability threshold Standard based
+   on a measurement interval of one year; average of daily values over the
+   globe Standard predicated on a maximum of 18 hours of major service
+   failure behavior over the sample interval 99.79% single point average
+   Conditioned on coverage and service availability standards 500 meter
+   Not-to-Exceed (NTE) predictable horizontal error reliability threshold
+   Standard based on a measurement interval of one year; average of daily
+   values from the worst-case point on the globe Standard based on a
+   maximum of 18 hours of major service failure behavior over the sample
+   interval Table 4-1 has the 99.99% horizontal errors reported by a
+   receiver at each of the nine NSTB/WAAS sites. This will be evaluated
+   against the SPS specification at the end of the year. Table 4-1 Service
+   Reliability Based on Horizontal Error NSTB/WAAS Site Number of Maximum
+   Samples Horizontal Error This (Meters) Quarter Anderson 758519 17.9
+   Atlantic City 7944430 222000* Columbus 6493572 278000* Denver 7788160
+   264000* Elko 757013 9.73 Grand Forks 7941857 220000* Great Falls 751721
+   8.14 Atlantic City (FVS) 758504 8.66 Bangor (FVS) 2606166 180000*
+   Atlanta 4872316 167000* Kansas City 4535897 181000* Salt Lake City
+   4821025 200000* Miami 4677306 136000 * Note: Numbers rounded to nearest
+   thousands due to memory restrictions of statistical process. All sites
+   that tracked the PRN22 event on 28 July 2001 exceeded the 500-meter
+   Horizontal Error threshold for this quarter. Report 35 12 GPS SPS
+   Performance Analysis Report October 31, 2001 5.0 Accuracy
+   Characteristics Accuracy: Given coverage, service availability and
+   service reliability, the percentage of time over a specified time
+   interval that the difference between the measured and expected user
+   position or time is within a specified threshold at any point on or
+   near the Earth. Accuracy Standard Conditions and Constraints
+   Predictable Accuracy Conditioned on coverage, service availability and
+   service 100 meters horizontal error 95% reliability standards of time
+   Standard based on a measurement interval of 24 hours, for 156 meters
+   vertical error any point on the globe 95% of time 300 meters horizontal
+   error 99.99% of time 500 meters vertical error 99.99% of time
+   Repeatable Accuracy Conditioned on coverage, service availability and
+   service 141 meters horizontal error 95% reliability standards of time
+   Standard based on a measurement interval of 24 hours, for 221 meters
+   vertical error any point on the globe 95% of time Relative Accuracy
+   Conditioned on coverage, service availability and service 1.0 meters
+   horizontal error 95% reliability standards of time Standard based on a
+   measurement interval of 24 hours, for 1.5 meters vertical error any
+   point on the globe 95% of time Standard presumes that the receivers
+   base their position solutions on the same satellites, with position
+   solutions computed at approximately the same time Time Transfer
+   Accuracy Conditioned on coverage, service availability and service 340
+   nanoseconds time reliability standards transfer error 95% of time
+   Standard based upon SPS receiver time as computed using the output of
+   the position solution Standard based on a measurement interval of 24
+   hours, for any point on the globe Standard is defined with respect to
+   Universal Coordinated Time, as it is maintained by the United States
+   Naval Observatory Range Domain Accuracy Conditioned on satellite
+   indicating healthy status 150 meters NTE range error Standard based on
+   a measurement interval of 24 hours, for 2 meters/second NTE range rate
+   any point on the globe error Standard restricted to range domain errors
+   allocated to 8 millimeters/second2 range space/control segments
+   acceleration error 95% of time Standards are not constellation values
+   -- each satellite is 19 millimeters/second2 NTE range required to meet
+   the standards acceleration error Assessment requires minimum of four
+   hours of data over the 24 hour period for a satellite in order to
+   evaluate that satellite against the standard Report 35 13 GPS SPS
+   Performance Analysis Report October 31, 2001 5.1 Position Accuracies
+   The data used for this section was collected for every second between 1
+   July through 30 September 2001 at the NSTB and WAAS selected locations.
+   Table 5-1 provides the 95% and 99.99% horizontal and vertical error
+   accuracies for the quarter. Table 5-1 Horizontal & Vertical Accuracy
+   Statistics for the Quarter NSTB Site 95% 95% 99.99% 99.99% Horizontal
+   Vertical Horizontal* Vertical* (Meters) (Meters) (Meters) (Meters)
+   Anderson 1.403 9.171 11.778 21.032 Atlantic City 4.499 7.902 208491.297
+   366464.500 Columbus 4.905 7.534 181428.047 114620.000 Denver 4.798
+   7.496 187235.672 89303.898 Elko 4.404 8.020 8.683 16.177 Grand Forks
+   4.809 7.266 153539.125 120874.008 Great Falls 3.584 7.642 7.827 12.654
+   Atlantic City (FVS) 4.952 7.474 8.182 13.683 Bangor (FVS) 6.138 7.780
+   160931.750 273606.438 Atlanta 5.192 8.537 165911.906 394625.188 Kansas
+   City 5.126 7.649 92148.531 63184.152 Salt Lake City 5.051 7.876 10.350
+   20.522 Miami 5.924 10.583 135032.594 431648.281 * Note: For those sites
+   that were tracking the failure of PRN22 on 28 July 2001, the 99.99%
+   values will be affected. This is due to the fact that the PRN22 event
+   lasted long enough to fail the 99.99% requirement. Figures 5-1 and 5-2
+   are the combined histograms of the vertical and horizontal errors for
+   all seven NSTB and two WAAS sites from 1 July to 30 September 2001. Any
+   value greater than 30 meters was placed into the 30+ meter histogram
+   bin. Due to the PRN22 event on 28 July 2001, you will notice a spike at
+   the far right of the histogram. Report 35 14 GPS SPS Performance
+   Analysis Report October 31, 2001 Figure 5-1 Combined Vertical Error
+   Histogram Figure 5-2 Combined Horizontal Error Histogram Report 35 15
+   GPS SPS Performance Analysis Report October 31, 2001 5.2 Repeatable
+   Accuracy Table 5-2 provides the repeatability statistics, which met all
+   of the evaluated requirements stated in the SPS. Table 5-2
+   Repeatability Statistics NSTB Site 95% 95% Horizontal Vertical (m) (m)
+   Anderson 2.213 7.122 Atlantic City 1.705 3.966 Columbus 1.356 3.066
+   Denver 1.405 3.455 Elko 1.778 4.871 Grand Forks 1.440 3.130 Great Falls
+   1.415 3.521 Atlantic City (FVS) 2.044 4.960 Bangor (FVS) 1.964 4.507
+   Atlanta 1.632 4.321 Kansas City 1.489 3.801 Salt Lake City 1.360 3.327
+   Miami 1.717 4.944 5.3 Relative Accuracy To be included in future
+   reports. 5.4 Time Transfer Accuracy The GPS time error data between 1
+   July and 30 September 2001 was down loaded from USNO Internet site. The
+   USNO data file contains the time difference between the USNO master
+   clock and GPS system time for each GPS satellites during the time
+   period. Over 10,000 samples of GPS time error are contained in the USNO
+   data file. In order to evaluate the GPS time transfer error, the data
+   file was used to create a histogram (Fig 5-3) to represent the
+   distribution of GPS time error. The histogram was created by taking the
+   absolute value of time difference between the USNO master clock and GPS
+   system time, then creating data bins with one nanosecond precision. The
+   number of samples in each bin was then plotted to form the histogram in
+   Fig 5-3. The mean, standard deviation, and 95% index are within the
+   requirements of GPS SPS time error. Report 35 16 GPS SPS Performance
+   Analysis Report October 31, 2001 Figure 5-3 Time Transfer Errors Report
+   35 17 GPS SPS Performance Analysis Report October 31, 2001 5.5 Range
+   Domain Accuracy Tables 5-3 through 5-5 provide the statistical data for
+   the range error, range rate error and the range acceleration error for
+   each satellite. This data was collected between 1 July and 30 September
+   2001. The Millennium at Anderson was used to collect range measurement.
+   Future PAN reports will contain statistics from all WAAS sites. A
+   weighted average filter was used for the calculation of the range rate
+   error and the range acceleration error. All Range Domain SPS
+   specifications were met. Table 5-3 Range Error Statistics (meters) PRN
+   Range Error Range Error 1 95% Range Max Range Error Samples Mean RMS
+   Error (SPS Spec. < 150 m) 1 -1.416 3.046 2.697 6.275 11.386 2210489 2
+   -0.374 2.577 2.550 5.210 12.003 1992492 3 -1.852 3.539 3.016 7.274
+   16.832 2016271 4 -0.432 2.168 2.124 4.301 8.276 2186973 5 0.168 2.722
+   2.717 5.285 19.383 2551839 6 -1.012 3.366 3.210 6.428 13.216 2462647 7
+   0.070 2.195 2.193 4.323 10.918 2273255 8 -0.885 2.971 2.836 5.673
+   15.609 2164066 9 0.460 3.478 3.447 6.712 22.377 2281456 10 -0.098 2.861
+   2.860 5.882 11.008 2077887 11 -0.994 2.622 2.426 5.232 18.907 2185788
+   13 -0.809 2.407 2.267 4.886 18.992 2509241 14 0.753 3.263 3.175 6.234
+   10.813 2251001 15 0.844 4.300 4.216 8.397 13.299 2009223 17 0.561 4.655
+   4.621 8.698 16.047 1826098 18 1.135 3.890 3.720 7.519 12.521 2163128 20
+   -0.233 2.159 2.147 4.250 17.248 2538469 21 1.078 3.970 3.821 7.705
+   15.805 1983521 22 -1.191 3.515 3.307 6.840 14.339 1759159 23 0.130
+   4.038 4.036 7.654 14.065 2277183 24 0.124 2.629 2.626 5.312 10.275
+   2260537 25 -0.787 3.759 3.676 7.085 18.314 2289913 26 0.152 3.597 3.594
+   6.850 16.085 1822143 27 -1.690 3.441 2.997 6.673 13.617 1829819 28
+   -0.968 3.097 2.942 5.928 13.250 2190464 29 -0.237 3.147 3.138 6.088
+   11.640 2229672 30 -0.688 3.036 2.957 5.850 19.444 2329380 31 -1.550
+   3.463 3.097 6.965 13.785 1912486 Report 35 18 GPS SPS Performance
+   Analysis Report October 31, 2001 Table 5-4 Range Rate Error Statistics
+   (meters/second) PRN Range Rate Range Rate Range Rate 95% Range Max
+   Range Rate Error Samples Error Mean Error RMS Error 1 Rate Error (SPS
+   Spec. < 2 m) 1 0.00000 0.00739 0.00739 0.01474 0.23881 2210489 2
+   -0.00006 0.00772 0.00772 0.01495 0.20948 1992492 3 -0.00012 0.00799
+   0.00798 0.01401 0.55200 2016271 4 0.00001 0.00589 0.00589 0.01210
+   0.15011 2186973 5 -0.00014 0.00927 0.00926 0.01669 0.58077 2551839 6
+   0.00001 0.00783 0.00783 0.01521 0.25999 2462647 7 0.00007 0.00698
+   0.00698 0.01448 0.17950 2273255 8 -0.00009 0.00759 0.00759 0.01517
+   0.19150 2164066 9 -0.00032 0.01069 0.01068 0.01788 0.74953 2281456 10
+   0.00001 0.00679 0.00679 0.01190 0.42546 2077887 11 0.00008 0.01068
+   0.01068 0.01736 0.74109 2185788 13 0.00003 0.00823 0.00823 0.01391
+   0.69738 2509241 14 -0.00013 0.00758 0.00758 0.01629 0.09274 2251001 15
+   0.00027 0.00826 0.00826 0.01663 0.25031 2009223 17 0.00011 0.00709
+   0.00709 0.01445 0.31504 1826098 18 -0.00004 0.00717 0.00717 0.01470
+   0.08502 2163128 20 -0.00007 0.00933 0.00933 0.01616 0.61157 2538469 21
+   0.00011 0.00750 0.00750 0.01534 0.26132 1983521 22 -0.00029 0.00643
+   0.00642 0.01191 0.28556 1759159 23 0.00008 0.00706 0.00706 0.01430
+   0.18500 2277183 24 -0.00001 0.00721 0.00721 0.01401 0.29441 2260537 25
+   -0.00022 0.00753 0.00752 0.01493 0.20282 2289913 26 -0.0023 0.00708
+   0.00708 0.01328 0.43242 1822143 27 0.00000 0.00727 0.00727 0.01436
+   0.26463 1829819 28 0.00006 0.00727 0.00727 0.01450 0.19279 2190464 29
+   -0.00005 0.00714 0.00714 0.01441 0.41893 2229672 30 -0.00017 0.01009
+   0.01009 0.01828 0.70992 2329380 31 -0.00014 0.00693 0.00693 0.01265
+   0.32857 1912486 Report 35 19 GPS SPS Performance Analysis Report
+   October 31, 2001 Table 5-5 Range Acceleration Error Statistics
+   (meters/second2) PRN Range Range Range % < 0.008 Max Range Samples
+   Acceleration Acceleration Acceleration 1 (SPS Spec. 95% Acceleration
+   Error Error Mean Error RMS of Time) (SPS Spec. < 0.019 m/s2) 1 0.00000
+   0.00007 0.00007 100 0.00232 2210489 2 0.00000 0.00007 0.00007 100
+   0.00230 1992492 3 0.00000 0.00007 0.00007 100 0.00553 2016271 4 0.00000
+   0.00005 0.00005 100 0.00148 2186973 5 0.00000 0.00008 0.00008 100
+   0.00575 2551839 6 0.00000 0.00007 0.00007 100 0.00264 2462647 7 0.00000
+   0.00006 0.00006 100 0.00177 2273255 8 0.00000 0.00007 0.00007 100
+   0.00190 2164066 9 0.00000 0.00010 0.00010 100 0.00750 2281456 10
+   0.00000 0.00006 0.00006 100 0.00431 2077887 11 0.00000 0.00010 0.00010
+   100 0.00737 2185788 13 0.00000 0.00008 0.00008 100 0.00700 2509241 14
+   0.00000 0.00007 0.00007 100 0.00083 2251001 15 0.00000 0.00007 0.00007
+   100 0.00250

@@ -1,0 +1,63 @@
+http://haifung.jpl.nasa.gov/details.html
+
+
+
+                                    Web Site
+
+   This website runs pretty much automatically so there may be outages and
+   interruptions which pass unnoticed. We try to keep abreast of its
+   status, and we succeed, for the most part, but there's only one person
+   monitoring it, and he does other things too.
+
+   The "Created:" times are in Pacific Time, Daylight or Standard,
+   depending. The times indicated on the various products are GMT. In the
+   past, this has led to some confusion.
+
+   The two 'Archives' which we maintain: I keep the past products until
+   the 4 Gb disk gets about 95% full, then I purge the oldest products
+   with a ruthless application of `find ./ -mtime XX -exec rm -f.' The
+   'XX' is determined more or less at my whim, but you can usually find
+   the last 2 or 3 months of products on the site. I wouldn't depend on
+   much more, if I were you.
+     __________________________________________________________________
+
+                                    The Data
+
+   The Data come from the SeaWinds instrument aboard the QuikSCAT
+   satellite. Frequently we refer to the data as Quikscat data. To be the
+   most precise, we should say SeaWinds on QuikSCAT but that is such a
+   mouthful! Don't be confused if you see all three phrases, Quikscat,
+   SeaWinds and SeaWinds on QuikSCAT, they all mean the same thing.
+
+   See the Scatterometry Project's Winds page here at JPL for the general
+   discussion of Scatterometry, specific information about SeaWinds on
+   QuikSCAT, history of past missions and news of upcoming ones. In
+   particular, another SeaWinds instrument will be flying on the Adeos II
+   spacecraft, built, launched and run by Japan's national space
+   administration NASDA, currently projected to launch in Nov, 2001.
+     __________________________________________________________________
+
+                                   Animations
+
+   Fourteen hours of QuikSCAT data is interpolated to a 1x1 degree grid
+   using the method of successive corrections and then animated using our
+   special animator. The time indicated on the animation is the end time
+   of the last file included in the animation.
+     __________________________________________________________________
+
+                                 Cloud Overlays
+
+   What's to say? We plot the clouds and then the winds over them.
+
+   The time given on the plot is the GMT of the cloud data used. The wind
+   data varies +/- 3 hours of this time, depending on its availability.
+   The data flagged as 'rain contaminated' is plotted in black.
+
+   The GMS 5 cloud imagery was originally obtained via GMS of JMA and made
+   available to us by Nasa and the University of Hawaii.
+     __________________________________________________________________
+
+
+    William H. Daffer (webmaster@catspaw.jpl.nasa.gov)
+
+   Last modified: Thu Mar 16 09:16:24 2000

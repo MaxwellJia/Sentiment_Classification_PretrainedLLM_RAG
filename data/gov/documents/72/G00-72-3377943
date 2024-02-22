@@ -1,0 +1,69 @@
+http://seadas.gsfc.nasa.gov/obtaining.html
+
+Obtaining SeaDAS 4.1
+
+   SeaDAS is available for download via anonymous FTP from
+   seadas.gsfc.nasa.gov. To connect to the SeaDAS ftp site and to download
+   those files, click here. The /seadas directory contains the following
+   compressed tar files. The completed SeaDAS installation will require
+   about 330MB without demo files and 950 MB with demo files. Using the
+   embedded IDL runtime feature will add an additional 180MB to the
+   installation.
+
+   Required:
+    1. SeaDAS source and executable files (~91MB) (select one of the
+       following files that match or close to the OS of your workstation)
+          + seadas_irix6.3.tar.gz or seadas_irix6.5.tar.gz: for SGI
+            workstation
+          + seadas_solaris2.6.tar.gz or seadas_solaris2.7.tar.gz: for SUN
+            workstation
+          + seadas_linux6.tar.gz or seadas_linux7.tar.gz for PC
+    2. Data files for basic SeaDAS functions (~86MB)
+          + seadas_data1.tar.gz
+
+   Required only for SeaWiFS & OCTS processing: (~126MB)
+     * seadas_data2.tar.gz
+
+   Required for the embedded IDL runtime license feature (~130MB)
+     * seadas_idl_rt.tar.gz
+
+   Required only for CZCS processing: (~853MB)
+     * seadas_data3.tar.gz
+
+   Optional: optional sample data files and demo scripts for running the
+   tutorial examples and demos. A complete suite of SeaWiFS products is
+   included here. (~623MB)
+     * seadas_demo.tar.gz
+
+   Note: Some users, especially outside the U.S. have had trouble with the
+   size of these files. We have split these files into smaller sections
+   using the UNIX "split -12000" command. The split files can be found
+   under the ./split directory.
+
+   To put the pieces back together (concatenate the files), use the
+   following commands:
+   cat seadas_irix6.3.tar.gz?? > seadas_irix6.3.tar.gz (for seadas tar
+   file), OR
+   cat seadas_data1.tar.gz?? > seadas_data1.tar.gz (for data tar file)
+
+   To put the pieces back together, uncompress them, and unTAR the TAR
+   file in one step:
+   cat seadas_irix6.3.tar.gz?? | gunzip -c - | tar xvf - (for source
+   files) OR
+   cat seadas_data1.tar.gz?? | gunzip -c - | tar xvf - (for data files)
+
+   We can also create SeaDAS on CD for those users who do not have
+   internet access. Please send your request to
+   seadas@seadas.gsfc.nasa.gov.
+
+   For installation instructions, please follow the simple steps in
+   HOWTO_INSTALL.
+     __________________________________________________________________
+
+   [seadas_logo.gif] This page maintained by:
+                     The SeaDAS Development Group
+                     Mark Ruebens, Robert Lindsay and Long Wang
+                     Code 970, NASA/GSFC
+                     seadas@seadas.gsfc.nasa.gov
+                     Last updated: 11/01/01.
+   _______________________________________________________________________

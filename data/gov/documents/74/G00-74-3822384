@@ -1,0 +1,111 @@
+http://mgs-mager.gsfc.nasa.gov/instrument.html
+
+   Mars Global Surveyor MAG/ER
+
+                The MGS Magnetometer and Electron Reflectometer
+
+   The magnetometer and electron reflectometer instruments are attempting
+   to measure the poorly understood global magnetic properties of Mars. On
+   Earth, a magnetic field surrounds the planet. The magnetism results
+   from electric currents circulating in the molten iron churning slowly
+   in the Earth's core. Magnetic fields are usually measured in units of
+   "gamma", for our purposes we use the "nanoTesla" unit.
+
+   Unlike the other instruments, the magnetometer sensors are not attached
+   to the main body of the spacecraft. Instead, each one of the two
+   sensors sits at opposite ends of the spacecraft at the tips of
+   Surveyor's two solar panels. This placement ensures that the data
+   generated from the magnetometer sensors will not be "polluted" by
+   magnetic signals from the spacecraft system.
+
+                     electron reflectometer magnetometer
+
+                      Click on pictures for large views
+
+   The electron reflectometer sensor is mounted on the instrument platform
+   because it is not sensitive to weak magnetic fields. The magnetometer
+   and electron reflectometer were operational during the cruise phase of
+   the mission. During the aerobraking phase the MGS spacecraft crossed
+   the Martian bow shock formed by the supersonic interaction of the
+   planet with the solar wind at least twice per orbit. The MAG/ER
+   detected these crossing and generated valuable data for determining the
+   global extent of the Martian magnetic field. During the mapping orbit,
+   the MAG/ER is operating continuously - and will continue to do so for a
+   total of at least one Martian year (687 days) - obtaining detailed maps
+   of the interior and crustal magnetic fields of Mars.
+
+Fluxgate (Saturable-Core) Magnetometer
+
+   The fluxgate magnetometers implemented for the Mars Global Surveyor are
+   based on similar instruments developed for numerous previous missions
+   (Voyager, Magsat, International Solar Polar mission, Giotto, Active
+   Magnetospheric Particle Tracer Explorers, etc.). The basic
+   configuration consists of dual; wide-range, triaxial flux gate sensors
+   mounted remote from the spacecraft's body. Assuming that this field is
+   primarily dipolar in nature at the location of the magnetometer
+   sensors, the ambient field can then be analytically determined by
+   combining the outboard and inboard measurements.
+
+   In a magnetometer of this type, the nonlinearity of magnetization
+   properties for the high permeability of easily saturated ferromagnetic
+   alloys provides an indicator of the local field strength. The word
+   "fluxgate" is used to refer to the method of periodic switching of
+   magnetic flux in the detector.
+
+                    illustration of fluxgate magnetomter
+                      Click on picture for larger view
+
+   For taking measurements of weak magnetic fields, enhancements are made
+   to the second harmonic detection. "In one method, two parallel cores
+   are wound in opposing directions in the excitation field circuit, and a
+   single secondary coil encompasses both. The two primary contributions
+   into the pickup windings are thereby canceled. The example above
+   illustrates such a system, which utilizes second harmonic phase
+   detection. With specifically selected cores and careful construction,
+   sensitivities of a few milligamma have been obtained. In recent years,
+   the cores have been fashioned in the shape of a ring, just about a
+   centimeter in size, and the excitation and pick up windings have been
+   made toroidally about the ring." (Intro to Geomagnetic field, Wallace
+   H. Campbell, p. 187).
+
+   The MGS flux gate sensors are constructed utilizing the ring core
+   geometry, which has been shown to exhibit superior performance
+   characteristics in terms of long-term zero-level stability and drive
+   power requirements when compared to other types of flux gate sensors.
+   In addition, the magnetic material used to manufacture these sensors is
+   the latest in a series of advanced molybdenum-pemalloy alloys, which
+   have been especially developed for low-noise, high stability
+   applications.
+
+   The signals from the magnetometers are first processed by their
+   respective analog electronic subsystems and then fed to the
+   digital-processing unit (DPU). Depending on the spacecraft telemetry
+   mode, variable time resolution formats are derived from the basic
+   measurements. This subsystem also provides the necessary information to
+   the microprocessor to activate the automatic range control logic in the
+   magnetometer electronics. If the magnitude of the measured vector
+   component exceeds reselected threshold values, the dynamic range (scale
+   factor) of each magnetometer is incremented or decremented to maintain
+   maximum digital resolution.
+
+   Both inboard and outboard magnetometers are sampled at a rate of 32
+   samples per second by a clock system derived from the spacecraft data
+   system real-time interrupt clock (RTI). These "raw" samples are then
+   averaged according to the telemetry mode selected for the spacecraft
+   and the data rate allocated to the experiment.
+     __________________________________________________________________
+
+   MGS MAG/ER What's New Overview Status Publications MAG/ER Team
+   Kids/Teachers Samuel Ogle
+     __________________________________________________________________
+
+   Last Modified: 13 February 2001
+
+   Contributors: David Brain, Monte Kaelberer, Cisco Perin, and Theresa
+   Valentine
+
+   Curator: Patricia Lawton, Emergent
+   Email: Patricia.Lawton@gsfc.nasa.gov
+
+   Responsible NASA Representative: Mario Acuña
+   Email: Mario.H.Acuna.1@gsfc.nasa.gov

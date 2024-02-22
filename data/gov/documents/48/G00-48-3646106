@@ -1,0 +1,148 @@
+http://d3d.fsl.noaa.gov/symposium/davesd3dpaper.pdf
+
+   J5.5 OPERATIONAL APPLICATIONS OF THREE DIMENSIONAL AIR PARCEL
+   TRAJECTORIES USING AWIPS D3D David B. Barjenbruch* and Eric Thaler
+   National Weather Service Forecast Office Boulder, Colorado and Edward
+   J. Szoke NOAA Forecast Systems Laboratory Boulder, Colorado 1.
+   INTRODUCTION 2. D3D TRAJECTORY COMPUTATION Perhaps one of the
+   fundamental challenges facing D3D was derived from Vis5D software
+   originally the operational meteorologist is understanding the fully
+   developed at the University of Wisconsin-Madison. three-dimensional
+   motion of the atmosphere, that is, The changes are explained by Szoke
+   et. al (2001). visualizing air parcel trajectories. This is not a
+   trivial Vis5D was created to examine and interact with large task and
+   there have been few explicit methods of volumes of data and or model
+   output from a research accomplishing this visualization. Until
+   recently, the model. In research mode one can display model main tool
+   at the forecaster's disposal for trajectory output at short time
+   intervals, as desired, so analysis has been two-dimensional streamline
+   computation of trajectories with Vis5D is relatively analysis. However,
+   these two-dimensional streamline straight forward, as outlined in
+   Hibbard (1986). In patterns neglect the vertical component of the flow
+   and operations, bandwidth concerns limit the amount of duplicate
+   horizontal trajectories only if they are model output that can be
+   transmitted as full, three- stationary. As a consequence of these
+   inadequacies, dimensional grids. In the case of AWIPS, this interval
+   forecasters can be misled as the actual path that air for the Eta model
+   is currently set at 6 hours, for the parcels take to arrive in an area
+   of concern. This can examples shown in this paper. Clearly a
+   computation lead to errors in temperatures and moisture forecasts of
+   trajectories at 6 hour intervals without any among other problems.
+   modification would lead to problems, and a trajectory that did not
+   represent the forecast air motions very Because of its close proximity
+   to the NOAA well. To overcome this, Vis5D (and therefore D3D) Forecast
+   Systems Laboratory (FSL), the Boulder attempts to artificially shorten
+   this lengthy time step by (formerly Denver) Weather Forecast Office
+   (WFO) has applying a factor to the data, depending on the size of
+   always served as a test bed for new development that the domain, that
+   creates much small time steps. In the often becomes part of AWIPS. One
+   recent case of the Eta model and the AWIPS domain, the 6 development
+   has been to test AWIPS on a PC platform hour interval is divided into
+   approximately 130 such using Linux, rather than the HP-Unix
+   workstations steps. While this cannot replace the use of 130 actual
+   currently in use. This workstation has been running time steps, if they
+   were available, in our experience the Display Two-Dimensional (D2D),
+   and with its sufficient trajectories created by D3D have looked quite
+   realistic computing power is also used as a platform to run and are
+   usually fairly smooth. Display Three-Dimensional (D3D), following the
+   port of the D3D software to Linux. The D3D software that 3. FORECAST
+   EXAMPLE runs as part of the Linux PC AWIPS eliminates much of the
+   aforementioned difficulties in visualizing air A case study from 8
+   September 2001 illustrates parcel trajectories in an operational mode.
+   While D3D the utility of D3D and the advantages over the old two- is a
+   software package containing numerous data sets dimensional analysis
+   method. This case was and a vast array of display capabilities, this
+   characterized by an unseasonably strong upper level presentation will
+   concentrate on the utility of air parcel trough moving southeast from
+   Alberta across the Rocky trajectories. Specifically, comparisons will
+   be made Mountains and Colorado. Initially, only light between the old
+   two-dimensional methods of precipitation was associated with this
+   system as it estimating trajectories and the new D3D methods moved
+   southeastward. However, increasing Quasi- available in AWIPS.
+   Geostrophic forcing was forecast to react with a moist and slightly
+   unstable airmass, along with north-
+   __________________________________________ northeasterly upslope flow
+   over eastern Colorado. * Corresponding author address: David
+   Barjenbruch, While the above dynamical factors would have alerted
+   National Weather Service, 325 Broadway, the operational forecaster to a
+   potential significant Boulder, CO 80305-3328; weather event, the use of
+   D3D trajectories helped the e-mail: David.Barjenbruch@noaa.gov
+   forecaster accurately assess where air parcels at separate levels in
+   the atmosphere were originating. This aided the forecaster in
+   quantifying the actual amount of vertical motion a parcel underwent as
+   it moved to the area of interest. Figures 1a through 1c show a top view
+   of the air parcel trajectories for the 12, 18, and 24 hour forecast
+   periods from the 1200 UTC 7 September 2001 Eta model run. Note these
+   trajectories are for parcels that terminated near Denver at 1200 UTC 8
+   September 2001. It can be seen that the low level parcels Fig. 1c. Same
+   as Figure 1a except 24 hour forecast valid at 1200 UTC 8 September
+   2001. originated in southern Saskatchewan and extreme northern Montana
+   where surface temperatures were generally in the 45°F to 50°F range and
+   dewpoints were near 40°F. If we rotate the view to the east for the 24
+   hour forecast (Figure 2), we can obtain additional Fig. 1a. Eta 12 hour
+   parcel trajectory forecast (top view) valid at 0000 UTC 8 September
+   2001. Fig. 2. ETA 24 hour trajectory forecast (east view) valid at 1200
+   UTC 8 September 2001. information. For example, the parcels that
+   originated Fig. 1b. Same as Figure 1a except 18 hour forecast near 850
+   mb over southern Saskatchewan rose sharply valid at 0600 UTC 8
+   September 2001. when they reached eastern Colorado, reaching near 500
+   mb by 1200 UTC 8 September. With that amount of upward vertical motion,
+   it became evident that a widespread and significant precipitation event
+   was likely to occur. In fact, over an inch of rain fell in most of the
+   Boulder and Denver, Colorado metro areas, while heavy snow occurred in
+   the Front Range valid time and all vertical motion is excluded. The
+   mountains and foothills above 6500 feet where up to 13 forecaster is
+   left to interpret the exact path the parcel inches of snow was
+   recorded. This snow level was has taken, which may lead to forecast
+   errors. consistent with the upstream temperatures, dewpoints, and
+   resultant wet bulb zero level observed at the point 4. SUMMARY AND
+   CONCLUSIONS of origin. The AWIPS D3D software has been used In addition
+   to the above figures showing column operationally at the Boulder,
+   Colorado National trajectories (trajectory parcels ending at various
+   levels Weather Service Forecast Office since May 2001. at a specific
+   point at a single valid time) other means of D3D air parcel
+   trajectories have been shown to be trajectory display are also
+   available in D3D. For advantageous over D2D streamline analysis,
+   largely example, trajectory time series generate a parcel attributable
+   to the ability to show vertical motion and trajectory for a specific
+   point for every valid time in any continuity of the parcel(s) of
+   concern. This has numerical weather prediction model run. This would
+   allowed the operational forecaster to improve indicate where air
+   parcels would have originated 6, 12, meteorological understanding and
+   forecast techniques, 18, 24, 48, etc. hours ago before reaching the
+   specified including applications of conceptual models. point of
+   interest. Trajectories may also be generated for numerous points along
+   North-South or East-West With increased use and familiarization with
+   D3D, oriented lines providing assistance in determining the operational
+   forecaster will have a better three-dimensional motions of the
+   atmosphere. understanding of air flow trajectories in a given weather
+   pattern. This is expected to result in improved Once D3D trajectories
+   are calculated, forecasters moisture, temperature, cloud, and
+   precipitation are able to color code them according to numerous
+   forecasts. Some examples where D3D may aid parameters such as pressure,
+   height, temperature, operational forecasts include significant weather
+   lapse rate, theta-e, etc. Flexible color table can then be events
+   associated with well-developed cyclones, the applied in order to
+   highlight particular features or levels onset of summer monsoon and
+   convection in the of interest. For instance, this capability was used
+   to Desert Southwest, and the development of upslope isolate an area of
+   subsidence that substantially clouds and precipitation in and near
+   mountainous diminished convective development over the southern
+   terrain. Additional case studies and air parcel Front Range Foothills
+   of Colorado on 6 August 2001. trajectory visualization methods will be
+   presented at the conference. While conventional Display Two Dimensions
+   (D2D) has the functionality to display streamlines, it is not 5.
+   REFERENCES capable of showing trajectories, except for a limited
+   trajectory data set based on the NGM. Even then, data Reap, R. M.,
+   1992: The Techniques Development is confined to a few parameters and
+   only three levels: Laboratory Three-Dimensional Trajectory Model.
+   surface; 850 mb; and 700 mb (Reap, 1992). In Technical Procedures
+   Bulletin (TPB) 397, National addition, D2D streamlines (Figure 3) are
+   only a Oceanic and Atmospheric Administration (NOAA), "snapshot" of
+   trajectories at a given point and given U.S. Department of Commerce,
+   11pp. Szoke, E. J., 2002: D3D: Overview, Update and Future Plans.
+   Preprints, Interactive Symposium on AWIPS, Orlando, FL, Amer. Meteor.
+   Soc. Hibbard, W. L., 1986: Computer Generated Imagery for 4-D
+   Meteorological Data. Bull. Amer. Meteor. Soc., 67, 1362-1369. Fig. 3.
+   ETA 500 mb (dark) and 700 mb (light) D2D streamlines valid at 1200 UTC
+   8 September 2001.

@@ -1,0 +1,383 @@
+http://atlas-csc.inst.bnl.gov/RHAWG071299.pdf
+
+   ATLAS Technical Coordination Radiation Hardness Assurance Working Group
+   Coordinator: M. Dentan. Report of the Second meeting of the ATLAS
+   Radiation Hardness Assurance Working Group CERN, 593-R-10, 7 December
+   1999, 9:00-16:30. The main purpose of this meeting was to prepare the
+   revision 2 of the ATLAS policy on Radiation Tolerant Electronics.
+   Agenda: I. Introduction: low dose rate effects on bipolar transistors:
+   - Facts; explanations of the mechanisms. II. Proposed strategy for
+   pre-selecting components and qualifying batches. - Radiation
+   constraint; radiation hardness required; - Existing test methods; -
+   Procurement strategy. III. Proposed standard test methods for ATLAS: -
+   Total ionising dose, displacement damages, single event effects. IV.
+   Radiation constraints in ATLAS detector and cavern. - Available data;
+   improvements required. V. List of the components used in each ATLAS
+   sub-system. - Frame of the ATLAS electronics components data base. VI.
+   Irradiation facilities. - Preliminary list. VII. RHA-WG members. -
+   Official list. Attendees: Marie-Laure Andrieux (Grenoble / Atlas LARG),
+   Francis Anghinolfi (CERN / Atlas SCT), Pierre Borgeaud (Saclay / Atlas
+   LARG), Martin Dentan (CERN/ Atlas TC), Federico Faccio (CERN / COTS),
+   Philippe Farthouat (CERN / Atlas TC), Philippe Grenier (Clermont /
+   Atlas Tile), Bjorn Hallgren (CERN / Atlas DCS), Pierre Jarron (CERN /
+   COTS), Werner Kubischta (CERN / Atlas cryogenics), Jose Pascual (Saclay
+   / Atlas LARG), Vinnie Polychronakos (BNL / Moun CSC), Robert Richter
+   (Munchen / Atlas Muons MDT), Giorgio Stefanini (CERN / CMS), Riccardo
+   Vari (INFN Roma / Atlas Muons RPC). I. INTRODUCTION: LOW DOSE RATE
+   EFFECTS ON BIPOLAR TRANSISTORS I.1. Facts: P. Jarron reported the main
+   results of a study of low dose rate effects on bipolar transistors made
+   by Allan Johnston (Jet Propulsion Laboratory). The degradation induced
+   on bipolar transistors by Total Ionising Dose (TID) increases when the
+   dose rate decreases. This phenomenon called Low Dose Rate Effect (LDRE)
+   becomes significant with a dose rate of about 50 rad/s; it increases
+   continuously when the dose rate decreases down to 0.001 rad/s or less.
+   LDRE occurs even for very low TID (1 or 2 krads). LDRE depends on the
+   technology (structure and thickness of the oxide surrounding the
+   emitter), on the type of devices (LDRE are generally more severe on pnp
+   than on npn transistors), on the biasing conditions (worst case: biased
+   devices), on the design (lateral or vertical transistors). For the same
+   device, LDRE varies strongly between manufacturers (factor 10 or more).
+   No recovery is observed after irradiation on devices irradiated at low
+   dose rate. On elementary bipolar transistors, LDRE increases the
+   degradation of the gain induced by TID. On bipolar circuits, LDRE
+   increases the degradation of the gain of amplifiers, of the input bias
+   currents, of the input offset voltages, etc. I.2. Brief explanation of
+   the mechanisms: M. Dentan gave a brief explanation of the mechanisms
+   responsible for low dose rate effects on CMOS and bipolar transistors.
+   This explanation is summarised in appendix I. II. PROPOSED STRATEGY FOR
+   PRE-SELECTING COMPONENTS AND QUALIFYING BATCHES II.1. Radiations
+   constraints Three types of radiation constraints will affect ATLAS
+   electronics components: Particles producing ionisation in silicon
+   oxide: photons, protons, pions, ions, (...).The unit to represent these
+   particles is the total ionizing dose (TID) expressed in Gray. Particles
+   producing atomic displacements in silicon: hadrons. The unit to
+   represent these particles is the 1 MeV equivalent neutron fluence.
+   Particles producing Single Event Effects (including SEU = single event
+   upsets, SEL = single event latch-up, SEB = single event burn-out, SEGR
+   = single event gate rupture). These particles can be incident
+   particles, or particles resulting from interactions of incident
+   particles with the material of the electronics components. The unit
+   used to represent these particles is the linear energy transfer (LET).
+   The units used to represent the sensitivity of a given device to SEE
+   are the threshold LET (minimum LET required to produce a SEE) and the
+   saturated cross section (surface of the sensitive nodes). II.2.
+   Radiation hardness required at test level: Radiation levels have been
+   simulated by Mike Shupe (University of Arizona) for the various regions
+   of ATLAS where electronics systems will be located. Safety factors (SF)
+   must be applied on these simulated radiation level to estimate the
+   radiation hardness required at test level for the electronics
+   components of the various electronics systems: ¡ SF1 = 4 to 6
+   represents the inaccuracy of the simulation (description of the system,
+   ...); ¡ SF2 = 5 represents LDRE (when no experimental approach exists);
+   ¡ SF3 = 2 to 4 represents the radiation tolerance variation from lot to
+   lot and within lots. II.3. Existing test methods: Standard test methods
+   have been developed by the US DOD and by the ESA to estimate the
+   radiation hardness of electronics components. Table 1 summarises the
+   main effects of the radiation constraints on electronics components and
+   the test methods suitable to evaluate these effects. Particles Basic
+   effects Main units Sensitive Main Test method devices Effects
+   Displacement 1 MeV eq. Bipolar ¢ Beta MIL 883 - 1017.2 Hadrons damage
+   neutron / cm2 Diodes ¢ I(V) MIL 883 - 1017.2 fluence JFETs ¢ Vp MIL 883
+   - 1017.2 Oxide ionisation Dose (Gy) CMOS ¢ Vt, ESA spec. 22900 @ high
+   dose rate dose rate (Gy/s) I leakage MIL 883 - 1019.5 Photons, Bipolar
+   ¢ Beta, ESA spec. 22900 Electrons, I leakage MIL 883 - 1019.5 Charged
+   Oxide ionisation Dose (Gy) CMOS ¢ Vt, ESA spec. 22900 Hadrons. @ low
+   dose rate dose rate (Gy/s) I leakage MIL 883 - 1019.5 Bipolar ¢ Beta
+   JPL approach ? Protons, SEU Flux, LET Logic circuits Errors ESA spec.
+   25100 Pions, // Memories upsets ESA spec. 25100 Energetic SEL // CMOS
+   circuits short circuit ESA spec. 25100 Neutrons, SEGR // CMOS short
+   circuit ? Ions. SEB // CMOS, bipolar short circuit ? Table 1. £
+   Standard test methods derived from DOD or ESA test methods must be
+   defined and applied for the selection and the procurement of the
+   components required by each ATLAS sub-systems (see section III). II.4.
+   Procurement strategy: The participants to this RHA-WG meeting have
+   defined a components procurement strategy in four steps. They agree to
+   propose it to the ATLAS Executive Board, with the aim to use it as a
+   standard for ATLAS. Step one: listing of all the components types (part
+   number PN, manufacturer) required to build the various electronics
+   systems of ATLAS, with mention of the required quantities and the
+   required radiation hardness (see details in appendix II). Step two
+   (fig. 1) : pre-selection of the components types (same part number,
+   same manufacturer) which may withstand the required radiation hardness.
+   This pre-selection must be based on ATLAS standard test procedures (see
+   section III). It must be made by sampling. The population sample must
+   be large enough to enable statistical analysis (see standard test
+   procedures). Ideally, components must come from a known production
+   line. However, in most of the cases, the customer only knows the name
+   of the manufacturer, but he does not know if the components come from
+   one or several production plant from the manufacturer around the world,
+   or from another unknown manufacturer but with the stamp of the known
+   manufacturer on the top of the package. The safety factor SF3
+   representing the variation of the radiation tolerance from lot to lot
+   and within lots should cover these uncertainties. PN, manufacturer
+   sample test 0 reject PN 1 accept PN Figure 1. Step three (fig. 2) :
+   qualification of the lots of components to be mounted in ATLAS
+   electronics boards. As for the pre-selection step, the qualification of
+   lots of components must be based on ATLAS standard test procedures and
+   must be made by sampling with a population sample large enough to
+   enable statistical analysis. Ideally, lots of components must come from
+   a known production line and must have the same date and diffusion code.
+   When this is not clearly stated, a commercial lot of components having
+   the same part number and the same manufacturer name on their package
+   can randomly contain components issued from several diffusion lots
+   which could come from several production lines from several
+   manufacturers. As for the pre- selection step, these uncertainties on
+   the origin of the components must be covered by the safety factor SF3
+   representing the variation of the radiation tolerance from lot to lot
+   and within lots. PN, manufacturer, lot sample test 0 reject lot 1
+   accept lot Figure 2. Step four: Purchasing of the lots of components.
+   Ideally, step four must be made after step three. This requires good
+   relations with the vendor, which must agree to "freeze" lots and to
+   provide samples which the customer will test before deciding to
+   purchase or to reject the frozen lots. Most of the time, vendors cannot
+   "freeze" lots and step 4 must be made before step 3. This induces the
+   risk of purchasing bad commercial lots. To reduce this risk, if no
+   "test and purchase" agreement can be found with the vendor, the
+   population sample in step 2 must be significantly higher than the
+   minimum recommended in the standard test procedures. Result: these four
+   steps lead to lots of known good components, ie components which are
+   known to satisfy the required radiation hardness level. III. PROPOSED
+   STANDARD TEST METHODS FOR ATLAS The participants to this RHA-WG meeting
+   have examined in details three radiation test methods issued from DOD
+   and ESA. They agree to propose them with several minor adaptations to
+   the ATLAS executive board, with the aim to apply them as standard test
+   methods, associated with the components procurement strategy presented
+   in section II.4. The original DOD and ESA test methods are: ¤ DOD MIL
+   STD 883 test method 1017.2 (displacement damage test method); ¤ ESA SCC
+   basic specification no 22900 (total ionising dose test method); ¤ ESA
+   SCC basic specification no 25100 (SEU and latch-up test method). They
+   are available on the ATLAS Front-End Electronics web page
+   (http://www.cern.ch/Atlas/GROUPS/FRONTEND/radhard.htm) : ¤
+   http://www.cern.ch/Atlas/GROUPS/FRONTEND/WWW/milstd~1.pdf ¤
+   http://www.cern.ch/Atlas/GROUPS/FRONTEND/WWW/22900.pdf ¤
+   http://www.cern.ch/Atlas/GROUPS/FRONTEND/WWW/25100.pdf IV. RADIATION
+   CONSTRAINTS IN ATLAS DETECTOR AND CAVERN The ATLAS radiation
+   environment has been simulated first by Paula Sala and Alfredo Ferrari
+   (CERN), then by Mike Shupe (University of Arizona). Currently available
+   data: The list of the available data on the ATLAS radiation environment
+   is given in appendix III. These data include the TID required for total
+   ionising dose tests and the 1 MeV equivalent neutron fluence required
+   for displacement damage tests. However, they don't include the total
+   fluence of hadrons above 20 MeV required for SEE tests based on
+   protons, nor the precise particle energy spectrums (maps with energy
+   cuts) in the range 1 Mev  20 MeV required for SEE tests based on
+   neutrons. Problems of accuracy : Difference between two simulation
+   codes The simulations made by Mike Shupe give more optimistic results
+   (lower radiation levels) than those made by Paula Sala and Alfredo
+   Ferrari. These two families of simulations have been made with two
+   different codes. The difference between their results is large
+   sometimes: a factor 5 on the neutron fluence, and a factor 2 on the
+   total ionising dose. These differences show that simulated radiation
+   levels should in no way be used as exact values, and that they must be
+   used very cautiously. Possible errors Simulations made by Mike Shupe
+   show no photons in the range 1 keV  10 keV, whereas they show photons
+   below 1 keV and beyond 10 keV. This probably results from an error.
+   Obsolete results The data currently available result from simulation
+   taking into account the main materials constituting ATLAS. However,
+   when these simulations were performed, the final structure of some of
+   the sub-systems was not decided. The final choice made on these
+   sub-systems makes the simulation obsolete. New simulations could be
+   necessary to avoid over-estimation of the radiation constraint in these
+   sub-systems. This is particularly requested by the Tile Collaboration
+   (see details in appendix IV). New simulations required : New
+   simulations must be performed as soon as possible to provide ATLAS
+   sub-systems with the missing data required for SEE tests and to correct
+   the problems of accuracy mentioned above. Such simulations must be done
+   by a person or a team willing to do this work and to improve it,
+   according to ATLAS needs, during the next four years. Vinnie
+   Polychronakos (BNL) proposes to ask both Sue Willis (Northern Illinois
+   University) and Mike shupe to perform these new simulations. The new
+   simulated radiation maps immediately required are: Test Required map
+   Displacement damage - total fluence of 1 MeV equivalent neutrons, per
+   year Total Ionising Dose - total ionising dose (Gy) , per year Single
+   Event Effects - total fluence of hadrons above 20 MeV, per year tested
+   with protons Single Event Effects - fluence of neutron with energy
+   cuts, per year; tested with neutrons - fluence of electrons with energy
+   cuts, per year; - fluence of total charged particles with energy cuts,
+   per year; all these maps with the following energy cuts: ¥ < 1 keV (1
+   map); ¥ 1 keV  10 keV (1 map); ¥ 10 keV  100 keV (1 map); ¥ 100 keV  1
+   MeV (1 map); ¥ 1 MeV  20 MeV by steps of 1 or 2 MeV (11 to 20 maps); ¥
+   > 20 MeV (1 map). V. LIST OF THE COMPONENTS USED IN EACH ATLAS
+   SUB-SYSTEM A preliminary frame of the ATLAS electronics components data
+   base is given in appendix II. The final frame will be given in revision
+   2 of the ATLAS policy on radiation tolerant electronics. VI.
+   IRRADIATION FACILITIES A preliminary list of some irradiation
+   facilities is given in appendix V. A more complete list will be given
+   in revision 2 of the ATLAS policy on radiation tolerant electronics.
+   VII. RHA-WG MEMBERS The official representatives of all the ATLAS
+   sub-systems have been designated by the coordinators of the
+   sub-systems. The list of the members of the RHA-WG is given in appendix
+   VI. ______________________________ Appendix I Mechanisms responsible
+   for LDRE in CMOS and bipolar devices LDRE occur in every device using
+   silicon oxide, in particular MOS and bipolar transistors. I. MOS
+   transistors: Ionising particles (photons, ions) induce electron-hole
+   pairs in MOS gate oxide. Electrons have a high mobility and quickly
+   leave the oxide. Holes have a low mobility and diffuse slowly; most of
+   them are finally long-term trapped in the oxide near the edge of the
+   oxide. These trapped holes produce an electrical field which induces a
+   negative shift of the threshold voltage (Vt) of both NMOS and PMOS
+   transistors. However, before leaving the oxide, some of the electrons
+   are recombined with some of the holes. This recombination mechanism
+   reduces the total quantity of holes which will be trapped in the oxide,
+   and then reduces the negative Vt shift induced by the total absorbed
+   dose. The recombination rate depends on the dose rate. A high dose rate
+   induces a high instantaneous density of electron-hole pairs which
+   enhances the recombination rate. A low dose rate induces a low
+   instantaneous density of electron-hole pairs (electrons quickly leave
+   the oxide) which minimises the recombination rate. A second mechanism
+   occurs in addition to the hole generation and trapping described below.
+   Indeed, a fraction of the holes accumulated near the edge of the oxide
+   will finally leave the oxide. When they leave the oxide at the
+   interface between oxide and silicon, they produce defects in the
+   silicon near this interface. These defects called interface states
+   reduce the mobility of the carriers in the channel of MOS devices. They
+   also trap electrical charges, according to the electrical bias applied
+   on the gate. In PMOS devices, the gate is negatively biased and the
+   charges trapped in interface states are positive (like the holes
+   trapped in the gate oxide). These positive trapped charges produce an
+   electrical field which induces a negative Vt shift, which then
+   increases the negative Vt shift produced by the gate oxide trapped
+   holes. In NMOS devices, the gate is positively biased and the charges
+   trapped at the interface are negative (unlike the holes trapped in the
+   gate oxide). These negative trapped charges produce an electrical field
+   which induces a positive Vt shift, which then decreases the negative Vt
+   shift produced by the holes trapped in the gate oxide. The global Vt
+   shift of NMOS transistors depends on the ratio of the oxide charge
+   density over the interface charge density. The magnitude of the Vt
+   shifts induced by interface trapped charges depends on the density of
+   the interface states, which depends on the density of holes accumulated
+   in the gate oxide near the oxide-silicon interface, which is controlled
+   by the dose rate. In PMOS devices, the global Vt shift is always
+   negative; it increases when the dose rate decreases. In NMOS devices,
+   the sign and the magnitude of the global Vt shift depends on the ratio
+   of the oxide charge density over the interface charge density, which is
+   controlled by the TID and by the dose rate. Figure 3 illustrates the
+   evolution of the NMOS Vt shift with the TID, in case of high dose rate
+   and in case of low dose rate. low dose rate § Vt (NMOS) high dose rate
+   0 Dose 0 Figure 3: NMOS Vt shift versus dose, for low and high dose
+   rates. LDRE are important in the case of non rad-hard devices; they are
+   small in the case of devices produced with a rad-hard technology. II.
+   Bipolar transistors: As explained before, TID induces energy states in
+   the oxides and in the silicon near the silicon-oxide interface. The
+   density of oxide states and of interface states increases when the dose
+   rate decreases. Bipolar transistors involve oxide in their
+   architecture. The emitter of lateral or vertical bipolar transistors is
+   always surrounded by an oxide. Before irradiation, the density of
+   energy states at the interface between silicon and the oxide
+   surrounding the emitter is very low, and the recombination of minority
+   carriers (injected from the emitter into the base) on these interface
+   states is negligible. The collector current Ic is the flux of carriers
+   injected from the emitter into the base (these carriers diffuse through
+   the base and reach the collector). The base current Ib is the flux of
+   carriers injected from the base into the emitter. The gain of the
+   bipolar is: ¦ pre-rad = Ic/Ib. After irradiation, the density of energy
+   states at the interface between silicon and the oxide surrounding the
+   emitter is high, it induces a significant recombination of minority
+   carriers (injected from the emitter into the base) with majority
+   carriers (coming from the base). This recombination current constitutes
+   a parasitic base current (Ib') which adds to the regular base current
+   Ib. The total base current (Ib+Ib') becomes significantly greater than
+   the regular base current Ib. The gain of the bipolar transistor
+   becomes: ¦ post-rad = Ic/( Ib+Ib') At high collector current, the
+   interface states are saturated by the carriers issued from the emitter
+   (which recombines with the majority carriers issued from the base). The
+   parasitic base current reach a saturation value Ib'sat which becomes
+   more and more negligible (by comparison with Ib) when Ic (and Ib)
+   increases. Consequently, at high collector current, the
+   post-irradiation gain becomes close to the pre-irradiation gain.
+   Inversely, at low collector current, there is no saturation of the
+   interface states and thus the post-irradiation gain is strongly
+   degraded by the parasitic recombination current Ib'. TID induces
+   interface state density which produces the gain decrease. As explained
+   in the case of CMOS devices, the interface state density induced by TID
+   is higher at low dose rate than at high dose rate. Consequently, the
+   degradation of the gain induced by TID is higher at low dose rate than
+   at high dose rate. Figure 4 illustrates the evolution of the gain with
+   the TID, in case of high dose rate and in case of low dose rate. ¨ 100
+   pre-rad 75 50 high dose rate 25 low dose rate 0 Ic (A) -7 -6 -5 -4 -3
+   10 10 10 10 10 Figure 4: (Ic) before irradiation and after irradiation
+   at low and high dose rate. ¨ Appendix II Frame of the ATLAS electronics
+   components data base (draft) For each type of component, the following
+   data are requested (when available): General: © Part number; © Serial
+   number; © Manufacturer: - Name; - Address. © Technology: - Type (CMOS,
+   bipolar, BiCMOS, ...); - Minimum geometry available; - Maximum number
+   of interconnection layers available - Date of first commercial
+   availability of the technology; - Date of end of life of the technology
+   (if known). © Packaging: - Type; - Number of pin; - Material. Radiation
+   hardness: © Identification of the tested samples: - Production plant
+   from where the tested samples come; - Date of manufacturing of the
+   tested samples (date code); - Reference of the diffusion batch from
+   which the tested samples come; © Hardness to Total Ionising Dose: -
+   Test method, radiation source, dose and dose rate used for the tests; -
+   Total Ionising Dose producing the failure; - Failure mechanism(s). ©
+   Hardness to displacement damages: - Test method, radiation source,
+   fluence and flux used for the tests; - Total 1 MeV eq. neutron fluence
+   producing failure; - Failure mechanism(s). © Hardness to Single Event
+   Effects: - Test method, radiation source, fluence and flux used for the
+   tests; - For each type of SEE observed (SEU, SEL, SEB, SEGR): value of
+   the LET threshold and of the saturation cross section. Foreseen
+   application: © For each ATLAS sub-system: - Total number of parts
+   required; - Radiation hardness required; - Contact person (address,
+   phone, Email). Appendix III List of the available data on ATLAS
+   radiation environment (December 1999) Data available in the ATLAS
+   Policy on Radiation Tolerant Electronics version 1: Total neutron
+   fluence in the best and worst ATLAS locations; 1 MeV equivalent neutron
+   fluence in the best and worst ATLAS locations; 1 MeV equivalent neutron
+   fluence map; Total ionising dose in the best and worst ATLAS locations;
+   Total ionising dose map. Maps available in the web site
+   http://isnwww.in2p3.fr/atlas/andrieux/mshupe.html Total neutron flux; >
+   100 keV neutron flux; Total charged particles; Total deposited energy;
+   Total ionisation dose; Photon above 30 keV; Photon above 300 keV; Total
+   electron flux; Total muon flux; Star density. Appendix IV Material from
+   the Tile Calorimeter which must be taken into account in new simulation
+   of the radiation environment. Figure 5 : radiation levels must be
+   accurately calculated in the regions were the Tile Cal electronics will
+   be located, ie on the top and on the bottom of the 70 mm thick
+   aluminium drawers, inside the 175 mm square of the steel girders.
+   Figure 6 : the fingers (horizontally hachured region between the barrel
+   and the extended barrel) will be full of cables and various electronics
+   racks. The polyethylene blocks will contribute to reduce the neutron
+   flux coming from the fingers into the drawers. Figure 5 Figure 6
+   Appendix V Some irradiation facilities (draft) Gamma irradiations:
+   DELTA (DEIN) : Contact person: Jean-Pierre Le Gac, Tel. +33 (0)1 69 08
+   67 45 Source : Co60 (340 mCi) Volume: 100 dm3 Dose rates : 0.015 to 1.5
+   Gy/h SIGMA (DEIN) : Contact person: Jean-Pierre Le Gac, Tel. +33 (0)1
+   69 08 67 45 Source : Co60 (100 Ci) Volume : 40 dm3 Dose rates : 23 to
+   260 Gy/h IRMA (IPSN) : Contact person: Jean-Pierre Le Gac, Tel. +33
+   (0)1 69 08 67 45 Source : Co60 (9510 Ci) Volume : 24 m3 Dose rates : 25
+   to 8000 Gy/h PAGURE (Cis Bio Industrie) : Contact person: Technical:
+   Alexandre Battung, Tel. +33 (0)1 69 85 71 17 Marketing: M. Duval, Tel.
+   +33 (0)1 69 85 71 80 Source : Co60 Volume : room = 5 m length, 5m
+   width, 3 m high Dose rates : 20 kGy/h (inner region); 2 kGy/h (10 cm),
+   1 Gy/h (2.5 m). GALAXIE (Cis-Bio Industrie): Contact person: Technical:
+   Alexandre Battung, Tel. +33 (0)1 69 85 71 17 Marketing: M. Duval, Tel.
+   +33 (0)1 69 85 71 80 Source : Co60 Volume : 40 cm diameter, 50 cm high.
+   Dose rates : 2 kGy/h (mini), 5 Gy/h (maxi). Neutron irradiations:
+   PROSPERO (DAM): Location: Valduc (France) Contact person: P. Zyromski,
+   Tel. +33 (0)3 80 23 43 21 Source : Reactor Volume: room = 10 m length,
+   8 m width, 6.5 m high Mean energy: 0.75 MeV Maximum flux: 0.8 E14
+   n.cm2/hour (1 MeV equivalent neutrons) Very low gamma residual dose;
+   accurate dosimetry. See also M.L. Andrieux's web site:
+   http://isnwww.in2p3.fr/atlas/andrieux/radfac.html#radfac Appendix VI
+   RHA-WG members Collaboration Surname First Name Institute Phone Email
+   Pixel ATLAS Sicho Petr Prague +420 266 05 21 43 Petr.Sicho@cern.ch
+   Silicon Strip Mandic Igor Lubljana Igor.Mandic@ijs.si Silicon Strip
+   Anghinolfi Francis CERN +41 22 76 90 84 Francis.Anghinolfi@cern.ch
+   Silicon Strip Kaplon Jan CERN +41 22 767 81 21 Jan.Kaplon@cern.ch TRT +
+   ATLAS TC Farthouat Philippe CERN +41 22 767 62 21
+   Philippe.Farthouat@cern.ch Larg calorimeter Delataille Christophe LAL
+   Orsay +33 01 64 46 89 39 Taille@lal.in2p3.fr Larg calorimeter Borgeaud
+   Pierre CEA Saclay +33 01 69 08 61 65 borgeaud@hep.saclay.cea.fr Larg
+   calorimeter Andrieux Marie-Laure ISN Grenoble +33 04 76 28 41 28
+   andrieux@isn.in2p3.fr Tile calorimeter Grenier Philippe Clermont Fd +33
+   04 73 40 77 93 grenier@clrhp04.in2p3.fr Muon / CSC O'Connor Paul BNL
+   poc@marlin.inst.bnl.gov Muon / MDT Richter Robert MPI Munchen +49 89 32
+   354 358 Robert.Richter@cern.ch Muon / TGC Sasaki Osamu KEK +81 298 64
+   54 36 sosamu@post.kek.jp Muon / RPC Vari Riccardo INFN Roma
+   Riccardo.vari@cern.ch Magnet Control Tyrvainen Harri
+   Harri.Tyrvainen@cern.ch DCS Hallgren Bjorn CERN +41 22 767 34 44
+   Bjorn.Inge.Hallgren@cern.ch Crane Inigo-Golfin Joaquin
+   Joaquin.Inigo-Golfin@cern.ch Cryogenics Kubischta Werner CERN +41 22
+   767 57 67 Werner.Kubischta@cern.ch Radiation constraint Shupe Mike Uni
+   Arizona +1 520 621 26 79 Shupe@uazhep.physics.arizona.edu ATLAS TC
+   Dentan Martin CERN +41 22 767 59 34 Martin.Dentan@cern.ch

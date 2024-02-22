@@ -1,0 +1,823 @@
+http://mgs-mager.gsfc.nasa.gov/data_available.html
+
+   Mars Global Surveyor MAG/ER
+
+                        MGS MAG/ER Data Availability
+
+Overview
+
+   The Mars Global Surveyor Magnetometer/Electron reflectometer
+   investigation was implemented without the usual "magnetometer boom"
+   often used to separate the sensitive magnetic sensor and spacecraft.
+   This separation is important, as it allows for attenuation (as 1/r**3)
+   of spacecraft-generated magnetic fields and helps achieve the most
+   accurate measurement of the ambient magnetic field. To save valuable
+   spacecraft resources (e.g., mass), the fluxgate magnetometer sensors
+   were mounted at the very ends of the two solar panels (see
+   illustration). These solar panels were specially engineered (Acuña, M.
+   H., et al, JGR, in press, 2001) to minimize any stray magnetic fields.
+   To fully calibrate the magnetic field observations, we conducted
+   in-flight calibration maneuvers to characterize the magnetic field
+   produced by the spacecraft. We then used these data to develop a model
+   of the spacecraft magnetic field so that this contribution could be
+   removed from the data.
+
+   The figures below show some examples and illustrate how well the
+   spacecraft field is modeled. This work was completed within six months
+   of the February 2000 receipt of calibration data, and fully calibrated
+   magnetometer data began to flow into the PDS in August 2000 (please see
+   schedule).
+
+   Fully calibrated MGS MAG/ER data are available at the PDS.
+
+   The following diagram shows the different configurations of the solar
+   arrays and High Gain Antenna (HGA) during the different phases of the
+   mission. Please note that the location of the HGA was fixed during
+   cruise and aerobraking. However, the HGA is mobile during the mapping
+   phase of the mission.
+
+     composite of 4 line drawings showing the MGS spacecraft in cruise,
+        aerobraking, normal mapping, and during maneuvers orienations
+                               Courtesy of JPL
+
+   The plots provided are intended to give you some insight into the High
+   Gain Antenna (HGA) magnetic mapping and the model used to approximate
+   the field of the HGA in our data reduction. In this test, the solar
+   panels (upon which the magnetic sensors sit) are positioned and held
+   fixed, while the High Gain Antenna is articulated about one axis. This
+   was done while the spacecraft was in the shadow of Mars to avoid
+   confusion with effects related to the power subsystem. The difference
+   field (mag #1 - mag #2) reveals a magnetic signature due to the HGA
+   movement which we used to estimate the position and magnetic moment of
+   the assembly. The light blue line shows the modeled difference field;
+   you can judge how well the spacecraft model works by how well the
+   difference field is approximated by the light blue line.
+
+   The following plot shows a HGA articulation, the white line is the
+   DIFFERENCE between the vector fields measured by the two sensors in
+   spacecraft payload coordinates. Subtracting one from the other removes
+   (the much larger) variations in the ambient field and allows us to
+   isolate movements of the HGA. The blue line shows the corresponding
+   DIFFERENCE in the model field at each sensor location for comparison.
+
+                     comparison of model and actual data
+                          Larger version available
+                         Courtesy of Jack Connerney
+
+   NOTE that the model included a constant adjustment for each test that
+   is not reflected in the plots. What you are interested in is not the
+   constant offset of the data and the model, but how well the VARIATION
+   in the model difference compares with the VARIATION in the data
+   difference.
+
+   Why do we allow for a constant offset from one test (HGA articulation)
+   to the next? The tests must all be done when the spacecraft is in
+   darkness (shadowed by the planet) in order to avoid confusion with the
+   dynamic field associated with currents in the power subsystem. The time
+   it takes to complete an articulation of the HGA is a large fraction of
+   the eclipse period so we can only get one articulation per orbit. In
+   the time between test, the static spacecraft field may have changed a
+   bit, so we allow for this by allowing a constant (throughout any one
+   HGA articulation) offset from eclipse to eclipse.
+
+   The HGA model was derived from these data (differences in vector field
+   at each sensor) using a generalized inverse matrix method (Connerney,
+   1981). We found that a simple offset dipole model (where offset is with
+   reference to the HGA coordinate system) did as good a job in modeling
+   the field of the HGA as did a quadrupole or octupole expansion (about
+   the same origin) so this is the model we adopt for data reduction.
+
+   The following plot shows the variation in the model HGA field at each
+   sensor location for one of the HGA articulation tests conducted in
+   early 2000.
+
+   More information available on the MGS MAG calibration work.
+
+                     comparison of model and actual data
+                          Larger version available
+                         Courtesy of Jack Connerney
+     __________________________________________________________________
+
+                          Calibrated Data Timeline
+
+                                    Year
+
+                                    Month
+
+                                  Comments
+
+                                    2000
+
+                                   January
+
+                 MGS MAG calibration maneuvers (20th-22nd);
+          received CK and SPK kernels for MAG maneuvers time period
+
+                                    2000
+
+                                  February
+
+                     MGS HGA calibration maneuver (3rd);
+          received CK and SPK kernels for HGA maneuvers time period
+
+                                    2000
+
+                                    March
+
+         received reconstructed SPK kernels for mapping phase set 4
+       [Mapping Cycles 10-12; 1999-321 (17-November) through 2000-039
+                               (08-February)]
+
+                                    2000
+
+                                March - July
+
+           analysis of spacecraft field, modeling, and processing
+
+                                    2000
+
+                                   August
+
+     Cdroms containing data for Mapping Cycles 1-3 delivered to the PDS
+    [mapping phase set 1; 1999-067 (08-March) through 1999-152 (01-June);
+
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                                PDS_MAP1_CD1B
+
+                             1999-067 (08-March)
+
+                             1999-079 (20-March)
+
+                                PDS_MAP1_CD2B
+
+                             1999-080 (21-March)
+
+                             1999-096 (06-April)
+
+                                PDS_MAP2_CD1B
+
+                             1999-097 (07-April)
+
+                             1999-103 (13-April)
+
+                                PDS_MAP2_CD2B
+
+                             1999-104 (14-April)
+
+                              1999-124 (04-May)
+
+                                PDS_MAP3_CD1A
+
+                              1999-125 (05-May)
+
+                              1999-134 (14-May)
+
+                                PDS_MAP3_CD2A
+
+                              1999-135 (15-May)
+
+                              1999-143 (23-May)
+
+                                PDS_MAP3_CD3A
+
+                              1999-144 (24-May)
+
+                             1999-152 (01-June)
+
+                                    2000
+
+                                   October
+
+     Cdroms containing data for Mapping Cycles 4-6 delivered to the PDS
+   [mapping phase set 2; 1999-153 (02-June) through 1999-236 (24-August)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                                PDS_MAP4_CD1A
+
+                             1999-153 (02-June)
+
+                             1999-162 (11-June)
+
+                                PDS_MAP4_CD2A
+
+                             1999-163 (12-June)
+
+                             1999-171 (20-June)
+
+                                PDS_MAP4_CD3A
+
+                             1999-172 (21-June)
+
+                             1999-180 (29-June)
+
+                                PDS_MAP5_CD1A
+
+                             1999-181 (30-June)
+
+                             1999-189 (08-July)
+
+                                PDS_MAP5_CD2A
+
+                             1999-190 (09-July)
+
+                             1999-198 (17-July)
+
+                                PDS_MAP5_CD3A
+
+                             1999-199 (18-July)
+
+                             1999-208 (27-July)
+
+                                PDS_MAP6_CD1A
+
+                             1999-209 (28-July)
+
+                            1999-218 (06-August)
+
+                                PDS_MAP6_CD2A
+
+                            1999-219 (07-August)
+
+                            1999-227 (15-August)
+
+                                PDS_MAP6_CD3A
+
+                            1999-228 (16-August)
+
+                            1999-236 (24-August)
+
+                                    2000
+
+                                  November
+
+    Cdroms containing data for Science Phasing Orbit 1 (with calibration)
+                            delivered to the PDS
+           [spo1; 1998-086 (27-March) through 1998-119 (29-April)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                                PDS_SPO1_CD1D
+
+                             1998-086 (27-March)
+
+                             1998-119 (29-April)
+
+                                    2000
+
+                                  December
+
+     Cdroms containing data for Mapping Cycles 7-9 delivered to the PDS
+         [mapping phase set 3; 1999-237 (25-August) through 1999-320
+                               (16-November)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                                PDS_MAP7_CD1A
+
+                            1999-237 (25-August)
+
+                           1999-245 (02-September)
+
+                                PDS_MAP7_CD2A
+
+                           1999-246 (03-September)
+
+                           1999-254 (11-September)
+
+                                PDS_MAP7_CD3A
+
+                           1999-255 (12-September)
+
+                           1999-264 (21-September)
+
+                                PDS_MAP8_CD1A
+
+                           1999-265 (22-September)
+
+                           1999-273 (30-September)
+
+                                PDS_MAP8_CD2A
+
+                            1999-274 (01-October)
+
+                            1999-283 (10-October)
+
+                                PDS_MAP8_CD3A
+
+                            1999-284 (11-October)
+
+                            1999-292 (19-October)
+
+                                PDS_MAP9_CD1A
+
+                            1999-293 (20-October)
+
+                            1999-302 (29-October)
+
+                                PDS_MAP9_CD2A
+
+                            1999-303 (30-October)
+
+                           1999-312 (08-November)
+
+                                PDS_MAP9_CD3A
+
+                           1999-313 (09-November)
+
+                           1999-320 (16-November)
+
+                                    2001
+
+                                   January
+
+    Cdroms containing data for Science Phasing Orbit 2 (with calibration)
+                            delivered to the PDS
+          [spo2; 1998-147 (27-May) through 1998-265 (22-September)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                                PDS_SPO2_CD1B
+
+                              1998-147 (27-May)
+
+                             1998-174 (23-June)
+
+                                PDS_SPO2_CD2B
+
+                             1998-175 (24-June)
+
+                             1998-199 (18-July)
+
+                                PDS_SPO2_CD3B
+
+                             1998-200 (19-July)
+
+                            1998-223 (11-August)
+
+                                PDS_SPO2_CD4B
+
+                            1998-224 (12-August)
+
+                           1998-247 (04-September)
+
+                                PDS_SPO2_CD5B
+
+                           1998-248 (05-September)
+
+                           1998-265 (22-September)
+
+                           PDS_SPO2_CD6B (Phobos)
+
+                              1998-147 (27-May)
+
+                             1998-179 (28-June)
+
+                           PDS_SPO2_CD7B (Phobos)
+
+                             1998-180 (29-June)
+
+                             1998-208 (27-July)
+
+                           PDS_SPO2_CD8B (Phobos)
+
+                             1998-209 (28-July)
+
+                            1998-237 (25-August)
+
+                           PDS_SPO2_CD9B (Phobos)
+
+                            1998-238 (26-August)
+
+                           1998-265 (22-September)
+
+                                    2001
+
+                                  February
+
+    Cdroms containing data for Mapping Cycles 10-12 delivered to the PDS
+        [mapping phase set 4; 1999-321 (17-November) through 2000-039
+                               (08-February)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                               PDS_MAP10_CD1A
+
+                           1999-321 (17-November)
+
+                           1999-336 (02-December)
+
+                               PDS_MAP10_CD2A
+
+                           1999-337 (03-December)
+
+                           1999-348 (14-December)
+
+                               PDS_MAP11_CD1A
+
+                           1999-349 (15-December)
+
+                           1999-365 (31-December)
+
+                               PDS_MAP11_CD2A
+
+                            2000-001 (01-January)
+
+                            2000-011 (11-January)
+
+                               PDS_MAP12_CD1A
+
+                            2000-012 (12-January)
+
+                            2000-030 (30-January)
+
+                               PDS_MAP12_CD2A
+
+                            2000-031 (31-January)
+
+                           2000-039 (08-February)
+
+                                    2001
+
+                                    March
+
+        Cdroms containing data for Aerobraking 1 delivered to the PDS
+         [ab1; 1997-255 (12-September) through 1998-085 (26-March)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                                PDS_AB1_CD1A
+
+                           1997-255 (12-September)
+
+                            1997-303 (30-October)
+
+                                PDS_AB1_CD2A
+
+                            1997-304 (31-October)
+
+                           1997-343 (09-December)
+
+                                PDS_AB1_CD3A
+
+                           1997-344 (10-December)
+
+                            1998-011 (11-January)
+
+                                PDS_AB1_CD4A
+
+                            1998-012 (12-January)
+
+                             1998-085 (26-March)
+
+                                    2001
+
+                                    April
+
+    Cdroms containing data for Mapping Cycles 13-15 delivered to the PDS
+   [mapping phase set 5; 2000-040 (09-February) through 2000-123 (02-May)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                               PDS_MAP13_CD1A
+
+                           2000-040 (09-February)
+
+                             2000-067 (07-March)
+
+                               PDS_MAP14_CD1A
+
+                             2000-068 (08-March)
+
+                             2000-095 (04-April)
+
+                               PDS_MAP15_CD1A
+
+                             2000-096 (05-April)
+
+                              2000-123 (02-May)
+
+                                    2001
+
+                                     May
+
+        Cdroms containing data for Aerobraking 2 delivered to the PDS
+         [ab2; 1998-266 (23-September) through 1999-067 (08-March)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                                PDS_AB2_CD1B
+
+                           1998-266 (23-September)
+
+                           1999-039 (08-February)
+
+                                PDS_AB2_CD2B
+
+                           1999-040 (09-February)
+
+                           1999-050 (19-February)
+
+                                PDS_AB2_CD3B
+
+                           1999-051 (20-February)
+
+                             1999-067 (08-March)
+
+                                    2001
+
+                                    June
+
+    Cdroms containing data for Mapping Cycles 16-18 delivered to the PDS
+     [mapping phase set 6; 2000-124 (03-May) through 2000-207 (25-July)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                               PDS_MAP16_CD1A
+
+                              2000-124 (03-May)
+
+                              2000-151 (30-May)
+
+                               PDS_MAP17_CD1A
+
+                              2000-152 (31-May)
+
+                             2000-179 (27-June)
+
+                               PDS_MAP18_CD1A
+
+                             2000-180 (28-June)
+
+                             2000-207 (25-July)
+
+                                    2001
+
+                                    July
+
+    Cdroms containing data for Mapping Cycles 19-21 delivered to the PDS
+   [mapping phase set 7; 2000-208 (26-July) through 2000-291 (17-October)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                               PDS_MAP19_CD1A
+
+                             2000-208 (26-July)
+
+                            2000-235 (22-August)
+
+                               PDS_MAP20_CD1A
+
+                            2000-236 (23-August)
+
+                           2000-263 (19-September)
+
+                               PDS_MAP21_CD1A
+
+                           2000-264 (20-September)
+
+                            2000-291 (17-October)
+
+                                    2001
+
+                                   August
+
+    Cdroms containing data for Mapping Cycles 22-25 delivered to the PDS
+        [mapping phase set 8; 2000-292 (18-October) through 2001-031
+    (31-January), and start of extended phase set 1 (remainder of Mapping
+      Cycle 25; 2001-032 (01-February) through 2001-037 (06-February)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                               PDS_MAP22_CD1A
+
+                            2000-292 (18-October)
+
+                           2000-319 (14-November)
+
+                               PDS_MAP23_CD1A
+
+                           2000-320 (15-November)
+
+                           2000-333 (28-November)
+
+                               PDS_MAP23_CD2A
+
+                           2000-334 (29-November)
+
+                           2000-347 (12-December)
+
+                               PDS_MAP24_CD1A
+
+                           2000-348 (13-December)
+
+                           2000-361 (26-December)
+
+                               PDS_MAP24_CD2A
+
+                           2000-362 (27-December)
+
+                            2001-009 (09-January)
+
+                               PDS_MAP25_CD1A
+
+                            2001-010 (10-January)
+
+                            2001-023 (23-January)
+
+                               PDS_MAP25_CD2A
+
+                            2001-024 (24-January)
+
+                           2001-037 (06-February)
+
+                                    2001
+
+                                   October
+
+    Cdroms containing data for Mapping Cycles 26-27 delivered to the PDS
+   [extended mission phase set 1; 2001-038 (07-February) through 2001-093
+                                 (03-April)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                               PDS_MAP26_CD1A
+
+                           2001-038 (07-February)
+
+                           2001-051 (20-February)
+
+                               PDS_MAP26_CD2A
+
+                           2001-052 (21-February)
+
+                           2001-058 (27-February)
+
+                               PDS_MAP26_CD3A
+
+                           2001-059 (28-February)
+
+                             2001-065 (06-March)
+
+                               PDS_MAP27_CD1A
+
+                             2001-066 (07-March)
+
+                             2001-075 (16-March)
+
+                               PDS_MAP27_CD2A
+
+                             2001-076 (17-March)
+
+                             2001-084 (25-March)
+
+                               PDS_MAP27_CD3A
+
+                             2001-085 (26-March)
+
+                             2001-093 (03-April)
+
+                                    2001
+
+                                   October
+   Global vector magnetic field maps at mapping orbit altitude (400 km
+   +/-38 km) available as digital data files and images, at 1 deg by 1 deg
+   resolution (Connerney et al., Geophys. Res. Lett., 28, 4015-4018,
+   2001).
+
+                                    2001
+
+                                  December
+
+    Cdroms containing data for Mapping Cycles 28-30 delivered to the PDS
+     [extended mission phase set 2; 2001-094 (04-April) through 2001-177
+                                 (26-June)]
+
+                                   CD Name
+
+                                 Start Date
+
+                                  End Date
+
+                               PDS_MAP28_CD1A
+
+                             2001-094 (04-April)
+
+                             2001-103 (13-April)
+
+                               PDS_MAP28_CD2A
+
+                             2001-104 (14-April)
+
+                             2001-112 (22-April)
+
+                               PDS_MAP28_CD3A
+
+                             2001-113 (23-April)
+
+                              2001-121 (01-May)
+
+                               PDS_MAP29_CD1A
+
+                              2001-122 (02-May)
+
+                              2001-139 (19-May)
+
+                               PDS_MAP29_CD2A
+
+                              2001-140 (20-May)
+
+                              2001-149 (29-May)
+
+                               PDS_MAP30_CD1A
+
+                              2001-150 (30-May)
+
+                             2001-158 (07-June)
+
+                               PDS_MAP30_CD2A
+
+                             2001-159 (08-June)
+
+                             2001-167 (16-June)
+
+                               PDS_MAP30_CD3A
+
+                             2001-168 (17-June)
+
+                             2001-177 (26-June)
+     __________________________________________________________________
+
+   The data is available from the PDS. Please let Jack Connerney
+   (John.E.Connerney.1@gsfc.nasa.gov) know if you have problems obtaining
+   the data from the PDS.
+     __________________________________________________________________
+
+   Sample plots of the MGS MAG data are available.
+     __________________________________________________________________
+
+   MGS MAG/ER What's New Overview Instrument Publications MAG/ER Team
+   Kids/Teachers Samuel Ogle
+     __________________________________________________________________
+
+   Last Modified: 11 January 2002
+
+   Curator: Patricia Lawton, Emergent
+   Email: Patricia.Lawton@gsfc.nasa.gov
+
+   Responsible NASA Representative: Mario Acuña
+   Email: Mario.H.Acuna.1@gsfc.nasa.gov

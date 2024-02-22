@@ -1,0 +1,33 @@
+http://loki-www.lanl.gov/performance.html
+
+                                  Loki Logo
+
+                             Loki - Performance
+
+   For a comparison with other parallel supercomputers, the following is a
+   table of the performance of our parallel treecode running a 10 million
+   particle benchmark. All machines are running the same code, with the
+   exception that the Intel i860 machines and the CM-5 have the inner loop
+   coded in assembly language. The code for Loki is entirely in C, and was
+   compiled with gcc 2.7.2. Message passing was accomplished with our own
+   UDP socket library.
+
+   CAPTION: Treecode performance
+
+   Site Machine Procs Time Gflops Mflops/proc
+
+                                        LANL TMC CM-5 512 140.7 14.06 27.5
+                                Caltech Intel Paragon 512 144.4 13.70 26.8
+                                        NRL TMC CM-5E 256 171.0 11.57 45.2
+                                  Caltech Intel Delta 512 199.3 10.02 19.6
+                                          NAS IBM SP-2 128 281.9 9.52 74.4
+                                          JPL Cray T3D 256 338.0 7.94 31.0
+                                    LANL TMC CM-5 no vu 256 754.6 2.62 5.1
+                                      SC '96 Loki+Hyglac 32 1218 2.19 68.4
+
+   Time is wall clock time in seconds, and includes all message passing
+   and load imbalance overheads.
+
+   If you are interested in a further description of the algorithm, please
+   see the papers describing the treecode and our NASA HPCC project page.
+   [arrow_b.gif] Back to Loki Home Page

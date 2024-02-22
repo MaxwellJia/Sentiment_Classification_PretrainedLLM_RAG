@@ -1,0 +1,436 @@
+http://maphost.dfg.ca.gov/software_support.html
+
+   You can find many other user and ESRI written scripts and utilities at
+   ESRI's ArcScripts webpage at http//gis.esri.com/arcscripts/scripts.cfm
+     __________________________________________________________________
+
+   AV Garmin (version 2.1.74)
+
+   AV Garmin is an ArcViewextension.  Used with a Garmin GPS an either
+   Waypoint+ or PCX download software or GarTrip, AV Garmin allows you to
+   easily create shapefiles in ArcView. Point, Line or Polygon features
+   can be created from either waypoint or track data.  Shapefiles can be
+   projected into any ArcView supported format.  Read me file for this
+   extension.
+
+   Also, Cherie Klein of the USDAFS (U.S. Forest Service, Sequoia) has
+   written a PDF document detailing the polygon creation.   Also, the help
+   file has been updated and includes a "Quick Start" section.  If you
+   have the current version, but the old help file then just download the
+   new help file below.  This file goes into your $AVHOME/help
+   directory.   Current Garmin users and folks interested in purchasing
+   new Garmins may be interested to see the definitions of the IPX
+   waterproofness ratings.  Also Garmin FAQ (frequently asked questions)
+   can be seen at: http://www.garmin.com/support/faqs/ .   There is a DFG,
+   Garmin GPS recommendations document to assist DFG folks who want to
+   purchase new units.   Global Positioning System Status: USCG website
+
+   Results of Garmin GPS ongoing testing: accuracy, averaging, etc...
+   12 Map & XL    GPS Map 76    eTrex Summit    eTrex Vista
+
+   Author: Isaac Oshima (ioshima@dfg.ca.gov ) avgarmin.exe (676 kb
+   self-extracting & installing) (version 2.1.74).
+   Last updated: September 13, 2001. 200109.13  -  Added code to detect
+   the most common error: the use non-geographic decimal degrees as input
+   into AV Garmin.  Also, added code to show the AV Garmin version number
+   on the title bar of the dialog.
+   200107.09    Updated the help file.  Includes a "Quick Start"
+       section.
+       200106.21    Added support for "saved" tracklogs
+       200106.19    Fixed minor bug in Waypoint+ track reading code.
+       Fixed major bug where MapSource is configured to output meters
+       instead of feet.
+       200105.09    This version has PCX option dropped but has a new
+       option for newer Garmin models and the elevation data (eTrex
+       Summit, Vista and GPSMap 76)   The attribute table for their
+       shapefiles will have an "elevation" and a "depth" field when you
+       create point shapefiles.  The attribute table will have an
+       "elevation" and a "measure" field when you create a line/polyline
+       shapefile.  Beta version is currently (version 2.1.60)
+       200103.13    Added Florida Albers to "AV Projections" list.
+       200101.01    Added code to the extension loading process to account
+       for other languages other than English.  AV Garmin is NOT
+       internationalized.  I have just changed code that was preventing AV
+       Garmin from loading properly if your ArcView was for example in
+       French.  The extension and dialogs are still presented in
+       English.
+       200101.31    Added code to help diagnose installation issues and
+       did a minor update to the help file.
+       200010.24    Improved handling of MapSource data where date / time
+       strings are variable.
+       200009.28    Saves your default projection selection and does not
+       revert back to the DFG Teale Albers projection.
+       200007.18    Ability to use the new Garmin MapSource (exported
+       text) as input.
+       200005.08    Fixed bug which affected users of PCX version 2.09.
+       199911.10    Added Waypoint+ optional format support.  Use of
+       user-created Waypoint+ format files with correct date and time in
+       date/time field so that user can utilize the description field.
+       199905.19    Previous installer defaulted to path of 'c:\esri\....'
+       and did not allow the user to alter this path.
+     __________________________________________________________________
+
+   AV SADI (beta version 1.0)
+
+   Author: Isaac Oshima ioshima@dfg.ca.gov
+
+   ArcView SADI extension for connecting to SADI datasources.  You need to
+   have a SADI database as well as a SADI datasource (ODBC) and an entry
+   in your dfgavx.ini file.   This is practical only if you have a current
+   SADI database such as FishTrac, CalTrac, etc...
+
+   avsadi.exe (251 kb self-extracting & installing)
+   Last updated: April 16, 1999.
+     __________________________________________________________________
+
+   AV Xlinx (version 1.0.88)
+
+   ArcView Xlinx extension manages document links.  Basically, it lets you
+   associate any number of documents to features of a theme.   This is
+   like the current MS Access database xlinx function in applications such
+   as FishTrac, CalTrac, etc...  The current version does not interface
+   with the MS Access xlinx MDB structure, but this is planned.   Author:
+   Isaac Oshima ( ioshima@dfg.ca.gov ) This is a beta version so has no
+   help file.  Please, read / download / print the avxlinx.pdf file for
+   brief instructions on using AV Xlinx.   200110.02    -    added
+   functionality that can be called from the AV Sticke extension and
+   perhaps other extensions as well.   200106.21    -    fixed bug that
+   caused numeric field links to fail if the fields were not of type
+   integer.  Now handles any field type correctly.   200104.24 - added
+   code to correctly add the xlinx dbf files to $AVHOME\etc directory by
+   default and correctly read the indexhome value in the dfgavx.ini file
+   if xlinx dbf files are placed elsewhere; instead of the root
+   directory.   avxlinx.exe (250 kb self-extracting & installing)
+   Last updated: October 2, 2001.
+     __________________________________________________________________
+
+   AV Image Catalog (Version 2.1.6)
+
+   DFG Image Catalog has been renamed to AV Image Catalog.  AV Image
+   Catalog is an ArcView extension.  This extension helps you to create
+   and maintain "image catalogs" for use within ArcView.  Image catalogs
+   allow you to take any number of like images (scanned topo's, SPOT,
+   etc...) and logically group them for display in ArcView as a single
+   theme. Author: Isaac Oshima ( ioshima@dfg.ca.gov ) New AV Image Cat:
+   avicat.exe (427 kb self extracting & installing)
+   Last updated: October 16, 2001.
+   200110.16  Added code so that if your icatinx.dbf file is located on a
+       shared drive that is not editable, the extension will still let you
+       "read" the contents, but will not be able to edit.  The previous
+       version would error if it could not have "write" access and would
+       not even show the image catalog correctly.
+       200101.31  Changed the name of the extension from "DFG Image
+       Catalog" to "AV Image Catalog".  Technical updates not listed below
+       are the handling of MrSID images, updated help file, some minor
+       fixes.
+       200007.03  Fixed function for a single "Image Group" getting image
+       files from multiple directories to create a single image catalog.
+       Fixed function for deleting image catalog definitions and "Image
+       Group" constituents.
+       200005.08  Re-investigated the extension prompting for
+       "N:\icat\icatinx.dbf".  This should not occur anymore.
+       200003.03  Bug fix.  The "Apply" button was not enabled properly so
+       did not allow users to enter new records / image catalog
+       definitions.
+       199912.23  The annoying prompt to find the "icatinx.dbf" file every
+       time should be gone.  The user interface should be easier,
+       especially concerning new image catalog definitions.  Lastly, core
+       functions of Will's DRG Tools have been embedded.
+       199911.08  Bug fix for default image extension ("tif").
+       199909.23  The image catalog field, "IMAGE" length has been
+       increased from 128 characters to 255.
+       199905.10  Bug Fix has been incorporated into the latest
+       self-extracting file.  (uninstall the old version using the
+       'add/remove programs' applet in the control panel.)
+     __________________________________________________________________
+
+   AV Geotools
+
+   Author: Isaac Oshima ioshima@dfg.ca.gov (Note: new version in progress,
+   please check back or call / email author)
+   Version 2.1.36: avgeo.exe (343 kb zip, self extracting & installing)
+   Last updated: September 7, 2001.
+
+   New version does not accept input of dBASE / table data for shapefile
+   creation yet.  Also, the helpfile is not updated to reflect current
+   changes.   Prompts for projection settings should be much easier to
+   understand now.   Also, in addition to being able to save user-selected
+   points to a Waypoint+ formatted file for upload to your Garmin, an
+   import format (PCX) that MapSource uses is available.
+     __________________________________________________________________
+
+   Waypoint+ (Version 1.8.00)
+
+   Shareware windows application to download / upload data to the Garmin
+   GPS's.  Use this application to download your waypoint and track data
+   prior to importing them to ArcView using the AV Garmin extension. If
+   you use Waypoint+, please visit Brent at his website and email a
+   notification with at least a 'thank you'.   Supported recievers include
+   the 38, 40, 45/45XL, 12/12XL, II/II+. Supported except for icons
+   include the III/III+, 90, 92, 120, 175, and eTrex. The eMap, Street
+   Pilot, 162, and 295 are NOT supported.   *Garmin Receivers tested thus
+   far include the Garmin 45 and 45XL, software versions 2.03, 2.32, 2.41,
+   2.43 and 3.04., a Garmin 12XL, and a Garmin 95XL. Note: The GPS-45XL
+   does not preserve the time stamp of a waypoint upon uploading to it.
+   The time stamp is preserved with the GPS-45. Trackpoint time stamp is
+   never preserved after uploading to the GPS.  Although support is stated
+   the current version may not work with the Garmin eMap or eTrex.
+   (Compatibility information courtesy of http://maps.oes.ca.gov/gistech/
+   ) Also, Cherie Klein of the USDAFS (U.S. Forest Service, Sequoia) has
+   written a PDF document detailing using Waypoint+ for use with AV
+   Garmin.     Author: Brent Hildebrand  bhildebrand@earthlink.net
+
+   Current Garmin users and folks interested in purchasing new Garmins may
+   be interested to see the definitions of the IPX waterproofness
+   ratings.     waypoint.zip (1,351 kb) version 1.8.00
+   Last updated: January 15, 2001. http://www.tapr.org/~kh2z/Waypoint/
+     __________________________________________________________________
+
+   Waypoint2Shape (Version 1.0.8)
+
+   Windows application that takes a Waypoint+ text file of GPS point
+   locations from Garmin GPS units and converts the information to a point
+   shapefile that can then be used in ArcExplorer or ArcView. The
+   application allows for adding fields to the shapefile so that the user
+   may enter additional attribute information about the points. Two
+   coordinate formats are provided, decimal degrees and California Teale
+   Albers (projection most commonly used by California State Agencies).
+   Operating system compatibility = Windows98SE, NT4.0, Windows2000. It
+   has not been tested on WindowsXP.
+
+   Last updated: January 11, 2002.
+     __________________________________________________________________
+
+   GarTrip (Version 204)
+
+   Shareware windows application to download / upload data to the Garmin
+   GPS's.  Use this application to download your waypoint and track data
+   prior to importing them to ArcView using the AV Garmin extension.  You
+   will need to save your waypoints and tracks to separate files in the
+   Waypoint+ format.   If you use GarTrip please visit Heinrich at his
+   website and email a notification with at least a 'thank you'.  This is
+   shareware and costs $30.00 to access all functions.   Transfers data
+   from/to the receiver using GRMN protocol.  Works with Garmin GPS 12,
+   12XL, 12CX, 48, II, II+, III, III+, III, Pilot, 40, 45, 38, 35, 75, 89,
+   90, Street Pilot, Emap and eTrex and most others.  Now supports GPS76,
+   GPSMap76, 152, 168 and 182.   http://www.gartrip.de Author: Heinrich
+   Pfeifer pfeifer@fh-offenburg.de A self-extracting installer:
+   g_204.zip (2,414 kb zip archive) Last updated: July 18, 2001.
+     __________________________________________________________________
+
+   CNDDB Extension
+
+   Author: Isaac Oshima (ioshima@dfg.ca.gov ) beta version: avcnddb.exe
+   (270 kb zip, self extracting & installing)
+   Last updated: January 19, 1999. * updated installation package
+   (December 7, 2000)
+     __________________________________________________________________
+
+   DRG-Tools (v3.5) and Image-Tools (v2.5)
+
+   Because these two ArcView 3.x extensions have similar functions, they
+   are offered here together in one download. Extension descriptions are
+   provided below.
+
+   Image-Tools (v2.5)
+
+   This new extension provides various image-related utilities, including
+   specific features for use with single-band images (such as topographic
+   map scans, DRG, DOQ, NOAA chart, and other pseudocolor/color-indexed
+   products) as well as multi-band images (such as true color airphotos).
+   The current Image-Tools extension provides these options: * Side by
+   side single-band image viewing (edgematching - making overlap
+   transparent).
+     * Isolate particular single-band image colors.
+     * Toggle single-band image colors to transparent.
+     * Display single-band image colors in grayscale.
+     * Restore default image colors.
+     * Display transparent single-band image colors as white.
+     * Save a colormap file for the active single-band image (including
+       transparent colors).
+     * Load a colormap file for single-band images (including transparent
+       colors).
+     * Make all images visible (or all single-band images or all
+       multi-band images).
+     * Activate (highlight) all images (or all single-band images or all
+       multi-band images).
+     * Build an image catalog from images in the view.
+     * Build an image catalog from images stored on disk.
+     * Export views to georeferenced JPEG images (with quality and DPI
+       settings).
+     * Convert active single-band images to grids (transfers image colors
+       to grid theme).
+
+   Once downloaded and unzipped, please read the file "imgtools.txt" for
+   further information. Check back for future updates.
+
+   DRG-Tools (v3.5)
+
+   This extension provides specific utilities for use with most digital
+   raster graphic (DRG) images. A DRG is a scanned image of a USGS
+   standard series topographic map.  The current DRG-Tools extension
+   provides these options:  * Side by side DRG image viewing (edgematching
+   - making the collar transparent).
+     * Isolate particular DRG image features, such as contours or
+       hydrography.
+     * Toggle DRG image colors to/from transparent.
+     * Display DRG image colors in grayscale.
+     * Restore default DRG image colors.
+     * Display transparent DRG colors as white.
+     * Save a colormap file for the active DRG image (including
+       transparent colors).
+     * Load a colormap file for DRG images (including transparent colors).
+     * Make all DRG images visible.
+     * Activate (highlight) all DRG images.
+     * Build an image catalog from DRG images in the view.
+     * Convert active DRG images to grids (transfers DRG colors to grid
+       theme).
+
+   An archive of DRG-related colormap (*.clr), ArcView grid theme legend
+   (*.avl), and ArcView palette files (*.avp) is also included with the
+   extension download. These files can be useful for applying or restoring
+   DRG image colors to your data within various ESRI software programs.
+   Once downloaded and unzipped, please read the file "drgtools.txt" for
+   further information. Check back for future updates.
+   Author: Will Patterson (mailto:wpatters@hq.dfg.ca.gov ) Formats:
+   img_drg_tools.exe (288 kb self-extracting and installing)
+   Last updated: April 19, 2001.
+     __________________________________________________________________
+
+   Odb.Extract.Script (Version 1.0)
+
+   The purpose of this script is to provide for developers and those
+   interested in programming in Avenue a utility for extracting scripts
+   from ArcView projects (apr) and extensions (avx).  Avenue code can be
+   extracted from .apr's or .avx's (Projects and Extensions).   This
+   script is meant to encourage the sharing of code and knowledge.
+   Please, do not extract and use code without due credit to the author(s)
+   and do not extract or utilize copyrighted code without the consent of
+   the author(s). Author: Isaac Oshima (ioshima@dfg.ca.gov ) Formats:
+   odbextract.zip (3 kb zip archive)
+   Last updated: July 12, 1999.
+     __________________________________________________________________
+
+   DFG R1 Utilities (Version 1.0)
+
+   This extension set contains two extensions: DFG R1 Utilities and TRS
+   Tools.
+
+   DFG-R1 Utilities
+
+   This utility is an ArcView 3.1 extension containing commonly used
+   tools. Note that if you do not have ArcView 3.1, contact the author for
+   a 3.0a version of this extension.
+   DFG-R1 UTILITIES allows the following:
+     * Change Projection Initiate
+     * Geoprocessing Wizard
+     * Calculate Acres
+     * Calculate Area/Perimeter
+     * Calculate XY Coordinates
+     * Add Recno to attribute table
+     * Delete multiple fields from attribute table
+     * Export sorted table
+     __________________________________________________________________
+
+   TRS Tools
+
+   This ArcView 3.0a/3.1 extension contains tools for Public Land Survey
+   (PLS) themes. This includes the ability to find a section based upon a
+   specified township, range, and section, as well as tools for quartering
+   sections and creating output point themes based upon the center point
+   of a selected section.   Author: Clint Kellar ( ckellar@dfg2.ca.gov )
+   Formats: dfgr1utl.exe (254 kb self-extracting & installing)
+   Last updated: DFG R1 Utilities (November 1998) and TRS Tools (August
+   1999).
+     __________________________________________________________________
+
+   Trimble
+
+   The purpose of this section is to provide easy access Trimble
+   information and setup files.   dfgcsd.zip    zipped dfg.csd file for
+   configuring DFG Albers in PathFinder Office software to enable Albers
+   shapefile export.   Last updated: June 5, 2000 Isaac Oshima
+   (ioshima@dfg.ca.gov)
+
+   Timber Harvest Plan Database and Interface Please, contact Doug Burch
+   for more information.   Last updated: September 7, 2001 Douglas Burch
+   (dburch@dfg.ca.gov)
+     __________________________________________________________________
+
+   AV Sticke (beta version 1.081)
+
+   The AV Sticke extension works with the freeware Palm Pilot application
+   called, StickeNotes.   StickeNotes was created by Jason Pascoe and Nick
+   Ryan Copyright © 1996-1999 and can be downloaded at:
+   http://www.cs.ukc.ac.uk/people/staff/nsr/mobicomp/Fieldwork/Software/in
+   dex.html The user manual can be found online at:
+   http://www.cs.ukc.ac.uk/people/staff/nsr/mobicomp/Fieldwork/Software/Pi
+   lot/OnlineManual/StickeV2UserManual.html
+
+   The AV Sticke extension reads the hotsynced StickeNotes data from your
+   Palm Pilot and creates corresponding points in an ArcView shapefile.
+   The current version now interfaces with the ArcView xlinx dbf structure
+   via the AV Xlinx extension.  You should make sure you have the at least
+   AV Xlinx installed version 1.0.56.     It currently does not use /
+   access the MS Access xlinx MDB structure, but this is planned.   Last
+   updated: October 17, 2001 Author: Isaac Oshima ( ioshima@dfg.ca.gov )
+   This is a beta version so has no help file.   Please, read / download /
+   print the avsticke.pdf file for brief instructions on using AV
+   Sticke.  There is also an additional document (scenario.pdf) describing
+   the typical scenario of use and comments on AV Sticke's functions.
+   avsticke.exe (475 kb self-extracting & installing)   Versions 1.0.80
+   -  Added sound effects!  You can turn this off by editing the
+   %AVHOME%\dfgavx.ini file; look for the [avsticke] section entry called,
+   sndfx=TRUE and change this to sndfx=FALSE.  Also, there was a bug in
+   the re-naming of the imge files that should now be fixed.   1.0.73  -
+   This version has all known bugs removed.  I have added code to add the
+   Sticke shapefile if it already exists and you do not already have it in
+   the current view.   1.0.63    -    This version should be fully
+   functional but still may have some bugs.  The automatic hotlinking of
+   "Photolog" Sticke data table photo references now works.  You will need
+   to have the most current version of AV Xlinx also installed (version
+   1.0.56).  Monthly and spatial indexing now works.  Once you have chosen
+   an indexing method and created your project and project shapefile, you
+   should NOT change the indexing method.    1.0.29 - Added interim 'help'
+   document, avsticke.pdf 1.0.26 - Continuing to add code for "project"
+   based collection.  Handling of photo data nearing completion.
+   Automatic hotlinking of these images to points will require your
+   installation of the Xlink extension above.  Storage of images can be by
+   "monthly directories" or by "spatial index" based on a polygon
+   shapefile.  These are not fully completed.  If you use this extension
+   right now, limit yourself to the non-photo collection StickeNotes
+   templates.   1.0.10 - Added code for "project" based collection and
+   processing of data.   1.0.17 - Continuing to update with "project"
+   based file handling.
+     __________________________________________________________________
+
+   Rapix (beta version 1.0.55)
+
+   Rapix is an ArcView extension was created for the Resource Assessment
+   Program (RAP). It can be use for more general projects provided the
+   items in the "Required" section below are done. This extension helps
+   manage location attributes collected in a single dbf table in
+   association with the point locations collected with a Trimble GPS and
+   processed by the Trimble PathFinder Office software. This extension
+   also will process photograph "metafields" within the dbf that store
+   digital image identifiers and associate given image(s) to the proper
+   location in ArcView via customized hotlink. Required - You must have
+   the location attribute dbf, (photo*.dbf)  This attribute dbf must be
+   named such that the first five characters are, "photo". - You must have
+   a Trimble shapefile (posnpnt.shp). This post differentially corrected
+   file must have at least the fields: 'Max_pdop', 'Gps_date', 'Gps_time',
+   and 'Datafile'. The configuration of Trimble's PathFinder Office
+   determines the field(s) output to the shapefile. The name, posnpnt.shp
+   is the default output shapefile name. - These files must be in one
+   directory per each field session. - If collecting digital photographs
+   that you want "hotlinked" to the points (feature locations); these
+   photo image files must also be in this directory. - You can enter /
+   collect the locational attributes on any device that you would like, as
+   long as the final attribute file is a dbf. In the current development
+   the device is a Compaq iPAQ with data being added to an Excel
+   spreadsheet. This spreadsheet is transferred with the PC desktop /
+   laptop and examined in Excel before being saved to dbf format. Please
+   read the rapix_beta.txt document before using. Author: Isaac Oshima
+   (ioshima@dfg.ca.gov ) beta version: rapix.exe (325 kb self extracting &
+   installing)
+   Last updated: October 16, 2001.

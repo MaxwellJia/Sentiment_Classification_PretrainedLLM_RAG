@@ -1,0 +1,1010 @@
+http://biowulf.nih.gov/user_guide.html
+
+               [dna_wolf2.gif]
+
+                               N I H H e l i x S y s t e m s
+
+                               Biowulf/LoBoS3 User Information
+
+                       [bw1sm.jpg] [biowulf-72sm.gif]
+
+     About the NIH Biowulf/LoBoS3 Cluster
+     Biowulf Account Information
+     Logging In
+     Hardware Configuration
+     Disk storage
+     Using the Biowulf/LoBoS3 Cluster
+     Programming Tools/Libraries
+     Batch Queuing System
+     Monitoring Your Jobs
+     Benchmarking
+
+About the NIH Biowulf/LoBoS3 Cluster
+
+   The NIH Biowulf/LoBoS3 cluster is a Beowulf parallel processing system
+   designed and built at the National Institutes of Health. Managed by the
+   Helix Systems Staff, Biowulf/LoBoS3 consists of a main
+   login/administrative node and 340 compute nodes (680 processors)
+   running the Redhat Linux operating system. The computational nodes are
+   interconnected by a high speed network and have access to four
+   high-performance NFS RAID fileservers.
+
+   For FY2000/2001, NIH's Center for Information Technology and the
+   National Heart, Lung and Blood Institute have combined their resources
+   to create a follow-on to their previous clusters (Biowulf and LoBoS2).
+   This next-generation cluster, Biowulf/LoBoS3, is jointly funded by the
+   Division of Computer Systems and Services and the Division of
+   Computational Biology (CIT), and the Computational Biophysics Section
+   (NHLBI).
+
+   Please send comments or problem reports to staff@helix.nih.gov.
+
+    Biowulf/LoBoS3 and Scientific Publications
+
+   The continued growth and support of NIH's Biowulf/LoBoS3 cluster is
+   dependent upon its demonstrable value to the intramural program. In the
+   past we have been successful in obtaining support by citing published
+   work which involved the use of our systems.
+
+     When publishing data resulting from calculations done on the NIH
+       Biowulf/LoBoS3 cluster, please use the following citation in the
+       article:
+       This study utilized the high-performance computational capabilities
+       of the Biowulf/LoBoS3 cluster at the National Institutes of Health,
+       Bethesda, Md.
+     Please report the publication of articles which made use of the
+       cluster to the Helix Systems Staff, either by citing the reference
+       in email to staff@helix.nih.gov, or by mailing a copy of the
+       article to:
+  Chief, Helix Systems Staff
+  CIT, Building 12B, Rm 2N207
+  NIH
+  Bethesda, Md.
+  20892-5680
+
+Accounts
+
+   Biowulf accounts require a pre-existing Helix account. A Biowulf
+   account can be obtained by registering on the web
+   (http://helix.nih.gov/register/biowulf.html).
+
+   [fm2html-toc.gif]
+
+Logging in
+
+   The Biowulf/LoBoS3 system is accessed from the NIH network via telnet
+   or ssh to biowulf.nih.gov or lobos3.nih.gov. This login node runs a
+   secure shell daemon, and users are encouraged to login to the cluster
+   using ssh. Access to any of the processing nodes is gained from
+   biowulf.nih.gov using rlogin. The node names are assigned as p#, where
+   # is the node number.
+
+   note: biowulf.nih.gov and lobos3.nih.gov are DNS aliases for the login
+   node, whose hostname is actually biobos.nih.gov
+
+  Password Information
+
+   An initial password is assigned to each user upon creation of an
+   account. Your initial password is the same as your password on Helix at
+   the time the Biowulf account was created. To change your Biowulf
+   password, use the UNIX command 'passwd', which will prompt you for your
+   old password and then a new password. It is recommended that you select
+   a password that consists of at least six characters with at least one
+   numeric character and at least non-alphanumeric character (e.g., *,],
+   space, etc). Your username and password are uniform across all nodes of
+   the Biowulf system. Passwords on helix and biowulf are not synchronized
+   at this time.
+
+  Shells
+
+   The Bourne shell ('bash') is the default shell. Other available shells,
+   including csh and tcsh, are listed in /etc/shells.
+
+   To change your default shell, use the command 'chsh -s shell_name',
+   where shell_name is the full pathname of the desired shell (e.g.,
+   /bin/csh).
+
+  Home Directories
+
+   Biowulf home directories are in a shared NFS (Network File System)
+   filespace. Therefore the access to files in your home directory is
+   identical from any node in Biowulf.
+
+  Mail
+
+   E-mail can be sent from any node on Biowulf. However, all mail sent out
+   from Biowulf will have a return address of helix.nih.gov (rather than
+   the address of the node). In addition, mail sent to a user on a Biowulf
+   node will be automatically forwarded to that user on helix.nih.gov. In
+   other words, you can send, but not receive mail on Biowulf.
+
+   If you do not read mail on helix, be sure to set up a .forward file in
+   your helix home directory.
+
+   You may communicate with all Biowulf/LoBoS3 users (including staff) by
+   sending mail to biowulf-users when logged into biowulf.nih.gov, or to
+   biowulf-users@helix.nih.gov from elsewhere.
+
+   [fm2html-toc.gif]
+
+Hardware configuration
+
+   [biobos.gif]
+
+   The Biowulf cluster
+   is a distributed memory parallel computer consisting of a total of 640
+   XP/Athlon and Pentium III processors. The table below lists the current
+   hardware configuration of the nodes.
+
+# of nodes/
+node names  processors per node memory           paging
+                                                 space  local
+                                                        scratch
+                                                        disk   network
+92
+p9 - p24
+p264 - p339 2 x 1.4 GHz
+            AMD XP/Athlon
+            256 kB full-speed
+            secondary
+            cache               1 GB (50 nodes)
+                                2 GB (42 nodes)
+                                DDR/ECC          2 GB   20 GB  100 Mb/s ethernet
+64
+p181 - p244 2 x 866 MHz
+            Intel Pentium III
+            256 kB full-speed
+            secondary
+            cache               512 MB (48 nodes)
+                                1 GB (16 nodes)
+                                133 MHz/ECC      512 MB 12 GB  100 Mb/s ethernet
+                                                               2 Gb/s Myrinet
+87
+p113 - p180
+p245 - p263 2 x 866 MHz
+            Intel Pentium III
+            256 kB full-speed
+            secondary
+            cache               512 MB (45 nodes)
+                                1 GB (24 nodes)
+                                2 GB (8 nodes)
+                                133 MHz/ECC      512 MB 12 GB  100 Mb/s ethernet
+30
+p1 - p8
+p91 - p112  2 x 550 MHz
+            Intel Pentium III
+            512 kB
+            secondary
+            cache               256 MB
+                                100 MHz          512 MB 6 GB   100 Mb/s ethernet
+66
+p25 - p90   2 x 450 MHz
+            Intel Pentium III
+            512 kB
+            secondary
+            cache               256 MB (50 nodes)
+                                512 MB (8 nodes)
+                                1 GB (8 nodes)
+                                100 MHz          512 MB 6 GB   100 Mb/s ethernet
+
+   All nodes are interconnected by 100 Mb/s switched ethernet. The
+   hostnames for these interfaces are p1 through p339. The hostname for
+   biowulf's internal interface is biowulf-e0 (i.e., nodes wishing to
+   communicate with the login machine, should use the name biowulf-e0
+   rather than biowulf).
+
+   The ethernet switches are 72-port Foundry FastIron II and 144-port
+   FastIron II+ switches interconnected by Gigabit ethernet links. The
+   fileserver network switch is a TurboIron Gigabit ethernet switch.
+
+   In addition, for those applications that can benefit from the increased
+   bandwidth and low latency, 64 dual-processor nodes have a second
+   connection to the latest generation of Myrinet, Myrinet 2000. This very
+   high performance switched network has a bandwidth of 2 Gb/s with a
+   latency of around 10uS. The nodes are interconnected by a 128-port
+   Myricom Clos-128 switch.
+
+Disk Storage
+
+   There are several options for disk storage on Biowulf; please review
+   this section carefully to decide where to place your data. Contact the
+   Biowulf systems staff if you have any questions.
+
+   Except where noted, there are no quotas, time limits or other
+   restrictions placed on the use of space on the Biowulf system, but
+   please use the space responsibly; even hundreds of gigabytes won't last
+   forever if files are never deleted. Disk space on the Biowulf system
+   should never be used as archival storage.
+
+                      Summary of file storage options:
+
+   Location Creation Backups Performance Amount of Space Accessible
+   from (*)
+   /home network (NFS) with Biowulf account yes low 200 MB
+   (quota) B,C
+   /scratch (nodes) local created by user no best 6 - 20 GB shared C
+   /scratch (biowulf) network (NFS) created by user no low 120 GB shared
+   B,H,N,G
+   /data network (fast NFS) with Biowulf account yes high based on quota
+   (32 GB default) B,C,H,N,G
+
+     (*) H = helix, N = nimbus, G = galaxy, B = biowulf login node, C =
+                         biowulf computational nodes
+
+    Local Disk (/scratch)
+
+   Each Biowulf node has a directly attached disk containing a /scratch
+   filesystem. Note that scratch space is not backed up to tape, and thus,
+   users should store any programs and data of importance in their home
+   directories. Use of /scratch on the batch nodes should be for the
+   duration of your job only. It is your job's responsibility to check for
+   sufficient disk space. Your job may delete any and all files from
+   /scratch to make space available.
+
+   /scratch on biowulf.nih.gov is actually a shared (NFS) filesystem,
+   accessible from all Helix Systems. Files on this filesystem which have
+   not been accessed for 14 days are automatically deleted by the system.
+
+    Accessing other nodes' /scratch filesystems
+
+   Any node on the system can access any other node's /scratch filesystem
+   by referring to it as /s/p# where "#" is the nodenumber, e.g., /s/p12.
+   An exception is that computational nodes cannot access /scratch on
+   biowulf (since /scratch on biowulf is itself a network-accessed
+   filesystem).
+
+   note: this feature is currently disabled. If you have a need or use for
+   this feature please contact the Biowulf staff.
+
+    /data
+
+   This is a RAID-4 filesystem mounted over NFS from two Network Appliance
+   F840 and two F760 Filers configured for high availability. This system
+   offers high performance NFS access, and is exported to Biowulf over a
+   dedicated high-speed network. /data is accessible from all
+   computational nodes as well as Biowulf, and will be the filesystem of
+   choice for most users to store their large datasets. Biowulf users are
+   assigned an initial 32 GB quota on /data; please contact the Biowulf
+   staff if you need to increase your quota. /data is also accessible from
+   the other Helix Systems: helix, nimbus, galaxy and quasar.
+
+   Note: your /data directory is actually physically located on on
+   filesystems named /data1 through /data6. The /data directory consists
+   of links to one of those filesystems. Please refer to your data
+   directory through the /data links as opposed to the physical location
+   because the physical location is subject to change. In other words, use
+   /data/yourname rather than (for example) /data1/yourname in your
+   scripts.
+
+   [fm2html-toc.gif]
+
+Using the Biowulf/LoBoS3 Cluster
+
+   Due to the distributed memory architecture of clusters, parallel
+   programming on the system is generally done by explicit message
+   passing. Most programs are written in C or Fortran using the MPI
+   message passing library (see below).
+
+     node - a node is a computer containing one or more processors.
+   Sometimes simply called a "machine" or "box".
+
+     processor - a processor is a cpu, each able to run a single
+   application process at any given time.
+
+     process - the execution instance of an application. An MPI program
+   will typically consist of 2 or more processes.
+
+   There are 3 categories of nodes in the Biowulf cluster:
+
+     login nodes - these are nodes used for program development,
+   compiling, debugging and submission of jobs to the batch system. There
+   is currently one login node (biowulf.nih.gov). Please do not run
+   application code on login nodes.
+
+     interactive nodes - a small number of nodes are reserved for
+   interactive use. These nodes can be used for the testing and debugging
+   of applications. Note that interactive nodes are shared by all
+   currently running interactive jobs, so they should not be used for
+   benchmarking or for production jobs.
+
+     batch nodes - the majority of nodes in the cluster are used for
+   production jobs run under the control of the batch queueing system.
+   These nodes are dedicated to your job.
+
+  Node Allocation
+
+   All of the MPI systems described below refer to a file containing a
+   list of nodes. The nodes specified in the "nodes file" will be used to
+   run the number of MPI processes specified by the "-np" switch to the
+   mpirun command. Since Biowulf nodes are dual-processors, in most cases
+   the "nodes file" should contain half as many nodes as processes that
+   you plan to run. Note that if the file specifies more processes than
+   processors are available, MPI will schedule more than one process to
+   run on a processor.
+
+   Since Biowulf is primarily a batch system, when running a batch job the
+   batch system will automatically create the "nodes file" on your behalf.
+
+   When running an interactive job, you should specify a system-designated
+   node file which will contain the names of the nodes that can be
+   allocated for interactive use. Do not make a copy of this file, as the
+   nodes allocated for interactive use may change from time to time.
+
+   Except for the nodes reserved for interactive use (see the file
+   /usr/local/etc/i-nodes) all allocation of nodes should be done through
+   the batch system. Please do not run interactive jobs on any nodes other
+   than listed in /usr/local/etc/i-nodes.
+
+   [fm2html-toc.gif]
+
+Programming Tools & Libraries
+
+   All nodes run the Redhat Linux operating system, including the GNU EGCS
+   C compiler (gcc) and GNU Fortran (g77). Higher performance compilers
+   from the Portland Group are also available: C (pgcc), C++ (pgCC),
+   Fortran 77 (pgf77), and Fortran 90 (pgf90). This compiler suite also
+   includes the PGPROF profiler (pgprof) and PGDBG debugger (pgdbg), each
+   with an X window interface.
+
+   Documentation for the Portland Group compilers is available on-line at
+   http://biowulf.nih.gov/pgdoc/.
+
+   There are 2 MPI library implementations available on Biowulf: MPICH and
+   MPICH-GM. MPICH is a popular implementation of the MPI library.
+   Interprocess communicaction using MPICH occurs using TCP/IP sockets,
+   and so allows communication over virtually any network technology.
+   However, communicating over TCP/IP has significant overhead resulting
+   in realtively high latencies which can limit the scalability and
+   performance of codes with demanding communication requirements.
+
+   MPICH-GM is a version of MPICH written to make calls directly to the
+   Myrinet GM protocol layer, thereby bypassing the TCP/IP protocol stack.
+   This should result in significantly improved latency and bandwidth.
+   Check the hardware table above for the nodes with connections to
+   Myrinet.
+
+   Note: GM is not "thread safe". It does not work with threading or
+   forking. system() or fork() calls from a MPICH-GM program will cause GM
+   to fail with strange errors. system() or fork() are perfectly
+   acceptable before calling MPI_INIT.
+
+   A User Guide for MPICH and man pages are available on-line. The user
+   guide and guide to MPE (MPICH MPI Extensions) are also available in the
+   form of postscript files:
+User's Guide for mpich, v 1.2.0   /usr/local/doc/mpich-1.2.0-usersguide.ps.gz
+User's Guide for MPE, v 1.2.0     /usr/local/doc/mpich-1.2.0-mpeguide.ps.gz
+
+   After deciding which MPI library you wish to use, it is very important
+   to make sure your PATH is properly set (see below).
+
+   The instructions provided for running MPI in this section are for
+   running MPI jobs interactively. Instructions for running jobs in batch
+   are given in the next section below.
+
+   The table below indicates the current software versions available on
+   the Biowulf cluster.
+
+                      biowulf     computational
+                                  nodes (Pentium)  computational
+                                                   nodes (Athlon)
+   Redhat             6.x         6.0              7.1
+   Linux kernel       2.2.14      2.2.16-tcpfix (*)
+                                  2.4.2 (**)       2.4.12
+   C library          glibc-2.1.1 glibc-2.1.1      glibc-2.2.2
+   GNU gcc            1.1.2-12
+   GNU g77            1.1.2-12
+   Portland Group
+   C, C++ and Fortran 3.2-2
+   Sun Java 2 SDK     1.2.2
+   MPICH              1.2.2
+   MPICH-GM           1.2..5
+   GM                 1.4pre56
+   PBS Pro            5.1.3
+
+   (*) The "tcpfix" kernels incorporate code by Josip Loncaric which fixes
+   certain behaviors of Linux TCP which are detrimental to parallel
+   applications. See http://www.icase.edu/coral/LinuxTCP2.html for
+   details.
+   (**) Nodes with 2 GB of memory are running the 2.4.2 kernel.
+
+  Compiling MPI Programs
+
+   Biowulf has a number of compilers and mpi libraries to choose from. The
+   table below summarizes which compilers are available for each MPI
+   library, and the libraries under which they were built. If you require
+   a particular combination not listed, contact the Biowulf systems staff.
+
+                        MPICH MPICH-GM
+   GNU gcc                x      x
+   GNU g77                x      x
+   Portland Group pgcc    x      x
+   Portland Group pgCC    x
+   Portland Group pgf77   x      x
+   Portland Group pgf90   x
+
+   There are 2 steps in compiling your code:
+     Set your PATH environment variable.
+     Compile the program.
+
+    1. Setting your PATH
+
+   Verify that your path environment variable is correctly set. The
+   following paths should be used to select the libraries and compilers:
+
+                 MPICH 1.2.0              MPICH 1.2 GM
+   GNU
+   Compilers     /usr/local/mpich/bin or
+                 /usr/local/mpich-gnu/bin /usr/local/mpich-gm2k/bin or
+                                          /usr/local/mpich-gm2k-gnu/bin
+   Portland Group
+   Compilers     /usr/local/mpich-pg/bin  /usr/local/mpich-gm2k-pg/bin
+
+    2. MPI compile commands
+
+   MPI programs are compiled using "wrapper scripts". Which one you use
+   depends on the underlying language being compiled:
+
+                 c wrapper fortran wrapper
+   GNU compilers mpicc     mpig77
+   Portland Group
+   compilers     mpipgcc   mpif77
+
+   The simplest syntax for compiling using the mpich wrappers is:
+mpicc -o prog proc.c
+
+    An Example
+
+   Here is an example of compiling a Fortran program under MPICH and using
+   the Portland Group F77 compiler:
+biowulf$ export PATH=/usr/local/mpich-pg/bin:$PATH
+biowulf$ mpif77 -o MyPi pi3.f
+Linking:
+biowulf$ ls -l MyPi
+-rwxr-xr-x   1 steve    wheel      414340 Feb 16 15:11 MyPi
+biowulf$
+
+  Using MPICH Interactively
+
+   Once you have compiled your code, proceed as follows.
+
+   1. Create a link to the system interactive node file:
+ln -s /usr/local/etc/i-nodes
+
+   You can determine the number of nodes allocated for interactive use
+   with the command:
+wc -l i-nodes
+
+   2. Startup your program with mpirun:
+mpirun -nolocal -machinefile i-nodes -np 8 myprog
+
+   note: make sure your PATH is set correctly! The path selects mpirun in
+   the same way it selects the mpi compile command
+
+     MPICH allows you to start the mpi job from the host biowulf, however
+   you must specify -nolocal to prevent the job from running on biowulf
+   itself.
+
+     -np 8 specifies running 8 processes. When running on dual-processor
+   nodes, this should be at most twice the number of nodes specified in
+   i-nodes.
+
+     mpirun adds 2 switches to your application's command line arguments:
+   -p4pg and -p4wd. Your program need not use these arguments, but if it
+   processes command line arguments, it must be prepared to ignore them.
+
+  Using MPICH-GM Interactively
+
+   1. Create a file called ~/.gmpi/conf containing the number and
+   hostnames of nodes which have Myrinet interfaces (please contact the
+   biowulf staff before proceeding with his step):
+
+   # .gmpi/conf file begin
+   8
+   #
+   p11.biowulf.nih.gov 2
+   p12.biowulf.nih.gov 2
+   p13.biowulf.nih.gov 2
+   p14.biowulf.nih.gov 2
+   p11.biowulf.nih.gov 4
+   p12.biowulf.nih.gov 4
+   p13.biowulf.nih.gov 4
+   p14.biowulf.nih.gov 4
+   # .gmpi/conf file end
+
+   Notes:
+
+     The "2" which follows each hostname is the Myrinet logical "port" to
+   use. Use port 2 for the first process on the node, and port 4 if there
+   will be a second process.
+
+     The fully qualified hostname must be specified, i.e.,
+   "p11.biowulf.nih.gov" rather than "p11".
+
+     Don't specify the Myrinet interface ip name (g11.biowulf.nih.gov).
+
+   2. Specify the number of processes to run to mpirun:
+mpirun -nolocal -np 16 myprog
+
+  Debugging with Totalview
+
+   Totalview is a source- and machine-level debugger that allows
+   programmers to debug multiprocess, multithreaded programs, including
+   MPI applications, written in C, C++, FORTRAN 77 and Fortran 90. The
+   Totalview debugger provides users with an X-Window-based GUI for
+   viewing source code, stack trace and stack frame for one or more
+   processes.
+
+   In order to use Totalview, follow the steps listed below:
+    1. Set the DISPLAY environment variable to your local computer. For
+       example in csh, the command would be:
+   setenv DISPLAY foo.cit.nih.gov:0
+
+       where foo.cit.nih.gov specifies the specific address of the
+       computer at which you wish to have data displayed.
+    2. Add /usr/local/totalview/bin to your PATH environment variable.
+    3. Compile your source code with the -g compiler option, which
+       generates symbol table debugging information. For example,
+     cc -g foobar.c -o foobar
+
+       where foobar.c is the C source code and foobar is the executable
+       that is to be generated. The option -L/usr/local/totalview/lib is
+       to be used when linking with -ldbfork.
+    4. Start Totalview as follows:
+     totalview foobar &
+
+       A box should appear on your screen containing several windows, each
+       of which provides relevant information regarding your code. The
+       menu interface allows for the selection from a variety of debugging
+       options. Under the Help tab, access is available to the User's
+       Guide, a command line options guide and a conversion guide between
+       Ver. 4 and Ver. 5 commands.
+
+   The user guide can also be found in /usr/local/doc/totalview-5-0.pdf.
+
+  Libraries
+
+   The GNU Scientific Library (GSL) is a collection of routines for
+   numerical computing. The routines are written from scratch by the GSL
+   team in C, and are meant to present a modern Applications Programming
+   Interface (API) for C programmers, while allowing wrappers to be
+   written for very high level languages. For more information about GSL,
+   see the GSL Reference Manual. It is also available in gzipped
+   postscript (500K).
+
+   [fm2html-toc.gif]
+
+Batch Queueing System
+
+   The batch system on Biowulf is PBS (Portable Batch System).
+
+   In order to run a job under batch you must submit a script which
+   contains the commands to be executed. The command to do this is qsub.
+   See the qsub man page and the examples below for more information on
+   using qsub.
+
+   Other useful PBS commands are:
+     qstat - show status of pbs batch jobs
+     qdel - delete pbs batch job
+
+   See the man pages for details on these commands, and the man page for
+   pbs for general information on pbs.
+
+   The batch system starts your job with your home directory as the
+   current directory. The variable $PBS_O_WORKDIR is set to the directory
+   from which the qsub command was given.
+
+   You job may not run properly if your startup file (.bashrc, .cshrc,
+   etc) contains commands which attempt to set terminal characteristics.
+   Such commands can be skipped by testing the environment variable
+   PBS_ENVIRONMENT:
+if ( ! $?PBS_ENVIRONMENT ) then
+    do terminal stuff here
+endif
+
+  Resource Limits
+
+   There are no time limits for jobs running in the batch queue. However,
+   while debugging a program, or if there is otherwise a possibility that
+   your job could "runaway" due to a programming error, please use the
+   walltime switch to limit the time your job can run before it is
+   terminated by the batch system. For example, to limit your job to 72
+   hours use "-l walltime=72:00:00" as an argument to the qsub command.
+
+   To ensure fair allocation of nodes between users who submit multi-node
+   jobs, and those who submit numerous single-node jobs, the following
+   allocation policy has been implemented:
+
+   When you submit a job, it is "routed" into one of several queues, each
+   of which has limits based on
+     maximum number of nodes per job, and
+     maximum number of jobs per user
+
+   The current limits are:
+
+   queue max
+         nodes/job max
+                   jobs/user max
+                             total nodes
+   q1    1         16        16
+   q4    4         4         16
+   q8    8         2         16
+   q16   16        1         16
+   q32   32        1         32
+
+   note: you do not need to submit jobs to a specific queue - the batch
+   system will determine the correct queue when you submit your job
+
+   Scheduling on Biowulf is done using a Fair Share algorithm. This means
+   that, when more jobs are waiting to run than can be started, the next
+   job to run will be the one belonging to the user with the least amount
+   of system usage during the previous 6 hours. This should allow users to
+   submit as many jobs to the queue as they would like without concern
+   that they will take an unfair amount of processing time. Note that, as
+   we observe how this works in practice, we expect to fine tune the 6
+   hour interval to provide the best scheduling behavior.
+
+  Running MPICH Jobs under Batch
+
+   An example of a batch command file is shown below:
+
+   #!/bin/bash
+   # This file is mpi-hello.sh
+   #
+   #PBS -N MyJob
+   #PBS -m be
+   #PBS -k oe
+   PATH=/usr/local/mpich/bin:$PATH; export PATH
+   mpirun -machinefile $PBS_NODEFILE -np $np mpi-hello
+
+   The batch job is submitted with the qsub command:
+qsub -v np=16 -l nodes=8 mpi-hello.sh
+
+   In this example a batch file with the name mpi-hello.sh is submitted to
+   the batch queue with a job name of "MyJob". Note that many switches to
+   qsub can be specified either on the command line or as part of the
+   script by use of the special comment string (also called a directive)
+   #PBS. The job runs a 16-process mpi program named mpi-hello. The "-m"
+   switch specifies that mail should be sent to the user when the job
+   begins and when it ends. The "-k" switch specifies which output files
+   should be "kept", the argument of "oe" specifies that both stdout and
+   stderr files are written.
+
+   Other important features of the example above:
+    1. The PATH is set to use MPICH.
+    2. The special environment variable $PBS_NODEFILE is set by the batch
+       system to specify the name of the node file, and this variable is
+       used as the argument for the -machinefile switch.
+    3. The -l switch to qsub is used to specify a list of resources
+       required. Here 8 nodes are being requested. Note that you must
+       specify nodes=N even if N = 1.
+    4. The qsub command allows user-defined variables to be passed to the
+       batch control file by using the "-v" switch. Here this switch is
+       used to define a variable named np which makes it convenient to
+       specify the number of mpi processes to run on the qsub command
+       line. This variable is then used as the argument to the -np switch
+       to mpirun. Note finally that since the nodes are dual processor,
+       the number of nodes requested is one-half the number of processes
+       that will run.
+
+  Myrinet Jobs under Batch
+
+   (please contact the biowulf staff before proceeding)
+   When running Myrinet/GM in batch a unique config file name should be
+   created so that multiple batch jobs will not interfere with each other.
+   Set the environment variable GMPICONF to the name of the config file
+   and use the utility make-gmpi-conf to create it using the nodes
+   specified in $PBS_NODEFILE:
+export GMPICONF=~/gmconf.$PBS_JOBID
+make-gmpi-conf $PBS_NODEFILE
+mpirun -nolocal -np 8 myprog
+
+   When running IP over Myrinet use the utility make-gnode-file to create
+   a node file with myrinet interface names:
+export GMPICONF=~/gmconf.$PBS_JOBID
+make-gnode-file $PBS_NODEFILE > $GMPICONF
+mpirun -nolocal -machinefile $GMPICONF -np $np mpi-hello
+
+   Here is an example of a complete batch command file for running a job
+   over Myrinet/GM:
+
+   #!/bin/csh
+   #PBS -N MyJob
+   #PBS -k oe
+   #
+   # csh
+   set path = (/usr/local/mpich-gm2k/bin /usr/local/bin $path .)
+   setenv GMPICONF $PBS_O_WORKDIR/gmconf.$PBS_JOBID
+   # for bash, use these instead...
+   # PATH=/usr/local/mpich-gm2k/bin:/usr/local/bin:$PATH:.
+   # export GMPICONF=$PBS_O_WORKDIR/gmconf.$PBS_JOBID
+   #
+   make-gmpi-conf $PBS_NODEFILE
+   cd $PBS_O_WORKDIR
+   mpirun -np $np MyProg < MyProg.in >& MyProg.out
+   #
+   rm $GMPICONF
+
+   The batch job is submitted with the qsub command:
+qsub -v np=8 -l nodes=4:myr2k myjob.bat
+
+   Note the node specifier "4:myr2k", which results in a request for 4
+   nodes with the "myr2k" property (i.e., connected to Myrinet 2000).
+
+  Running Multiple Serial Jobs and the swarm Command
+
+   Because each Biowulf node has two processors, but the PBS batch system
+   allocates nodes rather than processors, submitting multiple single
+   process jobs to the system results in a poor utilizaion of processors
+   (i.e., only one processor per node).
+
+   In the case of simply running two processes on a single node, the
+   following example uses the wait command to prevent the batch command
+   script from exiting before the application processes have finished:
+
+   #!/bin/bash
+   #
+   # this file is myjob.sh
+   #
+   #PBS -N MyJob
+   #PBS -m be
+   #PBS -k oe
+   #
+   myprog -arg arg1 < infile1 > outfile1 &
+   myprog -arg arg2 < infile2 > outfile2 &
+   wait
+
+   Note how this script runs 2 instances of a program by putting them in
+   the background (using the ampersand "&"), and then using the shell wait
+   command to make the script wait for each background process before
+   exiting.
+
+   When running many single-threaded jobs, setting up many batch command
+   files can be cumbersome. The swarm command can be used to automatically
+   generate batch command files and submit them to the batch system.
+
+   swarm allows you to submit an arbitrary number of serial jobs to the
+   batch system by simply creating a command file with one command per
+   line. swarm automatically creates batch command files and submits them
+   to the batch system. Two commands are submitted for each node, making
+   optimal use of the processors.
+
+   Here is an example command file:
+
+   myprog -param a < infile-a > outfile-a
+   myprog -param b < infile-b > outfile-b
+   myprog -param c < infile-c > outfile-c
+   myprog -param d < infile-d > outfile-d
+   myprog -param e < infile-e > outfile-e
+   myprog -param f < infile-f > outfile-f
+   myprog -param g < infile-g > outfile-g
+
+   The command file is submitted using the following command:
+swarm -f cmdfile
+
+   The result is 4 jobs submitted to the batch system, 3 jobs with 2
+   processes each, and the last with a single process.
+
+   See the swarm documentation (biowulf.nih.gov/swarm.html) for more
+   details.
+
+    The multirun Command
+
+   If you wish to submit more than 2 single-threaded jobs but want them
+   under control of a single job, then an mpi "shell" can be used (note:
+   In many cases this will not be an optimal use of resources. Unless all
+   processes exit at roughly the same time, idle nodes will not be freed
+   by the batch system until the last process has exited).
+
+   The basic procedure is as follows (generation of these scripts can be
+   done automatically by writing a higher order script):
+
+   1. Create an executable shell script which will run multiple instances
+   of your program. Which will run depends on the "mpi task id" of the
+   instance.
+
+   #!/bin/tcsh
+   #
+   # this file is run6.sh
+   #
+   switch ($MP_CHILD)
+     case 0:
+       your_prog with args0
+       breaksw
+     case 1:
+       your_prog with args1
+       breaksw
+     case 2:
+       your_prog with args2
+       breaksw
+     case 3:
+       your_prog with args3
+       breaksw
+     case 4:
+       your_prog with args4
+       breaksw
+     case 5:
+       your_prog with args5
+       breaksw
+   endsw
+
+   2. Use mpirun in your batch command file to run the mpi shell program
+   (multirun):
+
+   #!/bin/tcsh
+   #
+   # this file is myjob.sh
+   #
+   #PBS -N MyJob
+   #PBS -m be
+   #PBS -k oe
+   #
+   set path=(/usr/local/mpich/bin $path)
+   mpirun -machinefile $PBS_NODEFILE -np 6 \
+          /usr/local/bin/multirun -m /home/me/run6.sh
+
+   3. Submit the job to the batch system:
+qsub -l nodes=3 myjob.sh
+
+   This job will run 6 instances of the program on 3 nodes.
+
+  Allocating Nodes for Interactive Use with PBS
+
+   Using the batch system for interactive use may sound like an oxymoron,
+   but doing so allows you to allocate an arbitrary number of nodes
+   without interfering with other jobs. This is an alternative to using
+   the reserved nodes specified in /usr/local/etc/i-nodes.
+
+   The following example shows how to allocate 4 nodes:
+
+biobos$ qsub -I -l nodes=4
+qsub: waiting for job 2011.biobos to start
+qsub: job 2011.biobos ready
+
+p139$ cat $PBS_NODEFILE
+p139
+p138
+p137
+p136
+p139$ exit
+logout
+
+qsub: job 2011.biobos completed
+biobos$
+
+   Note the following:
+     The qsub command, used with the -I switch, automatically logs you in
+       to the first allocated node.
+     As in batch, the $PBS_NODEFILE variable is the name of a file which
+       contains the allocated nodes.
+     The nodes are unallocated when the interactive session is ended using
+       the exit command.
+
+   [fm2html-toc.gif]
+
+Monitoring Your Jobs
+
+   Once a batch job has been submitted it can be monitored using both
+   command line and web-based tools.
+
+  qstat
+
+   The qstat command reports the status of jobs submitted to the batch
+   system. 'qstat -a' shows the status of all batch jobs; 'qstat -n'
+   shows, in addition, the nodes assigned to each job. Qstat with the "-f"
+   switch gives detailed information about a specific job, including the
+   assigned nodes and resources used. See the man page for 'qstat' for
+   more details.
+
+  shnodes
+
+   The shnodes (show nodes) command can be used to monitor the allocation
+   of nodes by the batch system:
+% shnodes
+Node    State          Properties
+p1      free           faste,p550,m256
+p2      free           faste,p550,m256
+p3      free           faste,p550,m256
+.
+.
+.
+
+   The first column lists the node name, the second column shows the state
+   (usually free, job-exclusive, or offline), and the third column lists
+   the "properties" of the node:
+
+     faste - connected to fast ethernet
+
+     myr2k - connected to myrinet 2000
+
+     p450 - 450 MHz processors
+
+     p550 - 550 MHz processors
+
+     p866 - 866 MHz processors
+
+     p1400 - 1.4 GHz processors
+
+     m256 - 256mb memory
+
+     m512 - 512mb memory
+
+     m1024 - 1gb memory
+
+     m2048 - 2gb memory
+
+     bigmem - >256mb memory
+
+   Switches to shnodes will list subpopulations of nodes:
+
+shnodes -f  list free nodes
+shnodes -o  list offline nodes
+shnodes -e  list job-exclusive (allocated) nodes
+
+   As an example of using the shnodes command, to find out the number of
+   free 866 Mhz nodes:
+% shnodes -f | grep p866 | wc -l
+
+  cluster monitor (web-based)
+
+   The web page at http://biowulf.nih.gov/sysmon lists several ways of
+   monitoring the Biowulf cluster. The "matrix" view of the system shows
+   the load of each node. The position on the matrix corresponds to the
+   node number, for instance row 14 column 3 is p143. Biowulf itself is
+   (0,0).
+
+   [monitor244.gif]
+
+   The color of the dot indicates the load:
+     white - the node is down
+     blue - idle (load < 0.2)
+     green - load >0.2 <1.2
+     yellow - load >1.2 <2.2
+     red - load >2.2
+
+   Clicking on the dot corresponding to a node will result in a display of
+   the process, cpu, disk and memory status for that node (output from the
+   top and df commands).
+
+   The status of specific batch jobs can be monitored by first clicking on
+   List Status of Batch Jobs which gives output similar to qstat, and then
+   clicking on the Job ID of the job of interest. This results in the
+   display of a matrix which contains dots only for the nodes allocated to
+   the job. The loads of those nodes can be monitored in same way as for
+   the system as a whole.
+
+   [job2741.gif]
+
+   Finally, the sum total of nodes allocated across all jobs to a user can
+   be monitored by clicking on Username.
+
+   [eric.gif]
+
+   Again, for both JobID and Username monitoring, clicking on a dot
+   corresponding to a node results in a display of information about the
+   node.
+
+   [fm2html-toc.gif]
+
+Benchmarking
+
+   Biowulf nodes are heterogeneous with respect to processor speed (450,
+   550 and 866 Mhz) and memory size (between 256 MB and 2 GB). The batch
+   system will not distinguish amongst nodes with differing cpu clock
+   speeds or memory sizes. This will have no consequences for most
+   production codes (other than varying runtimes), however, if you are
+   running benchmarks, you will want to specify processor speed and memory
+   size:
+qsub -l nodes=4:p866:m1024 myjob.bat      run on 866 MHz/1 GB nodes
+qsub -l nodes=4:p550:m256 myjob.bat       run on 550 MHz/256 MB nodes
+qsub -l nodes=4:p450:m256 myjob.bat       run on 450 MHz/256 MB nodes
+
+   [fm2html-toc.gif]
+     __________________________________________________________________
+
+   Biowulf Home Page: http://biowulf.nih.gov
+   This document is available as http://biowulf.nih.gov/user_guide.html
+
+   Comments are welcome and may be sent to staff@helix.nih.gov
+   .
+
+      Jan 24, 2002 (sf)

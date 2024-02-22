@@ -1,0 +1,61 @@
+http://telerobotics.jpl.nasa.gov/tasks/rockID/homepage.html
+
+                     Jet Propulsion Laboratory Home Page
+
+   [JPLnav_Black_Begin.gif] JPL Home Page JPL Home Page - Earth JPL Home
+   Page - Solar System JPL Home Page - Stars and Galaxies JPL Home Page -
+   Technology [JPLnav_Black_End.gif]
+
+                On-board 3D model generation of rock surfaces
+
+      This project focuses on optimizing the use of the bandwidth available
+      on a mission in situations where it is desired to retrieve valuable
+      geological information from a remote site. We are presently focusing on
+      two areas.
+       1. To establish a priority on the scientific relevance of images
+          available for downloading. During any given mission, due to
+          bandwidth constraints, the number of images taken by a robotic
+          vehicle (e.g., rover, lander, satellite, etc.) is much larger than
+          the number of images that can be returned to earth. Thus, there is
+          great interest to establish, automatically, a priority on those
+          images that increases the likelihood of sending to earth only the
+          images of the rocks or scenes that are interesting.
+          The following image shows a prioritization between two images using
+          the number of different types of rocks in the image as the sole
+          selection criteria.
+          [ipn1.gif]
+       2. To reduce the bandwidth requirements on retrieving 3D information
+          of a rock formation that has been identified as scientifically
+          relevant. A straightforward approach to get such information is to
+          transmit various stereo pairs of the formation obtained from
+          different positions to permit the 3D reconstruction of the
+          formation on earth. Our approach is to use the stereo pairs to
+          reconstruct the 3D shape, on board, and the transmit only the
+          reconstructed shape and its corresponding texture. In essence, we
+          are providing a trade-off between resources: on-board computation
+          vs. bandwidth.
+          The following images show some steps of the process, i.e., image
+          acquisition, single-view range estimation, multiple-view range
+          integration and 3D structure encoding. Other steps of this process
+          are texture generation, compression / decompression, visualization
+          and end-to-end integration.
+          [rock1.jpg] [rock2.jpg] [rock3.jpg] [rock4.jpg]
+
+   Team
+
+        * Andres Castano - JPL/sec 345 (PI)
+        * Bob Anderson - JPL/sec 323 (prioritization)
+        * Cagatay Basdogan - JPL/sec 366 (encoding, visualization)
+        * Becky Castano - JPL/sec 367 (prioritization)
+        * Wolfgang Fink - JPL/sec 367 (prioritization)
+        * Aaron Kiely - JPL/sec 331 (compression)
+
+      sponsor: NASA/JPL, InterPlanetary Network and Information Systems
+      Directorate (IPN-ISD)
+
+      private site
+     __________________________________________________________________
+
+   Created on 10/24/01
+   Last updated on 11/30/01
+   by Andres Castano

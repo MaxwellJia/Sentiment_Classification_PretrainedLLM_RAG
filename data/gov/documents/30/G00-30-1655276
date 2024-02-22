@@ -1,0 +1,151 @@
+http://ray.eeel.nist.gov/MoreInfo.html
+
+                         Current Activities within the
+
+                      Device and Package Metrology Project
+
+   Color Line
+
+INDEX
+
+     * Advanced Device Model Validation:
+
+                [blueball.gif] Analytic Model Developed for IGBT
+
+                [greenball.gif] Experimental Validation
+
+                [redball.gif] Implementation into Commercial Simulator
+
+                [ball.yellow.gif] Model Validation Working Group
+
+     * Microelectronic Package Characterization:
+
+                [blueball.gif] Package Technology
+
+                [greenball.gif] Multilayer Thermal Code
+
+                [redball.gif] Compact Thermal Component Models
+
+                [ball.yellow.gif] Package Thermal Characterization
+
+   Color Line
+
+   Analytic Model Developed for IGBT:
+
+   The component models that are used in the simulation of the electrical
+   behavior of systems are often poorly characterized and may not be
+   accurate for the conditions being simulated. NIST is working with
+   industry to develop procedures for validating the accuracy and range of
+   applicability for advanced models. Several years ago, NIST developed an
+   analytic model for the Insulated Gate Bipolar Transistor, the most
+   advanced and popular new power semiconductor device. (IGBT Schematic
+   Model).
+   [igbt4.white.trans.gif]
+
+   Color Line
+
+   Experimental Validation:
+
+   For designers to 'trust' a model, though, it must be completely tested
+   against actual experiments. The IGBT model was validated experimentally
+   for a wide range of use conditions at NIST.
+   [al2.gif]
+
+   Color Line
+
+   Implementation into Commercial Simulator:
+
+   For such a model to be truly useful, though, it must be available to
+   the circuit and system design community. NIST worked with Analogy, a
+   software company, to implement the model into their SABER system
+   simulator. Most recently, an advanced electro-thermal model complete
+   with compact thermal component models developed at NIST has been
+   implemented into the SABER simulator.
+   [test.gif]
+
+   Color Line
+
+   Model Validation Working Group:
+
+   Because of the importance of having validated models available, NIST,
+   with the IEEE, has formed a Working Group of industry experts to
+   develop accepted procedures for validating models and simulations. The
+   working group has well over 100 members from device manufacturers and
+   users, software vendors, government, and universities. One of the ways
+   the group communicates is through an interactive database, maintained
+   by NIST, on the World Wide Web.
+   [modval.gif]
+
+   Color Line
+
+   Package Technology:
+
+   A microelectronic device includes the semiconductor 'chip', the package
+   that surrounds the chip, and the interconnects between the chip and
+   that package. The technology trends are PHYSICALLY, for the chips to
+   become larger (to pack more functionality) and the packages to become
+   smaller, particularly thinner (to permit lighter, more portable
+   equipment), ELECTRICALLY, for the devices to operate faster, and
+   THERMALLY for the devices to dissipate more power.
+   [pckg.ps.pnm.crop.trans.gif]
+
+   Color Line
+
+   Multilayer Thermal Code:
+
+   Recently, an upgrade of the NIST-developed thermal modeling code, TXYZ,
+   was released. In the new version, the temperature on the top surface of
+   a structure with an arbitrary number of layers of different thermal
+   properties and thickness and for an arbitrary number and location of
+   surface heat sources is computed. Because TXYZ is based on an analytic
+   solution of the heat flow equations (as opposed to a finite difference
+   or finite element code), it has also been used in industry as a
+   benchmark to determine the accuracy of finite difference codes.
+   Color Line
+
+   Compact Thermal Component Models:
+
+   A procedure has been described, and recently implemented by a
+   commercial software vendor, for developing component models for
+   electro-thermal network simulation. Using this new methodology, the
+   simulator solves for the temperature distribution within the
+   semiconductor devices, packages, and heat sinks, which comprise the
+   'thermal network' simultaneously with the current and voltages in the
+   electrical network. The thermal network is represented as an
+   interconnection of compact thermal components so the system designer
+   can readily interchange different thermal components and examine
+   different configurations of the thermal network. The thermal component
+   models are parameterized in terms of their structure and material
+   properties so the details of the heat transfer physics are transparent
+   to the user.
+   [mele1.ps.pnm.crop.gif]
+
+   Color Line
+
+   Package Thermal Characterization:
+
+   For modern devices, many 'traditional' concepts are invalid or not
+   adequate. One such example, is 'thermal resistance', a concept that
+   describes the thermal behavior of a device. NIST is doing research and
+   working with various industry standards organizations, companies, and
+   universities to develop improved ways to specify and measure the
+   thermal performance of packages. This will enable users to not only
+   better compare package performance but also to more quickly and
+   accurately complete the thermal design of their systems.
+   [pckg.ps.pnm.crop.trans.gif]
+
+   Color Line
+
+   Package Thermal Simulation:
+
+   Today, the influence of the 'package' and 'interconnects' on system
+   performance is becoming more important, particularly due to the
+   increased speed and power dissipation of the chips. The NIST program is
+   addressing measurement issues related to the electrical and thermal
+   characterization of packages and interconnects.
+   [ansys_small.gif] Color Line
+
+
+    For more info email: hefner@sed.eeel.nist.gov
+
+   [back.gif] Return to Al Hefner's Home Page.

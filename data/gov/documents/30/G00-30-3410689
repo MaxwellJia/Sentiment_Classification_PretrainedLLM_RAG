@@ -1,0 +1,176 @@
+http://www.acl.lanl.gov/pooma/
+
+   go to ACL home advanced computing laboratory
+   learn about what we do explore our research projects information for
+   acl users acl and computing related resources latest news and events
+   find acl staff members search our web site need help? look here
+
+     [kitty.gif]
+
+     * About POOMA
+     * Credits
+     * Download
+     * Support
+     * Publications
+     * Presentations
+     * Tutorials
+
+
+            POOMA: Parallel Object-Oriented Methods and Applications
+
+   News
+
+   August 18, 2000 [new.gif]
+
+   POOMA 2.3.0 is released! This version supports message-passing based
+   parallelism for clusters and thread-based parallelism for shared-memory
+   multiprocessors.
+     * Added support for message-based parallelism to support applications
+       running on clusters of computers.
+     * Included some example block-decomposed preconditioners for
+       conjugate gradient solvers written in POOMA.
+     * Prototype of a new, more flexible Field class is included.
+     * Brick engine has been rewritten to be more efficient, and a new
+       separate Dynamic engine has been added.
+     * I/O support has been added for all POOMA classes except Particles
+       and Fields.
+     * The particle swap algorithm has been extended to support messaging.
+     * Various changes were made to enhance performance and reduce compile
+       times.
+
+   See our download page for this update.
+
+   November 3, 1999 [new.gif]
+
+   POOMA 2.2.0 is released! This version includes the following new
+   features and bug-fixes:
+     * Added experimental object I/O for Arrays and tiny types (e.g.,
+       Vector) using standard UNIX read/write routines.
+     * Added new debug functions supporting easy display of Fields and
+       Arrays.
+     * Added missing initialize() functions to Field.
+     * Added ability to make lthe POOMA library a shared library on Unix
+       systems.
+     * Fixed bug associated with retargeting componentwise boundary
+       conditions.
+     * Fixed memory affinity of patches when running multithreaded.
+
+   See our download page for this update. Also see the updated tutorials.
+   For a brief overview of POOMA, download our flyer.
+
+   October 14, 1999
+
+   POOMA 2.1.1 is released! This is a maintenance upgrade including
+   numerous bug-fixes and the following new features:
+     * Improved performance of Field class by inlining functions related
+       to indexing and by ensuring that domain calculations do not make
+       their way into inner loops.
+     * Added initialize() functions for Array, DiscreteGeometry, Field,
+       and Mesh classes; made it so initialize can be called for a
+       constructed object.
+     * Added ability to retarget boundary conditions.
+     * Added support for dynamically-resizing array (using DynamicArray)
+       and string (using std::string) variables to be sent/received via
+       PAWS.
+     * Added short-circuits to CompressibleBlock::tryCompress().
+     * Added --pooma-nocompress option. When this option is given,
+       CompressibleBrick Engines will always be uncompressed.
+     * Vector::Vector() now initializes its elements using the
+       ElementProperties::construct() method. Previously it left its
+       elements uninitialized.
+     * New classes to use for the Tensor class's EngineTag parameter, in
+       addition to Full: Symmetric, Antisymmetric, and Diagonal. These
+       store mininum required number of values and use symmetry to compute
+       others.
+     * New functions acting on Tensors (and Arrays/Fields of Tensors):
+       trace(), det() (determinant), transpose(),
+       symmetrize<OutputEngineTag>().
+     * It is now possible to use the comp() member function of arrays to
+       create views of arrays that reference members of user defined
+       structures.
+     * Added benchmarks/Doof2dField for comparison to Doof2dUMP (Field vs.
+       Array).
+     * Added examples/Laplace2 to illustrate associating boundary
+       conditions with operators.
+     * Added examples/Components/Shock to illustrate new generalized
+       component access.
+     * PDF file containing text of all of the tutorials.
+
+   About POOMA
+
+   POOMA (Parallel Object-Oriented Methods and Applications) is an
+   object-oriented framework for applications in computational science
+   requiring high-performance parallel computers. It is a library of C++
+   classes designed to represent common abstractions in these
+   applications.
+
+   Application programmers use and derive from these classes, which
+   present a data-parallel programming interface at the highest
+   abstraction layer. Lower, implementation layers encapsulate
+   distribution and communication of data among processors. Codes
+   developed on serial workstations port to all supported architectures,
+   including parallel processors.
+
+   The main goals of the POOMA framework include:
+     * Code portability across serial, distributed, and parallel
+       architectures with no change to source code
+     * Development of reusable, cross-problem-domain components to enable
+       rapid application development
+     * Code efficiency for kernels and components relevant to scientific
+       simulation
+     * Framework design and development driven by applications from a
+       diverse set of scientific problem domains
+     * Shorter time from problem inception to working parallel
+       simulations
+
+   The earlier version of POOMA, generally referred to as POOMA r1, has
+   enjoyed considerable success meeting these goals in real applications,
+   which include gyrokinetic particle-in-cell plasma simulation,
+   multimaterial compressible hydrodynamics, accelerator modeling, and
+   Monte Carlo transport. (Existing POOMA r1 users may continue to access
+   the r1 website, which includes user documentation, as long as r1
+   continues to be supported.)
+
+   POOMA 2.x is the next generation of the POOMA software, designed to
+   take advantage of advances in C++ compiler technology, multi-threaded
+   operation, and a new, highly extensible design.
+
+   POOMA has a flexible Array class that supports a plug-in "Engine"
+   architecture to achieve representation independence. It includes a
+   powerful system for specifying and combining domains to construct views
+   of arrays. These views are Arrays, so they can be used anywhere an
+   array is expected. Using a novel "ExpressionEngine" abstraction, array
+   expressions in POOMA are also first-class arrays.
+
+   POOMA supports multi-threaded execution on shared-memory
+   multi-processors using the SMARTS runtime system. An experimental
+   asynchronous scheduler that uses data-flow analysis to perform
+   out-of-order execution in order to improve cache coherency is
+   available. Multi-threaded POOMA II programs can be profiled using the
+   TAU library.
+
+   POOMA hides the details of parallel computation in a flexible
+   "Evaluator" architecture. For the user, this means that a program can
+   be written in a highly-abstract data- parallel form, tested and
+   debugged in serial mode, and then run in parallel with very little
+   effort.
+
+   With POOMA version 2.1, we introduced physics abstractions like fields,
+   coordinate systems, meshes, efficient differential operators, and
+   particles.
+
+   POOMA has been developed with the support of the United States
+   Department of Energy ASCI (Accelerated Strategic Computing Initiative)
+   and DOE 2000 programs, at Los Alamos National Laboratory in Los Alamos,
+   New Mexico.
+
+     __________________________________________________________________
+
+   LOS  ALAMOS  NATIONAL  LABORATORY  LABORATORY
+   Operated by the University of California for the US Department of
+   Energy
+
+   acl-www@lanl.gov | Copyright © UC 1999 | Disclaimer
+
+   [transparent.gif] [transparent.gif] [transparent.gif] [transparent.gif]
+   [transparent.gif] [transparent.gif]

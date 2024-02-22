@@ -1,0 +1,90 @@
+http://octlcam.jpl.nasa.gov/pub/images.html
+
+Image types and parameters
+
+   The camera server takes an image each time a http://<IP Address>/<image
+   type>.jpg call is made. In the following description, the http://<IP
+   address>/ part is omitted.
+
+   You can use the predefined snapshot types, or adjust the appearance
+   using the CGI parameters.
+     __________________________________________________________________
+
+  Snapshot types
+
+   The following snapshot types are available:
+
+   Snapshot type Size (pixels) Description
+
+                                fullsize.jpg
+
+                                 352 × 288
+   The standard resolution. Hardware generated in 0.5 seconds.
+
+                                halfsize.jpg
+
+                                 176 × 144
+   Excellent for thumbnails. Hardware generated in 0.3 seconds.
+
+                                lastshot.jpg
+     The last image taken, either as fullsize or halfsize. Primarily
+   intended for software applications for archiving a buffered image.
+   Note: lastshot is also updated when the front panel button is pressed
+   (fullsize format).
+   hugesize.jpg
+
+                                 704 × 576
+   This is the highest resolution available. As opposed to fullsize and
+   halfsize, this type is software generated, which takes about 18
+   seconds.
+
+                                  zoom.jpg
+   352 × 288 This is a cutout from the center of hugesize, and takes
+   about 8 seconds to generate. The zoom type is equivalent to:
+   hugesize.jpg?top=144&left=176&width=352&height=288 See also the
+   cropping parameters below.
+
+                                hugesize.bmp
+   704 × 576 This is a hugesize in BMP format. Also available in
+   fullsize and zoom.
+
+                                hugesize.ppm
+   704 × 576 This is a hugesize in PPM format. Also available is
+   fullsize and zoom.
+     __________________________________________________________________
+
+  CGI parameters
+
+   You have several possibilities to adjust the size and appearance of
+   your images, ranging from small highly compressed to large high-quality
+   images. As always on the web, the price for size and quality is time!
+
+   On the Settings page, you specify the default appearance of your images
+   (compression, rotation, time stamp, etc.). You can override these
+   settings by appending CGI image parameters. Use this syntax:
+
+          <image type>.jpg?<parameter>=<value>[&<parameter>=<value>...]
+
+   Example
+   To generate a fullsize snapshot with a time stamp, enter:
+
+          fullsize.jpg?clock=on
+
+   These CGI image parameters are available:
+
+    Parameter  Description
+   compression Adjusts the image quality and file size.
+               Values: [ medium | high | low ]
+      color    Selects color or grayscale image.
+               Values: [ normal | none ]
+    axislogo   Shows/hides the Axis logotype.
+               Values: [ off | on ]
+      clock    Shows/hides the time stamp.
+               Values: [ off | on ]
+    rotation   Rotates the image.
+               Values: [ normal | upsidedown | 90deg | 270deg ]
+     mirror    Mirrors the image horizontally.
+               Values: [ off | on ]
+    cropping   Crops a hugesize image.
+               Parameters: top, left, width, height
+               Values: Number of pixels in multiples of 8.

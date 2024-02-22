@@ -1,0 +1,80 @@
+http://ic-www.arc.nasa.gov/articles/story60.html
+
+   <back>
+
+                        Computational Sciences Division
+                                  Highlights
+                               December 10, 2001
+      __________________________________________________________________
+
+
+   CODE IC RESEARCH PAPERS PRESENTED AT ASE 2001
+   Several members of the Automated Software Engineering Research Area
+   presented their work at ASE 2001, the 16th International Conference on
+   Automated Software Engineering, San Diego, November 26-29, 2001.
+   Authors, titles and abstracts are as follows:
+   Title: Automata-Based Verification of Temporal Properties on Running
+   Programs
+   Authors: Dimitra Giannakopoulou and Klaus Havelund
+   Abstract: The paper presents an approach to checking a running program
+   against its Linear Temporal Logic (LTL) specifications. LTL is a widely
+   used logic for expressing properties of programs viewed as sets of
+   executions. Our approach consists of translating LTL formulae to
+   finite-state automata, which are used as observers of the program
+   behavior. The translation algorithm we propose modifies standard LTL to
+   Büchi automata conversion techniques to generate automata that check
+   finite program traces. The algorithm has been implemented in a tool,
+   which has been integrated with the generic JPaX framework for runtime
+   analysis of Java programs.
+   POC: Dimitra Giannakopoulou
+   __________________________________________________________________
+
+   Title: Monitoring Programs using Rewriting
+   Authors: Klaus Havelund and Grigore Rosu
+   Abstract: We present a rewriting algorithm for efficiently testing
+   future time Linear Temporal Logic (LTL) formulae on finite execution
+   traces. The standard models of LTL are infinite traces, reflecting the
+   behavior of reactive and concurrent systems which conceptually may be
+   continuously alive. In most past applications of LTL, theorem provers
+   and model checkers have been used to formally prove that down-scaled
+   models satisfy such LTL specifications. Our goal is instead to use LTL
+   for up-scaled testing of real software applications, corresponding to
+   analyzing the conformance of finite traces against LTL formulae. We
+   first describe what it means for a finite trace to satisfy an LTL
+   formula and then suggest an optimized algorithm based on transforming
+   LTL formulae. We use the Maude rewriting logic, which turns out to be a
+   good notation as well as being supported by an efficient rewriting
+   engine for performing these experiments. The work constitutes part of
+   the PathExplorer (PAX) project, the purpose of which is to develop a
+   flexible tool for monitoring program executions.
+   POC: Klaus Havelund
+   __________________________________________________________________
+
+   Title: Certifying Domain-Specific Policies
+   Authors: Mike Lowry, Tom Pressburger, Grigore Rosu
+   Abstract: Proof-checking code for compliance to safety policies
+   potentially enables a product-oriented approach to certain aspects of
+   software certification. To date, previous research has focused on
+   generic, low-level programming-language properties such as memory type
+   safety. In this paper we consider proof-checking higher-level
+   domain-specific properties for compliance to safety policies. The paper
+   first describes a framework related to abstract interpretation in which
+   compliance to a class of certification policies can be efficiently
+   calculated. Membership equational logic is shown to provide a rich
+   logic for carrying out such calculations, including partiality, for
+   certification. The architecture for a domain-specific certifier is
+   described, followed by an implemented case study. The case study
+   considers consistency of abstract variable attributes in code that
+   performs geometric calculations in Aerospace systems.
+   POC: Grigore Rosu
+   __________________________________________________________________
+
+   Title: Combining static analysis and model checking for software
+   analysis
+   Authors: Guillaume Brat and Willem Visser
+   POC: Guillaume Brat
+     __________________________________________________________________
+
+   DISCIPLINE: Automated Software Engineering Research Area
+
+   <back>

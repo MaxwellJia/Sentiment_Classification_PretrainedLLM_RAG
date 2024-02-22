@@ -1,0 +1,219 @@
+http://www-metdat.llnl.gov/metdat_FAQ.html
+
+   Privacy & Legal Notice
+
+
+         [lll-small.gif] [l05.jpg] [orad_logo2.gif] [logo-trans1.gif]
+     __________________________________________________________________
+
+                              LLNL Meteorology
+
+                         Frequently Asked Questions
+     __________________________________________________________________
+
+     * Why is the temperature reported on the LLNL Weather page different
+       from the temperature seen on a local thermometer?
+     * Where is the LLNL meteorological tower?
+     * Where is the Site 300 meteorological tower?
+     * The current weather page loads but is missing values.
+     * My browser hangs or crashes when I try to view metdat pages.
+     * What is Sigma Theta?
+     * What is Solar Radiation?
+     * What is Stability Class?
+     * Is Wind Direction relative to true north or magnetic north?
+     * Why are there discrepencies between the temperature reported by
+       these web pages and the web page at
+       http://www.llnl.gov/llnl-bin/weather ?
+     * Why is reported solar radiation sometimes greater on a partly
+       cloudy day than on a clear day?
+     * Why do the reports seem to be an hour behind the current time?
+     * Is the reported barometric pressure adjusted to sea level?
+     * Suggestions for additions to this list.
+     __________________________________________________________________
+
+   Why is the temperature reported on the LLNL Weather page different from
+   the temperature seen on a local thermometer ?[TOC]
+
+     There are many reasons the temperature reported by the LLNL met
+     tower may be different from that of other thermometers around the
+     lab.
+    1. Our temperatures are taken at 10 meters above the ground (a
+       standard height) and other thermometers are often near the source
+       of heat - the ground. We also have a thermistor at 2 meters. We may
+       start displaying the values from this sensor. The difference
+       between the two can be over 2 F on a sunny day.
+    2. Our thermistors are assessed every three months and have to be
+       within 0.5 F of a standard. They're usually closer than that. One
+       of the most common styles of consumer thermometers is the bi-metal
+       strip thermometer. These are notorious for being out of calibration
+       and out of linearity.
+    3. Our thermistors are ventilated by a fan. This way we get a true air
+       temperature, not temperature elevated by buildup of heat. Other
+       thermometers are usually not ventilated and are often between
+       buildings that slow down the air.
+    4. Even though a thermometer may be in the shade, it is often attached
+       to a wall. The wall may conduct heat from places in the sun.
+
+   Where is the LLNL meteorological tower?[TOC]
+
+     The LLNL meteorological tower is located in the west buffer zone
+     near the corner of Vasco and Patterson Pass Roads. The base of the
+     tower is about 570 feet above mean sea level.
+
+   Where is the Site 300 meteorological tower?[TOC]
+
+     The Site 300 meteorological tower is located on a ridge near the
+     center of the site. The base of the tower is about 1200 feet above
+     mean sea level.
+
+   The current weather page loads but is missing values. [TOC]
+
+     There are a couple of reasons why the current weather page might
+     load with missing values.
+    1. The met tower may be offline. This can occur due to scheduled
+       maintainence, emergency maintainence and hardware failure.
+    2. The computers serving the data may not be able to communicate. This
+       could be the result of hardware, software or network problems.
+    3. There can be latency between the software that collects the data
+       and the software that serves it to the web. The met data is
+       scheduled to be collected on the quarter hour. The software that
+       serves this data to the web tries to access the most recent data.
+       Depending on the load on the machine, the data collection software
+       may not run until sometime after scheduled. In these cases, the
+       server software tries to access data that does not yet exist. In
+       most cases, reloading the page a few minutes later resolves the
+       problem.
+
+   My browser hangs or crashes when I try to view metdat pages. [TOC]
+
+     Your browser may hang or crash your machine if you are using a
+     really old version of your browser. Most of the metdat pages use
+     javascript which can cause problems for older browsers. For example,
+     versions of Netscape Navigator prior to v2.2 for the Macintosh
+     behave badly when they encounter javascript.
+
+   What is Sigma Theta? [TOC]
+
+     Sigma Theta is measured by our wind vane and is related to
+     horizontal turbulence. Mathematically it is the standard deviation
+     of the vane position. This calculation is tricky because the vane
+     can swing in a circle (it uses polar coordinates).
+
+     At LLNL we take a reading of the wind vane every second. Every 15
+     minutes the data logger takes the 900 readings to calculate an
+     average wind direction and sigma theta. The dynamics of our Met One
+     020 wind vanes are well known and within specifications set down by
+     EPA for damping ratio, starting threshold, and distance constant.
+
+     We use Sigma Theta to estimate the potential for the atmosphere to
+     spread a plume. The EPA provides guidance to calculate a common
+     plume dispersion index (Pasquill Stability Class) from measurements
+     of wind speed and sigma theta.
+
+   What is Solar Radiation? [TOC]
+
+     Solar Radiation is measured by a simple photocell pointed directly
+     up. The voltage from this sensor is directly proportional to the
+     sun's energy striking the a horizontal surface. The photocell we use
+     is sensitive to a broad band of wavelengths.
+
+   What is Stability Class? [TOC]
+
+     Stability Class is used to determine the spread of a plume. There
+     are accepted equations for the width and height of a plume given the
+     distance from the source and the Stability class. Surprisingly, wind
+     speed is not included in these functions. To estimate stability
+     class we use a method suggested by the EPA. The wind speed and sigma
+     theta are combined in this method. There are other methods for
+     estimating stability class. An old one uses wind speed and percent
+     cloud cover. Another method uses solar radiation and wind speed in
+     the daytime, and vertical temperature difference and wind speed at
+     night. There are six Pasquill Stability categories: A through F. The
+     Unstable classes (A, B, and C) occur during the daytime. The Stable
+     classes (E and F) only occur at night. The Neutral class can occur
+     during the day or night. Class A is the Very Unstable and
+     corresponds to hot, calm days and leads to the greatest amount of
+     dispersion. A plume of effluent is broken up and spread wide with A
+     Stability. Class D is neutral. It corresponds to windy days or the
+     transition times of dawn and dusk. This is the most frequently
+     occurring stability class. Class F is Very Stable and corresponds to
+     nights with low winds. A plume experiencing F Stability will feature
+     very little dispersion. Here is a link to a short on-line tutorial
+     on many aspects of Air Quality: http://www.shodor.org/metweb/ or
+     more directly to the part about atmospheric dispersion and
+     stability: http://www.shodor.org/metweb/session6/stable.html
+
+   Is Wind Direction relative to true north or magnetic north? [TOC]
+
+     The wind direction values presented are all relative to True North.
+     We do use a compass to orient the wind vane, but we do take into
+     account the local declination angle.
+
+   Why are there discrepencies between the temperature reported by these
+   web pages and the web page at http://www.llnl.gov/llnl-bin/weather ?
+   [TOC]
+
+     The web page at http://www.llnl.gov/llnl-bin/weather uses the
+     instruments on the met tower located at 2m above the ground. Our web
+     page http://www-metdat.llnl.gov/cgi-pub/metdat/CurrentWeather.cgi
+     uses the instruments located at 10m above the ground, which is the
+     regulatory standard. By using our weather reporting facility (
+     http://www-metdat.llnl.gov/setup_report.html ) you can view the
+     temperature readings from the 2m package. However, there is still a
+     discrepency between our sites of at most 1 °. This reported
+     difference is due to rounding. Our site truncates the fractional
+     portion of temperatures reported in the farenheit scale. The other
+     site uses rounding.
+
+   Why is reported solar radiation sometimes greater on a partly cloudy
+   day than on a clear day? [TOC]
+
+     We use a Licor photometer to measure solar radiation. This sensor is
+     sensitive to the short wave radiation. Clouds reflect these short
+     waves towards the sensor. So, when the geometry is just right, white
+     clouds will add to direct sunlight.
+
+   Why do the reports seem to be an hour behind the current time? [TOC]
+
+     During daylight savings time, the data will appear to be an hour
+     off. All reports use PST as the time basis to ensure reports are
+     consistent even when the reporting period includes one of the time
+     change dates.
+
+   Is the reported barometric pressure adjusted to sea level? [TOC]
+
+     The pressure presented on our web pages is adjusted to sea level.
+     This is common practice and makes it possible to compare data
+     between stations.
+     To adjust back to absolute atmospheric pressure, multiply the sea
+     level pressure by: =((288-0.0065*ElevFeet/3.28)/288)^5.256 where
+     ElevFeet is the elevation in feet. You can see that ElevFeet/3.28 is
+     the elevation in meters.
+     The sensor is usually accurate to within 3 mb. If you need more
+     accuracy than this, you'll have to get a mercury barometer and take
+     your own measurements.
+     You can get data from our Site 300 barometer from our web site.
+     Also, you can get barometric data from the Livermore Airport (KLVK),
+     Oakland (KOAK), and Stockton (KSCK) here. You might have to start at
+     the University of Wyoming home page and click on Weather and Surface
+     Observations.
+     __________________________________________________________________
+
+     Suggestions for additions to this list should be directed to Frank
+                                  Gouveia.
+     __________________________________________________________________
+
+     Comments and Suggestions about this page should be directed to Gary
+                                   Laguna.
+
+      Copyright (C) 1996, 1997 UC Regents and LLNL. All Rights Reserved
+     __________________________________________________________________
+
+              Contact Author Contact Webmaster LLNL Disclaimers
+
+                                             Rev. Date
+
+              UCRL-MI-125279
+
+   Modified: 10-Jul-01 11:44
+   Disclaimer

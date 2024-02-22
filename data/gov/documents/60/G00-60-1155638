@@ -1,0 +1,141 @@
+http://mi.msfc.nasa.gov/NeedsAssessment/library/check.js
+
+   function checkbyIndv() { if (document.byIndv.FName.value.length == 0) {
+   alert ("Please enter your FIRST NAME"); document.byIndv.FName.focus();
+   return false; } if (document.byIndv.LName.value.length == 0) { alert
+   ("Please enter your LAST NAME"); document.byIndv.LName.focus(); return
+   false; } if (document.byIndv.Directorate.selectedIndex == 0) { alert
+   ("Please enter your DIRECTORATE"); document.byIndv.Directorate.focus();
+   return false; } if (document.byIndv.Department.selectedIndex == 0) {
+   alert ("Please enter your DEPARTMENT");
+   document.byIndv.Department.focus(); return false; } if
+   (document.byIndv.Program.value.length == 0 ||
+   document.byIndv.Program.value == 0 || document.byIndv.Program.value ==
+   "+" || document.byIndv.Program.value == " ") { alert ("Please enter
+   your search criteria in the PROGRAM field");
+   document.byIndv.Program.focus(); return false; } if
+   (document.byIndv.Priority.selectedIndex == 0) { alert ("Please enter
+   the PRIORITY for this Program"); document.byIndv.Priority.focus();
+   return false; } return true; } //
+   ***********************************************************************
+   **************** // function checkTraining() { if
+   (document.training.Directorate.selectedIndex == 0) { alert ("Please
+   enter your DIRECTORATE"); document.training.Directorate.focus(); return
+   false; } if (document.training.Department.selectedIndex == 0) { alert
+   ("Please enter your DEPARTMENT"); document.training.Department.focus();
+   return false; } if (document.training.Program.value.length == 0 ||
+   document.training.Program.value == 0 || document.training.Program.value
+   == "+" || document.training.Program.value == " ") { alert ("Please
+   enter your search criteria in the PROGRAM field");
+   document.training.Program.focus(); return false; } if
+   (document.training.Priority.selectedIndex == 0) { alert ("Please enter
+   the PRIORITY for this Program"); document.training.Priority.focus();
+   return false; } if (document.training.FName.value.length == 0) { alert
+   ("Please enter your FIRST NAME"); document.training.FName.focus();
+   return false; } if (document.training.LName.value.length == 0) { alert
+   ("Please enter your LAST NAME"); document.training.LName.focus();
+   return false; } return true; } //
+   ***********************************************************************
+   **************** // function checkGroupReg() { if
+   (document.GroupReg.EmpRequiring.value.length == 0) { alert ("Please
+   enter the Number of individuals requiring this program");
+   document.GroupReg.EmpRequiring.focus(); return false; } if
+   (document.GroupReg.Priority.selectedIndex == 0) { alert ("Please enter
+   the PRIORITY for this Program"); document.GroupReg.Priority.focus();
+   return false; } if (document.GroupReg.Directorate.selectedIndex == 0) {
+   alert ("Please enter your DIRECTORATE");
+   document.GroupReg.Directorate.focus(); return false; } if
+   (document.GroupReg.Department.selectedIndex == 0) { alert ("Please
+   enter your DEPARTMENT"); document.GroupReg.Department.focus(); return
+   false; } if (document.GroupReg.Program.value.length == 0 ||
+   document.GroupReg.Program.value == 0 || document.GroupReg.Program.value
+   == "+" || document.GroupReg.Program.value == " ") { alert ("Please
+   enter your search criteria in the PROGRAM field");
+   document.GroupReg.Program.focus(); return false; } return true; } //
+   ***********************************************************************
+   **************** // function checkOffsite() { if
+   (document.offsite.Directorate.selectedIndex == 0) { alert ("Please
+   enter your DIRECTORATE"); document.offsite.Directorate.focus(); return
+   false; } if (document.offsite.Department.selectedIndex == 0) { alert
+   ("Please enter your DEPARTMENT"); document.offsite.Department.focus();
+   return false; } if (document.offsite.EstAttend.value == 0) { alert
+   ("Please enter the Estimated number of Attendees for this Event");
+   document.offsite.EstAttend.focus(); return false; } if
+   (document.offsite.Objectives.value == 0) { alert ("Please enter the
+   Objectives for this Event"); document.offsite.xObjectives.focus();
+   return false; } if (document.offsite.Location.selectedIndex == 0) {
+   alert ("Please enter the Location of this Event");
+   document.offsite.Location.focus(); return false; } if
+   (document.offsite.POC.value == 0) { alert ("Please enter the Point of
+   Contact for this Event"); document.offsite.POC.focus(); return false; }
+   if (document.offsite.POCPhone.value == 0) { alert ("Please enter the
+   Phone Number for the POC of this Event");
+   document.offsite.POCPhone.focus(); return false; } return true; } //
+   ***********************************************************************
+   **************** // function checkNoReg() { if
+   (document.GroupReg.EmpRequiring.value < 15 &&
+   document.GroupReg.EmpRequiring.value > 0) { alert ("The minimum entry
+   for this field is 15.\n\nPlease click the 'EXIT' button\nto return to
+   the main menu\nand choose one of the first two\noptions for less than
+   15 Employees."); document.GroupReg.EmpRequiring.value = 0;
+   document.GroupReg.EmpRequiring.focus(); return false; } } //
+   ***********************************************************************
+   **************** // function checkNoAttend() { if
+   (document.offsite.EstAttend.value < 15 &&
+   document.offsite.EstAttend.value > 0) { alert ("The minimum entry for
+   this field is 15.\n\nPlease click the 'EXIT' button\nto return to the
+   main menu\nand choose one of the first two\noptions for less than 15
+   Employees."); document.offsite.EstAttend.value = 0;
+   document.offsite.EstAttend.focus(); return false; } } //
+   ***********************************************************************
+   **************** // function convertSpaces(str) { var out = "", flag =
+   0; for (i = 0; i < str.length; i++) { if (str.charAt(i) != " ") { out
+   += str.charAt(i); flag = 0; } else { if(flag == 0) { out += "+"; flag =
+   1; } } } return out; } //
+   ***********************************************************************
+   **************** // function checkview() { if
+   (document.view.reportype[0].checked) { return true; } if
+   (document.view.Directorate.value.length == 0) { alert ("Please enter a
+   DIRECTORATE to view"); document.view.Directorate.focus(); return false;
+   } if (document.view.Department.selectedIndex == 0) { alert ("Please
+   enter a DEPARTMENT to view"); document.view.Department.focus(); return
+   false; } } //
+   ***********************************************************************
+   **************** // function searchProgramByIndv() { if
+   (document.byIndv.Program.value.length == 0 ||
+   document.byIndv.Program.value == "+") { document.byIndv.Program.value =
+   "+"; x=window.confirm ("Leaving the Program Field blank\nwill return
+   the complete Catalog Listing.\n\nThis listing may take a few minutes to
+   load.\n\nClick OK to Continue"); if (!x) {
+   document.byIndv.Program.focus(); return false; } } var
+   x=document.byIndv.Program.value; var
+   fileName="selectProgramByIndv.cgi?keyword="+x;
+   window.open(fileName,"popuppage","width=550,height=550,top=5,left=5,too
+   lbar=no,location=no,directories=no,status=no,menubar=no,resizable=yes,s
+   crollbars=yes"); } //
+   ***********************************************************************
+   **************** // function searchProgramTraining() { if
+   (document.training.Program.value.length == 0 ||
+   document.training.Program.value == "+") {
+   document.training.Program.value = "+"; x=window.confirm ("Leaving the
+   Program Field blank\nwill return the complete Catalog Listing.\n\nThis
+   listing may take a few minutes to load.\n\nClick OK to Continue"); if
+   (!x) { document.training.Program.focus(); return false; } } var
+   x=document.training.Program.value; var
+   fileName="selectProgramTraining.cgi?keyword="+x;
+   window.open(fileName,"popuppage","width=550,height=550,top=5,left=5,too
+   lbar=no,location=no,directories=no,status=no,menubar=no,resizable=yes,s
+   crollbars=yes"); } //
+   ***********************************************************************
+   **************** // function searchProgramGroupReg() { if
+   (document.GroupReg.Program.value.length == 0 ||
+   document.GroupReg.Program.value == "+") {
+   document.GroupReg.Program.value = "+"; x=window.confirm ("Leaving the
+   Program Field blank\nwill return the complete Catalog Listing.\n\nThis
+   listing may take a few minutes to load.\n\nClick OK to Continue"); if
+   (!x) { document.GroupReg.Program.focus(); return false; } } var
+   x=document.GroupReg.Program.value; var
+   fileName="selectProgramGroupReg.cgi?keyword="+x;
+   window.open(fileName,"popuppage","width=550,height=550,top=5,left=5,too
+   lbar=no,location=no,directories=no,status=no,menubar=no,resizable=yes,s
+   crollbars=yes"); }

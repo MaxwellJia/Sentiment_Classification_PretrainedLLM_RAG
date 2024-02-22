@@ -1,0 +1,1518 @@
+http://noaa.wff.nasa.gov/csguide/cs_guide.htm
+
+    Computer Users' Guide
+
+                               For Protecting
+
+                            Information Resources
+
+                                  MARCH 1997
+
+             U.S. DEPARTMENT OF COMMERCE
+
+   National Oceanic and Atmospheric Administration
+
+   Office of Finance and Administration, Systems Division
+
+   Telecommunications and ADP Security Branch
+
+        MESSAGE
+
+                 Computer security is more than the protection
+
+   of sensitive information. It is good management
+
+   and the duty of responsible Federal employees.
+
+   We as public servants must protect the materials
+
+   we handle as a public trust.
+
+    I am told that experts in the field of information
+
+   management agree that most security problems
+
+   stem from people simply not understanding their
+
+   responsibilities.
+
+    This booklet should be helpful in addressing that
+
+   problem. It will help all of us within NOAA
+
+   understand the need for vigilance in handling
+
+   secure documents and give us the tools for
+
+   carrying out that mission.
+
+       D. James Baker
+
+   Under Secretary for Oceans and Atmosphere
+
+   POLICY STATEMENT
+
+    It is the policy of the National Oceanic and Atmospheric
+   Administration (NOAA) to protect its information resources and allow
+   the use, access, and disclosure of information only in accordance with
+   applicable laws, Federal regulations, and NOAA Directives. This policy
+   statement is directed at reaffirming the goals of the NOAA for
+   protecting data, information, and the means of processing data.
+
+    An Information Technology (IT) Security Program will be maintained to
+   ensure that cost-effective security controls are set up for the
+   protection of existing systems, and that such controls are included in
+   the design and development of new systems. These controls will be
+   commensurate with the risks associated with loss of resources and/or
+   services within the NOAA. Important is the assurance that the computing
+   facilities and the data processed, stored, and distributed from these
+   facilities be protected to the degree dictated by the sensitivity of
+   the data and as directed by responsible user management. The term
+   security, as defined in this policy, encompasses the full range of
+   physical measures, technological safeguards, and administrative
+   procedures applied to facilities, hardware, software, firmware, data,
+   telecommunications and personnel.
+
+     TABLE OF CONTENTS
+
+    Policy Statementi
+
+   Introduction1
+
+   Who is Responsible for Protecting Data and Information1
+
+   What is "Sensitive" Data2
+
+   What Risks are Associated With the Use of Computers?2
+
+   How Much Security Is Enough?3
+
+   Password Security3
+
+   Selecting Good Passwords4
+
+   Malicious Software7
+
+   Virus Protection9
+
+   Definition of a Security Breach9
+
+   Reporting Security Breach/Viruses10
+
+   The Internet11
+
+   Proper Use of Government Equipment15
+
+   Is Your Computer Humming Along While You=re Out?16
+
+   Facts About Software17
+
+   The Law17
+
+   The Language18
+
+   The Code of Ethics19
+
+   General Responsibilities22
+
+   Employee Responsibilities23
+
+   Security and Control Guidelines25
+
+   Personal Computer Security27
+
+   Summary of Security Practices29
+
+   Protect Your Equipment29
+
+   Protect Your Area29
+
+   Protect Your Password29
+
+   Protect Your Files29
+
+   Protect Against Viruses30
+
+   Lock Up Storage Media Containing Sensitive Data30
+
+   Back Up Your Data30
+
+   Report Security Violations30
+
+   Copyright Laws30
+
+   Information Technology Security Officersinside back cover
+
+   INTRODUCTION
+
+    Today's computer technology, with microcomputers and on-line access,
+   has placed the power of the computer where it belongs, in YOUR hands.
+
+    YOU, the users, develop computer applications and perform other data
+   processing functions that were previously only done by the computer
+   operations personnel. These advances have greatly improved our
+   efficiency and effectiveness but also present a serious challenge in
+   achieving adequate data security.
+
+    While excellent progress has been made in computer technology, very
+   little has been done to inform users of the vulnerability of data and
+   information to such threats as unauthorized modification, disclosure,
+   and destruction, either deliberate or accidental. This guide will make
+   you aware of some undesirable things that can happen to data and will
+   provide some practical solutions for reducing your risks to these
+   threats.
+
+     WHO IS RESPONSIBLE FOR PROTECTING DATA AND INFORMATION?
+
+    The statement that "security is everyone's responsibility" is
+   absolutely true. Owners, developers, operators, and users of
+   information systems have a personal responsibility to protect these
+   resources.
+
+    Supervisors have the responsibility to provide appropriate security
+   controls for any information resources entrusted to them. These
+   supervisors are personally responsible for understanding the
+   sensitivity and criticality of their data and the extent of losses that
+   could occur if the resources are not protected. Supervisors must ensure
+   that all users of their data and systems are made aware of the
+   practices and procedures used to protect the information resources.
+
+    When you do not know what your security responsibilities are, ASK YOUR
+   SUPERVISOR.
+
+    WHAT IS "SENSITIVE" DATA?
+
+    All data is sensitive to some degree; exactly how sensitive is unique
+   to each business environment. Within the Federal Government, personal
+   information is sensitive to unauthorized disclosure under the Privacy
+   Act of 1974. Occasionally, data is far more sensitive to accidental
+   errors or omissions that compromise accuracy, integrity, or
+   availability.
+
+     [Image1.gif]
+
+   For example, in a Management Information System, inaccurate,
+   incomplete, or obsolete information can result in incorrect management
+   decisions that could cause serious damage and require time and money to
+   rectify. Data and information that are critical to an agency's ability
+   to perform its mission are sensitive to nonavailability.
+
+    Still, other data are sensitive to fraudulent manipulation for
+   personal gain. Systems that process electronic funds transfers, control
+   inventories, issue checks, control accounts receivables and payables,
+   etc., can be fraudulently exploited resulting in serious losses to an
+   agency.
+
+    One way to determine the sensitivity of data is to ask the questions,
+   "What will it cost if the data is wrong? Manipulated for fraudulent
+   purposes? Not available? Given to the wrong person?" If the damage is
+   more than you can tolerate, then the data is sensitive and should have
+   adequate security controls to prevent or lessen the potential loss.
+
+     WHAT RISKS ARE ASSOCIATED WITH THE USE OF COMPUTERS?
+
+    Over the past several decades, computers have taken over virtually all
+     of our major record-keeping functions. Recently, personal computers
+       have made it cost-effective to automate many office functions.
+      Computerization has many advantages and is here to stay; however,
+     automated systems introduce new risks, and we should take steps to
+                            control those risks.
+
+     We should be concerned with the same risks that existed when manual
+        procedures were used. One risk introduced by computers is the
+      concentration of tremendous amounts of data in one location. The
+     greater the concentration, the greater the consequences of loss or
+   damage. Another risk is computer user access from remote terminals. We
+    must be able to positively identify the user, as well as ensure that
+      the user is authorized. Newspaper accounts of computer "hackers,"
+     computer virus attacks, and other types of intruders underscore the
+    reality of the threat to government and commercial computer systems.
+
+                        HOW MUCH SECURITY IS ENOUGH?
+
+    No matter how many controls or safeguards we use, we can never achieve
+   total security. We can, however, decrease the risk in proportion to the
+   strength of the protective measures. The degree of protection is based
+   on the value of the information; in other words, how serious would be
+   the consequences if a certain type of information were to be wrongfully
+   changed, disclosed, delayed, or destroyed?
+
+    There are two things you need to do:
+
+    !Ensure that you=re the only one who knows your password.
+
+   !Ensure that your password is not one that can be easily guessed by a
+   password cracker.
+
+    A password is not just a way to get into the computer system; it is a
+   way to keep unauthorized people out. Don't underestimate your
+   importance. You are on the frontline of information systems security!
+   In many cases, even though you may not deal with sensitive material on
+   your own computer, your password may be all the information a hacker
+   needs to pass from the outer regions (where you compute) to the inner
+   regions (where the sensitive data resides) of your organization's
+   network.
+
+     PASSWORD SECURITY
+
+                    Can You Outsmart A Password Cracker?
+
+         One of the most basic methods used to secure the integrity,
+    confidentiality and availability of the data on computer systems is a
+   password. Consequently, "password cracking" (guessing a user's password
+        and using it to gain unauthorized access) is one of the most
+      fundamental activities of computer hackers. Password cracking has
+   become very sophisticated. There are hacker programs that can guess an
+    average of 40 percent of all passwords on a computer network. Such a
+      program can be designed to attempt not only all the words in the
+     dictionaries of several languages, but also various permutations of
+                            commonly used words.
+
+     Since your password is the most vulnerable point of break-in for any
+      would-be hacker, taking care in the choice and protection of that
+   password is the single most important contribution you can make to the
+              security of your organization's computer system.
+
+                          SELECTING GOOD PASSWORDS
+
+                                  RATIONALE
+
+      The object, when choosing a password is to make it as difficult as
+     possible for a cracker to make educated guesses about what you have
+   chosen. This leaves him no alternative but a brute-force search, trying
+     every possible combination of letters, numbers, and punctuation. A
+     search of this sort, even conducted on a machine that could try one
+      million passwords per second (most machines can try less than one
+    hundred per second), would require, on the average, over one-hundred
+                             years to complete.
+
+        Create a password that is both difficult to guess and easy to
+   remember. Random alphanumeric compositions (for example, AX$78BO@) make
+    excellent passwords. Unfortunately, they are hard to remember. Use an
+   acronym from an easy to remember phrase. AA stitch in time saves nine@
+                        can translate into AASITS9.@
+
+                                  DO NOT USE
+
+     Cyour login name in any form (as-is, reversed, capitalized, doubled,
+                                   etc.).
+
+    Ca name associated with you in any way (your middle initial, spouse=s
+   first name, a maiden name, pet=s name, child=s name, or favorite
+   celebrity). In fact, don=t choose a proper name, whether a first name
+   or a last name.
+
+    Cother information easily obtained about you. This includes license
+   plate numbers, telephone numbers, social security numbers, the brand of
+   your automobile, the name of the street you live on, etc.
+
+    Ca password of all digits, or all the same letters. This significantly
+   decreases the search time for a cracker.
+
+    Cany word in any dictionary in any language in any form. Don=t simply
+   reverse the spelling of a dictionary word. Again, password crackers are
+   very smart little programs.
+
+    Cany slang words or obscenity, technical term or jargon, computer
+   brand names or operating systems.
+
+    Csimple patterns, including: passwords of all the same letters, simple
+   keyboard patterns, or anything that someone might easily recognize if
+   they see you typing it.
+
+    Cobjects that are in your field of vision at your workstation.
+
+    Cany password that you have used in the past.
+
+    Cpasswords found on a password protection checklist
+
+    Ca password shorter than six characters.
+
+    DO
+
+                      CChange your password frequently.
+
+    CUse both upper and lowercase letters.
+
+    CUse numbers and special symbols (!@#$) with letters. For example,
+   AYou Are My Sunshine@ becomes Yr#M?s.
+
+    CCreate simple mnemonics (memory aids) or compounds that are easily
+   remembered, yet hard to decipher: 2bOn2b for ATo Be Or Not To Be@.
+
+    CUse two or more words together (Yet_Another_Example).
+
+    CUse misspelled words (WhutdooUmeenIkan'tSpel?).
+
+    CUse a minimum of six characters. Generally, the longer the password,
+   the more secure it is.
+
+     METHOD TO CHOOSE SECURE AND EASY TO REMEMBER PASSWORDS
+
+    CChoose a line or two from a song or poem, and use the first letter of
+                                 each word.
+
+    CAlternate between one consonant and one or two vowels, up to eight
+   characters. This provides nonsense words that are usually
+   pronounceable, and thus easily remembered. Examples: Aroutboo,@
+   Aquadpop,@
+
+    CChoose two short words and concatenate them with a punctuation
+   character between them. For example: Adog;rain,@ Abook+mug,''
+   Akid?goat.@
+
+     PROTECTING PASSWORDS
+
+    NEVER write your password down anywhere, nor share your password with
+                                   anyone.
+
+            NEVER tape your password near terminals or calendars.
+
+       The non-print and non-display options are to be used to protect
+                                 passwords.
+
+                              CHANGING PASSWORDS
+
+    Passwords must be changed at least once every 120 days or no less than
+       every six months. Passwords are to be changed immediately when
+               compromised or when personnel leave employment.
+
+                      AWHY GO THROUGH ALL THE TROUBLE?''
+
+      Passwords are the primary defense and front-line security for your
+       personal data. If someone obtains your password, then they have
+      complete access to your account and all its data, and to all the
+   privileges and abilities you have. If you give your password to anyone,
+         you are giving them significant power while keeping all the
+   responsibility for their wielding it. There are always better and safer
+      ways of doing anything legitimate than giving away your password.
+
+   MALICIOUS SOFTWARE
+
+    Malicious software presents an increasingly serious security problem
+   for computer systems and networks. Malicious software includes viruses
+   and other destructive programs, such as Trojan horses and network
+   worms. This type of software is often written as independent programs
+   that appear to provide useful functions but contain malicious programs
+   that can be very destructive. It can be quickly spread though software
+   bulletin boards, shareware, and users unaware of the danger, who copy
+   and share these programs in an unauthorized manner. It can also be
+   spread by users sharing data files and software products. Networks are
+   particularly vulnerable as they allow very rapid spread of the virus to
+   all systems connected to the network.
+
+    A program that is infected with a virus can infect any host in which
+   the program is used. Because of the insidious nature of a virus, any
+   user may become an unwitting propagator. NOAA's dependence on networked
+   computer systems, personal computers (PCS), and office automation makes
+   us susceptible to virus "attacks." Computer viruses have become a
+   threat to virtually everyone who uses a computer. A virus can destroy
+   programs and data by copying itself to other programs. It is then
+   executed when the infected program is run. It can disable computers and
+   entire computer networks. It can also cause lost computer time and
+   staff resources to track and eliminate it.
+
+    Most of NOAA's Line Offices have been infected with different computer
+   viruses. In many cases, data was not lost, but time and staff resources
+   were wasted tracking and eliminating these viruses. These viruses are
+   unintentionally received through disk, bulletin boards, on-line
+   services, E-mail, the Internet, and organizational networks.
+
+    PC=s are more susceptible to viruses than other types of computers due
+   to their widespread use. However, viruses can be created for any type
+   of computer. Malicious programs such as Trojan horses and trap doors
+   were originally written for mainframe computer systems. Introduction of
+   malicious programs into these larger systems is usually caused by
+   unauthorized use of the system.
+
+    To minimize the risk of viruses and other malicious software to NOAA
+   systems and
+
+   networks, all employees should adhere to the following:
+
+    !Make frequent back-up copies of software and data. Employees should
+   back-up new software immediately, retaining the original distribution
+   diskettes in a safe and secure location. Write-protect original
+   diskettes prior to making back-up copies. If a virus destroys the
+   working copy, the original software is still available.
+
+    !Use only newly-formatted diskettes for copying software for back-up
+   storage. Used disks may already contain malicious programs which would
+   contaminate the back up copies.
+
+    !Scan all out-going and incoming software and data diskettes for
+   viruses or other malicious coding. Use only new media for making copies
+   for distribution. Where possible, use a stand-alone computer system
+   when preparing copies for distribution.
+
+    !Use only certified commercial software. All PC machine-readable media
+   will be scanned for malicious software before initial use. This
+   includes software sealed in "shrink-wrapped" plastic.
+
+    !Use only authorized software. It is imperative that machine-readable
+   software and data files be obtained from reliable sources. Viruses are
+   often spread through free or shared programs, games, demonstration
+   programs, and programs downloaded from bulletin boards. Employees must
+   not use privately-owned software or take software from their office
+   without management approval. Commercial software must be obtained
+   through appropriate procurement channels. In-house developed software
+   must be done in accordance with established policy within the operating
+   unit and have prior management approval.
+
+    !Shareware and freeware software must be obtained only with prior
+   management approval. Software obtained electronically from bulletin
+   boards and the Internet should be downloaded to newly formatted
+   diskettes and not directly to the computer hard disk. All newly
+   acquired software, regardless of source, is subject to the scanning
+   requirements.
+
+    !For all of NOAA systems, user identification and passwords are the
+   primary protection mechanism against malicious software. If the
+   would-be perpetrators cannot get into the system, they cannot put
+   malicious software on the system.
+
+    !Portable computer systems, such as laptops, that leave NOAA
+   controlled areas must be scanned for viruses before and after
+   connecting to systems or software owned by other organizations.
+
+    !Never use a local area network file server as a workstation. File
+   servers should be located in areas where access is restricted during
+   workings hours and locked after hours.
+
+    !Never start up (boot) your computer from a diskette unless it is the
+   original
+
+   write-protected system master or a trusted copy.
+
+       VIRUS PROTECTION
+
+       To protect your software and data, use NOAA's standard detection
+    software, VirusScan by McAfee Associates. This software is capable of
+    continuous monitoring and reporting malicious programs and should be
+     installed on hard disks to prevent contamination. Periodic scans of
+    hard disks, using VirusScan, should be performed for systems without
+                         this protection installed.
+
+      NOAA users can obtain copies for home and office PCS by contacting
+      their system administrator or Line Office Information Technology
+   Security Officer (ITSO). (See inside back cover for the ITSO list.) The
+         software can be downloaded from the NOAA Security Home Page
+                     http://www.rdc.noaa.gov/~security.
+
+     DEFINITION OF A SECURITY BREACH
+
+    A security breach is any violation of computer security policies,
+   procedures and requirements which have been established to reduce the
+   risk of misuse, abuse, corruption, unauthorized access, improper
+   disclosure, loss of availability for program operations, or any other
+   compromise of NOAA information resources.
+
+    Each system's level of security must protect the confidentiality,
+   integrity, and availability of the information. Failure to protect
+   passwords, to log off of terminals and/or PC's when working with
+   sensitive data, improper disposal of printed sensitive data, i.e.
+   passwords, computer printouts (listings) and/or unsecured desks, doors,
+   cabinets, or other facilities (computer room) are examples of computer
+   security breaches. The use of Government automated information systems
+   and or resources for personal gain, profit, entertainment, or non
+   work-related purposes is also considered a security breach.
+
+    All NOAA employees are to report to their supervisor and ITSO any
+   security violations on the following topics:
+
+    Security breachesUnusual events
+
+   Unauthorized disclosuresViruses
+
+            REPORTING SECURITY BREACHES/VIRUSES [Image2.gif]
+
+    Should a virus or hacker intrusion be detected within NOAA offices, an
+   initial verbal report to the Line Office ITSO is required within 24
+   hours of the incident. Within seven working days of the incident, a
+   written report must be forwarded to the Line Office ITSO using NOAA
+   Form 47-43. An electronic copy of the form can be obtained from your
+   line office ITSO, and returned to the ITSO electronically. The form can
+   also be down loaded from the NOAA Security Web Page.
+
+    THE INTERNET
+
+                       SPREADING COMPUTER VIRUS HOAXES
+
+                                 [Image3.gif]
+
+     The Internet has become the leading source of information regarding
+   computer virus threats. However, interspersed among real virus notices
+     are computer virus hoaxes. These virus hoaxes are sometimes called
+    Junk-mail viruses because they act like other computer viruses, only
+     they use people as the method of infecting new systems. While these
+   hoaxes do not infect systems, they are still time consuming and costly
+                                 to handle.
+
+    Users of the Internet must learn to be skeptical, and think carefully
+     before spreading a message to new users. Remember these points for
+                             identifying a hoax:
+
+     !It is recommended that you DO NOT circulate virus warnings without
+   first checking with your system administrator, system security officer
+    or IT Security Officer. Real warnings about viruses and other network
+    problems are issued by different response teams (CIAC, CERT, ASSIST,
+   NASIRC, etc.) and are digitally signed by the sending team using Pretty
+     Good Privacy (PGP) encryption key. If you download a warning from a
+      teams web site or validate the PGP signature, you can usually be
+                      assured that the warning is real.
+
+    !Warnings without the name of the person sending the original notice,
+   or warnings with names, addresses and phone numbers that do not
+   actually exist are probably hoaxes.
+
+    !If the warning urges you to pass it on to your friends. This should
+   raise a red flag that the warning may be a hoax.
+
+    !If the warning indicates that it is a Federal Communication
+   Commission (FCC) warning. According to the FCC, they have not and never
+   will disseminate warnings on viruses. It is not part of their job.
+
+    !If a message seems like it should be shared with a large number of
+   people. The more urgent it sounds, the more skeptical you should be.
+
+    !These hoaxes are not computer viruses. They are more like a social
+   virus or a thought virus.
+
+     WHAT TO DO WHEN YOU RECEIVE A WARNING
+
+      NOAA users are requested to please not spread unconfirmed warnings
+   about viruses. If you receive an invalidated warning, DO NOT forward it
+    to all your friends. All warnings are to be forwarded to your system
+              administrator or IT Security Officer to validate.
+
+       There is ABSOLUTELY NO WAY for an E-mail message to infect your
+     computer with a virus just by reading it. Note however, that it IS
+    possible to download an executable program through e-mail, or through
+    your web browser. To protect your hard drive against viruses, always
+                        download files to a diskette.
+
+                         IS AN E-MAIL VIRUS POSSIBLE?
+
+     No. There is no way for a virus to spread simply by reading E-mail.
+
+    A few people have gone through mental gymnastics trying to dream up a
+      way such a thing could be done. The closest anyone has come is to
+      infect a program with a virus, encode the program into text with
+     uuencode, binhex, etc., and E-mail the encoded program. The person
+     receiving the E-mail would have to download the mail to their hard
+    drive, decode it, and run the infected program. That's not even close
+              to the claims made for the spread of Good Times.
+
+   You should, of course, be wary of any file attachments a stranger sends
+    you. At the least, you should check such file attachments for viruses
+                            before running them.
+
+              HOW CAN I PROTECT MYSELF FROM VIRUSES IN GENERAL?
+
+    Use NOAA's standard virus software, VirusScan, by McAfee Associates.
+         This software is obtainable on the NOAA Security Home page:
+     http://rdc.noaa.gov/~security. Most people get into trouble because
+     they never bother to check their computer for viruses. Most viruses
+   spread through floppy disks, so isolating yourself from online services
+             and the Internet will not protect you from viruses.
+
+      The following virus hoaxes have been circulating throughout NOAA:
+
+                    Irina Virus HoaxGood Times Virus Hoax
+
+                    Deeyenda Virus HoaxGhost.exe Warning
+
+                              Penpal Greetings
+
+                               ONLINE REFERENCES
+
+    For a description of each of the above virus hoaxes, check out one of
+                                the following
+
+                             online references:
+
+          NOAA Security Home Page: http://www.rdc.noaa.gov/~security
+
+         Computer Virus Myths home page: http://www.kumite.com/myths/
+
+     McAfee Associates Home Page: http://www.mcafee.com/support/hoax.html
+
+                                  NETIQUETTE
+
+                    Internet tips on proper ANetiquette.@
+
+      Search for the FAQs: Frequently Asked Questions (FAQ=s) are freely
+   available throughout cyberspace. In this way, users new to the Net can
+     get up to speed without clogging the wires with a lot of repetitive
+                                  queries.
+
+    Don=t spam: WWW sites are the appropriate way to advertise promotional
+        messages to news groups, mailing lists, etc. is very uncool.
+
+     Don=t flame: Remember the old adage about Anever starting something,
+    unless you=re prepared to finish it@? Well, in regard to flaming, it
+   would read more like Anever start something unless you=re prepared for
+    it to never finish.@Before you ignite the first match in a flame war,
+          ask yourself if you=re willing to endure the return fire.
+
+    Don=t SHOUT: Using ALL CAPS in Net correspondence implies that you are
+                                  SHOUTING.
+
+    Lurk for awhile: If you sign onto news groups or mailing lists, Alurk@
+    for awhile. Read the posting of others for at least a few days, until
+       you know what list participants talk about and at what level of
+                           expertise they commune.
+
+      Stay on the topic: If you lurk before posting, you=ll notice that
+    those maintaining the list or group usually try to stay on topic. You
+                             should do the same.
+
+     Set date and time: Most E-mail systems stamp messages with the date
+      and time. If you have questions about setting your PC=s clock or
+      calendar, consult your organization=s information systems staff.
+
+      Take a breath or two before you respond: E-mail correspondence is
+    unforgiving. If you type a furious response on paper, there is plenty
+    of time to cool off between the office printer and the mail-box. But
+   with E-mail, once you send it, it is gone. Unless you take a moment or
+        two, to consider the consequences, you could regret it later.
+
+      Don=t hog the line: When you=re finished surfing the WWW, log-off.
+
+      Use emoticons: The nuances of human interaction (the glance, wink,
+      smirk, sigh) are absent in electronic communications (other than
+    video-conferencing). Emoticons help avoid misunderstandings. Samples
+                                  include:
+
+                                 :-) (Happy)
+
+                                :-( (Unhappy)
+
+                              :-C (Very unhappy)
+
+                                 :-} (Smirk)
+
+                            :-J (Tongue-in-cheek)
+
+                                  :X (Oops!)
+
+                                <L> (Laughing)
+
+                                <G> (Grinning)
+
+                        IMHO (In my humble opinion...)
+
+                   IMNSHO (In my not so humble opinion...)
+
+                             PROPER USE OF GOVERNMENT EQUIPMENT
+
+      The computer systems you use in your daily work should be used only
+     for authorized purposes and in a lawful manner. There are computer
+    crime laws that prescribe criminal penalties for those who illegally
+    access Federal computer systems or data. One example is the Computer
+   Fraud and Abuse Act of 1986 (PL 99-474). Additionally, the unauthorized
+     use of Federal computer systems or use of authorized privileges for
+    unauthorized purposes could result in disciplinary action. This also
+              includes all government facsimile (fax) machines.
+
+       The Standards of Ethical Conduct are found in 5 Code of Federal
+    regulations (CFR) Part 2635. Part 2635.704 (a) of the CFR states: "An
+     employee has a duty to protect and conserve Government property and
+        shall not use such property, or allow its use, for other than
+                            authorized purposes."
+
+       The Department of Commerce Employee Handbook, Chapter 14, states:
+
+      "The use of any Government computer facility, computer system, or
+     related computer equipment, including the use of data terminals and
+   word processors, for anything other than official, authorized purposes
+           is prohibited. Employees are also prohibited from using
+       computer-generated data or information for anything other than
+   official, authorized purposes. Commerce employees or other individuals
+   with access to Government computers and related equipment who knowingly
+     misuse this equipment or its output for personal, recreational, or
+    other unofficial uses will be subject to disciplinary actions, up to
+                   dismissal and/or criminal prosecution."
+
+    In addition to misuse of Government property you must remain cognizant
+   of misuse of work time. Part 2635.705 (a) of the CFR states: "Unless
+   authorized in accordance with law or regulations to use such time for
+   other purposes, an employee shall use official time in an honest effort
+   to perform official duties." Unauthorized use of Government property
+   and/or time will not be tolerated.
+
+               IS YOUR COMPUTER HUMMING ALONG WHILE YOU=RE OUT?
+
+     Why bother turning off your computer when you leave for lunch or for
+    home? After all, you=ll simply have to restart it when you return. If
+   that=s your attitude, you=re not worried about conserving energy. And,
+   you=re not in step with official concern over energy efficiency in the
+    operation of Federal buildings. Recent legislation requiring Federal
+       agencies to reduce building energy use has caused most Federal
+     employees to begin looking more closely at energy used by personal
+                     computers and associated equipment.
+
+        Executive Order 12759 of April 17, 1991, requires that Federal
+    agencies reduce their energy consumption to 20 percent below the 1985
+     levels by the year 2000. Personal computers are responsible for the
+      fastest growing segment of energy usage in Federal buildings. The
+   increased used of personal computers has added to the burden placed on
+      building air conditioning systems and electrical components, say
+       experts. Research suggests that 30 percent to 40 percent of all
+    computers are left on at night and over weekends, and that during the
+         day computers are active less than 20 percent of the time.
+
+     Over time, the personal computers and associated equipment which are
+     used in the Federal workforce will be replaced with technologically
+   advanced equipment that will automatically Apower-down@ when not being
+      used. In the meantime, there are several procedures which can be
+     adopted that will help reduce the consumption of energy used in the
+    buildings like those used by NOAA. A key component to reducing energy
+      consumed by the use of personal computers is to promote employee
+   awareness on energy efficient practices, the experts say. The following
+    tips will help to save energy and ease the burden on Federal building
+                  air conditioning and electrical systems:
+
+    1.Turn equipment off during non-work hours. The energy consumption of
+    a personal computer can be reduced by more than 75 percent by simply
+               turning off the machine during non-work hours.
+
+    2.Turn equipment off whenever you leave the office for an extended
+   period of time or for any long period of inactivity when it will not be
+   inconvenient to re-boot or re-start.
+
+    3.Turn off just the monitor between shorter absences of use. This will
+   reduce the unit=s power consumption about 50 percent.
+
+                              FACTS ABOUT SOFTWARE
+
+                                 [Image4.gif]
+
+                                   THE LAW
+
+       Title 17, United States Code, Section 106 gives copyright owners
+      exclusive rights to reproduce and distribute their material, and
+     Section 504 states that copyright infringers can be held liable for
+    damages to the copyright owner. Title 18, United States Code provides
+            felony penalties for software copyright infringement.
+
+        It is the responsibility of all NOAA employees to protect the
+       government's interests in the performance of their duties. This
+   includes responsibility for assuring that commercial software, acquired
+        by the government, is used only in accordance with licensing
+   agreements. Likewise, it is also your responsibility to assure that any
+     proprietary software is properly licensed before being installed on
+   government equipment. This policy does not apply to software developed
+     by or for a federal agency and no restrictions apply to its use or
+                 distribution within the federal government.
+
+    Your acquisition and use of software is governed by copyright law and
+   the license agreement accompanying the software. Therefore, you should
+                                  be aware:
+
+      !It is illegal to copy or distribute software or its accompanying
+      documentation, programs, applications, data, codes, and manuals,
+          without permission or a license from the copyright owner.
+
+    !It is illegal for organizations to consciously or unconsciously
+   encourage, allow, compel, or pressure employees to make or distribute
+   unauthorized software copies.
+
+    !It is illegal to infringe the laws against unauthorized software
+   copying because someone requests or compels it.
+
+    !It is illegal to loan software so that a copy can be made
+
+    !It is illegal to make, import, possess, or deal with articles
+   intended to facilitate the removal of any technical means applied to
+   protect the software program.
+
+                                THE LANGUAGE
+
+                                 [Image5.gif]
+
+     Software language is not just about programming, but also about the
+    management and use of original software under copyright law. Here are
+                  some definitions of commonly used terms:
+
+    Intellectual PropertyCAn original computer program is regarded by law
+   as the intellectual property of the person or company which created the
+      work. Computer programs are protected under copyright law, which
+      provides that any unauthorized copying of such works is illegal.
+
+      Software License AgreementCA software license agreement states the
+    terms of usage, as permitted by the copyright owner, for the specific
+        software product to which it pertains. The license agreement
+         accompanying software is stated explicitly in the software
+    documentation or on the computer screen when the program is started.
+     The price of software covers the legal acquisition of the software
+    license and binds the purchaser to use the software only according to
+               the terms and conditions stated in the license.
+
+       Unauthorized CopyingCUnless otherwise stated, the purchase of a
+   software license allows the purchaser to make only one "back-up" copy,
+      to be used in case the original software disk malfunctions or is
+   destroyed. Any other copy of the original software is considered to be
+    an unauthorized copy, and is an infringement of the license agreement
+     and the copyright law which protects software and governs its use.
+
+       Software PiracyCSoftware piracy is the term used to describe the
+    unauthorized copying or use of a computer program in any manner other
+    than what is permitted by copyright law or by the author as stated in
+     the software license agreement. Any person who engages in software
+         piracy commits an illegal act under general copyright law.
+
+                                 [Image6.gif]
+
+                             THE CODE OF ETHICS
+
+     Any duplication of licensed software except for backup and archival
+     purposes is a violation of the law. Any unauthorized duplication of
+    copyrighted computer software is contrary to the NOAA's standards of
+                                  conduct.
+
+       In compliance with NOAA's software license agreements and NOAA=s
+            policy concerning software duplication, an employee:
+
+      1.Will use all software in accordance with our license agreements.
+
+   2.Will be provided legitimate software. No employee of NOAA will make
+   any unauthorized copies of any software under any circumstances. Anyone
+   found copying software other than for backup purposes violates the law.
+
+   3.Will not tolerate the use of any unauthorized copies of software in
+   NOAA. Any person illegally reproducing software can be subject to civil
+   and criminal penalties including fines and imprisonment. We do not
+   condone illegal copying of software under any circumstances and anyone
+   who makes, uses, or otherwise acquires unauthorized software shall be
+   appropriately disciplined.
+
+   4.Will not give software to any outsiders (including clients,
+   customers, friends, and others).
+
+   5.Who determines that there may be a misuse of software within NOAA
+   shall notify their supervisor or Information Technology Security
+   Officer.
+
+   6.Ensures that all software used on NOAA computers will be properly
+   purchased through appropriate procedures.
+
+     QUESTIONS AND ANSWERS ABOUT COPYING SOFTWARE
+
+                     by Software Publishers Association
+
+     Q:Is it Okay to Copy My Colleague's Software?A:NO, it's not okay to
+      copy your colleague's software. Software is protected by federal
+    copyright law, which says that you can't make such additional copies
+      without the permission of the copyright holder. By protecting the
+   investment of computer software companies in software development, the
+    copyright law serves the cause of promoting broad public availability
+   of new, creative, and innovative products. These companies devote large
+   portions of their earnings to the creation of new software products and
+   they deserve a fair return on their investment. The creative teams who
+       develop the softwareCprogrammers, writers, graphic artists and
+    othersCalso deserve fair compensation for their efforts. Without the
+   protection given by our copyright laws, they would be unable to produce
+   the valuable programs that have become so important in our daily lives:
+      educational software that teaches us much needed skills; business
+         software that allows us to save time, effort and money; and
+   entertainment and personal productivity software that enhances leisure
+                                    time.
+
+    Q:That Makes Sense, but What Do I Get out of Purchasing My Own
+   Software?
+
+   A: When you purchase authorized copies of software programs, you
+   receive user guides and tutorials quick reference cards, the
+   opportunity to purchase upgrades, and technical support from the
+   software publishers. For most software programs, you can read about
+   user benefits in the registration brochure or upgrade flyer in the
+   product box.
+
+    Q:What Exactly Does the Law Say about Copying Software?
+
+   A:The law says that anyone who purchases a copy of software has the
+   right to load that copy onto a single computer and to make another copy
+   "for archival purposes only." It is illegal to use that software on
+   more than one computer or to make or distribute copies of that software
+   for any other purpose unless specific permission has been obtained from
+   the copyright owner. If you pirate software, you may face not only a
+   civil suit for damages and other relief, but criminal liability as
+   well, including fines and jail terms of up to one year.
+
+    Q:So I'm Never Allowed to Copy Software for Any Other Reason?
+
+   A:That's correct. Other than copying the software you purchase onto a
+   single computer and making another copy "for archival purposes only,"
+   the copyright law prohibits you from making additional copies of the
+   software for any other reason unless you obtain the permission of the
+   software company.
+
+    Q:At My Company, We Pass Disks Around All the Time. We All Assume That
+   this must Be Okay since it Was the Company That Purchased the Software
+   in the First Place.
+
+   A:Many employee=s don't realize that corporations are bound by the
+   copyright laws, just like everyone else. Such conduct exposes the
+   company (and possibly the persons involved) to liability for copyright
+   infringement. Consequently, more and more corporations concerned about
+   their liability have written policies against such "softlifting".
+   Employees may face disciplinary action if they make extra copies of the
+   company's software for use at home or on additional computers within
+   the office. A good rule to remember is that there must be one
+   authorized copy of a software product for every computer upon which it
+   is run.
+
+     Q:Do the Same Rules Apply to Bulletin Boards and User Groups? I
+   Always Thought That the Reason They Got Together Was to Share Software.
+
+   A:Yes. Bulletin boards and user groups are bound by the copyright law
+   just as individuals and corporations. However, to the extent they offer
+   shareware or public domain software, this is a perfectly acceptable
+   practice. Similarly, some software companies offer bulletin boards and
+   users groups special demonstration versions of their products, which in
+   some instances may be copied. In any event, it is the responsibility of
+   the bulletin board operator or user group to respect copyright law and
+   to ensure that it is not used as a vehicle for unauthorized copying or
+   distribution.
+
+   Q:What about Schools and Professional Training Organizations?
+
+   A:The same copyright responsibilities that apply to individuals and
+   corporations apply to schools and professional training organizations.
+   No one is exempt from the copyright law.
+
+    Q:I'll Bet Most of the People Who Copy Software Don't Even Know That
+   They're Breaking the Law.
+
+   A:Because the software industry is relatively new, and because copying
+   software is so easy, many people are either unaware of the laws
+   governing software use or choose to ignore them. It is the
+   responsibility of each and every software user to understand and adhere
+   to copyright law. Ignorance of the law is no excuse. If you are part of
+   an organization, see what you can do to initiate a policy statement
+   that everyone respects. Also, suggest that your management consider
+   conducting a software audit. Finally, as an individual, help spread the
+   word that the users should be "software legal."
+
+      The Software Publishers Association (SPA) also offers a number of
+   other materials designed to help you comply with the Federal Copyright
+                                    Law.
+
+      For educational materials, call SPA at (202) 452-1600 or check out
+                   their web page at: http://www.spa.org.
+
+                          GENERAL RESPONSIBILITIES
+
+           All Federal computer system users share certain general
+     responsibilities for information resource protection. The following
+                  considerations should guide your actions.
+
+    !Treat information as you would any valuable asset. You would not walk
+     away from your desk leaving cash or other valuables unattended. You
+    should take the same care to protect information. If you are not sure
+     of the value or sensitivity of the various kinds of information you
+                   handle, ask your manager for guidance.
+
+    !Use Government computer systems only for lawful and authorized
+   purposes. The computer systems you use in your daily work should be
+   used only for authorized purposes and in a lawful manner. There are
+   computer crime laws that prescribe criminal penalties for those who
+   illegally access Federal computer systems or data. One example is the
+   Computer Fraud & Abuse Act of 1986 (P.L. 99-474). Additionally, the
+   unauthorized use of Federal computer systems or use of authorized
+   privileges for unauthorized purposes could result in disciplinary
+   action. This also includes all government facsimile (fax) machines.
+   (See page 15, Proper Use of Government Equipment.)
+
+    !Observe policies and procedures established by NOAA and local
+   management. NOAA has established requirements for the protection of its
+   information. General guidelines may be found in the NOAA Administrative
+   Order 212-13 and the Department of Commerce Information Technology
+   Management Handbook. Management within your office should provide you
+   with specific local policies as they apply to the systems you use.
+
+    !Recognize that you are accountable for your activities on computer
+   systems. After you receive authorization to use any Federal computer
+   system, you become personally responsible and accountable for your
+   activity on the system. Accordingly, your use should be restricted to
+   those functions needed to carry out job responsibilities.
+
+    !Report unusual occurrences to your supervisor. Many losses would be
+   avoided if computer users would report any circumstances that seem
+   unusual or irregular. Warning signals could include such things as
+   unexplainable system activity that you did not perform, data that
+   appears to be of questionable accuracy, and unexpected or incorrect
+   processing results. If you should notice anything of a questionable
+   nature, bring it to your supervisor's attention.
+
+                          EMPLOYEE RESPONSIBILITIES
+
+         Each NOAA employee must comply with the following policies:
+
+     !Government ADP equipment may not be used for activities other than
+                        approved Government business.
+
+   Use of Government equipment for personal business or non-work related
+   activities (i.e. playing computer games, or loading unauthorized
+   software) is strictly prohibited. (See pages 15 and 22)
+
+    !Bulletin Boards should only be used as an identifier of available
+   software packages and information.
+
+   Bulletin Boards (BBS) provide a service that allows computer users to
+   survey the latest updates offered by a company or to review newly
+   developed programs that may be useful. Programs located on public BBS,
+   that are not closely monitored, have a high risk of being contaminated.
+   Some BBS allow users to upload, as well as download, information
+   directly to and from the Bulletin Board. Allowing users to upload
+   information increases the chance of having contaminated software on the
+   Board. The procedures for copying freeware and shareware (shown below)
+   should be used for obtaining software listed on BBS.
+
+    !Public domain software may not be placed on a NOAA system until
+   certain requirements are met.
+
+   Freeware and shareware are examples of public domain software available
+   on BBS. This software can be acquired with little or no compensation to
+   the developer. If any payment is required, the software cannot be
+   acquired without prior authorization. Downloading software directly
+   from BBS can be very costly if the program is contaminated with a
+   malevolent virus. If freeware or shareware is to be placed on an NOAA
+   system, the following procedures must be followed:
+
+    1.Establish that there is a valid need for the software;
+
+    2.Obtain approval from an Information Resource Management (IRM)
+   Official to load the software. Consideration will only be given to
+   software that is obtained from a known reputable source. Software may
+   not be obtained from sources that have uncontrolled public access for
+   uploading;
+
+    3.Obtain the software directly from the vendor or developer of the
+   software either by disc/tape or downloading the code onto a disc/tape;
+   and
+
+    4.Before installing the product, all possible precautions should be
+   taken to insure that the software is not contaminated.
+
+    !Software that is copyrighted may not be copied or distributed to
+   unauthorized users without vendor authorization.
+
+   Vendors place specific copyright restrictions on purchased software
+   which are to be strictly enforced. Some software is purchased with the
+   intent to be copied to other systems (i.e. software with a
+   right-to-copy and/or a site license). These practices are permissible
+   because they are authorized in advance by the vendor. Use of software
+   that is copyrighted without such authorization, is a criminal offense
+   and is punishable by fine and/or imprisonment. (See page 17, Facts
+   About Software)
+
+    !Authorization must be received before software can be loaded onto
+   Government equipment.
+
+   Any software necessary to complete job related activities must be
+   purchased through a Government procurement. Computer games or any
+   nonbusiness related software that is purchased by an employee, may not
+   be loaded on Government equipment. Privately developed and privately
+   purchased software that is compatible with existing software and
+   necessary for completing an authorized job function, may be loaded onto
+   Government equipment only if it does not conflict with any copyright
+   restrictions, and after receiving authorization from management.
+
+    !Confidential passwords that are issued to NOAA employees may never be
+   published and should be changed periodically.
+
+   NOAA systems contain information that may not be released and should
+   not be accessed by unauthorized personnel. Access to NOAA systems is
+   protected by passwords. These passwords can not be shared or published.
+   Publishing or sharing a password gives unauthorized users the ability
+   to access proprietary information and possibly damage existing NOAA
+   systems. If an employee is aware that someone has access to his
+   password or when an employee leaves, the password should be changed
+   immediately. Passwords must also be changed on a routine basis to
+   maintain confidentiality. (See pages 4 and 5 on passwords).
+
+                       SECURITY AND CONTROL GUIDELINES
+
+      Some common-sense protective measures can reduce the risk of loss,
+   damage, or disclosure of information. Following are the most important
+    areas of information systems controls that assure that the system is
+           properly used, resistant to disruptions, and reliable.
+
+      !Make certain no one can impersonate you. If a password is used to
+      verify your identity, this is the key to system security. Do not
+      disclose your password to anyone, or allow anyone to observe your
+   password as you enter it during the sign-on process. If you choose your
+   own password, avoid electing a password with any personal associations,
+    or one that is very simple or short. The aim is to select a password
+   that would be difficult to guess or derive. "1REDDOG" would be a better
+                            password than "DUKE."
+
+    !If your system allows you to change your own password, do so
+   regularly. NOAA and the Department of Commerce require passwords be
+   changed every 120 days or no less frequently than every six months.
+   Periodic password changes keep undetected intruders from continuously
+   using the password of a legitimate user. After you are logged on, the
+   computer will attribute all activity to your user ID. Therefore, never
+   leave your workstation without logging off or inactivating your
+   workstationCeven for a few minutes.
+
+   !Safeguard sensitive information from disclosure to others. People
+   often forget to lock up sensitive reports and computer media containing
+   sensitive data when they leave their work areas. Information carelessly
+   left on top of desks and in unlocked storage can be casually observed,
+   or deliberately stolen. Every employee who works with sensitive
+   information should have lockable space available for storage when
+   information is not in use. If you are not sure what information should
+   be locked up or what locked storage is available, ask your supervisor.
+
+    While working, be aware of the visibility of data on your personal
+   computer or terminal display screen. You may need to reposition
+   equipment or furniture to eliminate over-the-shoulder viewing. Be
+   especially careful near windows and in public areas. Label all
+   sensitive diskettes and other computer media to alert other employees
+   of the need to be especially careful. When no longer needed, sensitive
+   information should be deleted or discarded in such a way that
+   unauthorized individuals cannot recover the data. Printed reports
+   should be finely shredded, while data on magnetic media should be
+   overwritten. Files that are merely deleted are not really erased and
+   can still be recovered.
+
+    !Install physical security devices or software on personal computers.
+   The value and popularity of personal computers make theft a big
+   problem, especially in low-security office areas. Relatively
+   inexpensive hardware devices greatly reduce the risk of equipment loss.
+   Such devices involve lock-down cables or enclosures that attach
+   equipment to furniture. Another approach is to place equipment in
+   lockable cabinets.
+
+    When data is stored on a hard disk, take some steps to keep
+   unauthorized individuals from accessing that data. A power lock device
+   only allows key-holders to turn on power to the personal computer.
+   Where there is a need to segregate information between multiple
+   authorized users of a personal computer, additional security in the
+   form of software is probably needed. Specific files could be encrypted
+   to make them unintelligible to unauthorized staff, or access control
+   software can divide storage space among authorized users, restricting
+   each user to their own files.
+
+    !Avoid costly disruptions caused by data or hardware loss. Disruptions
+   and delays are expensive. No one enjoys working frantically to re-enter
+   work, do the same job twice, or fix problems while new work piles up.
+   Most disruptions can be prevented, and the impact of disruptions can be
+   minimized by advance planning. Proper environmental conditions and
+   power supplies minimize equipment outages and information loss. Many
+   electrical circuits in office areas do not constitute an adequate power
+   source, so dedicated circuits for computer systems should be
+   considered. Cover equipment when not in use to protect it from dust,
+   water leaks, and other hazards.
+
+    For protection from accidental or deliberate destruction of data,
+   regular data backups are essential. Complete system backups should be
+   taken at intervals determined by how quickly information changes or by
+   the volume of transactions. Backups should be stored in another
+   location, to guard against the possibility of original and backup
+   copies being destroyed by the same fire or other disaster. Failure to
+   safeguard your work wastes not only your time but also the government's
+   investment.
+
+    !Maintain the authorized hardware/software configuration. Some offices
+   have been affected by computer "viruses" acquired through seemingly
+   useful or innocent software obtained from public access bulletin boards
+   or other sources; others have been liable for software illegally copied
+   by employees. The installation of unauthorized hardware or software can
+   cause damage, invalidate warranties, or have other negative
+   consequences. Install only hardware or software that has been acquired
+   through normal acquisition procedures and comply with all software
+   licensing agreement requirements.
+
+                         PERSONAL COMPUTER SECURITY
+
+     Floppy DisksCA floppy disk is capable of storing many pages of typed
+   data. There are two sizes of disks: 5.25" and 3.5" both double and high
+   density capacity. The 5.25" size needs to be handled more carefully due
+             to its softer material. Some handling suggestions:
+
+     [Image7.gif] !Don't touch the disk surface. It's easily contaminated,
+    so something as minor as a fingerprint can cause error. On a dry day,
+    your finger could have enough electrostatic charge to damage the data
+                                permanently.
+
+    !Do use a felt tip pen when writing on the disk label. Pencil or ball
+   point pressure can destroy floppy precision.
+
+    !Don't use alcohol, thinners, or Freon to clean the disk. Chemical
+   fumes can endanger the magnetic coating, so don't expose it to solvents
+   like nail polish or duplicating machine fluids.
+
+    !Do keep disks in their protective jackets when not in the drive unit.
+
+    !Do keep disks stored upright in their boxes.
+
+    !Do keep disks clear of eraser crumbs, dust, and smoke particles.
+
+    !Do back-ups. Then store them in a separate facility from the
+   originals.
+
+    !Don't expose the disk to magnetic or magnetized objects. Data can be
+   destroyed, scrambled, or wiped out completely. A color TV, CRT,
+   electric motor, or other devices can destroy data integrity.
+   Screwdrivers, paper clips, car keys or any metal object may also be
+   magnetized.
+
+    !Don't put a telephone on top of a disk, the disk drive, or a box of
+   disks. One ring can cause damage.
+
+    !Don't bend, fold, or use rubber bands or paper clips on the disk. Any
+   warping can lead to mistracking.
+
+    !Don't rest heavy objects on the disk. It can cause a crimp that would
+   lead to mistracking.
+
+    !Do protect your floppy at least as well as you would the data that's
+   on it.
+
+   !Don=t keep in too cold or too hot an area.
+
+    !Insert disk carefully into the drive. Never remove a floppy disk from
+   the drive if the red light is on.
+
+    !Lock up all disks containing highly sensitive information when office
+   is unattended or overnight.
+
+       SUMMARY OF SECURITY PRACTICES
+
+     Ultimately, computer security is the user's responsibility. You, the
+     user, must be alert to possible security breaches and adhere to the
+      regulations that have been established within NOAA. The security
+    practices listed are not inclusive, but rather designed to remind you
+    and raise your awareness toward securing your information resources:
+
+                            PROTECT YOUR EQUIPMENT
+
+                      !Keep it in a secure environment.
+
+   !Keep food, drink, and cigarettes AWAY from it.
+
+   !Know where the fire suppression equipment is located and how to use
+   it.
+
+   !To reduce fire risks, turn off computer monitors during non-working
+   hours.
+
+   !Use of Government equipment will be used only for authorized purposes
+   and in a lawful manner.
+
+    PROTECT YOUR AREA
+
+         !Keep unauthorized people AWAY from your equipment and data.
+
+   !Challenge strangers in your area.
+
+    PROTECT YOUR PASSWORD
+
+                  !Never write it down or give it to anyone.
+
+   !Don't use names, numbers or dates which are personally identified with
+   you.
+
+   !Password length is to be a minimum of six characters.
+
+   !Passwords are to be changed at least every 120 days or no less than
+   every six months. Passwords are to be changed immediately when
+   compromised or when personnel leave employment.
+
+     PROTECT YOUR FILES
+
+           !Don't allow unauthorized access to your files and data.
+
+   !NEVER leave your equipment unattended with your password activated -
+   SIGN OFF!
+
+   !Don=t send sensitive information through E-Mail.
+
+      PROTECT AGAINST VIRUSES
+
+                      !Don't use unauthorized software.
+
+   !Back up all software and data.
+
+   !Back up your files before implementing ANY new software.
+
+   !Scan all incoming and outgoing diskettes for computer viruses.
+
+   !To scan/eradicate viruses, use the NOAA's standard detection software,
+   McAfee=s VirusScan.
+
+     LOCK UP STORAGE MEDIA CONTAINING SENSITIVE DATA
+
+         !If the data or information is sensitive or critical to your
+                           operation, lock it up!
+
+    BACK UP YOUR DATA
+
+     !Keep duplicates of your sensitive data in a safe place, out of your
+                               immediate area.
+
+   !Back it up as often as necessary.
+
+     REPORT SECURITY VIOLATIONS
+
+      !Tell your supervisor if you see any unauthorized changes to your
+                                    data.
+
+   !Immediately report any loss of data or programs, whether automated or
+   hard copy. Viruses and hacker intrusions are to be reported on NOAA
+   Form 47-43.
+
+     COPYRIGHT LAWS
+
+    !If you purchase a copy of software, you have only the right to (1)
+   copy the software onto a single computer and (2) make another copy for
+   archival purposes only.
+
+   !When upgrades to software are purchased, the old version must either
+   be destroyed or returned to the software developer.
+
+   !It is illegal to use the old software version on another computer.
+
+   !Upgraded software is usually purchased at a reduced cost and is
+   considered a continuation of the original license, not an additional
+   license.
+
+   !Each NOAA office should ensure compliance with licensing agreements
+   issued by the manufacturer for software purchased by the Government.
+
+   !Copies of original software, upgrades, and documentation should be
+   accounted for and retained.
+
+   INFORMATION TECHNOLOGY
+
+                          SECURITY OFFICERS (ITSOs)
+
+    NOAA/ITSO
+
+   Office of Administration
+
+   Rebecca Vasvary
+
+   Banyan: Becky R.Vasvary@ISFOSD@OA
+
+   Internet: Becky.R.Vasvary@NOAA.GOV
+
+   Phone: 301-413-1200, ext. 139
+
+   Fax: 301-413-0022
+
+   NOAA Corps
+
+   Greg Bass
+
+   Banyan: GregB@NC23@NOAA
+
+   Internet: Gregory.Bass@noaa.gov
+
+   Phone: 301-713-3425, ext. 179
+
+    Systems Acquisitions Office
+
+   Carolyn Alderman
+
+   Internet: CarolynA@SAO.NOAA.GOV
+
+   Alternate: Janet Unkle
+
+   Internet: JanetU@SAO.NOAA.GOV
+
+   Phone: 301-713-0111, ext. 113
+
+    NOAA Coastal Oceans Program
+
+   Timothy Morris
+
+   Internet: Timothy.Morris@noaa.gov
+
+   Phone: (301) 713-3338, ext. 120
+
+    Integrated Programs Office
+
+   Scott Wilson
+
+   Internet: swilson@ipo.noaa.gov
+
+   Phone: (301) 427-2080, ext 120
+
+    Office of Global Programs
+
+   Warren Keenan
+
+   Internet: Keenan@ogp.noaa.gov
+
+   Phone: (301) 427-2089, ext. 60
+
+      National Ocean Service
+
+   Richard Kissel
+
+   Banyan: Richard L. Kissel@ADP@N
+
+   RKissel@SPUR.NOS.NOAA.GOV
+
+   Phone: (301) 713-305-, ext. 123
+
+    National Weather Service
+
+   Harry Bly
+
+   CCMail: Harry Bly@MHub@NWS
+
+   Internet: Harry.Bly@NOAA.GOV
+
+   Phone: 301-713-0262, ext. 134
+
+    National Marine Fisheries Service
+
+   K. Scott Brown
+
+   CCM: Kevin S Brown@MHub@NMFS
+
+   Internet: Kevin.S.Brown@NOAA.GOV
+
+   Phone: 301- 713-2372
+
+    National Environmental Satellite, Data, and Information Service
+
+   Peter Topoly
+
+   Internet: PeterTopoly@NESDIS.NOAA.GOV
+
+   Phone: 301-763-8597
+
+   Alternate: Neil Huyck
+
+   NeilHuyck@NESDIS.NOAA.GOV
+
+   Phone: 301- 457-5205
+
+    Office of Oceanic and
+
+   Atmospheric Research
+
+   Dr. John A. Calder
+
+   Phone: 301-713-2474 x114
+
+   Alternate: Paul Quicker
+
+   Email: Paul Quicker@ERL@R
+
+   Internet: Paul.Quicker@NOAA.GOV
+
+   Phone: 301-713-2458, ext. 185
+
+               [Image3.gif]
+
+                    NOAA=s Security Web Page
+
+                        http://www.rdc.gov/~security

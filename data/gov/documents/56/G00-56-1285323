@@ -1,0 +1,113 @@
+http://gnarly.lanl.gov/Kiva/Kiva.html
+
+   [mtr_white_small.gif]
+
+
+                                      KIVA
+
+   (updated 8/22/99)
+
+   KIVA, a transient, three-dimensional, multiphase, multicomponent code
+   for the analysis of chemically reacting flows with sprays has been
+   under development at the Los Alamos National Laboratory for the past
+   several years. The code uses an Arbitrary Lagrangian Eulerian (ALE)
+   methodology on a staggered grid, and discretizes space using the
+   finite-volume technique. The code uses an implicit time-advancement
+   with the exception of the advective terms that are cast in an explicit
+   but second-order monotonicity-preserving manner. Also, the convection
+   calculations can be subcycled in the desired regions to avoid
+   restricting the time step due to Courant conditions. The range of
+   validity of the code extends from low speeds to supersonic flows for
+   both laminar and turbulent regimes. Arbitrary numbers of species and
+   chemical reactions are allowed. A stochastic particle method is used to
+   calculate evaporating liquid sprays, including the effects of droplet
+   collisions and aerodynamic breakups. Although specifically designed for
+   performing internal combustion engine calculations, the modularity of
+   the code allows it for easy modifications for solving a variety of
+   hydrodynamics problems involving chemical reactions. The code has found
+   a widespread application in the automotive industry.
+     __________________________________________________________________
+
+Samples and Sites of KIVA
+
+     * User Web site: Prior KIVA-TALK emails, makefiles, pre-post
+       processor links - Kiva JumpStation
+     *
+     * Prototype 3D Simulation of an Advanced Diesel Engine
+     *
+     * The Engine Research Center at the University of Wisconsin
+     *
+     * IBM ECSEC (European Centre for Scientific and Engineering
+       Computing)
+     *
+     * IBM EngAGE (Engineering Analysis Gridding Environment)
+     *
+     * Piaggio/ECSEC Collaboration: Designing a Better Scooter
+     *
+     * Development of a Hydrogen-fueled Combustion Engine
+     __________________________________________________________________
+
+Availability of KIVA
+
+   The KIVA code is available (for a fee) from Energy Science and
+   Technology Software Center (ESTSC) at (423) 576-2606. The mailing
+   address for ESTSC is P.O. Box 1020, Oak Ridge, TN 37831-1020. The email
+   address for ESTSC is estsc@adonis.osti.gov. Distribution of KIVA code
+   from Los Alamos National Laboratory is only to our collaborators.
+
+   For established users, there is now a KIVA mailing list . Questions
+   concerning difficulties with KIVA and area of applications should first
+   be addressed to this list.
+
+   For more information about KIVA, contact David J. Torres at
+   dtorres@lanl.gov
+     __________________________________________________________________
+
+Availability of KIVA documentation
+
+
+   KIVA manuals and some papers are now available electronically in pdf
+   format:
+     * KIVA-3V manual, release 2. (0.4 MB, searchable within READER.) -
+       NEW August 1999!
+     * Example input files from the above manual (0.25 MB tar file) - NEW
+       August 1999!
+     * KIVA-3V manual. (1.5MB, searchable within READER.)
+     * KIVA-3 manual. (2.2 MB, searchable within READER.)
+     * KIVA-II manual. (8.9MB, scanned document, not searchable.)
+     * Papers on gaseous injection and hydrogen combustion are also
+       available at the site below.
+
+   Downloading information:
+
+   ftp to: ftp.acl.lanl.gov (ip address currently 128.165.147.1)
+   login: anonymous
+   password: your-full-email-address
+   directory: cd pub/nlj/public/kiva
+   list files: ls
+   get file: mget KIVA3V.rel2.pdf xamples.3v.tar KIVA3V.pdf KIVA3.pdf
+          KIVA2.pdf
+
+
+   Be sure that you are in the binary transfer mode. Note that you must go
+   directly to the "public" directory; you will not be able to view
+   intermediate directories.
+
+   Or using a browser ftp://ftp.acl.lanl.gov/pub/nlj/public/kiva
+
+
+   You will need Adobe Reader 2.0 or above to read the file. This is
+   available on the Net for free at:
+
+     http://www.adobe.com/prodindex/acrobat/readstep.html
+     __________________________________________________________________
+
+KIVA People
+
+   [Amsden.gif] Tony Amsden
+   [Butler.gif] Dan Butler
+   [Face.gif] Mike Cline
+   [Fairfield.gif] Peggy Fairfield
+   [Johnson.gif] Norman Johnson
+   [Face.gif] Peter O'Rourke
+   [Sahota.gif] Manjit Sahota

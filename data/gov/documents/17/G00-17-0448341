@@ -1,0 +1,503 @@
+http://mplm.msfc.nasa.gov/MPLM%20Data/Presentations/SSP_30223_REV_J.pdf
+
+   SSP 30223 Problem Reporting and Corrective Action for the Space Station
+   Program International Space Station Program Revision J May 29, 2000
+   Type 1 National Aeronautics and Space Administration International
+   Space Station Program Johnson Space Center Houston, Texas Contract No.
+   NAS15-10000 REVISION AND HISTORY PAGE REV DESCRIPTION PUB DATE Base
+   REFERENCE SSCBD BB000227 01-26-87 Rev. A REFERENCE THE ELECTRONIC
+   BASELINE REFORMATTED 04-08-88 VERSION Rev. B REFERENCE SSCBD BB000471B
+   EFF 10-30-90 AND DOCUMENT CONVERSION TO NATIVE POST SCRIPT REFERENCE
+   SSCBD NO. BB000727 09-28-90 Rev. C REFERENCE SSCBD BB000896C 10-11-91
+   Rev. C1 REFERENCE SSCBD BB003200 06-03-92 Rev. D REFERENCE SSCBD
+   BB003200A 07-10-92 Rev. E REFERENCE SSCBD 000026 EFF. 4-14-94 04-04-94
+   Rev. F Revision F reflecting NASA/ Prime technical convergence
+   agreements - 11-07-94 Ref. 8-31-94 MOU (REFERENCE SSCBD 000082 EFF.
+   11-04-94) Rev. G Revision G reflecting NASA/ ISS Prime Contractor
+   technical clarification 03-06-98 agreements - Rev. H Revision H
+   reflecting NASA/ ISS Prime Contractor process improvement 09-30-99
+   agreements during the November 4, 1998 PRACA TIM and Flight 2A
+   "On-Orbit" Lessons Learned. Also includes ISS Payloads Office PRACA
+   requirements. Rev. J Revision J reflecting technical clarification
+   agreements. 02-29-00 ii INTERNATIONAL SPACE STATION PROGRAM PROBLEM
+   REPORTING AND CORRECTIVE ACTION REPORTING FOR THE SPACE STATION PROGRAM
+   MAY 29, 2000 PREFACE Design, manufacturing, and operational
+   discrepancies discovered in International Space Station (ISS) hardware
+   are resolved through use of an organized system of problem reporting,
+   analysis, resolution, and trending. This document establishes
+   requirements and responsibilities for establishing and operating the
+   Space Station Problem Reporting and Corrective Action (PRACA) system as
+   required by SSP 41173, Space Station Quality Assurance Requirements.
+   The implementation of these requirements provide for effective
+   recurrence control, provides experience data retention, and minimizes
+   the technical and schedule impact of problems. The objective of the ISS
+   PRACA system is to utilize existing National Aeronautics and Space
+   Administration (NASA), Contractor, Payload Developer, and International
+   Partner/ Participant (IP/P) engineering and management infrastructure
+   for problem resolution and disposition. The requirements of this
+   document shall apply to the NASA International Space Station Program
+   Office (ISSPO), the ISS Prime Contractor, and NASA/ Prime organizations
+   responsible for providing equipment or processing to be used as a part
+   of the ISS system. These requirements cover the reporting, processing
+   and resolution of all problems on equipment for which the ISSPO,
+   including the ISS Payloads Office, and Government Furnished Equipment
+   (GFE) offices have responsibility. The IP/Ps shall maintain a Problem
+   Reporting system as defined in the NASA/ International Partners/
+   Participants Bilateral Agreements. The contents of this document are
+   intended to be consistent with the tasks and products to be prepared by
+   Program participants. The Problem Reporting and Corrective Action
+   Requirements for the International Space Station Program shall be
+   implemented on all new ISS contractual and internal activities and
+   shall be included in existing contracts through contract changes. This
+   document is under the control of the International Space Station Safety
+   and Mission Assurance (S&MA) Panel, and changes or revisions to this
+   document will be approved by the NASA and Prime S&MA Managers (or
+   delegated representatives). iii INTERNATIONAL SPACE STATION PROGRAM
+   PROBLEM REPORTING AND CORRECTIVE ACTION REQUIREMENTS FOR THE SPACE
+   STATION PROGRAM MAY 29, 2000 CONCURRENCE PREPARED BY: M.Wolf OE PRINT
+   NAME ORGN SIGNATURE DATE CHECKED BY: D. Dyer OE PRINT NAME ORGN
+   SIGNATURE DATE BOEING M. Martin 2-6614 Safety and Mission Assurance
+   PRINT NAME ORGN Office SIGNATURE DATE NASA J. Holsomback OE Safety and
+   Mission Assurance PRINT NAME ORGN Office SIGNATURE DATE NASA W. Panter
+   OD Avionics and Software Office PRINT NAME ORGN SIGNATURE DATE NASA M.
+   Sufferdini OB Vehicle Office PRINT NAME ORGN SIGNATURE DATE DQA PRINT
+   NAME ORGN SIGNATURE DATE iv INTERNATIONAL SPACE STATION PROGRAM PROBLEM
+   REPORTING AND CORRECTIVE ACTION REQUIREMENTS FOR THE SPACE STATION
+   PROGRAM LIST OF CHANGES MAY 29, 2000 All changes to paragraphs, tables,
+   and figures in this document are shown below: ENTRY DATE CHANGE
+   PARAGRAPH (S) October 26, 1994 F 1.3, 3.1, 3.2, 3.2.1, 3.2.2, 3.3,
+   4.1.3, 4.1.3.1, 5.0, 5.3, 5.4, 6.1, 6.3, A.1, B.1 May 6, 1998 G All
+   Paragraphs September 30, 1999 H 2.1, 3.1, 3.2.2, 3.2.3, 3.3, 3.3.1,
+   3.3.2, 4.2, 5, 9, A.1, B.1 February 29, 2000 J All Paragraphs v TABLE
+   OF CONTENTS 1. INTRODUCTION
+   .......................................................................
+   ................................................................... 1-1
+   1.1
+   PURPOSE................................................................
+   .......................................................................
+   ............. 1-1 1.2
+   SCOPE..................................................................
+   .......................................................................
+   ................ 1-1 2. DOCUMENTS
+   .......................................................................
+   .......................................................................
+   .. 2-1 2.1 APPLICABLE DOCUMENTS
+   .......................................................................
+   ............................................ 2-1 2.2 ASSOCIATED WEB
+   SITE
+   .......................................................................
+   .................................................. 2-1 3. HARDWARE
+   PROBLEM REPORTING AND CORRECTIVE
+   ACTION.............................................. 3-1 3.1 ENTERING
+   NONCONFORMANCE IN PDS NONCONFORMANCE PARTITION
+   ..................................................... 3-2 3.2
+   PROMOTING/ENTERING PROBLEM IN PDS PROBLEM
+   PARTITION..............................................................
+   .... 3-2 3.3 ASSIGNING
+   LEVELS.................................................................
+   ......................................................................
+   3-3 3.4 PROBLEM RESOLUTION
+   RESPONSIBILITIES.......................................................
+   ............................................. 3-3 3.5 CLOSING
+   PROBLEMS...............................................................
+   ......................................................................
+   3-3 A. APPENDIX A ABBREVIATIONS AND ACRONYMS
+   .......................................................................
+   ................................... A-1 B. APPENDIX B DEFINITIONS
+   .......................................................................
+   .......................................................................
+   ..... B-1 vi 1. INTRODUCTION 1.1 PURPOSE The purpose of this document
+   is to define the requirements of the International Space Station (ISS)
+   Problem Reporting and Corrective Action (PRACA) system. ISS PRACA
+   provides a closed-loop process for the reporting, processing,
+   dispositioning, and documenting corrective action(s) for problems
+   involving ISS hardware, payloads, and ground support equipment (GSE).
+   The goal is to assure that all reportable problems are evaluated and
+   the appropriate corrective actions taken in a timely and cost effective
+   manner. The ISS PRACA Data System (PDS) is the database that allows for
+   the reporting of problems defined in this document. The ISS PDS shall
+   be accessible to everyone under the scope of these requirements. The
+   ISS PDS shall provide the ability to access failure history, allow for
+   the identification of trends and statistics, and provide engineering
+   data for corrective action and design improvement. The ISS PRACA
+   process for hardware problems is addressed herein. The process for
+   software problems is documented in SSP 50200-01-AnxD, Station Program
+   Implementation Plan Volume 1: Station Program management Plan Annex D:
+   Avionics & Software Office Plan. 1.2 SCOPE The requirements in this
+   document apply to all elements and sites involved in the manufacture,
+   assembly, handling, testing, use, or repair of ISS hardware, payloads,
+   or GSE equipment with the following exceptions: (1) Requirements for
+   the International Partners/ Participants are defined in NASA/ IP/P
+   Bilateral S&MA Requirements documents and NASA/ IP/PsBilateral Data
+   Exchange Agreements, Lists and Schedules documents; (2) Johnson Space
+   Center (JSC) GFE shall follow the PRACA requirements and processes
+   established in JSC 28035; (3) Software problems shall follow the PRACA
+   requirements and processes established in SSP 50200-01- AnxD; (4)
+   Payload problems are only required to report Level 1 problems; and (5)
+   On-orbit problems are entered directly into the ISS Problem Partition.
+   ISS development and sustaining organizations shall specify those
+   activities and processes necessary to comply with the requirements set
+   forth in this document by developing and implementing command media
+   (program directives, procedures, bulletins, etc.) to encompass the
+   scope of their operations and responsibilities for the PRACA process.
+   1-1 2. DOCUMENTS 2.1 APPLICABLE DOCUMENTS The following documents of
+   the date and issue shown include specifications, models, standards,
+   guidelines, handbooks, and other special publications. "Current Issue"
+   is shown in parentheses in place of the specific date and issue when
+   the document is under International Space Station Control Board control
+   or the JSC document control system. The status of documents identified
+   by "Current Issue" may be determined from the International Space
+   Station Program Baseline Activity Index and Status Report. The
+   documents in this paragraph are applicable to the extent specified
+   herein. DOCUMENT NO. TITLE D684-10530-01 PRACA Implementation Procedure
+   Current Revision JSC 28035 JSC Government-Furnished Equipment (GFE)
+   Problem Reporting and Corrective Current Revision Action (PRACA)
+   Requirements SSP 30234 Failure Modes and Effects Analysis and Critical
+   Items List Requirements for Space Current Revision Station SSP 30524
+   Problem Reporting and Corrective Action (PRACA) Data System (PDS)
+   Current Revision Requirements Definition Document (RDD) for the Space
+   Station Program. SSP 41173 Space Station Quality Assurance Requirements
+   Current Revision SSP 50200-01-AnxD Station Program Implementation Plan
+   (SPIP) Volume 1: Station Program Current Revision Management Plan Annex
+   D: Avionics & Software Office Plan SSP 50431 Space Station Program
+   Requirements for Payloads (PRP) Current Revision 2.2 ASSOCIATED WEB
+   SITE The JSC Intranet website that supports ISS PDS may be accessed
+   through the PRACA homepage at address:
+   http://iss-www.jsc.nasa.gov/ss/issapt/praca All JSC on-site and
+   off-site employees and contractors have access to the JSC Intranet and
+   the PRACA homepage. Refer to SSP 30524 for information on obtaining
+   access to the JSC Intranet. 2-1 3. HARDWARE PROBLEM REPORTING AND
+   CORRECTIVE ACTION The ISS PRACA database shall warehouse program
+   nonconformance records that meet established criteria. This gives the
+   ISS program the capability to address the long-term goals of
+   identifying hardware trends, supporting on- orbit anomaly resolution,
+   and providing management visibility into significant problems. A subset
+   of these nonconformances shall be "promoted" to the status of a problem
+   report in the PDS providing NASA the means to be involved and approve
+   the failure analyses and recurrence control activities. Figure 3-1
+   depicts an overview of the process for ISS hardware. Nonconformance oc
+   curs* *O ccurs subsequent to m anuf acturing or dev elopment Isolated
+   and Dispos itioned W ork recurrence I mplement Disposition control ac
+   tivities , Stop 10 days if required Nonconformanc e must be 2 days
+   report ed into partition within 2 **Sc reened out are those records
+   documenting bus ines s days after isolation to documentation errors ;
+   written to fac ilitate Sc reened Yes S top the hardware but not later
+   than planning, inspec tion, ass embly , or other activit ies; out?** 10
+   bus ines s days after or written to rec ord general observations or
+   occurrenc e (if not is olated). information No Boeing Nonc onformanc e
+   Sys tems Entered into PDS PDS Nonconformance Partition Nonconformanc e
+   Partition** What is Sc reened Crit 3 or c riticality by SPRT N/A
+   effect? S top Crit 1 or 2 P DS Nonc onformanc e Partition O n-orbit, No
+   Entered into Elevate to PR? Yes PDS P roblem Payload, or PDS Problem P
+   artition IP/P Partition Nonconformance PDS P roblem Partition Sc
+   reening Criteria TT &E and/ 1) Cos metic defects (i.e. does not affec t
+   form , fit, or or F ailure func tion); analys es 2) Operator or test s
+   et-up errors when the procedures and/or training are adequate and there
+   is no overstress to the hardware; 3) Defec t's dispos itioned by an
+   approved s tandard Corrective action repair procedure and there is no
+   need for recurrenc e implemented and verified c ont rol ac tion;
+   effective 4) Items ex ceeding s helf life; or 5) Leakage exceeding
+   specific ation requirem ents oc curring as a res ult of s ys tem ass
+   embly/ re- as sembly which are res olved by routine procedures SPRT
+   agrees (e.g. rec ycling, retorquing fitting, line adjustment, to clos e
+   and etc .). signs PR Program PRB P rogram Manager Need Program Level I?
+   Yes rev iews and or Deputy Progam Manager or Deputy Y es approves PR
+   Manager reviews Approval? and approves No No Stop Figure 3-1: Hardware
+   Problem Reporting Process 3-1 3.1 Entering Nonconformance In PDS
+   Nonconformance Partition Whenever hardware that is representative of
+   the flight hardware to be used on the ISS fails to meet its'
+   specification or is overstressed; a nonconformance report shall be
+   written to document and disposition the condition. This applies to all
+   hardware indenture levels. Nonconformances that occur on hardware that
+   is representative of flight hardware subsequent to manufacturing shall
+   be entered into the ISS PDS Nonconformance Partition. Nonconformance
+   records that shall not be entered are those documenting documentation
+   errors; written to facilitate planning, inspection, assembly, or other
+   activities; or written to record general observations or information.
+   Note: "Representative of flight hardware" means Flight hardware
+   (including qualification/proto- flight/flight-like hardware but not
+   Flight Equivalent Unit (FEU)), Flight spares, Flight Support Equipment
+   (FSE), Orbital Support Equipment (OSE) (including Laboratory Support
+   Equipment (LSE)) and safety critical GSE. Trend codes shall be added to
+   all nonconformance records in the PDS Nonconformance Partition. These
+   codes are the subsystem, criticality, defect, and cause codes per SSP
+   30524. After coding, those records that will not be promoted require no
+   additional work in the ISS PDS system. Nonconformance records shall be
+   entered into the PDS Nonconformance Partition within two (2) business
+   days after the nonconformance is isolated to the flight representative
+   hardware but no later than ten (10) business days after
+   occurrence/detection. Should a nonconformance occur which potentially
+   jeopardizes the flight crew's safety, ground crew's safety, or mission
+   success, then the NASA SPRT co-chair shall be notified as soon as
+   possible but not to exceed twenty four (24) hours after
+   occurrence/detection. The NASA SPRT co-chair is responsible for
+   notifying the ISS Program Office of the situation and, if appropriate,
+   the Mission Evaluation Room manager. 3.2 Promoting/Entering Problem In
+   PDS Problem Partition A nonconformance in the PDS Nonconformance
+   Partition shall be promoted to the PDS Problem Partition when the
+   failure effect criticality is 1, 1R, 1S, 1SR, 1P, 2, or 2R (per SSP
+   30234) or when the assigned System Problem Resolution Team (SPRT)
+   determines there is a need to document the failure analyses and
+   recurrence control action(s) based on trend data, past experience, or
+   the significance of the nonconformance should it recur on-orbit.
+   Nonconformance records shall not be promoted for the following unless
+   directed by the System Problem Resolution Team (SPRT): 1) Cosmetic
+   defects (i.e. does not affect form, fit, or function); 2) Operator or
+   test set-up errors when the procedures and/or training are adequate and
+   there is no overstress to the hardware; 3) Defect's dispositioned by an
+   approved standard repair procedure and there is no need for recurrence
+   control action; 4) Items exceeding shelf life; or 5) Leakage exceeding
+   specification requirements occurring as a result of system
+   assembly/re-assembly which are resolved by routine procedures (e.g.
+   recycling, retorquing fitting, line adjustment, etc.) and no recurrence
+   control action required. Nonconformances that are not entered in the
+   PDS Nonconformance Partition shall be entered directly into the PDS
+   Problem Partition per the above requirements. On-orbit hardware
+   anomalies shall be processed directly into the PDS Problem Partition.
+   However, the following list of anomalies are not required to be
+   reported into the PDS Problem Partition: 1) Unexpected hardware
+   performance that is within specification limits; 2) Hardware failures
+   due to incorrect Crew operations if no damage or overstress exists; 3)
+   Planned maintenance; 4) Explained Caution & Warning indications if no
+   hardware failure exists; 5) Unexpected, incorrect, or inconsistent
+   telemetry if no hardware failure exists; 6) Ground data does not match
+   on-orbit data if no hardware failure exists but can be explained; 3-2
+   7) Vehicle (e.g., Orbiter) failures that do not cross ISS boundaries;
+   8) Ground facility nonconformances (e.g. Mission Control Center). 3.3
+   Assigning Levels Nonconformance records promoted to the PDS Problem
+   Partition shall be classified as Level 1 or Level 2. Level 1 problems
+   are those meeting any one of the following criteria: 1) The failure
+   effect criticality is 1, 1R, 1S, 1SR, 1P, 2, or 2R and a) The root
+   cause can not be identified, b) Corrective or recurrence control
+   actions, although appropriate for the problem, will not be implemented,
+   c) System Problem Resolution Team (SPRT) recommends termination of
+   failure investigation prior to firm determination of root cause, d) The
+   problem is not detectable at qualification testing, acceptance testing
+   or inspection, or during the normal service of the component, or e) The
+   problem condition is not fully restored to compliance and a "use as is"
+   disposition is proposed. 2) The problem occurrence or its' resolution
+   impacts a launch schedule or on-orbit assembly sequence; 3) The problem
+   affects a functional/physical interface between ISS Prime Contractor,
+   Payload, GFE, and/or IP/P hardware; 4) The problem affects common
+   hardware used by payloads (per SSP 50431); or 5) System Problem
+   Resolution Team (SPRT) determines that Level 1 approval is required. If
+   the problem report does not meet any of the Level 1 criteria, the
+   problem report is considered a Level 2 problem. NOTE: When a PR closure
+   is implementing a Program Change Directive (e.g. modification, waiver,
+   exception, etc.) approved by a Program board or panel that would
+   normally have Level 1 authority for the PR closure, the PR may be
+   closed by the Level 2 SPRT with the approved change and supporting
+   documentation attached to the PRACA report. 3.4 Problem Resolution
+   Responsibilities System Problem Resolution Teams (SPRTs) shall be
+   established and chartered by the ISS Program Office. The SPRTs are
+   responsible for: 1) Evaluating records in the PDS Nonconformance
+   Partition to identify trends; 2) Promoting records to the PDS Problem
+   Partition; 3) Identifying the flight(s)/stage(s) affected; classifying
+   the problem's level; 4) Developing test, teardown, and evaluation
+   (TT&E) and/or failure analyses plans to identify the root cause; 5)
+   Determining the corrective action(s) necessary to prevent recurrence of
+   the problem; 6) Ensuring the verification of the implementation and
+   effectiveness of the corrective action(s); 7) Ensuring the data entered
+   into the PDS Problem Partition is accurate and complete to support
+   future failure history investigations and trending efforts; 8) Coding
+   problem reports to support trending; 9) Closing or presenting to the
+   Program for closure all open problems in the PDS Problem Partition for
+   the respective system, in a timely manner; and 10) Performing trending
+   analyses to identify preventative or maintenance actions. The
+   appropriate Program Problem Review Boards (PRBs) shall be established
+   and chartered by the ISS Program Office. The Program PRBs are
+   responsible for reviewing and approving the problem reports classified
+   as Level 1. 3.5 Closing Problems A problem shall be closed when the
+   article in question has been dispositioned, a root cause has been
+   identified, adequate corrective action has been defined, implemented,
+   and verified as effective for preventing recurrence of the problem. In
+   the event corrective action is not implemented, the problem closure
+   must address the root cause or a 3-3 most probable cause, rationale for
+   not implementing corrective action, and the consequences of the problem
+   recurring on-orbit. This includes the methods of detection on-orbit,
+   the mission effects, operational workarounds, and methods of recovery.
+   3-4 SSP 30223 APPENDIX A - ABBREVIATIONS AND ACRONYMS CFE Contractor
+   Furnished Equipment FEU Flight Equivalent Unit FSE Flight Support
+   Equipment GFE Government Furnished Equipment GSE Ground Support
+   Equipment IP/P International Partner/ Participant ISS International
+   Space Station ISSPO International Space Station Program Office JSC
+   Johnson Space Center LSE Laboratory Support Equipment MRB Material
+   Review Board NASA National Aeronautic and Space Administration OSE
+   Orbital Support Equipment PDS PRACA Data System PR Problem Report PRACA
+   Problem Reporting and Corrective Action PRB Problem Review Board PRP
+   Program Requirements for Payloads RDD Requirements Definitions Document
+   S&MA Safety and Mission Assurance SE Sustaining Engineering SPRT System
+   Problem Resolution Team TT&E Test, Teardown and Evaluation A-1 SSP
+   30223 APPENDIX B - DEFINITIONS Definitions of technical terms related
+   to the ISS PRACA system are as follows: Acceptance Testing - Tests to
+   determine that a part, component, subsystem, or system is capable of
+   meeting performance requirements prescribed in purchase specifications
+   or other documents specifying what constitutes the adequate performance
+   capability for the item in question. Refer to SSP 41173. Adverse Trend
+   - A problem detected during trend analysis by the design or user
+   cognizant organization for hardware nonconformance, which has been
+   shown to need recurrence control. Anomaly - An unexpected event,
+   hardware damage, a departure from past experience, established
+   procedures or performance, or a deviation of system, subsystem, and/ or
+   hardware performance outside certified design/ performance
+   specification limits. Approved Standard Repair  Specific repair
+   instructions as documented on the nonconformance record and approved by
+   the Material Review Board (MRB) prior to the repair activity. Closed
+   Problem - A problem is closed when NASA concurs with the problem
+   analysis (including determination of the cause) and the corrective
+   action to preclude recurrence of the problem is implemented or
+   acceptable rationale is provided for not implementing corrective
+   action. Contractor-Furnished Equipment (CFE) - Hardware provided under
+   the International Space Station Program (SSP) end item hardware
+   contract by the ISS Prime Contractor. Corrective Action  An action(s)
+   taken to eliminate the root cause of a problem to prevent its
+   recurrence. Criticality - per SSP 30234 The FMEA shall include
+   criticality category assignments for the effects of all failure modes
+   considered in the applicable mission phases. The criticality should be
+   assigned based on the identified effects on the SS/ Crew. Prime shall
+   document the assumptions used in relating functional loss to crew
+   effects. In the event failure tolerance has not been allocated to an
+   end item, then the Prime may assume that the redundancy is provided at
+   the segment level and assign the criticality based on this assumption.
+   Criticality categories are as follows: Category Definition 1 Single
+   failure point that could result in loss of Space Station (SS) or loss
+   of flight or ground personnel. 1R Redundant items, all of which if
+   failed, could result in loss of ISS or loss of flight or ground
+   personnel. 1S A single failure point of the system component designed
+   to provide safety or protection capability against a potentially
+   hazardous condition or event or a single failure point in a safety or
+   hazard monitoring system that causes the system to fail to detect, or
+   operate when needed during the existence of a hazardous condition that
+   could lead to loss of flight or ground personnel or ISS (e.g., fire
+   suppression, medical hardware, etc.) 1SR Redundant components designed
+   to provide safety or protection capability against a potentially
+   hazardous condition or event, all of which if failed could cause the
+   system to fail to detect, or operate when needed during the existence
+   of a hazardous condition that could lead to loss of flight or ground
+   personnel or SS; OR redundant components within a safety or hazard
+   monitoring system, all of which if failed could cause the system to
+   fail to detect, or operate when needed during the existence of a
+   hazardous condition that could lead to loss of flight or B-1 SSP 30223
+   ground personnel or SS. 1P A single failure point which is protected by
+   a safety device, whereby the proper functioning of the safety device,
+   would prevent the hazardous consequences of the failed (protected)
+   component. 2 Single failure point that could result in loss of critical
+   mission support capability. 2R Redundant items, all of which if failed,
+   could result in loss of critical mission support capability. 3 All
+   others. The criticality categorization of a failure mode shall be made
+   on the basis of the worstcase potential failure effect regardless of
+   probability of occurrence. For 1R, 1SR, and 2R items, the number of
+   valid success paths, at the associated level of integration, which are
+   available to accomplish the function as well as the number required to
+   meet failure tolerance requirements shall be identified (reference SSP
+   30234 Appendix C, Items 32 and 33). Failure - The inability of a
+   system, subsystem, component, or part to perform its specified function
+   within specified limits, under specified conditions, and for a
+   specified duration. Flight Constraint - Unacceptable risk to mission or
+   safety that causes a constraint to be placed on the applicable flight.
+   Flight Equivalent Unit (FEU) - Hardware utilized to functionally
+   demonstrate or simulate flight hardware operations. Hardware
+   configuration does not necessarily match flight configuration.
+   Flightlike Hardware  Non-flight equipment which is built to the
+   following: a) Manufacturing processes, which are identical or
+   significantly similar to those, utilized in flight equipment. b)
+   Contain parts or assemblies which are identical or significantly
+   similar* in design to flight hardware (includes manufacturing processes
+   at the piece part level). c) Equipment whose design (electrical or
+   mechanical) is identical or significantly similar* to flight equipment
+   when such design is critical to functional performance. * Significantly
+   similar is defined as commonality between parts, processes, or design
+   such that the differences have no impact on the final performance of
+   the equipment (e.g., solder, SN60 vs. SN63, has no difference to
+   eventual equipment performance). Government-Furnished Equipment (GFE) -
+   Equipment in the possession of, or directly acquired by, the government
+   from suppliers other than the ISS Prime Contractor and subsequently
+   made available to the ISS Program. Ground Support Equipment (GSE) -
+   Ground-based equipment functionally designed to support flight hardware
+   servicing, checkout, test, movement, alignment, protection, or
+   calibration. GSE will be delivered to the government. International
+   Partner/ Participant (IP/P) - Those non-U.S. space agencies that
+   formally participate in the ISS Program. Laboratory Support Equipment
+   (LSE) - LSE are devices that are shared on a non-interference basis by
+   multiple research users. LSE varies in size and complexity from a
+   simple thermometer to full size ISPR containing a refrigerator/freezer.
+   B-2 SSP 30223 Launch Processing Constraint - The specific event beyond
+   which processing cannot proceed without incorporation of required
+   remedial action or recurrence control. Nonconformance - A condition of
+   any article or material in which one or more characteristics do not
+   conform to requirements. Includes failures, discrepancies, defects,
+   malfunctions and problems. Nonflight Like Hardware - Hardware which,
+   although similar to flight equipment, does not contain parts,
+   processes, or design which are identical or significantly similar* to
+   those utilized in flight hardware. *Significantly similar is defined as
+   commonality between parts, processes, or design such that the
+   differences have no impact on the final performance of the equipment
+   (e.g., solder, SN60 vs. SN63, has no difference to eventual equipment
+   performance). On-orbit Anomaly - An on-orbit anomaly may be detected
+   during on-orbit International Space Station stage operations.
+   Overstress - A value of any stress parameter in excess of the upper or
+   lower limit of the normal working range or in excess of rated value.
+   Payload - Any space equipment, flight hardware, or material designed to
+   conduct either coherent sets of experiments (e.g., "Facility Class"
+   instruments) or individual experiments and payload support equipment.
+   Primary Structure  Provides carriage for the major structural loads of
+   the element (e.g., Node, Lab, Truss, etc.) Prime Contractor - The
+   organization under contract to NASA for the for design, manufacture,
+   delivery, and integration of ISS contract end items. Problem  A
+   nonconformance which is, or is suspected of being, a failure, an
+   unsatisfactory condition, an unexplained anomaly, or an overstress
+   occurring during or subsequent to production acceptance testing or
+   qualification testing (i.e. after manufacturing or development).
+   Problem Reporting and Corrective Action (PRACA) - A management system
+   for identifying, reporting, analyzing for cause, remedying, and
+   preventing recurrence of problems. Problem Review Board - A problem
+   review board is an existing board or panel (e.g., Material Review
+   Board, Avionics and Software Control Board, Vehicle Systems Integration
+   Panel, Space Station Program Control Board) which exercises approval
+   authority to close a problem report depending on the level of the
+   problem. Qualification Hardware - Hardware (that includes flight-like
+   hardware) manufactured for the express purpose of undergoing
+   qualification testing. Qualification Test - Those tests conducted as a
+   part of the certification program to demonstrate that design and
+   performance requirements can be realized under specified conditions.
+   Recurrence Control - Action taken to prevent repetition of a
+   nonconformance. This action may involve one or more of the following:
+   a) Design change b) Manufacturing method/ procedure/ process change c)
+   Facility/ test equipment change d) Test, inspection or operating
+   procedure change e) Training or certification of personnel f)
+   Maintenance procedure change g) Limit time or cycle of component B-3
+   SSP 30223 h) Transportation, handling or shipping change i) Software
+   change or firmware change Responsible Organization  The Hardware
+   Developer, Payload Developer, or the organization responsible for the
+   sustaining engineering (SE) of the hardware. Root Cause - The
+   underlying reason for, or cause of, one or more nonconformances or
+   deficiencies identified through investigations and studies which, when
+   corrected, will prevent or reduce the recurrence of the realized or
+   potential nonconformance(s) deficiency(ies). Safety Critical GSE  GSE
+   necessary to support the program, the failure of which could cause loss
+   of vehicle system or loss of personnel capability. In addition, GSE
+   used in direct contact with hypergolic, cryogenic, explosive,
+   flammable, toxic, corrosive, or harmful material or fluids, equipment
+   using ordinance devices, or devices used for ordinance checkout,
+   equipment using high internal pressure, high electrical energy, high
+   flow volume, high temperature or radiant energy, equipment with
+   high-speed dynamic components in its operation, and hoisting equipment,
+   are considered safety critical. This definition also includes
+   electrical equipment that operate in areas where flammable gases and/or
+   vapors may be present, or where electrical equipment is utilized for
+   control of safety critical GSE. This also includes personnel rescue
+   equipment. Severity  To be provided System Problem Resolution Team  A
+   defined group whose purpose is to streamline the process of managing
+   PRACA reportable problem dispositions by integrating NASA/ISS Prime
+   Contractor/IP/P authority into a single entity capable of providing the
+   final disposition of a reportable problem in an effective and timely
+   manner. Unsatisfactory Condition  Any nonconformance for which
+   engineering resolution is required and which requires recurrence
+   control beyond the specific article under question. Included in this
+   definition are: 1. Conditions which cannot be corrected to the
+   specified configuration using standard repair procedures; or 2. An
+   event which could lead to a failed condition but does not affect the
+   function of the article such as contamination, corrosion, workmanship,
+   process escape, etc. Unexplained Anomaly  An anomaly that cannot be
+   repeated (phantom or ghost) or for which a cause cannot be determined.
+   B-4

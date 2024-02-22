@@ -1,0 +1,152 @@
+http://biowulf.nih.gov/apps.html
+
+   [biowulf_small.gif]
+   Status
+   About
+   Hardware
+   Applications
+   Batch queues
+   Disk storage
+   MPI
+   Performance
+   New Users
+   User Guide
+   Documentation
+   Research
+
+                       Applications on Biowulf/Lobos3
+
+        AMBER
+                AMBER (Assisted Model Building with Energy Refinement) is
+                a package of molecular simulation programs. Version 6 is
+                currently installed on Biowulf. Major programs in the
+                AMBER package include sander, gibbs, nmode, LEap.
+
+        BLAST on Biowulf
+                A scheme for efficiently running a large number of
+                sequence files against a variety of BLAST databases has
+                been implemented on Biowulf. This procedure makes use of a
+                couple of controlling script and an MPI wrapper process.
+                See the documentation for details.
+
+        BLAT
+                BLAT is a DNA/Protein Sequence Analysis program written by
+                Jim Kent at UCSC. It is designed to quickly find sequences
+                of 95% and greater similarity of length 40 bases or more.
+                It may miss more divergent or shorter sequence alignments.
+                It will find perfect sequence matches of 33 bases, and
+                sometimes find them down to 22 bases. BLAT on proteins
+                finds sequences of 80% and greater similarity of length 20
+                amino acids or more. In practice DNA BLAT works well on
+                primates, and protein blat on land vertebrates. See the
+                documentation for details on how to run Blat on Biowulf.
+
+        CHARMM on Biowulf
+                CHARMM (Chemistry at HARvard Molecular Mechanics) is a
+                program which supports a wide range of theoretical
+                modeling calculations of the structure and dynamics of
+                biological molecules. In addition to energy minimization
+                and molecular dynamics simulations, Monte Carlo sampling,
+                use of genetic algorithms, and several interfaces to
+                quantum codes (AM1, GAMESS) are available or under
+                development. Recent CHARMM versions have been made
+                available for use on Biowulf, as a joint effort between
+                NHLBI/LBC Computational Biophysics Section and CBER/OVRR
+                Biophysics Lab and with the support of Biowulf Staff.
+                Multiple executables are available for each version, in
+                order to support larger molecular systems, and the
+                different types of parallel communications available on
+                Biowulf, i.e. ethernet and Myrinet 2000. The support files
+                are also available for the above versions, e.g. version
+                .doc files, and the standard topology and parameter files.
+
+                CHARMM is a fairly sophisticated and complicated command
+                line based program; detailed CHARMM Documentation is
+                available online.
+
+        GAMESS
+                GAMESS is a program for ab initio quantum chemistry.
+                Briefly, GAMESS can compute wavefunctions ranging from
+                RHF, ROHF, UHF, GVB, and MCSCF, with CI and MP2 energy
+                corrections available for some of these. Analytic
+                gradients are available for these SCF functions, for
+                automatic geometry optimization, transition state
+                searches, or reaction path following. Computation of the
+                energy hessian permits prediction of vibrational
+                frequencies. A variety of molecular properties, ranging
+                from simple dipole moments to frequency dependent
+                hyperpolarizabilities may be computed. Many basis sets are
+                stored internally, and together with effective core
+                potentials, all elements up to Radon may be included in
+                molecules. Several graphics programs are available for
+                viewing of the final results. Many of the computational
+                functions can be performed using direct techniques, or in
+                parallel on appropriate hardware.
+
+        GAUSS
+                The GAUSS Mathematical and Statistical System is a fast
+                matrix programming language designed for computationally
+                intensive tasks, which has a wide variety of statistical,
+                mathematical and matrix handling routines.
+
+        GAUSSIAN 98
+                Gaussian 98 is a series of electronic structure programs
+                performing computations starting from the basic laws of
+                quantum mechanics. Gaussian 98 can predict energies,
+                molecular structures, vibrational frequencies for systems
+                in the gas phase and in solution, and it can model them in
+                both their ground state and excited states.
+
+        PFSearch
+                The PfSearch program searches a protein or DNA sequence
+                library for sequence segments matching a profile. The
+                result is an unsorted list of profile-sequence matches
+                written to the standard output. See the instructions for
+                details on how to run Pfsearch on Biowulf.
+
+        Physica
+                PHYSICA is a high level, interactive programming
+                environment with user friendly graphics and sophisticated
+                mathematical analysis capabilities. Over 200 numeric and
+                character functions are provided, as well as over 30
+                operators, providing all of the operations of simple
+                calculus, along with powerful curve fitting, filtering and
+                smoothing techniques, and employing a dynamic array
+                management scheme allowing arrays limited in size only by
+                system resources. Algebraic expressions of arbitrary
+                complexity are evaluated using a lexical scanner approach.
+                Line graphs, histograms and pie charts, as well as
+                contour, density and surface plots are available. The user
+                interface is a command language with a simple to use and
+                easy to learn syntax, incorporating basic elements of a
+                structured programming language including conditional
+                branching, looping and subroutine calling constructs. For
+                more information see the Physica home page.
+
+        PovRay
+                POVRAY (Persistence of Vision RAYtracer) is a high-quality
+                tool for creating three-dimensional graphics. Raytraced
+                images are publication-quality and 'photo-realistic', but
+                are computationally expensive so that large images can
+                take many hours to create. PovRay images can also require
+                more memory than many desktop machines can handle. To
+                address these concerns, a parallelized version of PovRay
+                has been installed on the Biowulf system.
+
+        R
+                R (the R Project) is a language and environment for
+                statistical computing and graphics. R is similar to S, and
+                provides a wide variety of statistical and graphical
+                techniques (linear and nonlinear modelling, statistical
+                tests, time series analysis, classification, clustering,
+                ...).
+
+        Swarm
+                Swarm is a program designed to simplify submitting a group
+                of commands to the cluster. Some programs do not scale
+                well and thus are not suited to true parallelizing. Other
+                programs may be such that each individual job is very
+                short, but many such jobs need to be run. Such programs
+                are well suited to running 'swarms of single-threaded
+                jobs'. The Swarm program simplifies this process. See the
+                documentation for details. Download swarm.

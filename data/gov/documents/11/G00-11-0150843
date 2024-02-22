@@ -1,0 +1,261 @@
+http://speech.llnl.gov
+
+                    RADAR ACOUSTIC RESEARCH & DEVELOPMENT
+
+  Speech Technology Using Electromagnetic Sensors and Acoustic Microphones
+
+         New Ways to Characterize Speech and Other Acoustic Systems
+
+                 John F. Holzrichter PhD, Lawrence C. Ng PhD
+
+    This work is a collaboration between researchers at LLNL from the EE
+   Department and the Laser Programs, and at UC Davis from the Department
+      of Applied Science. The work is supported by the US Department of
+            Energy, the National Science Foundation, and by DARPA
+     __________________________________________________________________
+
+   What's New
+
+   [new.gif] *Burnett, G. C.; Holzrichter, J. F.; Gable, T. J.; and Ng, L.
+   C., "Denoising of Human Speech using Combined Acoustic and EM Sensor
+   Signal Processing," presented at the International Conference on
+   Acoustics, Speech, and Signal Processing--ICASSP 2000, June 5-9, 2000,
+   Istanbul, Turkey. Conference Paper - pdf format.
+
+   [new.gif] *Burnett, G. C.; Holzrichter, J. F.; Gable, T. J.; and Ng, L.
+   C., "The Use of Glottal Electromagnetic Micropower Sensors (GEMS) in
+   Determining a Voiced Excitation Function, " presented at the 138th
+   Meeting of the Acoustical Society of America, November 2, 1999,
+   Columbus, Ohio.
+
+   [new.gif] *Gable, T. J.; Burnett, G. C.; Holzrichter, J. F.; and Ng, L.
+   C., "Speaker Verification Performance Comparison Based on Traditional
+   and Electromagnetic Sensor Pitch Extraction, " presented at the 138th
+   Meeting of the Acoustical Society of America, Poster Session 2pSC,
+   Speech Processing, November 2, 1999, Columbus, Ohio.
+
+   [new.gif] *Ng, L. C.; Burnett, G. C.; Holzrichter, J. F.; and Gable, T.
+   J., "Background Speaker Noise Removal Using Combined EM Sensor/Acoustic
+   Signal Signals, " presented at the 138th Meeting of the Acoustical
+   Society of America, Poster Session 2pSC, Speech Processing, November 2,
+   1999, Columbus, Ohio.
+
+   [new.gif] Burnett, G. C.; Holzrichter, J. H., "Human Speech Articulator
+   Measurements Using Low Power, 2 GHz Homodyne Sensors", presented at the
+   International Conference on Infrared and Millimeter Waves, September 6,
+   1999, Monterey, CA.
+
+   [new.gif] Dr. Burnett's thesis, entitled "The Physiological Basis of
+   Glottal Electromagnetic Micropower Sensors (GEMS) and Their Use in
+   Defining an Excitation Function for the Human Vocal Tract", was the
+   recipient of the 1998-99 U.C. Davis Allen G. Marr Prize for the
+   outstanding thesis in the colleges of Mathematics, Physical Science,
+   and Engineering.
+
+   [new.gif] Burnett, G. C.; Holzrichter, J. F.; Gable, T. J.; and Ng, L.
+   C., "Direct and Indirect Measures of Speech Articulator Motions Using
+   Low Power EM Sensors," presented at the XIV International Congress of
+   Phonetic Sciences, August 6, 1999, San Francisco, California.
+
+                                 [fig-e.gif.2]
+
+
+                                APPLICATIONS
+     * Speech Recognition
+     * Speaker Verification
+     * Speech Synthesis
+     * Speech Diagnostics
+     * Speech Coding
+     * Noise Removal
+
+   Human vocal system showing locations of electromagnetic radar sensors.
+       The sensors can be built into microphone housings and other
+       convenient devices.
+
+                                [fig-h.gif.2]
+
+     Typical micropower radar set for detecting motions of nearby objects
+     within approximately 1 m range. This unit can be further reduced in
+     size to one or two IC chips. Presently used radars transmit a short
+     burst of several EM waves with a 2-GHz nominal frequency, and at a
+     PRF of 2 MHz.
+
+                               [HorzBar1.gif]
+
+                                Typical Data
+
+                                 [data.gif]
+
+       Above Audio Signal: "The prowler wore a ski mask for disguise."
+
+  Data Description
+
+   The audio signal (top) is from an adult male speaking, "the prowler
+   wore a ski mask for disguise." The EM sensor signal shows glottis open
+   and closing for the voiced segments of the audio signal. Both signals
+   are taken simultaneously. The audio is delayed relative to the glottal
+   signal by about 52 samples (0.8 milliseconds) because of the difference
+   in the speed of sound and light. For more descriptions, please refer to
+   the reference section for talks and presentations.
+
+   The data pictured above, skimask.zip, may be downloaded and examined
+   within Matlab. The skimask mat-file includes the variables audio,
+   emsensor and fs, where fs is the sampling rate. This file is a zipped
+   Matlab file for a PC or UNIX version. If you wish to use a Macintosh
+   version of skimask.mat, download the file to machine and load it within
+   the Matlab application.
+
+  Project Introduction
+
+   Newly developed electromagnetic (EM) near field sensors (refer to the
+   technology transfer web site) provide a capability for measuring EM
+   wave reflections from speech organ interfaces in a non invasive, safe,
+   fast, portable, and low cost fashion. These devices have similarities
+   to some far-field radar systems except that their power levels are very
+   low, their measurements are commonly in the near-field, and their rate
+   of data acquisition (e.g., prf) is very high and very flexible. They
+   are being used in investigations for other applications such as heart
+   function and mechanical vibration sensing. In particular, they make
+   possible the real-time measurements of the positions and motions of the
+   human vocal articulators during speech production. The measurements to
+   date include the motions of the glottis (i.e., vocal folds), lips,
+   tongue, jaw, and velum. Examples of vocal fold measurements (in real
+   time) gives the pitch period, enable noise removal, and enables pitch
+   synchronous deconvolving of the corresponding excitation from the
+   acoustic output to obtain improved quality speech transfer functions.
+   Similarly, EM sensor measurements of jaw motion with acoustic speech
+   provide constraints on the sound being articulated for speech
+   recognition, and can be used for "talking head" and video image
+   synchronization.
+
+   In the past, there have been successes and limitations on using EM wave
+   sensors, such as radars, in imaging modes. The difficulties include
+   resolution, penetration, safety, speed, portability, complexity, and
+   calibration. Our present approach using very fast, low power systems
+   resolves many of these issues. The speech articulator signals from our
+   instruments are being carefully calibrated using existing procedures,
+   such as electroglottographs, laryngoscopes, magnetic resonance imaging,
+   ultrasonics, and many others. Also, continuing issues associated with
+   tomographic image formation are relieved by using these EM sensors for
+   specific model-based organ parameter measurements. The experiments and
+   interpretations in our reports are intended to demonstrate promising
+   approaches to studying speech production from babies to adults, for
+   diagnosing and correcting communication disorders and learning
+   difficulties, for real time continuous speech recognition, speech
+   synthesis, speaker verification, speech coding, noise reduction, and
+   other applications.
+
+   LLNL References: (Click Link for Presentation)
+
+   [new.gif] *Burnett, G. C.; Holzrichter, J. F.; Gable, T. J.; and Ng, L.
+   C., "Denoising of Human Speech using Combined Acoustic and EM Sensor
+   Signal Processing," presented at the International Conference on
+   Acoustics, Speech, and Signal Processing--ICASSP 2000, June 5-9, 2000,
+   Istanbul, Turkey. Conference Paper - pdf format.
+
+   [new.gif] *Burnett, G. C.; Holzrichter, J. F.; Gable, T. J.; and Ng, L.
+   C., "The Use of Glottal Electromagnetic Micropower Sensors (GEMS) in
+   Determining a Voiced Excitation Function, " presented at the 138th
+   Meeting of the Acoustical Society of America, November 2, 1999,
+   Columbus, Ohio.
+
+   [new.gif] *Gable, T. J.; Burnett, G. C.; Holzrichter, J. F.; and Ng, L.
+   C., "Speaker Verification Performance Comparison Based on Traditional
+   and Electromagnetic Sensor Pitch Extraction, " presented at the 138th
+   Meeting of the Acoustical Society of America, Poster Session 2pSC,
+   Speech Processing, November 2, 1999, Columbus, Ohio.
+
+   [new.gif] *Ng, L. C.; Burnett, G. C.; Holzrichter, J. F.; and Gable, T.
+   J., "Background Speaker Noise Removal Using Combined EM Sensor/Acoustic
+   Signal Signals, " presented at the 138th Meeting of the Acoustical
+   Society of America, Poster Session 2pSC, Speech Processing, November 2,
+   1999, Columbus, Ohio.
+
+   [new.gif] Burnett, G. C.; Holzrichter, J. H., "Human Speech Articulator
+   Measurements Using Low Power, 2GHz Homodyne Sensors", presented at the
+   International Conference on Infrared and Millimeter Waves, September 6,
+   1999, Monterey, CA.
+
+   [new.gif] Burnett, G. C.; Holzrichter, J. F.; Gable, T. J.; and Ng, L.
+   C., "Direct and Indirect Measures of Speech Articulator Motions Using
+   Low Power EM Sensors," presented at the XIV International Congress of
+   Phonetic Sciences, August 6, 1999, San Francisco, California.
+
+   [new.gif] Burnett, G.C.The Physiological Basis of Glottal
+   Electromagnetic Micropower Sensors (GEMS) and Their Use in Defining an
+   Excitation Function for the Human Vocal Tract,"
+   thesis, Applied Science in the Office of Graduate Studies, U.C. Davis,
+   March 1999.
+
+   Burnett, G.C., Holzrichter, J.F., Cheng, C.Z., Gable, T.J., Ng, L.C.,
+   Freeman, R.R., (1999)"Speech Characterization Using Micro-Power EM
+   Sensors" presented at the NSF Workshop on the Human-Computer
+   Interaction Program, February 22, 1999, Orlando, Florida.
+
+   Burnett, G.C., Gable, T. J., Holzrichter, J.F., Ng, L.C.,
+   (1998)"Micropower Electro-Magnetic Sensors for Speech Characterization"
+   presented at the International Conference and Speech and Linguistic
+   Phonetics, November 30 - December 4, 1998, Sydney Australia.
+
+   Holzrichter, J. F., Lea, W. A., McEwan, T. E., Ng, L. C., Burnett, G.
+   C. (1996). "Speech Coding, Recognition, and Synthesis using Radar and
+   Acoustic Sensors," University of California Report UCRL-ID-123687
+   (reprints available from the Office of Scientific and Technical
+   Information, P.O.Box 62, Oak Ridge, TN, 37831).
+
+   Burnett, G.C., Holzrichter, J.F., Ng, L.C., Leonard, R., Lea, W.A.
+   (1996) "Micropower Radar Measurements of Human Vocal Articulator
+   Motions" Third Joint Meeting of the Acoustical Society of America and
+   Acoustical Society of Japan, December 2-6, 1996, Honolulu, Hawaii.
+
+   Holzrichter, J.F., Lea, W.A., Ng, L.C., Burnett, G.C., (1996)"Uses of
+   Micropower Radars for Speech Coding and Applications" Third Joint
+   Meeting of the Acoustical Society of America and Acoustical Society of
+   Japan, December 2-6, 1996, Honolulu, Hawaii.
+
+   Holzrichter, J.F. and Burnett, G.C. (1997) "Use of Low Power EM Radar
+   Sensors for Speech Articulator Measurements
+   " presented at Eurospeech 97, September 22-25, 1997, Rhodes, Greece and
+   published in proceedings.
+
+   Gable, T. J., Burnett, G.C., Holzrichter, J.F., Ng, L.C., Lea, W.A.
+   (1997) "Comparison of conventional acoustic and MIR radar/acoustic
+   processing of speech signals
+   " paper 4aSP5, 134th meeting of the Acoustic Society of America,
+   December 1-5, 1997 San Diego.
+
+   Burnett, G.C., Gable, T. J., Holzrichter, J.F., Ng, L.C., (1997)"Voiced
+   excitation functions calculated from micropower impulse radar
+   information." paper 4aSP4. 134th meeting of the Acoustic Society of
+   America, December 1-5, 1997 San Diego.
+
+   Holzrichter, J.F., Burnett, G.C., Ng, L.C., Lea, W.A. (1998)"Speech
+   articulator measurements using low power EM-wave sensors." Journal of
+   the Acoustic Society of America, 103 (1), pg. 622-625, January 1998.
+   Reprints available upon request.
+
+   Haddad, W. S., Rosenbury, E. T., Johnson, K. B., and Pearce, F. J.
+   (1997) "Measurements of the Dielectric Properties of Body Tissues and
+   Fluids at Microwave Frequencies," to be published, Lawrence Livermore
+   National Laboratory.
+
+   Holzrichter, J.F., Ng, L.C. (1998), Patent Number 5,729,694, "Speech
+   Coding, Reconstruction and Recognition Using Acoustics and
+   Electromagnetic Waves."
+
+   [HorzBar1.gif]
+
+  Contact Information:
+
+                        John F. Holzrichter PhD
+                        Phone: (925) 423-7454
+                        Fax: (925) 424-4820
+                        E-mail: holzrichter1@llnl.gov
+                        Mail code: L-003
+
+                                 [logo.gif]
+   LLNL Disclaimers
+
+   [HorzBar1.gif]
+
+                      Last modified on December 2, 1999

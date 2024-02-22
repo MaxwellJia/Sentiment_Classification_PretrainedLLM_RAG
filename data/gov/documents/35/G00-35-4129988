@@ -1,0 +1,422 @@
+http://flightlinux.gsfc.nasa.gov/docs/onboard_LAN.html
+
+
+
+                             FlightLinux Project
+
+                                 Onboard LAN
+
+                              Technical Report
+
+                                May 30, 2001
+
+   Patrick H. Stakem
+
+                               QSS Group, Inc.
+
+
+
+
+   Revision History
+
+   5/30/2001 Initial Release
+
+
+   Introduction
+
+   The intent of this technical report is to define the LAN (local area
+   network) architectures that will be supported by the FlightLinux
+   software product. An onboard LAN in a standard configuration will
+   simplify the interface between various spacecraft components. A LAN
+   consists of the lower (physical) layer, and perhaps two levels of
+   software protocol imposed on the physical layer. The advantages of
+   running a routable protocol over the physical LAN will be explored.
+
+   This is considered to be a living document, that will be updated as
+   required to encorporate new and evolving information. Sections marked
+   "to be supplied" will be completed and supplied in subsequent revisions
+   of this document. At this writing, a meeting on IP-over-CCSDS is
+   scheduled to be held at JPL momentarily, followed by a meeting with the
+   Internet Engineering Task Force (IETF) in London in August, 2001.
+
+   Background
+
+   This work was conducted under task NAS5-99124-297, with funding by the
+   NASA Advanced Information Systems Technology (AIST) Program,
+   NRA-99-OES-08. The work is conducted by personnel of QSS Group, Inc. in
+   partnership with NASA/GSFC codes 586 (Science Data Systems), Code 588
+   (Advanced Architectures and Automation), and code 582 (Flight
+   Software).
+
+   The FlightLinux project has the stated goal of providing an on-orbit
+   flight demonstration of the software within the contract period.
+   Numerous other Linux efforts exist within the GSFC flight software
+   community. Currently, FlightLinux is being developed for a flight test
+   on the UoSat-12 spacecraft, which is already on-orbit. A UoSat-12
+   testbed facility owned by the OMNI Project (Code 588) is being used for
+   development. This testbed incorporates synchronous serial, CAN bus, and
+   ethernet interfaces.
+
+   Management Summary
+
+   This report discusses the existing and projected LAN architectures for
+   use onboard spacecraft, and the support that is or will be available
+   under FlightLinux. It discusses the benefits and importance of an
+   onboard LAN architecture. Given Linux onboard the spacecraft, support
+   for a LAN becomes relatively easy. Extending the onboard LAN to other
+   spacecraft units in a constellation also becomes feasible, as does
+   having the spacecraft operate as an Internet node.
+
+   Interface between spacecraft components is usually provided by
+   point-to-point connections, or a master-slave bus architecture. The use
+   of a LAN onboard is not yet common. This is partially due to the lack
+   of space-qualified components.
+
+   The avionics bus MIL-STD-1553 and its optical derivative, 1773, are
+   commonly used between spacecraft components. This bus, used in
+   thousands of military and commercial aircraft has a legacy of
+   applications behind it. Also, 1553 is transformer-coupled and
+   dual-redundant, providing a level of failure protection. The raw data
+   rate is 1 megabit per second. It is a master-slave architecture.
+
+   For point-to-point connections that do not require the complexity of a
+   1553/1773 connection, a synchronous serial connection such as RS-422/23
+   with a bit rate around 1 megabit per second is typically used.
+
+   A LAN-type architecture is typically used in office and enterprise
+   environments (and spacecraft control centers). It provides a connection
+   between peer units, or clients and servers. The typical LAN used a coax
+   or twisted pair connection at a transmission rate of 10 megabits per
+   second, a twisted pair connection at 100 megabits per second, or
+   optical at 155 megabits per second, with higher speeds possible.
+
+   Usually, a LAN is configured with a repeating hub, or a central switch
+   between units. The standard protocol imposed on the physical interface
+   is TCP/IP - transmission control protocol/internet protocol, although
+   others are possible (even simultaneously). The TCP/IP protocol has
+   become a favored approach to linking computers around the world. The
+   protocol is supported by Linux and most other operating environments.
+   The use of TCP/IP first appeared in 1969.
+
+   The OSI model and Network Protocols
+
+                               To be supplied
+
+   Server Based networks
+
+                               To be supplied
+
+   TCP/IP Protocol, and the OSI Model
+
+                               To be supplied
+
+   Bridges and Routers
+
+   Bridges operate between networks, at the OSI Data Link Layer (level 2).
+   Switches also operate at level 2. Routers operate at OSI level 3 - the
+   Network layer.
+
+   Routable versus non-routable protocols
+
+   A communications protocol that contains a network address as well as a
+   device address, allowing data to be routed from one network to another,
+   is called a routable protocol. If the protocol does not contain a
+   network (level 3) address, it is not routable. A non-routable protocol
+   does not incorporate an addressing scheme for sending data from one
+   network to another. The TCP/IP protocol is routable.
+
+   References:
+
+   1) Good background material can be found at:
+   http://marconi.com/html/education/webbasedlantheory.htm
+
+   2) Habraken, Joe, Practical Cisco Routers, Que Books
+
+   3) Naik, Dilip C., Internet Standards and Protocols
+
+   4) OSI Model,
+   http://www.erg.abdn.ac.uk/users/gorry/eg3561/intro-pages/osi.html
+
+   Discussion of Near-term onboard LAN options
+
+   The following Onboard LAN options for the physical layer are derived
+   from the Spacecraft onboard payload data accommodations section of the
+   Rapid-I and -II programs, (see http://rsdo.gsfc.nasa.gov), and from
+   common and emerging commercial LAN architectures These can be
+   considered typical of near-term spacecraft architectures for onboard
+   data transfer.
+
+   1. MIL-STD-1553b/1773
+
+   The effective data throughput of the legacy 1553 bus is around 300
+   kilobits per second. The bus architecture has a single master with
+   multiple slaves, and uses dual-redundant transformer-coupled buses.
+   This technology has an extensive experience base in avionics and space.
+   1773 is the optical version of twisted pair 1553, and operates at
+   higher rates. It should be noted that a component may be on multiple
+   1553 buses simultaneously, and may serve as master of one, and slave on
+   others. In essence, master units can initiate communication, where
+   slave units speak when spoken to.
+
+   Because 1553 is a master-slave architecture, it does not map well to a
+   client-server type model. However, the Spacecraft Onboard Inter Face
+   (SOIF) group, under the auspices of the CCSDS committee, has been
+   looking at these issues. It is not impossible to run a protocol such as
+   TCP/IP over master-slave architectures, although it is not
+   straight-forward.
+
+   The use of 1553/1773 is facilitated by the availability of space
+   qualified hardware.
+
+   references
+
+   1) 1553 Product Handbook, United Technology Microelectronic Center,
+   1991.
+
+   2) MIL-STD-1553 Designer's Guide, 3rd. edition, ILC Data Device
+   Corporation, 1990.
+
+   3) SOIF: ftp://ftp.estec.esa.nl/pub/ws/wsd/ccsds/ccsdsoif/intro.htm
+
+
+   2. EIA-RS-422
+
+   RS-422 is a serial point-to-point physical interface over wire. It has
+   an effective maximum throughput to 5 megabits per second. Usually, a
+   synchronous serial protocol such as (High level data link control) HDLC
+   is imposed over RS-422.
+
+   3. EIA-RS-485
+
+   RS-485 is an upgraded version of the RS-422 protocol, specifically
+   designed to address the problem of communication between multiple
+   devices on a single data line. It is a balanced transmission system
+   that is virtually identical to RS-422 with the important addition of
+   the ability to allow up to 32 devices to communicate using the same
+   data line. Thus any point can directly communicate with each other,
+   taking on the role of master and slave as needed. This is achieved by
+   the use of tri-state drivers which are controlled by a programmable
+   handshake line to ensure that only one device acts as a driver at any
+   one time. Communication can be initiated from any point on the line. A
+   protocol such as HDLC can be imposed on RS-485.
+
+   Reference:
+
+   http://www.erg.abdn.ac.uk/users/gorry/eg3561/dl-pages/hdlc-framing.html
+
+   4. CAN
+
+   CAN is the Controller Area Network, originally developed for
+   automobiles and industrial use. It uses a two-wire differential bus. It
+   is a serial protocol, with data rates to 1 Mbit/sec. It implements
+   distributed real time control and multiplexing. CAN represents the Data
+   link and physical layer of the ISO networking model. It is used by
+   Surrey Satellite Technology Ltd. for UOSat-12 and SNAP-1, and is
+   supported by Linux drivers.
+
+   The Controller Area Network (CAN) specification defines the Data Link
+   Layer, ISO 11898 defines the Physical Layer. The CAN interface is an
+   2-wire asynchronous transmission scheme controlled by start and stop
+   bits at the beginning and end of each character. This interface is
+   used, employing serial binary interchange. Information is passed from
+   transmitters to receivers in a data frame. The data frame is composed
+   of an Arbitration field, Control field, Data field, CRC field, ACK
+   field. The frame begins with a ‘Start of frame’, and ends with an ‘End
+   of frame’ space. The data field may be from 0 to 8 bits. The frame
+   check sequence is derived from a Cyclic Redundancy Code (CRC).
+
+   References:
+
+   1) http://www.interfacebus.com/Design_Connector_CAN.html
+
+   2) ISO 11898/11519
+
+
+   5. USB
+
+   The Universal Serial Bus (USB) has been developed and standardized
+   under the collaborative efforts of a number of hardware and software
+   manufacturers to address the limitations and complexity associated with
+   adding expansion devices to the personal computer. However, the use of
+   USB is not limited to Intel or X86 architecture. The USB specification
+   describes a standard for attaching peripheral devices to computers that
+   can be used with many processor types including the more capable
+   embedded processors that control many modern devices or systems. In
+   addition, USB can be used to interconnect computers, or to connect mass
+   storage devices to processors.
+
+   Traditionally there has been a limitation on the number of peripheral
+   devices that can be attached to a computer. The more common methods of
+   delivering and receiving data from a computer require it to provide
+   dedicated physical and logical assets for each connected input/output
+   (I/O) device. Physical assets include the electrical connectors and
+   circuitry required to attach devices to the computer, while logical
+   assets include the methods required to signal the computer that an
+   external device is ready to deliver or accept information. External
+   devices are defined as any add-on device, whether it is plugged into a
+   card slot inside the computer’s cabinet or attached to a connector on
+   the exterior of the cabinet.
+
+   The lack of expansion capability for inexpensive computers, coupled
+   with a flood of new or planned add-on devices, particularly medium
+   speed multimedia peripherals such as scanners, cameras, digital audio,
+   and telephony equipment drove the development of the Universal Serial
+   Bus. The USB allows the attachment of up to 127. A number of the 127
+   devices will actually be expansion ports that allow connection of
+   additional devices in a tiered manner. USB is supported by the
+   Microsoft Windows 98/ME/2000 and Apple Macintosh OS9 operating systems.
+   The Linux operating system also provides partial USB support. Common
+   hardware support for USB is provided on virtually all Intel
+   architecture PCs built after 1997 and on the Apple Computer iMac,
+   PowerMac G4, and iBook products.
+
+   The ability to connect 127 devices to a single USB port is accomplished
+   by using methods that have more in common with computer networking
+   models than with previous types of input/output connection for
+   peripherals. Communication is between adjacent layers in the stack as
+   well as between the corresponding layers of the transmitting and
+   receiving stacks. The emerging USB-II protocol will increase the
+   existing transmission speed from the existing 1.5/12 Mbps to 480 Mbps.
+   USB-II devices and support are just appearing in the marketplace.
+
+   Reference:
+
+   1) http://mes.loyola.edu/FACULTY/PHS1.HTM - the pages on USB were
+   compiled by Paul M. Reeves, for Loyola College, Dept. of Engineering
+   Science, Graduate School in partial fulfillment of the requirements for
+   a Master's Degree, under P. Stakem, Advisor.
+
+   6. FireWire
+
+   IEEE-1394, also known as FireWire-3, is a high-speed serial bus
+   standard developed for consumer electronics. FireWire is to be easy to
+   use and configure, but is more complex than SpaceWire (discussed in
+   Section 7), which has lower latency with higher scalability. Since
+   FireWire and SpaceWire are aimed at different applications, they also
+   have different specifications. Firewire is a registered trademark of
+   Apple-Computer, Inc.
+
+   FireWire is a bus (master-slave) architecture using cable media. A tree
+   or daisy chain topology is required. It uses a 6-wire cable: 2 for
+   power supply & 2 pairs for data: Each pair transmits one Data or Strobe
+   Signal in differential form in one direction. Links are half-duplex:
+   i.e. data can be transmitted only in one direction at the time. The
+   data rates are specified at 100 Mbps, 200 Mbps, and 400 Mbps.
+
+   FireWire devices in military-grade (but not in radiation tolerant
+   grade) are available now. Current FireWire connectors are not suitable
+   for space applications.
+
+   References
+
+   1) IEEE-1394, http://www.1394ta.com/
+
+
+   7. Spacewire
+
+   SpaceWire is a network for space applications composed of nodes and
+   routers interconnected through bi-directional high-speed digital serial
+   links using cable media.
+
+   SpaceWire is an upgrade of the high-speed digital serial links defined
+   in the DS-DE part of the IEEE-1355 Standard. SpaceWire is based on the
+   DS-DE (DataStrobe-Differential Ended) part of the IEEE 1355 Standard,
+   and its main characteristics are:
+
+     * high-speed (> 100 Mbps) bi-directional
+     * point-to-point serial interface
+     * can be used at 10 meters distance or more
+     * simple interface using Data-Strobe
+     * Low-Cost, Low-Latency, Scalable
+
+   Data rate is not specified in the Standard (it is a function of skew
+   and jitter). At present, devices operate at 155-200 Mbps.
+
+   SpaceWire is a derivative of the Inmos Transputer link architecture,
+   which was a 10 Mbps asynchronous serial interconnect, that could be
+   switched. The transparent physical layer of SpaceWire is compatible
+   with higher level protocols (e.g. ATM, SCI, Ethernet).
+
+   References:
+
+   1) http://www.estec.esa.nl/tech/spacewire/index.html
+
+   2) http://grouper.ieee.org/groups/1355/index.html, IEEE Std 1355-1995
+   Standard for Heterogeneous InterConnect (HIC) (Low Cost Low Latency
+   Scalable Serial Interconnect)
+
+   8. 10baseT, 100 base T Ethernet
+
+   Of all the protocols, Ethernet is the most widely used. It provides
+   network access using carrier sense multiple access with collision
+   detection (CSMA/CD) as a strategy. The nodes on the network listen
+   before transmitting. If two nodes happen to transmit at the same time,
+   the communication is garbled. This is detected, and each transmitter
+   waits a random time, and tries again. Ethernet can be run across a
+   variety of media, including optical fibre, to gigabit speeds.
+
+   Standards:
+
+   1. Ethernet 802.3 - Novel Netware 2 &3
+
+   2. Ethernet 802.2 - Novel Netware 4 and 5
+
+   3. Ethernet SNAP - AppleTalk
+
+
+   The OMNI Project, IP in space experience.
+
+                               To be supplied
+
+   References:
+
+   1. The OMNI Project webpage: http://ipinspace.gsfc.nasa.gov/
+
+   2. Internet Access to Spacecraft, James Rash, Ron Parise, Keith Hogie,
+   Ed Criscuolo, Jim Langston, Chris Jackson, Harold Price^, published at
+   the Small Satellite 2000 conference in Logan, Utah.
+
+   3. Internet Technology on Spacecraft, James Rash, Ron Parise, Keith
+   Hogie, Ed Criscuolo, Jim Langston, AIAA paper 2000-5295
+
+
+   The UoSat-12 Onboard Computer configuration
+
+   The UoSat-12 onboard computer, which will become the onorbit testbed
+   for FlightLinux, is an embedded Intel 80386EX processor, with 4
+   megabytes of main memory, 128 megabytes of extended memory, and 4
+   synchronous serial interfaces, dual CAN bus interfaces, and an ethernet
+   port. A Linux interface developed by the OMNI Project will for the
+   synchronous ports will be adapted for FlightLinux. Similarly, existing
+   device drivers for the CAN bus will be ported to Linux. The ethernet
+   port is standard, and should be directly supported by FlightLinux.
+
+   Reference:
+   http://www.sstl.co.uk/missions/subpage_missions_uosat_12.html
+
+
+   The OMNI FlatSat Configuration
+
+   To be supplied
+
+
+   Expeience with LAN Physical layer options onboard spacecraft
+
+   MIL-D-1553b/1773 extensive experience base
+
+   EIA RS-422, -485 common use for point-point
+
+   CAN limited use, in flight
+
+   USB no known usage
+
+   FireWire experimental
+
+   SpaceWire experimental. ESA favored
+
+   10Base-T experimental
+
+
+   Interaction of the Onboard Lan with CCSDS Protocols
+
+   To be supplied

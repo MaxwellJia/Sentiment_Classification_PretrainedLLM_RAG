@@ -1,0 +1,843 @@
+http://epims.gsfc.nasa.gov/epims_pub/e_sys_reqt.html
+
+EPIMS System Requirements
+
+   [e_sys_reqt-1.gif]
+
+   (Most recent update: August 19, 1997 11:43 pm)
+
+
+Requirements Methodology
+
+   Requirements for the system were inherited from the earlier
+   requirements documents for EPIMS (see Parent Documents, below), which
+   was a conventional (non-Web) information system. These requirements
+   were revisited during Joint Application Design (JAD) sessions that were
+   held at GSFC on January 17, March 21, and April 10, 1996, in order to
+   identify new requirements and functional needs for EPIMS. Requirements
+   developed at the JADs included responses to Software Change Requests
+   (SCR's) written against EPIMS.
+
+Parent Documents
+
+     * NASA Electrical, Electronic, and Electromechanical (EEE) Parts
+       Information Management System (EPIMS) -- System Specification .
+       Document # MTR-88W74, Mitre Corporation, McLean, VA. 1988.
+     * Electrical, Electronic, and Electromechanical (EEE) Parts
+       Information Management System (EPIMS) Requirements Definition
+       Document (RDD). Document # MTR-89W00150, Mitre Corporation, McLean,
+       VA. 1989.
+     * Information System Requirements for the Electrical, Electronic, and
+       Electromechanical (EEE) Parts Information Management System
+       (EPIMS). NASA Parts Project Office. December 17, 1993.
+
+Requirements
+
+   This section contains baseline system requirements and describes the
+   system's end-user roles See Also: EPIMS System User Roles
+
+Interface [I]
+
+   This section defines the requirements for the user interface (UI) and
+   system interfaces.
+
+   [I-1] Default Results Display Window
+
+   The default for displaying results shall be the entire browser window.
+   (This is intended to accommodate users with small monitors.)
+
+   [I-2] Record Counts
+
+   The system shall display the count of records in all search results.
+
+   [I-3] Scrolling Minimization
+
+   User interfaces shall minimize the need for scrolling.
+
+   [I-4] Date Sorts
+
+   The search interface shall provide the capability to sort search
+   results by date where applicable.
+
+   [I-5] Date Searches
+
+   Date searches shall be provided on all functions to which they are
+   applicable.
+
+   [I-6] Links to CAGE/Manufacturer Information
+
+   Links shall be provided from search results to CAGE (Commercial And
+   Government Entity) and manufacturer information where applicable; the
+   manufacturer parent company shall be displayed with CAGE information if
+   it is applicable.
+
+   [I-7] Print and Save-to-File
+
+   Print and save-to-file capabilities shall be provided. (This shall
+   utilize the standard capabilities of Web browsers.)
+
+   [I-8] Access Control and User Roles
+
+   Access to system functions and data shall be controlled by means of
+   user roles See Also: EPIMS System User Roles -- a user may be assigned
+   one or more of the specified roles relative to distinct sets of the
+   system functions and data.
+
+Help [H]
+
+   This section defines the requirements for on-line system help. These
+   requirements apply to the help for all system functions.
+
+   [H-1] Hypertext Help
+
+   The system shall provide hypertext help documentation.
+
+   [H-2] Help on Data Fields
+
+   The system shall provide help for each data field (the minimum being a
+   definition of the field).
+
+   [H-3] Full-Text Search of Help (not yet implemented)
+
+   The system shall provide a full-text search of Help topics.
+
+Federal Supply Class (FSC) Directory [F]
+
+   FSC Directory requirements include the FSC Directory data and all FSC
+   and part classification services for all system functions.
+
+   [F-1] FSC Database
+
+   The system shall include a complete FSC database.
+
+   [F-2] FSC Picklists
+
+   The system shall provide an FSC picklist for all functions for which
+   FSC is a search criterion.
+
+Commercial And Government Entity (CAGE) Directory [C]
+
+   This section defines the requirements for the CAGE Directory function
+   and CAGE Directory services for all system functions. CAGE data is a
+   listing of organizations, addresses, and a 5-character code, called a
+   "CAGE Code", assigned to each organization by the Defense Logistics
+   Agency (DLA). For more information on CAGE data, see the CAGE Web site.
+
+   [C-1] CAGE Database
+
+   The system shall include the DLA CAGE database.
+
+   [C-2] CAGE Searches
+
+   The system shall support searches by CAGE code and name, as well as
+   searches for substrings of CAGE names or of CAGE listings (name,
+   address, etc.).
+
+   [C-3] CAGE Look-ups
+
+   The system shall provide a CAGE Look-up capability from the search
+   window of functions for which CAGE Code is a search criterion, to
+   enable quick look-up and insertion of a CAGE Code.
+
+User Directory and Data Access Control [U]
+
+   User Directory and Data Access Control requirements apply to the
+   tracking of system users and the control of their access to all system
+   functions.
+
+   [U-1] User Database
+
+   The system shall contain a database of all system users.
+
+   [U-2] User Roles
+
+   The system shall provide the capability to associate each user with an
+   organization (CAGE), project name code, and access roles See Also:
+   EPIMS System User Roles
+
+NASA Project Directory [P]
+
+   The Project Directory requirements specify the support the system must
+   provide for information on NASA projects, and the project directory
+   services required for use by all system functions.
+
+   [P-1] Project Database
+
+   The system shall include a database of all projects that have data in
+   the system.
+
+   [P-2] Project Picklists
+
+   A project pick-list shall be provided for any function for which
+   project is a search criterion.
+
+NASA Spacecraft and Design Items Directory [S]
+
+   The NASA Spacecraft and Design Items Directory requirements specify the
+   support the system must provide for information on NASA Spacecraft and
+   Design Items, which is generally the Configuration Management (CM)
+   information supported by the system.
+
+   [S-1] Spacecraft and Design Item Repository
+
+   The system shall provide a repository for spacecraft and design item
+   information (the Spacecraft and Design Items Directory) for the use of
+   NASA projects. The Spacecraft and Design Items Directory shall support
+   at least the following attributes: item name, type (e.g., board,
+   launch-replaceable unit [LRU], spacecraft, etc.), serial number,
+   drawing number, criticality code, launch date, and point of contact
+   ("owner" of the item or person to contact for information).
+
+   [S-2] Design Item Hierarchical Navigation (not yet implemented)
+
+   A hierarchical spacecraft and design item navigation interface shall be
+   provided.
+
+   [S-3] Spacecraft and Design Item Data Maintenance (not yet implemented)
+
+   Spacecraft and design item data maintenance functions shall be
+   provided. The project data administrator and global data administrators
+   shall be the only users with access to these functions.
+
+Parts Lists [PL]
+
+   Parts lists requirements apply to the Part Usage function and to the
+   relationship between parts lists and design items.
+
+   [PL-1] Parts List Repository
+
+   The system shall provide a repository for NASA project parts lists.
+
+   [PL-2] Part Usage Searches
+
+   The system shall support searches for parts by part number, FSC, CAGE
+   code, project name code, and "full text" (all fields). Searches by
+   substrings of part number shall also be supported.
+
+   [PL-3] Parts List Searches (not yet implemented)
+
+   The system shall support searches for parts lists by project name code,
+   parts list type (e.g., Early Potential, As-Designed, As-Built), and
+   parts list number.
+
+   [PL-4] Parts List Versioning
+
+   The system shall support the use of a version letter to distinguish
+   between parts list versions.
+
+   [PL-5] NSPAR Status Field (not yet implemented)
+
+   The system shall provide a NSPAR status field on the Parts List
+   Detailed Information screen.
+
+Nonstandard Part Approval Requests (NSPAR) [N]
+
+   This section defines the requirements that apply to the NSPAR functions
+   and to their relationship to other system functions.
+
+   [N-1] NSPAR Repository
+
+   The system shall provide a repository for NASA project Non-Standard
+   Part Approval Requests (NSPAR's).
+
+   [N-2] NSPAR Searches
+
+   The system shall support searches by part number, FSC, CAGE code, CAGE
+   name code, CAGE association name, NASA NSPAR number, contractor NSPAR
+   number, and project name code. Searches shall also be supported for
+   substrings of part number, NASA NSPAR number, and contractor NSPAR
+   number.
+
+   [N-3] NSPAR Data Maintenance
+
+   The system shall support NSPAR maintenance functions (create and
+   modify). The Project User and Project Data Administrator shall have
+   access to these functions for the projects to which they are assigned.
+
+   [N-4] NSPAR Versioning
+
+   The system shall support the use of a version letter to distinguish
+   between versions of NSPARs.
+
+   [N-5] Creation of NSPAR by Copy/Modify
+
+   The system shall support the creation of a new NSPAR by copying and
+   modifying an existing NSPAR from any project.
+
+   [N-6] NSPAR Status Field
+
+   The default search result shall show NSPAR status.
+
+   [N-7] Additional Fields for Advanced NSPAR Search
+
+   The Advanced NSPAR Search shall support searches by (1) QA Status and
+   (2) any of the following types of dates: {Date Submitted, Date Entered,
+   QA Approval Date}.
+
+   [N-8] Exact NSPAR Searches
+
+   The system shall support exact searches by NSPAR Number and Version.
+
+   [N-9] NSPAR Data Validation
+
+   The system shall validate the following data that may be entered in the
+   NSPAR Maintenance functions (Create and Modify): Manufacturer CAGE
+   Code, Vendor CAGE Code, Contractor CAGE Code, and Subcontractor CAGE
+   Code. A valid CAGE Code must be one of the following: (1) in the system
+   CAGE database; (2) "QPL", (3) "TBD", or (4) "81349" (a generic QPL CAGE
+   Code).
+
+   [N-10] NSPAR Data Conversion to Upper Case
+
+   The system shall convert the following data to upper case when saved
+   from the NSPAR Create or Modify function: NASA NSPAR Number;
+   Specification Part Number; Generic Part Number; Manufacturer Part
+   Number; National Stock Number; Closest Standard Part Number;
+   Manufacturer CAGE Code; Specification Number; Screening Specification
+   Number; Contractor NSPAR Number; Contractor CAGE Code; Subcontractor
+   CAGE Code; QA Status; Project Status; and Vendor CAGE Code.
+
+   [N-11] NSPAR Deletion
+
+   The system shall support deletion of NSPARs by authorized users of the
+   NSPAR Data Maintenance functions (Create and Modify). The system shall
+   enforce the following business rules for deletion of NSPARs: (a) only
+   one NSPAR at a time may be deleted, and (b) the user must preview a
+   NSPAR before deleting it.
+
+Alert Search [A]
+
+   Alert Search requirements define the capabilities required by end users
+   in searching for Alerts.
+
+   [A-1] Alert Repository
+
+   A repository shall be provided for the storage of and access to all
+   Government-Industry Data Exchange Program (GIDEP) Failure Experience
+   Data Interchange (FEDI) data (Alerts, Safe-Alerts, Problem Advisories,
+   Product Change Notices, Diminishing Manufacturing Sources and Materials
+   Shortages, Agency Action Notices, and Urgent Data Requests) and NASA
+   Advisories. The repository shall be maintained by the EPIMS Alert
+   Administrator(s) using the GIDEP download and Alert Value-Added
+   Processing functions.
+
+   [A-2] Alert Searches
+
+   The system shall support searches by Alert number, part number, FSC,
+   CAGE code, and full text. The system shall also support substring
+   searches by Alert number and part number.
+
+   [A-3] Alert Full-Text and Date Searches
+
+   The system shall support searches of Alerts by full-text (all text
+   fields) and by Alert Issue Date (before, after, or between two dates),
+   in combination with other attributes (fields).
+
+Alert Value-Added Processing [AV]
+
+   This section defines the functional requirements for support of the
+   Alert System Administrator in adding new Alerts to the system and
+   performing quality control on the Alert data.
+
+   [AV-1] New Alert E-mail Notification
+
+   For each Alert downloaded from GIDEP, the GIDEP Automatic Download
+   Process shall send an e-mail message to all ADA's and GDA's. The
+   message shall contain the following data on each Alert downloaded:
+   Alert Number, EPIMS time-date stamp as entered in the Alert download
+   log, and a link to the New Alert Check-in function in order to enable
+   immediate start-up of the function if a Web-enabled e-mail tool is used
+   to read the message.
+
+   [AV-2] New Alert Check-in
+
+   The system shall provide a function to check in newly downloaded GIDEP
+   Failure Experience Data Interchange (FEDI) data (herein collectively
+   referred to as "Alerts"), simultaneously creating both a baseline
+   version, which shall be called the "GIDEP" version, and a version for
+   Value-Added Processing to operate on, which shall be called the
+   "Value-Added" version. (Note that, immediately after New Alert
+   Check-in, these two versions of any new Alert are identical.) The
+   purpose of the New Alert Check-in function is to enable the EPIMS Alert
+   Data Administrator(s) (ADA's) to review the results of the Alert
+   parsing, to ensure that all data created is consistent with the GIDEP
+   original (as represented by the Full Text) before it is checked in as
+   the baseline ("GIDEP") version. This function shall be accessible only
+   to the EPIMS Alert Data Administrator(s) (ADA's) and Global Data
+   Administrator(s) (GDA's).
+
+   [AV-3] Creation and Identification of Value-Added Alerts
+
+   The New Alert Check-in process automatically creates database entries
+   for both a baseline "GIDEP" version and a Value-Added version (with
+   "-V" suffix) of each alert. Thus each alert shall thus give rise to two
+   database entries. Upon creation, the only difference between the two
+   entries shall be that the Alert number for the Value-Added version will
+   have a "-V" suffix. All other database fields shall be duplicated.
+
+   [AV-4] Value-Added Alert E-mail Notification
+
+   Upon check-in of each new Value-Added Alert created, the system shall
+   send an e-mail message to all Commodity Specialists (CS's) for all
+   FSC's related to the Alert. The message shall contain the FSC for which
+   the CS is identified, the Alert Number, CAGE Code, and Title, and a
+   link to the Alert Value-Added Processing function with that Alert
+   displayed for processing (this will enable immediate start-up of the
+   Alert Value-Added Processing function if a Web-enabled e-mail tool is
+   used to read the notification message).
+
+   [AV-5] Record Locking
+
+   When any ADA or GDA is performing Value-Added Processing on an Alert,
+   that Alert number shall be locked to prevent other ADAs and GDAs from
+   also performing Value-Added Processing on the same Alert at the same
+   time.
+
+   [AV-6] Permissions
+
+   Only Alert Data Administrators (ADA's) and Global Data Administrators
+   (GDA's) shall be able to create and modify Value-Added Alerts (-V
+   extension). The original Alert data downloaded from GIDEP shall be
+   saved in a "GIDEP" version (without the -V extension) that is not
+   capable of being modified.
+
+   [AV-7] Comments
+
+   Only Alert Data Administrators (ADA's) and Commodity Specialists (CS's)
+   shall be able to add comments to Value-Added Alerts.
+
+   [AV-8] Searches
+
+   The system shall support searches by Alert number, part number, FSC,
+   CAGE code, full text, and by date (before, after, or between two dates
+   where the date can be either the date of the Alert or the date of its
+   entry into the system). Substring searches shall be supported for any
+   search criteria (except date).
+
+   [AV-9] Data Retention
+
+   The original Alert and the latest version of the Value-Added Alert
+   shall be stored in the system.
+
+   [AV-10] Display Options
+
+   By default, only the Value-Added version of the Alert will be
+   displayed. The system shall provide an option to display the original
+   ("GIDEP") version of the Alert instead of the Value-Added (-V) version.
+
+Alert Impact Cross-Reference [AX]
+
+   These requirements define the operations to be performed in
+   cross-referencing parts lists to Alerts, maintaining a persistent
+   record of the cross-references, and enabling end-users to search and
+   disposition Alert cross-references to their parts lists.
+
+   [AX-1] Automated Alert-to-Part Cross-Referencing and Retention (not yet
+          implemented)
+
+   The system shall provide automated cross-referencing of Alerts (all
+   GIDEP FEDI data and NASA Advisories in the Alert Repository) to all
+   project parts lists in the Parts List Repository that have been marked
+   for cross-referencing by the Project Data Administrator; matching shall
+   be done by part number, FSC, and CAGE; "special part numbers"
+   associated with Value-Added Alerts by the Alert Data Administrator
+   shall be supported to match imbedded part numbers and aliases. The
+   results of the Alert-to-Part cross-referencing process shall be a
+   database of "hits" -- a hit being the combination of an Alert and a
+   matched parts list line item. The system shall store the results of the
+   automated cross-referencing process (i.e., the hits) in an Alert Impact
+   Cross-Reference Repository.
+
+   [AX-2] Automated Updating of Alert Impact Cross-Reference Database (not
+          yet implemented)
+
+   Cross-references shall be updated automatically whenever new Alerts,
+   etc., are added; also whenever a parts list is modified, and the
+   results shall be stored in the Alert Impact Cross-Reference Repository.
+
+   [AX-3] Alert Impact Searches (not yet implemented)
+
+   Searches shall be possible by part number, FSC, CAGE code, spacecraft
+   or design item number and name; substring searches by part number shall
+   also be possible.
+
+   [AX-4] Automatic Notification of Hits (not yet implemented)
+
+   Automatic notification to project users shall be provided when new hits
+   are found.
+
+   [AX-5] Closed Loop Disposition System (not yet implemented)
+
+   A closed-loop system shall be provided for the Project Data
+   Administrators to disposition hits.
+
+   [AX-6] Flagging Parts Lists for Cross-Referencing (not yet implemented)
+
+   The capability shall be provided for the Project Data Administrator
+   (PDA) to set a flag for each Alert type at each level of the project
+   hierarchy (project, spacecraft, spacecraft item) to signify whether
+   Alert cross-referencing will occur for parts lists for these items.
+
+   [AX-7] Default Cross-Reference Flags for Projects (not yet implemented)
+
+   The initial setting of a new project when it is created shall have all
+   flags set to TRUE except for GIDEP Diminishing Manufacturing Sources
+   (DMS) reports, which shall be set to FALSE.
+
+   [AX-8] Default Cross-Reference Flags for Design Items (not yet
+          implemented)
+
+   The initial settings of a new spacecraft or top-level design item shall
+   be set to those of its parent when the item is created (the ultimate
+   parent is the project).
+
+   [AX-9] Default Cross-Reference Flags for Parts Lists (not yet
+          implemented)
+
+   The default parts lists to be cross-referenced for an item shall be the
+   latest version for each active life cycle phases.
+
+   [AX-10] Setting of Cross-Reference Flags by the PDA (not yet
+          implemented)
+
+   Any of these flags may be changed by the Project Data Administrator
+   (PDA) for the project in question. The capability shall be provided for
+   the Project Data Administrator (PDA) to select any parts list for the
+   project to which the PDA is assigned and choose to have Alert
+   cross-referencing performed; this will be in addition to any parts
+   lists that are cross-referenced by default.
+
+   [AX-11] Attachment of Dispositions (not yet implemented)
+
+   Dispositions shall be attached to individual Alert hits.
+
+   [AX-12] Dispositioning by Alert Number (not yet implemented)
+
+   The capability shall be provided for the Project Data Administrator
+   (PDA) to select all the current hits for an Alert Number when creating
+   or attaching a disposition.
+
+   [AX-13] Identification of Dispositioner (not yet implemented)
+
+   The userid of the Project Data Administrator (PDA) who last saves a
+   disposition shall be stored with the disposition.
+
+   [AX-14] Searches of Alert Hits (not yet implemented)
+
+   The capability shall be provided to search for Alert hits that do not
+   have dispositions.
+
+Global Search [G]
+
+   Global Search requirements define the capabilities needed for access to
+   all data from a single search interface.
+
+   [G-1] Basic Global Search by Attributes (not yet implemented)
+
+   The capability shall be provided to search all applicable data in the
+   system simultaneously by part number, CAGE code, CAGE name, CAGE
+   association name, FSC code, and date.
+
+
+
+   CAPTION:
+
+EPIMS System User Roles
+
+User Role
+
+Assigned by
+
+Assigns
+
+Notes
+
+   Global Data Administrator (GDA)
+
+   Divine Right
+
+   Any role
+     * The Global Data Administrator (GDA) grants access to new users,
+       assigns the Alert Data Administrator (ADA), Commodity Specialist,
+       Alert User, and General User roles, and assigns the initial Project
+       Data Administrator (PDA) role for new projects. The GDA can assign
+       Project User roles, but this is customarily done by the PDA.
+
+   Project Data Administrator (PDA)
+
+   PDA or
+
+   GDA
+
+   PDA
+   (for same project)
+
+   Project User
+   (for same project)
+     * The initial Project Data Administrator (PDA) for a project is
+       assigned by the GDA.
+     * A PDA for a project can assign additional PDA's or Project Users
+       for that project. From the point of view of the system, all PDA's
+       for a given project are equivalent (i.e., have the same privileges
+       and responsibilities).
+     * The PDA is automatically notified of Alert Impacts on all project
+       parts lists for their assigned project(s).
+     * The PDA is responsible for the dispositioning of Alert Impacts on
+       project parts lists for their assigned project(s).
+
+   Project User
+
+   PDA or
+
+   GDA
+
+   [none]
+     * Project Users have the ability to create and modify project data,
+       including parts lists and NSPARs, for the projects to which they
+       are assigned.
+     * Project Users who are owners of parts lists are automatically
+       notified of Alert Impacts on those parts lists.
+
+   Flight Assurance Manager (FAM)
+
+   GDA or
+
+   FAM
+
+   FAM
+   (for same project)
+     * The initial Flight Assurance Manager (FAM) for a project is
+       assigned by the GDA.
+     * A FAM for a project can assign additional FAM's for that project.
+       From the point of view of the system, all FAM's for a given project
+       are equivalent (i.e., have the same privileges and
+       responsibilities).
+     * The FAM is automatically notified of Alert Impacts on project parts
+       lists for their assigned project(s).
+     * The FAM is responsible for setting the "cross-referencing flag" on
+       project parts lists for their assigned project(s).
+
+   Alert Data Administrator (ADA)
+
+   GDA
+
+   [none]
+     * The Alert Data Administrator (ADA) has access to the "Alert
+       Value-Added Processing" function, which supports the creation of a
+       new, "Value-Added" (-V suffix) version of an Alert and the addition
+       or correction of relevant data.
+
+   GIDEP Coordinator (GC)
+
+   GDA or
+
+   GC
+
+   GC
+   (for same center)
+     * The initial GIDEP Coordinator (GC) for a site (NASA Center or
+       participating site) is assigned by the GDA.
+     * A GC for a site can assign additional GC's for that site. From the
+       point of view of the system, all GC's for a given site are
+       equivalent (i.e., have the same privileges and responsibilities).
+     * The GC is automatically notified of Alert Impacts on project parts
+       lists for their assigned site.
+
+   Commodity Specialist (CS)
+
+   GDA
+
+   [none]
+     * The Commodity Specialist is responsible for providing information
+       on Value-Added (-V suffix) versions of Alerts within the commodity
+       class (Federal Supply Classification or FSC) to which they are
+       assigned. This information may include technical implications of an
+       Alert as well as its severity, scope of applicability, and
+       recommended corrective measures.
+
+   Alert User
+
+   GDA
+
+   [none]
+     * The Alert User has access to all data in the system, including
+       Alert data. This role is restricted to users whose organizations
+       are GIDEP participants.
+
+   General User
+
+   GDA
+
+   [none]
+     * The General User has access to all data in the system except Alert
+       data. This is the default role for any new user.
+
+Candidate Requirements
+
+   This section defines the Candidate Requirements for the system.
+   Candidate Requirements are derived from System Change Requests (SCR's),
+   and may be promoted to Baseline Requirements by the EPIMS Configuration
+   Control Board (CCB), which is composed of the EPIMS Center
+   Coordinators.
+
+Federal Supply Class (FSC) Directory [F]
+
+   FSC Directory requirements include the FSC Directory data and all FSC
+   and part classification services for all system functions.
+
+   [F-3] Searches for FSC
+
+   Searches by FSC number, name, and category shall be supported.
+
+NASA Project Directory [P]
+
+   The Project Directory requirements specify the support the system must
+   provide for information on NASA projects, and the project directory
+   services required for use by all system functions.
+
+   [P-3] Searches for Project
+
+   Searches by project name and project name code (acronym) and substring
+   searches shall be supported.
+
+Parts List [PL]
+
+   Parts lists requirements apply to the Part Usage function and to the
+   relationship between parts lists and design items.
+
+   [PL-6] Parts List Comparison
+
+   The capability shall be provided to compare any two parts lists
+   (MIL-STD-975 can be selected as one of the parts lists, to identify
+   standard parts).
+
+   [PL-7] Parts List Comparison Restricted to an FSC
+
+   It shall be possible to restrict a comparison to look only at parts
+   within a selected FSC or set of FSCs.
+
+   [PL-8] Parts List Comparison Part Number Matches
+
+   Matches shall be identified for any type of part number (spec, generic,
+   or manufacturer's).
+
+   [PL-9] Parts List Comparison Results Format
+
+   Results shall be supplied in the form of (a) a list of matches and (b)
+   for each parts list, a list of unmatched items.
+
+   [PL-10] Parts List Comparison Reports
+
+   Reports shall be provided with view, print, and save-to-file
+   capabilities.
+
+   [PL-11] Selection of Parts Lists for Comparison
+
+   The ability shall be provided to search by Parts List Number when
+   choosing a parts list for the Parts List Comparison function.
+
+Alert Search [A]
+
+   Alert Search requirements define the capabilities required by end users
+   in searching for Alerts.
+
+   [A-4] Additional Alert Report Options
+
+   An option shall be provided to produce a combination report that
+   includes the manufacturer's name with CAGE, the part description with
+   FSC, and Value-Added information.
+
+   [A-5] Value-Added Alert "Diff" Report
+
+   The system shall provide the capability to show changes between a
+   Value-Added Alert and the original GIDEP Alert.
+
+Global Search [G]
+
+   Global Search requirements define the capabilities needed for access to
+   all data from a single search interface.
+
+   [G-2] Global Search with OR Logic
+
+   The capability shall be provided to search by multiple part numbers
+   using "OR" logic across all part number fields.
+
+Acronyms
+
+ADA
+
+Alert Data Administrator See Also: EPIMS System User Roles
+
+AU
+
+Alert User See Also: EPIMS System User Roles
+
+CAGE
+
+Commercial And Government Entity (a DLA database of organizations with which
+the Department of Defense does business)
+
+CS
+
+Commodity Specialist See Also: EPIMS System User Roles
+
+DLA
+
+Defense Logistics Agency (source of CAGE and FSC databases)
+
+EPIMS
+
+Electrical, Electronic, and Electromechanical (EEE) Parts Information
+Management System on the World Wide Web
+
+FAM
+
+Flight Assurance Manager See Also: EPIMS System User Roles
+
+FEDI
+
+Failure Experience Data Interchange (one of the GIDEP databases)
+
+FSC
+
+Federal Supply Class (DLA commodity classification system)
+
+GC
+
+GIDEP Coordinator See Also: EPIMS System User Roles
+
+GDA
+
+Global Data Administrator See Also: EPIMS System User Roles
+
+GIDEP
+
+Government-Industry Data Exchange Program (http://www.gidep.corona.navy.mil)
+
+GSFC
+
+Goddard Space Flight Center
+
+JAD
+
+Joint Application Design
+
+NASA
+
+National Aeronautics and Space Administration
+
+NSPAR
+
+Non-Standard Part Approval Request
+
+PDA
+
+Project Data Administrator See Also: EPIMS System User Roles
+
+POC
+
+Point Of Contact
+
+SCR
+
+System Change Request

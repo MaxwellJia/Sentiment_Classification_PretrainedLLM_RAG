@@ -1,0 +1,20 @@
+http://xtesof.nascom.nasa.gov/cgi-bin/onsite-only/status_page_xgo2.pl
+
+                              Brief SOF Status
+
+                               [blue_bar.gif]
+
+This page produces a text output with the status of specific processes, disk
+  space and last directory updates. The information is parsed from a local
+ file, STATUS.OUT which is created via perl scripts running as cron jobs on
+  each machine. The last hour's status update (STATUS.OUT.old) is available
+                               upon selection.
+
+                                 SELECT ONE:
+                     (*) The most recent STATUS file, or
+                 ( ) the LAST STATUS update (previous hour)?
+
+                                 Clear Run!
+                               [blue_bar.gif]
+
+                       This page created by Ed Lander.

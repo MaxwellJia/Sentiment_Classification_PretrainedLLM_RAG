@@ -1,0 +1,461 @@
+http://imglib.lbl.gov/ImgLib/user.guide.html
+
+                       LBNL Image Library User's Guide
+
+                              Mary R. Thompson
+                                Dec. 5, 1997
+                              [thin_green.gif]
+
+Table of Contents
+
+     * Overview
+     * Using a collection
+
+     * Browsing
+     * Searching
+     * Selecting Images
+
+     Creating and Maintaining a collection
+     * Collection Description
+     * Access Control
+     * Adding a New Collection
+     * Editing Collection Information
+     * Exporting Images from the Mass Storage System
+     * Adding Images
+     * Editing Tag Files
+
+     Helpful Hints
+
+     Sample curator forms
+     * Curator Interface
+     * Create Collection Interface
+     * Add/Edit Interface
+
+Overview
+
+   The LBNL Image Library provides an image management service to the LBNL
+   community. Its goals are to allow quick, protected and platform
+   independent access and manipulation of collections of large digital
+   images, especially those on the LBNL Mass Storage System (MSS).
+
+   To achieve these goals a set of small thumbnail versions of each large
+   image is derived and stored locally. Also a text description of each
+   image called a tag file is associated with each image. These files can
+   be browsed, searched or selected for later reference. Whenever a
+   thumbnail is displayed the larger images and complete text information
+   can be easily retrieved. Access to the images can be restricted by the
+   collection owner to specific users or groups or it may be open to
+   anyone.
+
+   All access and manipulation of the derived images and text takes place
+   via a WWW interface. The WWW interface provides platform independence
+   and easy evolution of the system to meet new needs.
+
+   An introduction to the use and appearance of the Image Library can be
+   found in the Image Library Introduction. A description of the goals and
+   design in greater depth can be found in the project plan document and
+   project design document for the Image Library.
+
+Using a Collection
+[thin_green.gif]
+
+Browsing
+
+   Browsing starts from the INDEX TO ALL COLLECTIONS option on the Home
+   page. Collections are arranged hierarchically so many of the top level
+   collections only contain sub-collections. Selecting search at the top
+   of a collection will present a form which can be used to search over
+   all the text files in the collection.
+
+   Once a collection is encountered that contains images, you are given a
+   pull-down menu of the following choices: browse, image_browse and
+   search. The browse option will display a thumbnail (whose size you
+   select with the icon size menu) and various links to different images
+   sizes and text information. It uses a table format to display this
+   information, so if you are not using a browser that understands tables,
+   e.g. Netscape, use the image_browse option instead. Image_browse will
+   just display the thumbnail images (linked to the text/image display
+   page). This option gives a more densely packed but less informative way
+   of viewing a collection. Clicking on an image gives more information
+   about the image.
+
+   The search option will give you another form on which to input the word
+   or words that you want searched for. If a collection includes
+   sub-collections the text files in all the sub-collections will be
+   searched.
+
+Searching
+
+   The Image Library uses the Glimpse search engine from the University of
+   Arizona. This program searches a word based index which contains a
+   entry for most every word in the set of text files that is being
+   searched. This index contains pointers to each block in which the word
+   appears. When a match is found in the index each matching file is
+   searched using agrep. Glimpse supports case sensitive or insensitive
+   matching, whole or partial word matches, misspellings, boolean and/or
+   searching and all the wild-card functions of the grep family.
+
+   The collection owner must manually trigger the creation the glimpse
+   index for a collection whenever the tags files are changed. The Create
+   Glimpse Index option on the Add/Edit page (under Curators Interface)
+   does this. Individual sub-collections and/or tree of sub-collections
+   can be indexed. The collection in which a search is initiated
+   determines what index is searched.
+
+Selecting Images
+
+   The browse window gives you an option to select images for later
+   processing. The selection list is simply a list of images from various
+   collections which is kept under your userid or machine name for up to
+   12 hours. In most cases you are able to specify the name of the list as
+   either your userid or the name of the machine you are connecting from.
+   Using your userid is preferable since it will eliminate confusion that
+   can occur if more than one user accesses the Image Library from the
+   same remote client. You can view the current contents of your selection
+   list from the browse pages and the global edit page by clicking on the
+   scroll icon. [scroll.gif]
+
+   The selection list can be used to create a list of files for global
+   editing, local editing, moving, deleting, and staging on the Mass
+   Storage System, or just for future reference. If the original images
+   reside on the Mass Storage System (MSS), and you know that you are
+   going to want to view a number of them, it will save time to stage them
+   before you try to view them. Staging brings images in from the MSS tape
+   archive to its disk cache. Note that it does not move the file either
+   to the Image Library server machine or to your client machine. Staging
+   files as a group saves both MSS time and your time. The MSS will get
+   all the files that are on one tape off the tape at the same time rather
+   than having to mount the tape each time an individual file is
+   retrieved. Once the staging has been completed, you can view or
+   retrieve an image in just the time it takes to move the image from the
+   MSS to your machine, without encountering the 5-10 minutes wait that it
+   can take for the file to be brought in off tape.
+
+Creating and Maintaining a Collection
+[thin_green.gif]
+
+Collection Description
+
+   The following information is kept about each collection.
+     * Owners name
+     * The directory containing the original high resolution images
+     * Default icon size for the browse or search pages
+     * Information on the format of the derived images
+     * Access group that may read the derived images
+     * Access group that may read the high-resolution images
+     * Access group that may modify the collection
+     * A description of the collection
+     * A set of tags and default values for the Tag files
+     * A Glimpse index of all the text files
+
+   The derived images may be gif or jpeg format. jpeg files are about 1/10
+   to 1/2 the size of a gif file depending on what "quality" metric you
+   chose. Higher numbers give better quality, but create bigger files. Not
+   all browsers support in-line jpegs. Netscape, Internet Explorer, Mosaic
+   and HotJava all do. There is a collection of sample jpeg and gif images
+   in the collection JPEG_EXAMPLES if you would like to see how they will
+   look with your favorite browser. In my experience, jpeg down to quality
+   50 looked as good as gif viewed with Netscape on a Unix machine, but
+   not as good when viewed with Netscape on a Mac.
+
+  Access Control
+
+   The access groups and users are defined by the Image Library software
+   and are independent of Unix users who have accounts on the server
+   machine. Any collection owner can create new users or groups for his
+   collections. There are links to the Add user/group form under the
+   Curators Interface. Users and groups must exist before they can used to
+   control access to a collection. The default group for read access is
+   all (all lower case). This allows anyone to read the images without
+   authentication. The default user to modify the collection is the user
+   who is creating the collection.
+
+   If the high-resolution images are kept on the machine on which the
+   Image Library server is running, it will use the high-resolution access
+   group to control read access to them. If the images are on the Mass
+   Storage System, the MSS Server, an HTTP server running on the MSS
+   machine. will control access. There is a link from the Image Library
+   Curators Interface page to Export file from Mass Storage which connects
+   you to the MSS Server's interface for setting and changing access.
+
+Adding a New Collection
+
+  Preliminaries
+
+     * First you need to get authorization to add files to the Image
+       Library system. If you are a member of LBNL, send e-mail to
+       MRThompson@lbl.gov or call me at x7408 to arrange access.
+     * If the image files are on the Mass Storage System you will need to
+       set up the directories they are in for exporting via the MSS Web
+       server. Before you can export files from a MSS subtree you need to
+       authorize it with the MSS administrator, HHHolmes@lbl.gov. You can
+       change access or add new subdirectories via a Web interface to the
+       MSS server. See the section on Access Control for more details.
+     * Before you add MSS images to your collection you should stage them
+       from tape to disk, since the addition process will access them all.
+          + If you access mass storage via NFS use the stage command to do
+            this
+          + If you use FTP or Fetch to access mass storage, use the FTP
+            "dir" command or the Fetch "view file list" from the Remote
+            option to see if the files are on disk or archive. Do a get
+            command on all the archive files to stage them to disk. Once
+            they are all on disk exit from FTP or Fetch.
+
+  Instructions
+
+     * Read the previous section, Collection Description, and decide what
+       the values for your collection are.
+     * Go to the Create a new collection choice from the Curators
+       Interface page
+     * Fill in the blanks on the Create collection page.
+          + Embedded "/"s in collection names are used to create
+            sub-collections. Sub-collections can inherit default tags
+            files from their parent collection. Both individual
+            sub-collections and all the sub-collections of a single parent
+            can be a target of searches. The parent collection must be
+            created first and then each sub-collection can be created.
+          + The image source directory name should be of the form
+            /home/mss/... for files residing on the mass storage system.
+            It also needs to be exported from the mass storage system by
+            the MSS server. If the image source directory is local, it
+            must be readable by the Image Library server.
+          + The tags file option Use Parent Form is designed for
+            hierarchical collections. If you select this option, the
+            initial tag file for the sub-collection will be inherited from
+            the parent.
+     * When the Create Collection form returns to you, check the displayed
+       information for correctness and fill in as many default values as
+       possible. If you made any changes check make changes. When all the
+       information looks correct and you have no more changes click enter
+       records which takes you back to the Add/Edit page.
+     * To add images to the collection, type the collection name in the
+       Add images box on the Add/Edit page (under Curators Interface) and
+       click submit to enter. See the section Adding Images for more
+       details. If you are creating a parent collection, you may want to
+       skip this step and proceed to create the sub-collections.
+     * At your leisure you can edit each of the tag files to tell the
+       complete truth about each image. See the section Editing Tag Files
+       for more details.
+     * When the tags files are complete enough that it will be useful to
+       search them, you should create a Glimpse index for the collection.
+       The Create Glimpse Index option on the Add/Edit page does this.
+
+Adding Images
+
+   The Add images choice from the Add/Edit page takes you to a form that
+   gives you a list of all the files in the image source directory. You
+   can edit the list to remove any non-image files or images that you do
+   not want included in the collection. Entering an image causes a default
+   tag file and a pointer to the original high resolution image to be
+   entered and then starts a program that will generate the derived
+   images. The creation of the derived images take about 1 minute per 4M
+   image. After a appropriate interval you can try browsing your new
+   collection. The icons with "?" should get replaced with pictures when
+   the derived images are in place. If you add images for another
+   collection, the images will be queued behind any images that have not
+   yet been processed. You can queue images for addition much faster than
+   the system can process them, so don't expect instant results.
+
+   Note that the only time the image source directory name is used is when
+   images are added. Each entry contains a pointer back to its original
+   image. This has two implications; one is that if you move the original
+   images this link will be broken. It can be repaired by re-entering the
+   image with its new location specified by the image source directory. If
+   a tag file exists when an image is entered it will not be touched. The
+   second implication is that you can change the image source directory
+   before entering a new batch of images and thus have a collection
+   consist of images whose originals are in a variety of directories.
+
+   If something appears to have gone wrong while creating the derived
+   images, you can open the log file imglog in
+   /ImgLib/COLLECTIONS/<YOURCOLL>/images/imglog to see what happened. The
+   most likely problem is that the Image Library Server does not have
+   access to read some of your image files or that it cannot handle the
+   image type. Currently it knows about gif,tiff, jpeg, eps, and some
+   DICOM format files. It can handle Macintosh binary versions of all
+   these file types except DICOM. The server does check that it has read
+   permission to the image source directory before returning in the first
+   place.
+
+Eporting Images from the Mass Storage System
+
+   If your orginal images are stored on the Lab's Mass Storage System
+   (MSS) and you want to use ImgLib to retrieve these images you must
+   export the MSS directories that the files are in. This additional step
+   is required to help safe-guard files on the MSS from inadvertly being
+   accessible via the Web. Only a user who has write access to an MSS
+   directory may export it via ImgLib. This step is independent of the
+   steps you take to make the images on MSS readable by the ImgLib server.
+   This tells the ImgLib server that it is ok to pass these images off to
+   other users whom the collection curator has authorized.
+
+   The Exporting file from Mass Storage System choice on the curator's
+   page takes you to a form that allows you to enable a MSS directory for
+   exporting and to specify what ImgLib users will be able to get copies
+   of the files off of the MSS. The name of the directory to be exported
+   is the complete pathname of a MSS directory (eg. /home/mss/icsd/mrt).
+   This is probably totally different from the ImgLib collection name that
+   points to these images. The userid and groupid are Unix ids that have
+   write access to the MSS directory. The Server will run as those ids
+   when it is copying files from the MSS to limit the number of
+   directories it has access to. The userid may be set to "anyuser" if
+   only the groupid is needed to permit write access. Alternatively, you
+   can set groupid to "anygroup" if your ImgLib userid matches a Unix
+   userid that has write permission in the MSS directory.
+
+   The second part of this form allows you to specify groups and users who
+   will have access to the MSS files. The user names and ids should match
+   any that you have assigned to the ImgLib collection that points to
+   these original files, otherwise you will confuse the users who is asked
+   to authenticate twice when fetching MSS files. The reason for the two
+   identical sets of users and passwords is to protect the MSS files by
+   having a dedicated Web server that interfaces between Web clients and
+   the MSS.
+
+Editing Collection information
+
+   The Edit the input form choice from the Add/Edit page takes you to a
+   form that allows the collection description, access permissions and
+   default tags to be edited. Any changes to the default tags file or to
+   the image source directory will affect any new images added to the
+   collection but not existing ones. Changes in access control affect the
+   existing files as well.
+
+   There is a link to the Add user/group form from the Curators Interface
+   page.
+
+   The Create a Glimpse index choice on the Add/Edit page recreates the
+   Glimpse index for the specified collection.
+
+Editing Tag Files
+
+   The option Modify a single record ... add, edit, delete record on the
+   Add/Edit page lets you add or modify individual text files. This
+   individual edit form can also be reached from the display tag and image
+   page accessed from the collection browse pages.
+
+Helpful Hints
+
+     * If you get any errors when filling out a form, using the back
+       button on the browser will take you back to the previously filled
+       in page to correct. Using the back arrows on the error report takes
+       you back to a clean form.
+     * Any of the directories or files of your collection can be viewed
+       directly by using the open function on your browser. Start with the
+       URL http://imglib.lbl.gov/ImgLib/COLLECTIONS and append your
+       collection name in all capital letters. e.g opening
+       http://imglib.lbl.gov/ImgLib/COLLECTIONS/MISC/APOLLO/forms/ will
+       display a list of the files that store information about the
+       misc/apollo collection.
+     * The standard browse option uses a table format designed for viewing
+       by Netscape. If you are using a different browser use the
+       image_browse option instead and then click on the individual images
+       to find out more information about them.
+     * Most of the "pages" that are displayed are generated dynamically by
+       scripts, thus you do not want to save bookmarks to these pages.
+       They can be referenced via your window history list ("Go" menu on
+       Netscape) because those pages are cached on your machine. If you
+       want to see changes that have been made to a collection since you
+       first displayed the page you may need to reload the page using the
+       reload button. If you try to open the URL, it will be missing the
+       arguments to the script that tells it what information to display
+       Dynamic pages can be distinguished from static ones by the file
+       name given in the URL. Dynamic pages start with the name /cgi-bin
+       where static pages start with /ImgLib and end in .html.
+
+Sample Interface pages
+
+   [thin_green.gif]
+
+                   LBNL Image Library -- Curator's interface
+
+Please read the User's Guide before trying to create a collection
+     __________________________________________________________________
+
+   [create.gif] Create a new collection in the LBNL Image Library
+
+   [edit.gif] Add to or edit a collection in the LBNL Image Library
+
+   [user.gif] Add or remove a User or change a password
+
+   [file_trans.gif] Export files from Mass Storage System
+
+   [document.gif] User Guide to the LBNL Image Library
+
+   [question.gif] Policy on usage of retrieved image and text documents
+
+   [thin_green.gif]
+
+                  LBNL Image Library -- Create new collection
+
+  Please read the Image Library User's Guide before creating a collection
+     __________________________________________________________________
+
+  Enter data for description file
+
+   ________________________________________ Enter your collection name
+   ________________________________________ Enter your name
+   ________________________________________ Image source directory
+   default values are taken from the parent collection
+   Default icon size [default] Original image type [default]
+   Format for small thumbnails [default] Quality for jpeg images [default]
+   Format for large thumbnails [default] Quality for jpeg images [default]
+
+   __________________________________________________
+   __________________________________________________
+   __________________________________________________
+   __________________________________________________
+     __________________________________________________________________
+
+  Design default tag form
+
+   Each image in the Image Library has some textual information associated
+   with it that can be indexed and searched over. When creating a
+   collection the owner should decide on a consistent form for the
+   information about each image. This template is stored as the default
+   tag form. It is used as the template for the tag file which is created
+   when an image is added to the collection
+
+   ( ) Use Parent Form (*) input new tags
+
+   enter tags or tags:default_value pairs separated by commas for a new
+   form.
+
+   __________________________________________________
+   __________________________________________________
+   __________________________________________________
+   __________________________________________________
+   __________________________________________________
+   SUBMIT FORM
+
+   [thin_green.gif]
+
+               LBNL Image Library -- Edit or add to a collection
+
+   Fill in the appropriate blank with your collection name
+     __________________________________________________________________
+
+   Add images to collection:
+   ___________________________________ submit HELP
+     __________________________________________________________________
+
+   Edit the description or default tags for collection:
+   ___________________________________ submit HELP
+     __________________________________________________________________
+
+   Delete all or part of a collection:
+   ___________________________________ submit HELP
+     __________________________________________________________________
+
+   Modify a single record
+   For collection: ___________________________________ HELP
+   add ( ) edit (*) or delete ( ) Record ____________________ submit
+     __________________________________________________________________
+
+   Create a Glimpse index for collection:
+   ___________________________________ submit HELP
+     __________________________________________________________________
+
+   Administrative info for this page
+   [welcome.gif] Image Library Homepage [back.gif] DSD Home page
+   [LBLlogo.icon.gif] LBNL Home page

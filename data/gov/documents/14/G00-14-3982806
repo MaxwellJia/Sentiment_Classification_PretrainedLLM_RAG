@@ -1,0 +1,132 @@
+http://wesley.wwb.noaa.gov/reanalysis2/index.html
+
+                         NCEP/DOE AMIP-II Reanalysis
+
+                               (Reanalysis-2)
+
+   The NCEP/DOE AMIP-II Reanalysis (Reanalysis-2) is based on the widely
+   used NCEP/NCAR Reanalysis. The goal of Reanalysis-2 is to improve upon
+   the NCEP/NCAR Reanalysis by fixing the errors and by updating the
+   parameterizations of the physical processes.
+
+   While we think that Reanalysis-2 is better; we know that it should not
+   be considered the "next generation" of reanalysis. Improvements such as
+   higher horizontal and vertical resolution, direct assimilation of
+   radiances, (proper) use of SSM/I data, assimilation of rainfall data,
+   need to be incorporated.
+
+   [new.png] 1/11/01: A problem was found in the program that created the
+   monthly means. The mean values are correct but the GRIB header is
+   flawed. Naturally GrADS and wgrib users are unaffected by the problem.
+   If they were, the problem would have been fixed during the software
+   development stage. For those who want the gory details, the scan mode
+   is wrong for the 2.5x2.5 grids and the longitude increment is wrong for
+   the Gaussian grids. A program to fix the headers will be made
+   available.
+
+   [new.png] 12/22/00: NCAR (Roy Jenne's group) has R2 analyses.
+
+   [new.png] 12/19/00: Computed 30 year (79-98) climatologies for the flx
+   and pgb monthly means. These climatologies are available for download
+   and have been integrated into the web plotting system. Now you can plot
+   R2 anomalies from climatology.
+
+   [new.png] 12/1/2000: Analyses from August 1998 to February 1999 have
+   been redone. By mistake, automatic programs have downloaded the old
+   March 1999-December 1999 analyses. Please eliminate all copies of
+   August 1998+ data that were obtained prior to Nov 16, 2000 and March
+   1999+ data that were obtain prior to Dec 2, 2000.
+
+   10/17/2000: All analyses from August 1998 are being redone. More
+   problems found with converting the surface fields (snow and sea-ice) to
+   the R2 assimilation system.
+
+   7/27/2000: A computer glich was uncovered in 06Z 19 March 1982, flx,
+   dg3, znl files. The PRATE was corrupted with a unrealistic wavey
+   pattern and the problem went away when the model was rerun. We suspect
+   a hardware glitch. The continuity of the assimilation was not affected
+   as 3/19/82 is part of the "rerun" assimilation (1/79-9/82). (A change
+   in the stratiform cloud tuning was done mid-way through the
+   assimilation, Since the change in the cloud tuning would have only a
+   small effect on the pressure level analyses, it was decided to keep the
+   sigma/pgb analyses and just run the forecast model with the new cloud
+   tuning.)
+
+   6/22/2000: All analyses from August 1998 to March 2000 are being
+   redone. The sea-surface temperature data set was not converted from
+   Celcius to Kelvin.
+
+   1/1/2000: The analyses for 1996 are being redone. An analysis of the
+   observation counts found that all the observational data were not being
+   incorporated into the analyses. Please discard all 1996 analyses
+   obtained prior to 1/7/2000. (Between 1/1/00 and 1/6/2000, the cron jobs
+   were downloading the old analyses.)
+
+   Reanalysis-2 will will be run in real-time starting in 2001. When that
+   happens, it will cover Jan 1979-present.
+     * submision to the NERSC annual report
+     * talk, 1998 Climate Diagnostics Workshop (Miami)
+     * [new.png] short and long overviews, 2nd Int. Reanalyses Conf
+       (Reading, 1999)
+     * [new.png] comparison of reanalyses, 2nd Int. Reanalyses Conf
+       (Reading, 1999) (pdf)
+       by Jay Hnilo et al., PCMDI and supplement (pdf)
+     * effect of satellite and aircraft on analyses, 2nd Int. Reanalyses
+       Conf (Reading, 1999)
+
+                           Obtaining the Analyses
+
+   The current version is "A/C" (Version C from 1/79-8/82 and Version A
+   from 9/82 onwards).
+
+   ftp directories:
+   ftp://wesley.wwb.noaa.gov/pub/data2/reanalysis/reanalysis2-C
+   ftp directories:
+   ftp://wesley.wwb.noaa.gov/pub/data3/reanalysis/reanalysis2-C
+
+   monthly flx plots: Server 3
+   monthly pgb plots: Server 3
+   monthly dg3 plots: Server 3
+
+   monthly flx ftp2u: Server 3
+   monthly pgb ftp2u: Server 3
+
+   monthly flx: ftp
+   monthly pgb: ftp
+   monthly dg3: ftp
+
+   4x daily flx plots: Server 3
+   4x daily pgb plots: Server 3
+   The NERSC computers have the entire Reanalysis-2 archive on their mass
+   storage unit.
+   NCAR now has R2 analyses. (doc)
+   Send requests for more 4x daily data to wd51we@sun1.wwb.noaa.gov. (We
+   have space limitations so please don't request all the data to be
+   on-line.)
+     __________________________________________________________________
+
+   Version C: The cloud temperatures should have been set to undefined in
+   cloud free regions. Unfortunately the cloud temperatures were set to
+   zero. When the monthly means were computed, the zero were used making
+   the cloud tempertures too low. A similar problem also affects the cloud
+   top pressure, cloud base pressure, The only on-line cloud field that is
+   unaffected by this problem is the cloud fraction (TCDC).
+
+   (7/99) The flux files have a problem with two bad entries in the GDS
+   section of the GRIB message. Most programs do not use these entries but
+   copygb does. We have a program to rewrite the entries if anyone wants
+   it. BTW we plan to fix the GDS.
+
+   (7/99) The monthly averages for 199205 were affected by a computer
+   problem. The files have been updated.
+
+   The cloud temperature can be calculated from the 4x daily file by
+   ex. ave(maskout(TMPhct,TMPhct-1),time=00z1jan1982,time=18z31jan1982)
+
+   The precipitation adjustments are stored the fields "BGRUN". If the
+   adjustment adds water, BGRUN is positive.
+     __________________________________________________________________
+
+   back
+
+                     comments: wesley.ebisuzaki@noaa.gov

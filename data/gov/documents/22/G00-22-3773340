@@ -1,0 +1,107 @@
+http://seadas.gsfc.nasa.gov/doc/sds_command.html
+
+
+                             SeaDAS Command-Mode
+
+     see $SDSDEMO/*.demo files for simple command syntax examples
+
+     see $SEADAS/examples directory for more complex scripts
+
+Overview
+
+Available Commands
+
+     * Process
+
+     * SeaWiFS
+
+     * l1agen - SeaWiFS L1A file generation.
+     * l1bgen - SeaWiFS L1B file generation.
+     * msl12 - SeaWiFS L2 file generation.
+     * l3bin- SeaWiFS L3 Binned file generation.
+     * smigen - SeaWiFS L3 standard mapped image file generation.
+     * browse - SeaWiFS L1A, L2, and L3 browse file generation.
+     * bl1map - Generate a SeaDAS Mapped file from SeaWiFS L1A data.
+     * bl2map - Generate a SeaDAS Mapped file from SeaWiFS L2 data.
+     * bl3map - Generate a SeaDAS Mapped file from SeaWiFS L3 Binned data.
+     * l1atol0- SeaWiFS L0 regeneration from L1A.
+     * coccobloom - SeaWiFS coccolithophore mask generation.
+     * subscene - SeaWiFS L1A and L2 file extraction.
+
+     CZCS
+     * l1aczcs - SeaDAS CZCS L1A file generation.
+     * l2czcs - SeaDAS CZCS L2 file generation.
+     * exczcs - SeaDAS CZCS L1A and L2 file extraction.
+     * ring - CZCS L2 ringing mask generation.
+     * glint - CZCS L1A or L2 glint mask generation.
+     * coccobloom - CZCS coccolithophore mask generation.
+
+     OCTS
+     * l1bocts - SeaDAS OCTS L1B file generation from L0 HRPT input.
+     * l1bgen - SeaDAS OCTS L1B file generation from L1A GAC input.
+     * msl12 - SeaDAS OCTS L2 file generation.
+     * l3bin- SeaDAS OCTS L3 Binned file generation.
+     * smigen - SeaDAS OCTS L3 standard mapped image file generation.
+
+     MOS
+     * mosl1corr - SeaDAS MOS L1B destriper.
+     * msl12- SeaDAS MOS L2 file generation.
+
+     Display /Imaging
+     * seadisp - General image and graphics display.
+
+     * load - Load SeaWiFS, MODIS, OCTS, CZCS, MOS, AVHRR SST, SeaDAS
+       Mapped, flat, binary, HDF, gif, tiff, or true color files.
+     * display - Display any loaded product in a seadisp display window.
+
+   Functions on loaded bands which create new bands:
+     * mband_cmd - Create new bands with user-defined calculations on
+       loaded bands.
+     * mapimg - Map project any loaded navigable product.
+     * bathyimg - Bathymetry image generation.
+     * band_avg- Average any number of loaded bands.
+     * band_diff - Difference any two loaded bands.
+     * band_sum - Sum any number of loaded bands.
+
+   Functions on either loaded bands or displayed images:
+     * out, /data  - Output raw or geophysical data values.
+     * out, /nav  - Output latitude/longitude values.
+     * out_rline - Output points or line segments (ship track) image data.
+     * out_ascii - Output raw, geophysical, latitude, longitude, pixel,
+       line values.
+     * loop - Loop through any sequence of loaded bands and/or displayed
+       windows.
+
+   Functions on displayed bands only:
+     * coast - Overlay coastline and optionally landmask, etc.
+     * grid - Overlay gridlines and/or labels on any loaded navigable
+       product.
+     * landmask - Overlay landmask graphics on any loaded navigable
+       product.
+     * cbar - Put a color bar on the displayed image.
+     * vector - Overlay vectors on the displayed image.
+     * load_graph - Load bitmap graphics from a flat file or an HDF file.
+     * loadpal - Load a color palette into the specified SeaDAS color
+       table.
+     * loadgp - Modify default graphics colors.
+     * out, /display  - Output image display.
+     * out, /graph  - Output image graphics.
+
+   Miscellaneous seadisp functions:
+     * clear_up - Exit seadisp and free memory. Same as seadisp,/quit.
+
+
+     Utility
+     * sdwfont- Set default widget font.
+     * sdpfont- Set default plot font.
+   _______________________________________________________________________
+
+
+
+   [seadas_logo.gif] This page maintained by:
+                     The SeaDAS Development Group
+                     Mark Ruebens, Robert Lindsay and Long Wang
+                     Code 970, NASA/GSFC
+                     seadas@seadas.gsfc.nasa.gov
+                     Last updated: 11/01/01.
+   _______________________________________________________________________

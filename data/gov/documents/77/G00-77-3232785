@@ -1,0 +1,239 @@
+http://qso.lanl.gov/~mpg/perfmon.html
+
+                             perfmon & mperfmon
+     __________________________________________________________________
+
+           Performance Monitoring for the Pentium and Pentium Pro
+
+                      Under the Linux Operating System
+     __________________________________________________________________
+
+                NEW! NEW! NEW! NEW! NEW! NEW! NEW! NEW! NEW!
+
+ perfmon's name has been changed to pperf so as to avoid confusion with the
+          performance monitor used on that other operating system.
+
+    The newest version of pperf and libpperf is 0.5. Download the newest
+                                version here.
+
+                               (February 1998)
+     __________________________________________________________________
+
+            New ALPHA release of perfmon and the new libperfmon.
+
+                               (November 1997)
+     __________________________________________________________________
+
+                    M. Patrick Goda and Michael S. Warren
+
+     * What are perfmon and mperfmon?
+     * General Information About perfmon/mperfmon
+     * Obtaining perfmon/mperfmon
+     * Limitations and Bugs
+     * Installing perfmon/mperfmon
+     * Copying perfmon/mperfmon
+     * DISCLAIMER AND WARRANTY INFORMATION
+
+                       What are perfmon and mperfmon?
+
+   perfmon is a performance monitoring utility for the Intel Pentium and
+   Pentium Pro processors. perfmon utilizes the Model Specific Registers
+   built into the processor to profile hardware performance.
+
+   Intel Corporation has implemented Model Specific Registers (MSRs) into
+   the Pentium and Pentium Pro processors which allow users greater
+   control over profiling than with standard profiling tools. In addition
+   to profiling events, the Pentium and Pentium Pro contain a free-running
+   64-bit Time Stamp Counter (TSC) which increments once every clock cycle
+   allowing highly accurate profiling results in time. The MSRs on the
+   Pentium and Pentium Pro can be used, for example, to monitor memory
+   references, cache activity, bus activity and certain aspects of the
+   Floating Point Unit (FPU).
+
+   perfmon allows the user to monitor two profiling events while running a
+   user-specified application. mperfmon multiplexes over all available
+   profiling events (or some subset therein).
+
+   perfmon/mperfmon were recently presented at the Pentium Pro Cluster
+   Workshop, April 10-11 1997 in Ames, Iowa. Additional information and
+   examples of perfmon/mperfmon use is available at
+   http://qso.lanl.gov/~mpg/ames/main.html.
+
+                 General Information about perfmon/mperfmon
+
+   This software uses the msr module developed by Stephan Meyer (this
+   module is included with perfmon/mperfmon). Stephan Meyer has also
+   developed a graphical tool to plot the values of the event registers.
+   You can get more information on Stephan's MSR Homepage.
+
+   perfmon/mperfmon are maintained by M. Patrick Goda.
+
+                         Obtaining perfmon/mperfmon
+
+   Download perfmon.
+
+   Download mperfmon.
+
+                          Bugs in perfmon/mperfmon
+
+   Since perfmon/mperfmon are in their infancy, bug reports are greatly
+   appreciated and can be reported to loki-info@lanl.gov.
+
+   In a future release perfmon/mperfmon functionality will be combined
+   into a single program. We further hope to create code that will
+   determine the processor speed and type at run time as opposed to
+   compile time.
+
+   The program to be invoked is specified on the command line after the
+   invocation of perfmon/mperfmon. In this sense perfmon/mperfmon operate
+   much like the GNU time command which monitors a programs execution
+   time. As of version 0.1 the values of the two profiling registers are
+   affected by other running processes. That is, the profiling registers
+   are not saved in a context switch and thus contain spurious event
+   counts. However, in tests on a single user Pentium and Pentium Pro
+   running X-Windows the results have been found to be in error by less
+   than about 2%. Be warned though, if multiple processor intensive jobs
+   are running, one of which is being profiled, the results of
+   perfmon/mperfmon could be seriously compromised. We are working on a
+   fix for this problem by adding support for the profiling registers into
+   the task structure of the kernel which will allow accurate results for
+   multiple users/jobs running concurrently.
+
+   perfmon/mperfmon uses /dev/msr (via a module developed by Stephan
+   Meyer). Currently no checking is performed to prevent multiple
+   instances of perfmon from resetting the profiling events. Thus, if two
+   users attempt to run perfmon/mperfmon at the same time the results will
+   be unpredicatable and will not reflect actual event counts. Until
+   context switch support for the profiling event registers is added to
+   the kernel this problem can be bypassed by running only one single
+   instance of perfmon/mperfmon on a processor at a time.
+
+                         Installing perfmon/mperfmon
+
+   perfmon/mperfmon
+   will only run on the Intel Pentium and Pentium Pro processors.
+
+   The perfmon/mperfmon
+   installation currently uses Perl to parse data regarding the
+   characteristics of your processor. However, perl is not neccessarily
+   needed to compile perfmon/mperfmon. If you do not have Perl installed
+   then A) install it, it's a great tool OR B) go to the section NO PERL.
+
+   Please read the README file. It contains general information about
+   perfmon/mperfmon
+   as well as important information regarding copying and modifying
+   perfmon/mperfmon. The standard disclaimers are also in the README file.
+
+                                  STANDARD
+
+To install perfmon or mperfmon:
+
+        1) Unpack the source code:
+
+        sample% tar zxvf perfmon-0.X
+
+        2) Change to the perfmon directory, then run ``make config'':
+
+        sample% cd perfmon-0.X
+        sample% make config
+
+        ``make config'' tries to detect the processor type (Pentium/
+        Pentium Pro) and processor speed (used to convert clock cycles
+        to real time).  ``make config'' compiles machine.c and runs
+        it, using the results to make changes to the Makefile.
+
+        3) Make perfmon:
+
+        sample% make perfmon
+
+        4) Optionally you can install (default location is
+        /usr/local/bin) perfmon and the perfmon man page (default
+        manpage location is /usr/man/man1).  These locations can
+        be changed in the Makefile.
+
+        5) Now you are hopefully ready to go!  For quick help:
+
+        sample% perfmon -h
+
+                                   NO PERL
+
+To install perfmon:
+
+        1) Unpack the source code:
+
+        sample% tar zxvf perfmon-0.X.X
+
+        2) Compile and run machine.c:
+
+        sample% gcc -o machine machine.c
+        sample% machine
+        _P5
+        CPU_SPEED_133
+
+        3) Use the results of ``machine'' (in this sample, we find
+        that we are running on a P5 at 133 MHz) to update the
+        appropriate line in the Makefile.  This is an important step
+        since the characteristics (and registers and events) of
+        of the profiling monitors are greatly different between the
+        Pentium and Pentium Pro.  The processor speed is used to
+        convert clock cycles to real time
+
+        4) Make perfmon:
+
+        sample% make perfmon
+
+        5) Optionally you can install (default location is
+        /usr/local/bin) perfmon and the perfmon man page (default
+        manpage location is /usr/man/man1).  These locations can
+        be changed in the Makefile.
+
+        6) Now you are hopefully ready to go!  For quick help:
+
+        sample% perfmon -h
+
+                          Copying perfmon/mperfmon
+
+   perfmon/mperfmon is free software. It was developed by M. Patrick Goda
+   and Michael S. Warren Copyright 1997 by M. Patrick Goda and Michael S.
+   Warren.
+
+   Permission to copy and modify this code is granted by the authors
+   provided that:
+
+   1) This README file is included in all distributions of
+   perfmon/mperfmon and its variants.
+
+   2) The authors, M. Patrick Goda and Michael S. Warren of Los Alamos
+   National Laboratory, are acknowledged in all distributions.
+
+   perfmon/mperfmon was developed at Los Alamos National Laboratory for
+   use on Loki, a Beowulf class 16 node Pentium Pro cluster. For details
+   pertaining to Loki please see http://loki-www.lanl.gov .
+
+                     DISCLAIMER AND WARRANTY INFORMATION
+
+   perfmon/mperfmon are distributed in hopes that it will be useful to
+   others but is provided AS IS. M. PATRICK GODA, MICHAEL S. WARREN, LOS
+   ALAMOS NATIONAL LABORATORY, THE UNIVERSITY OF CALIFORNIA AND ANY OTHER
+   AUTHORS OF THIS SOFTWARE WILL NOT BE HELD RESPONSIBLE FOR ANY DAMAGES
+   RESULTING FROM THE USE OF THIS SOFTWARE OR ANY OF ITS COMPONENT PARTS.
+
+   BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
+   FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN
+   OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
+   PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
+   EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+   WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE
+   ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH
+   YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL
+   NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+   IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+   WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
+   REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR
+   DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+   DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM
+   (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED
+   INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF
+   THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR
+   OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.

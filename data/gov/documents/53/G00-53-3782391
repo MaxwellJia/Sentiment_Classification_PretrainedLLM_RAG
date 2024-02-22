@@ -1,0 +1,278 @@
+http://www.kepler.arc.nasa.gov/character.html
+
+                                                           Updated 9/27/00
+
+                         Characteristics of Transits
+
+                                 [Logo.gif]
+
+
+
+     Three parameters describe the characteristics of a planetary
+     transit:
+     * the period of recurrence of the transit;
+     * the duration of the transit.and
+     * the fractional change in brightness of the star.
+
+The Planet's Orbital Period
+
+     The period, P, is used to determine the semi-major axis, a, given
+     that the stellar mass, M*, is known from the spectral type of the
+     star. Kepler's Third Law is used to calculate the semi-major axis:
+
+                               [equation0.gif]
+
+The Transit Duration
+
+     For transits across the center of the star the transit duration is
+     given by:
+
+                              [equation1.gif] ,
+
+     where d* is the stellar diameter in solar diameters, M* is the
+     stellar mass in solar masses and a is the orbital semi-major axis in
+     AU. The duration does not tell us anything physically about the
+     planet. However, like the transit depth, the duration must by
+     consistent for all the transits of a given planet-star combination.
+     If not, then one suspects that there are multiple planets in the
+     system that are being detected or some other non-transit phenomena
+     is taking place.
+
+The Transit Depth, i.e., the Planet's Size
+
+     The fractional change in brightness or transit depth is equal to the
+     ratio of the area of the planet to the area of the star. This
+     measurement is used to calculate the size of the planet given that
+     the size of the star is known from its spectral type.
+
+     The table below lists the duration and transit depth (equal to the
+     ratio of the planet area to the area of the Sun) for several cases.
+     Single transits of giant planets have depths on the order of 1%.
+     These transits are so large that follow-up verification can be done
+     from the ground.
+
+   CAPTION:
+
+Transit Properties of Solar System Objects
+
+    Planet
+
+                                   Orbital
+                                   Period
+                                  P (years)
+
+                                    Semi-
+                                 Major Axis
+                                  a (A.U.)
+
+                                   Transit
+                                  Duration
+                                   (hours)
+
+                                   Transit
+                                    Depth
+                                     (%)
+
+                                  Geometric
+                                 Probability
+                                     (%)
+
+                                 Inclination
+                               Invariant Plane
+                                    (deg)
+
+    Mercury
+
+                                                                     0.241
+
+                                                                      0.39
+
+                                                                       8.1
+
+                                                                    0.0012
+
+                                                                      1.19
+
+                                                                      6.33
+    Venus
+
+                                                                     0.615
+
+                                                                      0.72
+
+                                                                      11.0
+
+                                                                    0.0076
+
+                                                                      0.65
+
+                                                                      2.16
+    Earth
+
+                                                                     1.000
+
+                                                                      1.00
+
+                                                                      13.0
+
+                                                                    0.0084
+
+                                                                      0.47
+
+                                                                      1.65
+    Mars
+
+                                                                     1.880
+
+                                                                      1.52
+
+                                                                      16.0
+
+                                                                    0.0024
+
+                                                                      0.31
+
+                                                                      1.71
+    Jupiter
+
+                                    11.86
+
+                                                                      5.20
+
+                                                                      29.6
+
+                                    1.01
+
+                                                                     0.089
+
+                                                                      0.39
+    Saturn
+
+                                    29.5
+
+                                     9.5
+
+                                                                      40.1
+
+                                    0.75
+
+                                                                     0.049
+
+                                                                      0.87
+    Uranus
+
+                                    84.0
+
+                                    19.2
+
+                                                                      57.0
+
+                                    0.135
+
+                                                                     0.024
+
+                                                                      1.09
+    Neptune 164.8
+
+                                    30.1
+
+                                                                      71.3
+
+                                    0.127
+
+                                                                     0.015
+
+                                                                      0.72
+
+
+                                  P^2M*= a^3
+
+    13 sqrt(a)  %=(d[p]/d*)^2
+
+                                     d*/D
+
+                                     phi
+
+     Note: M* is in solar masses M[o], d[p] is the diameter of the
+     planet. Pluto has been ignored.
+
+Signal-to-Noise Dependence
+
+     Our instrument is designed to produce an SNR=8 sigma for an
+     Earth-size planet orbiting an m[v]=12 solar-like star with 4
+     near-grazing transits having a duration of 6.5 hrs. The
+     signal-to-noise (SNR) varies as (nt)^1/2, where t is the transit
+     duration and n is the number of transits which equals the mission
+     life divided by the orbital period. Thus, for a given star and using
+     Kepler's third law, the SNR relative to that at 1 AU, SNR[1AU],
+     increases with decreasing a as a^-1/2:
+
+                               [equation4.gif]
+
+Geometric Probability
+
+     Transits can only be detected if the planetary orbit is near the
+     line-of-sight (LOS) between the observer and the star. This requires
+     that the planet's orbital pole be within an angle of d*/a (part 1 of
+     the figure below) measured from the center of the star and
+     perpendicular to the LOS, where d* is the stellar diameter (= 0.0093
+     AU for the Sun) and a is the planet's orbital radius.
+
+     This is possible for all 2pi angles about the LOS, i.e., for a total
+     of 4pi d*/2a steradians of pole positions on the celestial sphere
+     (part 2 of figure).
+
+     Thus the geometric probability for seeing a transit for any random
+     planetary orbit is simply d*/2a (part 3 of figure) (Borucki and
+     Summers, 1984, Koch and Borucki, 1996).
+
+                             [Transit_prob.gif]
+
+     For the Earth and Venus this is 0.47% and 0.65% respectively (see
+     above Table). Because grazing transits are not easily detected,
+     those with a duration less than half of a central transit are
+     ignored. Since a chord equal to half the diameter is at a distance
+     of 0.866 of the radius from the center of a circle, the usable
+     transits account for 86.6% of the total. If other planetary systems
+     are similar to our solar system in that they also contain two
+     Earth-size planets in inner orbits, and since the orbits are not
+     co-planar to within 2d*/D, the probabilities can be added. Thus,
+     approximately 0.011 x 0.866 = 1% of the solar-like stars with
+     planets should show Earth-size transits.
+
+Probability for Detection of Multiple Planets Per System
+
+     Current models for planetary system formation assume that the
+     planets are formed out of a common nebula with the star and that the
+     orbital planes should have small relative inclinations. For the
+     solar system, these inclinations are on the order of a few degrees
+     (see table above). Similarly, the inclinations are also small for
+     the inner moons of Jupiter, Saturn and Neptune. If one were to view
+     the system near either node of the intersection of the orbital
+     planes of two planets, then both planets would be observed. For
+     small relative inclinations of the planes, (phi1 + phi2) < d*/a,
+     both planets would always be observed, and for (phi1 + phi2)/ >=
+     d*/a the probability for seeing a second planet in the system is
+     given by (Koch and Borucki, 1996):
+
+                               [equation2.gif]
+
+     For the Venus-Earth combination, there is a 12% chance of seeing
+     both planets. Thus, there appears to be a significant chance that
+     multiple-planetary systems can be seen. This result should lead to a
+     further refinement of the models that describe both the frequency of
+     planet formation as well as the co-planarity of their orbits.
+
+     _______________________________________________________________
+
+   [finger.gif] Go to The Next Topic
+
+          [basics.gif] Return to: Scientific Basis For the Mission
+
+
+                                [bumper.gif]
+                     Return to Kepler Mission Home Page
+
+
+
+   Curator: David Koch, dkoch@mail.arc.nasa.gov [mail.box.gif]

@@ -1,0 +1,79 @@
+http://csmr.ca.sandia.gov/projects/idea.html
+
+   #Juan Meza
+
+         Computational Sciences and Mathematics Research Department
+     ___________________________________________________________________
+
+                               The IDEA/MAUI Project
+
+                                    Description
+
+       Motivated by the desire of design analysts to apply a diverse set of
+      computational tools in distributed environment to explore design space
+          and to optimize or imporve these designs, we are developing the
+            IDEA/MAUI system. IDEA, which stands for Integrated Design,
+      Exploration, and Analsys provides a unified framework and asynchronous
+           communication system to allow various computing platforms to
+      participate in a single design session consisting of the application of
+      several tools to a model of the design. MAUI is a general GUI front end
+      useable with the IDEA system. MAUI automatically produces a GUI from an
+        XML description of the tools and applications. Thus a developer of
+      IDEA/MAUI applications only needs to concentrate on the details of the
+           application and tools, not at all on the GUI or the network.
+
+         IDEA/MAUI is being used successfully in several important Sandia
+       applications. It is providing the front end to generate the input for
+        the CALORE code of SIERRA and is being considered for other SIERRA
+         codes. It will be connedted to an important parameter-estimation
+         application based on ALEGRA where it will be used to facillitate
+       multiple runs of ALEGRA over a cluster of machines. IDEA/MAUI is also
+      being developed as a fron-end to the DAKOTA system and independently to
+               the Opt++ and DDACE systems. (Recent slides on IDEA.)
+
+                      Our design is based on these criteria:
+        * New tools should be easy to add, independent of the language in
+          which they are written. This implies that ``legacy'' codes can be
+          driven by the system, but, of course, limited monitoring of the
+          process of such codes can be achieved. Codes that take advantage of
+          some of the tools in the IDEA system can be monitored, altered, and
+          halted through the \maui\ front end.
+        * The GUI should be flexible, allowing development and modifications
+          to be easy. This is accomplished by having the GUI completely
+          defined by an XML description of the process. Thus if a new tool
+          becomes available or a new parameter needs to be included, a small
+          change in the XML is all that is required. Although \maui\ is
+          written in Java, which has excellent features for GUIs, a user need
+          not know any Java to exploit this system.
+        * Tools can run on a variety of platforms. Our design allows a user
+          running on a very modest workstation to invoke and control
+          processes running on a set of processing platforms up to and
+          including ASCI platforms.
+        * The system should be secure. Our communication scheme is based on
+          the use of sockets, with implementations in both Java and C++. Thus
+          the security of the connections between participating platforms can
+          be made secure by taking advantage of the General Security
+          Framework (GFS) that replaces standard sockets by special sockets
+          with appropriate security.
+
+
+   IDEA/MAUI
+
+                                  Project Members
+
+        * Paul Boggs
+        * Leslea Lehoucq
+        * Kevin Long
+        * Andrew Rothfuss
+        * Edward Walsh
+
+                                Contact Information
+
+         Contact Paul Boggs (ptboggs@ca.sandia.gov) for more information.
+
+     ___________________________________________________________________
+
+       CSMR Department Projects at Sandia National Labs in California.
+            Copyright © 2001, Sandia Corp. All rights reserved.
+                        Comments: tgkolda@sandia.gov.
+                       Acknowledgments and Disclaimer.

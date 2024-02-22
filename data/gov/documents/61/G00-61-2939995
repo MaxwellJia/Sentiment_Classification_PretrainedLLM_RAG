@@ -1,0 +1,476 @@
+http://d3d.fsl.noaa.gov/ams01/paper/D3D_for_the_NWS.html
+
+   1.4     D3D: A Potential 3D Visualization Tool for the National Weather
+                                   Service
+
+ Edward J. Szoke *, U. Herbert Grote, Patrice C. Kucera, Paula T. McCaslin,
+                 Philip A. McDonald*, and William F. Roberts
+
+            NOAA Forecast Systems Laboratory   Boulder, Colorado
+
+
+                   1.     INTRODUCTION
+
+       A visualization tool, D3D (Display Three Dimensions) could
+   potentially add 3D visualization capabilities to the National Weather
+   Service (NWS) forecast offices. The Forecast Systems Laboratory (FSL)
+   has taken the University of Wisconsin's Vis5D software (Hibbard and
+   Santek, 1991) and enhanced its capabilities and changed its graphical
+   interface to appear very much like the Advanced Weather Interactive
+   Processing System (AWIPS) D2D system (MacDonald and Wakefield, 1996;
+   Wakefield, 1998), which is currently a part of every NWS Weather
+   Forecast Office (WFO). The motivation for the development of this
+   workstation application is the need to examine the value of 3D
+   visualization in an operational forecast setting. Our current version
+   of D3D (McCaslin et al., 2000) displays gridded output (analysis and
+   output fields in AWIPS netCDF format) from the operational models
+   available on AWIPS, as well as analyses from the Local Analysis and
+   Prediction System (LAPS, McGinley et al., 1991). It is also capable of
+   displaying output from a local-scale model that is run at FSL. Test
+   versions of radar displays have also been demonstrated (Roberts and
+   Longmore, 1999), but are not yet available in a real-time framework.
+
+       We have looked at the D3D workstation application critically over
+   time and have invited others to do so as well. At the IIPS conference
+   in 1999 (McCaslin et al., 1999), we presented our initial efforts on
+   the development of D3D and our first forecast exercise. In the summer
+   of 1998 a limited exercise, called RT98, was conducted to test the
+   application and involved local FSL staff and a few forecasters from the
+   Denver (now Boulder) WFO. There were a number of suggestions for
+   potential and/or improved products and displays that resulted from
+   RT98, but the overall response to D3D was very positive, even though we
+   used an earlier version of AWIPS that sometimes resulted in rather slow
+   response to D3D commands.
+
+       Since RT98 the D3D interface has continued to evolve to where most
+   of the Vis5D GUIs are no longer in place and the overall appearance is
+   quite close to the D2D interface. We therefore felt that the next
+   logical step in D3D development would be to expose the package to a
+   wider variety of users via a more formal forecast exercise, much as was
+   done in the early development days of D2D. Thus an exercise called RT99
+   was carried out from October to December 1999 at FSL, with one
+   forecaster invited from each of the NWS six Regions, and from four of
+   the National Centers. All but one participant was able to attend RT99,
+   a much more comprehensive exercise than RT98, consisting of two weeks
+   of training and D3D use with both real-time and delayed real-time
+   cases. The exercise generated an extensive volume of evaluation
+   material, from input on the D3D interface to potential value of 3D
+   visualization to the forecast process. This paper summarizes the
+   results of RT99, describes some recent improvements to the D3D software
+   based on suggestions from the exercise, and presents our views on the
+   next steps that might be undertaken with D3D.
+
+
+                   2.     REAL-TIME EXERCISE 99
+
+                   2.1 Overview of RT99
+
+       The RT99 exercise was much more comprehensive and formal than the
+   previous one (RT98). As noted earlier, forecasters came from all over
+   the country, including Alaska. Three sessions were run from October
+   into mid-December. The first two sessions were two weeks long, and the
+   last was a somewhat "condensed" version that lasted one full week. For
+   the full exercises, Week 1 focused on training users to become
+   proficient with the system using specific exercises with real-time and
+   case data, and included comparison to D2D. Week 2 focused on evaluating
+   D3D as an operational forecast system using three cases.
+
+       We decided (in part based on results from RT98) that a full week of
+   training-type activities was required since many aspects of the D3D
+   visualization software package take time to comprehend. On day 1,
+   participants were given a demonstration of the system using real-time
+   data. This was followed by step-by-step instructions on how to use the
+   system including loading and examining data. We took the approach of
+   moving from left to right along the menubar and toolbar introducing all
+   system options. (The menubar and toolbar can be seen at the top of the
+   image in Figure 5.) Tools used to display data were the focus of the
+   afternoon. We tried to follow the D3D User's Guide fairly closely for
+   the training on Day 1. Essentially, by the end of Day 1 the forecasters
+   had gone over all the aspects of D3D, including all the tools, but of
+   course had very limited time to use them independently. Thus, the
+   remainder of the week (Days 2 through 5) was dedicated to intensively
+   study the visualization (rendering) techniques. There are essentially
+   five such techniques in D3D (one could actually list seven separate
+   techniques in Vis5D, but for our training they were grouped into five):
+   1) isosurfaces, 2) cross sections and plan views, 3) soundings and the
+   probe, 4) trajectories, and 5) volume visualization. Given this
+   grouping the participants concentrated on one new technique each day,
+   except on Day 5 when both trajectories and volume visualization were
+   covered, with a half-day for each.
+
+       The first task on each day was to review loading a parameter with a
+   visualization tool and modifying the properties of that parameter. This
+   was instructor-led with time for the user to perform the activity and
+   ask questions. Following this, learning modules were then used to
+   instruct participants to load a series of complex products. The
+   afternoons consisted of viewing both real-time and delayed real-time
+   data, creating various products that addressed questions a forecaster
+   might ask when examining analysis and model output. Included in this
+   activity were comparisons with similar fields using D2D, which gave the
+   participants a view of features in a more familiar setting and a chance
+   to assess whether there were any advantages in using D3D.
+
+       As noted, during this learning phase participants were limited to
+   one new visualization tool per day. For example, Tuesday the focus was
+   isosurfaces. This encouraged thorough exploration of parameters using
+   only isosurfaces. Exploration included isosurfaces colored by a second
+   parameter, multiple isosurfaces at varying threshold values, and a new
+   capability, isosurfaces contoured by a second parameter. One of the
+   cases used during the first week was the 3 May 99 tornado outbreak
+   event, another was a hurricane that brushed the East Coast. An example
+   of an exercise might be for the forecaster to create an isosurface of
+   wind speed at a particular level, make it more complex by displaying
+   several values of wind speed (using levels of transparency), followed
+   by adding isosurfaces of various forcing fields such as divergence,
+   vertical motion, etc. Initially on each day the next new tool
+   introduced was treated separately, but as the day went on the exercises
+   included combining the new tool with any previously learned tools. In
+   this manner the forecaster was able to remain active in using tools
+   already learned, while by the end of the week able to use all the
+   available tools in D3D. Evaluation questions were included within the
+   various exercises, as well as an overall evaluation at the end of each
+   day.
+
+       For the one-week version of the RT99 exercise, we did not have the
+   luxury of this somewhat more relaxed pace. However, it was decided that
+   the initial Day 1 training was very critical, so this was kept
+   unchanged, while the exercises with the tools were condensed from four
+   days into one, still following the idea of introducing tools one at a
+   time.
+
+       Week 2 began (Monday) with an extensive review of D3D, which was
+   found to be useful after a weekend away from the application. The
+   exercise then focused on three cases presented in "delayed real-time"
+   (DRT) mode, where the forecaster is allowed to only look at
+   observations and models through a given time, then a forecast is made,
+   then the "clock" advanced so that one can examine data farther ahead in
+   time, another forecast made, etc. The cases chosen were a summer
+   convective case (the Salt Lake City tornado event of 11 August 99), a
+   winter case (the October 1997 blizzard in CO/WY and farther east), and
+   another more obscure convective case with supercell storms in CO/WY on
+   25-27 June 99. Approximately one full day was allotted for each case.
+   Both D2D and D3D were available for use, and while the participants
+   were encouraged to use D3D, they were free to choose whatever tools
+   they deemed would be of use for the particular forecast problem on
+   either system. As with any DRT type case, forecaster recognition of the
+   event can be a problem when trying to emulate a real forecast
+   environment. To deal with this, aspects of the cases were chosen that
+   were not necessarily the "main event." Additionally, we were really not
+   concerned with the forecasts per se as much as how the participants
+   used D3D in the forecast process.
+
+      In addition to the cases, about a half day was allotted to having
+   the participants, in teams of two, lead one of FSL's daily weather
+   briefings. This was another way to simulate real-time usage with a
+   deadline (1100 LT for the 30 min briefing). However, for the one-week
+   exercise in December we were not able to have participation in the
+   briefing, but were able to allow almost the same amount of time for the
+   cases. Finally, evaluation was of course a very important aspect of
+   RT99, and there were questionnaires to accompany each case. The
+   forecasters also could use an electronic notepad to record any thoughts
+   at any time, which proved to be popular and enabled more spontaneous
+   reactions to be recorded. At the end of the exercise there was a very
+   comprehensive written final questionnaire, then the exercise concluded
+   with a 2-3 hour somewhat informal discussion. In the next section we
+   briefly summarize some of the collected responses.
+
+                   2.2 A brief summary of RT99 feedback
+
+
+
+       The overall impression of D3D among the participants in RT99 was
+   extremely positive, to the point that most wanted to take the
+   application back to their WFO or Regional Office in its current state.
+   This is not to say that there was not a large number of suggestions for
+   improvement of D3D, which are summarized below along with a discussion
+   of features found most appealing.
+
+       Probably the most unique aspect of D3D, compared to how
+   meteorologists are accustomed to viewing the atmosphere in
+   two-dimensions (as with a system like D2D), is the isosurface, which
+   allows for fields to be presented as 3D surfaces. Participants in RT99
+   found this type of presentation quite interesting and also very
+   illustrative in terms of visualizing the atmosphere, but they also
+   noted that it would take some time for forecasters to determine how
+   best to use this feature. They suggested that training would be most
+   useful in this area, with development (perhaps at the local WFO level)
+   of suggested combinations of isosurfaces that would be most useful for
+   diagnosing various weather problems. Some even noted they would have
+   liked to see such instruction as part of RT99, but we purposely avoided
+   such training detail since we were seeking how the meteorologists would
+   choose to display the information with D3D. In addition to this
+   unfamiliarity with how best to use such a 3D product, another problem
+   involved difficulty in georeferencing in some situations. For example,
+   an isosurface of wind speed at some level (an upper-level "jet") was a
+   logical field to display as an isosurface with D3D, but when viewed at
+   a skewed angle it was impossible to tell the position of the jet
+   relative to the ground. To help with this problem, which was also noted
+   from the RT98 exercise, a convenient way to quickly switch back and
+   forth from the current view to an overhead view for determining
+   position was developed via button selections on the toolbar.
+
+       While the participants felt that isosurfaces could be useful in an
+   operational environment, to both visualize atmospheric processes and
+   quickly find features, many were as impressed with the other
+   applications in the D3D package. In fact, comments from RT99 indicated
+   as much or even greater use of other features of the D3D package, which
+   are really D2D-like applications but with more flexibility for quick
+   perusal of a lot of information. These features included the movable
+   cross sections and plan views, and the sounding tool (which could also
+   display other parameters as a line plot in height). While each of these
+   features have analogous D2D features, the ability to quickly move a
+   plan view, cross section, or sounding through a volume of model output
+   brought a new aspect to these tools. Together with isosurfaces, the
+   users felt the main operational utility of D3D was the ability to
+   quickly peruse a large amount of information, which should allow
+   operational forecasters to better focus on the important aspects of a
+   forecast problem more quickly, and with less of a chance of missing
+   some critical feature because they failed to examine the "correct"
+   level or the most appropriate cross section. One of the main
+   suggestions for the cross-section tool was to have flexibility in
+   determining the end points of the cross section, currently set by Vis5D
+   to lie somewhere at the edge of the displayed area. One feature, again
+   added after RT98, was the ability to link different fields to the same
+   cross section or plan view. This added quantitativeness to a cross
+   section by linking it with a height or pressure scale, as well as the
+   ability to move a single cross section composed of multiple fields
+   across the volume as one unit.
+
+       One tool that was universally very appealing and generated much
+   interest was the sounding tool, particularly the basic SkewT display of
+   temperate, dewpoint, and wind (see Figure 1 for an example).
+   Forecasters found it quite exciting to be able to move the vertical
+   sounding line across the domain and see an instant display of the
+   sounding (in D2D, one selects points where soundings will be
+   displayed), and felt this would be a highly utilized operational tool.
+   Given the high use of this application, lots of suggestions were
+   offered regarding improvements, such as a hodograph display and a
+   listing of important parameters for assessing severe weather potential.
+   Our implementation of these suggestions is included in Section 2.3.
+
+       The suggestions for the sounding tool echoed an overall theme to
+   much of the feedback from RT99, which was to continue to advance D3D so
+   that it appears more like D2D where possible. This was viewed as
+   important in order to reduce the amount of training needed by
+   forecasters to use the system, allowing instead for the training to
+   concentrate more on the meteorological use of features like
+   isosurfaces. D2D-type features the forecasters asked for included more
+   control of the output (through control of line style or length of a
+   cross section), output variables that matched those on D2D, a new color
+   editor like that in D2D (versus the Vis5D editor used for the
+   exercises), and map scales that match those in D2D.
+
+   [D3D_for_the_NWS-1.gif]
+
+   Figure 1. New D3D Sounding and Hodograph.
+
+       The main criticisms of D3D from RT99 included an absence of
+   observed data, and the need to be able to examine more than one model
+   at a time. The latter problem is addressed in a more recent version of
+   the Vis5D software, which allows for a linked multiple window display.
+   The display of actual data is somewhat more problematic in terms of how
+   best to portray. Vis5D was developed for display of three-dimensional
+   data volumes, such as output from a numerical model. Analyses in such
+   3D volumes, like those from LAPS, are also easily displayed. The best
+   way to include point data (such as input from soundings or surface
+   stations), however, is not clear. One could certainly display it on
+   surfaces as is done in D2D, but it could be argued that this should
+   remain the function of D2D. Presumably, one might envision merging the
+   systems so that the forecaster can freely move from D2D to D3D. Radar
+   data are produced in volumes (though of irregularly spaced data) that
+   would seem a natural for D3D, and as noted exploration of such radar
+   displays is underway at FSL (Roberts and Longmore, 1999) and elsewhere.
+   Clouds might also be displayed with Vis5D from input via satellite
+   data, and promising work is underway in this area (for example, see the
+   NASA web site http://rsd.gsfc.nasa.gov/rsd ).
+
+
+     [D3D_for_the_NWS-2.gif]
+
+   Figure 2. Equivalent potential temperature isosurface colored and
+   contoured by pressure, and a potential temperature isosurface
+   displaying wind barbs on its surface.
+
+       Among other concerns from the exercise was the agreement that the
+   application must be used on a machine capable of yielding quick
+   displays and response, due to the highly interactive nature of many of
+   the D3D tools. Experience by many of the participants on somewhat
+   slower systems when preparing their Daily Weather Briefing was more
+   than enough to convince them of the need for good performance. It was
+   clearly determined that it would be impossible to effectively run both
+   D3D and D2D on the current AWIPS hardware. Training was noted as a need
+   as well, since meteorologists are not accustomed to looking at
+   phenomena in three dimensions.
+
+
+                   2.3 Software Development
+
+       Recent improvements to D3D have been based primarily on exercise
+   results and user feedback. The summary of improvements starts with
+   porting the application to a PC/Linux. This accomplishment improved
+   performance and holds the promise of more increases in performance as
+   advances in PC software and hardware technology develop. It also makes
+   the product accessible to more users. Most exercise participants were
+   very enthusiastic about acquiring a PC/Linux version to continue use of
+   the application when the distribution CD became available. During the
+   porting to Linux, D3D's core was upgraded from Vis5D 4.3 to Vis5D 5.1.
+   This upgrade added data clipping planes and the potential for multiple
+   data display contexts.
+
+       The ever-popular sounding tool now includes an optional hodograph
+   display (Figure 1). Future enhancements will be the ability to plot
+   user-selected parameters, sampled in the vertical column, and the
+   display of derived parameters (e.g. helicity), like those offered by
+   D2D.
+
+       We have developed the ability to add glyphs (wind barbs,
+   streamlines and contour lines) on top of an isosurface. Figure 2 shows
+   a 3D 310 K potential temperature isosurface colored and contoured by
+   pressure from the Eta model valid for 0000 UTC 20 Sept 2000. It also
+   shows a 298 K potential temperature isosurface displaying wind barbs on
+   its surface. Only isosurfaces that are relatively smooth and have only
+   one value for each horizontal location (typically those of pressure,
+   height, temperature, etc.) are good candidates for this technique.
+   These criteria are sometimes referred to collectively as a "well
+   behaved" isosurface. Isosurfaces of relative humidity values or
+   divergence, for example, are inconsistent throughout a 3D grid and are
+   not smooth nor, often, large enough to generate meaningful or
+   intelligible glyphs on their surface.
+
+       Since RT99, the D3D interface has continued to evolve to a point
+   where the Vis5D GUIs are no longer necessary, and the overall
+   appearance is much closer to the D2D interface, developed using Tcl/Tk.
+   The Colors Editor allows the user to customize the color(s) for a
+   particular object and has a Color Wheel, Red/Green/Blue/Opacity Slider
+   Bars, Brightness Bar, and a Color Swatch (Figure 3). Adjusting the
+   Color Wheel Centroid or Slider Bars generates the desired color in the
+   Color Swatch, or a specific RGB value can be entered, allowing
+   incremental changes in the amount of red, green, blue, saturation and
+   brightness that is present in the color displayed in the Color Swatch.
+   It allows the user more flexibility to edit colors than does the Vis5D
+   Color Editor interface (Figure 4), for example, the user can now create
+   color banding. Note, color editors in Figures 3 and 4 reflect the same
+   color table used to color the surface specific humidity field displayed
+   in Figure 5.
+
+     [D3D_for_the_NWS-3.gif]
+
+   Figure 3. D3D Colors Editor.
+
+
+     [D3D_for_the_NWS-4.gif]
+
+   Figure 4. Vis5D Color Editor.
+
+
+     [D3D_for_the_NWS-5.gif]
+
+   Figure 5. Surface Specific Humidity RUC 1500 14 Sept 00.
+
+
+
+                   3.     FUTURE EFFORTS
+
+       A number of improvements have been made to D3D based on the results
+   of RT99. FSL will continue to analyze the feedback from the exercise to
+   identify other areas for improvements in D3D. The software performed
+   well and participants were ready to install the software back at their
+   home site. However, some work remained, such as preparing a
+   distribution version of the software and evaluating the potential
+   impact of the software on the operational AWIPS system. Both of these
+   tasks were accomplished by late 2000.
+
+       Based on the positive feedback from the exercise, the decision was
+   made to test D3D at selected operational sites, where its use for a
+   wide variety of forecast problems should generate an excellent cross
+   section of operationally oriented feedback. This test will provide
+   greater confidence that the D3D system will be of use to operational
+   forecasters and potentially open the door for wider use within the NWS.
+   The NWS has begun the process of establishing D3D test sites at several
+   WFOs in the Southern Region as well as Regional Centers. FSL's port of
+   D3D to a PC/Linux platform should allow the sites to acquire at least
+   one test workstation at relatively low costs. FSL is implementing
+   methods to evaluate D3D usage and to collect feedback from the various
+   users. The internet provides a powerful way to exchange information by
+   email, list servers, and other means. This will allow users in
+   different areas to examine common problems that may arise, and FSL to
+   more easily serve the different sites.
+
+       The next major D3D development will be to incorporate the latest
+   version of Vis5D with its support for a multiple window environment.
+   This will make it possible to compare different models, and potentially
+   allow for displays of nongridded data in D3D. The D3D development has
+   made significant progress toward meeting the needs of operational
+   forecasters, and D3D can be another powerful tool for operational
+   forecasters in preparing their daily weather forecasts.
+
+
+                   4.     ACKNOWLEDGEMENTS
+
+       We wish to thank the following FSL staff for their work in
+   successfully carrying out RT99, Scott Longmore and Cindy Lusk with the
+   evaluation effort, and Susan Williams, Joe Wakefield, Amenda Stanley,
+   and Darien Davis for keeping the real-time and case data feeds
+   reliable. We also thank COMET and the Boulder WFO for helping with the
+   pre-exercise shakedown, and acknowledge the invited participants in
+   RT99: Jordan Alpert, NCEP/EMC; Tim Barker, Missoula, Montana WFO; Scott
+   Entrekin, Boulder WFO; John Hart, NCEP/SPC; James Hayes, Grey, Maine
+   WFO; Larry Hinson, NCEP/AWC; Jim Johnson, Dodge City, Kansas WFO;
+   Lawrence Lahiff, NCEP/TPC; Steve Listemaa, NCEP/HPC; Tom Paylor, OM/NWS
+   Headquarters; Scott Plischke, Amarillo, Texas WFO; and Carven Scott,
+   Anchorage, Alaska WFO.
+
+
+                    5.     REFERENCES
+
+
+       Forecast Systems Laboratory, 1999, D3D User Guide
+   http://www.fsl.noaa.gov/~osborn/d3d/D3DUG_TC.html
+
+       Forecast Systems Laboratory, 2000, D3D homepage
+   http://d3d.fsl.noaa.gov
+
+       Forecast Systems Laboratory Evaluation Team, 2000: RT99 D3D
+   Evaluation Final Questionnaire Catalog of Results (draft), 130 pp.
+
+       McCaslin, P.T., P. A. McDonald, and E. J. Szoke, 2000: 3D
+   Visualization Development at NOAA Forecast Systems Laboratory. AMC
+   SIGGRAPH Computer Graphics, February 2000, Vol. 34 No. 1, 41-44.
+
+       McCaslin, P.T., P. A. McDonald, and E. J. Szoke, 1999: Developing
+   and Testing a 3D Visualization Workstation Application at FSL.
+   Preprints, 15th International Conference on Interactive Information and
+   Processing Systems for Meteorology, Oceanography, and Hydrology ,
+   Dallas, TX. Amer. Meteor. Soc., 498-501.
+
+       Hibbard, W. R. and D. Santek, 1991: The Vis5D system for easy
+   interactive visualization. Preprints, Seventh International Conference
+   on Interactive Information and Processing Systems for Meteorology,
+   Oceanography, and Hydrology , New Orleans, LA. Amer. Meteor. Soc.,
+   129-134.
+
+       MacDonald, A. E., and J. S., Wakefield, 1996: WFO-Advanced: An
+   AWIPS-like Prototype Forecaster Workstation. Preprints, 12th
+   International Conference on Interactive Information and Processing
+   Systems for Meteorology, Oceanography, and Hydrology , Atlanta, GA.
+   Amer. Meteor. Soc., 254-258.
+
+       McGinley, J.A., S.C. Albers, and P.A. Stamus, 1991: Validation of a
+   composite convective index as defined by a real-time local analysis
+   system. Weather and Forecasting. 6, 337-356.
+
+       Roberts, W.F., and S.P. Longmore, 1999: Real-time visualization
+   techniques for a regional radar volume. Preprints, 29th International
+   Conference on Radar Meteorology, Montreal, Canada. Amer. Meteor. Soc.,
+   225-228.
+
+       Wakefield, J.S., 1998: Operational Risk Reduction: Easing AWIPS
+   into the Field. Preprints, 14th International Conference on Interactive
+   Information and Processing Systems for Meteorology, Oceanography, and
+   Hydrology , Phoenix, AZ. Amer. Meteor. Soc., 389-391.
+     __________________________________________________________________
+
+   * Joint collaboration with the Cooperative Institute for  Research in
+   the Atmosphere, Colorado State University, Fort  Collins, Colorado
+   80523. Corresponding author address:  Ed Szoke, NOAA/ERL/FSL R/E/FS1,
+   325 Broadway,  Boulder, CO 80305-3328; e-mail: szoke@fsl.noaa.gov

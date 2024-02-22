@@ -1,0 +1,61 @@
+http://www-itg.lbl.gov/grid/projects/pyGlobus/
+
+                                  pyGlobus
+     __________________________________________________________________
+
+                                  Overview
+
+   To allow the use of the Globus toolkit from python I've been working on
+   using SWIG to generate the necessary interface code. Eventually this
+   should allow the use of the entire Globus toolkit from higher level
+   scripting languages like python. Currently a substantial subset of the
+   Globus toolkit has been wrapped.
+
+                                    Goals
+
+     * Provide a clean object-oriented interface to the Globus toolkit.
+     * Provide similar performance to using the underlying C code as much
+       as possible.
+     * Minimize the number of changes necessary when aspects of Globus
+       change.
+     * Where possible, make Globus as natural to use from Python as
+       possible. For example, the gassFile module allows the manipulation
+       of remote GASS files as Python file objects.
+
+                                Requirements
+
+     * Python2.0 and up. It should work with earlier versions, but has not
+       been tested.
+     * The Globus 2.0 beta build of the Globus toolkit. Some parts of the
+       wrapper will work with the Globus 1.1.3 release, but most of the
+       data transfer functionality is based on the new gsiftp code.
+
+   This code is presented as pre-alpha quality code. Any comments,
+   complaints, suggestions should be sent to Keith Jackson.
+
+                                  Download
+
+                            pyGlobus-0.9.2.tar.gz
+
+                            Redhat Linux 7.2 rpm
+
+                                 Source rpm
+
+                                Documentation
+
+     * Slides given at the Grid Portal Developers Workshop June 4, 2001 at
+       LBNL.
+     * API documentation generated with HappyDoc
+         ______________________________________________________________
+
+       INFORMATION ABOUT THIS PAGE
+       This page is the resonsibility of Keith R. Jackson
+       (KRJackson@lbl.gov). William E. Johnston (johnston@www-itg.lbl.gov)
+       has reviewed this WWW document. Please make sure that you read the
+       Credits and are aware that this document and fits uses are subject
+       to LBL's disclaimers and legal notices.
+       [back.gif]
+       ITG Homepage [LBLlogo.icon.gif] LBNL Homepage
+       If there is a problem with this page please, e-mail
+       webmaster@www-itg.lbl.gov
+         ______________________________________________________________

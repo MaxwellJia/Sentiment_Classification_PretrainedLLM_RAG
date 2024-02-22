@@ -1,0 +1,34 @@
+http://bldg6.arsusda.gov/mtucker/Public/Consed/Intro_Consed.html
+
+Introduction to using Consed on the Bldg6 server
+
+   Consed is a graphical interface for Phred and Phrap which align
+   sequences and aid in the editing of ABI trace files. For a brief review
+   of Consed and info on its use read the Consed manual
+
+   For greater detail on all the programs in the suit read the linked
+   manuals: Consed, Phrap and Cross_Match, Phred, Swat, phd2fasta, Swat
+   Cross_Match.
+
+   If you are interested in using Consed for sequencing projects you must
+   first request setup and access to Consed by e-mailing
+   tuckerm@ba.ars.usda.gov. The use of Consed may be limited until an
+   extended agreement has been approved by the Univ. of Washington.
+
+   Each time you start a new project you will need to make a copy of the
+   format directory tree. For example, cp -R format (new project name).
+   This will create three directories (chromat_dir, edit_dir, phd_dir) and
+   a vector.seq file (you may want to add vectors to this file in a fasta
+   format) inside the the new project name directory. Put all your ABI
+   trace file into the chromat_dir directory. Move to the edit_dir (i.e.,
+   cd ~/Consed/(project name)/edit_dir). Once inside edit_dir type
+   phredPhrap to run the perl script that creates the alignments and .ace
+   file needed by the consed viewer. Once completed, run Consed by typing
+   consed_sgi while still in the edit_dir directory. If you haven't used
+   the expected naming for your sequence trace files (see consed manual)
+   you will get an error message, but it will still work. Click on the
+   contig that you wish to view. To view the trace, place the cursor in
+   the sequence you want to view the trace for and then click the middle
+   key (may be the left arrow on X-windows emulations). The darker the
+   gray, the lower the confidence scor for that base. For more detail read
+   through the brief tour in the Consed manual.

@@ -1,0 +1,175 @@
+http://www-oss.fnal.gov/policy/services.html
+
+                            Services to Turn off
+     __________________________________________________________________
+
+   This is an attempt to document which services should be turned off
+   after a system has been installed. It does not list the more well known
+   services such as telnet, rsh, rlogin, etc since it is assumed the admin
+   knows whether or not these services should be turned off. Instead, this
+   document tries to describe some of the other not-so-well known services
+   in /etc/inetd.conf that should be turned off. This is just a guideline
+   based on a sampling of systems and should not be treated as policy. As
+   always, please test any changes you make on a test system (if possible)
+   or during a test window before committing to a production system.
+
+   SGI Services
+   SUN Services
+   DEC Services
+   Linux Services - Fermi Linux specific
+
+                                SGI Services
+     __________________________________________________________________
+
+   SGI Services To Turn Off
+     * finger - Used to get who is logged into the machine (remote
+       finger).
+     * http - Leave on if you are offering up a webserver and using inetd
+       to start the http daemon. In practice, this is a bad idea since too
+       many web connections can completely kill your system. In any case,
+       you should be using the apache distribution from kits.
+     * wn-http - Another webserver. Should use apache instead.
+     * bootp - Leave on if this is a boot server
+     * tftp - Leave on if this is a boot server, font server, roboinst
+     * ntalk - Leave on if you need to use the talk utility
+     * tcpmux - Needed if system serves non-standard services that do not
+       have a well known port (such as a local service). If you aren't
+       running a local service (i.e. one developed here) you probably
+       don't need this. Services such as taped and dbserv, which were
+       developed here, don't know about tcpmux and specify the port they
+       need to talk to in their config files. So turning this off won't
+       affect them. It will affect SGI's scanner, printer and sysadm
+       services, though. With the exception of sysadm, which is used for
+       CXFS, I don't think we use any of these here.
+     * sgi-dgl - Leave on if you need a graphics library server
+     * echo - Used for testing. Echoes out what comes in.
+     * discard - Used for testing.
+     * daytime - Used for testing.
+     * chargen - Used for testing.
+     * uucp - Old, turn it off.
+     * mountd - Leave on if you are serving NFS files.
+     * sgi_mountd - Leave on if you are serving NFS files.
+     * rstatd - Leave on if you rely on this to get system stats, like the
+       farms system or rup
+     * walld - Leave on if you like to allow others to rwall this syste
+     * rusersd - Leave on if you need to do remote monitoring of whose
+       logged on
+     * rquotad - Leave on if you need use quotas on NFS served filesystems
+     * sprayd - Used for testing.
+     * bootparam/1 - Provides info for diskless clients.
+     * ypupdated - Insecure, leave off
+     * rexd - Insecure, leave off
+     * sgi_videod - Used for video devices like DIVO or DIVO_DVC boards.
+     * sgi_toolkitbus ????
+     * sgi_snoopd - Gives network traffic data to clients which have
+       subscrided. Turn off.
+     * sgi_pcsd - Leave on if you are running CaseVision/Workshop
+       Debugger.
+     * sgi_pod - Printer Object Database Server. Turn this off.
+     * sgi_xfsmd - Used for the GUI tool to create xfs filesystem. Don't
+       be a weenie. Use CLI.
+     * sgi_espd - Embedded support partner which can provide useful
+       information if you are using it. However, you have to have esp
+       chkconfig'd on.
+     * sgi_esphttpd - Allows you to view the esp reports via http. Better
+       to leave this off and use apache instead.
+     * ttdbserverd - Tooltalk, should turn this off.
+     * tcpmux/sgi_scanner - Unless you have a scanner on this machine and
+       need to be able to access it remotely, turn this off. If you turned
+       off tcpmux, this us probably useless anyway.
+     * tcpmux/sgi_printer - Leave on if you use lpsched and not flpr
+     __________________________________________________________________
+
+                                SUN Services
+     __________________________________________________________________
+
+   SUN Services To Turn Off
+     * name - Used for name service. This is a central service provided by
+       datacomm so this should be off.
+     * talk - Leave on if you want to use the talk utility
+     * comsat - Works with biff to tell you when you have mail and pops up
+       the first 7 lines or 560 chars onto your terminal
+     * finger - Used to get who is logged into the machine (remote
+       finger).
+     * uucp - No one really uses this anymore.
+     * tftp - Leave on if this is a font/boot server
+     * systat - Leave on if you need to do remote "ps -ef" to system
+     * netstat - Leave on if you need to do remote "netstat -f inet" to
+       system
+     * echo - Used for testing. Echoes out what comes in.
+     * discard - Used for testing.
+     * daytime - Used for testing.
+     * chargen - Used for testing.
+     * 100232/10 - This is the sadmind service for remote administration.
+       Leave on if you really need it, but make sure you have the latest
+       patch.
+     * rquotad - Leave on if you need use quotas on NFS served filesystems
+     * rusersd - Returns the list of users on a host.
+     * sprayd - Used for testing.
+     * walld - Leave on if you like to allow others to rwall this syste
+     * rstatd - Leave on if you rely on this to get system stats, like the
+       farms system or rup
+     * ufsd - Per bug 4143953, ufsd never shipped with Solaris and never
+       will. So, this is a bogus entry in the /etc/inetd.conf
+     * 100221/1 (KCMS Profile Server) Kodak color management
+     * fs - Sun font Server
+     * 100235/1 - Leave on if you are using cachefs, I don't think anyone
+       is.
+     * 100068/2-5 (rpc.cmsd) - Leave on if you use calendar manager. There
+       are security patches which should be installed with this first.
+     * 100083/1 - tooltalk. There have been enough security problems with
+       this that it should be turned off.
+     * kerbd/4 - Leave off. Used fermi kerb5 or AFS instead.
+     * printer - Since we use flpr, this shouldn't be necessary
+     * dtspc - If you use the DT login stuff, you may want to leave this
+       on
+     __________________________________________________________________
+
+                                DEC Services
+     __________________________________________________________________
+
+   DEC Services To Turn Off
+     * talk - Leave on if you want to use the talk utility
+     * comsat - Sends the You've got mail messages
+     * finger - Used to get who is logged into the machine (remote
+       finger).
+     * uucp - Unix to Unix copy program, now obsolete
+     * tftp - Leave on if this is a font/boot server
+     * ntalk - talk across the network
+     * bootps - leave on if this is a boot server
+     * kdebug - kernel debug daemon--dangerous--must be off.
+     * cfgmgr - remote configuration manager--not used at FNAL
+     * rstatd - Leave on if you want to check uptime with rup (which we do
+       for OSS machines)
+     * echo - Used for testing. Echoes out what comes in.
+     * discard - Used for testing.
+     * daytime - Used for testing.
+     * chargen - Used for testing.
+     * rquotad - Leave on if you need use quotas on NFS served filesystems
+     * rusersd - Returns the list of users on a host.
+     * sprayd - Used for testing.
+     * walld - Leave on if you like to allow others to rwall this syste
+     * rstatd - Leave on if you rely on this to get system stats, like the
+       farms system or rup
+     * rpc.cmsd - CDE calendar manager daemon (subject of several security
+       alerts in past)
+     * rpc.ttdbserverd - tooltalk. There have been enough security
+       problems with this that it should be turned off.
+     * dtspc - Used for desktop clients in CDE environment
+     __________________________________________________________________
+
+                               Linux Services
+     __________________________________________________________________
+
+   Linux Services To Turn Off
+
+   By default, Fermi Red-Hat Linux comes with all services supported by
+   inetd or xinetd turned off.
+   By default ssh is turned on if it is installed.
+   Kerberizing a machine doesn't change the state of a service. Ie. If
+   telnet was turned on before, the kerberized version will be turned on.
+   If telnet was turned off, the kerberized version will be turned off.
+     __________________________________________________________________
+     __________________________________________________________________
+
+   Security, Privacy, Legal

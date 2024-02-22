@@ -1,0 +1,54 @@
+http://snfactory.lbl.gov/follow_power.html
+
+
+                             SN Follow-up Power
+                                  Telescope
+     Instrument Aperture Weather Image Quality Efficiency Fraction Power
+                                    Notes
+       (meters) (percent) (arcseconds) (total) (per night) (relative)
+                                  ESO 2.2m
+                 SNIFS 2.2 90% 0.9-1.3 20% 30% 1.00 Fiducial
+                                   UH 2.2m
+                     SNIFS 2.2 70% 0.8-1.2 20% 20% 0.52
+                                 duPont 2.5m
+                 SNIFS? 2.5 90% 0.9-1.3 20% 10% 0.33 on hold
+                                  WIYN 3.5m
+                     SNIFS? 3.5 55% 0.8-1.3 20% <5% 0.35
+                                  ARC 3.5m
+                     SNIFS? 3.5 55% 0.8-2.0 20% 10% 0.32
+                                   CTIO 4m
+                   Fiber IFU 4.0 85% 0.9-1.3 7% 5-10% 0.25
+                                 Palomar 5m
+                    SNIFS? 5.0 50% 1.0-1.5 20% < 5% 0.21
+                                  NOT 2.6m
+                    SNIFS? 2.6 50% 0.8-2.0 20% 5-10% 0.11
+                                   Lick 3m
+                   Fiber IFU 3.0 45% 1.3-2.3 15% <5% 0.03
+                                Whipple 1.5m
+            FAST longslit 1.5m 55% 1.3-1.6 10% 90% 0.19 CfA Group
+                                     MMT
+                longslit 6m 55% 0.8-1.3 10% 4% 0.25 CfA Group
+     __________________________________________________________________
+     __________________________________________________________________
+
+   Note that all values except for aperture size are approximate. The
+   total efficiency is generally uncertain, while fraction of time per
+   night is extremely uncertain in many cases. The efficiency is based on
+   the preliminary SNIFS blue-channel throughput estimate from Emmanuel
+   for SNIFS-like instruments. The CTIO fiber IFU is an estimate from Tom
+   Ingerson. The Whipple 1.5-m and MMT 6-m values are the crudest
+   estimates, and included estimated slit losses; note that I have not
+   imposed a penalty for systems which would provide inferior wavelength
+   coverage (or require two serial observations with different gratings).
+   Power is dimensionless since it is normalized to the fiducial. The
+   scale for power is proportional to the product of collecting area,
+   weather, efficiency and available fraction of telescope time, divided
+   by the square of the seeing. In the case of ranges, I used the upper
+   end of the fraction range, but somewhere near the middle of the image
+   quality range.
+     __________________________________________________________________
+
+
+    Greg Aldering (galdering@lbl.gov)
+
+   last updated May 23, 2000

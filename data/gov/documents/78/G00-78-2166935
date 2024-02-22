@@ -1,0 +1,175 @@
+http://npp.ninds.nih.gov/sow/stm256.htm
+
+           Multichannel Transcutaneous Cortical Stimulation System
+
+Principal Investigator
+
+                                                    Affiliation
+
+                                                                               Contract Number
+
+                                                                                                   Link
+Phil Troyk, Ph.D.     Illinois Inst. of Technology N01-NS7-2365
+
+     __________________________________________________________________
+
+   BACKGROUND
+   The Neural Prosthesis Program (NPP), National Institute of Neurological
+   Disorders and Stroke, National Institutes of Health develops implanted
+   devices that interface directly with the nervous system to replace or
+   supplement function in neurologically disabled individuals.
+   Significant advances have been made in demonstrating the feasibility of
+   bypassing peripheral sensory organs such as the ear and the eye to
+   restore lost sensory functions. Recently, a blind individual had an
+   array of 38 microelectrodes with percutaneous leads implanted into her
+   visual cortex for a period of three months. During this time she was
+   able to see and describe visual phosphenes produced by electrical
+   stimulation through the microelectrodes. Critical engineering
+   parameters, such as phosphene thresholds as low as 4 microamperes and a
+   two point resolution of 500 microns, were determined which now permit
+   the design of a permanent implant controlled by electromagnetic signals
+   passing across the skin. (Ref. Hambrecht, F.T., 1995, Visual prostheses
+   based on direct interfaces with the visual system. In Brindley, G.S.
+   and Rushton, D.N. eds., Baillière's Clinical Neurology:
+   Neuroprostheses, Baillière Tindall, London, pp 147-165.) Because such a
+   permanent implant would not require any leads passing through the skin,
+   there should be little risk of infection and the implant could be left
+   in place indefinitely.
+   Specifically, a transcutaneous stimulation system consisting of a
+   computer controlled transmitter and a group of implantable
+   receiver-stimulator modules, each with 256 stimulus channel outputs, is
+   needed. Research and development are required to assure that the
+   implanted portion of this system will be small enough to fit safely and
+   comfortably beneath the scalp and that the stimulus outputs are
+   flexible enough to provide the range of stimulus parameters necessary
+   for producing patterns of phosphenes by intracortical microstimulation.
+   This transcutaneous transmission system will interface not only with
+   discrete wire microelectrodes but also with silicon microstimulating
+   microelectrodes presently being developed by other investigators in the
+   NPP. The extracorporeal portion of the system will include a computer
+   controlled transmitter for sending power and control signals across the
+   skin to the implanted receiver-stimulator modules.
+   This contract research is a new project not previously supported by the
+   NPP. A bibliography listing publications resulting from NPP studies
+   related to this project is available, free of charge, from the Neural
+   Prosthesis Program, NIH, Federal Building, Room 916, Bethesda, MD
+   20892-9170. (fax: 301-402-1501, e-mail: fh2@cu.nih.gov)
+     __________________________________________________________________
+
+   STATEMENT OF WORK
+   I. Independently, and not as an agent of the government, the contractor
+   shall exert its best efforts to design and fabricate a transcutaneous
+   transmission system suitable for use in a human visual prosthesis. The
+   system shall consist of: 1.) a group of appropriately packaged,
+   implantable, 256 channel receiver-stimulator modules each with high
+   density connectors suitable for connection to 256 cortical
+   microelectrodes; 2.) an external transmitter interfaced to an external
+   computer which can be used to control the implanted receiver-stimulator
+   modules; 3.) a reverse telemetry system for monitoring key voltages in
+   the receiver-stimulator modules. The contractor will not be required to
+   furnish the microelectrodes nor perform any animal or human testing.
+   Specifically the Contractor shall:
+   A. Design the overall system such that it can be expanded in modules of
+   256 channels up to 1024 channels.
+   B. Design the receiver-stimulator module to meet the following target
+   specifications. (Note: Priorities and limits will have to be assigned
+   to some of the stimulus parameters under certain operational conditions
+   to avoid conflicts. These rules of operation will be established
+   shortly after the beginning of the contract in a joint meeting between
+   the contractor and the Project Officer.)
+   1. Capable of passing truly simultaneous biphasic current pulses
+   through at least 16 of any of the 256 microelectrodes that will be
+   connected to its output with the capability of passing interleaved
+   biphasic current pulses through any or all of the non-simultaneously
+   pulsed microelectrodes.
+   2. Capable of stimulating each channel at repetition rates of 10 to 250
+   Hz. The repetition period should have a resolution of 250 microseconds.
+   3. Phase durations of each phase of a biphasic pulse pair controllable
+   over the range of 50 to 750 microseconds (50 microsecond
+   resolution/phase)
+   4. Output compliance voltages of at least +/- 5 volts.
+   5. Amplitude of each phase controllable over the range of0 to +/- 64
+   microamperes (0.5 microampere resolution) unless limited by the
+   compliance voltage.
+   6. Have an anodic bias supply adjustable over the range of 0 to 0.75
+   volts referenced to a standard calomel electrode (SCE). In a functional
+   system, the actual voltage of this bias must be translated to
+   correspond to the use of a large surface area platinum reference
+   electrode that will be used in place of a SCE. Each channel must be
+   connected to the anodic bias supply through large bias resistors (e.g.
+   10 megohm)
+   7. Train length on each channel of 1 to 255 biphasic pulse pairs.
+   8. Train delay times for each channel referenced to a reference timing
+   pulse (e.g, a reference pulse for channel #1) adjustable over the range
+   of 0 to 12700 microseconds (100 microsecond resolution).
+   9. Maximum total output current of each module at least 1024
+   microamperes.
+   10. Have built-in safety features that include the ability to sense the
+   failure of any of the output drivers or other modes of operation that
+   could result in charge imbalance and tissue damage.
+   a. Since it is assumed that space will not permit output coupling
+   capacitors on each channel, a desired feature would be the ability to
+   disconnect a shorted output driver from its power supply.
+   11. The modules should be capable of independent operation, i.e. should
+   any of the modules fail, such failure should not affect the operation
+   of the remaining modules.
+   12. Have a reverse telemetry system for monitoring the following
+   voltages within each module on demand
+   a. The voltage waveform developed across any remotely selected
+   microelectrode during stimulation.
+   b. The anodic bias supply.
+   c. The positive and negative power supply voltages
+   13. Contained in a hermetic package
+   a. Suitable for implantation between the scalp and the skull with
+   dimensions no greater than 5 mm thick, 30 mm wide, and 30 mm long, not
+   including any receiving antennae which can be external to the package.
+   b. With 4 separate 66 contact, high-density, low disconnect force,
+   connectors in the package walls that interface with appropriate
+   connectors terminating the leads from the microelectrodes or on dummy
+   loads during in-vitro testing.
+   c. With smooth, rounded edges and attachment sites for immobilizing the
+   package to the skull in an appropriate manner.
+   C. Design the external transmitter portion of the system to supply
+   power and full control of up to four receiver-stimulator modules.
+   1. The transcutaneous transmission signal should be capable of reliably
+   operating through human scalp tissue with thicknesses ranging from 2 mm
+   to 10 mm.
+   2. The transmitter shall be under the control of a computer whose
+   output can be altered by keyboard entries, by software or by a remote
+   interface that will eventually be controlled by an image sensing device
+   such as a television camera. (The contractor does not need to supply
+   the image sensor, nor any interface electronics between the image
+   sensor and the computer, only the remote interface that will allow full
+   control of the receiver-stimulator modules.)
+   3. Although the external portions of the systems to be supplied under
+   this contract do not need to be "patient portable", the design should
+   not ignore the fact that future generations of the system will be
+   portable.
+   D. Fabricate and test, in-vitro, a complete system with 1024 channels.
+   1. Document the ability of the system to deliver the specified design
+   stimuli at the specified rates without significant cross talk between
+   channels.
+   2. Test functional receiver-stimulator packages with integral
+   connectors for hermeticity and proper electrical operation in an
+   accelerated aging environment of heated saline solution for a period of
+   at least 6 months.
+   E. Before the end of the first year of the contract, furnish the
+   Project Officer with 5 empty but hermetically sealed receiver-module
+   packages with at least one 66 contact connector for in-vivo testing by
+   other investigators in the Neural Prosthesis Program (NPP).
+   F. Before the end of the second year of the contract, furnish the
+   Project Officer with at least 5 fully functional, 256 channel systems,
+   complete with mating connectors so that other investigators in the NPP
+   can attach microelectrode leads and test the complete system in
+   animals.
+   G. Before the end of the third year of the contract, furnish the
+   Project Officer with at least 2 fully functional, 1024 channel systems,
+   complete with mating connectors for attachment to microelectrode leads
+   for human testing by other NPP investigators.
+   H. Should failures occur during the above mentioned in-vitro or in-vivo
+   testing, the remaining required deliverables will be reduced, upon
+   mutual agreement between the contractor, the Project Officer and the
+   Contracting Officer, to allow resources to be applied to the redesign
+   and fabrication of relevant parts of the system.
+   I. The contractor shall coordinate his work, through the Project
+   Officer, with other investigators in the NPP.

@@ -1,0 +1,388 @@
+http://mrdata.usgs.gov/av/mc/avimshelpmc.html
+
+   USGS Home Page
+
+  Help Topics
+
+    1. System and Software Requirements
+    2. Home Page Options
+    3. MapClient Display
+    4. MapClient Tips
+    5. Potential Problems and Recommended Solutions
+    6. Contact Information
+
+   1. System and Software Requirements
+
+          The IMS Internet application works on virtually all computers,
+          however, a 100MHz 486 computer with 32 Mb or more of system
+          (RAM) memory and a monitor screen size of 800x600 or better. is
+          recommended. The IMS application requires a "Java Enabled"
+          Internet browser such as Microsoft Internet Explorer 3.01 or
+          greater, or Netscape Navigator 3.0 or greater. We recommend
+          downloading the most recent version of Microsoft Internet
+          Explorer or Netscape Navigator. A plugin is required for
+          Macintosh users. When you initially select a map to display, a
+          Java applet, called MapClient_31, will be downloaded to your
+          system. Depending on the speed of your system and network
+          connection, the Java applet may take a couple of minutes to
+          load.
+
+   2. Home Page Options
+
+          The Mineral Resources On-Line Spatial Data Home Page presents
+          the user with the following options:
+          (1) Map Viewing Options. The user can select a region of
+          interest by clicking on a state or state name on the state map,
+          the USA icon, or the world icon.
+          (2) Download data. The user can download each data file and it's
+          associated metadata.
+          (3) About this Site. Displays a document describing the goals,
+          structure, technology utilized and future of this application as
+          it pertains to the USGS Spatial Data Delivery Project.
+          (4) Help. Pressing this is your current location, which contains
+          information that will help the user utilize this site.
+          (5) Links. A list of mineral resource related sites.
+          (6) Feedback. An opportunity to give us your comments and
+          suggestions.
+          (7) Software Bugs. Describes known software bugs and error
+          messages.
+          (8) Privacy Statement, Disclaimer, and Data Availability Policy
+          Statements.
+
+   3. MapClient Display
+
+   Once the MapClient application is downloaded to your system you will
+   see an initial display with a map which depends on the Display View
+   selected. The following is a description of the MapClient Interface
+   icons and their functions.
+
+   Table of Contents [Window on left]
+
+   (1)To display a theme select the box to the left of the theme name.
+   (2)Display the legend for a theme by double clicking the theme name in
+   the Table of contents.
+   (3)Select the order in which the themes are displayed (i.e. which
+   themes are displayed on top of others) by selecting (highlighting) the
+   theme name in the Table of Contents and while holding down the left
+   hand mouse button, drag the theme's position either up or down. Note:
+   if a active theme disappears while adjusting the theme order, it may be
+   covered by a solid filled polygon and/or grid/image theme that is
+   higher in the drawing order. Themes are drawn in order from the bottom
+   of the Table of Contents list to the top.
+
+   (3)
+
+   Blue Box with white question mark Detailed Legend [TOC]
+   Click on this icon to display a detailed theme legend (if it exists) in
+   a separate display window.
+
+                             MAP DISPLAY WINDOW
+
+   Gray Box containing white hand symbol PAN
+   Pressing this button allows you to manually navigate through the map by
+   clicking at a location, holding down the left mouse button, dragging
+   the cursor to a new location and releasing the left mouse button. If
+   you pan beyond the edge of the current map display, a new map will be
+   requested from the server.
+
+   Gray Box containing magnifier symbol ZOOM IN
+   Pressing this button allows you to zoom in to a smaller area on the map
+   by clicking at a location or by holding down the left mouse button and
+   dragging a window. If you click on a location, the new map will be
+   centered on that location.
+
+   Gray Box containing magnifier symbol ZOOM OUT
+   Pressing this button allows you to zoom out to a larger area on the map
+   by clicking at a location or by holding down the left mouse button and
+   dragging a window. If you click on a location, the new map will be
+   centered on that location.
+
+   Gray Box containing black box outline with upper left corner
+   highlighted in red and yellow ZOOM TO A FEATURE
+   Pressing this button allows you to zoom to a map extent defined by a
+   set of selected features. One or more themes must be selected
+   (highlighted) in the Table of Contents before using this tool. Clicking
+   on a location or dragging a box with the left mouse button selects all
+   features on the selected theme(s) at the selected location or within
+   the box. A new map is drawn which includes all selected features. After
+   the application zooms to the new extent the selected features will be
+   highlighted in yellow. To remove the yellow highlight, press the Reload
+   button.
+
+   Gray Box containing white letter I within black circle IDENTIFY
+   Pressing this button allows you to get attribute information about a
+   feature on which you click. One or more themes must be selected
+   (highlighted) in the Table of Contents before using this tool. The
+   attribute information will be displayed in a separate browser display
+   window.
+
+   Gray Box containing black lightening bolt HYPERLINK
+   Pressing this button allows you to display related HTML file or image
+   (if available) by clicking on a feature. A theme must be selected
+   (highlighted) in the Table of Contents before using this tool
+
+   Gray Box containing blue character X and red character Y
+   LATITUDE/LONGITUDE
+   Pressing this button allows you to display the latitude and longitude
+   coordinates(dms) for any location contained in the map display window.
+   Click the mouse with the cursor at the desired location and the
+   coordinates are displayed in a box at the lower right corner of the
+   display.
+
+   Gray Box containing left pointing black arrow BACK
+   Pressing this button zooms back to the previous map extent you were
+   viewing.
+
+   Gray Box containing right pointing black arrow FORWARD
+   Pressing this button zooms forward to the map extent you were viewing
+   before pressing the Back button.
+
+   Gray Box containing black arrows pointing inward ZOOMIN FIXED
+   Pressing this button zooms in, by a fixed amount with the resulting map
+   centered on the previous view center.
+
+   Gray Box containing black arrows pointing outward ZOOMOUT FIXED
+   Pressing this button zooms out, by a fixed amount with the resulting
+   map centered on the previous view center.
+
+   Gray Box containing black outline of house HOME
+   Pressing this button returns the display to the initial map extent you
+   saw when you first accessed the map.
+
+   Gray Box containing globe ZOOM TO FULL EXTENT
+   Pressing this button zooms to the extent of all the themes listed in
+   the Table of Contents.
+
+   Gray Box containing black box with upper left corner highlighted with
+   black and yellow plus sign NEW MAP WINDOW
+   Pressing this button opens up a new resizable map in a separate browser
+   window. This is particularly useful if your screen resolution is not
+   800 x 600. Opening a new window and clicking the maximum button on the
+   new window allows the application to make full use of the available
+   screen.
+
+   Gray Box containing black box with empty rows and columns THEME TABLE
+   Pressing this retrieves the attribute data for the theme(s) selected by
+   the user in the Table of Contents. A theme must be highlighted in the
+   Table of Contents before this tool is used.
+
+   Gray Box containing black binoculars SEARCH
+   Pressing this button brings up a dialog box where you can enter search
+   criteria for locating specific map features. Look under (4) MapClient
+   Tips for additional information on utilizing this tool.
+
+   Gray Box containing black outline of computer printer PRINT
+   Pressing this button downloads a graphic image (map layout) of the
+   current map display. A separate Layout Options Window will appear
+   allowing the user to enter a map title, select legend components, and
+   select the graphic format for the layout. The map and possibly
+   additional legend pages, will be downloaded as one or more new browser
+   windows. Each window can be printed, using the browser's print
+   function, as an 8.5" x 11" page. Be sure to select "Landscape" mode and
+   "fit to page" for printer options. Each window can also be saved to
+   disk for input into other applications.
+
+   Gray Box containing black arrows oriented in a circle RELOAD
+   Pressing this button reloads the current map.
+
+   Gray Box containing white character X within dark gray circle STOP
+   Pressing this button stops retrieving the map.
+
+   Gray Box containing black question mark ABOUT
+   Pressing this button enables you to get more information about the map
+   you are using. Pressing this button displays a dialog containing the
+   comments about the map such as which themes will currently display only
+   at set map scales.
+
+   Gray Box containing black arrow pointing left HIDE/SHOW TABLE OF
+   CONTENTS
+   Pressing this button allows the map Table of Contents to be hidden to
+   increase the map display area. Pressing this button a second time
+   restores the Table of Contents.
+
+   Home:    Returns user to the Mineral Resources On-Line Spatial Data
+   home page.
+   Metadata:    A link to metadata records for each of the themes.
+   Field Attribute Help:    This is a link to field attribute codes for
+   several themes that have coded data.
+   Map Display Help:    The current map display help page.
+
+   4. MapClient Tips
+
+          (1)To draw either the Mine Claim Density or NURE Sediment
+          Chemistry data sets do not select the check box left of the
+          title. Underneath the title select the appropriate data set. For
+          example, if you want to display the Arizona Mine Claim Density
+          data [Make sure you are zoomed in sufficiently close (see #3
+          below)], select (click) the box next to AZ.
+
+          (2) To improve performance, limit the number of datasets drawn
+          at once and if possible, zoom in to a smaller area. A good start
+          is turning off the Elevated Shaded Relief image located at the
+          bottom of the Table of Contents unless it is desired as a
+          background.
+
+          (3) If you select a theme and nothing is drawn in the display
+          window, the cause is most likely that the theme has a limited
+          display scale. This means that the theme will draw only when you
+          have zoomed in sufficiently close. To see which themes have
+          display limits set, select the ? (About button) in the lower
+          left hand corner.
+
+          (4) If only a portion of the graphic is drawn in the MapClient
+          display window, select the reload button.
+
+          (5) Find Feature button:
+          (a) If you do not know the exact spelling of the attribute you
+          want to find, then you can use standard wildcards (* and ?) in
+          place of the letter(s) you do not know.
+          (b) If you are searching for a number that may be contained in a
+          string field within the database, e.g., a FIPS code, you should
+          place double quotes around that number, for example "435434".
+          (c) A list of features matching your search criteria will be
+          displayed in a standard theme table format. The table can then
+          be manipulated as if it were a complete theme table.
+          (d) The Find tool doesn't work on either GRID (raster) data or
+          TIF images thus some of the themes won't be displayed in the
+          Choose Layer scroll list.
+          (5) Retrieve Theme Tabular Data:
+          (a) Highlight only one theme in the Table of Contents before
+          this tool is used.
+          (b) The attribute data for all features in the current map
+          extent, for the selected theme, will be downloaded as a table.
+          (c) There is a limit to the size of the table downloaded to the
+          client. All the attribute records will be downloaded until a
+          maximum threshold is met. A message will appear at the bottom
+          indicating the maximum number of rows displayed
+          (d) After the table has been downloaded, select view (on table)
+          to display a list of options that can be performed on the table
+          data.
+          (5) Download a map image for printing:
+          (a) A graphic image (map layout) of the current map display can
+          be created.
+          (b) Enter a title for the layout of up to 3 lines of 40
+          characters.
+          (c) Select one of the following 3 image formats: JPEG, Placeable
+          WMF (Windows Metafile), Postscript New (eps)
+          Note: JPEG format is recommended due to the small file size that
+          is generated.
+          (d) Select one or more of the following options:
+
+                (1) Legend: A separate legend will be created
+                corresponding to only those themes currently selected (in
+                the Table of Contents) and those features in the current
+                map display.
+                Note: The legend may consist of several files depending on
+                the number of themes selected and the complexity of their
+                legends.
+                (2) North Arrow: A north arrow is displayed in the lower
+                left portion of the image.
+                (3) Scale Bar: A scale bar (mile units) is created.
+                (4) Maintain Aspect Ratio of Map:
+
+   5. Potential Problems and Recommended Solutions.
+
+          (1) The Java applet MapClient fails to load.
+
+          Your browser may not be 'Java enabled". If you are using
+          Microsoft's Internet Explorer, go to the menu and click on View
+          and under Options select Security and make sure the "Enable
+          Java" programs box is checked. For Netscape users, go to the
+          main menu and click on Edit and under Preferences select
+          Advanced. Next, make sure that the "Enable Java" box is checked.
+          (2) Netscape 4.0 users:
+
+          Windows 95/98, NT systems running early versions of Netscape 4.0
+          may lock-up when starting Java. Users should upgrade to Netscape
+          version 4.08 or higher. On Windows NT systems, running Netscape
+          4.04, users may experience problems when starting Java with the
+          monitor set to display true color. Set the monitor to display
+          16.7 million colors or fewer to fix this problem or upgrade to a
+          more recent version.
+          (3) Browser crashes or locks up when MapClient applet starts
+          loading.
+
+          Cause: There is a conflict between Java and your browser's
+          Just-In-Time (JIT) compiler. This behavior may occur with either
+          Netscape Communicator 4.x or Microsoft Internet Explorer 4.x. It
+          does not happen to all machines running these browsers.
+          Solution: Disable your browser's JIT compiler. To disable
+          Microsoft Internet Explorer's JIT compiler: From the View menu,
+          choose Internet Options, select the Advanced tab, scroll down to
+          the Java VM section and uncheck the Java JIT compiler. Restart
+          Internet Explorer. To disable Netscape Communicator's JIT
+          compiler: Look for the file jit3240. DLL in Netscape's install
+          directory. The default path to this file is
+          C:\Netscape\Communicator4.04\Program\Java\Bin. Shutdown Netscape
+          and rename the file to jit3240.old. Restart Netscape.
+          Notes: Normally, when this happens with Netscape, the browser
+          will freeze and you will have to shut it down with Task Manager
+          on Windows NT and ctrl-alt-del on Windows 95. Typically Internet
+          Explorer will just crash. In either case, you will need to
+          disable the JIT compiler and restart the browser.
+          (4) A Separate Window is displayed stating: Map Server is Busy".
+
+          Cause: Many people are currently accessing the site at the same
+          time.
+          Solution: If possible, revisit the site at a later time when
+          demand is lower.
+
+          (5) Internet Explorer 3.02 hangs when MapClient is running on
+          Windows NT 4.0 (with Service Pack 3)
+
+          Cause: Internet Explorer version 3.02 may hang when connecting
+          to a Web link that contains a Java application (e.g. MapClient)
+          after you have installed Windows NT version 4.0 Service Pack 3.
+          The application will stop responding only if the Display
+          Properties Color Palette is set to True Color.
+          Solution: Do not use the True Color palette in Display
+          Properties.
+          Notes: Microsoft has confirmed this as a problem in Windows NT
+          version 4.0. A supported fix is now available, but is not fully
+          regression-tested and should be applied only to systems
+          experiencing this specific problem. Unless you are severely
+          impacted by this specific problem, Microsoft recommends that you
+          wait for the next Service Pack that contains this fix. Contact
+          Microsoft Product Support Services for more information. The fix
+          is also available for download on the Internet at the following
+          URL:
+          ftp://ftp.microsoft.com/bussys/winnt/winnt-public/fixes/usa/nt40
+          /hotfixes- postSP3/java-fix. This information was taken from
+          Microsoft TechNet, document ID Q168748.
+          (6) Cannot view served maps with Internet Explorer 3.x on
+          Windows.
+
+          Cause: There is a conflict with the Java program and Internet
+          Explorer's internal Java JIT (Just-In-Time) compiler.
+          Solution: Download the update for the Microsoft Virtual Machine
+          for Java from: http://www.microsoft.com/java
+          Notes: See Microsoft TechNet Document Q168806 for more
+          information or upgrade to a more recent browser version.
+          (7) Netscape Communicator issues error: "The certificate issuer
+          for this server isn't recognized by Netscape. The security
+          certificate may or may not be valid." Or
+          "java.lang.security.exception : system classes was not signed"
+
+          For Netscape Communicator 4.5 users, go to the main menu and
+          click on Edit and under Preferences select Advanced. Next, make
+          sure that the "Enable Java" and "Enable JavaScript" boxes are
+          checked. If you still receive these errors you will have to
+          reinstall Netscape Communicator 4.5. Make sure that you first
+          completely uninstall your previous version of Netscape utilizing
+          Microsoft's Add/Remove programs (under control panel). Next,
+          delete any previous Netscape profiles that were created.
+          (Remember to manually save your bookmarks before doing this).
+          You are now ready to install a clean version of Netscape
+          Communicator 4.5.
+
+   6. Contact Information
+
+          If you experience any problems, or have a question or comment
+          regarding the Mineral Resources On-Line Spatial Data site,
+          please contact Tom Kress.
+     __________________________________________________________________
+
+   Go Back Arrow Go back.
+   Pressing this page is <http://mrdata.usgs.gov/avimshelpmc.html>
+   Maintained by Tom Kress
+   Last Modified: 01/18/01

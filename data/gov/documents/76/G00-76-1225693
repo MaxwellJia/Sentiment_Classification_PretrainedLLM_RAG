@@ -1,0 +1,584 @@
+http://emlib.jpl.nasa.gov/EMLIB/files.html
+
+   JPL Home Page JPL - Earth JPL - Solar System JPL - Stars & Galaxies JPL
+   - Technology
+
+                              JPL/Caltech link
+     __________________________________________________________________
+
+                               [software.gif]
+
+                            [Local Free Software]
+                            [Non-local Software]
+                            [Software from Books]
+                              [EMLIB Home Page]
+
+                          Local Free EMLIB Software
+
+     * agursc.sty
+       agursc-sample.tex
+       agursc.txt
+       LaTeX sty file used for publications in AGU Radio Science. The file
+       agursc-sample.tex shows an example of how to use the sty file to
+       produce layout ready copy for AGU.
+     * complex.2.0.tar.Z
+       Complex dense linear solver from:
+
+     T. Cwik, R. van de Geijn, and J. Patterson, "Application of
+     Massively Parallel Computation to Integral Equation Models of
+     Electromagnetic Scattering (Invited Paper)," J. Opt. Soc. Am. A,
+     Vol. 11, No. 4, April 1994.
+     * cyl.f
+       Calculates exact series solution for RCS of an infinite cylinder.
+     * dte.f and dbess.f (required by dte.f)
+       by Keith Lysiak
+
+     "... calculates the exact solution for the near fields in and around
+     a 2-D cylinder. This is for the 2-D TE case. ... The code is for
+     "near" fields and due to the limits on the number of HANKLE
+     functions, it will not work if a large area relative to the size of
+     the cylinder is chosen. The code could be modified to perform far
+     field approximations to eliminate this problem. ... I also have
+     coding for the TM case but it has not been thoroughly checked out. I
+     provide it on an individual case with that understanding. I can be
+     contacted at: klysiak@swri.edu".
+     * grating.f
+       grating.txt
+       by Tom Cwik. Computes the exact reflection and transmission
+       coefficients for a p.e.c. strip grating. For this exact solution,
+       the strip width to cell size ratio is 0.5 and the excitation is
+       normally incident. The solution is due to Weinstein using the
+       factorization method.
+     * kdps.tar.Z
+       kdps.txt
+       by Bengt W Littmann. Mode matching program calculating the
+       scattering parameters of a waveguide cross-section jump. See
+       kdps.txt for more info on opening files.
+     * miev.tar.Z
+       Calculates scattering from homogeneous or conducting sphere for a
+       wide range of arguments; MIE series solution.
+     * MOMIC, a user-oriented method-of-moments PC program, suitable for
+       analyzing the electromagnetic behaviour of arbitrarily shaped wire
+       antennas and scatterers, modeled by piecewise linear segments, in
+       free space. The code is provided freely for non-commercial usage.
+     * monopole.f
+       monopole.txt
+       by Louis Wilson. Calculates the fields of a monopole on a circular
+       ground plane using the Uniform Theory of Diffraction using a
+       formulation by Dr. Robert Kouyomjian. Operation is interactive and
+       the output is a file (monopole.dat) of angle (degrees) and
+       normalized field (deciBels). The program is set up to output from 0
+       to 360 degrees in 1 degree increments.
+     * polar_plot.tar.Z
+       polar_plot.txt
+       by Louis Wilson. PostScript polar plotting program
+     * powerSmith.zip
+       PC version of RF modeling tool and Smith Chart. With s-parameters,
+       stability circles, gain circles and noise circles. AutoMatch
+       function and fine tuning of composite components. By David Tomanek
+       and Martin Kratoska (ok1rr@qsl.net)
+     * rel_error.f
+       by Marco Kunze. Calculates the relative error in the infinity-norm
+       in "Ax" if Ax = b
+     * smith-ps.f
+       smith-ps.txt
+       by Louis Wilson. Plots normalized impedance data on a smith chart.
+       Sample input file is included in monopole.txt. The output is a file
+       (smith.ps) in Postscript format.
+     * stack.for
+       by Barry Chambers.
+
+     "... Calculates and plots the variation with frequency of the
+     reflection and transmission coefficients for a stack of lossy
+     dielectric layers with optional interface impedances. The incident
+     wave may be at any angle and have either parallel or perpendicular
+     polarisation. The software is based on theory given in the book:
+     "Radar Cross-Section" by Knott, Schaeffer and Tuley (Artech House
+     1993) and can be used to design multi-layer windows or radar
+     absorbers."
+     * tscht.f
+       by Marco Kunze. Calculates the Tschebyscheff-Polynomials T of the
+       first order. The argument of the polynomials is real.
+     * tschu.f
+       by Marco Kunze. Calculates the Tschebyscheff-Polynomials U of the
+       second order. The argument of the polynomials is real.
+     * xyfdtd.tar.Z
+       by Louis Wilson. 2 dimensional Finite-Difference Time Domain demo
+       program using the Yee algorithm and Mur absorbing boundary
+       conditions. Uses X-windows to display the wave propagation. The
+       input file contains all the input parameter definitions with a
+       sample case.
+     * zeros.f
+       zeros.txt
+       by Louis Wilson. This subroutine computes the zeros of the Bessel
+       function J or its derivative J' and stores a table to an array.
+       This array may be written to a file for later use. It can be used
+       to compute cylindrical waveguide modes.
+     * MATLAB macro files.
+       vswr.m : Simple vswr plotter
+       radpat.m : Radiation Pattern plotter
+       smith.m : Smith Chart plotter
+       gkeybox.m : Legend Box automator (used with *.m plotters above)
+       polarplot.m : Plots up to three radiation patterns with choices of
+       line type, grid type, axis labeling etc.
+
+   Unhappy with our software selection? Or our file formats?
+   We will gladly accept any software to add to this page, or any other
+   comments.
+   Drop us a note: emstaff@emlib.jpl.nasa.gov [mail3.gif]
+
+                            [Local Free Software]
+                            [Non-local Software]
+                            [Software from Books]
+                              [EMLIB Home Page]
+
+                             Non-local Software
+
+     * Ansys/Emag, a finite element code from Ansys Corp. This code is
+       commercial.
+     * APLAC, a general purpose nonlinear circuit, system, and
+       electromagnetic FDTD simulation and design program, from the
+       Circuit Theory Laboratory of the Helsinki University of Technology,
+       Nokia Research Center, and Nokia Mobile Phones. This code is
+       commercial, and free demo versions are available.
+     * ATLASS: Advanced Transmission Line Analysis and Synthesis System.
+       This code, from ElectroMagneticWorks Inc., is commercial.
+     * Boundary Element Method Codes: A set of Fortran codes for carrying
+       out the central task in solving the Helmholtz equation via the BEM
+       in a variety of domains. The codes use the simplest elements, are
+       easy to use, versatile and efficient. They are for use in DC
+       (electrostatics) and AC (electromagnetics), and were written by
+       Stephen M. Kirkup. These codes are non-commercial.
+     * CARMEN is the advanced 3d rotating machine module for full
+       rotational analysis from Vector Fields, and forms part of the
+       OPERA-3d suite of software. This is a commercial code.
+     * CFD-Maxwell / CFD-Maxwell-Suite, a newly developed 3D FDTD solver
+       for arbitrary structured and unstructured meshes. Packages contains
+       2 preprocessors: CFD-GEOM (classical model generation) and
+       CFD-Micromesh (microelectronics/optics process emulator) as well as
+       the postprocessor CFD-VIEW (MPEG-1 and MPEG-2 movie creation
+       capability) Available for i386 (Win/Linux) as well as most RISC
+       boxes. This code is commercial. (Free beta licenses through
+       12/31/2001)
+     * CONCERTO is an advanced new software package for microwave design
+       from Vector Fields. It uses the powerful Finite Difference Time
+       Domain method in conjunction with a unique technique known as
+       conformal meshing which allows the use of non rectangular grids
+       that conform more precisely to curved surfaces. This easy to use
+       package is fast, flexible and accurate. In use by academic and
+       industrial users all over the world, the applications covered
+       include waveguide components, antennas, resonators, microstrips and
+       microwave heating. This is a commercial code.
+     * COSMOS/M, finite element modeling, meshing, visualization, and
+       analysis software from Structural Research and Analysis Corp. This
+       code is commercial.
+     * CST Microwave Studio, efficient and accurate Modeling of High
+       Frequency Devices, based on the Finite Integration Theory combined
+       with PBA (Perfect Boundary Approximation). This code is commercial.
+     * Electric Field, a visual demonstration of electric fields intended
+       for students, from Socrates Software. This code is commercial.
+     * ELEKTRA is the dynamics analysis module for ac or transient
+       excitation with linear or non-linear materials from Vector Fields.
+       Rotational or linear velocity problems can also be modelled, and
+       forms part of the OPERA-3d suite of software. This is a commercial
+       code.
+     * Dr. Atef Z. Elsherbeni's page of Recently Developed EM Related
+       Software. These codes are non-commercial.
+     * EM-Interplay, EM-Aerial and EM-Visual, three products from
+       Panoramic Technology that provide 3-D electromagnetic field
+       simulation for advanced semiconductor lithography from Panoramic
+       Technology. EM-Interplay interfaces to UC Berkeley's FDTD
+       electromagnetic simulator TEMPEST or to Panoramic Technology's
+       TEMPESTpr. These codes are commercial.
+     * EM3DS is a MoM-based full-wave solver for planar structures, able
+       to handle thick lossy conductors rigorously, so suitable for MMIC
+       analysis, including MEM switches, CPW etc. It also addresses the
+       analysis of a class of 2-port waveguide components. A completely
+       free (but functionally limited) version may be downloaded. A 30-day
+       complete (full-functional) download is also available.
+     * EMA3D, three dimensional time domain finite difference solution of
+       Maxwell's equations from EMA, Inc. This code is commercial.
+     * EMAP, a family of 3-D finite element codes from the University of
+       Missouri at Rolla's EMC lab. These codes are non-commercial.
+     * EMFlex: the time-domain finite element solver for Maxwell's
+       equations, developed by Weidlinger Associates Inc. This code is
+       commercial.
+     * EMIT, a set of modeling tools for EMI modeling, including MoM and
+       FDTD kernels, from SETH Corporation. This code is commercial.
+     * EMLAB, an FDTD-based 2D and 3D electromagnetics tool suite
+       including a graphical modeling tool and an automatic grid
+       generator. Target applications are RF, Microwave and millimeter
+       wave applications, and photonic applications, from ISE Integrated
+       Systems Engineering AG. This code is commercial.
+     * Empire, a versatile 3D electromagnetic field simulator developed at
+       the IMST. It is based upon the powerful 3D-Finite Difference Time
+       Domain Method (FDTD). Scattering parameters, radiation patterns,
+       field plots etc. are generated for a user defined frequency range
+       within only one simulation process. A smart 3D editor, which is
+       part of the Empire Basic Package can be used for structure
+       definition. AutoCADTM, a well known mechanical desktop program, can
+       be used as the Graphical User Interface (GUI), too. Monitoring and
+       animation can give physical insight into the electromagnetic wave
+       phenomena while accurate results are obtained with little effort.
+       The code is commercial.
+     * EMPLAN is a computer software to perform full-wave electromagnetic
+       (EM) analysis of printed multilayer circuits. Its formulation is
+       based on the mixed potential integral equation employing
+       spatial-domain closed-form Green's functions. This code is
+       commercial; a demo version is also available.
+     * EMPOWER, a planar 3D electromagnetic simulator for MIC, MMIC and
+       other planar RF/microwave circuits. It may be used standalone to
+       generate S-parameter data and with GENESYS suite to integrate
+       synthesis, schematic entry, layout, circuit theory and
+       electromagnetic simulation. This code is commercial.
+     * EMS is a 3D-field simulator for low frequency electromagnetic and
+       electromechanical applications. EMS combines a high level of
+       functionality and accuracy with ease-of-use, and is applicable in a
+       wide variety of designs. This code is commercial.
+     * EMSightEMSight is a Windows 95/NT based electromagnetic simulator
+       for analyzing and the behavior of high-frequency, RF and microwave
+       circuits and antennas. EMSight can analyze arbitrary planar
+       circuits including interconnecting vias on an unlimited number of
+       dielectric layers with an unlimited number of ports. The code is
+       commercial; a 30-day demo is available.
+     * Emu/fdtd, a 3D Maxwell solver, from Brunel University's Parallel
+       FDTD Project. This code is commercial, but may be freely available
+       under some conditions.
+     * Ensemble, a planar electromagnetic field simulator from Ansoft.
+       This code is commercial.
+     * [new.gif] Equipotential Surfaces and E Lines, 3D Software for
+       calculation and visualization of equipotential surfaces and
+       electric field lines with topographic view and deals with many
+       kinds of charges (dotive, linear, page..sphere, di electric). The
+       program runs on PC computers with Win95 compatible operating
+       systems, the downloaded version will work will all features for 30
+       times, then the user will decide to buy it or not.
+     * FastCap and FastHenry, tools developed at M.I.T. for the solution
+       of Maxwell equations and extraction of circuit parasites
+       (inductance and capacitance). These codes are free.
+          + FastCap ftp site: the source files for the Unix version, the
+            original docs, the articles explaining the algorithms
+            implemented in the software
+          + FastHenry ftp site: the source files for the Unix version, the
+            original docs, the articles explaining the algorithms
+            implemented in the software
+          + Windows versions of FastCap and FastHenry
+     * FEKO (South African site and US mirror site) is a numerical
+       electromagnetics code based on the Method of Moments for solving
+       general electromagnetics radiation and scattering problems. In
+       order to solve electrically larger structures, the MoM has been
+       hybridized with high frequency techniques such as Physical Optics
+       and the Uniform Theory of Diffraction. This code is commercial.
+     * FEMLAB, a general purpose finite element code based on MATLAB for
+       electromagnetics, photonics and multiphysics modeling. This code is
+       commercial.
+     * FEMM (Finite Element Method Magnetics) addresses 2-D planar and
+       axisymmetric magnetic problems (including linear and nonlinear
+       magnetostatic problems and low frequency harmonic problems,) for
+       Windows. This code is shareware.
+     * FIMMWAVE and FIMMPROP-3D are rigorous EM codes from Photon Design,
+       aimed at the optical domain, using efficient, fast modal
+       decomposition techniques, with bidirectional, full vector,
+       anisotropic propagation capability, in 2D and 3D, as well as near
+       omni-directional capability in 2D. These codes are commercial.
+     * Flux3D and Flux2D, finite element codes from Magsoft Corp. These
+       codes are commercial.
+     * FullWave, a PC-based 3-D finite-element code from Infolytica Corp.
+       This code is commercial.
+     * Gemini, a PC-based 2-D finite-element code from Infolytica Corp.
+       This code is commercial.
+     * GetDP, a scientific computation program for the numerical solution
+       of integro-differential equations, using finite element and
+       integral type methods. The software is free.
+     * GRASP8W, a set of tools for analysing general reflector antenna
+       systems. The software package calculates the electromagnetic
+       radiation from systems consisting of multiple reflectors with
+       several feeds and/or feed arrays using advanced, state-of-the-art
+       analysis methods. These comprise Physical Optics, Physical Theory
+       of Diffraction and Uniform Geometrical Theory of Diffraction. To
+       assist the user in setting up the scattering geometry as well as in
+       visualising the results, the software package also includes a
+       graphical interface in the form of pre- and post-processors. The
+       software, developed by TICRA, is commercial. A Student Edition,
+       GRASP8W-SE, is available as freeware for both Windows and Linux
+       platforms.
+     * Harmonica, a frequency domain circuit simulator for linear and
+       non-linear design from Ansoft. This code is commercial.
+     * HFSS, a finite element code from Ansoft. This code is commercial.
+     * HFSS, a finite element code from Hewlett Packard. This code is
+       commercial.
+     * HFWorks is a fully 3D field simulator for RF, Microwave, and
+       Wireless applications. These applications include: dielectric
+       resonators, oscillators, tuning elements, waveguide twists and
+       bends, waveguide tees, directional couplers, isolators,
+       circulators, attenuators, antennas, high Q filters, etc. This code
+       is commercial.
+     * IE3D, a PC-based full- wave EM simulation tool, from Bay Technology
+       Inc. This code is commercial.
+     * LC, a simulation tool for the design of high-speed interconnects
+       based on a 3-D FD-TD algorithm, from Silicon Graphics, Inc. This
+       code is commercial, but freely available for Cray and SGI
+       platforms.
+     * LINMIC+/N, the Microwave & RF IC Design Suite - mostly
+       electromagnetics-based software for high frequency RF and microwave
+       IC design and layout (GDS-II,DXF,..) from AC Microwave (formerly
+       Jansen Microwave). The CAD package features interactive design
+       speed and includes optimization, device modeling and nonlinear
+       simulation. This code is commercial; a demo version is also
+       available.
+     * lucernhammer is a radar cross section prediction suite which
+       analyzes arbitrarily shaped facetized 3D target models. It uses
+       Physical Optics, the Physical Theory of Diffraction, and the
+       Shooting and Bouncing Ray method for higher-order contributions.
+       100% C, parallel processing, portable to many different platforms.
+       Available as a free beta to United States Government agencies,
+       contractors, and qualified educational institutions.
+     * Mafia, a Simulation Tool for Electromagnetic Analysis and Design,
+       based on the Finite Integration Theory. This code is commercial.
+     * MagNet, finite-element software from Infolytica Corp. This code is
+       commercial.
+     * MaX-1, a PC-based CEM code, from the Swiss Federal Institute of
+       Technology's Electromagnetic Code Designers Group. This code is
+       commercial. A demo version is available.
+     * Maxwell 2D and 3D field simulators from Ansoft, Inc. These codes
+       are commercial.
+     * Maze series of codes, 3-D PC-based finite element software from
+       Field Precision. These codes are commercial.
+     * MEFiSTo for Windows 95/98/NT is a highly interactive time domain
+       electromagnetic simulator with a VirtualElectromagnetics Laboratory
+       for both academic and research applications, based on the TLM
+       method. It is available from Faustus Scientific Corporation. This
+       code is commercial.
+     * MEGA, solves electromagnetic differential equations using the
+       finite element method, from the University of Bath's Applied
+       Electromagnetics Research Centre. This code is commercial.
+     * Mesh-TV, an interactive graphical analysis tool for visualizing and
+       analyzing data on 2D and 3D meshes from Lawrence Livermore National
+       Laboratory. This software is non-commercial.
+     * Micro-Stripes, 3-D TLM software from Flomerics. This code is
+       commercial.
+     * MMP, the multiple multipole program, from the Swiss Federal
+       Institute of Technology's Electromagnetic Code Designers Group.
+       This code is commercial. A demo version is available.
+     * Momentum a planar finite element code from Hewlett Packard. This
+       code is commercial.
+     * MultiSTRIP, written to analyze and design multilayered arbitrary
+       shaped microstrip antennas on multiple dielectric layers. The
+       solution is done by rigorous solution of integral equation via
+       Galerkin Method (Moment Method) and using the correct Greens
+       functions. The code is non-commercial.
+     * MyWebTA is a web site that contains interactive educational EM
+       simulations (applets). The web site is commercial as access to the
+       simulations is provided for a nominal yearly fee.
+     * NEC, the Numerical Electromagnetics Code.
+
+     Two unofficial web sites containing the non-commercial software
+     exist:
+          + one is maintained by Ray Anderson
+          + one is maintained by Peter Richeson
+
+     NECSee, a visualization tool for antennas, which operates on NEC
+     output files. One version is free, the enhanced version is
+     commercial.
+     NEC-Win Pro and NEC-Win Basic, PC-based GUIs for the NEC code, from
+     Nittany Scientific. These codes are commercial.
+     QuikNec Antenna Software, which generates geometries used in antenna
+     simulations, usable under Windows, from ThinkWireless, Inc. This
+     code is commercial.
+     [new.gif] SuperNec 1.53, is a hybrid Method of Moment (MoM) /
+     Unified Theory of Diffraction (UTD) antenna analysis program. The
+     Matlab graphical interface that sets this product apart from the
+     rest was developed by Dr Nitch. SuperNEC 1.53 incorporates ready
+     made antenna assemblies,support for dielectric-coated wires and
+     context sensitive help. SuperNEC 1.53 is free for non-commercial use
+     to everyone who has Matlab 5.2 or better.
+     Other information and links about NEC, written by Dave Michelson, is
+     also available.
+     * Netlib, a vast collection of mathematical software, files, reports,
+       etc... This software is non-commercial.
+     * Numerical Recipes Home Page
+     * Numeric Python EM Project
+     * OPERA-2D suite of finite element software from Vector Fields
+       includes modules for static and time varying electromagnetic field
+       modelling in 2 dimensions. The interface to OPERA-2d allows easy
+       geometry input and advanced output options. A scripting language is
+       available for automation. Statics (ST): The static analysis module
+       for electrostatic & magnetostatic calculations, linear & non-linear
+       materials. Dynamic (AC/TR/VL): The dynamic analysis module for ac
+       transient and velocity (linear or rotational) calculations.
+       Rotating Machine (RM): The rotating machine module for full
+       rotational motion including mechanical effects and variable speed.
+       Space Charge (SP): The space charge module for full space charge
+       analysis of particle beams including a large library of emitter
+       surfaces. Mechanical (SA/TH): The Stress and thermal analysis
+       module allows input from electromagnetic analysis or stand alone
+       operation. Design Environment (DE): The design environment allows
+       full parameterisation of models with separate user and engineer
+       interfaces. This is a commercial code.
+     * OPERA-3D suite of finite element software from Vector Fields
+       includes modules for static and time varying electromagnetic field
+       modelling in 3 dimensions. The 3D modules include TOSCA, ELEKTRA,
+       CARMEN and SCALA, with a dedicated geometric modeller for easy
+       geometry input, and an advanced post-processor. A scripting
+       language is available for automation. of model creation, analysis,
+       and result processing. This is a commercial code.
+     * POISSON/SUPERFISH and other software maintained and distributed by
+       the Los Alamos Accelerator Code Group. These codes are
+       non-commercial.
+     * ProMAX/2D from FINLE Technologies, determines the electric field
+       beneath a complex 2-dimensional mask cross-sectional structure
+       using the FDTD algorithm. This code is commercial.
+     * QuickField, simulation software for EM, heat transfer and stress
+       analysis, for PCs under MS DOS or Windows.
+          + QuickField main site, for information on the commercial
+            software.
+          + QuickField support site, for technical support and a shareware
+            version.
+     * Quick Wave 3-D, a general purpose electromagnetic simulator based
+       on the finite-difference time-domain method with new models and
+       procedures.
+     * RFMATCH, a graphic impedance calculator. The program can be used to
+       match sources to loads with networks made with impedances,
+       inductors, capacitors, transmission lines, stubs and transformers.
+       Frequency and components can be trimmed on line and the result is
+       imediately shown. Frequency sweep and Monte Carlo simulation can be
+       used to evaluate the behaviour of the matching network. Autotuning
+       helps the user to find a solution to matching problems. A pop-up
+       calculator for complex numbers is also included. This PC program is
+       freeware.
+     * SABOR (Software de Análisis de BOcinas y Reflectores, Software for
+       the analysis of Horns and Reflectors), a pre-design and educational
+       program for computing radiation patterns for both horns and
+       reflectors, This code is for PCs under Windows. This code is
+       shareware.
+     * SCALA is the space charge module for full space charge analysis of
+       particle beams including a large library of emitter surfaces. The
+       module forms part of the OPERA-3d suite of software from Vector
+       Fields. This is a commercial code.
+     * SCATMECH, a public-domain library containing a variety of C++ codes
+       implementing theories and models for the scattering of polarized
+       light by roughness, subsurface defects, and particles on surfaces
+       and thin films. Also contains code for Mie scattering, for handling
+       the Stokes-Mueller and Jones representations of polarized light,
+       for reflection and transmission of light by dielectric thin films,
+       and for handling the optical properties of materials. These codes
+       are non-commercial.
+     * SI 2D and SI 3D, electromagnetic field simulation and SPICE
+       analysis for high speed signal integrity design codes from Ansoft.
+       The codes are commercial.
+     * SLIM, a comprehensive suite of software for the finite element
+       analysis of EM fields. Its modular arrangement contains facilities
+       for mesh generation, field solution and post processing of field
+       data in 2D, axi-symmetric and 3D geometries. Modeling encompasses
+       static, dynamic and transient studies, motion (rotating machines,
+       actuators),non-linearity, eddy currents. Free evaluation software
+       available.
+     * Sonnet Suite, 3-D MoM Planar High-Frequency Electromagnetic
+       Software, from Sonnet Software Inc. This code is commercial. Also
+       available is a free version with some restrictions, Sonnet Lite.
+     * Space and Naval Warfare Systems Center Software - Various
+       high-fidelity EM propagation models, databases, and
+       DOS/Windows95/NT assessment systems for evaluating the effects of
+       complex atmospheric environments and terrain upon 100MHz to 57GHz
+       propagation. These codes are non-commercial.
+     * SuperNEC, see SuperNEC, under NEC
+     * TKC101: Includes Specmaster and Clock Architect. Specmaster
+       presents commercial EMI specs and provides distance scaling for
+       radiated emissions limits, worst case of US and international
+       specs. Clock Architect facilitates "tweaking" of clock frequencies
+       so as to avoid harmonic coincidence at frequencies where emissions
+       are of concern. Radiation Profiler: radiation from microstrip
+       transmission line, both resistive and reactive loads. These codes
+       are from TKC and are commercial.
+     * Symphony, a high frequency system simulator for the analysis and
+       design of communication systems from Ansoft. This code is
+       commercial.
+     * TLM Program, an implementation of the TLM method from the
+       University of Victoria's TLM Modeling Group. This code is
+       non-commercial.
+     * Michael I. Mishchenko's T-matrix codes for computing 3D scattering
+       by rotationally symmetric dielectric particles in fixed and random
+       orientations. These codes are non-commercial.
+     * TOSCA is the renowned static analysis module for electrostatic and
+       magnetostatic calculations from Vector Fields. It uses the finite
+       element method for linear and nonlinear material modelling, and
+       forms part of the OPERA-3d suite of software. This is a commercial
+       code.
+     * ToyFDTD is a series of heavily-commented source codes demonstrating
+       implementation of 3-dimensional FDTD capabilities and published
+       under the GNU General Public License. The first in the series,
+       ToyFDTD1, is a stripped-down, minimalist, 3D FDTD code illustrating
+       the basic tasks in implementing a simple 3D FDTD simulation. Also
+       available are ToyFDTD2, ToyFDTD3, ToyFDTD4...
+       In a similar spirit, though not heavily commented, the CEMTACH
+       group also offers ToyPlaneFDTD, a 2-D FDTD code, and ToyTLM, a 3-D
+       TLM code. Just added is a Discussion Board for swapping ideas about
+       getting your FDTD code to work right...
+     * TriComp, 2-D PC-based finite element software from Field Precision.
+       This code is commercial.
+     * Wave2D, a 2-D finite element code from Magsoft Corp. This code is
+       commercial.
+     * Westbay Tools for Windows, a collection of tools for performing a
+       wide variety of EMC related tasks, Westbay Computfilt for Windows,
+       a simple tool to help diagnose and solve conducted interference
+       problems, Westbay Auditor, EMC shielded enclosure design review,
+       and Westbay FasTrack, simulation of a digital signal on pcb track
+       acting as a transmission line, are from Westbay Technology Limited.
+       These codes are commercial. Evaluation copies are available.
+     * xfdtd, user-friendly 3-D FDTD software, from Remcom, Inc. This code
+       is commercial. Demo copies are available.
+     * Xwake, a user-friendly Body of Revolution (BOR) Finite Difference
+       Time Domain (FDTD) code for wake potential and impedance
+       calculations of rotationally symmetric structures, from Fermilab.
+       This code is non-commercial.
+
+   Unhappy with our software selection? Or our file formats?
+   We will gladly accept any software to add to this page, or any other
+   comments.
+   Drop us a note: emstaff@emlib.jpl.nasa.gov [mail3.gif]
+
+                            [Local Free Software]
+                            [Non-local Software]
+                            [Software from Books]
+                              [EMLIB Home Page]
+
+                             Software from Books
+
+     * Computational Methods for Electromagnetics, by Peterson, Ray, and
+       Mittra, (IEEE Press, 1998):
+       FORTRAN software: including routines to implement a pulse basis
+       function, source-field calculations, and a first-order finite
+       element solution of the scalar Helmholtz equation.
+     * EMC Analysis Methods and Computational Models, by Tesche, Ianoz and
+       Karlsson, (John Wiley & Sons, 1996):
+       Windows-based software: including a transmission line analysis
+       code, a transmission line code having advanced riser modeling, a
+       code for computing lightning-induced surges in a transmission line,
+       and a program to evaluate the E and H-fields over and in the earth.
+     * Field Solutions on Computers, by Humphries, (CRC Press, 1998):
+       TCE, a finite-element package.
+     * The Finite Difference Time Domain for Electromagnetics, by Kunz and
+       Luebbers, (CRC Press, 1993):
+       routines from the book.
+     * Finite Element Method for Electromagnetics, by Volakis, Chatterjee,
+       and Kempel, (IEEE Press, 1999):
+       software from the book.
+     * Scattering of Electromagnetic Waves, v.1 by Tsang, Kong, and Ding,
+       2000, v.2 by Tsang, Kong, Ding, and Ao, 2001, v.3 by Tsang and
+       Kong, 2001, (John Wiley & Sons): EM Wave MATLAB Library, with
+       theory and formulation as described in the book.
+
+   Unhappy with our software selection? Or our file formats?
+   We will gladly accept any software to add to this page, or any other
+   comments.
+   Drop us a note: emstaff@emlib.jpl.nasa.gov [mail3.gif]
+
+                            [Local Free Software]
+                            [Non-local Software]
+                            [Software from Books]
+                              [EMLIB Home Page]
+     __________________________________________________________________
+
+
+    emstaff@emlib.jpl.nasa.gov
+    Last modified: 28 January 2002

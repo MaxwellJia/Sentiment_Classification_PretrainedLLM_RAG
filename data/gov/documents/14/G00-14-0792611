@@ -1,0 +1,356 @@
+http://www.nws.noaa.gov/dataprod.html
+
+       Navigation Bar exit list imagemap'd to National Weather Service
+    homepage, Fequently asked questions, feedback page, disclaimer page,
+                               and notice page
+                           NWS Header Banner image
+
+                          DATA RETRIEVAL PROCEDURES
+
+                          File Describing Metadata
+                         Server Directory Structure
+
+                          ACCESS TO DATA & PRODUCTS
+              Anonymous FTP Services | Controlled FTP Services
+                                     AND
+                            FTPmail Data Services
+                            _____________________
+
+  Background
+
+   The United States National Weather Service makes many of our warnings,
+   advisories, forecast products, and observations available to the
+   Internet audience on web and file servers. The NWS provides other
+   globally received data and products and will continue to add more to
+   the servers over time. The Universal Coordinated Time, commonly
+   referred to as UTC, is important to understand when using
+   hydrometeorological data. Please review our page on UTC.
+
+   The File servers at the NWS Gateway provide NWS computer generated
+   forecast products and observational data in WMO message code format as
+   received for download (using the standard anonymous FTP protocol). As a
+   Member of WMO, the United States National Weather Service has data and
+   products received from international sources. Some United States
+   international agreements contain special conditions placed by some
+   countries on the use of some data and products . As the United States
+   National Weather Service has global communication circuits, some of
+   these data and computer derived products with conditions are available
+   on our servers. Please go to the section on Additional Data and
+   Products for details on this retreival process. The gridded forecast
+   fields are not human readable products and must be computer processed
+   before use. Many files of alphanumeric products available are on the
+   File server in flat-ASCII files. WMO messages are combined in files
+   (beginning with their abbreviated heading) by using a flag field
+   between each message. This "flag field" is defined in detail on our
+   file server naming practices web page.
+
+   NOTE: The Web servers (data servers) may be viewed with any interactive
+   Web browser. The various NWS web servers (sites) are located at local
+   state forecast offices and/or central forecast facilities around the
+   U.S. or at the NWS Gateway. (see our homepage)
+     __________________________________________________________________
+
+                Metadata about the Server Directory Structure
+
+          ( See our NEW Directory & File Name Standards HTML pages)
+
+   All file contents (except for some model data set files) are collective
+   groups of WMO messages. All meteorological data are coded in WMO
+   standard code forms which are documented by WMO Manual 306. The model
+   data set files having contents with no WMO abbreviated headings are all
+   in GRIB or BUFR code format.
+
+    Descriptions of Files Using Older File Name Standards
+
+   These files are planned to be removed in the near future. It is highly
+   recommended that you instead locate the same products in files on the
+   servers listed under the "NEW" TOC Directory & File Name Standards"
+   provided below.
+
+                                  Files for
+       General Use   The description of files created to meet general
+   meteorological scientific user requirements which generallycontain NCEP
+      model output in GRIB code form or observational data in WMO code.
+                                  Files for
+     Special Purpose   The description of files created to meet specific
+    meteorological user requirements. The data inthese files include data
+     which has been sent on certain dedicated circuitsfrom the Gateway,
+    specific individual collectives or groups of collectives,or specific
+                               types of data.
+   Data Set Files   The description of NCEP files from the Computer Model
+   runs or data sets of observationsused in the computer model production.
+
+    Description of Files Using the "New" TOC Directory & File Name Standards
+
+                                Observational
+                                  Bulletin
+    Data Files   The description document on files of observational data
+    and Terminal Area Forcasts (TAFs) in originally received WMO bulletin
+    form of the T1T2 = SM, US, SA, FT, UA, WS data types to be FTP'd for
+    use in analysis modelling and research projects. They are all in the
+   appropriate standard WMO codes.(This data is available for at least 48
+                 hours after reciept at the Washington RTH.)
+                                    Radar
+   Data Files   The description file of the directory and file names used
+      to stored files of centrally collected radar WSR-88D data in its
+   original RPG product form. This data is in 10 second received rotating
+    files by product type/radar site. This data is available for at least
+    48 hours after reciept at the Washington RTH. [See the Radar Product
+       Central Collection/Distribution Service web page for details.]
+                                Text Messages
+    Data Files   The description document on the directory and file names
+   used to store files of text readable products (forecasts and warnings)
+      generated at the NWS Forecast Offices. This information is in the
+   received WMO bulletin structure (AWIPS heading structure applies). They
+                          are primarily in English.
+                               Forecast Model
+     Product Files   The description document on the directory and file
+    names used to store computer model derived products from the various
+   central processing centers. These products are either in the originally
+       received WMO message (bulletin) format or in files of GRIB/BUFR
+   products not intended for message transmission. (This data is available
+      for 48 hours after reciept at the Washington RTH.) (NOT ALL DATA
+                          CURRENTLY AVAILABLE) new
+                                 Polar SSM/I
+                                  Satellite
+     Product Files   The description document on the directory and file
+     names used to store computer generated NESDIS satellite DMSP SSM/I
+     polar obital satellite products from three polar satellites. These
+      products are in the NESDIS proccessed format not intended for GTS
+   message transmission. These products must be FTP'd by GTS users. (This
+    data is available for the last two orbits after reciept at the NESDIS
+                                Washington.)
+
+    Description of Files Using the "English Descriptive Format"
+
+                                 Individual
+                               Observations &
+     Forecast Files   This document describes the files of observational
+      data and forcasts products which are stored under unique "English
+      descriptive directory and file names" defining a data type and/or
+   location. These separate files were generated for internal server use.
+   They are available for infrequent retrieval by those who wish to obtain
+          a finite set of specific information. The original source
+   meteorological bulletins are also available . Only the last received is
+      made available. Older information is over-written with the latest
+                                information.
+     __________________________________________________________________
+
+                         Access To Data and Products
+
+   The structure of the data and products on the server is flat ASCII
+   filesfor extraction by scientific meteorological research groups and
+   others interested in these data sets. The various files contain
+   collections of hydrometeorological forecast products or observational
+   data generated in WMO message format; as well as, other files which
+   contain major computer model data fields NOT generated in WMO message
+   format. Files are created at specific time intervals and all data
+   available in the telecommunications switching system at file creation
+   time are included in each file.
+
+                HOW TO DOWNLOAD DATA AND PRODUCTS USING HTTP
+
+   The majority of our human readable text warnings, forecasts and
+   observations are downloadable for viewing using standard web browsers.
+   The service is provided on two major data providing servers. One server
+   URL is weather.noaa.gov which operates the Internet Weather Source,
+   abbreviated as IWS. The other server URL is weather.gov which operates
+   the Interactive Weather Information Network, abbreviated as IWIN. These
+   servers maintain only current products and observations. They do not
+   store archived data and products. They also point to other servers
+   which can maintain extensive products and data files, normally for FTP
+   access. A new addition to the NWS web server product suite is the
+   NEXRAD mosaic images for browser viewing. This service is on servers
+   located across the United States. Each NWS Regional Headquarters
+   operate servers that maintain the product images for their regional
+   area NEXRAD sites. These products can be seen on each Weather Forecast
+   Office Web Site. The top link to these new products is located on the
+   IWS server.
+
+                 HOW TO DOWNLOAD DATA AND PRODUCTS USING FTP
+
+                                 Help Guide
+
+   There is a "help guide" that can aid you in establishing the procedures
+   you should use for retrieving data and forecast products from our file
+   servers using the FTP protocol. This help guide addresses both the
+   standard directory and file name practices used by the Gateway servers
+   listed below and the parsed "individual data and forecast products"
+   processed for our own use.
+
+                             NOTICE TO FTP USERS
+
+                  This is an open service for general use.
+
+      Accessing servers with programs/scripts which are too repetitive,
+    opening multiple concurrent sessions, and include the use of the FTP
+   "ls" (list command) during the session will significantly reduce server
+      response for everyone and severly impact the access by all users.
+
+                    Servers for Data & Product Retrieval
+
+   Here are the IP and URL address of the file servers of the Gateway you
+   can access for downloading the many data and forecast products received
+   by the Telecommunication Gateway.
+
+  * Access procedures for reading DATA & GRIDDED FIELD files written with the
+  old file name practices
+
+   This file server is planned for removal. It is recommended that you use
+   the servers provided under the "NEW" TOC Directory & File Name
+   Standards.
+
+   See description of file names above which use the older directory and
+   file name practices.
+    1. The NWS has UNIX(AIX) file servers which are accessible via
+       anonymousFTP over the Internet.
+    2. The current IP address is 140.90.88.142
+    3. The password is: (Your E-mail address)
+
+  * Access procedures for reading WEATHR MAP files (FAX) written with the old
+  file name practices
+
+   See description of file names above which use the older directory and
+   file name practices.
+    1. The NWS has UNIX(AIX) file servers which are accessible via
+       anonymousFTP over the Internet.
+    2. The current IP address is 140.90.88.142/FAX
+    3. The password is: (Your E-mail address)
+
+   NOTE: These are single product files written with File Names
+   constructed by using the first six characters of the WMO Heading. These
+   files are produced as black & white graphical products (facsimile [FAX]
+   charts). They were used as tools by the professional government weather
+   forecaster to develop the warnings and forecasts. These files are in
+   both T-4 FAX {.FAX} and a browser viewable TIFF {.TIF} format. Some
+   maps have global coverage and are used for aviation operations
+
+  * Access procedures for reading files written with the "NEW" TOC Directory &
+  File Name Standard
+  Data and Model Products
+
+   See description of file names above. All "new" TOC File Name Standards
+   are used under the SL.us008001 sub-directory name.
+    1. The UNIX(AIX) file servers that use the "new" subdirectory and file
+       naming standard are accessible via anonymous FTP over the Internet.
+    2. The current IP address is tgftp.nws.noaa.gov/SL.us008001
+    3. The password is: (anything you like ¹ )
+
+   ¹ As a user, if you do not provide your identity (such as your email
+   address), we can not reach you when technical changes are made.
+
+  * Access procedures for reading files written with the "English Descriptive
+  Format"
+  Data and Plain Language Text Products
+
+   See description of file names above. All Files of selectable
+   observations and forecasts are found under the data sub-directory name.
+    1. The UNIX(AIX) file servers that use this directory tree are
+       accessible via anonymous FTP over the Internet.
+    2. The current IP address is tgftp.nws.noaa.gov/data
+    3. The password is: (anything you like ² )
+
+   ² As a user, if you do not provide your identity (such as your email
+   address), we can not reach you when technical changes are made.
+
+  * Access procedures for reading files written with the "English Descriptive
+  Format"
+  Facsimile Charts by WMO Abbreviated Heading (see NOTE)
+
+    1. The UNIX(AIX) file servers that use this directory tree are
+       accessible via anonymous FTP over the Internet.
+    2. The current IP address is tgftp.nws.noaa.gov/fax
+    3. The password is: (anything you like ³ )
+
+   (NOTE): The FAX charts are available in TIFF and GIF formats for many
+   products. Please check our MASTER Index of TIFF versions containing
+   descriptive titles and source information.
+
+   ³ As a user of this service, if you do not provide your identity (such
+   as your email address), we can not reach you when technical changes are
+   made.
+     __________________________________________________________________
+
+                           Gateway FTPmail Service
+
+   The Gateway servers are available for the extraction of files by using
+   standard E-mail. This can be useful by meteorological research groups
+   and general users interested in obtaining the data without having
+   immediate access to the Internet. The various files that can be
+   obtained include site observations, facsimile charts, or meteorological
+   forecast products. The current E-mail address is
+   ftpmail@weather.noaa.gov. There are details on using the Gateway
+   FTPmail service for requesting data and products.
+
+   You must first establish a list of desired products. You can best do
+   this by accessing the server named below using your favorite web
+   browser and a connection to the Internet through your Internet service
+   provider. You will display and can record the file names of the data
+   and products you will need for the future building of your FTPmail
+   request. There are two subdirectories with specific data types
+   available :
+     * http://weather.noaa.gov/pub/data - for data and forecast products
+       (in ACSII readable format),
+       and
+     * http://weather.noaa.gov/pub/fax/ - for facsimile charts (in "TIFF"
+       & "gif" format).
+
+   if you have remote access to standard E-mail while onboard ships at
+   sea, this is a way to get marine fascimile charts and off shore text
+   forecasts. Additional details on using FTPmail discusses the data types
+   available and their related input format structure.
+     __________________________________________________________________
+
+                       International Data and Products
+                                    with
+                              Controlled Access
+
+   A number of countries distribute a small set of data and products with
+   conditions. The data and products are listed by WMO abbreviated
+   heading. This web site lists only the WMO meteorological bulletins
+   expected at the NWS Gateway from international sources.
+
+   The U.S. agreed during the XIIth World Meteorological Congress (June
+   1995) it would make its best effort to inform subsequent recipients of
+   foreign data, exchanged over the World Weather Watch system, about
+   conditions placed on "additional" meteorological and related data and
+   products, according to WMO Resolution 40. Since the adoption of WMO
+   Resolution 40, the U.S. private sector and research and education
+   communities have had full access to all real-time data and products via
+   the NOAA Family of Services dissemination system, and all delayed data
+   and products via Anonymous FTP (file transfer protocol) over the
+   Internet. To date, we are not aware of any violations by the U.S.
+   meteorological community.
+
+   The U.S. recently reviewed its policy on Internet distribution of
+   foreign data and products. It was determined, according to the letter
+   and spirit of WMO Resolution 40, "additional" data and products would
+   be distributed over the Internet. As agreed, notification of the
+   conditions on the "additional" data and products will be provided
+   during distribution.
+
+                          PROCEDURES for ACCESSING
+            "Additional" Observational Data and Forecast Products
+
+      [ NOTE: U.S. Data is Available Through The PROCEDURES FOR OPENLY
+                    ACCESSIBLE DATA AND PRODUCTS Above ]
+     [These "Additional Data & Products" are a limited subset from some
+        countries in Europe, Asia, and South America (including their
+                                territories)]
+
+                              [ Activity Log ]
+     __________________________________________________________________
+
+       Navigation Bar exit list imagemap'd to National Weather Service
+    homepage, Fequently asked questions, feedback page, disclaimer page,
+                               and notice page
+                            Privacy NOTICE Button
+   Homepage | Frequently Asked Questions | Feedback Page | Disclaimer Page
+                        | Privacy Notice to User Page
+
+   NOAA logo small image
+
+   National Weather Service
+   Page Author : Jim Fenix
+   Last Modified : Thursday; October 29, 2001
+   URL : http://www.nws.noaa.gov/dataprod.html

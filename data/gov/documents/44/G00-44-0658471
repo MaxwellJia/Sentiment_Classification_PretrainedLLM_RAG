@@ -1,0 +1,223 @@
+http://www.nssl.noaa.gov/~ziegler/newcas/SLS98.big.html
+
+   P3.2 EVOLUTION OF LOW LEVEL ROTATION IN THE 29 MAY 1994 &#12;&#12;&#12;
+   NEWCASTLE, TEXAS STORM DURING VORTEX
+
+   Conrad L. Ziegler*, Tom R. Shepherd^@, Erik N. Rasmussen^#, Andrew I.
+   Watson^&, and Jerry M. Straka^%
+   ______________
+       *Corresponding author address: Dr. Conrad L. Ziegler, National
+       Severe Storms Laboratory, 1313 Halley Circle, Norman, OK 73069
+       @NOAA/NSSL, Norman, Oklahoma
+       #NOAA/NSSL, Boulder, Colorado
+       &National Weather Service, Tallahassee, Florida
+       %University of Oklahoma, Norman, Oklahoma
+
+   1.&#12;INTRODUCTION
+
+   In this paper we present analyses of airflow evolution in the tornadic
+   Newcastle, Texas, storm of 29 May 1994 (Wakimoto and Atkins 1996,
+   referred to as paper WA), one focus of intensive mobile mesoscale field
+   observations during the Verification of the Origins of Rotation in
+   Tornadoes EXperiment or VORTEX (Rasmussen et al. 1994). Our goal is to
+   document the evolution of low level rotation of the parent mesoscale
+   circulation (i.e. mesocyclone) of the Newcastle tornado and gain
+   insights into the origins of mesoscale rotation preceding
+   tornadogenesis.
+
+   2.&#12;OBSERVATIONS AND ANALYSIS
+
+   The Newcastle storm evolved from a line of deep convection that
+   developed along a dryline in north-central Texas during mid-afternoon.
+   In expectation of storm development, the NOAA P-3 was flying over north
+   Texas as early as 1900 and began flying legs adjacent to developing
+   cells around 2100 (all times are Universal Time). The P-3 flew a series
+   of seven consecutive legs along the southwest flank of the Newcastle
+   storm from 2240 until 2318, obtaining pseudo-dual Doppler tail radar
+   data in the fore-aft scan or FAST mode (Jorgensen et al. 1996).
+   Operated in 180° sector mode, the tail radar completed each fore or aft
+   sweep in 3 seconds, corresponding to a nominal along-track data spacing
+   of about 700 m.
+
+   In post-analysis, radar data was extensively edited to remove ground
+   targets and regions of atmospheric reflectivity less than about 10 dBZ,
+   and velocities were dealiased using the NCAR Solo software. Since
+   subsequent analysis would focus on the lower levels of the storm,
+   editing was concentrated on the lowest 5 km AGL.
+
+   In the next analysis step, radar data were spatially interpolated via
+   the Barnes technique using a slightly modified form of the NCAR Reorder
+   software. Radial velocities and reflectivities were interpolated to a
+   51 x 51 x 21 regular cartesian grid with dimension of 25 x 25 x 5 km
+   (i.e. 0.5 km horizontal and 0.25 km vertical grid spacing). The Barnes
+   weighting function takes the form w = exp(-r^2/k ), where r is the
+   distance from a gridpoint to a datum and k is a smoothing parameter.
+   The frequency response of the Barnes weighting function may be
+   expressed as D[0] = exp[-k * (p /l * )^2], where k = k * L^2, L = 2D ,
+   and l * = l /L. Given a nominal horizontal (vertical) data spacing D =
+   0.7 km (0.4 km), and picking a constant k * = 0.799, the theoretical
+   horizontal (vertical) response of the Barnes filter is ~ 50% at
+   wavelength l = 4.8 km (2.7 km) and near zero at the Nyquist wavelength
+   L.
+
+   In the final analysis step using the NCAR Cedric software, an iterative
+   scheme was employed in combination with the two linear equations for
+   the fore and aft scan radial velocities to vertically integrate the
+   mass continuity equation from w = 0 at ground level. The following
+   steps were taken to modify the interpolated radial velocities prior to
+   integration: 1) hole filling; 2) two-step, 2-D Leise filtering of
+   radial velocity fields.
+
+   3.&#12;RESULTS
+
+   The Newcastle storm began as an updraft on the west end of a bow-shaped
+   echo which was driven by outflow convergence from the neighboring
+   Graham storm (Fig. 1a). At this early stage the bow echo was anchored
+   by two counter-rotating mesoscale vorticies (i.e. "bookend vorticies"),
+   the Graham mesocyclone to the east with (x,y) coordinates (km) of
+   (23,12), and an anticyclonic circulation at (16,13). The parent
+   mesoscale circulation of the Newcastle tornado formed northwest of the
+   inflow notch into the anticyclonic circulation at (14,14). Near ground
+   and at all analysis times, the southwestern edge of the
+   Newcastle-Graham complex marked the location of a westward-moving cold
+   outflow boundary.
+
+   [2242.vdbz2p5km.gif]
+
+   [2250.vdbz2p5km.gif] [2253.vdbz2p5km.gif]
+
+   [2301.vdbz2p5km.gif] [2305.vdbz2p5km.gif] [2312.vdbz2p5km.gif]
+
+   [torn.gif]
+
+   Fig. 1&#12;Horizontal airflow vectors, reflectivity (dBZ, contoured at
+   10 dBZ interval starting at 25 dBZ), and updraft speed (m/s, gray
+   shading in 10 m/s interval starting at 5 m/s) at the following analysis
+   times on 29 May 1994 (starting on previous page): a) 2242; b) 2250; c)
+   2253; d) 2301; e) 2305; f) 2312. Heavy line segment locates vertical
+   cross-section to be presented later in the paper. Panel (g) is a
+   tornado photo taken by lead author CLZ at 231213 looking ENE from P-3.
+   Photogrammetric analysis of P-3 side-looking video is used to locate
+   and size the tornado funnel and wall cloud in panel (f).
+
+   With subsequent development, (Figs. 1b-f), the Graham mesocyclone moved
+   southward while the Newcastle cell moved slowly westward, increased in
+   reflectivity, and developed an intense mesocyclonic circulation. The
+   Newcastle mesocyclone continued to intensify through 2302, the
+   approximate onset time of damage to vegetation from strong surface
+   winds (WA), through the time of the first tornado photo from a ground
+   team around 2309. During the development of the mesovortex, especially
+   after 2253, strong convective updrafts were noted within and on the
+   inflow side of the circulation center.
+
+   Vertical cross-sections through the location of maximum vertical
+   vorticity in the developing Newcastle cell reveal the close
+   correspondence of updraft and vertical mesocyclonic rotation (Fig. 2).
+   As early as 2242 (Fig. 2a), a peak vertical vorticity of mesocyclone
+   strength (i.e. 10 x 10^-3 s^-1) is located in the updraft around 5 km,
+   with weaker rotation at lower levels. By 2250 (Fig. 2b), midlevel
+   rotation in the updraft had more than doubled in strength while the
+   first signs of a developing rear flank downdraft (RFD) were seen in the
+   lowest three kilometers rough 1 km to the west of the mesocyclone.
+   Vertical vorticity continued to increase through 2253 (Fig. 2c) and
+   2301 (Fig. 2d), the most notable features being the development of a
+   secondary maximum of vertical vorticity near ground, the persistent
+   colocation of the mesocyclone and updraft, and the vigorous RFD to the
+   west. The mesocyclone continued to intensify at all levels through 2305
+   (Fig. 2e) to 2312 (Fig. 2f), when a maximum value of 34 x 10^-3 s^-1
+   was analyzed around the location of the tornado. The analysis at 2315
+   (not shown) reveals the same overall morphology and a slow westward
+   movement of the mesocyclone.
+
+   [2242.xz.gif]
+
+   [2250.xz.gif]
+
+   [2253.xz.gif]
+
+   [2301.xz.gif]
+
+   [2305.xz.gif]
+
+   [2312.xz.gif]
+
+   Fig. 2&#12;Vertical east-west cross-sections of airflow vectors and
+   vertical vorticity (s^-1 x 10^-3), located as in Fig. 1 and starting in
+   left column. (a) 2242; (b) 2250; (c) 2253; (d) 2301; (e) 2305; (f)
+   2312. Gray polygon in panel (f) is estimate of tornado funnel size and
+   location based on video photogrammetry.
+
+   4.&#12;DISCUSSION AND CONCLUSIONS
+
+   Motivated by WA who suggested that stretching of preexisting vertical
+   vorticity along a mesoscale boundary intensified the Newcastle
+   circulation and eventually initiated the tornado, we performed an
+   analysis of vertical vorticity forcing by tilting and stretching.
+   Departing somewhat from previous studies, we evaluated these forcing
+   terms and the accumulated vorticity along short (~4 min) lagrangians
+   approximating the motion of air entering the mesocyclone. The results
+   suggest that air entered the updraft and intensifying mesocyclone at
+   2253 from the east (e.g. trajectory in Figs. 1c and 2c) and was
+   subsequently stretched to the observed mesocyclone intensity (Fig. 3).
+
+   [Image26.gif]
+
+   Fig. 3&#12;Time histories of vertical velocity, analyzed vertical
+   vorticity
+   (s^-1 x 10^-3), and predicted vertical vorticity along a short (4 min)
+   streamline entering the Newcastle mesocyclone during its developing
+   stage. Vertical vorticity is set to the observed value at the beginning
+   of the trajectory, and both individual (TLT, STR) and total (TOT)
+   tendencies are accumulated following the motion.
+
+   It is difficult to explain the observed mesocyclogenesis leading to the
+   Newcastle tornado as stretching of vertical vorticity along a
+   preexisting boundary, in this case the westward-moving cold outflow.
+   Our trajectory analysis suggests that air was entering the developing
+   mesocyclone from the east (i.e. behind the outflow boundary. A portion
+   of these E-W trajectories (not shown) entered the edge of the
+   mesocyclone, became ingested into the wrapping rear flank downdraft
+   (RFD), and were ultimately lifted and stretched as they passed from the
+   RFD into the updraft.
+
+   There are additional difficulties with the hypothesis that stretching
+   of preexisting outflow boundary vorticity formed the Newcastle tornado.
+   The Newcastle mesocyclone first appeared aloft, eventually building
+   down to low levels where a secondary vorticity maximum developed prior
+   to tornadogenesis. Moreover, the analysis revealed the updraft
+   meso-anticyclone farther southeast along the outflow boundary that
+   preceded the Newcastle mesocyclone. Obviously, any hypothesis of
+   mesocyclogenesis would need to explain the observed sequence of
+   development of the circulations of both signs.
+
+   We are presently investigating the origins of the rather weak vertical
+   vorticity to the east the outflow boundary and Newcastle mesocyclone.
+   Our analyses reveal that some of the inflow air moved from a roughly
+   annular region of negative vertical vorticity into the region of weak
+   positive vertical vorticity surrounding the Newcastle mesocyclone (e.g.
+   Fig. 2f). We are studying the possible role of tilting to move inflow
+   air across the interface, and plan to report additional findings at the
+   conference.
+
+   5.&#12;ACKNOWLEDGEMENTS
+
+   We thank the NOAA Aircraft Operations Center (AOC) staff, who capably
+   operated the P-3 aircraft and its data systems during VORTEX. We also
+   thank NCAR staff, especially Dick Oye, Michelle Case, and Jay Miller,
+   for assistance with the NCAR analysis software. NCAR is sponsored by
+   the National Science Foundation.
+
+   6.&#12;REFERENCES
+
+   Jorgensen, D. P., T. Matejka, and J. D. DuGranrut, 1996: Multi-beam
+   techniques for deriving wind fields from airborne Doppler radars. J.
+   Met. and Atmos. Phys., 59, 83-104.
+
+   Rasmussen, E. N., J. M. Straka, R. Davies-Jones, C. A. Doswell III, F.
+   H. Carr, M. D. Eilts, and D. R. MacGorman, 1994: Verification of the
+   origins of rotation in tornadoes experiment: VORTEX. Bull. Amer.
+   Meteor. Soc., 75, 995-1006.
+
+   Wakimoto, R.M., and N. T. Atkins, 1996: Observations of the origins of
+   rotation: The Newcastle tornado during VORTEX 94. Mon. Wea. Rev., 124,
+   384-407.

@@ -1,0 +1,82 @@
+http://www-email.fnal.gov/relay.asp
+
+   As of 4/29/1999 Mail Relaying through the site mailserver has been
+   disabled.
+
+   What is relaying?
+
+   The general definition is when someone tries to directly route mail
+   through a smtp server from a machine not on the same site or network as
+   the smtp server to another machine not on the same site or network as
+   the smtp server or the originating address. This has become a preferred
+   practice for email spammers and email system attackers for hiding their
+   tracks.
+
+   Who is Affected?
+    1. Users and mailing lists at FNAL that point to offsite addresses
+       will NOT be affected when using the alias.
+    2. Users that must telnet to a system at the lab to read their mail
+       will NOT be affected by this.
+    3. Users that use FNAL dialup lines or FNAL provided ISDN lines will
+       NOT be affected.
+    4. Users that are traveling or Users using ISP's to read mail on lab
+       mailservers such as POPGTW, IMAPSERVER1, and IMAPSERVER2, may be
+       affected.
+
+   But I need to relay mail
+
+   There are legitimate uses of mail relay at FNAL. People with portable
+   machines who travel to other sites and don't want to reconfigure their
+   machines and need to stay in contact with others are one.
+
+   We have the ability to accommodate laptop users individually and one
+   can contact the helpdesk to arrange for an exemption. This is a manual
+   process and we have a service goal of 1 business day to handle these
+   requests.
+
+   In the long term, mail relay is expected to be disabled on all machines
+   at FNAL and the use of authenticating mail agents the method of
+   continuing the legitimate use.
+
+   The interoperability of authenticating SMTP servers and email clients
+   is being tested.
+
+   For FNAL to accept mail one of the following must be true:
+    1. The message must have a destination address in the "fnal.gov"
+       domain, or
+    2. The message must originate from a host in the "fnal.gov" domain. By
+       this we mean that the host the mail is sent from must be in the
+       fnal.gov domain. This is not the same as setting your From: address
+       in your e-mail client to user@fnal.gov.
+
+   Problems-
+
+   I can't send mail offsite when using my ISP
+
+   Users should be using the ISP's mailserver to provide e-mail services,
+   particularly outgoing email. Users should have fewer problems with
+   incoming mail, and should under most circumstances be able to fetch
+   mail from the FNAL POP or IMAP servers.
+
+   How to I change my settings?
+
+   If you are having a problem sending mail using smtp.fnal.gov along with
+   a private ISP you need to change your SMTP server on your email client.
+   Here is how to do it with some of the popular clients.
+
+     * Outlook Express
+     * Pine
+     * Netscape Messenger
+     * Eudora
+     * Pegasus
+
+   If you have any problems or questions with regard to these
+   instructions, please contact the Fermilab Postmaster at
+   postmaster@fnal.gov
+
+   Last Update - September 21^st, 1999
+     __________________________________________________________________
+
+                                LEGAL NOTICES
+      E-Mail Support | Operating Systems Support | Computing Division |
+                 Fermilab | FNAL Disclaimer | FNAL Directory

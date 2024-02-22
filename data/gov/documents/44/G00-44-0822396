@@ -1,0 +1,78 @@
+http://icesat4.gsfc.nasa.gov/ia_home/ers1_2_bias.html
+
+               Investigation of the Observed ERS-1/ERS-2 Bias
+
+   Investigation of the ERS-2 and ERS-1 IDRs in the ocean near Greenland
+   inferred that there was a significant bias of around 40cm between
+   elevations calculated from ranges from the two satellites with ERS-2
+   being lower. This is very close to the documented difference in the OPR
+   data for ERS-1 and ERS-2 of 40.9 cm due to the differences in the
+   eps-tau-g correction (Femenias 1997, "ERS QLOPR and OPR Range
+   Processing",ER-TN-RS-RA -0022) though we have found no documentation
+   stating that this bias exists for ERS-1 and ERS-2 data processed from
+   the WAP.
+
+   To validate that this bias was not regional, we processed global ocean
+   data from the WAP ERS-1 for January and July from 1993-1996 for ERS-1
+   and for 1995-1996 for ERS-2. All the like-mission crossover statistics
+   show means of 0-2+/-20 cm whereas the cross-mission statistics show
+   means of 30+/-17 cm with ERS2 being lower. The data processing was
+   exactly the same as for over the ice sheets except that we applied an
+   EM bias of 5.5% of the SWH to both missions. This showed ERS2 WAP ocean
+   ranges had a significant bias with respect to ERS1 WAP ranges, however
+   it was not the expected 40-41cm. This may be due to the fact that we
+   did not use optimal ocean processing. Optimal ocean processing would
+   include using the radiometer correction instead of a model for the wet
+   troposphere delay, applying a barotropic correction, using a more
+   accurate em bias calculation, and better editing.
+
+   We also compared one pass each of ERS-1 WAP and ERS-2 WAP data ove r
+   the Arctic Ocean to the respective OPR data. We compared the
+   measurement values after internal and Doppler corrections were made.
+   The OPR measurement also had the OCOG retracking correction applied,
+   but the OPR does not give the actual value used. An article written in
+   1994 by Johnathan Bamber stated that they used the 50% OCOG and a look
+   up table. The look up table value is given on the OPR and is set to
+   zero for these two passes.
+
+   The mean of the difference between the ERS-1 WAP measurement and the
+   OPR was 6.8+/- 17.5 cm when the OCOG 50% retracker was used and
+   4.1+/-25.3 cm when the GSFC V4 retracker was used on the WAP
+   measurement. For ERS-2 the mean difference was 7.9+/-10.5cm for the
+   OCOG 50% retracker and 1.7+/-14.3 cm for the GSFC V4 retracker. If the
+   ERS-1 and ERS-2 WAP data were processed the same way we would have
+   expected close to a 40 cm mean between the ERS-2 WAP and the OPR
+   measurement. Our results infer that the ERS-2 WAP has some correction
+   different than the ERS-1 WAP. We suspect that the eps-tau-g correction
+   was modified for ERS-2 WAP based on the better ERS-2 ground
+   calculation.
+
+   The eps-tau-g recharacterization was confirmed in an E-mail message
+   from Pierre Femenias. The text of this message follows:
+   Dear Anita,
+   Please find hereafter information on the ERS Radar Altimeter external
+   range biases which I hope will answer to your query from July 27 2000
+   regarding the WAP data.
+     * You mention in your mail that the Venice external bias is applied
+       to the ERS-2 OPR. This is not correct. No external bias is applied
+       to the ERS-1/2 OPR. The difference in range between the two is
+       explained by a different characterisation parameter (eps_tau_g).
+       See document 'ERS QLOPR and OPR range processing, 20/5/96,
+       ER-TN-RS-RA-022.
+     * No external bias as well is applied to the ERS-1/2 WAP data. We
+       agree on this. (for information, the Venice bias is only applied
+       operationally to the ERS-1 QLOPR data).
+     * The bias you found in the WAP data of about 41 cm has the same
+       origin as the one existing in the OPR data, i.e. a different
+       characterisation parameter (eps_tau_g). The ERS-1 and ERS-2 data
+       are all processed the same way on the different processing chains
+       (OPR, URA, WAP, QLOPR) but of course with the proper sensor
+       characterization data.
+
+   As developed in the note mentioned here above, the determination of the
+   ERS-2 characterisation data has been performed with more reliable
+   techniques leading to different parameters as it is the case for the
+   eps_tau_g parameter. The difference between ERS-1 and ERS-2 is very
+   close to the Venice bias and it is for this reason that most of the
+   users apply this value (40.9 cm) as external bias to the ERS-1 data
+   instead of the Venice one.

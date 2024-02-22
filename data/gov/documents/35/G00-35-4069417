@@ -1,0 +1,134 @@
+http://expect.nist.gov/sha1pure/
+
+                             The sha1pure Home Page
+
+   sha1pure is a Tcl extension that computes an sha1 message digest or
+   hmac. sha1pure uses only core Tcl commands and therefore requires no
+   compilation.
+
+  How To Use
+
+   sha1pure can be loaded using package require sha1pure. Alternatively,
+   it can be sourced or even inserted directly into another source file.
+
+   sha1 message digests are computed using the sha1pure::sha1 command. It
+   takes a single argument and returns the message digest. For example:
+      % sha1pure::sha1 "hello world"
+      2aae6c35c94fcfb415dbe95f408b9ce91ee846ed
+
+   sha1 hmacs are computed using the sha1pure::hmac command. Its takes key
+   and text arguments and returns the hmac. For example:
+      % sha1pure::hmac "our little secret" "hello world"
+      a7ed9d62819b9788e22171d9108a00c370104526
+
+  Performance
+
+   sha1pure was not written for efficiency and is inappropriate for large
+   arguments. Applications requiring high-performance should use Andreas
+   Kupries' trf extension. trf implements several other message digests
+   and contains many other conversion functions.
+
+   sha1pure is appropriate for small arguments. Here are some timings. The
+   numbers along the top of this chart indicate the message size (in
+   bytes). So for example, to produce a digest of a 50-byte string on a
+   Sparc 20 required 46ms (about 1/20 of a second). Question marks are
+   placeholders timings Iexpect to get in the near future.
+
+   10 50 100 500 1000 5000 10000
+   Sun Sparc 20 Solaris 5.6 Tcl 8.3.2 gcc 2.95.2 50ms 46ms 97ms 362ms
+   701ms 3.38s 6.74s
+   Sun Sparc Ultra 3000 Solaris 5.6 Tcl 8.3.2 gcc 2.95.2 ?ms ?ms ?ms ?ms
+   ?ms ?s ?s
+   Sun Sparc Ultra 2 Solaris 5.6 Tcl 8.3.2 gcc 2.95.2 14ms 14ms 27ms 106ms
+   212ms 1.04s 2.06s
+   Sun Sparc Ultra 60 Solaris 5.6 Tcl 8.3.2 gcc 2.95.2 ?ms ?ms ?ms ?ms ?ms
+   ?s ?s
+   Mac PB 300Mhz G3 MacOS 9.0.4 Tcl 8.4a2 CW Pro 5+ ?ms ?ms ?ms ?ms ?ms ?s
+   ?s
+   Mac 450Mhz G4 MacOS 9.0.4 Tcl 8.3.2 CW Pro 5+ ?ms ?ms ?ms ?ms ?ms ?s ?s
+   Intel 650Mhz PIII NT 4.0 Tcl 8.2 VC++ 5.0 ?ms ?ms ?ms ?ms ?ms ?s ?s
+   Intel 650Mhz PIII NT 4.0 under VMware on SusE 2.2.14 Tcl 8.4a2 VC 6.0
+   ?ms ?ms ?ms ?ms ?ms ?s ?s
+   Intel 650Mhz PIII SuSE 2.2.14 Tcl 8.4a2 gcc 2.95 ?ms ?ms ?ms ?ms ?ms ?s
+   ?s
+
+   The careful reader will note that the times for 10 and 50 are very
+   close. In fact, the sha1 algorithm pads all messages out to (roughly
+   speaking) 64-byte boundaries so any difference in times is just system
+   noise. The precise steps in the algorithm occur at 56 + 64n characters.
+
+   If you want to do your own timings, run: sha1pure::time
+
+   I have optimized the code but only modestly because the performance is
+   already acceptable for my own purposes. If you want to send me
+   additional speedups, fine. However, I would prefer not to destroy the
+   readability of the code or otherwise perturb it too much. The current
+   implementation parallels the pseudocode in FIPS 180-1 very closely - in
+   fact, most of the comments are direct quotes from the FIPS. I'd
+   hesitate to give that up.
+
+  Credits
+
+   The hmac-sha1 implementation was taken from hmac-md5 which was written
+   by D. J. Hagberg.
+
+  Other Caveats
+
+   sha1 is defined over strings with length less than 2^64. This
+   implementation limits string lengths to 2^32. This restriction could be
+   removed, however there seems no point to it given the speed with which
+   such strings could be handled in the first place.
+
+   sha1pure has not been tested on machines with 64-bit integers. It is
+   possible that it may not work on all 64-bit machines, due to integer
+   layout although I haven't checked any. (I would be interested to hear
+   feedback about this.)
+
+  Testing
+
+   sha1pure includes a test suite. For simplicity, it is included in the
+   sha1pure package itself. To run the tests, load the package and run:
+   sha1pure::test
+
+  Source
+
+sha1pure.tcl The source to sha1pure. Note: if you've got the Tcl plugin
+             loaded in your browser, you'll have to shift-click when fetching to
+             avoid it being executed!
+pkgIndex.tcl Only necessary if you want to load sha1pure as a package.
+
+  Installation
+
+   There is no installation script since it is expected that most people
+   will simply insert or include the sha1pure.tcl file into their
+   applications directly. However, a pkgIndex.tcl file is available so
+   that sha1pure can be installed as a package.
+
+  Generic Disclaimer
+
+   Although I can't promise anything in the way of support, I'd be
+   interested to hear about your experiences using it (good or bad). I'm
+   also interested in hearing bug reports and suggestions for improvement
+   even though I can't promise to implement them.
+
+   If you send me a bug, fix, or question, include the version of
+   sha1pure, version of Tcl, and name and version of the OS that you are
+   using. Before sending mail, it may be helpful to verify that your
+   problem still exists in the latest version. You can check on the
+   current release and whether it addresses your problems by retrieving
+   the latest HISTORY.
+
+   Awards, love letters, and bug reports may be sent to:
+
+
+    Don Libes
+    National Institute of Standards and Technology
+    100 Bureau Dr, Stop 8260
+    Gaithersburg, MD 20899-8260
+    (301) 975-3535
+    libes@nist.gov
+     __________________________________________________________________
+
+        Disclaimer/Privacy
+
+   Last edited: Wed May 30 16:28:44 EDT 2001 by Don Libes

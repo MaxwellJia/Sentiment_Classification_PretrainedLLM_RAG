@@ -1,0 +1,59 @@
+http://www-itg.lbl.gov/grid/projects/WebServer-SG/
+
+                                WebServer-SG
+
+     * Introduction
+     * Download
+     * Installation
+     * Resources
+
+  Introduction
+
+   WebServer-SG is a prototype package to provide a turn-key solution to
+   the relatively painful experience of installing and deploying a secure
+   Apache web server and the Tomcat servlet container. WebServer-SG v1.1
+   is bundled with the following packages:
+     * mm-1.1.3
+     * openssl-0.9.6b
+     * apache_1.3.20
+     * mod_dav-1.0.2-1.3.6
+     * mod_ssl-2.8.4-1.3.20
+
+   In addition both ant v1.3 and Tomcat version 3.2.3 is included and uses
+   the mod_jk connector to talk to Apache.
+
+  Download
+
+   The build script is simple Bourne shell and has been tested under Linux
+   and Solaris.
+
+   Get the latest version of WebServer-SG here.
+
+  Installation
+
+   Create a user under which you wish to run the web server. Generally
+   this is a user with minimal privileges e.g user or group nobody.
+
+   Now run the install script as root:
+
+%>./install.sh
+
+   After compiling and installing the necessary programs, you will be
+   asked a couple questions about server configuration before the script
+   processes the configuration files and prints out post installation
+   instructions on obtaining a certificate and other issues.
+
+  Resources
+
+   Good sources of information: Books:
+     * "Professional Apache" by Peter Wainright, Wrox Press Ltd.
+
+   Websites:
+     * Apache Documentation
+     * A website for lots of information: FAQs, good explanation of how
+       Tomcat and Apache work...
+     * Tomcat documentation
+     __________________________________________________________________
+
+
+   Last modified: Fri Aug 31 08:27:16 PDT 2001

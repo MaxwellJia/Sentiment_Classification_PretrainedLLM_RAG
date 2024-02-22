@@ -1,0 +1,80 @@
+http://ferret.wrc.noaa.gov/Ferret/LAS/
+
+ [tmap_combined_logo.gif]            [title_LAS.gif]
+
+ [spacer.gif]
+
+ Live Access Server
+  What's New
+  Documentation
+  Downloads
+  FAQ
+  Mail Archives
+
+ DODS
+ Ferret
+
+                          [spacer.gif]
+
+                                          Sharing Climate Data over the Internet
+
+                          Try out these operational servers
+     * NVODS (National Virtual Oceanographic Data System)
+     * PMEL (Pacific Marine Environmental Laboratory)
+     * PFEL (Pacific Fisheries Environmental Laboratory)
+
+   The Live Access Server (LAS) is a highly configurable Web server
+   designed to provide flexible access to geo-referenced scientific data.
+   It can present distributed data sets as a unified virtual data base
+   through the use of DODS networking. Ferret is the default visualization
+   application used by LAS, though other applications (Matlab, IDL, GrADS,
+   ...) can also be used.
+
+   LAS enables the Web user to
+     * visualize data with on-the-fly graphics
+     * request custom subsets of variables in a choice of file formats
+     * access background reference material about the data (metadata)
+     * compare (difference) variables from distributed locations
+
+   LAS enables the data provider to
+     * unify access to multiple types of data in a single interface
+     * create thematic data servers from distributed data sources
+     * offer derived products on the fly
+     * remedy metadata inadequacies (poorly self-describing data)
+     * offer unique products (e.g. visualization styles specialized for
+       the data)
+   __________________________________________________________________
+
+   How do I obtain LAS?
+          See the Downloads section.
+
+   Where do I get help using LAS?
+          Help is available through a users email list, the email list
+          archives, and answers to frequently asked questions.
+
+   Who is using LAS?
+          Table of LAS sites. We also maintain a separate illustrative
+          table showcasing current and planned features of LAS.
+
+   Who should use LAS?
+          LAS is a resource for anyone who needs to share oceanographic or
+          atmospheric data with others. It is especially well-suited to
+          groups of data producers with related data sets at distributed
+          locations: a community modeling effort for example.
+
+   Can I configure LAS to meet special needs?
+          LAS is configurable with respect to the structure of data sets;
+          the style of output graphics; the appearance of the interface;
+          the level of user access provided (who can request what); and
+          security (who can access the server).
+
+   What systems does LAS run on?
+          The server portion of LAS is written in perl and should run on
+          any Ferret supported Unix / linux platform. The user interface
+          requires java and javascript. A table describes the OS/browser
+          combinations it has been tried on.
+   __________________________________________________________________
+
+   Dept of Commerce / NOAA / OAR / PMEL / TMAP Last modified: August 2,
+                                               2001
+   __________________________________________________________________

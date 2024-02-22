@@ -1,0 +1,132 @@
+http://chemdata.nist.gov/mass-spc/Srch_v1.7/index.html
+
+                         NIST MS Search Upgrade Page
+
+   MS SEARCH SOFTWARE UPGRADE FOR USE WITH THE NIST/EPA/NIH MASS SPECTRAL
+   LIBRARY
+
+        Version 2.0 Upgrade    Version 1.7 Upgrade   Other Information
+
+   This is page is for software updates only.  The NIST 98 library is not
+   included in this download.  A demo of version 2.0 with a sample library
+   is now available.  AMDIS (Automated Mass Spectral Deconvolution and
+   Identification System) can be downloaded separately.
+
+   VERSION 2.0 UPGRADE
+
+   This upgrade installs version 2.0 of the NIST MS Search Program.  This
+   upgrade will not replace your NIST MS Search Program v 1.6 or 1.7, but
+   it will upgrade any previously distributed version 2.0 files.  Please
+   refer to readme_v20.txt included in the zip file below for more
+   details.
+
+   UPGRADE INSTRUCTIONS:  Detailed instructions are included in
+   readme_v20.txt in the zip file.  Please read this document before
+   downloading the complete zip file.  For this upgrade to work properly,
+   it is important that the MS Search Program is not open when the files
+   are extracted.
+
+                           v17down.gif (769 bytes)
+
+
+   WHAT IS NEW IN VERSION 2.0 (released March 2000).
+
+   32 Bit Program  The NIST MS Search v2.0 is a true 32 bit application
+   and thus requires Windows NT 4.0, 95, 98, Me or 2000.
+
+   Structure Searching  The search program will now find all data based on
+   its structural similarity. The searching can be done with either data
+   from the NIST MS library, a user MS library or from a structure drawn
+   in most chemical drawing packages. To enable structure search in user
+   libraries use strdbld.exe to create and update structure indexing.
+
+   User Library Structures  Present since version 1.6, but possibly new to
+   some of the users.
+
+   Overall User Interface  The user interface should be easier to use and
+   more conformant with normal Windows conventions.
+
+   Compare Views  There are a number of new ways that to visually compare
+   two spectra.
+
+   Drag and Drop  Data can be dragged and dropped between windows.
+
+   Direct interaction with a number of chemical drawing packages  For
+   details see "How to send a drawing to a structure drawing program".
+
+
+   VERSION 1.7 UPGRADE
+
+   This upgrade converts version 1.6 of the Search program to version 1.7.
+   This package only includes the files necessary for this upgrade.  To
+   upgrade from earlier versions (version 1.5 and earlier) please contact
+   NIST Standard Reference Data.
+
+   UPGRADE INSTRUCTIONS:  Download the zip file and extract the program
+   files into the same folder as version 1.6 (it is usually named NIST98).
+   Note that this procedure overwrites several file. For this to work
+   properly, it is important that the MS Search Program is not open when
+   the files are extracted.
+
+                           v17down.gif (769 bytes)
+
+   WHAT IS NEW IN VERSION 1.7 (released November 1999).
+
+   Incremental Name Search in User Libraries  User Libraries can now be
+   searched with incremental names in the Incremental Name Search window.
+   Choose the library you want to search from the Libraries drop down list
+   box.
+
+   Full Support of Synonyms  Chemical name synonyms are now included in
+   the User Libraries. The synonyms in User Libraries are fully searchable
+   both in the Incremental Name Search and in the Name in User Library
+   search (full synonym name only). Older libraries (created prior to
+   v.1.7) must first have user library names indexed by Update User
+   Library Names in the Tools Menu.
+
+   m/z Corrections  When spectral files are imported, m/z corrections can
+   be made to transform non-integer m/z values into integer m/z values.
+   The NIST/EPA/NIH Mass Spectral Library contains only spectra with
+   'normalized' integer m/z, non-integer m/z values must be rounded to
+   integer m/z values for proper library searching.  Imported m/z  values
+   can be multiplied by some factor (e.g., for correct rounding
+   compensating for mass defects) and/ or have a constant added/subtracted
+   (e.g., to correct for mass offsets).  Since mass defect depends on
+   elemental formula rather than molecular weight, this approximation will
+   begin to fail at sufficiently high molecular weights (above 1000
+   daltons).
+
+   More Pre-Search options  When searching a user spectrum the pre-search
+   may be turned off. This can improve the match quality of spectra that
+   have only a small degree of similarity to the submitted spectrum. Also,
+   if the molecular weight of the target is known in advance, a MW
+   pre-search may be chosen rather than the default option chosen in the
+   Identity Search or Similarity Search. The MW pre-search is not a new
+   feature, but the control has a new appearance.
+
+   Additional improvements
+     * Faster User Libraries building
+     * Faster spectral import from text files
+     * Editing/importing that used to take minutes now takes just seconds
+       with v.1.7.
+     * Input spectra can contain up to 10,000 peaks. However, only the
+       most significant 800 peaks are retained.
+     * Long file names are recognized in the locator files (e.g.
+       autoimp.msd) used with instrument data systems for automatic
+       importing spectral data under MS Windows 95/98 or NT.
+     * Software to convert JCAMP files to the NIST library format.  This
+       software for 32 bit operating systems also converts ChemStation,
+       .MSP, and .SDF formats to the NIST library format.  Synonyms and
+       chemical structures in the original library are included in the
+       converted NIST library format.  [library.gif]
+
+
+   Instrument Specific Information
+
+   ChemStation Information
+
+   Third Party Compatibility Issues
+
+   Other Information
+
+   Overheads from Presentations

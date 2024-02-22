@@ -1,0 +1,417 @@
+http://mtp.jpl.nasa.gov/intro/intro.html
+
+    | MTP Home Page |
+   _______________________________________________________________________
+
+ This page is written for the layperson, and is intended to introduce folks
+  without a technical or scientific background to the concept of microwave
+   temperature profiling, and why it is an important and useful technique.
+
+      There will be two discussions: one short and one long. The short
+     discussion will provide a top-level description of what an MTP does
+     without getting into all the details and technical terms. The long
+     discussion will go into more details and provide illustrations, but
+      still at the layperson level. It may be useful to read the Short
+                      Version before the Long Version.
+   _______________________________________________________________________
+
+   Links to Short Version and Long Version
+   _______________________________________________________________________
+
+             A Layperson's Guide to Remote Temperature Sounding
+
+                                Short Version
+
+                                 MJ Mahoney
+
+   Temperature is a fundamental property of everything, big or small, and
+   it can tell you important information about these systems. To determine
+   whether or not you have a fever, you might place a thermometer  under
+   your tongue. The thermometer directly measures your body temperature.
+   To measure the vertical temperature structure of the atmosphere,
+   scientists often rely on radiosondes which are launched from the ground
+   and carried aloft by a helium balloon. This is also a direct
+   temperature measurement. Radiosondes however are only launched twice a
+   day, and launch sites are typically 500 km apart. Because the
+   atmosphere's temperature can change significantly in 12 hours and over
+   spatial scales much smaller than 500 km, atmospheric researchers often
+   require a better means of measuring temperature. This is particularly
+   important when research instruments are carried aboard aircraft to
+   study problems such as the ozone holes, global warming, or the impact
+   of aircraft emissions on atmospheric chemisty. Research aircraft are
+   flying chemisty labs which measure dozens of gaseous species (e.g.,
+   ozone, nitrous oxide, chlorine monoxide, methane, etc.) and aerosols
+   (liquid or frozen particles) in the atmosphere.
+
+   To interpret what these measurements mean, it is often necessary to
+   know the temperature not just at the aircraft altitude -- where the
+   chemical measurements are made -- but above and below the aircraft as
+   well. The reason for this is that the vertical temperature profile
+   provides meteorological context for the in situ measurements. For
+   example, it is important to know whether the aircraft is in the
+   troposphere (the lowest part of the atmosphere) or in the stratosphere
+   (the next highest region). Ozone (O[3]) normally has much higher
+   abundances in the stratosphere than the troposphere because it is
+   produced there. Similarly, carbon monoxide (CO) has much higher
+   abundances in the troposphere than in the stratosphere, because that's
+   where it's produced. If high O[3] and low CO are seen, one might
+   conclude that the aircraft is in the stratosphere. However, this
+   condition can occur occasionly in the troposphere, and the only way to
+   know for sure what the real situation is is to measure where the
+   thermal tropopause is located, as this separates the troposphere from
+   the stratosphere. To do this this we need to measure an altitude
+   temperature profile.
+
+   So how is the temperature profile of the atmosphere measured from an
+   aircraft? There is really only one practicable, proven  way to do this,
+   and that is to use a microwave temperature profiler (MTP). Obviously
+   the MTP must make a remote temperature measurement. It does this by
+   detecting the naturally-occuring thermal emission of microwaves from
+   oxygen molecules in the atmosphere. As is explained in the detailed
+   version of this write-up, oxygen molecules satisfy several criteria
+   which make such a measurement possible. When the MTP is scanned in
+   frequency and elevation about the flight altitude, it measures the
+   total emission from oxygen molecules along the viewing direction. The
+   temperature profile is not measured directly however. The 20 or 30
+   measurements that the MTP makes in scanning from near-zenith to
+   near-nadir, are converted into a temperature profile by performing a
+   "retrieval" which takes into account where the aircraft is flying and
+   the time of year. You might imagine that many different combinations of
+   atmospheric conditions in the viewing direction might produce the same
+   measurement, and you would be correct! The retrieval process, however,
+   uses all of the measurements during a scan from zenith to nadir to
+   figure out which is the most likely set of temperatures to produce the
+   measurements, and this becomes the retrieved altitude temperature
+   profile. In a nutshell, that is what an MTP does.
+
+   MTPs have a many more potential applications beyond their use as a
+   research instrument. They are useful for example in predicting the
+   possibility of clear air turbulence (CAT) and icing hazard potential
+   for commercial aircraft, and also improving their fuel efficiency. MTPs
+   will also be able to detect when unstart conditions will occur is a
+   supersonic transport (SST) fleet so that preventative measures can be
+   taken. A key to making these and other applications affordable is the
+   development of monolithic microwave integrated circuit (MMIC)
+   technology, which will reduce the cost of manufacture by about an order
+   of magnitude.
+   _______________________________________________________________________
+
+             A Layperson's Guide to Remote Temperature Sounding
+
+                                Long Version
+
+                                 MJ Mahoney
+   _______________________________________________________________________
+
+Table of Contents
+
+     * Introduction
+     * How Temperature Measurements Are Made
+     * Microwave Remote Temperature Sensing
+     * A Standard Atmosphere
+     * The Airborne Operation of a MTP
+     * Current MTP Airborne Platforms
+     * Recent MTP Deployments
+     * Related Links
+     * Glossary
+   _______________________________________________________________________
+
+   Introduction Most people would agree that the measurement of
+   temperature is a useful thing to do. We like to know what the
+   temperature is if we are planning some outdoor activity, or what our
+   body temperature is if we are not feeling well.  Scientists and
+   engineers have many, many more reasons to measure temperature, as it is
+   a fundamental physical property of just about everything. Since my
+   particular research interest is the measurement of the vertical profile
+   of temperature through the atmosphere, and since that is what the
+   Microwave Temperature Profiler (MTP) Web Pages are about, the ensuing
+   discussion will be geared with that in mind.
+
+How Temperature Measurements Are Made
+
+   Generally temperature measurements are made with some kind of
+   thermometer, and thermometers can be made in many different ways. The
+   simplest thermometer just makes a relative temperature measurement. For
+   example, if you want to check quickly whether someone has a fever, you
+   might put your hand on their forehead. If their forehead is warmer than
+   your hand, heat will flow to your hand, and you will conclude that they
+   have a fever because they "feel" warmer than you.. Such a thermometer
+   is not very useful however. What is needed is a device that can make
+   absolute temperature measurements.  Thermometers are devices which are
+   able to measure the average thermal energy (in an absolute sense) of
+   some material or medium, and assign a temperature to it. And because
+   the laws of physics are more simply expressed on a temperature scale
+   with respect absolute zero, scientists generally measure temperature in
+   Kelvins, rather than degrees Celcius or Fahrenheit.
+
+   Most people are familiar with  in situ temperature measurements, where
+   the thermometer is placed in or next to the thing whose temperature is
+   to be determined. Often, however, this may not be possible: the medium
+   may be so hot that the thermometer would either melt or loose
+   calibration, or it may be so far away that it can't easily be reached.
+   In these cases, remote sensing techniques must be used.  Unlike in situ
+   sensors, which rely on directly heating the thermometer (e.g., a
+   mercury bulb or a thermistor), remote sensing techniques rely on
+   detecting the energy radiated by the object or medium of interest, and
+   then determining a temperature based upon the properties of the
+   radiation. We are all familiar, for example, with the "heat" energy
+   that we feel near a smoldering log. This energy, which is invisible to
+   the human eye, is called infrared (IR) radiation and our skin has
+   evolved to be able to sense it (for obvious reasons), just like our
+   eyes have evolved to sense visible light (also for obvious reasons).
+
+   [ir20.gif] So what is it about radiation that let's us measure
+   temperature? Radiation, or more properly electromagnetic radiation, is
+   part of a broad energy spectrum of naturally occuring thermal (and
+   non-thermal) emissions which are carried by particles called photons.
+   Photons travel at the speed of light in a vacuum, and their energy is
+   characterized by either their wavelength or their frequency. The most
+   energetic photons have the shortest wavelengths (highest frequencies),
+   and include gamma rays and x-rays. In the "middle" of the
+   electromagnetic spectrum, at lower energy, are the ultraviolet (UV),
+   visible and infrared (IR) photons. Microwaves and long radio waves, the
+   least energetic of the photons, are at the longest wavelengths (lowest
+   frequencies). Now, without getting into the thermal physics of all
+   this, when an object is in thermodynamic equilibrium with its
+   surroundings (that is, when it emits and absorbs equal amounts of
+   energy), the intensity of its thermal emission at any frequency (or
+   wavelength) depends on only one thing -- it's temperaure! This
+   remarkable fact, which physicists refer to as the Planck Blackbody
+   Distribution, is the basis for most remote temperature measurements.
+   Generally, remote temperature sensing is done in the infrared at
+   wavelengths between 0.7 and 20 microns. (see Infrared Temperature
+   Measurement Theory and Application for an introductory discussion of IR
+   remote sensing).
+
+Microwave Remote Temperature Sensing
+
+   In principle, however, temperature can be measured at any wavelength of
+   the electromagnetic spectrum; the proper choice depends on the details
+   of the application. In the case of atmospheric remote temperature
+   sensing, advantage is taken of several properties of oxygen molecules,
+   which comprise 23% of the mass of the Earth's atmosphere.
+
+   First, oxygen molecules radiate (and absorb) at a number of discrete
+   frequencies between 50 and 70 GHz (microwaves with a wavelength of ~0.5
+   cm). These discrete frequencies, or spectral lines, are a consequence
+   of rules of quantum mechanics which only allow oxygen molecules to have
+   particular rotational energy states. Furthermore, since the oxygen
+   molecules are in thermodynamic equilibrium with the local environment,
+   this means that if we can measure the strength of the thermal emission
+   from the oxygen molecules, then we can deduce the physical temperature
+   of the molecules that produced this emission. Microwaves also have an
+   advantage over infrared temperature sensing techniques in that they are
+   only minimally affected by the presence of clouds. In addition, the
+   receiver and detector technology is very mature.
+
+   [O2abs.gif] Second, the oxygen absorption is strong enough that the
+   effective distance that emission is "seen" from is of the order of a
+   few kilometers, depending on the frequency and altitude, as is shown in
+   the figure, which illustrates the absorption in units of Nepers/km for
+   altitudes of 0, 10, and 20 km. On the ground the oxygen absorption is a
+   single broad feature because individual oxygen emission lines have been
+   blended together by what is known as pressure broadening. At 10 km
+   (~33,000 feet, the approximate altitude jet liners fly)  individual
+   absorption features (spectral lines) are beginning to be seen as
+   pressure broadening of the emission lines becomes less important, and
+   at 20 km (the approximate altitude the highest research aircraft fly)
+   many individual spectral lines can be seen.
+
+   [wf.GIF] Because any oxygen emission is absorbed in proportion to its
+   distance from the instrument detecting it (a MTP in our case), nearby
+   emission is absorbed little and the absorption increases exponentially
+   with distance (r) in the viewing direction, which in the figure is
+   inclined to the direction of flight. The integrated emission can be
+   represented by a "weighting function" (W(r)) which characterizes the
+   weighted mean distance of the emission. In the special case where the
+   temperature lapses at a constant rate with distance, it is easy to show
+   that the brightness temperature measured by the radiometer is exactly
+   equal to the physical temperature at the e-folding (R[a])distance for
+   the absorption. More complicated situations require more detailed
+   treatment.
+
+   Third, oxygen molecules are a well-mixed component of the atmosphere at
+   all heights, which is to say that the number of emitting molecules at
+   any height depends only on the pressure altitude. Water vapor, for
+   example, could not be used as a temperature surrogate because it's
+   distribution (or mixing ratio) compared to its surroundings varies
+   erratically. This characteristic is important because the strength of
+   the signal emitted by the oxygen molecules (which we want to use to
+   determine the temperature) depends not only on their temperature, but
+   also on the number of emitting molecules (as measured by the pressure),
+   and to a much lesser degree humidity. We must understand these
+   dependencies to interpret our measurements. It is clear from the figure
+   above that absorption decreases with altitude; the effect of
+   temperature on absorption is opposite to pressure: lower temperatures
+   increase absorption. These two effects somewhat offset each other, but
+   pressure wins out and there is a net decrease of absorption with
+   altitude.
+
+A Standard Atmosphere
+
+   [StdAtmos.gif] The figure to the right shows how pressure and
+   temperature vary with altitude for a standard atmospheric model, which
+   for the case shown represents average conditions at mid-latitudes.
+   Since pressure at any height is just the total weight per unit area of
+   all the air above, it decreases exponentially with height (blue curve)
+   and varies little from the exponential shape shown. The behaviour of
+   temperature (red curve) is more complicated. It typically decreases
+   with altitude until the tropopause is reached. The rate of temperature
+   change with altitude (the lapse rate) varies from about -10 K/km for
+   dry air to about -5 K/km for moist air. These large lapse rates are the
+   result of convective mixing in the region below the tropopause called
+   the troposphere. This is where most weather occurs. By contrast the
+   region above the tropopause -- the stratosphere -- is relatively benign
+   as it is convectively stable. The temperature in the stratosphere
+   varies from being nearly constant (isothermal) at high latitudes (the
+   polar regions) to increasing slowly with altitude at low latitudes (the
+   tropics). The heat source in the stratosphere is the absorption of
+   ultraviolet radiation from the sun by ozone molecules.
+
+The Airborne Operation of a MTP
+
+   [wamsu50.jpg] An MTP generally consists of two assemblies: a sensor
+   unit (SU), which receives and detects the signal, and a data unit (DU),
+   which controls the SU and records the data. In addition, on some
+   platforms there may be a third element, a real-time analysis computer
+   (RAC), which analyzes the data to produce temperature profiles and
+   other data products in real time. The SU is shown in the image to the
+   right and the DU and RAC are shown in the image below. The SU is
+   connected to the DU with power, control, and data cables. In addition
+   the DU has interfaces to the aircraft navigation data bus and the RAC,
+   if one is present. Navigation data is needed so that information such
+   as altitude, pitch and roll are available for the MTP data analysis.
+   Aircraft altitude is needed to perform retrievals (which are altitude
+   dependent), while pitch and roll are needed for controlling the
+   position of a stepper motor which must drive a scanning mirror to
+   predetermined elevation angles.
+
+   [s50_adapter_ring.jpg] In the SU image the scanning mirror is almost
+   edge on and pointing slightly upward and out of the page. The horn --
+   the equivalent of an antenna -- which receives the signal is
+   perpendicular to the left side of the box and faces the scanning mirror
+   which is inclined at 45 degrees to the horn. This mirror rotates about
+   an axis through the horn  which is nearly normal to the flight
+   direction (perpendicular to the side of the box with JPL written on it)
+   and allows viewing from near nadir (straight down) to near zenith
+   (straight up). At each viewing position a radio frequency signal
+   source, called a local oscillator (LO), is sequenced through two or
+   more frequencies and combined with the oxygen signal reflected off of
+   the mirror to produce a signal which is detected. A calibration target
+   is the white object behind the scanning mirror. The SU box dimensions
+   are 14 cm W x 16 cm H x 24 cm D and it weighs ~5 kg. The DU and RAC are
+   shown below in a WB57F superpod. Their dimensions are 36 cm W x 10 cm H
+   x 20 cm D and 25 cm W x 8 cm H x 35 cm D, respectively, and each unit
+   weights ~5 kg.
+
+   Because each frequency has a different effective viewing distance, the
+   MTP is able to "see" to different distances by changing frequency. In
+   addition, because the viewing direction is also varied and because the
+   atmospheric opacity is temperature and pressure dependent, different
+   effective viewing distances are also achieved through scanning in
+   elevation. For a two-frequency radiometer with 10 elevation angles,
+   each 15-second observing cycle produces a set of 20 signals (called
+   brightness temperatures), which are converted through a data analysis
+   procedure called a linear retrieval algorithm to a profile of air
+   temperature versus altitude, T(z).
+
+   [sss_951211a.gif] Finally, radiometric calibration is performed using
+   the outside air temperature (OAT) and a heated reference target to
+   determine the instrument gain. However, complete calibration of the
+   system to include "window corrections" and other effects, requires
+   tedious analysis and comparison with radiosondes near the aircraft
+   flight path. This is probably the most important single factor
+   contributing to reliable calibration. For stable MTPs, such
+   calibrations appear to be reliable for many years. Such analysis is
+   always performed before MTP data are placed on mission archive
+   computers. An example of an altitude temperature profile (ATP) is shown
+   to right in yellow. The location of the tropopause is shown be the
+   horizontal white dashed line; the aircraft altitude is indicated by the
+   short yellow horizontal line at 35,000 feet (right scale), just below
+   the tropopause. More information on this and other MTP data products
+   can be found here.
+
+Current MTP Airborne Platforms
+
+   At the present time MTPs fly of three NASA research aircraft: the DC8,
+   ER2 and WB57 (with USAF). Click on the thumbnail image to see a
+   full-sized image of the aircraft.
+
+
+   [S_dc8_right.jpg] DC8 on ramp in Shannon, Ireland
+   MTP is located in window just aft of forward starboard exit door
+   Home field is at the Edwards, CA,  Dryden Flight Research Center
+   Go to this link to get more information on DC8 capabilities
+   [S_er2sf.jpg] Two ER2 aircraft flying over Golden Gate bridge in San
+   Fransisco
+   MTP is located on right engine cheek.
+   Home field is at the Edwards, CA, Dryden Flight Research Center
+   Go to this link to get more information on ER2 capabilities
+   [S_ramp2.jpg] WB57F on ramp at Ellington Field, TX near Johnson Space
+   Center
+   MTP is located on right side of starboard wing superpod
+   Home field is Ellington Field, TX
+
+
+
+Recent MTP Deployments
+
+   The table below summarizes six recent MTP deployments in the past 3
+   years. The links in the Acronym column take you to the mission home
+   page where there is a discussion of the science objectives and results
+   for each of these missions.
+
+
+   Platform Dates Acronym Full Mission Name
+   WB57 March-May 1998 WAM WB57 Aerosol Mission
+   DC8 October-November, 1997 SONEX SASS Ozone and Nitrogen Oxide
+   Experiment
+   ER2 April - May 1997
+   June - July 1997
+   September 1997 POLARIS Photochemistry of Ozone Loss in the Arctic
+   Region In Summer
+   DC8 April - May 1996 SUCCESS SUbsonic aircraft: Contrail & Cloud
+   Effects Special Study
+   DC8 December 1995 - February 1996 TOTE/VOTE  Tropical Ozone Transport
+   Experiment and
+   Vortex Ozone Transport Experiment
+   ER2 May 1995
+   October - November 1995
+   January - February 1996 STRAT Stratospheric Tracers of Atmospheric
+   Transport
+
+
+   _______________________________________________________________________
+
+Related Links
+
+   Practical Guidelines for Temperature Measurement
+   _______________________________________________________________________
+
+Glossary
+
+   Lapse Rate The rate at which temperature changes with increasing
+   altitude.
+
+   Mixing Ratio By volume, the number of molecules of a particular
+   specicies (e.g. water vapor) divided by the number of other molecules
+   in a given volume. By mass, the mass of a particular species (e.g.
+   water vapor) divided by the total mass of other molecules in a given
+   volume.
+
+   Nepers/km A unit of absorption defined such that the reciprocal of this
+   quantity is the e-folding distance for the signal attenuation; that is,
+   the distance at which the signal is reduced by a factor of exp(-1), or
+   0.367 of the original signal strength. An absorption of 3 Nepers/km
+   would reduce a signal of strength 1 unit to 0.05 units (or 5%) in one
+   km.
+
+   Tropopause   Because of convective mixing in the lower atmosphere
+   (i.e., the troposphere) temperature decreases with increasing altitude
+   because as rising air parcels enter regions of lower pressure, they
+   expand and cool. This continues until a temperature inversion (that is,
+   a warmer temperature) is encountered. At this point, rising air parcels
+   are heavier than the surrounding air and sink back down. Normally this
+   inversion occurs at the tropopause. Above the tropopause (in the
+   stratosphere)  the air becomes warmer because it is being heated by the
+   absorption of ultraviolet sunlight by ozone.

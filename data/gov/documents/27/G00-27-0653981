@@ -1,0 +1,185 @@
+http://epims.gsfc.nasa.gov/epims_pub/epims_overview.pdf
+
+   March 15, 2000 An Overview of the NASA Electronic, Electrical, and
+   Electromechanical Parts Information Management System (EPIMS) S.
+   Waterbury ABSTRACT The Electrical, Electronic, and Electromechanical
+   (EEE) Parts Information Management System (EPIMS) is a comprehensive
+   data system, called to support the management of EEE parts for all NASA
+   projects. EPIMS 1.0 became operational in February of 1994, and
+   implements a core set of functions. EPIMS 2.0 was released in March of
+   2000, and introduced file upload and parts list check-in, among other
+   features. Keywords: components, database, electronics, parts, PDM. 1.0
+   PURPOSE AND SCOPE The purpose of EPIMS is to provide automated
+   engineering information management for EEE parts reliability, quality
+   assurance, design support, and cost control with an agency-wide,
+   integrated, on-line data system accessible to all NASA projects,
+   contractors, and supporting personnel. The scope of EPIMS includes
+   storage of and access to EEE part selection, availability,
+   qualification, usage, test, field history, and inventory data;
+   electronic submittal of contractual data requirements; and automated
+   support for parts management tasks for all NASA projects and for the
+   NASA Electronic Parts and Packaging (NEPP) Program. An Overview of the
+   NASA Electronic, Electrical, and Electromechanical Parts 1 of 8
+   Information Management System (EPIMS)
+   /vol01/epims_dev/docs/overview/epims_2.0_overview.fm5 OBJECTIVES 2.0
+   OBJECTIVES EPIMS is an information resource designed to be accessible
+   to all NASA Centers, projects, and cooperating activities. The system
+   objectives are to provide: * sharing of parts and design data among all
+   NASA projects; * agency-wide coordination of EEE parts management
+   activities; * electronic capture of data, enabling - elimination of
+   duplicate data entry and - minimization and eventual elimination of
+   paper systems; * a knowledge base of parts technical expertise; *
+   integration of NASA EEE parts management with system design activities.
+   3.0 POLICIES AND STANDARDS The policies or standards relevant to EPIMS
+   include both domain standards and policies (NASA EEE parts policies)
+   and metadata standards (system and software standards). 3.1 EEE Parts
+   Domain All policy documents are cited in Section 2, Reference
+   Documentation. EPIMS is designed to support the Data Item Descriptions
+   (DID's) specified in the Electrical, Electronic, and Electromechanical
+   (EEE) Parts Management and Control Requirements for NASA Space Flight
+   Programs, NHB 5300.4(1F) (July 1989), which defines the NASA
+   requirements for EEE parts management and control for NASA spaceflight
+   projects. 3.2 System, Software, and Metadata Standards The system,
+   software, and metadata standards applicable to EPIMS are: * The POSIX
+   (IEEE 1003.1, FIPS 151-1) operating system standard (a NIST Application
+   Portability Profile standard); * ISO 8879, the Standard Generalized
+   Mark-up Language (SGML); * IEC Draft International Standard 1360-1,
+   "Principles and Methods for Defining Standard Data Element Types with
+   Associated Classification Scheme for Electric Components;" * ISO 10303,
+   or "STEP", "Product Data Representation and Exchange," an international
+   standard for the exchange of product life cycle data. POSIX and STEP
+   are integral to the EPIMS concept. The EPIMS server runs on a
+   POSIX-compliant Operating System (Solaris) and utilizes POSIX standard
+   scripting languages in implementing EPIMS application modules. Input
+   formats, output formats, and a repository structure based on the ISO
+   10303 (STEP) standard will be incorporated in future releases of EPIMS.
+   2 of 8 An Overview of the NASA Electronic, Electrical, and
+   Electromechanical Parts Information Management System (EPIMS)
+   /vol01/epims_dev/docs/overview/epims_2.0_overview.fm5 USER COMMUNITY
+   DEFINITION 4.0 USER COMMUNITY DEFINITION 4.1 Primary Users * All NASA
+   and JPL project parts engineers and design engineers * The NASA
+   Electronic Parts and Packaging Program (NEPP) managers, engineers, and
+   support contractors * Any other NASA and NASA support contractor
+   personnel, NASA partners, and co- investigators who need EEE parts data
+   4.2 Secondary Users * NASA OEM's: Boeing, Lockheed-Martin, Ball
+   Aerospace, Hughes, etc. * DoD: Navy-CRANE, Air Force Space Systems
+   Division An Overview of the NASA Electronic, Electrical, and
+   Electromechanical Parts 3 of 8 Information Management System (EPIMS)
+   /vol01/epims_dev/docs/overview/epims_2.0_overview.fm5 4 of 8 INTERF 5.0
+   INTERFACES AND DATA FLOWS ACES AND D NASA - Bulk Loading of User Data -
+   NASA Parts Selection List (NPSL) Administration Electronic - GIDEP Data
+   Loading and Maintenance Air Parts & Force Aerospace - Part Problem
+   Identification Space A Packaging - Usage and Qual Data Corporation TA
+   Program Division FLO - Alert Dispositions WS Information Management
+   System (EPIMS) An Overview of the NASA Electronic, Electrical, and
+   Electromechanical Parts - Parts Lists - NSPARs/Reviews Parts - Alert
+   Impacts European Engineers - Parts Analysis Info Space - Usage and Qual
+   Data Navy/Crane Agency - Parts Lists - NSPARs - FSC Codes - S/C
+   Elements - CAGE Data - NPSL - PAPLs, PPLs EPIMS Defense Design
+   Logistics Engineers - Part Usage Supply Contractors - Part Qual Data
+   Center - Part Availability (DLSC) - Failure - Project Parts Lists
+   Experience - NSPARs Data Interchange - PAPLs (FEDI) NASA - Alert Impact
+   Data/Dispositions Documents Projects - Parts List Reviews (Alerts,
+   etc.) - NSPAR Reviews GIDEP - Parts List Mgt/Searching - Data from
+   Other Projects Key /vol01/epims_de NASA Current: Interfaces External
+   v/docs/o Future: Interfaces vervie w/epims_2.0_o vervie w.fm5 SYSTEM
+   ARCHITECTURE 6.0 SYSTEM ARCHITECTURE 6.1 Concept: Design Intent of
+   EPIMS The intent of EPIMS is to provide a repository for EEE parts data
+   that will enable a tighter coupling between the activities of EEE parts
+   engineers and NASA designers. Quick access to current data is essential
+   to enable the parts engineers to support designers on the part
+   selection and qualification issues that arise early in the formulation
+   of designs for flight hardware. The goal of EPIMS will provide
+   "one-stop shopping" for the management of project EEE parts information
+   for NASA designers, parts engineers, and project personnel, and to
+   integrate that information with reference data and documents (e.g., the
+   data maintained by the NEPP program) and other project data, such as
+   drawings, design models, and project documents. 6.2 Implementation: Web
+   Client / Server with CGI Database Interface The system architecture
+   concept for EPIMS is based on a simple Web client-server structure. The
+   EPIMS application consists of a database, interface applications, and a
+   Web server. All data is served to the user by way of the user's Web
+   browser, using context-sensitive, active HTML pages. Users connect to
+   EPIMS by logging on to the EPIMS Web server via Basic Authentication
+   (userid/password) and access the EPIMS database via CGI applications
+   with script-generated HTML forms interfaces. An Overview of the NASA
+   Electronic, Electrical, and Electromechanical Parts 5 of 8 Information
+   Management System (EPIMS)
+   /vol01/epims_dev/docs/overview/epims_2.0_overview.fm5 FUNCTIONAL
+   DECOMPOSITION 7.0 FUNCTIONAL DECOMPOSITION 0 EPIMS 1 FSC Directory 2
+   CAGE Directory 3 User Directory 4 NASA Project Directory (FUTURE) 5
+   NASA Spacecraft 10 Alert Impact and Design Item Cross-Reference
+   Directory 6 Alerts/Advisories/ Problem Reports 7 Parts Lists 8 NSPARs 9
+   Data Import 6 of 8 An Overview of the NASA Electronic, Electrical, and
+   Electromechanical Parts Information Management System (EPIMS)
+   /vol01/epims_dev/docs/overview/epims_2.0_overview.fm5 FUNCTIONAL
+   DECOMPOSITION 8.0 SYNOPSIS OF FUNCTIONS 1. Federal Supply Class (FSC)
+   Directory * Complete FSC database (all FSC's used by Defense Logistics
+   Agency) * FSC pop-up list from within other functions for selection of
+   valid FSC's for use in search criteria 2. Commercial And Government
+   Entity (CAGE) Directory * Complete CAGE database (over 750,000
+   organization locations), updated quarterly by download from the Defense
+   Logistics Support Command (DLSC) * Query by CAGE number, name;
+   wild-card search on names or on all fields * CAGE directory access from
+   other functions for quick look-up and insert * Reports, with view,
+   print, and save-to-file capabilities 3. User Directory and Data Access
+   Control * Complete EPIMS user directory -- data is obtained from NASA's
+   X.500 directory for NASA and NASA contractor personnel who are listed
+   there * Associates each user with an organization (CAGE), project(s),
+   and access role(s) 4. NASA Project Directory * Directory of all
+   projects with data in EPIMS * Project pop-up from other functions for
+   valid project acronyms to use in searches 5. NASA Spacecraft and Design
+   Elements Directory * Database of all spacecraft and design items in
+   EPIMS * Spacecraft/design element search by attributes, drill-down to
+   parts lists * Spacecraft and design element metadata maintenance
+   function for Project Data Administrators 6. Alerts/Advisories/Problem
+   Reports * EPIMS provides access to the NASA Alert Reporting System
+   (NARS), a database of all GIDEP FEDI documents (Alerts, Safe-Alerts,
+   Problem Advisories, etc.) and NASA Advisories * Query by Alert number,
+   part number, FSC, CAGE code, full-text search on all document text and
+   attributes, searches by date (before, after, between two dates) *
+   Reports, with view, print, and save-to-file capabilities 7. Parts Lists
+   * Repository support for all project parts lists (Project-Approved,
+   Early-Potential, As-Designed, As-Built, and Inventory Lists) * Search
+   for parts lists by spacecraft or design item; wild-card search * Search
+   for "part usage" (usages of parts in EPIMS parts lists) by project,
+   part number, FSC, CAGE code, or all fields * "Where-used" report
+   showing where a part is used by parts list, design item, and project,
+   with pop-up windows for specific data on parts lists, design items,
+   projects, CAGE codes, and parts list points of contact * Parts list
+   data maintenance functions assigned by Project Data Administrator *
+   Separate versioning for each parts list type (i.e., PAPL, EPPL, ADPL,
+   ABPL, etc.) associated with a given design item * Reports, with view,
+   print, and save-to-file capabilities 8. Non-Standard Part Approval
+   Requests (NSPAR) * Repository support for all project NSPAR's * Query
+   by part number, FSC, CAGE code, spacecraft or design element number,
+   name, etc.; wild-card search * NSPAR maintenance functions assigned by
+   Project Data Administrator An Overview of the NASA Electronic,
+   Electrical, and Electromechanical Parts 7 of 8 Information Management
+   System (EPIMS) /vol01/epims_dev/docs/overview/epims_2.0_overview.fm5
+   FUNCTIONAL DECOMPOSITION * Support for multiple versions and submittals
+   * Reports, with view, print, and save-to-file capabilities 9. Data
+   Import * Upload of parts list file (in tab-separated-values format) via
+   Web browser * Mapping function enabling user to specify how the part
+   attribute columns used in their parts list map to the EPIMS part
+   attributes * Automated transformation of parts list data via the
+   user-specified maps * Saving of maps for re-use in future parts list
+   check-ins * Capability to specify the design item to which a parts list
+   applies either by selecting a pre-defined design item in EPIMS or by
+   defining a new item and associated attribute data * Email notification
+   when parts list check-in process completes 9.0 PLANNED FUNCTIONS 10.
+   Alert Impact Cross-Reference * Automated cross-referencing of Alerts
+   (all GIDEP FEDI data and NASA Advisories) to all project parts lists
+   and NSPAR's in EPIMS - matching done by part number, FSC, and CAGE *
+   Cross-reference automatically updated whenever new Alerts, etc., are
+   added; also whenever a parts list or NSPAR is added or modified * Query
+   by part number, FSC, CAGE code, spacecraft or design element number,
+   name, etc.; wild-card search * Automatic email notification to project
+   users when new Alert impacts to project parts lists are identified by
+   automated cross-referencing * Closed loop system for Alert impact
+   dispositioning * Reports, with view, print, and save-to-file
+   capabilities Stephen C. Waterbury Code 562 NASA / Goddard Space Flight
+   Center Greenbelt, MD 20771 301-286-7557 steve.waterbury@gsfc.nasa.gov 8
+   of 8 An Overview of the NASA Electronic, Electrical, and
+   Electromechanical Parts Information Management System (EPIMS)
+   /vol01/epims_dev/docs/overview/epims_2.0_overview.fm5

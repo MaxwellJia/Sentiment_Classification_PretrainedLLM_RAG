@@ -1,0 +1,45 @@
+http://modis-ocean.gsfc.nasa.gov/dataproc.html
+
+   [oceanbartxt.gif] linkbar [bluebar.gif]
+
+   Data
+   Processing
+
+Processing Status
+
+Processing Overview
+
+   Data are processed by both the Goddard Distributed Active Archive
+   Center (Goddard DAAC) and the MODIS Adaptive Processing Sytem (MODAPS).
+   Processing occurs in stages, producing different levels of processed
+   data.
+
+   Upon receipt of the instrument data (Level 0), the Goddard DAAC
+   produces radiance counts (Level 1A) and calibrated, geolocated radiance
+   data (Level 1B). This processing includes computation of the
+   geolocation information, atmospheric profiles, and cloud mask.
+
+   The Level 1B calibrated, geolocated radiance data is then sent to
+   MODAPS where the local granule (Level 2) and global (Level 3) data
+   products are generated. The Level 2 and 3 products are then sent back
+   to the Goddard DAAC, where all Level 1 (A & B), atmospheric data, and
+   ocean data are archived.
+
+   To obtain data products, contact the Goddard DAAC.
+
+Ocean Processing Links
+
+     * MODIS Ocean Data Processing
+       Description of Level 2 & 3 Ocean Color and Sea Surface Temperature
+       Processing Code
+       from Oregon State University
+     * MODIS Ocean Primary Productivity (OPP) Software
+       Level 4 Ocean Primary Productivity Data Flow Diagram and Processing
+       Software
+     * MODIS Science Data Support Team (SDST) Oceans Group
+       Integration of Processing Code into MODAPS
+     __________________________________________________________________
+
+   Developed by:   Ron Vogel, GSC   (ron.vogel@gsfc.nasa.gov)
+   Authorized by:   Wayne E. Esaias, Code 971, NASA Goddard Space Flight
+   Center

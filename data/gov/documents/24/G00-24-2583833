@@ -1,0 +1,717 @@
+http://step.nasa.gov/omg/cwm_part3_00-01-03.pdf
+
+   Common Warehouse Metamodel (CWM) Specification Volume 3. Extensions
+   Proposal to the OMG ADTF RFP: Common Warehouse Metadata Interchange
+   (CWMI) Joint Submission International Business Machines Oracle
+   Corporation Corporation Unisys Corporation UBS AG NCR Corporation
+   Genesis Development Corpora- tion Hyperion Solutions Corporation
+   Dimension EDI Supported by: Deere & Company InLine Software Sun
+   Microsystems, Inc. Aonix Hewlett-Packard Company Hitachi, Ltd. Data
+   Access Technologies OMG Document ad/2000-01-03 February 11, 2000
+   Copyright 1999, IBM Corporation Copyright 1999, Unisys Corporation
+   Copyright 1999, NCR Corporation Copyright 1999, Hyperion Solutions
+   Copyright 1999, Oracle Corporation Copyright 1999, UBS AG Copyright
+   1999, Genesis Development Corporation Copyright 1999, Dimension EDI The
+   companies listed above hereby grant a royalty-free license to the
+   Object Management Group, Inc. (OMG) for worldwide distribution of this
+   document or any derivative works thereof, so long as the OMG reproduces
+   the copyright notices and the below paragraphs on all distributed
+   copies. The material in this document is submitted to the OMG for
+   evaluation. Submission of this document does not represent a commitment
+   to implement any portion of this specification in the products of the
+   submitters. WHILE THE INFORMATION IN THIS PUBLICATION IS BELIEVED TO BE
+   ACCURATE,THE COMPANIES LISTED ABOVE MAKE NO WARRANTY OF ANY KIND WITH
+   REGARD TO THIS MATERIAL INCLUDING BUT NOT LIMITED TO THE IMPLIED
+   WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. The
+   companies listed above shall not be liable for errors contained herein
+   or for incidental or consequential damages in connection with the
+   furnishing, performance or use of this material. The information
+   contained in this document is subject to change without notice. This
+   document contains information which is protected by copyright. All
+   Rights Reserved. Except as otherwise provided herein, no part of this
+   work may be reproduced or used in any form or by any means--graphic,
+   electronic, or mechanical, including photocopying, recording, taping,
+   or information storage and retrieval systems--without the permission of
+   one of the copyright owners. All copies of this document must include
+   the copyright and other information contained on this page. The
+   copyright owners grant member companies of the OMG permission to make a
+   limited number of copies of this document (up to fifty copies) for
+   their internal use as part of the OMG evaluation process. RESTRICTED
+   RIGHTS LEGEND. Use, duplication, or disclosure by government is subject
+   to restrictions as set forth in subdivision (c) (1) (ii) of the Right
+   in Technical Data and Computer Software Clause at DFARS 252.227.7013.
+   CORBA, OMG, and Object Request Broker are trademarks of Object
+   Management Group. 1. Preface . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . 1-11 1.1 Introduction . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1-11 1.2
+   Guide to Volume 3 . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . 1-11 1.3 Organization of the CWM Extensions (CWMX) . . . . . . 1-12
+   2. Entity Relationship . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . 2-15 2.1 Overview . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . 2-15 2.2 Organization of the Entity
+   Relationship Package . . . . . . 2-15 2.3 Entity Relationship Classes .
+   . . . . . . . . . . . . . . . . . . . . . 2-16 2.3.1 CandidateKey . . .
+   . . . . . . . . . . . . . . . . . . . . . 2-16 2.3.2 Attribute . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . 2-17 2.3.3 Domain . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 2-17 2.3.4 Entity .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2-20 2.3.5
+   ForeignKey. . . . . . . . . . . . . . . . . . . . . . . . . . 2-21
+   2.3.6 Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   2-21 2.3.7 ModelLibrary . . . . . . . . . . . . . . . . . . . . . . . .
+   2-21 2.3.8 NonUniqueKey. . . . . . . . . . . . . . . . . . . . . . .
+   2-22 2.3.9 PrimaryKey . . . . . . . . . . . . . . . . . . . . . . . . .
+   2-22 2.3.10 Relationship . . . . . . . . . . . . . . . . . . . . . . .
+   . . 2-22 2.3.11 RelationshipEnd . . . . . . . . . . . . . . . . . . . .
+   . . 2-23 2.3.12 SubjectArea . . . . . . . . . . . . . . . . . . . . . .
+   . . . 2-24 2.4 Entity Relationship Associations . . . . . . . . . . . .
+   . . . . . . 2-24 2.4.1 DomainBaseType . . . . . . . . . . . . . . . . .
+   . . . . 2-24 2.4.2 ForeignKeyImplements protected 2-25 2.5 OCL
+   Representation of Entity Relationship Constraints 2-25 3. COBOL Data
+   Division . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-27
+   3.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . 3-27 3.2 Organization of the COBOL Data Division Package
+   . . . 3-27 3.3 COBOL Data Division Classes . . . . . . . . . . . . . .
+   . . . . . 3-28 3.3.1 COBOLFD . . . . . . . . . . . . . . . . . . . . .
+   . . . . . 3-28 3.3.2 COBOLFDIndex . . . . . . . . . . . . . . . . . . .
+   . . 3-33 3.3.3 COBOLField . . . . . . . . . . . . . . . . . . . . . . .
+   . 3-34 3.3.4 FileSection . . . . . . . . . . . . . . . . . . . . . . .
+   . . . 3-40 3.3.5 LinageInfo . . . . . . . . . . . . . . . . . . . . . .
+   . . . . 3-40 3.3.6 LinkageSection. . . . . . . . . . . . . . . . . . .
+   . . . . 3-42 3.3.7 OccursKey . . . . . . . . . . . . . . . . . . . . .
+   . . . . . 3-42 3.3.8 Renames . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . 3-43 2/11/2000 ad/2000-01-03: Common Warehouse Metamodel,
+   Vol 3 iii 3.3.9 ReportWriterSection . . . . . . . . . . . . . . . . . .
+   . 3-44 3.3.10 Section . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . 3-44 3.3.11 Usage . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . 3-44 3.3.12 WorkingStorageSection . . . . . . . . . . . .
+   . . . . 3-45 3.4 COBOLData Associations . . . . . . . . . . . . . . . .
+   . . . . . . . 3-45 3.4.1 FDDepending pr otected 3-45 3.4.2 FDStatusID
+   protected 3-45 3.4.3 FileSectionFD protected 3-46 3.4.4 LinageField
+   protected 3-46 3.4.5 LinageInfoField protected 3-47 3.4.6
+   OccursDependingOn protected 3-47 3.4.7 OccuringKeyInfo protected 3-48
+   3.4.8 OccursKeyField protected 3-48 3.4.9 PaddingField protected 3-49
+   3.4.10 Redefines protected 3-49 3.4.11 RelativeOffsetField protected
+   3-50 3.4.12 RenamesFirst protected 3-51 3.4.13 RenamesThru protected
+   3-51 3.4.14 SectionRecord . . . . . . . . . . . . . . . . . . . . . . .
+   3-52 3.5 OCL Representation of COBOLData Constraints . . . . . 3-52 4.
+   DMS II . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . 4-55 4.1 Overview . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . 4-55 4.2 Organization of the DMSII
+   Package . . . . . . . . . . . . . . . 4-55 4.3 DMSII Classes . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . 4-57 4.3.1 Access
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4-57 4.3.2
+   AutomaticSubset . . . . . . . . . . . . . . . . . . . . . 4-57 4.3.3
+   DASDLComment . . . . . . . . . . . . . . . . . . . . . 4-57 4.3.4
+   DASDLProperty . . . . . . . . . . . . . . . . . . . . . . 4-58 iv
+   ad/2000-01-03: Common Warehouse Metamodel, Vol 3 2/11/2000 4.3.5
+   Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4-59
+   4.3.6 DataItem . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   4-60 4.3.7 DataSet . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . 4-65 4.3.8 FieldBit. . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . 4-67 4.3.9 KeyItem . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . 4-67 4.3.10 PhysicalAccessOverride . . . . . . . . . .
+   . . . . . . 4-68 4.3.11 PhysicalDatabase . . . . . . . . . . . . . . .
+   . . . . . . 4-68 4.3.12 PhysicalDataSet . . . . . . . . . . . . . . . .
+   . . . . . . 4-69 4.3.13 PhysicalDataSetOverride . . . . . . . . . . . .
+   . . . 4-69 4.3.14 PhysicalSet . . . . . . . . . . . . . . . . . . . . .
+   . . . . . 4-69 4.3.15 PhysicalSetOverride . . . . . . . . . . . . . . .
+   . . . . 4-69 4.3.16 Remap . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . 4-70 4.3.17 RemapItem . . . . . . . . . . . . . . . . . . .
+   . . . . . . . 4-71 4.3.18 Remark . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . 4-73 4.3.19 Set. . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . 4-74 4.3.20 SetStructure . . . . . . . .
+   . . . . . . . . . . . . . . . . . 4-76 4.3.21 Subset . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . 4-76 4.3.22
+   VariableFormatPart. . . . . . . . . . . . . . . . . . . . 4-77 4.4
+   DMSII Associations . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . 4-77 4.4.1 DASDLPropertyOwner . . . . . . . . . . . . . . . . 4-77
+   4.4.2 DataItemStructure. . . . . . . . . . . . . . . . . . . . . 4-78
+   4.4.3 DataSetPartitionSet protected 4-78 4.4.4 FieldBits protected 4-79
+   4.4.5 KeyDataItem protected 4-79 4.4.6 OccursDepending protected 4-80
+   4.4.7 RemapItems protected 4-80 4.4.8 RemappedStructure . . . . . . . .
+   . . . . . . . . . . . 4-81 4.4.9 SetPartitionSet protected 4-81 4.5 OCL
+   Representation of DMSII Constraints . . . . . . . . . . 4-82 5. IMS . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . 5-87 5.1 Overview . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . 5-87 5.2 Organization of the IMS Package.
+   . . . . . . . . . . . . . . . . . 5-88 5.3 IMS Classes . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 5-92 5.3.1 ACBLIB .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . 5-92 2/11/2000
+   ad/2000-01-03: Common Warehouse Metamodel, Vol 3 v 5.3.2 AccessMethod .
+   . . . . . . . . . . . . . . . . . . . . . . 5-92 5.3.3 DBD . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . 5-93 5.3.4 DBDLib . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 5-96 5.3.5 DEDB . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5-97 5.3.6
+   Dataset . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5-98
+   5.3.7 Exit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . 5-102 5.3.8 Field . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . 5-104 5.3.9 HDAM . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . 5-106 5.3.10 HIDAM . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . 5-107 5.3.11 INDEX . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . 5-108 5.3.12 LCHILD . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . 5-110 5.3.13 MSDB. . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . 5-112 5.3.14 PCB . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . 5-113 5.3.15 PSB. . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 5-117 5.3.16 PSBLib
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5-120 5.3.17
+   SecondaryIndex . . . . . . . . . . . . . . . . . . . . . . 5-121 5.3.18
+   Segment . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5-123
+   5.3.19 SegmentComplex . . . . . . . . . . . . . . . . . . . . . 5-127
+   5.3.20 SegmentLogical . . . . . . . . . . . . . . . . . . . . . . 5-129
+   5.3.21 SenField . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   5-131 5.3.22 SenSegment . . . . . . . . . . . . . . . . . . . . . . . .
+   . 5-132 5.4 IMS Associations . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . 5-133 5.4.1 Captures protected 5-133 5.4.2
+   CapturesExit pr ot ected 5-134 5.4.3 ContainsDataset protected 5-134
+   5.4.4 ContainsDBD protected 5-135 5.4.5 ContainsPSB protected 5-135
+   5.4.6 ContainsSegment protected 5-136 5.4.7 ExtendedByAccessMethod
+   protected 5-136 5.4.8 HasIndexSource protected 5-137 5.4.9 HasSource
+   protected 5-137 5.4.10 Indexes protected 5-138 vi ad/2000-01-03: Common
+   Warehouse Metamodel, Vol 3 2/11/2000 5.4.11 IndexShares protected 5-138
+   5.4.12 Indices protected 5-139 5.4.13 IsDuplicateData pr ot ected 5-139
+   5.4.14 IsInDBDLib protected 5-140 5.4.15 IsIndexedBy protected 5-140
+   5.4.16 IsInPSBLib protected 5-141 5.4.17 IsLChild protected 5-141
+   5.4.18 IsLParent protected 5-142 5.4.19 IsPaired protected 5-142 5.4.20
+   ParentChild protected 5-143 5.4.21 PcbToDbd protected 5-143 5.4.22
+   PcbToSenSegment protected 5-144 5.4.23 PrimaryIndex protected 5-144
+   5.4.24 PsbToPcb protected 5-145 5.4.25 Searched protected 5-145 5.4.26
+   SenfldToField protected 5-146 5.4.27 SensegMapsTo pr ot ected 5-146
+   5.4.28 SensegToSenfld protected 5-147 5.4.29 SequencedBy pr ot ected
+   5-147 5.4.30 StoresSegment protected 5-148 5.4.31 Subsequenced
+   protected 5-148 5.5 OCL Representation of IMS Constraints . . . . . . .
+   . . . . . 5-149 2/11/2000 ad/2000-01-03: Common Warehouse Metamodel,
+   Vol 3 vii 6. Essbase . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . 6-151 6.1 Overview . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 6-151 6.2
+   Organization of the Essbase Package . . . . . . . . . . . . . . . 6-151
+   6.3 Essbase Classes . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . 6-153 6.3.1 Alias . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . 6-154 6.3.2 Application . . . . . . . . . . . . . . .
+   . . . . . . . . . . . 6-154 6.3.3 Comment . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . 6-154 6.3.4 Consolidation . . . . . . . . . . .
+   . . . . . . . . . . . . . 6-155 6.3.5 CurrencyConversion. . . . . . . .
+   . . . . . . . . . . . 6-155 6.3.6 DataStorage . . . . . . . . . . . . .
+   . . . . . . . . . . . . 6-155 6.3.7 Database . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . 6-155 6.3.8 Dimension . . . . . . . . . .
+   . . . . . . . . . . . . . . . . 6-156 6.3.9 Formula . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . 6-157 6.3.10 Generation . . . . . .
+   . . . . . . . . . . . . . . . . . . . . 6-158 6.3.11 ImmediateParent. .
+   . . . . . . . . . . . . . . . . . . . . 6-158 6.3.12 Level. . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . 6-158 6.3.13
+   LinkedPartition. . . . . . . . . . . . . . . . . . . . . . . 6-158
+   6.3.14 Name . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   6-159 6.3.15 OLAPServer . . . . . . . . . . . . . . . . . . . . . . . .
+   . 6-159 6.3.16 Outline . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . 6-159 6.3.17 Partition abstract 6-160 6.3.18
+   ReplicatedPartition . . . . . . . . . . . . . . . . . . . . 6-161
+   6.3.19 TimeBalance. . . . . . . . . . . . . . . . . . . . . . . . .
+   6-161 6.3.20 TransparentPartition . . . . . . . . . . . . . . . . . . .
+   6-162 6.3.21 TwoPassCalculation . . . . . . . . . . . . . . . . . . .
+   6-162 6.3.22 UDA . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . 6-162 6.3.23 VarianceReporting . . . . . . . . . . . . . . . .
+   . . . . 6-162 6.4 Essbase Associations . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . 6-163 6.4.1 DatabaseOwnsOutline . . . . . . . . .
+   . . . . . . . . 6-163 6.4.2 OutlineReferencesDimensions . . . . . . . .
+   . . . 6-163 6.5 OCL Representation of Essbase Constraints . . . . . . .
+   . . 6-164 7. Express . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . 7-167 7.1 Overview . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 7-167 7.2
+   Organization of the Express Package . . . . . . . . . . . . . . . 7-167
+   7.3 Express Classes . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . 7-172 7.3.1 AggMap . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . 7-172 7.3.2 AggMapComponent . . . . . . . . . . . . . . .
+   . . . . 7-173 7.3.3 AliasDimension . . . . . . . . . . . . . . . . . .
+   . . . . 7-174 viii ad/2000-01-03: Common Warehouse Metamodel, Vol 3
+   2/11/2000 7.3.4 Composite . . . . . . . . . . . . . . . . . . . . . . .
+   . . . 7-174 7.3.5 Conjoint. . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . 7-175 7.3.6 Database . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . 7-176 7.3.7 Dimension abstract 7-176 7.3.8 Formula . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . 7-176 7.3.9 Model . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7-177 7.3.10
+   PreComputeClause . . . . . . . . . . . . . . . . . . . . 7-177 7.3.11
+   Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7-178
+   7.3.12 Relation . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   7-179 7.3.13 SimpleDimension . . . . . . . . . . . . . . . . . . . .
+   7-180 7.3.14 ValueSet. . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . 7-182 7.3.15 Variable . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . 7-183 7.3.16 Worksheet . . . . . . . . . . . . . . . . . .
+   . . . . . . . . 7-184 7.4 Express Associations . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . 7-185 7.4.1 AggMapComponentDimension . .
+   . . . . . . . . 7-186 7.4.2 AggMapComponentRelation . . . . . . . . . .
+   . . 7-186 7.4.3 AggMapComponents protected 7-187 7.4.4
+   AliasDimensionBaseDimension protected 7-187 7.4.5 ComputeClause
+   protected 7-188 7.4.6 RelationReferenceDimension . . . . . . . . . . .
+   . 7-188 7.4.7 SimpleDimensionDataType . . . . . . . . . . . . . 7-189
+   7.4.8 ValueSetReferenceDimension . . . . . . . . . . . 7-189 7.4.9
+   WorksheetColumnDimension . . . . . . . . . . . . 7-190 7.4.10
+   WorksheetRowDimension . . . . . . . . . . . . . . 7-190 7.5 OCL
+   Representation of Express Constraints . . . . . . . . . 7-191 8.
+   InformationSet. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . 8-193 8.1 Overview . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . 8-193 8.2 Organization of the
+   InformationSet Package . . . . . . . . . 8-194 8.2.1 InformationSet
+   Inheritance . . . . . . . . . . . . . . 8-195 8.2.2 InformationSet
+   Relationships . . . . . . . . . . . . 8-196 8.3 InformationSet Classes.
+   . . . . . . . . . . . . . . . . . . . . . . . . . 8-198 8.3.1
+   InformationSet . . . . . . . . . . . . . . . . . . . . . . . 8-198
+   8.3.2 InfoSetAdministration . . . . . . . . . . . . . . . . . 8-199
+   8.3.3 InfoSetDate. . . . . . . . . . . . . . . . . . . . . . . . . .
+   8-201 8.3.4 Rule . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . 8-201 8.3.5 Segment . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . 8-202 2/11/2000 ad/2000-01-03: Common Warehouse Metamodel,
+   Vol 3 ix 8.3.6 SegmentRegion . . . . . . . . . . . . . . . . . . . . .
+   . 8-203 8.4 InformationSet Associations . . . . . . . . . . . . . . . .
+   . . . . . 8-204 8.4.1 InformationSetReferencesInfoSetAdministration 8-
+   204 8.4.2 InformationSetReferencesRule. . . . . . . . . . . 8-204 8.4.3
+   InfoSetAdministrationReferencesInfoSetDates 8-205 8.4.4
+   SegmentReferencesRule . . . . . . . . . . . . . . . . 8-205 8.4.5
+   SegmentRegionReferencesRule . . . . . . . . . . 8-206 8.5 OCL
+   Representation of InformationSet Constraints. . . . 8-206 9.
+   Information Reporting . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . 9-209 9.1 Overview . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . 9-209 9.2 Organization of the Information
+   Reporting Metamodel . 9-209 9.2.1 Dependencies . . . . . . . . . . . .
+   . . . . . . . . . . . . 9-209 9.2.2 Major Classes and Associations . .
+   . . . . . . . . 9-209 9.3 Inheritance of the Information Reporting
+   Metamodel . . 9-211 9.4 Information Reporting Classes. . . . . . . . .
+   . . . . . . . . . . . 9-211 9.4.1 Report. . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . 9-211 9.4.2 ReportAttribute. . . . . . . .
+   . . . . . . . . . . . . . . . 9-212 9.4.3 ReportExecution . . . . . . .
+   . . . . . . . . . . . . . . . 9-212 9.4.4 ReportField. . . . . . . . .
+   . . . . . . . . . . . . . . . . . 9-213 9.4.5 ReportGroup. . . . . . .
+   . . . . . . . . . . . . . . . . . . 9-213 9.4.6 ReportPackage . . . . .
+   . . . . . . . . . . . . . . . . . . 9-214 9.5 Information Reporting
+   Associations. . . . . . . . . . . . . . . . 9-214 9.5.1
+   ReportGroupReferencesQueryExpressions. . 9-214 9.5.2
+   ReportOwnsReportExecutions . . . . . . . . . . . 9-215 9.6 OCL
+   Representation of Information Reporting Constraints 9-215 References
+   References-217 x ad/2000-01-03: Common Warehouse Metamodel, Vol 3
+   2/11/2000 Preface 1 1.1 Introduction CWM provides interchange for the
+   common portions of warehouse tool metamodels. CWM is intended to be a
+   foundation for tool specific metamodels and as such extended to be a
+   tool specific metamodel. There are three general extension techniques
+   to CWM: 1. Extensions not intended for interchange. These types of
+   extensions are private to the operation and management of a specific
+   tool. Interchange of shared data will be via CWM and private
+   information is not interchanged. 2. Extensions to specific model
+   objects that are not common. These types of extensions are attributes
+   of model objects that are needed by tools, but are not significant
+   enough to require the production of a tool specific model. The user of
+   CWM should use the general extension mechanism provided by UML, namely
+   tagged value pairs, to resolve these requirements. 3. Extension
+   definitions proposed for interchange of non-normative models between
+   tools that share a common definition of the extension. All of the
+   following chapters in this volume are examples of non-normative
+   extensions of CWM. The chapters provided in this volume represent only
+   examples of the extensions and may be changed or updated by the vendors
+   without notice or revision to this volume. 1.2 Guide to Volume 3 Volume
+   3 consists of the following chapters: Chapter 1 Preface Introduces this
+   volume. 2/11/2000 ad/2000-01-03: Common Warehouse Metamodel, Vol 3 1-11
+   1 Chapter 2 Entity Relationship Describes the Entity Relationship
+   package which contains classes and associations that represent metadata
+   of entity-relationship models. This package is an extension of the UML
+   Foundation package. Chapter 3 COBOL Data Division Describes the COBOL
+   Data Division package which contains classes and associations that
+   represent metadata of COBOL Data Divisions. This package is an
+   extension of the CWM Record package. Chapter 4 DMS II Describes the
+   DMSII package which contains classes and associations that represent
+   metadata of DMS II data resources. This package is an extension of the
+   CWM Record package. Chapter 5 IMS Describes the IMS package which
+   contains classes and associations that represent metadata of IMS data
+   resources. This package is an extension of the CWM Record package.
+   Chapter 6 Essbase Describes the Essbase package which contains classes
+   and associations that represent metadata of Essbase data resources.
+   This package is an extension of the CWM Multidimensional package.
+   Chapter 7 Express Describes the Express package which contains classes
+   and associations that represent metadata of Express data resources.
+   This package is an extension of the CWM Multidimensional package.
+   Chapter 8 Information Set Describes the InformationSet package which
+   contains classes and associations that represent metadata of
+   InformationSet tools. This package is an extension of the CWM OLAP
+   package. Chapter 9 Information Reporting Describes the
+   InformationReporting package which contains classes and associations
+   that represent metadata of information reporting tools. This package is
+   an extension of the CWM InformationVisualization package. References
+   Lists the references used in this volume. 1.3 Organization of the CWM
+   Extensions (CWMX) The CWMX Metamodel uses the same package structure as
+   CWM to control complexity, promote understanding, and support reuse.
+   The packages are grouped as follows: 1-12 ad/2000-01-03: Common
+   Warehouse Metamodel, Vol 3 2/11/2000 1 * Foundation package * Entity
+   Relationship (ER) package * Resource package * COBOL Data package * DMS
+   II package * IMS Database package * Essbase package * Express package *
+   Analysis package * Information Set package * Information Reporting
+   package 2/11/2000 ad/2000-01-03: Common Warehouse Metamodel, Vol 3 1-13
+   1 1-14 ad/2000-01-03: Common Warehouse Metamodel, Vol 3 2/11/2000
+   Entity Relationship 2 2.1 Overview Entity Relationship (ER) models are
+   used frequently as a means of describing business processes and the
+   data on which they operate. The ER model was a precursor of today's
+   object models and is probably the first data model to have the
+   adjective "semantic" applied to it. Although the ER model is widely
+   used to capture some aspects of application logic and data structure,
+   there have been surprisingly few implementations of the model as data
+   resources. Most development teams have preferred to map their ER models
+   to existing data systems such as relational database management
+   systems. This dearth of physical implementations has meant that
+   modelers have been free to elaborate the basic ER model in any (and
+   all) convenient directions with little or no impact on deployed
+   information systems. Consequently, variants of the ER model abound.
+   Because of its importance as a design and tool model, the CWM includes
+   a foundational ER model from which individual tool models may derive
+   their specific extensions. Doing so will improve the extent to which ER
+   models can be interchanged between various tooling environments. 2.2
+   Organization of the Entity Relationship Package The ER package depends
+   on the following packages: * org.omg::UML::Foundation *
+   org.omg::UML::Model_Management * org.omg::CWM::Foundation::Expressions
+   * org.omg::CWM::Foundation::KeysIndexes Many ER model concepts map
+   directly onto equivalent UML concepts, making the ER classes seem to be
+   little more than renamings of UML classes. However, the renaming
+   provided by deriving ER model classes from appropriate UML classes is
+   considered 2/11/2000 ad/2000-01-03: Common Warehouse Metamodel, Vol 3
+   2-15 2 valuable to promote understanding. In such cases, the discussion
+   of the role of ER classes has been kept minimal. However, when
+   important modeling choices were required, they are discussed in the
+   following class descriptions. UniqueKey (f rom Key sIndexes) Class
+   Attribute AssociationClass (f rom C or e) (f rom Core) (f ro m Core )
+   Candida teKey Entity Relationship Attribute PrimaryKey Index Subsystem
+   Model Package (f rom Key sIndexes) ( f ro m Mode l_Mana ge men t) (f
+   rom Model_Management) (f ro m Mod el_Man agemen t) Nonuniq ueKey
+   ModelLibrary Model SubjectA rea baseT yp e Classifier Associ ati onE nd
+   K eyRela ti onship (from Core) (f rom Core) 0. 0...11 (f rom Key
+   sIndexes) ** RelationshipEnd ForeignKey delete : ExpressionNode Domain
+   / relationshipEnd : RelationshipEnd 0.0...11 00..1 ..1 update :
+   ExpressionNode validationRule : ExpressionNode insert : ExpressionNode
+   default : ExpressionNode / foreignKey : ForeignKey / baseType :
+   Classifier Figure 2-1 Entity Relationship Package 2.3 Entity
+   Relationship Classes 2.3.1 CandidateKey Candidate keys are key that
+   meet the requirements for being a primary key. However, only keys that
+   are members of the PrimaryKey subclass have actually been identified as
+   primary keys. 2-16 ad/2000-01-03: Common Warehouse Metamodel, Vol 3
+   2/11/2000 2 Superclasses UniqueKey 2.3.2 Attribute Instances of the ER
+   model Attribute class are attributes (i.e., "features" in UML
+   terminology) of some Entity or Relationship instance. Superclasses
+   Attribute 2.3.3 Domain Domain instances represent restrictions on data
+   types declared elsewhere and can be used as the type of Attribute
+   instances. Domains restrict, as described by their validationRule
+   attribute, the values of the type identified via the baseType reference
+   that can be stored in the current Attribute. Because the baseType
+   reference is optional, Domains are not required to have a base type; in
+   such cases, the type of the Domain is the type of the default
+   expression. The following figures illustrate two ways that Domains can
+   be used to subset a data type. 2/11/2000 ad/2000-01-03: Common
+   Warehouse Metamodel, Vol 3 2-17 2 Schedule : Day : Entity fea ture
+   Attribute type WeekDay : WorkDay : Enumeration baseType Domai n Sunday
+   : validationRule : EnumerationLiteral ExpressionNode Monday : body =
+   EnumerationLiteral "Monday..Friday" Tuesday : EnumerationLiteral
+   default : Exp ressionNode Wednesday : EnumerationLiteral bod y =
+   "Monday" Thursday : EnumerationLiteral Friday : EnumerationLiteral
+   Saturday : EnumerationLiteral Figure 2-2 Using Domains to subset
+   Enumerations. 2-18 ad/2000-01-03: Common Warehouse Metamodel, Vol 3
+   2/11/2000 2 Schedule : HoursWorked Entity feature : Attribute typ e
+   Integer : PostiveInteger : DataType baseType Domain validationRule :
+   ExpressionNode body = ">= 0" default : ExpressionNode body = "0" Figure
+   2-3 Using Domains to subset a numeric data type. Superclasses
+   Classifier Attributes validationRule Contains an expression that
+   describes the valid values for this attribute. If the baseType
+   reference is not empty, the expression restricts the values of the base
+   type indicated by it. type: ExpressionNode multiplicity: exactly one
+   2/11/2000 ad/2000-01-03: Common Warehouse Metamodel, Vol 3 2-19 2
+   default An expression indicating the default value of Attributes for
+   which this Domain serves as the type. type: ExpressionNode
+   multiplicity: zero or one References baseType Identifies a Classifier
+   instance that represents the type upon which the Domain instance is
+   based. class: Classifier defined by: DomainBaseType::baseType
+   multiplicity: zero or one Constraints A Domain instance may not be its
+   own base type. [C-1] 2.3.4 Entity Instances of the Entity class are the
+   primary objects in a ER model. They represent ideas, processes, and
+   things of interest in an application system or tool model. Superclasses
+   Class Contained Elements Attribute CandidateKey PrimaryKey ForeignKey
+   NonUniqueKey 2-20 ad/2000-01-03: Common Warehouse Metamodel, Vol 3
+   2/11/2000 2 2.3.5 ForeignKey A ForeignKey instance identifies a set of
+   attributes in one Entity instance that uniquely identifies an instance
+   of another Entity containing a matching primary or candidate key value.
+   Superclasses KeyRelationship References relationshipEnd Identifies the
+   RelationshipEnd of the Relationship that is implemented by the current
+   ForeignKey instance. class: RelationshipEnd defined by:
+   ForeignKeyImplements::relationshipEnd multiplicity: zero or one
+   inverse:: RelationshipEnd::foreignKey 2.3.6 Model Instances of this
+   class represent ER models. Models are collected together by
+   ModelLibrary instances. Superclasses Model Contained Elements Domain
+   Entity Relationship SubjectArea 2.3.7 ModelLibrary A collection of ER
+   models and model libraries. Model libraries can be nested using the
+   inherited UML ownership association between Namespace and ModelElement.
+   The 2/11/2000 ad/2000-01-03: Common Warehouse Metamodel, Vol 3 2-21 2
+   same inherited UML association is used to define ER package Model
+   instances that reside in the current model library. Superclasses
+   Subsystem Contained Elements Model ModelLibrary 2.3.8 NonUniqueKey A
+   NonUniqueKey in the ER model is equivalent to a CWM Index. Values of
+   the keys are not necessarily either unique or required. Superclasses
+   Index 2.3.9 PrimaryKey PrimaryKey instances identify a key that
+   uniquely identifies each instance of an Entity and that is
+   distinguished by the modeler as the Entity's primary key. Superclasses
+   CandidateKey 2.3.10 Relationship ER Relationship instances represent
+   links between Entity instances. Because they derive from
+   AssociationClass, Relationships can have attributes as allowed by some
+   ER model extensions. This derivation also allows Relationship instances
+   to be used as the end points of other Relationship instances.
+   Superclasses AssociationClass Contained Elements RelationshipEnd 2-22
+   ad/2000-01-03: Common Warehouse Metamodel, Vol 3 2/11/2000 2 2.3.11
+   RelationshipEnd The RelationshipEnd class extends UML's AssociationEnd
+   class to permit the definition of separate delete, update, and insert
+   rules on each end of a Relationship. An ER model Relationship instance
+   owns two or more RelationshipEnds via an inherited UML association
+   between the Association and AssociationEnd classes. Superclasses
+   AssociationEnd Attributes delete An expression describing the integrity
+   constraint rule for deletes on this RelationshipEnd instance. type:
+   ExpressionNode multiplicity: Exactly one update An expression
+   describing the integrity constraint rule for updates on this
+   RelationshipEnd instance. type: ExpressionNode multiplicity: exactly
+   one insert An expression describing the integrity constraint rule for
+   inserts on this RelationshipEnd instance. type: ExpressionNode
+   multiplicity: exactly one 2/11/2000 ad/2000-01-03: Common Warehouse
+   Metamodel, Vol 3 2-23 2 References foreignKey Identifies a ForeignKey
+   instance that implements this RelationshipEnd. class: ForeignKey
+   defined by: ForeignKeyImplements::foreignKey multiplicity: zero or one
+   inverse: ForeignKey::relationshipEnd 2.3.12 SubjectArea A meaningful
+   subset of the instances in an ER Model instance. Normally, a
+   SubjectArea instance will consist of the Entity and Relationship
+   instances it owns or imports. The inherited UML ownership association
+   between ModelElement and Namespace is used to link SubjectArea
+   instances to their owning Model instances. Superclasses Package 2.4
+   Entity Relationship Associations 2.4.1 DomainBaseType Identifies a
+   Classifier instance that represents the type upon which the Domain
+   instance is based. Ends baseType Identifies the Classifier instance
+   that is the type upon which the Domain is based. class: Classifier
+   multiplicity: zero or one domain Identifies the Domains for which a
+   Classifier instance acts as the base type. class: Domain multiplicity:
+   zero or more 2-24 ad/2000-01-03: Common Warehouse Metamodel, Vol 3
+   2/11/2000 2 2.4.2 ForeignKeyImplements protected Identifies the
+   ForeignKey that implements a particular RelationshipEnd. Ends
+   relationshipEnd Identifies the RelationshipEnd instance that this
+   ForeignKey instance implements. class: RelationshipEnd multiplicity:
+   zero or one foreignKey Identifies the ForeignKey instance that
+   implements the RelationshipEnd instance. class: ForeignKey
+   multiplicity: zero or one 2.5 OCL Representation of Entity Relationship
+   Constraints [C-1] A Domain instance may not be its own base type.
+   context Domain inv: self.baseType <> self 2/11/2000 ad/2000-01-03:
+   Common Warehouse Metamodel, Vol 3 2-25 2 2-26 ad/2000-01-03: Common
+   Warehouse Metamodel, Vol 3 2/11/2000 COBOL Data Division 3 3.1 Overview
+   The concepts and ideas implicit in the definition of the COBOL
+   language's DATA DIVISION were one of the earliest (if not the first)
+   formalizations of the ubiquitous record model. A COBOL program contains
+   much more than just record descriptions. However, because neither CWM
+   nor UML attempt to describe programming languages directly, only the
+   DATA DIVISION is described here. The model presented here is compliant
+   to the COBOL 85 language standard [COBOL]. The primary purpose of the
+   COBOL DATA DIVISION metamodel extension package in CWM is to allow the
+   structure of DATA DIVISIONs to be captured so that their usage of other
+   model elements (such as RecordDefs and Fields) can be modeled. This
+   allows definition of files and databases created by COBOL programs as
+   well as direct support for tools that attempt to track the lineage and
+   determine the impact of proposed changes to COBOL application programs.
+   The metamodel does not, however, provide sufficient structure to
+   support tools that want to capture the structure of a DATA DIVISION
+   source into a CWM repository and then be able to faithfully reproduce
+   the source on demand. The COBOL DATA DIVISION metamodel extension also
+   serves as an example of the use of the CWM Record metamodel. The CWM
+   Record package is intended as a foundation upon which many
+   record-oriented programming languages can be described. The COBOL Data
+   Division extension package is provided as example demonstrating
+   appropriate usage of CWM and UML classes in modeling the data structure
+   representation parts of this and similar programming language
+   environments. 3.2 Organization of the COBOL Data Division Package The
+   COBOL Data Division package depends on the following packages: *
+   org.omg::UML::Foundation * org.omg::CWM::Foundation::KeysIndexes
+   2/11/2000 ad/2000-01-03: Common Warehouse Metamodel, Vol 3 3-27 3 *
+   org.omg::CWM::Resource::Record Classifier (from Core) DataType (f rom
+   Core) Section Usage / record : RecordDef ** Field Feature (f rom
+   Record) (from Core) WorkingStorageSection ReportWriterSection Renames *
+   firstRenames 1 * firstField 1 / firstField : COBOLField FileSection
+   COBOL Field ** thruRenames thruField 00..1 ..1 / cobolFD : COBOLFD
+   LinkageSection / thruField : COBOLField level : Integer occursKeyField
+   11 signKind : SignKindType isFiller : Boolean 11 isJustifiedRight :
+   Boolean redefinedField 00..1 ..1 isBlankWhenZero : Boolean
+   isSynchronized : Boolean picture : String dependingOnField 00..1 ..1
+   occursLower : Integer occursUpper : Integer indexName : String
+   isExternal : Boolean isGlobal : Boolean RecordFile / dependingOnField :
+   COBOLField (f rom Record) occurringField ** / occurringField :
+   COBOLField / occursKeyInfo : OccursKey / redefinedByField : COBOLField
+   occursKeyFieldInfo ** Class redefinedByField ** / redefinedField :
+   COBOLField (f rom Core) / paddedFD : COBOLFD OccursKey / linageInfo :
+   LinageInfo isAscending : Boolean {ordered} / dependingFD : COBOLFD /
+   occursKeyField : COBOLField / statusFD : COBOLFD * occursKeyInfo
+   {ordered} / occursKeyOf : COBOLField * / firstRenames : Renames /
+   thruRenames : Renames record ** occursKeyOf 11 {ordered} ** /
+   relativeFD : COBOLFD relativeFD ** ** /record ** RecordDef COBOL FD (f
+   rom Record) /file 00..1 ..1 0. 0..1 .1 00..1 ..1 00..1 ..1
+   relativeField {ordered} 00..1 ..1 organization : FileOrganization
+   padField statusID accessMode : AccessType dependsOn isOptional :
+   Boolean reserveAreas : Integer assignTo : String statusFD ** codeSetLit
+   : String blockSizeUnit : BlockKind Index minBlocks : Integer
+   dependingFD ** (f rom Key sIndexes) maxBlocks : Integer ** minRecords :
+   Integer maxRecords : Integer Li nageInfo labelKind : LabelKind
+   isExternal : Boolean ModelElement value : Integer 0..4 1 0..4 1 type :
+   LinageInfoType isGlobal : Boolean (from Core) / cobolFD : COBOLFD
+   {ordered} padLiteral : String / cobolField : COBOLField / fileSection :
+   FileSection / linageInfo : LinageInfo COBOLFDIndex / statusID :
+   COBOLField /spannedClass ** isAlternate : Boolean / dependsOn :
+   COBOLField 11 /index / padField : COBOLField / relativeField :
+   COBOLField paddedFD ** Figure 3-1 COBOLDataDivision Package 3.3 COBOL
+   Data Division Classes 3.3.1 COBOLFD Represents COBOL FD definitions.
+   FDs describe files that are used in COBOL programs. 3-28 ad/2000-01-03:
+   Common Warehouse Metamodel, Vol 3 2/11/2000 3 The size of COBOLFD
+   records may vary within a range bounded by the contents of the
+   minRecords and maxRecords attributes and with a current size given by
+   the field identified by the dependsOn reference. Two attributes and a
+   reference are used to represent the necessary information. To
+   illustrate the roles they play, the names of the attributes and the
+   reference are substituted into the following COBOL syntax fragment:
+   RECORD IS VARYING FROM minRecords TO maxRecords DEPENDING ON dependsOn
+   Superclasses Class RecordFile Contained Elements LinageInfo Attributes
+   organization Contains the physical organization of the file. type:
+   FileOrganization (unspecified | indexed | relative | sequential)
+   multiplicity: exactly one accessMode Contains the access mode of the
+   file. type: AccessType (unspecified | dynamic | random | sequential)
+   multiplicity: exactly one 2/11/2000 ad/2000-01-03: Common Warehouse
+   Metamodel, Vol 3 3-29 3 isOptional If True, the file is optional at
+   runtime. type: Boolean multiplicity: exactly one reserveAreas Contains
+   the number of buffer areas reserved for the file. type: Integer
+   multiplicity: zero or one assignTo Contains the name of the storage
+   medium the file is assigned to. type: String multiplicity: exactly one
+   codeSetLit Contains the name of the code set. type: String
+   multiplicity: exactly one blockSizeUnit Contains the unit type for the
+   contents of the minBlocks and maxBlocks fields. type: BlockKind
+   (records | characters) multiplicity: exactly one 3-30 ad/2000-01-03:
+   Common Warehouse Metamodel, Vol 3 2/11/2000 3 minBlocks Contains the
+   minimum number of per block, where is specified by the blockSizeUnit
+   attribute. type: Integer multiplicity: zero or one maxBlocks Contains
+   the maximum number of per block, where is specified by the
+   blockSizeUnit attribute. type: Integer multiplicity: zero or one
+   minRecords Contains the minimum number of characters per record. type:
+   Integer multiplicity: zero or one maxRecords Contains the maximum
+   number of characters per record. type: Integer multiplicity: zero or
+   one labelKind Contains the label kind of the file. type: LabelKind
+   (unspecified | standard | omitted) multiplicity: exactly one isExternal
+   If True, the file is external. type: Boolean multiplicity: exactly one
+   2/11/2000 ad/2000-01-03: Common Warehouse Metamodel, Vol 3 3-31 3
+   isGlobal If True, the file is global. type: Boolean multiplicity:
+   exactly one padLiteral If not an empty string, contains the pad
+   character. If an empty string, the padField reference may point to a
+   COBOLField instance that contains the pad character. type: String
+   multiplicity: exactly one References fileSection Identifies the
+   FileSection instances that contain this COBOLFD instance. class:
+   FileSection defined by: FileSectionFD::fileSection multiplicity:
+   exactly one inverse: FileSection::cobolFD linageInfo Identifies the
+   LinageInfo instances relevant to this COBOLFD instance. class:
+   LinageInfo defined by: LinageInfoField::linageInfo multiplicity: zero
+   to four; ordered inverse: LinageInfo::cobolFD statusID Identifies the
+   COBOLField instance containing the status value. class: COBOLField
+   defined by: FDStatusID::statusID multiplicity: zero or one inverse:
+   COBOLField::statusFD 3-32 ad/2000-01-03: Common Warehouse Metamodel,
+   Vol 3 2/11/2000 3 dependsOn Identifies the COBOLField instance that
+   contains the current record size for this COBOLFD instance. class:
+   COBOLField defined by: FDDepending::dependsOn multiplicity: zero or one
+   inverse: COBOLField::dependingFD padField Identifies the COBOLField
+   instance that contains the pad character. class: COBOLField defined by:
+   PaddingField::padField multiplicity: zero or one inverse:
+   COBOLField::paddedFD relativeField Identifies the COBOLField instance
+   containing the current relative record offset in the file represented
+   by the COBOLFD instance. class: COBOLField defined by:
+   RelativeOffsetField::relativeField multiplicity: zero or one inverse:
+   COBOLField::relativeFD Constraints The presence of a padding character
+   can be indicated either by a constant (in the padLiteral attribute) or
+   by a reference to another field via the padField reference but not by
+   both. [C-1] 3.3.2 COBOLFDIndex A COBOLFDIndex instance represents a
+   RECORD KEY or ALTERNATE RECORD KEY for an INDEXED file. Superclasses
+   Index 2/11/2000 ad/2000-01-03: Common Warehouse Metamodel, Vol 3 3-33 3
+   Attributes isAlternate If True, this is an alternate index. type:
+   Boolean multiplicity: exactly one 3.3.3 COBOLField Represents fields
+   that appear in COBOL record descriptions. COBOLField instances are
+   associated with their owning RecordDef or Group instances via the UML
+   owner/feature association between Feature and Classifier. The VALUE IS
+   clause for a COBOLField instance is stored in the initialValue
+   attribute inherited from the UML Attribute superclass. The
+   "occurs-depending" syntax that may be attached to a COBOLField instance
+   is addressed by a collection of attributes (occursLower and
+   occursUpper) and a reference (dependingOnField). To illustrate the
+   roles these attributes and references play, their names can be
+   substituted into the following COBOL syntax fragment: OCCURS
+   occursLower TO occursUpper TIMES DEPENDING ON dependingOnField
+   Superclasses Field Contained Elements OccursKey Attributes level The
+   level number of a COBOLField. type: Integer multiplicity: exactly one
+   3-34 ad/2000-01-03: Common Warehouse Metamodel, Vol 3 2/11/2000 3
+   signKind The type of sign for the field. type: SignKindType
+   (unspecified | leadingSign | trailingSign | leadingSepSign |
+   trailingSepSign) multiplicity: exactly one isFiller If True, the field
+   is a filler field. type: Boolean multiplicity: exactly one
+   isJustifiedRight If True, the content of the field is right justified.
+   type: Boolean multiplicity: exactly one isBlankWhenZero If True, the
+   field is interpreted as having the numeric value zero when the field
+   contains blanks. type: Boolean multiplicity: exactly one isSynchronized
+   If True, the field is synchronized. type: Boolean multiplicity: Exactly
+   one picture Contains the picture specification for the field. type:
+   String multiplicity: exactly one 2/11/2000 ad/2000-01-03: Common
+   Warehouse Metamodel, Vol 3 3-35 3 occursLower If the field occurs,
+   contains the lower bound of the number of possible occurrences. type:
+   Integer multiplicity: zero or one occursUpper If the field occurs,
+   contains the upper bound of the number of possible occurrences. type:
+   Integer multiplicity: zero or one indexName A list of strings that are
+   the names obtained from the INDEXED BY clause. type: String
+   multiplicity: zero or more isExternal If True, the field is external.
+   type: Boolean multiplicity: exactly one isGlobal If True, the field is
+   global. type: Boolean multiplicity: exactly one References
+   dependingOnField Identifies the COBOLField instance that contains the
+   number of occurrences of this field. class: COBOLField 3-36
+   ad/2000-01-03: Common Warehouse Metamodel, Vol 3 2/11/2000 3 defined
+   by: OccursDependingOn::dependingOnField multiplicity: zero or one
+   inverse: COBOLField::occurringField occurringField Identifies the
+   COBOLField instances for which this field contains the number of
+   occurrences. class: COBOLField defined by:
+   OccursDependingOn::occuringField multiplicity: zero or more inverse:
+   COBOLField::dependingOnField occursKeyInfo Identifies the OccursKey
+   instances describing the fields that make up the "occurs" key for this
+   field. class: OccursKey defined by: OccursKeyField::occursKeyInfo
+   multiplicity: zero or more; ordered inverse: OccursKey::occursKeyOf
+   occursKeyFieldInfo Identifies the OccursKey instances that describe how
+   this field participates in the "occurs" keys of other fields. class:
+   OccursKey defined by: OccuringKeyInfo::occursKeyFieldInfo multiplicity:
+   zero or more inverse: OccursKey::occursKeyField redefinedByField
+   Identifies the COBOLField instances that redefine this field. class:
+   COBOLField defined by: Redefines::redefinedByField multiplicity: zero
+   or more inverse: COBOLField::redefinedField 2/11/2000 ad/2000-01-03:
+   Common Warehouse Metamodel, Vol 3 3-37 3 redefinedField Identifies the
+   COBOLField instances that this field redefines. class: COBOLField
+   defined by: Redefines::redefinedField multiplicity: zero or one
+   inverse: COBOLField::redefinedByField paddedFD Identifies the COBOLFD
+   instances for which this field contains the pad character. class:
+   COBOLFD defined by: PaddingField::paddedFD multiplicity: zero or more
+   inverse: COBOLFD::padField linageInfo Identifies the LinageInfo
+   instances in which this field participates. class: LinageInfo defined
+   by: LinageField::linageInfo multiplicity: zero or more inverse:
+   LinageInfo::cobolField dependingFD Identifies the COBOLFD instance for
+   which this field determines the record size. class: COBOLFD defined by:
+   FDDepending::dependingFD multiplicity: zero or more inverse:
+   COBOLFD::dependsOn statusFD Identifies COBOLFD instances for which this
+   field acts as the statusID. class: COBOLFD 3-38 ad/2000-01-03: Common
+   Warehouse Metamodel, Vol 3 2/11/2000 3 defined by: FDStatusID::statusFD
+   multiplicity: zero or more inverse: COBOLFD::statusID firstRenames
+   Identifies the Renames instances in which this COBOLField instance is
+   the first renamed field. class: Renames defined by:
+   RenamesFirst::firstRenames multiplicity: zero or more inverse:
+   Renames::firstField thruRenames Identifies the Renames instances in
+   which this COBOLField instance is the last renamed field. class:
+   Renames defined by: RenamesThru::thruRenames multiplicity: zero or more
+   inverse: Renames::thruField relativeFD Identifies the COBOLFD instances
+   for which this COBOLField instance acts as a relative record offset.
+   class: COBOLFD defined by: RelativeOffsetField::relativeFD
+   multiplicity: zero or more inverse: COBOLFD::relativeField Constraints
+   Level 77 fields must be owned by the Working Storage or the Linkage
+   sections and may not have children. [C-2] Field level must be 01 to 49,
+   66, 77 or 88. [C-3] A COBOLField can only be redefined by fields at the
+   same level. [C-4] 2/11/2000 ad/2000-01-03: Common Warehouse Metamodel,
+   Vol 3 3-39 3 3.3.4 FileSection Represents the File section of a COBOL
+   Data Division. Superclasses Section Contained Elements COBOLFD
+   References cobolFD Associates a COBOL File section with the COBOLFD
+   instances that it contains. class: COBOLFD defined by:
+   FileSectionFD::cobolFD multiplicity: zero or more; ordered inverse:
+   COBOLFD::fileSection Constraints The RecordDef instances defined within
+   each COBOLFD in a FileSection instance

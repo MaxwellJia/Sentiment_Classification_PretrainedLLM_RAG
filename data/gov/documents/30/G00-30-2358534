@@ -1,0 +1,276 @@
+http://sasysoft.phy.bnl.gov/home.html
+
+
+
+   CAPTION:
+
+             Spin ASYmmetry (SASY)  Analysis Sofware (SasySoft)
+
+   [sasy3d.jpg]
+   This site is a "repository" of source code and related stuff for
+   SasySoft - the software for analysis of data in LEGS group experiment
+   using unique detector setup SASY.  This package was born mostly
+   because of availability of ROOT analysis package.  ROOT is used heavily
+   here and enables one to use standard interface to such common functions
+   as read-write data file, histos and also provides ability to  run on
+   many OS systems and still share data and results of processing without
+   any conversions as long as everybody uses ROOT format files.  And what
+   is also very important  - all  ROOT classes  are nicely described on
+   their official site with FAQ and other nice documentation and I also
+   generate documentation for my classes in html format that can be
+   browsed. Tutorials and "howto" sections  get written on "as time allows
+   basis". Below are available versions of the package and short history
+   of changes.  Any questions or comments are welcome.
+
+   Best wishes
+
+   Khamit Ardashev
+
+
+
+
+   Version 2.21 11/01/01
+   added CMB user, improved clustering a little, ADC calibrations for
+   PN-PV-bars are cosmics based now ( Albert's work), and TDC calibrations
+   are cosmics corrected. Thresholds are more realistic  in general.
+   release notes DOWNLOAD
+   Version 2.20 08/11/01
+   new tagger energy and TDC calibrations for Nov99 HD data, neutron
+   barrel work in progress. Some bugs fixed.
+   Version 2.19 07/13/01
+   corrections to Xpos in PN-bars with cosmics added
+   Version 2.17 06/22/01
+   Resolutions for PN Xposition, XC Zposition, PN tof, XT Energy,
+   thresholds for PN, XTC are matched better between MC and Nov99 data.
+   Photon energy in MC is constrained to 64 values just like in data to
+   reflect resolution of tagger spectrometer. Clustering algorithm is no
+   longer using energy ration between clusters as cut, only opening angle.
+   twobody lookup tables are created for pi0p channel only now.
+   Version 2.16 05/15/01
+   TOF for PB is used now for cuts on PbGamma. Flux calculation already
+   adjusted for CG3 efficiency in data runs (not MC obviously).
+   added directory "storage" for keeping unused maker and selector
+   directories. Makefile is more universal now. It compiles all
+   directories starting with src*, selector*, maker*. This is why if is
+   needed to move unused directories to where Makefile does not see them
+   - "storage". Albert added eloss lookup tables for charged particles.
+   Default particle has to be set explicitly. MUCH more improved
+   calibrations for Zpos in XC for Nov99 and Apr00 data.  DF_t is used
+   instead of Float_t and Double_t  some places.
+   Version 2.09 03/07/01
+   First working release with OHA. Also, split directory programs into
+   programsKA, programsAL ... for different users, added selector*
+   directories with customized selectors. Makefile searches for files in
+   dirs: maker*, selector*, src*. Renamed libTot.so to libsrc.so.
+   Version 2.07 02/28/01
+    Last release before moving to OHA("One Hit Analysis"), where program
+   automatically loops over all tagger hits and all events appear to have
+   only one tagger hit. ( In reality of course events may have several).
+   New calibrations are used for PN-bars,PV-paddles, XT gammas. LegsCut
+   added.
+   Version 2.05 01/04/01
+   Minor changes in makers.  release notes DOWNLOAD
+   Version 2.04 12/20/00
+   Added makerHM directory, made counters of events of type Int_t instead
+   of Stat_t.
+   Version 2.03 11/27/00
+   Bug fix of 2.02,  LegsEvent class is parent of LegsRun now. LegsEvent
+   is supposed to contain ONLY data needed for global access and pointer
+   to this class (LegsEvent* it) is made global.  Makers do not need to be
+   given pointer  "theRun" any more. In this version LegsEvent is simply
+   copy of LegsRun. In next versions staff gradually will move to LegsRun
+   and will be protected from global access. Also  LegsEvent is likely to
+   become parent of other classes such as LegsHit, LegsTagHit,
+   LegsSelector, LegsMaker and then global pointers will become obsolete.
+   LegsSelector is just like maker except it is for different purpose -
+   select events before they are put into vectors and clustered.
+   Version 2.01 10/18/00
+   Tagger hit  info such as tag_id ( generally unavailable or wrong in MC
+   ntuples) is well faked now in case of MC by editing GetTag*() functions
+   of LegsRun. Smearing has been added to all detectors in sumulations for
+   Egy and Tof and Xpos. Variables kSmear*  may be tweaked in
+   definitions.h. TRandom generator ( gRandom) is seeded with same number
+   always to allow for painless debugging. For more info see
+   Version 2.00 10/16/00
+   Program has been modified to be able to run MonteCarlo simulated data
+   as well as real experiment data. New classes: LegsSelectorSkipEvent,
+   LegsPid.  fPidVec data member of LegsRun.  Histograms are written out
+   as entries into standard TDirectory  now. This helps to make output
+   files backward compatible and portable. Calibrations files and routines
+   have been updated also.
+   LegsMakerCluster4 is called from within LegsRun before any user makers
+   are called, therefore user need not to declare it.
+   LegsMakerPid class is being developed and does nothing right now, but
+   it is also called automatically, so that user has clustered and
+   identified particles with 4-momentum as given automatically. LegsChan
+   class is still kept for backward compatibility.
+   Ntuples have 4-momentum variables now. Very soon one will be able to
+   play with MC as if it is data and then simply run data through the same
+   code and get results.  All old makers should still work, only macros
+   have to be changed so that they don't declare second LegsMakerCluster4
+   object.
+   Version 1.12 08/21/00
+   Updated makers for PiZero reconstruction. Introduced vector of chanels
+   in LegsRun class -  fChanVec.  It contains objects of new class
+   LegsChan, used for reaction cahnels reconstruction with same logic as
+   LegsHit and LegsPart.
+   Version 1.11 08/01/00
+   Minor bug fix
+   Version 1.09 07/19/00
+   ROOT's version 2.25 has double precision - SasySoft has all floats
+   changed to doubles. Many changes for gamma clustering and energy
+   reconstruction in XT. More, better calibration functions in LegsDB.
+   Better clusterization in LegsMakerCluster4.  Flux calculation is
+   auatomatic and is based on ascii files cg3_xxxx.dat. This version was
+   given redesigned calibration files.  Some variables names have changed
+   to sastisfy programming conventions.
+   Version 1.07  06/14/00
+   UPDATE.sh file put back into $SasyHomeDir after it mysteriously
+   dissappeared several versions ago. PiZero reconstruction, MonteCarlo
+   integration is in process. Calibration parameters files format change
+   is in process. Basically, just a snapshot with no significant changes
+   yet. For more info see release notes DOWNLOAD
+
+     Version
+     1.06
+
+         05/23/00
+     Tutorials updated. Names of libraries and directories changed to be
+     standard. Installation procedure different. Bug fix for
+     LegsPart::GetPhi(). XV veto paddles are in.
+
+   Version 1.04 05/11/00
+   Pi Zero reconstruction using XT is the main thing that changed. Also
+   LegsTagHit class was added for covering all possible functions,
+   conversions that have to do with tagger such as energy calibration,
+   splitting into groups of a certain size, determining if hit is true or
+   false and so on. CMassTable class is used wider  to make sure same
+   masses used everywhere. Global variables are used more to avoid passing
+   them from class to class too much, such as pointers to LegsDB object (
+   gDB), one instance of which is supposed to exist only since we ave only
+   one detector setup geometry. If another instance is needed - new
+   executable ( or another session of CINT)  is needed. Use of global
+   variables limits number of instances of LegsRun objects to only one.
+   Confusion may result if more than one LegsRun object exists. This is
+   experimental. I hope no one will need to have two runs simultenuosly.
+   If nobody ( including me) complains about global variables - I might
+   introduce more global pointers, for example pointer to current LegsRun
+   object gIt. Then all makers may be declared simply wihtout passing any
+   parameters:  LegsMakerSample sample;
+   The conclusion is:   (one session of ROOT)  <-> (one  instance of
+   LegsRun).  More makers were written fo analysis of PiZero and
+   simulations with GEANT. Geometry of SASY has been tweaked a little for
+   PN-bars. Distance between bars was corrected. Code together with ROOT
+   has been compiled sucessfully on ATHLON-750 CPU with SD-11 motherboard.
+   Version 2.24.04 of ROOT is installed now. So far only one bug noticed:
+   when moving text on a canvas  ROOT hangs up. Otherwise it is OK.  This
+   version is kind of raw because I did not check it thoroughly. It does
+   what I want it to do though. Plan is to write up clone of ROOT's
+   "stress" program for SasySoft soon so that running one program may
+   quickly give an idea of stability of the code.  Some libraries were
+   renamed to standartize naming a little. Default directories for input
+   and output ( data_dir and hist ) have been moved to $HOME directory to
+   avoid acidental ovewriting when copying new version.  Idea is to allow
+   copying the whole directory  $SasyHomeDir from one place to another and
+   leave data and result output untouched. The directory should contain
+   code, calibration parameters, executables... but no data and no
+   histograms. Twobody kinematics parameters are now in different
+   subdirectories for different tagger calibrations. Previously one had to
+   delete parameter files  by hand if new tagger calibration was used.
+   Version 1.03 03/22/00
+   a couple bugs fixed, more comments here and there, output file has host
+   name appended for occasions when I run on cluster of PCs and need to
+   collect constituent partial histograms and add them together. Unique
+   file naming helps. DOWNLOAD
+   Version 1.02 03/15/00
+   NO design changes, only file naming changed for better readability by
+   human eye.  A couple of new functions in LegsDB and LegsRun to cover
+   calibrations for Pb-wall and tagger. Calibration files for Pb  may be
+   inserted into general scheme and automatically loaded when needed just
+   like others.  Calibrations for tagger have been added already, version
+   1.00 had them wrong.  Updated comments in LegsRun and LegsDB . Updated
+   tutorials.
+
+Version 1.00
+
+03/11/00
+
+   This version got major version number bumped up because:
+
+    1. Names of all classes related to LEGS group only start with "Legs".
+       Classes that are of general use still have prefix "C".  Global
+       functions names do not have any convention at the moment and I
+       don't see need because there are only several of them.
+    2. LegMaker*    classes have TDirectory as parent now. This makes
+       writing and reading histos a snap.
+    3. Calibration files are ordered and named according to run number and
+       time. An user may add his own calibrations and they will be
+       automatically read in at appropriate time and run.
+    4. New directories added to distribution.
+
+   Version 0.14 03/06/00
+   This version used to be 1.00 but after collaborative decision to have
+   new major version with new names it was rolled back .  It has
+   everything 1.00 has except class names start with "C" and some bugs are
+   not cured yet.
+   Version 0.13 02/16/00
+   Automatically generates twobody lookup tables when  CTwobody object is
+   declared.  They will be put into special directory
+   ~/sasy/twobodyLookuptables.
+   I stop putting those tables into distribution now.  display.C macro has
+   been changed a little - CMakerCluster4 has been added to it. Remember :
+   no clustering - most of makers will give crap because they rely on
+   clustered data. DOWNLOAD
+   Version 0.12 02/16/00
+   This version has tutorials updated, new Makefile in ~/sasy directory
+   and  PLUS several makers  for Pi Zero reconstruction. Bugs were related
+   to memory leak in  CRun.cxx and initialization stage in
+   CMakerIsPiPlus(A,B,C,D). New gloabal functions GetAbsoluteTime(...)  to
+   convert date to seconds and GetDate(...) to convert seconds to date.
+   They are planned to be used for calibration files naming scheme.
+   Version 0.9 02/09/00
+   No change in organization of program flow or classes. Only Makefile
+   changed  If any #include statements have been added to any files then
+   command "make depend " will automatically update all dependencies.
+   Isn't it great !. No more manual writing dependencies.Physics changes:
+   New better clustering algorithm implemented: CMakerCluster4.  Global
+   function GetOpeningAngle(CPart1*,CPart2*) has been  implemented.
+   Version 0.6 01/30/00
+   Clustering also in CMaker* classes now, new directory ctructure , new
+   way of writing histos to root file- through Streamer() function of
+   CMaker* objects.
+   Version 0.5 01/19/00
+   Created bunch of CMaker* classes from old code instead of  member
+   functions of class CRun.  Changed Makefile to reflect that. Makefile is
+   constructed in such a way that any change to any header file will
+   induce regeneration of class dictionaries and recompilation of
+   everything. Changes in implementaion files do not. This might be
+   changed later when classes are stable and could be hardcoded into the
+   Makefile. Meanwhile it is safer to regenerate and recompile everything
+   because of difficulty of tracking all newly created dependencies.
+   Version 0.4
+   Renamed classes to be different from ROOT classes. Copied one cut into
+   maker class - works.  No event display for makers yet. And also no
+   automatic streaming of makers yet. Otherwise - idea becomes reality
+   pretty good.
+   Version 0.3 01/12/00
+   Readjusted to work properly with real data. Earlier was only working
+   with simulation. No reorganization yet. No new features.
+   Version 0.2 01/11/00
+   The release is small bug fix of previous version. No reorganization
+   yet. No new features.
+   Version 0.1  01/10/00
+   The release is start of multi-user mode in developing analysis software
+   for SASY detector based on ROOT.  Idea is to have users write Maker
+   Classes inheriting from  standard "parent class". This parent class
+   will take care of  most of necessary details of bookkeeping. User will
+   be able to concentrate on physics instead. This version  needs some
+   work to making it easily upgradable and portable to different machines.
+   The package will suffer changes very soon.
+     __________________________________________________________________
+     __________________________________________________________________
+
+Khamit Ardashev
+Last update 03/13/00
+
+                                                         Copyright ©  1999-2001 OPEN SOURCE

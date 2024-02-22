@@ -1,0 +1,100 @@
+http://fits.gsfc.nasa.gov/xtension.html
+
+
+
+                         Registered Extensions to FITS
+
+IAU FITS Working Group
+
+Donald C. Wells, Chair
+
+   (File last updated 1995-September-07, 1300 UT)
+     __________________________________________________________________
+
+Introduction
+
+   Extensions to the basic FITS format can be defined as specified in
+   Grosbøl et al. (Astron. Astrophys. Suppl. 73, p359-364, 1988). The IAU
+   FITS Working Group (WG) under Commission 5 registers the names of such
+   conforming extensions. The status of a given extension can have one of
+   the following levels:
+   Status   Remarks
+  ___________________________________________________________________________
+
+     S      Standard FITS extension accepted by the IAU FITS WG
+            and recommended by the IAU.
+
+     P      Proposal for FITS extension accepted by local FITS
+            committees but not yet by the IAU FITS WG.
+
+     D      Draft proposal to be discussed in local FITS commitees.
+
+     R      Reserved FITS extension name for which a full draft proposal
+            has not yet been submitted.
+
+     L      Local FITS extension which has a limited scope only.
+     __________________________________________________________________
+
+   The table below gives a list of known names of FITS extension formats,
+   their status and reference organization:
+      Ext-name   Status  Ref.   Remarks
+  ___________________________________________________________________________
+
+     'BINTABLE'    S     IAU    Defined at FITS archives in the files
+                                bintable_aa.* of
+                                1995-Feb-06. (Note: Only main document
+                                excluding Appendices)
+
+     'IMAGE   '    S     IUE    Defined in Astron. Astrophys. Suppl. 105
+                                p53-55, (1994).
+
+     'TABLE   '    S     IAU    Defined in Astron. Astrophys. Suppl. 73,
+                                p365-372, (1988).
+
+     'COMPRESS'    R     GSFC   Suggested extension name (by A. Warnock);
+                                Preliminary proposal in FITS archives
+                                in the files
+                                compress.*.
+
+     'DUMP    '    R      -     Suggested extension name for binary dumps;
+                                No full proposal submitted.
+
+     'FILEMARK'    R     NRAO   Suggested extension name (by D.Wells);
+                                No full proposal submitted.
+
+     'VGROUP  '    R     GSFC   Suggested extension name for HDF Vgroups;
+                                No full proposal submitted (D.Jennings).
+
+     'A3DTABLE'    L     NRAO   Extension used by AIPS and defined in
+                                the 'Going AIPS' Manual Chapter 14.
+                                Subset of 'BINTABLE'
+
+     'IUEIMAGE'    L     IUE    Local extension defined for archiving
+                                of special IUE data products.
+                                Identical to 'IMAGE'
+     __________________________________________________________________
+
+   Anyone who wants to register a FITS extension name should contact
+   either of the following addresses:
+
+
+    FITS Support Office
+    fits@fits.gsfc.nasa.gov
+
+   or
+
+
+    IAU FITS Working Group (WG) c/o dwells@nrao.edu
+
+   A short description and justification should be submitted together with
+   the request for registration.
+     __________________________________________________________________
+
+   This information is provided by the FITS Support Office at the NASA
+   Goddard Space Flight Center
+     __________________________________________________________________
+
+   Content last revised: 7 September 1995
+
+   Responsible NASA representative: Richard White
+   (rwhite@nssdc.gsfc.nasa.gov)

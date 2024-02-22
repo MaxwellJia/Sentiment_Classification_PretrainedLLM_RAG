@@ -1,0 +1,198 @@
+http://hpcf.nersc.gov/storage/afs/
+
+   NERSC High Performance Computing
+
+   You are here: hpcf / storage / afs / index You came from:
+     __________________________________________________________________
+
+Summary
+
+   Files stored in the Andrew File System (AFS) are distributed across one
+   or more AFS servers but remain accessible to all AFS client machines.
+   The principal benefits of AFS for NERSC users are:
+    1. Access to files across multiple platforms and machines.
+    2. Daily file backup.
+    3. Use of familiar UNIX file manipulation commands.
+
+   The NERSC Cray systems do not have "native" AFS implementations. The
+   AFS file system (/afs) is available on the Crays as an NFS mounted
+   filesystem. There are no AFS commands available on the Crays. Users
+   must connect to the NFS-AFS gateway machine, dano.nersc.gov, and use
+   the menu to enable access.
+
+Using AFS at NERSC
+
+     * Your AFS Username and Password
+     * Authentication
+     * Your AFS File Space
+     * Backup Copies of Your AFS Files
+     * AFS File Quotas
+     * AFS Project Directories
+     * Using Your AFS File Space
+     * AFS Utilities
+     * Summary of Steps to Get Started
+
+Your AFS Username and Password
+
+   Your AFS username is your NERSC Cray username. Your AFS password is the
+   password sent to you when you requested AFS access. You can change your
+   AFS password by using ssh to connect to dano.nersc.gov and making the
+   appropriate selection from the menu.
+
+Authentication
+
+   You must be authenticated by AFS before accessing protected AFS files.
+
+   On non-NERSC machines running AFS, execute:
+
+   klog username@nersc.gov
+
+   where username is your NERSC username (e.g. u1234). You will be
+   prompted for your NERSC AFS password.
+
+   If you can not find the klog utility on your AFS-enabled workstation,
+   contact your local system administrator for details.
+
+   On NERSC's Cray machines you must authenticate by using ssh to connect
+   to dano.nersc.gov, (use your AFS username and password) and following
+   the menu instructions. Choose
+1)  enable attached hosts        (knfs)
+
+   to authenticate yourself to be able to use the NFS/AFS gateway on the
+   NERSC production machines.
+
+   Once you are authenticated, the current session possesses an AFS token
+   which enables subordinate processes to access AFS files without
+   reauthenticating. At NERSC, AFS tokens expire after 30 days. Once the
+   token expires, the owner must re-authenticate.
+
+Your AFS File Space
+
+   All AFS user files are located in the directory tree /afs. The
+   immediate subdirectories of /afs are called cell names. NERSC's cell
+   name is nersc.gov. Each NERSC AFS user is given a directory with a
+   pathname of the form
+
+   /afs/nersc.gov/u/xxx/yyyyyy
+
+   where xxx is the account group (i.e., ccc), and yyyyyy is the user's
+   NERSC CRAY username. For example, if your NERSC CRAY username were
+   u1234, the path of your AFS directory would be
+   /afs/nersc.gov/u/ccc/u1234.
+
+   The structure of a NERSC user's AFS directory is as follows:
+     * Home Directory: /afs/nersc.gov/u/xxx/yyyyyy
+          + Backup Directory: OldFiles
+          + Public Directory: Public
+          + System-Specific Area: .systype
+               o hp700_ux90
+               o sun4m_53
+               o ...
+     * /afs/nersc.gov/u/xxx/yyyyyy serves as a common home directory for
+       logins from any AFS client machine. By default, any user at any AFS
+       site may list the contents of this directory.
+     * OldFiles contains online backups; see the section Backup Copies of
+       Your AFS Files for details.
+     * Public is meant for files that you wish to make available to
+       anyone. By default, any user at any AFS site may read the files in
+       your Public directory.
+     * System-specific directories within the /.systype directory contain
+       files, such as login procedures (i.e., dot files), which are keyed
+       to specific systems. Symbolic links point the main login procedures
+       in /afs/nersc.gov/u/xxx/yyyyyy to the correct system-specific files
+       inside the subdirectories of /.systype. .systype contains a
+       subdirectory for each system type that you use. You will have the
+       following .systype subdirectories by default:
+          + hp700_ux90 for HPUX systems
+          + sun4m_53 for Solaris systems
+     * You may also have others, such as:
+          + sun4c_411 for Sunos systems
+          + rs_aix32 for AIX systems
+
+Backup Copies of Your AFS Files
+
+   Each NERSC AFS user has a backup directory:
+
+   /afs/nersc.gov/u/xxx/yyyyyy/OldFiles
+
+   A backup copy of your AFS files, as of midnight of the previous night,
+   is always available here, with read-only access. To recover a file,
+   copy it from OldFiles directory.
+
+AFS File Quotas
+
+   As a NERSC AFS user, you have a quota of 100 megabytes in your AFS file
+   space. From a workstation with native AFS invoke:
+
+   fs listquota directory
+
+   to check your usage against the quota. For example, user u1234, in
+   account group ccc can see check her AFS quota by using:
+
+   fs listquota /afs/nersc.gov/u/ccc/u1234
+
+AFS Project Directories
+
+   Groups of NERSC CRAY users collaborating on a project may wish to place
+   their shared files in AFS. Special AFS directories, separate from the
+   users' own AFS directories, can be created for this purpose. Please
+   send electronic mail to consult@nersc.gov to request a project
+   directory.
+
+Using Your AFS File Space
+
+   To avoid filling your AFS space with transient files, you should work
+   in /tmp or in your work directory, rather than in your AFS file space.
+   It is not appropriate to compile, run, or debug applications within
+   your AFS file space. Instead, store your source files, makefiles, and
+   input files in AFS and modify your makefiles to write the executables
+   to /tmp or to your work directory.
+
+   The NFS/AFS gateway enables access to AFS files from the NERSC Crays,
+   but access times can be very slow. File caches are likely to be
+   inconsistent on the time scale of minutes. Users will experience
+   problems if they change an AFS file from the Cray and try to read it on
+   a workstation before the file cache has had time to synchronize.
+
+AFS Utilities
+
+   Native AFS implementation have numerous utilities for working with AFS
+   files (setting permissions or ACLs, determining quotas, defining
+   groups, etc.). None of these utilities are available on the NERSC
+   Crays. Therefore, use of AFS only makes sense for those users who have
+   access to workstations that have native AFS implementations.
+
+Summary of Steps to Get Started
+
+   Contact the NERSC Support Office (1-800-66-NERSC, menu option 2) to
+   request an AFS account.
+
+   Enable AFS access by connecting to dano.nersc.gov. After you login to
+   dano, follow the instructions in the menu to enable AFS access.
+
+   The pathname of your AFS directory is:
+
+   /afs/nersc.gov/u/xxx/yyyyy
+
+   where xxx is your group (e.g., ccc) and yyyyy is your login (e.g.,
+   u1234). You will see the following subdirectories:
+
+        OldFiles
+                (Backup copies of your files.)
+
+        Public
+                (Any user at any AFS site has read and lookup rights to
+                all files stored here.)
+
+        .systype
+                (Login procedures unique for different systems; contains
+                machine-specific subdirectories.)
+
+   You can create other directories in your AFS file space. The UNIX file
+   manipulation commands will work as usual.
+     __________________________________________________________________
+
+   Page last modified: Monday, 04-Dec-00 17:53:47
+   Page URL: http://hpcf.nersc.gov/storage/afs/index.html
+   Contact: Webmaster <webmaster@nersc.gov>
+   Privacy and Security Notice

@@ -1,0 +1,740 @@
+http://www.frpspt.noaa.gov/cams5.pdf
+
+   DEPARTMENT OF COMMERCE REAL PROPERTY SYSTEM DESCRIPTION, SPECIFICATION
+   AND WORK STATEMENT PART I - SECTION C DESCRIPTION/SPECIFICATION/WORK
+   STATEMENT PAGE C-1 SECTION C August 20, 1999
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT C.1 DESCRIPTION C.1.1
+   Procurement Overview The purposes of this procurement are to: (1)
+   accomplish a "proof-of-concept" demonstration of the RPS, and (2)
+   achieve Department-wide implementation of this system--in the event
+   this demonstration is evaluated to be successful. Department-wide
+   implementation of the planned RPS will be pursued in phases, requiring
+   the acquisition of optional and required software, related training,
+   and optional technical/implementation support services. C.1.1.2 Guiding
+   Vision 1. The real property community envisions a dynamic system that
+   will grow, change, and remain current with available technology,
+   changing philosophy, changing regulations, and reporting requirements.
+   2. Ultimately the RPS will be a fully Internet based system that may be
+   integrated with other DOC systems using an ORACLE data base. 3. The RPS
+   will provide real-time capture, validation, processing and recording of
+   real property data. 4. The RPS will be user-friendly, provide flexible
+   processing, easy to change, and readily accommodate the addition and
+   deletion of users. 5. The RPS will encompass all phases of the real
+   property management process from acquisition through general
+   administration and reporting. 6. The RPS will interface with the
+   General Services Administration's (GSA) RENT system for validation of
+   charges and space inventory the GSA Worldwide Inventory of Real
+   Property Owned by and Leased to the U.S. Government for annual
+   reporting purposes. C.1.1.3 Initial Concept of Operation 1. DOC expects
+   the real property management software to be single source code. The DOC
+   Real Property User's Group will coordinate suggested changes to the
+   software, to ensure that any modifications will not adversely impact on
+   the rest of the system. 2. The ultimate objective is "single-entry,
+   source capture of data" (i.e. one-time capture of procurement and
+   payment information). 3. A mechanism of data validation and edits will
+   be used throughout the real property management module to ensure the
+   accuracy of data input. Pre-defined data entry screens will
+   automatically generate transactions to seamlessly balance procurement
+   of real property between the CFS, procurement and real property
+   management modules. The cost savings realized through reduced data
+   reconciliations and error correction is an expected benefit of an
+   integrated system. PART I - SECTION C DESCRIPTION/SPECIFICATION/WORK
+   STATEMENT PAGE C-2 4. Up-to-date real property data will be available
+   for on-line query and reporting based on user security level. Real
+   Property data will be maintained as close to the source as possible,
+   and data integrity will be enhanced by the elimination of data entry
+   redundancy and extensive data reconciliation. 5. Real Property data
+   managers will have ready access to all data and information needed to
+   satisfy these requirements. 6. If deployed on more than one platform,
+   the RPS will have the capability of uploading selected files to a
+   central repository for central reporting requirements. C.1.1.4 Current
+   Environment DOC is comprised of 14 bureaus (i.e., operating units), the
+   Office of the Secretary, and a number of administrative offices charged
+   with carrying out a wide range of disparate programs and administrative
+   support tasks. These programs encompass such areas as patent and
+   trademark, research and testing, weather forecasting, economic
+   development, international trade, economic forecasts, fishery
+   management, mapping, and many others. DOC has approximately 30,000
+   employees located worldwide. It is expected that the RPS will be
+   implemented by the Office of the Secretary, three bureaus and four
+   administrative support centers. The ultimate goal is for the RPS to be
+   a fully Internet-Based Application, accessible through any standard
+   internet browser. C.1.1.5 Hardware/Operating Systems Environment The
+   DOC performs financial management in a decentralized manner. The major
+   bureaus currently operate financial systems on their own computer
+   platforms, while some smaller bureaus are cross-serviced by other,
+   larger bureaus. The bureaus operate a variety of hardware, principally
+   VAX and IBM/IBM-compatible. C.1.1.6 Scope. The Contractor will provide
+   the necessary personnel, materials, and services to meet the
+   requirements of the real property management module as defined in this
+   document. C.1.1.7 Commercial Off-The-Shelf Software (COTS) Package for
+   the Real Property System (RPS) "COTS Package." The DOC RPS will be
+   implemented through the acquisition and firm-fixed- price modification
+   of a Commercial Off-The-Shelf Software (COTS) Package. This COTS
+   package must meet all of DOC's "Mandatory Technical Requirements" and
+   "Mandatory Functional Requirements" (described in Section C.4.1,
+   "Minimum Mandatory Requirements") and "Critical Functional
+   Requirements" (described in Section C.4.2.1) before it is accepted and
+   deployed to operating units within DOC. Further, the COTS package must
+   substantially meet the "Critical Technical Requirements" described in
+   Section C.4.2.2. before it is accepted. PART I - SECTION C
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-3 C.1.1.8 Required
+   Modifications "Required Fixed-Price Modifications and System
+   Acceptance." DOC requires that the selected COTS package fully meet all
+   of the Minimum Mandatory and Critical Functional Requirements before it
+   will be accepted according to Section E, "Inspection and Acceptance."
+   Therefore, contractor's COTS package will include any required
+   modifications--i.e., those necessary to fully comply with all of the
+   Minimum Mandatory and Critical Functional Requirements. Modifications
+   to a contractor's COTS package pursuant to this requirement are called
+   "Required Modifications." C.1.1.9 Required Support Software "Required
+   Support Software." This includes any additional software for the
+   operation, maintenance, or management of the COTS package necessary to
+   meet contract requirements, as well as to ensure the efficiency and
+   effectiveness of the package. For example, this may include: Relational
+   Database Management Systems (RDBMS), Report Generators, Fourth
+   Generation Language Screen Generators (4GLs), 4GL runtime licenses
+   necessary for users to run terminal screens and reports on client
+   personal computers (PCs), Query Generators, Query Utilities, System
+   Monitoring Software Utilities, User Management Software Utilities,
+   Communications Software necessary for Client-Server operations, Memory
+   Managers necessary to operate Clients on PCs, Utilities necessary to
+   run queries under Windows, Utilities necessary to facilitate message
+   generation (e.g., error messages, action messages) from the COTS
+   package to system users over networks, Computer Aided Systems
+   Engineering (CASE) Tools used to support software maintenance, and
+   Utilities that support software configuration management. The
+   Government reserves the option to require the contractor to provide all
+   required support software identified above, as well as required support
+   software identified in the contractor's proposal. Software identified
+   by the contractor as a product not manufactured by the contractor must
+   be commercially available from a third party vendor. DOC seeks to
+   acquire each necessary software product under a Department-wide blanket
+   license agreement with the respective software vendor. However, until
+   such time as the successful contractor's modified COTS package is
+   evaluated for Department-wide implementation, DOC will be responsible
+   only for purchasing a license sufficient to authorize those uses for
+   which DOC is employing the package. C.1.1.10 Documentation
+   "Documentation." Modified COTS Package software must be completely
+   documented. This includes both technical and user manuals that
+   incorporate all changes made to the contractors basis software package.
+   C.1.1.11 Training Courses and Materials "Training Courses and
+   Materials." These include formal classroom instruction, computer-based
+   training software, and self-study courses as required in Section C.5,
+   "Training." C.1.1.12 Additional Documentation PART I - SECTION C
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-4 "Additional
+   Documentation." Contractor is required to supply additional copies of
+   documentation to DOC on delivery orders as requested. Additional
+   Documentation includes extra copies of all of the different types of
+   documentation, manuals, and training material required for the COTS
+   Package as specified in Section C.4, "Software Package Requirements"
+   and Section C.5, "Training". Additional Documentation also includes
+   extra copies of documentation, manuals for all support software
+   supplied by the contractor--to the extent that documentation is
+   available from suppliers, if the software vendor is other than the
+   contractor. "Extra copies" means additional copies above the number
+   required to be delivered as part of the fixed-price for products
+   specified elsewhere in Section C. C.1.1.13 System Maintenance Support
+   "System Maintenance Support." This is required as described in Section
+   C.6, "System Maintenance Support." C.1.1.14 Technical Services
+   "Technical Services." These include all contractor support necessary
+   for the implementation of the RPS. (See Section C.7, "Technical
+   Services" below). C.1.2 Implementation Strategy The strategy for
+   implementing the RPS follows a multi-layered approach, beginning with
+   the acquisition, installation and vendor modification of a stand-alone
+   commercial off-the-shelf software package. Once the modified package is
+   accepted and a successful implementation of it is achieved within the
+   pilot bureau(s), the package may be deployed, in phases, to the
+   remaining DOC bureaus/organizations. At a future date, the RPS may be
+   integrated with other systems. C.2 PROJECT MANAGEMENT REQUIREMENTS The
+   contractor's project management approach will ensure that: (1) the COTS
+   software package is modified on schedule, per the contractor's approved
+   Software Modification Plan; (2) the modified package is accepted on
+   schedule; and (3) all delivery/task orders are completed successfully
+   and on time. All task deliverables will be presented to the contracting
+   officers technical representative (COTR) in accordance with the
+   approved plan for that task. The contractor will provide professional,
+   technical and office support staffing sufficient to assure the timely
+   completion of all milestones and all other contractual
+   responsibilities. All products, including memoranda, records, reports,
+   computer programs and inventions developed by the offeror under the
+   contract will become the property of the DOC, including the proprietary
+   rights therein. Additionally, the contractor will meet the specific
+   project management requirements given in Section H.12, "Optional
+   Delivery/Task Orders." C.3 THIS SECTION INTENTIONALLY LEFT BLANK PART I
+   - SECTION C DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-5 C.4
+   SOFTWARE PACKAGE REQUIREMENTS As part of the Department-wide CAMS, the
+   DOC requires a real property management module that will maintain a
+   current inventory of all DOC's land, buildings, and structures. This
+   module will eventually be fully integrated with the CFS and the
+   procurement system. This document defines the functional requirements
+   for the real property management module. C.4.1 Minimum Mandatory
+   Requirements C.4.1.1 Minimum Mandatory Functional Requirements The
+   contractor's proposed software package solution will satisfy fully each
+   of the following minimum mandatory functional requirements: C.4.1.1.1
+   This section intentionally left blank . C.4.1.1.2 General Requirements
+   The contractor's proposed baseline COTS package--i.e., commercially
+   available but without DOC required modifications--will be a fully
+   supported, production version as of the date of contract award.
+   C.4.1.1.3 Commerce-specific Requirements C.4.1.1.3.1 The contractor's
+   proposed software package solution will support the entry of data in an
+   interactive mode. C.4.1.1.3.2 Documentation for the contractor's
+   proposed RPS software will be current, complete and delivered to the
+   DOC in hard copy, and, if available, in on-line electronic form. It
+   will be of a quality sufficient to allow Commerce-wide RPS end users,
+   bureau RPS administrators and operators, and responsible Departmental
+   technical designers/programmers to readily identify, understand, and
+   effectively operate, maintain and enhance all aspects of the system.
+   The documentation should contain the information as categorized below,
+   but does not have to include the detailed items as specific titles; and
+   the contractor will provide a cross-reference of their documentation to
+   the following list. This documentation will include, at a minimum: (1)
+   End-User Documentation: - Overview of RPS. - Getting Started - End-User
+   Operations Overview. - Detailed User Guides, (platform-specific). -
+   Aids, such as Quick Reference Cards, by module (platform-specific). -
+   Detailed Ad-Hoc Query Guide for End Users. (2) RPS Administrator(s)
+   Documentation (platform-specific): - Implementation Guidelines. -
+   Concept of Operations Overview. - Detailed Administrator's Reference,
+   by module. PART I - SECTION C DESCRIPTION/SPECIFICATION/WORK STATEMENT
+   PAGE C-6 (3) System Technical Operations Documentation
+   (platform-specific): - System Operations Overview. - Detailed
+   Installation Manuals: RPS package. - Detailed Installation Manuals: all
+   other RPS software. - Detailed Installation Manuals: all ancillary
+   software. - Detailed Technical Operations Manuals. - Detailed Technical
+   Implementation Guidelines. - Restart/Recovery Procedures. - Standard
+   Operating Procedures (SOP). (4) System Maintenance/Enhancement
+   Documentation for Analysts/Programmers (platform-specific) by
+   module/product: - System Overview with detailed System Flow Chart(s). -
+   Detailed System Design Document(s). - Programming Standards and Naming
+   Conventions. - Data Dictionary/Encyclopedia. Note: The following are
+   required only if used in the development of the software: - Entity
+   Relationship Diagrams (ERD) - CASE Models/CASE Encyclopedia C.4.1.2
+   Minimum Mandatory Technical Requirements The contractor's proposed
+   software package solution will satisfy fully each of the following
+   minimum mandatory technical requirements: C.4.1.2.1 Be operable on DEC
+   hardware/operating system software, with both data and processing fully
+   distributable across DEC processors (on systems with multiple
+   processors) and across DEC system clusters. The version of the DEC
+   operating system (and any other DEC support software) will be the most
+   current version as of the date of the release of the solicitation.
+   C.4.1.2.2 Be operable on IBM-compatible hardware/operating system
+   software, with processing fully distributable across processors (on
+   such systems with multiple processors). The version of the operating
+   system (and other support software) will be the most current version as
+   of the date of the release of the solicitation. C.4.1.2.3 The exact
+   same version of the contractor's proposed software package will run on
+   all sizes of computer platforms. C.4.1.2.4 The client/server version,
+   the decentralized version, and the host-based version of the package
+   will use the same source code--so that changes coordinated centrally at
+   the DOC-Implementation Center will apply, without modification, to all
+   versions of the application software in use throughout DOC. C.4.1.2.5
+   Allow DOC to leverage its existing technology architecture while
+   migrating to its planned architecture, by including each of the
+   following technical capabilities as an integral part of the system
+   design: C.4.1.2.5.1 Be operable on each system conforming to the IEEE
+   1003.x "POSIX" family of standards not more than 18 months after
+   operating systems PART I - SECTION C DESCRIPTION/SPECIFICATION/WORK
+   STATEMENT PAGE C-7 meeting those standards are released for hardware
+   platforms used by DOC to operate the contractor's proposed software
+   package. C.4.1.2.5.2 Support direct queries based on the use of the
+   FIPS-127-1, "Structured Query Language" by providing appropriate
+   certification of compliance to the standard. Provide a definitive plan
+   for achieving compliance to FIPS-127-2 with proposed CFS software
+   solution. C.4.1.2.5.3 Be implemented within a relational data base
+   management system (RDBMS). C.4.1.2.5.4 Be implemented using a
+   "normalized" data structure: i.e., one that is in third-normal form
+   (3NF), optimized for both performance and platform. C.4.1.2.6 Allow the
+   DOC or third-party contractor personnel to maintain, modify, enhance or
+   upgrade the contractor's proposed software system to meet additional,
+   new or changing DOC requirements--without requiring any assistance
+   whatever from the contractor. C.4.1.2.7 Provide the DOC all application
+   source code; program, system and design documentation; CASE tool/data
+   dictionary information; and any and all other documentation and
+   information needed by the DOC to maintain the contractor's proposed
+   software without any assistance whatever from the contractor. C.4.2
+   Critical Requirements The functional and technical requirements listed
+   below are considered by DOC to be critical to its RPS operations.
+   C.4.2.1 Critical Functional Requirements The DOC's real property
+   management function encompasses the total structure of methods and
+   procedures used to record, classify and report information on the real
+   property holdings of each DOC bureau. Each of the requirements listed
+   below is critical to the successful performance of this function, and
+   therefore each must be fully supported by the Department's planned RPS.
+   The contractor's proposed software package solution will either satisfy
+   fully each of the critical functional requirements defined below, or
+   else will be modified by the contractor--as part of the DOC's purchase
+   price--to fully satisfy each. NOTE: The numbering system used within
+   Section C.4.2.1, Critical Functional Requirements, does not define
+   hierarchical relationships between requirements. Each requirement is
+   individually defined and will be evaluated separately. C.4.2.1.2. Real
+   Property Management Network The DOC utilizes a distributed delegation
+   of authority for providing real property operational services. This
+   authority has been granted to DOC's Director, Office of Real Estate
+   Policy and Major Programs; the Director, Bureau of the Census; the
+   Commissioner, Patent and Trademark Office; the National Oceanic and
+   Atmospheric Administration Chief Financial Officer/Chief Administrative
+   Officer and each Administrative Support Center PART I - SECTION C
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-8 Director, for DOC
+   bureaus within their respective service areas. As a result, the same
+   pattern is to be followed concerning data entry into the RPS.
+   C.4.2.1.2.1. Management Offices. The RPS will provide the capability to
+   record the appropriate management office responsible for each real
+   property record entered into the system. While each installation record
+   can have only one valid management office, it is possible that the
+   occupants (bureaus) located at any particular installation may have a
+   management office that differs from the office listed at the
+   installation level. Valid real property management offices are: 1.
+   Office of Real Estate Policy and Major Programs (R) 2. Bureau of the
+   Census (S) 3. Patent and Trademark Office (P) 4. NOAA Facility
+   Management Division (N) 5. Eastern Administrative Support Center (E) 6.
+   Central Administrative Support Center (C) 7. Mountain Administrative
+   Support Center (M) 8. Western Administrative Support Center (W)
+   C.4.2.1.2.2. Mass Changes. The RPS will provide the capability to
+   perform mass changes within or between bureau system of assignment of
+   property items. Types of mass changes would include reassigning the
+   management office responsible for a particular installation or occupant
+   within an installation. C.4.2.1.3. Data Validation The RPS will have
+   validation tables to establish valid codes that may be used for various
+   data elements. Valid codes are included in Appendix A, Data Dictionary.
+   C.4.2.1.3.1. Standard Description Codes. 1. The RPS will require the
+   assignment of standard description codes for each installation and
+   property record, and include the following: - Agency Bureau Codes;
+   Four-digit numeric codes established and required by GSA. - Estate
+   codes; Two-digit codes established internally at DOC. - Property Type
+   Codes; Two-digit codes established and required by GSA. - Acquisition
+   Codes - Usage Codes Appendix A contains lists of all valid standard
+   description codes. 2. Standard Description Codes will be available to
+   browse and select from a pop-up window or other mechanism to allow for
+   on-screen access to the table. PART I - SECTION C
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-9 3. The RPS will be
+   capable of `crosswalking" DOC standard Description Codes to GSA codes.
+   C.4.2.1.3.2. Transaction Edits: The RPS will include transaction edits
+   that will: 1. Insure all mandatory data elements are entered into all
+   real property records. See Appendix A, Data Dictionary for additional
+   information on mandatory data elements. 2. Automatically verify for
+   each real property transaction the validity of all Standard Description
+   Codes. Appendix A contains lists of all valid codes. 3. As an aid to
+   data entry, automatically assign default values to the following data
+   elements, but allow the defaults to be overridden by the user: Lease
+   Type Indicator (O = Operating) Lease to Purchase Indicator (N = No) Out
+   lease Indicator (N = No) GSA 1166 Indicator (N = No) Utilization Data
+   (1166) Baseline (N=No), Deferral (N=No) GSA Assistance Needed (N=No)
+   Seismic Safety Standards Met (UK = Unknown) Fixed Escalator Indicator
+   (N=No) NPR Lease Indicator (N=No) Historic Building Code (Seismic) (
+   H2= Non-historic) Heritage Asset Indicator (N=No) Federal mission
+   indicator (N=No) 4. Automatically system-generate values in history
+   records for the following data elements: Date Property Record
+   Established in RPS Management Control Point 5. Prevent unauthorized
+   users from entering data. See Section 4.2.2.3 of this document on
+   Security. C.4.2.1.3.3. On-Screen Messages: The RPS will produce
+   appropriate error messages, informational messages and tutorial
+   information. 1. Error Messages: The RPS will generate error messages to
+   notify the system user of the following conditions: a. Required data
+   elements have not been entered. PART I - SECTION C
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-10 b. Data element
+   content requirements (validity checks) are not met. c. User doesn't
+   have proper security authorization to proceed with inquiry,
+   transaction, or report production. d. Improper or unrecognizable key
+   has been pressed. 2. On-line Assistance: The RPS will include
+   user-activated assistance which will include, at a minimum, the
+   following capabilities. a. The RPS will provide an extensive on-line,
+   context-sensitive HELP facility which provides valid data values, error
+   codes, data element definitions, and the addition of examples, policy
+   and general guidance. b. The RPS will provide a comprehensive, on-line
+   active data dictionary, which an end user may query without exiting the
+   current application screen. This data dictionary must contain, at a
+   minimum, a glossary of data elements, their definitions and
+   relationship to screens, data fields, system prompts, and edits.
+   C.4.2.1.4. Recording Real Property The RPS will provide the capability
+   to record the data elements for each accountable real property holding
+   as indicated in the Data Element Dictionary in Appendix A. C.4.2.1.4.1.
+   Categories of Real Property. The RPS will provide the capability to
+   track and differentiate between the following categories of real
+   property: 1. Capitalized real property: All real property with an
+   initial acquisition cost that meets a user-defined capitalization
+   criteria, capitalization threshold and an estimated service life of two
+   years or greater is capitalized real property. Capitalized real
+   property carried in the RPS will agree with capitalized real property
+   in the general ledger. The RPS will provide the capability for the
+   capitalization threshold to be easily modified. The current
+   capitalization threshold is $25,000. 2. Non-capitalized accountable
+   real property: All real property with a service life of less than two
+   years or real property not meeting the capitalization criteria or
+   minimum capitalization threshold. 3. Leased real property: All real
+   property leased directly by the DOC regardless of cost. The RPS will
+   provide the capability to identify and categorized leases as either
+   capital or operating. C.4.2.1.4.2. Methods of Acquisition. PART I -
+   SECTION C DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-11 Real
+   Property is acquired by the Government through various methods. The RPS
+   will be capable of identifying the method of acquisition for each real
+   property holding as indicated below. 1. The RPS will generate the
+   appropriate general ledger entries to record property acquired through
+   donations; gratuitous agreement; transfer; easement; condemnation;
+   reserved; withdrawal from public domain; license to DOC; or interagency
+   support agreement. 2. Purchased property: The RPS will provide the
+   capability to record the data elements necessary to properly record
+   real property holdings and related improvements (See Appendix A for
+   data elements). 3. Leased-non-capitalized: The RPS will provide the
+   capability to complete the data elements necessary to properly record
+   real property holdings leased by DOC that are non-capitalized
+   (operating leases) when the lease document and payment data are
+   processed through the CFS. 4. Leased-capitalized: The RPS will provide
+   the capability to complete the data elements necessary to properly
+   record real property holdings leased by DOC and their related
+   improvements that are capitalized when the lease, procurement document,
+   and payment data are processed through the CFS. 4.a. Real property
+   acquired through lease agreements will be capitalized if the lease
+   meets the defined criteria for a "capital lease." (See Appendix B for
+   checklist.) Such property will be depreciated from the beginning of the
+   lease term when the property was initially acquired, (See Appendix A,
+   Data Dictionary for the definition of Lease Effective Date.) 4.b. Any
+   improvements made to real property acquired by lease agreement will be
+   capitalized only if they meet the definition of a "capital improvement"
+   (See Appendix C for details.) Such improvements will be capitalized
+   beginning on the date when the improvement is completed only if the
+   improvement's value is equal to or exceeds the amount set for
+   capitalization and life expectancy of a capital improvement. 5. GSA
+   Assignments: The RPS will provide the capability to complete the data
+   elements necessary to properly record real property holdings acquired
+   through GSA assignment. C.4.2.1.4.3. Adding Real Property Records The
+   DOC Real Property record consists of installations, under which there
+   can be multiple properties. Under each property, there can be multiple
+   occupants and under each occupant, multiple space classifications. The
+   RPS will be capable of associating multiple space classifications with
+   a single related occupant, multiple occupants with a single related
+   property, and multiple properties with a single related installation.
+   The requirements outlined below indicate how the data elements are
+   associated with each of these. The RPS will contain the necessary data
+   elements to: PART I - SECTION C DESCRIPTION/SPECIFICATION/WORK
+   STATEMENT PAGE C-12 1. Establish a Real Property Installation Record.
+   Data Elements: INSTALLATION NUMBER BUREAU CODE INSTALLATION NAME STREET
+   ADDRESS CITY STATE ZIP CODE CONGRESSIONAL DISTRICT COUNTY NAME STATE
+   CODE CITY CODE COUNTY CODE DATE ENTERED DATE OF LAST CHANGE NEXRAD
+   INDICATOR OFFICE RESPONSIBLE (INST) GSA1166 REQUIRED INDICATOR (INST)
+   2. Establish a GSA 1166 record for selected installations. Data
+   Elements: INSTALLATION NUMBER ESTIMATED CURRENT VALUE HIGHEST AND BEST
+   USE HISTORIC INDICATOR (1166) EXCESS INDICATOR YEAR OF LAST SURVEY YEAR
+   OF NEXT SURVEY UTILIZATION DATA (1166) BASELINE Y/N DEFERRAL Y/N
+   ANTICIPATED EXCESS DATE GSA ASSISTANCE NEEDED Y/N 3. Establish a
+   property level record. Data Elements: INSTALLATION NUMBER PROPERTY
+   NUMBER PROPERTY NAME PROPERTY CODE OFFICE RESPONSIBLE (PROP) ESTATE
+   CODE ACQUISITION CODE USAGE CODE GSA1166 REQUIRED INDICATOR (PROP) OUT
+   LEASE INDICATOR OUT LICENSE INDICATOR PART I - SECTION C
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-13 SERVICES PROVIDED
+   CODE SERVICES PROVIDER CODE DATE OF LAST CHANGE 4. Establish property
+   type records. 4.a. For Land Data Elements: INSTALLATION NUMBER PROPERTY
+   NUMBER URBAN ACRES RURAL ACRES STEWARDSHIP LAND INDICATOR DATE OF LAST
+   CHANGE 4.b. For Buildings Data Elements: INSTALLATION NUMBER PROPERTY
+   NUMBER GROSS SQUARE FEET NET USABLE SQUARE FEET DATE OF LAST CHANGE .5.
+   Establish seismic safety records for owned buildings. 5.a. For All
+   Buildings Data elements: SEISMIC SAFETY NUMBER SEISMIC SAFETY INDICATOR
+   SEISMIC SAFETY STATUS CODE SEISMIC LEVEL INDICATOR AREA (SQUARE METERS)
+   REASON FOR EXEMPTION DATE OF LAST CHANGE COMMENTS 5.b. For Non-Exempt
+   Buildings Data Elements: OCCUPANCY CLASS CODE ESSENTIAL DESIGNATION
+   IDENTIFIER HISTORIC BUILDING CODE (SEISMIC) DATE CONSTRUCTED BUILDING
+   MODEL TYPE NUMBER OF STORIES DATE OF LAST CHANGE 5.c. For Non-Exempt
+   Evaluated Buildings PART I - SECTION C DESCRIPTION/SPECIFICATION/WORK
+   STATEMENT PAGE C-14 Data Elements: EXCEPTIONAL RISK INDICATOR
+   EVALUATION PROCEDURE USED SOIL TYPE FOUNDATION TYPE OUTCOME OF
+   EVALUATION WHY DEFICIENT (FOUR FIELDS) STRUCTURAL NON-STRUCTURAL
+   GEOLOGICAL ADJACENCY PROBLEMS ESTIMATED COST OF REHABILITATION (FOUR
+   FIELDS) FINISHING COSTS NON-STRUCTURAL COSTS STRUCTURAL COSTS PROJECT
+   COSTS SOURCE OF COST ESTIMATE DATE OF LAST CHANGE 6. Establish GSA 1166
+   data for selected properties. Data Elements: INSTALLATION NUMBER
+   PROPERTY NUMBER GSA1166 INSTALLATION NUMBER GSA1166 ACQUISITION CODE
+   (LAND ONLY) DATE ACQUIRED FROM DATE ACQUIRED TO ACQUISITION COST
+   ESTIMATED COST INDICATOR NEGLIGIBLE COST INDICATOR DATE OF LAST CHANGE
+   7. Establish occupant level records. 7.a. For DOC Leased Properties
+   Data Elements: LEASE CONTRACT NUMBER LESSORS NAME AND ADDRESS TAXPAYER
+   IDENTIFICATION NUMBER PAYEE NAME AND ADDRESS SMALL BUSINESS INDICATOR
+   SEISMIC SAFETY STANDARDS MET Y/N/UK ACCOUNTING CLASSIFICATION CODE
+   STRUCTURE LEASE EFFECTIVE DATE (BASE LEASE) LEASE EXPIRATION DATE
+   (FINAL OPTION) CURRENT LEASE EXPIRATION DATE TERMINATION NOTIFICATION
+   DAYS LEASE RENEWAL NOTIFICATION DATE PART I - SECTION C
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-15 LEASE RENEWAL
+   NOTIFICATION DAYS RENEWAL OPTION YEARS RENT ANNUAL COST RENT PAYMENT
+   FREQUENCY RENT PAYMENT AMOUNT LEASE TYPE INDICATOR O/C Note: Defaults
+   to O(Operating). If C(Capital) selected, system branches to capital
+   lease spread sheet or contractor developed capital lease procedure.
+   FPMR 239 INDICATOR (NPR) FULL SERVICE INDICATOR TOTAL SQUARE FOOTAGE
+   ESCALATIONS - CPI CPI EFFECTIVE DATE TAX ESCALATION INDICATOR Y/N Note:
+   Defaults to N=No FIXED ESCALATIONS INDICATOR Y/N Note: Defaults to
+   N=No. If Y=Yes selected, system branches to fixed escalations spread
+   sheet or contractor developed fixed escalation procedure. INSTALLATION
+   NUMBER PROPERTY NUMBER BUREAU CODE BUREAU NAME LINE OFFICE OFFICE
+   RESPONSIBLE (OCCP) OPERATING UNIT CODE OPERATING UNIT NAME TOTAL FULL
+   TIME AGENCY PERSONNEL TOTAL NON-AGENCY PERSONNEL PART-TIME AGENCY
+   PERSONNEL TOTAL PERSONNEL DATE OF LAST CHANGE 7.b. For Selected DOC
+   Leases (NPR) Data Elements: NPR LEASE INDICATOR Y/N Note: Defaults to
+   N=No. If Y=Yes selected, system branches to NPR lease spread sheet or
+   contractor developed NPR lease procedure. DATE OF LAST CHANGE 7.c. For
+   GSA Assigned Properties Data Elements: INSTALLATION NUMBER PROPERTY
+   NUMBER BUREAU CODE LINE OFFICE ACCOUNTING CLASSIFICATION CODE STRUCTURE
+   PART I - SECTION C DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-16
+   OFFICE RESPONSIBLE (OCCP) OPERATING UNIT CODE TOTAL AGENCY PERSONNEL
+   TOTAL NON-AGENCY PERSONNEL PART-TIME PERSONNEL TOTAL PERSONNEL DATE OF
+   LAST CHANGE 7.d. For GSA (ACO) Delegated Leased Properties Data
+   Elements: LEASE CONTRACT NUMBER LESSOR NAME AND ADDRESS PAYEE NAME AND
+   ADDRESS ACCOUNTING CLASSIFICATION CODE STRUCTURE LEASE EFFECTIVE DATE
+   (BASE LEASE) CURRENT LEASE EXPIRATION DATE LEASE EXPIRATION DATE (FINAL
+   OPTION) RENEWAL OPTION YEARS RENT ANNUAL COST RENT PAYMENT FREQUENCY
+   LEASE TYPE INDICATOR FULL SERVICE INDICATOR TOTAL SQUARE FOOTAGE
+   ESCALATIONS - CPI CPI EFFECTIVE DATE ESCALATIONS - TAX TAX EFFECTIVE
+   DATE FIXED ESCALATIONS INDICATOR Y/N Note: Defaults to N=No. If Y=Yes
+   selected, system branchesto fixed escalations spread sheet or
+   contractor developed fixed escalation procedure. DATE OF LAST CHANGE
+   7.e. For DOC Owned Properties Data Elements: INSTALLATION NUMBER
+   PROPERTY NUMBER HERITAGE ASSET INDICATOR Y/N FEDERAL MISSION INDICATOR
+   Y/N BUREAU CODE LINE OFFICE ACCOUNTING CLASSIFICATION CODE STRUCTURE
+   OFFICE RESPONSIBLE (OCCP) OPERATING UNIT CODE TOTAL AGENCY PERSONNEL
+   TOTAL NON-AGENCY PERSONNEL PART-TIME PERSONNEL DATE OF LAST CHANGE PART
+   I - SECTION C DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-17 8.
+   Establish Classification of Space records. 8.a. For DOC Acquired Space
+   Data Elements: INSTALLATION NUMBER PROPERTY NUMBER BUREAU CODE LINE
+   OFFICE ACCOUNTING CLASSIFICATION CODE STRUCTURE CLASS OF SPACE ASSIGNED
+   SQUARE FEET JOINT USE SQUARE FEET DATE OF LAST CHANGE NUMBER OF PARKING
+   SPACES ANNUAL MARKET RENT GSA MONTHLY RENT ANNUAL GSA RENT 8.b. For
+   Depreciation Data Elements: INSTALLATION NUMBER PROPERTY NUMBER BUREAU
+   CODE LINE OFFICE ACCOUNTING CLASSIFICATION CODE STRUCTURE DEPRECIATION
+   RECORD TYPE ORGANIZATION CODE TASK CODE DESCRIPTION LEASE TO PURCHASE
+   INDICATOR ACQUISITION DATE ESTIMATED USEFUL LIFE DEPRECIABLE BASIS
+   MONTHLY DEPRECIATION ACCRUED DEPRECIATION NET BOOK VALUE UNSUPPORTED
+   VALUE INDICATOR DATE OF LAST CHANGE 8.c. For GSA Assignments Data
+   Elements: INSTALLATION NUMBER PROPERTY NUMBER BUREAU CODE LINE OFFICE
+   ACCOUNTING CLASSIFICATION CODE STRUCTURE GSA ASSIGNMENT NUMBER DATE
+   ASSIGNED PART I - SECTION C DESCRIPTION/SPECIFICATION/WORK STATEMENT
+   PAGE C-18 DATE RELEASED OCCUPANCY INDICATOR CLASS OF SPACE ASSIGNED
+   SQUARE FEET JOINT USE SQUARE FEET NUMBER OF PARKING SPACES ANNUAL
+   MARKET RENT GSA MONTHLY RENT MARKET RATE MONTHLY GSA RENT ANNUAL GSA
+   RENT DATE OF LAST CHANGE C.4.2.1.5 Facilities Management Contractor's
+   software will include a facilities management module. At a minimum,
+   this module will have the capability of: - Tracking preventative
+   maintenance on systems and equipment - Tracking space assignments -
+   Tracking maintenance costs - Tracking custodial requirements - Tracking
+   utility costs and energy usage S Tracking Deferred Maintenance
+   C.4.2.1.6. Maintaining Real Property Records C.4.2.1.6.1. Modifications
+   to Real Property Information The RPS will provide the capability for
+   users to modify real property information. Modifications may be
+   recorded in the following categories: 1. Modify Property Record--to
+   allow changes to the property record to maintain accuracy, such as the
+   Estate Code, Office Responsible--Occupant Level, Occupant, Line Office,
+   etc. 2. Change Lease Data--to make modifications to existing lease
+   data. 3. Recording Capital Improvements--to allow the capability to
+   associate multiple improvements to a particular property record.
+   C.4.2.1.6.2. Transfers of Real Property The RPS will provide the
+   capability to reassign the office responsible between Real Property
+   Offices. C.4.2.1.6.3. Audit Trail and History Records 1. The RPS will
+   preserve a history of all transactions that have occurred to each real
+   property record, including acquisition, improvements, changes to lease
+   terms, etc. PART I - SECTION C DESCRIPTION/SPECIFICATION/WORK STATEMENT
+   PAGE C-19 2. As each transaction is completed, the RPS will record the
+   type of transaction (add, change, delete), the user performing the
+   transaction, the date of the transaction, and the time of the
+   transaction. 3. The RPS will maintain all history records of all real
+   property transactions and related financial transactions in the same
+   format as the original record. 4. The RPS will have the capability to
+   store a snapshot of all current database records on a fixed annual
+   schedule. The snapshot will be taken at the end of each Fiscal Year on
+   September 30. The snapshot records will be retained for three years in
+   accordance with accepted Departmental policy and be maintained and
+   available online for review and analysis. C.4.2.1.7. Reporting The RPS
+   will provide the capability to produce reports based on the real
+   property data in the system as described below. The RPS will provide
+   on-line inquiry of all real property and related accounting data.
+   C.4.2.1.7.1. Pre-defined Reports: 1. The RPS will contain a menu of
+   pre-defined reports that can be produced on- demand. See appendix D for
+   current requirements. 2. The RPS will provide the capability to easily
+   modify pre-defined reports without the intervention of a programmer. 3.
+   The RPS will provide the capability to easily add additional
+   pre-defined reports to the menu. 4. The RPS will provide the capability
+   for capturing, classifying, summarizing and reporting current year and
+   cumulative data on capital acquisitions, improvements, leases,
+   depreciation and operating expenses up to the Bureau and Departmental
+   levels. 5. The RPS will allow reports to be sorted by various and
+   multiple data elements. 6. The RPS will provide the capability to
+   produce information on various media including: 6.a Report files
+   available for computer-to-computer transfer of reports electronically
+   (formatted as reports with titles, headings, and totals or in ASCII
+   flat file format as straight data). 6.b. Computer generated standard
+   forms and/or predefined hard copy formats. 6.c. On-screen display for
+   visual inspection. 7. The RPS will automatically produce specific
+   reports on pre-defined schedules on a recurring or periodic basis for
+   internal and external use. (Appendix D, which PART I - SECTION C
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-20 contains a summary
+   chart and samples of internal and external reports, describes the
+   minimum requirements for specific reports that will be automatically
+   generated from the RPS. The chart identifies report title, form,
+   recipient, detail, frequency, medium, guidelines, and whether reports
+   are to be programmed for electronic routing.) 7.a. The RPS will provide
+   the capability to define and modify the schedule for automatically
+   producing pre-defined reports. 7.b. The RPS will produce pre-defined
+   reports that can be automatically sent to the designated recipient by
+   electronic means. 7.c. The RPS will produce hard copies of scheduled
+   pre-defined reports. 8. The RPS will support user-specified routing to
+   a specific output device. C.4.2.1.7.2. Ad Hoc Reports: 1. The RPS will
+   provide an ad hoc reporting capability for both current and historical
+   data for users without the intervention of a programmer. 2. The RPS
+   will provide the capability to produce summarization data sorted in
+   hierarchical levels up to the Bureau and Departmental levels. 3. The
+   RPS will provide the capability to produce ad hoc reports on various
+   media as identified in Sections 7.A.6.a. through 7.A.6.c. above.
+   C.4.2.1.8. General C.4.2.1.8.1 This section is intentionally left
+   blank. C.4.2.1.8.2 Provide the option for end users to bypass menus to
+   access desired screens. C.4.2.1.8.3 Populate the current screen with
+   related information previously captured to minimize data entry.
+   C.4.2.1.8.4 Provide end users with an on-line ability to record
+   additional text associated with any document, such as notes from
+   correspondence, phone conversations, etc. C.4.2.1.8.5 Provide on-line
+   edits and controls to detect incorrect, incomplete, and duplicate data,
+   as it is being entered into the system at the data element level.
+   C.4.2.1.8.6 Provide table-driven edits that can be modified and
+   maintained by users. C.4.2.1.8.7 Edit interfaced data with the same
+   type of edits which are applied to data entered on-line into the
+   system, and maintain a record of interfaced data that was changed or
+   adjusted. PART I - SECTION C DESCRIPTION/SPECIFICATION/WORK STATEMENT
+   PAGE C-21 C.4.2.1.8.8 The system will continue to operate and provide
+   information/data in the same way at the year 2000. (Please explain in
+   detail how your system will accommodate processing, sorting, and
+   reporting of data). C.4.2.1.8.9 Permit the user to exclude/include
+   ranges of data values for rate applications, reporting purposes, and
+   edits. C.4.2.1.8.10 Support a user-defined archival/purge process for
+   closed documents, based on fiscal year and dates, while maintaining
+   database integrity. C.4.2.1.8.11 Permit an end-user to download data
+   into other software without the need for any computer programming.
+   C.4.2.1.8.12 User documentation will be current, available in hard copy
+   and will contain: (1) Table of contents and a detailed index. (2)
+   System overviews describing each application, highlighting any
+   dependencies or integration with other applications. (3) Description of
+   inputs that include: - Screen display layouts. - Text, explanation of
+   error messages & follow-up action to be taken. - Explanation of input
+   controls establishment. - Explanation of using input edit listings. (4)
+   Description of outputs that include: - Types of reports. - Reports to
+   processing cycle relationships. - Report control totals reconciliation
+   methods. (5) Data control and error correction procedures that are used
+   to control, correct, and balance data with respect to input data, key
+   transcription, computer editing and validation, and computer
+   processing. (6) User guides describing how to design and generate
+   user-defined reports and inquiries. (7) Descriptions of menu options
+   and menu maps. (8) All other information needed by the DOC to
+   understand and effectively operate the contractor's proposed software
+   system. C.4.2.1.8.13 Provide an extensible on-line, context-sensitive
+   HELP facility which provides valid data values, error codes, data
+   element definitions, and the addition of examples, policy, and general
+   guidance. C.4.2.1.8.14 Provide a comprehensive, on-line, active data
+   dictionary, which an end- user may query without exiting the current
+   application screen. This data dictionary must contain, at a minimum: a
+   glossary of data elements, PART I - SECTION C
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-22 their definitions
+   and relationships to screens, data fields, system prompts, and edits.
+   C.4.2.1.8.15 Provide the option to load all, or a portion of, user and
+   system documentation on-line. C.4.2.1.8.16 Provide the ability for end
+   users to execute any module, query, or report, for which they have the
+   proper security permissions, in an on-line, interactive mode, from
+   their desk top, with results returned either to their desk top system
+   or their local printer; and also provide the capability for users to
+   save these results on their desktop systems. C.4.2.1.8.17 Utilize
+   previously established default values, based on user-id, so that a
+   user's on-line activities appear as if they are accessing the system
+   from their own work station, regardless of the physical device
+   utilized. C.4.2.1.8.18 Execute any query or report against either
+   current data or prior period data including, but not limited to,
+   previous day, previous week, previous month, previous quarter, and
+   previous year; and accomplish these queries in an interactive manner.
+   C.4.2.2 Critical Technical Requirements A contractor's proposed
+   software package could meet most of the above "critical functional
+   requirements" and yet still not represent a satisfactory solution for
+   the Department's planned RPS. This is because, in the future, the RPS
+   is intended to be an integrated with the CFS. In view of this
+   objective, the contractor's proposed system solution will have, apart
+   from the specific required functional capabilities, a variety of other
+   capabilities and characteristics which address basic system operations,
+   program management support, Commerce user-community expectations,
+   security and control, external regulations and policies, and data
+   handling characteristics. These other capabilities are reflected in the
+   "critical technical requirements" identified below. C.4.2.2.1 Ability
+   to Cost-effectively Maintain, Modify, and Enhance the System
+   C.4.2.2.1.1 Provide a system which, over its expected life (of at least
+   ten years), allows the DOC to cost-effectively: (1) maintain it for
+   ongoing, Department-wide use; (2) interface it to various other
+   systems; and (3) enhance it to add significant new functionality. The
+   contractor will: (1) provide at least 3 detailed references that
+   substantiate that the proposed version of its software can be
+   maintained (provide reference to type of maintenance and support for
+   the previous three years); (2) that the software has been interfaced to
+   other systems (provide a detailed breakdown for these three references
+   of the systems that have been interfaced); and (3) that the system is
+   extensible--that it has the ability to add new functionality (provide 2
+   detailed references--including how and what was done to add additional
+   functionality). C.4.2.2.1.2 Furnish the DOC with an ASCII tape
+   cartridge or CD ROM version of all of the application source code,
+   including a detailed listing of PART I - SECTION C
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-23 all files on the
+   tape, comprising the proposed software solution, in a form adequate for
+   DOC personnel to readily access and modify. C.4.2.2.1.3 Provide the DOC
+   limited access to the current version of any CASE tool (and its
+   associated models), for the sole purpose of the DOC performing impact
+   analyses of its proposed software changes. C.4.2.2.1.4 Code all modules
+   of both the proposed on-line and batch subsystems in a 4GL. C.4.2.2.1.5
+   Code any proposed subsystem not done in a 4GL in an ANSI Standard 3GL,
+   with no extensions. C.4.2.2.1.6 Provide a system which employs
+   contemporary technology extensively, including, but not limited to: (1)
+   Applications implemented within a RDBMS and making effective use of its
+   features and capabilities. (2) Graphical User Interfaces implemented
+   for all end-user devices capable of supporting such interfaces. (3)
+   Standards implemented sufficient to offer the DOC a clear migration
+   path to an Open Systems Environment (OSE) for its Financial Management
+   function. C.4.2.2.1.7 Provide sufficient data recovery features to
+   assure the recovery of all data in the event of any hardware or
+   software failure; these features may include the use of a combination
+   of roll-back/roll-forward, checkpoint/restart, journalizing, and other
+   techniques to assure the availability of accurate, consistent data in
+   the database. C.4.2.2.1.8 Operate a "Hot Line", available on each DOC
+   workday from 8:00 AM EST until 7:00 PM EST, staffed by personnel
+   specifically familiar with the DOC implementation of the contractor's
+   proposed system, including all changes that the contractor has made to
+   the proposed system at the request of DOC. C.4.2.2.2 Data Management
+   C.4.2.2.2.1 The proposed on-line transmission processing and on-line
+   query systems will use a single integrated database. C.4.2.2.2.2 A
+   single integrated database will support all proposed system modules and
+   functions, and it will be implemented as part of the proposed on-line
+   system. C.4.2.2.2.3 Multiple users of the proposed system will be able
+   to read and write each table, or file, with changes to the table, or
+   file, being made only after a user's transaction successfully
+   completes; and other users PART I - SECTION C
+   DESCRIPTION/SPECIFICATION/WORK STATEMENT PAGE C-24 will be allowed to
+   concurrently read/update other table/file entries during the update.
+   C.4.2.2.2.4 The proposed system will be implemented with an active data
+   dictionary which supports all operations of the system and which is
+   also available to DOC-Implementation Center staff to support changes to
+   the system. C.4.2.2.2.5 The DOC will have the ability to readily add
+   data elements to the database and data dictionary used with the
+   contractor's proposed system. C.4.2.2.2.6 The proposed system will
+   support the use of synonyms and aliases (for data elements, screen
+   labels, report/query column titles, file/table names, etc.) to allow
+   the bureaus to tailor screens and documentation to bureau-specific
+   naming conventions, without requiring customization of the applications
+   code or documentation. C.4.2.2.2.7 The proposed system will support
+   Query-by-Example (QBE), Query- by-Form (QBF), and Graphical User
+   Interface point-and-click methods of specifying ad hoc queries.
+   C.4.2.2.2.8 The proposed system will support SQL-based and table-driven
+   ad hoc query capabilities. C.4.2.2.2.9 The ad hoc query capability will
+   be available under MS Windows and will support both off line entry
+   (OLE) and direct data entry (DDE). The release numbers for OLE and DDE
+   are the latest production release number as of the date the
+   solicitation is issued. C.4.2.2.2.10 The proposed system will provide
+   an integrated, table-driven report writer for end users that gives them
+   the capability to: (1) Create and generate reports. (2) Save report
+   specifications. C.4.2.2.3 System Security C.4.2.2.3.1 Access security
+   for the proposed system will be provided at the screen, record, and
+   field level for all information in the data base. C.4.2.2.3.2 Only each
+   bureau's System Administrator will have the ability to modify
+   bureau-related system tables. C.4.2.2.3.3 Users of the proposed system
+   will be able to delegate their authorities subject only to security and
+   access controls. C.4.2.2.3.4 The proposed system will restrict access
+   (input or query) down to the data element level for each user-ID. All
+   unauthorized log in attempts, and all unauthorized access attempts,
+   will be written to a log file with the date and time, terminal ID, User
+   ID, table(s) and PART I - SECTION C DESCRIPTION/SPECIFICATION/WORK
+   STATEMENT PAGE C-25 function(s) ID recorded. This information should be
+   accessible via query and report. C.4.2.2.3.5 The proposed system will
+   generate and maintain audit tra

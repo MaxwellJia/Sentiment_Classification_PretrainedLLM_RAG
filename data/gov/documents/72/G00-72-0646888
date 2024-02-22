@@ -1,0 +1,162 @@
+http://www.mel.nist.gov/msidstaff/libes/
+
+Don Libes <libes@nist.gov>
+
+   [don.libes.jpg] I'm a computer scientist at NIST where I do CS research
+   to support manufacturing technology. I work in the Manufacturing
+   Systems Integration Division. We take software and data from various
+   vendors, and add glue - mostly in the form of custom software that
+   implements draft standards - to show that it can (and sometimes cannot)
+   work together. What I've been working on the last couple of years:
+     * STEP - A family of ISO standards and draft standards for product
+       management. I've been writing lots of tools, most of which are for
+       manipulating EXPRESS models. My publication list shows most of
+       these.
+     * Collaboration Tools - Have a look at the NIST Identifier
+       Collaboration Service. It's a free tool that may reduce your costs
+       due to rapidly developing but unmanaged namespaces. [This is
+       presently getting the bulk of my time.]
+     * Expect - A tool for automating interactive applications such as
+       telnet, ftp, passwd and hundreds of others. Get Expect to do the
+       work for you where you are typing the same keystrokes everytime you
+       do some task. I believe you'll find the use of Expect quite easy.
+
+   Some papers I'm writing (or just contemplating writing) are:
+     * NIST Identifier Collaboration Service
+       Status: I haven't started writing this but I really should.
+     * CGI Scripts in Tcl - A Tutorial
+       Status: I'm thinking about the best way to do this.
+     * Agents ... - various papers.
+
+  Software
+
+     * NICS - A service to allow collaborative management of identifiers.
+     * Expect - A tool for automating interactive applications such as
+       telnet, ftp, passwd and hundreds of others.
+     * cgi.tcl - A comprehensive library for creating Tcl-based CGI
+       scripts. cgi.tcl supports tables, cookies, file upload, Expect, Tcl
+       applets, Java, etc, etc.
+     * tkbiff - yet another program to alert you to incoming mail. tkbiff
+       allows arbitrary commands (play audio clip, metamail, etc) to be
+       executed upon mail reception. If you like programs like xbiff++ but
+       wish they were more flexible or more portable, then you'll like
+       tkbiff.
+     * md5pure - Computes md5 message digests using only core Tcl
+       commands. Surprisingly fast. (Surprised me anyway.)
+     * Stopwatch - A little stopwatch - just right for helping you get the
+       timing down while practicing a talk. Provided both as an applet and
+       a standalone Tk script.
+     * tcl-debug - A Tcl debugger. Provides traditional debugging
+       capabilities to any Tcl script. Built-in to Expect but it works
+       with any Tcl extension including Tk. Can be dynamically loaded.
+     * I wrote a large number of tools for manipulating EXPRESS models
+       including a compiler (with Steve Clark), a server, and a
+       development environment (with Steve and Josh Lubell). For more
+       information, see the EXPRESS documents below or the SC4 page.
+     * Implementing Software Timers (reprint provided courtesy of Rich
+       Stevens) simulates multiple timers given an environment that only
+       provides a single timer.
+     * As I get time, I'll document more of the things I've written...
+
+  Peer-Reviewed Publications
+
+     * Nenad Ivezic, Mario Barbacci, Don Libes, Tom Potok, and John Robert
+       "An Architecture Analysis of Agent-based Systems", accepted at
+       ESAW'00 ("Engineering Societies in the Agents' World") workshop
+       http://lia.deis.unibo.it/confs/ESAW00/ (and to be included in the
+       workshop proceedings published in Springer's Lecture Notes), Aug
+       21, 2000.
+     * Nenad Ivezic, Mario Barbacci, Don Libes, Tom Potok, and John
+       Robert, "An Analysis of a Supply Chain Management Agent
+       Architecture", accepted at the The Fourth International Conference
+       on MultiAgent Systems http://icmas.lania.mx, July 7, 2000.
+     * Nenad Ivezic, Mario Barbacci, Don Libes, Tom Potok, and John
+       Robert, "An Architecture and COTS Analysis of Agent Systems",
+       accepted at "The First Goddard Workshop on Formal Approaches to
+       Agent-Based Systems" http://fmw.gsfc.nasa.gov/ (and to be published
+       in the proceedings in Springer's Lecture Notes), April 4, 2000.
+     * Schlenoff, C., Gruninger, M., Ciocoiu, M. and Libes, D., "Process
+       Specification Language (PSL): Results of the First Pilot
+       Implementation", ASME International Mechanical Engineering Congress
+       and Exposition, Nashville, October, 1999.
+     * Craig Schlenoff, Robert Ivester, Don Libes, Peter Denno and Simon
+       Szykman: An Analysis of Existing Ontological Systems for
+       Applications in Manufacturing,", Engineering Information Management
+       Symposium, Computers in Engineering Conference / ASME Design
+       Technical Conferences, Las Vegas, Nevada, September 12-15, 1999
+       (also NISTIR 6301).
+     * Libes, D., Writing a Tcl Extension in Only ... 7 Years, Proceedings
+       of the Fifth Annual Tcl/Tk Workshop '97, Boston, MA, July 14-7,
+       1997. [Received Best Paper Award.]
+     * Libes, D., Managing Tcl's Namespaces Collaboratively, Proceedings
+       of the Fifth Annual Tcl/Tk Workshop '97, Boston, MA, July 14-7,
+       1997.
+     * Libes, D., "Tcl/Tk-based Agents for Mail and News Notification --
+       or -- A Tale of Two Biffs", Software - Practice & Experience, John
+       Wiley & Sons, West Sussex, England, Vol. 27(4), p. 481-493, April
+       1997.
+     * Libes, D., "Automation and Testing of Interactive Character Graphic
+       Programs", Software - Practice & Experience, John Wiley & Sons,
+       West Sussex, England, Vol. 27(2), p. 123-137, February 1997.
+     * Libes, D., "How to Avoid Learning Expect -- or -- Automating
+       Automating Interactive Programs" (PDF, PostScript), Proceedings of
+       the Tenth USENIX System Administration Conference (LISA X),
+       Chicago, IL, September 30 - October 4, 1996.
+     * Libes, D., "Writing CGI Scripts in Tcl" (PDF, PostScript),
+       Proceedings of the Fourth Annual Tcl/Tk Workshop '96, Monterey, CA,
+       July 10-13, 1996. [Received Best Presentation Award.]
+     * Libes, D., "Authentication by Email Reception", Proceedings of the
+       Fifth System Administration, Networking, and Security Conference
+       (SANS 96), Washington, DC, May 12-18, 1996.
+     * Libes, D., Clark S.N., "An Object-Oriented Tcl/Tk Binding for
+       Interpreted Control of the NIST EXPRESS Toolkit in the NIST STEP
+       Application Protocol Development Environment", Proceedings of the
+       EXPRESS User Group Workshop (EUG '95), Grenoble, France, October
+       21-22, 1995.
+     * Libes, D., "Handling Passwords with Security and Reliability in
+       Background Processes", Proceedings of the Eighth USENIX System
+       Administration Conference (LISA VIII), pp. 57-64, San Diego, CA,
+       September 19-23, 1994.
+     * Libes, D., "Concepts of the NIST EXPRESS Server" Proceedings of the
+       First International Workshop on Services in Distributed and
+       Networked Environments (SDNE), Prague, Czech Republic, June 27-28,
+       1994.
+     * Libes, D., "X Wrappers for Non-Graphic Interactive Programs",
+       Proceedings of Xhibition 94, San Jose, California, June 20-24,
+       1994.
+     * Libes, D., "The NIST EXPRESS Toolkit: Design and Implementation,"
+       Seventh Annual Engineering Database Symposium - ASME Computers in
+       Engineering Conference, San Diego, CA, August 9-11, 1993.
+     * Libes, D., "A Debugger for Tcl Applications," Proceedings of the
+       1993 Tcl/Tk Workshop, Berkeley, CA, June 10-11, 1993.
+     * Libes, D., "Kibitz- Connecting Multiple Interactive Programs
+       Together ", Software - Practice & Experience, John Wiley & Sons,
+       West Sussex, England, Vol. 23, No. 5, May 1993.
+     * Libes, D., Clark, S.N., "The NIST EXPRESS Toolkit - Lessons
+       Learned," Proceedings of the EXPRESS Users Group Conference,
+       Dallas, TX, October 1992.
+     * Libes, D., "Regression Testing and Conformance Testing Interactive
+       Programs", Proceedings of the Summer 92' USENIX Conference, San
+       Antonio, TX, June 8-12, 1992.
+     * O'Connell, J., Sullivan, F., Libes, D., Stella, A.L., Einstein,
+       T.L., "Self-Avoiding Random Surfaces: Monte Carlo Study Using
+       Oct-tree (sic) Data-Structures," Journal of Physics "A" Math, Gen.
+       24 (1991) pp. 4619-4635.
+     * Libes, D., "Modeling Dynamic Surfaces with Octrees," Published in
+       Computers & Graphics Magazine, Pergamon Press, New York, Vol. 15,
+       No. 3, 1991. (republished from NISTIR 89-4055)
+     * Libes, D., "Expect: Scripts for Controlling Interactive Processes,"
+       Computing Systems, Vol. 4, No. 2, University of California Press
+       Journals, Spring 1991.
+     * Libes, D., "Using Expect to Automate System Administration Tasks,"
+       Proceedings of the Fourth USENIX Large Installation Systems
+       Administration (LISA), Colorado Springs, CO, October 17-19, 1990.
+     * Libes, D., "Expect: Curing Those Uncontrollable Fits of
+       Interaction," Proceedings of the Summer 1990 USENIX Conference,
+       Anaheim, CA, June 1990.
+     * Libes, D., "Choosing a Name for your Computer," Communications of
+       the ACM, p. 44, November 1989.
+     * Libes, D., Barkmeyer, E., "The Integrated Manufacturing Data
+       Administration System (IMDAS) - An Overview," International Journal
+       of Computer Integrated Manufacturing, Vol. 1, No. 1, p. 44, 1988.
+     * Furlani, C., Barkmeyer, E., Mitchell, M., Libes, D., "

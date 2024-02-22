@@ -1,0 +1,382 @@
+http://nsdi.usgs.gov/wais/maps/gnis.HTML
+
+   (USGS logo)
+     __________________________________________________________________
+
+                Metadata for Geographic Names Information System
+
+   These metadata describe the Geographic Names Information System
+   holdings of the USGS for the conterminous United States. This is a
+   data-set level implementation of the Content Standards for Digital
+   Geospatial Metadata.
+
+Table of Contents
+
+     * Identification_Information
+       Data_Quality_Information
+       Spatial_Data_Organization_Information
+       Spatial_Reference_Information
+       Entity_and_Attribute_Information
+       Distribution_Information
+       Metadata_Reference_Information
+
+Identification_Information:
+
+       Citation:
+           Citation_Information:
+               Originator: U.S. Geological Survey
+               Publication_Date: 19810501
+               Title: Geographic Names Information System
+               Publication_Information:
+                  Publication_Place: Reston, VA
+                  Publisher: U.S. Geological Survey
+       Description:
+           Abstract:
+               An automated inventory of the names and locations of physical
+               and cultural geographic features located throughout the United St
+ates
+           Purpose:
+               To promote geographic feature name standardization and to serve
+               as the Federal Government's repository of information regarding f
+eature name spellings
+               and applications for features in U.S. The names listed in the inv
+entory can be published
+               on Federal maps, charts, and in other documents.  The feature loc
+ative information has
+               been used in emergency preparedness, marketing, site-selection an
+d analysis, genealogical
+               and historical research, and transportation routing applications.
+       Time_Period_of_Content:
+           Time_Period_Information:
+               Range_of_Dates/Times:
+                  Beginning_Date: Unknown
+                  Ending_Date: Present
+           Currentness_Reference: ground condition
+       Status:
+           Progress: In work.
+           Maintenance_and_Update_Frequency: As needed.
+       Spatial_Domain:
+           Bounding_Coordinates:
+               West_Bounding_Coordinate: -180.00
+               East_Bounding_Coordinate: 172.00
+               North_Bounding_Coordinate: 72.00
+               South_Bounding_Coordinate: -12.00
+       Keywords:
+           Theme:
+               Theme_Keyword_Thesaurus: None.
+               Theme_Keyword: geographic feature
+               Theme_Keyword: feature name
+               Theme_Keyword: place name
+           Place:
+               Place_Keyword_Thesaurus: None.
+               Place_Keyword: United States
+               Place_Keyword: Territories
+               Place_Keyword: Outlying Areas
+       Access_Constraints: None
+       Use_Constraints: None
+       Point_of_Contact:
+           Contact_Information:
+               Contact_Person_Primary:
+                  Contact_Person: Roger L. Payne
+                  Contact_Organization: U.S. Geological Survey
+               Contact_Position: Chief, Branch of Geographic Names
+               Contact_Address:
+                  Address_Type: mailing address
+                  Address: 523 National Center
+                  City: Reston
+                  State_or_Province: Virginia
+                  Postal_Code: 20192
+               Contact_Voice_Telephone: 1 703 648 4544
+               Contact_Electronic_Mail_Address: rpayne@usgs.gov
+               Hours_of_Service: 0730-1700
+       Data_Set_Credit:
+           The Geographic Names Information System was developed
+           by the U.S. Geological Survey in cooperation with the U.S. Board on G
+eographic
+           Names.
+       Native_Data_Set_Environment:
+           The Geographic Names Information System is resident on a Sun Enterpri
+se 4000 computer.
+           It uses Sun Solaris Version 2.6 as its operating system.  The system
+contains approximately
+           1.5 million records, averaging 500 bytes in length.
+
+Data_Quality_Information:
+
+       Attribute_Accuracy:
+           Attribute_Accuracy_Report:
+               A random sample of 10% of the entries in the system were visually
+               verified against the compilation source data (large-scale USGS
+               topographic maps) to ensure an accuracy rate of at least 95%.
+       Logical_Consistency_Report:
+           Locative references (geographic coordinates, topographic map, and cou
+nty)
+           are cross-checked for logical consistency.
+       Completeness_Report:
+           This dataset contains information about physical and cultural geograp
+hic
+           features identified by a proper name, with the exception of most road
+s
+           and highways.
+       Positional_Accuracy:
+           Horizontal_Positional_Accuracy:
+               Horizontal_Positional_Accuracy_Report:
+                  Accuracy of these digital data is based upon the use of source
+                  graphics which are compiled to meet National Map Accuracy Stan
+dards.
+                  Comparision to the graphic source is used as control to assess
+                  digital positional accuracy.
+       Lineage:
+           Source_Information:
+               Source_Citation:
+                  Citation_Information:
+                      Originator: U.S. Geological Survey
+                      Publication_Date: unknown
+                      Title: 1:24,000-scale topographic maps
+                      Geospatial_Data_Presentation_Form: map
+                      Publication_Information:
+                          Publication_Place: Reston, VA
+                          Publisher: U.S. Geological Survey
+               Source_Scale_Denominator: 24000
+               Type_of_Source_Media: paper
+               Source_Time_Period_of_Content:
+                  Time_Period_Information:
+                      Range_of_Dates/Times:
+                          Beginning_Date: unknown
+                          Ending_Date: present
+                  Source_Currentness_Reference: publication date
+               Source_Citation_Abbreviation: USGS
+               Source_Contribution: Feature names and attribute information
+           Source_Information:
+               Source_Citation:
+                  Citation_Information:
+                      Originator: U.S. Board on Geographic Names
+                      Publication_Date: Unpublished material
+                      Title: Records of the U.S. BGN
+               Type_of_Source_Media: card files
+               Source_Time_Period_of_Content:
+                  Time_Period_Information:
+                      Range_of_Dates/Times:
+                          Beginning_Date: 1932
+                          Ending_Date: present
+                  Source_Currentness_Reference: creation date
+               Source_Citation_Abbreviation: USBGN
+               Source_Contribution: Feature names and attribute information
+           Source_Information:
+               Source_Citation:
+                  Citation_Information:
+                      Originator: U.S. Forest Service
+                      Publication_Date: unknown
+                      Title: U.S. Forest Service 1:24,000-scale topographic maps
+               Type_of_Source_Media: paper
+               Source_Time_Period_of_Content:
+                  Time_Period_Information:
+                      Range_of_Dates/Times:
+                          Beginning_Date: unknown
+                          Ending_Date: present
+                  Source_Currentness_Reference: publication date
+               Source_Citation_Abbreviation: USFS
+               Source_Contribution: Feature names and attribute information
+           Process_Step:
+               Process_Description:
+                  GNIS Phase I data compilation and edit--Feature name and attri
+bute
+                  data are collected from the largest-scale USGS topographic map
+s
+                  available.  These data are compared to the records of the U.S.
+ Board
+                  on Geographic Names.
+               Source_Used_Citation_Abbreviation: USGS, USBGN
+               Process_Date: 198105
+               Process_Contact:
+                  Contact_Information:
+                      Contact_Person_Primary:
+                          Contact_Person: Roger L. Payne
+               Process_Date: not complete
+               Process_Contact:
+                  Contact_Information:
+                      Contact_Person_Primary:
+                          Contact_Person: Robin D. Worcester
+                          Contact_Organization: U.S. Geological Survey
+                      Contact_Position: Chief, Geographic Names Information Sect
+ion
+                      Contact_Address:
+                          Address_Type: mailing address
+                          Address: 523 National Center
+                          City: Reston
+                          State_or_Province: Virginia
+                          Postal_Code: 20192
+                      Contact_Voice_Telephone: 1 703 648 4551
+                      Contact_Electronic_Mail_Address: rwrocest@usgs.gov
+           Process_Step:
+               Process_Description:
+                  GNIS Maintenance program--Maintenance cooperators feed GNIS
+                  new names and corrections discovered in the course of new
+                  mapping and revision activities and implementation of the
+                  national geographic names standarization program.
+               Source_Used_Citation_Abbreviation: USBGN, USGS, USFS
+               Process_Date: ongoing
+               Process_Contact:
+                  Contact_Information:
+                      Contact_Person_Primary:
+                          Contact_Person: Robin D. Worcester
+                          Contact_Organization: U.S. Geological Survey
+                      Contact_Position: Chief, Geographic Names Information Sect
+ion
+                      Contact_Address:
+                          Address_Type: mailing address
+                          Address: 523 National Center
+                          City: Reston
+                          State_or_Province: Virginia
+                          Postal_Code: 20192
+                      Contact_Voice_Telephone: 1 703 648 4551
+                      Contact_Electronic_Mail_Address: rworcest@usgs.gov
+                      Hours_of_Service: 0900-1700
+
+Spatial_Data_Organization_Information:
+
+       Indirect_Spatial_Reference:
+           Features are located by State and county, and related to the USGS top
+ographic
+           map on which the feature is shown.
+       Direct_Spatial_Reference_Method: point
+       Point_and_Vector_Object_Information:
+           SDTS_Terms_Description:
+               SDTS_Point_and_Vector_Object_Type: point
+
+Spatial_Reference_Information:
+
+       Horizontal_Coordinate_System_Definition:
+           Geographic:
+               Latitude_Resolution: 1
+               Longitude_Resolution: 1
+               Geographic_Coordinate_Units: degrees, minutes, and seconds
+
+Entity_and_Attribute_Information:
+
+       Overview_Description:
+           Entity_and_Attribute_Overview:
+               The dataset contains records for named geographic features locate
+d in the
+               United States, its Territories and Outlying Areas.  The records a
+re organized
+               by State (or State equivalent).  Each record includes: the offici
+al name of
+               the feature; the feature type; the county(s) in which the feature
+ is located;
+               the name(s) of the USGS 1:24,000-scale topographic map(s) on whic
+h the feature
+               is shown; geographic coordinates locating the mouth of linear fea
+tures and the
+               approximate center of areal features, and coordinates locating th
+e feature on
+               each additional (if any) USGS 1:24,000-scale map on which the fea
+ture is shown;
+               a bibliographic code referring to the source of information for e
+ach record,
+               and other names by which the feature may be or may have been know
+n.  Some
+               records include information about the history of the feature or t
+he origin
+               of the feature name.
+           Entity_and_Attribute_Detail_Citation:
+               U.S. Department of the Interior, U.S. Geological Survey, 1987
+               Geographic Names Information System--Data Users Guide 6;
+               Reston, Virginia
+               Softcopy in hypertext format is available at:
+               <URL:http://mapping.usgs.gov/www/ti/GNIS/gnis_users_guide_toc.htm
+l>
+               Softcopy in ASCII format is available at:
+               <URL:ftp://mapping.usgs.gov/pub/ti/GNIS/gnisguide/gnisdug.txt>
+               Softcopy in WordPerfect format is available at:
+               <URL:ftp://mapping.usgs.gov/pub/ti/GNIS/gnisguide/gnisdug.wp5>
+               Softcopy in Postscript format is available at:
+               <URL:ftp://mapping.usgs.gov/pub/ti/GNIS/gnisguide/gnisdug.ps>
+
+
+Distribution_Information:
+
+       Distributor:
+           Contact_Information:
+               Contact_Organization_Primary:
+                  Contact_Organization: Earth Science Information Center, U.S.Ge
+ological Survey
+               Contact_Address:
+                  Address_Type: mailing address
+                  Address: 507 National Center
+                  City: Reston
+                  State_or_Province: Virginia
+                  Postal_Code: 20192
+               Contact_Voice_Telephone: 1 888 ASK USGS
+               Hours_of_Service:
+                  In addition to the address above there are other ESIC offices
+                  throughout the country.  A full list of these offices is at:
+                  <URL:http://mapping.usgs.gov/esic/esic_index.html>
+       Resource_Description: Geographic Names Information System
+       Distribution_Liability:
+           Although these data have been processed successfully on a computer sy
+stem at the
+           U.S. Geological Survey, no warranty expressed or implied is made by t
+he USGS
+           regarding the utility of the data on any other system, nor shall the
+act of
+           distribution constitute any such warranty. The Geological Survey will
+ warrant the
+           delivery of this product in computer-readable format, and will offer
+appropriate
+           adjustment of credit when the product is determined unreadable by cor
+rectly adjusted
+           computer input peripherals, or when the physical medium is delivered
+in damaged
+           condition.  Requests for adjustment of credit must be made within 90
+day from the date
+           of this shipment from the ordering site.
+               Digital_Transfer_Option:
+                 Online_Option:
+                   Computer_Contact_Information:
+                     Network_Address:
+                       Network_Resource_Name:
+                         <URL:http://mapping.usgs.gov/www/gnis/gnisftp.html>
+                    Offline_Option:
+                      Offline_Media: CD-ROM
+                      Recording_Format: ISO 9660
+                      Compatibility_Information:
+                          Requires an IBM PC-XT-AT or compatible microcomputer
+                          with 512 kilobytes of memory, with DOS operating syste
+m version
+                          3.0 or greater; one 20 megabyte hard disk drive; and a
+ CD-ROM
+                          reader with software drivers that read ISO-9660 format
+ted CD-ROMs.
+                          The CD-ROM contains software for searching, sorting, d
+isplaying,
+                          printing, and exporting the data.  The software must b
+e installed
+                          onto a hard disk before the data can be used.
+           Fees:
+               The charge is $57 for the CD-ROM
+               A $3.50 handling charge is applied to all mail orders.
+
+Metadata_Reference_Information:
+
+       Metadata_Date: 19950121
+       Metadata_Contact:
+           Contact_Information:
+               Contact_Organization_Primary:
+                  Contact_Organization: U.S. Geological Survey
+               Contact_Address:
+                  Address_Type: mailing address
+                  Address: 508 National Center
+                  City: Reston
+                  State_or_Province: Virginia
+                  Postal_Code: 20192
+               Contact_Voice_Telephone: 1 703 648 4543
+       Metadata_Standard_Name: Content Standards for Digital Geospatial Metadata
+       Metadata_Standard_Version: 19940608
+     __________________________________________________________________
+
+
+    USGS Node of NSDI Clearinghouse
+    <http://nsdi.usgs.gov/nsdi/maps/gnis.HTML>.
+    Maintained by <nsdi@usgs.gov>
+    Last modified: 3 December 1999 ltd

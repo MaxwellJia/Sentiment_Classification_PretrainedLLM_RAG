@@ -1,0 +1,926 @@
+http://nmp-techval-reports.jpl.nasa.gov/DS1/Scarlet_Integrated_Report.pdf
+
+   The Scarlet Solar Array: Technology Validation and Flight Results David
+   M. Murphy dmurphy@aec-able.com AEC-Able Engineering Co., Inc
+   www.aec-able.com Tel: 805.685.2262 Deep Space 1 Technology Validation
+   Report DS1 Scarlet Technology Validation Page i Table of Contents
+   Section Description Page 1. EXTENDED ABSTRACT
+   .......................................................................
+   .......................................................................
+   ........1 2.
+   INTRODUCTION...........................................................
+   .......................................................................
+   ..................................3 3. TECHNOLOGY DESCRIPTION
+   .......................................................................
+   ..................................................................3 3.1
+   Overview...............................................................
+   .......................................................................
+   ..............................3 3.2 Key Validation Objectives at Launch
+   .......................................................................
+   ............................................3 3.3 Expected Performance
+   Envelope
+   .......................................................................
+   ....................................................4 3.4 Detailed
+   Design
+   Description............................................................
+   .......................................................................
+   5 3.4.1
+   Overview...............................................................
+   .......................................................................
+   .......................5 3.4.2 Mechanical Description
+   .......................................................................
+   .............................................................5 3.4.3
+   Electrical
+   Description............................................................
+   .......................................................................
+   .....5 3.4.4 Optical
+   Description............................................................
+   .......................................................................
+   .........6 3.4.5 Thermal
+   Design.................................................................
+   .......................................................................
+   ..........7 3.5 Technology
+   Interdependencies......................................................
+   .......................................................................
+   ..8 3.6 Test
+   Program................................................................
+   .......................................................................
+   .......................8 3.6.1 Ground Test Validation
+   .......................................................................
+   .............................................................8 3.6.2
+   Flight Test Validation
+   .......................................................................
+   ..............................................................10 3.7
+   Analysis of Flight Test
+   Results................................................................
+   .............................................................10 3.7.1
+   Deployment.............................................................
+   .......................................................................
+   ...................10 3.7.2
+   Pointing...............................................................
+   .......................................................................
+   ........................12 3.7.3 Temperature
+   .......................................................................
+   .......................................................................
+   ........13 3.7.4 Power
+   .......................................................................
+   .......................................................................
+   ...................15 4. TECHNOLOGY VALIDATION SUMMARY
+   .......................................................................
+   .........................................18 5. APPLICATION FOR FUTURE
+   MISSIONS
+   .......................................................................
+   .............................................19 6.
+   ACKNOWLEDGMENTS........................................................
+   .......................................................................
+   ......................19 7.
+   REFERENCES.............................................................
+   .......................................................................
+   ....................................19 Figures Figure 1. One wing of
+   Scarlet for DS1 showing module level details: Lens, Frame, and
+   Photovoltaic Receiver ...1 Figure 2. DS1 Scarlet (Wing 1 of 2) on
+   Deploy Rail
+   .......................................................................
+   .....................................3 Figure 3. DS1 Mission Timeline
+   vs Sun
+   Distance...............................................................
+   ..................................................4 Figure 4. Scarlet
+   Module: Lens and
+   Receiver...............................................................
+   .........................................................5 Figure 5.
+   DS1 Scarlet
+   Wing...................................................................
+   .......................................................................
+   .............5 Figure 6. Temperature Profile Across
+   Cell...................................................................
+   ...........................................................7 Figure 7.
+   Temperature Profile Across Panel (From cell center to centerline
+   between module rows)...........................7 Figure 9. Scarlet
+   String I-V Curves
+   .......................................................................
+   ...................................................................9
+   Figure 10. Ascent to Deployment Temp.
+   Transient..............................................................
+   .................................................11 Figure 11.
+   Deployment Duration vs. Temperature
+   .......................................................................
+   ..........................................12 Figure 12. Light
+   Collection versus Alpha Angle
+   .......................................................................
+   .............................................12 Figure 13. Pointing
+   Validation Summary
+   .......................................................................
+   .........................................................12 Figure 14.
+   RTDs: 4 on a Module (in 2
+   Locations).............................................................
+   ...................................................13 Figure 15.
+   Thermal Modeling Results for 1.0174
+   AU.....................................................................
+   ......................................13 Figure 16. Steady State
+   Temperature vs. Power
+   Draw...................................................................
+   .......................................14 Figure 17. Short Circuit
+   Current
+   Degradation............................................................
+   .............................................................15 Figure
+   18. Historical Sunspot
+   Activity...............................................................
+   ......................................................................1
+   6 Figure 19. Tap Module - Wing 1, Panel 1
+   .......................................................................
+   ........................................................16 Figure 20.
+   SPeak Sequence Flight Data
+   .......................................................................
+   ............................................................16 Figure
+   21. SPeak Sequence, Incrementing Voltage Near Peak Power
+   .......................................................................
+   ........16 Figure 22. SPeak Data, Array Output at 1.1185
+   AU.....................................................................
+   .........................................17 DS1 Scarlet Technology
+   Validation Page ii Table of Contents Section Description Page Figure
+   23. Mini-SPeak 1, Mission Day
+   160....................................................................
+   ........................................................17 Figure 24.
+   Mini-SPeak 1, Peak IV
+   Data...................................................................
+   ................................................................17
+   Figure 25. Original Forecasts and Flight Data
+   .......................................................................
+   .................................................18 Tables Table 1.
+   Optical Losses in Lens
+   Assy...................................................................
+   ..................................................................7
+   Table 2. Random Vibration Test
+   Levels.................................................................
+   ................................................................9 Table
+   3. Protoqual Deploy Timing
+   Ranges.................................................................
+   .........................................................11 Table 4.
+   Flight Release and Deploy
+   Durations..............................................................
+   ......................................................11 Appendices
+   Appendix A Telemetry Channels Related to Array Technology
+   Validation............................................................A
+   -1 Appendix B In-Flight Array Validation Activities and Data Summary
+   .....................................................................B-
+   1 DS1 Scarlet Technology Validation Page 1 The Scarlet Solar Array:
+   Technology The performance of Scarlet on DS1 substantially validated
+   Validation and Flight Results all aspects of the novel structural
+   platform, Fresnel optics, multi-junction cell module performance, and
+   electrical design. The major features of safe stowage through 1.
+   EXTENDED ABSTRACT launch, deployment, and sun acquisition were clearly
+   demonstrated on the first day of the mission. Stability of The Solar
+   Concentrator Arrays with Refractive Linear the array system, in
+   particular, the ability to maintain the Element Technology (SCARLET)
+   system used on the relatively tight pointing, has been verified over
+   more than Deep Space 1 (DS1) spacecraft has been validated a year. The
+   array performance has continued to achieve through successful
+   performance in flight. ScarletTM is the design specifications without
+   imposing any onerous first successful concentrator array ever used as
+   primary requirements on the spacecraft. power for a spacecraft. The
+   main feature of the technology is that for a given Flight results to
+   date show that performance projections power level, the Scarlet optical
+   system reduces the were within 1% of measured results, making Scarlet
+   one required solar cell area by approximately a factor of of the
+   highest performance solar arrays ever used in seven. The decreased cell
+   area can significantly reduce space. The Scarlet array uses linear,
+   arched Fresnel lens solar array cost while at the same time providing
+   state-of- the-art performance. Scarlet allows the cost-effective
+   concentrators to focus sunlight onto narrow rows of implementation of
+   advanced cell technologies, as multiple band gap solar cells to produce
+   2.5-kW of power. demonstrated on DS1, especially when early production
+   This paper describes the array technology, development may limit
+   availability or greatly elevate costs. process, array assembly and
+   qualification, and flight operations of this novel system. Another
+   particular advantage of Scarlet is for applications with severe
+   radiation environments where a thick cell DS1, the first of the NASA
+   New Millennium series of coverglass is needed. The low cell area
+   fraction means exploratory spacecraft, was launched in October 1998 and
+   that thick glass won't significantly increase wing mass. completed its
+   primary mission in July 1999. The primary This can be a
+   mission-enabling feature for MEO orbits or objective for DS1 was to
+   test advanced technologies that for exploration at or near large
+   planets with high trapped can reduce the cost or risk of future
+   missions. Although radiation levels. Often interplanetary missions must
+   part of the advanced technology validation study, the contend with the
+   debilitating effect on cell performance array is also the power source
+   for the spacecraft and its that low light intensity and low temperature
+   (LILT) can NASA Solar electric propulsion Technology Application cause.
+   The concentrating optics of Scarlet can be utilized Readiness (NSTAR)
+   electric propulsion system. The to overcome these performance losses as
+   well. array continues providing power to DS1 and its NSTAR ion electric
+   propulsion system on the way to the next encounter object. Sponsored by
+   the Ballistic Missile Defense Organization (BMDO), the Scarlet
+   concentrator solar array is the first space application of a refractive
+   lens concentrator and the first to use both dual and triple junction
+   solar cells. As part of the DS1 validation process, the amount of
+   diagnostics data acquired was more extensive than would be the norm for
+   a more conventional solar array. DS1 Scarlet DS1 Scarlet These data
+   included temperature measurements at numerous locations on the 2-wing,
+   4-panel per wing, solar array. For each panel, one 5-cell module in one
+   of the Figure 1. One wing of Scarlet for DS1 showing module circuit
+   strings was wired to obtain complete I-V curves. level details: Lens,
+   Frame, and Photovoltaic Receiver The data was used to verify sun
+   pointing accuracy and array output performance. In addition, the
+   spacecraft To obtain further information on the development and power
+   load could be varied in a number of discrete steps, commercialization
+   of the Scarlet technology please from a small fraction of the array
+   total power capability, contact the author, Dave Murphy, or ABLE's
+   marketing up to maximum power. For each of the power loads, technical
+   director, Brian Spence, at (805) 685-2262. Learn array operating
+   voltage could be measured along with the about our past history and
+   recent developments, such as current output from each wing. Scarlet
+   advancements, on the web at www.aec-able.com. DS1 Scarlet Technology
+   Validation Page 2 LOW COST LOW WEIGHT RADIATION HARD ABLE provided the
+   ScarletTM solar concentrator arrays for the Deep Space 1 (DS1)
+   spacecraft. Launched October 24, 1998, the solar arrays deployed
+   flawlessly and have operated according to pre-flight predictions ever
+   since. DS1 is the first spacecraft primarily The Ballistic Missile
+   Defense Organization sponsored ScarletTM for use on DS1. ScarletTM
+   powered by ScarletTM solar arrays and will rely on technology was
+   developed with ENTECH, Inc, who them to energize the electric
+   propulsion and other supply the Fresnel optics, and the NASA Glenn
+   systems during the full course of the mission. Research Center at Lewis
+   Field The revolutionary ScarletTM arrays employ a patented refractive
+   Fresnel lens system, which concentrates sunlight onto the solar cells.
+   Because of this, less solar cell area is required, providing tremendous
+   weight and cost savings. Additionally, using fewer and smaller cells
+   allowed the cost-effective implementation of high efficiency
+   multi-junction GaInP2/GaAs/Ge photovoltaic cells aboard DS1. The DS1
+   mission is part of The New Millennium Program, NASA's most aggressive
+   technology demonstration program. According to Ray Garza, ABLE's DS1
+   ScarletTM Program Manager, "This high technology mission challenged us
+   to build the most advanced solar array in the world." Such strides were
+   made with this new technology that ABLE was recognized in 1999 with a
+   NASA Group Achievement Award and by the University of New Mexico's
+   Institute for Space and Nuclear Power with their Schreiber-Spence
+   Achievement Award. The performance of the ScarletTM arrays on DS1
+   validated all aspects of the novel structural platform, optics, and
+   electrical design as well as the analytical models used to characterize
+   the array. The ScarletTM technology proven on DS1 will continue to be
+   refined to benefit future science mission as well as commercial
+   endeavors such as mid-level orbit satellites, and communication
+   constellations. Wing Dimensions: 206 in. x 64 in. Specific Power: 45
+   W/kg DS1 SCARLETTM Panel Dimensions: 45 in. x 63 in. (4 panels per
+   wing) Stowed Stiffness: 92 Hz SPECIFICATIONS Array Power: 2500 W (1
+   AM0) Deployed Stiffness: 0.37 Hz Wing Mass: 27.7kg (with tiedowns)
+   Deployed Strength: 0.015 g's AEC-ABLE ENGINEERING COMPANY, INC
+   HTTP://WWW.AEC-ABLE.COM/SOLAR 93 CASTILIAN DRIVE E-MAIL:
+   SOLARARRAYS@AEC-ABLE.COM GOLETA CA 93117 TEL: 805.685.2262 * FAX:
+   805.685.1369 DS1 Scarlet Technology Validation Page 3 Technology
+   Directorate has sponsored development of The Scarlet Solar Array:
+   Technology Scarlet through the first New Millennium Space flight on
+   Validation and Flight Results the Deep Space 1 spacecraft. Substantial
+   funding support and technical aid for this application was also
+   provided by the Jet Propulsion Laboratory (JPL). 2. INTRODUCTION The
+   DS1 Scarlet solar array has made significant advances in the
+   state-of-the-art of space-demonstrated This report summarizes the
+   design, development, and test solar cells, concentrators, lightweight
+   packaging, and of the Solar Concentrator Array with Refractive Linear
+   deployment techniques. Element Technology (SCARLET) system and details
+   the flight validation on the New Millennium Deep Space 1 (DS1) mission.
+   Array deployment, system pointing, thermal performance, and power
+   production are analyzed and discussed in comparison to ground results
+   and mission predictions. In summary, the solar array has operated
+   flawlessly and all aspects of the technology were successfully
+   validated in pre-launch and mission activities. The flight of Scarlet
+   on DS1 has enabled the development and validation of a low-recurring
+   cost technology which offers significant advantages for radiation
+   applications, such as MEO orbits, or LILT applications. For example,
+   Wing Dimensions: 206 in. x 64 in. missions to large outer planetary
+   bodies can benefit from Panel Dimensions: 45 in. x 63 in. the weight
+   efficient radiation hardness and the LILT Wing Power: 1250 W (1 AM0)
+   Stowed Stiffness: 92 Hz advantages of the Scarlet technology. This
+   novel flight- Deployed Stiffness: 0.37 Hz validated solar array is a
+   cost-effective and mission- Deployed Strength: > 0.015 g's enabling
+   technology. Figure 2. DS1 Scarlet (Wing 1 of 2) on Deploy Rail 3.
+   TECHNOLOGY DESCRIPTION The pioneering success of the Scarlet Array was
+   recognized with the 1999 Schreiber-Spence Award for 3.1 Overview
+   Significant Technology Advances. This year's award was presented to the
+   NSTAR and Scarlet teams in recognition Scarlet is a concentrator solar
+   array for space applications of the first use of solar-powered ion
+   propulsion as primary which uses linear refractive Fresnel lenses to
+   focus propulsion and of the first use of a multi-band-gap, sunlight
+   onto spaced rows of solar cells. For a given concentrator array for a
+   robotic, deep-space mission, power level, the Scarlet optical system
+   reduces the thereby helping to open the solar system to frequent, low-
+   required solar cell area by approximately a factor of 7. cost
+   exploration. Scarlet, with its radiation hardness The decreased cell
+   area can significantly reduce solar capability and ion propulsion
+   employed together, also array system cost and weight, especially in
+   high radiation provides an excellent combination for the cost-saving
+   environments where thick cell coverglass is required. concept of orbit
+   raising from LEO. The DS1 array is derived from and scaled up from the
+   prototype Scarlet wing that was built for the METEOR 3.2 Key Validation
+   Objectives at Launch satellite in 1995. Due to the failure of the
+   Conestoga launch vehicle, DS1 was the first flight of Scarlet Data
+   collection objectives for technology validation were technology. This
+   second-generation Scarlet solar array formulated for two phases of the
+   mission. Within the first incorporated many additional advanced
+   technologies such month of the mission the data desired was: as
+   multi-junction solar cells and a new mechanization and structural
+   design. * Initial power telemetry data collection on earliest day
+   possible using all tap circuits and AEC-Able Engineering Company, Inc.
+   (ABLE), temperature sensors: 8 taps and 10 Resistive designed,
+   assembled, and tested the 2.5 kW concentrator Temperature Detectors
+   (RTDs). solar array for the DS1 mission, which launched on October 24th
+   of 1998. The Ballistic Missile Defense This data verifies initial
+   performance prior to on-orbit Organization (BMDO) Innovative Science
+   and calibration. RTDs were used to extrapolate cell DS1 Scarlet
+   Technology Validation Page 4 temperatures and to validate the array
+   thermal design by 100% Successful acquisition of periodic power
+   measuring gradients in the structure around the focal line production
+   data of the tap modules. In summary, each of these goals was fully met,
+   and thus, * On-orbit calibration to maximize power output 100% success
+   was attained, with one caveat: The of the array prior to beginning
+   cruise phase. "periodic" power telemetry data sets were not as numerous
+   as planned. The spacecraft has had a series of This data was used to
+   evaluate and validate the accuracy anomalies unrelated to the solar
+   array that caused delay of the initial alignment of the
+   array/spacecraft with and postponed Scarlet validation activities by
+   several respect to perceived attitude. months. * Power telemetry data
+   sets taken nominally every As the mission has progressed, opportunities
+   to refine the week to validate performance vs. AU, understanding of
+   detailed modeling factors have become temperature, and environmental
+   degradations. available. By March of 2000 the spacecraft will be back
+   to 1.1 AU after traveling out to almost 1.35, and after nine It was
+   important to record data often at the start of the more months will
+   have reached 1.35 again. This mission mission to capture early
+   degradation effects such as profile, shown in Figure 3, will allow
+   analysis to separate spacecraft or array outgassing contamination and
+   UV time and distance effects. darkening. Days From Launch 1.45 1.40 For
+   beyond the first month the data desired was: Comet Borrelly 1.35
+   Encounter: Asteroid Braille July 28, 1999 1.30 1.25 * Power telemetry
+   data sets nominally every two Comet Wilson-Harrington 1.20 weeks (every
+   month as a minimum when or if 1.15 mission events conflict) to validate
+   performance 1.10 Distance From Sun (AU) 1.05 vs. AU, temperature, and
+   environmental 1.00 degradations. 0.95 0 100 200 300 400 500 600 700 800
+   900 1000 1100 (10-98) 1999 2000 2001 Regular data sets form the basis
+   for validating and correlating power output and modeling. Figure 3. DS1
+   Mission Timeline vs Sun Distance Criteria for incremental success in
+   flight validation were developed and documented in the New Millennium
+   3.3 Expected Performance Envelope Program - Deep Space One Project
+   Technology Validation Agreement between BMDO, JPL, and ABLE. The
+   performance envelope of any future Scarlet array is Those criteria
+   were: well understood as many detailed point designs have been
+   generated from the DS1 baseline. It has been configured 50% Successful
+   zero-g deployment of both wings into arrays from 500 to 25,000 W, for
+   LEO, MEO, GEO, and interplanetary missions. The key metrics for array
+   60% Successful acquisition of launch and deployment evaluation are
+   specific power (W/kg) and cost. The cost activities data, Spacecraft
+   orientation from spin- advantage with concentration is self-evident,
+   and the down to start of deployment event, Time history remaining
+   questions for planning or selection are whether of the states of
+   telemetry switches and RTDs the array will meet all mission
+   requirements and at what level of performance. 75% Successful
+   acquisition of initial power telemetry data set, which includes:
+   Current and voltage Scarlet technology has now been proven out with the
+   (IV) curve data points for each of the 8 tap flight of DS1 and the
+   completion of subsystem circuits, Temperature readings from each of 10
+   qualifications tests which complete the verification of RTDs, day and
+   time, Heliocentric distance, Wing thermal cycle capability in various
+   environments. The orientations: alpha for each wing and beta of key
+   measure of performance, specific power, spacecraft, Spacecraft
+   orientation reference data demonstrated on DS1 is at the
+   state-of-the-art (45 W/kg) and alpha/beta offsets and can easily be
+   increased with now proven design enhancements and/or size increase. The
+   specific power 80% Successful acquisition of initial on-orbit alpha-
+   increases as wing size grows because the mechanism beta calibration
+   data overhead of tiedowns and yoke diminish relative to the
+   photovoltaic content. For example, with larger arrays the 90% Produce
+   power in excess of 2400 W at BOL specific power approaches 70 W/kg for
+   a 15 year GEO environment. DS1 Scarlet Technology Validation Page 5
+   simplified pointing control analysis, reduced stowed Generally
+   speaking, Scarlet technology versus standard volume, and simplified
+   yoke structure. Additionally, the array technology is transparent to
+   the spacecraft user, with lens panels are held securely between power
+   panels in the one exception: pointing. DS1 has shown that the accuracy
+   stowed condition. level required is not a significant engineering or
+   operations burden. The required accuracy of the Basic proven mechanisms
+   such as release assemblies, spacecraft knowledge and pointing was set
+   at 0.5° tiedown cup-cones, cable pullers, and hinges of Scarlet I
+   maximum. Typically communications spacecraft point to were utilized
+   again for Scarlet II, but optimized to better than 0.1°, so this was
+   not a novel challenge. minimize weight. [ref. 2] However, if needed,
+   the technology can also be configured for wider pointing acceptance
+   angles. The 3.4.2 Mechanical Description optics are not sensitive to
+   errors in one axis and thus GEO The DS1 Scarlet solar array consists of
+   two wings of four orbit seasonal off-pointing (+ 24°) can be
+   accommodated panels each. The wings are delivered fully integrated with
+   only a small reduction in performance. with tiedowns, gimbal drive
+   assembly, and spacecraft interface plate as shown below. 3.4 Detailed
+   Design Description 3.4.1 Overview The basis of the technology is to use
+   a linear refractive Fresnel lens to focus sunlight onto a 1 cm wide
+   strip of solar cells as shown in Figure 4. Fresnel Lens Glass over
+   Silicone Frame Spacer Solar Cells GaInP/GaAs/Ge Figure 5. DS1 Scarlet
+   Wing Deployment of a wing is initiated when power is applied Lens Frame
+   to the high output paraffin (HOP) linear actuators in each Flex Circuit
+   Bonded of two tiedown assemblies. A resistive load causes the to Module
+   Base paraffin to heat and change phase, which forces a pin Bypass
+   Diodes forward releasing the restraint arm on a torsion tube. Tiedown
+   cables are wrapped and captured in fittings on Figure 4. Scarlet
+   Module: Lens and Receiver either end of the tube, so when a torsion
+   spring revolves the tube, both cables are released. When the second The
+   Scarlet array for DS1 is based on the prototype release mechanism has
+   actuated, the wing unfolds, driven Scarlet array that was built for the
+   METEOR satellite in by double-wound torsion springs distributed on each
+   1995. [ref. 1] After the failure of the Conestoga launch hingeline.
+   vehicle, the BMDO Innovative Science and Technology Directorate
+   sponsored the development of this second- The hingelines are
+   synchronized by a system of cables generation Scarlet solar array -
+   which incorporates which are wound over static pulley cams. The
+   advanced technologies such as multi-junction solar cells
+   synchronization transfers the deploy torque to the root and an improved
+   structural design - for use and validation where redundant rotary
+   viscous dampers retard the on DS1. deployment rate. The first
+   generation Scarlet array was a melding of 3.4.3 Electrical Description
+   ABLE's standard planar array structure, PUMA [ref. 2], with
+   concentrator optics. That structural baseline was The cells used by DS1
+   Scarlet are about 1 cm wide and reassessed for the DS1 Scarlet design
+   to improve the 4 cm long and are spaced in rows 8.6 cm apart. The low
+   union between the cell substrates and lens panels. The cell area per
+   watt needed beneath the concentrator greatly result is a simple
+   cable-synchronized structure which lowers cost and also eases the risk
+   of utilizing emerging, deploys flat. The major advantages are fewer
+   piece parts, high-performance cell technologies. For this reason, DS1
+   Scarlet Technology Validation Page 6 BMDO elected to specify the
+   procurement of an entirely Cell interconnect reliability is also
+   greatly improved over multibandgap-cell-based solar array. standard CIC
+   construction because 120 interconnects (in parallel per cell) connect
+   the cell to the circuit board In 1996 production quantities of
+   GaInP2/GaAs/Ge dual- carrier. The automated wire bonder, which stitches
+   at a junction cells were not yet available. Tecstar was the rate of
+   three cells per minute, results in large cost savings only cell vendor
+   willing to participate, and the DS1 team by eliminating hand labor. was
+   cautious about the difficulties of bringing new cell technology into
+   production. So to mitigate risk, and to set Engineering modules
+   underwent thermal cycling from - performance criteria for the flight
+   build, an engineering 160°C to +110°C for 100 cycles to assure a high
+   margin build quantity of 100 cells was procured. of compatibility with
+   the single thermal cycle experienced on the DS1 mission at the start of
+   its interplanetary The III-V cell design, termed "Cascade" by Tecstar,
+   had mission. All modules experienced no visible degradation previously
+   been qualified in the standard series of and comparison of pre- and
+   post-IV curves under the X25 environments for space applications. The
+   only solar simulator at NASA Glenn Research Center (GRC) modification
+   required was gridline sizing for the high flux showed no measurable
+   electrical degradation. profiles of the concentrator. To demonstrate
+   the orbital applicability of the Scarlet The engineering evaluation
+   result was very encouraging, technology, flight modules and lenses were
+   later with the average efficiency result coming in at 24.25% at
+   successfully cycled for GEO thermal extremes for 7.5X air mass zero
+   (AM0). The performance criteria for 1350 cycles and to MEO extremes for
+   40,000 cycles. the flight build was set at 23.25%, - partially because
+   of losses anticipated for over-glassing, but mostly as insurance
+   against the uncertainties of a larger build. 3.4.4 Optical Description
+   The Fresnel lens is comprised of precisely formed During the flight
+   production phase Tecstar experienced a individual ridges which refract
+   incident light from a 3.22- series of setbacks in producing the flight
+   cells. The most inch aperture down to a strip of light focused in the
+   persistent problem was shunting (Reviewed in [ref. 3]) middle of the
+   0.40-inch-wide cell strip to leave margin for which reduced the
+   performance of many of the cells to as pointing error. low as 16% at 1
+   sun intensity. Fortunately, the high current injection levels created
+   by the lens overrides the The average optical efficiency of the DS1
+   lenses, which fixed magnitude shunts and the performance at have no
+   anti-reflective (AR) coatings, (used with the concentration is only
+   slightly degraded. Cascade cell described above) has been measured at
+   89%. The effective concentration ratio, 7.14 (= 0.89 x 3.22/.40), After
+   intensive effort by Tecstar, and aided by the was selected to provide
+   for reasonable pointing error. The synergism of the early
+   dual-junction-cell manufacturing purpose was to create a cost-effective
+   system to technology (ManTech) development program, remarkable
+   manufacture and assemble which is compatible with improvement in yield
+   and performance were achieved. standard gimbal and spacecraft ACS
+   architectures. But schedule delays eventually forced the acceptance of
+   cells with a minimum lot average - under 7.5X The linear Fresnel
+   pattern is molded in a continuous roll concentration - of 22.6 %.
+   process using space-grade silicone. Individual lenses are
+   machined-trimmed and bonded to glass superstrates The cells were
+   covered by Tecstar with 0.004-inch-thick which have been thermally
+   formed into cylindrical coverglass with an anti-reflection coating with
+   blue/red sections. The materials chosen for the lens, the bondline,
+   filtering (BRR). The reflection of the near infrared lowers and the
+   glass are well understood: DC 93-500 silicone the operating temperature
+   of the cell by 11°C. and ceria-doped borosilicate glass (Corning 0213).
+   The glass protects the lens from particle radiation and with an The
+   cell receiver module consists of five series cells, each AR/ITO (Indium
+   Tin Oxide) coating, planned for future with bypass diodes, affixed to a
+   circuit on a high thermal programs, the optical efficiency is enhanced
+   and charge conductivity substrate as depicted in Figure 4. The buildup
+   is minimized. modules are joined using overlapping redundant tabs with
+   reflowed solder to form 50 cell strings that generate The space between
+   lenses must be minimized to 40 watts at an operating voltage of 90
+   volts at 1 AU. maximize packing factor (the ratio of the area of light
+   which passes through the lens to the total panel area). To Cells in the
+   module are interconnected along both their demonstrate the
+   survivability of the thin glass lens long edges. Given the long aspect
+   ratio (4:1), the most mounted in this minimal structure frame, five
+   lens-in- probable crack direction will never leave a section of the
+   frame components were tested - successfully - to cell isolated. Dual
+   ohmics also provide balanced off-track conservative local
+   acoustic/random levels (29 Grms out-of- performance and lower gridline
+   resistance losses. DS1 Scarlet Technology Validation Page 7 plane, 9
+   in-plane). In qualification testing of the Distance from Cell
+   Centerline completed wings less than 2% of lenses had any cracking. 68
+   67 The efficiency of the lens overall is a function of the refractive
+   index matching of the lens, superstrate, and 66 optical coating used,
+   as well as the surface finishes and 65 Glass sharpness of the lens
+   teeth. The manufacturing of the lens Cell produces smooth and sharp
+   prisms with small root radii. 64 Adhesive The close match between the
+   refractive index of the 63 Copper silicone and the glass (1.523 and
+   1.409 respectively) 62 Kapton causes a slight loss of 0.3%. The losses
+   are summarized Adhesive in Table 1. 61 Carrier Temperature (C) 60
+   Adhesive Well established optical coatings would reduce the large
+   Facesheet loss the lens outer surface transmittance, but the thermal 59
+   forming of the lens superstrates occurs at a temperature 0 0.1 0.2 0.3
+   0.4 0.5 0.6 0.7 0.8 0.9 1 which is higher than the survival temperature
+   of typical coatings. Application of AR coatings to the curved Figure 6.
+   Temperature Profile Across Cell surface of the glass superstrate was
+   developed at OCLI, (Edge at D = 1) but not in time to coat all flight
+   lenses. The largest temperature rise is caused by the Kapton. The Table
+   1. Optical Losses in Lens Assy thermally-conductive silicone adhesives
+   and the cell (without AR coating) carrier present very little
+   resistance to thermal conduction. The carrier, which is used during
+   cell laydown to stabilize Component Material Interface Absorptance the
+   Kapton circuit and thus protect the cells from damage, Reflection
+   Scattering is made of a high-conductivity composite to match the Space
+   Vacuum 0.0% thermal expansion coefficient (nearly zero) of the panel.
+   4.5% This creates minimal strain along the long bondline, and Cover
+   Glass 0.5% in addition, the material is very light and stiff. 0.3% Lens
+   Silicone 3.1% 3.0% As can be seen in Figure 7, once conducted to the
+   panel Space Vacuum 0.0% the heat spreads rapidly out through the
+   facesheets and Totals 7.7% 3.6% core. This is because the facesheets
+   are constructed of a ultra-high-conductivity fiber (which also
+   possesses good Combined Loss: 11.0% compressive strength) which has a
+   conductivity of 384 (Multiplicative along light path) W/m-K (for
+   unidirectional layup, 60% fiber volume), which is 60% higher than pure
+   aluminum. Two coated lenses flew on the DS1 array in positions where
+   their contribution to module efficiency could be measured and compared
+   to non-coated lenses. The coating developed combined AR performance
+   with Distance from Module Centerline electrical conductivity, using ITO
+   to dis sipate charge to 70 the grounded lens frame structure. Component
+   testing of the coated lenses demonstrated a 2% efficiency gain. 65 Cell
+   module stack Facesheet, front Core, center 3.4.5 Thermal Design 60
+   Facesheet, back The thermal design challenge is to spread the absorbed
+   but unconverted solar energy (heat) from the cell modules 55 out across
+   the panel to engage the full area and high emissivity of the graphite
+   panel to radiate efficiently. The 50 Temperature (C) cell, circuit
+   layers, and panel were analyzed with a detailed finite difference model
+   so that material choices 45 and thicknesses could be optimized to
+   reduce the cell temperature. The calculation results, for 1 AU 0 0.1
+   0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 illumination, are shown in Figure 6.
+   Figure 7. Temperature Profile Across Panel (From cell center to
+   centerline between module rows) DS1 Scarlet Technology Validation Page
+   8 Typically, Scarlet cells operate about 20°C hotter than a Figure 8
+   shows the individual tests that were included in planar GaAs design,
+   mostly due to front surface radiation the program as well as the order
+   that the tests were blockage by the lenses and the temperature
+   gradients performed. Following each of the major tests (thermal
+   associated with heat spreading. The thermal modeling cycle, acoustic,
+   random vibration), the wing was deployed was first correlated to a
+   balloon flight module [ref. 4] then and inspected to verify that no
+   critical damage occurred later, with a vacuum thermal balance test at
+   NASA GRC. during the test. Before and after the full testing sequence,
+   The excellent agreement with the flight results, discussed a full
+   electrical functional test was performed on the wing later, was aided
+   by these early validations. to verify that the power level and
+   electrical functionality of the wing was not degraded by the exposure
+   to the test 3.5 Technology Interdependencies environments. The
+   performance of many subsystems is often critical to Deployment Tests:
+   As part of the initial deployment the survival of a spacecraft. Of the
+   dozen new technology tests, the array was deployed at thermal extremes,
+   experiment on DS1, several also functioned as bus including a 10°C
+   margin, based on modeling of the subsystems. Perhaps the most critical
+   to the mission is possible conditions in space at the time of
+   deployment. the power system - the Scarlet array. Without a The array
+   was successfully deployed at -66°C, 30°C, and functional solar array, a
+   spacecraft cannot long survive. If at ambient temperature. the array
+   had suffered even slightly degraded performance the ion engine may not
+   have been able to thrust at a level Thermal Cycle Test: Thermal cycling
+   was not a major sufficient to meet the first encounter target. issue
+   for the DS1 mission because after the spacecraft leaves the earth's
+   shadow following launch, it is in the But the critical nature and
+   unique features of the Scarlet sun for the rest of the mission.
+   However, the CVS array were generally transparent to the other
+   spacecraft required a limited number of thermal cycles to ensure that
+   subsystems. It was mated to the spacecraft with no more the initial
+   cycle from ambient (launch) to cold (umbra) to interfaces or complexity
+   than a generic solar array. hot (in the sun) would not be a problem.
+   One important exception is that in operation the array requires much
+   tighter pointing control than standard The wings were cycled three
+   times between -123°C and arrays. The pointing abilities of the
+   spacecraft were not +113°C. The temperatures were determined by mission
+   taxed by this need. The array included Moog-SMI gimbal analysis of the
+   hottest and coldest possible conditions, assemblies with excellent
+   orientation capability. The plus margin. The tests were conducted in a
+   dry nitrogen largest error sources were in the sub-assemblies of the
+   environment. Prior to array assembly, all of the flight wing itself. At
+   one point in the mission a software, array components had also gone
+   through at least three potentially a single event upset, caused one
+   wing to off- thermal cycles. point significantly. The inherent
+   redundancy of the two wing system prevented the temporary power loss
+   from Following the test, the arrays showed no measurable threatening
+   the mission. power reduction and no structural damage. Nearly 4% of the
+   glass concentrator lens superstrates developed small cracks during the
+   testing. However, the shape of the lens 3.6 Test Program was maintained
+   because the curved shape was formed in a zero stress state. The
+   silicone adhesive also helped to Due to limitations in evaluations that
+   can be feasibly maintain the configuration of the lens. No deformation
+   or executed on-orbit, a thorough validation of technology optical
+   degradation was observed in the cracked lenses. such as Scarlet is
+   highly dependant on ground testing. Of course, a systematic
+   qualification test program is also All of the cracked lenses
+   subsequently survived the essential to minimize flight risk. The ground
+   test program acoustic and random vibration environments. Thus, the
+   (reviewed in detail in ref. 5) is discussed below as a program decided
+   not to replace the cracked lenses. prelude to the flight observations.
+   Acoustic Test: The wings were exposed to acoustic environments between
+   105 and 135-dB over a frequency 3.6.1 Ground Test Validation range of
+   30 to 10,000 Hz during a 1-minute test. The Wing qualification testing
+   was initiated once assembly of arrays experienced no measurable power
+   reduction or each wing was completed. No spare hardware was structural
+   damage due to the test. As with the thermal fabricated and a
+   protoflight test approach on the flight cycle test, a small number of
+   concentrator lens glass hardware was used. The levels for the
+   protoflight testing superstrates were cracked during the test, less
+   than 2% of were defined by the DS1 Component Verification superstrates
+   in this case. Again, there was no deformation Specification (CVS). or
+   optical degradation and all of these lenses subsequently DS1 Scarlet
+   Technology Validation Page 9 Physical Electrical Visual Inspection Test
+   Test Functional Test Deployment Test -Workmanship - Weight -Electrical
+   power (LAPSS) -Tiedowns released -Cleanliness - CG (3-axis stowed, y
+   deployed) -RTDs and damper heater operation -Kinematics & latching
+   verified -Structural integrity -Stowed envelope -Cell circuit ground
+   isolation -Switches monitored -Deployed envelope -Cell string
+   capacitance -Alignment verified -Interfaces Visual Inspection, Acoustic
+   Thermal Cycle Deployed Stiffness Passive Electrical & Test Test and
+   Strength Test Deployment Test -141.4 dB OASPL -Complete visual
+   inspection test -Out-of-plane stiffness and -Duration: 1 min. -RTD and
+   damper heater operation - Ambient pressure dry nitrogen strength
+   verified -Cell circuit ground isolation -Temperature and continuity
+   -Cell string capacitance monitored -Complete deployment test SADA
+   Installed Visual Inspection, Random Visual Inspection Electrical
+   Passive Electrical & Vibration Test & Functional Test Deployment Test
+   Deployment Test -Complete visual inspection test - 0.04 g 2/Hz peak,
+   5.7 grms overall -Complete visual inspection test -RTD and damper
+   heater operation - Duration: 1 min. each axis -Complete deployment test
+   -Cell circuit ground isolation - Low level pre-test to measure -Cell
+   string capacitance response & notch spectrum if reqd. -Complete
+   deployment test - 11 response accelerometers Figure 8. Protoflight Test
+   Sequence survived the random vibration test. No other problems were
+   observed during this test. All of the measurements performed as
+   expected during these tests. Figure 9 shows the results of testing a
+   string Random Vibration Test: The wings were random with and without
+   the concentrator lenses. The string Isc vibration tested in all three
+   axes to the levels shown in for a long series string was consistent
+   with the measured Table 2. The test duration was one minute in each
+   axis. average lens concentration ratio of 7.14. The string Voc As with
+   the previous protoflight test, the arrays boost of 8% was consistent
+   with individual module experienced no measurable power reduction or
+   structural results. The string Pmax increased by 4% more than damage
+   due to the test. Again, a small number of expected (increased fill
+   factor). This was determined to concentrator lens glass superstrates
+   were cracked during be due to the presence of shunts in some of the
+   cells. the test; in this case, less than 1% of superstrates. As in
+   Under concentration, the cells generate more current, so previous
+   tests, there was no deformation or optical the shunts become less
+   significant. degradation. DS1 SCARLET WING 1, PANEL 1, STRING 5 0.50
+   Frequency PSD WITH LENSES 0.45 (Hz) (g2/Hz) 20 0.0016 0.40 50 0.04 0.35
+   WITHOUT WITH LENS LENS RATIO 500 0.04 0.30 Isc (A) 0.0633 0.4520 7.14
+   Voc (V) 116.3 125.5 1.08 Table 2. Random Vibration Test Levels 0.25
+   Pmax (W) 5.71 45.93 8.04 FF 0.776 0.809 1.04 0.20 Power Measurement:
+   The power was measured using a 0.15 Large Area Pulse Solar Simulator
+   (LAPSS). Due to the WITHOUT LENSES concentrator lenses, the light must
+   be collimated 0.10 perpendicular to the wing for the power to be
+   measured. 0.05 This required that wing power be measured one string at
+   a 0.00 time. The configuration of the strings results in an area of 0
+   20 40 60 80 100 120 140 VOLTAGE (V) 17.3-cm across by 110-cm wide for
+   each string. Testing showed that the light from the LAPSS was
+   sufficiently collimated over this area. Special filtering was required
+   to Figure 9. Scarlet String I-V Curves improve the LAPPS spectral
+   balance for accurate multi- junction cell measurement (ref. 6). DS1
+   Scarlet Technology Validation Page 10 3.6.2 Flight Test Validation
+   While the SIVPerf data is useful for certain A large portion of the
+   validation of Scarlet in flight was investigations, there is another
+   data set which gives much accomplished with the initial survival of the
+   launch better confidence for full array power. environment and
+   successful deployment of the mechanism. After many months of data
+   accumulation the Successful execution of that sequence, termed SPeak
+   for power capabilities and robustness of the wing in the space solar
+   array peak power, affirmed the validation at 90%: environmental was
+   convincingly demonstrated. Power production in excess of 2400 W. The
+   various power telemetry from both SIVPerf and SPeak have been To reach
+   our first goal at a 50% validation level, required analyzed, combined,
+   and contrasted to track the array the array - with its novel
+   cable-linked synchronization, power versus heliocentric distance and
+   time. hinges, root articulation, four-bar lens panel kinematics, and
+   latches - to perform as expected. 60% was obtained The system power
+   production has followed the original when the telemetry data was
+   obtained and evaluated. A model very closely, thus completing 100%
+   validation of detailed review of the results is included in "Analysis
+   of the Scarlet technology in-flight, from mechanism Flight Test
+   Results, Deployment," Section 3.7.1. structure and kinematics through
+   thermal/optical/electrical modeling and power performance. The analyses
+   of power Receiving the first power telemetry data set obtained 75%
+   performance are discussed in "Analysis of Flight Test validation as
+   even one data set gives flight confirmation Results, Power," Section
+   3.7.4. of the capability of the technology to produce power in the
+   space environment. 3.7 Analysis of Flight Test Results The original
+   Power Telemetry data set was comprised of: Analysis of the in-flight
+   validation of Scarlet is grouped into four areas of performance:
+   Deployment, pointing, * Current and voltage (IV) curve data points for
+   temperature, and power. The following sections address each of the 8
+   tap circuits the flight activities and data gathered and compare the *
+   Temperature readings from each of 10 RTDs data to pre-flight analyses
+   and forecasts. * Day, time, and heliocentric distance * Wing
+   orientations angles 3.7.1 Deployment * Spacecraft orientation reference
+   data and wing angle null offsets The first activity required from the
+   Scarlet system in space, deployment, occurred 1 hour after launch. The
+   The information for wing and spacecraft orientation sequence plan for
+   deployment of the wings was as turned out to be superfluous. A
+   measurement of the follows: available power versus gimbal position was
+   performed early in the mission as planned. The experiment 0. Power to
+   damper heaters (ON since launch) demonstrated that the wings were so
+   well aligned that 1. Disable attitude control system (to prevent power
+   roll-off was not a factor. These results, which reaction during wing
+   motion) pushed successful validation past 80%, are discussed in 2.
+   Power HOP primary heaters for 180 seconds "Analysis of Flight Test
+   Results, Pointing," Section 3.7.2. 3. Power HOP secondary heaters for
+   180 seconds 4. Power HOP primary heaters for 180 seconds The operating
+   temperature is a key element of the flight 5. Power HOP secondary
+   heaters for 180 seconds validation. The wings were well instrumented to
+   measure cell temperature and gradients in the structure around the
+   During steps 3-5, if all 8 release indications OR focal line. An
+   analysis of the performance and a all 4 deployment indications become
+   true, wait comparison to pre-flight expectations is discussed in 10 sec
+   then turn off the HOP heaters and go to "Analysis of Flight Test
+   Results, Temperature," step 6. Section 3.7.3. 6. Wait 240 seconds for
+   extension of wings The sequence of commands executed by the spacecraft
+   to ("deployment") collect and store the power telemetry data set is
+   termed SIVPerf, for solar array IV performance. Because During steps
+   3-6, if all 4 deployment indications SIVPerf measures the IV curves of
+   a single module within become true, turn off the damper heaters. a
+   string of 10 modules on each panel, whereon there are 9 strings, the
+   calculation of total wing power production is 7. Turn OFF the damper
+   heaters a large extrapolation. 8. Enable reaction control system 9.
+   Index solar array gimbals DS1 Scarlet Technology Validation Page 11
+   Through considerable discussion this conservative and was being
+   recorded at 5-second intervals. Forty minutes straightforward algorithm
+   was developed by JPL with later, when the real time link was
+   reestablished at JPL and ABLE input. In flight none of the redundancies
+   proved the monitors filled with data, it was evident the array was
+   necessary as the deployment was nominal. The logic of deployed: The
+   indicator switch states were all in this sequence is as follows:
+   agreement and power was being produced. * Requiring all 8 tiedown
+   release or all Later analysis of the recorded data allowed the duration
+   in 4 deployment indications was to protect against a seconds of the
+   deployment events of HOP heating to false positive, while still
+   allowing quick re- SATM release and damped wing motion to latching at
+   full enabling of attitude control and positioning of deployment to be
+   determined, as listed in Table 4. the array to the sun. Table 4. Flight
+   Release and Deploy Durations * Waiting 180 seconds before looking at
+   the switch status meant that a primary heater failure Event Time in
+   seconds could be tolerated too. This double failure protection was felt
+   to be justified by JPL because Duration Wing 1 Wing 2 of problems with
+   microswitches in the past. Ist Tiedown Release 75 70 * Broken wires or
+   open connectors can cause a false positive, because in all cases the
+   2nd Tiedown Release 85 80 microswitch configuration desired for
+   positive Deployed & Latched 85 80 indication was "open." False
+   negatives from the switches were prevented from being a Total Time 170
+   160 detrimental factor, by OR-ing the tiedown set with the deployment
+   set, and because the sequence would run regardless of microswitch The
+   HOP heating durations on each of the four actuators problems. ranged
+   from 70 to 85 seconds. These values agree well with the duration
+   predicted, 77 seconds, for the HOP * Waiting 10 seconds after getting
+   all 8 release or temperature of 18°C. The thermal modeling of the 4
+   deployment indications was added to prevent temperature transients from
+   fairing jettison after launch to any possibility of indications coming
+   before deployment in eclipse is shown in Figure 10. The model actual
+   release. predicted a HOP temperature of 15°C. 30 FAIRING Activation of
+   the paraffin actuators activates the JETTISON Actual Deploy Time
+   mechanism to release the panel tiedown cables. After the 20 tiedown
+   cables are released, the wing deploys powered by 10 torsion springs and
+   rate-limited by viscous dampers. The nominal timing and range in
+   protoqual testing for the 0 PITCH-OVER release activation and the
+   unfolding of the wing are -10 HOP ECLIPSE shown in Table 3. DAMPER
+   START Temperature (C) SPIN-UP -20 PANEL 1 Table 3. Protoqual Deploy
+   Timing Ranges PANEL 2 -30 PANEL 3 PANEL 4 HOP Release Damper Deploy -40
+   Temp Time Temp Time 0 10 20 30 40 50 60 70 (°C) (sec.) (°C) (sec.) Time
+   from Launch (minutes) 30 60 + 10 30 42 + 10 Figure 10. Ascent to
+   Deployment Temp. Transient 18 77 + 7 18 62 + 5 The duration of the wing
+   deployment depends on the damper temperature, which was forecast to be
+   near zero. 0 110 + 15 10 88 + 10 The damper body and silicone fluid and
+   thermostat were modeled by a single node, as the primary intent was to
+   -10 130 + 30 0 160 + 20 determine how early the thermostat could turn
+   on causing the damper heater to draw power and if the 10 watt heater
+   was sufficient to maintain the damper above 0°C. Power to the tiedown
+   mechanisms was autonomously commanded at about 6:08 am PDT on October
+   24, 1 hour The actual fluid temperature would certainly lag behind
+   after launch. The spacecraft was in eclipse. Telemetry the cooling of
+   the casing exterior and the thermostat body. DS1 Scarlet Technology
+   Validation Page 12 So the flight temperature was probably between 0 and
+   On-Orbit Calibration: The sequence was termed SCal, 15ºC. Placing the
+   average wing deployment time on the for solar array calibration. To
+   determine if each wing was curve of predicted time versus temperature,
+   Figure 11, positioned by the spacecraft (for beta) and the wing
+   suggests the fluid temperature was near 11°C. gimbals (for alpha) at
+   the angles which provided maximum power, the wings were steered to
+   various 250 positions over a range of +4° in alpha and +8° in beta. 200
+   The alignment of the system was judged by the short Actual Wing Deploy
+   Time and Estimated Temperature circuit current (Isc) output, a direct
+   indication of the light 150 flux on the cells, of the tap modules on
+   each panel. 100 The sequence ran for about 6 hours, where each beta
+   Deploy Time (sec) position was selected and the various alpha positions
+   were 50 steered through. The drift of the spacecraft causes some random
+   variation in the current output results, but a 0 0 5 10 15 20 25 30
+   parabolic curve fit, see example in Figure 12, can be used Damper
+   Temperature (C) to estimate whether the alignment of a module is
+   centered or offset. Figure 11. Deployment Duration vs. Temperature In
+   summary, all telemetry indicates the deployment Isc Versus Alpha - Wing
+   1, Panel 1 occurred precisely as designed. This was a significant 0.5
+   milestone for technology validation because - although 0.45 the
+   highlight of the technology is the 0.4 optical/thermal/electrical
+   performance of the 0.35 concentrator/cell module - the kinematic
+   control and joint 0.3 mechanisms were also making their debut. 0.25 0.2
+   0.15 Best Fit Offset = -0.175 Degrees 3.7.2 Pointing 0.1 Short Circuit
+   Current (Amperes) 0.05 The criticality of proper alignment of a
+   concentrator 0 system is plain. System performance is dependent on all
+   -4 -3 -2 -1 0 1 2 3 4 elements (cells, modules, lens frames, panels,
+   hinges, Alpha (Degrees) yoke,...) being assembled accurately, being
+   deployed reliably, and being resistant to thermal dis tortion. Numerous
+   industry efforts to build concentrator systems Figure 12. Light
+   Collection versus Alpha Angle have failed at various stages prior to
+   launch due to the inherent design and manufacturing difficulties. The
+   When the offsets are compared against the design industry has had
+   limited success of late with low specifications, as in Figure 13, the
+   success of the system concentration ratios, for example the STEX trough
+   in achieving far better alignment than required is clearly concentrator
+   at 2X. The Scarlet system is the first system evident. on-orbit to
+   provide significant concentration benefits. 2 The Fresnel optics
+   provide an advantage in tolerance to 1.5 shape error that reflective
+   systems lack. This technology, when properly integrated at a 7X
+   concentration level with 1 +2 degree error tolerance, creates a system
+   with 0.5 significant cost and performance benefits. 0 While it was
+   demonstrated that manufacture of the piece -0.5 parts and assembly of
+   Scarlet was straightforward, the Design Wing 1 -1 Specification proof
+   of success - power production - required on orbit Wing 2 data. Would
+   each and every lens be pointed accurately to -1.5 Measured Error at Tap
+   Module (deg) the sun within the accumulated errors of piece part -2
+   fabrication, sub-assembly, system assembly, thermal 1 2 3 4 distortion,
+   spacecraft knowledge and pointing control? Inboard Panel Outboard Panel
+   The eighth day of the mission provided an opportunity to find out.
+   Figure 13. Pointing Validation Summary DS1 Scarlet Technology
+   Validation Page 13 In the event the SCal data had shown any significant
+   A fairly detailed finite difference model was developed, difference in
+   current between modules or wings, a starting in 1996, to analyze the
+   complex heat balance and topology study was planned to determine the
+   best beta thermal gradients beneath the lens. The line focus and
+   correction for the spacecraft and the best alpha correction regular
+   module-to-module spacing allows for accurate for each gimbal. Actually,
+   it was hoped that an temperature predictions using a half-symmetry 2-D
+   adjustment of pointing to achieve maximum power would model. The model
+   was refined in 1997 based on thermal not be required. Calibration is an
+   activity that places a balance testing performed in a 1-sun vacuum
+   environment burden on spacecraft operations and it was important to at
+   NASA Glenn Research Center. demonstrate to future Scarlet users that it
+   isn't required. The modeling results for each node of the model are The
+   results of SCal demonstrated that Scarlet achieved shown in Figure 15,
+   for the module at maximum power the pointing accuracy goals not only
+   for the design and (minimum waste heat in cell). In this case the sun
+   assembly of the wings, but of integration with gimbals distance is set
+   at 1.0174 AU, to correspond to the first and the spacecraft structure,
+   and for integrated applicable flight data set, presented next. The
+   model is performance with the spacecraft issues of position shown
+   without the 10°C margin used in the power knowledge, pointing control,
+   and drift. prediction, because the flight data demonstrates it was not
+   needed, as will be shown below. 3.7.3 Temperature 90 A critical
+   validation of the power model is the operating 85 Cell module stack
+   temperature of the array. Each wing was equipped with 80 Facesheet,
+   front resistance temperature devices (RTDs): Four on the 75 Core,
+   center inboard panel and four on the outboard panel. As shown 70 RTD in
+   Figure 14, the cluster of four RTD's were located: Facesheet, back 65
+   RTD * Next to cell on the front facesheet (as close as 60 Module Base
+   width allowed) 55 Temperature (C) * On module-to-module centerline on
+   front 50 RTD facesheet 45 RTD * Directly behind the cell on the back
+   facesheet 40 * On module-to-module centerline on back 0 0.1 0.2 0.3 0.4
+   0.5 0.6 0.7 0.8 0.9 1 Panel Position (X/L) facesheet On the second wing
+   only the RTDs nearest the cells were Figure 15. Thermal Modeling
+   Results for 1.0174 AU recorded, due to channel restrictions. Therefore
+   the flight data set consists of 8 RTDs on Wing 1 and 2 on Wing 2. On
+   the 37th day of the mission the ion engine was, for the first time,
+   commanded to thrust at increasing increments up to maximum available
+   power. The data available on all the RTDs at the intermediate levels
+   between zero and near full power are plotted in Figure 16. The model
+   prediction curve is also plotted for comparison. The general agreement
+   is excellent. Several observations about the data can be made: * The
+   agreement is fairly precise, on average, near maximum power for the
+   RTDs nearest the cells. * The flight data shows the gradients of heat
+   spreading across and through the panel were slightly larger than the
+   model forecast. Since the gradients are larger than expected, but the
+   near- cell RTD temperatures were accurate, it can be surmised that
+   optimistic and conservative simplifications in the model were
+   offsetting. Two known corrections which Figure 14. RTDs: 4 on a Module
+   (in 2 Locations) would reduce model conservatism are: DS1 Scarlet
+   Technology Validation Page 14 RTD Location: Front, Near Cells RTD
+   Location: Front, Between Modules 90 90 85 85 8

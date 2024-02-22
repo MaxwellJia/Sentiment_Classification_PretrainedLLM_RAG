@@ -1,0 +1,204 @@
+http://wsom.nws.noaa.gov/manual/CHAPTERD/ND510991.HTML
+
+   noaa logo     NATIONAL WEATHER SERVICE     Operations Manual
+                                SILVER SPRING, MARYLAND 20910    Letter
+   9-91
+
+   Date of Issue:     August 16, 1991        Effective Date:    August 16,
+   1991
+
+   In Reply Refer to:     W/OM12           File With:    D 51
+
+   Subject: Implementat1on of the Use of Generic Codes in the Coastal
+   Marine  Great Lakes Forecasts
+
+   Reference(s): This OML modifies WSOM Chapter D-51, Issuance 86-4, dated
+   June 1, 1986, and WSOM Chapter D-52, Issuance 91-2, dated March 21,
+   l991
+
+   1.    Effective at 00Z, 60 days after issuance date, all Great Lakes
+   Open Lakes and Nearshore Marine Forecasts (AFOS identifiers GLF and
+   NSH) and all Coastal Marine Forecasts (AFOS identifier CWF) including
+   locally adapted marine forecasts shall contain a Universal Generic Code
+   (UGC).
+
+   The UGC is to be in the form "SSZNNN-DDHHMM-" where:
+   SS = two-letter state or lake identifier
+   Z = an indicator noting that an area designator follows
+   NNN = a three-digit code specifically defining a Basic Marine Area for
+   an individual state or lake
+   - = code separator/end of address
+   DDHHMM = Scheduled expiration time (day, hour, and minute in UTC) of
+   current product. This coincides with the next scheduled issuance time
+   of this product.
+
+   2.    In this OML a Basic Marine Area is considered to be the marine
+   equivalent of the public forecast zone. For clarity and conciseness,
+   the marine forecaster can, in the body of the forecast, subdivide a
+   Basic Marine Area or can combine two or more Basic Marine Areas as
+   shown in the examples below. However. it is not permissible to combine
+   one Basic Marine Area with just a part of another. All Basic Marine
+   Areas are listed in attachment 1 to this OML.
+
+   3.    The following are examples of various marine forecast formats to
+   show how the UGCs are to be placed.
+   A. One Basic Marine Area with no subdivisions:
+   BUFGLFPLF
+   TTAAOO KBUF 191414
+
+   LAKE FORECAST
+   NATIONAL WEATHER SERVICE BUFFALO NY
+   1015 AM EDT TUE JUN 19 1990
+
+   LAKE ONTARI-O FORECAST BEYOND 5-NM-FROM-SHORE
+
+   LOZ501-192000-
+   LAKE ONTARIO
+   1015 AM EDT TUE JUN 19 1990
+   ...HEADER (IF NEEDED)...
+   TODAY... .
+   TONIGHT... .
+   WEDNESDAY...
+   $$ .
+   B. One Basic Marine Area subdivided into two smaller areas 2 EXAMPLES:
+
+   ARBNSHAPN
+   TTAA00 KAPN 192121
+
+   NEARSHORE MARINE FORECAST
+   NATIONAL WEATHER SERVICE ALPENA MI
+   500 PM EDT TUE JUN 19 1990
+
+   FOR WATERS WITHIN FIVE NAUTICAL MILES OF SHORE ON LAKE HURON
+
+   .SYNOPSIS (OPTIONAL ON THE GREAT LAKES)...(TEXT)
+
+   MIZ510-200300-
+   NINE MILE POINT TO ALABASTER
+   500 PM EDT TUE JUN 19 1990
+
+   NINE MILE POINT TO NORTH POINT
+
+   ...HEADER (IF NEEDED)...
+
+   .TONIGHT...
+   .WEDNESDAY...
+   .WEDNESDAY NIGHT...
+
+   NORTH POINT TO ALABASTER
+
+   ...HEADER (IF NEEDED)...
+
+   .TONIGHT...
+   .WEDNESDAY...
+   WEDNESDAY NIGHT...
+   $$
+
+   FZHW40 PHNL-301600
+
+   COASTAL AND OFFSHORE FORECASTS FOR HAWAII
+   NATIONAL WEATHER SERVICE HONOLULU HI
+   6 AM HST WED MAY 30 1990
+
+   HAWAIIAN WATERS OUT TO 100 NAUTICAL MILES
+
+   .SYNOPSIS...(TEXT)
+
+   HIZ501-302200-
+   HAWAIIAN WATERS (OUT TO 100 NM MILES - Optional)
+   6 AM HST WED MAY 30 1990
+
+   ...HEADER (IF NEEDED)...
+
+   COASTAL WATERS
+
+   .TODAY...
+   .TONIGHT AND THURSDAY...
+
+   CHANNELS BETWEEN THE ISLANDS
+
+   .TODAY...
+   .TONIGHT AND THURSDAY...
+   $$
+
+   HIGH SEAS WITHIN 1000 NAUTICAL MILES OF HONOLULU
+
+   ETC..
+
+   C.    Two or more Basic Marine Areas combined.
+
+   SFOCWFSFO
+   TTAA00 KSFO 191414
+
+   COASTAL MARINE FORECAST
+   NATIONAL WEATHER SERVICE SAN FRANCISCO CA
+   715 AM PDT TUE JUN 19 1990
+
+   COASTAL CALIFORNIA...POINT ST. GEORGE TO POINT CONCEPTION
+
+   .SYNOPSIS...(TEXT)
+
+   CAZ503-504-505-192000-
+   POINT PINOS TO POINT CONCEPTION (OUT TO 60 NM - Optional)
+   POINT ARENA TO POINT PINOS
+   SAN FRANCISCO SAN PABLO SUISAN BAYS AND WEST DELTA
+   715 AM PDT TUE JUN 19 1990
+
+   ...HEADLINE (IF NEEDED)...
+
+   .TODAY...
+   .TONIGHT...
+   WEDNESDAY...
+   $$
+
+   CAZ506-192000-
+   POINT ST. GEORGE TO POINT ARENA (OUT TO 60 NM - Optional)
+   715 AM PDT TUE JUN 19 1990
+
+   ...HEADLINE (IF NEEDED)...
+
+   .TODAY...
+   .TONIGHT AND WEDNESDAY...
+   $$
+
+   D.    An example of a forecast update.
+
+   FZAK61 PAJN 011900 AMD
+
+   MARINE FORECAST FOR SOUTHEAST ALASKA UPDATE
+   NATIONAL WEATHER SERVICE JUNEAU AK
+   11 AM ADT FRI JUN 1 1990
+
+   .SYNOPSIS...(TEXT)
+
+   AKZ611-020000-
+   AREA lA. INSIDE WATERS SKAGWAY TO DIXON ENTRANCE
+   11 AM ADT FRI JUN 1 1990
+
+   LYNN CANAL AND GLACIER BAY
+   ICY STRAIT AND CROSS SOUND
+   STEPHENS PASSAGE
+   FREDERICK SOUND
+   SUMNER STRAIT
+   CHATHAM STRAIT
+   CLARENCE STRAIT
+
+   ...HEADLINE (IF NEEDED)...
+
+   TEXT...
+   $$
+
+   AKZ612-613-020000-
+   AREA lB. OUTSIDE WATERS DIXON ENTRANCE TO CAPE FAIRWEATHER
+   AREA 2A. CAPE FAIRWEATHER TO CAPE SUCKLING
+   330 AM ADT FRI JUN 1 1990
+
+   ...HEADLINE (IF NEEDED)...
+
+   .TEXT...
+   $$
+
+
+   Elbert W. Friday, Jr.
+   Assistant Administrator
+      for Weather Services

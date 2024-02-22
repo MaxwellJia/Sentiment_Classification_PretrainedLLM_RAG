@@ -1,0 +1,112 @@
+http://fnpcc.fnal.gov/resources.php
+
+   Header
+
+
+   FPS HomePage
+   Graphs and statistics for FPS resources
+      Selection by farmlets:
+
+      mirsi_test
+
+      Farm
+
+      Stream_B
+
+      Stream_A
+
+      test2
+
+      MC_MDC2
+
+      test1
+
+      Stream_C
+
+      Stream_H
+
+      Stream_I
+
+      Stream_F
+
+      Stream_D
+
+      Stream_E
+
+      Stream_G
+
+      Stream_J
+
+      general2
+
+      general1
+
+
+      Selection by resources:
+
+      Stageout disk
+
+      Concatenated disk
+
+      CPU
+
+      Concatenation network
+
+      Stagein disk
+
+      Input network
+
+      Output network
+
+      Concatenation disk
+
+   Currently processing datasets and filesets
+      Currently processing datasets and filesets.
+
+   Tables for files already processed
+      Files already processed.
+
+   Visualisation of rates
+      Visualisation of rates.
+
+   Current status of stages in FPS
+      Current status of stages in FPS
+
+   Messenger status
+      Messenger logs
+
+   E-log information
+      Farm e-log information.
+
+   Nodes status
+      Nodes performance statistics.
+
+
+   30 Jan 2002 Wed 11:54:16
+
+   The bandwidth of various parts of the production system are listed
+   below:
+     * Tape drive - The tape drive hardware is not decided. Before the
+       start of Run 2 it is quite likely that newer technology with 6 MB/s
+       speed or higher with capacity around 50 GB will mature. In that
+       case we'll need 5 input tape drives and 3 output tape drives, plus
+       a few more for buffering and spare.
+     * Disk - The disk speed from an early test was approximately 20 MB/s.
+       With RAID disks, the disk speed is expected to reach 50 MB/s or
+       more. However, it will drop considerably if multiple read/write
+       occurs on the same disk array whether or not the disk head
+       contention costs much performance. Therefore it may be desirable to
+       avoid multiple read/write on the same physical disks.
+     * I/O bus: The fibre channel on input/output nodes should have
+       bandwidth around 1 Gb/s, or 90 MB/s.The SCSI bus on the worker
+       nodes will probably have bandwidth of 20-40 MB/s. The bandwidth on
+       worker nodes is not a problem because there are multiple worker
+       nodes. The bandwidth on the output node is also suitable to sustain
+       5 concurrent read/write tasks of 11 MB/s each.
+     * Network - The network on input/output nodes will be gigabit
+       Ethernet (90 MB/s wire speed), and on worker nodes are 100BaseT (9
+       MB/s). With multiple worker nodes the bandwidth is sufficient.
+       Overall there are known no show-stoppers on bandwidth issues.
+
+   Clickable map of Farms loop showing resources (red):
+   CDF Farms loop

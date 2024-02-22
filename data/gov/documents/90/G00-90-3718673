@@ -1,0 +1,73 @@
+http://orpheus.nascom.nasa.gov/objects_philosophy.html
+
+              The Philosophy Behind the SoHO Object Abbreviations
+
+   The SoHO on-line catalogs are designed to have a field called OBJECT to
+   represent the object or event that the observation was intended to
+   study. Associated with this is another field called OBJ_ID which is
+   supposed to uniquely identify the object. For example, if the object is
+   an active region, then OBJ_ID would be the active region number.
+
+   The catalog of SoHO observations will be very large, easily going to
+   several hundred thousand entries. If one were to size the OBJECT field
+   big enough to hold character strings such as "Active Region" or
+   "Coronal Mass Ejection", then it would take up quite a bit of space.
+   Also, the OBJECT field is one of the tools that users will have for
+   searching for observations that are relevant to their interest. To that
+   end, one has two possibilities:
+    1. Make the OBJECT string free form, and let the user search for the
+       presence of strings, or
+    2. Restrict the value of OBJECT to a predefined set of possibilities.
+
+   It would be more efficient in terms of disk space, and I think easier
+   for both creating the catalog and using it, if we followed the latter
+   approach. Therefore, I have put together an initial list of generic
+   objects and events together with suggested three-letter code values.
+   Please let me know at the address at the bottom of the page about any
+   modifications or additions you would like me to make.
+
+   A cogent argument can be made for keeping the number of possible object
+   codes small. Scientists will be using these to find observations that
+   are relevant to their interest, and shouldn't have to enter in several
+   codes that all mean basically the same thing. Thus some thought will
+   have to be put into the list to be sure that it is well designed. What
+   I have is only a first, very rough cut.
+
+Why only three characters?
+
+   There's really nothing magical about using three characters for the
+   object codes. The more characters, the more space this field will take
+   up in the database. My initial guess was that two characters would
+   probably be sufficient to uniquely identify all the possible generic
+   objects that SoHO will observe. I am now using a scheme based on three
+   characters which is working much better.
+
+What are the rules for forming the abbreviations?
+
+   I've tried to make the abbreviations as natural as possible. The
+   necessity of avoiding duplications makes that difficult. Some of the
+   ways that the abbreviations are formed are as follows:
+     * The initials of a phrase, e.g. "BP" for "bright points".
+     * The letters of each syllable in a word, e.g. "FP" for "footpoint".
+     * The first two or three letters of a word, e.g. "FL" for "flare".
+
+What will the person using the catalog software see?
+
+   The user will generally see the expanded out name rather than the
+   abbreviation. One could use a number instead of an abbreviation, but I
+   thought there might be some advantage in using something that was a
+   little more closely associated with the concept actually being stored.
+
+What will appear in the FITS file headers?
+
+   The expanded out name will be used in the FITS file headers. There's no
+   storage advantage in using an abbreviation.
+     __________________________________________________________________
+
+   Back to SOHO catalogs home page
+     __________________________________________________________________
+
+
+    Author: William Thompson (William.T.Thompson.1@gsfc.nasa.gov)
+    Responsible Official: Arthur I. Poland, code 682.1
+    Last revised: 20 December 1994

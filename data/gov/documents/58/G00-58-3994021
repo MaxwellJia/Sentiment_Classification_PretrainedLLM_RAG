@@ -1,0 +1,157 @@
+http://www-fbsc.ncifcrf.gov/biologue/prot-biocorner.html
+
+Proteomics/Bioinformatics Corner
+
+  by Bob Stephens, Ph.D., and Gary Smythers
+
+     * New Genomica Discovery Manager Program
+     * Evaluate Omniviz Cluster Visualization Tool
+     * New Array Analysis and Display Tool
+     * Finch Suite of Sequence Analysis and Storage Applications Available
+     * User's Question Answered
+
+   The ABCC recently added or upgraded several pieces of software that
+   should be of use to the local scientific community.
+
+  Genomica Discovery Manager Program
+
+   We have upgraded the genomica discovery manager program. Discovery
+   Manager is an application that is designed to house all of the data
+   from genetics laboratories. The program can be used to collect
+   information from pedigrees and haplotype information, conduct linkage
+   analysis, correlate physical mapping results and finally collect
+   sequencing and blast results all under one application. The program has
+   already been of use to several users. An instructional tutorial session
+   will be scheduled for early in 2001, so please contact Bob Stephens if
+   you are interested. In the interim period, you can have a look at the
+   manual to see if the program will be of any use in aiding your
+   research.
+
+  Evaluate Omniviz Cluster Visualization Tool
+
+   We have obtained an evaluation copy of the omniviz cluster
+   visualization tool. Omniviz allows users to perform visualization of
+   complex clustered data such as that obtained from gene expression
+   experiments like those produced from microarray analysis. We currently
+   have two copies of the program installed for users to try and two
+   copies of the tutorial instruction manual. Please contact Bob Stephens
+   for more information.
+
+  New Array Analysis and Display Tool
+
+   We have also been working with Dr. Peter Lemkin of the Laboratory of
+   Experimental and Computational Biology, DBS, NCI-Frederick. Dr. Lemkin
+   has also made an array analysis and display tool that is very robust,
+   can be run either as an applet or an application and has many features
+   being added almost daily. We have been trying to get the many sources
+   of microarray data (e.g., Affymetrix, Incyte and NCI) to all work
+   seamlessly with Dr. Lemkin's program and have currently added the
+   capability to work with the Incyte Gem data.
+
+   The Microarray Explorer can be seen at
+   http://www.lecb.ncifcrf.gov/MAExplorer. We hope to eventually be able
+   to use this tool to compare data from experiments performed with these
+   different technologies directly.
+
+  Finch Suite of Sequence Analysis and Storage Applications Available
+
+   The ABCC recently acquired the finch suite of sequence analysis and
+   storage applications. These tools allow for the storage and retrieval
+   of raw and processed sequence information. The platform can also be
+   used to submit sequencing requests to the Molecular Technology
+   Laboratory in either 96well or individual analysis. The request
+   information as well as any of the derived sequence information can then
+   be viewed or retrieved via the web.
+
+  Question Sent in by a User
+  How often does the motif ACTG occur in a base sequence?
+
+     ******>>> ASSUMING A=25%, T=25%, C=25%, G=25%
+     ******>>> AND BASES RANDOMLY DISTRIBUTED
+
+   LET:
+
+     P(p) = probability of pattern, ie. P(ACTG) = probability of ACTG
+
+     P(a) = probability of A at a sequence position
+     P(t) = probability of T at a sequence position
+     P(c) = probability of C at a sequence position
+     P(g) = probability of G at a sequence position
+
+     * => multiplication
+     ** => exponentiation
+
+     P(p) = P(ACTG) = P(a) * P(c) * P(t) * P(g)
+
+     P(p) = 0.25 * 0.25 * 0.25 * 0.25 = 0.003906250
+
+  How often should we expect to see ACTG?
+
+     1 / P(p)
+
+     1 / 0.003906250 = 256
+
+     ACTG should occur on average once every 256 bases
+
+     Now let GC content be 66.3%,
+     then AT = 33.7%, and assume G=33.15%, C=33.15%, A=16.85%, T=16.85%
+
+     P(p) = P(ACTG) = P(a) * P(c) * P(t) * P(g)
+
+     P(ACTG) = 0.1685 * 0.3315 * 0.1685 * 0.3315 = 0.003120088
+
+     1 / 0.003120088 = 320.5 bases Once every ~321 bases.
+
+  How often would you expect the pattern gctggtgg to occur in DNA sequences with
+  a GC content of 66.3%?
+
+     P(a) = 0.1685
+     P(t) = 0.1685
+     P(c) = 0.3315
+     P(g) = 0.3315
+
+     Pattern gctggtgg contains 5 g's, 2 t's, and 1 c
+
+     P(p) = (0.3315 ** 5) * (0.1685 ** 2) * (0.3315) = 0.000037679
+
+     1 / P(p) = 26539.9 ~ every 26.5 kb
+
+     Consider AYG, or RGC
+
+     P(AYG) = P(a) * (P(c)+P(t)) * P(g)
+
+     P(RGC) = (P(a)+P(g)) * P(g) * P(c)
+
+  What about GNT?
+
+     P(GNT) = P(g) * (P(a)+P(g)+P(c)+P(t)) * P(t)
+
+     or
+
+     P(GNT) = P(g) * 1 * P(t) = P(g) * P(t)
+
+  NOTE:
+
+   All this is assuming that the bases are randomly distributed in the
+   sequence, and this is not the case for "real" sequences. Some patterns
+   occur more frequently and some less than would be indicated from a
+   simple analysis such as this.
+
+   As an example consider Genbank accession L19268, Homo sapiens myotonic
+   dystrophy associated protein kinase mRNA, complete cds 2726 bp. Using
+   the Wisconsin Package GCG program Composition
+   (which gives mono, di, and trinucleotide counts for a sequence), we
+   get:
+
+   for mononucleotide base counts, A: 459 C: 865 G: 902 T: 500
+   and for these 2 trinucleotides, ATA: 3 CTG: 99
+
+   Using the above method we would expect to see approximately 14
+   occurrences of ATA, and approximately 53 occurrences of CTG in a
+   sequence of 2726 base pairs. ATA occurs much less often and CTG much
+   more often than expected with the above calculation.
+
+   If we use the Wisconsin Package program Shuffle
+   to randomize the order of the bases in L19268, and then run
+   Composition, we will see values close to 14 for ATA and 53 for CTG,
+   more in line with the above method.

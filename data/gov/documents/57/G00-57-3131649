@@ -1,0 +1,184 @@
+http://www-aig.jpl.nasa.gov/public/planning/rover/
+
+   [jpllogo.gif] Projects: Rover, Planning and Scheduling, Artificial
+   Intelligence Group [Nasalogo.gif]
+
+   nothing
+
+   artificial intelligence group [_line.gif] planning and scheduling
+   [_line.gif] machine learning systems [_line.gif] jpl [_line.gif]
+   caltech [_line.gif] nasa
+
+   [dot.gif] [earth.gif]
+   nothing
+   background description impact technology status significance problem
+   sponsors moreinfo publications the team contacts
+
+   Background top
+
+   Following on the successful Pathfinder mission, NASA/JPL intends to
+   continue to explore the surface of Mars and other planets. Mission
+   operations for rover missions can be labor-intensive. As rover missions
+   become longer and more complex, the need to automate operations
+   increases.
+
+   Future rover operations will use WITS to enable scientists to
+   participate in planetary lander and rover missions from their home
+   institutions, rather than having to physically travel to JPL to
+   participate. Currently, the Rocky7 microrover is being used as the
+   testbed for new technologies.
+
+   AI Technology top
+     * Planning and Scheduling
+     * Heuristic Search
+     * Iterative Repair
+     * Temporal Reasoning
+
+   Problem top
+
+   With the current use of WITS, the scientists make requests without
+   detailed knowledge of the operations constraints on the rover. The
+   requests may be incomplete, or they may oversubscribe the rover's
+   resources. The problem is to automatically generate a sequence of
+   low-level rover commands to achieve the set of science requests.
+
+   Impact top
+
+   Automated Planning/Scheduling would impact both the rover science
+   planning team and the rover engineering team. First, it would provide
+   the science team with immediate feedback on the feasibility of their
+   requests, showing necessary additions, deletions, and reorderings. It
+   would also allow the scientists to provide the sequencers with a more
+   complete request sequence, which would more likely be achievable and
+   used for uplink to the rover with minimal modification.
+
+   Status top
+
+   A preliminary demo was given on January 12, 1998.
+
+   A proof-of-concept demo was given on April 15, 1998.
+
+   Description top
+
+   The Artificial Intelligence Group at JPL has been working on a system
+   called ASPEN (Automated Scheduling and Planning Environment). Based on
+   AI techniques, ASPEN is a modular, reconfigurable application framework
+   which is capable of supporting a wide variety of planning and
+   scheduling applications. ASPEN provides a set of reusable software
+   components that implement the elements commonly found in complex
+   planning/scheduling systems, including: an expressive modeling
+   language, a resource management system, a temporal reasoning system, a
+   set of search algorithms for generating and repairing schedules, and a
+   graphical interface.
+
+   The primary application area for ASPEN is the spacecraft/rover
+   operations domain. Planning and scheduling rover operations involves
+   generating a sequence of low-level rover commands from a set of
+   high-level science and engineering goals. ASPEN will encode complex
+   rover operability constraints, flight rules, spacecraft and rover
+   hardware models, science experiment goals and operations procedures to
+   allow for automated generation of low-level rover sequences by use of
+   advanced Artificial Intelligence planning and scheduling technology.
+
+   ASPEN is being integrated with WITS to provide a more intelligent tool
+   for rover ground operations. WITS is used to visualize the terrain
+   around the rover, generate the initial sequence, and to send the final
+   sequence to the rover. ASPEN is used to take the initial sequence from
+   WITS and generate a more complete and valid sequence to return to WITS.
+   A preliminary version of the integrated system has been demonstrated on
+   the Rocky7 rover in the JPL Marsyard.
+
+   Significance top
+
+   Automated planning/scheduling technologies have great promise in
+   reducing operations cost and increasing the autonomy of rover
+   operations. By automating the command sequence generation process and
+   by encapsulating the operation specific knowledge, ASPEN will enable
+   rover commanding by a small operations team without subsystem experts.
+   It will also provide scientists with immediate, more informed feedback
+   on the feasibility of their science requests.
+
+   More Information top
+
+     * ASPEN home page
+     * WITS home page
+     * Long Range Science Rover
+     * Rocky7 model
+     * Rocky7 schedule
+     * Rocky7 demo
+
+   Publications top
+
+   Please Note:
+   This material is provided for your personal use only and may not be
+   retransmitted or redistributed without permission in writing from the
+   paper's publisher and/or author. You may not upload this material to
+   any public server, on-line service, network, or bulletin board without
+   prior written permission from the publisher and/or author. You may not
+   make copies for any commercial purpose. This material is not public
+   domain. Reproduction or storage of materials retrieved from this web
+   site are subject to the U.S. Copyright Act of 1976, Title 17 U.S.C.
+
+   P. Backes, G. Rabideau, K. Tso, S. Chien, "Automated Planning and
+   Scheduling for Planetary Rover Distributed Operations," Proceedings of
+   the IEEE Conference on Robotics and Automation (ICRA), Detroit,
+   Michigan, May 1999. (PostScript) (PDF)
+
+   Rabideau, G., Chien, S., Estlin, T., Barrett, A., "Working Together:
+   Centralized Command Sequence Generation for Cooperating Rovers,"
+   Proceedings of the IEEE Aerospace Conference (IAC), Aspen, CO, March
+   1999. (PostScript) (PDF)
+
+   IEEE Copyright Notice.
+   Personal use of this material is permitted. However, permission to
+   reprint/republish this material for advertising or promotional purposes
+   or for creating new collective works for resale or redistribution to
+   servers or lists, or to reuse any copyrighted component of this work in
+   other works must be obtained from the IEEE.
+
+   AAAI Copyright Notice.
+   This material is provided for your personal use only and may not be
+   retransmitted or redistributed without permission in writing from The
+   American Association for Artificial Intelligence. You may not upload
+   this material to any public server, on-line service, network, or
+   bulletin board without prior written permission from AAAI. You may not
+   make copies for any commercial purpose. This material is not public
+   domain. Reproduction or storage of materials retrieved from this web
+   site are subject to the U.S. Copyright Act of 1976, Title 17 U.S.C.
+
+   Contacts top
+
+   ASPEN/Rover Project Contact:
+   Gregg Rabideau, AI Group,
+   Gregg.Rabideau@jpl.nasa.gov, (818) 393-5364
+
+   JPL Technical Contact:
+   Dr. Steve Chien, AI Group,
+   Steve.Chien@jpl.nasa.gov, (818) 393-5320
+
+   JPL Program Contact:
+   Dr. Richard J.Doyle, Autonomy TechnologyProgram.
+   Richard.Doyle@jpl.nasa.gov, (818) 393-5316
+
+   The Project Team top
+
+   Gregg Rabideau
+   Gregg.Rabideau@jpl.nasa.gov
+
+   Dr. Steve Chien
+   Steve.Chien@jpl.nasa.gov
+
+   Dr. Paul Backes
+   Paul.Backes@jpl.nasa.gov
+
+   Gene Chalfant
+   Gene.Chalfant@jpl.nasa.gov
+
+   Kam Tso
+   Kam.Tso@jpl.nasa.gov
+
+   Sponsors top
+
+   NASA Code SM
+
+   [jpllogo.gif] Questions: www@www-aig.jpl.nasa.gov

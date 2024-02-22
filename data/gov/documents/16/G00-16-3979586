@@ -1,0 +1,140 @@
+http://ssp.nascom.nasa.gov/faq.html
+
+                               IP in Space FAQ
+     __________________________________________________________________
+
+                                   [Home]
+     __________________________________________________________________
+
+   This FAQ is under construction. Last update on 24-Jul-2000. Please
+   check back often!
+
+   A text only version of this FAQ is also available for download.
+    1. General
+         1. Define what you mean by "IP".
+         2. What do you mean by "layers"?
+         3. Doesn't IP fail in space due to long propagation delays?
+         4. Isn't IP designed for clean terrestrial links instead of
+            noisy, intermittant space links?
+         5. What is required to adapt a ground station for IP to a
+            spacecraft?
+         6. Isn't the Space Communication Protocol Standards (SCPS) suite
+            of protocols designed to overcome the shortcomings of IP used
+            in space networks?
+     __________________________________________________________________
+
+    1. General
+         1. Define what you mean by "IP".
+            "IP" stands for Internet Protocol. Strictly speaking, this is
+            a layer 3 (networking) protocol that is only concerned with
+            end-to-end network addressing. However, when speaking
+            generally, the term "IP" is oftern used to refer to the entire
+            suite of Internet protocols, including TCP, UDP, FTP, NTP,
+            SMTP, etc., and not just the network layer protocol.
+         2. What do you mean by "layers"?
+            "Layers" refers to a set of Open Systems Interconnect (OSI)
+            network services that was originally defined by ISO in the mid
+            1980's. Each layer has a well defined subset of services it
+            provides to the layer above, and a well defined interface to
+            the layers above and below. The OSI model had 7 layers, but as
+            the Internet evolved, layers 5 and 6 were rarely used.
+            The layers are:
+               o Layer 7: Application Layer
+                 High-level protocols that use lower layer services.
+                 (FTP, Telnet, SMTP, NFS, DNS, SNMP)
+               o Layer 6: Presentation Layer - not generally used
+               o Layer 5: Session Layer - not generally used
+               o Layer 4: Transport Layer
+                 End-to-end stream multiplexing Protocols.
+                 (TCP - reliable byte-stream delivery, UDP - unreliable
+                 packet delivery)
+               o Layer 3: Network Layer
+                 End-to-end addressing, packet routing, simple packet
+                 forwarding.
+                 (IP, RIP, OSPF, IGRP, BGP)
+               o Layer 2: Data Link Layer
+                 Data unit delivery across a single data link, data unit
+                 framing, link level addressing.
+                 (Ethernet, HDLC, ATM, PPP, SLIP)
+               o Layer 1: Physical Layer
+                 Physical media and signal levels. coding specifications,
+                 bit-level operations.
+                 (10baseT, RS-422, UTP, Reed-Solomon)
+         3. Doesn't IP fail in space due to long propagation delays?
+            This is a misconception that is brought about by confusing IP,
+            a layer 3 network protocol, with TCP, a layer 4 transport
+            protocol. IP is strictly an end-to-end addressing mechanism.
+            IP packet headers have a source address, an destination
+            address, and a few bytes of options. These get slapped on a
+            packet which is then sent on it's merry way and forgotten
+            about. Network layer protocols do not perform handshaking or
+            retransmission. These functions get performed at a higher
+            layer. As a result, IP is insensitive to transmission delay.
+            It will work equally well across the room or out to Pluto. It
+            will even work over uindirectional links. UDP, a layer 4
+            transport protocol, will also work over unidirectional links,
+            allowing applications to be built that are not sensitive to
+            delay. TCP, on the other hand, requires a bidirectional link
+            to perform handshaking. The round-trip-time and the TCP
+            "window" buffer size combine to restrict the maximum
+            throughput possible over a TCP connection. TCP experiments
+            have been done with the ACTS satellite in geosynchronous orbit
+            that achieved a throughput of 540 Mbits/sec. It appears that
+            TCP is quite useable in a planetary neighborhood, out to about
+            lunar distance. Beyond that, UDP-based applications are called
+            for.
+         4. Isn't IP designed for clean terrestrial links instead of
+            noisy, intermittant space links?
+            This is another misconception. One of the commonest physical
+            links for the terrestrial Internet, the telephone line, has a
+            bit error rate (BER) than is similar to most spacecraft RF
+            links! The CCITT recommendations for voice circuits that have
+            been conditioned to carry data is a BER of 10^-5 (Source: ITT
+            Reference Data for Radio Engineers). On the other hand, NASA
+            typically specs it's spacecraft RF links at a BER of 10^-5!
+            The reason IP works over the phone lines is that the modem
+            applies error correction down at the physical layer,
+            transparently to the upper layers. This allows the upper
+            layers to behave as though they have a clean link. Similarly,
+            NASA applies error correction to it's space links, achieving
+            BERs down to 10^-7 or better. At 10^-7, handshaking protocols,
+            such as TCP/IP, work well.
+         5. What is required to adapt a ground station for IP to a
+            spacecraft?
+            Connect the clock and data lines from the groundstation RF
+            system to a synchronous serial WAN port on a router.
+         6. Isn't the Space Communication Protocol Standards (SCPS) suite
+            of protocols designed to overcome the shortcomings of IP used
+            in space networks?
+            At the time the SCPS Rationale, Requirements, and Application
+            Notes document (CCSDS SCPS-710-0-G-0.4) was generated, that
+            was true; however, in the two years since then, while ongoing
+            industry research has solved, implemented, standardized, and
+            deployed IP solutions to many of these problems, and are
+            continuing to do so. For example, IP now supports constrained
+            bandwidth channels via the header compression standard defined
+            in RFC-2507, which was SPECIFICALLY designed for channels with
+            non-trival packet loss rates. And asymetric channels are
+            better supported by Selective Acknowledgement (SACK) RFC-2018,
+            which is now deployed standard with most operating systems.
+            Selectable routing, such as flood routing, and managed
+            connection operation is being handled under the evolving IETF
+            draft for the Dynamic Source Routing (DSR) protocol, and
+            congestion signaling is being handled by Explicit Congestion
+            Notification (ECN) and Random Early Detection (RED) spelled
+            out in RFC-2481.
+         ______________________________________________________________
+         ______________________________________________________________
+
+                                   [Home]
+         ______________________________________________________________
+
+   [nasalogoanim.gif]
+
+
+    Responsible NASA Official: Jim Rash
+    Technical Contact: Keith Hogie, Computer Sciences Corp.
+    NASA Privacy Statement
+    Last Modified: Monday, 24-Jul-2000 10:25 EDT
+
+   [csc_logo.gif]

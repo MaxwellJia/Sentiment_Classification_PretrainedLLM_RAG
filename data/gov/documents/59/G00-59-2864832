@@ -1,0 +1,98 @@
+http://www-oss.fnal.gov/uas/user.meeting/1998-4th-quarter/1998-11-10.upsv4.products.html
+
+UAS Products Released under ups v4
+
+   As of 10 November 1998, the following products are available for
+   distribution from kits. Products marked as "flavored" included
+   instances for AIX+4, IRIX+5, IRIX+6, OSF1+V3, OSF1+V4, SunOS+5 and
+   Linux+2 (at least), unless otherwise marked. Products marked as "NULL"
+   will run on all flavors of UNIX.
+     __________________________________________________________________
+
+     Core FUE environment:
+     * bootstrap_coreFUE b1_1 (flavored; also available for CYGWIN32_NT)
+       (a self-contained, pre-configured release of ups, upd, and perl)
+     * ups v4_3 (flavored; also available for CYGWIN32_NT and AIX+3)
+     * upd v4_3_2 (NULL)
+     * upc v4_3 (NULL)
+
+     Login and/or programming shells:
+     * shells v3_0 (flavored) (table-file-only product which installs perl
+       v5_004, bash v2_02, tcsh v6_06)
+     * perl v5_004 (flavored)
+     * bash v2_02 (flavored)
+     * tcsh v6_06 (flavored)
+     * python v1_5 (flavored)
+
+     Programming Languages:
+     * egcs v1_1b (flavored)
+     * dddebugger v3_0 (test, flavored; not available for IRIX+5, OSF1+V3
+       or OSF1+V4 at this time)
+
+     tk/tcl suite:
+     * tk v8_0_2 (flavored)
+     * tcl v8_0_2 (flavored)
+     * expect v5_25 (flavored)
+     * tclx v8_0_2 (flavored)
+     * tkman v1_7_5 (flavored)
+     * ical v2_2 (flavored)
+     * blt v2_3 (flavored)
+     * tktools v8_0_2 (NULL)
+     * tksession v1_2 (NULL)
+     * mgui v1_2a (NULL)
+     * rolodex v1_1 (NULL)
+
+     Tape tools:
+     * fmb v6_7 (NULL)
+     * rbio v9_3d (test, flavored)
+     * ftt v2_2 (flavored)
+
+     Mail readers:
+     * exmh v2_0_2 (test, NULL) (exmh v1_6_6 will crash and burn with the
+       new tk/tcl suite)
+     * pine v4_05 (test, flavored)
+
+     Web browsers:
+     * www v3_0 (NULL) (table-file-only which will setup the current
+       releases of lynx and netscape; support for mosaic has been dropped)
+     * install_netscape v4_x (test, flavored) (we aren't allowed to
+       distribute netscape directly; but this package will assist you in
+       downloading netscape and arranging the file hierarchy so that ups
+       "setup" can find netscape, its configuration files and assistant
+       applications, etc.
+     * lynx v2_8 (flavored)
+
+     Miscellaneous:
+     * Info v1_3b (test, NULL)
+     * gtools v2_2 (flavored)
+     * xemacs v20_4 (flavored)
+     * template_product v4_3 (NULL)
+     __________________________________________________________________
+
+     To be released soon:
+     * systools
+          + cmdscripts (adduser.work, locks)
+               o cmdscriptsbase { functions, sys.env }
+               o cmdscriptsctrl { chmod, kill, renice, rm }
+               o cmdscriptsguid { deldata, obtain, smushgid, smushuid }
+               o cmdscriptslgrp { log{age,data,dir,gid,shell,uid,user},
+                 grp{members,name,number} }
+               o cmdscriptshell { shell, shells }
+               o cmdscriptsuser { {add,del}member, {add,chg,mod}user,
+                 clearaccounts, disks, disuser, finduser, greeting,
+                 resetuser, vi{gr,pw} }
+          + cmdbin
+               o cmdbincmd { cmd }
+               o cmdbinutl { cwi, getlock }
+          + genpasswd
+     * ximagetools
+     * ghostview
+     * ispell
+
+     Under Development:
+     * login (includes separate products: shrc, setpath, setterm, setxwin)
+     * futil (includes separate products: flpr, telpehone, stock, gzip,
+       lsof)
+     __________________________________________________________________
+
+   Security, Privacy, Legal

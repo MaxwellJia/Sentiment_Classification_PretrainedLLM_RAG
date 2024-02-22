@@ -1,0 +1,197 @@
+http://www.nipc.gov/publications/highlights/2001/highlight-01-12.htm
+
+                                  NATIONAL
+                               INFRASTRUCTURE
+                                 PROTECTION
+                                   CENTER
+
+                                 HIGHLIGHTS
+
+      A publication providing information on infrastructure protection
+       issues, with emphasis on computer and network security matters.
+
+                               [Nipclogo.jpg]
+
+                              Issue 12-01
+                              January 15, 2002
+
+                           Editors: Linda Garrison
+                                     Martin Grand
+     __________________________________________________________________
+
+        * Securing Network Infrastructure: Routers
+        * Evolution of Malicious Code During 2001
+        * Telecommunications - Information Sharing and Analysis Center
+     __________________________________________________________________
+
+    We welcome your comments and suggestions for improving this product.
+    For more information, or to be added to the distribution list, please
+    contact the NIPC Watch at nipc.watch@fbi.gov or call (202) 323-3204.
+
+      This issue has an overall classification of "Unclassified." This
+     publication may be disseminated further without express permission.
+     __________________________________________________________________
+
+   Securing Network Infrastructure: Routers
+
+   A comprehensive network security policy should take into consideration
+   routers, which are the specialized computing devices that manage
+   information flow between networks and the Internet. By taking advantage
+   of improperly configured systems, insecure administrative practices, or
+   software vulnerabilities, even an apprentice hacker can co-opt a router
+   and use it in an attack. The Cyber Emergency Response Team (CERT)
+   Coordination Center has reported a rise in intruder's compromising
+   routers.
+
+   Intruders may target routers in several ways. By reconfiguring the
+   router, network traffic can be misdirected or cut off. A flooding
+   denial-of-service (DoS) attack performed on a boundary router can block
+   legitimate Internet service. Other attacks include crashing a router
+   and then masquerading as the disabled device, thus enabling the
+   attacker to read, send, and receive network data.
+
+   Victims of an attack can range far beyond the targeted router's
+   immediate network. A hijacked router can be utilized by a malicious
+   intruder as a platform for scanning other networks or for performing
+   flooding attacks against other hosts on the Internet. There have been
+   reports of malicious individuals assembling networks consisting of
+   hundreds of hacked routers. Such a network could potentially be used to
+   launch a devastating DOS attack.
+
+   The following points will minimize the risk of an organization's router
+   being successfully compromised and utilized in attacks:
+     * Ensure all routers are included in the corporate information
+       security policy.
+     * Conduct regular security audits of routers to ensure policy
+       adherence.
+     * Change the vendor-supplied default administrative passwords on all
+       routers.
+     * Enable encrypted administrative communications to the router if
+       possible, and limit the addresses allowed to establish a connection
+       to the device.
+     * Apply updates to eliminate known vulnerabilities in the router's
+       operating system.
+
+   Hacker how-to guides and software exploits for certain router
+   vulnerabilities are already available in the computer underground.
+   Based on past experience, one can expect a greater distribution of
+   software tools that offer automated vulnerability discovery and attack
+   capability against routers in the future.
+
+   Several on-line resources can assist administrators in securing their
+   routers.
+     * National Security Agency's Cisco Router Security Recommendation
+       Guides, http://nsa1.www.conxion.com/cisco/
+     * The SANS Institute's "Securing Your Internet Access Router,"
+       http://www.sans.org/infosecFAQ/firewall/router.htm
+     * Cisco's Security Reference Information,
+       http://www.cisco.com/warp/public/707/ref.html
+     * qOrbit Technologies' JUNOS Secure Template,
+       http://www.qorbit.net/documents/junos-template.pdf
+     * Foundry Networks' Foundry Security Guide,
+       http://www.foundrynet.com/services/documentation/security/
+
+   Evolution of Malicious Code During 2001: Increasing Role of Worms and
+   Malicious Code Packages with Multiple Capabilities
+
+   Technical professionals have noted a significant new development in
+   malicious code trends. This trend is the rise in prominence of worms
+   (self-propagating malicious code) in the "top ten" list reported
+   monthly by major computer security and anti-virus vendors. Computer
+   viruses, had, until recent years dominated the "top ten."
+
+   Tracking the trend
+   Three worms emerged during 1999 on the top ten "infectors" list. By the
+   beginning of 2000, computer viruses and worms each accounted for
+   approximately half of the list. The number of worms rose to eight of
+   the top ten "infectors" by the end of 2000, and this pattern continued
+   into 2001. In July and August 2001, it was observed that worms
+   accounted for all of the top ten malicious code attacks.
+
+   Worms as the "weapon of choice" for computer attacks
+   Articles by security and anti-virus technical professionals often
+   disagree on specific details in discussing malicious code complexities.
+   The differences include different views on the severity of individual
+   malicious code attacks compared to those of other attacks, and on how
+   to rank specific attacks within the overall scope of attacks.
+   Additionally, several technical professionals have referred to the
+   increase of malicious code attacks incorporating worm attributes as
+   worms becoming the "weapon of choice" for computer attacks during 2001.
+
+   Increased capabilities of malicious code packages have resulted in more
+   devastating impacts.
+   Several other trends were also noted in 2001. Most significantly, is
+   the incorporation of the capabilities of worms, Trojan horses
+   (backdoors), and viruses in a single package. Malicious code attacks
+   during 2001 also included techniques for propagating more rapidly than
+   ever before. The brief interval between the Code Red worm and the
+   release of Nimda worm continued the long-established trend of malicious
+   code packages being modified based on "lessons learned" from previous
+   attacks. This resulted in a more advanced malicious code package.
+   Initial analysis of the "VBS/Mass-Mailing Worm, W32/Goner.A" that
+   appeared on or about December 4, 2001 is in progress and we are
+   currently evaluating the degree to which the "Goner" worm may
+   incorporate capabilities not emphasized in earlier packages.
+   Many technical professionals believe that the increasingly difficult
+   challenges presented by malicious code will continue to be an emerging
+   trend. However, aggressive and up to date security practices and
+   policies can mitigate such impacts. While new defensive approaches are
+   being developed to deal with the increasingly powerful, fast spreading
+   malicious code attacks, immediate attention by system administrators is
+   needed.
+
+   Telecommunications - Information Sharing and Analysis Center
+
+   Purpose: The Telecommunications - Information Sharing and Analysis
+   Center (Telecom-ISAC) is a function under the National Coordinating
+   Center for Telecommunications (NCC). The Telecom-ISAC mission is to
+   facilitate voluntary collaboration and information sharing among
+   Government and industry ISAC members in support of Executive Order
+   12472 and the critical infrastructure protection goals of Presidential
+   Decision Directive 63 (PDD-63). The Telecom-ISAC will gather and
+   analyze "all hazards" information on vulnerabilities, threats,
+   intrusions, and anomalies in order to avert or mitigate impact upon the
+   telecommunications infrastructure. Information will be sanitized and
+   disseminated in accordance with Information Sharing Agreements
+   established by the Telecom-ISAC Participants.
+
+   Background: In accordance with PDD-63 and The National Plan for
+   Information Systems Protection, the NCC established the Telecom-ISAC on
+   March 01, 2000 in support of two goals outlined in the National Plan.
+   The first is the establishment of the U.S. Government as a "model for
+   information security," while the second is the development of a
+   private-public partnership to defend the national telecommunications
+   infrastructure. Although the concept of the ISAC was new, the NCC has
+   been a central hub for sharing critical national security / emergency
+   preparedness (NS/EP) telecommunications information between Government
+   and industry since 1984. The NCC -- established in 1984 based on a
+   recommendation to the President by the National Security
+   Telecommunications Advisory Committee (NSTAC)  to coordinate
+   telecommunications restoration and to provision during national
+   disasters through Government/industry cooperation on a 24-hour basis.
+
+   Highlights:
+     * The Telecom-ISAC is the only ISAC currently established to have
+       both Government and industry members.
+     * The Telecom-ISAC builds on the history of cooperation and
+       established trust relationships among the NCC members.
+     * Government representation: Departments of State, Defense and
+       Commerce; the General Services Administration; the Federal
+       Communications Commission; and the Federal Emergency Management
+       Agency.
+     * Industry representation: AT&T, Avici, BellSouth, Boeing, Cisco
+       Systems, Computer Sciences Corporation, EDS, ITT Industries,
+       Lockheed Martin, Lucent Technologies, Nortel Networks, Qwest
+       Communications, Raytheon, SBC, Science Applications International
+       Corporation, Sprint, TRW, the United States Telecom Association,
+       Verizon Communications, and WorldCom.
+     * Full participation in the Telecom-ISAC is also open to companies
+       that provide network services, equipment, or software to the
+       communications and information sector, or Government NS/EP users.
+       Potential participants include commercial local exchange carriers
+       (CLECs), Internet Service Providers (ISPs), vendors, software
+       providers, federal, state, and local agencies.
+
+   Contact Information: Additional information may be obtained by
+   contacting the Manager, NCC. Telephone: (703) 607-4900, Fax: (703)
+   607-4998, e-mail: ncs@ncs.gov, web: http://www.ncs.gov/ncc

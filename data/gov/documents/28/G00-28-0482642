@@ -1,0 +1,133 @@
+http://spdbv.niehs.nih.gov/text/tips.htm
+
+
+
+
+
+                                 [logo.gif]
+
+
+   Download
+   User Guide
+    1. Files
+    2. Control Panel
+    3. Move & Rotate
+    4. Display
+    5. Rendering
+    6. Tools
+    7. Mutations
+    8. Torsions
+    9. Preferences
+   10. hardware stereo
+   11. electrostatics
+   12. surface
+   13. tips & tricks
+       Index
+
+   Tips
+   Tutorial
+   Feedback
+   Index
+   Art Gallery
+   Mirror sites
+   References
+
+
+       _______________________________________________________________
+
+                                  by N.Guex
+                                 & T.Schwede
+
+
+
+
+
+
+
+
+                                Cool Features
+     __________________________________________________________________
+
+   This page can be considered as a collection of tricks and tips that
+   didn't fit well in other pages. Even though the Swiss-PdbViewer is
+   quite intuitive, some nice features are more burried. Therefore reading
+   this page will transform you in a Swiss-PdbViewer guru.
+     __________________________________________________________________
+
+     * "option" click on a group name (right mouse button on the PC)
+       either in the control panel or in the align window will center the
+       carbon alpha of the group in the display window. It is quite useful
+       if the group was out of screen, and can also be used to rotate the
+       molecule around the carbon alpha (see the paragraph about the
+       rotation tool ).
+
+
+     * Hitting the "Help" key or the "=" key ("Insert" key or right mouse
+       button for PC users) will automatically move and scale the molecule
+       so that all visible groups fit in the view.
+
+
+     * "Shift" click on any column of the control panel apply the change
+       on all groups. For example, shift-click in the "side" column will
+       display/undisplay all sidechains, shift click in the "color" column
+       will prompt for a new color to apply to all groups...
+
+
+     * You can go directly to the top or the bottom of the Control Panel,
+       Align Window or Text Window with the keyboard "Page-up" and
+       "Page-down" keys (nothing exceptionnal here).
+
+     * When slab mode is activated, its position along the Z axis can be
+       changed by holding down the shift key while moving the mouse up or
+       down. It allows to look at different parts of the protein.
+
+
+     * It is possible to renumber amino-acids by selecting them and then
+       using the "Rename Current Layer" item of the Edit menu. You will be
+       asked for a number that will be applied to the first amino-acid
+       selected. Next selected amino-acids wil be renumbered accordingly.
+
+
+     * You can change the dot density in the dialog that allows to change
+       the windows caracteristics (size, view angle, and so on).
+       Please, note that dot surfaces are recomputed after any operation,
+       and it can take time (however, you may interrupt the process any
+       time by hitting the "esc" key). The reason I do not store all
+       computed points and then rotate them is purely a memory concern
+       (some programmers have to take care of the few memory that remains
+       once you have opened a word processor and a web browser).
+       Note that you can momentaneously prevent all dots surface to be
+       drawn even if they are marked "on" in the Control Panel with an
+       option of the "Display" menu.
+
+     * Holding the shift key while choosing any of the "Color By" item of
+       the display menu will apply changes to all layers.
+     * Holding the Control key while choosing any of the "Color By" item
+       of the display menu will apply changes to selected groups only.
+     * Holding the shift key while selecting an amino-acid in the "Align
+       window also selects corresponding aa of other layers.
+
+     * Hitting the "*" key while the mouse is on-top of an aa in the align
+       window will browse the rotamer library to select the best
+       sidechain.
+     * Clicking on an ATOM or HETATM line of a text pdb file will
+       automatically center the view on the clicked atom and display only
+       groups that are in a 7Å sphere around this atom.
+     * Clicking on a CRYST1 line of a text pdb file will load the unit
+       cell infos (The unit cell is displayed only when the appropriate
+       checkbox item of the EDM preferences is enabled).
+     * Clicking on a MTRX line of a pdb file will load the matrix
+       transformation and will let you apply it on the currently selected
+       groups of the current layer.
+     * Clicking on a line of a text file containing an uppercase amino
+       acid name followed by a number will automatically center the view
+       around this residue (provided that such a group exists in the
+       current layer). This is very useful to inspect results of whatcheck
+       [4].
+     * Left and right arrow keys will center the view around the CA of the
+       following (or previous) residue when an electron density map is
+       loaded.
+     * up and down arrow keys will change the sigma contouring value when
+       an electron density map is loaded. (for the second contouring
+       value, use shift key).
+     __________________________________________________________________

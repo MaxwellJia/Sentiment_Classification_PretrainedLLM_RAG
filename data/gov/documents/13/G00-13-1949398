@@ -1,0 +1,361 @@
+http://caffeine.arc.nasa.gov/GeneratedItems/CSScriptLib.js
+
+   // -- Adobe GoLive JavaScript Library // -- Global Functions CSAg =
+   window.navigator.userAgent; CSBVers =
+   parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10); function IsIE() { return
+   CSAg.indexOf("MSIE") > 0;} function CSIEStyl(s) { return
+   document.all.tags("div")[s].style; } function CSNSStyl(s) { return
+   CSFindElement(s,0); } function CSFindElement(n,ly) { if (CSBVers < 4)
+   return document[n]; var curDoc = ly ? ly.document : document; var elem
+   = curDoc[n]; if (!elem) { for (var i=0;i" ) res =
+   (CSStateArray[action[1]] > action[2]); else if(op == ">=") res =
+   (CSStateArray[action[1]] >= action[2]); else if(op == "<" ) res =
+   (CSStateArray[action[1]] < action[2]); else if(op == "<=") res =
+   (CSStateArray[action[1]] <= action[2]); return res; } function
+   CSScriptInit() { if(typeof(skipPage) != "undefined") { if(skipPage)
+   return; } idxArray = new Array; for(var i=0;i= 0) &&
+   (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+   return true; // dont follow link else return false; // dont follow link
+   } function CSButtonReturn () { var bAgent = window.navigator.userAgent;
+   var bAppName = window.navigator.appName; if
+   ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >=
+   0) && (bAgent.indexOf("Mac") >= 0)) return false; // follow link else
+   return true; // follow link } function CSBrowserSwitch(action) { var
+   bAgent = window.navigator.userAgent; var bAppName =
+   window.navigator.appName; var isNS = (bAppName.indexOf("Netscape") >=
+   0); var isIE = (bAppName.indexOf("Explorer") >= 0); var isWin =
+   (bAgent.indexOf("Win") >= 0); var isMac = (bAgent.indexOf("Mac") >= 0);
+   var vers = 0; var versIdx = (bAgent.indexOf("Mozilla/")); if(versIdx >=
+   0) { var sstr = bAgent.substring(versIdx + 8, versIdx + 9); vers =
+   parseInt(sstr) - 2; } var url = action[1]; var platform = action[2];
+   var versVec; if(platform) { if(isNS && isMac) versVec = action[3];
+   if(isIE && isMac) versVec = action[5]; if(isNS && isWin) versVec =
+   action[4]; if(isIE && isWin) versVec = action[6]; } else { if(isNS)
+   versVec = action[3]; if(isIE) versVec = action[4]; } if(vers >
+   (versVec.length-1)) vers = versVec.length-1; if(versVec[vers] == 0) {
+   location = url; CSStopExecution = true; } } function
+   CSURLPopupShow(formName, popupName, target) { var form =
+   CSFindElement(formName); var popup = form.elements[popupName];
+   window.open(popup.options[popup.selectedIndex].value, target);
+   popup.selectedIndex = 0; } function CSSetStyleDepth(style,depth) { if
+   (IsIE()) CSIEStyl(style).zIndex = depth; else CSNSStyl(style).zIndex =
+   depth;} function CSGetStyleDepth(style) { if (IsIE()) return
+   (CSIEStyl(style).zIndex); else return (CSNSStyl(style).zIndex); }
+   CSSeqArray = new Array; function
+   CSSeqActionFct(seq,loopCount,continueLoop) { if ((seq.loop < 2) ||
+   ((loopCount % 2) != 0)) { for (var i=0;i 1) && (seq.actions[3*i + 1] <
+   seq.start)) continue; if (seq.actions[3*i + 2] < loopCount) {
+   seq.actions[3*i + 2] = loopCount; CSLoopIsRunning = true; CSAction(new
+   Array(seq.actions[3*i + 0])); continueLoop = true; } } else {
+   continueLoop = true; break; } } } else { for (var
+   i=seq.actionCount-1;i>=0;i--) { if (seq.actions[3*i + 1] > seq.frame) {
+   if (seq.actions[3*i + 1] > seq.end) continue; if (seq.actions[3*i + 2]
+   < loopCount) { seq.actions[3*i + 2] = loopCount; CSLoopIsRunning =
+   true; CSAction(new Array(seq.actions[3*i + 0])); continueLoop = true; }
+   } else { continueLoop = true; break; } } } return continueLoop; }
+   function CSSeqFunction(fctInfo) { var seq = fctInfo.data; var oldFrame
+   = seq.frame; var newTicks = (new Date()).getTime(); seq.frame =
+   Math.round((seq.fps * (newTicks - seq.startTicks)/1000.0) - 0.5); var
+   continueLoop = false; var loopCount = 1; if (seq.loop > 0) {
+   continueLoop = true; if (seq.loop == 1) { var iv = (seq.end -
+   seq.start); var f = Math.round(((seq.frame - seq.start) / iv) - 0.5);
+   if (f < 0) f = 0; loopCount = f+1; seq.frame = seq.start + ((seq.frame
+   - seq.start) % (seq.end - seq.start)); } else { var iv = (seq.end -
+   seq.start); var f = Math.round(((seq.frame - seq.start) / iv) - 0.5);
+   if (f < 0) f = 0; loopCount = f+1; f = (seq.frame - seq.start) % (2 *
+   iv); if (f > iv) f = 2*iv - f; seq.frame = seq.start + f; } }
+   continueLoop = CSSeqActionFct(seq,loopCount,continueLoop); for (var
+   i=0;i seq.frame) { partIdx = k; partCount = seq.frame - lastCount;
+   break; } lastCount = frameCount; } if (partIdx <
+   track.parts.ticks.length) { var type=track.parts.moveType[partIdx];
+   if(type==1) CSSetLinearPos (track, partIdx, partCount); else
+   if(type==2) CSSetCurvePos (track, partIdx, partCount); else if(type==3)
+   if (oldFrame != seq.frame) CSSetRandomPos (track, partIdx, partCount);
+   else { x = CSGetStylePos(track.layer,0); y =
+   CSGetStylePos(track.layer,1); }
+   CSSetStyleVis(track.layer,track.parts.visibilities[partIdx]);
+   CSSetStyleDepth(track.layer,track.parts.depths[partIdx]); continueLoop
+   = true; } else { var partIdx = track.parts.moveType.length-1; var
+   posArray = track.parts.positions; var x = posArray[partIdx * 6 + 0];
+   var y = posArray[partIdx * 6 + 1]; CSSetStylePos(track.layer,0,x);
+   CSSetStylePos(track.layer,1,y);
+   CSSetStyleVis(track.layer,track.parts.visibilities[partIdx]);
+   CSSetStyleDepth(track.layer,track.parts.depths[partIdx]); } } return
+   continueLoop; } function CSSetLinearPos (track, partIdx, partCount) {
+   var curTicks = track.parts.ticks[partIdx]; var pIdx1 = partIdx * 6; var
+   pIdx2 = (partIdx+1) * 6; var posArray = track.parts.positions; var x =
+   posArray[pIdx1 + 0]; var y = posArray[pIdx1 + 1]; var x1,x2,y1,y2; var
+   factor = partCount/curTicks; x1 = x; y1 = y; x2 = posArray[pIdx2 + 0];
+   y2 = posArray[pIdx2 + 1]; x = x1 * (1-factor) + x2 * factor; y = y1 *
+   (1-factor) + y2 * factor; CSSetStylePos(track.layer,0,x);
+   CSSetStylePos(track.layer,1,y); } function CSSetCurvePos (track,
+   partIdx, partCount) { var curTicks = track.parts.ticks[partIdx]; var
+   pIdx1 = partIdx * 6; var pIdx2 = (partIdx+1) * 6; var posArray =
+   track.parts.positions; var x = posArray[pIdx1 + 0]; var y =
+   posArray[pIdx1 + 1]; var x1,x2,x3,x4,y1,y2,y3,y4; var factor =
+   partCount/curTicks; var t = factor; var u = t * t; var v = u * t; var
+   val1 = 3*(u-t) - v + 1; var val2 = 3*(v+t - 2*u); var val3 = 3*(u-v);
+   var val4 = v; x1 = x; y1 = y; x2 = posArray[pIdx1 + 2]; y2 =
+   posArray[pIdx1 + 3]; x3 = posArray[pIdx1 + 4]; y3 = posArray[pIdx1 +
+   5]; x4 = posArray[pIdx2 + 0]; y4 = posArray[pIdx2 + 1]; x = x1 * val1 +
+   x2 * val2 + x3 * val3 + x4 * val4; y = y1 * val1 + y2 * val2 + y3 *
+   val3 + y4 * val4; CSSetStylePos(track.layer,0,x);
+   CSSetStylePos(track.layer,1,y); } function CSSetRandomPos (track,
+   partIdx, partCount) { var curTicks = track.parts.ticks[partIdx]; var
+   pIdx1 = partIdx * 6; var pIdx2 = (partIdx+1) * 6; var posArray =
+   track.parts.positions; var x = posArray[pIdx1 + 0]; var y =
+   posArray[pIdx1 + 1]; var x1,x2,y1,y2; var factor = partCount/curTicks;
+   x1 = x; y1 = y; x2 = posArray[pIdx2 + 0]; y2 = posArray[pIdx2 + 1]; var
+   factorx = Math.random(); var factory = Math.random(); x = x1 *
+   (1-factorx) + x2 * factorx; y = y1 * (1-factory) + y2 * factory;
+   CSSetStylePos(track.layer,0,x); CSSetStylePos(track.layer,1,y); }
+   function CSStartSeq(name) { var seq = CSGetScene(name); var date = new
+   Date() seq.startTicks = date.getTime() for (var i=0;i 2) ? argv[2] :
+   null; var secure = (argc > 5) ? argv[5] : false; document.cookie = name
+   + "=" + escape (value) + ((expires == null) ? "" : ("; expires=" +
+   expires.toGMTString())) + ((path == null) ? "" : ("; path=" + path)) +
+   ((domain == null) ? "" : ("; domain=" + domain)) + ((secure == true) ?
+   "; secure" : ""); } // Script copyright 1999, Adobe Systems
+   Incorporated. All rights reserved. function frameP(action) {
+   if(parent.frames.length==0) { var
+   fileName=window.location.href.substring(window.location.href.lastIndexO
+   f("/")+1,window.location.href.length);
+   window.location.href=action[1]+"?"+action[2]+"="+fileName; } else {
+   if(top.location.search!="") { var
+   sFrame=top.location.search.substring(1,top.location.search.indexOf("=")
+   ); if(name==sFrame) { var
+   sName=top.location.search.substring(top.location.search.indexOf("=")+1,
+   top.location.search.length); var
+   fileName=window.location.href.substring(window.location.href.lastIndexO
+   f("/")+1,window.location.href.length); if(fileName!=sName) {
+   location=sName; } } } } } // Script copyright 1999, Adobe Systems
+   Incorporated. All rights reserved. function CSPAKkillframe() { if
+   (self.parent.frames.length != 0) self.parent.location =
+   document.location } // © 1999, Adobe Systems Incorporated. All rights
+   reserved. var actn1 = ""; var actn2 = ""; var pass="" var z=23; var
+   y=28; iCounter = 3; if (Array) { var f= new Array(); var K= new
+   Array(); var base= new Array("0", "1", "2", "3", "4", "5", "6", "7",
+   "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
+   "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y",
+   "Z","a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+   "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z") }
+   function inc(){ iCounter-- if (iCounter > 0) { if (confirm("\nPassword
+   is incorrect.\n\n\n\nRetry?")) Check() } else alert('Access Denied'); }
+   function Check(){ pass = prompt("Enter your password.","")
+   if(pass==null || pass==""){ alert("You did not enter a password!");
+   if(pass==""){ Check() } } else{ var lpass=(pass.length)+1 for (l=1;
+   lSSmax)SSsuite=SSmax if (SSnumimg<=1 & SSloop==true & SSpalin!=true) {
+   SSsuite=SSmax } if (SSnumimg<=1 & SSloop==true & SSpalin==true) { if
+   (SSsens2==-1 & SSsens3==-1) {SSsuite=SSmax;SSsens3=1} else {
+   SSsuite=SSnumimg+1; SSsens2=false }} if (SSnumimg<=1 & SSloop!=true &
+   SSpalin!=true) { if (SSsens2==-1 & SSsens3==-1) {
+   SSsuite=SSmax;SSsens3=1 } else {SSsuite=SSnumimg; SSfini()}} } else {
+   SSmax=SSmax-1 SSsuite=SSnumimg+1 if (SSnumimg>SSmax & SSloop==true &
+   SSpalin!=true) { SSsuite=1} if (SSnumimg>SSmax & SSloop==true &
+   SSpalin==true) {SSsuite=SSnumimg-1; SSsens2=true } if (SSnumimg>SSmax &
+   SSloop!=true & SSpalin!=true) { SSsuite=SSnumimg;SSfini() } if
+   (SSnumimg<1) SSsuite=1 } SSnumimg=SSsuite if (SSsuite<10) {
+   SSaller="0"+SSsuite } else SSaller=SSsuite
+   SSsource=SSpstr+SSaller+SSformat var SSimg = null; if (document.images)
+   { if (!IsIE()) SSimg = CSFindElement(SSimgNom,0); else SSimg =
+   document.images[SSimgNom]; if (SSimg) SSimg.src = SSsource; } }
+   function SSfini() { } // Script copyright 1999, Adobe Systems
+   Incorporated. All rights reserved. function CSSlideShowAuto(action) {
+   SSAfini=0 SSAnumimg=0 SSAmax=action[2] SSAimgNom=action[1]
+   SSAtemps=action[3]*1000 if (action[4]==true) { SSAstop=true } else
+   SSAstop=false var SSAimg = null; if (document.images) { if (!IsIE())
+   SSAimg = CSFindElement(SSAimgNom,0); else SSAimg =
+   document.images[SSAimgNom]; str=SSAimg.src n=str.length p=n-6
+   SSApstr=str.substring(0,p) SSAnimg=str.substring(p,p+2)
+   SSAformat=str.substring(p+2,n) if (SSAformat==".jpg" ||
+   SSAformat==".JPG" || SSAformat==".gif" || SSAformat==".GIF") {} else {
+   alert("Image extension must be .jpg or .gif (case sensitive). Images
+   must use 2 digit naming starting with 01, 02 ... plus extension") } if
+   (SSAnimg.substring(0,1)=="0") {
+   SSAnumimg=Number(SSAnimg.substring(1,2)) } else
+   {SSAnumimg=Number(SSAnimg)}
+   SSAtempo(SSAmax,SSAimgNom,SSAtemps,SSAstop,SSApstr,SSAnimg,SSAformat) }
+   } function
+   SSAtempo(SSAmax,SSAimgNom,SSAtemps,SSAstop,SSApstr,SSAnimg,SSAformat) {
+   setTimeout("slideAuto(SSAmax,SSAimgNom,SSAstop,SSApstr,SSAnimg,SSAforma
+   t)",SSAtemps) } function
+   slideAuto(SSAmax,SSAimgNom,SSAstop,SSApstr,SSAnimg,SSAformat) { if
+   (SSAfini==1) { SSAnumimg = SSAnumimg-2 CSSlideShowAutoPause() } else {
+   SSAmax=SSAmax-1 SSAsuite=SSAnumimg+1 if (SSAnumimg>SSAmax) { SSAsuite=1
+   if (SSAstop==true) SSAfini=1 else SSAfini=0 } if (SSAnumimg<1)
+   SSAsuite=1 SSAnumimg=SSAsuite if (SSAsuite<10) { SSAaller="0"+SSAsuite
+   } else SSAaller=SSAsuite SSAsource=SSApstr+SSAaller+SSAformat var
+   SSAimg = null; if (document.images) { if (!IsIE()) SSAimg =
+   CSFindElement(SSAimgNom,0); else SSAimg = document.images[SSAimgNom];
+   if (SSAimg) SSAimg.src = SSAsource; }
+   SSAtempo(SSAmax,SSAimgNom,SSAtemps,SSAstop,SSApstr,SSAnimg,SSAformat) }
+   } function CSSlideShowAutoPause() {} // Script copyright 1999, Adobe
+   Systems Incorporated. All rights reserved. function
+   CSSlideShowAutoStop(action) { if (SSAfini==0) SSAfini=1 else SSAfini=0
+   ; SSAnumimg = SSAnumimg+2 ;
+   slideAuto(SSAmax,SSAimgNom,SSAstop,SSApstr,SSAnimg,SSAformat) } //
+   Script copyright 1999, Adobe Systems Incorporated. All rights reserved.
+   function CSPAKtrg2frames(action) {
+   parent.frames[action[1]].location.href = action[2]
+   parent.frames[action[3]].location.href = action[4] } // Script
+   copyright 1999, Adobe Systems Incorporated. All rights reserved.
+   function CSPakRemote(action) { if (TRversion()) { if (action[2].length
+   < 1) { opener.location.href=action[1]; } else {
+   opener.parent.frames[action[2]].location.href=action[1]; } } return; }
+   function TRversion() { return (navigator.appName.indexOf("Netscape") >=
+   0 && parseInt(navigator.appVersion.charAt(0)) >= 3) ||
+   (navigator.appName.indexOf("Explorer") >= 0 &&
+   parseInt(navigator.appVersion.charAt(0)) >= 3); } // Script copyright
+   1999, Adobe Systems Incorporated. All rights reserved. function
+   timeRedirect(action) { var now = new Date(); var hours =
+   now.getHours(); var timeValue = action[1]; if (timeValue >= 12) {
+   timeValue = timeValue - 12; } // deals with 24-hour time if (action[2]
+   == true) { timeValue += 12; } // deals with PM times if (hours <
+   timeValue && action[4] != "(Empty Reference!)" && action[3] == true) {
+   window.location = action[4]; } if (hours >= timeValue && action[6] !=
+   "(Empty Reference!)" && action[5] == true) { window.location =
+   action[6]; } } // Script copyright 1999, Adobe Systems Incorporated.
+   All rights reserved. function CSVisitorCookie(action) { resultat =
+   "visitor" cookiename = action[1] goUrl = action[2] var arg = cookiename
+   + "="; var alen = arg.length; var clen = document.cookie.length; var i
+   = 0; while (i < clen) { var j = i + alen; if
+   (document.cookie.substring(i, j) == arg) return CSVisitorGetCookie (j);
+   i = document.cookie.indexOf(" ", i) + 1; if (i == 0) break; }
+   VisitorSetCookie(cookiename) return null; } function CSVisitorGetCookie
+   (offset) { var endstr = document.cookie.indexOf (";", offset); if
+   (endstr == -1) endstr = document.cookie.length;
+   valeur=unescape(document.cookie.substring(offset, endstr)) if
+   (valeur==resultat) VisitorGotoLink(goUrl) else
+   VisitorSetCookie(cookiename) } function VisitorGotoLink(goUrl) {
+   location = goUrl } function VisitorSetCookie(cookiename) { var
+   value="visitor" var jours=500*24 path="/" domain=null var expdate = new
+   Date (); expdate.setTime (expdate.getTime() + (jours * 60 * 60 *
+   1000)); SetCookie(cookiename,value,expdate) } function SetCookie
+   (cookiename, value) { var argv = SetCookie.arguments; var argc =
+   SetCookie.arguments.length; var expires = (argc > 2) ? argv[2] : null;
+   var secure = (argc > 5) ? argv[5] : false; document.cookie = cookiename
+   + "=" + escape (value) + ((expires == null) ? "" : ("; expires=" +
+   expires.toGMTString())) + ((path == null) ? "" : ("; path=" + path)) +
+   ((domain == null) ? "" : ("; domain=" + domain)) + ((secure == true) ?
+   "; secure" : ""); } function CSGetLayerPos(action) { var layer =
+   action[1]; var x = CSGetStylePos(layer, 0); var y =
+   CSGetStylePos(layer, 1); return new Array(x, y); } function
+   CSGetFormElementValue(action) { var form = action[1]; var elem =
+   action[2]; return document.forms[form].elements[elem].value; }
+   CSImages=new Array(); function CSPreloadImage(action) { if
+   (document.images) { CSImages[CSImages.length]=new Image();
+   CSImages[CSImages.length-1].src=action[1]; } } function
+   CSRandomImg(action) { if (document.images) { var img = null; var
+   whichone = Math.floor((Math.random() * 10)) % 3 if(!IsIE()) img =
+   CSFindElement(action[1],0); else img = document.images[action[1]];
+   img.src = action[whichone+2] } } function CSSetImageURL(action) { var
+   img = null; if (document.images) { if (!IsIE()) img =
+   CSFindElement(action[1],0); else img = document.images[action[1]]; if
+   (img) img.src = action[2]; } } function CSGoBack1() { history.back() }
+   function CSGotoLink(action) { if (action[2].length) { var
+   hasFrame=false; for(i=0;i 0) eval ('document.' + CSLastSound +
+   '.run()'); else eval ('document.' + CSLastSound + '.play(true)'); }
+   else { alert ("The current Plug-In cannot be controlled by JavaScript.
+   Please try using LiveAudio or a compatible Plug-In!"); } } function
+   CSShowHide(action) { if (action[1] == '') return; var type=action[2];
+   if(type==0) CSSetStyleVis(action[1],0); else if(type==1)
+   CSSetStyleVis(action[1],1); else if(type==2) { if
+   (CSGetStyleVis(action[1]) == 0) CSSetStyleVis(action[1],1); else
+   CSSetStyleVis(action[1],0); } } function CSStopAll(action) {
+   CSStopComplete (); } function CSStopScene(action) { CSStopFunction
+   (action[1]); } function CSStopSound (action) {if
+   (eval('document.'+action[1])!=null) { eval ('document.' + action[1] +
+   '.stop()');}} function CSStartWipe (action) { var
+   el=CSCreateTransElement (action[1], action[2]); if (el==null) return;
+   var dir=action[3]; if (dir=="_inLeft")
+   {el.steps=el.clipRect.width/el.maxValue; el.modus="in";} else if
+   (dir=="_inRight") {el.steps=el.clipRect.width/el.maxValue;
+   el.modus="in";} else if (dir=="_outLeft")
+   {el.steps=el.clipRect.width/el.maxValue; el.modus="out";} else if
+   (dir=="_outRight") {el.steps=el.clipRect.width/el.maxValue;
+   el.modus="out";} else if (dir=="_inTop")
+   {el.steps=el.clipRect.height/el.maxValue; el.modus="in";} else if
+   (dir=="_inBottom") {el.steps=el.clipRect.height/el.maxValue;
+   el.modus="in";} else if (dir=="_outTop")
+   {el.steps=el.clipRect.height/el.maxValue; el.modus="out";} else if
+   (dir=="_outBottom") {el.steps=el.clipRect.height/el.maxValue;
+   el.modus="out";} else if (dir=="_inCenter")
+   {el.HSteps=el.clipRect.width/el.maxValue;
+   el.VSteps=el.clipRect.height/el.maxValue; el.modus="in";} else if
+   (dir=="_outCenter") {el.HSteps=el.clipRect.width/el.maxValue;
+   el.VSteps=el.clipRect.height/el.maxValue; el.modus="out";} if
+   (el.modus=="") return; el.currentValue=0; el.glDir=action[3];
+   CSStartFunction(CSDoWipe,el); } function CSDoWipe (info) { var el =
+   info.data; if (el==null) return false; if
+   (el.currentValue==el.maxValue) { CSFinishWipe(el); return false; } var
+   r = new
+   CSRect(el.clipRect.left,el.clipRect.top,el.clipRect.width,el.clipRect.h
+   eight); var dir=el.glDir; if (dir=="_inLeft")
+   {r.left=r.width-el.currentValue*el.steps;} else if (dir=="_inTop")
+   {r.top=r.height-el.currentValue*el.steps;} else if (dir=="_inRight")
+   {r.width=el.currentValue*el.steps;} else if (dir=="_inBottom")
+   {r.height=el.currentValue*el.steps;} else if (dir=="_outLeft")
+   {r.width=r.width-el.currentValue*el.steps;} else if (dir=="_outTop")
+   {r.height=r.height-el.currentValue*el.steps;} else if
+   (dir=="_outRight") {r.left=el.currentValue*el.steps;} else if
+   (dir=="_outBottom") {r.top=el.currentValue*el.steps;} else if
+   (dir=="_inCenter") {r=CSCenterRectIn(el,r);} else if
+   (dir=="_outCenter") {r=CSCenterRectOut(el,r);} CSSetLayerClip(el,r);
+   el.currentValue+=1; return true; } function CSFinishWipe (el) { if
+   (el.modus=="in") CSSetLayerClip(el,el.clipRect); else { el.clipRect=new
+   CSRect(0,0,el.width,el.height); CSSetLayerClip(el,el.clipRect);
+   CSSetStyleVis(el.layer,0); } CSDisposeTransElement(el); } function
+   CSCenterRectIn(el,r) { var hValue= el.currentValue*el.HSteps/2; var
+   vValue= el.currentValue*el.VSteps/2;
+   r.left=Math.round(r.left+r.width/2-hValue);
+   r.top=Math.round(r.top+r.height/2-vValue);
+   r.width=Math.round(hValue*2); r.height=Math.round(vValue*2); return r;
+   } function CSCenterRectOut(el,r) { var hValue=
+   el.currentValue*el.HSteps/2; var vValue= el.currentValue*el.VSteps/2;
+   r.left+=Math.round(hValue); r.top+=Math.round(vValue);
+   r.width-=Math.round(hValue*2); r.height-=Math.round(vValue*2); return
+   r; } function CSFixFct() { var d = document; var w = window; if
+   (d.cs.csFix.w != w.innerWidth || d.cs.csFix.h != w.innerHeight) {
+   d.location = d.location; } } function CSNSFix(action) { var d =
+   document; var w = window; if ((navigator.appName == 'Netscape') &&
+   (parseInt(navigator.appVersion) == 4)) { if (typeof d.cs ==
+   'undefined') { d.cs = new Object; d.cs.csFix = new Object; } else if
+   (CSIsFrame (w) == true) CSFixFct(); d.cs.csFix.w = w.innerWidth;
+   d.cs.csFix.h = w.innerHeight; window.onresize = CSFixFct; } } function
+   CSIsFrame (window) { var rootWindow = window.parent; if (rootWindow ==
+   'undefined') return false; for (i = 0; i < rootWindow.frames.length;
+   i++) if (window == rootWindow.frames[i]) return true; return false; }
+   function CSResizeWindow(action) { if(navigator.appVersion.charAt(0)
+   >=4) { window.resizeTo (action[1],action[2]) } } function
+   CSScrollDown(action){ if(navigator.appVersion.charAt(0) >=4) { var
+   container = 0 if (action[2] > 0) { while (container < action[1]) {
+   window.scrollBy(0,action[2]); container = container + action[2]; } } }
+   } function CSScrollLeft(action){ if(navigator.appVersion.charAt(0) >=4)
+   { var container = 0 if (action[2] > 0) { while (container < action[1])
+   { window.scrollBy(-action[2],0); container = container + action[2]; } }
+   } } function CSScrollRight(action){ if(navigator.appVersion.charAt(0)
+   >=4) { var container = 0 if (action[2] > 0) { while (container <
+   action[1]) { window.scrollBy(action[2],0); container = container +
+   action[2]; } } } } function CSScrollUp(action){
+   if(navigator.appVersion.charAt(0) >=4) { var container = 0 if
+   (action[2] > 0) { while (container < action[1]) {
+   window.scrollBy(0,-action[2]); container = container + action[2]; } } }
+   } function CSSetBackColor(action) { document.bgColor = action[1]; }
+   function CSActionGroup (action) { for(var i=1;i l2 ? l1 : l2) var h =
+   (b1 < b2 ? b1 : b2) - (t1 > t2 ? t1 : t2) return ((w >= 0) && (h >=
+   0)); } CSCurrentPressedKey = -1; function CSKeyPress(ev) { var code;
+   if(IsIE()) CSCurrentPressedKey = event.keyCode; else
+   CSCurrentPressedKey = ev.which; } document.onkeypress = CSKeyPress;
+   function CSKeyCompare(condition) { var eq = (condition[1] ==
+   CSCurrentPressedKey); if(eq) CSCurrentPressedKey = -1; return eq; }
+   function CSTimeout (condition) { var result = false; if (typeof
+   (gCurrentIdleObject) == "undefined") return result; if
+   (gCurrentIdleObject.lastTime) { var t=new Date(); if (t.getTime() >=
+   gCurrentIdleObject.lastTime) { if (t.getTime() >=
+   gCurrentIdleObject.nextTime) { gCurrentIdleObject.lastTime =
+   t.getTime() + condition[1]*1000; gCurrentIdleObject.nextTime =
+   gCurrentIdleObject.lastTime + condition[1]*1000; return false; } return
+   true; } } else { var t=new Date(); gCurrentIdleObject.lastTime =
+   t.getTime() + condition[1]*1000; gCurrentIdleObject.nextTime =
+   gCurrentIdleObject.lastTime + condition[1]*1000; } return result; } //
+   EOF

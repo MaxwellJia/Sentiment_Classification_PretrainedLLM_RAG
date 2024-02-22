@@ -1,0 +1,52 @@
+http://www.usatlas.bnl.gov/AFSWEB/computing/software/mysql_at_BNL.html
+
+                                                       US ATLAS Computing
+   Information on MySQL databases and relevant software at U.S. ATLAS Tier
+   1 Facility.
+                                                           BNL PAS Group
+
+   MySQL is a relational database system that has the follwing basic
+   features:
+     * Understands standard SQL syntax.
+     * Many clients can work simultaneously.
+     * Extensive documentation is available.
+     * Web access to all data.
+     * Variety of API is available:
+          + PHP API to write dynamic Web pages that access databases.
+          + Perl API: simple scripting language to fill and read
+            databases.
+          + C API based on client library included in the MySQL
+            distribution.
+          + Mysql++: simpler C++ API to make working as easy as with STL
+            containers.
+     * Multi level security system: priviliges can be specified at user,
+       db, host, tables, and column level.
+
+   MySQL is installed at U.S. Atlas Tier 1 Facility Linux machines at
+   /afs/usatlas.bnl.gov/offline/external/mysql . It is recommended to use
+   the binaries of the latest stable MySQL version at
+   /afs/usatlas.bnl.gov/offline/external/mysql/current/bin.
+
+   MySQL is free software and can be easily downloaded to a Linux computer
+   with the following procedure:
+     * download the latest stable source distribution from MySQL website.
+       The filenames are such as mysql-version.tar.gz
+     * unpack it and move to resulted directory
+       cd mysql-version
+     * follow instructions of INSTALL and README files. To install
+       binaries into /usr/local directory it is usually sufficient to run
+       the following commands:
+          + .configure --prefix=/usr/local
+          + make
+          + make install
+     * The server can be started with command safe_mysqld
+     * mysqladmin utility is useful for administrative operations.
+     * mysqldump utility allows easy database copying between servers.
+
+   U.S. ATLAS Tier 1 MySQL servers are read opened, so anybody can access
+   them with any username and null password (click on the link to get more
+   information on servers).
+   _________________
+
+
+    Comments to: Alex Undrus

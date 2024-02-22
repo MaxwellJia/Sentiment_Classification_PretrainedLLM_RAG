@@ -1,0 +1,137 @@
+http://www.kepler.arc.nasa.gov/diff_phot.html
+
+                                                           Updated 9/27/00
+
+                           Differential Photometry
+
+                          Animation of working CCD
+
+Spacebased Photometric Performance
+
+     Reliable detection with a >8 sigma statistical significance with >3
+     transits (four sigma, single transit) of terrestrial planets
+     requires relative photometry of 2x10^-5 on time scales of 2 to 16
+     hours. The brightness change due to a transit is proportional to the
+     the ratio of the planet's area to that of the star. When observing
+     stars the size of the Sun, the decrease in brightness for giant
+     planets, such as Jupiter, Saturn or the planet orbiting HD209458,
+     etc., is approximately 1%. For planets like Uranus and Neptune it is
+     about 0.1%. For Earth-size planets it is about 0.01%. Obstacles to
+     achieving the necessary precision are:
+     * Variations in seeing and extinction (for ground based observing)
+     * Photon shot noise
+     * Intrinsic variability of the target stars and
+     * Instrument instabilities.
+
+     Variations in seeing and extinction are eliminated by using a
+     spaceborne photometer. Shot noise is reduced to an acceptable level
+     using Kepler's moderate-aperture photometer. The Sun's brightness
+     variations on time scales of a few hours are small compared to the
+     necessary precision and, by extension, so are those of most stars of
+     similar spectral type and age. The principal challenge in attaining
+     adequate photometric precision therefore lies in using a stable
+     method of photometry. This is done using the techniques of
+     differential ensemble photometry.
+
+     The key factors used to achieve the required differential
+     performance for the Kepler Mission are:
+     * Differential spatial photometry: The brightness of each target star
+       is normalized to the average of all nearby stars, providing
+       common-mode rejection in the measuring system.
+     * Differential temporal photometry: Transit durations are a few hours
+       to less than a day. Brightnesses are compared to data just shortly
+       before and after the test interval, so there is no need for long
+       term stability.
+     * Decorrelation of image motion: Motion due to the image drifting
+       over time scales long compared to a transit produce highly
+       correlated amplitude variations that can be removed.
+     * Optimal weighting of pixels: The individual pixels that comprise
+       each star image can be weighted to maximize the SNR.
+     * Keeping each star image on the same pixels for three months:
+       Eliminates effects of inter- and intra-pixel quantum-efficiency
+       variations.
+     * Operating the CCDs near full well capacity: Read noise and dark
+       current are negligible.
+     * Selection of an Earth-trailing heliocentric orbit: Stable thermal
+       environment and negligible scattered light background.
+
+Proper Photometer Design
+
+     In a well-designed experiment, the total of all controllable noise
+     sources should be similar to that of the uncontrollable noise. For
+     Kepler, stellar variability is the limiting uncontrollable noise
+     source. By design the shot and instrument noises are of the same
+     magnitude. Given Kepler's aperture, bandpass and optical efficiency,
+     the number of detected photoelectrons, N[e], from a G2 dwarf star of
+     magnitude m[v] is given by:
+
+                   N[e] = 7.8x10^8x 10^-0.4 (mv-12) e^-/hr
+
+     For a typical target star with m[v]=12 and an integration time of
+     6.5 hours, N[e]=5x10^9, giving a relative Poisson noise of
+     1.4x10^-5. Instrumental noise is suppressed because the photometric
+     measurements are differential with respect to nearby stars and
+     differential with respect to time. By measuring the ratio of the
+     brightness of each star to the average of its neighbors on the same
+     CCD detector, the Kepler photometry is largely immune to temperature
+     variations, drifting amplifier gains and zero-point offsets, as well
+     as changes in the focus, alignment and transmission of the optical
+     system. This technique of "ensemble normalization" or "common-mode
+     rejection" was applied to ground-based photometry of the cluster M67
+     by Gilliland et al. 1993. They found that a precision of 8x10^-4
+     could be attained at transit time scales, limited by the (often 50%)
+     variations in seeing and transmission imposed by the Earth's
+     atmosphere. Absolute, not differential, HST photometry of the
+     transiting planet HD209458b has also achieved near-Poisson-limited
+     precision (6x10^-5 in ten min) with the largest non-random errors
+     resulting from rapidly changing environmental conditions related to
+     HST's low-Earth orbit.
+
+     Several noise sources are not addressed by differential photometry,
+     notably noise arising from spacecraft LOS motion and from some kinds
+     of variation of the stellar Point Spread Function (PSF). These occur
+     because neighboring stars fall at different fractional-pixel
+     displacements relative to the CCD's pixel grid. Also, different
+     stars sit on differing distributions of stray light from neighboring
+     and background stars. If the position and PSF variations are
+     suitably small, this kind of noise can be nearly eliminated by
+     decorrelating the time series of relative brightness against the
+     accurately measured star positions and PSF parameters. The Kepler
+     technology demonstration clearly shows that by applying these
+     methods to realistic laboratory measurements, an instrument
+     precision of <1x10^-5 was maintained for weeks at a time well at the
+     same time detecting transit signals equivalent to Earth-size
+     planets.
+
+     In summary, the noise sources limiting Kepler's photometry are known
+     and understood. Methods for suppressing them have been proven in
+     circumstances ranging from laboratory demonstrations to ground-based
+     observations at large telescopes to spaceborne photometry. Applied
+     to intrinsically stable time series data from Kepler's benign
+     Earth-trailing heliocentric orbit, these same methods can perform
+     even better. No new technology is required for Kepler to produce the
+     photometric precision necessary for this mission.
+
+Technology Demonstration
+
+     During the past year, an end-to-end laboratory simulation was
+     conducted to demonstrate that the technology to do differential
+     ensemble photometry at the precision required to detect Earth-size
+     planets was ready. The simulation reproduced the important features
+     of a spaceborne system including the on-orbit noise sources that
+     limit system performance. When software was used that compensated
+     for both jitter and drift motions of the images, the measured
+     precision routinely produced the required value. A comprehensive
+     discussion is further on.
+     __________________________________________________________________
+
+   [finger.gif] Go to The Next Topic
+
+                 [calculator.gif] Return to: Mission Design
+
+                                [bumper.gif]
+                     Return to Kepler Mission Home Page
+
+
+
+   Curator: David Koch, dkoch@mail.arc.nasa.gov [mail.box.gif]

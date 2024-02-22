@@ -1,0 +1,278 @@
+http://dcb.larc.nasa.gov/Introduction/models.html
+
+
+
+  Introduction of Modeling of Aerospace Vehicles for Flight Dynamic Studies
+
+   Many of the early attempts at powered flight failed because, among
+   other reasons, basic stability and control of the vehicle was
+   inadequate. Central to the astounding progress in this field (initial
+   powered human flight to lunar exploration in 66 years) has been the
+   development and application of the stability and control technologies.
+
+   In modern aerospace vehicle development, a central feature of any
+   project is the engineering simulation model of the flight dynamics of
+   the vehicle. This model is a mathematical representation of the
+   steady-state performance and dynamic response that is expected of the
+   proposed vehicle. This math model allows the stability and control
+   engineer to develop control laws to allow a human pilot (and
+   increasingly an autopilot) to maneuver the vehicle to launch, perform
+   its mission, and (if not an expendable weapon or probe) recover safely
+   for re-use. The math model also forms the basis for simulators used to
+   train a pilot in the skills needed to operate the vehicle safely and
+   effectively.
+
+   This brief article is intended to explain to a novice student how these
+   math models are created and used.
+
+  Contents
+
+     Modeling of aerospace systems
+     Sources of data
+     Modeling languages
+     Uses and types of models
+     Real-time, piloted simulation models
+     Summary
+     References
+     Bibliography
+
+  Modeling of aerospace systems
+
+   To be able to predict the resulting motion of any vehicle (whether
+   automobile, boat, skateboard, or Space Shuttle) it is necessary to
+   understand the physics of how forces cause objects to move. This field
+   of study is called dynamics and is a college-level course in most
+   engineering curricula. (Dynamics follows a similar course, statics,
+   that examines how objects, especially structures, transmit loads and
+   forces through structural elements.)
+
+   Using basic equations from dynamics, mathematical equations are written
+   that describe how the vehicle will move in response to forces that are
+   applied to the vehicle. For example, it is pretty easy to describe how
+   a rocket will accelerate when a constant thrust is provided by the
+   rocket's engine. More difficult is to describe and predict how the
+   sloshing of fuel in the rocket's fuel tank will cause the rocket's
+   structure to vibrate or throw the rocket off-course. Another type of
+   modeling problem would be to understand and predict, in a mathematical
+   equation, how an aircraft will respond to hitting an updraft in the
+   atmosphere, or how the aircraft will respond to the deflection of
+   various control surfaces at different airspeeds.
+
+   These equations are usually in the form of differential equations, in
+   which the rate of change of some quantity is described as being
+   dependent upon other quantities and their rates of change.
+
+   The set of mathematical equations that describe these motions are
+   collectively called a math model or simulation model of the vehicle.
+   These equations can range in complexity from a single equation on an
+   engineer's workpad to a complex set of software routines. The more
+   complex vehicle models are, for convenience, broken down into subsystem
+   models that deal with different sets of forces:
+
+   An atmospheric subsystem model, which is usually reused by many
+   different vehicle models, describes how the Earth's (or other planet's)
+   atmosphere behaves. The atmosphere has several properties that change
+   with altitude such as pressure, temperature, and how fast sound travels
+   through the air (speed of sound); these in turn have a quite important
+   effect on how a vehicle traveling through the atmosphere will behave.
+
+   An aerodynamic subsystem model describes how the vehicle will respond
+   to forces caused by motion of the vehicle through the atmosphere, and
+   predicts the effects of each different control surface (such as the
+   flaps, rudders, ailerons, etc.) upon the motion of the vehicle. While
+   spacecraft operate primarily in the absence of an atmosphere, they
+   usually have to fly through the atmosphere of the Earth (or another
+   planet) during launch or landing (if the mission of the spacecraft
+   includes landing). Thus, most aerospace vehicle math models include an
+   aerodynamic subsystem model.
+
+   A propulsion subsystem model describes how any motors or engines will
+   behave and what forces will act on the vehicle to which they are
+   attached.
+
+   A landing gear subsystem model is required when the vehicle is in
+   contact with the ground in order to model how the ground reaction
+   forces are created and how they affect the motion of the vehicle.
+
+   An inertial properties subsystem model provides details about how the
+   mass and inertia of the vehicle might change with time. For simple
+   vehicles (such as skateboards) the mass properties (weight, moments of
+   inertia) don't change, but any fuel-carrying vehicle will have varying
+   mass properties. If the circumstances require, the 'inertia model' will
+   include such dynamic elements as fuel slosh, landing gear movement, and
+   in a highly-detailed model, take into account the motion of control
+   surfaces.
+
+   Some vehicles are relatively flexible, requiring the development of a
+   flexible structure subsystem model to account for motion of various
+   parts of the vehicle in relation to other parts. Airships and other
+   long, slender vehicles made of lightweight materials will require some
+   attention to this aspect of modeling.
+
+   Finally, any electrical, mechanical, or electronic system that assists
+   the pilot in moving the control surfaces has to be described
+   mathematically. This includes the springiness of control cables in a
+   light airplane, the hydraulic actuators of older commercial transports,
+   and the 'fly-by-wire' flight control systems of tactical aircraft and
+   newer transports (and all spacecraft).
+
+  Sources of data
+
+   The modeler bases the subsystem models on various pieces of
+   information. Aerodynamic models are often the most complex models and
+   are usually based on wind-tunnel data, in which the forces and moments
+   (moments are rotary forces) exerted on a scaled model are measured at
+   various speeds, flow angles, and with combinations of control surface
+   deflections, until enough data is available to predict the forces and
+   moments that will act on the full-scale vehicle. Increasingly more data
+   is being added by using a technology called Computational Fluid
+   Mechanics (CFD) in which the same forces and moments are predicted in a
+   computer program, using the geometry (shape) of the vehicle in a
+   virtual wind tunnel.
+
+   The resulting aerodynamic subsystem model will predict what the forces
+   and moments would be as a result of any combination of control surface
+   deflections, thrust settings, and flight conditions.
+
+   Other subsystem models can be equally complex, depending on the type of
+   vehicle and the fidelity required of the model. Propulsion models can
+   be simple thrust and moment estimates or include the calculation of
+   many internal engine states (such as flow rates, pressures, and
+   temperatures in several stages of a turbine engine or rocket fuel
+   turbopumps). Rotorcraft models include models of the rotor dynamics;
+   propeller models are needed for propeller-driven aircraft. Landing gear
+   models often use data obtained from landing gear drop tests and
+   friction measurements from specialized testing equipment. Inertial
+   models are usually generated from adding up individual component
+   weights and locations; only in rare cases do full-scale aircraft get
+   moments of inertia (rotational inertia) measured directly.
+
+   Models of flight control systems are usually based on specifications
+   for the hardware and software components involved in the control
+   system; often the flight control software itself is included in the
+   control subsystem model.
+
+  Modeling languages
+
+   Aerospace vehicle mathematical models are written in a variety of
+   software languages; early models were actually made from analog
+   electronics (thus the 'analog computer') that contained no software;
+   the electronic components such as resistors, capacitors and amplifiers
+   represented the differential equations that describe the motion of the
+   vehicle.
+
+   Since the 1950s, FORTRAN (for FORmula TRANslater) has been the
+   principal programming language used to write flight dynamic models. Its
+   almost universal application for science applications has been
+   gradually reduced by more modern software languages; however, the bulk
+   of vehicle simulations are still written in FORTRAN [1].
+
+   In addition to general purpose languages, such as FORTRAN, BASIC, C,
+   C++, and Ada, there exist specialized languages for differential
+   equation solution. Also used are specialized software environments for
+   describing mathematical equations (Mathematica, MAPLE, MATLAB, xMath,
+   and others) as well as allowing construction of block diagrams of
+   dynamic systems (xMath's SystemBuild and MATLAB's Simulink).
+
+   The choice of programming language is dictated by the purpose of the
+   math model and familiarity with the programming tool.
+
+  Uses and types of models
+
+   An aerospace vehicle flight dynamics model can take many forms
+   depending on the purpose of the model.
+
+   For design work, for example in developing an control law for the
+   vehicle, often the model is in the form of a 'linearized model'. In
+   this form, the dynamics of the vehicle (technically, the perturbations
+   of the vehicle's motion from a specified steady-state condition) can be
+   represented by a set of matrices or Laplace-domain transfer functions.
+
+   Since these linear models can be generated from the complete,
+   non-linear math model (but not vice-versa) often the complete model is
+   created first and then linearized for investigation of specific flight
+   conditions. Usually these high-fidelity, complex simulation models are
+   intended to be run in 'batch' mode, or not in real time where the model
+   maneuvers at the same rate it would in actual flight. Real-time models
+   are used exclusively for simulation studies involving human or flight
+   hardware 'in-the-loop.'
+
+  Real-time, piloted simulation models
+
+   A specialized form of a complete non-linear model is usually required
+   if the model is to serve as a real-time simulation model (by
+   'real-time' it is implied that the simulation will be piloted). [Note -
+   with the increasing computational speed of newer computers, less
+   specialization is required to solve the differential equations of the
+   model fast enough to serve as a piloted simulation model.]
+   Traditionally, each research organization that makes use of an in-house
+   flight simulator facility has developed customized simulation source
+   code in a variety of languages; these are functionally similar but
+   surprisingly non-compatible requiring modifications to a mathematical
+   model when transferred from one organization to another.
+
+   It is traditional to generate a set of check cases, composed of 'trim'
+   values and dynamic time history recordings of key parameters, to
+   guarantee proper reimplementation if a simulation model is moved from
+   one type of computer to another.
+
+  Summary
+
+   The development of a mathematical description of the dynamics of a
+   flight vehicle is central to any development project. Development of
+   flight dynamic models require information from many engineering
+   disciplines and often specialized programming languages.
+
+  References
+
+   [1] Jackson, E. Bruce: Results of a Flight Simulation Software Methods
+   Survey, AIAA Paper No. 95-3414, August 1995. Presented at the AIAA
+   Flight Simulation Technologies Conference, Baltimore, MD, August 7-9,
+   1995.
+
+  Bibliography
+
+   General approach to simulation modeling, with a non-linear F-16
+   aircraft example:
+
+   Stevens, Brian L. and Lewis, Frank L.: Aircraft Simulation and Control.
+   John Wiley & Sons, 1992. ISBN 0-417-61397-5
+
+   Modeling of dynamic systems:
+
+   Cannon, Robert H.: Dynamics of Physical Systems. McGraw-Hill, 1967.
+   ISBM 07-009754-2
+
+   Modeling of aircraft dynamics:
+
+   McRuer, Duane; Ashkenas, Irving; and Graham, Dunstan: Aircraft Dynamics
+   and Automatic Control. Princeton University Press, 1973. ISBN
+   0-691-08083-6
+
+   Equations of motion:
+
+   Gainer, Thomas G. and Hoffman, Sherwood: Summary of Transformation
+   Equations and Equations of Motion used in Free-Flight and Wind-Tunnel
+   Data Reduction and Analysis. NASA SP-3070, 1972
+
+   Etkin, Bernard: Dynamics of Atmospheric Flight. John Wiley & Sons,
+   1972. ISBN 0-471-24620-4
+
+   Martin R. Waszak, Carey S. Buttrill and David K. Schmidt:Modeling and
+   Model Simplification of Aeroelastic Vehicles: An Overview, NASA
+   TM-107691, September 1992
+
+   Aerospace simulation software:
+
+   Jackson, E. Bruce: Manual for a Workstation-Based Generic Flight
+   Simulation Program (LaRCsim) Version 1.4, NASA TM-110164, May 1995
+
+   Flightgear, a collaborative freeware product, is available at
+   www.flightgear.org
+
+   Flight vehicle models:
+
+   Jackson, E. Bruce; Cruz, Christopher I.; and Ragsdale, W. A.: Real-Time
+   Simulation Model of the HL-20 Lifting Body, NASA TM-107580, July 1992.
+
+    Top

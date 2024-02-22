@@ -1,0 +1,170 @@
+http://hn.usatlas.bnl.gov/Planning/usgridPlanning.html
+
+
+     Contact
+   US ATLAS Grid Computing Planning
+
+   ATLAS Computing - USATLAS Computing - ATLAS Computing Planning
+
+   Grid Computing in U.S. ATLAS
+
+   The Large Hadron Collider (LHC) at CERN will open a new frontier in
+   particle physics due to its higher collision energy and luminosity
+   compared to existing accelerators. The guiding principle in designing
+   the ATLAS experiment, one of the two major LHC experiments, has been
+   maximising the discovery potential for new physics such as Higgs bosons
+   and supersymmetric particles, while keeping the capability of
+   high-accuracy measurements of known objects such as heavy quarks and
+   gauge bosons. ATLAS is being constructed by 1850 collaborators in 150
+   institutes around the world. The detector employs precision tracking,
+   calorimetry and muon measurement over a large solid angle to accurately
+   identify and measure electrons, muons, photons, jets and missing
+   energy. The very high interaction rate of 10**9 Hz is filtered by a
+   multiple trigger levels down to a recorded rate containing the rare
+   interactions of interest of approximately 100 Hz. This corresponds to
+   100 MB/sec of raw data and 10 PB/year total raw and processed data
+   volume. The scale of the computing challenge presented by the LHC
+   experiments is unprecedented in terms of data volume, processing
+   requirements, and the scale and distributed nature of the analysis task
+   among thousands of physicists worldwide.
+
+  Distributed computing in ATLAS, and U.S. involvement
+
+     Grid technologies are essential to fully realize the potential of
+     the ATLAS program, particularly for distant participants such as the
+     U.S., by enabling a seamless international and national computing
+     fabric that can deliver the capability for full participation in the
+     development and execution of the ATLAS research program on the part
+     of physicists at their home institutes. Meeting the demands of LHC
+     analysis via a highly distributed, hierarchical computing
+     infrastructure exploiting Grid technologies is a central element of
+     the ATLAS worldwide computing model.
+
+     While LHC datataking will not begin until 2006, ATLAS already has a
+     large and highly distributed computing and software operation
+     serving immediate and near term needs such as test beam data
+     analysis, detector performance and physics studies supporting
+     detector design and optimization, software development and
+     associated scalability studies, and 'Data Challenges' involving
+     high-throughput, high-volume stress tests of offline processing
+     software and facilities.
+
+     ATLAS is currently transitioning from FORTRAN-based software used
+     for past production operations to new object oriented C++ software
+     in which the U.S. has a leading role in architectural design and
+     infrastructure development. In databases and data management, again
+     with a leading U.S. presence, ATLAS is now ramping a development
+     program to build the full ATLAS system. The U.S. has selected these
+     focus areas as those best matched to available expertise and to most
+     effectively enabling U.S. physics analysis participation. Our Grid
+     computing program provides an important complement to these efforts
+     in providing a powerful and well integrated distributed computing
+     capability that will enable physicists to employ the full capability
+     of ATLAS computing in analysis work at their home institutes.
+     * U.S. ATLAS Grid Computing Page
+     * Particle Physics Data Grid (PPDG) in ATLAS
+     * GriPhyN/iVDGL in ATLAS
+     * US Distributed IT facilities plan
+     * ATLAS Eurogrid validation plan draft -- 10/20/01
+
+  Associated major ATLAS milestones
+
+   Calorimeter test beam analysis: Summer/Fall 2001
+          Use as developmental testbed and early application area for
+          distributed data service, making test beam data available at
+          U.S. institutes involved in test beam analysis (ANL, BNL,
+          possibly others)
+
+   ATLAS physics workshop: Sep 2001
+          Use as developmental testbed and early application area for
+          distributed data service, making simulation data available at
+          U.S. institutes involved in physics studies (many U.S.
+          institutes)
+
+   Mock Data Challenge 1: Feb - Jul 2002
+          Major test at ~.1% scale relative to final system of data
+          processing and computing facilities. Will incorporate
+          distributed services then available in the Challenge.
+
+   Computing TDR preparation: May - Nov 2002 (writing starts)
+          Experience to date with design and deployment of distributed
+          data and processing services will drive the worldwide computing
+          model developed for the Computing TDR.
+
+   Trigger/Data Acquisition TDR: Summer 2002
+          Heavy user of distributed data service.
+
+   US ATLAS Tier 1 large scale system test: Oct 2002
+   Mock Data Challenge 2: Jan - Sep 2003
+          As MDC1, but at ~10% scale relative to final system, and
+          including first large scale production deployment of multi-tier
+          distributed computing services.
+
+   Physics Readiness Report: Jan 2004 (writing starts)
+          Major report based on extensive physics studies. Full deployment
+          of distributed services to participating physicists.
+
+   Full chain test: Jul 2004
+          Test of full processing chain at full bandwidth, from high level
+          trigger through analysis. High throughput testing of distributed
+          services.
+
+   20% Processing farm prototype: Dec 2004
+          Production processing test with 100% complexity (processor
+          count), 20% capacity system relative to 2007 level. High
+          throughput, high complexity testing of distributed services.
+
+   U.S. ATLAS Grid Computing WBS and Schedule
+
+   This is the XProject based US ATLAS planning materials for grid
+   computing. Other planning pages:
+     * US ATLAS computing
+     * International ATLAS
+
+  US ATLAS Grid Computing WBS
+
+     This US ATLAS Grid Computing WBS is a 'projection' of the US
+     software and facilities WBS's showing the structure of the US ATLAS
+     Grid Computing effort, which includes both facility and software
+     components.
+
+     * Full US ATLAS grid computing WBS projection
+     * Software section (1.3)
+          + To level 3
+          + To level 4
+     * WBS to a specified level (based on queries to servlet version)
+          + To level 2
+          + To level 3
+          + To level 4
+          + To level 5
+
+  US ATLAS Grid Computing Schedule
+
+     Each schedule item is associated with a WBS item as indicated.
+     Schedule items which are expired and completed are shown in green.
+     Items which are expired but not marked as completed are shown in
+     red. Milestones are indicated; they have only one associated date.
+     Major milestones are indicated in bold. Schedules are ordered by
+     start date unless otherwise specified.
+
+     * US ATLAS grid computing schedule
+          + Ordered by end date
+     * Current schedule activities
+       Activities underway today (according to the schedule!) with their
+       start and end dates. Ordered by end date.
+     * Expired schedule activities, milestones
+       Ideally, they should all be green for complete! Ordered by end
+       date.
+     * Subproject and related schedules
+          + ATLAS Data Challenges
+          + PPDG
+               o PPDG summary goals by year
+               o PPDG ATLAS distributed data management project
+               o Magda distributed data manager prototype development
+          + GriPhyN/iVDGL
+          + Grid-enabling Athena and other ATLAS software
+          + U.S. ATLAS Grid Testbed
+          + 'Condor tree' study (Saul Youssef, BU)
+   _________________
+
+   Information on XProject

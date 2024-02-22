@@ -1,0 +1,405 @@
+http://seadas.gsfc.nasa.gov/doc/sds_faq.html
+
+                    SeaDAS Frequently Asked Questions (FAQ)
+
+Send additional questions to: seadas@seadas.gsfc.nasa.gov
+
+   Note: Questions regarding currently unsupported operating systems and
+   IDL versions have been left in this FAQ as a convenience to users who
+   may still be running in these environments.
+
+    General Questions
+     * What is SeaDAS ?
+     * What are Level-0 (L0), Level-1A, Level-1B, 2, and 3 data anyway?
+     * How to order SeaWiFS data ?
+     * Can SeaDAS process MODIS, CZCS or AVHRR data ?
+     * Why support just  SGI, SUN and PC/Linux platforms?
+     * What is the difference between SeaDAS and the available SeaWiFS
+       Project code ?
+     * What is the difference between HRPT and LAC data?
+     * Can I run SeaDAS from a script or in non-interactive mode?
+
+   Specific Questions
+     * How do I create a nice-looking true-color SeaWiFS L1A image?
+     * How do I change the default data range scalings for SeaWiFS
+       products?
+     * How do I get SeaDAS to automatically place my windows?
+     * How do I change the background color of my SeaDAS windows?
+     * How do I change my SeaDAS widget font?
+     * How do I kill a SeaDAS session if it seems to be hanging?
+
+   Known Problems/Anomalies/Limitations
+     * l1agen
+
+     * SGI/IRIX 6.2: May have error running l1agen. Need SGI patch 2435
+       (previously 2170).
+
+     l3bin
+     * Binning resolution currently fixed at either 4km or 9km bins
+     * l3bin program is currently dependent on 2-line elements files being
+       kept up-to-date
+
+     subscene
+     * Starting with SeaDAS 4.0, the subscene program no longer supports
+       subscening Level-2 files.
+
+     seadisp
+     * Load SEAPAK CZCS - Does not handle map projected SEAPAK files.
+     * Load SeaDAS Mapped - Messages about missing attributes.  (see IDL
+       5.0.x bug)
+     * Coast - Sometimes missing entire continents for IDL mapped images
+       (see IDL 5.0.3 bug)
+     * Resizing Plot windows - Incorrect behavior if DECREASE window size
+       (see IDL 5.0 bug)
+
+     IDL bugs
+     * IDL 5.1 & 5.2 have a map projection bug involving p0lon and /fill
+       options.
+     * IDL 5.0.3 has a bug putting on continents.
+     * IDL 5.0.x has a bug regarding resizing windows
+     * IDL 5.0.x bug: HDF_SD_ATTRFIND: Failed to Find the Attribute: xxxx
+     * IDL 4.x and 5.x bug: xlib sync error and hanging of SeaDAS session
+   _______________________________________________________________________
+
+  General Answers:
+
+     * What is SeaDAS ?
+
+   SeaDAS is a comprehensive image analysis package for processing,
+       displaying and analyzing all SeaWiFS (Sea-viewing Wide
+       Field-of-view Sensor) data products and ancillary data. SeaWiFS
+       data products include L0, L1A, L1B, L1A-Browse, L2, L2-Browse, L3
+       Binned, L3 Standard Mapped Image (SMI) and L3-Browse products.
+       Ancillary data include Wind, Pressure, Precipitable H20 and OZONE
+       data from NCEP. The source of the ozone data is EP/TOMS.
+       In addition, SeaDAS can also process OCTS, MOS and CZCS data.
+       SeaDAS can only display (but not process AVHRR SST data).
+       The SeaDAS source code is FREE and available via FTP. SeaDAS is
+       supported by the NASA ocean biochemistry program under UPN
+       S79-11-03-20 to C. R. Mcclain (P.I).
+
+     * What are SeaWiFS Level-0 (L0), Level-1A, Level-1B, 2, 3, SMI and
+       BROWSE data ?
+
+   L0: Initial data from the SeaWiFS sensor. Reconstructed, unprocessed
+       instrument/payload data at full resolution.
+       L1A: Reconstructed, unprocessed instrument data at full resolution,
+       including radiometric and geometric calibration coefficients and
+       georeferencing parameters (i.e., platform ephemeris) computed and
+       appended, but not applied to the L0 data.
+       L1B: At-sensor radiances derived by applying the sensor calibration
+       to the Level 1A counts at the same resolution and location as the
+       Level 1A data. (Only available with SeaDAS, not available from the
+       Goddard DAAC).
+       L2: Derived environmental variables at the same resolution and
+       location as the L1 data.
+       L3 Binned: Variables mapped on uniform space-time grid scales,
+       usually with some completeness and consistency.
+       L3 SMI: The Standard Mapped Image product is the image
+       representation of the L3 binned data. The product is a byte-valued
+       two dimensional array (4096 x 2048) representing an equidistant
+       cylindrical projection of the globe.
+       BROWSE - In general, the  browse products are subsampled raster
+       images of the L1A, L2 and L3 SMI files:
+
+     * L1A browse is a Quasi-true-color composite of Bands 6,5 and 1 (ie
+       670nm, 555nm and 412nm) with a Rayleigh correction applied to
+       remove haze
+     * L2 browse is a subsampled raster image of the Level-2 "chlorophyll
+       a concentration" product
+     * L3 browse is a subsampled raster image of the Level-3 SMI
+       "chlorophyll a concentration" product.
+
+   See the data products web page under the SeaWiFS project for more
+   detailed information.
+
+
+     How to order SeaWiFS data ?
+   The NASA Goddard DAAC will archive and distribute all SeaWiFS L1A (LAC,
+       GAC, and BROWSE) data, L2 (GAC and BROWSE) data, and L3 (Binned,
+       SMI, and BROWSE) data. The data will be available for the public
+       during the first 90 days after the launch. After that, only
+       authorized users may access the DAAC for data. Check the SeaWiFS
+       home page to get information about how to apply for an authorized
+       user account.
+
+     * Can SeaDAS process MODIS, CZCS or AVHRR data ?
+
+   SeaDAS 4.1 can only process SeaWiFS, OCTS, MOS and CZCS data. SeaDAS
+       can display (but not process) AVHRR SST, and MODIS Ocean data.
+       SeaDAS has no plans to provide processing capabilities for MODIS
+       data. In the future, SeaDAS may include the capability to process
+       and or display data from other satellites.
+
+     * Why support just SGI, SUN and PC/Linux platforms?
+
+   The SeaWiFS Project is not able to support a full suite of machines
+       with verified software. When the SeaWiFS Project started, it was
+       determined that the vast majority of prospective users utilized
+       either SUN or SGI workstations. The SeaWiFS Project uses SGI
+       workstations in their production processing environment. SUN was
+       the most widely-used platform by prospective users.
+       The SeaWiFS Project decided to support providing a PC/Linux version
+       of SeaDAS once PC's became powerful enough to handle processing
+       SeaWiFS data. There are not any plans to support the Windows or NT
+       operating systems.
+       We encourage groups to provide "ports" to other platforms. We would
+       be able to distribute but not verify any user-provided ports.
+
+     * What is the difference between SeaDAS and the available SeaWiFS
+       Project code ?
+
+   SeaDAS is a stand-alone package meant for individuals or groups who
+       would like to generate and/or analyze SeaWiFS data. SeaDAS is more
+       general than the SeaWiFS data processing system and provides
+       interfaces which allow the user to control the input parameters of
+       the processing programs.
+       The SeaWiFS Project code, although designed to be as portable as
+       possible, will nevertheless be dependent on many hardware
+       (graphics, disks, network,nodes) and software (database, SGI/GL,
+       etc.) specific to the SeaWiFS data processing system. It is a
+       production system designed for data types, data rates,
+       reprocessings, computer systems, and manpower that are beyond the
+       requirements of SeaWiFS data users.
+       It is important to note that SeaDAS will be capable of producing
+       SeaWiFS Level-1, -2, and -3 products identical to those generated
+       by the production system given the same input files and parameters.
+       The defaults used by the SeaDAS programs will match the parameters
+       used by the SeaWiFS production processing system.
+
+     * What is the difference between HRPT and LAC data?
+
+   HRPT data and LAC data have the same format and the same resolution.
+       They are different, however. HRPT data is broadcast continuously by
+       the satellite for reception by the HRPT stations. It is lost unless
+       it is received by a ground station or recorded. Each HRPT pass will
+       (at GSFC) be kept as one image. So HRPT scenes can range from very
+       short (if the satellite is at the horizon of the station) to very
+       long (several minutes).
+       LAC (Local Area Coverage) data is actually RECORDED HRPT data
+       downlinked with the GAC data and covers a very small area. LAC data
+       for calibration will be very short (<1 min) to cover the ground
+       location of interest and cannot be very long (the total LAC
+       recording time is about 10 min). Each time the recorder is turned
+       on & off, for whatever length of time, it will constitute one LAC
+       scene. The highest priority for using LAC recording space will be
+       for calibration purposes. People needing LAC that is unavailable
+       from an HRPT station should request it from the SeaWiFS Project
+       (Chuck McClain).
+     __________________________________________________________________
+
+  Specific Answers:
+
+     * How do I get SeaDAS to automatically place my windows?
+
+   SeaDAS will automatically place your windows for you conveniently if
+       you allow it to. You must tell your window manager to allow
+       applications to place their own windows. To do this, you must:
+
+     * Modify your .Xresources or .Xdefaults file to tell your window
+       manager to allow applications programs to determine window
+       placement.
+     * Restart your window manager.
+
+   Required in order for SeaDAS window positioning to work at all:
+
+     Mwm*clientAutoPlace: False Turn off automatic window placement by
+     window manager
+
+     Mwm*interactivePlacement: False Turn off user interactively
+     positioning all windows
+
+   Not required, but can be convenient:
+
+     Mwm*positionIsFrame: True Widget positions given by applications
+     programs include the frame (NOTE: If this is not on, then the window
+     may overlap each other near the frames).
+
+     Mwm*positionOnScreen: False Don't let any windows get positioned off
+     the screen.
+
+   NOTE: Replace Mwm with 4Dwm in the following lines if you're running
+   4Dwm.
+
+
+     How do I change the background color of SeaDAS windows?
+
+     * Modify your .Xresources or .Xdefaults file to include a line
+       similar to the line below. (Use unix command showrgb to see
+       available colors)
+     * Update your resource database using command xrdb -merge .Xresources
+     * Start up SeaDAS.
+
+   Idl*background: peachpuff
+
+
+     How do I change my SeaDAS widget font?
+   To select a widget font for your current SeaDAS session only:
+
+          + Interatively: Use the interactive command sdwfont found in the
+            SeaDAS Main Menu under Utility.
+          + Command-mode: Use the command setdef_wfont.
+
+   Your default SeaDAS widget font is set in file
+   $SEADAS/config/seadas.env in the environment variable SDSWFONT.
+
+   a) To change the default widget font for everyone on your system, you
+   can change the value of SDSWFONT in the configuration file
+   $SEADAS/config/seadas.env.
+
+   b.) To change the default for yourself permanently, set your own value
+   for SDSWFONT after sourcing seadas.env in your .login file:. Example:
+source /usr3/seadas/config/seadas.env
+setenv SDSWFONT 'lucidasans-bold-10'
+
+     How do I change the default data range scalings for SeaWiFS products?
+   The default scalings are looked for first in file .seadas_defaults in
+       the users home directory and secondly in file
+       $SEADAS/config/seadas_defaults.
+       To change scaling defaults for everyone running SeaDAS on your
+       system, you can modify the file $SEADAS/config/seadas_defaults .
+       To change scaling defaults for only your own SeaDAS sessions, copy
+       the system defaults file to your home directory and modify it.
+       cp $SEADAS/config/seadas_defaults ~/.seadas_defaults
+       NOTES: If an entry is commented out or removed, the default will be
+       to scale the product to it's local min/max data range. Also,
+       currently, product names containing blanks are not supported.
+
+     * How do I kill a SeaDAS session if it hangs?
+
+   Look for your SeaDAS process ID and kill it. It will appear in your
+       main SeaDAS menu widget. If your main widget is not up, then issue
+       the following command to find your idl session and kill the
+       corresponding process id.
+       % ps -ef | grep idl (search for your idl session)
+       % kill nnnn (kill the process id associated with your idl session)
+       Problem 1: An error message occurs similar to 'Xlib: unexpected
+       async reply ('sequence 9x56a2)!', followed by IDL hanging. This
+       problem occurs infrequently and is unreproducable. Currently the
+       cause is undetermined and there is no known way of working around
+       this problem. RSI is working on resolving this problem.
+
+     * How do I create a nice-looking SeaWiFS L1A true color image?
+
+   To create a nice-looking true color image from SeaWiFS L1A data, use
+       the browse function found in the Process->SeaWiFS menu.  This will
+       allow you to create a L1A browse image at full resolution if
+       desired.  To create an image at full resolution, set the X & Y
+       sampling rates to 1.
+       The Load->True option in the general display program does not give
+       very clear results for true color since the Rayleigh correction has
+       not been applied.  The browse program applies the Rayleigh
+       correction when creating the L1A browse file.
+   _______________________________________________________________________
+
+   Known Problems/Anomalies/Limitations - Detailed answers
+     * SGI/IRIX 6.2: May have error running l1agen. Need SGI patch 2435
+       (previously 2170).
+
+   * Install SGI patch 2170 if l1agen fails to run with the following
+       error message:
+       namelist read: variable not in namelist
+       apparent state: unit 18 named orbctl.nl
+       last format: namelist io
+       Unit 18 is a sequential unformatted external file
+       *** Execution Terminated (119) ***    (This is a FORTRAN compiler
+       bug which causes a run-time error.)
+
+     * Binning resolution currently fixed at either 4km or 9km bins.
+
+   Currently the l3bin program will  create either 4km or 9km bins. This
+       is a known constraint. The SeaWiFS Project has plans to make the
+       bin size completely variable in the future.
+
+     * l3bin program is currently dependent on 2-line elements files being
+       kept up-to-date.
+  DATADAYS: Error calculating start day.
+
+                   ERROR
+
+  RECENT NORAD TWO LINE ELEMENT FILE NOT FOUND
+                FOR SEASTAR:
+  File does not exist or most recent file
+           exceeds 30 days old
+        Obtain updated element file
+       Currently, the l3bin program is dependent on the 2-line elements
+       files, in directory $SEADAS/data/seawifs/norad, being kept fairly
+       up-to-date. We have plans to eliminate the need for this program to
+       use these files. However, currently it will be necessary to keep
+       these files updated. They can be downloaded from:
+       ftp://samoa.gsfc.nasa.gov/pub/two-line-elements. You may want to
+       set up a cron job to download these automatically every day.
+
+     * Load SEAPAK CZCS - Does not handle map projected SEAPAK files.
+
+   Currently the display program is not able to navigate SEAPAK map
+       projected files. One option is to map project the original
+       unprojected SEAPAK file within SeaDAS.
+
+     * IDL 5.0.x bug: HDF_SD_ATTRFIND: Failed to Find the Attribute: xxxx
+
+   You may see the following, or similar messages displayed when loading
+       files into the display program. This happens most noticeably with
+       SeaDAS Mapped files:
+   HDF_SD_ATTRFIND: Failed to Find the Attribute: xxxx
+       where xxxx may be any number of things such as Parameter, Slope,
+       Intercept, etc.
+       These messages are not errors and should not be printed out.
+       However, in IDL 5.0.x it was impossible to suppress these messages.
+       They come from internal IDL HDF routines which did not respond to
+       normal IDL error-handling controls. This problem is fixed in IDL
+       5.1.
+
+     * IDL 5.0.3 has a bug putting on continents.
+
+   IDL 5.0.3 has a bug when putting on continents. You can see this
+       problem by doing the following tests:
+1) IDL> map_set,0.0,180.0,LIMIT=[-90.0, 0.0, 90.0, 359.0], /continents
+
+   ; For IDL 5.0.3, both North and South America are missing!
+
+2) IDL> map_set, 0.0,180.0,LIMIT=[-70.0,-359.0,70,0.0],/continents,/MERC
+
+   ; For IDL 5.0.3, Australia is now missing!
+       This problem is only known for IDL 5.0.3. It does not occur in IDL
+       4.0.1, IDL 5.0 or IDL 5.1. RSI acknowleges this problem and
+       supplied a patched version of map_continents.pro. This patch is
+       also available on seadas's anonymous ftp-site in directory
+       outgoing/idl5.03_bug.
+
+     * IDL 5.0.x has a bug regarding resizing windows.
+
+   IDL 5.0.x has a bug regarding resizing windows. This behavior does not
+       occur when running under IDL 4.0.1 or IDL 5.1. This behavior is
+       evident in SeaDAS when attempting to resize plot windows. The plots
+       behave properly if the window is resized to be larger, however it
+       does not behave properly if the window is resized to be smaller.
+
+     * IDL 5.1 & 5.2 have a map projection bug involving p0lon and /fill
+       options.
+
+   Some values of p0lon when using the /fill keyword when mapping can
+       cause IDL to bomb as in the following example.  If the /fill is
+       turned off, or if p0lon is set to be the exact center of the area
+       limits, then the problem does not occur.  RSI has been notified
+       about this problem.
+       IDL> limit=[40,-71.5, 45, -65.0]
+       IDL> window, xsize=300, ysize=300
+       IDL> p0lon = -66.55
+       IDL>  map_set,0.0, p0lon, limit=limit
+       IDL> map_continents, /hires,/fill_continents
+       % Internal error: Border sort.
+       % Execution halted at:  MAP_DO_SEGMENTS   215
+       /apia01/usr/local/rsi/idl_5.1/lib/map_continents.pro
+       %  MAP_CONTINENTS    305
+       /apia01/usr/local/rsi/idl_5.1/lib/map_continents.pro
+       %  $MAIN$
+     __________________________________________________________________
+
+   [seadas_logo.gif] This page maintained by:
+                     The SeaDAS Development Group
+                     Mark Ruebens, Robert Lindsay and Long Wang
+                     Code 970, NASA/GSFC
+                     seadas@seadas.gsfc.nasa.gov
+                     Last updated: 11/01/01.
+   _______________________________________________________________________

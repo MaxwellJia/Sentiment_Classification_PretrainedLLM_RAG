@@ -1,0 +1,29 @@
+http://forms99.psc.gov/Forms/VersionManagement.htm
+
+              Version Management Sample with Browser Detection
+
+   This sample contains a Version Management control hidden at the bottom
+   of the page. The buttons below call the various methods of the Version
+   Management control through their OnClick event using JavaScript.
+   You must close all FormFlow 99 forms in order for the Version
+   Management control to update your form objects and controls. Form
+   objects which are currently in use will not be updated, even if the
+   update appears successful.
+
+   [BUTTON Input] (not implemented)_______________
+   The UpdateControls method displays the Update Controls dialog box,
+   which enables you to manually select which form objects to update. Note
+   that you will not be able to install the Entrust Server Control unless
+   certain required files are already present on your computer.
+   [BUTTON Input] (not implemented)__________________ The
+   AnalyzeAndUpdateVersions method compares the versions of the form
+   objects on the server with the versions installed on your computer.
+   Depending on the Administrator settings in controls.txt, your controls
+   will either be updated automatically, or you will be prompted to update
+   your controls as required.
+   [BUTTON Input] (not implemented)________________ The SendDiagnostics
+   method sends form object versions and other environment information
+   about a users computer to the server through anonymous FTP. Note that
+   the FTP path specified under the Diagnostics settings in controls.txt
+   must exist and allow anonymous write access in order for this method to
+   work.

@@ -1,0 +1,232 @@
+http://ncem.lbl.gov/frames/computing.htm
+
+                   [smallncem.gif]
+
+                                  Image Analysis Facility
+     __________________________________________________________________
+
+   [cproom.gif]
+
+   The NCEM Image Analysis Facility (IAF) is designed to handle the
+   computational needs of the users of the Center. Apart from hosting a
+   number of commercial scientific software packages, there is also an
+   on-going development of custom software solutions by the resident
+   staff. The main focus of the IAF application software is in the area of
+   image processing and image simulation, all with the goal of extracting,
+   quantitatively if possible, structural information from images taken on
+   the Center's electron microscopes.
+     __________________________________________________________________
+
+Software
+
+   Image processing and analysis facilities are available at several user
+   stations in the computer user area. Listed below are the main software
+   packages applied in the area of image simulation, image processing and
+   modelling. In addition there are software packages for data analysis,
+   plotting, image visualization and general presentation software. NCEM
+   public domain software packages can be downloaded from our software
+   page.
+
+Image Simulation / Crystallography
+
+     * NCEMSS (NCEM Simulation Software) for HRTEM image simulations.
+       Developed at the NCEM, this package can simulate through-focus and
+       through-thickness series of HRTEM images from model structures up
+       to 25nm x 25nm in area (perfect crystal or defect structures). It
+       includes symmetry operators for all 230 space groups and scattering
+       factors for 98 elements. Executables for a number of common
+       platforms are available from the NCEM for download.
+     * SHRLI (Simulated High-Resolution Lattice Images) can be used for
+       simulations from models up to 3nm x 3nm in area (perfect crystal or
+       small defect structures). Images are displayed in 256-level
+       grayscale.
+     * MacTempas is a general HRTEM image simulation software package
+       running on the NCEM Apple Macintosh computers. An add-on package
+       for quantitative comparison of images and automatic parameter and
+       structure refinement is currently being developed at the NCEM.
+     * Desktop Microscopist is available on the 4 Macintosh workstations
+       and provides a number of useful functions, ranging from tables of
+       d-spacings and angles to CBED patterns, Kikuchi maps and search of
+       the Electron Diffraction Data base for identification of unknown
+       compounds.
+
+
+   [COMPmullite.gif]
+
+   Through focus series of ARM images of [001] mullite showing the
+   presence of an oxygen- deficient column is confirmed by image
+   simulations. More at: T. Epicier, M.A. O'Keefe and G.Thomas, Acta
+   Cryst. A46 (1990) 948-962.
+
+   [tilt.gif]
+
+   Simulated HRTEM images of a cubeoctahedron consisting of 561 Pd atoms,
+   repesenting a typical catalyst particle. In experimental HRTEM
+   investigations of dispersed catalysts, the orientations of the
+   nanoparticles with respect to the incident electron beam are unknown. A
+   large proportion of the particles present in any micrograph field will
+   show the presence of "lattice fringes", leading to a first impression
+   that many particles must lie close to zone-axis orientations. Since
+   these particles are sufficiently small to possess large
+   reciprocal-space shape functions that will be intersected by the Ewald
+   sphere for quite large tilts away from the nearest zone axis, the
+   electron scattering produced by these intersections will often lead to
+   "lattice fringes" that are not simply related to the crystal structure
+   of the particles. Such misleading "lattice fringes" can lead to
+   misidentification of the particles.
+
+   More at: J.-O. Malm and M.A. O'Keefe, Ultramicroscopy 68 (1997)13-23.
+     __________________________________________________________________
+
+                      Image Processing / Data Analysis
+
+     * SEMPER is a general-purpose image processing package. It includes
+       many operations suitable for processing of electron microscope
+       images, and has been extended locally. It is used for Fourier-space
+       filtering of experimental images, for cross-correlation and lattice
+       averaging, and for spatial-frequency enhancement.
+     * CRISP provides crystallographic image processing by applying
+       symmetry principles to the Fourier transform of experimental high
+       resolution electron microscope images of perfect crystals.
+     * NIH Image is a public-domain package for general image manipulation
+       with a limited set of image processing tools. It is useful for
+       grayscale enhancing and Fourier filtering.
+     * Prism is similar to, but greatly extends the capabilities of Image.
+     * Digital Micrograph is a general image processing package with many
+       features specific to electron microscopy. DM has been extended by
+       several plug-in programs which have been developed at the Center.
+     * EmiSpec for off-line analysis of spectral information obtained at
+       the Center's analytical microscopes.
+     * "NCEMPackage" is an extension to Digital Micrograph and contains a
+       number of routines for image processing, analysis and feature
+       extraction. It includes peak finding, lattice refinement,
+       displacement analysis, noise reduction filters, template matching,
+       routines for use in holography and more. It comes with an
+       integrated help system on the available commands.
+     * "Phase" is an extension to Digital Micrograph which uses the
+       concept of the geometric phase to analyze variations in reciprocal
+       space to determine quantitatively real space displacements, local
+       lattice parameters and local strain. As with "NCEMPackage", an
+       on-line help function is available.
+
+   [fourier.gif]
+
+   Example of structure determination by image processing and simulation.
+   Original image (left) is windowed in Fourier space and embedded into
+   simulated image of Y2Si2O7 (right).
+
+   [phase.gif]
+
+   Quantitative determination of local lattice parameter and composition
+   across a quantum well through the use of the "Geometric Phase" software
+   extension which is a public domain software package available from the
+   NCEM.
+
+   [Zeolite.gif]
+
+   Image processing and feature extraction using the NCEMPackage software
+   extension to Digital Micrograph. The original image is that of Zeolite
+   which is rapidly damaging under the electron beam. The final result
+   shows the average image of the zeolite unit cell in the 010 direction.
+
+   [CCR.gif]
+
+   Digitized high-resolution image of quasiperiodic asymmetrical 90° <110>
+   tilt grain boundary in Al and cross correlation with a structural unit
+   (inset) characteristic for this boundary. The location of these units
+   in the boundary is indicated by white cross-correlation peaks.
+     __________________________________________________________________
+
+                              Atomic modelling
+
+     * CrystalKit produces models of interfaces and defects for input to
+       either MacTempas, NCEMSS or EMS image simulation software packages.
+
+   [CoSi2.gif]
+
+   Example of modelling and image simulation of an interface between CoSi
+   and Si. The model on the top was created in CrystalKit starting with
+   two perfect lattices of CoSi and Si, defining the orientation
+   relationship between the crystals, the interface plane and the zone
+   axis. The model is shown slightly titled off the zone axis with the
+   atomic bonds drawn. The atomic coordinates were then imported directly
+   into MacTempas for simulation of the HRTEM image shown below.
+     __________________________________________________________________
+
+                                  Hardware
+
+           Presently the IAF equipment consists of the following:
+     * Four Apple Macintosh 604/200 workstations for image simulation,
+       image processing and general computing are networked to a file
+       server. One machine is connected to a LeafScan 16 bit scanner for
+       input of images from negatives.
+     * One Apple Macintosh Quadra 800 is used as an input/output station.
+       It is connected to a flatbed scanner, a SuperMac ProofPositive
+       color dye-sublimation printer and a Matrix filmwriter.
+     * One Apple Macintosh 604/132 server controls a Micropolis 16GB RAID
+       5 disk array for storage of user data.
+     * One 200MHZ PC runs off-line data analysis and image processing.
+
+     __________________________________________________________________
+
+                                User Stations
+
+       There are 5 user stations available in the computer user area:
+     * User station 1,2,3 & 4 all run MacTempas, CrystalKit, Digital
+       Micrograph, Desktop Microscopist,Photoshop,Image and a whole set of
+       general purpose application software including statistical analysis
+       and image visualization.
+     * User station 5 (ElCid) runs CRISP, SEMPER,EMISPEC and general
+       Windows applications.
+     * Computer room users may sign up for two 4 hour sessions in advance.
+       Cancellations should be forewarded as soon as possible to John
+       Turner or Roar Kilaas.
+
+     __________________________________________________________________
+
+                               Input & Output
+
+     Since all the computers are networked together, data that is input
+       using any particular input device can be made available on all
+    computers; similarly, data on any computer can be sent to any output
+   device. Users should bring sufficient desired storage media if network
+                         transfer is not available.
+
+                               Input media --
+     * Negatives -- selected areas of experimental micrographs can be
+       input as digitized images using a Leafscan transmission scanner.
+       This scanner supports a variety of negative sizes. For a 35mm
+       film-window, maximum resolution gives 5080 pixels by 7400 pixels.
+       Images can be digitized at 8 or, for wider dynamic range, at 16
+       bits. This scanner accepts positive or negative transparencies in
+       color or black/white.
+     * Prints -- can be scanned in as 8-bit pixels at a resolution of up
+       to 800 dots per inch through a gray-scale Agfa scanner, or through
+       a ScanMaker II RGB/Grayscale scanner.
+     * Video tape and live video -- frames can be digitized (grabbed) as
+       8-bit images with 640 by 480 pixels.
+
+                               Output media --
+     * Slides -- 24-bit color slides can be produced on 35mm film at a
+       resolution of 4096x2732 pixels.
+     * Negatives -- 35mm negatives of grayscale images can be output with
+       8-bit intensity (256 levels of gray) at a maximum resolution of
+       4096x2732 pixels
+     * Paper -- images can be output as laserprinter halftones on 8.5" x
+       11" paper or in color/grayscale on a dye-sublimation SuperMac
+       Proofpositive printer and also on an Apple Color Stylewriter.
+     * Storage Media -- 3.5" floppy disk , 44MB/88MB or 200MB 5-1/4"
+       Syquest cartridges, CD-ROM, 100MB Iomega Zip.
+     * Networks -- user data (including simulated or processed images) can
+       be output over ethernet to the user's own computer using FTP.
+
+     __________________________________________________________________
+
+   About NCEM | Microscopes and Facilities | Staff | Becoming an NCEM User
+
+   NCEM Fellowship | Workshops and Seminars | Assistance and Collaboration
+                                 | Software
+
+   Publications | New Research | On-line Microscopy | Gallery | Microscopy
+                                    Links
+     __________________________________________________________________

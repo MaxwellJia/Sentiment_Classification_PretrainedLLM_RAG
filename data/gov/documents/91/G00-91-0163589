@@ -1,0 +1,162 @@
+http://emlib.jpl.nasa.gov/EMLIB/intro.html
+
+   JPL Home Page JPL - Earth JPL - Solar System JPL - Stars & Galaxies JPL
+   - Technology
+
+                              JPL/Caltech link
+     __________________________________________________________________
+
+                                 [info.gif]
+
+                                    EMLIB
+
+Introduction
+
+   EMLIB is intended for the free distribution of electromagnetics (EM)
+   software and related information. The EMLIB staff actively encourages
+   anyone with appropriate material to deposit it here so that it can be
+   shared (and perhaps even improved) by the greater community of EM
+   workers. Appropriate material includes (but is not limited to):
+    1. EM analysis codes (for antennas, propagation, scattering, microwave
+       devices, etc.)
+    2. demonstration codes that document how a given numerical method
+       works (providing more detail than can be found in a typical
+       published paper)
+    3. codes that implement analytic solutions for benchmark problems
+    4. math functions/subroutines (e.g. special functions, matrix
+       utilities) of particular interest to the EM community
+    5. functions or modules for use with commercial analysis or
+       visualization codes such as Mathematica, MATLAB, AVS, etc.
+    6. mesh generators/pre-processors which could be used with EM analysis
+       codes
+    7. graphics utilities with EM applications
+    8. numerical or experimental results for benchmark problems
+    9. educational software
+   10. meeting announcements
+   11. reports
+   12. TeX, LaTeX, troff, etc. macros and style guides for journals and
+       conferences of interest
+   13. e-mail directory of EM workers
+   14. pointers to other sources of software (other relevant anonymous ftp
+       sites)
+
+   Future expansion could include a bulletin board or mailing list for
+   discussion of EM-related topics.
+
+Procedures for Retrieving Software from EMLIB
+
+   Files may be retrieved via the WWW.
+
+Policies for Depositing Software on EMLIB
+
+   All donated software must be either in the public domain or protected
+   via instruments such as the GNU Public License (this legal instrument
+   is known as a "copyleft"; it permits free public distribution while
+   (essentially) retaining copyright and prohibiting unauthorized
+   commercialization and subsequent restrictions on the code's
+   distribution).
+
+   It is the donor's responsibility to obtain permission for widespread
+   software distribution from their employer and/or sponsor. Any software
+   deposited on EMLIB will be presumed to be in the public domain unless
+   otherwise noted. Software deposited in EMLIB which contains
+   distribution restrictions will be deleted. The EMLIB staff, their
+   employers, and their sponsers are not liable for any damage caused by
+   the inadvertent release of proprietary or classified software or
+   information.
+
+   All software deposited on EMLIB should contain:
+    1. source code in a standard language (Fortran, C, etc.)
+    2. documentation - a manual, a unix man page, or something similar
+       that tells how to build the code and how to use it
+    3. sample inputs and outputs (if appropriate)
+
+   Binary executable and object files are prohibited.
+
+   Donations of shareware (a distribution mechanism whereby software is
+   distributed freely while requesting that active users send a fee to the
+   developer, perhaps to get updates or a manual) and teaserware
+   (stripped-down, demo versions of commercial codes) are prohibited.
+
+   The EMLIB staff retains the right to delete any donated material at any
+   time.
+
+   There are a variety of ways to organize your contribution. At a
+   minimum, we request at least two files:
+   The source file program.f or program.c or program.C or program.matlab
+       ...
+       and the documentation file program.txt
+
+   where the source file contains source code for the specific application
+   (including all subroutines and libraries) and the documentation file
+   contains both the documentation and sample input and output data sets.
+
+   An example documentation file can read as follows:
+    PROGRAM: program.f computes fields radiated from a half wave
+             dipole using Pocklington's equation and entire-domain
+             sinusoidal basis functions.
+
+    AUTHOR:
+             Hot 'EM' Hacker    or   Daisy Dipole   or   anonymous
+             Vaperware Inc.          Software Ltd.
+             128 Hard Drive
+             Nodoc WY
+
+    BUS. PHONE: (101) 234-5678  or   (199) 545-7699   or
+    HOME PHONE: (101) 565-9928
+    CAR  PHONE: (101) 445-6599
+    BUS. FAX:   (101) 235-5545
+    CAR  FAX:   (101) 235-4390
+    EMAIL:      hack@em.vaper.com
+
+    LIBRARIES USED: none
+
+    PRECISION NECESSARY: complex*16, real*8 when more than 5000 expansion
+                         functions used.
+
+    REFERENCES:
+
+    SAMPLE INPUT/OUTPUT SET:
+
+   More complicated, multi-file contributions are also accepted. If you
+   choose to do this, we encourage you to organize your code,
+   documentation, and data in a sensible directory structure
+
+   For example, one might organize the code above as:
+        dipole/README          - brief description, installation info
+              /src/program.f   - source for the main program
+                  /sub1.f        "   "   "  a subroutine
+                  /sub2.f        "   "   "  another subroutine
+                  /Makefile      Makefile for compiling the code
+              /doc/program.man - unix man page
+                  /program.tex - user's manual in TeX format
+              /demo/input      - sample input
+                   /output     - sample output
+
+   and then bundle up the files, along with their directory structure,
+   using the unix tar command into a single file. For the example above,
+   this might be called dipole.tar. This practice ensures that related
+   files stay together and that potential users get the entire package.
+   Compression via the unix compress utility is encouraged to minimize
+   disk space use and transfer time.
+
+   Alternate archiving and compression mechanisms may be considered (e.g.
+   shell archives), but we prefer using just tar and compress.
+
+   When you have files you wish to deposit on EMLIB, please send mail to
+   emstaff@emlib.jpl.nasa.gov and we will set up a convenient method to
+   tranfer your files.
+
+Remarks
+
+   Reduce duplication of effort! Stop reinventing the wheel! Tell your
+   colleagues! Put a little polish on your codes and share them with the
+   community!
+     __________________________________________________________________
+
+   Back to EMLIB Home Page
+     __________________________________________________________________
+
+
+    emstaff@emlib.jpl.nasa.gov
+    Last modified: 12 October 1997

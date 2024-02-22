@@ -1,0 +1,120 @@
+http://www-didc.lbl.gov/GridPerf/
+
+   [ggf-logo.gif]
+   GridForum home
+
+                     Global Grid Forum Performance Area
+
+   * Steering Committee
+   * Working Groups
+   * GGF4 BOFs New!
+    - Grid Benchmarking
+    - Sensor Management
+   The Performance Area is an administrative division of the Global Grid
+   Forum working groups that will tend to contain working groups that are
+   primarily concerned with system, application, and network performance
+   and monitoring issues.
+
+Steering Committee
+
+     * Ruth Aydt - <aydt@cs.uiuc.edu>
+     * (to be named)
+
+Working Groups
+
+     * Grid Monitoring Architecture Working Group (GMA-WG)
+        - This was the previous "main" performance working group. The
+            charters and goals, etc. are out of date, but archived
+            information such as talks, meeting minutes, etc. are all
+            there.
+     * Network Measurements Working Group (NM-WG)
+        - The Network Measurements Working Group (NMWG) identifies and
+            characterizes metrics useful to grid applications and
+            middleware, and develops standards to ensure the compatibility
+            of metrics across measurement systems and applications.
+
+GGF4 Birds of a Feather (BOF) Sessions
+
+     * Grid Benchmarking BOF
+
+        Charter
+                Grid Benchmarking Working/Research Group Provisional
+                Charter
+
+                As Grid Computing Environments are getting pervasive, it
+                is becoming clear that objective tests must be devised to
+                rate their functionality and efficiency. A number of such
+                testing tools are already available, but these usually
+                take the form of simulations of idealized Grid
+                Environments, or lower-level performance rating tools.
+                Either way, they are typically standalone products that do
+                not specify a standard workload against which Grid
+                performance should be rated.
+
+                We propose to put together a set of tasks that assesses
+                Grid performance at the level of user applications. The
+                tasks should be specified as paper-and-pencil benchmarks
+                that can be implemented using any of the existing and
+                future Grid Environments. They should be representative of
+                the kinds of computations that are naturally suited for
+                Grid environments.
+
+        Proposed agenda items
+                Some initial work in Grid benchmarking has been done in
+                the NAS Grid Benchmarking Project (there was a
+                presentation at GGF3, and a paper at HPDC in San Francisco
+                in August 2001), but a lot of issues are still to be
+                determined.
+
+               o True Grid benchmarks should test data processing as well
+                 as data transfer properties of the environment. Some
+                 rules of thumb should be developed--with the input from
+                 networking experts and visionaries--to specify tasks that
+                 will test both for a wide range of distributed systems.
+               o Wise scale-up rules should be developed for designing
+                 larger problem classes that can carry Grid benchmarks
+                 into the future.
+               o Should Grid benchmarks specify security, fault tolerance,
+                 authentication? If so, how?
+               o How should Grid Benchmarks present results? Should the
+                 resources used be listed?
+               o Is there a need for a Grid benchmarking suite for
+                 developers of Grid Environments (as opposed to users
+                 thereof), and, if so, should it be drawn up from scratch,
+                 or can it be composed of elements of user-level
+                 benchmarks.
+
+     * Sensor Management BOF
+       A BOF will be held at GGF4 to discuss the formation of a Sensor
+       Management (or Sensor) Working Group in the Performance Area.
+
+        Motivation
+                Previous discussions at GGF2, GGF3, and on the Performance
+                Mailing list identified an interest in developing a
+                repository of downloadable sensor code, in defining the
+                relationship between sensors and Grid Monitoring
+                Architecture (GMA) producers, and in defining a
+                minimum-criteria standard for a sensor that is to be used
+                for grid-related applications.
+
+        People
+                Tom Roney (troney@ncsa.uiuc.edu) will lead the BOF, and is
+                looking for someone to co-chair the WG, if the interest
+                and commitment level expressed at the BOF is sufficent to
+                form a WG. Brian Tierney (bltierney@lbl.gov) will assist
+                in running the BOF, but is not interested in co-chairing
+                the WG.
+
+        Charter, etc.
+                More details about the proposed WG, including a draft
+                Charter and Milestones, which will form the basis of the
+                discussion at the BOF, will be posted to the Perf Area
+                mailing list and web page prior to GGF4.
+     __________________________________________________________________
+
+   This page is the responsibility of:
+
+
+    Dan Gunter - DSD staff
+
+   Last modified: Fri Jan 11 13:37:24 PST 2002

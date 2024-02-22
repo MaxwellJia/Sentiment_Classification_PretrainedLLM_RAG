@@ -1,0 +1,127 @@
+http://www-toc.fnal.gov/pcs/policies/backup-policy.asp
+
+Backups  - PCS Supported Systems
+
+
+
+   Windows NT servers that are supported by the Computing Division PC
+   Support group are supported with a centralized backup system. The
+   backup system is only used to backup the central servers of our
+   clients, and not individual workstations. Users are expected to put all
+   of their data onto their associated server. It is the individual users
+   responsibility to backup any data that is kept on their local desktop
+   system.
+
+
+
+What is Backed Up
+
+   The Central backup system will backup all data on the NT servers
+   supported by the PCS group. This includes NT based central servers
+   including the IMAP and POP e-mail servers. The following are not backed
+   up by the central backup facility:
+
+
+               Oracle Databases
+
+               Exchange Databases
+
+               Open files that are opened with an exclusive lock.
+
+
+   In many cases, the backup server will be able to backup files that are
+   open. Only select applications open files with an exclusive lock. For
+   example, documents opened with Microsoft Word can be backed up while
+   they are open, but data opened with Microsoft Excel cannot. To ensure
+   your data is backed up, users should close all applications before
+   leaving their desktop for any length of time.
+
+
+   File permissions also play an important role for backups. The backup
+   server must have permissions to see all of the files in order to back
+   the data up. The backups run under an account that has Domain Admin
+   rights, hence it is mandatory that users do not remove the ‘Domain
+   Admin’ or the administrator account rights on the permissions of their
+   files. If the backups are not able to access a file because of lack of
+   permission rights, an exception is noted in the backup report that is
+   sent to the appropriate server manager. It is the server manager’s
+   responsibility to rectify any of these discrepancies.
+
+
+
+   Cycle of Backups
+
+   Backups are run during evening hours to reduce the network overhead and
+   decrease the odds of attempting to backup open user data. The exact
+   times that backups are run varies based on the data loads. The cycle
+   for backups is as follows:
+
+
+               A full backup of all central servers is performed once a
+   week. This is traditionally run during each weekend, starting on Friday
+   evening.
+
+
+               Incremental backups are performed Monday thru Thursday
+   evening. These backups only backup data and files that have been
+   changed since the previous full or prior incremental backups.
+
+
+   Backups are written to a high-grade reliable tape media. Tapes rotation
+   is as follows:
+
+
+               Incremental backup tapes are kept for at least 2 weeks.
+
+
+               Full backups are kept for at least 6 weeks, with the 1^st
+   Friday of the month full backups being retained for one year. Tapes
+   that are retained for the full year are kept at the FCC tape vault. All
+   other tapes are either in the tape libraries/loaders or are kept in a
+   secured area outside of the WH7 computer room.
+
+
+               Tapes use a simple external label system to help identify
+   the data. All ‘Monthly’ full backups begin with the letter M followed
+   by the numeric month (IE 02 for February). Regular weekly full backups
+   are labeled with a ‘W’ and Daily incrementals are initialized with the
+   letter ‘D’. A database of all the tapes used and their associated data
+   files is maintained on-line by the backup software. Tapes can also be
+   scanned by the backup software to determine the tapes contents.
+
+
+               With the volume of data we maintain, several restores are
+   performed each week. This random amount of restoration aids in the
+   verification of the reliability of backups. Backups are also run with
+   the ‘Checksum’ option, which adds to the data integrity. This option
+   calculates a checksum for each data stream and saves this data onto the
+   tape. A separate ‘verify’ job can be run against the tape to validate
+   the integrity of the data.
+
+
+               Server managers are responsible to ensure that backups are
+   performed for their servers. Server managers are provided with a daily
+   report(s) of their servers regarding the backup activity. Server
+   managers are responsible for reviewing these reports and ensuring their
+   system was backed up.
+
+
+
+Restoration of Data
+
+               The PCS server managers handle restoring of data. Users are
+   required to contact their PCS support representative for restore
+   requests. All PCS server managers have access to the central backup
+   facility and are trained in the necessary tools to perform restoration
+   of data to their server. All PCS server managers have authorization to
+   retrieve tapes from the FCC tape vault.
+
+
+
+
+
+
+     __________________________________________________________________
+
+   Questions/Comments - (Email Address Coming Soon!)
+   Last Update - June 19^th, 2000

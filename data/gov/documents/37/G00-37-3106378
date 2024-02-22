@@ -1,0 +1,294 @@
+http://qso.lanl.gov/qc/graphics/tele.ps
+
+   Complete Quantum Teleportation (to appear in Nature, November 1998) M.
+   A. Nielsen\Lambda y, E. Knillz, & R. Laflamme\Lambda \Lambda
+   Theoretical Astrophysics T-6, MS B-288, Los Alamos National Laboratory,
+   Los Alamos, NM 87545 yDepartment of Physics and Astronomy, University
+   of New Mexico, Albuquerque, NM 87131-1131 zComputer Research and
+   Applications CIC-3, MS B-265, Los Alamos National Laboratory, Los
+   Alamos, NM 87545 October 29, 1998 Quantum mechanics provides
+   spectacular new information processing abilities 1;2. One of the most
+   unexpected is a procedure called quantum teleportation 3 that allows
+   the quantum state of a system to be transported from one location to
+   another, without moving through the intervening space. Partial
+   implementations of teleportation 4;5 over macroscopic distances have
+   been achieved using optical systems, but omit the final stage of the
+   teleportation procedure. Here we report an experimental implementation
+   of the full quantum teleportation operation over inter-atomic distances
+   using liquid state nuclear magnetic resonance (NMR). The inclusion of
+   the final stage enables for the first time a teleportation
+   implementation which may be used as a subroutine in larger quantum
+   computations, or for quantum communication. Our experiment also
+   demonstrates the use of quantum process tomography, a procedure to
+   completely characterize the dynamics of a quantum system. Finally, we
+   demonstrate a controlled exploitation of decoherence as a tool to
+   assist in the performance of an experiment. In classical physics, an
+   object can be teleported, in principle, by performing a measurement to
+   completely characterize the properties of the object. That information
+   can then be sent to another location, and the object reconstructed.
+   Does this provide a complete reconstruction of the original object? No:
+   all physical systems are ultimately quantum mechanical, and quantum
+   mechanics tells 1 us that it is impossible to completely determine the
+   state of an unknown quantum system, making it impossible to use the
+   classical measurement procedure to move a quantum system from one
+   location to another. Bennett et al 3 have suggested a remarkable
+   procedure for teleporting quantum states. Quantum teleportation may be
+   described abstractly in terms of two parties, Alice and Bob. Alice has
+   in her possession an unknown state j\Psi i = ffj0i + fij1i of a single
+   quantum bit (qubit) - a two level quantum system. The goal of
+   teleportation is to transport the state of that qubit to Bob. In
+   addition, Alice and Bob each possess one qubit of a two qubit entangled
+   state, j\Psi iA (j0iAj0iB + j1iAj1iB) ; (1) where subscripts A are used
+   to denote Alice's systems, and subscripts B to denote Bob's system.
+   Here and throughout we omit overall normalization factors from our
+   equations. This state can be rewritten in the Bell basis ((j00i \Sigma
+   j11i) ; (j01i \Sigma j10i) for the first two qubits and a conditional
+   unitary transformation of the state j\Psi i for the last one, that is,
+   (j00i + j11i) j\Psi i + (j00i \Gamma j11i) oezj\Psi i + (j01i + j10i)
+   oexj\Psi i + (j01i \Gamma j10i) (\Gamma ioeyj\Psi i) ; (2) where oex;
+   oey; oez are the Pauli sigma operators 6, in the j0i; j1i basis. A
+   measurement is performed on Alice's qubits in the Bell basis.
+   Conditional on these measurement outcomes it is easy to verify from the
+   previous equation that Bob's respective states are j\Psi i; oezj\Psi i;
+   oexj\Psi i; \Gamma ioeyj\Psi i: (3) Alice sends the outcome of her
+   measurement to Bob, who can then recover the original state j\Psi i by
+   applying the appropriate unitary transformation I; oex; oez, or ioey,
+   conditional on Alice's measurement outcome. Notice that the quantum
+   state transmission has not been accomplished faster than light because
+   Bob must wait for Alice's measurement result to arrive before he can
+   recover the quantum state. Recent demonstrations of quantum
+   teleportation 4;5 omitted the final stage of teleportation, the unitary
+   operators applied by Bob conditional on the result of Alice's
+   measurement. This prevents complete recovery of the original state.
+   Instead, the earlier experiments relied on classical post-processing of
+   the data after completion of the experiment to check that the results
+   were consistent with what one would expect if the conditional
+   operations had, in fact, been performed. Our experiment implements the
+   full teleportation operation. The most important implication of the
+   inclusion of this difficult extra stage is that our teleportation
+   procedure can, in principle, be used as a subroutine in the performance
+   of other quantum information processing tasks. Teleportation as a
+   subroutine is important in potential applications to quantum
+   computation and communication 7;8, although in the present system,
+   moving the C2 qubit to H may be accomplished more efficiently by
+   techniques other than teleportation. 2 Our implementation of
+   teleportation is performed using liquid state nuclear magnetic
+   resonance (NMR), applied to an ensemble of molecules of labeled
+   trichloroethylene (TCE). The structure of the TCE molecule may be
+   depicted as Cl C2QQ Cl jj Cl QQ CljjH (4) To perform teleportation we
+   make use of the Hydrogen nucleus (H), and the two Carbon 13 nuclei (C1
+   and C2), teleporting the state of C2 to H. Figure 1(a) illustrates the
+   teleportation process we used. The circuit has three inputs, which we
+   will refer to as the data (C2), ancilla (C1), and target (H) qubits.
+   The goal of the circuit is to teleport the state of the data qubit so
+   that it ends up on the target qubit. We are therefore only teleporting
+   the qubit a few angstroms, making this a demonstration of the method of
+   teleportation, rather than a practical means for transmitting qubits
+   over long distances. State preparation is done in our experiment using
+   the gradient-pulse techniques described by Cory et al 9, and phase
+   cycling 10;11. The unitary operations performed during teleportation
+   may be implemented in a straightforward manner in NMR, using
+   non-selective rf pulses tuned to the Larmor frequencies of the nuclear
+   spins, and delays allowing entanglement to form through the interaction
+   of neighboring nuclei 9;12. Other demonstrations of quantum information
+   processing with three qubits using NMR are described in 14;15;16, and
+   with two qubits in 17;18;19;20. An innovation in our experiment was the
+   method used to implement the Bell basis measurement. In NMR, the
+   measurement step allows us to measure the expectation values of oex and
+   oey for each spin, averaged over the ensemble of molecules, rather than
+   performing a projective measurement in some basis. For this reason, we
+   must modify the projective measurement step in the standard description
+   of teleportation, while preserving the remarkable teleportation effect.
+   We use a procedure inspired by Brassard et al 21, who suggest a
+   two-part procedure for performing the Bell basis measurement. Part one
+   of the procedure is to rotate from the Bell basis into the
+   computational basis, j00i; j01i; j10i; j11i. We implement this step in
+   NMR by using the natural spin-spin coupling between the Carbon nuclei,
+   and rf pulses. Part two of the procedure is to perform a projective
+   measurement in the computational basis. As Brassard et al point out,
+   the effect of this two part procedure is equivalent to performing the
+   Bell basis measurement, and leaving the data and ancilla qubits in one
+   of the four states, j00i; j01i; j10i; j11i, corresponding to the
+   different measurement results. We cannot directly implement the second
+   step in NMR. Instead, we exploit the natural phase decoherence
+   occurring on the Carbon nuclei to achieve the same effect. Recall that
+   phase decoherence completely randomizes the phase information in these
+   nuclei and thus will destroy coherence between the elements of the
+   above basis. Its effect on the state of the Carbon nuclei is to
+   diagonalize the state in the computational basis, ae \Gamma !
+   j00ih00jaej00ih00j + j01ih01jaej01ih01j + j10ih10jaej10ih10j 3
+   +j11ih11jaej11ih11j: (5) As emphasized by Zurek 22, the decoherence
+   process is indistinguishable from a measurement in the computational
+   basis for the Carbons accomplished by the environment. We do not
+   observe the result of this measurement explicitly, however the state of
+   the nuclei selected by the decoherence process contains the measurement
+   result, and therefore we can do the final transformation conditional on
+   the particular state the environment has selected. As in the scheme of
+   Brassard et al, the final state of the Carbon nuclei is one of the four
+   states, j00i; j01i; j10i; j11i, corresponding to the four possible
+   results of the measurement. Our experiment exploits the natural
+   decoherence properties of the TCE molecule. The phase decoherence times
+   (T2) for C1 and C2 are approximately 0:4s and 0:3s. All other T2 and T1
+   times for all three nuclei are much longer, with a T2 time for the
+   Hydrogen of approximately 3s, and relaxation times (T1) of
+   approximately 20 \Gamma 30s for the Carbons, and 5s for the Hydrogen.
+   Thus, for delays on the order of 1s, we can approximate the total
+   evolution by exact phase decoherence on the Carbon nuclei. The total
+   scheme therefore implements a measurement in the Bell basis, with the
+   result of the measurement stored as classical data on the Carbon nuclei
+   following the measurement. We can thus teleport the state from the
+   Carbon to the Hydrogen and verify that the state in the final state
+   decays at the Hydrogen rate and not the Carbon rate. Re-examining
+   figure 1(a) we see how remarkable teleportation is from this point of
+   view. During the stage labeled "Measure in the Bell basis" in figure
+   1(a), we allow the C1 and C2 nuclei to decohere and thus be measured by
+   the environment, destroying all phase information on the data and
+   ancilla qubits. Experimentally, a standard NMR technique known as
+   refocusing employs rf pulses to ensure that the data qubit effectively
+   does not interact with the target qubit. Classical intuition therefore
+   tells us that the phase information about the input state, j\Psi i, has
+   been lost forever. Nevertheless, quantum mechanics predicts that we are
+   still able to recover the complete system after this decoherence step,
+   by quantum teleportation. We implemented this scheme in TCE using a
+   Bruker DRX-500 NMR spectrometer. Experimentally, we determined the
+   Larmor and coupling frequencies for the Hydrogen, C1 and C2 to be: !H
+   ss 500:133491MHz; !C1 ss 125:772580MHz; !C2 ss !C1 \Gamma 911Hz (6) JH
+   C1 ss 201Hz; JC1 C2 ss 103Hz: (7) The coupling frequencies between H
+   and C2, as well as the Chlorines to H, C1 and C2, are much lower, on
+   the order of ten Hertz for the former, and less than a Hertz for the
+   latter. Experimentally, these couplings are suppressed by multiple
+   refocusings, and will be ignored in the sequel. Note that C1 and C2
+   have slightly different frequencies, due to the different chemical
+   environments of the two atoms. 4 We performed two separate sets of
+   experiments. In one set, the full teleportation process was executed,
+   making use of a variety of decoherence delays in place of the
+   measurement. The readout was performed on the Hydrogen nucleus, and a
+   figure of merit - the entanglement fidelity - was calculated for the
+   teleportation process. The entanglement fidelity is a quantity in the
+   range 0 to 1 which measures the combined strength of all noise
+   processes occurring during the process 23;24. In particular, an
+   entanglement fidelity of 1 indicates perfect teleportation, while an
+   entanglement fidelity of 0:25 indicates total randomization of the
+   state. Perfect classical transmission corresponds to an entanglement
+   fidelity of 0:5 23;24, so entanglement fidelities greater than 0:5
+   indicates that teleportation of some quantum information is taking
+   place. The second set of experiments was a control set, illustrated in
+   figure 1(b). In those experiments, only the state preparation and
+   initial entanglement of H and C1 were performed, followed by a delay
+   for decoherence on C1 and C2. The readout was performed in this
+   instance on C2, and the entanglement fidelity was calculated for the
+   process. The results of our experiment are shown in figure 2, where the
+   entanglement fidelity is plotted against the decoherence delay. Errors
+   in our experiment arise from the strong coupling effect, imperfect
+   calibration of rf pulses, and rf field inhomogeneities. The estimated
+   uncertainties in the entanglement fidelities are less than \Sigma 0:05,
+   and are due primarily to rf field inhomogeneity and imperfect
+   calibration of rf pulses. To determine the entanglement fidelities for
+   the teleportation and control experiments, we performed quantum process
+   tomography 25;26, a procedure for obtaining a complete description of
+   the dynamics of a quantum system, as follows: The linearity of quantum
+   mechanics implies that the single qubit input and output for the
+   teleportation process are related by a linear quantum operation 27. By
+   preparing a complete set of four linearly independent initial states,
+   and measuring the corresponding states output from the experiment, we
+   may completely characterize the quantum process, enabling us to
+   calculate the entanglement fidelity for the process 26. Three elements
+   ought to be noted in figure 2. First, for small decoherence delays, the
+   entanglement fidelity for the teleportation experiments significantly
+   exceeds the value of 0:5 for perfect classical transmission of data,
+   indicating successful teleportation of quantum information from C2 to
+   H, with reasonable fidelity. Second, the entanglement fidelity decays
+   very quickly for the control experiments as the delay is increased.
+   Theoretically, we expect this to be the case, due to a T 2 time for C2
+   of approximately 0:3s. Third, the decay of the entanglement fidelity
+   for the teleportation experiments occurs much more slowly.
+   Theoretically, we expect this decay to be due mainly to the effect of
+   phase decoherence and relaxation on the Hydrogen. Our experimental
+   observations are consistent with this prediction, and provide more
+   support for the claim that quantum data is being teleported in these
+   experiments. 5 References [1] Bennett, C. H. Quantum information and
+   computation. Phys. Tod. 48 (Oct), 24-30 (1995). [2] Preskill, J.
+   Quantum computing: pro and con, Proc. Roy. Soc. A 454, 469-486 (1998).
+   [3] Bennett, C. H., Brassard, G., Crepeau, C., Jozsa, R., Peres, A.,
+   and Wootters, W.. Teleporting an unknown quantum state via dual
+   classical and EPR channels. Phys. Rev. Lett. 70, 1895-1899 (1993). [4]
+   Bouwmeester, D., Pan, J. W., Mattle, K., Eibl, M., Weinfurter, H., and
+   Zeilinger, A. Experimental quantum teleportation. Nature 390, 575-579
+   (1997). [5] Boschi, D., Branca, S., De Martini, F., Hardy, L., and
+   Popescu, S.. Experimental realization of teleporting an unknown pure
+   quantum state via dual classical and Einstein-Podolski-Rosen channels.
+   Phys. Rev. Lett. 80, 1121-1125 (1998). [6] Sakurai, J. J. Modern
+   Quantum Mechanics. (Addison-Wesley, 1995). [7] Bennett, C. H.,
+   DiVincenzo, D. P., Smolin, J. A., Wootters, W. K., Mixed state
+   entanglement and quantum error correction. Phys. Rev. A 54, 3824- 3851
+   (1996). [8] Cirac, J. I., Zoller, P., Kimble, H. J., and Mabuchi, H.
+   Quantum state transfer and entanglement distribution among distant
+   nodes in a quantum network. Phys. Rev. Lett. 78, 3221-3224 (1997). [9]
+   Cory, D. G., Fahmy, A. F., and Havel, T. F. Ensemble quantum computing
+   by NMR spectroscopy. Proc. Natl. Acad. Sci. USA 94, 1634-1639 (1997).
+   [10] Ernst, R., Bodenhausen, G., and Wokaun, A. Principles of Nuclear
+   Magnetic Resonance in one and two dimensions. (Oxford University Press,
+   1990). [11] Grant, D. M. and Harris, R. K., editors. Encyclopedia of
+   nuclear magnetic resonance. (John Wiley, 1996). [12] Gershenfeld, N.
+   and Chuang, I. L. Bulk spin resonance quantum computation. Science,
+   275, 350-356 (1997). [13] Nielsen, M. A., Knill, E., and Laflamme, R.
+   http://wwwcas.unm.edu/ mnielsen/nmr/index.html (1998). [14] Cory, D.
+   G., Price, M. D. and Havel, T. F. Nuclear magnetic resonance
+   spectroscopy: An experimentally accessible paradigm for quantum
+   computing. Physica D 120, 82-101 (1998). 6 [15] Laflamme, R., Knill,
+   E., Zurek, W. H., Catasti, P., and Mariappan, S. V. S. NMR
+   Greenberger-Horne-Zeilinger states. Phil. Trans. Roy. Soc. A 356,
+   1941-1947 (1998). [16] Cory, D. G., Price, M. D., Maas, W., Knill, E.,
+   Laflamme, R., Zurek, W. H., Havel, T. F., and Somaroo, S. S.
+   Experimental quantum error correction. Phys. Rev. Lett. 81, 2152-2155
+   (1998). [17] Chuang, I. L., Gershenfeld, N., and Kubinec, M.
+   Experimental implementation of fast quantum searching. Phys. Rev. Lett.
+   18, 3408-3411 (1998). [18] Jones, J. A., and Mosca, M. Implementation
+   of a quantum algorithm on a nuclear magnetic resonance quantum
+   computer. J. Chem. Phys. 109, 1648-1653 (1998). [19] Chuang, I. L.,
+   Vandersypen, L. M. K., Zhou, X. L., Leung, D. W., and Lloyd, S.
+   Experimental realization of a quantum algorithm. Nature 393, 143-146
+   (1998). [20] Jones, J. A., Mosca, M., and Hansen, R. H. Implementation
+   of a quantum search algorithm on a nuclear magnetic resonance quantum
+   computer. Nature 393, 344-346 (1998). [21] Brassard, G., Braunstein,
+   S., and Cleve, R. Teleportation as a quantum computation Physica D 120,
+   43-47 (1998). [22] Zurek, W. H. Decoherence and the transition from
+   quantum to classical. Phys. Tod. 44, 36-44 (1991). [23] Schumacher, B.
+   W. Sending entanglement through noisy quantum channels. Phys. Rev. A
+   54, 2614-2628 (1996). In Schumacher's notation, we calculate Fe(I=2; E,
+   where E is the teleportation operation. [24] Barnum, H., Nielsen, M.
+   A., and Schumacher, B., W. Information transmission through a noisy
+   quantum channel. Phys. Rev. A 57, 4153-4175 (1998). [25] Poyatos, J.
+   F., Cirac, J. I., and Zoller, P. Complete characterization of a quantum
+   process: the two-bit quantum gate. Phys. Rev. Lett. 78, 390-393 (1997).
+   [26] Chuang, I. L., and Nielsen, M. A. Prescription for experimental
+   determination of the dynamics of a quantum black box. J. Mod. Opt. 44,
+   2455-2467 (1997). [27] Nielsen, M. A., and Caves, C. M. Reversible
+   quantum operations and their application to teleportation. Phys. Rev. A
+   55, 2547-2556 (1997). 7 Acknowledgments We thank David Cory, Chris
+   Jarzynski, Jun Ye, and Wojtek Zurek for useful discussions, the Stable
+   Isotope Laboratory at Los Alamos for use of their facility, and the
+   National Security Agency and Office of Naval Research for support.
+   Correspondence and requests for materials should be sent to M. A. N.
+   (mnielsen@theory.caltech.edu). (a) data(C2) ancilla(C1) target (H)
+   j\Psi i 0 0 Alice Bob entangle measure in the Bell basis conditional
+   unitary U00; U01; U10; U11 d d classicaldata classicaldata j\Psi i (b)
+   data (C2) ancilla(C1) target (H) j\Psi i 0 0 Alice Bob entangle
+   decohere tomography Figure 1: Schematic circuits for (a) the quantum
+   teleportation experiment, and (b) the control experiment. The
+   teleportation circuit is based upon that suggested by Brassard et al
+   21. Note that the control circuit simply omits two elements of the
+   teleportation experiment - rotation from the Bell basis into the
+   computational basis, immediately before the decoherence step, and the
+   conditional unitary operation. Commented pulse sequences for our
+   experiment may be obtained on the world wide web 13. 8 0.25 0.50 0.75
+   1.00 1.25 1.50 1.75 2.000.0 0.2 0.4 0.6 0.8 1.0 Ent ang lem ent fid
+   elit y Decoherence delay (s) Figure 2: Entanglement fidelity (a measure
+   of how well quantum information is preserved) is plotted as a function
+   of decoherence time. The bottom curve is a control run where the
+   information remains in C2. The curve shows a decay time of
+   approximately 0.5s. The top curve represents the fidelity of the
+   quantum teleportation process. The decay time is approximately 2.6s.
+   The information is preserved for a longer time, corresponding
+   approximately to the combined effects of decoherence and relaxation for
+   the Hydrogen, confirming the prediction of teleportation. 9

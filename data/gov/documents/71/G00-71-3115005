@@ -1,0 +1,215 @@
+http://expect.nist.gov/tkbiff/
+
+                              The tkbiff Home Page
+
+   tkbiff is yet another program to alert you to incoming mail. tkbiff
+   allows arbitrary commands to be executed upon mail reception. If you
+   like programs like xbiff++ but wish they were more flexible, then
+   you'll like tkbiff. For example, suppose you want to play your favorite
+   song when you get mail that mentions "windsurfing" but play a groan
+   when you get mail from your manager unless you're mentioned in the cc
+   in which case don't play anything. This kind of thing is easy to do
+   with tkbiff. [tkbiff.gif] tkbiff also doesn't waste your valuable
+   screen space with icons - instead, it shows you the mail itself. (If
+   this image were live, clicking on a message in the graphic would bring
+   up that message.)
+
+   tkbiff is fully customizable. If you want to change the appearance of
+   tkbiff or the way it behaves, it is easy to do.
+
+   tkbiff runs on Windows, NT, MacOS, and UNIX and supports IMAP, POP,
+   APOP, SSL, TLS and UNIX-style mail files and directories.
+
+   tkbiff comes with a very pleasant default configuration. The default
+   configuration is aimed at three things:
+     * Speed and Convenience
+       tkbiff lets you browse mail with a single mouse click -
+       particularly convenient if you normally use heavy-duty mail readers
+       (such as Outlook Express, Messenger, and Emacs VM) which can be
+       slow and in states where it is inconvenient to rearrange window
+       configurations just to peek to see if a mail message is worth
+       spending more time looking at.
+     * Feedback and Flexibility
+       Playing a sound is traditional - providing a fast way of finding
+       out who mail is from without having to shuffle through windows or
+       look at the screen in the first place. But tkbiff can do other
+       things on receipt of a message: pop it up automatically, display
+       the sender's icon, or even order pizza.
+       tkbiff can also decide what to do based on the sender, whether you
+       were listed in the To: line (versus Cc:), or how many times the
+       word "pizza" was mentioned (and if it was cheese or pepperoni).
+     * Minimal screen real-estate
+       tkbiff avoids unnecessary frills such as mailbox icons or postage
+       stamp icons or borders inside of borders inside of borders. All you
+       see is your mail and in a clear, obvious, and accessible way. Of
+       course, if you really want glorious 3d highlights, huge fonts, lots
+       of borders, animations, etc., tkbiff can provide that too.
+
+   The current version of tkbiff is 3.11
+
+Technical Hype
+
+     * tkbiff runs on UNIX, Windows, and MacOS.
+     * tkbiff supports SSL/TLS (encryption and certification) connections.
+     * tkbiff supports IMAP and POP. Sockets are not left idle.
+     * tkbiff supports (but does not require) the optional POP commands:
+       UIDL, TOP (for efficiency) and APOP (for security).
+     * tkbiff supports (but does not require) the optional IMAP command:
+       STARTTLS.
+     * tkbiff supports UNIX mail formats (Maildir, mbox, mboxrd, mboxo,
+       mboxcl, mboxcl2) and interoperates with all known mail clients.
+     * tkbiff is fully event-driven and includes an easy to use trace
+       facility. So if tkbiff seemingly hangs, you can ask what it's
+       waiting for and it will tell you. (Great for giving your ISP clear
+       and constructive suggestions about their flakey network or
+       misbehaving IMAP server!)
+     * tkbiff requires no special permissions to install or run.
+     * tkbiff needs no compilation.
+     * tkbiff won't interfere with other biffs. You can let your old biff
+       continue running if you want to compare them side by side.
+     * tkbiff understands problematic mail such as missing or duplicate
+       message ids, bare From lines, directories that live on caching NFS
+       servers, etc.
+     * tkbiff understands mail clients such as elm which do creative
+       things with file access times or temporarily remove messages and
+       then put them back.
+     * tkbiff can be used to monitor multiple mail files simultaneously.
+     * tkbiff can monitor new or old mail files. (Some people find tkbiff
+       so convenient that they use it as a fast browser on static mail
+       files or folders.)
+     * tkbiff's configuration file is portable. So your configuration will
+       work the same way on all platforms (unless, of course, you
+       configure it not to :-)
+     * tkbiff can take advantage of any system-specific features. (If you
+       want to have tkbiff control your proprietary audio player, tkbiff
+       will be happy to do so.)
+     * If you design a nifty configuration, you can redistribute tkbiff
+       with your configuration.
+     * tkbiff understands all the usual X arguments (-display, etc) and
+       has built-in support to redirect audios back to the client when
+       running remotely.
+     * tkbiff can be used in public environments - where the OS doesn't
+       know who you are. In such situations, tkbiff records no identifying
+       information and will prompt for it by default.
+     * For most sites, tkbiff takes about 1 minute to install.
+     * tkbiff can run with or without a GUI - or totally without a
+       user-interface (i.e., as an autonomous agent).
+
+Technical Anti-Hype
+
+   Here are some things about tkbiff that some people might not like.
+     * tkbiff does not presently support IMAP's AUTHENTICATE command.
+       (tkbiff does however support IMAP's STARTTLS command as well as
+       pre-secured SSL/TLS channels (a la SSLwrap) for either IMAP or
+       POP.)
+     * tkbiff does not presently support MH (a mail format specific to
+       UNIX). MH users are welcome to send me patches for tkbiff. They
+       appear to be pretty easy, although I figure all mh users use exmh
+       already which gives complete control of the GUI in the same way
+       that tkbiff does.
+     * Fully customizing tkbiff requires an editor rather than a GUI. GUIs
+       are great for simple configurations but people often hit a wall
+       with GUIs, finding that:
+          + they can't configure a tool the way they want
+          + they can't understand why their configuration doesn't work
+          + they can't switch or cut/paste between different
+            configurations easily
+          + they can't share configurations with other users
+          + they can't view the configuration GUI while they test out
+            their new configuration
+          + etc.
+       Compared to other mail notification tools, you'll find that tkbiff
+       is more flexible and understandable because tkbiff uses a
+       configuration script rather than forcing everything through a GUI.
+     * tkbiff requires Tcl and Tk. They are freely available from
+       Scriptics.
+
+If you're already using an older version of tkbiff
+
+   This version of tkbiff (version 3) does not support configuration files
+   created for tkbiff 2. For most people, it will only take 1 minute to
+   cut and paste their preferences from the old config file to their new
+   one. If you're not sure which tkbiff you've been running, don't worry -
+   tkbiff will autodetect which version your configuration file expects
+   and warn you only if there's a problem.
+     __________________________________________________________________
+
+Downloading tkbiff
+
+  . . . for UNIX
+
+Get tkbiff.tar.Z or tkbiff.tar.gz. The gz file is preferrable simply because it
+is quicker to download. However, if you have no idea what to do with a gz file
+once you've got it, just transfer the Z version of the distribution. Then, at
+the command line, type:
+
+ uncompress < tkbiff.tar.Z | tar xvf -
+
+   This will create a directory containing the tkbiff distribution. Change
+   to that directory and read the INSTALL file.
+
+. . . for Windows and MacOS
+
+   tkbiff works well on Windows and MacOS, but a nice package for shipping
+   it has not yet been constructed. For now, grab the files one at a time.
+   (Fortunately, there aren't that many required files - in fact, there's
+   only one!)
+
+   tkbiff.tcl THIS IS IT - the file to download for Windows or MacOS.
+   Note: if you've got the Tcl plugin loaded in your browser, you'll have
+   to shift-click when fetching to avoid it being executed!
+   INSTALL After downloading (see above), read these installation
+   instructions.
+   example audios Audios used in the example tkbiff configuration - you
+   needn't take any - but they're supplied for completeness sake.
+   documentation No need to get these files manually - they will be
+   downloaded automatically as necessary. But you can browse them now if
+   you like.
+
+   Once you've downloaded the file(s), read the installation instructions.
+     __________________________________________________________________
+
+Reasons to upgrade - recent improvements for old users
+
+     * The main window bindings now work in message windows, too. So if a
+       message window pops up under your cursor, you can get rid of it
+       without going back to the main window (or keyboard).
+     * You can now scroll message windows from the keyboard (even if you
+       are already holding down the temporary popup button) - space to go
+       forwards a page, backspace (and delete) to go back. (Scrollbar or
+       panning still works, of course.)
+     * Other bug fixes and improvements. See History for details.
+     __________________________________________________________________
+
+Documentation
+
+   There's a lot of documentation for tkbiff. Fortunately, most people
+   will be able to use tkbiff without looking at any of it!
+     __________________________________________________________________
+
+Support
+
+   Although I can't promise anything in the way of support, I'd be
+   interested to hear about your experiences using it (good or bad). I'm
+   also interested in hearing bug reports and suggestions for improvement
+   even though I can't promise to implement them.
+
+   If you send me a bug, fix, or question, include the version of tkbiff
+   (as reported by <?>), version of Tcl and Tk, and name and version of
+   the OS that you are using. Before sending mail, it may be helpful to
+   verify that your problem still exists in the latest version.
+
+   Awards, love letters, and bug reports may be sent to:
+
+   Don Libes
+   National Institute of Standards and Technology
+   Bldg 220, Rm A-127
+   Gaithersburg, MD 20899
+   (301) 975-3535
+   libes@nist.gov
+     __________________________________________________________________
+
+   Go to tkbiff homepage.
+   Go to tkbiff documentation.
+
+   Last edited: Mon Aug 7 13:50:42 EDT 2000 by Don Libes

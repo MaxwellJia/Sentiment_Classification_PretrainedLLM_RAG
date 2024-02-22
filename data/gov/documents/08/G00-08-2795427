@@ -1,0 +1,388 @@
+http://nvo.gsfc.nasa.gov
+
+
+
+   [space.gif]
+   [space.gif]
+
+              SSDS General Resource Vocabulary Draft Definition
+
+                          Version 0.1 (28 Apr 1999)
+                          by Ray Plante & Ed Shaya
+
+   Contents:
+     * Purpose
+     * Vocabulary Organization and Its Application to a Resource
+     * Vocabulary Definition
+          + Part A: Queryable Fields
+          + Part B: Non-Queryable Fields
+     * Conformity Requirements
+     * Relationship to Other Vocabularies
+
+Purpose
+
+   The purpose of the General Resource Vocabulary is to describe an
+   information service in terms of the data it can deliver. This
+   description is given in terms of concepts that are meaningful across
+   the entire discipline of space science.
+
+   The intended use of this vocabulary by an interoperable system is
+   primarily as a way to determine whether a specific query should be sent
+   to the resource being described. The secondary use is to record
+   information that is useful to the end-user for obtaining more
+   information about the resource directly.
+
+   It is envisioned that data providers could provide descriptions of
+   their services using this vocabulary. This might be done for each
+   service by filling in values into a form.
+
+   Comment:
+          Explicitly excluded from this vocabulary is information
+          regarding how the resource can be queried as this is considered
+          an implementation-specific detail.
+
+Vocabulary Organization and Its Application to a Resource
+
+   The vocabulary definition is organized as a list of fields, or
+   concepts, which have associated values that describe attributes of the
+   resource. Along with each field is a definition of the concept and,
+   where applicable, the restrictions on the values it can have.
+   Restrictions can take the form of controlled vocabulary.
+
+   Question:
+          How "controlled" should controlled vocabulary be? In some cases,
+          strictly controlled vocabulary--where values can only be drawn
+          from a given list--is adequate. A looser alternative might
+          permit the value to be drawn from a predetermined list, but if
+          the list does not include an appropriate term, a
+          resource-supplied value may be used; see Data Package for a
+          possible example.
+
+   The vocabulary definition is divided into two categories. The first
+   list addresses the primary use of the vocabulary, determining whether a
+   query should be sent to the resource. For each field, it is expected
+   that the data provider will provide two pieces of information when
+   describing a resource:
+     * whether the field is queryable. The field is considered queryable
+       if the resource, upon receiving a query containing a reference to
+       the field and a match-string, can return records based on some
+       comparison with the match-string and the resource held data for the
+       specified field.
+     * the restrictions on field values that apply to all the deliverable
+       data from the resource as a whole. That is, the resourse lists the
+       constraints on the field value necessary to return at least one
+       record matching a query that uses the field.
+
+   In general, these two pieces of information can be used independently.
+   The latter piece can be used by a query gateway to determine whether
+   none of the data records from a resource matches a given query; if so,
+   the query gateway can choose not to forward the query to that resource.
+   The former piece indicates whether the service will properly use the
+   part of the query referring to that field. It is possible that the
+   field is queryable but has no restrictions in value. It is also
+   possible that a field is not queryable but is still restricted in
+   applicable values.
+
+   Example:
+          An archive may not support searches by time; nevertheless, the
+          service may inform that the data have all been acquired after
+          1994.
+
+   The format for expressing field value constraints is to be determined.
+   In general, multiple constraints can be given. In the case of string
+   values, all strings that apply to the resource can be listed.
+
+   Example:
+          A single resource that serves data from several HST
+          instruments--e.g. NICMOS, STIS, WFPC2--might list each one as a
+          value for the instrument field.
+
+   For some of the fields, the constraint will typically only contain a
+   single value. A null-valued constraint indicates that no constraints
+   should be associated with the field. In other words, records should be
+   returned with information on this field no matter what values are
+   present. The query should be constrained by at least one field.
+
+   The second list of fields specifically address the secondary use of
+   this resource vocabulary, recording other information that might be
+   useful to the end-user. These fields should be considered
+   non-searchable attributes of the resource.
+
+   Note that while this vocabulary may define how values and constraints
+   may be represented as text, it does not define how the field itself is
+   represented as this is considered implementation-dependent. Field names
+   are merely conceptual handles for the given definitions.
+   Implementations of this vocabulary should define how each field maps to
+   its representation.
+
+Vocabulary Definition
+
+   Field Index:
+     * Part A: Queryable Fields
+          + Facility
+          + Facility Type
+          + Instrument Host
+          + Instrument
+          + Instrument Type
+          + Observable
+          + Sampling Mode
+          + Data Class
+          + Data Package
+          + Time
+          + Principal Investigator
+     * Part B: Non-Queryable Fields
+          + Resource Name
+          + Data Service Site
+          + Curator
+          + Resource URL
+          + Sub-vocabularies
+
+  Part A: Queryable Fields
+
+   Facility
+          Definition: The name of the organization responsible creating
+          the data. This can be observatory name, mission name, or general
+          project name.
+
+   Facility Type
+          Definition: The type of organization responsible for creating
+          the data.
+          Controlled Values:
+
+                observatory
+                mission
+                program
+                laboratory
+                other
+
+          Notes:
+
+          + This term is new since the 22 Apr 1998 Team Meeting.
+          + Meanings of vocabulary terms to be defined.
+
+   Instrument Host
+          Definition: the name of the platform that hosts the measuring
+          instrument. Time may be the name of a telescope or spacescraft.
+
+   Instrument
+          Definition: the name of the specific measuring instrument that
+          produced the deliverable data.
+
+   Comment:
+          One or more of Facility, Instrument Host, and Instrument may
+          have the same value. For example, an archive of VLA data may
+          have both Instrument Host and Instrument equal to VLA.
+
+   Instrument Type
+          Definition: the class of measuring instrument.
+          Controlled Values:
+
+                frequency spectrometer
+                composition spectrometer
+                photometer
+                polarizer
+                imager
+                radar
+                position measurer
+                particle analyzer
+                field detector
+                riometer
+                sounder
+
+   Observable
+          Definition: the field or particle that the measuring
+          instrument's detector is sensitive to.
+          Controlled Values:
+
+                photon
+                electron
+                proton
+                ion
+                atom
+                molecule
+                magnetic field
+                electric field
+                pressure
+                temperature
+
+   Sampling Mode
+          Definition: the observational data sampling scheme used to
+          create a basic set of measurements.
+          Controlled Values:
+
+                time series -- a sampling scheme that produces a set of
+                measurements which vary primarily as a function of time.
+                image -- a sampling scheme that produces a set of
+                measurements which vary regularly along two dimensions.
+                aperture -- a sampling scheme that produces single-valued
+                measurements
+                spectrum -- a sampling scheme that produces a set of
+                measurements which vary primarily as a function of
+                frequency.
+                visibility -- a sampling scheme that produces a
+                measurement of the amplitude and phase of a Fourier
+                component of the spatial distribution of some quantity.
+                scan -- a sampling scheme that produces a set of
+                measurements which vary regularly along one dimension.
+
+          Comments:
+
+          + Would it be worthwhile to add in situ as a one of the allowed
+            values?
+
+   Data Class
+          Definition: the general type of the deliverable data object or
+          the types included within the deliverable data object.
+          Controlled Values:
+
+                pointed observation -- an observation of a specific target
+                or set of targets.
+                survey observation -- an observation that is part of
+                program of observations that cover some region regardless
+                what targets appear in it.
+                derived -- a data object whose elements have been derived
+                from observations or simulations.
+                simulation -- a data object containing calculations
+                derived from a set of boundry conditions. This is meant to
+                specifically address computer simulations.
+                model fit -- a data object representing a model whose
+                parameters have been fit to data
+                literature -- a text-based document
+
+          Comments:
+
+          + Earlier suggestions not included were ephemeris and software;
+            should they be?
+
+   Data Package
+          Definition: an identifying name indicating the format used to
+          encode the data object or objects.
+          Recognized Values: FITS, CDF, HDF, XDF, ASCII, custom
+          Comments:
+
+          + This field may be a good example of where loosely controlled
+            vocabulary would be useful. See question on controlled
+            vocabulary in previous section.
+          + Recognized values should be defined.
+
+   Time
+          Definition: The time or time range associated with the
+          deliverable data object. Whenever appropriate, the value should
+          refer to the time that the data was created or acquired.
+          Comments:
+
+          + format for values to be defined.
+          + Recall that when resources describe themselves using this
+            vocabulary, they should apply this field to all of the data
+            served by the resource as a whole. That is, they should
+            specify the range (or ranges) of time associated with all the
+            data deliverable by the resource.
+
+   Principal Investigator
+          Definition: The name of the first author or primary person
+          responsible for the creation of the data object.
+          Comments:
+
+          + format to be defined
+          + the definition needs to clarify whether it applies to an
+            "instrument PI", a "guest-observer PI", or "science PI" when
+            more than one applies to a data object.
+
+   Comment:
+          Several fields proposed in the 22 Apr 1998 Team Meeting--namely,
+          Object Name, Object Type, and Bandpass/Energy Range--were
+          dropped for this version of the vocabulary because they seemed
+          too discipline-specific for this vocabulary level. It was
+          thought, however, that this should not prevent someone from
+          submitting general queries that include these concepts. See the
+          section on other vocabularies below for a discussion of this
+          issue.
+
+  Part B: Non-Queryable Fields
+
+   Resource Name
+          Definition: the name of the specific data resource being
+          described with this vocabulary.
+          Comments: see also Data Service Site.
+
+   Data Service Site
+          Definition: the name of the data center providing data.
+
+   Curator
+          Definition: the person responsible for the resource
+
+   Resource URL
+          Definition: The URL for accessing the home page associated with
+          the resource or the data center serving the resource. This URL
+          is intended for end-users; it should not be a URL that accepts
+          queries, and it usually will not be the URL of an HTML query
+          form.
+
+   Sub-vocabularies
+          Definition: the identifiers for sub-vocabularies supported by
+          this resource. Supporting a sub-vocabulary indicates that the
+          resource can understand queries that include terms which conform
+          to the sub-vocabulary.
+          Comments: See the section on other vocabularies below.
+
+Conformity Requirements
+
+   To be defined.
+
+Relationship to Other Vocabularies
+
+   It is expected that other vocabularies will be defined for data
+   providers to augment their descriptions of resources. These
+   vocabularies can add either discipline-specific information or
+   complement information which is not discipline-specific (such as
+   bibliographic vocabularies). These other vocabularies could be employed
+   in largely the same way that this one is in describing a resource: for
+   each field, the provider indicates whether it is queryable and what the
+   applicable restrictions are on its value. This information could be
+   stored along with the descriptive information associated with this
+   General Vocabulary.
+
+   This General Resource Vocabulary is often referred to as a "top-level"
+   vocabulary. This means that it describes concepts that are common to
+   all resources within the space science community. Concepts that are
+   only applicable to certain sub-disciplines should be relegated to
+   sub-vocabularies. Similar concepts that are expressed in significantly
+   different ways by different disciplines (e.g. "bandpass" vs. "energy
+   level", position as [longitude, latitude] vs. [x,y,z] vs. name
+   location) should likewise be segregated into different
+   sub-vocabularies. This policy for vocabulary definition should not only
+   lead to smaller vocabularies, but should also reduce the burden on the
+   data provider of having to force fit a largely inapplicable concept.
+
+   The heirarchical relationship of vocabulary need not be reflected in
+   the search interfaces presented to users. For example, there should be
+   nothing preventing a search gateway such as ISAIA from presenting a
+   "first page" that allows the user to ask, "Where can I find X-ray
+   images of Jupiter?" (Of course, this query would usually come to the
+   gateway in some parameterized form.) This query can be handled in two
+   ways. First, by examining the query, the gateway can see that the query
+   includes one criterion from the General vocabulary--sampling mode being
+   images--and two from another sub-vocabulary--the X-ray frequency band
+   and the object Jupiter. Thus, it can determine that the query should
+   only go to services that support the sub-vocabulary, and it should not
+   send it to services that do not have image data.
+
+   The second way to handle this "first page" query addresses the case
+   where two sub-vocabulary define slightly different concepts. For
+   example, an astronomical vocabulary might define a waveband field while
+   a space physics vocabulary defines energy band. If the gateway (or more
+   precisely, the user) wants to send the query to both astronomical and
+   space physics sites, then the gateway should employ a query conversion
+   service that can translate the cross-over terms from one vocabulary to
+   another. In the case of our example, the "X-ray" waveband could be
+   converted to a range in energy before sending the query to a space
+   physics site.
+     __________________________________________________________________
+
+
+    rplante@ncsa.uiuc.edu
+
+
+    edward.j.shaya.1@gsfc.nasa.gov
+
+   Last modified: March 12 2001

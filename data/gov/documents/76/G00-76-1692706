@@ -1,0 +1,285 @@
+http://oceanesip.jpl.nasa.gov/BTmodel/
+
+   OCEANEsip banner
+
+   spacer_img Home > BarotropicModel > Along-Track
+
+
+                  GUI
+    [ocean_esip_side_separator.jpg]
+
+   Datasets
+   [ocean_esip_side_separator.jpg]
+
+   Objectives
+   [ocean_esip_side_separator.jpg]
+
+   Digital Earth
+   [ocean_esip_side_separator.jpg]
+
+   VACS
+   [ocean_esip_side_separator.jpg]
+
+   BigSur
+   [ocean_esip_side_separator.jpg]
+
+   People
+   [ocean_esip_side_separator.jpg]
+
+   Federation Home
+   [ocean_esip_side_separator.jpg]
+
+
+
+     __________________________________________________________________
+
+                          Altimetry Documents
+
+                         TOPEX Cycle Start Times
+                     [ocean_esip_side_separator.jpg]
+
+                   ESIP Tech Reports
+                   [ocean_esip_side_separator.jpg]
+
+
+     __________________________________________________________________
+
+   Altimetry Links
+                           Open in New Window
+
+                   Center for Space Research, U. Texas
+                     [ocean_esip_side_separator.jpg]
+
+                   NOAA Lab for Satellite Altimetry
+                   [ocean_esip_side_separator.jpg]
+                      Surface Currents (Lagerloef)
+                    [ocean_esip_side_separator.jpg]
+
+                  Colorado Cntr Astrodynamics Research
+                  [ocean_esip_side_separator.jpg]
+
+                   GSFC Altimeter Pathfinder
+                   [ocean_esip_side_separator.jpg]
+
+                Naval Research Lab, Stennis Space Center
+                [ocean_esip_side_separator.jpg]
+
+                   TOPEX/
+                   Poseidon Project
+                   [ocean_esip_side_separator.jpg]
+
+                   Delft Altimetry
+                   [ocean_esip_side_separator.jpg]
+
+                   ERS Project
+                   [ocean_esip_side_separator.jpg]
+
+                   GFO: GEOSAT Follow-On
+                   [ocean_esip_side_separator.jpg]
+
+                   PODAAC
+                   [ocean_esip_side_separator.jpg]
+
+                   AVISO
+                   [ocean_esip_side_separator.jpg]
+
+                    Barotropic Model - Along-Track (T/P)
+
+                    Ahmed Haider Ali and Victor Zlotnicki
+
+     __________________________________________________________________
+
+   DATA ACCESS
+
+   The barotropic model output, sampled along the Topex/Poseidon track,
+   and read software, are available at our ftp site
+
+   Last cycle available: 281
+   Temporal extent: Sep 23, 1992 - May 09, 2000
+
+   The starting times corresponding to each TOPEX cycle are found in our
+   Table of Cycle Start Times.
+   _______________________________________________________________________
+
+   DATASET OVERVIEW TOPEX/Poseidon
+     * This dataset is organized along the Topex/Poseidon tracks, at the
+       latitude-longitudes of our nominal 'grid', just as our residuals.
+       It includes the following parameters:
+
+     * TIME2: time of each point, for pass j, position i along the pass.
+     * RES: sea level residual in mm.
+     * IB: inverted barometer from the T/P GDR, in mm. This value is
+       derived from ECMWF pressure.
+     * BM: Barotropic Model 'sea level', in 0.1 mm, at same time-lat-lon
+       as res. Details below.
+     * BMIB: Barotropic Model - IB in 0.1 mm. Because the model was forced
+       with NCEP wind and pressure, this IB is not the same as the field
+       'IB', from ECWMF.
+     * HFBM: High Frequency part of BM, in 0.1 mm. Details below.
+     * HFBMIB: High Frequency part of (Full Model - IB) in 0.1 mm
+
+     All quantities have had their 1993-1996 time-average removed.
+
+     The Along-track grid has fixed locations for all cycles, 6.2 km
+   spacing along-track. The lat-lons (also (3127, 254), but independent of
+   time) are in a separate file, latlon.dat.
+
+     The values of TIME2, RES and IB are exactly the same as those in the
+   alongtrack residuals dataset (as are the lat-lon values).
+
+     For details on the barotropic model itself, see the description
+   below.
+   _______________________________________________________________________
+
+   DATASET VERSION
+   vBT10v2000-12-20-AKH. See residuals description here.
+
+
+   Date of Last Update
+   2001-06-28
+   _______________________________________________________________________
+
+   KNOWN PROBLEMS
+
+   For residuals problems, look here.
+   The barotropic model version used here has masked out the
+   Mediterranean, Black and Caspian seas, where the T/P data is otherwise
+   good, and all shallow waters (Patagonian shelf, Grand Banks, etc).
+   Special tuning is needed to get those regions performing better than
+   inverted barometer alone.
+
+   The wind stress is derived from 1000 mbar, not 10 m wind. In our
+   experiments, this conversion matched T/P data better than when 10 m
+   winds were used, even though it is not defensible on first principles,
+   and the Kondo stress parameterization is for 10 m wind.
+     __________________________________________________________________
+
+   PROCESSING HISTORY
+   _______________________________________________________________________
+
+   DATA FORMAT
+
+   Units, Data Type, Array Dimensions
+     * TIME2(integer*4 time2(3127,254)): time of each point. time2(i,j)
+       corresponds to pass number j, position i along the pass. In seconds
+       past Jan 1, 1992.
+     * RES (integer*2 res(3127,254)): sea level residual in mm.
+       (res(i,j)=32767 is a missing value flag; the normal range for res
+       is -1500 to +1500 mm)
+     * IB (integer*2 ib(3127,254)): inverted barometer from the T/P GDR,
+       in mm. This value is derived from ECMWF pressure.
+     * BM (integer*2 bm_res(3127,254)): Barotropic Model 'sea level', in
+       0.1 mm, at same time-lat-lon as res.
+     * BMIB (integer*2 bm_res(3127,254)): Barotropic Model - IB in 0.1 mm.
+       Because the model was forced with NCEP wind and pressure, this IB
+       is not the same as the field 'IB', from ECWMF.
+     * HFBM (integer*2 bm_res(3127,254)): High Frequency part of BM, in
+       0.1 mm.
+     * HFBMIB (integer*2 bm_res(3127,254)): High Frequency part of (Full
+       Model - IB) in 0.1 mm
+
+   Special Values
+   Value set to 32767 where data does not exist or has been edited out
+   Residual values have 10,000 mm added in shallow water
+     * To use deep data only, exclude values h: abs(h) > 1500
+     * To use shallow also, if(abs(h) .gt. 1500 AND h .lt. 32767)
+       h=h-10000
+
+   Data Organization
+   Each file corresponds to one cycle of exactly 3127x254 points. Each
+   group of 3127 consecutive points corresponds to one 'pass'. There are
+   254 passes in a cycle. Each file contains equator crossing time, the
+   relative time (in sec) of of each 1 sec sample, and the sea level
+   residual in mm. Latitude and longitude values (3127x254, in degrees)
+   are in a separate file, common to all cycles.
+
+   Read Software
+     * in Fortran and IDL
+   _______________________________________________________________________
+
+   MODEL DESCRIPTION
+
+   The residuals themselves are described here.
+
+   Barotropic Model BT-PHA-1.0
+
+   * Code:
+   - Barotropic model of Ponte (1993, 1997, 1999),
+   as modified by Hirose et al (2000):
+   * subsurface no-slip condition
+   * topography from ETOPO5 (1.125 averages) over the unmasked oceans
+   * optimized friction parameter, -bu/H, b=2 cm/s
+   * Resolution: 1.125° x 1.125°
+
+   - Coverage/landmask: global, 75°S to 65°N, EXCEPT it does NOT
+   include Mediterranean sea, North Sea, Sea of Japan, smaller
+   enclosed seas and bays, or waters shallower than 1000m (such
+   as the Patagonian shelf, Indonesian Sea, Hudson Bay, etc)
+
+   * Forcing:
+   - Atmospheric pressure and 1000 mbar winds, from NCEP Reanalysis, NCAR
+   dataset DS090, http://dss.ucar.edu/datasets/ds090.0/ . These forcing
+   files are issued every 6 hrs.
+   - The 1000 mbar wind is converted to wind stress using the Kondo (1975)
+   coefficient.
+   - Both the pressure and wind components are time-filtered: at each grid
+   point a
+   two-pass 4-point (24 hr) average is applied, to remove effect of
+   atmospheric
+   thermal tides.
+
+   * Inputs required:
+   - 6-hourly grids of atmospheric pressure, north wind stress, east wind
+   stress.
+   - time-invariant bathymetric grid
+   - time-invariant land-mask grid
+   - parameters file, includes time step, days to integrate, westernmost
+   longitude, southernomost latitude; flags on whether or not to write
+   grids and how often, whether to smooth in time and how much, Rayleigh
+   friction coeff (cm/s), Newtonian damping coeff (days).
+   - optional: topex sea level file. If the corresponding option is on,
+   this file
+   is read, the model is sampled at Topex time-lat-lon on-the-fly, and an
+   output file is generated for later statistical summary.
+
+   * Outputs:
+   - 1-hourly grids of output model sea level, sea level-IB
+   - 1-hourly grids of output water velocity (optional)
+
+   * Filtering:
+   - a 2-pass, 20-day bin average is applied to the 1-hour grids at each
+   lat-lon node, then substracted from them, to produce the
+   'high-frequency' values.
+
+   * References:
+
+   Ali, A.H., V. Zlotnicki, N. Hirose, I. Fukumori, and R. M. Ponte:
+   Effect of different Wind Forcings on a barotropic ocean model's ability
+   to fit Topex and BPR data. AGU SF 12/2000. (preprint at
+   http://oceans-www.jpl.nasa.gov/vz)
+
+   Hirose N., I. Fukumori, V. Zlotnicki and R. M. Ponte, High-Frequency
+   Barotropic Response to Atmospheric Disturbances: Sensitivity toForcing,
+   Topography, and Friction. Submitted to J. Geophys. Res., 2000.
+   (preprint at http://oceans-www.jpl.nasa.gov/vz)
+
+   Kondo J., Air-Sea Bulk Transfer Coefficients in diabatic conditions.
+   Bound. Layer Meteorol. 9, p91-112, 1975
+
+   Ponte, R. M., Variability in a homogeneous global ocean forced by
+   barometric pressure, Dyn. Atmos.Oceans, 18, 209-234, 1993.
+
+   Ponte, R. M., Nonequilibrium response of the global ocean to the 5-day
+   Rossby-Haurwitz wave in atmospheric surface pressure, J. Phys.
+   Oceanogr., 27, 2158-2168, 1997.
+
+   Ponte, R. M. and P. Gaspar, Regional analysis of the inverted barometer
+   effect over the global ocean using TOPEX/POSEIDON data and model
+   results, J. Geophys. Res., 104, 15 587-15 601, 1999.
+
+
+
+   [top]
+     __________________________________________________________________
+
+   Last Updated: 2001-08-02

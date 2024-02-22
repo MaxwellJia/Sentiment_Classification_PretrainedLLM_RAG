@@ -1,0 +1,40 @@
+http://www-t10.lanl.gov/tools.html
+
+   T-10 | Welcome | People | Research | Projects | Tools | News | Events |
+   Jobs | Dislaimer/Privacy
+
+                              T-10 Software Tools
+
+   The following computational tools are distributed by T-10.
+     * [rindicon.gif] RIND
+       Description: RIND stands for Reconstructed Independence. Given an
+       alignment of protein sequences, rind computes a maximum-likelihood
+       estimate of the number of times each residue was replaced into each
+       position. Rind averages over several of the most likely phylogenies
+       it is able to find using a user-specified distance-based method
+       such as neighbor joining. The program can also make local changes
+       to the topology when these will improve the likelihood. The
+       evolutionary model used throughout the computation allows for
+       different residue frequencies in each position, but ignores the
+       genetic code.
+       Support: Bill Bruno
+     * NAMoT
+       Description: NAMoT stands for Nucleic Acid Modeling Tool.
+       Support: Chang-Shung Tung
+     * Weighbor
+       Description: Weighbor is a weighted version of Neighbor Joining
+       that gives significantly less weight to the longer distances in the
+       distance matrix. The weights are based on variances and covariances
+       expected in a simple Jukes-Cantor model. The criterion for which
+       pair is joined is based on a likelihood function on the distances.
+       The resulting trees are less perturbed by adding distant taxa
+       compared to Neighbor Joining, and negative branch lengths are
+       avoided. The method does not suffer from long branch attraction as
+       maximum parsimony and other methods do. The method is much faster
+       than maximum likelihood, usually faster than maximum parsimony, and
+       a lot slower than Neighbor Joining.
+       Support: Bill Bruno
+     * DISTANCE
+       Description: Tool for estimation of reversible substitution
+       matrices and evolutionary distance
+       Support: Bill Bruno

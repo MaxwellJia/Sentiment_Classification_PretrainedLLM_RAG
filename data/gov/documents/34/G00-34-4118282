@@ -1,0 +1,45 @@
+http://ie.lbl.gov/ensdf/ens_start.htm
+
+                              Isotope Explorer
+                               version 3.0 b1
+
+               IP, LBNL - Lund collaboration   [lbnllund.gif]
+
+     This service is a general tool for displaying ENSDF-formatted
+     nuclear data. The following features are currently implemented:
+     * HTML Tables from data sets (several varieties)
+     * ENSDF/2 formatted data sets
+     * Level drawings and Band drawings (Java)
+
+     The function displaying HTML tables is reasonably well debugged and
+     works for most JavaScript-enabled browsers. The Java drawings are in
+     a very preliminary stage of development and require the latest
+     version of Netscape Navigator (v.4.5 or later on the Windows, Linux
+     and Sun UNIX platforms works).
+
+     ENSDF data are from the ENSDF file, which is maintained by the
+     National Nuclear Data Center (NNDC) at Brookhaven. Please contact
+     Jagdish K. Tuli (Tuli@BNL.GOV) for errors in the data.
+
+     Superdeformed data are from an evaluation by Balraj Singh
+     (balraj@mcmail.cis.McMaster.CA).
+
+     UNSDF data are unevaluated ENSDF formatted data usually from one
+     publication or experiment.
+
+     Please contact Frank Chu (SYFChu@LBL.GOV) for presentation problems.
+
+     Example of usage:
+
+     To get a gamma table for ^60Co decay:
+    1. Enter 60 in the Nuclide field
+    2. Select beta- decay in the Data set select box
+    3. Click the Get List button
+    4. Select 60Ni 60Co b- decay (5.2714 Y) in the appearing Data set
+       select box
+    5. Select Gamma table in the Output select box
+    6. Click the Display button
+
+     The references button    [refs.gif]    gives access to the NSR
+     server. With this facility you can search the Nuclear Science
+     References file.

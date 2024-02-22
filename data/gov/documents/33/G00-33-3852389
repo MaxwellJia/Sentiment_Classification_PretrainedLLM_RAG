@@ -1,0 +1,1147 @@
+http://nmp-techval-reports.jpl.nasa.gov/DS1/PEPE_Integrated_Report.pdf
+
+   Plasma Experiment for Planetary Exploration (PEPE) DS1 Technology
+   Validation Report Prepared by: David T. Young University of Michigan
+   College of Engineering Department of Atmospheric Oceanic and Space
+   Sciences Tel.: 734-936-7263 e-mail: dtyoung@umich.edu Jane E. Nordholt
+   Los Alamos National Laboratory Space and Atmospheric Science Group
+   NIS-1 Tel.: 505-667-3897 e-mail: jnordholt@lanl.gov John J. Hanley
+   Southwest Research Institute Space Research and Instrumentation
+   Division Tel.: 210-522-2884 e-mail: jhanley@swri.edu Deep Space 1
+   Technology Validation Report-Plasma Experiment for Planetary
+   Exploration Table of Contents Section Page Extended
+   Abstract...............................................................
+   .......................................................................
+   ..v PEPE Fact
+   Sheet..................................................................
+   ......................................................................v
+   iii 1.0
+   Introduction...........................................................
+   .......................................................................
+   ...........1 2.0 Technology Description
+   .......................................................................
+   ...................................................1 2.1
+   Overview...............................................................
+   .......................................................................
+   ...........................................................1 2.2 Key
+   Technology-Validation Objectives at
+   Launch.................................................................
+   .........................................................3 2.2.1
+   Miniaturized 3-dimensional Linear Electric Field (LEF3D) Time-of-flight
+   (TOF) Optics ..............................................3 2.2.2
+   High-Speed TOF Electronics
+   .......................................................................
+   .......................................................................
+   .........3 2.2.3 Integrated Ion/Electron
+   Optics.................................................................
+   .......................................................................
+   .............3 2.2.4 Data-Acquisition
+   System.................................................................
+   .......................................................................
+   ......................3 2.2.5 High-Voltage
+   System.................................................................
+   .......................................................................
+   ............................3 2.2.6 High-Density Packaging Architecture
+   .......................................................................
+   ................................................................3 2.3
+   Expected Performance Envelope
+   .......................................................................
+   .......................................................................
+   ..........3 2.4 Detailed
+   Description............................................................
+   .......................................................................
+   ...........................................5 2.4.1 Miniaturized
+   3-dimensional Linear Electric Field (LEF3D) Time-of-flight (TOF) Optics
+   ..............................................5 2.4.2 High-Speed TOF
+   Electronics
+   .......................................................................
+   .......................................................................
+   .........6 2.4.3 Integrated Ion/Electron
+   Optics.................................................................
+   .......................................................................
+   .............6 2.4.4 Data-Acquisition
+   System.................................................................
+   .......................................................................
+   ......................6 2.4.5 High-Voltage
+   System.................................................................
+   .......................................................................
+   ............................8 2.4.6 High-Density Packaging Architecture
+   .......................................................................
+   ................................................................8 2.5
+   Technology
+   Interdependencies......................................................
+   .......................................................................
+   ...............................9 2.5.1 PEPE Plasma Spectrometer
+   Technology.............................................................
+   ......................................................................9
+   2.5.2 Data-Acquisition and High-Voltage Systems
+   .......................................................................
+   ....................................................9 2.6 Test
+   Program................................................................
+   .......................................................................
+   ....................................................9 2.6.1 Ground
+   Test...................................................................
+   .......................................................................
+   ..........................................9 2.6.2 Flight
+   Test...................................................................
+   .......................................................................
+   ...........................................10 2.7 Comparison Between
+   Ground and Flight
+   Test...................................................................
+   .............................................................14 3.0
+   Technology Validation Summary
+   .......................................................................
+   ...................................14 4.0 Technology Application for
+   Future Missions
+   .......................................................................
+   .................14 5.0 List of
+   References.............................................................
+   ....................................................................15
+   Figures Figure Page Figure 1. Photo of PEPE on the Bench Prior to
+   Delivery...............................................................
+   ..........................................................1 Figure 2.
+   Cross Section Illustrating the Location of PEPE Subsystems and Layout
+   of PEPE Ion/Electron-Optical System....... 2 Figure 3. Schematic Block
+   Diagram of the PEPE Electronic Subsystems and Their Relationship to
+   Sensor Elements.............. 4 Figure 4. Cross-sectional Detail of the
+   PEPE TOF
+   Cylinder...............................................................
+   .................................................... 5 Figure 5. Data
+   from 26 Jan. 1998 0000-0600 UT Illustrating PEPE's Response to
+   Quiescent Solar-Wind Plasma ..................... 7 Figure 6. Data from
+   1 March 1998 0600-1200 UT Illustrating PEPE's Response to Disturbed
+   Solar-Wind Conditions............. 7 Figure 7. Data from 20 April 1998
+   0600-1200 UT Showing the Startup (~0905 UT) and Operation of the IPS
+   Xe+
+   Thruster...............................................................
+   .......................................................................
+   ................................... 8 Figure 8. TOF Spectrum Based on
+   Direct Event TOF
+   Data...................................................................
+   ................................................ 11 Figure 9. Spectra
+   Comparing Solar-Wind Data From PEPE and the
+   WIND/SWE...............................................................
+   ............. 13 Figure 10. Daily Average TOF Counts for a Day Without
+   IPS Firing (Day 009, 1999), a Day With Continuous IPS Firing Early in
+   the Mission (Day 083, 1999), and a Day Much Later in the Mission With
+   Continuous IPS Firing (Day 216, 1999)
+   .......................................................................
+   .......................................................... 14 iii Deep
+   Space 1 Technology Validation Report-Plasma Experiment for Planetary
+   Exploration Appendices Appendix Page Appendix A. PEPE's Telemetry
+   Channels...............................................................
+   ....................................16 Appendix B. PEPE's Date of
+   Turn-on and Provisional Times-of-Data-Capture List
+   ....................................17 iv Deep Space 1 Technology
+   Validation Report-Plasma Experiment for Planetary Exploration EXTENDED
+   ABSTRACT outgassing exotic plastics. A second new process was required
+   to vapor-deposit a variable-depth, extremely high- The Plasma
+   Experiment for Plasma Exploration (PEPE) is a ohmic coating on
+   high-purity ceramic cylinders. At the time particle spectrometer
+   capable of resolving the energy, angle, we were assured by
+   collaborating technologists that no one and mass composition of a wide
+   range of plasmas found had ever tried to accomplish these tasks for
+   ground throughout the solar system. PEPE commenced successful
+   applications, much less for spaceflight. A second risk operations on 8
+   December 1998. As a part of the Deep category was overall system
+   design. Although PEPE was Space 1 (DS1) mission, the objectives of the
+   PEPE based on previous experience and designs, the entire investigation
+   are to demonstrate new instrumentation instrument was built without the
+   benefit of a prototype or an technologies relevant to low-resource
+   space plasma engineering development unit for the optical subsystem,
+   instrumentation, to show that such instruments can be high-voltage
+   subsystem, or for the system as a whole. A few operated successfully to
+   obtain high-quality scientific data selected subsystems were
+   prototyped, primarily to develop on a spacecraft employing an ion
+   propuls ion system (IPS), and test digital interfaces. Schedule and
+   budget comprised a and to obtain new scientific findings related to the
+   prime third risk category: to our knowledge no instrument of this
+   scientific targets of the DS1 mission. The three broad complexity has
+   been built in a period of 26 months from the categories of new
+   technologies demonstrated in the PEPE contract start date to delivery
+   at the launch site. Schedule instrument include novel electron and ion
+   optical systems, risk was managed largely through the contribution of
+   including an electrostatically swept field-of-view and time- prolonged
+   work hours by a small and dedicated team. of-flight mass analysis, that
+   significantly reduce overall sensor mass and volume relative to
+   performance; a compact, In most cases, validation of the PEPE concept
+   and high-reliability, high-voltage system consisting of eight
+   technologies is being obtained primarily by examining data individual
+   supplies ranging from ±3.6 to ±15.0 kV; and low- obtained in space from
+   the instrument and inferring resource, high-performance electronics
+   that perform sub- subsystem performance indirectly. A number of
+   subsystems, nanosecond measurements and provide very flexible data
+   mostly digital electronics, were tested and validated during
+   acquisition and processing capabilities. ground tests. However, our
+   primary test case consists of the thoroughly studied characteristics of
+   the solar-wind plasma Several categories of risk were associated with
+   the PEPE that is simultaneously being observed by the Wind program from
+   its inception. Technological risks associated spacecraft and the
+   Advanced Composition Explorer (ACE) with the instrument manufacture
+   included the use of novel spacecraft located near the Earth. Together
+   with solar-wind materials and processing techniques that had no
+   previous instruments on other spacecraft located elsewhere in the
+   flight history. In particular, previously untried methods had solar
+   system (Solar and Heliospheric Explorer [SOHO], to be developed to
+   metal-plate and chemically etch low- Ulysses, Cassini), PEPE provides a
+   valuable contribution to Examples of PEPE Data Returned on 5 April 1999
+   When the IPS Was Running. The first two panels show the energy and
+   angular distributions for electron and ions. The third panel shows the
+   time-of-flight spectrum summed over all energies and angles. v Deep
+   Space 1 Technology Validation Report-Plasma Experiment for Planetary
+   Exploration PEPE's Mounting Position on DS1. PEPE is color coded to
+   show the electron section in green, the ion and data processing section
+   in blue, and the aperture in red. the study of large-scale solar-wind
+   structures because of its program, testing at the system level was
+   minimal in the location in a part of the solar system widely distant
+   from the extreme. For example, the thermal vacuum test consisted of
+   other spacecraft. Thus, a careful analysis of observations of a single
+   cycle that was combined with an attenuated solar-wind ions and
+   electrons that have been collected since calibration period lasting
+   only 2 days! The hot part of the PEPE switch-on in December 1998 serve
+   to validate the cycle also served as the bakeout period for the
+   instrument overall end-to-end performance of the optical design, high-
+   prior to calibration. This deficit was to be made up in flight voltage
+   system, time-of-flight electronics, and other by accumulating a large
+   number of operating hours in technologies. Particular details of the
+   measured shape and different environments and instrument operational
+   modes intensity of the solar-wind velocity distributions give and by
+   in-flight calibration using targets of opportunity specific information
+   about optical alignments, carbon foil involving similar instruments on
+   other spacecraft. and detector efficiencies, high-voltage system
+   performance, and end-to-end system performance. To a large extent it
+   has been possible to gather the data necessary for validation. The data
+   taken so far with PEPE Although validation of the PEPE instrument and
+   compare very favorably with solar-wind data obtained by technologies is
+   a primary concern of the program, it was plasma instruments on the
+   Wind, ACE, and Cassini realized early on that because of the compacted
+   develop- spacecraft after allowances are made for the structure and
+   ment schedule we would have to forgo a considerable evolution of the
+   solar wind and the separation distances of amount of ground testing and
+   calibration activities. the respective spacecraft from DS1. In
+   addition, PEPE data Individual electronic subsystems received enough
+   ground have been used to demonstrate that high quality testing to
+   validate their specified performance; however, measurements of plasma
+   at energies above roughly 50 eV combinations of subsystems often
+   received little more than can be made with the IPS operating. Below
+   this energy interface checks to validate their compatibility. Because
+   the PEPE has obtained measurements of xenon ions as well as complete
+   PEPE system came together only very late in the secondary electrons
+   related to both the IPS and SCARLETT vi Deep Space 1 Technology
+   Validation Report-Plasma Experiment for Planetary Exploration solar
+   arrays. These data can be used to map the previously ACKNOWLEDGEMENTS
+   unobserved local plasma environment of an IPS-driven The authors wish
+   to thank the PEPE teams at Southwest spacecraft-a topic of considerable
+   interest for future Research Institute (SwRI) and Los Alamos National
+   planetary and heliospheric missions. Laboratory (LANL) for their hard
+   work during the development phase of the instrument. These scientists
+   and PEPE technologies can be put to future use in two ways: as
+   engineers are: J. L. Burch1, D. J. McComas2, R. A. Abeyta2, an entire
+   sensor technology and as a set of subsystem J. Alexander 1, J.
+   Baldonado2, P. Barker2, R. K. Black1, technologies. As an integrated
+   system, PEPE provides T. L. Booker1, R. P. Bowman1, P. J. Casey1, L.
+   Cope2, nearly the same capability as the state-of-the-art Cassini J. P.
+   Cravens1, N. Eaker1, H. O. Funsten2, R. Goldstein1, Plasma
+   Spectrometer; however, at 5.5 kg and 9.6 W, it D. R. Guerrero1, S. F.
+   Hahn2, B. P. Henneke2, E. F. Horton1, requires only 24% of the mass and
+   46% of the electrical D. J. Lawrence2, K. P. McCabe2, S. Rogillio1, R.
+   P. Salazar2, power of the latter. In addition there are qualitatively
+   E. Santiago2, M. Shappirio2, S. A. Storms 2, and C. Urdiales1.
+   different approaches used in PEPE that simplify its use in We also
+   thank the two institutions and the Department of future missions.
+   Typical planetary spacecraft such as Energy for their support and
+   dedication to PEPE. We would Cassini and DS1 are 3-axis stabilized,
+   which presents a particularly like to thank SwRI for investment of
+   internal problem for plasma instruments that typically need to view
+   research support to help develop several of the PEPE as much of the
+   unit sphere as possible. The ideal is 4 technologies. Development and
+   operation of PEPE would steradian coverage, which presents a
+   significant problem to not have been possible without the support of
+   members of both the spacecraft and instrument designers. On Cassini,
+   the JPL DS1 team; in particular, L. Livesay, K. Cleven, this problem
+   was solved by scanning the plasma instrument D. Lehman, R. Nelson, K.
+   Fleming, P. Chadbourne, mechanically using a 3.6 kg motor with
+   attendant problems M. Rayman, and P. Varghese. We particularly want to
+   thank related to magnetic cleanliness and mechanical stability G.
+   Withbroe of NASA HQ for his generous support of the needed for fine
+   pointing of optical sensors (both problems PEPE instrument. We would
+   also like to thank R. Christy were solved on Cassini). With PEPE, the
+   problem was and C. Gerber of TriboCoat Inc. for their willingness to
+   try approached for the first time by employing an some new things. The
+   development phase of PEPE was electrostatically scanned field-of-view
+   using no moving supported at SwRI by JPL contract 961207 and at LANL by
+   parts or magnetic fields. Thus, the PEPE technology has NASA contracts
+   WO-9049 and WO-9066; the mission wide appeal for future missions
+   because it eliminates operations and data analysis phase is supported
+   at SwRI by possible magnetic and mechanical interferences. Other JPL
+   contract 960619 and at LANL by WO-9165 and PEPE subsystem technologies
+   having wide future WO-9138. applicability include very low resource
+   high-voltage power supplies and compact time-of-flight mass,
+   spectrometer 1. SwRI optics and associated electronics. 2. LANL
+   Comparison Between the Cassini Plasm a Spectrometer (CAPS) and PEPE.
+   vii Deep Space 1 Technology Validation Report-Plasma Experiment for
+   Planetary Exploration PEPE Fact Sheet Parameter Range/Resolution
+   Performance Units Sensor Type Toroidal electrostatic angular scanning
+   and energy/charge analyzers coupled to linear-electric -field time -of-
+   flight ion mass/charge analyzer. Energy Range 8.0 to 33,500 eV/eV Range
+   scanned 120 steps, log-spaced Resolution (ions) 0.046 E/E Resolution
+   (electrons) ~0.085 E/E Analyzer constant (ions) 13.07 Mass Range 1 to
+   135 amu/e Resolution (medium mode) ~4 M/ M Resolution (high mode) ~20
+   M/ M Angle EL angle range (scanned) 45 to +45 (°) EL analyzer
+   deflection 6.7 × 105/(E/Q) (°) Range scanned 16 steps, linear-spaced AZ
+   angle range (static) 360 (°) Solid angle coverage 8.9 sr Resolution
+   (electrons) 256 pix @ 5 × 22 (°) × (°) Resolution (ions) 128 pix @ 5 ×
+   5 (°) × (°) Resolution (ions) 32 pixels @ 5 × 22 (°) × (°) Resolution
+   (ions) 96 pixels @ 5 × 45 (°) × (°) Temporal AZ angle × TOF 0.008/0.032
+   s AZ angle × EL angle × TOF 0.128/0.512 s AZ angle × EL angle × energy
+   × TOF 16.38/65.54 s Sensitivity Electrons (5° × 22° pixel, ~ 0.5) ~1.5
+   × 10-4 cm2 sr × cts/el. Ions (5° × 22° pixel, ~ 0.5) ~8.0 × 10-5 cm2 sr
+   × cts/ion (@8.0 kV TOF, ~ 0.2) ~3.0 × 10-5 cm2 sr × cts/ion Dynamic
+   Electrons 0.1 to 106 Hz Range Ions (singles) 0.1 to 106 Hz Ions (TOF
+   analyzed) 0.01 to 105 Hz Resources Mass 5.5 kg Power 9.6 W Volume ~7.25
+   liters Density 0.83 g/cm3 Telemetry (commandable) 1024, 512, 250, 100,
+   50, 25 bits/s Location on spacecraft +Z edge of the +X-Y face of s/c
+   Operating range 20 to +35 C Cover (with GN2 purge) Remove before flight
+   Performance Operating time (as of 11/1/99) ~5600 hours Contacts: David
+   T. Young Jane E. Nordholt University of Michigan Los Alamos National
+   Laboratory Ann Arbor, MI 48109 Los Alamos, NM 87544 dtyoung@umich.edu
+   jnordholt@lanl.gov John J. Hanley Southwest Research Inst. San Antonio,
+   TX 78228 jhanley@swri.edu viii Deep Space 1 Technology Validation
+   Report-Plasma Experiment for Planetary Exploration Plasma Experiment
+   for Planetary Exploration (PEPE) DS1 Technology Validation Report David
+   T. Young, University of Michigan, College of Engineering Jane E.
+   Nordholt, Los Alamos National Laboratory, Space and Atmospheric Science
+   Group John J. Hanley, Southwest Research Institute, Space Research and
+   Instrumentation Division 1.0 INTRODUCTION attempted several new
+   materials treatments and processes, including depositing-uniform
+   coatings of very high ohmic Unlike all of the technologies onboard the
+   Deep Space 1 materials on ceramics, metal plating of relatively inert
+   (DS1) mission (except MICAS), Plasma Experiment for plastics, and
+   complex, multi-layer electrical boards Planetary Exploration (PEPE)
+   (shown prior to delivery in containing ion-optical components. Figure
+   1) is both a spacecraft technology and a self- contained scientific
+   instrument [1, 2]. PEPE itself All of these technologies and their
+   attendant risks are incorporates a half-dozen technologies that are to
+   our discussed in detail in Section 2. The reference point for knowledge
+   novel to space-plasma instrumentation. The much of the discussion is
+   the Cassini Plasma Spectrometer technologies were developed in response
+   to the need for described in [2, 3]. Validation of the instrument
+   greatly reduced resources relative to comparable technologies has
+   required careful analysis of their instrumentation on other missions,
+   such as Cassini. Because performance in a number of situations using
+   the ambient the two teams that built PEPE (Southwest Research Institute
+   solar-wind plasma, the spacecraft-photoelectron sheath, and [ SwRI] and
+   Los Alamos National Laboratory [LANL]) had the products of the xenon
+   ion propulsion system as test also designed and built much of the
+   Cassini Plasma opportunities. Unfortunately, the time-of-flight system
+   has Spectrometer (CAPS) (see [3, 4]), a decision was made to not been
+   able to operate at its planned high-voltage level. design an instrument
+   that would maintain the performance This topic will be discussed along
+   with other validation envelope of CAPS while at the same time reducing
+   the topics in Sections 2.7 and 3. In Section 4 we will discuss the
+   resource envelope by a significant fraction. The PEPE use of PEPE and
+   related technologies for future missions. resources were also dictated
+   by their availability and Appendices A and B give technical details on
+   the PEPE data allocation on the DS1 spacecraft. channels and data
+   collection periods. 2.0 TECHNOLOGY DESCRIPTION 2.1 Overview PEPE is a
+   charged-particle spectrometer capable of measuring and resolving the
+   velocity distribution of electrons and ions and the mass composition of
+   ions that make up the wide variety of plasmas found in the solar
+   system. In order to coincide with the scientific objectives of the DS1
+   mission, the particular design chosen for PEPE focuses on measuring
+   solar-wind plasma and the plasma populations resulting from solar-wind
+   interactions with intrinsic plasmas associated with the outgassing of
+   asteroids and comets. However, the general concepts and technologies
+   used in PEPE can be adapted readily to a wider Figure 1. Photo of PEPE
+   on the Bench Prior to variety of objectives and missions, in particular
+   missions to Delivery study planetary magnetospheres. A major driving
+   factor in the design of PEPE was to reduce its resource requirements
+   PEPE required a number of breakthroughs: a complete relative to those
+   of instruments with comparable redesign of the CAPS particle -optics
+   system, new ways of capabilities. In this case, we turned to the
+   Cassini Plasma miniaturizing and incorporating the large number of high
+   Spectrometer, a very high capability instrument presently voltages
+   required to drive the optics, and miniaturization of operating on the
+   Cassini-Orbiter spacecraft. Because the critical circuits needed for
+   high-speed (~1 GHz) time -of- core design teams of the two instruments
+   are the same, the flight (TOF) measurements and for data acquisition
+   and goals for the PEPE design consisted of trying to duplicate
+   compression. Fortunately, the radiation hardness required of the main
+   performance features of the Cassini instrument in a the DS1 program did
+   not place any stringent requirements much lower resource instrument. It
+   was recognized at the on the PEPE electronic-parts procurements. We
+   also outset that PEPE could not exactly duplicate these features 1 Deep
+   Space 1 Technology Validation Report-Plasma Experiment for Planetary
+   Exploration because the DS1 mission did not require it and because
+   timing measurements used to discriminate ion mass; and (4) performance
+   compromises would have to be made in some digital electronics that
+   provide data-acquisition and areas in order to meet resource targets.
+   instrument-command-and-control functions. These are integrated using a
+   packaging architecture that draws the With reference to the cross
+   section of the PEPE instrument subsystems together in a single,
+   compact, low-resource assembly shown in Figure 2, PEPE is made up of
+   four instrument. The functional components of PEPE make use functional
+   components that are integrated using a novel of several technology
+   applications that are either newly architecture: (1) a series of
+   charged-particle optical developed for PEPE or are new applications of
+   existing elements; (2) a system of high-voltage supplies that
+   technologies, such as the system of Field Programmable establish bias
+   voltages needed for particle-optical elements Gate Arrays (FPGAs) used
+   to make up PEPE's powerful and detectors; (3) high-speed pulse
+   electronics that make and flexible data-acquisition system. Figure 2.
+   Cross Section Illustrating the Location of PEPE Subsystems and Layout
+   of the PEPE Ion/Electron-Optical System 2 Deep Space 1 Technology
+   Validation Report-Plasma Experiment for Planetary Exploration 2.2 Key
+   Technology-Validation Objectives at Launch 2.2.4 Data-Acquisition
+   System-An onboard pulser will be The primary-validation objective for
+   PEPE, can be used to create fixed-pattern artificial TOF spectra that
+   can summarized as end-to-end functionality that meets be acquired and
+   compared with ground-based calibration. A requirements for
+   scientifically useful data products. The second and more stringent
+   validation will be achieved by objectives of developing a reduced
+   resource instrument can processing the high-counting-rate random
+   electron and TOF be validated by simple measurement of volume, power,
+   events caused by the solar wind and other naturally mass, and data rate
+   if the functionality requirement is met. occurring plasmas. Solar-wind
+   data from other space-borne Each of the PEPE technologies can be
+   analyzed and instruments on the WIND and ACE spacecraft located near
+   validated against the descriptions and requirements that will the Earth
+   will be compared with the processed PEPE data to be described in the
+   following sections. However, the determine that all components of the
+   PEPE data product are paramount issue in validating PEPE is the
+   contribution of correct and free from artifacts. each technology to
+   overall performance. With that overarching goal in mind, we can
+   reconsider each of the 6 2.2.5 High-Voltage System-The high-voltage
+   system will PEPE technologies. be activated and brought up to full
+   operating levels singly and in combinations required for spectrometer
+   operation. 2.2.1 Miniaturized 3-dimensional Linear Electric Field Data
+   from the high-voltage supply monitors and from the (LEF3D)
+   Time-of-flight (TOF) Optics-The LEF3D- background intervals during the
+   high-voltage scans will be conceptual design is based on that of the
+   LEF3D used in the used to measure and track detector-noise levels in
+   order to CAPS instrument's Ion-Mass Spectrometer (IMS) [5, 6, 7].
+   ascertain long- and short-term operation criteria for drift The
+   cylinder technology rests primarily on the use of high- stability and
+   ripple. Automatic high-voltage (HV) turn-on resistance surface coatings
+   in place of a set of discrete-ring sequences will be prepared and
+   executed without operator electrodes on the CAPS/IMS. A second
+   departure was to re- intervention. The goal was to be able to turn on
+   the HV design interfaces between the high-voltage supplies and the
+   system automatically within a period of 4 hours or less LEF3D's optical
+   elements. Validation objectives include without intervention. being
+   able to apply the target ±15 kV high voltage to the cylinder without
+   high-voltage breakdown and operating the 2.2.6 High-Density Packaging
+   Architecture-If the optical cylinder stably for a period comparable to
+   typical mission and high-voltage systems' (sections 2.2.1, 2.2.2,
+   2.2.3, and lifetimes of ~2 years. The LEF3D optics should deliver TOF
+   2.2.5) performances are nominal, the packaging architecture spectra
+   with mass resolution equivalent to M/ M ~20 based will be considered
+   validated. The PEPE data acquisition on ray-tracing and experience with
+   the IMS. Resolution and technology (section 2.2.4) is largely
+   unaffected by the mass range as well as species rejection of the LEF3D
+   optics architecture. The fact that PEPE's instrument density of must
+   also be validated. 0.83 g/cm3 is significantly higher than similar
+   plasma spectrometers (values range from ~0.25 to ~0.5 g/cm3) 2.2.2
+   High-Speed TOF Electronics-The TOF electronics indicates that this
+   design feature has been validated, consist of a high-speed front-end
+   electronics (FEE) that provided PEPE functions correctly in flight.
+   includes amplifiers, discriminators and logic, and a time-to- digital
+   converter circuit with associated logic. The TOF 2.3 Expected
+   Performance Envelope electronics should deliver performance with ~1 GHz
+   The scientific objectives for PEPE or any other plasma bandwidth that
+   is consistent with the TOF resolution spectrometer require that it
+   measure the N-dimensional required of the cylinder. This performance
+   should be nearly particle-phase space consisting of 3 velocity
+   coordinates and identical with that of the IMS [6, 7] although the
+   resources N-3 mass/charge coordinates in the frame of reference of the
+   required should drop by ~50%. Built-in test functions and spacecraft.
+   The time coordinate and 3 spatial and 3 attitude in-flight validation
+   of the FEE and time -to-digital converter coordinates are required to
+   put the plasma data in the proper (TDC) will be carried out using TOF
+   data from the LEF3D. context. These fiducial data are obtained from the
+   spacecraft and, although they could affect PEPE's ability to deliver
+   2.2.3 Integrated Ion/Electron Optics-Using the solar wind valid
+   measurements, by convention the spacecraft team is as a well-studied
+   and constantly-monitored plasma source, responsible for that aspect of
+   performance. The specific we shall confirm the energy and angle
+   resolution, the correct elements of performance of plasma instruments
+   such as angular orientation and location of elements of the field of
+   PEPE concern: a) the range of parameter space coverage, b) view (FOV),
+   the energy and field-of-view scanning resolution within that range, and
+   c) sensitivity for detecting functionality, and the absolute detector
+   response of the charged particles within that range. The parameters
+   that sensor. The efficiency of the anti-reflection surface have to be
+   measured are those that determine the details of treatments will be
+   validated by measurement of the extent to the particle-distribution
+   functions: namely, energy/ charge, which solar UV and particles are
+   scattered into the sensor. mass/charge, and angle of the direction of
+   particle arrival. Because the plasma environment is highly dynamic, it
+   is 3 Deep Space 1 Technology Validation Report-Plasma Experiment for
+   Planetary Exploration also important that the entire range of
+   measurement be In order to cover a range of particle angles of arrival
+   and covered in as short a time interval as possible. their energies,
+   two sets of coupled power supplies drive the deflection and
+   energy-analysis optics (Figure 3). One set of The performance envelope
+   is dictated not only by the supplies produces two fast-slewing (3 × 106
+   V/s) bi-polar measurement objectives mentioned above, but by the
+   supplies that deliver ±5.0 kV to deflect particles ±45 ° in
+   capabilities of the measurement technology. PEPE consists elevation.
+   The deflection supplies float with respect to two of an electrostatic
+   ion-optical system (magnetic systems are "bulk" supplies (Figure 3) as
+   do the ESA supplies. The impractical under the circumstances) and its
+   supporting nominal dwell time at a single elevation step is 0.032 s,
+   electronics. The optics in turn depend on the correct shape giving a
+   rate of 0.512 s for a single, full-elevation scan of and location of
+   the optical electrodes and the application of 90°. Similarly, the HV
+   set driving the energy analyzer the correct voltages to correctly bias
+   the optical elements at section is also swept, but at a lower rate of
+   one step for each a given instant in time. Electrode shape and position
+   were elevation scan. In this way, an entire scan of the PEPE range
+   maintained through the usual design and manufacturing of energies and
+   angles (TOF- mass measurements occur at processes to an estimated
+   ±0.005 inches. The magnitude and every sample) takes place in 65.54 s.
+   These times are number of distinct voltages required is determined by
+   the sufficient for monitoring the solar wind (usual temporal optical
+   design. In the case of PEPE, eight HV supplies are resolution is 1 to 5
+   minutes). Higher time resolution needed required with voltages ranging
+   from ±3.6 kV for the two for rapid flybys of asteroids and comets can
+   be obtained by micro -channel plate (MCP) detectors to ±15 kV for the
+   main using shorter dwell times, restricted scan ranges that can be TOF
+   voltages. The latter are the highest voltages in PEPE covered more
+   rapidly. Power-supply scan patterns and dwell and, in part, determine
+   the mass-resolution performance. times are programmable (as explained
+   in section 2.4.4). Figure 3. Schematic Block Diagram of the PEPE
+   Electronic Subsystems and Their Relationship to Sensor Elements 4 Deep
+   Space 1 Technology Validation Report-Plasma Experiment for Planetary
+   Exploration Instrument sensitivity is determined by: 1) The instrument
+   design that is volumetrically smaller by a factor of ~8. The aperture
+   (related in turn to the available volume and mass key performance
+   factor-namely, the resolution of ion- allocated to the instrument) and
+   2) the energy/charge flight-path timing-was reduced by a factor of 2
+   owing andangular-resolution requirements. The latter set the size
+   primarily to shorter flight paths, but was still acceptable for of the
+   gaps between the field elements and determine the PEPE's science
+   objectives. high voltages needed to establish the electrical forces
+   across them (since electrical force ~ voltage/optical-element
+   separation). Sensitivity is usually given in units of [cm2 sr] × -15KV
+   [detector counts/incident target particle] (see the PEPE Fact Electrode
+   with Sheet). Thus, sensitivity and resolution are directly related
+   Central to the mass and electrical power allocated to the instrument.
+   Secondary Coated High Emitter The design of PEPE was meant to optimize
+   sensitivity for a Ceramic Resolution Typical Start Cylinders Ion LEF
+   Region given set of resources; however, it is difficult to normalize
+   Electron Trajectory Trajectory Insulating the PEPE performance per unit
+   resources relative to that of Sleeve other instruments. The ultimate
+   validation is the fact that +15KV PEPE obtains excellent solar-wind
+   measurements at Electrode Secondary Stop Grounded relatively high
+   resolution with a fraction of the resources of Neutral Ion Electron
+   Strongback existing instruments. The comparable plasma analyzers on
+   Trajectory Trajectory MCPs the WIND spacecraft [8], for example, have
+   about the same MCP Holder range of energy and angular acceptance as
+   PEPE, but do not Anode have either mass/charge analysis capability or a
+   swept FOV (WIND is a spinner). Figure 4. Cross-sectional Detail of the
+   The WIND instruments are combined with several others in PEPE TOF
+   Cylinder a package so that only very rough estimates can be made of
+   their weight and power; however, it appears that they are When ions
+   exit the curved analyzer plates (section 2.4.3), a comparable to those
+   of PEPE. Since PEPE includes the large negative potential accelerates
+   them into thin (1µg/cm2 added features of TOF mass spectrometry and a
+   swept field- or ~50Å thickness) carbon foils. The foils form the
+   entrance of-view (WIND is a spinning spacecraft and does not to the
+   time -of-flight mass/charge analyzer. Electrons that are require a
+   swept FOV), we conclude that PEPE has perhaps a released by the passage
+   of the ion through the foil are factor of 2 advantage in performance
+   for the same mass. accelerated onto the outer annulus of the MCP stack
+   at the One other figure of merit is the mass density of the bottom of
+   the TOF section. They all take a uniform time of packages: PEPE's ratio
+   of mass to volume is 0.75 g/cm3, about 2ns to get to the MCP. There
+   they start a clock that whereas that of the WIND instrument is ~0.25
+   g/cm3, will be used to determine the time -of flight for the ion that
+   similar to that of CAPS. An informal survey of plasma released them.
+   Ions are generally neutralized by their spectrometers shows that
+   instrument density is typically passage through the foils. In this
+   case, they continue down 0.25 to 0.5 g/cm3, indicating that PEPE's goal
+   of producing the TOF section until they (with high probability) strike
+   the relatively high-packaging density has been achieved. center
+   section-or "stop" section-of the MCP. This stops the clock and standard
+   time-of-flight mass spectroscopy. 2.4 Detailed Description The
+   knowledge of the ion's initial energy to determine its 2.4.1
+   Miniaturized 3-dimensional Linear Electric Field velocity is used to
+   determine the ion's mass. Mass (LEF3D) Time-of-flight (TOF)
+   Optics-Figure 4 shows a resolution M/ M is only about 5 for this
+   process. If the ion cross-section of PEPE's LEF3D cylinder together
+   with remains charged and it's energy is not too large to be turned
+   characteristic particle trajectories and major features of the around
+   by the high voltage on the curved grid (heavy-curved instrument. CAPS'
+   Ion Mass Spectrometer (IMS) contains line in Figure 4), it will
+   "bounce" in the linearly-increasing an LEF3D spectrometer similar to
+   PEPE but larger in electric field just as a mass on a spring would. The
+   time for volume by a factor of ~8. The IMS is made up of 30 discrete
+   one-half oscillation of this bounce is independent of energy
+   field-rings joined by a series of resistors. This arrangement or angle
+   of flight of the ion; therefore, the TOF is produces the electric field
+   configuration needed to make proportional to the square root of only
+   the mass/charge and, high-resolution TOF measurements. The approach
+   taken thus, the mass resolution for TOF of this type is much with PEPE
+   was to eliminate the rings altogether, replacing higher than in simple
+   field-free TOF systems. Ions that do them with a monolithic ceramic
+   cylinder coated with a layer bounce hit a secondary emitter at the top
+   of the TOF section of high-resistance, vapor-deposited chromium oxide.
+   The and the resulting electrons are drawn to the center "stop" volume
+   of the cylinder materials was reduced by a factor of portion of the
+   MCP. The mass resolution in the case is ~5. The cylinder itself was
+   made smaller by a factor of ~2 calculated at ~20. and its aspect ratio
+   (height to width) reduced to produce a 5 Deep Space 1 Technology
+   Validation Report-Plasma Experiment for Planetary Exploration All three
+   regions (acceleration, LEF3D, and deceleration) of space with
+   dramatically reduced resources allocated to the the TOF section use
+   ceramic cylinders with resistive optical system. The
+   toroidal-deflection electrodes create an coatings to produce in them a
+   uniform-electric field; electric field that is terminated at the
+   surface of the PEPE however, only the center section requires the
+   coating to have instrument by a toroidal-shaped wire-mesh grid. In
+   order to varying thickness to produce the linearly-increasing electric
+   ensure grid shape and stability, the wire -mesh material was field.
+   formed in a vacuum-driven jig that shaped the grid and held it in place
+   while the edges of the grid material were epoxied 2.4.2 High-Speed TOF
+   Electronics-The CAPS instrument to the grid frame. The resulting toroid
+   mesh was then plated relied on TOF electronics capable of 750 ps (10-12
+   s) with a thin Ni coating to bond the wires into place and resolution
+   and pulse-pair resolution of 40 ns. The timing further guarantee the
+   shape. The electron optics made use of electronics required high-speed
+   amplifier discriminator a dynode structure that converts the incoming
+   electron flux chains and logic (referred to as front-end electronics
+   [FEE]) into low-energy secondary electrons that can be easily and a
+   time-to-digital converter (TDC) that required a concentrated onto a
+   small MCP detector. This device significant amount of power and
+   component-board space. reduces the size and complexity of the MCP that
+   would With reference to the functional block diagram shown in otherwise
+   be required to cover the exit aperture of the Figure 3, the PEPE design
+   maintains the CAPS functionality electron-energy analyzer. After the
+   PEPE optical electrodes and, in addition, doubles the number of
+   angular-position were machined and metal plated with nickel and copper,
+   channels encoded in order to capture finer details of the they were
+   treated with the Ebanol-C process that develops a solar-wind ion
+   distribution. Because PEPE's TOF optics thin layer of anti-scattering
+   microscopic crystals that are operate in substantially the same way as
+   those of the CAPS both rough and black. instrument, they required
+   similar performance but with reduced resources. The FEE and TDC
+   circuits were 2.4.4 Data-Acquisition System-The primary data product
+   redesigned using chip-on-board technology. In addition, a of CAPS' IMS
+   TOF system is two 2048-channel TOF direct digital-encoding scheme was
+   incorporated to register spectra generated every 62.5 ms. CAPS' maximum
+   data rate the increased number of angular channels. The PEPE timing is
+   16 kbits/s. In contrast, the maximum PEPE downlink rate circuits
+   required about 50% less power than the IMS unit is only 1024 bits/s for
+   a similar amount of raw data from the and occupied about 40% less board
+   space. TDC. This requires a very high degree of onboard capability for
+   restructuring the angle/energy sweep program and the 2.4.3 Integrated
+   Ion/Electron Optics-At the time that compression of the resulting data
+   products. In order to CAPS was designed, two entirely separate
+   instruments were provide this kind of a flexible program for optimum
+   data needed to measure electrons and ions. This required two sets
+   return under all conditions likely to be encountered during of
+   housings, separate-entrance collimators and fore-optics, the mission,
+   PEPE was equipped with programmable separate high-voltage supplies to
+   drive the two electrostatic control-of-sample dwell time (factor of 8),
+   a voltage-scan analyzers, and separate mounting locations to obtain
+   clear program, and data-acquisition and processing capability.
+   fields-of-view. The duplication of functions required a fairly The PEPE
+   system is functionally comparable to that of the high investment in
+   resources. In addition, because Cassini, CAPS instrument but uses about
+   one third of the resources. like DS1, is a 3-axis stabilized
+   spacecraft, CAPS required However, PEPE relies more heavily on FPGA's
+   (ACTEL some way to articulate its field-of-view in order to sample
+   1280) than did CAPS and less on its low-resource processor the wide
+   range of viewing space occupied by target plasma (RTX2010).
+   distributions. On Cassini, the solution was to use a motor/actuator
+   that rotated the entire CAPS instrument Spectral scanning is carried
+   out by setting the deflection and (weighing 20 kg) over a range of
+   ±104°. PEPE was ESA supplies to their highest commanded levels and then
+   designed so that electron and ion optics share a common stepping the
+   supplies down. The deflection supply entrance aperture that eliminates
+   duplication of this optical completes a scan and then the ESA is
+   stepped. The nominal element (Figure 2). After crossing the collimator,
+   electrons method of scanning is the "survey" mode (see Figure 5, and
+   ions enter an electric field region created by the inner Figure 6, and
+   Figure 7) that covers the full 16-step elevation electrodes of two
+   electrostatic-energy analyzers (ESA) × 128-step energy scan (8 of the
+   energy scan steps are used (Figure 1). In a manner similar to the CAPS
+   design, the for background measurement). If the target-plasma energy
+   analyzers are cylindrically symmetric, an population is restricted in
+   velocity space (e.g., the solar- arrangement that allows the instrument
+   to view over a range wind or cometary ionospheres) or the DS1-mission
+   strategy of 360° in the plane perpendicular to Figure 2. Unlike
+   requires that PEPE restrict its data rate, then PEPE can be CAPS,
+   however, a set of toroidal electrodes was placed just programmed in
+   several ways that provide more optimal data outside the PEPE entrance
+   aperture to deflect incoming ions return. The simplest way to lower the
+   data rate is to and electrons in such a way that the instrument FOV can
+   be integrate the spectra over longer intervals (up to 20 minutes,
+   scanned over a range of ± 45° in the plane of Figure 2. The equivalent
+   to 50 bits/s). More efficient scans can be made by result is that PEPE
+   covers a larger range of observation targeting a restricted volume of
+   phase space and creating a 6 Deep Space 1 Technology Validation
+   Report-Plasma Experiment for Planetary Exploration smaller
+   region-of-interest (ROI) angle/energy scan that can Data products
+   (electrons, ion singles and TOF, be scanned at a higher rate than
+   nominal. A second way of housekeeping) from a completed energy × angle
+   × angle × producing a ROI is simply to select a subset of the current
+   TOF spectrum are acquired into separate memory arrays spectrum (whether
+   full or ROI) and send back only those (Figure 3). After acquisition of
+   the current spectrum, the products. Figure 5. Data from 26 Jan. 1998
+   0000-0600 UT Illustrating PEPE's Response to Quiescent Solar-Wind
+   Plasma (Note the lack of interference from solar photons that would
+   appear at all energies near elevation zero in both the ion and electron
+   spectra.) Figure 6. Data from 1 March 1998 0600-1200 UT Illustrating
+   PEPE's Response to Disturbed Solar-Wind Conditions (Note the bright
+   vertical bars in the electron data that are caused by
+   attitude-control-thruster firings and the related change in DS1
+   orientation. The thrusters cause a large cloud of photoelectrons to be
+   created from gas molecules released during the firing.) 7 Deep Space 1
+   Technology Validation Report-Plasma Experiment for Planetary
+   Exploration Figure 7. Data from 20 April 1998 0600-1200 UT Showing the
+   Startup (~0905 UT) and Operation of the IPS Xe+ Thruster (The data gap
+   is caused by data-mode changes on DS1. Electron fluxes mask the
+   solar-wind and spacecraft electrons while the Xe+ ions are clearly seen
+   at energies just above the PEPE cutoff of 16 eV.) data memory is read
+   out while a second spectrum is voltages of ±3.6 kV and ±15 kV to
+   fast-settling 12-bit acquired into a second, identical memory. The two
+   controlled supplies of ± 2.5 kV and ±5.0 kV. There are two memories
+   (consisting of 1.25 Mbytes each) are operated in sets of ±5.0 kV
+   bi-polar supplies that bias the toroidal ping-pong fashion to ensure
+   the continuous availability of deflection electrodes. Performance
+   requirements for the data for compression operations prior to
+   transmission. In supplies represented compromises in which some
+   addition to forming raw TOF spectra, the system also characteristics,
+   such as drift and ripple, were allowed to histograms the TOF data,
+   selects certain pre-programmed, increase slightly in order to simplify
+   circuit design and parts regions of the spectra, and assigns counts
+   within that region counts. The compromise requirements were based on an
+   to M/Q channels. When operational, the M/Q histogrammer assessment of
+   the minimal relaxation that would produce compresses the TOF data
+   efficiently and reduces the amount acceptable performance. For example,
+   the deflection and of data needed to transmit composition information
+   to the energy-analyzer optics have finite transmission passbands
+   ground. Output-data rates can be varied from 1024 bits/s to that can be
+   relaxed somewhat in favor of reduced 25 bits/s. The makeup of this data
+   stream (e.g., the emphasis requirements on power-supply stability.
+   placed on electron vs. ion data, or TOF vs. singles data) can be
+   changed on command 2.4.6 High-Density Packaging Architecture-PEPE
+   contains eight high-voltage power supplies that deliver voltages Over
+   the course of the DS1 mission it has been necessary to throughout the
+   instrument (see Figure 2). In order to save reprogram parts of the
+   data-acquisition and processing the weight and volume associated with
+   bulky high-voltage system to meet the needs, for example, of
+   observations connectors and cabling, the high-voltage supplies were co-
+   during the flyby of the small asteroid Braille at a velocity of located
+   with the optical elements requiring biasing. Several 15 km/s. In that
+   case, a new data sample period four times of the supplies, including
+   the ±15 kV supplies, were faster than the designed speed was
+   implemented that could designed as single units that could easily be
+   installed during meet the requirements for faster sampling of a reduced
+   final instrument buildup. However, other supplies were region of
+   interest in energy and angular space. Onboard located deep within the
+   optical system. These were programs used to bring up the PEPE
+   high-voltage system generally hardwired to the optical elements and
+   made use of have also been modified several times, as have the data
+   optical or structural elements for both housing and mounting products
+   associated with particular scanning programs. the supplies. In the CAPS
+   design and the design of many conventional-plasma sensors, the optical
+   elements and 2.4.5 High-Voltage System-The PEPE electron and ion
+   electronic components are usually separated into different optics are
+   driven by a system of 8 high-voltage supplies compartments (if not
+   entirely separate boxes). As is (Figure 3) ranging from programmable
+   but relatively static 8 Deep Space 1 Technology Validation
+   Report-Plasma Experiment for Planetary Exploration apparent from Figure
+   2, the PEPE-optical components are PEPE high-voltage supply technology
+   when it was found tightly packaged with PEPE-electronic components,
+   that the supplies could be programmed to operate at four particularly
+   in the area of high-voltage supplies and detector times their normal
+   speed. The clock rate of the instrument electronics. In some cases, the
+   optical paths pass through was increased by a factor of four to allow
+   fast scanning to electronics boards and electronics circuits are placed
+   inside take place. This new fast mode enabled higher time- the optical
+   elements, such as the domes of the two resolution-measurements to be
+   made during the asteroid electrostatic energy analyzers. This folded-up
+   configuration flyby (lack of signal was due to the very weak or non-
+   saved a considerable amount of volume and, therefore, existent
+   outgassing rate of the object) and will be used again mass, compared to
+   conventional packaging. The particular during the planned cometary
+   encounter. technologies used to produce compact design include: new
+   methods for fabrication and surface treatment of high- 2.6 Test Program
+   voltage optical electrodes, incorporation of high-voltage This section
+   summarizes test objectives and success criteria signal de-coupling
+   capacitors within detector-anode that were used to meet the
+   requirements for instrument structures, monolithic microchannel-plate
+   (MCP) holders validation set forth in Section 2.2. It should be
+   emphasized, with integral resistor/capacitor dividers, vapor deposition
+   of however, that the restricted schedule and budget under thin
+   high-ohmic resistive materials that replace discrete which PEPE was
+   produced and tested often prevented resistor chains, fabrication of
+   suspended sections of detailed procedures from being drawn up.
+   Moreover, there multilayer printed-wiring assemblies that allow
+   high-areal was little formal documentation of many test results for the
+   throughput of the optical beam through a PWA, high- same reason. This
+   section will, therefore, address the test voltage power supply housings
+   manufactured from metal- program in a quantitative way wherever
+   possible but will coated plastics, and the extensive use of parylene
+   coatings resort to qualitative discussion if necessary. on high-voltage
+   multipliers, which allowed the use of unpotted components. As mentioned
+   above, the packaging 2.6.1 Ground Test- density of PEPE is 0.83 g/cm3,
+   which is the highest value 2.6.1.1 Miniaturized 3-dimensional Linear
+   Electric Field for plasma spectrometers of which the authors are aware.
+   (LEF3D) Time-of-flight (TOF) Optics-The TOF resistive- cylinder
+   technology was tested by measuring the amount of 2.5 Technology
+   Interdependencies current drawn with high voltage applied. The
+   resistances of 2.5.1 PEPE Plasma Spectrometer Technology-Because the 3
+   sections of the cylinder were consistently above 10 PEPE is a highly
+   capable plasma spectrometer, we have Gohm, the value required to meet
+   high-voltage supply-load been able to demonstrate the effects that the
+   DS1 ion requirements. The high-voltage stand-off capability of the
+   propulsion system (IPS) and the DS1 spacecraft itself have resistive
+   cylinder was tested repeatedly. Several cylinder on local plasma
+   populations and on observations of solar- combinations were tested at
+   20% overvoltage (±18 kV) with wind electrons and ions incident on the
+   DS1 spacecraft. varying results. The ultimate performance of the
+   cylinder on PEPE data taken during attitude maneuvers clearly show the
+   ground was very much effected by the amount of test that there is a
+   strong and irregular photoelectron sheath time in which the system
+   could be pumped to sufficiently around the spacecraft. The sheath seems
+   to be effected by high vacuum (~10-8 Torr) for periods of several
+   weeks. In the presence of large (~±50 V) differential potentials on the
+   the end we were not able to achieve a stable-applied SCARLETT solar
+   arrays and intermittently by the use of the cylinder voltage above ~±8
+   kV, which was set as the initial attitude-control thrusters. Data also
+   shows the very on-orbit operating value. (Ironically, just a few weeks
+   after noticeable effect that the IPS has on the local-plasma PEPE was
+   delivered, we were able to demonstrate a population: low-energy,
+   charge-exchanged xenon ions technology for potting the ceramic
+   cylinders in a way that ejected by the interaction of the primary 1 keV
+   beam with permitted ±18 kV to be achieved rather easily.) We planned
+   neutral xenon are observed by PEPE at energies up to ~40 to operate at
+   the ±8 kV level initially and then boost the eV (see Figure 7 and
+   Reference [9]). Thermal electrons voltage after extensive outgassing
+   was obtained on orbit. associated with the Xe+ beam are accelerated up
+   to ~100 eV and completely dominate the solar-wind electron flu x. The
+   LEF3D optics and associated high-speed TOF Nonetheless, the PEPE
+   observations during IPS thrusting electronics were tested in the LANL
+   ion beam prior to show that observations can still be made of
+   solar-wind ions, integration with the rest of the PEPE instrument. The
+   tests though not of electrons. produced TOF spectra that were difficult
+   to interpret because the beam was not collimated to reduce scattering
+   2.5.2 Data-Acquisition and High-Voltage Systems-The and neutrals before
+   it entered the TOF section. Ray-tracing flexibility of the PEPE
+   data-acquisition and operating simulations of the TOF optics indicated
+   that the goal of system technologies has allowed a number of unplanned
+   M/ M ~ 20 could be reached at ±15 kV. new modes to be introduced in
+   response to unexpected spacecraft-operational situations or measurement
+   2.6.1.2 High-Speed TOF Electronics-The TOF electronics opportunities. A
+   new ROI mode made unexpected use of the were integrated with the optics
+   prior to final testing before 9 Deep Space 1 Technology Validation
+   Report-Plasma Experiment for Planetary Exploration delivery. Detailed
+   examination of the TOF spectra indicated ion/electron-beam tests also
+   demonstrated qualitatively that that the TOF resolution per channel was
+   0.75 ns as required. both MCP detectors were operational and operating
+   at The pulse-pair resolution of 40 ns was also achieved. roughly
+   nominal efficiencies. Logical functions associated with the rejection
+   of non- coincident events and correlations of coincident events were
+   2.6.1.4 Data-Acquisition System-During bench testing, the demonstrated.
+   The performance of the built-in-test (BIT) system successfully acquired
+   all of the data types generated pulser functions was consistent with
+   results taken in the ion by the internal-pulser system. During vacuum
+   testing, the beam. Because of the compactness of the final delivery
+   system successfully acquired and formatted electron- and schedule,
+   functional tests associated with measuring circuit ion-singles data.
+   The interface problem referred to above dead times under the conditions
+   of randomly-arriving events was corrected on the bench, but tests of
+   the repaired system presented by the ion beam were not carried out.
+   were deferred to flight operations. 2.6.1.3 Integrated Ion/Electron
+   Optics-Because of 2.6.1.5 High-Voltage System-The eight power supplies
+   schedule concerns, it was not possible to carry out tests of making up
+   the PEPE high-voltage system were first tested ion- and
+   electron-optical components at the subsystem level on the bench and
+   shown to operate as specified. In (except for the TOF cylinder
+   discussed above), which is the particular, the individual voltage
+   levels, voltage waveforms, usual procedure before integration of an
+   instrument. and transition slew rates were all shown to be within
+   Therefore, the entire optical system was integrated and specifications.
+   Once the supplies were integrated with the tested/calibrated at one
+   time in the ion/electron-calibration sensor, it became impossible to
+   test them directly at the system at SwRI. The pumpdown period prior to
+   PEPE output because the electrodes would not tolerate operation at
+   calibration also served as a single-cycle thermal vacuum test full
+   voltage in air (this is a standard complication). After during which
+   the instrument was first cycled hot to +60° C system assembly, the
+   supplies are monitored on the primary for 48 hours. This satisfied the
+   hot-cycle requirement and side in PEPE housekeeping data; however, the
+   only way to also provided a high-vacuum (~10-6 Torr) bake-out period as
+   validate supply operation is through data produced by well. A hot start
+   and functional test were performed with the plasma populations in
+   flight. instrument in equilibrium at +45° C. The temperature was then
+   lowered to 35° C and 3 cold starts were performed Vacuum testing of the
+   high-voltage system was monitored successfully. Cooling the instrument
+   for these tests had the by the ion and electron detectors and by
+   voltage monitors added advantage of reducing the chamber pressure to 4
+   × located on the primary side of the supply transformers. 10-8 Torr,
+   thereby permitting internal-instrument surfaces to Because of problems
+   encountered earlier during testing of outgas more rapidly. The
+   reduced-chamber pressure was an the TOF cylinder, tests of the
+   integrated TOF-HV system in absolute must in order to allow the
+   instrument interior to vacuum were limited to ±8 kV. Even at this
+   level, it was reach an estimated internal pressure in the 10-7 Torr
+   range, noted that the positive TOF-HV monitor tended to sag to where it
+   would be safe to operate high voltage. slightly lower values. There was
+   no further opportunity to re-test this problem and no fix was attempted
+   on the bench. Ion beams of several energies were fired at the
+   instrument Because of the relatively high-vacuum pressures during and
+   successfully recorded as singles events. The ion data ground testing,
+   the testing of automated-HV turn-on indicated that the PEPE energy and
+   angle passbands were in sequences was deferred to flight. the correct
+   locations and that the PEPE energy-analyzer constant (relating applied
+   voltages to the incident ion 2.6.1.6 High-Density Packaging
+   Architecture-The final energy) was correct. The energy-analyzer
+   constant of 13.07 ground assembly of the unit proved that the
+   high-density was close to that determined by ray-tracing (12.8). The
+   packaging concept worked to the extent that all the parts
+   angular-deflection constant (see Fact Sheet) could not be were inside.
+   Successful high-voltage tests in vacuum verified in the ion beam,
+   although the functionality of the (except for the positive TOF-HV sag
+   noted above) proved deflector system was verified. Tests of the ability
+   of the that the optical and high-voltage systems were packaged
+   multiple-anode system showed that it was operational. An correctly.
+   Voltage breakdown during the test would have interface problem between
+   the data-acquisition system and been indicated by high background rates
+   in the electron and the TDC prevented us from obtaining ion TOF-data
+   during ion MCP detectors; this was not observed. The PEPE an end-to-end
+   test of the optics and electronics. The test was instrument density of
+   0.83 g/cm3 was determined by deferred to flight. dividing the
+   instrument mass by a calculated volume. A broad energy/angle-electron
+   source was used to stimulate 2.6.2 Flight Test-Once on-orbit, the PEPE
+   instrument was the electron side of the PEPE optics simultaneously with
+   the activated successfully over two DS1 passes on December 8 ion side
+   and this qualitative test was successful. The and 9, 1998. The initial
+   data returned during this period swept-FOV function was demonstrated
+   for both species, as confirmed that end-to-end performance of the PEPE
+   system was the ability to produce scanned-energy spectra. The was
+   nominal (although no detailed-quantitative results could 10 Deep Space
+   1 Technology Validation Report-Plasma Experiment for Planetary
+   Exploration be obtained immediately). On December 10, the IPS was
+   corresponding to M/ M ~17 to 21. The resolution of the H+ turned on
+   with PEPE operating. It was immediately clear peak at a TOF of 70
+   channels (1 channel = 0.75 ns) is that the fluxes of Xe+ ions and
+   electrons in the lower part of somewhat lower; however, that is
+   expected because of the the PEPE energy range were too intense for the
+   PEPE MCP larger fraction of error that is introduced by the TOF
+   detectors. Subsequent to this, a patch to the PEPE software electronics
+   at these short times. Preflight calibration blocked PEPE energy scans
+   from operating below 16 eV in indicated that these were the approximate
+   resolutions; order to reduce the intensity of the IPS fluxes to
+   tolerable however, because calibration of the TOF section was levels on
+   the detectors. performed without the collimation provided by the
+   energy- analysis section, it was not possible to determine the exact
+   2.6.2.1 Miniaturized 3-dimensional Linear Electric Field mass
+   resolution. Figure 8 shows the direct events data (fully (LEF3D)
+   Time-of-flight (TOF) Optics-Once on orbit, the resolved and
+   uncompressed) from approximately 3 hours of LEF3D optics were used to
+   determine the TOF and M/Q accumulated time on 2 different days in the
+   solar wind. In spectra of solar-wind ions. The E/Q ion spectra obtained
+   Figure 8, the data from both days was summed over energy from the ion
+   singles events also reflect the composition of so that TOF peaks could
+   be more easily picked out. Each the solar wind during periods when the
+   solar-wind Mach peak was analyzed using the energy information also
+   number is high (>8). These spectra were compared with provided in the
+   data. The notation used in the peak labels TOF spectra to demonstrate
+   that the latter were in refers to the ion-charge state before entering
+   PEPE and after quantitative agreement. It was also possible to observe
+   the arrow the state that exited the foil is shown. The xenon and
+   molybdenum ions in the TOF spectra as would branching ratios for each
+   ion is known and the peaks, as be expected during periods of IPS
+   thrusting. Final labeled, are consistent with known charge-state
+   branching confirmation of the operation of the TOF system awaits ratios
+   in thin-carbon foils and the attendant efficiencies. It is observations
+   of cometary molecules that break up to somewhat difficult to determine
+   the ultimate-mass produce more complex TOF spectra. Resolution of the
+   resolution for the TOF section because the high-charge solar-wind TOF
+   spectra (Figure 8) is consistent with states in the solar wind rarely
+   emerge unchanged or more anticipated low-resolution values of M/ M ~5.
+   High- positive from the foils; unless this is the case, ions will not
+   resolution features have been identified in the spectra "bounce" and be
+   measured at high resolution. Figure 8. TOF Spectrum Based on Direct
+   Event TOF Data (This shows solar wind ions at the highest available TOF
+   resolution. Note that the peaks that originated as He+ are believed to
+   have derived from the pressurization system of the spacecraft thruster
+   system and not the solar wind.) 11 Deep Space 1 Technology Validation
+   Report-Plasma Experiment for Planetary Exploration 2.6.2.2 High-Speed
+   TOF Electronics-The TOF electronics plasma neutralizer that emits large
+   numbers of electrons. It appear to deliver performance consistent with
+   ground is also clear the electron fluxes are highly variable;
+   measurements. The presence of high-resolution TOF peaks however, the
+   reason is not understood. in the spectra confirms the proper
+   functioning of the TOF electronics. The operation of the BIT function
+   has been Figure 10 shows the average TOF spectra summed over confirmed
+   in-flight. energy and angle for each of three full days. On the day of
+   year (DOY) 009 of 1999, the IPS was not running. On DOY 2.6.2.3
+   Integrated Ion/Electron Optics-PEPE data obtained 083 and DOY 216 of
+   1999, the IPS ran continuously from observations of the solar wind were
+   compared with throughout the day and there was very little, if any,
+   thruster WIND/SWE instrument data (Figure 9) to obtain calibration
+   activity. The line spectra clearly show a molybdenum (Mo) factors
+   relating flux intensity and energy/angle response of peak that appears
+   only on the later day when the IPS had PEPE to engineering values of
+   density, temperature, and accumulated many hours of firing. The peak at
+   ~450 TOF flow velocity. PEPE's values appear consistent within ~10%
+   bins is possibly argon; however, possible sources of argon of
+   measurements made by the WIND instrument. This are unknown. This could
+   be a molecular peak with nearly estimate is based on what appear to be
+   valid correlations the same total mass. Further investigation is
+   required; between observations made at PEPE and those made at however,
+   it is clear that PEPE is capable of providing a very WIND, which is
+   ~106 km distant. The comparison was detailed analysis of processes
+   around the spacecraft. established by time -shifting the two solar-wind
+   ion spectra until maximum correlation of the density, bulk, and thermal
+   2.6.2.4 Data-Acquisition System-The data system has velocities were
+   found. The result is fairly good, as is successfully acquired,
+   compressed, and transmitted more apparent from Figure 9. than 75,000
+   full spectra in the course of operations so far. All of these spectra
+   have been plotted in a summary format Several other features of the
+   optics have been confirmed as shown, for example, in Figures 5, 6, and
+   7. Examination of well. PEPE optics and anti-reflective surface
+   treatments the different spectra indicate that the data system acquires
+   were designed to allow the aperture to face directly into the and
+   formats the data correctly. High-counting-rate random Sun without
+   creating a large flux of internal photoelectrons electron and ion TOF
+   events have been observed throughout and resulting background. As seen
+   in Figure 5, a spectrum this period and have been processed correctly.
+   As noted of the quiet solar wind shows that the PEPE optics are solar
+   above, a comparison of PEPE's solar-wind data with that blind to the
+   extent that there is no perceptible background from WIND/SWE indicates
+   that acquisition and processing above that caused by the spacecraft
+   itself. The cause of the of PEPE data are being carried out correctly
+   and are free of electron background signal at energies >4 keV is not
+   artifacts that might be introduced by this process. The understood.
+   This background is variable, at times mass/charge (M/Q) function has
+   not been fully tested disappearing, and does not seem to be related to
+   spacecraft because emphasis has been put on the analysis of other data
+   attitude. As is apparent from Figure 5, the background does formats.
+   not interfere with measurements of electrons from either the solar wind
+   or the spacecraft sheath. The data at the bottom 2.6.2.5 High-Voltage
+   System-The high-voltage system of Figure 5 indicate that the spacecraft
+   attitude during which appears to operate correctly. However, a recent
+   anomaly the data were obtained was such that the PEPE aperture was with
+   the operation of the TOF system may be related to directly viewing the
+   sun at the time. The ability of the sagging of the +HV monitor noted
+   during vacuum testing of deflection optics to keep the solar-wind beam
+   in the the system on the ground. This problem is under instrument FOV
+   despite turns made by the spacecraft is also investigation. Both ion-
+   and electron-detector backgrounds demonstrated in Figure 6, where the
+   solar wind is quite are very low (<1 count/cm2 s [see the spectra in
+   Figures 5 active but is still tracked by the PEPE deflection system.
+   and 6]) and are consistent with the thermionic and cosmic This shows
+   that the deflection system operates correctly (at ray backgrounds
+   expected in space. This indicates that very least up to solar-wind
+   energies of several keV). little, if any, noise or ripple is being
+   introduced by the supplies. PEPE's automatic HV turn-on sequence now in
+   Another important test of the instrument is demonstrated by use is
+   executed automatically and brings PEPE to full the data shown in Figure
+   7, which are taken from a period operation within 2 hours (vs. the 4
+   hours that were when the IPS engine was turned on and operated. The ion
+   originally planned). data clearly show the start-up of the thruster at
+   0910 UT. The slight disturbance in the electron spectrum at 0850 UT
+   2.6.2.6 High-Density Packaging Architecture-The optical seems to be
+   related to attitude-control thruster firings prior and high-voltage
+   systems have performed correctly in flight. to the main-engine firing
+   at 0910. The electron fluxes This demonstrates that the high-density
+   packaging intensify just before that time, probably in response to the
+   architecture of PEPE (0.83 g/cm3) is successful. 12 Deep Space 1
+   Technology Validation Report-Plasma Experiment for Planetary
+   Exploration Figure 9. Spectra Comparing Solar-Wind Data From PEPE and
+   the WIND/SWE Instrument (PEPE dataare in red. The two time series have
+   been shifted to obtain the best-time series correlation. Figure
+   courtesy Frank Crary.) 13 Deep Space 1 Technology Validation
+   Report-Plasma Experiment for Planetary Exploration Figure 10. Daily
+   Average TOF Counts for a Day Without IPS Firing (Day 009, 1999), a Day
+   With Continuous IPS Firing Early in the Mission (Day 083, 1999), and a
+   Day Much Later in the Mission With Continuous IPS Firing (Day 216,
+   1999) (Note the appearance of a molybdenum peak on the last day.) 2.7
+   Comparison Between Ground and Flight Test missions. The PEPE data are
+   of very high quality and are Most of this comparison has been carried
+   out during the finding their way out to the wider scientific community
+   for discussion of ground and flight tests mentioned above. further
+   analysis. The ultimate test of PEPE performance PEPE has generally
+   proven itself to be a very capable and must wait for the arrival of the
+   DS1 spacecraft at one or flexible plasma spectrometer. It is impossible
+   to create any both of the target comets during 2001. That opportunity
+   will of the space-plasma environmental conditions encountered allow
+   PEPE to demonstrate the full capability of the six- in space by PEPE on
+   the ground. Ground calibration is instrument technologies while
+   contributing to our restricted to unidirectional, mono-energetic beams
+   of understanding of cometary physics. particles that are a poor
+   approximation of the plasmas encountered in space. The single problem
+   that has been 4.0 TECHNOLOGY APPLICATION FOR encountered in flight
+   (TOF-high-voltage operation) was FUTURE MISSIONS known from ground
+   testing, but could not be addressed because of the impacted-development
+   schedule. The fact The PEPE instrument is ideally suited for
+   comprehensive that a successful method was found to address this
+   problem studies of space plasmas on future planetary and for future
+   applications of the technology by potting the TOF magnetospheric
+   missions. The ion/electron optics that cylinder indicates that the
+   miniaturized-TOF system can be perform an analysis of ion and electron
+   directions of arrival made to work successfully on a future mission.
+   and energies have already been incorporated into the Ion 3.0 T Electron
+   Spectrometer instrument scheduled to be flown on ECHNOLOGY VALIDATION
+   SUMMARY the Rosetta Cometary mission in 2007. Individual PEPE
+   technologies, such as the miniaturized high-voltage power PEPE and its
+   related technologies have been demonstrated supplies, have already
+   served as the basis of improvements to work very well during the flight
+   phase of the mission. All in this area. The group at SwRI responsible
+   for the supplies of the six technologies incorporated into PEPE have
+   been have built a prototype of the MCP supply that weighs 60 validated
+   during the flight phase of the mission with the grams (vs. the 100
+   grams for the equivalent PEPE supply). exception of the operation of
+   the high-voltage system at The data acquisition system is being further
+   miniaturized by maximum voltage. However, later tests of an improvement
+   using more capable gate arrays. In addition, the possibility made to
+   the technology on the ground show that the of custom ASICS designed for
+   this purpose are being miniaturized TOF system and associated
+   high-voltage investigated for future planetary missions requiring much
+   subsystem work very well and will be available for future harder parts.
+   14 Deep Space 1 Technology Validation Report-Plasma Experiment for
+   Planetary Exploration 5.0 LIST OF REFERENCES [6] McComas, D. J., J. E.
+   Nordholt, J. -J. Berthelier, et al., "The Cassini Ion Mass
+   Spectrometer," in Measurement [1] Young, D. T., J. E. Nordholt, J. L.
+   Burch, D. J. Techniques in Space Plasmas: Particles, AGU McComas, et
+   al., "Plasma Experiment for Planetary Monograph Series Vol. 102, R. F.
+   Pfaff, J. E. Borovsky, Exploration," to be submitted to Space Science
+   and D. T. Young, eds., 187193, 1998. Reviews, 2000. [7] Nordholt, J.
+   E., J.- J. Berthelier, D. M. Burr, et al., "The [2] Nordholt, J. E., D.
+   T. Young, and H. O. Funsten, Cassini Ion Mass Spectrometer: Performance
+   metrics "Plasma Experiment for Planetary Exploration (PEPE) and
+   techniques," in Measurement Techniques in Space on DS1," IEEE........
+   Plasmas: Particles, AGU Monograph Series Vol. 102, [3] Young, D. T., B.
+   L. Barraclough, J. -J. Berthelier, et al., R. F. Pfaff, J. E. Borovsky,
+   and D. T. Young, eds., 209 "Cassini Plasma Spectrometer Investigation,"
+   in 214, 1998. Measurement Techniques in Space Plasmas: Particles, [8]
+   Lin, R. P., K. A. Anderson, S. Ashford, et al., "A three- AGU Monograph
+   Series Vol. 102, R. F. Pfaff, J. E. dimensional plasma and energetic
+   particle investigation Borovsky, and D. T. Young, eds., 237242, 1998.
+   for the WIND spacecraft," in The Global Geospace [4] Young, D. T., J.
+   -J. Berthelier, M. Blanc, et al., "Casini Mission, C. T. Russell, ed.
+   125153, 1995. Plasma Spectrometer Investigation," accepted for [9]
+   Wang, J., D. Brinza, R. Goldstein, et al., "Deep Space publication,
+   Space Science Reviews, 2000. One investigations of ion propulsion
+   interactions: [5] McComas, D. J., and J. E. Nordholt, "A new approach
+   Overview and initial results," AIAA paper 99-2971 to 3-D, high
+   sensitivity, high mass resolution space presented at AIAA/ASME/SAE/ASEE
+   Joint Propulsion mass composition measurements," Rev. Sci. Instrum.
+   Conference, 2024 June 1999, Los Angeles, CA. 61, 30953097, 1990. 15
+   Deep Space 1 Technology Validation Report-Plasma Experiment for
+   Planetary Exploration Appendix A: PEPE's Telemetry Channels W HKID New
+   Name Original Name Chan ID Type Bit pos Bit len Calibration State Title
+   Units 0 0 CCSDS_HEADER n/a n/a 0 96 n/a n/a n/a 6 0 mon_mcp_ion G-0301
+   unsigned 96 16 u16 * -0.97568-12.3 n/a volts 7 0 mon_mcp_elc (spelling)
+   mon_mpc_elc G-0302 unsigned 112 16 u16 *1.067556-11.9 n/a volts 8 0
+   mon_tof_p15k G-0303 unsigned 128 16 u16 * 3.991378-54.6 n/a volts 9 0
+   mon_tof_n15k G-0304 unsigned 144 16 u16 * -3.98304+37.8 n/a volts 10 0
+   mon_sys_p5 G-0305 unsigned 160 16 u16 * 0.001280 n/a volts 11 0
+   mon_sys_n5 G-0306 unsigned 176

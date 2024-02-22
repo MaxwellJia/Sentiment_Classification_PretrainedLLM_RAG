@@ -1,0 +1,80 @@
+http://www7.etl.noaa.gov/modeling/COUPLED/index.html
+
+
+   [noaa_icon.gif]
+
+Commerce / NOAA / OAR / ERL / ETL / Meteorology / Modeling
+
+Regional Weather and Climate Applications Division
+
+NOAA/ETL-CU Coupled Coastal Modeling System (CCMS)
+
+   [etl_icon.gif]
+   [3dline.gif]
+
+[why.gif] In traditional models of the atmosphere, the extent of the
+          influence of the ocean on the atmosphere is limited to providing the
+          bottom boundary condition in terms of SST. It has become increasingly
+          clear that the finite heat capacity of the upper ocean and the
+          dependence of air-sea momentum transfer on the sea state must be
+          properly accounted for. In many cases, the two-way interaction between
+          the ocean and the atmosphere is crucial to the evolution of meso-scale
+          features in the atmosphere.
+
+     For research on air-sea interactions and ocean-atmosphere coupling on
+     sub-basin scales, the NOAA/ETL-CU Coupled Coastal Modeling System
+     (CCMS) has been developed that couples the Penn State/NCAR mesoscale
+     atmospheric model (MM5V2) to the University of Colorado version of the
+     Princeton ocean model (CUPOM) through the WAMDI group wave model cycle
+     4 (WAM). The entire development is lead by J.-W. Bao and J.M. Wilczak
+     at NOAA/ETL in collaboration with L. Kantha and J.-K. Choi at
+     University of Colorado. MM5V2 is a regional, finite-difference,
+     nonhydrostatic, three-dimensional primitive equation-based numerical
+     weather prediction model with movable nesting capability. CUPOM is a
+     three-dimensional, hydrostatic, Boussinesq, sigma-coordinate model that
+     is well-suited for application to marginal and coastal seas. WAM
+     describes the evolution of the wave spectrum by solving the wave energy
+     transfer equation with no constraints on the spectral shape. The three
+     model components of CCMS are initialized separately at this moment.
+     MM5V2 is initialized by performing a successive-scan Cressman objective
+     analysis on conventional surface and rawinsonde observations, together
+     with the first guess fields from the gridded global analyses of wind,
+     temperature, geopotential, and relative humidity at the mandatory
+     levels from the National Centers for Environmental Prediction. CUPOM is
+     initialized using results from an ocean nowcast model simulation forced
+     by six-hourly wind stresses from the U.S. Navy FNMOC. In addition, the
+     model assimilates TOPEX altimetric data and the SST is damped to weekly
+     MCSSTs derived from NOAA AVHRR data to provide a realistic state of the
+     ocean at the start of the coupled model forecast. WAM is used to
+     properly partition the stress applied by the atmosphere to waves and
+     ocean currents. CCMS has been applied to simulations of Hurricane Opal
+     (1995) and Hurricane Danny (1997) in the Gulf Mexico.
+     __________________________________________________________________
+
+   General Information:
+
+       [who_icon.gif] Contacts
+
+                                              [library_icon.gif] References
+     __________________________________________________________________
+
+   Division Libraries:
+
+       [data_icon.gif] Data
+
+       [earth.gif] Sites
+
+       [publication_icon.gif] Publications
+
+       [tools_icon.gif] Acronyms
+     __________________________________________________________________
+
+   Related Links:
+
+
+
+     Regional Weather and Climate Applications Division [Home Page]
+
+
+
+     Environmental Technology Laboratory [Home Page]

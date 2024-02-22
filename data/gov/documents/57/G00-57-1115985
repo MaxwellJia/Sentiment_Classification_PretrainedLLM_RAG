@@ -1,0 +1,24 @@
+http://step.nasa.gov/slides/ned_prototype.pdf
+
+   NASA Engineering Database NASA Engineering Database (NED) (NED)
+   Prototype Prototype Stephen C. Waterbury NASA/Goddard Space Flight
+   Center December, 2000 Model Interaction and Security, Transformation
+   Services: Thin Auth., Expresso Client and Web Browser API: Request Java
+   Server Routing Database: Pages Services: Repository PostgreSQL Database
+   Manager of Users Search File Vault/Storage Manager (STEP, proprietary,
+   docs, etc.) MetaServices (Dictionaries, MOF, etc.) MetaRepository
+   (read/write) Control Services (Roles/Perms) Directories (read/write)
+   (people, orgs, licenses, products, etc.) External System Systems API
+   (PDM, etc.) (peer/peer, Library federation, Services Libraries global
+   search) (read/write) (part models, IP, etc.) Security, Auth., Model and
+   CAD/CAE Interaction and Request Tools Transformation Thick Routing
+   Services Services Client (translate and API transform models, Utility
+   Tools generate views) (Viewers, Special Editors, etc.) Transaction
+   Databases and Caches Manager [R/O/O-R] DBMSs (reads/writes) (Master
+   Model Repository) Thin Client Web Browser API Search File Vault Manager
+   (reads only) (p21, proprietary files, docs, etc.) Expresso Repository
+   Manager PostgreSQL Check-in Process 1. File upload via Web browser 2.
+   RM calls Expresso to run Express-X to extract PDM data. 3. Expresso
+   outputs XML-encoded File Vault/Storage PDM data. (Unix Filesystem) 4.
+   RM executes transaction to write PDM data into PostgreSQL and AP210
+   file to "vault" (PDM data contains reference to file).

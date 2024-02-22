@@ -1,0 +1,636 @@
+http://ctas.arc.nasa.gov/project_description/fast.html
+
+                       Center-TRACON Automation System
+
+   CAPTION: Navigation Menu
+
+   CTAS Home Page CTAS News CTAS Description Publications Acronyms
+   blank space decoration
+   Traffic Management Advisor (TMA) Descent Advisor (DA) You are on the
+   Final Approach Spacing Tool (FAST) page. title=
+   User Preferred Routing (UPR) Direct-To Tool Expedite Departure Path
+   (EDP) Collaborative Arrival Planning (CAP) Pseudo Aircraft Systems
+   (PAS) CTAS Software Overview
+   blank space
+   Facilities Gallery CTAS in the Media Personnel Job Opportunities Links
+   to other CTAS-related websites
+
+   [ CTAS Home | CTAS News | CTAS Description | Publications | Acronyms |
+         Facilities | Gallery | CTAS in the Media | Personnel | Job
+                           Opportunities | Links ]
+
+      [ TMA | DA | FAST | UPR | Direct-To | EDP | CAP | PAS | Software
+                                 Overview ]
+     __________________________________________________________________
+
+   Final Approach Spacing Tool (FAST)
+
+Contents
+
+     * Overview
+     * Route Analysis and Trajectory Synthesis
+     * Sequencer and Scheduler
+     * Conflict Resolution
+     * Runway Allocation
+     * Controller Interface
+     * Simulation and Field Testing
+
+     * Simulations
+     * Operational Testing
+     * Test Highlights
+     * Passive FAST vs. Current Operation
+
+     Passive FAST Operational at Dallas/Fort Worth TRACON
+
+     Concluding Remarks
+     __________________________________________________________________
+
+Overview
+
+   The Final Approach Spacing Tool (FAST) is a CTAS decision support tool
+   for the terminal area (TRACON) air traffic controllers. The TRACON
+   typically encompasses the airspace within approximately 40 nautical
+   miles of a major airport. FAST provides landing sequences and landing
+   runway assignments, as well as speed, and heading advisories that help
+   controllers manage arrival traffic and achieve an accurately spaced
+   flow of traffic on final approach.
+
+   The FAST software suite consists of the following CTAS processes.
+   Communications Manager (CM)
+
+     The CM provides the communication and common database between each
+     of the processes.
+
+   Radar Daemon
+
+     The Radar Daemon serves as the interface between CTAS and the air
+     traffic control facility's host computer.
+
+   Weather Daemon
+
+     The Weather Daemon receives and process live weather information
+     from the National Oceanic and Atmospheric Administration (NOAA) or
+     the National Weather Service (NWS).
+
+   Timeline Graphical User Interface (TGUI)
+
+     The TGUI receives input from and displays information to the TMCs.
+
+   Planview Graphical User Interface (PGUI)
+
+     The PGUI receives input from and displays information to the
+     controllers and TMCs.
+
+   Route Analyzer (RA)
+
+     The RA computes the project horizontal route that each aircraft will
+     follow. This information is then passed the Trajectory Synthesizer
+     (TS).
+
+   Trajectory Synthesizer (TS)
+
+     The TS computes the ETAs and 4-D trajectory, including both the
+     horizontal route and descent profile, for each aircraft.
+
+   Profile Selector (PFS)
+
+     The PFS computes the runway assignment for each aircraft and
+     computes the sequences and STAs to the final approach fixes, and
+     runway thresholds.
+
+   Go To Top
+     __________________________________________________________________
+
+Route Analysis and Trajectory Synthesis
+
+   FAST depends on the accurate estimates of arrival times for all
+   aircraft. These arrival times are used by FAST for sequencing and
+   scheduling aircraft to the runway threshold. CTAS's Route Analyzer (RA)
+   and Trajectory Synthesizer (TS) provide the rapid update and accurate
+   calculation of Estimated Times of Arrival (ETAs) based on radar track
+   or flight plan data.
+
+   The set of ETAs that the RA/TS computes represents ranges of possible
+   arrival times given an aircraft's predicted route of flight combined
+   with possible variations in degrees of freedom along those routes.
+   Typical degrees of freedom include speed, horizontal maneuvers, and
+   vertical maneuvers. Upon receipt of a flight plan or radar track data
+   update (x-coordinate, y-coordinate, altitude, ground speed), the RA
+   ``categorizes'' each aircraft's situation for each potential landing
+   runway in terms of destination airport, airport configuration,
+   geographical sections of airspace, engine type (jet, turbo-prop, or
+   piston), approach segment (downwind, final, base, etc.), and aircraft
+   states (x-coordinate, y-coordinate, altitude, heading, speed). Each
+   situation category has a name and a complete description of
+   route/degree of freedom combinations that are possible for that
+   aircraft. The RA uses this site-adaptable data for each situational
+   category to build a series of one or more routes for each aircraft,
+   apply degrees of freedom to those routes, and finally request the TS to
+   compute ETAs for each route/degree of freedom combination.
+
+   The inputs to the TS are the aircraft state, winds aloft, temperature
+   and pressure profiles, a series of waypoints depicting the expected
+   route of flight for an aircraft, and vertical and speed constraints on
+   the predicted route. The outputs from the TS include a complete
+   time-based (4D) trajectory along the expected path including all data
+   pertinent for resolving conflicts and estimating times of arrival at
+   points along the path.
+
+   As the aircraft flies through the arrival airspace and descends to the
+   runway, it will change situation categories as it transitions from one
+   flight segment to the next, producing stable sets of ETAs. These sets
+   of ETAs form the basis for the sequencing and scheduling process. Once
+   the sequencing and scheduling process is completed, the same set of
+   RA/TS trajectories will be used for conflict resolution. Finally, they
+   will be used as a reference in computing expected delay for aircraft in
+   the runway allocation process.
+
+   Go To Top
+     __________________________________________________________________
+
+Sequencer and Scheduler
+
+   Air traffic controllers must construct a plan about how aircraft will
+   merge together and land safely. The Profile Selector (PFS) assists
+   controllers by sequencing and scheduling aircraft at various points
+   along their flight path while maintaining proper spacing and avoiding
+   conflicts. This process is described below.
+
+   Trajectory Segments
+
+                                                                         D
+
+   A trajectory is made up of a set of time steps at defined intervals.
+   Each time step contains a predicted x-coordinate, y-coordinate,
+   altitude, speed, and heading of an aircraft at a future time. A
+   trajectory segment is a group of time steps that fall within a
+   predefined segment of flight. The figure at right shows an aircraft and
+   its trajectory broken into four trajectory segments called LONG_LEFT,
+   DOWNWIND_LEFT, BASE_LEFT, and FINAL.
+
+   The first step in producing a plan or sequence is to determine an order
+   in which to land the aircraft. Ordering is the process of both creating
+   a relative sequence within each trajectory segment and combining those
+   sequences into a consistent global ordering for each runway.
+
+   At the beginning of each sequencing cycle, FAST builds a new trajectory
+   for each aircraft at its current position. The sequencing algorithm
+   uses these trajectories to calculate the order of aircraft relative to
+   one another. The previous sequence is also considered to provide
+   stability to the new sequence.
+
+                            Sequencing Example D
+
+   The diagram above depicts a situation where seven aircraft merge
+   together to land on the same runway. First the aircraft on each
+   individual segment are ordered. Thus, each segment shown in the diagram
+   at right may be ordered as follows.
+
+   CAPTION: FAST Computed Sequence per Segment
+
+            Segment           Aircraft Order
+   LONG_LEFT                  B A
+   OVER_THE_TOP_RIGHT_TO_LEFT G
+   DOWNWIND_LEFT              C
+   BASE_LEFT                  F E
+   FINAL                      D
+
+   Next, starting with the outermost segment, segments are merged such
+   that the relative order in the previous step are preserved. In this
+   example, the following sequences would be built.
+
+   CAPTION: Results of Merging Segments
+
+        Merging Segments      Merged Sequence
+   LONG_LEFT,
+   OVER_THE_TOP_RIGHT_TO_LEFT,
+   onto DOWNWIND_LEFT         C B G A
+   DOWNWIND_LEFT,
+   BASE_LEFT,
+   onto FINAL                 D C F E B G A
+
+   Notice that in computing the merge of LONG_LEFT, and
+   OVER_THE_TOP_RIGHT_TO_LEFT, onto DOWNWIND_LEFT, the aircraft maintain
+   their order relative to other aircraft on the same segment. For
+   example, even though aircraft G is inserted between aircraft B and A,
+   aircraft B and A are in the same order relative to each other as when
+   the sequence was computed for the LONG_LEFT segment alone. The result
+   of merging the aircraft onto DOWNWIND_LEFT is used when merging
+   DOWNWIND_LEFT, and BASE_LEFT onto FINAL. The resulting sequence on
+   FINAL is the overall landing order for this runway.
+
+   Finally, with the sequence on the FINAL trajectory segment in hand, the
+   Scheduled Time of Arrival (STA) of each aircraft is computed. The STA
+   for the number one aircraft is set to the aircraft's nominal arrival
+   time. STAs for the remaining aircraft are calculated according to:
+    STA of Tail Aircraft = Max[(STA of lead aircraft + required separation),
+                               Aircraft's Nominal ETA]
+
+   The algorithm subsequently computes a delay for each aircraft by
+   subtracting the STA from the aircraft's nominal time.
+
+   Go To Top
+     __________________________________________________________________
+
+Conflict Resolution
+
+   All trajectory segments for an aircraft are checked for conflicts with
+   other aircraft within the same segments. If there is no conflict for an
+   aircraft, it will be assigned its nominal trajectory. When a conflict
+   is predicted, one or both aircraft trajectories must be manipulated to
+   resolve the conflict. Because the aircraft have already been ordered,
+   PFS knows which aircraft is ahead and which aircraft is behind. PFS
+   will add delay to the trailing aircraft in order to resolve the
+   conflict. The PFS accomplishes this by searching the trajectory for
+   degrees of freedom which will help to resolve the conflict. The
+   magnitude of the conflict is measured and translated into a required
+   delay for the aircraft before it reaches the conflict point. Because
+   the PFS knows which degrees of freedom will help to resolve the
+   conflict, it can combine this knowledge with the route/degree of
+   freedom/ETA values it received from the RA/TS to bound and then begin
+   the iterative process for resolving the conflict.
+
+                         Conflict on DOWNWIND_LEFT D
+
+   The process of resolving conflicts contains a number of complicated
+   situations. It may seem that for each aircraft added to the sequence,
+   FAST only has to resolve violations that are with an aircraft ahead in
+   the final sequence. Unfortunately, there are a number of cases where
+   the situation is more complicated. In the figure above, for example,
+   aircraft A will merge with aircraft B on DOWNWIND_LEFT and then another
+   C on FINAL. Assume that the final ordering is B, C, then A. The idea of
+   resolving only the conflicts A had with C could leave a DOWNWIND_LEFT
+   conflict unresolved. The problem with checking for conflicts only with
+   the aircraft ahead on FINAL is that a merge could be missed. FAST will
+   search for and resolve conflicts on all trajectory segments between a
+   given aircraft and the aircraft sequenced ahead of it.
+
+   Go To Top
+     __________________________________________________________________
+
+Runway Allocation
+
+   In general, aircraft are vectored from Center airspace into a TRACON
+   over a feeder gate or metering fix. Aircraft engine types (e.g.
+   turbo-jets, turbo-props, piston) and feeder gate assignment map to a
+   preferred runway which is typically the closest runway to that feeder
+   gate. Depending on the procedures at a given TRACON, an aircraft may be
+   eligible to change to secondary or alternate runways. Situations which
+   would influence a controller-initiated runway change include excessive
+   or unbalanced delay buildup on the preferred runway, controller
+   workload for a given runway, and airline or control tower preferences
+   for ease of ground traffic movement. A controller will select which
+   aircraft to change to an alternate runway based on a number of
+   considerations such as separating aircraft of a dissimilar engine type
+   or weight class from the other aircraft in a busy stream of traffic,
+   avoiding potential conflicts in current streams of traffic, or avoiding
+   potential conflicts in merging streams of traffic. Ideally, a
+   controller would like to change the runway early in the traffic flow
+   (i.e. near the feeder gates), but because of the uncertainties of
+   making such a decision early in the flow, changes are commonly held off
+   until the last possible moment. This can cause an undesirable increase
+   in workload for the pilots of arriving aircraft because of the late
+   changes in selecting navigation frequencies and configuring the
+   aircraft for an approach.
+
+   The strength of an automation system such as FAST is its ability to
+   assign runways based on accurate estimations of delay savings and
+   workload benefits at an early stage of the arrival process. The runway
+   allocation algorithm employed in FAST attempts to meet three primary
+   objectives:
+    1. making an early and accurate decision,
+    2. reducing overall system delay and
+    3. reducing controller workload.
+
+   The algorithm is heuristically-based and site-adaptable. The approach
+   is to define the preferred runway for all aircraft in the landing
+   sequence and then to select the set of all aircraft which are eligible
+   for reassignment, apply criteria to narrow this set to a most likely
+   aircraft to be reassigned, to test the aircraft's new runway in a full
+   sequencing and conflict resolution cycle with all other aircraft, and
+   finally to apply detailed criteria to this solution set for all
+   aircraft.
+
+   The set of aircraft eligible for runway reassignment is defined by a
+   runway allocation time window for each runway. The time window begins
+   with a ``start testing runway allocation time horizon'' measured in
+   expected flight minutes from a given runway and ends with a ``freeze
+   runway allocation time horizon'' also measured in expected flight
+   minutes from the runway. Any aircraft with an estimated time of arrival
+   for a runway which falls within the runway allocation time window are
+   deemed eligible for allocation to that runway. Once the set of eligible
+   aircraft are determined for all arrival runways, the system builds an
+   estimated schedule and its associated delays for each aircraft to their
+   currently assigned runway and to any available alternate runways. The
+   system then selects those eligible aircraft which pass a set of runway
+   allocation heuristics. This selection process is based on a site
+   adaptable decision tree file which incorporates facility procedures,
+   delay reduction, and controller heuristics.
+
+                                       Example of a Runway Decision Tree D
+
+   A simplified example of a runway allocation decision tree is shown at
+   right. In this example, only one thread through a series of branches on
+   the decision tree is shown. The tree first branches on runway pair,
+   followed by arrival feeder gate, followed by a criterion labeled ``Odd
+   Aircraft Type.'' This criterion examines the aircraft together with all
+   aircraft meeting the previous criteria (runway pair and feeder gate),
+   and determines if the aircraft currently traversing the decision tree
+   is an odd type (e.g. the only turbo prop in a stream of jet traffic).
+   If this is true, then the system examines a system-wide or global delay
+   reduction criterion. Because the aircraft in this example is an odd
+   engine type in its stream, the delay reduction criterion is small (0
+   minutes). If we examined the branch on the ``No'' answer for ``Odd
+   Aircraft Type,'' we would find that the global delay reduction
+   criterion would require a larger value (typically 2-4 minutes). The
+   reason for the difference in delay reduction requirements on these two
+   branches is to force FAST to favor pulling a dissimilar engine or
+   weight class aircraft out of the traffic stream. This serves to reduce
+   workload for the controller.
+
+   After all eligible aircraft have passed through this decision tree and
+   thus narrowing the list of all eligible aircraft to a smaller set, FAST
+   then selects a single aircraft which appears to have the greatest delay
+   benefits to the overall arrival system. In some cases, there may not be
+   any aircraft which pass these criteria and in this case, the runway
+   allocation algorithm will not consider any aircraft for that update
+   cycle. Once an aircraft is selected, it is then placed in an alternate
+   runway sequencing and conflict resolution cycle. The entire arrival
+   airspace sequencing problem is solved with this aircraft placed on its
+   alternate runway. This allows the software to evaluate all aspects of
+   the particular runway allocation. Full trajectory solutions are
+   obtained for each aircraft which in turn give accurate sequences,
+   expected delay, and conflict detection for the entire airspace. At this
+   point, a new and more detailed set of criteria are applied. These
+   criteria examine trajectory based issues such as potential conflict
+   resolution problems and exhaustion of critical degree of freedom
+   limits. They are applied to the alternate solution set in order to make
+   the final determination as to whether or not to change the aircraft to
+   the alternate runway.
+
+   Once an aircraft has been switched away from a given runway, that
+   runway is blocked off from further consideration for that aircraft. A
+   more optimal solution would be to allow allocation of this aircraft
+   back to its original runway if a situation warrants, but this was found
+   to be unacceptable to controllers. Controllers always have the final
+   authority in the runway assignment, and if a controller directs FAST to
+   assign a given aircraft to a runway through a keyboard entry, the
+   system will freeze that decision and no longer consider that aircraft
+   for any other runway. Finally, once an aircraft's ETA falls below a
+   runway's freeze time horizon, that runway will be blocked off from
+   further consideration. After all but one runway has been blocked off,
+   the runway assignment advisory is frozen for the remainder of the
+   flight. In nearly all cases, the aircraft has a frozen runway
+   assignment before twelve minutes of flight time from the runway.
+
+   Go To Top
+     __________________________________________________________________
+
+Controller Interface
+
+   The development of the controller interface has focused on implementing
+   FAST on two different controller interface platforms. The first
+   interface platform is the current controller interface in operation at
+   Dallas/Fort Worth called the Full Digital ARTS Display (FDAD). The
+   FDADs employ a monochrome digital display with trackball, keyboard and
+   analog input devices. The FDADs will be used as the controller
+   interface in the initial field implementation of FAST. The second
+   interface platform is a Sun workstation color monitor with
+   mouse/trackball and keyboard input devices. This color workstation was
+   the initial development platform for FAST and was used primarily before
+   the FDADs became available for testing at NASA.
+
+   To assure an effective controller interface, the FAST development team
+   used active air traffic controllers throughout the interface design and
+   four key guidelines evolved:
+    1. minimize screen clutter,
+    2. associate advisories with aircraft
+    3. minimize keyboard entries, and
+    4. use graphical advisories where possible.
+
+                            ARTS Flight Datablock with FAST Enhancements D
+
+   The output of the previously described algorithmic components produce a
+   set of advisories which must be transferred to the controller
+   interface. There are two primary methods for displaying this
+   information to the controller. The first method is to add information
+   to the aircraft's flight data block. The figure at right shows a
+   typical flight data block for an aircraft currently displayed in
+   TRACONs.
+
+   The first line indicates the aircraft identification or call sign. The
+   second line contains two data fields. The first data field contains the
+   current reported altitude (in hundreds of feet) time-shared with a
+   facility scratch pad (typically containing the current runway
+   assignment), and the second data field contains the aircraft's current
+   ground speed (in tens of knots) time-shared with the aircraft type
+   (e.g. Boeing 727 is displayed as ``B727''). The third line shown is the
+   FAST information data line and is not currently displayed operationally
+   in TRACONs. This line also contains two data fields. The first data
+   field contains the FAST relative sequence number to the runway
+   time-shared with the FAST runway assignment advisory. The second data
+   field can contain both indicated airspeed and heading advisory
+   information. If the data is indicated airspeed information, it is shown
+   in tens of knots, and if it is an advised heading, it is show in tens
+   of degrees (magnetic North) preceded by an ``H'' for heading.
+
+                                   FAST Speed and Turn Advisory Graphics D
+
+   The second method of advisory display in FAST is graphical and applies
+   to speed and heading advisories. Speed advisories are typically
+   displayed as a marker on the display and an advised indicated airspeed
+   in the third line of the data block as described above (see figure at
+   right). These speed advisories are displayed as orange markers along
+   with an orange alphanumeric for the speed value in the data block.
+
+   Heading advisories are displayed as a location to issue the turn (shown
+   by a graphical marker), a magnetic heading in degrees next to the
+   marker, and a turn arc depicting the projected aircraft path taking
+   into account its speed, heading and the winds aloft. The graphical data
+   is color coded based on arrival feeder gate for the aircraft. The
+   aircraft flight data block changes color to match the graphical
+   advisory. When the aircraft executes or passes the advisory, the flight
+   data block reverts back to its nominal color.
+
+   Go To Top
+     __________________________________________________________________
+
+Simulation and Field Testing
+
+  Simulations
+
+   The planning and development for field testing and implementation has
+   been ongoing for several years. Initially, simulations were conducted
+   with controllers from all over the U.S., but as the development
+   progressed, simulations focused exclusively on and with controllers
+   from the Dallas/Fort Worth TRACON in preparation for field testing at
+   that facility.
+
+   The simulations focused on a number of issues ranging from validation
+   of the algorithms to an evaluation of human factors issues. They
+   assisted both in the development of the system and the planning of the
+   field deployment. The simulations had the following objectives:
+    1. to assess the potential benefits of FAST,
+    2. to evaluate controller acceptability, and
+    3. to develop the system for operational testing.
+
+   Initial information on the potential benefits was obtained in a
+   simulation evaluation of FAST operating on a color display in a single
+   runway, Instrument Flight Rules (IFR) configuration (Davis et al,
+   1991). This simulation demonstrated efficient use of airspace,
+   increased landing rates, and controller acceptance of the system.
+   Similar results were obtained in an independent study (Credeur et al,
+   1993).
+
+   More recently, simulations of FAST designed for the Dallas/Fort Worth
+   TRACON have demonstrated the system's performance in more complex
+   operations with multiple runways in both IFR and Visual Flight Rules
+   (VFR). These simulations have included parallel simultaneous and
+   staggered approaches, as well as converging approaches. The simulations
+   have been conducted on the FDAD's with traffic scenarios based on live
+   traffic samples from the Dallas/Fort Worth TRACON. The primary results
+   of the tests are discussed below.
+
+   First, the controllers have reported that detection of the speed and
+   heading advisories on a monochrome display is difficult and requires
+   additional workload. This is largely because of screen clutter from
+   non-arrival air traffic. In addition, controllers sometimes have
+   difficulties associating advisories with the correct aircraft on the
+   monochrome display. The controllers stated that the color display
+   mitigates these problems substantially.
+
+   Second, the controllers felt that sequence numbers and runway
+   assignment advisories would provide substantial benefits even on the
+   monochrome displays. The controllers report that these advisories often
+   improved on their own decisions. The best use of the sequence numbers
+   was found to be in sectors where the controllers merged streams of
+   traffic. Runway assignment advisories were found to match or improve
+   the controller decisions in most cases. Occasionally, controllers had a
+   tendency to doubt runway allocation advisories because FAST could
+   ``see'' aircraft that are out of the controller's view and thus make an
+   accurate assessment at an earlier stage. However, the ``doubtful''
+   runway assignment advisories were nearly always shown to be correct.
+
+   Go To Top
+
+  Operational Testing
+
+     * Test Site: Dallas/Fort Worth (D/FW) TRACON
+     * Test Period: February-July, 1996
+     * Passive FAST functionalities tested (runway and sequence
+       advisories)
+     * System evaluated by D/FW-appointed ``Assessment Team''
+          + Specifically trained for evaluation (FAST functionality +
+            Human Factors Assessment)
+          + Active participation from ATA and NATCA
+     * Operational Test-Airport Configurations
+          + South Flow, VFR, 3 runways
+          + North Flow, VFR & IFR, 3 runways
+          + North Flow, IFR, 2 runways
+
+   Go To Top
+
+  Test Highlights
+
+     * Many rushes were ``free-flowed'' (cancelled metering) 10-15 minutes
+       after they began:
+          + Arrival rate increases 10-15% depending on conditions
+          + Small, but acceptable, workload increase during increased
+            traffic levels
+          + Sharp workload reduction during current traffic levels
+     * Positive feedback from tower/ground control
+          + ``Near-perfect runway balancing''
+          + No measured increase in taxi-in or taxi-out time
+
+   Go To Top
+
+  Passive FAST vs. Current Operation
+
+                           Aircraft Arrival Rates
+
+                  Aircraft Arrival Rates comparison graph D
+                           _______________________
+
+                         Excess In-Trail Separations
+
+               Excess In-Trail Separations comparions graph D
+                           _______________________
+
+                       Passive FAST Sequence Adherence
+
+   Passive FAST Sequence Adherence graph D
+                           _______________________
+
+    Passive FAST Runway Adherence
+
+   Passive FAST Runway Adherence graph D
+                           _______________________
+
+    Passive FAST Workload Ratings
+
+   Passive FAST Workload Ratings graph D
+
+   Go To Top
+     __________________________________________________________________
+
+Passive FAST Operational at Dallas/Fort Worth TRACON
+
+   On February 15, 1999, the Passive Final Approach Spacing Tool (pFAST)
+   began sixteen hour per day operational use at the Dallas/Fort Worth
+   (D/FW) TRACON. This was a major milestone for the pFAST Free Flight
+   Phase One (FFP1) effort as it demonstrated that pFAST could be
+   independently adapted and run operationally by an FAA contractor
+   (Sterling Software) without substantial NASA oversight or input. In the
+   two weeks of operation, over 80% of the possible arrival rushes were
+   run using pFAST. Controller acceptance of the runway advisories was
+   96.9%, and acceptance of the sequence advisories was also high,
+   although not specifically tracked. Air traffic controllers and D/FW
+   TRACON management reported the first week of operations as being ``very
+   positive.'' Controllers in the D/FW Tower reported that airport traffic
+   balance was at an all time high, and that rushes seemed to begin and
+   end earlier, potentially pointing to reduced delays. The D/FW Tower
+   also reported an increase in surface traffic operational efficiency due
+   to the improved overall balance of traffic on the ground. To date, only
+   one software change to address improved sequencing of low speed general
+   aviation aircraft has been required and the resulting change has been
+   transferred to D/FW for operational use with positive results. The D/FW
+   TRACON continues to use pFAST on a daily basis and analytical studies
+   to assess the benefits impact will be initiated following an initial
+   1-2 month ``burn-in'' period.
+
+   Go To Top
+     __________________________________________________________________
+
+Concluding Remarks
+
+   An automation system for assisting terminal area air traffic
+   controllers in efficiently managing and controlling arrival traffic has
+   been developed and tested in simulation and in the field. The
+   automation system, referred to as the Final Approach Spacing Tool
+   (FAST), was developed through thousands of hours of real-time
+   simulations and field tests with active air traffic controllers.
+   Results from these tests show benefits in efficient airspace
+   utilization, reduced controller workload, increased runway capacity,
+   and reduced air traffic delays.
+
+   The FAST system is designed to operate either independently or in
+   direct coordination with the other CTAS tools. However, simulation
+   results indicate that the arrival air traffic management process will
+   receive the most benefits by utilizing all tools sets in CTAS.
+   Integrated tests of all CTAS tools are planned for the Dallas/Fort
+   Worth and Denver airports.
+
+   See list of FAST papers.
+
+   Go To Top
+     __________________________________________________________________
+
+   This page was last updated on 08/14/01.
+   Webmaster: Gregory L. Wong
+   Responsible Official: Dr. Dallas Denery - Deputy Division Chief for Air
+   Traffic Management
+
+   See the NASA privacy statement.
+
+   To request information on this web site in a Section 508 accessible
+   format, please contact access@mail.arc.nasa.gov.

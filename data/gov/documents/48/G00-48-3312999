@@ -1,0 +1,802 @@
+http://www1.etl.noaa.gov/radiom/psr/
+
+   Commerce / NOAA / OAR / ETL / Oceans / PSR
+
+
+                                [3dline.gif]
+
+               The NOAA Polarimetric Scanning Radiometer (PSR)
+
+                                [3dline.gif]
+
+                          (Updated: April 30, 2001)
+
+            Go directly to PSR Data Sets
+
+   Instrument Description
+
+   The Polarimetric Scanning Radiometer (PSR) is a versatile airborne
+   microwave imaging radiometer developed by the Georgia Institute of
+   Technology and the NOAA Environmental Technology Laboratory for the
+   purpose of obtaining polarimetric microwave emission imagery of the
+   Earth's oceans, land, ice, clouds, and precipitation. The PSR is the
+   first airborne scanned polarimetric imaging radiometer suitable for
+   post-launch satellite calibration and validation of a variety of future
+   spaceborne passive microwave sensors. The capabilities of the PSR for
+   airborne simulation are continuously being expanded through the
+   development of new mission-specific scanheads to provide airborne
+   post-launch simulation of a variety of existing and future U.S.
+   sensors, including CMIS, ATMS, AMSU, SSMIS, WindSat, TMI, RAMEX, and
+   GEM.
+
+   The basic concept of the PSR is a set of polarimetrc radiometers housed
+   within a gimbal-mounted scanhead drum. The scanhead drum is rotatable
+   by the gimbal positioner so that the radiometers (Figure 2.) can view
+   any angle within ~70^o elevation of nadir at any azimuthal angle (a
+   total of 1.32  pi sr solid angle), as well as external hot and ambient
+   calibration targets. The configuration thus supports conical,
+   cross-track, along-track, fixed-angle stare, and spotlight scan modes.
+   The PSR was designed to provide several specific and unique
+   observational capabilities from various aircraft platforms. The
+   original design was based upon several observational objectives:
+
+   1.      To provide fully polarimetric (four Stokes' parameters: T[v],
+   T[h], T[U], and T[V]) imagery of upwelling thermal emissions at several
+   of the most important microwave sensing frequencies (10.7, 18.7, 37.0,
+   and 89.0 GHz), thus providing measurements from X to W band;
+
+   2.      To provide the above measurements with absolute accuracy for
+   all four Stokes' parameters of better than 1 K for T[v] and T[h], and
+   0.1 K for T[U] and T[V];
+
+   3.      To provide radiometric imaging with both fore and aft look
+   capability (rather than single swath observations);
+
+   4.      To provide conical, cross-track, along-track, and spotlight
+   mode scanning capabilities; and
+
+   5.      To provide imaging resolutions appropriate for high resolution
+   studies of precipitating and non-precipitating clouds, mesoscale ocean
+   surface features, and satellite calibration/validation at Nyquist
+   spatial sampling.
+
+   The original system has been extended - as discussed below - to greatly
+   exceed the original design objectives by providing additional
+   radiometric channels and expanded platform capabilities.
+
+   The PSR scanhead (Figure 2.) was designed for in-flight operation
+   without the need for a radome (i.e., in direct contact with the
+   aircraft slipstream), thus allowing precise calibration and imaging
+   with no superimposed radome emission signatures. Moreover, the conical
+   scan mode allows the entire modified Stokes' vector to be observed
+   without polarization mixing.
+
+       PSR on NASA P-3
+       Figure 1. PSR and bomb-bay fairing as installed on the NASA P-3
+       aircraft.
+
+   The entire assembly (including both scanhead and positioner) was
+   designed for integration into several different aircraft, including:
+
+   ·        NASA Dryden Flight Research Center’s DC-8 (nadir-7 and/or
+   nadir-2 ports)
+
+   ·        NASA Wallops Flight Facility’s Orion P-3B (aft end of the P-3
+   bomb bay) (Figure 1)
+
+   ·        Scaled Composites Proteus underbody pod
+
+   ·        NASA Johnson Space Center’s WB-57F (palletized bomb bay)
+
+   ·        NASA Dryden Flight Research Center’s ER-2 (Q-bay)
+
+   To date, the PSR has flown successfully for over 340 flight hours on
+   NASA and Navy P-3s and the NASA DC-8 in conjunction with several major
+   field experiments (see below) sponsored by the US. Office of Naval
+   Resarch (ONR), NASA, NPOESS Integrated Program Office (IPO), NOAA, U.S.
+   Navy, and the U.S. Department of Agriculture. During all flights the
+   PSR exhibited excellent aerodynamic, mechanical, and electrical
+   performance in ambient conditions as cold as -51^o C and at true air
+   speeds up to 375 knots.
+
+                             PSR under NASA P-3B
+         Figure 2. PSR as installed on the NASA Orion P-3B aircraft.
+
+
+   The PSR/A scanhead provides either full-Stokes vector or
+   tri-polarimetric sensitivity at the radiometric bands of 10.7, 18.7,
+   and 37 GHz, and thus is well suited for the NPOESS Integrated Program
+   Office’s internal government (IG) studies of ocean surface wind vector
+   measurements - as proposed for inclusion on NPOESS. Currently, PSR data
+   has been used to demonstrate the first-ever retrieval of ocean surface
+   wind fields using conically-scanned polarimetric radiometer data. The
+   results have suggested that the NPOESS specification for wind vector
+   accuracy will be achievable with a polarimetric two-look system.
+
+   A. Polarimetric Radiometers: PSR/D
+
+   The first PSR scanhead (denoted "PSR/D," for its use of digital
+   correlators) was developed in 1995-96 and consisted of four
+   polarimetric radiometers operating at 10.7, 18.7, 37.0, and 89.0 GHz
+   (see Piepmeier and Gasiewski, 1996a). In order to efficiently utilize
+   the scanhead faceplate area, the 10.7 and 37.0 GHz radiometers utilize
+   a common dual-band antenna, while the 18.7 and 89.0 GHz receivers each
+   utilize single-band antennas. The precise radiometric bands measured by
+   the PSR are X (10.6-10.8 GHz), Ku (18.6-18.8 GHz), Ka (36-38 GHz), and
+   W (86-92 GHz). These bands were selected to provide sensitivity to
+   clouds, precipitation, and surface features over almost one decade of
+   microwave bandwidth at octave intervals.
+
+   All antennas are of the lens/corrugated feedhorn type and are dual
+   orthogonal-linear polarized with grooved rexolite lenses. Antenna
+   diameters were chosen to provide beamwidths of 8^o (for both X- and
+   K-bands) and 2.3^o (for both Ka- and W-bands). All main beam
+   efficiencies are in the 95-97% range and all on-axis cross-polarization
+   isolations exceed -27 dB.
+
+   The microwave receivers in PSR/D were all dual-channel superheterodyne
+   with a common local oscillator driving each of two identical mixers.
+   The 10.7 and 18.7 GHz receivers were single sideband (SSB) and use high
+   electron mobility transistor (HEMT) preamplifiers, while the 37.0 and
+   89.0 GHz receivers are double sideband (DSB). Noise temperatures are
+   low enough to meet the required sensitivities for airborne radiometric
+   studies of ocean emission anisotropies, clouds, and precipitation.
+
+   Tri-polarimetric detection (T[v]=<|E[v]|^2>, T[h]=<|E[h]|^2>, and
+   T[U]=2 [r_goth.gif] e <E[v]E[h]^*>) was accomplished in PSR/D using
+   custom three-level (1.6-bit) digital correlators operating at 1 GS/sec
+   (Piepmeier and Gasiewski, 1996b). The correlators allowed detection and
+   cross-correlation of 500 MHz wide intermediate frequency bands at the
+   Nyquist sampling rate. High-speed ECL logic was used to accomplish the
+   digital detection (Figure 3.). IF subband division was used to allow
+   detection of the full IF bandwidths available from the various
+   receivers (up to 2000 MHz). The digital detection hardware was backed
+   up by redundant dual-polarization analog detection hardware.
+
+     Digital Correlator
+
+                         Digital Correlator with cover
+
+     Digital Clock Module
+
+                         Above: 1 Gs/sec dual-band emitter-coupled
+
+                         logic (ECL) digital correlator module. Four
+
+                         of these modules were incorporated into the
+
+                         PSR/D scanhead.
+
+
+
+                         Left: PSR/D clock distribution/control module.
+
+     Figure 3. High speed (1 GS/s) digital correlators used in the PSR/D
+     scanhead.
+
+   The PSR/D scanhead (Figure 4) contains an 80486 PC, an eight-channel
+   digital correlator bank, and four total- power tri-polarimetric
+   radiometers installed inside a 20" (51 cm) diameter and 20" (51 cm)
+   long rotating drum. Radiometric data is processed using a 80486-based
+   computer within the scanhead, then transmitted to an archival computer
+   in the aircraft cabin via a 10-base 2 LAN link through the sliprings.
+   Thus, all radiometric detection is accomplished inside the scanhead
+   drum.
+
+    PSR/D Wiring
+
+                PSR/D Installation
+
+    Figure 4. PSR scanhead as seen through the access cover illustrating
+    wiring
+
+    and microwave electronics.
+
+   The scanhead package includes a monochrome CCD telephoto video camera
+   boresighted along the antenna main beams. The camera incorporates an
+   orange filter and vertical polarizer to maximize the contrast of ocean
+   foam against the ocean background and clouds against either ocean or
+   land backgrounds. The camera is used to observe the scene for purposes
+   of cloud clearing, ocean foam coverage estimation, and surface feature
+   detection.
+
+   B. Scanning Mechanism
+
+   To provide the required imaging capabilities a nadir-viewing two-axis
+   gimbal mount is used to scan the PSR radiometers in the airstream
+   outside the aircraft. The gimbal mount utilizes a 30-inch diameter ring
+   bearing to support a nominal aerodynamic wind load of up to 600 lbs. To
+   avoid calibration problems no radome is used, however an aerodynamic
+   fence is used to reduce the maximum free-stream wind loading to ~170
+   psf which is appropriate for the gimbal and scanhead structure. Geared
+   stepper motors with ~135 N-m of torque along with 12-bit absolute
+   position encoders facilitate scanhead motion under nominal wind
+   loading. Structural torsional deflections have been designed to be less
+   than 0.01^o to maintain positioning accuracy. Scanhead power is
+   provided by azimuthal and elevation slip rings provide power to the
+   scanhead.
+
+   The 170-lb scanning drum can be positioned to view any angle with 0.1^o
+   precision using a two-axis high-torque stepper motor positioner system
+   driven by a dedicated 68000-based programmable controller. Sliprings
+   are used to provide power to the scanhead and to facilitate digital and
+   analog data communications via ethernet and NTSC video links. In order
+   to minimize damage to the electronics caused by condensation, a dry gas
+   system is used to purge the scanhead drum and sliprings. The weight of
+   the positioner alone is 437 lbs, yielding a total instrument weight
+   (less computer control hardware) of 607 lbs. An additional 200-400 lbs
+   (depending on the specific aircraft platform) is required for computer
+   control hardware. Positioner and calibration load power requirements
+   vary with the motor's dynamic loads and with ambient temperature, but
+   the maximum required power (during warmup on ascent) is less than 1500
+   watts at 120 VAC. Scanhead power consumption is an additional 240 watts
+   at 28 VDC.
+
+   All scan modes are software-selectable in flight, and include: (1)
+   conical, with either fixed-angle or stepped-angle cones and including
+   both fore and aft views, (2) cross-track or along-track, (3)
+   fixed-angle stare, including nadir and (during modest rolls) cold sky
+   stare, and (4) spotlight. Minimum scan times of ~10 seconds for a
+   complete fore-and-aft viewing cone with 53.1^o half-angle (or ~4
+   seconds without hot and cold calibration views) are attained in-flight
+   with excellent mechanical stability. A network of IRIG-B clocks within
+   the scanhead and controlling computers provides position/sample
+   synchronization to better than one millisecond. A two-axis gyroscope is
+   mounted on the positioner to provide roll and pitch information at ~10
+   msec intervals. These data are later used to correct the observed
+   imagery for minor aircraft attitudinal variations.
+
+   C. Calibration
+
+   Calibration of all radiometers is performed in-flight using standard
+   (unpolarized) hot and cold blackbody targets. The unpolarized load
+   consists of an array of canted pyramidal iron-epoxy absorbing wedges
+   organized in a two-faced L-shaped configuration (Figure 5). The
+   absorbing pyramids overlie a thermally-conducting substrate of aluminum
+   pyramids so that the physical temperature of the entire structure
+   remains homogeneous to within 1-2 K. The microwave emission temperature
+   of the structure is thus precisely calculable using measurements of the
+   physical temperature of the array. The pyramids are canted at an angle
+   of 45^o so as to provide maximum absorption in the direction of PSR
+   lens antennas. The dimensions of each pyramid were chosen so as to
+   maximize absorption over the entire band of frequencies used by the
+   PSR.
+
+   Calibration Target
+
+                                          Calibration Target with foam
+
+   Figure 5. Canted-pyramid iron-epoxy calibration target for use with the
+   PSR.
+
+   D. PSR/A: Recent Innovations in preparation for the NASA CAMEX3
+   Experiment
+
+   Several major improvements in the scanhead and data system have been
+   implemented in preparation for the CAMEX-3, thus leading to a second
+   (analog) iteration of the original scanhead (PSR/A) (Figure 6). First,
+   the 18-GHz feedhorn and receiver has been upgraded to cover two
+   radiometric bands and now includes a fully-polarimetric channel at
+   18.6-21.7 GHz, and a dual-polarized water vapor channel at 21.3-21.6
+   GHz. The new K-band receiver will thus be sensitive to emissions from
+   both the surface and integrated water vapor. The new receiver will also
+   be a direct detecting type rather than superheterodyne. Second, each of
+   the five radiometers will incorporate sub-interval calibration hardware
+   to supplement the standard hot- and ambient-view calibration. The
+   sub-interval calibration hardware will switch noise diodes into the RF
+   inputs of the receivers at ~100 msec intervals, pulsing each diode both
+   on and off so as to allow estimation of the radiometer gains and
+   offsets at time intervals comparable to the drift time of receivers. In
+   this manner, uncalibrated gain and offset drift caused by 1/f noise
+   will be significantly reduced. Third, the digital correlators were
+   replaced by analog adding correlators using quadrature hybrid arrays.
+   The analog system allows measurement of all four Stokes' parameters for
+   the 10- and 18-GHz channels, and the first three Stokes' parameters for
+   the 37- and 89-GHz channel. Finally, using a new pyramidal calibration
+   load (expected to be available in late 1998), the absolute accuracy of
+   the PSR is expected to be ~1 K, thus providing excellent capabilities
+   for absolute intercomparisons of measurements with radiative transfer
+   model calculations.
+
+       PSR/A Wiring
+
+                                        PSR/A Installation under DC-8
+
+       Figure 6. PSR/A scanhead illustrating internal construction and
+       installation on the NASA DC-8
+
+       in preparation for CAMEX-3.
+
+   E. New Developments: PSR/C, PSR/S, and PSR/L
+
+   The modularity of the PSR system allows for a straightforward
+   replacement of the scanhead under field conditions with either of
+   several new or planned scanheads. The replacement of a scanhead
+   requires approximately two-hours of time and can thus be can be
+   accomplished well within the duration of a typical field campaign. The
+   logical, electrical, and mechanical interfaces to the new scanheads are
+   all identical, thus minimizing design and fabrication costs as well as
+   providing observational versatility. Additional PSR gimbal positioners
+   are being fabricated in order to allow more than one PSR scanehad to be
+   operated from a single aircraft. Synchronized operation of two PSR
+   systems is possible on the DC-8, P-3, WB-57F, or Proteus aircraft.
+
+   PSR/C.. The second PSR scanhead consists of a fully polarimetric C-band
+   radiometer inside a standard PSR scanhead drum. The C-band system
+   (PSR/C) provides simultaneous four-Stokes' vector measurements within
+   four bands adjacent at 5.80-6.20, 6.30-6.70, 6.75-7.10, and 7.15-7.50
+   GHz. Applications of PSR/C include ocean surface emissivity studies,
+   soil moisture mapping, sea ice mapping, and imaging of heavy
+   precipitation. The multiband capability of PSR/C will also be used to
+   study the feasibility of frequency agile radiometry for observations
+   over interference prone regions. Recently, am interference detection
+   and removal algorithm was demonstrated using PSR/C data.
+
+   PSR/C Scanhead
+
+   Figure 7. PSR/C scanhead. The primary lens/feedhorn antenna is located
+   to the left of a
+
+   co-boresighted video camera and longwave (10um) IR sensor.
+
+   PSR/S. A “submillimeter” wavelength scanhead, PSR/S, with radiometers
+   operating at the temperature and moisture sounding bands on AMSU/A and
+   B is currently being fabricated. This scanhead will contain several
+   dual-orthogonal linearly polarized millimeter- and submillimeter wave
+   radiometers with frequencies ranging from 18.7 to 500 GHz.^ This system
+   (PSR/S) is being designed to study the polarization signatures of
+   clouds and precipitation and will provide dual-polarized sensitivity at
+   all major window channels in this range. When completed, this
+   instrument will provide NOAA with the first-ever capability to perform
+   comprehensive post-launch calibration of its AMSU sensors - and the
+   first ever in-house capability for this critical acceptance task. PSR/S
+   will also be ideally suited for post-launch calibration of all NPOESS
+   microwave sensors (ATMS and CMIS) along with the ATMS on the NPOESS
+   Preparatory Project (NPP).
+
+   The PSR/S scanhead will have several sub-millimeter-wave channels,
+   providing sensitivity to cirrus water content and upper tropospheric
+   water vapor. These sensing capabilities will be used to study the
+   distributions of ice and water phases around convective sources. Since
+   water vapor is the most important of greenhouse gasses, the use of this
+   scanhead will provide important information on natural mechanisms for
+   stratospheric water vapor exchange.
+
+   The submillimeter-wave channels on PSR/S will be provide simulation
+   capability for the Geosynchronous Microwave (GEM) Sounder, now under
+   consideration for the NOAA GOES series of satellites. GEM has been
+   proposed as a practical geosynchronous microwave sounder, providing
+   sounding channels at 118, 183, 380, and 424 GHz with spatial resolution
+   of ~15-20 km and rapid scanning and update capability. Here, the PSR/C
+   and PSR/S scanheads - used in tandem - will provide important
+   radiometric imagery necessary to determine the capabilities of a
+   proposed microwave sensor to sound  temperature and humidity from
+   geosynchronous orbit. The combination of PSR/C and PSR/S scanheads will
+   provide the first means of intercomparing the data available from the
+   GEM-class sounder with data from well-understood systems such as AMSU
+   and SSM/I.
+
+   PSR/L. A new conically-scanning PSR scanhead operating at L-band
+   (PSR/L) promises to provide more accurate maps of sea surface salinity
+   that currently available. The high resolution of the PSR/L airborne
+   sensor will be particularly valuable for coastal and estuarian salinity
+   mapping and sea ice melt research.
+   _______________________________________________________________________
+
+   Field Measurement Programs
+
+   F. Labrador Sea Deep Convection Experiment (1997)
+
+   During January-March 1997 a unique multiagency complement of
+   instruments for observing ocean surface emission and scattering
+   signatures was installed and deployed on the NASA/Wallops Flight
+   Facility (WFF) Orion P-3B aircraft (N426NA). The primary goal of the
+   Ocean Winds Imaging (OWI) complement was to collect data to verify the
+   utility of passive ocean wind vector sensing in high seas, with
+   secondary goals being to better characterize the thermal emission and
+   scattering signatures of the wind-driven ocean surface. The complement
+   was flown under a variety of meteorological conditions in coordinated
+   patterns over both ocean buoys along the eastern U.S. coast and an
+   instrumented research vessel - the R.V. Knorr - within the Labrador
+   Sea. The conditions represented a wide range of surface wind speeds,
+   cloud and water vapor states, and fetch lengths. During the Labrador
+   Sea deployment the OWI complement observed the ocean across sections of
+   several convective meteorological systems driven primarily by arctic
+   cold-air outbreaks moving eastward from Labrador, Canada over the open
+   water. Several coordinated underflights of low-orbitting satellites
+   sensors, including the NASA Scatterometer (NSCAT) and the Defense
+   Meteorological Satellite Program (DMSP) SSM/I sensors were also
+   performed. The flights resulted in the acquisition by the OWI science
+   team of the first high-resolution polarimetric passive microwave
+   conically-scanned imagery of the ocean in a broad set of bands, and the
+   first combined joint high-resolution passive and active imagery of the
+   ocean surface. Total flying time for the effort (including integration
+   and engineering check flights) amounted to ~48 flight hours.
+
+    Wind Direction Harmonics (small image)
+
+    Figure 8. Azimuthal wind direction harmonics observed during the
+    Laborador Sea Deep Convection Experiment
+
+    on March 4, 1997. From Piepmeier and Gasiewski [2000]. (Select image
+    for full-size figure)
+
+   Participating institutions in the integration and observation phases of
+   the OWI/Labrador Sea experiment included the Georgia Institute of
+   Technology School of Electrical and Computer Engineering (GIT/ECE), the
+   NOAA Environmental Technology Laboratory Ocean Remote Sensing Division
+   (NOAA/ETL), the University of Massachusetts at Amherst Microwave Remote
+   Sensing Laboratory (U-Mass/MIRSL), the NASA/WFF Observational Science
+   Branch (OSB) and Aircraft Programs Branch (APB), the National Center
+   for Atmospheric Research (NCAR), the Woods Hole Oceanographic
+   Institution, and the Aerospace Corporation. In addition, assistance in
+   the design and fabrication of critical aircraft equipment was obtained
+   from the Raytheon Corporation, the NASA/Ames Research Center (ARC), and
+   the Georgia Tech Research Institute (GTRI).
+
+   The OWI complement included two active radar scatterometers for
+   measuring both Bragg and specular return (the U-Mass C-band
+   Scatterometer - C-Scatt and the NASA/WFF/OSB Radar Ocean Wave
+   Spectrometer - ROWS), two passive polarimetric scanning radiometers for
+   imaging the upwelling thermal emission from the ocean surface (the
+   Polarimetric Scanning Radiometer -  PSR/D and the U-Mass Ka-band
+   Scanning Polarimetric Radiometer - KaSPR), and precision fixed-beam
+   radiometers for measuring the sub-track upwelling polarimetric emission
+   from the ocean (the ETL Ka-band polarimetric radiometer - Kapol) and
+   the above-track thermal emission from clouds and water vapor (the ETL
+   Cloud and Water Vapor Radiometer - CWVR). The complement also included
+   a nadir infrared pyrometer for measuring sea surface temperature, a GPS
+   dropsonde package (provided by NCAR) for measuring subtrack pressure,
+   temperature, humidity, and wind vector, and several video cameras
+   (provided by GIT) for recording ocean foam and cloud conditions.
+
+   The OWI experiment provided data to develop an extended geophysical
+   model function (GMF) for ocean surface thermal emission for T[v], T[h],
+   and T[U] at 10.7 and 37.0 GHz, and for Tv and Th at 18.7 GHz (Figure
+   8). When the raw data were averaged over a large number of scans to
+   reduce both instrument and geophysical noise, excellent agreement
+   between the PSR and SSM/I 37 GHz azimuthal harmonic amplitudes was
+   obtained for the range of wind speeds from near calm to  ~16 m/sec over
+   large footprint areas and for an ensemble of ocean-atmosphere states.
+   The GMF also exhibits excellent consistency between amplitudes and
+   phases of the azimuthal harmonics for the 10.7, 18.7, and 37.0 GHz
+   channels, with harmonic amplitudes monotonically increasing by ~50%
+   from 10.7 to 37.0 GHz.
+
+   On smaller spatial scales, the T[v] and T[h] data often showed local
+   brightness variations of up to 10-15 K that are related to the presence
+   of convection and/or unstable air-sea conditions. Atmospheric
+   conditions suggest that these brightness perturbations are caused by
+   surface wave spectrum variations. Such conditions did not influence the
+   T[U] imagery nearly as much, and in many instances virtually no impact
+   is seen in T[U]. The degree to which T[U] rejects such
+   convection-related perturbations indicates that the polarization
+   signature will provide valuable information on surface wave, and hence
+   wind, direction.
+
+   The PSR GMF was used to demonstrate the first aircraft-based passive
+   microwave maps of ocean surface wind fields using a maximum likelihood
+   (ML) estimator with adaptive channel weights. One-dimensional wind line
+   plots were developed using full 360^o azimuthal scans, and
+   two-dimensional wind field maps over a region of ~14 x 100 km were
+   developed using a two-look technique. Both one- and two-dimensional
+   techniques show that ocean wind direction signatures over
+   mesoscale-sized regions of ~15 km or greater size are consistent enough
+   for satellite mapping using a two-look polarimetric technique that
+   includes T[U]. Moreover, adaptive channel weighting allows use of all
+   radiometric channels during conditions where the azimuthal harmonics
+   have high signal-to-noise ratio (SNR), but emphasizes the lower
+   frequency channels during conditions when the higher frequency channels
+   become perturbed by either clouds or surface roughness.
+
+   Satellite simulations using the PSR data downsampled to spot sizes
+   similar to that of the SSM/I, but including both tri-polarimetric
+   channels (T[v], T[h], and T[U]) and two-looks show retrieval accuracies
+   of ~8.4^o and ~0.8 m/sec without directional ambiguities. These results
+   strongly support the concept of satellite-based passive ocean surface
+   wind vector mapping. When the third Stokes parameter is removed the
+   simulated retrieval accuracy was reduced to ~12.6^o and ~1.0 m/sec,
+   with a significant increase in ambiguity rate (11.1%). When a
+   tri-polarimetric system is used but with only one look, the accuracy is
+   ~14^o and ~1.6 m/sec, although the ambiguity rate is slightly lower
+   (7.7%). It is noted that these simulation accuracies are consistent
+   with error values predicted using the Cramer-Rao error bound for
+   retrievals of multichannel sinusoidal signal phases in the presence of
+   satellite radiometer measurement noise. The simulations also show that
+   wind direction information significantly benefits the retrieval of wind
+   speed by resolving small azimuthal brightness perturbations that would
+   otherwise produce wind speed errors.
+
+   The OWI experiment also resulted in several innovations useful for
+   spaceborne passive microwave wind direction sensing. The use of a 1
+   GS/sec three-level digital polarization correlator in the PSR showed
+   for the first time that accurate calibrated polarimetric measurements
+   can be made using only standard unpolarized ambient and cold
+   calibration targets. Such calibration standards are readily available
+   in a space environment. The correlator demonstration also required the
+   development of new expression for the response of a digital correlator
+   to the input correlation coefficient, correlator A/D converter offset,
+   and A/D converter hysteresis. The utility of a polarized calibration
+   standard for ground-based pre-flight calibration of the three first
+   three Stokes parameters was demonstrated.  Such a calibration standard
+   should be useful for pre-launch calibration of future polarimetric
+   sensors such as WindSat and CMIS.
+
+   G. Hurricane Winds Experiment (HOWEX, 1997)
+
+   The Hurricane Winds Experiment was held during August-September 1997
+   for the purpose of augmenting the Labrador Sea wind vector data set
+   with additional data over extremely high wind states associated with
+   hurricanes. The configuration of the PSR on the NASA P-3 for HOWEX was
+   identical to that for the Labrador Sea experiment. Sorties were flown
+   out of Miami, FL and into the rainbands of hurricane Erika located
+   southeast of Bermuda.
+
+   H. CAMEX3 Deployment (1998)
+
+   During August-September of 1998 the PSR was flown on the NASA DC-8
+   aircraft as part of the Third Convection and Moisture Experiment
+   (CAMEX3). The purpose of CAMEX3 was to study the formation, dynamics,
+   and evolution of hurricanes and intense tropical convection using a
+   variety of in-situ and remote sensing instrumentation. Three
+   experiments requiring specific flight patterns were performed: (1) an
+   eye dynamics experiment in which the DC-8 flew down into hurricane eyes
+   to observe the dynamics of the eyewall, (2) a synoptic flow experiment
+   in which the DC-8 flew near the periphery of hurricanes to study the
+   effects of prevailing conditions on rainband evolution, and (3) a
+   landfalling tropical cyclone experiment in which the DC-8 overflew
+   convection associated with a landfalling hurricane. One of the goals of
+   CAMEX3 was to provide the scientific understanding of severe coastal
+   weather necessary to be able to predict the need for evacuation more
+   precisely than possible using existing methods. In addition, several
+   flights were performed in association with the NASA   TRMM TExas and
+   FLorida UNderflights experiment (TEFLUN) to study the satellite
+   signatures produced by convective and stratiform precipitation.
+
+   PSR/A was integrated into the nadir-7 port of the DC-8 for CAMEX3 and
+   operated in both 52^o conically-scanned and cross-track scanned modes,
+   depending on the aircraft maneuver. A new moving-map display for the
+   PSR was used to provide near real-time brightness temperature imagery
+   for both scientific and flight operations purposes. The display
+   provided conically-scanned quick-look brightness temperature maps at
+   the five PSR/A bands and at several polarizations.
+
+   I. 1999 Mount Washington Icing Sensors Project (MWISP99)
+
+   NOAA ETL participated in the 1999 Mount Washington Icing Sensors
+   Project (MWISP99) by deploying the PSR/A scanhead in a ground-based
+   configuration on the summit of Mt. Washington in New Hampshire. The
+   purpose of MWISP99 was to obtain experimental signatures of supercooled
+   liquid clouds viewed horizotnally using a foward-looking polarimetric
+   radiometer under near-flight conditions. Such data is essential in
+   developing aircraft sensors that can potentially detect aircraft icing
+   conditions.  The conditions at the Mt. Washington summit (elevation
+   6288', winds exceeding hurricane force (75 MPH) on an average of 104
+   days a year, and cloud shrouded about 60% of the time) are ideal for
+   near-flight observations of supercooled liquid clouds.
+
+   During MWISP99 the PSR performed vertical range-height indicator (RHI)
+   scans in an east-west plane using a field-of-view passing through both
+   zenith and the westward horizon. Looking west, the PSR viewed over
+   radar, radiometer, and lidar equipment located at the Mt. Washington
+   Cog Railway Base site. A new sector-imaging scan mode was also
+   implemented to obtain two-dimensional angular imagery of clouds as
+   approaching from the west. The instrument operated successfully for
+   over four weeks during this deployment.
+
+   J. 1999 Southern Great Plains (SGP99) Experiment
+
+   The 1999 Southern Great Plains Experiment was conducted from July 8th
+   through 19th, 1999 over the USDA Oklahoma mesonet hydrological site.
+   The goal of the experiment was to image soil moisture variations using
+   S- and C-band radiometric channels. Although L-band channels provide
+   greater direct sensitivity to soil moisture, the implementation of
+   higher-frequency channels such as at S- and C-band is more
+   straightforward on either aircraft or satellite platforms. In 2001,
+   such a C-band imaging radiometer (the Advanced Microwave Scanning
+   Radiometer, or AMSR-E) will be operated as part of the NASA EOS Aqua
+   platform. AMSR-E is a conically-scanned imaging sensor supporting a
+   dual-polarization channel at 6.92 GHz. The utility of this AMSR band
+   for soil moisture retrieval depends on the degree to which both
+   beam-filling and vegetation effects can be compensated. To study these
+   effects, as well as those of anthropogenic interference at the AMSR
+   6.92-GHz band, a the PSR/C scanhead was flown on the NASA P-3 aircraft
+   in grid patterns over central Oklahoma. The overflights included
+   coverage almost daily coverage of the well-instrumented Little Washita
+   hydrological site. The SGP99 data from the PSR over Oklahoma clearly
+   show 50-70 K decreases in upwelling horizontally-polarized brightness
+   temperature as the result of a major precipitation event that deposited
+   1-2” of rain, along with increases in brightness of similar magnitude
+   during the subsequent dry-down phase. The images obtained from this
+   experiment represent the first application of high-resolution C-band
+   radiometric imaging of soil moisture, in particular using
+   constant-incidence angle conical scanning.
+
+    V70899    V70999    V71199    V71499    V71599    V71999   animated V70899
+   V 7/08/99 V 7/09/99 V 7/11/99 V 7/14/99 V 7/15/99 V 7/19/99   V animation
+    H70899    H70999    H71199    H71499    H71599    H71999   animated V70899
+   H 7/08/99 H 7/09/99 H 7/11/99 H 7/14/99 H 7/15/99 H 7/19/99   H animation
+                      Brightness Scale     Brightness Scale
+                      Figure 9.     SGP99 Sample Imagery
+
+   K. 2000 Meltpond Experiment (MP00)
+
+   As part of NASA’s Earth Observing System AQUA sea ice validation
+   program for the Advanced Microwave Scanning Radiometer (AMSR-E), a
+   series of aircraft flights using the PSR over melting arctic ice were
+   performed.  The campaign, Meltpond 2000, occurred during June-July 2000
+   with the objective of quantifying the errors incurred in proposed
+   AMSR-E sea ice algorithms resulting from the presence of melting ponds
+   on the surface of dissipating pack ice.  Melt ponds are currently the
+   largest source of error in the determination of Arctic sea ice
+   concentrations using satellite passive microwave sensors.  A secondary
+   objective of Meltpond 2000 was to develop a microwave capability to
+   discriminate between melt ponds and open sea water.
+
+   The campaign focused on the use of the PSR for high-resolution
+   polarimetric surface imaging, and involved the efforts of the Navy and
+   personnel at the NASA Goddard Space Flight Center.  A Navy P-3 aircraft
+   made a series of five 8-hour flights over Baffin Bay (Figure 10),
+   Viscount Melville Sound, and a Canadian ice camp near Resolute, Canada.
+   The P-3 flew out of Thule Air Base, Greenland.  The aircraft was
+   outfitted with one of two PSR scanheads operating at two key sets of
+   radiometric bands. The PSR/A scanhead covered the bands of 10.7, 18.7,
+   21.5, 37, and 89 GHz, and the PSR/C scanhead covered four bands from
+   6.0 to 7.5 GHz. These two scanheads were used on alternate days, thus
+   demonstrating the ability to swap PSR scanheads for different
+   experiments under field conditions. The aircraft also carried the
+   NOAA/NOS Scanning Low Frequency Microwave Radiometer (SLFMR), operating
+   at a frequency of 1.4 GHz.  The complement of instruments provided a
+   unique sensing package in terms of spectral coverage, polarization
+   capability, and imaging spatial resolution. Satellite imagery provided
+   additional information on surface conditions during the overflights.
+
+    PSR/C Imagery from Baffin Bay
+
+    Figure 10. PSR/C imagery of ice floes within Baffin Bay, July 7,
+    2000. Observations were made
+
+    at an altitude of 21,000 feet at 6.925 GHz, horizontal polarization,
+    annd at an incident angle of 55^o.
+
+    Open water areas are distinguished by cold brightness temperatures.
+
+   The aircraft radiometer measurements elucidated the microwave spectral
+   and polarimetric characteristics of the Arctic ice cover during the
+   summer melt period. Final data processing is nearing completion, and
+   the first paper stemming from this campaign will be presented at the
+   fall 2000 Oceans from Space Meeting. Collaborators on the project
+   included NOAA ETL scientists A.J. Gasiewski, M. Klein, A. Yevgrafov,
+   and T. Uttal, NASA scientists D. Cavalieri, T. Markus, and E. Kim, and
+   Lt. Miles Ervin of the Naval Air Warfare Center at Patuxent River NAS.
+   Besides fabricating and operating the radiometer equipment, NOAA ETL
+   engineers were heavily involved in the modification of the P-3, the
+   installation of the radiometer equipment, and flight planning and
+   operations.
+
+   PSR Data Sets
+
+   Several PSR calibrated Tb data sets from past experiments are available
+   for downloading. In some cases data is restricted to authorized
+   co-investigators. A list of experiments and links to PSR data is
+   provided below. Passwords for authorized users can be requested from
+   Dr. A.J. Gasiewski at agasiewski@etl.noaa.gov.
+
+                          Experiment Name / Date(s)
+
+                                 Information
+
+                                    Data
+
+
+                   Labrador Sea Deep Convection Experiment
+                                (March 1997)
+
+                             LabSea97 Experiment
+
+                                LabSea97 Data
+
+
+                         Hurricane Winds Experiment
+                          (August -September 1997)
+
+                             HOWEX97 Experiment
+
+                                HOWEX97 Data
+
+
+                  Third Convective and Moisture Experiment
+                           (August-September 1998)
+
+                              CAMEX3 Experiment
+
+                                 CAMEX3 Data
+
+
+                     Texas-Florida Undeflight Experiment
+                           (August-September 1998)
+
+                             TEFLUN-B Experiment
+
+                                TEFLUN-B Data
+
+
+             North Atlantic Polar Scanning Radoimeter Experiment
+                           (October-November 1998)
+
+                            NAPSCAR98 Experiment
+
+                               NAPSCAR98 Data
+
+
+                  Mount Washington Icing Sensors Experiment
+                                (April 1999)
+
+                             MWISP99 Experiment
+
+                                MWISP99 Data
+
+
+                      Southern Great Plains Experiment
+                                 (July 1999)
+
+                              SGP99 Experiment
+
+                                 SGPP99 Data
+
+                          Meltpond 2000 Experiment
+
+                              (June-July 2000)
+
+                            Meltpond00 Experiment
+
+                               Meltpond00 Data
+
+   Publications
+
+   Piepmeier, J.R., A.J. Gasiewski, M. Klein, V. Bohm, and R.C. Lum,
+   "Ocean Surface Wind Direction Measurement by Scanning Microwave
+   Polarimetric Radiometry", Proceedings of the 1998 International
+   Geoscience and Remote Sensing Symposium, presented in Seattle, WA, July
+   6-10, 1998.
+
+   Gasiewski, A.J., Piepmeier, J.R., McIntosh, R.E., Swift, C.T.,
+   Carswell, J.R.,Donnelly, W.J., Knapp, E., Westwater, E.R., Irisov,
+   V.I., Fedor, L.S., and Vandemark, D.C., "Combined High-Resolution
+   Active and Passive Imaging of Ocean Surface Winds from Aircraft,"
+   Proceedings of the 1997 International Geoscience and Remote Sensing
+   Symposium, pp. 1001-1005, presented inSingapore, August 3-8, 1997.
+
+   Piepmeier, J.R., and Gasiewski, A.J., "High-resolution Multiband
+   Passive Polarimetric Observations of the Ocean Surface,"Proceedings of
+   the 1997 International Geoscience and Remote Sensing Symposium, pp.
+   1006-1008, presented in Singapore, August 3-8, 1997.
+
+   Piepmeier, J.R., and Gasiewski, A.J., "Three-level, 1 GS/s Digital
+   Correlator for Wideband Polarimetric Radiometry," Proceedings of the
+   1996 IEEEMTT-S International Microwave Symposium, pp. 1339-1341,
+   presented in San Francisco CA, June 17-21, 1996b.
+
+   Piepmeier, J.R., and Gasiewski, A.J., "Polarimetric Scanning Radiometer
+   for Airborne Microwave Imaging Studies," Proceedings of the 1996
+   International Geoscience and Remote Sensing Symposium, pp. 1688-1691,
+   presented in Lincoln, NE, May 27-31, 1996a.
+
+   "Remote Sensing of Ocean Surface Wind Vectors by Passive Microwave
+   Polarimetry - PSR Airborne Validation Study," A.J. Gasiewski, J.R.
+   Piepmeier, M. Klein, and V. Boehm, Report to the NPOESS Integrated
+   Program Office, Silver Spring MD,  December 20, 1999.
+
+   Piepmeier, J.R., and A.J. Gasiewski, "High-Resolution Passive Microwave
+   Polarimetric Mapping of Ocean Surface Wind Vector Fields," accepted for
+   publication in IEEE Trans. Geosci. Remote Sensing, September, 2000.
+   _______________________________________________________________________
+
+   For more information, contact Dr. Albin J. Gasiewski at
+   al.gasiewski@noaa.gov or (303) 497-7275.
+   _______________________________________________________________________
+
+               Ocean Remote Sensing Home Page | ETL Home Page
+   _______________________________________________________________________
+
+   Last updated on Monday, April 30, 2001.

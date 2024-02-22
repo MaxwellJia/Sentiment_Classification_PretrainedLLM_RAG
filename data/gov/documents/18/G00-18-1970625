@@ -1,0 +1,226 @@
+http://storm.aoml.noaa.gov/Meetings_Subprojects/fw_menu.js
+
+   /** * fw_menu 24OCT2000 Version 4.0 * John Ahlquist, October 2000 *
+   Copyright (c) 2000 Macromedia, Inc. * * based on menu.js * by gary
+   smith, July 1997 * Copyright (c) 1997-1999 Netscape Communications
+   Corp. * * Netscape grants you a royalty free license to use or modify
+   this * software provided that this copyright notice appears on all
+   copies. * This software is provided "AS IS," without a warranty of any
+   kind. */ function Menu(label, mw, mh, fnt, fs, fclr, fhclr, bg, bgh) {
+   this.version = "990702 [Menu; menu.js]"; this.type = "Menu";
+   this.menuWidth = mw; this.menuItemHeight = mh; this.fontSize = fs||12;
+   this.fontWeight = "plain"; this.fontFamily =
+   fnt||"arial,helvetica,verdana,sans-serif"; this.fontColor =
+   fclr||"#000000"; this.fontColorHilite = fhclr||"#ffffff"; this.bgColor
+   = "#555555"; this.menuBorder = 1; this.menuItemBorder = 1;
+   this.menuItemBgColor = bg||"#cccccc"; this.menuLiteBgColor = "#ffffff";
+   this.menuBorderBgColor = "#777777"; this.menuHiliteBgColor =
+   bgh||"#000084"; this.menuContainerBgColor = "#cccccc";
+   this.childMenuIcon = "arrows.gif"; this.items = new Array();
+   this.actions = new Array(); this.childMenus = new Array();
+   this.hideOnMouseOut = true; this.addMenuItem = addMenuItem;
+   this.addMenuSeparator = addMenuSeparator; this.writeMenus = writeMenus;
+   this.FW_showMenu = FW_showMenu; this.onMenuItemOver = onMenuItemOver;
+   this.onMenuItemAction = onMenuItemAction; this.hideMenu = hideMenu;
+   this.hideChildMenu = hideChildMenu; if (!window.menus) window.menus =
+   new Array(); this.label = label || "menuLabel" + window.menus.length;
+   window.menus[this.label] = this; window.menus[window.menus.length] =
+   this; if (!window.activeMenus) window.activeMenus = new Array(); }
+   function addMenuItem(label, action) { this.items[this.items.length] =
+   label; this.actions[this.actions.length] = action; } function
+   addMenuSeparator() { this.items[this.items.length] = "separator";
+   this.actions[this.actions.length] = ""; this.menuItemBorder = 0; } //
+   For NS6. function FIND(item) { if (document.all)
+   return(document.all[item]); if (document.getElementById)
+   return(document.getElementById(item)); return(false); } function
+   writeMenus(container) { if (window.triedToWriteMenus) return; if
+   (!container && document.layers) { window.delayWriteMenus =
+   this.writeMenus; var timer = setTimeout('delayWriteMenus()', 250);
+   container = new Layer(100); clearTimeout(timer); } else if
+   (document.all || document.hasChildNodes) { document.writeln('');
+   container = FIND("menuContainer"); } window.fwHideMenuTimer = null; if
+   (!container) return; window.triedToWriteMenus = true;
+   container.isContainer = true; container.menus = new Array(); for (var
+   i=0; i\n'+ '
+
+   \n'+ '
+   \n'+ ''; } var x=i; for (var i=0; i'; var dClose = '
+   ' if (menu.bgImageUp) { menu.menuBorder = 0; menu.menuItemBorder = 0;
+   dTag = '
+   '; if (document.layers) { dTag = ''; dClose = ''; } } var textProps =
+   'position:absolute;left:' + menu.menuItemIndent + ';top:1;'; if (lrs) {
+   textProps +=itemProps; dTag = ""; dClose = ""; } var dText = '
+   '+ item +'
+   \n
+   '+ item +'
+   '; if (item == "separator") { content += ( dTag + '
+   \n
+   \n' + dClose); } else if (childMenu) { content += ( dTag + dText + '
+   ['+ menu.childMenuIcon +']
+   \n' + dClose); } else { content += ( dTag + dText + dClose); } if (lrs)
+   { l.document.open("text/html"); l.document.writeln(content);
+   l.document.close(); content = ''; theStat += "-"; tsc++; if (tsc > 50)
+   { tsc = 0; theStat = ""; } status = theStat; } countItems++; } if (lrs)
+   { // focus layer var focusItem = new Layer(100, body);
+   focusItem.visiblity="hidden"; focusItem.document.open("text/html");
+   focusItem.document.writeln(" "); focusItem.document.close(); } else {
+   content += '
+
+   \n'; content += '
+   \n
+
+   \n\n'; } i=x; } if (document.layers) { container.clip.width =
+   window.innerWidth; container.clip.height = window.innerHeight;
+   container.onmouseout = mouseoutMenu; container.menuContainerBgColor =
+   this.menuContainerBgColor; for (var i=0; i0) l.top =
+   body.document.layers[n-1].top + body.document.layers[n-1].clip.height +
+   proto.menuItemBorder; l.hilite = l.document.layers[1]; if
+   (proto.bgImageUp) l.background.src = proto.bgImageUp;
+   l.document.layers[1].isHilite = true; if
+   (l.document.layers[0].id.indexOf("menuSeparator") != -1) { l.hilite =
+   null; l.clip.height -= l.clip.height / 2;
+   l.document.layers[0].document.bgColor = proto.bgColor;
+   l.document.layers[0].clip.width = l.clip.width -2;
+   l.document.layers[0].clip.height = 1;
+   l.document.layers[1].document.bgColor = proto.menuLiteBgColor;
+   l.document.layers[1].clip.width = l.clip.width -2;
+   l.document.layers[1].clip.height = 1; l.document.layers[1].top =
+   l.document.layers[0].top + 1; } else if (l.document.layers.length > 2)
+   { l.childMenu = container.menus[i].items[n].menuLayer;
+   l.document.layers[2].left = l.clip.width -13; l.document.layers[2].top
+   = (l.clip.height / 2) -4; l.document.layers[2].clip.left += 3;
+   l.Menu.childMenus[l.Menu.childMenus.length] = l.childMenu; } }
+   body.document.bgColor = proto.bgColor; body.clip.width = l.clip.width
+   +proto.menuBorder; body.clip.height = l.top + l.clip.height
+   +proto.menuBorder; var focusItem = body.document.layers[n];
+   focusItem.clip.width = body.clip.width; focusItem.Menu = l.Menu;
+   focusItem.top = -30; focusItem.captureEvents(Event.MOUSEDOWN);
+   focusItem.onmousedown = onMenuItemDown; menu.document.bgColor =
+   proto.menuBorderBgColor; var lite = menu.document.layers[0];
+   lite.document.bgColor = proto.menuLiteBgColor; lite.clip.width =
+   body.clip.width +1; lite.clip.height = body.clip.height +1;
+   menu.clip.width = body.clip.width + (proto.menuBorder * 3) ;
+   menu.clip.height = body.clip.height + (proto.menuBorder * 3); } } else
+   { if ((!document.all) && (container.hasChildNodes)) {
+   container.innerHTML=content; } else {
+   container.document.open("text/html");
+   container.document.writeln(content); container.document.close(); } if
+   (!FIND("menuLayer0")) return; var menuCount = 0; for (var x=0; x
+   window.innerWidth || NS4sIH > window.innerHeight || NS4sIH <
+   window.innerHeight ) { window.location.reload(); } } function
+   onMenuItemOver(e, l) { FW_clearTimeout(); l = l || this; a =
+   window.ActiveMenuItem; if (document.layers) { if (a) {
+   a.document.bgColor = a.saveColor; if (a.hilite) a.hilite.visibility =
+   "hidden"; if (a.Menu.bgImageOver) { a.background.src =
+   a.Menu.bgImageUp; } a.focusItem.top = -100; a.clicked = false; } if
+   (l.hilite) { l.document.bgColor = l.menuHiliteBgColor; l.zIndex = 1;
+   l.hilite.visibility = "inherit"; l.hilite.zIndex = 2;
+   l.document.layers[1].zIndex = 1; l.focusItem.zIndex = this.zIndex +2; }
+   if (l.Menu.bgImageOver) { l.background.src = l.Menu.bgImageOver; }
+   l.focusItem.top = this.top; l.Menu.hideChildMenu(l); } else if (l.style
+   && l.Menu) { if (a) { a.style.backgroundColor = a.saveColor; if
+   (a.hilite) a.hilite.style.visibility = "hidden"; if (a.Menu.bgImageUp)
+   { a.style.background = "url(" + a.Menu.bgImageUp +")";; } } if
+   (l.isSeparator) return; l.style.backgroundColor = l.menuHiliteBgColor;
+   l.zIndex = 1; // magic IE 4.5 mac happy doohicky. jba if
+   (l.Menu.bgImageOver) { l.style.background = "url(" + l.Menu.bgImageOver
+   +")"; } if (l.hilite) { l.style.backgroundColor = l.menuHiliteBgColor;
+   l.hilite.style.visibility = "inherit"; } l.focusItem.style.top =
+   l.focusItem.style.pixelTop = l.style.pixelTop; l.focusItem.style.zIndex
+   = l.zIndex +1; l.Menu.hideChildMenu(l); } else { return; // not a menu
+   - magic IE 4.5 mac happy doohicky. jba } window.ActiveMenuItem = l; }
+   function onMenuItemAction(e, l) { l = window.ActiveMenuItem; if (!l)
+   return; hideActiveMenus(); if (l.action) { eval("" + l.action); }
+   window.ActiveMenuItem = 0; } function FW_clearTimeout() { if
+   (fwHideMenuTimer) clearTimeout(fwHideMenuTimer); fwHideMenuTimer =
+   null; fwDHFlag = false; } function FW_startTimeout() { fwStart = new
+   Date(); fwDHFlag = true; fwHideMenuTimer = setTimeout("fwDoHide()",
+   1000); } function fwDoHide() { if (!fwDHFlag) return; var elapsed = new
+   Date() - fwStart; if (elapsed < 1000) { fwHideMenuTimer =
+   setTimeout("fwDoHide()", 1100-elapsed); return; } fwDHFlag = false;
+   hideActiveMenus(); window.ActiveMenuItem = 0; } function
+   FW_showMenu(menu, x, y, child) { if (!window.fwWroteMenu) return;
+   FW_clearTimeout(); if (document.layers) { if (menu) { var l =
+   menu.menuLayer || menu; l.left = 1; l.top = 1; hideActiveMenus(); if
+   (this.visibility) l = this; window.ActiveMenu = l; } else { var l =
+   child; } if (!l) return; for (var i=0; i 0) FW_showMenu(null,
+   "relative", "relative", l.layers[i]); } if (l.parentLayer) { if (x !=
+   "relative") l.parentLayer.left = x || window.pageX || 0; if
+   (l.parentLayer.left + l.clip.width > window.innerWidth)
+   l.parentLayer.left -= (l.parentLayer.left + l.clip.width -
+   window.innerWidth); if (y != "relative") l.parentLayer.top = y ||
+   window.pageY || 0; if (l.parentLayer.isContainer) { l.Menu.xOffset =
+   window.pageXOffset; l.Menu.yOffset = window.pageYOffset;
+   l.parentLayer.clip.width = window.ActiveMenu.clip.width +2;
+   l.parentLayer.clip.height = window.ActiveMenu.clip.height +2; if
+   (l.parentLayer.menuContainerBgColor) l.parentLayer.document.bgColor =
+   l.parentLayer.menuContainerBgColor; } } l.visibility = "inherit"; if
+   (l.Menu) l.Menu.container.visibility = "inherit"; } else if
+   (FIND("menuItem0")) { var l = menu.menuLayer || menu;
+   hideActiveMenus(); if (typeof(l) == "string") { l = FIND(l); }
+   window.ActiveMenu = l; var s = l.style; s.visibility = "inherit"; if (x
+   != "relative") s.left = s.pixelLeft = x || (window.pageX +
+   document.body.scrollLeft) || 0; if (y != "relative") s.top = s.pixelTop
+   = y || (window.pageY + document.body.scrollTop) || 0; l.Menu.xOffset =
+   document.body.scrollLeft; l.Menu.yOffset = document.body.scrollTop; }
+   if (menu) { window.activeMenus[window.activeMenus.length] = l; } }
+   function onMenuItemDown(e, l) { var a = window.ActiveMenuItem; if
+   (document.layers) { if (a) { a.eX = e.pageX; a.eY = e.pageY; a.clicked
+   = true; } } } function mouseupMenu(e) { hideMenu(true, e);
+   hideActiveMenus(); return true; } function mouseoutMenu() {
+   hideMenu(false, false); return true; } function hideMenu(mouseup, e) {
+   var a = window.ActiveMenuItem; if (a && document.layers) {
+   a.document.bgColor = a.saveColor; a.focusItem.top = -30; if (a.hilite)
+   a.hilite.visibility = "hidden"; if (mouseup && a.action && a.clicked &&
+   window.ActiveMenu) { if (a.eX <= e.pageX+15 && a.eX >= e.pageX-15 &&
+   a.eY <= e.pageY+10 && a.eY >= e.pageY-10) {
+   setTimeout('window.ActiveMenu.Menu.onMenuItemAction();', 2); } }
+   a.clicked = false; if (a.Menu.bgImageOver) { a.background.src =
+   a.Menu.bgImageUp; } } else if (window.ActiveMenu && FIND("menuItem0"))
+   { if (a) { a.style.backgroundColor = a.saveColor; if (a.hilite)
+   a.hilite.style.visibility = "hidden"; if (a.Menu.bgImageUp) {
+   a.style.background = "url(" + a.Menu.bgImageUp +")";; } } } if
+   (!mouseup && window.ActiveMenu) { if (window.ActiveMenu.Menu) { if
+   (window.ActiveMenu.Menu.hideOnMouseOut) { FW_startTimeout(); }
+   return(true); } } return(true); } function PxToNum(pxStr) { // pxStr ==
+   27px, we want 27. if (pxStr.length > 2) { n = Number(pxStr.substr(0,
+   pxStr.length-2)); return(n); } return(0); } function
+   hideChildMenu(hcmLayer) { FW_clearTimeout(); var l = hcmLayer; for (var
+   i=0; i < l.Menu.childMenus.length; i++) { var theLayer =
+   l.Menu.childMenus[i]; if (document.layers) { theLayer.visibility =
+   "hidden"; } else { theLayer = FIND(theLayer); theLayer.style.visibility
+   = "hidden"; } theLayer.Menu.hideChildMenu(theLayer); } if (l.childMenu)
+   { var childMenu = l.childMenu; if (document.layers) {
+   l.Menu.FW_showMenu(null,null,null,childMenu.layers[0]);
+   childMenu.zIndex = l.parentLayer.zIndex +1; childMenu.top = l.top +
+   l.parentLayer.top + l.Menu.menuLayer.top + l.Menu.menuItemHeight/3; if
+   (childMenu.left + childMenu.clip.width > window.innerWidth) {
+   childMenu.left = l.parentLayer.left - childMenu.clip.width +
+   l.Menu.menuLayer.left + 15; l.Menu.container.clip.left -=
+   childMenu.clip.width; } else { childMenu.left = l.parentLayer.left +
+   l.parentLayer.clip.width + l.Menu.menuLayer.left -5; } var w =
+   childMenu.clip.width+childMenu.left-l.Menu.container.clip.left; if (w >
+   l.Menu.container.clip.width) l.Menu.container.clip.width = w; var h =
+   childMenu.clip.height+childMenu.top-l.Menu.container.clip.top; if (h >
+   l.Menu.container.clip.height) l.Menu.container.clip.height = h;
+   l.document.layers[1].zIndex = 0; childMenu.visibility = "inherit"; }
+   else if (FIND("menuItem0")) { childMenu = FIND(l.childMenu); var
+   menuLayer = FIND(l.Menu.menuLayer); var s = childMenu.style; s.zIndex =
+   menuLayer.style.zIndex+1; if (document.all) { // ie case. s.pixelTop =
+   l.style.pixelTop + menuLayer.style.pixelTop + l.Menu.menuItemHeight/3;
+   s.left = s.pixelLeft = (menuLayer.style.pixelWidth) +
+   menuLayer.style.pixelLeft -5; } else { // zilla case var top =
+   PxToNum(l.style.top) + PxToNum(menuLayer.style.top) +
+   l.Menu.menuItemHeight/3; var left = (PxToNum(menuLayer.style.width)) +
+   PxToNum(menuLayer.style.left) -5; s.top = top; s.left = left; }
+   childMenu.style.visibility = "inherit"; } else { return; }
+   window.activeMenus[window.activeMenus.length] = childMenu; } } function
+   hideActiveMenus() { if (!window.activeMenus) return; for (var i=0; i <
+   window.activeMenus.length; i++) { if (!activeMenus[i]) continue; if
+   (activeMenus[i].visibility && activeMenus[i].Menu) {
+   activeMenus[i].visibility = "hidden";
+   activeMenus[i].Menu.container.visibility = "hidden";
+   activeMenus[i].Menu.container.clip.left = 0; } else if
+   (activeMenus[i].style) { var s = activeMenus[i].style; s.visibility =
+   "hidden"; s.left = -200; s.top = -200; } } if (window.ActiveMenuItem) {
+   hideMenu(false, false); } window.activeMenus.length = 0; }

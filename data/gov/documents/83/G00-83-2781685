@@ -1,0 +1,991 @@
+http://hn.usatlas.bnl.gov/doc/DOM2.pdf
+
+   Document Object Model (DOM) Level 2 Specification Document Object Model
+   (DOM) Level 2 Specification Version 1.0 W3C Candidate Recommendation 10
+   May, 2000 This version:
+   http://www.w3.org/TR/2000/CR-DOM-Level-2-20000510 (PostScript file, PDF
+   file, plain text, ZIP file) Latest version:
+   http://www.w3.org/TR/DOM-Level-2 Previous version:
+   http://www.w3.org/TR/2000/CR-DOM-Level-2-20000307 Editors: Lauren Wood,
+   SoftQuad Software Inc., chair Arnaud Le Hors, W3C staff contact until
+   October 1999, then IBM Vidur Apparao, Netscape Communications
+   Corporation Laurence Cable, Sun Mike Champion, Arbortext and Software
+   AG Mark Davis, IBM Joe Kesselman, IBM Philippe Le Hégaret, W3C, staff
+   contact (from November 1999) Tom Pixley, Netscape Communications
+   Corporation Jonathan Robie, Texcel Research and Software AG Peter
+   Sharpe, SoftQuad Software Inc. Chris Wilson, Microsoft Copyright © 2000
+   W3C® (MIT, INRIA, Keio), All Rights Reserved. W3C liability, trademark,
+   document use and software licensing rules apply. Abstract This
+   specification defines the Document Object Model Level 2, a platform-
+   and language-neutral interface that allows programs and scripts to
+   dynamically access and update the content, structure and style of
+   documents. The Document Object Model Level 2 builds on the Document
+   Object Model Level 1. The DOM Level 2 is made of a set of core
+   interfaces to create and manipulate the structure and contents of a
+   document and a set of optional modules. These modules contain
+   specialized interfaces dedicated to XML, HTML, an abstract view,
+   generic stylesheets, Cascading Style Sheets, Events, traversing the 1
+   Status of this document document structure, and a Range object. Status
+   of this document This specification is still in the Candidate
+   Recommendation phase. A coordination issue has arisen, which
+   necessitates an extended Candidate Recommendation phase. It will end
+   when the coordination issue is resolved. Comments on this document are
+   invited and are to be sent to the public mailing list www-dom@w3.org.
+   An archive is available at
+   http://lists.w3.org/Archives/Public/www-dom/. Should this specification
+   prove impossible or very difficult to implement, the necessary changes
+   to make it implementable will be made. If this specification is
+   possible to implement, the only changes which will be made to this
+   specification are minor editorial changes and clarifications. This
+   document has been produced as part of the W3C DOM Activity. The authors
+   of this document are the DOM WG members. Different modules of the
+   Document Object Model have different editors. A list of current W3C
+   Recommendations and other technical documents can be found at
+   http://www.w3.org/TR. Note: The coordination issue affects the handling
+   of namespace URIs. The resolution of the coordination issue may
+   necessitate changes to the DOM Level 2 Core module. Table of contents
+   Expanded Table of Contents . . . . . . . . . . . . . . . .5 Copyright
+   Notice . . . . . . . . . . . . . . . . . . .9 What is the Document
+   Object Model? . . . . . . . . . . . . . .13 Chapter 1: Document Object
+   Model Core . . . . . . . . . . . . .19 Chapter 2: Document Object Model
+   HTML . . . . . . . . . . . . .73 Chapter 3: Document Object Model Views
+   . . . . . . . . . . . . . 125 Chapter 4: Document Object Model
+   StyleSheets . . . . . . . . . . . . 127 Chapter 5: Document Object
+   Model CSS . . . . . . . . . . . . . 133 Chapter 6: Document Object
+   Model Events . . . . . . . . . . . . . 221 Chapter 7: Document Object
+   Model Traversal . . . . . . . . . . . . 243 Chapter 8: Document Object
+   Model Range . . . . . . . . . . . . . 265 Appendix A: Changes . . . . .
+   . . . . . . . . . . . . 289 Appendix B: Accessing code point boundaries
+   . . . . . . . . . . . . 291 Appendix C: IDL Definitions . . . . . . . .
+   . . . . . . . . 293 Appendix D: Java Language Binding . . . . . . . . .
+   . . . . . 331 Appendix E: ECMA Script Language Binding . . . . . . . .
+   . . . . 395 Acknowledgments . . . . . . . . . . . . . . . . . . 445
+   Glossary . . . . . . . . . . . . . . . . . . . . 447 2 Table of
+   contents References . . . . . . . . . . . . . . . . . . . . 453 Objects
+   Index . . . . . . . . . . . . . . . . . . . 455 Index . . . . . . . . .
+   . . . . . . . . . . . . 459 3 Table of contents 4 Expanded Table of
+   Contents Expanded Table of Contents Expanded Table of Contents . . . .
+   . . . . . . . . . . . .5 Copyright Notice . . . . . . . . . . . . . . .
+   . . . .9 W3C Document Copyright Notice and License . . . . . . . . . .
+   .9 W3C Software Copyright Notice and License . . . . . . . . . . .10
+   What is the Document Object Model? . . . . . . . . . . . . . .13
+   Introduction . . . . . . . . . . . . . . . . . . .13 What the Document
+   Object Model is . . . . . . . . . . . . .13 What the Document Object
+   Model is not . . . . . . . . . . . .15 Where the Document Object Model
+   came from . . . . . . . . . . .15 Entities and the DOM Core . . . . . .
+   . . . . . . . . .15 Compliance . . . . . . . . . . . . . . . . . . .16
+   DOM Interfaces and DOM Implementations . . . . . . . . . . . .18
+   Chapter 1: Document Object Model Core . . . . . . . . . . . . .19 1.1.
+   Overview of the DOM Core Interfaces . . . . . . . . . . . .19 1.1.1.
+   The DOM Structure Model . . . . . . . . . . . . .19 1.1.2. Memory
+   Management . . . . . . . . . . . . . .20 1.1.3. Naming Conventions . .
+   . . . . . . . . . . . .20 1.1.4. Inheritance vs. Flattened Views of the
+   API . . . . . . . . .21 1.1.5. The DOMString type . . . . . . . . . . .
+   . . .21 1.1.6. The DOMTimeStamp type . . . . . . . . . . . . .22 1.1.7.
+   String comparisons in the DOM . . . . . . . . . . . .22 1.1.8. XML
+   Namespaces . . . . . . . . . . . . . . .23 1.2. Fundamental Interfaces
+   . . . . . . . . . . . . . . .24 1.3. Extended Interfaces . . . . . . .
+   . . . . . . . . .67 Chapter 2: Document Object Model HTML . . . . . . .
+   . . . . . .73 2.1. Introduction . . . . . . . . . . . . . . . . . .73
+   2.2. HTML Application of Core DOM . . . . . . . . . . . . .74 2.2.1.
+   Naming Conventions . . . . . . . . . . . . . .74 2.3. Miscellaneous
+   Object Definitions . . . . . . . . . . . . .74 2.4. Objects related to
+   HTML documents . . . . . . . . . . . .76 2.5. HTML Elements . . . . . .
+   . . . . . . . . . . .79 2.5.1. Property Attributes . . . . . . . . . .
+   . . . . .79 2.5.2. Naming Exceptions . . . . . . . . . . . . . .79
+   2.5.3. Exposing Element Type Names ( tagName ) . . . . . . . . .80
+   2.5.4. The HTMLElement interface . . . . . . . . . . . .80 2.5.5.
+   Object definitions . . . . . . . . . . . . . . .81 Chapter 3: Document
+   Object Model Views . . . . . . . . . . . . . 125 3.1. Introduction . .
+   . . . . . . . . . . . . . . . . 125 3.2. Interfaces . . . . . . . . . .
+   . . . . . . . . 125 Chapter 4: Document Object Model StyleSheets . . .
+   . . . . . . . . . 127 5 Expanded Table of Contents 4.1. Introduction .
+   . . . . . . . . . . . . . . . . . 127 4.2. Style Sheet Interfaces . . .
+   . . . . . . . . . . . . . 127 4.3. Document Extensions . . . . . . . .
+   . . . . . . . 131 4.4. Association between a style sheet and a
+   document. . . . . . . . . . 132 Chapter 5: Document Object Model CSS .
+   . . . . . . . . . . . . 133 5.1. Overview of the DOM Level 2 CSS
+   Interfaces . . . . . . . . . . 133 5.2. CSS Fundamental Interfaces . .
+   . . . . . . . . . . . . 133 5.2.1. Override and computed style sheet .
+   . . . . . . . . . . 156 5.2.2. Style sheet creation . . . . . . . . . .
+   . . . . 158 5.2.3. Element with CSS inline style . . . . . . . . . . .
+   . 158 5.3. CSS Extended Interfaces . . . . . . . . . . . . . . . 159
+   Chapter 6: Document Object Model Events . . . . . . . . . . . . . 221
+   6.1. Overview of the DOM Level 2 Event Model . . . . . . . . . . 221
+   6.1.1. Terminology . . . . . . . . . . . . . . . . 221 6.2. Description
+   of event flow . . . . . . . . . . . . . . . 222 6.2.1. Basic event flow
+   . . . . . . . . . . . . . . . 222 6.2.2. Event capture . . . . . . . .
+   . . . . . . . . 222 6.2.3. Event bubbling . . . . . . . . . . . . . . .
+   223 6.2.4. Event cancelation . . . . . . . . . . . . . . . 223 6.3.
+   Event listener registration . . . . . . . . . . . . . . . 224 6.3.1.
+   Event registration interfaces . . . . . . . . . . . . . 224 6.3.2.
+   Interaction with HTML 4.0 event listeners . . . . . . . . . . 226 6.4.
+   Event interface . . . . . . . . . . . . . . . . . 227 6.5.
+   DocumentEvent interface . . . . . . . . . . . . . . . 230 6.6. Event
+   set definitions . . . . . . . . . . . . . . . . 231 6.6.1. User
+   Interface event types . . . . . . . . . . . . . 231 6.6.2. Mouse event
+   types . . . . . . . . . . . . . . . 233 6.6.3. Key events . . . . . . .
+   . . . . . . . . . 237 6.6.4. Mutation event types . . . . . . . . . . .
+   . . . 237 6.6.5. HTML event types . . . . . . . . . . . . . . . 240
+   Chapter 7: Document Object Model Traversal . . . . . . . . . . . . 243
+   7.1. Overview . . . . . . . . . . . . . . . . . . 243 7.1.1.
+   NodeIterators . . . . . . . . . . . . . . . . 243 7.1.2. NodeFilters .
+   . . . . . . . . . . . . . . . 247 7.1.3. TreeWalker . . . . . . . . . .
+   . . . . . . 249 7.2. Formal Interface Definition . . . . . . . . . . .
+   . . . 253 Chapter 8: Document Object Model Range . . . . . . . . . . .
+   . . 265 8.1. Introduction . . . . . . . . . . . . . . . . . . 265 8.2.
+   Definitions and Notation . . . . . . . . . . . . . . . 265 8.2.1.
+   Position . . . . . . . . . . . . . . . . . 265 8.2.2. Selection and
+   Partial Selection . . . . . . . . . . . . 267 8.2.3. Notation . . . . .
+   . . . . . . . . . . . . 267 8.3. Creating a Range . . . . . . . . . . .
+   . . . . . 268 6 Expanded Table of Contents 8.4. Changing a Range's
+   Position . . . . . . . . . . . . . . 268 8.5. Comparing Range
+   Boundary-Points . . . . . . . . . . . . 269 8.6. Deleting Content with
+   a Range . . . . . . . . . . . . . 270 8.7. Extracting Content . . . . .
+   . . . . . . . . . . . 271 8.8. Cloning Content . . . . . . . . . . . .
+   . . . . . 271 8.9. Inserting Content . . . . . . . . . . . . . . . .
+   272 8.10. Surrounding Content . . . . . . . . . . . . . . . 272 8.11.
+   Miscellaneous Members . . . . . . . . . . . . . . . 273 8.12. Range
+   modification under document mutation . . . . . . . . . . 273 8.12.1.
+   Insertions . . . . . . . . . . . . . . . . 274 8.12.2. Deletions . . .
+   . . . . . . . . . . . . . . 274 8.13. Formal Description of the Range
+   Interface . . . . . . . . . . . 276 Appendix A: Changes . . . . . . . .
+   . . . . . . . . . 289 A.1. Changes between DOM Level 1 and DOM Level 2
+   . . . . . . . . . 289 A.1.1. Changes to DOM Level 1 interfaces and
+   exceptions . . . . . . . 289 A.1.2. New features . . . . . . . . . . .
+   . . . . . 289 Appendix B: Accessing code point boundaries . . . . . . .
+   . . . . . 291 B.1. Introduction . . . . . . . . . . . . . . . . . . 291
+   B.2. Methods . . . . . . . . . . . . . . . . . . 291 Appendix C: IDL
+   Definitions . . . . . . . . . . . . . . . . 293 C.1. Document Object
+   Model Core . . . . . . . . . . . . . . 293 C.2. Document Object Model
+   HTML . . . . . . . . . . . . . 298 C.3. Document Object Model Views . .
+   . . . . . . . . . . . 308 C.4. Document Object Model StyleSheets . . .
+   . . . . . . . . . 308 C.5. Document Object Model CSS . . . . . . . . .
+   . . . . . 309 C.6. Document Object Model Events . . . . . . . . . . . .
+   . 323 C.7. Document Object Model Traversal . . . . . . . . . . . . 325
+   C.8. Document Object Model Range . . . . . . . . . . . . . 327 Appendix
+   D: Java Language Binding . . . . . . . . . . . . . . 331 D.1. Document
+   Object Model Core . . . . . . . . . . . . . 331 D.2. Document Object
+   Model HTML . . . . . . . . . . . . . 339 D.3. Document Object Model
+   Views . . . . . . . . . . . . . 363 D.4. Document Object Model
+   StyleSheets . . . . . . . . . . . . 364 D.5. Document Object Model CSS
+   . . . . . . . . . . . . . . 365 D.6. Document Object Model Events . . .
+   . . . . . . . . . . 386 D.7. Document Object Model Traversal . . . . .
+   . . . . . . . 389 D.8. Document Object Model Range . . . . . . . . . .
+   . . . 391 Appendix E: ECMA Script Language Binding . . . . . . . . . .
+   . . 395 E.1. Document Object Model Core . . . . . . . . . . . . . . 395
+   E.2. Document Object Model HTML . . . . . . . . . . . . . 401 E.3.
+   Document Object Model Views . . . . . . . . . . . . . 421 E.4. Document
+   Object Model StyleSheets . . . . . . . . . . . . 422 E.5. Document
+   Object Model CSS . . . . . . . . . . . . . . 423 7 Expanded Table of
+   Contents E.6. Document Object Model Events . . . . . . . . . . . . .
+   438 E.7. Document Object Model Traversal . . . . . . . . . . . . . 441
+   E.8. Document Object Model Range . . . . . . . . . . . . . 442
+   Acknowledgments . . . . . . . . . . . . . . . . . . 445 Glossary . . .
+   . . . . . . . . . . . . . . . . . 447 References . . . . . . . . . . .
+   . . . . . . . . . 453 1. Normative references . . . . . . . . . . . . .
+   . . . 453 2. Informative references . . . . . . . . . . . . . . . . 454
+   Objects Index . . . . . . . . . . . . . . . . . . . 455 Index . . . . .
+   . . . . . . . . . . . . . . . . 459 8 Copyright Notice Copyright Notice
+   Copyright © 2000 World Wide Web Consortium, (Massachusetts Institute of
+   Technology, Institut National de Recherche en Informatique et en
+   Automatique, Keio University). All Rights Reserved. This document is
+   published under the W3C Document Copyright Notice and License [p.9] .
+   The bindings within this document are published under the W3C Software
+   Copyright Notice and License [p.10] . The software license requires
+   "Notice of any changes or modifications to the W3C files, including the
+   date changes were made." Consequently, modified versions of the DOM
+   bindings must document that they do not conform to the W3C standard; in
+   the case of the IDL binding, the pragma prefix can no longer be
+   'w3c.org'; in the case of the Java binding, the package names can no
+   longer be in the 'org.w3c' package. W3C Document Copyright Notice and
+   License Note: This section is a copy of the W3C Document Notice and
+   License and could be found at
+   http://www.w3.org/Consortium/Legal/copyright-documents-19990405.
+   Copyright © 1994-2000 World Wide Web Consortium, (Massachusetts
+   Institute of Technology, Institut National de Recherche en Informatique
+   et en Automatique, Keio University). All Rights Reserved.
+   http://www.w3.org/Consortium/Legal/ Public documents on the W3C site
+   are provided by the copyright holders under the following license. The
+   software or Document Type Definitions (DTDs) associated with W3C
+   specifications are governed by the Software Notice. By using and/or
+   copying this document, or the W3C document from which this statement is
+   linked, you (the licensee) agree that you have read, understood, and
+   will comply with the following terms and conditions: Permission to use,
+   copy, and distribute the contents of this document, or the W3C document
+   from which this statement is linked, in any medium for any purpose and
+   without fee or royalty is hereby granted, provided that you include the
+   following on ALL copies of the document, or portions thereof, that you
+   use: 1. A link or URL to the original W3C document. 2. The pre-existing
+   copyright notice of the original author, or if it doesn't exist, a
+   notice of the form: "Copyright © [$date-of-document] World Wide Web
+   Consortium, (Massachusetts Institute of Technology, Institut National
+   de Recherche en Informatique et en Automatique, Keio University). All
+   Rights Reserved. http://www.w3.org/Consortium/Legal/" (Hypertext is
+   preferred, but a textual representation is permitted.) 3. If it exists,
+   the STATUS of the W3C document. When space permits, inclusion of the
+   full text of this NOTICE should be provided. We request that authorship
+   attribution be provided in any software, documents, or other items or
+   products that you create pursuant to the implementation of the contents
+   of this document, or any portion thereof. 9 W3C Software Copyright
+   Notice and License No right to create modifications or derivatives of
+   W3C documents is granted pursuant to this license. However, if
+   additional requirements (documented in the Copyright FAQ) are
+   satisfied, the right to create modifications or derivatives is
+   sometimes granted by the W3C to individuals complying with those
+   requirements. THIS DOCUMENT IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS
+   MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING,
+   BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+   PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF
+   THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION
+   OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS,
+   TRADEMARKS OR OTHER RIGHTS. COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR
+   ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF
+   ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE
+   CONTENTS THEREOF. The name and trademarks of copyright holders may NOT
+   be used in advertising or publicity pertaining to this document or its
+   contents without specific, written prior permission. Title to copyright
+   in this document will at all times remain with copyright holders. W3C
+   Software Copyright Notice and License Note: This section is a copy of
+   the W3C Software Copyright Notice and License and could be found at
+   http://www.w3.org/Consortium/Legal/copyright-software-19980720
+   Copyright © 1994-2000 World Wide Web Consortium, (Massachusetts
+   Institute of Technology, Institut National de Recherche en Informatique
+   et en Automatique, Keio University). All Rights Reserved.
+   http://www.w3.org/Consortium/Legal/ This W3C work (including software,
+   documents, or other related items) is being provided by the copyright
+   holders under the following license. By obtaining, using and/or copying
+   this work, you (the licensee) agree that you have read, understood, and
+   will comply with the following terms and conditions: Permission to use,
+   copy, and modify this software and its documentation, with or without
+   modification, for any purpose and without fee or royalty is hereby
+   granted, provided that you include the following on ALL copies of the
+   software and documentation or portions thereof, including
+   modifications, that you make: 1. The full text of this NOTICE in a
+   location viewable to users of the redistributed or derivative work. 2.
+   Any pre-existing intellectual property disclaimers. If none exist, then
+   a notice of the following form: "Copyright © [$date-of-software] World
+   Wide Web Consortium, (Massachusetts Institute of Technology, Institut
+   National de Recherche en Informatique et en Automatique, Keio
+   University). All Rights Reserved. http://www.w3.org/Consortium/Legal/."
+   3. Notice of any changes or modifications to the W3C files, including
+   the date changes were made. (We 10 W3C Software Copyright Notice and
+   License recommend you provide URIs to the location from which the code
+   is derived.) THIS SOFTWARE AND DOCUMENTATION IS PROVIDED "AS IS," AND
+   COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR
+   FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE SOFTWARE OR
+   DOCUMENTATION WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS,
+   TRADEMARKS OR OTHER RIGHTS. COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR
+   ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF
+   ANY USE OF THE SOFTWARE OR DOCUMENTATION. The name and trademarks of
+   copyright holders may NOT be used in advertising or publicity
+   pertaining to the software without specific, written prior permission.
+   Title to copyright in this software and any associated documentation
+   will at all times remain with copyright holders. 11 W3C Software
+   Copyright Notice and License 12 What is the Document Object Model? What
+   is the Document Object Model? Editors Jonathan Robie, Software AG
+   Introduction The Document Object Model (DOM) is an application
+   programming interface (API) for HTML and XML documents. It defines the
+   logical structure of documents and the way a document is accessed and
+   manipulated. In the DOM specification, the term "document" is used in
+   the broad sense - increasingly, XML is being used as a way of
+   representing many different kinds of information that may be stored in
+   diverse systems, and much of this would traditionally be seen as data
+   rather than as documents. Nevertheless, XML presents this data as
+   documents, and the DOM may be used to manage this data. With the
+   Document Object Model, programmers can build documents, navigate their
+   structure, and add, modify, or delete elements and content. Anything
+   found in an HTML or XML document can be accessed, changed, deleted, or
+   added using the Document Object Model, with a few exceptions - in
+   particular, the DOM interfaces for the XML internal and external
+   subsets have not yet been specified. As a W3C specification, one
+   important objective for the Document Object Model is to provide a
+   standard programming interface that can be used in a wide variety of
+   environments and applications. The DOM is designed to be used with any
+   programming language. In order to provide a precise,
+   language-independent specification of the DOM interfaces, we have
+   chosen to define the specifications in Object Management Group (OMG)
+   IDL [OMGIDL], as defined in the CORBA 2.3.1 specification [CORBA]. In
+   addition to the OMG IDL specification, we provide language bindings for
+   Java [Java] and ECMAScript [ECMAScript] (an industry-standard scripting
+   language based on JavaScript [JavaScript] and JScript [JScript]). Note:
+   OMG IDL is used only as a language-independent and
+   implementation-neutral way to specify interfaces. Various other IDLs
+   could have been used ([COM], [JavaIDL], [MIDL], ...). In general, IDLs
+   are designed for specific computing environments. The Document Object
+   Model can be implemented in any computing environment, and does not
+   require the object binding runtimes generally associated with such
+   IDLs. What the Document Object Model is The DOM is a programming API
+   for documents. It is based on an object structure that closely
+   resembles the structure of the documents it models. For instance,
+   consider this table, taken from an HTML document:
+
+                                        Shady Grove             Aeolian
+   13 What the Document Object Model is Over the River, Charlie Dorian
+
+   The DOM represents this table like this: DOM representation of the
+   example table In the DOM, documents have a logical structure which is
+   very much like a tree; to be more precise, which is like a "forest" or
+   "grove", which can contain more than one tree. Each document contains
+   zero or one doctype nodes, one root element node, and zero or more
+   comments or processing instructions; the root element serves as the
+   root of the element tree for the document. However, the DOM does not
+   specify that documents must be implemented as a tree or a grove, nor
+   does it specify how the relationships among objects be implemented. The
+   DOM is a logical model that may be implemented in any convenient
+   manner. In this specification, we use the term structure model to
+   describe the tree-like representation of a document. We also use the
+   term "tree" when referring to the arrangement of those information
+   items which can be reached by using "tree-walking" methods; (this does
+   not include attributes). One important property of DOM structure models
+   is structural isomorphism: if any two Document Object Model
+   implementations are used to create a representation of the same
+   document, they will create the same structure model, in accordance with
+   the XML Information Set [Infoset]. Note: There may be some variations
+   depending on the parser being used to build the DOM. For instance, the
+   DOM may not contain whitespaces in element content if the parser
+   discards them. The name "Document Object Model" was chosen because it
+   is an "object model" in the traditional object oriented design sense:
+   documents are modeled using objects, and the model encompasses not only
+   the structure of a document, but also the behavior of a document and
+   the objects of which it is composed. In other words, the nodes in the
+   above diagram do not represent a data structure, they represent
+   objects, which have functions and identity. As an object model, the DOM
+   identifies: 14 What the Document Object Model is not the interfaces and
+   objects used to represent and manipulate a document the semantics of
+   these interfaces and objects - including both behavior and attributes
+   the relationships and collaborations among these interfaces and objects
+   The structure of SGML documents has traditionally been represented by
+   an abstract data model, not by an object model. In an abstract data
+   model, the model is centered around the data. In object oriented
+   programming languages, the data itself is encapsulated in objects that
+   hide the data, protecting it from direct external manipulation. The
+   functions associated with these objects determine how the objects may
+   be manipulated, and they are part of the object model. What the
+   Document Object Model is not This section is designed to give a more
+   precise understanding of the DOM by distinguishing it from other
+   systems that may seem to be like it. The Document Object Model is not a
+   binary specification. DOM programs written in the same language binding
+   will be source code compatible across platforms, but the DOM does not
+   define any form of binary interoperability. The Document Object Model
+   is not a way of persisting objects to XML or HTML. Instead of
+   specifying how objects may be represented in XML, the DOM specifies how
+   XML and HTML documents are represented as objects, so that they may be
+   used in object oriented programs. The Document Object Model is not a
+   set of data structures; it is an object model that specifies
+   interfaces. Although this document contains diagrams showing
+   parent/child relationships, these are logical relationships defined by
+   the programming interfaces, not representations of any particular
+   internal data structures. The Document Object Model does not define
+   what information in a document is relevant or how information in a
+   document is structured. For XML, this is specified by the W3C XML
+   Information Set [Infoset]. The DOM is simply an API to this information
+   set. The Document Object Model, despite its name, is not a competitor
+   to the Component Object Model (COM). COM, like CORBA, is a language
+   independent way to specify interfaces and objects; the DOM is a set of
+   interfaces and objects designed for managing HTML and XML documents.
+   The DOM may be implemented using language-independent systems like COM
+   or CORBA; it may also be implemented using language-specific bindings
+   like the Java or ECMAScript bindings specified in this document. Where
+   the Document Object Model came from The DOM originated as a
+   specification to allow JavaScript scripts and Java programs to be
+   portable among Web browsers. "Dynamic HTML" was the immediate ancestor
+   of the Document Object Model, and it was originally thought of largely
+   in terms of browsers. However, when the DOM Working Group was formed at
+   W3C, it was also joined by vendors in other domains, including HTML or
+   XML editors and document repositories. Several of these vendors had
+   worked with SGML before XML was developed; as a result, the DOM has
+   been influenced by SGML Groves and the HyTime standard. Some of these
+   vendors had also developed their own object models for documents in
+   order to provide an API for SGML/XML editors or document repositories,
+   and these object models have also influenced the DOM. 15 Entities and
+   the DOM Core Entities and the DOM Core In the fundamental DOM
+   interfaces, there are no objects representing entities. Numeric
+   character references, and references to the pre-defined entities in
+   HTML and XML, are replaced by the single character that makes up the
+   entity's replacement. For example, in:
+
+   This is a dog & a cat
+   the "&" will be replaced by the character "&", and the text in the P
+   element will form a single continuous sequence of characters. Since
+   numeric character references and pre-defined entities are not
+   recognized as such in CDATA sections, or in the SCRIPT and STYLE
+   elements in HTML, they are not replaced by the single character they
+   appear to refer to. If the example above were enclosed in a CDATA
+   section, the "&" would not be replaced by "&"; neither would the
+
+   be recognized as a start tag. The representation of general entities,
+   both internal and external, are defined within the extended (XML)
+   interfaces of DOM Level 1 [DOM-Level-1]. Note: When a DOM
+   representation of a document is serialized as XML or HTML text,
+   applications will need to check each character in text data to see if
+   it needs to be escaped using a numeric or pre-defined entity. Failing
+   to do so could result in invalid HTML or XML. Also, implementations
+   should be aware of the fact that serialization into a character
+   encoding ("charset") that does not fully cover ISO 10646 may fail if
+   there are characters in markup or CDATA sections that are not present
+   in the encoding. Compliance The Document Object Model level 2 consists
+   of several modules: Core, HTML, Views, StyleSheets, CSS, Events,
+   Traversal, and Range. The DOM Core represents the functionality used
+   for XML documents, and also serves as the basis for DOM HTML. A
+   compliant implementation of the DOM must implement all of the
+   fundamental interfaces in the Core chapter with the semantics as
+   defined. Further, it must implement at least one of the HTML DOM and
+   the extended (XML) interfaces with the semantics as defined. The other
+   modules are optional. A DOM application can use the hasFeature method
+   of the DOMImplementation [p.26] interface to determine whether the
+   module is supported or not. The feature strings for all modules in DOM
+   Level 2 are listed in the following table; (strings are
+   case-insensitive): 16 Compliance Module Feature String XML XML HTML
+   HTML Views Views StyleSheets StyleSheets CSS CSS CSS (extended
+   interfaces) CSS2 Events Events User Interface Events (UIEvent [p.231]
+   interface) UIEvents Mouse Events (MouseEvents [p.233] interface)
+   MouseEvents Mutation Events (MutationEvent [p.238] interface)
+   MutationEvents HTML Events HTMLEvents Traversal Traversal Range Range
+   The following table contains all dependencies between modules: Module
+   Implies Views XML or HTML StyleSheets StyleSheets and XML or HTML CSS
+   StyleSheets, Views and XML or HTML CSS2 CSS, StyleSheets, Views and XML
+   or HTML Events XML or HTML UIEvents Views, Events and XML or HTML
+   MouseEvents UIEvents, Views, Events and XML or HTML MutationEvents
+   Events and XML or HTML HTMLEvents Events and HTML Traversal XML or HTML
+   Range XML or HTML 17 DOM Interfaces and DOM Implementations DOM
+   Interfaces and DOM Implementations The DOM specifies interfaces which
+   may be used to manage XML or HTML documents. It is important to realize
+   that these interfaces are an abstraction - much like "abstract base
+   classes" in C++, they are a means of specifying a way to access and
+   manipulate an application's internal representation of a document.
+   Interfaces do not imply a particular concrete implementation. Each DOM
+   application is free to maintain documents in any convenient
+   representation, as long as the interfaces shown in this specification
+   are supported. Some DOM implementations will be existing programs that
+   use the DOM interfaces to access software written long before the DOM
+   specification existed. Therefore, the DOM is designed to avoid
+   implementation dependencies; in particular, 1. Attributes defined in
+   the IDL do not imply concrete objects which must have specific data
+   members - in the language bindings, they are translated to a pair of
+   get()/set() functions, not to a data member. Read-only attributes have
+   only a get() function in the language bindings. 2. DOM applications may
+   provide additional interfaces and objects not found in this
+   specification and still be considered DOM compliant. 3. Because we
+   specify interfaces and not the actual objects that are to be created,
+   the DOM cannot know what constructors to call for an implementation. In
+   general, DOM users call the createX() methods on the Document class to
+   create document structures, and DOM implementations create their own
+   internal representations of these structures in their implementations
+   of the createX() functions. The Level 1 interfaces were extended to
+   provide both Level 1 and Level 2 functionality. DOM implementations in
+   languages other than Java or ECMA Script may choose bindings that are
+   appropriate and natural for their language and run time environment.
+   For example, some systems may need to create a Document2 class which
+   inherits from Document and contains the new methods and attributes. 18
+   1. Document Object Model Core 1. Document Object Model Core Editors
+   Arnaud Le Hors, W3C Mike Champion, ArborText (for DOM Level 1 from
+   November 20, 1997) Steve Byrne, JavaSoft (for DOM Level 1 until
+   November 19, 1997) Gavin Nicol, Inso EPS (for DOM Level 1) Lauren Wood,
+   SoftQuad, Inc. (for DOM Level 1) 1.1. Overview of the DOM Core
+   Interfaces This section defines a set of objects and interfaces for
+   accessing and manipulating document objects. The functionality
+   specified in this section (the Core functionality) is sufficient to
+   allow software developers and web script authors to access and
+   manipulate parsed HTML and XML content inside conforming products. The
+   DOM Core API also allows creation and population of a Document [p.29]
+   object using only DOM API calls; loading a Document and saving it
+   persistently is left to the product that implements the DOM API. 1.1.1.
+   The DOM Structure Model The DOM presents documents as a hierarchy of
+   Node [p.38] objects that also implement other, more specialized
+   interfaces. Some types of nodes may have child nodes of various types,
+   and others are leaf nodes that cannot have anything below them in the
+   document structure. For XML and HTML, the node types, and which node
+   types they may have as children, are as follows: Document [p.29] --
+   Element [p.57] (maximum of one), ProcessingInstruction [p.71] , Comment
+   [p.66] , DocumentType [p.68] (maximum of one) DocumentFragment [p.28]
+   -- Element [p.57] , ProcessingInstruction [p.71] , Comment [p.66] ,
+   Text [p.66] , CDATASection [p.67] , EntityReference [p.70] DocumentType
+   [p.68] -- no children EntityReference [p.70] -- Element [p.57] ,
+   ProcessingInstruction [p.71] , Comment [p.66] , Text [p.66] ,
+   CDATASection [p.67] , EntityReference Element [p.57] -- Element, Text
+   [p.66] , Comment [p.66] , ProcessingInstruction [p.71] , CDATASection
+   [p.67] , EntityReference [p.70] Attr [p.56] -- Text [p.66] ,
+   EntityReference [p.70] ProcessingInstruction [p.71] -- no children
+   Comment [p.66] -- no children Text [p.66] -- no children CDATASection
+   [p.67] -- no children Entity [p.69] -- Element [p.57] ,
+   ProcessingInstruction [p.71] , Comment [p.66] , Text [p.66] ,
+   CDATASection [p.67] , EntityReference [p.70] Notation [p.69] -- no
+   children 19 1.1.2. Memory Management The DOM also specifies a NodeList
+   [p.47] interface to handle ordered lists of Nodes [p.38] , such as the
+   children of a Node [p.38] , or the elements returned by the
+   getElementsByTagName method of the Element [p.57] interface, and also a
+   NamedNodeMap [p.48] interface to handle unordered sets of nodes
+   referenced by their name attribute, such as the attributes of an
+   Element. NodeList [p.47] and NamedNodeMap [p.48] objects in the DOM are
+   live; that is, changes to the underlying document structure are
+   reflected in all relevant NodeList and NamedNodeMap objects. For
+   example, if a DOM user gets a NodeList object containing the children
+   of an Element [p.57] , then subsequently adds more children to that
+   element (or removes children, or modifies them), those changes are
+   automatically reflected in the NodeList, without further action on the
+   user's part. Likewise, changes to a Node [p.38] in the tree are
+   reflected in all references to that Node in NodeList and NamedNodeMap
+   objects. Finally, the interfaces Text [p.66] , Comment [p.66] , and
+   CDATASection [p.67] all inherit from the CharacterData [p.52]
+   interface. 1.1.2. Memory Management Most of the APIs defined by this
+   specification are interfaces rather than classes. That means that an
+   implementation need only expose methods with the defined names and
+   specified operation, not implement classes that correspond directly to
+   the interfaces. This allows the DOM APIs to be implemented as a thin
+   veneer on top of legacy applications with their own data structures, or
+   on top of newer applications with different class hierarchies. This
+   also means that ordinary constructors (in the Java or C++ sense) cannot
+   be used to create DOM objects, since the underlying objects to be
+   constructed may have little relationship to the DOM interfaces. The
+   conventional solution to this in object-oriented design is to define
+   factory methods that create instances of objects that implement the
+   various interfaces. Objects implementing some interface "X" are created
+   by a "createX()" method on the Document [p.29] interface; this is
+   because all DOM objects live in the context of a specific Document. The
+   DOM Level 2 API does not define a standard way to create
+   DOMImplementation [p.26] objects; DOM implementations must provide some
+   proprietary way of bootstrapping these DOM interfaces, and then all
+   other objects can be built from there. The Core DOM APIs are designed
+   to be compatible with a wide range of languages, including both
+   general-user scripting languages and the more challenging languages
+   used mostly by professional programmers. Thus, the DOM APIs need to
+   operate across a variety of memory management philosophies, from
+   language bindings that do not expose memory management to the user at
+   all, through those (notably Java) that provide explicit constructors
+   but provide an automatic garbage collection mechanism to automatically
+   reclaim unused memory, to those (especially C/C++) that generally
+   require the programmer to explicitly allocate object memory, track
+   where it is used, and explicitly free it for re-use. To ensure a
+   consistent API across these platforms, the DOM does not address memory
+   management issues at all, but instead leaves these for the
+   implementation. Neither of the explicit language bindings devised by
+   the DOM Working Group (for ECMAScript and Java) require any memory
+   management methods, but DOM bindings for other languages (especially C
+   or C++) may require such support. These extensions will be the
+   responsibility of those adapting the DOM API to a specific language,
+   not the DOM Working Group. 20 1.1.3. Naming Conventions 1.1.3. Naming
+   Conventions While it would be nice to have attribute and method names
+   that are short, informative, internally consistent, and familiar to
+   users of similar APIs, the names also should not clash with the names
+   in legacy APIs supported by DOM implementations. Furthermore, both OMG
+   IDL and ECMAScript have significant limitations in their ability to
+   disambiguate names from different namespaces that make it difficult to
+   avoid naming conflicts with short, familiar names. So, some DOM names
+   tend to be long and quite descriptive in order to be unique across all
+   environments. The Working Group has also attempted to be internally
+   consistent in its use of various terms, even though these may not be
+   common distinctions in other APIs. For example, we use the method name
+   "remove" when the method changes the structural model, and the method
+   name "delete" when the method gets rid of something inside the
+   structure model. The thing that is deleted is not returned. The thing
+   that is removed may be returned, when it makes sense to return it.
+   1.1.4. Inheritance vs. Flattened Views of the API The DOM Core APIs
+   present two somewhat different sets of interfaces to an XML/HTML
+   document: one presenting an "object oriented" approach with a hierarchy
+   of inheritance, and a "simplified" view that allows all manipulation to
+   be done via the Node [p.38] interface without requiring casts (in Java
+   and other C-like languages) or query interface calls in COM
+   environments. These operations are fairly expensive in Java and COM,
+   and the DOM may be used in performance-critical environments, so we
+   allow significant functionality using just the Node interface. Because
+   many other users will find the inheritance hierarchy easier to
+   understand than the "everything is a Node" approach to the DOM, we also
+   support the full higher-level interfaces for those who prefer a more
+   object-oriented API. In practice, this means that there is a certain
+   amount of redundancy in the API. The Working Group considers the
+   "inheritance" approach the primary view of the API, and the full set of
+   functionality on Node [p.38] to be "extra" functionality that users may
+   employ, but that does not eliminate the need for methods on other
+   interfaces that an object-oriented analysis would dictate. (Of course,
+   when the O-O analysis yields an attribute or method that is identical
+   to one on the Node interface, we don't specify a completely redundant
+   one.) Thus, even though there is a generic nodeName attribute on the
+   Node interface, there is still a tagName attribute on the Element
+   [p.57] interface; these two attributes must contain the same value, but
+   the Working Group considers it worthwhile to support both, given the
+   different constituencies the DOM API must satisfy. 1.1.5. The DOMString
+   type To ensure interoperability, the DOM specifies the following: Type
+   Definition DOMString A DOMString [p.21] is a sequence of 16-bit units
+   [p.447] . IDL Definition 21 1.1.6. The DOMTimeStamp type typedef
+   sequence DOMString; Applications must encode DOMString [p.21] using
+   UTF-16 (defined in [Unicode] and Amendment 1 of [ISO/IEC 10646]). The
+   UTF-16 encoding was chosen because of its widespread industry practice.
+   Note that for both HTML and XML, the document character set (and
+   therefore the notation of numeric character references) is based on UCS
+   [ISO-10646]. A single numeric character reference in a source document
+   may therefore in some cases correspond to two 16-bit units in a
+   DOMString [p.21] (a high surrogate and a low surrogate). Note: Even
+   though the DOM defines the name of the string type to be DOMString
+   [p.21] , bindings may use different names. For example for Java,
+   DOMString is bound to the String type because it also uses UTF-16 as
+   its encoding. Note: As of August 1998, the OMG IDL specification
+   included a wstring type. However, that definition did not meet the
+   interoperability criteria of the DOM API since it relied on negotiation
+   to decide the width and encoding of a character. 1.1.6. The
+   DOMTimeStamp type To ensure interoperability, the DOM specifies the
+   following: Type Definition DOMTimeStamp A DOMTimeStamp [p.22]
+   represents a number of milliseconds. IDL Definition typedef unsigned
+   long long DOMTimeStamp; Note: Even though the DOM uses the type
+   DOMTimeStamp [p.22] , bindings may use different types. For example for
+   Java, DOMTimeStamp is bound to the long type. In ECMAScript, TimeStamp
+   is bound to the Date type because the range of the integer type is too
+   small. 1.1.7. String comparisons in the DOM The DOM has many interfaces
+   that imply string matching. HTML processors generally assume an
+   uppercase (less often, lowercase) normalization of names for such
+   things as elements, while XML is explicitly case sensitive. For the
+   purposes of the DOM, string matching is performed purely by binary
+   comparison of the 16-bit units [p.447] of the DOMString [p.21] . In
+   addition, the DOM assumes that any case normalizations take place in
+   the processor, before the DOM structures are built. Note: Besides case
+   folding, there are additional normalizations that can be applied to
+   text. The W3C I18N Working Group is in the process of defining exactly
+   which normalizations are necessary, and where they should be applied.
+   The W3C I18N Working Group expects to require early normalization,
+   which means that data read into the DOM is assumed to already be
+   normalized. The DOM and applications built on top of it in this case
+   only have to assure that text remains normalized when being changed.
+   For further details, please see [Charmod]. 22 1.1.8. XML Namespaces
+   1.1.8. XML Namespaces The DOM Level 2 supports XML namespaces
+   [Namespaces] by augmenting several interfaces of the DOM Level 1 Core
+   to allow creating and manipulating elements and attributes associated
+   to a namespace. As far as the DOM is concerned, special attributes used
+   for declaring XML namespaces are still exposed and can be manipulated
+   just like any other attribute. However, nodes are permanently bound to
+   namespace URIs [p.450] as they get created. Consequently, moving a node
+   within a document, using the DOM, in no case results in a change of its
+   namespace prefix [p.450] or namespace URI. Similarly, creating a node
+   with a namespace prefix and namespace URI, or changing the namespace
+   prefix of a node, does not result in any addition, removal, or
+   modification of any special attributes for declaring the appropriate
+   XML namespaces. Namespace validation is not enforced; the DOM
+   application is responsible. In particular, since the mapping between
+   prefixes and namespace URIs is not enforced, in general, the resulting
+   document cannot be serialized naively. For example, applications may
+   have to declare every namespace in use when serializing a document.
+   Namespace URIs are treated literally, whether they are absolute or
+   relative. No processing of the namespace URI such as "absolutization"
+   or "canonicalization" is performed by the DOM implementation. Note: In
+   the DOM, all namespace declaration attributes are by definition bound
+   to the namespace URI: "http://www.w3.org/2000/xmlns/". These are the
+   attributes whose namespace prefix [p.450] or qualified name [p.450] is
+   "xmlns". Although, at the time of writing, this is not part of the XML
+   Namespaces specification[Namespaces], it is planned to be incorporated
+   in a future revision. In a document with no namespaces, the child list
+   of an EntityReference [p.70] node is always the same as that of the
+   corresponding Entity [p.69] . This is not true in a document where an
+   entity contains unbound namespace prefixes [p.450] . In such a case,
+   the descendants of the corresponding EntityReference nodes may be bound
+   to different namespace URIs [p.450] , depending on where the entity
+   references are. Also, because, in the DOM, nodes always remain bound to
+   the same namespace URI, moving such EntityReference nodes can lead to
+   documents that cannot be serialized. This is also true when the DOM
+   Level 1 method createEntityReference of the Document [p.29] interface
+   is used to create entity references that correspond to such entities,
+   since the descendants of the returned EntityReference are unbound. The
+   DOM Level 2 does not support any mechanism to resolve namespace
+   prefixes. For all of these reasons, use of such entities and entity
+   references should be avoided or used with extreme care. A future Level
+   of the DOM may include some additional support for handling these. The
+   new methods, such as createElementNS and createAttributeNS of the
+   Document [p.29] interface, are meant to be used by namespace aware
+   applications. Simple applications that do not use namespaces can use
+   the DOM Level 1 methods, such as createElement and createAttribute.
+   Elements and attributes created in this way do not have any namespace
+   prefix, namespace URI, or local name. Note: DOM Level 1 methods are
+   namespace ignorant. Therefore, while it is safe to use these methods
+   when not dealing with namespaces, using them and the new ones at the
+   same time should be avoided. DOM Level 1 methods solely identify
+   attribute nodes by their nodeName. On the contrary, the DOM Level 2
+   methods related to namespaces, identify attribute nodes by their
+   namespaceURI and 23 1.2. Fundamental Interfaces localName. Because of
+   this fundamental difference, mixing both sets of methods can lead to
+   unpredictable results. In particular, using setAttributeNS, an element
+   may have two attributes (or more) that have the same nodeName, but
+   different namespaceURIs. Calling getAttribute with that nodeName could
+   then return any of those attributes. The result depends on the
+   implementation. Similarly, using setAttributeNode, one can set two
+   attributes (or more) that have different nodeNames but the same prefix
+   and namespaceURI. In this case getAttributeNodeNS will return either
+   attribute, in an implementation dependent manner. The only guarantee in
+   such cases is that all methods that access a named item by its nodeName
+   will access the same item, and all methods which access a node by its
+   URI and local name will access the same node. For instance,
+   setAttribute and setAttributeNS affect the node that getAttribute and
+   getAttributeNS, respectively, return. 1.2. Fundamental Interfaces The
+   interfaces within this section are considered fundamental, and must be
+   fully implemented by all conforming implementations of the DOM,
+   including all HTML DOM implementations, unless otherwise specified.
+   Exception DOMException DOM operations only raise exceptions in
+   "exceptional" circumstances, i.e., when an operation is impossible to
+   perform (either for logical reasons, because data is lost, or because
+   the implementation has become unstable). In general, DOM methods return
+   specific error values in ordinary processing situations, such as
+   out-of-bound errors when using NodeList [p.47] . Implementations may
+   raise other exceptions under other circumstances. For example,
+   implementations may raise an implementation-dependent exception if a
+   null argument is passed. Some languages and object systems do not
+   support the concept of exceptions. For such systems, error conditions
+   may be indicated using native error reporting mechanisms. For some
+   bindings, for example, methods may return error codes similar to those
+   listed in the corresponding method descriptions. IDL Definition
+   exception DOMException { unsigned short code; }; // ExceptionCode const
+   unsigned short INDEX_SIZE_ERR = 1; const unsigned short
+   DOMSTRING_SIZE_ERR = 2; const unsigned short HIERARCHY_REQUEST_ERR = 3;
+   const unsigned short WRONG_DOCUMENT_ERR = 4; const unsigned short
+   INVALID_CHARACTER_ERR = 5; const unsigned short NO_DATA_ALLOWED_ERR =
+   6; const unsigned short NO_MODIFICATION_ALLOWED_ERR = 7; const unsigned
+   short NOT_FOUND_ERR = 8; const unsigned short NOT_SUPPORTED_ERR = 9;
+   const unsigned short INUSE_ATTRIBUTE_ERR = 10; // Introduced in DOM
+   Level 2: const unsigned short INVALID_STATE_ERR = 11; 24 1.2.
+   Fundamental Interfaces // Introduced in DOM Level 2: const unsigned
+   short SYNTAX_ERR = 12; // Introduced in DOM Level 2: const unsigned
+   short INVALID_MODIFICATION_ERR = 13; // Introduced in DOM Level 2:
+   const unsigned short NAMESPACE_ERR = 14; // Introduced in DOM Level 2:
+   const unsigned short INVALID_ACCESS_ERR = 15; Definition group
+   ExceptionCode An integer indicating the type of error generated. Note:
+   Other numeric codes are reserved for W3C for possible future use.
+   Defined Constants DOMSTRING_SIZE_ERR If the specified range of text
+   does not fit into a DOMString HIERARCHY_REQUEST_ERR If any node is
+   inserted somewhere it doesn't belong INDEX_SIZE_ERR If index or size is
+   negative, or greater than the allowed value INUSE_ATTRIBUTE_ERR If an
+   attempt is made to add an attribute that is already in use elsewhere
+   INVALID_ACCESS_ERR , introduced in DOM Level 2. If a parameter or an
+   operation is not supported by the underlying object.
+   INVALID_CHARACTER_ERR If an invalid or illegal character is specified,
+   such as in a name. See production 2 in the XML specification for the
+   definition of a legal character, and production 5 for the definition of
+   a legal name character. INVALID_MODIFICATION_ERR , introduced in DOM
+   Level 2. If an attempt is made to modify the type of the underlying
+   object. INVALID_STATE_ERR , introduced in DOM Level 2. If an attempt is
+   made to use an object that is not, or is no longer, usable.
+   NAMESPACE_ERR , introduced in DOM Level 2. If an attempt is made to
+   create or change an object in a way which is incorrect with regard to
+   namespaces. NOT_FOUND_ERR If an attempt is made to reference a node in
+   a context where it does not exist 25 1.2. Fundamental Interfaces
+   NOT_SUPPORTED_ERR If the implementation does not support the type of
+   object requested NO_DATA_ALLOWED_ERR If data is specified for a node
+   which does not support data NO_MODIFICATION_ALLOWED_ERR If an attempt
+   is made to modify an object where modifications are not allowed
+   SYNTAX_ERR , introduced in DOM Level 2. If an invalid or illegal string
+   is specified. WRONG_DOCUMENT_ERR If a node is used in a different
+   document than the one that created it (that doesn't support it)
+   Interface DOMImplementation The DOMImplementation interface provides a
+   number of methods for performing operations that are independent of any
+   particular instance of the document object model. IDL Definition
+   interface DOMImplementation { boolean hasFeature(in DOMString feature,
+   in DOMString version); // Introduced in DOM Level 2: DocumentType
+   createDocumentType(in DOMString qualifiedName, in DOMString publicId,
+   in DOMString systemId) raises(DOMException); // Introduced in DOM Level
+   2: Document createDocument(in DOMString namespaceURI, in DOMString
+   qualifiedName, in DocumentType doctype) raises(DOMException); };
+   Methods createDocument introduced in DOM Level 2 Creates an XML
+   Document [p.29] object of the specified type with its document element.
+   HTML-only DOM implementations do not need to implement this method.
+   Parameters namespaceURI of type DOMString [p.21] The namespace URI
+   [p.450] of the document element to create. qualifiedName of type
+   DOMString The qualified name [p.450] of the document element to be
+   created. doctype of type DocumentType [p.68] The type of document to be
+   created or null. When doctype is not null, its Node.ownerDocument
+   attribute is set to the 26 1.2. Fundamental Interfaces document being
+   created. Return Value Document [p.29] A new Document object. Exceptions
+   DOMException INVALID_CHARACTER_ERR: Raised if the specified [p.24]
+   qualified name contains an illegal character. NAMESPACE_ERR: Raised if
+   the qualifiedName is malformed, if the qualifiedName has a prefix and
+   the namespaceURI is null or an empty string, or if the qualifiedName
+   has a prefix that is "xml" and the namespaceURI is different from
+   "http://www.w3.org/XML/1998/namespace" [Namespaces].
+   WRONG_DOCUMENT_ERR: Raised if doctype has already been used with a
+   different document or was created from a different implementation.
+   createDocumentType introduced in DOM Level 2 Creates an empty
+   DocumentType [p.68] node. Entity declarations and notations are not
+   made available. Entity reference expansions and default attribute
+   additions do not occur. It is expected that a future version of the DOM
+   will provide a way for populating a DocumentType. HTML-only DOM
+   implementations do not need to implement this method. Parameters
+   qualifiedName of type DOMString [p.21] The qualified name [p.450] of
+   the document type to be created. publicId of type DOMString The
+   external subset public identifier. systemId of type DOMString The
+   external subset system identifier. Return Value DocumentType A new
+   DocumentType node with [p.68] Node.ownerDocument set to null.
+   Exceptions 27 1.2. Fundamental Interfaces DOMException
+   INVALID_CHARACTER_ERR: Raised if the specified [p.24] qualified name
+   contains an illegal character. NAMESPACE_ERR: Raised if the
+   qualifiedName is malformed. hasFeature Test if the DOM implementation
+   implements a specific feature. Parameters feature of type DOMString
+   [p.21] The name of the feature to test (case-insensitive). The values
+   used by DOM features are defined throughout this specification and
+   listed in the Compliance [p.16] section. The name must be an XML name
+   [p.451] . To avoid possible conflicts, as a convention, names referring
+   to features defined outside the DOM specification should be made unique
+   by reversing the name of the Internet domain name of the person (or the
+   organization that the person belongs to) who defines the feature,
+   component by component, and using this as a prefix. For instance, the
+   W3C SYMM Working Group defines the feature "org.w3c.dom.smil". version
+   of type DOMString This is the version number of the feature to test. In
+   Level 2, this is the string "2.0". If the version is not specified,
+   supporting any version of the feature causes the method to return true.
+   Return Value boolean true if the feature is implemented in the
+   specified version, false otherwise. No Exceptions Interface
+   DocumentFragment DocumentFragment is a "lightweight" or "minimal"
+   Document [p.29] object. It is very common to want to be able to extract
+   a portion of a document's tree or to create a new fragment of a
+   document. Imagine implementing a user command like cut or rearranging a
+   document by moving fragments around. It is desirable to have an object
+   which can hold such fragments and it is quite natural to use a Node for
+   this purpose. While it is true that a Document object could fulfill
+   this role, a Document object can potentially be a heavyweight object,
+   depending on the underlying implementation. What is really needed for
+   this is a very lightweight object. DocumentFragment is such an object.
+   Furthermore, various operations -- such as inserting nodes as children
+   of another Node [p.38] -- may take DocumentFragment objects as
+   arguments; this results in all the child nodes of the DocumentFragment
+   being moved to the child list of this node. 28 1.2. Fundamental
+   Interfaces The children of a DocumentFragment node are zero or more
+   nodes representing the tops of any sub-trees defining the structure of
+   the document. DocumentFragment nodes do not need to be well-formed XML
+   documents (although they do need to follow the rules imposed upon
+   well-formed XML parsed entities, which can have multiple top nodes).
+   For example, a DocumentFragment might have only one child and that
+   child node could be a Text [p.66] node. Such a structure model
+   represents neither an HTML document nor a well-formed XML document.
+   When a DocumentFragment is inserted into a Document [p.29] (or indeed
+   any other Node [p.38] that may take children) the children of the
+   DocumentFragment and not the DocumentFragment itself are inserted into
+   the Node. This makes the DocumentFragment very useful when the user
+   wishes to create nodes that are siblings; the DocumentFragment acts as
+   the parent of these nodes so that the user can use the standard methods
+   from the Node interface, such as insertBefore and appendChild. IDL
+   Definition interface DocumentFragment : Node { }; Interface Document
+   The Document interface represents the entire HTML or XML document.
+   Conceptually, it is the root of the document tree, and provides the
+   primary access to the document's data. Since elements, text nodes,
+   comments, processing instructions, etc. cannot exist outside the
+   context of a Document, the Document interface also contains the factory
+   methods needed to create these objects. The Node [p.38] objects created
+   have a ownerDocument attribute which associates them with the Document
+   within whose context they were created. IDL Definition interface
+   Document : Node { readonly attribute DocumentType doctype; readonly
+   attribute DOMImplementation implementation; readonly attribute Element
+   documentElement; Element createElement(in DOMString tagName)
+   raises(DOMException); DocumentFragment createDocumentFragment(); Text
+   createTextNode(in DOMString data); Comment createComment(in DOMString
+   data); CDATASection createCDATASection(in DOMString data)
+   raises(DOMException); ProcessingInstruction
+   createProcessingInstruction(in DOMString target, in DOMString data)
+   raises(DOMException); Attr createAttribute(in DOMString name)
+   raises(DOMException); EntityReference createEntityReference(in
+   DOMString name) raises(DOMException); NodeList getElementsByTagName(in
+   DOMString tagname); // Introduced in DOM Level 2: Node importNode(in
+   Node importedNode, in boolean deep) raises(DOMException); 29 1.2.
+   Fundamental Interfaces // Introduced in DOM Level 2: Element
+   createElementNS(in DOMString namespaceURI, in DOMString qualifiedName)
+   raises(DOMException); // Introduced in DOM Level 2: Attr
+   createAttributeNS(in DOMString namespaceURI, in DOMString
+   qualifiedName) raises(DOMException); // Introduced in DOM Level 2:
+   NodeList getElementsByTagNameNS(in DOMString namespaceURI, in DOMString
+   localName); // Introduced in DOM Level 2: Element getElementById(in
+   DOMString elementId); }; Attributes doctype of type DocumentType [p.68]
+   , readonly The Document Type Declaration (see DocumentType [p.68] )
+   associated with this document. For HTML documents as well as XML
+   documents without a document type declaration this returns null. The
+   DOM Level 2 does not support editing the Document Type Declaration,
+   therefore docType cannot be altered in any way, including through the
+   use of methods, such as insertNode or removeNode, which are inherited
+   from the Node [p.38] interface. documentElement of type Element [p.57]
+   , readonly This is a convenience attribute that allows direct access to
+   the child node that is the root element of the document. For HTML
+   documents, this is the element with the tagName "HTML". implementation
+   of type DOMImplementation [p.26] , readonly The DOMImplementation
+   [p.26] object that handles this document. A DOM application may use
+   objects from multiple implementations. Methods createAttribute Creates
+   an Attr [p.56] of the given name. Note that the Attr instance can then
+   be set on an Element [p.57] using the setAttributeNode method. To
+   create an attribute with a qualified name and namespace URI, use the
+   createAttributeNS method. Parameters name of type DOMString [p.21] The
+   name of the attribute. Return Value Attr A new Attr object with the
+   nodeName attribute set to name, and [p.56] localName, prefix, and
+   namespaceURI set to null. 30 1.2. Fundamental Interfaces Exceptions
+   DOMException INVALID_CHARACTER_ERR: Raised if the specified [p.24] name
+   contains an illegal character. createAttributeNS introduced in DOM
+   Level 2 Creates an attribute of the given qualified name and namespace
+   URI. HTML-only DOM implementations do not need to implement this
+   method. Parameters namespaceURI of type DOMString [p.21] The namespace
+   URI [p.450] of the attribute to create. qualifiedName of type DOMString
+   The qualified name [p.450] of the attribute to instantiate. Return
+   Value Attr A new Attr object with the following attributes: [p.56]
+   Attribute Value Node.nodeName qualifiedName Node.namespaceURI
+   namespaceURI Node.prefix prefix, extracted from qualifiedName, or null
+   if there is no prefix Node.localName local name [p.450] , extracted
+   from qualifiedName Attr.name qualifiedName Exceptions DOMException
+   INVALID_CHARACTER_ERR: Raised if the specified [p.24] qualified name
+   contains an illegal character. NAMESPACE_ERR: Raised if the
+   qualifiedName is malformed, if the qualifiedName has a prefix and the
+   namespaceURI is null or an empty string, if the qualifiedName has a
+   prefix that is "xml" and the namespaceURI is different from
+   "http://www.w3.org/XML/1998/namespace", or if the qualifiedName is
+   "xmlns" and the namespaceURI is different from
+   "http://www.w3.org/2000/xmlns/". 31 1.2. Fundamental Interfaces
+   createCDATASection Creates a CDATASection [p.67] node whose value is
+   the specified string. Parameters data of type DOMString [p.21] The data
+   for the CDATASection [p.67] contents. Return Value CDATASection [p.67]
+   The new CDATASection object. Exceptions DOMException NOT_SUPPORTED_ERR:
+   Raised if this document is an [p.24] HTML document. createComment
+   Creates a Comment [p.66] node given the specified string. Parameters
+   data of type DOMString [p.21] The data for the node. Return Value
+   Comment [p.66] The new Comment object. No Exceptions
+   createDocumentFragment Creates an empty DocumentFragment [p.28] object.
+   Return Value DocumentFragment [p.28] A new DocumentFragment. No
+   Parameters No Exceptions createElement Creates an element of the type
+   specified. Note that the instance returned implements the Element
+   [p.57] interface, so attributes can be specified directly on the
+   returned object. In addition, if there are known attributes with
+   default values, Attr [p.56] nodes representing them are automatically
+   created and attached to the element. To create an element with a
+   qualified name and namespace URI, use the createElementNS method.
+   Parameters 32 1.2. Fundamental Interfaces tagName of type DOMString
+   [p.21] The name of the element type to instantiate. For XML, this is
+   case-sensitive. For HTML, the tagName parameter may be provided in any
+   case, but it must be mapped to the canonical uppercase form by the DOM
+   implementation. Return Value Element A new Element object with the
+   nodeName attribute set to [p.57] tagName, and localName, prefix, and
+   namespaceURI set to null. Exceptions DOMException
+   INVALID_CHARACTER_ERR: Raised if the specified [p.24] name contains an
+   illegal character. createElementNS introduced in DOM Level 2 Creates an
+   element of the given qualified name and namespace URI. HTML-only DOM
+   implementations do not need to implement this method. Parameters
+   namespaceURI of type DOMString [p.21] The namespace URI [p.450] of the
+   element to create. qualifiedName of type DOMString The qualified name
+   [p.450] of the element type to instantiate. Return Value Element A new
+   Element object with the following attributes: [p.57] Attribute Value
+   Node.nodeName qualifiedName Node.namespaceURI namespaceURI Node.prefix
+   prefix, extracted from qualifiedName, or null if there is no prefix
+   Node.localName local name [p.450] , extracted from qualifiedName
+   Element.tagName qualifiedName 33 1.2. Fundamental Interfaces Exceptions
+   DOMException INVALID_CHARACTER_ERR: Raised if the specified [p.24]
+   qualified name contains an illegal character. NAMESPACE_ERR: Raised if
+   the qualifiedName is malformed, if the qualifiedName has a prefix and
+   the namespaceURI is null or an empty string, or if the qualifiedName
+   has a prefix that is "xml" and the namespaceURI is different from
+   "http://www.w3.org/XML/1998/namespace" [Namespaces].
+   createEntityReference Creates an EntityReference [p.70] object. In
+   addition, if the referenced entity is known, the child list of the
+   EntityReference node is made the same as that of the corresponding
+   Entity [p.69] node. Note: If any descendant of the Entity [p.69] node
+   has an unbound namespace prefix [p.450] , the corresponding descendant
+   of the created EntityReference [p.70] node is also unbound; (its
+   namespaceURI is null). The DOM Level 2 does not support any mechanism
+   to resolve namespace prefixes. Parameters name of type DOMString [p.21]
+   The name of the entity to reference. Return Value EntityReference
+   [p.70] The new EntityReference object. Exceptions DOMException
+   INVALID_CHARACTER_ERR: Raised if the specified [p.24] name contains an
+   illegal character. NOT_SUPPORTED_ERR: Raised if this document is an
+   HTML document. createProcessingInstruction Creates a
+   ProcessingInstruction [p.71] node given the specified name and data
+   strings. Parameters target of type DOMString [p.21] The target part of
+   the processing instruction. 34 1.2. Fundamental Interfaces data of type
+   DOMString The data for the node. Return Value ProcessingInstruction The
+   new ProcessingInstruction [p.71] object. Exceptions DOMException
+   INVALID_CHARACTER_ERR: Raised if the specified [p.24] target contains
+   an illegal character. NOT_SUPPOR

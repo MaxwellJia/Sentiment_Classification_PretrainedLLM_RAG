@@ -1,0 +1,331 @@
+http://nls3.nlm.nih.gov/chemicals.pdf
+
+   Analysis of Biomedical Text for Chemical Names: A Comparison of Three
+   Methods W. John Wilbur , MD, PhD, George F. Hazard, Jr. , PhD, Guy
+   Divita§, MS, James G. Mork§, MS, Alan R. Aronson§, PhD, Allen C.
+   Browne§, MS National Center for Biotechnology Information (NCBI),
+   Division of Specialized Information Services (SIS), §Lister Hill
+   National Center for Biomedical Communications (LHNCBC) National Library
+   of Medicine, Bethesda, MD 20894 At the National Library of Medicine
+   (NLM), a variety such as zidovudine, trade names such as Maximum of
+   biomedical vocabularies are found in data perti- Strength Bayer Aspirin
+   Caplets, company codes such nent to its mission. In addition to
+   standard medical as SKF-98625, and formulations such as Zovirax
+   terminology, there are specialized vocabularies 250mg i-v infusion (pdr
+   for recon). including that of chemical nomenclature. Normal lan- guage
+   tools including the lexically based ones used by The Natural Language
+   Systems (NLS) program at the Unified Medical Language System® (UMLS®)
+   to NLM has produced a variety of tools which process manipulate and
+   normalize text do not work well on text. These tools include Lexical
+   Variant Generator chemical nomenclature. In order to improve NLM's
+   (LVG)4 which allows abstracting away from lexical capabilities in
+   chemical text processing, two variation and MetaMap5 which maps free
+   text to con- approaches to the problem of recognizing chemical cepts in
+   the Metathesaurus. The tools are oriented nomenclature were explored.
+   The first approach was a toward standard medical terminology and do not
+   han- lexical one and consisted of analyzing text for the dle the
+   manipulation of chemical names well. Con- presence of a fixed set of
+   chemical segments. The sider the text ... the effect of the adenosine
+   receptor approach was extended with general chemical pat- agonist
+   5'-(N-ethylcarboxamido)adenosine (NECA) terns and also with terms from
+   NLM's indexing .... MetaMap fragments the chemical into three
+   vocabulary, MeSH®, and the NLM SPECIALISTTM phrases, 5'-,
+   (N-ethylcarboxamido and )adenosine lexicon. The second approach applied
+   Bayesian clas- because of the embedded parentheses. The fragmenta-
+   sification to n-grams of text via two different methods. tion prevents
+   adequate search for matching concepts The single lexical method and two
+   statistical methods in the Metathesaurus. Even if the fragmentation
+   were were tested against data from the 1999 UMLS Meta- prevented,
+   matching would be difficult because the thesaurus®. One of the
+   statistical methods had an closest Metathesaurus string to the text is
+   5'-N-Ethyl- overall classification accuracy of 97%.
+   carboxamidoadenosine which has no parentheses. The presence of the
+   acronym NECA in the text facili- INTRODUCTION tates mapping since NECA
+   does occur in the Meta- thesaurus, but proper handling of the full
+   chemical Chemical nomenclature is used to represent a chemi- name is
+   still required. cal concept in text. Systematic nomenclature is highly
+   conjunctive, in that a single unbroken string can con- NLS projects
+   have begun collaborative efforts to tain multiple concepts. Programs to
+   un-embed impor- improve the treatment of chemicals. The long-term tant
+   chemical concepts were originally developed for goal is to correctly
+   classify chemical terms occurring printed indexes1. This concept was
+   extended later to in text for use in phrase extraction, indexing (of
+   both online nomenclature retrieval, using a new algorithm2.
+   Metathesaurus concepts and bibliographic citations), Recently a method
+   to detect chemical names in synonym recognition and other text analysis
+   applica- SGML patent text using segments and statistical tions. The
+   immediate goal is to automatically recog- methods has been described3.
+   nize chemical terms in order to avoid subjecting them to inappropriate
+   processing. The UMLS Metathesaurus contains over 350,000 chemical
+   English terms represented by a variety of One approach to classifying
+   chemical terms is based types of nomenclature. There are systematic
+   names on the segmentation algorithms described above. The such as
+   1,2-dimethoxyethane, which describe the idea is to classify chemical
+   terms by eliciting their chemical structure, as well as generic drug
+   names chemical structure based on chemically meaningful segments. This
+   approach requires a priori identifica- otherwise classified using
+   information from the SPE- tion of segments that might be found in
+   chemical CIALIST lexicon in an effort to identify nonchemical
+   nomenclature. components embedded within chemical terms. How- Another
+   approach to the chemical name classification ever, the lexicon also
+   contains some chemicals which problem is to use naive Bayesian
+   classifiers6,7,8. Such have been marked as such through a variety of
+   meth- an approach has the advantage of requiring no a priori ods. A
+   final heuristic was added that consists of con- knowledge of chemical
+   name characteristics. If sulting a small list of terms such as disease
+   and selected attributes occur independently in data, a syndrome which
+   completely disqualify a term being naive Bayesian classifier will give
+   ideal performance. considered a chemical. The result of this
+   segmentation Of course it is possible for attributes to have strong
+   provides both a lexical analysis of chemical terms and
+   interdependencies, and in that case one may obtain the means to
+   classify them. better performance from a classifier of the rule-based
+   Once a term has been segmented, the segmentation type. But we have
+   chosen the attributes to have more algorithm assigns a score to each
+   term representing of a soft or statistical character. the degree to
+   which the term is a chemical. The scor- ing function has three
+   components: provenance, cohe- METHODS siveness, and coverage.
+   Provenance computes the The Segmentation Approach (SEG method) number
+   of known chemical segments in a term. Seg- Initially, we decided to
+   exploit the structure of chemi- ments from the chemical morpheme list
+   and its sup- cal terms, analyzing them into their constituent chem-
+   plemental lists give a term a higher provenance score. ical morphemes.
+   We established a list of chemical Certain patterns identified by
+   regular expression morpheme segments and used the algorithm described
+   matching also contribute to the provenance score. It is in the Registry
+   File Basic Name Segment Dictionary2 characteristic of chemical terms to
+   contain internal to analyze chemical terms into constituents. The algo-
+   punctuation. Provenance scores are therefore adjusted rithm matches the
+   longest left-most segment and pro- to take into account the amount of
+   punctuation in a ceeds across the term from left to right. If a term is
+   term. Cohesiveness and coverage are notions taken analyzable into known
+   chemical segment morphemes from the MetaMap algorithm5. Cohesiveness
+   mea- we can with a high level of confidence identify the sures the
+   maximum number of contiguous segments term as a chemical term. For
+   example Triethylamino- and coverage measures how many of the segments
+   in propylisothiuronium is analyzed into 8 constituent a term are
+   classifiable. The final score is (1/6 Cover- morphemes:
+   TRI-ETHYL-AMINO-PROPYL-ISO- age) + (1/6 Coherence) + (2/3 Provenance)
+   yielding a THI- URON-IUM. value between 0 and 1. The provenance score,
+   which is central to our analysis, has twice as much weight as The
+   resulting segmentation algorithm does not handle coherence and coverage
+   combined. generic and trade names well, since they are not fully
+   constructed of significant systematic chemical seg- The Bayesian
+   Classifier Approach (POS and ments. To remedy that situation the
+   morpheme list TOTAL methods) was augmented with a list of biomedically
+   significant We have implemented and tested the Bayesian classi-
+   segments an example of which is the segment stig- fier in two different
+   forms and we will describe the mast representing the systematic parent
+   of the Sito- methodology in terms of what they have in common sterol
+   class. The resulting list consists of 3,724 and then how they differ.
+   All implementations depend morpheme segments. We also created a
+   supplemental on two parameters. One parameter is a small positive list
+   of chemical terms from 84,453 single-word MeSH integer n which must be
+   fixed before processing chemical terms. In addition, pattern matching
+   with begins. It determines the n-gram size used in produc- regular
+   expressions was used to identify recurring pat- ing attributes. When n
+   has been fixed, any string STR terns such as numerical locants. These
+   modifications in the data set is processed as follows. allowed us to
+   handle semi-systematic names such as 1) STR is lowercased.
+   3',5'-dichloromethotrexate where 3',5' is a locant pat- 2) STR is
+   broken into terms at spaces and these indi- tern, di and chloro are
+   systematic segments, and meth- vidual terms are used to produce
+   n-grams. Strings otrexate is a generic drug name from MeSH. Pattern of
+   length n+k produce k+1 overlapping n-grams, matching was also used to
+   identify dosage and mea- while any string of length n or shorter is
+   taken as surement patterns and other possibly nonchemical the only
+   n-gram produced (for simplicity we shall constituents of terms. A
+   variety of other heuristics refer to it as an n-gram even if shorter
+   than n). All have been used as well. For example we have aug- such
+   n-grams are attributes of STR. mented the approach by identifying
+   constituents not 3) The first n-gram produced from each term derived
+   retrieval9. The Bayesian score for a string is then from STR is marked
+   at the right end by adding the divided by the vector length associated
+   with that character `!' and is included as an attribute. string in
+   order to produce a final score for ranking As an example suppose n = 4.
+   Then if STR is the purposes. This implementation we call the POS Baye-
+   string 1-methyl MB, it has attributes: 1-me, -met, sian classifier.
+   meth, ethy, thyl, 1-me!, mb and mb!. EVALUATION Once the attributes for
+   all strings to be processed have Evaluation of the three methods was
+   performed by been assigned, each attribute is assigned a weight
+   constructing training and testing sets of both chemi- based on the
+   Bayesian formalism. Let nc denote the cals and nonchemicals from the
+   strings in the 1999 number of strings that are classed as chemical
+   names UMLS Metathesaurus. First the set of (English) in the training
+   set and let n denote the number of c strings was divided into chemicals
+   and nonchemicals strings that are not classed as chemical names. Let s
+   according to semantic type. A string was considered be an arbitrary
+   attribute and suppose that in the train- to be chemical if it either
+   had semantic type `Clinical ing set ncs denotes the number of chemical
+   name Drug' (a child of `Manufactured Object') or was a strings that
+   have the attribute and n the number of cs descendent of `Chemical' in
+   the semantic hierarchy. nonchemical name strings that have the
+   attribute. Four semantic types below `Chemical' were excluded Then the
+   weight assigned to the attribute s is given by because of their lack of
+   chemical relevancy. Strings of type `Chemical Viewed Functionally', for
+   example, ws = log( p(1  q))  log(q(1  p)) include Lipstick and P&S
+   Shampoo; and `Immuno- where we define logic Factor' strings include
+   HLA-Cw9 antigen and p = (n + ) (n + ) Cryoproteins. The list of
+   semantic types defining the cs c 2 . set of chemicals follows with the
+   excluded semantic q = (n + ) (n + 2 ) cs c types lined through:
+   Chemical Here implements uninformed priors6 and is the sec- Chemical
+   Viewed Functionally ond parameter that must be set in order to define
+   the Pharmacologic Substance Bayesian classifier. Antibiotic Biomedical
+   or Dental Material In addition to the parameters n and which must be
+   Biologically Active Substance chosen, we have implemented the Bayesian
+   classifier Neuroreactive Substance or Biogenic Amine in what we may
+   call two flavors. One is just as Hormone Enzyme described and all
+   attributes are weighted whether they Vitamin receive positive or
+   negative weights. We will refer to Immunologic Factor this as the TOTAL
+   method. It is important to note that Receptor in this approach the
+   nonchemicals in the training set Indicator, Reagent, or Diagnostic Aid
+   are just as important as the chemicals in discrimina- Hazardous or
+   Poisonous Substance Chemical Viewed Structurally tion between the two.
+   Thus one may only expect to Organic Chemical achieve top performance if
+   the classifier is used to dis- Nucleic Acid, Nucleoside, or Nucleotide
+   criminate between chemicals names and strings which Organophosphorus
+   Compound are something like the nonchemical strings in the Amino Acid,
+   Peptide, or Protein training set. Because the world of nonchemical
+   strings Carbohydrate Lipid is much larger than the world of chemical
+   strings and Steroid one may not be able to give prior characterization
+   to Eicosanoid the environment in which one may wish to detect Inorganic
+   Chemical chemical names, we also looked at a version of the Element,
+   Ion, or Isotope classifier that only allows positive weights. In this
+   ver- ... Clinical Drug sion only the attributes that are more probable
+   in the set of chemical names are weighted and all other The
+   semantically determined chemical and nonchemi- attributes are given
+   zero weight by default. In order to cal sets were each randomly divided
+   into training and compensate somewhat for the lack of negative testing
+   sets, 2/3 for training and 1/3 for testing. This weights we treat each
+   string as a document and the produced a Full Training Set and a Full
+   Testset. The attributes as key terms and produce a vector length in two
+   statistical methods were trained using the Full the standard way
+   employed in vector document Training Set. Because the SEG method was
+   developed using the entire 1998 Metathesaurus, however, we three
+   methods scoring somewhat less on nonchemi- created a 99 Only Testset
+   removing strings that cals than in the Full Testset. Overall
+   performance for occurred in the 1998 Metathesaurus from the Full the
+   SEG and POS methods declined slightly, but Testset. This ensured that
+   the SEG method could be TOTAL's overall performance remained the same
+   due tested fairly with data it had not seen before. to an increase in
+   its performance for chemicals. The TOTAL method was still the overall
+   best scoring RESULTS method. All three methods produce a score for each
+   candidate string and a threshold must be chosen above which a
+   DISCUSSION score is used to classify a string as a chemical. For For
+   both testsets all three classification methods pro- purposes of testing
+   and comparison of methods as vide a high level of accuracy. The TOTAL
+   method presented here, thresholds were chosen to minimize clearly
+   achieves the best results for classifying terms the overall error rate
+   for both chemicals and nonchem- and is likely to be useful for both
+   indexing and icals. The Bayesian methods also require the setting
+   retrieval of such terms as well as detecting chemicals of the n-gram
+   size n and the prior confidence level . in free text. However the
+   segmentation approach The optimal value of n was found to be 4 for the
+   POS offers a lexical analysis of chemical terms which can method and 7
+   for the TOTAL method. For both of support tasks in which chemical
+   nomenclature is these methods a of 0.01 proved optimal or near
+   important. These tasks include recognizing synonyms optimal and was
+   used. of a given chemical and normalization of chemical For
+   completeness all methods were tested against terms. both the Full and
+   99 Only Testsets. The full testset The most important observation
+   regarding the Baye- contained 118,034 chemicals and 210,898 nonchemi-
+   sian methods was that a of only 0.01 gave a signifi- cals. Each of the
+   three methods correctly identified at cant boost to performance when
+   compared with a least 84% of the chemicals and 87% of the nonchemi-
+   more conventional choice. The usual interpretation of cals (see Table
+   1) with the TOTAL method perform- is a number of prior observations so
+   that it would be set to a small positive integer, frequently 16. The
+   SEG POS TOTAL use of 0.01 has essentially no effect in the calculations
+   Method Method Method unless either ncs or n is zero. If, for example
+   Chem Found 99,649 103,180 113,571 cs ncs = 0 , it has the effect of
+   adding the value % Found 84.4% 87.4% 96.2% log( ) to the weight one
+   would have obtained when Nonchem Found 182,388 197,734 204,488 ncs = 1
+   . This abrupt change in the weight is a form % Found 86.5% 93.8% 97.0%
+   of soft rule that says if an attribute is encountered that Found Wtd.
+   Avg. 85.7% 91.5% 96.7% was never seen in a chemical, then it is
+   probably not a Missed Wtd. Avg. 14.3% 8.5% 3.3% chemical and the score
+   should undergo a quantum Table 1: Results of Full Testset decrease.
+   Likewise when an attribute is observed that was never seen in a
+   nonchemical in training, the score ing significantly better than the
+   other methods. It should undergo a quantum increase by log( ) .
+   correctly identified 96% of the chemicals and 97% of With almost 1
+   million strings in the Metathesaurus, the nonchemicals. when n is 4
+   there are just over 440 thousand attributes Similarly, the 99 Only
+   Testset contained 35,113 and when n is 7 there are over 1.3 million
+   attributes. chemicals and 44,321 nonchemicals. Each of the three Thus
+   it is not easy to hand code all the rules that might methods correctly
+   identified at least 84% of both the be useful in distinguishing
+   chemicals from nonchemi- chemicals and nonchemicals (see Table 2) with
+   all cals. The soft rules are automatically in effect in the Bayesian
+   classifiers and allow for some rule like SEG POS TOTAL behavior which
+   proves beneficial. Method Method Method Failure analysis Chem Found
+   29,494 31,951 34,102 The results of a preliminary failure analysis are
+   shown % Found 84.0% 91.0% 97.1% in Table 3. The table shows the number
+   of incorrectly Nonchem Found 37,137 40,146 42,700 identified chemicals
+   and nonchemicals for each % Found 83.8% 90.6% 96.3% method together
+   with the number of failures unique to Found Wtd. Avg. 83.9% 90.8% 96.7%
+   the method. The last row gives the number of failures Missed Wtd. Avg.
+   16.1% 9.2% 3.3% common to all methods. 266 chemicals were not iden-
+   Table 2: Results of 99 Only Testset tified as such by any method.
+   Ninety-eight of these had the semantic type `Pharmacologic Substance'.
+   ognize higher-order tokens of various types including Agents for
+   alcohol related cognitive impairment is an author-defined acronyms and
+   chemicals. A more ambitious extension of this work is to com-
+   Nonchemicals Chemicals Not Identified bine the strengths of the
+   Bayesian classification and Method Identified as Chemicals segmentation
+   approaches. We believe that a combined Total Unique Total Unique
+   approach would enhance recognition of chemical SEG 5,619 4,656 7,184
+   5,107 terms while retaining the segmentation analysis which POS 3,162
+   1,893 4,175 1,892 has potential applications to our text analysis
+   efforts. TOTAL 1,011 274 1,621 601 We are investigating techniques for
+   appropriate lexi- All Methods 266 474 cal normalization of chemical
+   terms based on seg- Table 3. Errors (99 Only Testset) mentation. We are
+   also investigating techniques to discover the bounds of chemical terms
+   so that they example of such a missed chemical. Sixty-four cases can be
+   recognized in free text. Recognition of parent had the semantic type
+   `Organic Chemical'. Such substituent and modifier segments of chemical
+   terms organic chemicals as Jim's juice and Devil's Red were within the
+   segmentation analysis is feasible and missed. Examples like these are
+   difficult to detect should enable us to recognize synonymy between
+   because although they represent chemicals they do not chemical terms.
+   have the characteristic pattern of chemical terms. References Some of
+   the sixty-four organic chemicals, IS 145 for instance, involved English
+   words used as acronyms. 1. Heym DR, Siegel H, Steensland MC, and Vo HV.
+   Computer Recognition and Segmentation of Chemi- Many of the failures of
+   the SEG and POS methods cally Significant Words for KWIC Indexing. J.
+   Chem. were terms composed of two-, three- and four-charac- Inf. Comput.
+   Sci., 16:173-176, 1976. ter segments that are acronyms and
+   abbreviations. 2. Chemical Abstracts Service. Registry File Basic
+   CyH-CHID is an example. Name Segment Dictionary. June, 1993. The TOTAL
+   method (using both positive and negative 3. Kemp N and Lynch M.
+   Extraction of Information evidence) failed to recognize some chemical
+   terms from the Text of Chemical Patents. 1. Identification of involving
+   dosages or units of measurement such as Specific Chemical Names. J.
+   Chem. Info. Comput. CYCLOSERINE 250 MG capsule. It also failed for
+   Sci., 38:544-551, 1998. some terms such as Somnifacient that the SEG 4.
+   McCray AT, Srinivasan S, and Browne AC. Lexical method retrieved
+   because the terms appeared on one methods for managing variation in
+   biomedical termi- of the supplemental lists. nologies. In Ozbolt JG
+   (ed.) Proceedings of the 18th All methods had problems identifying
+   terms denoting Annual SCAMC, 235-239, 1994. allergies (e.g.,
+   Fludrocortisone allergy) as non chemi- 5. Aronson AR, Rindflesch TC,
+   and Browne AC. cals. Over half of the shared failures were of this
+   vari- Exploiting a large thesaurus for information retrieval. ety.
+   Terms involving complex punctuation and Proceedings of RIAO 94,
+   197-216, 1994. subterms which denote chemicals caused problems 6.
+   Langley P. Elements of Machine Learning. Mor- for both the SEG and POS
+   methods. The terms AMY- gan-Kaufmann Publishers, Inc., San Francisco,
+   CA, LASE.S1:CCNC:PT:SER:QN and Accid pois - petro- 1996. leum naphtha
+   are examples. The TOTAL method had 7. Langley P and Sage S. Induction
+   of selective Baye- less trouble with this sort of example. Terms that
+   sian classifiers. Proceedings of the Tenth Conference involved
+   overdoses and terms that involved intentions on Uncertainty in
+   Artificial Intelligence, 399-406, were also missed by the SEG method.
+   One example is 1994. Piracetam overdose of undetermined intent. 8.
+   Langley P, Iba W, and Thompson K. An analysis of Future work Bayesian
+   classifiers. Proceedings of the Tenth A straightforward way of taking
+   advantage of the National Conference on Artificial Intelligence, 223-
+   results described here is to add the TOTAL classifica- 228, 1992. tion
+   method to MetaMap's tokenization algorithm. 9. Salton, G. Automatic
+   Text Processing. Addison- This is actually being done as part of an
+   effort to rec- Wesley, Reading, MA, 1989.

@@ -1,0 +1,98 @@
+http://pilc.grc.nasa.gov/meetings/minneapolis/minutes.txt
+
+   Performance Implications of Link-layer Characteristics (PILC) BOF -
+   IETF 44 Reported by Mike Kallas (mailto:mkallas@nortelnetworks.com)
+   Mailing list contact information: http://pilc.grc.nasa.gov/pilc MINUTES
+   Chairs: Mark Allman (mailto:mallman@grc.nasa.gov) Spencer Dawkins
+   (mailto:sdawkins@nortelnetworks.com) Aaron Falk
+   (mailto:a.falk@ieee.org) Internet Draft:
+   draft-montenegro-pilc-ltn-01.txt (currently individual submission) The
+   second PILC BOF was held March 18, 1999 at IETF 44 in Minneapolis,
+   Minnesota. Aaron Falk, BOF Co-chair, started off with some history of
+   the PILC effort and experiences gained from the TCP over Satellite, and
+   presented a draft charter for the proposed PILC working group. His
+   slides are available at: http://pilc.grc.nasa.gov/pilc/. Mark Allman,
+   BOF Co-chair, continued the discussion by summarizing the interests
+   that have been expressed on the PILC mailing list, and leading the
+   discussion of the draft charter. Mark's slides are also available from
+   the PILC web page. Three major types of documents will be produced in
+   PILC: "Advice for Internet Subnetwork Designers", recommendations about
+   using (and not using) TCP Performance-Enhancing Proxies, and
+   recommendations about mitigations for specific network characteristics.
+   In addition, a pointer document for certain communities of interest may
+   be produced, depending on the need for a specific network type to deal
+   with more than one "unfortunate" link-layer characteristic and the
+   potential for "unfortunate" interactions between mitigations. Many
+   questions and comments were made about these "Pointer" documents. The
+   conclusion was to do the work on the mitigations documents and then see
+   whether the pointer documents are still required. The major threads on
+   the PILC list to date have been on these topics: Links with high BER,
+   Inconsistent BER, Links with occasional outages, and Low bandwidth
+   links. (Although, there have been brief threads on other topics). A
+   fairly contentious discussion on PEPs ensued. The consensus seemed to
+   be for including a document discussing the advantages/disadvantages of
+   using PEPs. Both Aaron and Mark suggested specifications that don't
+   target a specific type of network (say, "TCP over wireless"), but
+   target a specific network characteristic (say, "TCP over links with
+   high BERs after link-layer correction has been applied"). The rationale
+   was to make sure the TCP community doesn't ignore PILC specifications
+   as being tied to a specific network type - Aaron expressed the opinion
+   that this had happened in TCPSAT, and slowed down the process of
+   getting consensus on TCPSAT Internet-Drafts. Phil Karn, who has been
+   working on a draft of the "Advice for Internet Subnetwork Designers"
+   document (draft-in-process at http://people.qualcomm.com/karn/pilc.txt)
+   presented a proposed outline of the document, collected additions, and
+   identified additional contributors. Phil's document table of contents
+   at the beginning of the meeting was: MTU size, packet size Framing in
+   the sub-net Connection oriented sub-net Link characteristics QoS delay
+   / BER Reordering Mobility Multicasting Routing or use IP Security
+   Discovery protocols broadcasting Congestion feedback signals These
+   subjects were suggested as additions during the discussion: MAC
+   algorithm, tuning Media access affects link characteristics Link layer
+   should take advantage of burstiness, clumpiness of error helps TCP
+   Total error statistics behavior (not just BER) Compression Asymmetry
+   Buffering Fairness Vs performance Implications of protocol design on
+   power consumption for mobile/wireless devices Significant interest and
+   energy was expressed in support of the charter items discussed. The
+   initial areas of concentration, based on mailing list traffic to date,
+   will be "thin", or low-bitrate, networks, and lossy networks.
+   Additional areas may be addressed as communities with interest and
+   energy are identified. Steve Deering noted that interim meetings could
+   easily be held to focus on a specific link characteristic. There was
+   substantial discussion of a number of topics. Relevant comments are
+   summarized below. Q: Is PILC only about TCP? What about RTP, multicast?
+   A: No. We are also working on link layer issues today. Some
+   characteristics originally proposed for PILC were IP layer issues, and
+   UDP, RTP, and multicast are all acknowledged as possible areas of work
+   for PILC. The energy that has materialized so far in PILC has been
+   focused on link layer and TCP issues. Q: Do all wireless networks have
+   same issues? Why is a pointer document needed? A: We can't anticipate
+   all "wireless" characteristics, and there are different characteristics
+   for different types of wireless networks. Each "mitigation" document
+   will look at different link characteristics. The Pointer document for
+   wireless needs to be flexible so that we can add more sections as
+   needed. Different solutions work for different networks. Also note that
+   "wireless" was used as shorthand for "wireless WAN" in the discussion.
+   Q: Shouldn't we remove "wireless" from charter? A: We need to keep the
+   word in the charter as a commitment that PILC will work to meet the
+   requirements of the wireless community, but ("you're right,") wireless
+   environments are different and changing. We will not group all wireless
+   into one category, so different Pointer documents may be produced. We
+   will focus discussions on link characteristics, and not on network
+   types like wireless. We will use wireless as an example Q: We're
+   concerned about usefulness of the Pointer documents. Should Pointer
+   documents be IETF RFCs? Would a conference paper be better? A: Many
+   groups are publishing similar pointer documents in many places
+   (conference proceedings, industry forums). There is still a place for
+   documentation of mitigations that involve TCP that have been reviewed
+   within IETF. Q: Is designing a way for the applications to determine
+   underlying network characteristics in scope? A: No, network knowledge
+   of link topology is a different problem. and is also too big. We can
+   discuss this on the list if you disagree. Q: How good does the link
+   need to be? If you can not achieve recommendations, then what? A: Van
+   Jacobson noted that error behavior is non-linear. There is a tradeoff
+   between MAC design and error response. Error response is not linear and
+   breakpoint is distinct and visible. Chairs asked for people with energy
+   to work on problems not in the proposed charter. Hari Balkrishnan
+   volunteered to work on documents related to asymmetric networks. It was
+   also suggested that this WG should consider architecture.

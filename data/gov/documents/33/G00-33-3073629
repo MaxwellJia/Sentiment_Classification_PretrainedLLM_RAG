@@ -1,0 +1,112 @@
+http://rows.wff.nasa.gov/ers1.html
+
+     __________________________________________________________________
+
+         Assessing ERS-1 SAR ocean winds using an aircraft altimeter
+     __________________________________________________________________
+
+   Vandemark, D. , P. W. Vachon and B. Chapron, Assessing ERS-1 SAR wind
+   speed estimates using an airborne altimeter , ESA Earth Observation
+   Quarterly, No. 59, 1998. An html version (980420_v3) of this EOQ paper
+   is given here. Figures 1-3 are included.
+     __________________________________________________________________
+     __________________________________________________________________
+
+                           SUPPORTING INFORMATION
+     __________________________________________________________________
+
+                 Calibrated ERS-1 SAR imagery used in study
+
+   Mapped ERS-1 SAR PRI images for:
+
+   Grand Banks SAR Wave Mode Validation Experiment (Nov. 1991) -
+
+   911115 || 911118 || 911120
+
+   ONR's High Resolution Remote Sensing Experiment (HIRES) (June 1993) -
+
+   930611 || 930614 || 930617 || 930620 || 930627
+
+   Mapped ERS-1 SAR images and points of ROWS data and model winds:
+
+   911115 || 911118 || 911120
+
+   930611 || 930614 || 930617 || 930620 || 930627
+     __________________________________________________________________
+
+                      Spatially collocated wind speeds
+     __________________________________________________________________
+
+   The ROWS altimeter operated from NASA's P-3 aircraft near the time of
+   ERS-1 SAR overpass with data collected at the points within the ERS-1
+   SAR swath as indicated on the maps given above. After conversion of
+   ERS-1 SAR and ROWS altimeter data to 10 m wind speed using the
+   respective satellite inversion algorithms (CMOD5 and Modified
+   Chelton-Wentz), collocated data for each day's flight can be
+   overplotted versus time of day. Each plot within a figure represents a
+   separate day. The time of each SAR overflight is noted by a solid
+   vertical line. Dashed lines denote the +- 30 minute mark. The figure
+   shown here presents SAR winds derived using 200 m pixel smoothing to
+   derive the wind speed. The ROWS altimeter spatial sampling is of the
+   order of 2000 m^2.
+
+   Time series wind comparison for all eight ROWS flights ( Grand Baks and
+   HIRES) :
+
+   U_10 ROWS-Alt(blue trace) vs. ERS-1 SAR
+
+   Time series wind comparison for 11 June, 1993. These data show the very
+   strong correlation between altimeter and SAR derived wind estimates.
+   U_10 ROWS-Alt(symbols) vs. ERS-1 SAR(trace)
+
+   A scatter plot of the 'final' wind comparison results where the pixel
+   size was 2000 m and the allowed time interval was +- 60 minutes: Wind
+   comparison data
+     __________________________________________________________________
+
+                    Empirical method to directly compare
+
+                    ERS-1 SAR and Ku-band altimeter data
+     __________________________________________________________________
+
+   An alternative to using wind speed algorithms to compare the two
+   differing radar measurements is developed here. The basis is that we
+   assume that the altimeter and SAR are both responding to the same
+   omni-directional surface slope spectrum. The ROWS altimeter is deriving
+   a mean squared surface slope estimate from fall off(or shape) of the
+   normalized radar cross section(NRCS), mss_shape. ROWS mss_shape is
+   derived over the range of 0 to 12 deg. incidence angle. This is also an
+   omni-directional measurement: return signal is an integration of all
+   azimuth look directions. The SAR gives an absolute value of NRCS at a
+   given incidence angle between 19 and 26 deg.. from some single fixed
+   look direction WRT the surface wind direction.
+
+   To compare the data we would like isolate the omni-directional
+   component in the SAR signal and compare this to mss_shape.
+
+   The standard scatterometer model for the SAR can be written as :
+   NRCS_sar=A0_sar+ A2_sar*cos(2*phi). In this case, A0_sar represents the
+   mean, omni-directional radar return we wish to isolate. From
+   investigation related to the CMOD C-band wind(u) algorithm validations,
+   A2_sar can be written as A2_sar=A0_sar(f/(f+2)), where f= bu^2 + c. For
+   the ERS-1 incidence angles we have b=3.e-3 and c=0.15. This A2
+   coefficient defines the weighting of the wind direction component of
+   the total SAR NRCS.
+
+   Returning to main SAR eqn. then we can solve for A0_sar as:
+
+   A0_sar=NRCS/[1+f*cos(2*phi)/(f+2)] where f=A2_sar. In this case, NRCS,
+   phi and u are all known (NRCS is measured, phi is derived from in situ,
+   U from CMOD).
+
+   Next, based on recent investigations os the surface slope PDF, a model
+   relating mss_shape to A0_sar has been developed:
+   A0_shape=!pi*.64/cos(theta)^4*exp(a-b*tan(theta)). Here, theta = SAR
+   incidence angle, a=3.55-0.62*u, b=2.2/sqrt(mss_shape).
+
+   We can now compare the A0 coefficients derived based on above equations
+   and using the collected SAR and altimeter measurements. Results of the
+   along-track flight data shown here look promising. At this stage the
+   agreement is striking except in the case of very light winds where the
+   conversion of mss_shape to C-band A0 is not working well.
+     __________________________________________________________________

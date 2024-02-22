@@ -1,0 +1,194 @@
+http://sage.inel.gov/hpag_year2000.htm
+
+   [sagest2.gif]
+
+
+                Sage-ST ä
+                Year 2000 Compliance
+       _______________________________________________________________
+
+   Y2K Update    Sage Year 2000 Issues in Versions 4.1 through 5.12
+       _______________________________________________________________
+
+
+   As a Managing & Operating (M&O) Contractor to the Department of Energy,
+   BBWI cannot legally represent or warrant that Sage-ST ä is Year 2000
+   compliant. However, the INEEL has addressed this issue and we provide
+   the following information to assist you in your Year 2000 compliant
+   activities involving applications utilizing this tool.
+
+   The Sage-ST development tool set has a development and enhancement
+   history that spans over ten years. During these years many applications
+   and systems have been developed based on the tool's libraries and
+   database.
+
+   The database internal to Sage-ST has been year 2000 compliant from its
+   inception. In all date fields, the century information is preserved.
+   Based on user requirements throughout the years, several date display
+   formats are provided. Some of these display formats do not include the
+   century indicator. Although using a two-digit year is not a good Year
+   2000 programming practice, in Sage-ST the century is assumed and added
+   when stored inside the database. The Sage-ST convention has been to
+   assume >=50 to be in the 1900s and <50 to be in the 2000s. Thus, even
+   in older applications, the display and entry of dates into a Sage-ST
+   database using a two-digit year will not be a Year 2000 problem. We
+   cannot control a programmer's use of a date once it is pulled out of
+   the database, so the application itself could use the two-digit year
+   and not be correct.
+
+   Earlier versions of DOS did not account for the century, thus some of
+   the earlier versions of Sage-ST when using the system date will have
+   errors even on new DOS systems. This problem has been corrected in
+   Sage-ST and will work properly on newer versions. The Windows ä
+   versions have not had this problem.
+
+   A time and date library called TIMELIB is provided. The known and
+   reported problems were corrected several years ago. We expect no
+   problems now. As you can see by this, we are confident the later
+   versions of Sage-ST are and will prove to be Year 2000 compliant.
+
+   In addition, the INEEL has put together a plan to verify Year 2000
+   compliance for Sage-ST. This plan consists of three major components.
+   First, there were some known problems with dates and Year 2000 issues
+   in earlier versions of Sage-St. Although these have been fixed and are
+   no longer an issue in the current versions, several projects continue
+   to use these older versions. We will go back through the development
+   and release history of Sage-St and list the various version releases
+   and date-related corrections, and post these on our Sage-ST web site at
+   homepage.htm . For those using an older version, Year 2000 patches will
+   be available that can be compiled and used by the projects to correct
+   known problems.
+
+   Second, the current version of Sage-ST will be independently analyzed
+   with a Year 2000 tool. The INEEL development team will then mitigate
+   any Year 2000 problems in the Sage-ST tool encountered by this
+   independent effort.
+
+   Third, the INEEL is in the process of establishing its own capability
+   to analyze, correct, and verify Year 2000 problems for others in the
+   government and elsewhere. The INEEL will use Sage-ST as a means in
+   developing and demonstrating this capability. Thus, the current version
+   of Sage-ST will go through an additional internal Year 2000 review
+   process.
+
+   The plan will be implemented as time and resources permit during this
+   calendar year. We will complete all activities as early as possible and
+   by 12/31/98. It is felt these efforts will provide adequate confidence
+   that the tool and its libraries will operate correctly during the turn
+   of the century and beyond. This will not replace the fact that
+   applications using the Sage-ST tool set will need their own review for
+   the use of dates and date calculations.
+
+   Please contact us with any comments or questions regarding this Sage-ST
+   Year 2000 compliant plan or the INEEL's Year 2000 support capabilities
+   at hotline@sage.linel.gov , or (208) 526-0656.
+                              _________________
+
+UPDATE (March 1999)
+
+   This update provides a summary of INEEL activities in 1998 relating to
+   Year 2000 compliance for Sage-ST.
+
+   In our initial documentation, we outlined a 3 phased plan to verify
+   Year 2000 compliance for Sage-ST.
+
+   Phase I: There were some known problems with dates and Year 2000 issues
+   in earlier versions of Sage-ST, which were corrected and tested in
+   subsequent versions. Some projects may continue to utilize earlier
+   versions of Sage-ST, and to address that situation, we reviewed the
+   development and release history of Sage-ST. We have posted the various
+   version releases and date-related corrections to those versions on our
+   homepage at homepage/htm. Year 2000 patches are available to anyone
+   requiring these corrections by contacting us by email at:
+   hotline@sage.inel.gov.
+
+   Phase II: Sage-St was analyzed and tested for Year 2000 compliance by
+   actually setting the clock forward to January 1, 2000. This testing was
+   performed on specific applications and tools utilizing Sage-ST. All
+   date instances were analyzed to be Year 2000 compliant.
+
+   Phase III: The INEEL has planned to provide Year 2000 compliance
+   service and support for others in the government, etc. In doing so,
+   Sage-ST was used to exercise a testing capability by an independent
+   party. This was completed and to the best of our abilities and
+   knowledge, we have provided a Year 2000 compliant tool to all of our
+   customers.
+
+   As we stated in our previous documentation, even though we assert that
+   Sage-ST has been reviewed, analyzed, tested and corrected for Year 2000
+   compliance, we cannot control a programmer's use of a date once it is
+   pulled out of the database. An application could be developed using the
+   two-digit year, and not be correct. Individual applications must be
+   tested separately from the tool itself to certify compliance.
+                              _________________
+
+Sage Year 2000 Issues in Versions 4.1 through 5.12
+
+   The significant problems found were in TimeLib.CurrentDate0 and
+   TimeLib.Date2toDate0. In the earlier versions of Sage these procedures
+   were not able to convert a date later than 1999 accurately to the
+   desired Sage format. As a result incorrect character strings were
+   produced.
+
+   In Sage versions earlier than 4.1 other problems existed in addition to
+   those above. The current system date was not read correctly from DOS
+   and an error existed in Sage's leap year algorithm.
+
+   Additionally, some other changes had been made in the Julian date
+   conversion routines, but I was not able to find exactly where these
+   occurred.
+    Sage Versions:4.1 5/7/93 Alsys 5.1.2 FirstAda (16 bit mode) DOS compiler
+    4.11 8/10/93
+    4.14 11/16/93
+    4.15 1/5/94
+    4.16 3/14/94
+    4.2 7/19/95 Alsys 5.1.3 386/486 (32 bit mode) DOS compiler
+    Alsys 5.3 386/486 (32 bit mode) DOS compiler
+    5.1 11/12/96 ActiveAda 5.52 compiler Windows
+    ObjectAda V7.0 Windows
+    5.12 6/24/97 ObjectAda V7.0 Windows
+
+   Change history:
+
+   Versions 4.1, 4.11, 4.14 & 4.15 are the same and have a problem
+   formatting dates after 1999.
+
+   Version 4.16 was modified in other areas, but exhibits the same date
+   problem.
+
+   Version 4.2 contains a major fix for CurrentDate0.
+
+   Version 5.1 is the same as 4.2.
+
+   Version 5.12 contains a further fix for CurrentDate0 and also an
+   initial fix for Date2toDate0 to remove the assumption of the digits
+   "19" in the output date. This version calls a new procedure in the
+   TimeDate package which uses calls in DosLib that in turn call AsmLib.
+
+   Resolutions:
+
+   For versions 4.2 and later, a replacement of Timelib, TimeDate, Doslib,
+   and AsmLib should resolve the problem.
+
+   For versions 4.1 through 4.16 replacement of Doslib and AsmLib may
+   create other problems, plus some of these compilers are 16 bit which
+   will complicate package replacement further. Since these versions of
+   Sage can get the date from DOS correctly, a TimeLib package can be
+   modified to reformat the date without introducing the "19" error and
+   this new package can be provided for an alternate acquire package to
+   correct the date problem without reliance on the TimeDate, DosLib and
+   AsmLib changes.
+
+   For versions earlier than 4.1, Sage had difficulties in receiving the
+   date correctly from DOS, there was an early bug in the leap year
+   algorithm as well as the known CurrentDate0 formatting bug. Resolutions
+   for these platforms will be more complex and should be considered on an
+   as needed basis.
+       _______________________________________________________________
+
+   [pagetop.gif]
+       _______________________________________________________________
+
+     [Mail.gif] Send mail to: hotline@sage.inel.gov with questions or
+   comments about this web site.
+   Copyright © 1989-2002 Bechtel BWXT Idaho, LLC

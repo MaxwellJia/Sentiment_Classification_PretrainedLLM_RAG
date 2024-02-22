@@ -1,0 +1,1215 @@
+http://ishi.lanl.gov/documents/CFD_6_96.pdf
+
+   LA-UR-96-1426- Approved for public release; distribution is unlimited.
+   Title: The Legacy and Future of CFD At Los Alamos Author(s): Norman L.
+   Johnson Published in: Proceedings of the 1996 Canadian CFD Conference
+   Invited talk. Ottawa, Canada June 3-4, 1996 Los Alamos NATIONAL
+   LABORATORY Los Alamos National Laboratory, an affirmative action/equal
+   opportunity employer, is operated by the University of California for
+   the U.S. Department of Energy under contract W-7405-ENG-36. By
+   acceptance of this article, the publisher recognizes that the U.S.
+   Government retains a nonexclusive, royalty-free license to publish or
+   reproduce the published form of this contribution, or to allow others
+   to do so, for U.S. Government purposes. Los Alamos National Laboratory
+   requests that the publisher identify this article as work performed
+   under the auspices of the U.S. Department of Energy. Los Alamos
+   National Laboratory strongly supports academic freedom and a
+   researcher's right to publish; as an institution, however, the
+   Laboratory does not endorse the viewpoint of a publication or guarantee
+   its technical correctness. Form 836 (10/96) Intentionally blank THE
+   LEGACY AND FUTURE OF CFD AT LOS ALAMOS Norman L. Johnson Group T-3,
+   Theoretical Division Los Alamos National Laboratory Los Alamos, NM
+   87545 NLJ@LANL.GOV Abstract more information as warranted. The first
+   resource for further information is to explore our Web page The early
+   history is presented of the prolific
+   (http://gnarly.lanl.gov/home.html), which provides development of CFD
+   methods in the Fluid Dynamics contact information for each area of
+   application. Group (T-3) at Los Alamos National Laboratory in the years
+   from 1958 to the late 1960's. Many of the Although this review focuses
+   on the work from T-3, currently used numerical methods PIC, MAC, there
+   is significant work that has been done over the
+   vorticity-stream-function, ICE, ALE methods and the years in other
+   parts of the laboratory, some in k- method for turbulence originated
+   during this collaboration with T-3, or, more often, as independent
+   time. The rest of the paper summarizes the current work. The author
+   makes apologies for the myopic research in T-3 for CFD, turbulence and
+   solids view of CFD at Los Alamos and is the first to modeling. The
+   research areas include reactive flows, recognize the direct
+   contributions of colleagues in multimaterial flows, multiphase flows
+   and flows with other parts of the Laboratory and the contribution of
+   spatial discontinuities. Also summarized are modern the Laboratory as a
+   whole, in providing one of the particle methods and techniques
+   developed for large premiere research facilities in the world. scale
+   computing on massively parallel computing platforms and distributed
+   processors. 2. Early History of Group T-3 (1958-68) In the early years
+   of the Fluid Dynamics Group (T-3) 1. Introduction in the Theoretical
+   Division at Los Alamos, the problems of interest were multiple
+   materials under At times in history there often comes together a high
+   compression, in which solids behave like fluids. unique confluence of
+   people and events that can The standard approach in the 50's to
+   numerical change the development of history. In many ways the modeling
+   of deforming materials was a Lagrangian early development of
+   Computational Fluid Dynamics treatment with staggered primary variables
+   (CFD) methods at Los Alamos National Laboratory, (thermodynamic
+   variables at the element centers, and in particular in the Fluid
+   Dynamics Group, in the kinematic variables at the vertices or nodes).
+   The late 50's and through the 60's was such an example  Lagrangian
+   method satisfied the need for an accurate a rare integration of unique
+   computational resources, interfacial treatment, but severely suffered
+   from mesh people and applications. Arguably, a critical factor
+   distortions under the large shearing deformations and was the creation
+   of the world's largest computer instabilities. Typical simulations at
+   the time had to resources for programs of national interest that were
+   be halted when the mesh entangled and painstakingly available for
+   exploration into alternative CFD "remeshed" by hand, and then the
+   simulation methods. But equally, the presence of Francis H. continued.
+   Harlow with his prolific creativity, which continues to this day, and
+   his colleagues were also a rare PIC: Particle-In-Cell occurrence. Even
+   though the laboratory programs at the time needed robust simulations of
+   multimaterial, In this time of great need, the PIC method was
+   compressible flows, all applications were fair game proposed and
+   developed by Harlow in 1957 [42][46]. because of the almost total
+   absence of CFD codes at The original PIC code used mass particles that
+   carried the time. material position, mass, and species information on a
+   two-dimensional (2D), uniform, Eulerian mesh. It The purpose of the
+   present work is two-fold: to treated transient, compressible flows of
+   multiple review the early days of the development of CFD materials with
+   no restrictions on interfacial methods in the Fluid Dynamics group
+   (T-3) at Los deformation. It was also the first of the T-3 codes that
+   Alamos National Laboratory (at that time called Los used the technique
+   of solution phases: the division of Alamos Scientific Laboratory and
+   hereafter referred to the computational cycle into a Lagrangian and as
+   Los Alamos) and to summarize the current research Eulerian (remap or
+   rezone) phase. Fig. 1-1 shows a in T-3, as an invitation to the reader
+   to inquire about result from an early PIC calculation. A large number
+   of particles per element  16 was found to be best in variety of
+   applications, including incompressible, 2D  were required to reduce the
+   inherent fluctuations free-surface flows. of the method (this is
+   discussed in more detail in the FLIP section 3.3 below) and,
+   consequently, the The rest of this introduction focuses on the specific
+   method was memory intensive, particularly for the techniques that were
+   developed; these were developed computers of the time (IBM 701 and
+   704). While the with a common approach, a certain style that was PIC
+   scheme for fluid flow had limited application characteristic to T-3.
+   The techniques were developed outside of Los Alamos except for plasma
+   under the collaboration of typically a programmer and simulations, the
+   T-3 PIC method did find significant a theorist. The involvement of a
+   skilled programmer use in the Soviet Union as the "Large Particle" was
+   essential, because each code pushed the limits of technique. The PIC
+   method has had a major the current computer capability. The necessity
+   for resurgence almost three decades later in the large computers
+   precluded much of the use of this development of FLIP (see section
+   3.3). work outside of Los Alamos in the early 60's. Computer codes for
+   each new method were written from scratch and were not intended to be
+   exported. But, as the 60's progressed, the T-3 techniques were widely
+   applied across the country. The development of codes for use outside
+   Los Alamos came much later. FLIC: Fluid-In-Cell To address the particle
+   fluctuations and the large memory requirements of the PIC method, the
+   FLIC method was developed under Harlow's direction by Gentry, Martin
+   and Daly [45]. The FLIC method treated compressible flows of a single
+   material on a 2D, uniform, Eulerian mesh, in which all the state
+   variables were co-located at the cell center. The technique fluxed
+   material across cell boundaries in the now-typical Eulerian fashion.
+   Not surprisingly, the method suffered from stability problems from
+   poorly coupled momentum and pressure fields, which plagued the
+   co-located variable methods for the next three decades. The method
+   included the capability to treat arbitrarily shaped objects by using a
+   piece-wise Fig. 1-1. A shock passing though two gases with a linear
+   representation of a solid boundary in the regular stepped interface,
+   with a density ratio of 2 (the lighter mesh  a precursor to the later
+   fractional area/volume gas is shown) [47]. The PIC particles and mesh
+   are formulation. not illustrated. Vorticity and Stream Function Method
+   Formation and Style of Group T-3 Fromm's work was the first and only
+   foray away The success of the PIC method in solving the truly from
+   primitive variables in T-3 of velocity and unsolvable problems of the
+   time made the idea of pressure, and developed the first treatment of
+   strongly forming a dedicated fluid dynamics group attractive.
+   contorting incompressible flows in the world: the With the support of
+   Stan Ulam and Conrad vorticity-stream-function method for 2D,
+   transient, Longmire, the Fluid Dynamics Group (T-3) was incompressible
+   flows in 1963 by Fromm and Harlow created in the Theoretical Division
+   in 1958, with [44]. Fromm's ideas of a "Phase-Error Correction" Harlow
+   as its first Group Leader. Harlow remained method anticipated
+   monotonicity-preserving methods group leader until 1973. T-3 started
+   out with seven currently popular. The origin of this idea has been core
+   members, and grew to 13 members by 1963, largely forgotten. 15 members
+   by 1970, and 25 by 1990. Although the group was largely funded by
+   weapons research money MAC: Marker-And-Cell in these early years and
+   weapons applications remained the main area of application, the
+   atmosphere of the late fifties and sixties was one of free To treat
+   incompressible, free surface flows, the MAC exploration of CFD
+   techniques for solving a wide method was developed by Harlow and Welch
+   [50] as a variation of the PIC method but treating applications that
+   extended beyond those addressed by the vorticity stream-function
+   method. The MAC method was the KIVA lineage of codes [85], discussed in
+   the next first successful technique for incompressible flows. section.
+   Particles were used as markers to locate the material in the mesh and,
+   consequently, to define the location LINC (Lagrangian-Incompressible)
+   and of the free-surface. The MAC method had the ALE
+   (Arbitrary-Lagrangian-Eulerian) advantage of a more compact finite
+   difference stencil and tight coupling between the pressure and velocity
+   In 1967 the first 2D Lagrangian method for fields. To treat the fluid
+   incompressibility, a solution incompressible flows was developed in the
+   LINC to the Poisson equation for the pressure was used.
+   (Lagrangian-INCompressible) code. The approach was This was in contrast
+   to later methods that solved the based on restricting the movement of
+   the vertices coupled velocity-pressure equations, as discussed by such
+   that the volume remained constant and, thus, Viecelli [97]. Although
+   the solution of Poisson's was not based upon a global solution to the
+   zero equation was numerically simple, the specification of divergence
+   of the velocity field, as in previous the velocity boundary conditions
+   were not incompressible methods. While the LINC code was
+   straightforward. There was some controversy at the no more successful
+   in treating flows than other multi- time about the relative stability
+   of the MAC method, dimensional Lagrangian codes, its formulation led to
+   and this was resolved in the now-classic paper by Hirt the staggered
+   mesh approach to coupling of the [58], in which he showed that the MAC
+   method is pressure and velocity fields in the MAC method and unstable
+   with centered momentum advection unless was used to explore
+   elastic-plastic materials and the viscosity is sufficiently large. This
+   work was the surface tension effects. The most important precursor of
+   the modern "truncation error subtraction" consequence of the LINC code
+   was the observation analysis. This controversy illustrated the T-3 that
+   mesh rezoning was needed for most problems. approach: the development
+   was always on the The second generation version of LINC, physics, with
+   limited application of mathematical consequently, included an ALE
+   capability. This first analysis of, e.g., convergence and stability
+   properties. application of the ALE formalism paved the future for The
+   MAC method is still in use and has profited from all the later ALE
+   codes [16] [54], including SALE [9] the added efficiency of modern
+   conjugate gradient and its progeny. This version of LINC was also the
+   schemes for solving the Poisson equation. first application of the
+   Finite Volume method, the use of integral formulation of the
+   conservation ICE: Implicit-Continuous-Fluid-Eulerian equations, the
+   close cousin to the finite element methods. The Finite Volume method
+   enabled Also in the late 60's, an "all-speed" code was straightforward
+   treatment of nonorthogonal and three- developed, and called the ICE
+   method [8][53]. The dimensional meshes. ICE method was the first
+   approach that removed the Courant stability limitation based on the
+   fluid sound Turbulence and the k-epsilon Model speed. Originally, the
+   method had a fully nonlinear implicitness, which is often replaced by a
+   modern Harlow and his colleagues also contributed to the linear
+   implicitness  a more simple approach, but early numerical modeling of
+   turbulence and, in with the same stability properties in the limit of
+   zero particular, by the postulation of the now ubiquitous Mach number.
+   In the limit of zero Mach number, the k- model in the 60's [51][52].
+   The history of the ICE scheme reduces to the MAC scheme. early
+   turbulence modeling in T-3 is included with the current modeling in
+   section 3.5 below, in order to SOLA and Reactive Flow Codes present a
+   unified treatment of this complex topic. The MAC method was the basis
+   of the later "particle- PAF (Particle-and-Force) and Free- less"
+   techniques for compressible and incompressible Lagrangian Methods flows
+   embodied in the SOLA family of codes by Hirt, Nichols and others in the
+   early 70's that were the first One of the least known CFD methods
+   outside of T-3, T-3 codes distributed internationally. These codes but
+   one that was the precursor to the "Free- included extensions to two
+   immiscible fluids in the Lagrangian" methods, including the Smooth
+   Particle SOLA-VOF code [55][57], the first broadly and the Lattice Gas
+   methods, is the PAF method, first distributed T-3 code in its source
+   form. One member documented in 1961 [48]. It was the first of the of
+   SOLA family, the SOLA-DF code, included a "mesh-less" (in the sense
+   that computational points multiphase treatment with multiple velocity
+   fields were not associated with any mesh) and variable [56][86][96].
+   About the same time, the first reactive connectivity methods (in the
+   sense that the flow code, RICE, was developed by Rivard and Butler
+   "connectivity" changed during the simulation). It and others [27][87],
+   which evolved into the most combined the lack of numerical diffusion of
+   the widely used of the T-3 codes, APACHE-CONCHAS- Lagrangian methods
+   with the robustness of the Eulerian methods, but without the underlying
+   mesh Lattice Gas methods, which take the approach of and the large
+   memory requirements of the PIC reducing the unrestricted particle
+   motion to moving method. One way to view the method is as a on a
+   regular lattice, tried to relate the fluctuations to molecular dynamics
+   approach, but applied on a thermal motion and averaged the solution
+   over a large macroscopic scale. Computational points have a volume to
+   eliminate the fluctuations in the constant mass and carry all state
+   information; they do "macroscopic" flow field. not possess any moment
+   of inertia, i.e., they are point masses. The particles represent
+   parcels of fluid Harlow has often said that 1968 was the last year that
+   that interact with fluid-like forces that are chosen to he could keep
+   up with all the CFD developments duplicate the equation of state and
+   viscous effects around the world, so much had the entire field grown
+   [49]. At any time, the particles interact with only after that time. By
+   a similar measure, the CFD their neighbors. The time evolution of the
+   particles is methods developed in the 70's and 80's in T-3 were just
+   the solution of Newton's equations for a multi- more application-driven
+   with close collaboration with bodied system. the end users and less of
+   explorations in CFD  an era had passed. In 1965, a summary report was
+   published [34] and comparison between fairly complex experimental data
+   3. Summary of Current Research and simulations were made. The PAF
+   technique was abandoned because of the inherent noise in the flow There
+   are no obvious choices in the division of the field as particles
+   reconnected with different neighbors current research in T-3. Typically
+   a project is during shear flows. The PAF method also suffered
+   characterized by a unique and well-developed from slowness of the
+   calculation of the nearest capability or approach, and then additional
+   features are neighbors, one which scales with N2, where N is the
+   borrowed from other projects. Fig. 3 pictorially number of particles,
+   if no acceleration techniques are presents the major physics and
+   numerical methods used. Modern methods now have reduced this scaling
+   that are of current interest in T-3. Because of the to be linear and
+   the approach has become limitation of space, the description of each
+   project is computationally attractive again. necessarily brief. We
+   encourage the reader to consult our Web page
+   (http://gnarly.lanl.gov/home.html) for Not until 1983 were methods
+   developed that more information and points of contact. Where minimized
+   the fluctuations in the PAF method, such possible, readily available
+   journals are cited as that even incompressible flows could be modeled
+   references, but when internal Los Alamos reports are [60]. The smooth
+   particle methods of recent times cited, no outside publications were
+   made. These take a different approach and reduce this difficulty by
+   reports are available through the Report Library at averaging over more
+   particles, but at the expense of Los Alamos or by contacting the
+   author. less compact support and more computations. The Physics Codes
+   or Projects Numerical Methods/ Regimes A. Chemistry KIVA & No-Utopia
+   (A, B, C, D, E, 1, 3, 8, 11, 12, 13) 1. ALE B. Turbulence Wildfire
+   Modeling (A, B, 1, 2, 4) 2. Adaptivity 3. Compressible C. Mixing CFDLIB
+   (A, B, C, D, G, I, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12) 4. Incompressible 5.
+   Multi-field D. Interfacial phenomena FLIP (A, E, F, G, I, 1, 2, 3, 7,
+   8, 9) Granular Flow (D, F, H, 7, 9, 11) 6. Interface Tracking E. Phase
+   Changes 7. Particles TELLURIDE metal casting (B, C, D, E, F, H, 1, 4,
+   6, 8, 13) 8. Implicit F. Solid deformation Global Modeling (B, C, E, F,
+   H, 4, 12) 9. Lagrangian G. Electromagnetic Mantle Modeling (E, F, 4, 8,
+   10, 12) 10. Finite Elements 11. Variable Connectivity H.
+   Visco-elasticity Composites (D, F, H) 12. Block Structured Plasticity
+   (F, H, 8, 9, 10) I. Radiation 13. Unstructured Turbulence (A, B, C, D,
+   3, 4, 5) Fig. 3. The physics and numerical approaches of current
+   interest in T-3. 3.1 Reactive Flow and Combustion combustion that works
+   in conjunction with the k- Research turbulence model and a soot model
+   are provided. KIVA Family of Codes for Combustion Engines Reactive flow
+   and combustion modeling of fully miscible species is the area of
+   broadest use of simulation codes from T-3 and possibly from Los Alamos.
+   Currently these are represented by the KIVA family of codes [10][11].
+   The KIVA codes are in worldwide use by industry, academia, and
+   government laboratories and have a sufficient following that a yearly
+   International KIVA Users Meeting convenes to present papers and discuss
+   current applications and extension to the base codes. Their popularity
+   as research tools [61], primarily because of the availability of the
+   source code, is exemplified by the twenty-one research papers that use
+   the KIVA codes at the 1996 SAE Spring Congress. Although the intended
+   applications are to flow and combustion modeling in spark-ignition and
+   diesel engines and gas turbines (as in Fig. 3.1-1), the extreme
+   versatility and range of features have made KIVA programs attractive to
+   a variety of non-engine applications as well. These range in scale from
+   proposed 500-foot-high convection towers with water sprays that clean
+   and cool the air in polluted urban areas, down to modeling silicon
+   dioxide condensation in high pressure Fig. 3.1-1. A color visualization
+   of the temperature oxidation chambers used in the production of field
+   during the inlet flow in a hydrogen-fueled engine microchip wafers.
+   Other applications have included simulated with KIVA-3 [62][90] . The
+   open intake valve is on the right; the closed exhaust port is on the
+   the analysis of flows in automotive catalytic left. The particles are
+   used only to simulate the flow converters, power plant smokestack
+   cleaning, and are colored according to the temperature of the pyrolytic
+   treatment of biomass, design of fire gas. The cold intake air (blue) is
+   shown compressing suppression systems, pulsed detonation propulsion the
+   residual hot combustion gases (red). systems, stationary burners,
+   aerosol dispersion, and design of heating, ventilation, and air
+   conditioning Parallel with the effort to continue the maturation of
+   systems. A complete history of KIVA as a paradigm KIVA-3, future
+   versions of KIVA are being of technology transfer from the government
+   developed. These codes use largely the same numerics laboratories to
+   industry can be found in [12]. as KIVA-3 but address the requirements
+   of parallel computer architectures and requirements of modern The
+   current version of KIVA-3 uses an unstructured mesh generation codes.
+   KIVA-F90 is a complete mesh of hexahedrons that are groups of logical
+   blocks rewrite of KIVA-II using Fortran 90 and executes on of mesh and
+   an all-speed ALE formulation from the workstations, massively parallel
+   architectures, and SALE heritage. Because of the ability to model
+   supercomputers without modification. KIVA-AC, opening and closing of
+   ports and valves, connectivity just now under development, is an
+   unstructured mesh of the mesh can change during the simulation. This is
+   version of KIVA-F90 that will support combinations a unique feature of
+   the currently active codes in T-3 of tetrahedrons and hexahedrons.
+   (also see CAVEAT-GT below). KIVA is also unique in that it contains a
+   Lagrangian particle treatment of liquid spays as originally proposed by
+   Dukowicz [36]. N O - U T O P I A : a F u l l y I m p l i c i t , The
+   current spray model includes breakup, collisions Unstructured,
+   All-Speed Flow Code and evaporation, coupled with the turbulent gas
+   field. This model is inherently stochastic, in contrast to the This is
+   a new reactive flow algorithm under deterministic nature of all other
+   T-3 CFD codes, and development in T-3 for simulating a variety of only
+   produces an average solution for a large number hydrodynamic phenomena
+   ranging from low-speed of particles. The transport and chemistry
+   equations incompressible flows to shock-wave hydrodynamics. can treat
+   an arbitrary number of species and reactions, In-cylinder combustion of
+   gasoline and diesel engines, both kinetic and equilibrium.
+   Mixing-controlled external vehicle aerodynamics, underhood cooling,
+   vehicle air conditioning, and high-velocity impact immiscible materials
+   are presented in the sections on simulations are some of the
+   applications where this modern particle methods (3.3) and the section
+   on algorithm may be usefully employed. This is the first modeling
+   discontinuities (3.4). The division is three-dimensional T-3 algorithm
+   to have a fully somewhat arbitrary, because some of the methods
+   implicit and coupled solution to the Navier-Stokes presented easily
+   treat both regimes. equations, thereby eliminating the traditional
+   separation of the Lagrangian and rezone phases. The CFDLIB Family of
+   Codes: Multimaterial- flow solver employs an implicit finite-volume
+   Multiphase Applications The numerical origins technique that performs
+   surface integrals in parallel of the CFDLIB collection of codes began
+   with a loops over connections associated with the two thesis study [65]
+   in T-3 to find a stable, well-coupled, terminus nodes [79]. A
+   continuous transition between Finite Volume integration scheme for
+   incompressible explicit and implicit advection is employed that is flow
+   with co-located primitive variables. Two second-order accurate for
+   Courant numbers less than possibilities emerged [63][64], neither of
+   which unity and is monotone and unconditionally stable (a seemed fully
+   satisfactory. This was because both 3D extension of the scheme of
+   Collins, et al. [33]). schemes required solving two Poisson equations
+   at Other unique features of the algorithm are an accurate each time
+   step, rather than one Poisson solution, as treatment of the diffusion
+   terms and an accurate in the original MAC scheme. Nevertheless, these
+   gradient limiter for an arbitrary number of nearest schemes both
+   represented cell-centered Finite Volume neighbors associated with a
+   node. schemes for incompressible flow. Wildfire Code: Crisis Response
+   Modeling In quite a different application from reactive flows in
+   engines, a current effort is underway in T-3 by Linn and Harlow [76] to
+   model accurately the propagation of a forest fire. The ultimate goal is
+   to develop a method that is sufficiently accurate but faster than real
+   time, in order that it can be used to develop fire management
+   strategies during a crisis. With sufficient speed, the model can be
+   self-correcting as data is available during a crisis and can evaluate
+   many strategies to optimize safety and effectiveness. For the method to
+   be sufficiently fast, the description of the propagating fire must be
+   fairly coarse, even with modern computers. Hence, the challenge is to
+   capture accurately the effect of the expected small scale variations in
+   the fire, such as a single burning tree, in a stochastic, global model.
+   The techniques that are being used are the same as those used for the
+   development of the turbulent transport equations (see the section 3.6
+   on Turbulence). In a similar manner, the hope is to find a universality
+   in the scaling of the flame behavior such that the mean temperature can
+   be related to the local burning temperatures and flame Fig. 3.1-2.
+   Temperature fields of a propagating forest distribution. Adaptive
+   meshing methods to high fire and plume 122 seconds after an intense
+   ignition burning gradients and conformal mapping to terrain 10 m from
+   the left boundary. A wind speed of 0.5 are planned features of the
+   approach. Fig. 3.1-2 m/s from left-to-right propagates the fire to the
+   right. illustrates the results from the current 2D fire propagation
+   model. This project is part of an On another front was an internally
+   supported project internally funded, laboratory-wide research program
+   to to develop a computer code, CAVEAT, for two and develop simulation
+   tools for crisis management. three dimensional, compressible flows with
+   resolved material interfaces and large deformation that used co- 3.2
+   Modern Multimaterial Methods located primitive variables and an ALE
+   split computational cycle. The CAVEAT code [5] in its Even in current
+   times, the solution of flows with final incarnation included both a
+   Godunov's method large deformation of multiple materials remains a and
+   the so-called Total Variation Diminishing (TVD) major area of research
+   and development. In this Finite Volume method. Because of CAVEAT's
+   section the tools that specialize in the interpenetration versatile
+   block structure and highly efficient of materials are presented.
+   Methods that treat computational approach, it furnished the basic data
+   liquids, relative to a field of solid catalyst grains. structure that
+   was ultimately to become CFDLIB. Solid catalyst grains circulate in a
+   flow loop One of the goals of the research project was to consisting of
+   a cyclone separator with a gas exit. A develop a capability for
+   integrating the compressible realistic simulation of the FFB reactor is
+   dependent multiphase flow equations, and this effort focused on upon
+   the physical models used to represent the effects the TVD schemes,
+   because Godunov's method, an of chemical species conversion, physical
+   kinetics of explicit scheme, had not yet been applied to phase change,
+   granular flow, and multiphase fluid multiphase flows. One of the
+   fundamental features of turbulence. The equations that embody these
+   physical TVD schemes is the use of space-time centered fluxes models
+   are developed using a combination of detailed for advancing a
+   cell-centered state vector. When these mathematics, definitive
+   laboratory experiments, and fluxes are exactly centered in space and
+   time, the physical intuition. The large-scale simulation is a method is
+   second-order accurate, and is known as the means of bringing together
+   these diverse sets of Lax-Wendroff scheme. The TVD approach was to
+   information in order to test the validity of the devise a 'limiter' to
+   sense when the state is tending theories, and to provide important
+   guidance to the toward new extrema, and to use the limiter to design
+   and operation of modern equipment. introduce a first order fluxing in
+   such localities. During this development it became clear that classical
+   staggered meshes and TVD space-time centered fluxes were two different
+   ways of accomplishing the same coupling of the momentum and pressure
+   fields. Vapor outlet Hence, the next step was to examine a space-time
+   centered fluxing scheme for incompressible flow. What emerged is what
+   is now called CCMAC; a cell- centered generalization of the MAC method,
+   which requires a single Poisson pressure solution each time step [66].
+   Cracked Oil and The CCMAC scheme was the key development that provided
+   a common numerical treatment for CFDLIB: Catalyst Riser a collection of
+   hydrocodes that are suitable for Reactor compressible flow,
+   incompressible flow, multiphase flow of all kinds, magnetohydrodynamic
+   forces and multi-fluid solutions, each with their own set of
+   conservation equations. The design of each code volume in the library
+   is modular, making the Cyclone development of codes for specialized
+   applications Separator exceptionally fast. For example, a k- model of
+   the Reynolds stress, developed for one code volume, is easily inserted
+   into another because of the common data structure among the codes. Oil
+   Injection The FLIP approach is now being installed into CFDLIB as an
+   option, so one can take full advantage Ports of the nondiffusive
+   Lagrangian approach (see section 3.3 on Particle Methods below). With
+   the FLIP option, one can simulate the motion of a Lagrangian
+   projectile, passing through an Eulerian gas, Regeneration Catalyst
+   penetrating a Lagrangian wall, and into an Eulerian point liquid. Fig.
+   3.2-1. One time in a simulation of the startup A current area of
+   application of CFDLIB is the and operation of a recirculating
+   fast-fluidized bed modeling of a reactive flow in multiphase,
+   multi-field (FFB) reactor using CFDLIB with multiple fields and
+   problems, such as encountered in oil refining, phases. The colors
+   reflect the local volume fraction of chemicals manufacturing, metals
+   production, and fiber the solid catalyst (red-high, blue-low).
+   processing [67]. Fig. 3.2-1 illustrates one time of a full simulation
+   of the startup and operation of a There also exist many applications
+   [13] that are a recirculating fast-fluidized bed (FFB) reactor. Here,
+   the subset of the FFB application, such as the two-phase goal is to
+   model the interpenetration of gases and flow in human cardiovascular
+   systems, or the dynamics associated with a lifeboat dropped onto the
+   automatically maintains a prescribed number of sea from a
+   search-and-rescue aircraft [75]. These and particles in each cell of
+   the mesh [71]. many other contemporary applications in modern
+   technology are addressable by the Los Alamos code The principal
+   applications of FLIP have been to library CFDLIB. Some current
+   applications include modeling magnetohydrodynamic (MHD) flow in the the
+   smelting of iron ore, alumina precipitation, Earth's magnetosphere and
+   the Sun's heliosphere [15], combined granular and fiber flow in
+   manufacturing, to modeling plasma processing tools [72][73][74], and
+   the effects of a near-miss in the performance of and to modeling solids
+   mechanics [93][94][95]. The defensive missiles. application to plasma
+   processing illustrates the flexibility of the method. Particles model
+   the interaction of neutral gas and plasma with electrically active
+   elements within a dielectric chamber as in Fig. 3.3 Particle Methods
+   3.3-1. The solutions to steady-state problems are then used to
+   calculate the motion of electrically active dust FLIP: a Particle
+   Approach to Fluids particles to aid in the design of low-contamination
+   processing tools. The original application of the FLIP,
+   particle-in-cell (PIC) method, was to surface ablation of laser
+   targets. In the ablation layer, there is a transition from solid
+   densities for which fluid-like equations are valid, to low density
+   plasmas, for which kinetic equations are required. Particle-in-cell
+   models of the low density plasmas had been successfully used to model
+   the complex behavior of the low-density plasmas [43]. The goal of the
+   FLIP development was to extend the particle-in-cell method to model
+   fluid-like equations so that the entire ablation process could be
+   modeled in one code. Despite its special capabilities of PIC for
+   following contact discontinuities, it did not give accurate solutions
+   in general, because the transfer of information between the particles
+   and the underlying grid resulted in numerical diffusion equal to that
+   produced by the donor cell method. FLIP reduced this Fig. 3.3-1.
+   Discharge in a realistic geometry using numerical diffusion to very low
+   levels by limiting the the FLIP code [74]. On the left, the
+   electrostatic potential is shown (yellow: 50V, purple: -10V). On
+   transfer of information between grid and particles to the right the
+   dust density is shown, illustrating how updates [17]. That is, the
+   particle data is updated by the geometry of the base can be used to
+   design cleaner solutions on the grid rather than replaced. This allows
+   plasma reactors. the use of interpolation of arbitrary order, rather
+   than the nearest-grid-point interpolation to which PIC was restricted.
+   Higher order interpolation not only gives The solid mechanics version
+   of FLIP, uses the smoother solutions, but also suppresses the finite-
+   "material point" method, is being applied to the study grid-instability
+   [20]. of high explosives. The material point method eliminates the need
+   for a mixture theory by evaluating FLIP has several important
+   advantages over more equation of state and strength models particle by
+   generally used methods. The Galilean invariance of particle. Thus, the
+   properties of the plastic binder, the FLIP formulation is a distinct
+   advantage for explosive granules, and gases that are evolved by the
+   rotationally dominated flow problems [18], as is the decomposition of
+   the explosive, are each modeled conservation of angular momentum [19].
+   The accurately. Their interaction is captured by the Lagrangian
+   description provided by the particles also solution of dynamical
+   equations on a grid in the usual can be an advantage in chemically
+   reacting [83] and way. multiphase flows [92]. A mass-matrix formulation
+   reduces numerical dissipation to extremely low levels Currently, a
+   three-dimensional version of FLIP is [26]. A disadvantage of FLIP,
+   which is apparent in being developed. A new application will be to low-
+   adaptively zoned calculations, was eliminated by a gravity flow. A
+   higher-order formulation of the particle density control algorithm
+   which immersed boundary method [92] is also under development. Granular
+   Flow Modeling its evolution, both which can be treated with the
+   numerical code and theory. Aside from the application within the CFDLIB
+   code (section 3.2), the particle approach has also been 3.4 Modeling of
+   Discontinuities in Space applied to one of the least understood, quite
+   common flows, that of the flow of granular material. The Modeling
+   discontinuities whether material interfaces, knowledge of granular flow
+   is also vital to many key phase transitions, shocks or reaction fronts
+   have industries, including chemical, material, and been an active area
+   of research for T-3. Developing pharmaceutical. Lack of understanding
+   of granular robust and computationally-efficient methods of material
+   causes serious losses in the US industry. It numerically treating a
+   discontinuity has seen is estimated that eighty percent of solid
+   processing significant progress over the decades, as in the plants
+   encounter problems associated with granular example of shocks, from
+   adding numerical or flows. "artificial" viscosity to the development of
+   approximate Riemann solutions [37] to efficiently Research on granular
+   flow started as early as the last capture shocks in realistic
+   materials. In contrast, the century, resulting in many theories
+   focusing on the robust and efficient treatment of the multidimensional
+   solid-like behavior of the material. Since the 1970s, aspect of
+   discontinuities has been an outstanding the kinetic theory of molecular
+   dynamics has been challenge and has seen limited progress, despite the
+   used to calculate effective stresses for large mean-free- many
+   applications in need. For material interfaces, path granular flows. In
+   this class of theories, duration the original PIC method, and later
+   FLIP, had of particle collision is neglected, and only binary
+   robustness, but not the efficiency, particularly in collisions are
+   allowed. A systematic approach to three dimensions, or accuracy across
+   the interface. The investigate slow, dense flows has not been "front
+   tracking" methods have the efficiency, but established. Recently, a
+   research effort in T-3 has suffer from extensions to three dimensions
+   and from developed an averaged-equation method to derive the lack of
+   robustness for topologically complex governing equations for dense
+   flows which include discontinuities. In this section, two approaches
+   are interparticle contact and multiparticle interactions presented for
+   treating discontinuities, an Eulerian [101]. The advantage of the
+   averaging method is that approach, represented by TELLURIDE and a the
+   closure quantities are directly computable Lagrangian approach
+   represented by CAVEAT-GT. integrals. The resulting transport equation
+   yields, for example, a viscoelastic model for the ensemble of cohesive
+   granular particles. Direct numerical simulations are performed to
+   evaluate the assumptions in the theory and to evaluate coefficients,
+   similar to the application of direct numerical simulations for
+   turbulence and molecular dynamics. Currently, the numerical code is
+   used to study the shearing flow of particles coated with a thin layer
+   of viscous liquid. With a lubrication assumption, we consider only the
+   normal force between particles, which is modeled by a linear spring and
+   dashpot in series. The time evolution of this system is found by
+   solving a differential equation for each contacting particle pair [98].
+   For a simple shear flow, one finding is the formation of shear banding
+   in dense, slow flows (see Fig. 3.3-2). The exact nature and physics of
+   this is yet to be understood [77] . The averaged-equation method is a
+   powerful method in studying granular flows and multiphase flows. An
+   Fig. 3.3-2. One time in the simulation of lubricated immediate
+   generalization for the granular system is to spheres, undergoing a
+   shear flow from left to right, consider the tangential force between
+   particles, as showing the formation of a shear band at an average
+   occurs in flows of dry, granular materials. The volume fraction (58%).
+   At the beginning of the investigation is planned of the diffusion of
+   granular simulation, 108 particles are placed randomly with a particles
+   by the random fluctuations in the system. A statistically uniform
+   distribution in a cube with key issue in understanding the unusual
+   behavior of periodic boundaries. granular materials is the effect of
+   microstructure and Modern Surface Tension and VOF methods proportional
+   to the dimensions of the cell. A complete discussion of the history of
+   the development Two significant advancements in modeling of the VOF
+   method is available [68]. discontinuities in Eulerian meshes have been
+   developed  the robust and efficient treatment of TELLURIDE: A New
+   Casting-Simulation surface tension and of spatial discontinuities. The
+   Tool robustness of both advancements rely on the ability to neglect the
+   complications of modeling a While casting-simulation tools have evolved
+   over the discontinuity below a certain spatial resolution - the past
+   decade and are already useful in foundry dimension of the computational
+   cell. operations, there are many unanswered questions, particularly
+   those associated with the effects of the The continuum treatment of
+   surface tension [21] microstructural properties. Los Alamos has
+   assembled evaluates the curvature of the phase or material a
+   laboratory-wide team that is actively working on the discontinuity from
+   a continuous field defined by the development of a new
+   casting-simulation computer spatial distribution of the phases or
+   materials. Hence, code known as TELLURIDE. The ultimate goal is to the
+   evaluated surface tension forces are well behaved describe virtually
+   every property of the finished and easily calculated for three
+   dimensional surfaces, in product in terms of the sequence of casting
+   processes comparison to alternative methods. during its formation. The
+   current focus is the generation of a basic numerical tool and the
+   testing of The approach to modeling spatial discontinuities numerous
+   models for representing: mold-filling and follows the tradition of the
+   VOF method, and the fluid flow in the presence of liquid-solid phase
+   current implementation is largely based on the changes (gas entrapment,
+   surface tension effects, original approach developed by Youngs [99].
+   The "slushy" flows and turbulent currents); solid-solid Youngs method,
+   as applied to flows of materials, phase change and material response:
+   (pure metal or constructs a piecewise, linear (or planar in 3D) alloy,
+   grain structure, wall pull-away effects, porosity interface in each
+   computational cell that reproduces growth, bubbles or hole formation,
+   macrosegregation, the orientation and partial volume of a material in
+   the residual stress and distortion, and machinability); and cell. The
+   reconstructed interface is then used to geometry effects (movable walls
+   and gate and riser transport preferentially the material through the
+   mesh. design). For 3D, Youngs [100] decoupled the evaluation of the
+   normal of the interface from locating the interface TELLURIDE uses
+   Finite Volume methods with within the computational cell, thereby
+   making the primitive variables co-located at cell centers on an
+   three-dimensional solution tractable. unstructured hexahedral mesh and
+   is second-order accurate in time and space. The code can execute on The
+   source of the robustness of the VOF method is any modern computing
+   platform having a Fortran-90 that the discontinuity, or interface in
+   Youngs compiler, ranging from PCs and single workstations application,
+   is "reconstructed" at each time increment to symmetric multi-processor
+   workstations, in the simulation. By discarding the prior spatial
+   workstation clusters, and massively parallel information and
+   constructing the discontinuity based platforms. Efficient
+   parallelization results from on the new, averaged scalar information,
+   the spatial explicit message passing through the use of a new
+   complexity of discontinuity is limited to the mesh parallel
+   gather-scatter library (PGSLIB) based on the resolution. The
+   contribution of T-3 to the method message passing interface (MPI)
+   standard. was to extend Youngs method of interface Parallelization
+   decreases execution time and, more reconstruction on orthogonal, 2-D
+   and 3-D meshes to importantly, allows the analyst to perform 2-D,
+   non-orthogonal and curvilinear meshes by simulations with higher
+   resolution by taking Johnson and Zemach in the CAVEAT code [5] and
+   advantage of the larger memory on massively parallel later to 3-D,
+   non-orthogonal meshes by Kothe, platforms. Zemach and Chaumeazea [69].
+   The implementation in CAVEAT, and later in CFDLIB, had the unique Some
+   of the current capabilities of TELLURIDE are advantage that the
+   material interface could be initially illustrated in Fig. 3.3-1, which
+   display the cooling described in an accurate Lagrangian manner [81] and
+   and solidification of an aluminum-copper alloy part in then could
+   selectively be converted to a VOF a mold that has already been filled
+   and is at a uniform, treatment as the local mesh along the interface
+   initial temperature of 920°K. The underlying mesh of became distorted.
+   The ability to do reconstruction in 5322 hexahedral cells was provided
+   by Alcoa in a non-orthogonal cells also enables mesh adaptivity to
+   standard solids modeling format. The part is cooled minimize the volume
+   of the cells that contain from the bottom by imposing a 750°K
+   temperature. discontinuities, and thereby, significantly reducing the
+   All other surfaces are perfectly insulated. At the errors in the VOF
+   approximations, which are specified copper concentration, the cooling
+   process includes a temperature range of 99°K over which the gained from
+   the earlier CAVEAT family of codes and liquid and solid can coexist in
+   equilibrium and the from the Free Lagrangian efforts at Los Alamos. The
+   components of the alloy can migrate. Detailed numerical method was
+   based on CAVEAT [5], but a information on propagation and location of
+   the 2D mesh of arbitrarily shaped polygons was used solidification
+   front aids in the design and optimization with piecewise-linear
+   material interfaces. The of risers  reservoirs of excess molten alloy
+   that seep approach included a general rezone capability that in the
+   part as it cools. The cooling-rate data generated allowed the
+   simulation to proceed in a fully by this simulation form a basis for
+   providing insight Lagrangian manner until a mesh distortion criterion
+   into the final microstructure of the part. In other was exceeded and
+   then an entirely new mesh, which TELLURIDE simulations that include the
+   injection preserved the material interfaces in a "near process
+   following the progress of the free interface Lagrangian" fashion, was
+   generated and then used using the above-mentioned surface tension and
+   VOF until the next rezone was necessary. In contrast to the techniques,
+   the initial thermal state and alloy restrictions of a structured mesh,
+   the general topology distribution are found to be more complex than in
+   mesh can be chosen to have near ideal cell geometry, this idealized
+   experiment. a regular hexagon, for minimizing numerical inaccuracies
+   due to cell distortion. Because of the difficulty of a general rezone
+   on a polyhedron mesh in 3D, a 3D version of the code was not
+   contemplated. 3.5 Simulations on Parallel Platforms Throughout the
+   history of T-3, CFD code developments have typically saturated the
+   capabilities of existing platforms. Even so, the advent of the
+   massively parallel platforms in the late 80's yielded a quantum
+   increase in speed and, even more importantly, in memory. Entire classes
+   of problems were possible that could not even be considered earlier.
+   And, because of the complexity of programming on these platforms, more
+   simple CFD techniques, particularly Eulerian methods, saw a reemergence
+   in popularity. For example, relatively simple Eulerian codes with
+   orthogonal meshes using the VOF method described in the last section
+   quickly Fig. 3.3-1. The liquid volume fraction (red - high, displaced
+   the more complex ALE codes, such as blue -low) for the cooling of a
+   molded, alloy part. As CAVEAT, in popularity. Now that improvements in
+   heat is extracted from the molten part from below and programming
+   tools, such as Fortran-90, and libraries solidifies, the region of
+   solid/liquid mixture of message passing routines are widely available
+   for (yellow/green) moves upward. almost all platforms, the complexity
+   of the CFD method is becoming less important and a greater CAVEAT-GT: a
+   General Topology ALE variety of methods are being used on all
+   platforms. method As a point of reference, earlier parallel computing
+   In contrast to the method presented in the last section strategies in
+   T-3 focused on data parallel (SIMD) for modeling discontinuities on
+   Eulerian meshes, an machines in which the many processors compute in
+   alternative approach is to track the discontinuity, lockstep. It was on
+   these machines, such as Thinking resolving the distortions of the
+   surface to some Machines CM-200 and the CM-5, that the more arbitrary
+   resolution. A development effort was simple CFD approaches excel.
+   Later, the experience undertaken in the mid 80's to develop a general
+   in T-3 shifted towards explicit message passing topology ALE code that
+   could treat an arbitrary (SPMD, MIMD) machines in which the processors
+   distortion of material interfaces by refining the mesh can execute
+   different instructions and rely on along the Lagrangian description of
+   the interface. All coordinated exchange of information. This approach
+   prior T-3 ALE codes had been based on structured has the advantage of
+   ease of transport to a variety of meshes, which limited the degree of
+   distortion. It was machines, including CM-5, nCUBE2, Cray T3D, for this
+   capability that the VOF methods were Paragon, and, most significantly,
+   clusters of developed for non-orthogonal meshes, as discussed in
+   workstations. While specialized supercomputers will the last section.
+   The resulting code, CAVEAT-GT continue to have important uses in the
+   future, the area [6][39], was a culmination of all the understanding of
+   greatest increase and availability of computing resources in the world
+   will be in the area of clusters interactions and significantly change
+   our current of workstations. Future CFD codes must be able to climate.
+   However, these concerns have been very operate on these platforms.
+   difficult to address due to our limited understanding of each of the
+   isolated physical systems, much less the In this section, the current
+   code developments that fully coupled climate system. have benefited
+   from the availability of massively parallel computers are summarized.
+   For the mantle simulations, not only did the application benefit from
+   the new computers, but Baumgardner's work often led the way for other
+   applications in the development of optimal techniques and the
+   demonstration of the importance of the new platforms. Mantle Dynamics
+   Simulation Thirty years after the scientific revolution in the Earth
+   sciences that established the concept of plate tectonics, key aspects
+   of the mechanism responsible for moving the tectonic plates across the
+   surface of the Earth still remain unclear. Although the driving forces
+   are generally ascribed to the process of thermal convection, the
+   pattern of flow in the mantle responsible for the plate motions is
+   still largely a matter of speculation. The advent of massively parallel
+   computers, however, is now making possible high-resolution 3-D
+   simulation of the mantle's dynamic. When coupled with improving
+   observational results from seismic tomography, numerical modeling of
+   the Earth's interior promises to yield genuine understanding of the
+   Earth's internal dynamics and its plate tectonics history. Fig. 3.5-1
+   Cutaway view of the interior of a model of The mantle dynamics code
+   [22][23][24][25] is a 3D, the Earth's mantle showing patterns of cold
+   down- finite-element model that uses a mesh comprised of welling (in
+   blue and green) and hot upwelling (in red hexagonal prism elements
+   constructed from the and orange) generated by the process of thermal
+   regular icosahedron. The mantle's silicate material is convection.
+   treated as a viscous fluid. A multigrid method is used to solve the
+   global system of elliptic equations on Performing realistic computer
+   simulations of the every time step. The code utilizes domain global
+   ocean is difficult because the ocean contains decomposition and
+   message-passing communication both relatively small spatial scales
+   (tens of kilometers to map the calculation onto massively parallel for
+   energetic eddies) and long time scales (many platforms such a Cray T3D
+   and the IBM SP-2 or onto centuries for the deep ocean circulation). The
+   ocean clusters of scientific workstations. The model general
+   circulation model (OGCM), called POP includes the physics of
+   mineral-phase transition as (Parallel Ocean Program) [40][89], was
+   developed to well as temperature and stress-dependent rheology and take
+   advantage of parallel computer architectures and tectonic plates over
+   the Earth's surface. Fig. 3.5-1 to perform the highest resolution
+   global ocean shows one time of a simulation that uses 1.3 million
+   simulations ever undertaken. elements on 16 nodes of the parallel Cray
+   T3D. POP is a descendant of the Bryan-Cox OGCM which Global Ocean and
+   Climate Modeling has been successful in simulating a wide range of
+   ocean flows. The earlier model has been substantially POP: Global Ocean
+   Modeling The earth's improved and adapted for use with massively
+   parallel climate is determined by the complex interaction of computers.
+   Improvements include a surface-pressure many physical systems including
+   the ocean, formulation that allows a much more realistic atmosphere,
+   and biosphere. There is a growing representation of land masses and
+   ocean-bottom concern that human activities (such as increasing
+   topography, an implicit free-surface technique that greenhouse gases,
+   introducing ozone-depleting lets the air-sea interface evolve freely
+   [41], and the chemicals, and deforestation) could alter these ability
+   to use any locally orthogonal horizontal grid which easily allows the
+   Arctic ocean to be included in compromise important physical
+   approximations. simulations without the problems associated with the
+   CICE features a new elastic-viscous-plastic model of convergence at the
+   North Pole. ice dynamics that permits a fully explicit implementation
+   and produces results equivalent to the High-resolution simulations,
+   using POP, of the standard implicit viscous-plastic model. global ocean
+   on 512 nodes of the Thinking Machines CM-5 computer at Los Alamos gives
+   a horizontal Atmosphere and Ocean Coupling A new resolution from 30 km
+   near the equator to 7 km at the climate model for parallel computer
+   architectures is poles. Estimates of the true atmospheric winds from
+   under development with the goal of coupling 1985 to 1994 are used to
+   force the model. individual component models for the atmosphere,
+   hydrosphere, sea ice and biosphere. In most existing Sea Ice Model A
+   component of the POP effort is coupled models, simulations are run at
+   very coarse a description of the sea ice (the CICE model). Many
+   resolution (5 degrees) to enable very long factors affect the growth
+   and movement of sea ice, integrations. The Los Alamos model combines
+   the including heat fluxes from the atmosphere and ocean, Community
+   Climate Model (CCM3) from the short- and long-wave radiation, humidity,
+   snowfall, National Center for Atmospheric Research (NCAR) albedo,
+   salinity, ocean currents and winds [80][84]. for the atmosphere and
+   biosphere with the POP ocean CICE has three interacting components: a
+   model in the DOE-sponsored CHAMMP (Computer thermodynamic model that
+   produces local growth Hardware, Advanced Mathematics and Model Physics)
+   rates of snow and ice due to heating, snowfall and Program. local air,
+   ice and ocean temperatures; a transport model consisting of five
+   continuity equations for ice In addition, the NCAR Flux Coupler is used
+   to and snow thicknesses; and a model of ice dynamics, "glue" the models
+   together. The Flux Coupler accepts which predicts the velocity field of
+   the ice pack based state variables from each component model,
+   calculates on a model of the material strength of the ice and all
+   interface fluxes (e.g. heat and water), and sends forcing by wind and
+   ocean currents. The principal these fluxes back to the component
+   models. Los difficulty in the CICE model is the description of the
+   Alamos has added 1st and 2nd-order conservative viscous-plastic
+   deformation of the ice under flow. interpolation schemes [38] that work
+   for more general Parallel architectures present problems for these
+   grids like the POP displaced-pole grid. Currently, the implicit models,
+   which require excessive CHAMMP model is being tested with shorter
+   communication between processors. On the other simulations before
+   beginning long (100-year) hand, computationally simpler models tend to
+   simulations to examine climate variability. Fig. 3.5-2. This figure
+   shows the sea surface temperature averaged over 3 years as simulated by
+   the Parallel Ocean Program (POP). 3.6 Turbulence Modeling: Two-Point
+   Correlations and Engineering Models Current Research in T-3 History of
+   Turbulence Modeling Much of the work on turbulence in T-3 involves
+   exploiting the more fundamental two-point turbulence The first efforts
+   in "turbulence" modeling directed modeling approach to derive
+   "enhanced" engineering towards a practical closure date back to Chou
+   [28] in models. Thus, the effort may be considered as the early 1940's
+   and to Rotta [88] in the early 1950's. categorized into three subareas.
+   These early attempts at modeling typically involved a transport
+   equation for the turbulent kinetic energy, Derivation and validation of
+   two-point and met with limited success. It seemed that models A recent
+   development in T-3 by Besnard, something was missing: a time-scale or a
+   length- Harlow, Rauenzahn and Zemach [14] has been a scale. One of the
+   most successful "recipes" for tractable spectral (two-point) closure by
+   borrowing producing the missing item was the introduction of ideas from
+   both single-point and two-point models. the turbulent kinetic energy
+   dissipation rate equation This model does not require an equation and
+   thus (" "), by Harlow and Nakayama in the late 1960's does not invoke
+   many of the self-similarity [51][52]. Rather than attempt to derive the
+   -transport constraints implicit in the one-point closures. The
+   equation, Harlow and Nakayama produced it from the model has served as
+   the basis of a great deal of the turbulent kinetic energy equation and
+   dimensional spectral modeling work and practical simulations of
+   considerations alone, which lead to the still-popular, turbulent mixing
+   in multiple material problems. and useful, k- and Rij- [35] family of
+   closures. Extensions have been made to variable-density turbulence [32]
+   and inhomogeneous variable-density During this time period there were
+   also attempts to turbulence (e.g., Rayleigh-Taylor mixing) [91].
+   develop theoretical models of turbulence, such as the Quasi-Normal
+   models initiated by Millionshtchikov More recently, attempts are being
+   made in T-3, most [82] in the 1940's and the Direct Interaction notably
+   by Turner, to construct an Eddy-Damped Approximation of Kraichnan [70]
+   in the 1950's. Quasi-Normal Markovian (EDQNM) model for These models
+   differ from the "practical" closures in inhomogeneous flows which does
+   not invoke any some profound ways. The "practical" closures to this
+   assumptions of local homogeneity or local isotropy, day are based on
+   the joint probabilities of the and thus fundamentally differs from the
+   work of the fluctuating fluid quantities at a single point in space
+   French researchers at L'Ecole Centrale de Lyon. The and time, e.g., Rij
+   (x,t) = ui (x,t)uj (x,t). The more effort follows closely our direct
+   numerical fundamental theories typically consider the joint simulations
+   using pseudo-spectral algorithms of p r o b a b i l i t i e s a t t w o
+   p o i n t s , inhomogeneous turbulence. Figure 3.6-1 shows results from
+   the EDQNM model. Our research is Rij (x1, x2,t) = ui (x1,t)uj (x2,t)
+   and in some cases directed toward understanding the degree to which the
+   ( e . g . , D I A ) a t t w o t i m e s , EDQNM class of models can
+   represent the strongly Rij (x1,x2,t1t2 ) = ui (x1,t1)uj (x2,t2 ).
+   intermittent zones at the edges of the turbulent zones, as well as
+   understanding how well "gradient-diffusion" Although the single point
+   models provided a tractable models of the one-point variety can
+   represent the set of equations, they sacrificed significant physical
+   spreading of the turbulence. The work illustrates the fidelity. But,
+   the more fundamental closures are nearly relatively strong departures
+   of the statistics from a intractable, unless severe restrictions are
+   made (i.e., near-Gaussian distribution and the importance of the
+   isotropy, or homogeneity), and then cast in terms of action of the
+   triple-velocity correlations on the Fourier series. What do the more
+   fundamental theories distribution of the turbulence, and thus
+   highlights the offer? The two-point models do not require a need, and
+   challenge, of higher order turbulence restrictive coupling of
+   length-scales and time-scales, a closures. type of statistical
+   self-similarity necessary to characterize the multiscale problem by,
+   say, two- Direct numerical simulation (DNS) and two-point scales, k and
+   . While it will probably be some time closures are also being used to
+   investigate the nature before computers are capable of solving the of
+   the correlations of the fluctuating pressure-velocity fundamental
+   theories for practical problems, they and fluctuating pressure-strain.
+   It is found that the provide considerable guidance in the assumptions
+   "local" representation in differential form (rather than inherent in
+   the derivation of single-point equations, integral over the field) of
+   these terms as used in most and also serve as a useful bridge between
+   direct single-point closures may lead to errors at least as numerical
+   simulations and single-point closures. large as those due to truncating
+   the hierarchy of moment equations in the "classical" closure problem.
+   This is also true of spectral models which reduce the vector-k-space
+   spectral equations to a scalar k-space. inserted into the two-point
+   model equations, and a By understanding the nature and extent of this
+   one-point model can be derived by the construction of "nonlocal"
+   phenomenon, we hope to derive useable appropriate integral moments.
+   Besnard et al. have approximations that capture this feature of the
+   shown that if one chooses to represent the spectra as a pressure
+   correlations. particular self-similar form, one can then directly
+   derive a k- model by constructing appropriate moments of the spectra.
+   If the spectra from the model produce a different self-similar form in
+   different circumstances, then a new set of moment equations may produce
+   an improved k- model. An example of this has been demonstrated by Clark
+   [29] and Clark and Zemach [30]. Current Applications The turbulence
+   transport models developed in T-3 are being applied to examples at all
+   flow speeds from far subsonic (incompressible) to supersonic, and with
+   various combinations of interpenetrating fluids or clouds of droplets
+   or grains. Some of these examples are: the fuel-air interaction in an
+   internal combustion engine, turbulent flame behavior, unstable
+   deformation of inertial confinement fusion capsules, nozzle flows with
+   aerodynamic applications, two- phase flow of catalytic particles and
+   petroleum in an Fig. 3.6-1. Results of the EDQNM model for industrial
+   cracker, research problems for extended inhomogeneous turbulence. Shown
+   is the turbulent model development (free shears and mixing layers),
+   kinetic energy (red-high, purple-low) for the self- and fluidized beds.
+   propagating or "diffusing" turbulence from an initial localized
+   turbulence in the center of a channel. 5.7 Dynamics of Materials
+   Examining the two-point closures for emergent scalings and
+   self-similarities. O n e In what may seem an unexpected area for a
+   fluid of the more interesting features observed in the dynamics group,
+   in the past decade a significant spectral model of Besnard et al. [14]
+   is the emergence research effort in solid mechanics has grown in T-3.
+   of self-similar spectra for turbulence undergoing The point of
+   relevance is that many of the homogeneous mean shears and strains and
+   during free applications of interest involve large deformations of
+   decay of homogeneous anisotropic turbulence at very solids that make
+   use of numerical methods or high Reynolds numbers [29][31]. The
+   emergence of theoretical approaches that have been developed for
+   self-similar spectra has also been observed for the case fluids. The
+   description of the dynamic response of of a spectral model applied to
+   Rayleigh-Taylor solids to high-velocity, large deformation loadings
+   mixing by Steinkamp et al. [91]. The emergence of involve strains
+   between 0 and 200, strain rates from these self-similar spectral forms
+   indicates that the 10-2 s-1 to 107 s-1, and temperatures from 300°K to
+   turbulence model results (and, one hopes, the beyond the melting point.
+   Nonlinear, anisotropic turbulence itself) can be described by far fewer
+   degrees inelastic material response including strain-rate of freedom
+   than required in the two-point description. phenomena, thermal
+   softening, hardening, and failure The degree to which the spectral
+   models describe must be considered. The resulting material models
+   actual turbulence is judged by comparisons with direct must be
+   compatible with the incremental, continuum numerical simulations at low
+   Reynolds numbers and, formulations inherent to large deformation,
+   numerical to whatever degree possible, by comparison to actual
+   approaches and be numerically robust and experiments. computationally
+   efficient for large-scale computational simulations. One-Point
+   "Engineering" Models The emergence of the self-similar forms suggests
+   that the High Strain-Rate Plasticity spectral models may provide a
+   useful tool to judge the applicability of the single-point closures for
+   a given The flow stress of a metal is affected strongly by the class of
+   flows. If the emergent self-similar form is rate of deformation.
+   Efforts are being pursued to reasonably simple, or "simplifiable", they
+   can be implement plasticity models, which accurately model hardening
+   phenomena due to strain and strain-rate, into computational analyses
+   [78]. Furthermore, the Conclusions effects of the anisotropic plastic
+   deformation on problems related to metal forming, machining, and The
+   research in CFD in the early years of T-3 was impact events have been
+   considered. Material prolific, even though all developments were
+   anisotropy is a consequence of the inherent crystalline significant at
+   the time when so few methods were structure of a solid. Information
+   obtained from available. It was an exceptionally exciting time in the
+   experiments and microstructural investigations are development of a new
+   scientific field: computational used to construct anisotropic yield
+   surfaces for a fluid dynamics. The field is now fully mature, some
+   number of materials. The evolution of texture, three decades later. A
+   comparison of early work with including twinning phenomena, also has
+   been current research illustrates that many of the same pursued.
+   methods are still fundamental, and modern advances in CFD are often
+   improvements on older techniques. As Composites a consequence, the
+   current contributions to CFD, as represented by the current work in
+   T-3, are directed There is considerable interest in using engineered
+   towards developing new material models, integrating composite materials
+   to develop lighter structures that a wider variety of physics and
+   applications to are strong under adverse conditions. Mechanical complex
+   systems. The combination of more powerful attributes, which can be
+   tailored to provide high computers with more sophisticated simulation
+   tools strength and stiffness, light weight, abrasion have addressed
+   problems that could not have been resistance, improved damage
+   tolerance, and considered just a decade ago. inexpensive fabrication
+   requirements, have established composites as ideal materials for many
+   structural applications. Composite models are under Acknowledgments
+   development for both epoxy and metal matrix composites and use a
+   homogenization approach, The author wishes to thank the members of T-3
+   who which accounts for the response of the constituents both
+   contributed much of the initial text that and the interfaces within the
+   composite [7]. These comprised this manuscript and who provide a truly
+   techniques provide an approach for modeling the stimulating environment
+   and an unmatched collective microstructure of heterogeneous materials
+   without resource. Special thanks to Tony Hirt who provided requiring a
+   detailed resolution of the micromechanics. much material on the early
+   days of T-3. I also wish Homogenization techniques are applicable to
+   general to thank the organizers of the Canada CFD loading conditions,
+   compatible with a wide variety of Conference for their interest and
+   support that made constitutive models for the constituents, and are
+   easy this paper possible. Special thanks to M.A. Findley to implement
+   into simulation codes [1]. for the assistance in the final preparation
+   of the manuscript. Material Failure Phenomena including shear banding
+   and the nucleation and growth of porosity and cracks must be considered
+   for the large deformation of materials. An engineering analysis cannot
+   provide the resolution necessary for a detailed description of these
+   micromechanical processes. Therefore, solutions of micromechanical
+   events are obtained in terms of the far-field distributions of the
+   stress state. The addition of failure phenomena to a continuum analysis
+   also can lead to numerical complexities such as strain localization.
+   The equations governing the dynamics of failure may become ill-posed in
+   regions of material softening. Efforts to mitigate these numerical
+   problems have resulted in the development of rate- dependent,
+   overstress material models for ductile failure [2][4][59] and brittle
+   failure [3]. References Dynamics," Los Alamos National Laboratory
+   Report LA-UR-95-2968, 1996. [1] Addessio, F.L., and J.B. Aidun,
+   "Analysis of [14] Besnard, D.C., F.H. Harlow, R. Rauenzahn
+   Shock-Induced Damage in Fiber Reinforced and C. Zemach, "Spectral
+   Transport Model for Composites," High-Pressure Shock Turbulence," Los
+   Alamos National Laboratory Compression of Solids, Vol. 3, L. Davison
+   Report LA-UR-92-1666, 1992. and M. Shahinpoor, Eds., Springer-Verlag
+   (in [15] Birn, J., F. Iinoya, J.U. Brackbill, and M. print). Hesse, "A
+   Comparison of MHD Simulations [2] Addessio, F.L., and J.N. Johnson,
+   "Rate of Magnetotail Dynamics," Geophys. Res. Dependent Ductile Failure
+   Model," J. Appl. Lett., 1995 (accepted). Phys., Vol. 74, p. 1640, 1993.
+   [16] Brackbill, J.U., and W.E. Pracht, "An [3] Addessio, F.L., and J.N.
+   Johnson, "A Implicit, Almost-Lagrangian Algorithm for Constitutive
+   Model for the Dynamic Response Magnetohydrodynamics," J. Comp. Phys.,
+   of Brittle Materials," J. Appl. Phys., Vol. 67, Vol. 13, p. 455-482,
+   1973. p. 3275, 1990. [17] Brackbill, J.U., and H.M. Ruppel, "FLIP: A
+   [4] Addessio, F.L., J.N. Johnson and P.J. Method for Adaptively Zoned,
+   Particle-In-Cell Maudlin, "The Effect of Void Growth on Calculations of
+   Fluid Flows in Two Taylor Cylinder Impact Experiments," J. Appl.
+   Dimensions," J. Comp. Phys., Vol. 65, Phys., Vol. 73, p. 7288, 1993. p.
+   314, 1986. [5] Addessio, F.L., J.R. Baumgardner, J.K. [18] Brackbill,
+   J.U., "FLIP MHD: A Particle-In- Dukowicz, N.L. Johnson, B.A. Kashiwa,
+   Cell Method for Magnetohydrodynamics," J. R.M. Rauenzahn, and C.
+   Zemach, "CAVEAT: Comput. Phys., Vol. 96, pp. 163192, 1991. A Computer
+   Code for Fluid Dynamics [19] Brackbill, J.U., "On Modeling Angular
+   Problems with Large Distortion and Internal Momentum and Vorticity in
+   Compressible Slip," Los Alamos National Laboratory Report Fluid Flow,"
+   Comput. Phys. Comm., LA-10613-MS Rev. 1, May 1992. Vol. 47, pp. 116,
+   1987. [6] Addessio, F.L., M.C. Cline, and J.K. [20] Brackbill, J.U.,
+   "The Ringing Instability in Dukowicz, "A General Topology, Godunov
+   Particle-In-Cell Calculations of Low-Speed Method," Comp. Phys. Comm.,
+   Vol. 48, Flow," J. Comput. Phys., Vol. 75, pp. 469 pp. 6573, 1988. 492,
+   1988. [7] Aidun, J.B., and F.L. Addessio, "An Enhanced [21] Brackbill,
+   J.U., D. Kothe, C. Zemach, "A Cell Model with Nonlinear Elasticity," J.
+   Continuum Method for Modeling of Surface Comp. Mat., Vol. 30, p. 7248,
+   1996. Tension," J. Comp. Phys., Vol. 100, pp. 335- [8] Amsden, A.A.,
+   and F.H. Harlow, J. Comp. 354, 1992. Phys., Vol. 3, p. 80, 1968. [22]
+   Bunge, H.P., and J.R. Baumgardner, "Mantle [9] Amsden, A.A., H.M.
+   Ruppel, and C.W. Hirt, Convection and Modeling on Parallel Virtual
+   "SALE: A Simplified ALE Computer Machines," Computers in Physics, Vol.
+   9, Program for Fluid Flow at All Speeds," Los pp. 207215, 1995. Alamos
+   National Laboratory Report LA-8095, [23] Bunge, H.P., and M.A.
+   Richards, "The Origin 1980. of Long-Wavelength Structure in Mantle [10]
+   Amsden, A.A., "KIVA-3: A KIVA Program Convection: Effects of Plate
+   Motions and with Block Structured Mesh for Complex Viscosity
+   Stratification," Geophys. Res. Lett., Geometries," Los Alamos National
+   Laboratory 1996 (submitted). Report LA-12503-MS, March 1993. [24]
+   Bunge, H.P., M.A. Richards, and J.R. [11] Amsden, A.A., P.J. O'Rourke,
+   and T.D. Baumgardner, "A Sensitivity Study of 3-D Butler, "KIVA-II: A
+   Computer Program for Spherical Mantle Convection at 108 Rayleigh
+   Chemically Reactive Flows with Sprays," Los Number: Effects of
+   Depth-Dependent Alamos National Laboratory Report LA- Viscosity,
+   Heating Mode, and an Endothermic 11560-MS, May 1989. Phase Change," J.
+   Geophys. Res., 1996 [12] Amsden, D.C., and A.A. Amsden, "The KIVA
+   (submitted). Story: A Pardigm of Technology Transfer," [25] Bunge,
+   H.P., M.A. Richards, and J.R. IEEE Trans. on Prof. Comm., Vol. 36,
+   Baumgardner, "The Effect of Depth-Dependent pp. 190195, 1993. Viscosity
+   on the Platform of Mantle [13] Apen, P.G., E.L. Joyce, B.A. Kashiwa,
+   and Convection," Nature, Vol. 379, pp. 436438, W.B. VanderHeyden,
+   "Virtual National 1996. Laboratory for the Investigation of Multiphase
+   [26] Burgess, B., J.U. Brackbill, and D. Sulsky, "Mass Matrix
+   Formulation of the FLIP Particle-In-Cell Method," J. Comput. Phys.,
+   Atmos. Oceanic Technol., Vol. 10, pp. 195 Vol. 103, pp. 115, 1992. 208,
+   1993. [27] Butler, T.D., and P.J. O'Rourke, "A [41] Dukowicz, J.K., and
+   R.D. Smith, "Implicit Numerical Method for Two-Dimensional Free-Surface
+   Method for the Bryan-Cox- Unsteady Reacting Flows," Sixteenth Semtner
+   Ocean Model," J. Geo. Res., Vol. 99, International Symposium on
+   Combustion , pp. 7991-8014, 1994. pp. 15031515, 1976. [42] Evans, M.W.,
+   and F.H. Harlow, "The [28] Chou, P.Y., "On an Extension of Reynolds'
+   Particle-In-Cell Method for Hydrodynamic Method of Finding Apparent
+   Stress and the Calculations," Los Alamos National Nature of
+   Turbulence," Chin. J. Phys., Laboratory Report LA-2139, 1957. Vol. 4,
+   pp. 133, 1940. [43] Forslund, D.W., and J.U. Brackbill, [29] Clark,
+   T.T., "Spectral Self-Similarity of "Magnetic Field Induced Surface
+   Transport in Homogeneous Anisotropic Turbulence," Ph.D. Laser
+   Irradiated Foils," Phys. Rev. Let., Dissertation, University of New
+   Mexico, Vol. 48, p. 1614, 1982. 1991, also available as Los Alamos
+   National [44] Fromm, J. and F.H. Harlow, "Numerical Laboratory Report
+   LA-12284-T, 1992. Solution of the problem of Vortex Sheet [30] Clark,
+   T.T., and C. Zemach, "Engineering Development," Phys. Fluids, Vol. 6,
+   p. 975, Turbulence Models from the Standpoint of 1963. Spectral
+   Turbulence Models," Bull. Am. Phys. [45] Gentry, R., R.E. Martin and
+   B.J. Daly, J. Soc., Vol. 37 (8), p. 1799, 1992. Comp. Phys., "An
+   Eulerian Differencing [31] Clark , T.T., and C. Zemach, "A Spectral
+   Method for Unsteady Compressible Flow Model Applied to Homogeneous
+   Turbulence," Problems," Vol. 1, p. 87, 1966 Phys. Fluids, Vol. 7 (7),
+   pp. 16741694, [46] Harlow, F. H., "Hydrodynamic Problems 1995.
+   Involving Large Fluid Distortion," J. Assoc. [32] Clark, T.T. , and
+   P.B. Spitz, "Two-Point Comp. Mach., Vol. 4, p. 137, 1957. Correlation
+   Equations for Variable-Density [47] Harlow, F.H., D.O. Dickman, D.E.
+   Harris, Turbulence," Los Alamos National Laboratory and R.E. Martin,
+   "Two-Dimensional Report LA-12672-MS, 1995. Hydrodynamic Calculations,"
+   Los Alamos [33] Collins, J. P., P. Colella, H.M. Glaz, "An National
+   Laboratory Report LA-2301, 1959. Implicit-Explicit Eulerian Godunov
+   Scheme [48] Harlow, F.H., and B.D. Meixner, "The for Compressible
+   Flows," J. Comp. Phys., Particle-And-Force Method for Fluid Vol. 116,
+   pp. 195-211, 1995. Dynamics," Los Alamos National Laboratory [34] Daly,
+   B.J., F.H. Harlow, and J.E. Welch, Report LA-MS-2567, 1961. "Numerical
+   Fluid Dynamics Using the [49] Harlow, F.H., "Theory of Correspondence
+   Particle-And-Force Method," Los Alamos between Fluid Dynamics and
+   Particle-And- National Laboratory Report LA-3144, 1965. Force Method,"
+   Los Alamos National [35] Daly, B.J., and F.H. Harlow, "Transport
+   Laboratory Report LAMS-2806, 1963. Equations in Turbulence," Phys.
+   Fluids, [50] Harlow, F.H., and E. Welch, "Numerical Vol. 13, pp.
+   26342649, 1970. Calculation of Time-Dependent Viscous [36] Dukowicz,
+   J.K., "A Particle-Fluid Numerical Incompressible Flow of Fluids with
+   Free Model for Liquid Sprays," J. Comp. Phys., Surface," Phys. Fluids,
+   Vol. 8, p. 2182, Vol. 35, pp. 229-253, 1980. 1965. [37] Dukowicz, J.K.,
+   "A General, Non-Iterative [51] Harlow, F.H., and P.I. Nakayama,
+   "Turbulence Riemann Solver for Godunov's Method," J. Transport
+   Equations," Phys. Fluids, Vol. 10, Comp. Phys., Vol. 61, pp. 119137,
+   1985 pp. 23232332, 1967. [40]. [52] Harlow, F.H., and P.I. Nakayama,
+   "Transport [38] Dukowicz, J.K., and J. Kodis, SIAM J. Sci. of
+   Turbulence Energy Decay Rate," L o s Stat. Comp. , Vol. 8, pp. 305-321,
+   1987. Alamos National Laboratory Report LA-3854, [39] Dukowicz, J.K.,
+   M.C. Cline, and F.L. 1968. Addessio, "A General Topology Godunov [53]
+   Harlow, F.H., A.A. Amsden, and C.W. Hirt, Method," J. Comp. Phys., Vol.
+   82, pp. 65 2nd Int. Conf. on Num. Methods of Fluid 73, 1989. Dynamics,
+   Berkeley, CA, Sept. 1970. [40] Dukowicz, J.K., R.D. Smith, and R.C.
+   [54] Hirt, C.W., A.A. Amsden, and J.L. Cook, Malone, "A Reformulation
+   and "An Arbitrary Lagrangian-Eulerian Computing Implementation of the
+   Bryan-Cox-Semtner Method for All Flow Speeds," J. Comp. Ocean Model on
+   the Connection Machine," J. Phys., Vol. 14, p. 227, 1974. [55] Hirt,
+   C.W., B.D. Nichols, and N.C. Romero, Fluid Methods," Los Alamos
+   National "SOLA-A Numerical Solution Algorithm for Laboratory,
+   LA-UR-94-3384, 1994, submitted Transient Fluid Flows," Los Alamos
+   National to J. Comp. Phys. , Feb. 1995. Laboratory Report LA-5852,
+   1975. [69] Kothe, D., C. Zemach and A. Chaumeazea, [56] Hirt, C.W.,
+   N.C. Romero, M.D. Torrey, and manuscript in preparation, 1996. J.R.
+   Travis, "SOLA-DF: A Solution [70] R. H. Kraichnan, "The Structure of
+   Isotropic Algorithm for Nonequilibrium Two-Phase Turbulence at Very
+   High Reynolds Number," Flow," Los Alamos National Laboratory J. Fluid
+   Mech. , Vol. 5, pp. 497-543, 1959. Report LA-7725-MS (and
+   NUREG/CR-0690), [71] Lapenta, G., and J.U. Brackbill, "Control of 1979.
+   the Number of Particles in Fluid and MHD [57] Hirt, C.W., and B.D.
+   Nichols, "Volume of Particle-In-Cell Methods," Comp. Phys. Fluid (VOF)
+   Method for the Dynamics of Free Comm., Vol. 87, p. 139, 1995.
+   Boundaries," J. Comp. Phys., pp. 39, 201, [72] Lapenta, G., F. Iinoya,
+   and J.U. Brackbill, 1981. "Particle-In-Cell Simulation of Glow [58]
+   Hirt, C.W., J. Comp. Phys., Vol. 2, p. 339, Discharges in Complex
+   Geometries," IEEE 1968. Transactions on Plasma Science, Vol. 23, [59]
+   Johnson, J.N., and F.L. Addessio, "Tensile p. 769, 1995. Plasticity and
+   Ductile Fracture," J. Appl. [73] Lapenta, G., and J.U. Brackbill,
+   "Immersed Phys., Vol. 64, p. 6699, 1988. Boundary Method for Plasma
+   Simulation in [60] Johnson, N.L., "Discrete Macroscopic Complex
+   Geometries," IEEE Trans. Plasma Simulation of Fluid Flows," Doctoral
+   Thesis, Sci., 1996 (accepted). University of Wisconsin, Madison, 1983.
+   [74] Lapenta, G., and J.U. Brackbill, "Simulation [61] Johnson, N.L.,
+   and Y. Takagi, editors. of Dust Particle Dynamics for Electrode
+   Modeling in Diesel and SI Engines, SAE Design in Plasma Discharges,"
+   Plasma publication SP-1123, 1995. Sources Science and Technology, 1996
+   [62] Johnson, N. L., A. A. Amsden, T. D. Butler, (submitted). "Hydrogen
+   Program Combustion Research: [75] Lewis, M.W., B.A. Kashiwa, R.W.
+   Meier, and Three Dimensional Computer Modeling," S. Bishop, "Nonlinear
+   Dynamic Fluid- Proceedings of the 1995 DOE/NREL Hydrogen Structure
+   Interaction Calculations with Program Review, Vol. II, pp. 285-304,
+   Coupled Finite Element and Finite Volume NREL/CP-430-20036, 1995.
+   Programs," ASME Winter Annual Meeting, [63] Kashiwa, B.A., "A
+   Generalized MAC Method Chicago, IL, 1994. for Incompressible Fluid
+   Flow," Los Alamos [76] Linn, R.R., and F.H. Harlow, "Wildfire National
+   Laboratory Report LA-10853-MS, Propagation," Los Alamos National
+   November 1986. Laboratory Report, LALP-96-22, 1996. [64] Kashiwa, B.A.,
+   "A Predictor-Corrector Method [77] Lun, C.K.K., and A.A. Bent,
+   "Numerical for Calculation of Incompressible Fluid Flow Simulation of
+   Inelastic Frictional Spheres in Dynamics," Los Alamos National
+   Laboratory Simple Shear Flow," J. Fluid Mech., Report LA-10854-MS,
+   November 1986. Vol. 258, pp. 335353, 1994. [65] Kashiwa, B.A.,
+   "Statistical Theory of [78] Maudlin, P. J., S.I. Wright, G. T. Gray
+   III, Turbulent Incompressible Multimaterial and J. W. House,
+   "Application of Faceted Flow," University of Washington Doctoral Yield
+   Surfaces for Simulating Compression Thesis, Los Alamos National
+   Laboratory Tests of Textured Materials," Metallurgical and Report
+   LA-11088-T, 1987. Materials Applications of Shock-Wave and [66]
+   Kashiwa, B.A., N.T. Padial, R.M. Rauenzahn, High Strain Phenomena,
+   editors L. E. Murr, and W.B. VanderHeyden, "A Cell-Centered ICE K.P.
+   Staudhammer and M.A. Meyers, Elsevier Method of Multiphase Flow
+   Simulations," in Science Publishers, 1995. Proceedings, ASME Symposium
+   on [79] Mavriplis, D.J., "Three-Dimensional Multigrid Numerical Methods
+   for Multiphase Flows, Reynolds-Averaged Navier-Stokes Solver for Lake
+   Tahoe, NV, 1923 June 1994. Unstructured Grids," AIAA Journal, Vol. 33,
+   [67] Kashiwa, B.A., "Reactive Multiphase Flow pp. 445-453, 1995.
+   Simulation Workshop Summary," W.B. [80] Maykut, G.A., and N.
+   Untersteiner, "Some VanderHeyden, editor, Los Alamos National Results
+   from a Time Dependent Laboratory Report LA-UR-95-2194, June
+   Thermodynamic Model of Sea Ice," 1996. J. Geophys. Res., Vol. 76, pp.
+   15501575, [68] Kothe, D., and W. Rider, "Comments on 1971. Modeling
+   Interfacial Flows with Volume-of- [81] Menikoff, R., K. Lackner, N.L.
+   Johnson, S.A. Penetration of History-Dependent Materials," Colgate,
+   J.M. Hyman, G.A. Miranda, "Shock in Symposium on Advances in Numerical
+   Driven by a Phased Implosion," Phys. Fluids Simulation Techniques for
+   Penetration and A, Vol. 3, pp. 201218, 1991. Perforation of Solids, The
+   American Society of [82] Millionshtchikov, M., "On the Theory of
+   Mechanical Engineers, 1993. Homogeneous Turbulence," Dokl. Akad. [95]
+   Sulsky, D., and H.L. Schreyer, "The Particle- Nauk. SSSR, Vol. 32, pp.
+   615618, 1941. In-Cell Method as a Natural Impact [83] O'Rourke, P.J.,
+   B. Larratirou, and J.U. Algorithm," Sandia National Laboratories,
+   Brackbill, "On Particle-Grid Interpolation in Contract N

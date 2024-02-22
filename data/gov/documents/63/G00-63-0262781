@@ -1,0 +1,13 @@
+http://spaceresearch.nasa.gov/common/swap_image.js
+
+   bname = navigator.appName; bvers = parseInt(navigator.appVersion);
+   imgloaded = new Boolean(false); version = ""; function preLoad() {
+   //Only works for IE 4+ and Netscape 3+ if ((bname == "Netscape" &&
+   bvers >= 3) || (bname == "Microsoft Internet Explorer" && bvers > 3)) {
+   version = "OK"; var images = new
+   Array('sub_general_info_on.gif','sub_research_projects_on.gif','sub_fun
+   _learning_on.gif'); for(loop = 0; loop < images.length; loop++) { var
+   image = new Image(); image.src = images[loop]; } imgloaded=true; }else{
+   version = "Some old browser"; } } function swap_image(image,imagename)
+   { if (version == "OK" && imgloaded) {
+   document.images[imagename].src="/common/images/"+image; } }

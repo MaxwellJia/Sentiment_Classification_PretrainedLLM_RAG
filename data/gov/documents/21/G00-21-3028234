@@ -1,0 +1,1099 @@
+http://jncorlett.lbl.gov/Using%20Personal%20WebSharing.html
+
+                                 [macOS.GIF]
+
+                                 How to Use
+                         Mac OS Personal Web Sharing
+
+   Mac OS Personal Web Sharing is the easiest way to share your
+   information with others on your intranet, no matter what type of
+   computer or browser they're using. All you do is put the items you want
+   to share in the Web Pages folder and turn on Web Sharing.
+
+   As long as your computer is connected to a TCP/IP network (intranet or
+   Internet) and your server is running (turned on in the Web Sharing
+   control panel), the server's content is available to users of the
+   network. You control what items are shared and who can see those items,
+   by using the standard Mac OS file sharing privileges. You can specify
+   who has access to items and assign a password to some or all of your
+   Web server's content.
+
+   The first step in using Personal Web Sharing is to install the software
+   on your system, as described later in these instructions. (The software
+   may already be installed. To verify whether Personal Web Sharing is
+   installed, look for the Web Sharing control panel.)
+
+   After installation, you'll see two components: the Web Sharing control
+   panel (in the Control Panels folder) and the Web Pages folder (at the
+   top level of your hard disk). You use the control panel to turn Web
+   Sharing on or off, to configure the way your server operates, and to
+   designate the folder and home page you want to use as your server. The
+   Web Pages folder holds the contents you want to share.
+
+   What you need for Personal Web Sharing
+
+   Quick setup
+
+   Installing Personal Web Sharing
+
+   Before you turn on Web Sharing
+
+   Configuring your Web server
+
+   Using Personal Web Sharing
+
+   Getting the most from your server
+
+   Learning more about Web Sharing
+
+   Troubleshooting
+
+   Glossary
+
+  What you need for Personal Web Sharing
+
+   System: You need Mac OS 8.5 or a later version and either Open
+   Transport 2.0 or a later version (recommended) with an active TCP/IP
+   network connection.
+
+  Quick setup
+
+   The procedure that follows provides a brief version of installing and
+   setting up Personal Web Sharing. Detailed instructions for each stage
+   of the procedure are presented later in this document.
+     * Review the Read Me file for Personal Web Sharing.
+     * Install the software by opening the WebScript document.
+     * Before you turn on Web Sharing, make sure you have an active TCP/IP
+       connection. (Personal Web Sharing is not recommended for use over a
+       modem.)
+     * Turn on Web Sharing in the control panel and select a server folder
+       and home page for your server, if desired.
+     * Specify whether visitors to your server will have read-only access
+       to files, or set Mac OS file sharing privileges for users of the
+       server. (If you use file sharing privileges, be sure to turn on
+       file sharing and share the server folder or no one will have access
+       to the server.)
+     * Add the files you want visitors to your server to see and use.
+     * Notify others on the network that your server is available and give
+       them the server's IP address.
+
+  Installing Personal Web Sharing
+
+   Personal Web Sharing is installed as a standard part of Mac OS 8. If
+   you are not using Mac OS 8 or you used the Custom Install option to
+   install Mac OS 8 and did not include Web Sharing, you must install the
+   software. Look for the Web Sharing control panel (in the Control Panels
+   folder) to determine whether Web Sharing is installed on your computer.
+
+   Note: You must use Personal Web Sharing's Custom Install option to add
+   Personal Web Sharing to the Control Strip. (See "Quick Access to Web
+   Sharing with the Control Strip" later in this document for more about
+   using the Control Strip.)
+
+   Follow the steps below to install Personal Web Sharing.
+
+    Review the Read Me file
+
+   Before you install Mac OS Personal Web Sharing, review the Read Me file
+   in the folder with the software. This document contains the latest
+   information about the software and alerts you to any last-minute
+   changes or precautions you should know about when setting up and using
+   your Web server. (The Read Me file is provided as an HTML document to
+   read in your browser and as a SimpleText document. The two files
+   contain the same information.)
+
+    Install the software
+
+    1. Double-click the WebScript icon to open it.
+    2. Read the software license and click Agree.
+    3. For a custom installation, choose Custom Install from the pop-up
+       menu.
+    4. Use the Switch Disk button to select the disk on which to install
+       Personal Web Sharing.
+    5. Click Install to begin installation. (If a message reports that
+       installation cannot take place until other applications quit, click
+       Continue.)
+    6. Click Restart when installation is complete.
+
+  Before you turn on Web Sharing
+
+   Personal Web Sharing needs an active TCP/IP network connection to
+   operate. It is not recommended for use over a modem.
+
+   Important: Before you turn on Web Sharing, make certain that you have
+   an active TCP/IP network connection by checking your computer's TCP/IP
+   configuration. (If you need help determining whether you have an IP
+   connection, consult a network administrator.)
+
+   Once you've installed the software and verified that you have an active
+   TCP/IP network connection, you can turn on Web Sharing (by clicking the
+   Start button in the Web Sharing control panel) and begin using your
+   server immediately. The server will use the control panel's default
+   settings, which are listed in the next section, "Configuring Your Web
+   Server." Two of these settings include read-only access for all
+   visitors to your server and displaying the contents of your Web Pages
+   folder (the default server) as a list, rather than showing a specific
+   home page.
+
+  Configuring your Web server
+
+   You can change the default settings for your Web server by using the
+   Web Sharing control panel's options and the Preferences command in the
+   Edit menu when the control panel is open. The default settings are
+   listed in the table below.
+
+   Default settings for Personal Web Sharing
+
+   Setting
+
+   Default value
+
+   Options
+
+   In the Web Sharing control panel
+
+   Web Folder
+
+   Web Pages folder on hard disk
+
+   Choose another folder
+
+   Home Page
+
+   None (Personal NetFinder displays server items as a list)
+
+   Choose an HTML document as the home page
+
+   Give everyone read-only access
+
+   On
+
+   File-sharing privileges for visitors to the server (file sharing must
+   be on)
+
+   Use File Sharing to control user access
+
+   Off
+
+   Start/stop
+
+   In Web Sharing Preferences (Edit menu of the control panel)
+
+   Web Sharing Log
+
+   Off
+
+   Turn on or off and adjust size
+
+   Web Sharing Port
+
+   80
+
+   Change number
+   (Note: Numbers below 80 may not be accessible from some browsers;
+   numbers below 1000 may be reserved for other services.)
+
+   Allow Aliases to open items outside the Web folder
+
+   Off
+
+   Allow access to items outside server folder by means of aliases
+
+   Allow guests with write access to replace files in the Web folder
+
+   Off
+
+   Available only when file sharing access is on
+
+   Memory Allocation
+
+   1200 K
+
+   Change to another available size.
+   (Note: A higher number could improve performance but requires more
+   RAM.)
+
+   MIME Types
+
+   Standard set provided
+
+   Edit, add, or delete MIME types
+
+   Actions (control panel's method of handling CGI)
+
+   Interface for adding, editing; none supplied
+
+   Actions can be configured as pre-process, post-process, launch at
+   suffix, or filter
+
+   Follow the instructions below to configure each of the preferences for
+   Personal Web Sharing. (See the next section, "Using Personal Web
+   Sharing," for instructions on using the control panel's settings.)
+
+    Open a log of server activity
+
+   To open a log for the first time, follow these steps.
+    1. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    2. Click the Options tab (if necessary).
+    3. Click to put an X in the box labeled Web Sharing Log.
+    4. Click Save.
+
+   To view the log after the server has been used, open the log (by
+   opening the Web Sharing control panel and choosing Open Web Sharing Log
+   from the File menu or choosing Preference in the Edit menu and clicking
+   Open Log). When you open the log for the first time, you see the Mac OS
+   Easy Open dialog box, which lists the text-editing applications
+   available to open the log. Choose the application you want to use.
+
+   Note: Because SimpleText cannot open text files larger than 32
+   kilobytes (K), you should not use this application for the Web Sharing
+   log. The record of server activity is likely to be larger than the
+   SimpleText size limit.
+
+   The Web Sharing log is stored in the Web Sharing folder in the
+   Preferences folder (which is in the System Folder).
+     * To stop using the log, click to remove the X from the box labeled
+       Web Sharing Log in the Options section of Preferences and click
+       Save.
+
+    Change the server's port number
+
+   To change the port number for the Web server, follow these steps.
+    1. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    2. Click the Options tab (if necessary).
+    3. Select the number in the Web Sharing Port section and type the new
+       port number you want to use.
+       (Note: Numbers below 80 may not be accessible from some browsers;
+       numbers below 1000 may be reserved for other services. Certain port
+       numbers are reserved for specific types of devices; if you enter
+       one of these numbers, you'll see a message advising you to use a
+       different number.)
+    4. Click Save.
+
+   Note: When the port number is different from the default, the number
+   appears at the end of the Web server's address. You can check this in
+   the Web Sharing control panel.
+     * To restore the default port number (80), click the Use Defaults
+       button and click Save.
+
+   Tip: If you have other Web server software (in addition to Personal Web
+   Sharing), you can set up more than one server and use a different port
+   number for each one. (Personal Web Sharing supports only one Web
+   server, however.)
+
+    Allow access to items outside the Web folder with aliases
+
+   To allow access to items outside the Web server folder through the use
+   of aliases, follow these steps.
+    1. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    2. Click the Options tab (if necessary).
+    3. Click to put an X in the box labeled "Allow Aliases to open items
+       outside the Web folder."
+    4. Click Save.
+    5. Create an alias for each item to which you want to provide access
+       and put the aliases in your Web server folder.
+    6. Either set the home page to None in the control panel (so that
+       visitors see a list of items in the folder) or put links to the
+       aliases on the home page or on other HTML pages linked to the home
+       page.
+
+   Using an alias is the preferred method for sharing the contents of a CD
+   or other locked volume.
+
+   Important: You might inadvertently share items you don't want others to
+   see if you turn on access by means of aliases. For example, don't put
+   an alias of your hard disk in the Web server folder unless you want to
+   share the disk's contents through your server. Check all items that
+   have aliases in the Web server folder to verify that you want to share
+   them. (The default setting for access through aliases is off to prevent
+   inadvertent sharing of items outside the server folder.)
+
+   Tip: You can use an alias to serve files or a disk outside your Web
+   server folder. For example, if you want to include the contents of a CD
+   in your server, mount the CD, make an alias of it, and put the alias
+   inside the Web folder. The simplest way to ensure that visitors to the
+   server can see all contents of the CD is to set the home page to None
+   in the Web Sharing control panel.
+
+    Allow guests with write access to replace files in the Web folder
+
+   To allow guests who have write access to replace items in the server
+   folder, follow these steps.
+    1. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    2. Click the Options tab (if necessary).
+    3. Click to put an X in the box labeled "Allow guests with write
+       access to replace files in the Web folder."
+    4. Click Save.
+    5. Make sure file sharing is turned on in the File Sharing control
+       panel.
+    6. Make sure that the Web server folder is shared (select the folder,
+       then choose Sharing from the File menu).
+    7. Use the Users & Groups control panel to turn on Guest Access (open
+       the Guest icon, choose Sharing in the pop-up menu, and click to put
+       an X in the box labeled "Allow guests to connect to this
+       computer").
+    8. Set access privileges for the server folder (select it, then choose
+       Sharing from the File menu and use the pop-up menu to give guests
+       write access).
+
+    Change the server's memory allocation
+
+   To change the server's memory allocation, follow these steps.
+    1. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    2. Click the Options tab (if necessary).
+    3. In the Memory Allocation section, choose a size from the pop-up
+       menu.
+    4. Click Save.
+
+   Note: A higher memory allocation could improve the server's performance
+   but requires more RAM.
+
+    Modify a MIME type
+
+   A MIME types is information associated with a file that tells the
+   server and the visitor's browser the kind of file they're looking at
+   and which application or plug-in is the right one to open the file.
+
+   Personal Web Sharing has a standard set of MIME types that should
+   include all the types you'll need for your Web server. If necessary,
+   you can modify, add, or delete a MIME type. If you're not sure whether
+   to modify a MIME type, consult an expert or reference source before
+   making changes.
+
+   Tip: The server applies MIME types in the order listed in the
+   Preferences section of the Web Sharing control panel. Duplicates are
+   ignored.
+
+   To modify a MIME type, follow these steps.
+    1. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    2. Click the MIME Types tab (if necessary).
+    3. Click the MIME type you want to modify and click Edit.
+    4. In the MIME Types dialog box, select the text you want to revise
+       and type new text to replace it. (You can change any or all of the
+       items: File Suffix, MIME Type, Filetype, and Creator.)
+    5. Click OK when you've finished revising the MIME Type.
+    6. Click Save.
+
+   Note: You can reset the MIME types to the default set provided with
+   Personal Web Sharing or to the set saved most recently.
+     * To restore the default set of MIME types, click the Defaults
+       button.
+     * To revert to the set of MIME types saved most recently, click the
+       Revert button.
+
+   Important: If you restore the default MIME types (by clicking the
+   Defaults button), you will lose any modifications you're made to the
+   original set.
+
+    Add a MIME type
+
+   To add a MIME type, follow these steps.
+    1. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    2. Click the MIME Types tab (if necessary).
+    3. Click New.
+    4. In the MIME Types dialog box, enter the text you want for the
+       Suffix, MIME Type, Filetype, and Creator.
+    5. Click OK when you've finished entering the text.
+    6. Click Save to save the new MIME type.
+       The new MIME type is added at the top of the list (if no item is
+       selected) or below the item selected in the list.
+
+   Tip: The server applies MIME types in the order listed in the
+   Preferences section of the Web Sharing control panel. Duplicates are
+   ignored.
+
+   Note: You can reset the MIME types to the default set provided with
+   Personal Web Sharing or to the set saved most recently.
+     * To restore the default set of MIME types, click the Defaults
+       button.
+     * To revert to the set of MIME types saved most recently, click the
+       Revert button.
+
+   Important: If you restore the default MIME types (by clicking the
+   Defaults button), you will lose all new MIME types you've added and any
+   modifications you're made to the original set.
+
+    Delete a MIME type
+
+   To delete a MIME type, follow these steps.
+    1. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    2. Click the MIME Types tab (if necessary).
+    3. Click the MIME type you want to delete and click Delete.
+    4. Click Save.
+
+   Important: Do not delete the MIME types that end with :"html" or "htm."
+   These MIME types must be listed in the control panel's Preferences for
+   your Web server to deliver HTML pages correctly to a browser
+   application.
+
+   Note: You can reset the MIME types to the default set provided with
+   Personal Web Sharing or to the set saved most recently.
+     * To restore the default set of MIME types, click the Defaults
+       button.
+     * To revert to the set of MIME types saved most recently, click the
+       Revert button.
+
+   Important: If you restore the default MIME types (by clicking the
+   Defaults button), any MIME types you've deleted will be restored.
+
+   Personal Web Sharing can handle a maximum of 64 MIME types.
+
+    Add an action (Common Gateway Interface file, or CGI)
+
+   Actions allow the Web server to launch a Common Gateway Interface
+   (CGI), Asynchronous CGI (ACGI), or other application. You can add four
+   types of actions to your server:
+     * pre-process actions, which the server launches before it processes
+       a URL;
+     * post-process actions, which the server launches after processing a
+       URL;
+     * launch at suffix actions, for which the server uses the suffix in a
+       URL to determine the application to launch; and
+     * filters, which the server uses to launch a filtering application
+       before processing a URL.
+
+   A variety of CGIs are available from independent vendors; none are
+   supplied with Personal Web Sharing. Consult the documentation or
+   descriptive information provided for the CGI to determine how to use it
+   with your Web server.
+
+   To add an action (CGI) to your Web server, follow these steps.
+    1. Check the documentation for the CGI you want to add to see what
+       type it is and how to use it.
+    2. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    3. Click the Actions tab (if necessary).
+    4. Click New.
+    5. In the Action dialog box, select the type of action from the pop-up
+       menu.
+    6. Click Select and use the navigation buttons and menus to locate the
+       application to launch.
+    7. Click Open when the desired application is selected.
+    8. Click OK to add the new action to the list.
+    9. Click Save.
+
+   Note: You can restore the most recent set of actions.
+     * Click the Revert button to restore the set of actions saved most
+       recently.
+
+    Modify an action (Common Gateway Interface file, or CGI)
+
+   To modify an action, follow these steps.
+    1. Before modifying an action, check the documentation for the CGI to
+       determine how to configure it with Personal Web Sharing.
+    2. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    3. Click the Actions tab (if necessary).
+    4. Click an action to select it.
+    5. In the Action dialog box, select the type of action from the pop-up
+       menu.
+    6. Click Select and use the navigation buttons and menus to locate the
+       application to launch.
+    7. Click Open when the desired application is selected.
+    8. Click OK to add the revised action to the list.
+    9. Click Save.
+
+   Note: You can restore the most recent set of actions.
+     * Click the Revert button to restore the set of actions saved most
+       recently.
+
+    Delete an action (Common Gateway Interface file, or CGI)
+
+   To delete an action, follow these steps.
+    1. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    2. Click the Actions tab (if necessary).
+    3. Click the action you want to delete and click Delete.
+    4. Click Save.
+
+   Note: You can restore the most recent set of actions.
+     * Click the Revert button to restore the set of actions saved most
+       recently.
+
+   Personal Web Sharing can handle a maximum of 32 Actions.
+
+  Using Personal Web Sharing
+
+    Turn Web Sharing on
+
+   Important: Make sure your computer is connected to a network and TCP/IP
+   is properly configured and active before you turn on Personal Web
+   Sharing.
+    1. Open the Web Sharing control panel (in the Control Panels folder).
+    2. Check the Web Identity section of the control panel to verify that
+       the Web Folder and Home Page are the ones you want. (If you have
+       not designated a folder and home page, Personal Web Sharing uses
+       the Web Pages folder it created as the Web server and uses a list
+       view of the server's content instead of a home page.)
+    3. In the Web Sharing section of the control panel, click the Start
+       button to turn on Web Sharing.
+       A message confirms that sharing has been turned on or reports any
+       problem that occurs. A message may tell you that you need to
+       install part of the networking software or reconfigure one of the
+       networking control panels. (If you need help with this procedure,
+       consult your network administrator.)
+    4. Once Web Sharing is on, copy the server's address so you can give
+       it to others on the network. (Users can connect to your server
+       using either the domain name or the IP address for your server.)
+
+   To get a domain name, consult the person who set up the TCP/IP network.
+     * To copy the domain name and address, you can write them down or use
+       the Copy My Address command in the Edit menu of the Web Sharing
+       control panel.
+
+   About your IP address and domain name: Your Web server is identified on
+   the network by its IP address. Once Web Sharing is turned on, the IP
+   address appears in the Web Identity section of the control panel. Make
+   a note of this address; if you have a domain name, it is displayed in
+   addition to the IP address. (An IP address is always a set of numerals,
+   separated by periods. A domain name is text.)
+
+   Examples of the IP address and domain name for a server are:
+
+     http://130.43.2.2/
+     [example using IP address]
+
+     http://yourserver.yourcompany.com/
+     [example using domain name]
+
+   Tip: You can also copy the address by choosing Copy My Address from the
+   control panel's Edit menu, and you can paste the address into any
+   document.
+
+   Important: If you assign an IP address to your server as part of
+   configuring the TCP/IP connection, use only a standard IP address. Some
+   IP addresses ("0.0.0.0" or "1.1.1.1," for example) are reserved for
+   network hardware such as routers and gateways. If you are not sure how
+   to assign an IP address to your server, contact your network
+   administrator.
+
+   On your computer, you can specify a folder other than Web Pages (the
+   default) as your server, change to a different home page or select no
+   home page (the default), and add or delete items in the server.
+
+    Select a server folder
+
+   To select a server folder, follow these steps.
+    1. Open the Web Sharing control panel (in the Control Panels folder).
+    2. In the Web Identity section of the control panel, click the Select
+       button to the right of Web Folder.
+    3. Use the buttons and menus to locate the folder you want to use as
+       your Web server and click its name.
+    4. With the folder's name selected, click the Select button at the
+       bottom of the dialog box.
+
+   The control panel now lists your hard disk's name and the folder you
+   selected as the server.
+
+   When you change the Web server folder, you need to select a new home
+   page. If you don't select a home page, visitors to your server will see
+   a list of items in the server folder.
+
+   Note: When you select a folder as the Web folder, Personal Web Sharing
+   creates a folder in it (PNFIconGraphics) to hold icons. A copy of the
+   icon folder is created in each Web folder you select.
+
+    Select a home page
+
+    1. Open the Web Sharing control panel (in the Control Panels folder).
+    2. In the Web Identity section of the Web Sharing control panel, click
+       the Select button to the right of Home Page.
+    3. In the dialog box that appears, select an item in the list and
+       click Select, or click None if you want no home page specified.
+
+   Note: If you select None, no home page will be displayed. Instead,
+   people who visit your server will see a list of the folder's contents,
+   similar to the Finder's list view of a window's contents. This built-in
+   listing feature, called Personal NetFinder, can sort the list of items
+   in the server folder by name, date, size, or kind of file.
+
+   If you want to use a home page instead of the list view, you can select
+   "Default.html" (in the Web Pages folder) as your home page. You can
+   revise this page to include the information and links you want to share
+   with visitors to your Web server.
+
+   The control panel now lists the home page you selected.
+
+   You can also create your own home page or locate an HTML document and
+   drag it to the Web Pages folder. Then repeat the selection procedure.
+
+   You can adapt the pages in the Sample Files & Templates folder,
+   included with the server software, to start building your own library
+   of Web content. If you can't locate the sample pages folder, open the
+   WebScript document to start the Installer program, use the Custom
+   Install option in the pop-up menu, select "Documentation Package", and
+   click the "Install" button to install the sample files.
+
+    Adding or removing items in the Web folder
+
+   The folder you specify as your Web server is like any other folder. You
+   can add items, remove items, and edit any of the folder's contents. You
+   can control access to the folder and to other folders inside it by
+   using the standard file sharing privileges (see the next section of
+   these instructions).
+
+   Important: Certain characters should not be used in document names on
+   your Web server. Don't start a name with a period (.) or use a dollar
+   sign ($) or slash (/) anywhere in a name; if you use these characters,
+   a browser may not be able to locate or open the file.
+
+    Controlling access to your server's content
+
+   Once you specify a folder as your server and turn on Web Sharing, the
+   items in that folder are available to anyone who connects to your
+   server. The information is protected and can't be changed. You can add
+   security to some or all of the server's contents by using the access
+   privileges provided with Mac OS file sharing.
+
+   For complete instructions on using file sharing and assigning access
+   privileges, see the topics listed under "Sharing Files" in Mac OS Help.
+   The list below summarizes these procedures.
+    1. Turn on file sharing in the File Sharing control panel.
+    2. Establish any special users and groups you want in the Users &
+       Groups control panel.
+    3. Share the Web server folder (by selecting it, choosing Sharing from
+       Get Info popup in the File menu, and putting an X in the box
+       labeled "Share this item and its contents")
+    4. Share individual folder items in your server folder and assign
+       access privileges to them by selecting each folder item and then
+       using the Sharing command in the Get Info popup in the File menu.
+    5. Select the "Use File Sharing to control user access" option in the
+       Web Sharing control panel.
+
+   Important: Once you use file sharing's access privileges for any items
+   in your server folder, you must leave file sharing turned on. If you
+   turn off file sharing, everyone who tries to connect to your server
+   will be denied access. (As soon as you turn file sharing on, others
+   will again be able to connect and the security you established through
+   access privileges will be in effect.)
+
+  Getting the most from your server
+
+    Using the list view and toggling the list view on and off
+
+   You can set up your server so that visitors always see the Personal
+   NetFinder (PNF) list view--the default setting for Personal Web
+   Sharing. If you want to keep your server primarily in PNF view, select
+   None (rather than the name of a home page) in the Web Sharing control
+   panel.
+
+   Tip: You can give users of your server an easy way to switch to list
+   view by including a link to PNF on your home page. Two examples of the
+   link appear below. The first example shows the domain name of a server
+   and the second example shows the IP address of the server. Either type
+   of link will work (assuming that your server has a domain name, which
+   you can obtain from the person who set up the TCP/IP network).
+
+     http://yourserver.yourcompany.com/PNF:
+     [example using domain name]
+
+     http://130.43.2.2/PNF:
+     [example using IP address]
+     (Note that a colon is the last character in both examples.)
+
+   Tip: If you want users to see a list of items in a single folder that's
+   inside your Web server folder, you can create a link to that folder
+   using the PNF view. This is a good way to limit access by preventing
+   users from seeing all the items in your entire Web folder. (When the
+   server's content is displayed by means of links from a home page, users
+   see only the files that are linked to the home page.)
+
+   Note: When you create a a PNF link to a subfolder in your Web folder,
+   the subfolder's name should appear after the "PNF:" part of the
+   address. The examples below show two correct versions of a link of this
+   type and one incorrect version:
+
+     http://yourserver.yourcompany.com/PNF:subfoldername/
+     [example using domain name - correct format]
+
+     http://130.43.2.2/PNF:subfoldername/
+     [example using IP address - correct format]
+
+     http://130.43.2.2/subfoldername/PNF:
+     [example using IP address - incorrect format]
+
+   Although "PNF:" can't appear after a subfolder name, you can use the
+   address without "PNF:" and still link to a subfolder, with its contents
+   displayed in list view. The example below shows this alternative
+   format.
+
+     http://130.43.2.2/subfoldername/
+     [example using IP address, without "PNF:" - the subfolder contents
+     are displayed in list view]
+
+   Visitors can switch between home page and list view with the home page
+   link and the Back and Forward buttons of their browser.
+
+   Tip: If you want to present a list view of server items and a message
+   or banner like that on many home pages, you can add a header or footer
+   or both to Personal NetFinder. When you add files named
+   "folder_header.html" and "folder_footer.html" to a server folder,
+   Personal NetFinder reads the contents of those files and puts the text
+   before or after the folder listing. When you add "text_header.html" and
+   "text_footer.html" to a server folder, Personal NetFinder will read the
+   contents and add them to the beginning and end of any SimpleText
+   document that it translates into HTML.
+
+   Note: When you create a header or footer file, that file must not have
+   the standard HTML tags at the beginning ("<HTML>") or the end
+   ("</HTML>").
+
+   You can use this header and footer capability to display graphics,
+   provide your own tool bar, include a link to your top-level web page,
+   or whatever you choose to make your site better.
+
+   Important: Remember that using the list view for your server allows
+   everyone to see everything in the Web Pages folder. You can use file
+   sharing privileges to allow or deny access to folders inside your
+   server, however.
+
+   Downloading files from the server
+
+   Visitors to your Web server can download files from the server by
+   dragging them to their desktop or hard disk. You can use this feature
+   of the Web Sharing software to distribute documents to others who are
+   connected to your server's network.
+
+   To download a file, a visitor simply clicks it (in list view). An HTML
+   or image file appears in the browser window. Applications are
+   compressed (using binhex) before they are downloaded. Other files are
+   usually copied, though some variations may occur, depending on how the
+   MIME types are configured in Personal Web Sharing and in the visitor's
+   browser.
+
+   Visitors to your server can save a file by dragging it to their
+   desktop.
+
+   Note: When files are displayed as a list (PNF view), a visitor must
+   drag the link (name of file), not the icon; otherwise, only the icon
+   for that file will be copied.
+
+   Editing and uploading files to the server
+
+   If you use file sharing privileges to control access to the server and
+   give guests or registered users write privileges, they can download a
+   file, edit it, and copy the file back onto your Web server. The file's
+   name must not be changed, however.
+
+   The visitor's browser must support uploading of files.
+
+   Improving server performance with increased memory allocation
+
+   If many people are visiting your Web server, you may want to increase
+   the amount of memory the software can use. This allows for efficient
+   operation as people connect to your server and sample its contents.
+
+   To increase the memory allocation, follow these steps.
+    1. Open the Web Sharing control panel.
+    2. Choose Preferences from the Edit menu.
+    3. Click the Options tab.
+    4. In the Memory Allocation section, choose a larger number from the
+       pop-up menu.
+    5. Click Save.
+
+    Sharing files on a CD or other locked disk
+
+   To assure that users can open and copy files on a locked disk, such as
+   a CD, be sure to create an alias of the CD or disk and put that alias
+   in your Web folder. If you choose the actual CD or locked disk as the
+   Web folder, users who connect to your server will see an error message
+   when they try to open some of the files on the CD or locked disk.
+
+    Important file you should know about
+
+   The Personal Web Sharing software recognizes a certain type of file
+   that can make for efficient operation of your server.
+     * If there is a file named "index.html" in the Web server folder,
+       that file is automatically displayed as the home page when "None"
+       is selected as the home page in the Web Sharing control panel.
+
+   Quick access to Web Sharing with the Control Strip
+
+   Personal Web Sharing includes a module for the Control Strip. Once the
+   module is installed, you can use it to turn Web Sharing on or off, open
+   the Web Sharing control panel, and check your server's IP address.
+
+  Learning more about Web Sharing
+
+   You can use the sample Web pages and templates provided with this
+   software to fashion your own Web content. These files are in the Sample
+   Files & Templates folder, which is inside the Web Sharing folder. (If
+   you can't locate the sample files, use the Installer program's Custom
+   Install option to install the "Documentation Package".) The folder also
+   contains instructions and tips for using the sample files in the
+   document "Using Sample FilesTemplates.htm."
+
+   In addition, you can visit some of the many Web sites that offer great
+   advice and examples for creating Web pages. Some of these useful sites
+   are listed below; visit them to learn more about providing content for
+   Mac OS Personal Web Sharing.
+
+   Web design guidelines from Apple's Human Interface group: Excellent
+   advice for planning Web content of any size or scope.
+
+   HTML tutorials: A set of documents on various aspects of hypertext
+   markup language (HTML).
+
+   The Web Developer's Virtual Library: Depth and breadth about Web
+   topics, standards, scripting languages and technologies, and much more.
+
+   Yahoo Web design topic list: A rich set of resources for all aspects of
+   Web design and related topics.
+
+   Yale style guide for Web design: Comprehensive design information and
+   resources.
+
+  Troubleshooting
+
+   - Others can't find my server on the network:
+     * Make sure Web Sharing is turned on (in the Web Sharing control
+       panel).
+     * If your server is set to use file sharing privileges, make sure
+       file sharing is turned on (in the File Sharing control panel).
+       Important: If file sharing is not turned on and your server uses
+       file sharing to provide access to visitors, no one (including you)
+       will have access to the server.
+     * If your server is set to use file sharing privileges, make sure the
+       Web folder is shared (using the Sharing command in the File menu).
+       Important: If your Web folder is not shared and your server uses
+       file sharing to provide access to visitors, no one (including you)
+       will have access to the server.
+     * The TCP/IP connection may not be set up correctly--check with your
+       network administrator if you need help.
+     * Visitors may not be using the correct address for your server. Make
+       sure they have the correct domain name or IP address.
+     * Your server may be using a port number other than 80 (the default).
+       Send others the complete address using Copy My Address in the Web
+       Sharing control panel's Edit menu. (If the port number has been
+       changed from 80, the new number appears at the end of the IP
+       address.)
+     * To ensure that the correct content is served, the Web Pages folder
+       (or other server folder) should be located no more than five levels
+       below the root level of the hard disk.
+     * Every Personal Web Sharing server needs a unique assigned IP
+       address. Do not use nonstandard IP addressing with your server.
+       Some IP addresses ("0.0.0.0" or "1.1.1.1," for example) are
+       reserved for network hardware such as routers and gateways. If you
+       are not sure how to assign an IP address to your server, contact
+       your network administrator.
+
+   - Others report seeing a message that Authentication Failed when they
+   try to view an item:
+     * Make sure Web Sharing is turned on (in the Web Sharing control
+       panel).
+     * Make sure the server folder containing the desired item is shared.
+     * Make sure that others have access privileges for the shared item.
+
+   - I'm using FileMaker Pro on my server (or another Web server on my
+   computer) and I see an error message related to that program:
+     * FileMaker Pro has a dedicated port number. If you use FileMaker Pro
+       with a server on your computer, use a different port number for
+       your Personal Web Sharing server to avoid a conflict with the port
+       number for FileMaker Pro. (You can't change the port number for
+       FileMaker Pro.) Check the documentation for FileMaker Pro for more
+       information about using this application with a Web server.
+       Note: If you've changed the port number to a number other than 80,
+       you can see the new number at the end of the address in the Web
+       Sharing control panel.
+
+   - Files on the server are not displayed as expected.
+     * One of the MIME types may have been changed to include incorrect
+       information. If you have the correct information, modify the MIME
+       type that is causing a problem.
+     * If you can't correct the problem by modifying an individual MIME
+       type, you can restore the default set of MIME types supplied with
+       Personal Web Sharing.
+
+   Important: If you restore the default MIME types (by clicking the
+   Defaults button), you will lose all new MIME types you've added and any
+   modifications you're made to the original set. Any MIME types you've
+   deleted from the original set will be restored.
+
+   To restore the original set of MIME types, follow these steps.
+    1. Open the Web Sharing control panel and choose Preferences from the
+       Edit menu.
+    2. Click the MIME Types tab (if necessary).
+    3. Click Defaults.
+       The original set of MIME types is restored.
+
+   - An error message reports that the port is in use:
+     * If you see a port-in-use error message, another application may be
+       using the same port number as Personal Web Sharing. Change one of
+       the port numbers. (Also see the item above about FileMaker Pro.)
+
+   - I can't upload a file to the server.
+     * If you can't upload, your browser may not support uploading files.
+     * The file you want to upload may be an application, which can't be
+       uploaded.
+     * If you've changed the file name after downloading a file, the
+       browser may not recognize the file it is trying to replace on the
+       server. Change back to the original name.
+
+   - The computer seems to "hang" when I turn on Web Sharing in the
+   control panel, or when the computer is starting up with Web Sharing
+   already turned on.
+     * If your computer's TCP/IP configuration is set to acquire an
+       address dynamically, Personal Web Sharing tries to get the address
+       over the network. If the TCP/IP connection is not active or no
+       address can be obtained, Personal Web Sharing continues to seek an
+       address for up to 3 minutes.
+     * To avoid this situation, do not turn on Web Sharing unless you
+       already have an active TCP/IP connection.
+
+   - My system locks up unexpectedly when the server is on.
+     * If your computer is using OT/PPP 1.0, there is a known problem with
+       Personal Web Sharing. Personal Web Sharing runs as a background
+       application, which conflicts with the dialog box that PPP tries to
+       display when reconnecting (if the connection has been broken). This
+       can cause your system to crash. To work around this problem, turn
+       off the automatic reconnect option in the PPP control panel.
+
+   Follow these steps to turn off the automatic reconnect option:
+    1. Open the PPP control panel.
+    2. Click the Options button.
+    3. Click the Connection tab.
+    4. Click to remove the X from the box labeled "Connect automatically
+       when starting TCP/IP applications" and click OK.
+    5. Close the PPP control panel.
+
+   - Others report slow performance of my server.
+     * Some computers providing a server may experience slower performance
+       overall during times of heavy activity on the Personal Web Sharing
+       server over LocalTalk.
+
+   - Visitors who use other types of computers or non-English system
+   software report problems viewing some documents.
+     * Personal Web Sharing allows you to publish documents across
+       multiple platforms. Because character sets may differ from one
+       platform to another, you may notice a difference in how data is
+       displayed on some other types of computers on the network. To get a
+       more accurate representation of HTML documents in a cross-platform
+       environment, we recommend that you use Personal NetFinder to
+       display the documents on your server.
+     * File formats also vary from one type of computer to another in a
+       cross-platform environment. Each computer on the network should
+       have its browser's helper applications configured correctly for the
+       types of files your server contains before connecting to your
+       server.
+     * Mac to Mac: If your server contains non-English-language pages, the
+       client's browser should be set to the appropriate document encoding
+       option. Please review your browser documentation for more
+       information on document encoding.
+     * Mac to non-Mac: If your server contains non-English-language pages,
+       a non-Mac OS computer will encounter some incompatibilities. For
+       example, character sets may differ from one type of computer to
+       another.
+     * Personal NetFinder displays header information in the language of
+       the Finder (part of the system software) used by the server.
+
+  Glossary
+
+   action - the feature of Personal Web Sharing that allows the Web server
+   to launch a Common Gateway Interface (CGI), Asynchronous CGI (ACGI), or
+   other application.
+
+   access privileges - part of Mac OS file sharing, in which settings are
+   established for individual users, groups, and guests ("Everyone") that
+   determine whether they can see or change content on a server.
+
+   browser - the application that allows visitors to see the contents of
+   the a Web server. Microsoft Explorer and Netscape Navigator are
+   examples of browsers.
+
+   CGI - Common Gateway Interface, an application that the server software
+   launches, such as when the server displays a form that a visitor fills
+   out and sends to a data storage area.
+
+   domain name - the name associated with a Web site, ending with a suffix
+   that identifies the type of content or organization it contains (such
+   as "com" for commercial, "edu" for education, "gov" for government,
+   "org" for nonprofit organization).
+
+   Everyone - the category of access privileges for Mac OS file sharing
+   that applies to guests (anyone not registered by name).
+
+   File Sharing control panel - the control panel used to turn file
+   sharing on or off.
+
+   guest - anyone who connects to a server without supplying a name; guest
+   access can be turned on or off as part of Mac OS file sharing.
+
+   home page - the HTML document displayed when a visitor connects to a
+   Web server.
+
+   HTML - acronym for Hypertext Markup Language, a method for preparing
+   text files so they can display content and link to other files on the
+   World Wide Web.
+
+   intranet - a network-based collection of Web servers and sites, usually
+   concentrated within one company or other organization.
+
+   Internet - the massive global assemblage of interconnected computers
+   and communications hardware and software that links World Wide Web
+   sites and other services, such as e-mail, discussion groups, and FTP
+   servers.
+
+   IP address - acronym for Internet Protocol, a specification for
+   transfer of information across computer networks; the IP address, which
+   identifies a specific computer, consists of a four-to-twelve-digit
+   number separated into four sections by periods (for example,
+   130.43.2.2)
+
+   MIME type - information associated with a file that tells the server
+   and the visitor's browser what kind of file they're looking at and what
+   application is the right one to open the file. (Acronym for
+   Multipurpose Internet Mail Extensions,)
+
+   network - an interconnected group of computers that use specialized
+   software and hardware to share and transfer data.
+
+   owner - in Mac OS file sharing, the person who controls a specific
+   folder (such as the Web server when file sharing is in use).
+
+   Personal NetFinder - a component of Personal Web Sharing that displays
+   the content of a Web folder as a list.
+
+   port - the address of the server on your computer; a browser uses the
+   port to locate the server. By default, browsers look at port 80 for a
+   Web server.
+
+   registered user - in Mac OS file sharing, the name of a person who has
+   access privileges associated with that name.
+
+   SimpleText - a simple text-processing application supplied with Mac OS
+   computers that is used to view and save HTML files from a Web server.
+
+   TCP - acronym for Transfer Control Protocol, a specification for data
+   transfer over the Internet.
+
+   URL - acronym for Uniform Resource Locator, the "address" or location
+   of a Web site.
+
+   Users & Groups control panel - in Mac OS file sharing, the control
+   panel used to specify registered users, groups, and guests.
+
+   Web page - any HTML document on a Web server.
+
+   Web server - a computer that contains software to share HTML and other
+   files by means of the Internet (or on an intranet).
+
+   Web Sharing control panel - the server software for Personal Web
+   Sharing.
+
+   Web site - a collection of HTML files and other content that visitors
+   access by means of a URL.
+     __________________________________________________________________
+
+                            [Top of Page] [Apple]
+
+             © 1997, 1998 Apple Computer. All rights reserved.
+     Mac and the Mac OS logo are trademarks of Apple Computer, Inc. used
+                               under license.

@@ -1,0 +1,178 @@
+http://www-itg.lbl.gov/ITG.hm.pg.docs/Whole.Frog.Summary.html
+
+The LBL Whole Frog Project: Using the World Wide Web to Provide a Platform
+Independent Interface to Educational Uses of High Performance Computing
+
+    William Johnston and David Robertson
+
+    Lawrence Berkeley Laboratory, University of California, Berkeley, CA
+
+  Abstract
+
+   We have developed a set of techniques for providing interactive 3D
+   visualization via the World Wide Web (WWW) as part of the "Whole Frog"
+   project [1] . In the past 10-12 months the resulting WWW "pages" have
+   been accessed more than 1,000,000 times from 65 different countries.
+   The success of this project indicates that the Web and its associated
+   browsers can serve as a versatile and easily used front end to complex
+   and high-performance computing resources. In this project, the Common
+   Gateway Interface capability of WWW servers is used to provide an
+   interactive 3D visualization front-end via Web clients. This approach
+   is used to make a "Virtual Frog Dissection Kit" "Virtual Frog
+   Dissection Kit" (see [2] and [3] ). A student using this Kit has the
+   ability to interactively select, view, and get textual information
+   about various parts a frog's anatomy, to control the view angle, and to
+   determine which anatomical structures are visible or invisible. A new
+   experimental feature allows generation of "movie" clips of rotating 3D
+   objects that can be viewed with the user's Web browser.
+
+  Overview
+
+   This note describes work demonstrating the potential of the World Wide
+   Web architecture to provide a uniform and easily used interface to
+   high-performance computing applications. The back-end computation can
+   take place on as complex and powerful a distributed system as needed to
+   support the information display on the Web browser, and all of this is
+   hidden from the user. The Web browser (e.g. Univ. of Illinois' Mosaic,
+   or Netscape Communications Corp.'s Netscape Navigator) is the same one
+   that is used to access the many other kinds of information available on
+   the Web.
+
+   Use of the Web provides a platform-independent interface to
+   applications. Browsers (Web clients) are available for use with most
+   common operating systems and window systems (e.g. UNIX, X-Windows,
+   DOS/Windows, Macintosh, etc.). The Web support of interactive input
+   from browsers (via "forms") provides a significant subset of the
+   functionality available with Graphical User Interfaces (GUI's) such as
+   X Windows "toolkits".
+
+   The Web's design ([4], [5] ) has proven very versatile, providing for a
+   variety of high-level functions. These include:
+
+   (1) Publishing research results from high-performance computing
+   projects, including interactive exploration of the data and methods
+   used;
+
+   (2) Support of education by providing access to activities that are too
+   computationally expensive for most K-12 resources, and;
+
+   (3) Mechanisms for collaboration and sharing possibly scarce and
+   expensive remote experimental facilities.
+
+   We have used scientific visualization and education / instructional
+   scenarios as sample applications to drive the development of Web
+   capabilities that support front-ends for distributed processing. We
+   have also considered the issues for using Web-based user interfaces for
+   analysis and simulation codes.
+
+   One goal of this project is to explore the ability of the Web to
+   provide complex scientific data visualization in a way that end users
+   do not necessarily require high-performance rendering systems at their
+   location, and can use a variety of personal computers and workstations
+   to access the results. An additional goal of the project is to explore
+   the capabilities of the Web technology to enable K-12 students to learn
+   about and use scientific visualization (and frog anatomy), and
+   high-performance computing and networking.
+
+   The problem that we have selected as representative of many kinds of
+   scientific visualization is that of visualizing large, 3D scalar
+   fields. The example data set is a finely sampled, 3D colored grid of
+   the body of a frog. The data includes volume information and
+   significant internal surfaces (the anatomical organ boundaries).
+
+   In addition to exploring the interactive capabilities of the Web
+   architecture, we are also presented with an interesting exercise in how
+   to provide (experimentally) a computationally intense service to a
+   large number of users with resources that are simultaneously (and
+   primarily) used for other purposes. For example, the experimental
+   package being described here - the Virtual Dissection Kit - has been
+   accessed more than 1,250,000 times by 80,000 different sites, in over
+   65 different countries in the past 10 months. (The "dissection kit"
+   page - the basic visualization interface - can, at the selection of the
+   user, be displayed in English, Spanish, Dutch, German, and French.) By
+   December, 1994 we were servicing 150 requests per hour, 24 hours per
+   day, for this Web document. The generation of the more than 200,000
+   rendered images satisfying these requests has been done on four or five
+   large-ish Unix workstations on a non-interfering basis with our normal
+   use of the systems.
+
+   The number of accesses to a WWW page (an individual Web document) used
+   for publication or education can vary considerably, depending, for
+   example, on how much media attention it is receiving at any particular
+   moment. Unless access to a page is restricted, the HTTP server (the
+   system that receives and processes requests from Web browsers) must be
+   prepared to handle a potentially large number of accesses per minute.
+   If a page's intended use is interactive visualization, or interactive
+   instruction, then long waits for an image are not acceptable. Given
+   these considerations, one of our principal design goals has been to
+   have all of the rendered images of the frog available within a few
+   seconds, or less, after the user interaction. This is accomplished by
+   having the Web server (a single system) deal only with displaying the
+   text parts of the Web document, and redistributing all of the rendering
+   (image generation) to five or six other systems.
+
+   The figure below illustrates several features of the frog dissection
+   interface: There are buttons that select among the features (anatomical
+   objects) to be displayed, the image itself is a "sensitive map", and
+   clicking on the edges of the image will cause rotation. The interface
+   text can be adapted to the language preferred by the user. A new and
+   experimental aspect of the system is to allow the generation of movies.
+   The figure-boxes below the main display indicate to generate a movie
+   that rotates the selected features of the object around several
+   different axes.
+
+   This interface may tried by selecting this link.
+
+   The interface illustration:
+     __________________________________________________________________
+
+   [Frog.screen.crop.gif]
+     __________________________________________________________________
+
+  Acknowledgments
+
+   This work was sponsored by the U. S. Dept. of Energy, Energy Research
+   Division, Office of Scientific Computing , John Cavallini program
+   manager, under contract DE-AC03- 76SF00098 with the University of
+   California. Several people in the LBL Functional Imaging Group of the
+   Life Sciences Division, headed by Dr. Tom Budinger, were instrumental
+   in assisting with generating the frog data set. Several computer
+   science students, including in particular, Wing Nip, have provided
+   invaluable assistance, and several high school teachers from the LBL
+   Center for Science and Engineering Education summer program contributed
+   to various aspects of the project. This document is report LBL-36793.
+
+  References
+
+   [1] Johnston, W.E. "The Whole Frog Project" (Web page) University of
+   California, Lawrence Berkeley Laboratory, Berkeley, CA (1994).
+
+   [2] Robertson,D., W. Johnston, and W. Nip, "Virtual Frog Dissection:
+   Interactive 3D Graphics via the Web" , Second World Wide Web Conference
+   '94: Mosaic and the Web, Chicago, Oct., 1994
+
+   [3] Robertson,D., W. Johnston, "Using the World Wide Web to Provide a
+   Platform Independent Interface to High Performance Computing"
+   (Postscript), IEEE Compcon 1995
+
+   [4] T.J. Berners-Lee, R. Cailliau, J-F Groff, B. Pollermann, CERN,
+   "World-Wide Web: The Information Universe", published in Electronic
+   Networking: Research, Applications and Policy, Vol. 2 No 1, pp. 52-58
+   Spring 1992, Meckler Publishing, Westport, CT, USA.
+
+   [5] Papers on the World Wide Web, CERN, Geneva, Switzerland
+     __________________________________________________________________
+
+   The group staff are: William E. ("Bill") Johnston, Deb Agarwal, Sonia
+   R. Sachs, Brian Crowley, Guojun Jin, Bahram Parvin, David Robertson,
+   and Brian Tierney. Students are: Keith Beattie, Hanan Herzog, Gary Hoo,
+   Jason R. Lee, Sandra Roman, Alex Sim, Karen Tung, Lili Wu.
+
+   For more information contact William E. ("Bill") Johnston
+   (wejohnston@lbl.gov) or David Robertson (davidr@george.lbl.gov)
+
+  Lawrence Berkeley Laboratory, University of California
+
+   This document is
+   http://www-itg.lbl.gov/ITG.hm.pg.docs/Whole.Frog.Summary.html, and was
+   last updated on Feb 2, 1995.

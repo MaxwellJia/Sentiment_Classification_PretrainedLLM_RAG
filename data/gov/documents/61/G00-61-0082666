@@ -1,0 +1,258 @@
+http://wsom.nws.noaa.gov/manual/CHAPTERC/NC750800.HTML
+
+NOAA Logo                   NATIONAL WEATHER SERVICE
+
+          SILVER SPRING, MARYLAND 20910-3283
+
+                                                                   Operations Manual Letter
+
+                                                                             08-00
+
+   Date of Issue: October 24, 2000 Effective Date: October 24, 2000
+   In Reply Refer To: W/OS21 File With: C-75
+   Subject: Add Great Lakes to National Marine Verification Program (NMVP)
+   References: Adds the Great Lakes to the National Marine Verification
+   Program (NMVP) operated by NCEP/Environmental Modeling Center (EMC)
+   defined in WSOM C-75, Appendix D.
+
+     * Marine Verification Forecast (MVF). WFOs shall issue the
+
+   coded MVF twice a day for each operational verification site in their
+   forecast area (see appendix). The forecast wind and waves in the MVF
+   are for the sensors of the buoys and Coastal Marine Automated Network
+   (C-MAN) stations only. The MVF shall be consistent with the Near Shore
+   Forecast (NSH) and the Open Lake Forecast (GLF). The MVF may be sent up
+   to 2 hours after the forecast issuance time.
+
+   2. Small Craft Advisories Issued for Wave Heights Only.
+
+   Do not include small craft advisories in the MVF when they are issued
+   for wave heights only.
+     * Data Archive. EMC shall archive Great Lakes marine
+
+   warning, forecast, and observation data.
+
+   John J. Kelly, Jr.
+
+   Assistant Administrator
+
+   for Weather Services
+
+   WSOM-C-75-08-00
+
+   OML 08-00
+
+   Page 2
+
+                                  Appendix
+
+     * MVF Procedures. Attachment 1 gives the format for coding an
+
+   MVF. Attachment 2 provides a sample GLF with the corresponding MVF.
+   Attachment 3 contains the list of national marine verification sites
+   for the Great Lakes.
+
+   If the data from the verification site is missing (i.e. buoy/C-MAN is
+   out of commission), then code the missing data in nines (see Attachment
+   1). Discontinue issuing the MVF when the NSH is suspended for the
+   colder months. Resume issuing the MVF in the Spring with the start of
+   the NSH season.
+     * Data Consolidation. EMC computes quarterly verification
+
+   scores, which are posted to the National Marine Verification Program
+   Home Page. See WSOM Chapter C-75, Appendix D for more information.
+
+                                Attachment 1
+
+   Explanation of code used for point verification forecasts in the Marine
+   Verification Forecast (MVF).
+
+   CODE FORMAT
+
+   %%F nn(space)xxxxx(space)t[1] t[1] /WW/ddff/hh/t[2] t[2] /WW/ddff/hh
+   [LF][LF]$$
+   %%F Code for NCEP computer and delimiter for operational forecast. This
+   does not change.
+   nn Forecaster number. Note: comparative verification will NOT be used
+   as an individual performance measure. However, once statistics become
+   available, individuals should review them for self-improvement and
+   knowledge.
+   xxxxx Buoy/C-MAN identifier
+   t[1]t[1] Verification time 18 hours from NCEP model run (1800 UTC today
+   for 0000 UTC cycle today; 0600 UTC tomorrow for 1200 UTC cycle today).
+   WW Warning status
+
+   NO: No advisory or warning
+
+   SC: Small Craft Advisory (Nearshore Forecast only)
+
+   GL: Gale Warning
+
+   ST: Storm Warning
+   dd Wind direction in tens of degrees. If wind direction is less than
+   100 degrees, place a zero in the tens digit, e.g., 07. When wind speed
+   equals 100 knots or more, add 50 to wind direction, e.g., 57. Code 99
+   if wind is forecast to be variable based on regional guidelines.
+   ff Wind speed to nearest knot, not to nearest 5 knots as expressed in
+   the area forecast. If wind speed is less than 10 knots, place a zero in
+   the tens digit place, e.g., 05. For 100 knots or more, subtract 100,
+   e.g., 110 knots entered as 10 and add 50 to dd. Wind speed here is
+   defined as the wind speed criteria reported by the buoy/CMAN. Code
+   missing wind data with nines (i.e., 9999 for missing wind speed and
+   direction).
+   hh Significant wave height (combined wind waves and swell). If less
+   than 10 feet, place a zero in the tens digit, e.g., 08. Code missing
+   wave data as 99.
+   t[2 ]t[2] Verification time 30 hours from NCEP model initialization (06
+   UTC tomorrow for 0000 UTC cycle today; 18 UTC tomorrow for 1200 UTC
+   cycle today).
+   [LF][LF]$$ End bulletin code (2 line feeds followed by turn off code).
+
+                                Attachment 2
+
+   Examples of marine products.
+
+   Example of Open Lake forecast:
+
+   FZUS63 KMQT 270850
+
+   GLFLS
+
+   LSZ260-271500-
+
+   LAKE SUPERIOR FORECAST
+
+   NATIONAL WEATHER SERVICE MARQUETTE MI
+
+   400 AM EST FRI OCT 27 2000
+
+   .SYNOPSIS FOR 48 HOURS...(Text)
+
+   ...GALE WARNING IN EFFECT...
+
+   .TODAY...SOUTHWEST WIND 15 TO 25 KNOTS. SCATTERED SNOW SHOWERS LATE.
+   WAVES 4 TO 6 FEET.
+
+   .TONIGHT...WEST WIND 15 TO 25 KNOTS BECOMING NORTHWEST AND INCREASING
+   TO 35 KNOT GALES. SNOW SHOWERS. FREEZING SPRAY DEVELOPING. WAVES
+   BUILDING TO 6 TO 9 FEET.
+
+   .SATURDAY...NORTHWEST GALES TO 35 KNOTS DIMINISHING TO 30 KNOTS AND
+   VEERING NORTH. SCATTERED MORNING SNOW SHOWERS. WAVES SUBSIDING TO 5 TO
+   7 FEET LATE.
+
+   .SATURDAY NIGHT...NORTH WIND TO 30 KNOTS. WAVES 5 TO 7 FEET.
+
+   .OUTLOOK FOR SUNDAY THROUGH TUESDAY...WINDS 30 KNOTS OR LESS.
+
+   Example of corresponding coded MVF (see Attachment 3 for complete list
+   of verification sites):
+
+   FXUS53 KMQT 271000
+
+   MVF001
+
+   %%F99 45004 18/NO/2318/04/06/GL/3035/09
+
+   %%F99 45006 18/NO/2317/05/06/GL/3033/08
+
+                                Attachment 3
+
+   National Marine Verification Sites. Forecast areas are designated by N
+   (nearshore) or G (Great Lakes Open Lake). Only nearshore forecasts
+   require Small Craft Advisory as a warning category (in most cases).
+
+  Region
+
+          WFO
+
+                                             Point
+
+                                          Identifier
+
+                                                    Latitude
+
+                                                            Longitude
+
+                                                                     Forecast
+
+                                                                       Area
+
+  Eastern
+
+                                        Cleveland,
+
+          OH
+
+                                           (CLE)
+
+                                          45005
+
+                                                    41.7 N  82.4 W   G
+  Eastern Buffalo,
+
+          NY
+
+                                           (BUF)
+
+                                          DBLN6
+
+                                                    42.5 N  79.4 W   N
+
+                                                                           GLLN6
+
+                                                    43.9 N  76.5 W   N
+  Central
+
+                                        Duluth, MN
+
+                                           (DLH)
+
+                                          DISW3
+
+                                                    47.1 N  90.7 W   N
+  Central Marquette, MI (MQT)
+
+                                                                           45004
+
+                                                    47.6 N  86.6 W   G
+
+                                                                           45006
+
+                                                    47.3 N  89.9 W   G
+  Central Detroit,
+
+          MI
+
+                                           (DTX)
+
+                                          45003
+
+                                                    45.3 N  82.8 W   G
+
+                                                                           45008
+
+                                                    44.3 N  82.4 W   G
+  Central Green Bay,
+
+          WI (GRB)
+
+                                                                           SGNW3
+
+                                                    43.8 N  87.7 W   N
+  Central Milwaukee,
+
+          WI (MKX)
+
+                                                                           SGNW3
+
+                                                    43.8 N  87.7 W   N
+  Central Chicago, IL (LOT)
+
+                                                                           45002
+
+                                                    45.3 N  86.4 W   G
+
+                                                                           45007
+
+                                                    42.7 N  87.0 W   G

@@ -1,0 +1,123 @@
+http://www-aspen.cs.sandia.gov
+
+   #Rich Pryor
+
+                                [aspen.gif]
+
+                                [counter.cgi]
+
+New Economics Model Simulates U.S. Economy
+
+   Researchers at Sandia National Laboratories are developing a
+   microsimulation model of the US economy that has the potential to
+   significantly improve capabilities for analyzing and comparing economic
+   policies.
+   The new computational tool, called Aspen, capitalizes on Sandia's
+   expertise in both evolutionary learning and parallel computing to
+   provide several major advantages over more traditional economic models:
+     * Models the economy in a single, consistent calculation.
+     * Permits the impact of various legal, regulatory and policy changes
+       such as monetary policy, tax law, or trade policies to be modeled
+       in greater detail.
+     * Allows different sectors of the economy to be analyzed
+       independently and/or integrated with other sectors to develop a
+       better understanding of the whole economic process.
+     * Accurately simulates the behavior of basic decision-making segments
+       within the economy, like households, banks, companies, and
+       government.
+
+   Aspen uses agents to represent the various decision-making segments in
+   the economy. Each segment may have one or more agents representing it
+   in an analysis. One of Aspen's key features is its ability to
+   realistically reproduce the process used by actual economic agents to
+   maximize utility or profit. Agents in Aspen not only can communicate
+   with one another but also make "real-life" decisions. Through use of
+   evolutionary learning techniques, the agents adapt their behavior
+   according to changing economic conditions and past experience. In other
+   words, they become smarter as they move through time.
+
+Widespread applications
+
+   The model is designed to run on Sandia's massively parallel Intel
+   Teraflop computer, currently the world's fastest. Through its use,
+   researchers anticipate that the entire economy can be modeled in
+   sufficient detail to be realistic. This would give Aspen widespread
+   application in the following areas:
+     * Economic and financial market forecasting for the government,
+       banks, brokerage firms, or venture capitalists.
+     * Impact analysis of tax law or government policy changes.
+     * Impact studies of technology shifts for industry, consumers, or
+       market research firms.
+
+Technical approach
+
+   The most common tools currently used for economic modeling are either
+   macroeconomic or computable general equilibrium (CGE). Both rely on
+   regression analysis of aggregate data to develop parameters for use in
+   economic forecasting. These macromodels can provide accurate forecasts,
+   but problems arise when totally new economic policies are introduced
+   with no past relevant data that can be used to develop modeling
+   parameters. Also, modeling of shocks or discontinuities imposes certain
+   limitations on the analysis. Although microsimulation could offer more
+   modeling flexibility, it had been hampered by both a lack of essential
+   microdata and the extensive calculation time required to micromodel
+   something as large and complex as the US economy.
+   Advances in massively parallel techniques for solving complex modeling
+   problems, coupled with new rich sources of microlevel data, have now
+   made microsimulation a viable economic analysis tool.
+   Aspen microsimulates the economy using time-dependent Monte Carlo
+   methods. These methods are ideal for investigating the behavior of
+   complex, nonlinear stochastic systems like the economy. Agents defined
+   in a problem start each time increment making decisions much like their
+   real-life counterparts. Decisions on actions to take are based either
+   on probabilities computed from actual mircoeconomic data or on results
+   of learning models. These decisions include purchasing products, hiring
+   workers, selling bonds, collecting welfare payments, conducting open
+   market operations, and others. Macroeconomic variables, such as gross
+   domestic product, inflation (CPI), and the unemployment rate are
+   computed as aggregate results of innumerable decisions by the
+   individual economic agents.
+
+Development Status
+
+   A prototype model of a simple market economy was completed and is
+   available for general use on the web. A more detailed model is now
+   under development. See the reports below for more information.
+
+For more information contact:
+
+   Rich Pryor
+   Phone: (505) 844-2332
+   e-mail: rjpryor@sandia.gov
+   Sandia National Laboratories
+   Click here to get information on our other research and development
+   activities.
+   __________________________________________________________________
+
+                                 [graph.gif]
+
+   Image Caption: The graph shows results of a test problem that was run
+   using the prototype model. These results demonstrate Aspen's ability to
+   predict business-like cycles in an economy where prices and inventories
+   are allowed to vary.
+   __________________________________________________________________
+
+Reports:
+
+   The following reports are available in Acrobat PDF format. A PDF reader
+   for your computer can be found at the Adobe web site.
+   SAND96-0434: This report describes the prototype model.
+   SAND96-2459: This report desribes the more detailed model and documents
+   calculations on monetary policy.
+   SAND97-2093: This report documents the analysis done with Aspen on
+   transitional economies.
+
+   Business Week article.
+
+   Sandia News article.
+
+Other reports and files related to this subject can be found here.
+
+To run a calculation with the Prototype model click here.
+
+To see the latest on our Two Country Model click here.

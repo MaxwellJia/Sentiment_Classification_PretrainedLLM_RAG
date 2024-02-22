@@ -1,0 +1,212 @@
+http://hpcf.nersc.gov/computers/PVP/
+
+   NERSC High Performance Computing
+
+   You are here: hpcf / computers / PVP / index You came from:
+     __________________________________________________________________
+
+Summary
+
+   NERSC's Cray Parallel Vector Processor (PVP) cluster consists of three
+   SV1 machines.
+
+   These vector machines each have 1 GW of memory. Killeen is used for
+   interactive computing. The remaining two SV1 machines (Bhaskara and
+   Seymour) are batch-only machines.
+
+News & Status
+
+   [barrow.gif] PVP Announcements
+
+   [barrow.gif] Current Queue Status
+
+   [barrow.gif] Message of the Day
+
+   [barrow.gif] Scheduled Downtimes
+
+Cray PVP Cluster
+
+     * About the PVP Cluster
+     * How to get an Account
+     * Accessing the PVPs
+     * OS/Software Environment
+     * Programming
+     * File Systems and Data Storage
+     * Running Programs
+     * Applications/Software
+     * Priority Charging
+     * Account Charging
+
+Related Information
+
+     * Cray PVP Parallel Programming
+     * Note about backwards f90 compatibility
+     * Cray Programming Environment
+     * Overview of SV1 Vector Cache
+     __________________________________________________________________
+
+About the NERSC PVP cluster
+
+   The NERSC PVP cluster consists of three Cray SV1 SV1 computers. The
+   machines in the cluster have the following characteristics:
+
+   Name No. Processors Clock Speed Peak Performance (GFlops) Memory
+   Purpose
+   Killeen
+   20 300 MHz 24.0 1 GW interactive (and batch jobs depending on system
+   load)
+   Seymour 24 300 MHz 28.8 1 GW batch, jobs up to 512MW
+   Bhaskara 24 300 MHz 28.8 1 GW batch, jobs up to 512MW
+   Cluster Total 68   81.6 3 GW
+
+   The SV1 can produce four floating point results per clock period (two
+   adds and two multiplies). The SV1 peak performance is 1200 MFlops (1.2
+   GFlops) per CPU. This implies that the SV1 is six times (6x) as fast as
+   the previous generation Cray J90SE. However, "real" applications
+   indicate that users can expect typical programs to run about three
+   times (3x) as fast on the SV1 as on the J90SE.
+
+   Killeen has interactive limits of 10 hours of CPU time and 80MW of
+   memory. Killeen also provides NFS file service to all the batch
+   machines, so users' home directories are available on any platform.
+
+Software Environment
+
+   All four machines are running Cray's brand of UNIX, UNICOS version
+   10.0.
+
+   The software environment is set up using modules. The modules
+   environment enables dynamic configuration of your environment; system
+   and application software can be added, deleted or switched with one
+   simple command.
+
+   For details on using different shells in your account, please see
+   Shells and Startup Files.
+
+Programming on the PVP Cluster
+
+   The PVP cluster supports programming in Fortran 90, C, C++, and
+   assembler (see man as).
+
+   The software environment is set up using the modules environment.
+
+   See Programming Libraries for information on available libraries.
+
+   MPI is supported for parallel programming. See the Cray Message Passing
+   Toolkit. Cray's compilers also support OpenMP programming and
+   Autotasking.
+     __________________________________________________________________
+
+File Systems
+
+   See Cray File Systems.
+
+   The two principal file systems are as follows:
+     * $HOME
+          + Permanent user storage
+          + 5 GBytes per user (monitor with quota)
+          + Local to Killeen
+          + NFS-mounted on batch-only machines
+          + Backed up
+          + Older files may migrate to tape (but still count against 5 GB
+            quota)
+     * $TMPDIR
+          + Temporary user storage
+          + No usage limit
+          + Local to each machine
+          + Destroyed utterly once session ends
+
+   On each machine the $TMPDIR file system which is mounted locally.
+   $TMPDIR is much faster and more efficient than $HOME for performing
+   I/O. Use of $TMPDIR for batch and interactive processing will increase
+   I/O bandwidth and decrease the time needed for processing.
+
+     * AFS (Andrew File System) file systems are available on the PVP
+       cluster in /afs, but AFS commands and other software are not.
+     * The HPSS file storage system is also available.
+     __________________________________________________________________
+
+Running Programs
+
+   See Running Programs on the PVP Cluster.
+
+   Interactive Computing
+
+   Killeen is the only machine available for interactive computing.
+   Killeen is a 20-processor SV1 which provides interactive services at
+   all times, and also runs some batch queues to the extent that
+   interactive response is not compromised. See Running Interactive Jobs
+   on the Crays.
+
+   The Batch System
+
+   Killeen supports interactive use at all times. Additionally, batch
+   queues are enabled on this machine at night (17:00 - 06:00 Pacific
+   Time) and on weekends (17:00 Friday - 06:00 Monday, Pacific Time).
+   During these times, both interactive and batch jobs are run.
+   Furthermore, batch queues may be manually started and stopped during
+   "prime time" (06:00 - 17:00 Monday - Friday), if the interactive load
+   is not too high.
+
+   The remaining machines are restricted to batch use only. The batch
+   system on the PVP systems is the Network Queuing Environment (NQE),
+   which manages the Network Queuing System (NQS). Please see The Cray
+   Batch System for an introduction to NQE and NQS commands. In
+   particular, the cqsub command is used to submit a batch job to NQE.
+   Jobs may be submitted in one of three priority classes: premium,
+   regular, or low. For details about the scheduling and charging
+   implications of these classes, see Priority Batch Scheduling.
+
+   A batch job runs in a queue determined by the requested memory and
+   whether the job is single-tasked (st_) or multi-tasked (mt_). On the
+   batch-only machines, your job will run in one of the following
+   queues(depending on the resources you request):
+
+   Queue       Memory Limit (MW) CPU Time Limit (HRS)  Disk Space Limit (GB)
+                                 Process    Request
+   debug_small  80                 0.5   0.5           80
+   st_80        80               120     121           80
+   st_256      256               120     121           80
+   mt_512      512               120     121           80
+
+   It should be noted that the 512MW queues represent half the physical
+   memory present on each batch machine, so efficient jobs of this size
+   should be multitasked to use about 8 CPUs as well. A single-processor
+   job at this memory size can cause high idle time and seriously impact
+   other users. NERSC reserves the right to terminate without warning any
+   large-memory (> 256MW) job that uses fewer than 4 CPUs.
+
+   On the interactive machine, the batch queues have the following
+   characteristics:
+
+      Queue    Memory Limit (MW) CPU Time Limit (HRS)  Disk Space Limit (GB)
+                                 Process    Request
+   debug_small        80           0.5        0.5               20
+      st_80           80           120        121               40
+     st_256           256          120        121               40
+
+   As a reminder, the above queues on Killeen are only enabled at night,
+   on weekends, and during weekdays if the interactive load is not too
+   high. The exception to this policy is the debug_small queue, which is
+   always enabled.
+
+   The debug queues are scheduled in a slightly different manner. The
+   following command lines show some of the ways to submit a batch script
+   named my_job to these queues:
+
+        Command line            Meaning
+   cqsub -q debug my_job  Run on any machine
+   cqsub -q debugk my_job Run on Killeen
+   cqsub -q debugb my_job Run on Bhaskara
+   cqsub -q debugs my_job Run on Seymour
+
+   In any case, the batch job should start quickly (i.e., within a few
+   minutes).
+   See Monitoring Cray Jobs for information on how to determine the status
+   of jobs and how to . viewing output files during the run.
+     __________________________________________________________________
+
+   Page last modified: Monday, 24-Sep-01 14:26:39
+   Page URL: http://hpcf.nersc.gov/computers/PVP/index.html
+   Contact: Webmaster <webmaster@nersc.gov>
+   Privacy and Security Notice

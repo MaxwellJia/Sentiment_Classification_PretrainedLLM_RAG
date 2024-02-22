@@ -1,0 +1,208 @@
+http://www.osti.gov/wet/wethelp.html
+
+                         Security/Disclaimer Notices
+
+                           Wind Energy Technology
+     __________________________________________________________________
+
+                                New Releases
+     __________________________________________________________________
+
+                             Distributed Search
+     __________________________________________________________________
+
+                             Search the Archive
+     __________________________________________________________________
+
+                                Related Links
+     __________________________________________________________________
+
+                                  Site Help
+     __________________________________________________________________
+
+                                  Comments
+     __________________________________________________________________
+
+                            Other Subject Portals
+     __________________________________________________________________
+
+                             WET Home | DOE Home
+               Office of Scientific and Technical Information
+                               product of the
+                            Office of Scientific
+                                and Technical
+                             Information (OSTI)
+
+            Wind Energy Technology (WET) Subject Portal Site Help
+
+General Information
+
+   The Wind Energy Technology (WET) Subject Portal site is a searchable
+   gateway that integrates diverse WET resources into one location. It
+   provides a means of searching and accessing databases that can be
+   linked to or searched via either the WET distributed search engine or
+   the WAIS search engine that retrieves information from the WET Archive.
+   Information on the WET Subject Portal Web site appears below.
+
+New Releases
+
+   The WET New Releases brings together technical report and journal
+   literature entered into the DOE Information Bridge and PubSCIENCE
+   within the past six months. This page, which is updated biweekly,
+   highlights new information of interest to WET users. When updated, the
+   last two weeks of New Releases are removed from this list but remain
+   available through the DOE Information Bridge and PubSCIENCE.
+
+The Distributed Search
+
+   The Distributed Search button takes you to a list of databases that
+   contain WET information and can be searched as a single database or in
+   parallel with the Distributed Explorer search engine. Each of the
+   target resources must have a search functionality on the host server
+   for its Web site or a database built and maintained within the
+   parameters of a database management software. Distributed Explorer will
+   then "talk" to each of these target search engines, causing them to, in
+   turn, query their own Web sites or databases. The results are returned
+   via the Distributed Explorer technology to the common interface on WET.
+
+Search Tips
+
+   You may choose which combination of databases you want to search.
+   Simply click on the check boxes of the sites you wish to query; the
+   system will put a checkmark in that box and include that server or
+   database in the final search. Use the "Clear" button to search or mark
+   new sources.
+
+   The WET Subject Portal site utilizes the function of the individual
+   server and database searches. All search capabilities and options may
+   not be available for each database. Specifics on each database and a
+   link to each site may be found under Database Description.
+
+   While the target Web sites may employ different search options, the
+   following search tips are generally true:
+
+     * Limiting the number of collections searched at one time will return
+       faster results.
+     * Full text is searched when it is searchable in the individual
+       database.
+     * Author and title searches are an option for most databases.
+     * The search engine is not case sensitive; you may enter either case.
+     * Single word or word phrases may be entered in the query box to
+       submit.
+     * If a phrase is entered, the "And" operator is assumed.
+     * The "Or" operator is recognized and will work regardless of "case."
+     * The wildcard character * (asterisk) may be used to match the word
+       stem.
+
+     Search Examples:
+
+          photons and colliders
+
+          photons or electrons
+
+          linear colliders
+
+          comput*
+
+   The resulting document titles or "hits" from your search query will be
+   segmented by database.   You may specify how many items you wish to
+   have displayed from each database, up to 250. However, there are cases
+   in which a target database has its own rules about how many documents
+   can be returned. In those cases, the target's rules override the
+   functionality of the WET Network.
+
+   Distributed searching, of necessity, exposes the differences between
+   databases. The WET Subject Portal site sorts your results by target
+   resource. This will help you to see these kinds of differences between
+   sites.
+
+   Distributed Explorer
+
+   Distributed Explorer is a system that provides a common user interface
+   for searching and retrieving information across heterogeneous datasets
+   over the Internet. Distributed Explorer can be configured to access a
+   variety of Web databases, independent of the full-text search engine or
+   database package being used. Distributed Explorer is driven by a set of
+   configuration files that define how Distributed Explorer interacts with
+   the full-text search engine of the Web database being searched. Access
+   to these Web databases is performed at a low-level using libwww, a
+   software library that is able to interact with Web servers simulating
+   user input into the search form of the Web database being accessed.
+
+   A configuration file must be written for each Web database being
+   accessed.   The configuration file specifies the parameters that must
+   be specified to access search form. The configuration file also
+   specifies how to parse the result list that is returned by the search
+   software of each Web database being accessed. This is needed to be able
+   to extract an author, title, etc. from each result list item.
+
+   Distributed Explorer does not index any of the Web databases that it
+   provides access to. User search requests are translated by the
+   Distributed Explorer server into the syntax that is understood by the
+   search engine of the Web database being searched. Search requests are
+   submitted in parallel to the various databases selected by the user.
+   (Copyright  http://www.iwapps.com)
+
+   Search the Archives  WAIS
+
+   Searching with a single term (oil):
+
+   Type a single word such as oil into the blank "Search terms(s)" line of
+   the form and then click on the Submit Query button. The next screen you
+   see will be the search results screen.
+
+   Searching for/with a multiple-word term/phrase (oil ADJ deposits, not
+   oil deposits):
+
+   Use ADJ between the two or three words in your phrase (oil ADJ
+   refining). The capitalized ADJ tells the WAIS software to retrieve only
+   those documents in which these two words appear adjacent to each other
+   somewhere in the full text.
+
+   Note: If you forget to insert ADJ, the WAIS software will automatically
+   assume an OR between the words in your phrase (multiple-word term).
+   This may bring you a much larger set of search results than you want.
+
+   Searching with Boolean Logic (AND, ADJ, OR, NOT):
+
+   Boolean logic will help you narrow and focus your searches to limit the
+   number of documents you retrieve.
+     * Use AND (capitalized) between words when you want to retrieve all
+       documents that mention both terms and you don't care if the two
+       terms appear next to each other.
+     * ADJ allows you to retrieve only those documents in which the two or
+       more search terms you input are adjacent to each other somewhere in
+       the full text.
+     * OR retrieves every document in which one of the words in your
+       search appears as well as every document in which both words
+       appear. As a result, you may have many documents returned.
+     * NOT is useful if you want to deliberately exclude a set of
+       documents that you think might otherwise show up in your search;
+       for example, you may search waste NOT nuclear
+
+   When forming complex queries, ones that use more than one Boolean
+   operator, it is generally best to use parentheses around pairs or
+   groups of terms that are, in turn, joined by a Boolean operator; for
+   example: (snowstorms OR tornadoes OR hurricanes) AND (safety ADJ
+   procedures).
+
+   Ensuring you retrieve all spellings of your search term (Stemming with
+   wildcards):
+
+   You can do one search that retrieves all words beginning with a
+   particular stem by adding an asterisk (*) at the end of the word stem.
+   The asterisk acts as a wildcard.
+
+Related Links
+
+   This section provides links to other commonly used WET databases and
+   Web sites. You may also sign up to receive a weekly PrePRINT Alert by
+   e-mail on a topic of interest.
+
+Document Ordering
+
+   Many items within the WET Subject Portal site are provided in
+   downloadable full-text. However, if you cannot obtain the full-text you
+   seek on this site, please check related or distributed links for
+   additional information. You may also be interested in ordering a
+   document.

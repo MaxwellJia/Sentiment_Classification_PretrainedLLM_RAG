@@ -1,0 +1,152 @@
+http://www.kepler.arc.nasa.gov/simulation.html
+
+                                                           Updated 9/28/00
+
+                      Transit Detection and Simulation
+
+                              [bus_people.gif]
+
+Detecting Transiting Planets
+
+     Detecting transit and reflected light signals are classical
+     signal-detection problems for deterministic signals in colored noise
+     (Van Trees 1968). Essentially, the optimal detector whitens the
+     observations and then correlates the whitened data with the signal
+     resulting from passing a transit through the same whitening filter.
+     An essential component of signal detection is the characterization
+     of the observational noise, including stellar variability. The
+     result is a time series of test statistics representing the
+     likelihood that a transit was occurring at each point in time.
+     Folding this time series at the orbital period of a planet
+     coherently adds the test statistics for the bin containing the
+     transit. The test statistics add incoherently if the wrong period or
+     bin is chosen. The detection threshold is set so that no more than
+     one false alarm occurs for the entire mission. Thus, the result is
+     still meaningful even if terrestrial planets are infrequent or the
+     mission had to be de-scoped. The detection rate depends on the SNR
+     of a single event, the number of observed events and the detection
+     threshold. The adaptive, nonparametric matched filter algorithm
+     suggested by Kay (1999) is well suited to Kepler's needs,
+     particularly when modified as per Jenkins (1999).
+
+     The number of independent tests depends on the signal to be detected
+     and the range of values each signal parameter can have. In the case
+     of transits, there are two basic parameters: period and phase (time
+     to first transit). For orbital periods of less than 2 years, there
+     are about 5x10^6 tests per star required, for a total of 5x10^11
+     tests. In order to have no more than one false alarm for the entire
+     experiment, a detection threshold of 7 sigma is required, assuming
+     Gaussian statistics, which is important for being able to address a
+     null result. We note that the measurement noise in the Tech Demo was
+     well characterized as being Gaussian. For the point design of a 4
+     sigma single event SNR the combined SNR of a set of four transits is
+     8 sigma, yielding a detection efficiency of 84%.
+
+     The figure below shows SNRs for four transits of an Earth-size
+     planet about an m[v]=12 G2 dwarf star as a function of transit
+     duration during periods of low, high and mean stellar variability.
+     Here, low, high and mean stellar variability correspond to data
+     collected by ACRIM 1 in 1985 and 1986, in the last half of 1988 and
+     in 1989 and over the entire data set, respectively. For transits
+     between 3 and 5 hours, 1 R[e] planets are detected at least 84% of
+     the time on average. If the transits are longer than 5 hours, 97%
+     are detected on average, and at least 84% are detected even if all
+     transits occur during high stellar activity. Planets of 1.3 R[e] are
+     detected virtually always out to m[v]=12, and about 88% of the time
+     for those orbiting m[v]=14 G-dwarf stars. Planets yielding average
+     SNRs below the threshold are also detected, but at a lower rate. For
+     example, planets with SNRs of 7 sigma and 6.5 sigma are detected 50%
+     and 30% of the time, respectively.
+
+     Note that a central Earth-analog passage lasts 13 hours. Since the
+     chord length of a circle falls as the cosine with distance from the
+     center >50% of transiting Sun-Earth-analogs have durations >11.3
+     hours, >70% are >9.2 hours. Quoting results for 6.5-hour periods
+     represents a conservative estimate of the single event SNR.
+
+                                  [SNR.gif]
+     Signal to Noise Ratio as a Function of Transit Duration for Various
+                            Stellar Variabilities
+   The three curves give the SNR for 4 combined transits about an m[v]=12
+    solar-like star at times of low, medium and high stellar variability.
+
+
+Simulated Transit Events
+
+     A simulation was performed to demonstrate the detectability of the
+     transit signal for an Earth-size planet in the presence of all the
+     noise that is expected to be in the data.
+    1. The stellar noise was generated to match the solar noise spectrum
+       obtained from the ACRIM 1 instrument aboard the SMM spacecraft to
+       form a 4 year data sequence.
+    2. Shot noise and pointing noise were added to the synthetic stellar
+       noise to model the case for an m[v]=12 G2V (solar-like) star.
+    3. A set of four 12 hour Earth-size transits (R=1.0 R[e]) was added to
+       the noise sequence.
+
+     A matched filter algorithm was applied to the data set to search for
+     planets with periods between 100 and 400 days. The peak event of 8.5
+     sigma indicated a planet with the correct period of 365 days, as
+     shown in the figure below. The probability of this event occurring
+     by chance is less than 1x10^-17 for Gaussian noise, demonstrating
+     the significance of the detection. The additional blue spikes result
+     from folding signals composed of multiple pulses. The red points are
+     the result for the same data set without the transits incorporated.
+
+                              [prob_occur.gif]
+           Probability of Occurrence by Chance for Simulated Data.
+     The strong minimum at 365 days in blue indicates the presence of a
+   planet with a high confidence level. The red points are the result for
+     the same data set without transits, with all events attributable to
+                                   noise.
+
+     The figure below shows the sections of the data used in the above
+     simulation. The individual transits are shown (left-hand scale),
+     along with the result of folding and adding the data at the correct
+     period derived with the detection algorithm (right-hand scale).
+
+                             [Tran_det_sim.gif]
+                        Transit Detection Simulations
+      The four sections of a light curve containing the transits of an
+   Earth-size planet (1.0 R[e]) are folded at the correct period, with the
+       sum shown in red. The presence of the transit is unmistakable.
+
+Detecting Giant-Inner Planets
+
+     For the case of detecting giant-inner planets by phase modulation of
+     reflected light, the number of tests depends only on the length of
+     observation and on the largest planetary period to be considered.
+     Stellar variability limits this search space to periods less than
+     about 7 days as shown in the figure below. Thus, there are about
+     1,278 tests per star, for a total of 1.3x10^8 tests (assuming the
+     solar rotation period is typical of all stars in the sample).
+     Jovian-size planets are detectable with periods less than 6 days and
+     Uranus-size planets with periods less than 2.5 days. Because the
+     signal amplitude depends on the planetary albedo, planets with low
+     albedos are more difficult to detect than that shown here.
+
+                             [pwr_spect_den.gif]
+      Detectability of Reflected Light from Short-Period Giant Planets
+    The blue, red and green curves represent the total noise and include
+   expected stellar variability, shot noise, CCD noise and pointing noise
+          appropriate for m[v]=10, 12, and 14 stars, respectively.
+     The blue spike at 4.2 days is the reflected light signature of a 51
+     Peg-type planet with an albedo of 0.5 (assumed to match Jupiter) in
+     orbit about a m[v]=10 star. At other periods, the strength of this
+       spike would vary, as given by the black dotted reflected light
+   envelope. Since this envelope exceeds the measurement noise curves for
+   periods less than about 7 days, giant planets with periods up to 7 days
+                               are detectable.
+     _______________________________________________________________
+
+   [finger.gif] Go to The Next Topic
+
+                 [calculator.gif] Return to: Mission Design
+
+
+                                [bumper.gif]
+                     Return to Kepler Mission Home Page
+
+
+
+   Curator: David Koch, dkoch@mail.arc.nasa.gov [mail.box.gif]

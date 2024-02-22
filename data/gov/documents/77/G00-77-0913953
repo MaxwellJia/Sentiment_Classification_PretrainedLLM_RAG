@@ -1,0 +1,162 @@
+http://nls3.nlm.nih.gov/MetaMap/demo.notes.pdf
+
+   MetaMap Demo Notes * General maps text to concepts (equivalently, finds
+   concepts in text allowing for normalization of text) characteristics:
+   knowledge intensive, minimal commitment parsing, principled evaluation
+   normal processing vs. term processing (correctness vs. breadth)
+   process: parsing, variant generation, candidate retrieval, candidate
+   evaluation, mapping con- struction access: interactive, batch, API
+   conversion to C (term processing) for vocabulary study * MetaMap
+   options * Examples normal processing: lung cancer variants: (-v) lung
+   cancer compound and multiple mappings: obstructive sleep apnea term
+   processing: (-zogm) thrombolysis use of threshold: (-zog -r 500)
+   continuous pump-driven hemofiltration full utterance: Physical fitness
+   is a major determinant of femoral neck and lumbar spine bone mineral
+   density. MetaMap Demo Notes August 29, 1996 * MetaMap options lan@nls3>
+   metamap -h MetaMap (Meta 95) Usage: metamap [] [] [] [] contains
+   labelled utterances (default is user_input), is a file for results
+   (default is .out), and is an optional tag file. metamap options:
+   [DEFAULT] -t --tag_text -z --term_processing -o --allow_overmatches -g
+   --allow_concept_gaps -a --no_acros_abbrs -u --unique_acros_abbrs_only
+   Warning: [DEFAULT] -l --stop_large_n Subject to change [DEFAULT] -b
+   --best_mappings_only -r --threshold -j --mesh_projection -q
+   --machine_output [DEFAULT] -p --plain_syntax -x --syntax -v --variants
+   -f --full_variants [DEFAULT] -c --candidates -n --number_the_candidates
+   [DEFAULT] -s --semantic_types [DEFAULT] -m --mappings -h --help -i
+   --info -d --dump_timing -w --warnings -y --dump_stats -0 --debug0 -1
+   --debug1 -2 --debug2 -3 --debug3 -4 --debug4 -5 --debug5 -6 --debug6
+   lan@nls3> Figure 1. MetaMap options MetaMap Demo Notes 2 * Normal
+   processing: lung cancer (term processing retrieves 1,202 candidates)
+   lan@nls3> metamap MetaMap (Meta 95) Control options: tag_text
+   stop_large_n best_mappings_only plain_syntax candidates semantic_types
+   mappings sentence: lung cancer : Processing lung cancer Phrase: lung
+   cancer Meta Candidates (7): 1000 Lung Cancer [Disease or Syndrome] 861
+   Cancer [Disease or Syndrome] 694 Lung [Body Part, Organ, or Organ
+   Component] 638 Pulmonary <1> (Pulmono-) [Body Part, Organ, or Organ
+   Compo- nent] 638 Pulmonary <2> [Intellectual Product] 601 Pneumonia
+   [Disease or Syndrome,Finding] 601 Pulmonary Artery [Body Part, Organ,
+   or Organ Component] Meta Mapping (1000): 1000 Lung Cancer [Disease or
+   Syndrome] sentence: :lan@nls3> Figure 2. Lung cancer using normal
+   processing MetaMap Demo Notes 3 * Variants: (-v) lung cancer lan@nls3>
+   metamap -v MetaMap (Meta 95) Control options: tag_text stop_large_n
+   best_mappings_only plain_syntax candidates semantic_types mappings
+   variants sentence: lung cancer : Processing lung cancer Phrase: lung
+   cancer lung variants (n=16): arteria pulmonalis[9="sdss"] arterial
+   vein[9="sdss"] lung[0=[]] lungs[4="ss"] peripneumonia[7="sds"]
+   peripneumonitis[9="sdss"] pneumal[2="s"] pneumonia[5="sd"]
+   pneumonic[2="s"] pneumonic fever[7="sds"] pulmonal[4="ss"]
+   pulmonary[2="s"] pulmonary artery[5="sd"] pulmonary fever[7="sds"]
+   pulmonic[2="s"] truncus pulmonalis[7="sds"] cancer variants (n=7):
+   ca[2="a"] can[5="ad"] cancer[0=[]] cancerous[3="d"] cancriform[3="d"]
+   carcinomatous[2="s"] carcinous[4="ss"] Meta Candidates (7): 1000 Lung
+   Cancer [Disease or Syndrome] 861 Cancer [Disease or Syndrome] 694 Lung
+   [Body Part, Organ, or Organ Component] 638 Pulmonary <1> (Pulmono-)
+   [Body Part, Organ, or Organ Component] 638 Pulmonary <2> [Intellectual
+   Product] 601 Pneumonia [Disease or Syndrome,Finding] 601 Pulmonary
+   Artery [Body Part, Organ, or Organ Component] Meta Mapping (1000):
+   Figure 3. Variants of lung and cancer MetaMap Demo Notes 4 * Compound
+   and multiple mappings: obstructive sleep apnea lan@nls3> metamap
+   MetaMap (Meta 95) Control options: tag_text stop_large_n
+   best_mappings_only plain_syntax candidates semantic_types mappings
+   sentence: obstructive sleep apnea : Processing obstructive sleep apnea
+   Phrase: obstructive sleep apnea Meta Candidates (7): 913 Apnea,
+   Obstructive [Disease or Syndrome] 901 Apnea, Sleep [Disease or
+   Syndrome] Apneas, Sleep 827 APNOEA (Apnea) [Disease or
+   Syndrome,Finding] 827 Sleep [Mental Process,Organism Function] 755
+   Sleeplessness (Insomnia) [Finding,Mental or Behavioral Dysfunc-
+   tion,Sign or Symptom] 755 Sleepy (Somnolent) [Sign or Symptom] Meta
+   Mapping (901): 901 Apnea, Sleep [Disease or Syndrome] Meta Mapping
+   (901): 913 Apnea, Obstructive [Disease or Syndrome] 827 Sleep [Mental
+   Process,Organism Function] Figure 4. Mappings for Obstructive sleep
+   apnea MetaMap Demo Notes 5 * Term processing: (-zogm) thrombolysis
+   (normal processing returns nothing) lan@nls3> metamap -zogm MetaMap
+   (Meta 95) Control options: tag_text stop_large_n best_mappings_only
+   plain_syntax candidates semantic_types term_processing
+   allow_overmatches allow_concept_gaps sentence: thrombolysis :
+   Processing thrombolysis Phrase: thrombolysis Meta Candidates (14): 833
+   Thrombolysis, Therapeutic (Thrombolytic Therapy) [Therapeutic or Pre-
+   ventive Procedure] 761 Thrombolytic Agents (Fibrinolytic Agents)
+   [Pharmacologic Substance] 714 Thrombolysis of coronary artery by
+   intravenous infusion [Therapeutic or Preventive Procedure] 696
+   Thrombolysis of coronary artery by intracoronary infusion, including
+   selective coronary angiography [Diagnostic Procedure] 678 Intracoronary
+   artery thrombolytic infusion (Injection of thrombolytic agent direct
+   into coronary artery) [Therapeutic or Preventive Proce- dure] 650
+   Intra-arterial infusion of thrombolytic agent [Therapeutic or Preven-
+   tive Procedure] 628 SINGLE VESSEL PERCUTANEOUS TRANSLUMINAL CORONARY
+   ANGIOPLASTY (PTCA) WITH THROMBOLYTIC AGENT [Therapeutic or Preventive
+   Procedure] 628 Single vessel percutaneous transluminal coronary
+   angioplasty with thrombolytic agent infusion [Therapeutic or Preventive
+   Procedure] 625 Infusion of intra-arterial thrombolytic agent with
+   percutaneous transluminal coronary angioplasty [Therapeutic or
+   Preventive Proce- dure] 625 Single vessel percutaneous transluminal
+   coronary angioplasty without mention of thrombolytic agent [Therapeutic
+   or Preventive Procedure] 623 Removal of coronary artery obstruction by
+   percutaneous transluminal balloon with thrombolytic agent [Therapeutic
+   or Preventive Procedure] 623 SINGLE VESSEL PERCUTANEOUS TRANSLUMINAL
+   CORONARY ANGIOPLASTY (PTCA) WITHOUT MENTION OF THROMBOLYTIC AGENT
+   [Therapeutic or Preventive Proce- dure] 620 Infusion of intra-arterial
+   thrombolytic agent with percutaneous transluminal coronary angioplasty,
+   multiple vessels [Therapeutic or Preventive Procedure] 620 Infusion of
+   intra-arterial thrombolytic agent with percutaneous transluminal
+   coronary angioplasty, single vessel [Therapeutic or Pre- ventive
+   Procedure] Figure 5. Thrombolysis using term processing MetaMap Demo
+   Notes 6 * Use of threshold: (-zog -r 500) continuous pump-driven
+   hemofiltration (246 candidates if no threshold) lan@nls3> metamap -zog
+   -r 500 MetaMap (Meta 95) Control options: tag_text stop_large_n
+   best_mappings_only plain_syntax candidates semantic_types mappings
+   term_processing allow_overmatches allow_concept_gaps threshold=500
+   sentence: continuous pump-driven hemofiltration : Processing continuous
+   pump-driven hemofiltration Phrase: continuous pump-driven
+   hemofiltration Meta Candidates (10): 750 Hemofiltration [Therapeutic or
+   Preventive Procedure] 722 Hemofiltration, Continuous Arteriovenous
+   (CAVH) [Therapeutic or Pre- ventive Procedure] 583 Arteriovenous
+   Hemofiltration [Therapeutic or Preventive Procedure] 583 Extracorporeal
+   hemofiltration, NOS [Therapeutic or Preventive Proce- dure] 583
+   Hemofiltration Units [Medical Device] 583 Venovenous Hemofiltration
+   [Therapeutic or Preventive Procedure] 549 Drive [Mental Process] 549
+   Pumps [Medical Device] 500 CONTINUOUS INSULIN INFUSION PUMP [Medical
+   Device] 500 Drivers [Medical Device] Meta Mapping (916): 722
+   Hemofiltration, Continuous Arteriovenous (CAVH) [Therapeutic or Pre-
+   ventive Procedure] 549 Pumps [Medical Device] 549 Drive [Mental
+   Process] Figure 6. Continuous pump-driven hemofiltration with a
+   threshold MetaMap Demo Notes 7 * Full utterance: Physical fitness is a
+   major determinant of femoral neck and lumbar spine bone mineral density
+   lan@nls3> metamap MetaMap (Meta 95) Control options: tag_text
+   stop_large_n best_mappings_only plain_syntax candidates semantic_types
+   mappings sentence: Physical fitness is a major determinant of femoral
+   neck and : lumbar spine bone mineral density. : Processing Physical
+   fitness is a major determinant of femoral neck and lum- bar spine bone
+   mineral density. Phrase: Physical fitness Meta Candidates (6): 1000
+   Physical Fitness [Qualitative Concept] 861 Physical [Biomedical
+   Occupation or Discipline] 789 Fit, NOS (Seizures) [Disease or
+   Syndrome,Sign or Symptom] 789 Physic (Physics) [Occupation or
+   Discipline] 761 Physician (Physicians) [Professional or Occupational
+   Group] 755 Physicists [Professional or Occupational Group] Meta Mapping
+   (1000): 1000 Physical Fitness [Qualitative Concept] Phrase: is Meta
+   Candidates (0): Meta Mapping: Phrase: a major determinant Meta
+   Candidates (2): 761 determination [Laboratory Procedure] 694 Major
+   [Qualitative Concept] Meta Mapping (838): 694 Major [Qualitative
+   Concept] 761 determination [Laboratory Procedure] Phrase: of femoral
+   neck Meta Candidates (7): 964 Femur Neck [Body Location or Region] 861
+   Neck [Body Location or Region] 827 Necking [Social Behavior] 805
+   Cervical [Body Part, Organ, or Organ Component] 768 Cervix (Cervix
+   Uteri) [Body Part, Organ, or Organ Component] 638 Thigh [Body Location
+   or Region] 623 Femur [Body Part, Organ, or Organ Component] Meta
+   Mapping (964): 964 Femur Neck [Body Location or Region] (Continued
+   below) Figure 7. Physical fitness is a major determinant of femoral
+   neck and lumbar spine bone mineral density. MetaMap Demo Notes 8
+   Phrase: and Meta Candidates (0): Meta Mapping: Phrase: lumbar spine
+   bone mineral density. Meta Candidates (11): 884 Bone Mineral Density
+   (Bone Density) [Laboratory or Test Result,Quan- titative Concept] Bone
+   Density 804 Bone (Bone and Bones) [Body Part, Organ, or Organ
+   Component,Tissue] 804 Bone Mineralization (Calcification, Physiologic)
+   [Organ or Tissue Function] 804 Bone, NOS (Skeleton) [Body System] 804
+   density [Quantitative Concept] 804 mineral (Minerals) [Inorganic
+   Compound] 748 OS (Opening snap) [Finding] 733 Mineralization [Acquired
+   Abnormality] 673 Lumbar spine (Lumbar Vertebrae) [Body Part, Organ, or
+   Organ Compo- nent] 637 Spine [Body Part, Organ, or Organ Component]
+   Meta Mapping (893): 673 Lumbar spine (Lumbar Vertebrae) [Body Part,
+   Organ, or Organ Compo- nent] 884 Bone Mineral Density (Bone Density)
+   [Laboratory or Test Result,Quan- titative Concept] Figure 7.
+   (Concluded) MetaMap Demo Notes 9

@@ -1,0 +1,78 @@
+http://www.fnal.gov/cd/xterm/FAQ.html
+
+            FNAL X Terminals & Software - Frequently Asked Questions
+
+   This describes some FAQ for the FNAL X hardware and software. Last
+   updated June 7, 1999.
+
+I. General Information - Available Documentation
+
+  1. What are the sources of X Hardware and Software information for FNAL?
+
+   A number of Technical Notes have been written to answer various
+   questions concerning X issues. They are available from the Computing
+   Division Library, WH8NE, and on line in html format:
+
+     TN0050: Distributed Graphics Applications in X Protocol
+
+     TN0072: Evaluation of the VXT2000 X Terminal
+
+     TN0082: Using NCD Flash Memory
+
+  2. Is there on-line information available?
+
+   Yes - There is information in html format. The URL is
+
+     http://http://www.fnal.gov/cd/xterm From there you can navigate to
+   most of the information available on the FNAL X environment.
+
+  3. Where can I get help with X terminal questions?
+
+   Questions on X hardware and siftware can be directed to the Computing
+   Division help desk, X2345.
+
+II. X Terminals
+
+  1. What X terminal models are recommended by the Computing Division?
+
+   At present, certain models of Network Computind Devices (NCD) and
+   Tektronix X terminals are recommended. For a complete description,
+   refer to TN0060.
+
+  2. How do I order an X Terminal?
+
+   The Computing Division no longer recommends buying X terminals.
+
+  3. What do I do when my terminal arrives?
+
+   Using the manuals provided with the unit, hooking the terminal onto the
+   FNAL LAN is pretty straightforward. Once that has been done, you need
+   to get an IP address from the network group. Fill out an submit the
+   on-line form .
+
+  4. After it's hooked up, how can I make it work?
+
+   After you have an IP address for your unit, you will need to *boot* the
+   terminal. You are advised to make use of the fnalu boot service. This
+   service is described in BootServAnn.html. The basic configuration
+   provided when using the fnalu boot service is very intuitive; you
+   should be able to connect to any host on the network very easily once
+   your terminal has been booted.
+
+III. X Software
+
+  1. How do I run X software, including PAW and DECWindows applications, on my X
+  terminal?
+
+   A complete description of this process is described in TN0050.
+
+  2. What system software will run on my X terminal?
+
+   In general nearly all of the software provided with IRIX, SunOS,
+   Solaris, AIX which will run on the system consoles will also work on X
+   terminals. There are exceptions, particularly in the Case of IRIX,
+   which has some GL applications which will not run on an X server
+   (terminal). DECWindows application software on VAX and Ultrix machines,
+   including DECTerms, will run on X terminals. In particular, the command
+   % ls /usr/bin/X11 will give you a list of system-provided X client
+   programs. Consult the manuals for the host computers for more details.

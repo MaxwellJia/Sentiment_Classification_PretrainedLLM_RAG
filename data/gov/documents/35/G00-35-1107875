@@ -1,0 +1,209 @@
+http://hpcf.nersc.gov/accounts/accounts.html
+
+   NERSC High Performance Computing
+
+   You are here: hpcf / accounts / accounts You came from:
+     __________________________________________________________________
+
+                    Introduction to NERSC Account Management
+
+   Sections of this document
+     * Obtaining Allocations and Accounts
+     * Allocation Units
+     * Allocation Management
+     * Usage Reporting
+     * What happens if a repo or user balance is negative?
+     * User Policies
+     * Username Management
+
+Obtaining Allocations and Accounts
+
+   At NERSC allocations are made for projects that are funded by DOE's
+   Office of Science. Starting in FY 2000 the allocations process has
+   instituted a broader scientific peer review and allows a certain number
+   of allocations to be made for projects that aren't directly funded by
+   DOE's Office of Science but that fulfill its mission requirements. See
+   New NERSC Allocation Process Starting in FY 2000.
+
+   Project accounts are called repositories (repos). Every year in the
+   June to July timeframe Principal Investigators apply for funding for
+   both existing and new repositories. For information on the allocations
+   process, see the Allocations page.
+
+   Allocations are made for the Cray PVP Cluster, the MPP systems (Cray
+   T3E and IBM SP) and the HPSS mass storage system. As of 1999 all Cray
+   and SP usernames have corresponding usernames in HPSS. A user with an
+   active NERSC user account may apply for an account on the NERSC Math
+   and Visualization Servers, and may request an AFS shared file system
+   account by contacting the Account Support group.
+
+   As part of the allocations process, each PI specifies which existing
+   users should be continued for the next fiscal year, and what people to
+   add as new users. For new repos, the PI can specify which users to add.
+   In order to communicate effectively with users and in order to abide by
+   DOE computer use regulations we must have the following information for
+   each user: name, citizenship, email address, work phone number, and
+   work institution (organization). Users are given login names, also
+   called usernames, that are associated with repositories. On the T3E and
+   SP only one username per user is allowed. On the PVP cluster users must
+   use one of their existing usernames when they get added to a new repo.
+   PVP users are encouraged to combine their existing usernames into one
+   if they wish to. Please contact the Account Support group if you wish
+   to do this.
+
+   The PI may designate repo managers who help to administer the repo. At
+   any time during the fiscal year (which runs from October 1 through
+   September 30) PIs and repo managers can request user additions to and
+   deletions from their repository using the NIM web interface: use the
+   "Add/Delete User" link in NIM's main menu (located in the leftmost
+   frame).
+
+Allocation Units
+
+   On the PVP Cluster the allocation unit is the "Cray Resource Unit"
+   (CRU) hour. See Account Charging on the PVP Cluster.
+
+   On the MPP systems the allocation unit is the "MPP Hour": 1 MPP hour
+   equals 1 T3E processor hour. See Accounting on the T3E or Accounting on
+   the SP. .
+
+   On HPSS the allocation unit is the Storage Resource Unit (SRU) based on
+   storage used in HPSS and file transfers. See NERSC Storage Resource
+   Units.
+
+Allocation Management
+
+   Repositories that haven't used significant amounts of time by mid-year
+   will be adjusted by transferring a part of the unused balance to the
+   corresponding DOE Office reserve:
+
+     * On April 1:
+          + if usage is less than 20% transfer 25% of the unused balance
+          + if usage is less than 10% transfer 50% of the unused balance
+     * On July 1:
+          + if usage is less than 30% transfer 25% of the unused balance
+          + if usage is less than 20% transfer 50% of the unused balance
+          + if usage is less than 10% transfer 80% of the unused balance
+     * On August 1:
+          + if no usage close the repo and transfer balance to the reserve
+
+Usage Reporting
+
+   Usage reporting is accomplished using the NERSC Information Management
+   system NIM..
+
+  What happens if a repo or user balance is negative
+
+   Accounting information is sent from computers to the accounting system
+   once daily (in the early morning, Pacific Time). At this time actions
+   are taken if a repo or user balance is negative.
+
+   If a repo runs out of time all usernames which are not associated with
+   another repository of the same allocation type (either MPP or PVP) are
+   restricted. Restricted users are able to log in, but cannot submit
+   batch jobs, run parallel jobs, or run lengthly interactive programs.
+
+   Usernames that are associated with another repo (of the same allocation
+   type) that has a positive account balance are able to run jobs as
+   usual, but are not able to charge to the overdrawn repo.
+
+   The PI and repo managers receive an email notifying them that the repo
+   is negative. They should send an email to their NERSC Monitor stating
+   how much time the repo needs for the rest of the fiscal year.
+
+   If and when the repo receives additional time, any users that have been
+   restricted will be unrestricted the following morning (when the
+   accounting updates occur).
+
+   Likewise, when a user goes over her/his individual "allowed percent" in
+   a given repo, that user is restricted if s/he has no other repo to
+   charge to. The user receives an email to this effect. The user should
+   contact the repository's PI or a repo manager: for contact information
+   click the More Repo Info link in NIM's Repository Summary Frame. See
+   the NIM Users Manual for more information on using NIM. A PI or repo
+   manager can change the user's allowed percent using the "Update User
+   List" link in NIM's Repository Summary Frame.
+
+User Policies
+
+     * Computer Use Policies
+     * Password Policy and Procedures
+     * Account Ownership Policies
+     * Acknowledgement Policy
+
+Username Management
+
+   On most NERSC platforms, each user has a single username, which can
+   charge to one or more repos.
+
+   Your username can be in one of the following states:
+
+   Active
+          The usual state for active users in repos with a positive
+          balance.
+
+   Restricted
+          This happens if either the user or the repo runs out of time.
+
+          On the SP, T3E, and PVP cluster a username is restricted if a
+          (username, repo) pair runs out of time:
+
+          + If the the user can still charge to some repo, the depleted
+            repo is removed from the list the user can charge to.
+          + If the user has no repo to charge to the user's interactive
+            computing is limited and no batch computing is allowed.
+
+          When funds are restored, the user is unrestricted.
+
+   Disabled
+          The user can no longer login to a system, but the user's account
+          and files remain intact. A disabled user should contact the
+          Account Support group to be re-enabled. Disabling happens:
+
+          + after 5 failed login attempts.
+          + if a username is used by anyone other than the person to whom
+            it is assigned.
+          + if needed for security reasons.
+          + if a username hasn't been used in the past 120 days. This is
+            checked at the beginning of every month. Affected users are
+            notified by email.
+
+          Users who exhaust their storage allocations will receive an
+          email to that effect. After two such email warnings a user's
+          access to HPSS may be turned off.
+
+   Deleted
+          The username has been deleted from a system. Note: the below has
+          not been implemented as of April, 2001. This happens when a PI
+          or account manager requests that the username be removed,
+          usually as part of the account renewal process for the next
+          fiscal year (although a PI or account manager may request this
+          at any time). There are two cases:
+
+         1. The username is removed from one system but remains active on
+            other(s):
+               o Files in the user's home directory are archived to HPSS.
+         2. The username is removed from all systems:
+               o Files in the user's home directories are moved to HPSS.
+               o The user's HPSS files are then moved to an archival area.
+               o Files in the HPSS archival area are kept for 18 months,
+                 after which time they may be deleted.
+               o To retrieve archived files or to obtain a listing of such
+                 files contact the Account Support group.
+
+          The user is notified by email that her/his username is to be
+          removed and is given 30 days to clean up (move files to a
+          location owned by an active NERSC username or to the user's
+          desktop, for example). After that month, all files in the home
+          directory are archived to HPSS.
+
+          The PI and account managers are notified and warned that if they
+          want any data to remain active they must move the data to an
+          active username before the end of the 30 days. After the 30 days
+          the data will still be retrievable from HPSS for 18 months.
+     __________________________________________________________________
+
+   Page last modified: Wednesday, 30-May-01 14:58:53
+   Page URL: http://hpcf.nersc.gov/accounts/accounts.html
+   Contact: Webmaster <webmaster@nersc.gov>
+   Privacy and Security Notice

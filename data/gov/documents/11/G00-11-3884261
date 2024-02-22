@@ -1,0 +1,178 @@
+http://www.ops.sgp.arm.gov/Instrument_logs/ilogmaps/ilogs/CO2Flux/ILogCO2Flux.html
+
+   CO^2 Flux/Sampling System Instrument Log
+
+   CO^2 Flux
+
+   C1
+
+   CF Lamont, OK 60M Tower-AOS Trailer
+
+   Date
+
+   Operator
+
+   Comments
+
+   12/3/01
+
+   CAM
+
+   Instrument mentor notified Site Ops that the CO2 system was not
+   generating any data since 12/1.  Status check found an error message on
+   the screen indicating Com Port 1 could not be opened.  Rebooted the
+   computer at 1721 GMT.  RTS status O.K. at 1723 GMT.
+
+   11/26/01
+
+   CAM
+
+   Instrument mentor notified Site Ops that the CO2 system was not
+   generating any data.  Status check found an error message on the screen
+   indicating Com Port 1 could not be opened.  Rebooted the computer at
+   1851 GMT.  RTS status O.K. at 1853 GMT.
+
+   11/05/2001
+
+   TMG
+
+   Mentor reports that the 60m Flux has not been working properly since D4
+   program was installed and requests that the following steps be
+   performed on the 60m Flux computer. 1.) Move raw and processed data to
+   e:\Data and 2.) Disable D4 time protocol program. Technician moved all
+   the raw data files in the collection directory (raw (M*)to the larger
+   NTFS partition (e:\data\). Technician then disabled the D4 clock
+   program. Computer rebooted and RTS at 2100 GMT.
+
+   10/25/01
+
+   CM/TG
+
+   The CO2 flux time was 9 minutes and 26 seconds ahead of SDS time.
+   Installed D4 program on the CO2 computer and configured it to sync the
+   clock to SDS every 15 minutes.  Updated the time at 1835 GMT.  RTS
+   status O.K. at 1840 GMT.
+
+   10/24/01
+
+   CAM
+
+   Instrument mentor informed Site Ops that no data was being collected
+   from the CO2 Flux system for the past couple of days and requested that
+   the computer be rebooted.   The program was running and the system
+   appeared normal.  Stopped the program and rebooted the computer as
+   requested at 1743 GMT.   When the program restarted there was an error
+   opening Com Port 1.  Rebooted again at 1745 GMT and this time no errors
+   were encountered.  RTS at 1747 GMT.    Mentor later found that the
+   system had recovered prior to the reboot.
+
+   7/3/01
+
+   CAM
+
+   Instrument mentor notified Site Ops that the CO2 Flux system had not
+   collected any files since Friday, 6/29.  T/S found that the Gillsonic
+   was minimized which causes it to freeze.  Maximized Gillsonic program
+   and RTS status O.K. at 1312 GMT.  Suspect that the computer was
+   inadvertently power cycled during maintenance to the PGS system on 6/29
+   and the program never started.
+
+   5/23/01
+
+   MR
+
+   The instrument mentor wants the 60 meter instruments power cycled.
+   Power cycled the instruments at 1455. RTS at 1510.
+
+   4/13/01
+
+   Mentor
+
+   The CO2 flux computer has been relocated to the new building at the
+   base of the 60M tower. The new building was installed to house the
+   Precision Gas Sampling (PGS) equipment.
+
+   3/21/01
+
+   CAM
+
+   Instrument mentor asked if the CO2 Flux computer could be configured to
+   automatically restart after a power failure to minimize data loss.
+   Stopped the CO2 Flux program at 1800 GMT. Entered the BIOS setup
+   utility and enabled the AC Power Loss Restart option. Restarted the
+   computer and program and then disconnected the AC power for 5 seconds
+   to test the restart. Applied AC power and the computer powered itself
+   on as desired. However, the Logon prompt came up and the CO2 Flux
+   program would not start until the proper username and password were
+   entered to log on. RTS the system at 1810 GMT to research auto logon
+   capabilities. Found that the registry could be modified to perform an
+   auto logon. Stopped the program at 2015 GMT and made the necessary
+   registry changes. Tested the system several times and found that the
+   computer will now automatically restart and log on. RTS at 2058 GMT.
+
+   2/26/01
+
+   CAM
+
+   Marc Fischer notified Site Ops that he had not received files from the
+   instrument since 2/24. T/S found that the C02 Flux computer was powered
+   off. The site experienced a 1 hour power outage on 2/24 which had
+   drained the UPS batteries and caused the computer to power off.
+   Restored computer power at 2029 GMT. RTS status O.K.
+
+   2/7/01
+
+   CM
+
+   Marc Fischer notified Site Ops that he was not receiving data from the
+   instrument. T/S found that the PC was powered off. The site experienced
+   some problems with one leg of AC power on 2/5. This caused some
+   problems with some of the smaller UPS's and the UPS probably shut the
+   computer down then. Powered the computer on and RTS at 1922 GMT.
+
+   11/17/00
+
+   KT
+
+   At 1937 GMT powered off computer to install 360 UPS. At 1941 GMT
+   plugged instrument computer into UPS and left monitor plugged into
+   surge protector. At 1942 GMT powered computer on. Status ok. RTS at
+   1952 GMT.
+
+   11/16/00
+
+   TG
+
+   Instrument mentor reported that the flux system stopped collecting data
+   at 1930 GMT on 11/14. T/S found the computer was not logged on to.
+   Logged on and the flux program started working. Apparently, the system
+   had a power bump the day before that caused the computer to reboot. An
+   operator must log into the system for the software to work properly.
+
+   11/13/00
+
+   TG
+
+   Set the CO2 Flux clock to CST time. The computer was previously set to
+   PST.
+
+   11/9/00
+
+   CW
+
+   Rebooted CO2 Flux computer following tower maintenance.
+
+   9/20/00
+
+   TG
+
+   Mentor reported that the computer was locked up. T/S indicates that
+   root drive was filled with data files. Technician created a data
+   directory and copied all data files into the new directory. Rebooted
+   computer and RTS status ok.
+
+   9/13/00
+
+   CW
+
+   CO2 Flux station installed on the 60m tower from 1730-2230 GMT.

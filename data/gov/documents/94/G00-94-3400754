@@ -1,0 +1,25 @@
+http://lnx29.ncep.noaa.gov/maps/snow.html
+
+EMC: Global .5-deg snow analysis (Snow depth unit is mm water equivalent)
+
+   The snow analysis starts with the 47-km daily Air Force global snow
+   depth analysis and the 23-km daily NESDIS northern hemisphere snow
+   cover analysis. We interpolate both to a global .5-deg lat/long grid
+   using an area-average interpolation algorithm written by M. Iredell.
+   Only points with non-zero snow are entered in the interpolation.
+
+   We use the NESDIS snow cover analysis to quality-control the snow depth
+   field in the following way: If NESDIS field has no snow at a grid
+   point, we remove the snow from the snow depth field. If NESDIS field
+   has snow but the snow depth field indicates no snow, we arbitrarily add
+   2.5 mm of water equivalent snow to the data.
+
+   The first chart is the NESDIS snow conver field where snow cover
+   greater than 50 % is shaded. We use 50% as the snow/no-snow limit. The
+   second chart is the resulting snow depth analysis. The third chart is
+   the southern hemisphere snow depth analysis. In addition, the snow
+   cover and depth over North America are also included
+
+   Check the dates on the chart as we will try to map daily the data from
+   the previous day. The snow depth is converted from the water-equivalent
+   snow amount with a 10 to 1 ratio in the display.

@@ -1,0 +1,332 @@
+http://nls3.nlm.nih.gov/MetaMap/semantic_ir.93.pdf
+
+   Semantic Processing in Information Retrieval Thomas C. Rindflesch and
+   Alan R. Aronson National Library of Medicine Bethesda, MD 20894
+   Intuition suggests that one way to enhance the infor- used in
+   conjunction with structured queries. Hersh et mation retrieval process
+   would be the use of phrases al. [3] suggest that adding some form of
+   semantic pro- to characterize the contents of text. A number of cessing
+   to phrasal-based information retrieval may researchers, however, have
+   noted that phrases alone improve performance. In this paper, we explore
+   an do not improve retrieval effectiveness. In this paper approach to
+   semantic processing which adds to the we briefly review the use of
+   phrases in information information available about a text by specifying
+   the retrieval and then suggest extensions to this paradigm
+   relationships that exist among the concepts repre- using semantic
+   information. We claim that semantic sented by the phrases in the text.
+   (Also see [17, 18]). processing, which can be viewed as expressing
+   rela- As will be seen below, we base semantic processing tions between
+   the concepts represented by phrases, on an underspecified syntactic
+   analysis and extensive will in fact enhance retrieval effectiveness.
+   The avail- variant generation, which together support the robust
+   ability of the UMLS® domain model, which we exploit mapping of phrases
+   to terms in the UMLS Meta- extensively, significantly contributes to
+   the feasibility thesaurus®. of this processing. SYSTEM OVERVIEW
+   INTRODUCTION Our system first assigns a syntactic analysis to input
+   Information retrieval research is keenly interested in from either a
+   query or document. At the heart of the improving retrieval
+   effectiveness beyond that possible approach is a mapping of this
+   structure to concepts in by using key words alone. One possibility is
+   the use of the UMLS domain model [19]. The most important phrases; and
+   an array of approaches to the treatment information which is then
+   available for further analy- of phrases for information retrieval can
+   be found in sis is a semantic type for each concept which is situ- the
+   recent literature. These approaches vary most sig- ated in a network of
+   such types. Further semantic nificantly with respect to the amount of
+   linguistic processing constructs a predicate argument structure
+   analysis brought to bear in extracting phrases from which determines
+   how the concepts discovered in the free text, ranging from essentially
+   none to a full syn- previous phase interact within a particular
+   linguistic tactic parse. The barrier word method, for example, as
+   structure. For example, in slightly simplified form, demonstrated by
+   Tersmette et al. [1] considers a our syntactic component assigns the
+   underspecified phrase to be any string occurring between a list of bar-
+   structure (1b) to the input (1a). Thermogram and men- rier words. A
+   more extensive analysis employs barrier ingitis map to the UMLS
+   concepts shown in (1c), words in addition to some variant generation,
+   but which is the semantic interpretation for this example attempts no
+   (or very little) linguistic analysis [2,3,4, and provides both the UMLS
+   concepts as well as the 5,6]. Systems which exploit linguistic
+   structure in associated semantic types. The semantic interpreta-
+   information retrieval may be based on a full syntactic tion specifies
+   the relationship which obtains between analysis or some form of
+   underspecified structure the concepts in the input phrase.
+   [7,8,9,10,11,12,13,14]. (1) a. Use of thermogram in detection of
+   meningitis. Unfortunately, the use of phrases in information b.
+   noun_phrase( retrieval-regardless of the method used to generate
+   [head(use)], them-has so far not been shown to contribute signif-
+   [prep(of), head(thermogram)], icantly to retrieval effectiveness (see
+   [9,15,3]). Due to [prep(in), head(detection)] the intuitive appeal of
+   the use of phrases, a number of [prep(of), head(meningitis)])
+   researchers have investigated enhancements to c. detection(
+   phrasal-based methods. Lewis and Croft [16], for theme(head(meningitis,
+   example, discuss the use of term clustering of syntac-
+   concept("Meningitis"), tic phrases, while Croft et al. [7] examine
+   phrases semtype(`Disease or Syndrome'))), instr(head( thermogram, head
+   and distinguished from treated has important concept("Thermography"),
+   consequences during subsequent processing. We semtype(`Diagnostic
+   Procedure')))) claim that the structural information provided by this
+   We have a running prototype which produces under- analysis contains the
+   optimal amount of information specified syntactic analysis,
+   successfully maps noun for further processing, namely the mapping of
+   simple phrases to the UMLS domain model, and then builds noun phrases
+   to concepts in UMLS and the construc- semantic structures. tion of a
+   semantic interpretation. MAPPING PHRASES IN FREE TEXT TO THE After all
+   noun phrases have been identified, we map UMLS METATHESAURUS these
+   structures to concepts in the Metathesaurus using a comprehensive
+   mapping program which We have attempted to combine the most effective
+   employs extensive variant generation as well as a aspects of the
+   various approaches to using phrases in principled way of dealing with
+   partial matches information retrieval. Our system first identifies
+   between the phrase and Metathesaurus concepts. phrases in free text
+   using an underspecified syntactic analysis. We claim that such an
+   approach supports the Variant generation is determined by the
+   information semantic representations which can effect accurate
+   available from our lexicon and associated knowledge matching of queries
+   to relevant documents but avoids bases. Variants are recursively
+   computed by generat- the problems associated with a fully specified
+   syntac- ing morphological variants, synonyms, acronyms and tic analysis
+   as noted, for example, by Salton and abbreviations for each lexical
+   word in the input Smith [20]. Our syntactic component is closely allied
+   phrase. For example, all variants for the phrase ocular to work in
+   underspecified syntactic analysis of the complications are listed in
+   (3). type discussed in [21] and similar in depth of cover- (3) ocular,
+   oculars, oculus, oculi, eyepiece, age to the work of Evans et al [8].
+   eyepieces, eye, eyes, eyed, eyeing, eying, optic, We begin by analyzing
+   noun phrases and preposi- optics, optical, optically, vision,
+   ophthalmic, opthalmia, ophthalmiac, ophthalmiacs, tional phrases. In a
+   successful syntactic analysis, complication, complications. heads are
+   identified and most items to the left of the head are simply labelled
+   as "modifier"; however, par- Once variants have been generated for a
+   given phrase, ticiples are singled out and labelled as such. Preposi-
+   candidate terms from the Metathesaurus are identi- tional phrases are
+   implicitly identified, but during the fied. Such candidates for a noun
+   phrase consist of the syntactic phase their attachment is not
+   indicated. set of all Metathesaurus terms which contain at least one of
+   the variants computed for the phrase and which Although the syntactic
+   structure we produce is not satisfy a further condition on partial
+   matches dis- fully specified, it has advantages over the unstructured
+   cussed below. The candidates for ocular complica- phrases obtained from
+   a barrier word approach. Most tions appear in (4), where preferred
+   terms are given in importantly, the identification of heads of noun
+   parentheses. phrases has significant consequences during the map- ping
+   of such phrases to concepts in the Meta- (4) "Complications"
+   ("Complication") thesaurus, as will be seen in the following section.
+   An "complications <1>" example of the type of syntactic structure we
+   assign is "Eye" given in (2b) for the input in (2a). "Optic" ("Optics")
+   "Ophthalmia" ("Endophthalmitis") (2) a. patients with sustained
+   ventricular tachycardia "Vision" treated with amiodarone The final step
+   in the mapping process combines the b. noun_phrase([ [head(patients)],
+   best candidates to form mappings between the noun
+   [prep(with),mod(sustained),mod(ventricular), phrase and one or more
+   Metathesaurus terms. The head(tachycardia),pastpart(treated)], degree
+   of similarity between a noun phrase and a
+   [prep(with),head(amiodarone)]]) Metathesaurus concept is based on
+   factors which take Note in this example that the structure is extremely
+   into account how much variation is used to accom- flat; very little
+   commitment is made to the internal plish the match, whether the head is
+   involved, and structure of the noun phrase. For example, the past how
+   much of the Metathesaurus concept and the noun participle treated is
+   not assigned a syntactic structure phrase are involved in the match.
+   which directly reflects its final interpretation. At the same time, the
+   fact that tachycardia is labelled as a This last criterion is based on
+   various types of matches which can occur between a noun phrase and a
+   Metathesaurus term. In a simple match the noun related to logical form
+   (see [22]). The arguments in phrase maps to a single Metathesaurus
+   term. For conceptual structure are labelled with semantic case example,
+   the input phrase intensive care unit maps to roles [23] in order to
+   more clearly specify the relation- "Intensive Care Units". In a complex
+   match there is a ships among the concepts represented. For example,
+   partitioning of the noun phrase so that each element of we construct
+   the (simplified) conceptual structure the partition has a simple match
+   to a term in the Meta- given in (7) to represent the semantic
+   interpretation of thesaurus. Thus, intensive care medicine maps to the
+   hemofiltration in digoxin overdose. The case labels on two terms
+   "Intensive Care" and "Medicine". the arguments in (7) indicate that it
+   is digoxin over- In a partial match the noun phrase maps to a Meta-
+   dose that is being treated through the use of hemofil- thesaurus term
+   in such a way that at least one word of tration as an instrument.
+   either the noun phrase or the Metathesaurus term (or (7) treat( theme(
+   digoxin overdose ), both) does not participate in the mapping. Some
+   instr( hemofiltration ) ) examples of partial matches are given in (5).
+   Conceptual structures are built through the applica- (5) liquid crystal
+   thermography maps to tion of semantic rules which fall into two major
+   cate- "Thermography" gories. As much as possible we rely on the UMLS
+   ambulatory monitoring maps to "Ambulatory Semantic Network [24], since
+   doing so diminishes the Electrocardiographic Monitoring" number of
+   semantic rules we must write. When appli- obstructive sleep apnea maps
+   to cation of the Semantic Network is not possible, we "Obstructive
+   Apnea" appeal to rules which depend crucially on the seman- We
+   eliminate partial matches in which both the first tic types obtained
+   from UMLS and which are similar and last words of the Metathesaurus
+   term do not par- in spirit to those discussed in [21]. ticipate in the
+   match. This allows ambulatory moni- In exploiting the Semantic Network
+   for semantic toring to map to the Metathesaurus term "Ambulatory
+   interpretation we match linguistic patterns against
+   Electrocardiographic Monitoring" above, but disal- corresponding
+   relationships between semantic types lows, for example, left ventricle
+   from mapping to the in the Network. As an example, consider the text
+   sin- term "Left Ventricular Outflow Obstruction". With gle
+   corticospinal axons in the cat spinal cord and note regard to the
+   phrase ocular complications, this rule that axons has semantic type
+   `Cell Component', while eliminates "Postoperative Complications".
+   Mappings spinal cord is of type `Body Part, Organ, or Organ which do
+   not satisfy this rule do not constitute the best Component'.
+   Furthermore, in the Semantic Network mapping between noun phrase and
+   Metathesaurus. these two semantic types are joined by the relation In
+   the final determination of the mappings between `part_of' as noted in
+   (8). noun phrase and Metathesaurus term, both less varia- (8)
+   part_of(`Cell Component', tion and involvement of the head contribute
+   to a stron- `Body Part, Organ, or Organ Compo- ger match. In general, a
+   simple match represents a nent') stronger mapping between the input
+   phrase and the Metathesaurus term, while complex matches are less In
+   order to exploit these facts for semantic interpreta- strong, and
+   partial matches represent the weakest tion we need only stipulate that
+   the preposition in may mapping from input to Metathesaurus. These
+   criteria correspond to the Semantic Network relation determine that of
+   the candidate Metathesaurus terms `part_of'. Then, since single
+   corticospinal axons in given in (4), those listed in (6) constitute the
+   best map the cat spinal cord contains the preposition in and to ocular
+   complications. since its semantic types correspond to those in (8) this
+   relationship provides the semantic interpretation (9). (6) "Eye"
+   "Complication", "complications <1>" (9) part_of( nom( single
+   corticospinal axons ), theme( cat spinal cord ) ) RELATIONSHIPS BETWEEN
+   PHRASES: For situations in which an interpretation based on the
+   SEMANTIC PROCESSING Semantic Network does not apply, we supply rules of
+   Semantic interpretation indicates dependencies semantic interpretation,
+   which crucially depend on the among the concepts identified by mapping
+   noun UMLS semantic types. In this regard, the semantic phrases to
+   concepts in the Metathesaurus. We repre- types associated with
+   Metathesaurus concepts can be sent these dependencies in a predicate
+   argument struc- generalized. For example, frostbite has the semantic
+   ture that we call conceptual structure, which is closely type `Injury
+   or Poisoning', while malaria is typed as `Disease or Syndrome'. We
+   collapse these types and others referring to medically treatable
+   conditions into A solution based on semantic processing depends on the
+   generalized type . the partial (and simplified) conceptual structures
+   for An example of a domain-specific semantic rule is the query and
+   texts given in (13). (10), which states that a noun phrase which is the
+   (13) a. treat(theme(malignant gliomas), object of the preposition for
+   and whose head has any instr(intra-carotid injection)) of the UMLS
+   semantic types covered by the general- b. treat(theme(malignant
+   gliomas), ized semantic type can modify a minimal instr(intra-carotid
+   BCNU chemotherapy)) noun phrase to the left whose head has the semantic
+   c. co-occurs_with( type . Furthermore, the rule states that in
+   cotheme(internal carotid aneurysm), conceptual structure the
+   relationship between the cotheme(temporal glioma )) noun phrases is
+   such that the therapy is used as an instrument to treat the disorder.
+   Rule (10) applies to The most important aspect of (13) relevant to the
+   (11a) to produce (11b). problem under discussion is that the query and
+   the rel- evant title involve the predicate treat. In (13a) and (10)
+   [head()] ,[prep(for), head()] (13b) a concept with the semantic type
+   `Disease or treat(theme(),instr()) Syndrome' is treated by a concept
+   with semantic type (11) a. Electrocoagulation for gastrointestinal
+   `Therapeutic or Preventive Procedure'. A quite differ- hemorrhage. ent
+   semantic structure has been assigned to the non- b. treat(
+   theme(gastrointestinal hemorrhage), relevant title (13c), in which a
+   `Disease or Syndrome' instr(electrocoagulation) ) co-occurs with an
+   `Acquired Abnormality'. These facts based on semantic conceptual
+   structure EXPLOITING SEMANTIC STRUCTURE FOR can be used to improve
+   retrieval precision by includ- INFORMATION RETRIEVAL ing a stipulation
+   on the retrieval mechanism which In conclusion, we suggest a method of
+   exploiting states that in order for a query to match text, the main
+   semantic structure to improve retrieval effectiveness. predicate in the
+   semantic structure of the query must The example in (12) is constructed
+   to be paradigmatic match the main predicate in the conceptual structure
+   of one problem associated with the use of either key of the text. This
+   requirement eliminates the nonrele- words or phrases in information
+   retrieval. Title (12b) vant title (13c) above as a possible match to
+   the query. is relevant to query (12a) while (12c) is not. Once such a
+   requirement has been met, the normal Boolean query can be issued to
+   retrieve the relevant (12) a. Query: Intra-carotid injection of drugs
+   for the title (13b). treatment of malignant gliomas b. Title1:
+   Intra-carotid BCNU chemotherapy for In so far as semantics is able to
+   identify relationships malignant gliomas between phrases and thus more
+   precisely represent the content of text, we see this type of processing
+   as c. Title2: Association of internal carotid aneurysms and temporal
+   glioma showing considerable promise for being able to enhance existing
+   information retrieval techniques A reasonable translation of (12a) into
+   a Boolean query based on phrases, whether the phrases are directly
+   might be (carotid AND glioma). It is not advisable to identified in
+   text or result from mapping to a con- include injection in the Boolean
+   query, since the con- trolled vocabulary. cept represented by
+   intra-carotid injection could well be represented in text by some form
+   of infusion, per- ACKNOWLEDGMENTS fusion, or chemotherapy, at least.
+   Given this query it is not possible to reject the nonrelevant (12c). We
+   would like to acknowledge Allen C. Browne, Alexa T. McCray, Amir Razi,
+   and Suresh Srinivasan The use of phrases does not solve the problem,
+   and in for their contributions to this project. fact makes it worse.
+   The Boolean translation of the query using phrases would probably be
+   (intra-carotid References injections AND gliomas). This rejects the
+   nonrelevant 1. Tersmette KWF, Scott AF, Moore GW, Matheson title, but
+   also rejects the relevant title. NW and Miller RE. "Barrier word method
+   for detect- The use of terms from the Metathesaurus alone also ing
+   molecular biology multiple word terms." In does not help. "Injections"
+   (the term for intra-carotid Greenes RA (ed) Proceedings of the 12th
+   Annual injection) does not match "Chemotherapy" (the term SCAMC,
+   207-211, 1988. for intra-carotid BCNU chemotherapy). 2. Elkin PL,
+   Cimino JJ, Lowe HJ, Aronow DB, Payne 13. Smeaton AF and van Rijsbergen
+   CJ. "Experiments TH, Pincetl PS and Barnett GO. "Mapping to MeSH: on
+   incorporating syntactic processing of user queries The art of trapping
+   MeSH equivalence from within into a document retrieval strategy." In
+   Chiaramella Y narrative text." In Greenes RA (ed) Proceedings of the
+   (ed.) Proceedings of the 11th International ACM/ 12th Annual SCAMC,
+   185-190, 1988. SIGIR Conference, 31-51, 1988. 3. Hersh WR, Hickam DH
+   and Leone TJ. "Words, 14. Sparck Jones K and Tait JI. "Automatic search
+   concepts, or both: Optimal indexing units for auto- term variant
+   generation." Journal of Documentation mated information retrieval." In
+   Frisse ME (ed) Pro- 40:50-66, 1984. ceedings of the 16th Annual SCAMC,
+   644-648, 1992. 15. Croft WB and Das R. "Experiments with query 4. Lin
+   R, Lenert L, Middleton B and Shiffman S. "A acquisition and use in
+   document retrieval systems." free-text processing system to capture
+   physical find- Proceedings of the 13th Annual International ACM/ ings:
+   Canonical phrase identification system SIGIR Conference, 349-368, 1990.
+   (CAPIS)." In Clayton PD (ed) Proceedings of the 15th 16. Lewis DD and
+   Croft WB. "Term clustering of syn- Annual SCAMC, 168-172, 1991. tactic
+   phrases." In Vidick J-L (ed.) Proceedings of the 5. Miller RA,
+   Gieszczykiewicz FM, Vries JK and 13th Annual International ACM/SIGIR
+   Conference, Cooper GF. "CHARTLINE: Providing bibliographic 385-404,
+   1990. references relevant to patient charts using the UMLS 17. Miller
+   PL, Smith P, Morrow JS, Riely CL and Metathesaurus knowledge sources."
+   In Frisse ME (ed) Powsner SM. "Semantic relationships and MeSH." In
+   Proceedings of the 16th Annual SCAMC, 86-90, 1992. Greenes RA (ed)
+   Proceedings of the 12th Annual 6. Wagner MM. "An automatic indexing
+   method for SCAMC, 174-179, 1988. medical documents." In Clayton PD (ed)
+   Proceedings 18. Wendlandt EB and Driscoll JR. "Incorporating a of the
+   15th Annual SCAMC, 1011-1017, 1991. semantic analysis into a document
+   retrieval strategy." 7. Croft WB, Turtle HR and Lewis DD. "The use of
+   In Bookstein A, Chiaramella Y, Salton G and Ragha- phrases and
+   structured queries in information van VV (eds.) Proceedings of the 14th
+   Annual Inter- retrieval." In Bookstein A, Chiaramella Y, Salton G
+   national ACM/SIGIR Conference, 270-279, 1991. and Raghavan VV (eds.)
+   Proceedings of the 14th 19. Humphreys BL and Lindberg DAB. "The Unified
+   Annual International ACM/SIGIR Conference, 32-45, Medical Language
+   System Project: A Distributed 1991. Experiment in Improving Access to
+   Biomedical Infor- 8. Evans DA, Ginther-Webster K, Hart M, Lefferts
+   mation." In Lun KC, Degoulet P, Piemme T and Rien- RG and Monarch IA.
+   "Automatic indexing using hoff O (eds.) Proceedings of MEDINFO 92,
+   1496- selective NLP and first-order thesauri." RIAO 91, 1500, 1992.
+   Autonoma University of Barcelona, April 2-5, 624- 20. Salton G and
+   Smith M. "On the application of 44, 1991. syntactic methodologies in
+   automatic text analysis." 9. Fagan JL. Experiments in Automatic Phrase
+   Index- In Belkin NJ and van Rijsbergen CJ (eds.) Proceed- ing for
+   Document Retrieval: A Comparison of Syntac- ings of the 12th Annual
+   International ACM/SIGIR tic and Non-Syntactic Methods. Cornell
+   University Conference, 137-150, 1989. Doctoral Dissertation, 1987. 21.
+   Agarwal R and Boggess L. "A simple but useful 10. Mauldin ML.
+   Conceptual Information Retrieval: approach to conjunct identification."
+   Proceedings, A Case Study in Adaptive Partial Parsing. Boston: 30th
+   Annual Meeting of the Association for Computa- Kluwer Academic
+   Publishers, 1991. tional Linguistics, 15-21, 1992. 11. McCray AT.
+   "Extending a Natural Language 22. Allen J. Natural Language
+   Understanding. Menlo Parser with UMLS Knowledge." In Clayton PD (ed.)
+   Park, CA: Benjamin/Cummings, 1987. Proceedings of the 15th Annual
+   SCAMC, 194-198, 23. Fillmore CJ. "The case for case." In Bach E and
+   1991. Harms R (eds.) Universals in Linguistic Theory. New 12. Metzler
+   DP and Haas SW. "The constituent object York: Holt, Rinehart, and
+   Winston, 1-90, 1968. parser: Syntactic structure matching for
+   information 24. McCray AT and Hole WT. "The Scope and Struc-
+   retrieval." In Belkin NJ and van Rijsbergen CJ (eds.) ture of the First
+   Version of the UMLS Semantic Net- Proceedings of the 12th Annual
+   International ACM/ work." In Miller RA (ed.) Proceedings of the 14th
+   SIGIR Conference, 117-126, 1989. Annual SCAMC, 126-130, 1990.

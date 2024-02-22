@@ -1,0 +1,64 @@
+http://www.mel.nist.gov/div826/src/stopwatch/
+
+                            The Stopwatch Home Page
+
+  Description
+
+   Stopwatch does what its name implies - enables hand timing much like a
+   physical stopwatch. Stopwatch may run as a traditional program or in a
+   browser. If you want to run stopwatch outside the browser, download and
+   install it.
+
+   Stopwatch has millisecond accuracy and no limit on hours. Stopwatch
+   runs on UNIX, Windows, and MacOS.
+
+  Directions [stopwatch.gif]
+
+  Press "start" to start the stopwatch and "stop" to stop it. "record" records
+  the current time and selects it so that it can readily be pasted into other
+  programs. Recorded times are marked with an L for "lap" or T for "total". When
+  stopped, you can cut/paste/edit the time by hand and set it to any valid time.
+  "zero" resets the time to zero.
+  Download
+
+  source                This single file is all you really need.
+  complete distribution A full distribution for people who want the
+                        README, HISTORY, and other unnecessary stuff.
+
+  Installation
+
+  There is no installation step (such as "configure" or "Make"). Once
+  downloaded, simply run stopwatch with wish or any Tk-enabled interpreter.
+  PriceStopwatch is free. Copy and Reuse InformationStopwatch is in the public
+  domain. Caveats
+
+  Stopwatch requires Tcl/Tk 7.5 or later. Millisecond timing is only available
+  when using Tcl 8.3 or later.
+
+  By default, the maximum time is just over 596 hours (about 25 days). The range
+  may be increased (to about 68 years) by disabling the millisecond timer. To
+  disable the millisecond timer manually, edit the source and set
+  time(doMilliseconds) to 0.
+  Contact Info
+
+
+    Don Libes, libes@nist.gov
+
+
+    National Institute of Standards and Technology
+
+
+    Building 220, Room A127
+
+
+    Gaithersburg, MD 20899-0001
+
+
+    USA
+    _________________________________________________________________________
+
+        Names of companies and products, and links to commercial pages are
+        provided in order to adequately specify procedures and equipment used.
+        In no case does such identification imply recommendation or endorsement
+        by the National Institute of Standards and Technology, nor does it imply
+        that the products are necessarily the best available for the purpose.

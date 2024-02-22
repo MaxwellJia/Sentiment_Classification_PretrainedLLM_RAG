@@ -1,0 +1,204 @@
+http://casper.jpl.nasa.gov
+
+   [jpllogo.gif] Projects: CASPER, Planning and Scheduling, Artificial
+   Intelligence Group [Nasalogo.gif]
+
+   nothing
+
+   artificial intelligence group [_line.gif] planning and scheduling
+   [_line.gif] machine learning systems [_line.gif] jpl [_line.gif]
+   caltech [_line.gif] nasa
+
+   [dot.gif] [earth.gif]
+   nothing
+   background description impact technology status significance problem
+   sponsors moreinfo publications the team contacts
+
+   Background top
+
+   [casper_pic.gif]
+
+   An autonomous spacecraft must balance long-term and short-term
+   considerations. It must perform purposeful activities that ensure
+   long-term science and engineering goals are achieved and ensure that it
+   maintains positive resource margins. This requires planning in advance
+   to avoid a series of shortsighted decisions that can lead to failure.
+   However, it must also respond in a timely fashion to a somewhat dynamic
+   and unpredictable environment. Thus, spacecraft plans must often be
+   modified due to fortuitous events such as early completion of
+   observations and setbacks such as failure to acquire a guidestar for a
+   science observation.
+
+   CASPER (Continuous Activity Scheduling Planning Execution and
+   Replanning) uses iterative repair to support continuous modification
+   and updating of a current working plan in light of changing operating
+   context.
+   AI Technology top
+     * Planning and Scheduling
+     * Planning and Execution
+     * Replanning
+
+   Problem top
+
+   Traditional batch oriented models of planning have shortcomings for
+   spacecraft control. Constructing a plan from scratch can be a
+   computationally intensive process and onboard computational resources
+   are typically quite limited, so that it still may require considerable
+   time to generate a new operations plan. As a data point, the planner
+   for the Remote Agent Experiment (RAX) flying on-board the New
+   Millennium Deep Space One mission takes approximately 4 hours to
+   produce a 3 day operations plan. RAX is running on a 25 MHz RAD 6000
+   flight processor and uses roughly 25% of the CPU processing power.
+   While this is a significant improvement over waiting for ground
+   intervention, making the planning process even more responsive (e.g.,
+   on a time scale of seconds) to changes in the operations context, would
+   increase the overall time for which the spacecraft has a consistent
+   plan. As long as a consistent plan exists, the spacecraft can keep busy
+   working on the requested goals.
+   Impact top
+
+   Making the planner more timely in its responses has a number of
+   benefits:
+     * The planner can be more responsive to unexpected (i.e.,
+       unmodelable) changes in the environment that would manifest
+       themselves as updates on the execution status of activities as well
+       as monitored state and resource values.
+     * The planner can reduce reliance on predictive models (e.g.,
+       inevitable modeling errors), since it will be updating its plans
+       continually.
+     * Fault protection and execution layers need to worry about
+       controlling the spacecraft over a shorter time horizon (as the
+       planner will replan within a shorter time span).
+
+   Status top
+
+       CASPER is being used in a range of projects including autonomous
+       spacecraft, autonomous rovers, ground communications station
+       automation, and uninhabited aerial vehicles.
+       Applications:
+
+     * Autonomous Spacecraft - 3CS
+     * Autonomous Spacecraft - TS-21
+     * Rover Sequence Generation
+     * Distributed Rovers
+     * CLEaR (Closed Loop Execution and Recovery)
+
+     ASPEN and CASPER are currently available for external licensing.
+   Click here for more information.
+
+   Description top
+
+   To achieve a higher level of responsiveness in a dynamic planning
+   situation, we utilize a continuous planning approach and have
+   implemented a system called CASPER (for Continuous Activity Scheduling
+   Planning Execution and Replanning). Rather than considering planning a
+   batch process in which a planner is presented with goals and an initial
+   state, the planner has a current goal set, a plan, a current state, and
+   a model of the expected future state. At any time an incremental update
+   to the goals or current state may update the current state of the plan
+   and thereby invoke the planner process. This update may be an
+   unexpected event or simply time progressing forward. The planner is
+   then responsible for maintaining a consistent, satisficing plan with
+   the most current information. This current plan and projection is the
+   planner's estimation as to what it expects to happen in the world if
+   things go as expected. However, since things rarely go exactly as
+   expected, the planner stands ready to continually modify the plan.
+   Current iterative repair planning techniques enable incremental changes
+   to the goals and the initial state or plan and then iteratively resolve
+   any conflicts in the plan. After each update, its effects will be
+   propagated through the current projections, conflicts identified, and
+   the plan updated (e.g., plan repair algorithms invoked).
+
+   Significance top
+
+   CASPER enables faster response to changing environments than a
+   traditional batch-oriented planning approach.
+
+   More Information top
+
+     * ASPEN home page
+
+   Publications top
+
+   Please Note:
+   This material is provided for your personal use only and may not be
+   retransmitted or redistributed without permission in writing from the
+   paper's publisher and/or author. You may not upload this material to
+   any public server, on-line service, network, or bulletin board without
+   prior written permission from the publisher and/or author. You may not
+   make copies for any commercial purpose. This material is not public
+   domain. Reproduction or storage of materials retrieved from this web
+   site are subject to the U.S. Copyright Act of 1976, Title 17 U.S.C.
+
+   S. Chien, R. Knight, A. Stechert, R. Sherwood, and G. Rabideau, "Using
+   Iterative Repair to Increase the Responsiveness of Planning and
+   Scheduling for Autonomous Spacecraft," IJCAI99 Workshop on Scheduling
+   and Planning meet Real-time Monitoring in a Dynamic and Uncertain
+   World, Stockholm, Sweden, August 1999. (PostScript) (PDF)
+
+   S. Chien, R. Knight, A. Stechert, R. Sherwood, G. Rabideau, "Integrated
+   Planning and Execution for Autonomous Spacecraft," Proceedings of the
+   IEEE Aerospace Conference (IAC), Aspen, CO, March 1999. (PDF)
+
+   T. Estlin, G. Rabideau, D. Mutz and, S. Chien, "Using Continuous
+   Planning Techniques to Coordinate Multiple Rovers," IJCAI99 Workshop on
+   Scheduling and Planning meet Real-time Monitoring in a Dynamic and
+   Uncertain World, Stockholm, Sweden, August 1999. (PostScript) (PDF)
+
+   G. Rabideau, R. Knight, S. Chien, A. Fukunaga, A. Govindjee, "Iterative
+   Repair Planning for Spacecraft Operations in the ASPEN System,"
+   International Symposium on Artificial Intelligence Robotics and
+   Automation in Space (ISAIRAS), Noordwijk, The Netherlands, June 1999.
+   (PostScript) (PDF)
+
+   Contacts top
+
+   ASPEN Project Contact:
+   Dr. Steve Chien, AI Group,
+   Steve.Chien@jpl.nasa.gov, (818) 393-5320
+
+   JPL Technical Contact:
+   Dr. Steve Chien, AI Group,
+   Steve.Chien@jpl.nasa.gov, (818) 393-5320
+
+   JPL Program Contact:
+   Dave Atkinson, Autonomy Program
+
+   ASPEN Licensing Information:
+   Click here for more info
+
+   The Project Team top
+
+   Dr. Steve Chien
+   Steve.Chien@jpl.nasa.gov, (818) 393-5320
+
+   Russell Knight
+   Russell.Knight@jpl.nasa.gov
+
+   Gregg Rabideau
+   Gregg.Rabideau@jpl.nasa.gov
+
+   Robert Sherwood
+   Robert.Sherwood@jpl.nasa.gov
+
+   Darren Mutz
+   Darren.Mutz@jpl.nasa.gov
+   Forest Fisher
+   Forest Fisher@jpl.nasa.gov
+
+   Tara Estlin
+   Tara.Estlin@jpl.nasa.gov
+
+   Sponsors top
+
+   Sponsored By:
+   NASA Code SM
+   Autonomy program, Dave Atkinson (JPL) managing.
+   Telecommunications and Mission Operations Technology (TMOT)
+   Peter Shames, Managing
+   Also Sponsored By:
+   Directors Research Discretionary Fund,
+   Jet Propulsion Laboratory,
+   California Institute of Technology
+
+   [jpllogo.gif] Questions: www@@www-aig.jpl.nasa.gov

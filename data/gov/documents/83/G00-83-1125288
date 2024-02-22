@@ -1,0 +1,357 @@
+http://www-itg.lbl.gov/mbone/
+
+     Computing Sciences at Berkeley Lab Navigation Banner [Load to Use]
+                       Distributed Systems Department
+                     Collaboration Technologies Group
+     __________________________________________________________________
+
+                          Introduction to the MBone
+     __________________________________________________________________
+
+   Since the MBone software and tools are developed at a diverse set of
+   sites, it is difficult for the novice user of MBone videoconferencing
+   to determine where to begin. This page is intended to help people in
+   getting started in using the multicast backbone (MBone) for
+   videoconferencing. It provides
+
+          [redball.gif] List of items needed to participate in a MBone
+          Session
+          [redball.gif] MBone tools and binaries
+          [redball.gif] User guides for the MBone tools
+          [redball.gif] Useful and required peripherals
+          [redball.gif] Links to MBone Sites
+          [redball.gif] Reference books and papers
+
+   The best way to get started in using the Mbone is to first review the
+   section containing the list of items needed to participate in a MBone
+   Session. Then pick up the binaries for your platform from the tools and
+   binaries section and install them. To learn how to use each of the
+   tools refer to the user guides for the tools.
+
+   Many of the comments on these pages are written in the first person,
+   but do not be fooled--this is not the experience of any one single
+   person. The first person is used only as a narrative convenience.
+
+   If you would like to contribute to this page or for more pages like
+   this one but about other tools, see the ESCC Application Working Group
+   home page.
+
+   You may also want to check out our camera control and conference
+   controller tools for adding remote control capabilities to
+   videoconferencing.
+     __________________________________________________________________
+
+[question.gif] What do I need to participate in a MBone Session ?
+     __________________________________________________________________
+
+   The MBone is still somewhat experimental and is not yet available on
+   every operating system and subnet by default. The easiest way to
+   determine if you are able to receive multicast packets on your local
+   machine is to run sdr. If the list of sessions has entries in it and
+   they stay in the list for more than ~20 minutes then you are on the
+   MBone and your machine is receiving MBone broadcasts so skip 1 & 2
+   below. In order to participate in an MBONE session you need a few
+   things :
+    1. A multicast capable kernel. Many of the operating systems now come
+       multicast capable. There are patches available for many of the
+       operating systems that are not delivered multicast capable.
+    2. Your subnet needs to be on the MBONE. In other words, multicast
+       packets need to be being forwarded to your machine. The easiest way
+       to check if you are on the MBone is to run the sdr tool and see if
+       any sessions show up. Run it for about 10 minutes and if nothing
+       shows up in the session list you are not on the MBone!
+    3. The multicast videoconferencing applications. You need a minimum of
+       sdr, vic, and vat (or rat). It is also nice to have wb on hand.
+          + Sdr provides you with a session directory and video conference
+            launching tool.
+          + Vic is the video tool; vat and rat are audio tools.
+          + wb is a whiteboard application that is sometimes used to send
+            slides or for feedback.
+       (Sdr and rat were developed at UCL. Vic, vat, and wb were
+       originally developed here at LBNL by Van Jacobson's group. UCL is
+       also maintaining updated versions of vic.)
+    4. Multicast debugging tools are also helpful in diagnosing problems.
+       the primary tools available are mtrace, mrinfo, and rtpmon. Mtrace
+       allows you to do a multicast traceroute from a receiver to the
+       source of a multicast on a particular address. Mrinfo allows you to
+       query a multicast router and determine its local configuration.
+       Rtpmon allows you to monitor the RTP receiver reports as they are
+       received. NOTE: mrinfo and mtrace have to run as root.
+
+   NOTE :
+   It is a really bad idea to remotely log into a machine and start up vic
+   and vat on the remote machine because you will not get audio and the X
+   protocol is horribly inefficient at remotely displaying vic windows and
+   will bring an ethernet to its knees.
+
+   As a further note, if you are connecting via an ISDN line from home
+   there may be some things you need to do to get routing of multicast
+   packets over the ISDN line. You will also probably want the video
+   transcoder to convert the video to a lower rate format before sending
+   it down the ISDN line.
+     __________________________________________________________________
+
+[search.gif] Peripherals for MBone videoconferencing
+     __________________________________________________________________
+
+   To participate in a videoconferencing session over the MBone there are
+   a few things that you need. The following section will give you some
+   idea of the minimum requirements to be a participating member in a
+   videoconference (not just listen in) and lists some of the hardware we
+   have used and like.
+     * Minimum audio requirement - You will need an audio card capable of
+       at least half-duplex sound, full-duplex sound capabilities are
+       preferred. You will need a microphone and a speaker or headphones.
+       The microphone and speaker may be built-in and almost any quality
+       mic and speaker will work. A set of PC speakers and a cheap mic are
+       our standard setup.
+     * Audio add-ons - If you are going to videoconference alot and want
+       the conversations to be somewhat natural then you really need
+       hardware echo cancellation. There are some reasonably priced units
+       out there. We have tried the Coherent Callport and the Polycom
+       SoundPoint PC for offices and small rooms. We have recently been
+       experimenting with a new vat that has lower timing thresholds when
+       in external echo cancel mode and the Polycom has had fewer false
+       turn-ons due to echo than the Coherent. One source for these units
+       is PicturePhone Direct. They are also available in some computer
+       stores. For information about how to use the Polycom, click here.
+     * Audio extremes - The above echo cancellation units are a mic and a
+       speaker built into a single unit to provide a fixed distance for
+       echo cancellation. The higher-end hardware echo cancellers allow
+       separate microphones and speakers and of course come with a higher
+       price tag. Both Coherent and Polycom sell high-end units as well.
+       What we have bought for use in large conference rooms with several
+       mics and speakers is the Coherent VoiceCrafter.
+     * Minimum video requirements - You will need a video capture card
+       (usually with S-video and/or RCA input jacks) and a camera. The
+       camera can be just about anything that can generate a video signal.
+     * Video niceties - A camcorder works well for capturing video since
+       it allows you to have zoom, brightness and white balance control to
+       make the best of less than optimal video capture situations (like
+       dark rooms).
+     * SunVideo+ card - The SunVideoPlus card can be used on the new Sun
+       Ultras that have a PCI bus. The SunVideoPlus card and driver are
+       available from Sun Microsystems. Since the SunVideo+ is really a
+       MultiMedia Access Corporation Osprey-1100/1500 video card, it is
+       also available from MMAC. See "Vic: Hardware and operating system
+       specific tips" below.
+     * Video extremes - There are many situations where it is nice to have
+       a camera that can be controlled remotely. The Sony EVI-D30 is
+       really the cat's meow of videoconferencing cameras. It has built in
+       pan/tilt/zoom/focus and can be controlled using an infra-red remote
+       or RS-232. It also has some limited subject tracking and motion
+       detection capabilities. One source for the Sony EVI-D30 camera is
+       PicturePhone Direct. The Canon VC-C3 is also a very nice camera
+       with features very similar to the Sony camera. Software for
+       controlling the Sony and Canon cameras can be obtained from
+       http://www-itg.lbl.gov/mbone/devserv.
+       If you are using multiple cameras in your setup it is also nice to
+       have an RS-232 controllable video switcher. We use the Panasonic
+       WJ-MX50 which can also do picture-in-picture. Software for
+       controlling the Panasonic can be obtained from
+       http://www-itg.lbl.gov/mbone/devserv. We have also used the Sierra
+       Video RS-232 controllable video switch but it is not as nice as the
+       Panasonic. Panasonic also makes a WJ-MX20 as well but we have not
+       yet written the software to allow remote control of this switcher.
+     * Media Cards - We have found that the Hauppauge Wincast/WinTV video
+       card and AW35 Pro 3D sound card (Crystal CS423x audio chipset) work
+       under both freeBSD and Windows95/98/NT. To install the drivers for
+       these cards under freeBSD-3.1, please see How To Get Video and
+       Audio Cards Working under FreeBSD 3.1 .
+     __________________________________________________________________
+
+[search.gif] Guides to Using the Videoconferencing Tools
+     __________________________________________________________________
+
+   This section is still under development so please have patience. I have
+   a beginner's guide and a advanced section for most of the tools. The
+   beginner's guides are intended to provide you with enough information
+   to get you from "What is this tool anyway?" to "I can do this!" The
+   advanced user information sections document some of the lore and magic
+   incantations that I have accumulated with respect to the MBone tools
+   and routing protocols. This information is intended to augment (not
+   replace) the manual pages supplied with the tools. Comments regarding
+   content of the pages are welcomed.
+
+          VAT (audio tool)
+
+          + Vat Beginner's Guide
+          + Advanced user information (experiences and lore)
+          + Hardware and operating system specific tips
+
+          RAT (Robust Audio Tool)
+
+          + Robust-Audio Tool General Releases
+          + Rat Overview
+          + Rat User Guide
+
+          VIC (video tool)
+
+          + Vic Beginner's Guide
+          + Vic User Guide
+          + Advanced user information (experiences and lore)
+          + Hardware and operating system specific tips (including how to
+            use the SunVideoPlus card with vic)
+
+          DEVSERV and CAMCLNT (remote camera control tool)
+
+          + [new1.gif] Remote camera control software pages
+
+          CONFCNTLR (videoconference control tool)
+
+          + Conference Controller pages
+
+          SDR (session directory tool)
+
+          + Sdr Beginner's Guide
+          + Sdr User Guide
+          + Further information
+          + Advanced user information (experiences and lore)
+          + Hardware and operating system specific tips
+
+          Multicast Routing
+
+          + Setup
+          + Multicast Router Information - Mrinfo
+          + Multicast Traceroute - Mtrace
+          + RTP Statistics Monitor - Rtpmon
+          + Multi-Session Bridge - MSB and VTC
+     __________________________________________________________________
+
+[file_trans.gif] Tools and Binaries to download
+     __________________________________________________________________
+
+   This site is not a mirror site and is instead manually maintained so
+   there are no guarantees that it contains the latest versions of the
+   tools, binaries for all architectures, or all the possible tools. This
+   site is simply meant to help get you started. The groups that are most
+   actively developing new versions of the MBone videoconferencing tools
+   are the MASH group at UC Berkeley and the UCL Multimedia Research
+   Group, so you might want to check their sites for binaries first.
+
+   To go to the ftp directory for a particular architecture just click on
+   the architecture. If the architecture or binary you are looking for is
+   not listed it probably exists at the actual site building and
+   maintaining the individual tools so try the WWW pointers. For brief
+   explanations of what each of the tools are used for see the list of
+   items needed to participate in a MBone Session. To learn how to use the
+   tools refer the guides to the tools.
+
+   There are versions of MBone binaries in this directory for the
+   following architectures/operating systems.
+
+     * bsdi
+     * freebsd
+     * hpux
+     * sgi
+     * Solaris 2.x
+     * sunos
+     * win95
+
+   The corresponding manual pages are in Manual pages.
+
+   If you want additional tools not listed above, other places to look
+   are:
+     * CORE2000 at Pacific Northwest National Lab, a Java-based
+       videoconferencing environment that offers tools that include an
+       electronic notebook, a TeleViewer, and support for the Macintosh
+       platform.
+     * The MICE project in Europe offers older tools that include mmcc,
+       nv, ivs, and others.
+     __________________________________________________________________
+
+[search.gif] Links to MBONE Sites
+     __________________________________________________________________
+
+   URLs for getting more information about the MBONE and getting the MBONE
+   tools are listed below. You may already have these tools installed on
+   your machine. If you download the tools, I highly recommend the
+   alpha-test version of the vat tool rather than the older version. The
+   following URLs also have information about the several mailing lists
+   and meetings that discuss MBone and videoconferencing related issues.
+     * General information and tools
+          + Pointers to Everything you could need
+          + The MBONE information web
+          + MBONE session agenda
+          + H.323 Video-Conferencing (links to a lot of videoconferencing
+            information and tools)
+          + Mac tools
+          + MICE national support center
+          + [new1.gif] Remote Camera Control Software
+          + Confcntlr Information
+          + VAT information
+          + RAT information
+          + VIC information
+          + UC Berkeley MASH Tools for Solaris, Linux, FreeBSD, and
+            Windows.
+          + International Multimedia Teleconferencing Consortium
+          + An MBONE software archive
+          + The sdr tool
+          + The RTP Protocol
+          + CU-SEEME information
+     * For Windows 95 and NT tools and information
+          + [new1.gif] UC Berkeley MASH Tools reported to work well on
+            Windows.
+          + Microsoft's mbone page
+          + RAT
+          + VIC
+          + sdr
+          + WhiteBoardD (WBD)
+          + IP/TV windows software, commercially supported
+          + Precept PC windows software that is commercially supported.
+          + Paradise Windows NT software that is commercially supported.
+     __________________________________________________________________
+
+[book.gif] Bibliography
+     __________________________________________________________________
+
+     * Papers
+          + Macedonia, M. R., Brutzman, D. P., "MBone Provides Audio and
+            Video Across the Internet," IEEE Computer, Vol.27 #4, April
+            1994, pp. 30-36. This paper is a copy of the original version
+            at ftp://taurus.cs.nps.navy.mil/pub/mbmg/mbone.html.
+     * Videoconferencing Books There are several books on
+       videoconferencing. This list contains just a few of them:
+          + "Videoconferencing the Whole Picture" by Toby Trowt-Bayard
+          + " Personal Videoconferencing" by Evan Rosen
+          + "Internet TV With CU-SeeMe" by Michael Sattler
+     * MBONE Books
+          + "MBone: Multicasting Tomorrow's Internet" by Kevin Svetz, Neil
+            Randall and Yves Lepage, IDG Books Worldwide, Inc., 1996, ISBN
+            1-56884-723-8.
+            A good book to get started with the MBone.
+          + "MBone: Interactive Multimedia on the Internet" by Kumar and
+            Vinay, New Riders Publishing, Indianapolis Indiana, 1996. ISBN
+            1-56205-397-3. (U.S.) Library of Congress QA76.76.I59K85
+            A great book to be recommended for anyone interested in using
+            the MBone. Besides providing a thorough overview of key
+            topics, Vinay's chapter "System Administrator's Guide to the
+            MBone" covers a lot of advanced concepts and tools clearly in
+            one place.
+     __________________________________________________________________
+
+   Introduction to the MBone Page
+     __________________________________________________________________
+
+   Please also visit the
+
+   [lbllogo.gif] Lawrence Berkeley National Laboratory Home Page.
+   [frog.skeleton.logo.gif] Distributed Systems Department Home Page.
+   [SMC-tiny-logo.gif] Distributed Collaboratoratories Home Page.
+     __________________________________________________________________
+
+   You are visitor 26640 to this page since September 1997.
+
+   This document was last updated on October 29, 2001, and is located at
+   http://www-itg.lbl.gov/mbone/homepage.html.
+
+   To report Web page problems, e-mail webmaster@www-itg.lbl.gov. To
+   request further information about ITG activities, e-mail
+   wejohnston@lbl.gov.
+
+   Support Credits identify the funding sources and the organizational
+   context of the work described in this document.
+
+   Privacy and site security notice to Users
+
+   Deb Agarwal (DAAgarwal@lbl.gov) is responsible for this WWW document.

@@ -1,0 +1,99 @@
+http://srb-swlw.larc.nasa.gov/Journal/gewex.html
+
+   A Global Long-Term Data Set of Shortwave and Longwave Surface Radiation
+                                   Budget
+
+                        W.L. Darnell and W.F. Staylor
+                        NASA Langley Research Center
+                          Hampton, Virginia, U.S.A.
+
+                  S.K. Gupta, N.A. Ritchey and A.C. Wilber
+                     Lockheed Engineering & Sciences Co.
+                          Hampton, Virginia, U.S.A.
+
+   A new global long-term surface radiation budget (SRB) data set
+   consisting of monthly averages of shortwave (SW) and longwave (LW)
+   radiative fluxes is now available at the NASA Langley Research Center.
+   Meteorological data and cloud parameters available from the
+   International Satellite Cloud Climatology Project (ISCCP) C1 data were
+   used in the computation of the SRB. ISCCP C1 data are produced globally
+   on a 2.5-degree equal-area grid (Rossow and Schiffer, 1991). Surface
+   albedos for snow/ice-free land areas used in this data set were derived
+   from the clear-sky planetary albedos obtained from the Earth Radiation
+   Budget Experiment (ERBE). This 96-month data set includes the
+   initialization and validation of general circulation models of the
+   atmosphere and oceans, and in the studies of surface processes.
+
+   The flux algorithms used for producing this data set were developed and
+   validated during the last decade. The SW algorithm known as the
+   "Staylor algorithm" is one of two SW algorithms which were considered
+   apropriate for global data processing by the World Climate Research
+   Programme (WCRP) GEWEX Surface Radiation Budget (SRB) Project and was
+   subjected to extensive validation. The Staylor algorithm was found to
+   be insensitive to ISCCP calibration errors and was selected by the
+   GEWEX/SRB Project as "quality control" SW algorithm. It will be used
+   for checking the performance of the "Pinker algorithm" in the
+   production of long-term SW data sets. The LW fluxes in the data set
+   described in this note were produced with the "Gupta algorithm" , which
+   has been selected by the GEWEX/SRB Project for producing corresponding
+   LW fluxes for the WCRP.
+
+   The SW fluxes generally meet the same accuracy levels and regional
+   limitations as the 46-month SRB data set described by Whitlock et al.
+   (1995). Values of LW fluxes were generally found to be within 25 W/m2
+   of the surface measurements obtained from the Global Energy Balance
+   Archive (GEBA) and the Baseline Surface Radiation Network (BSRN).
+   Longwave flux errors larger than 25 W/m2 were encounteed for a very few
+   regions where ISCCP estimates of surface temperature and water vapor
+   have large uncertainties, such as river and mountain valleys during
+   winter.
+
+   Figure 1 (on page 1) shows the geographical distribution of 8-year
+   averages of downward SW (insolation) and downward LW fluxes for the
+   months of January and July. The insolation distribution for both
+   seasons is primarily zonal, but is modulated by the distribution of
+   clouds. The maxima follow the sun from the southern hemisphere (SH) in
+   January to the northern hemisphere (NH) in July. The highest values for
+   January occur over Antarctica and the subtropical regions of the SH,
+   while for July, they occur over the Arctic, Greenland, and subtropical
+   regions of the NH. The maxima for downward LW flux (DLF) for both
+   seasons occur over broad regions in the tropics with a gradual decrease
+   toward the poles. The maxima of DLF move from south of the equator in
+   January to north of the equator in July, but follow the sun weakly when
+   compared to the movement of insolation maxima. The highest values occur
+   over the subtropical deserts; over Australia in January and over the
+   Afro-Asian deserts in July.
+
+   Figure 2 shows the time-series of monthly averages of downward and net
+   SW and LW fluxes for ISCCP region number 5275 (lat. index 51, long.
+   index 85) which is bounded approximately by 35.ON and 37.5N latitude,
+   and 96.2 W and 99.3W longitude. Results for this region were chosen for
+   illustration as they may be of interest to the radiation/climate
+   science community because of the location of the U.S. Department of
+   Energy Atmospheric Radiation Measurement (ARM) Clouds and Radiation
+   Testbed (CART) site in Oklahoma within the chosen ISCCP region. Results
+   for this and other surrounding ISCCP regions may also be of interest to
+   the scientists engaged in surface process studies under GCIP. As shown
+   in Figure 3 a total of 39 ISCCP regions cover the entire GCIP region. A
+   climatology of SRB for the entire GCIP region can be readily extracted
+   from this data set.
+
+   The data set contains 96 monthly files, one for each month from July
+   1983 to June 1991. Each file contains monthly average values of the
+   following 7 parameters for each ISCCP region: SWCS - clear-sky downward
+   SW flux (insolation), SWDWN - total-sky downward SW flux, SWNET -
+   total-sky net SW flux (absorbed), LWCS - clear-sky downward LW flux,
+   LWDWN - total-sky net LW flux, and CP - ISCCP-derived cloud cover
+   (percent).
+
+   In addition, there is a location identification file which contains
+   ISCCP region numbers (1-6596), and corresponding latitude and longitude
+   indices. File descriptions are given in the "README" file. Also given
+   is a set of formulas which can be used to derive other SRB parameters
+   such as surface albedo, cloud radiative forcing and total flux
+   parameters. The data set can be obtained either by FTP from
+   cloud.larc.nasa.gov (128.155.17.41) or on an IBM PC-compatible CD-ROM.
+   Requests for the CD-ROM may be sent to: Dr. Charles H. Whitlock, Mail
+   Stop 420, NASA Langley Research Center, Hampton, VA 23681-0001, U.S.A.,
+   Tel.: 804/864-5675; Fax: 804/864-7996; E-mail:
+   c.h.whitlock@larc.nasa.gov or whitlock@srb1. larc.nasa.gov

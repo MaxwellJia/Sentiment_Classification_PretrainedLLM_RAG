@@ -1,0 +1,416 @@
+http://dshell.jpl.nasa.gov/soa.html
+
+   JPL
+
+      [soa_banr.jpg]
+      [ MAIN | DARTS | DSHELL | LIBSIM | SOA | REFERENCES ]
+
+      The Spatial Operator Algebra
+        __________________________________________________________________
+
+      Table of Contents:
+
+       I. Mathematical Roots of the DARTS Software
+      II. The Domain of Linked Multibody Systems is Very Large
+      III. The Mathematics for the Dynamical Motion of Such Systems is Very
+          Challenging
+      IV. Mathematical Complexity is Overwhelming Even for Relatively Simple
+          Systems
+       V. The Spatial Operator Algebra Eliminates Complexity
+      VI. Computational Complexity Grows Only Linearly with the Number of
+          Degrees of Freedom
+      VII. The Spatial Operators Extend to 3-Dimensional Mechanical Systems
+          the Computationally Efficient Digital Filtering Techniques of
+          Modern Signal Processing
+      VIII. The Spatial Operator Algebra Emerges from a Synthesis of Several
+          Scientific Disciplines Previously Thought to be Unrelated
+      IX. The Spatial Operator Algebra Leads to a Hierarchical Software
+          Architecture Built from Standardized, Reusable Modules
+       X. High-Performance Simulation for Real-Time Planetary Spacecraft
+          Dynamics
+      XI. Robotics Applications
+      XII. Large Scale Molecular Dynamics Simulations
+      XIII. Concluding Remarks
+        __________________________________________________________________
+
+        MATHEMATICAL ROOTS OF THE DARTS SOFTWARE
+          DARTS is a hierarchically layered software architecture rooted on a
+          new approach to modeling of linked multibody systems developed by
+          the authors, referred to as a spatial operator algebra. DARTS is
+          therefore a model-based software architecture, in which the
+          underlying mathematical model for the physical system very
+          efficiently organizes the inherent system complexity into several
+          layers of mathematical abstraction. The organization of the
+          software architecture very closely follows that dictated by the
+          mathematical model. Because this model determines the software
+          architecture, every software module and computational step has a
+          physical interpretation which can be obtained by examining the
+          model. The physical relationships inherent in the system itself
+          provide the software architecture. This features makes the software
+          architecture very elegant, as this architecture is driven by an
+          almost overwhelming logic determined by nature, as reflected in the
+          system mathematical model. Furthermore, the system mathematical
+          model used to determine the DARTS architecture is itself very
+          efficiently organized by the spatial operator algebra. One
+          therefore gets the best of two worlds: 1) the DARTS software
+          architecture is very efficiently organized because it is
+          model-driven; and 2) the model used to drive the architecture is
+          very efficiently organized by the spatial operator algebra. The
+          DARTS software is the embodiment of the spatial operator algebra,
+          and is the spatial operator algebra reduced to practice, using the
+          principles of modern software engineering. This algebra is at the
+          root of the elegance and efficiency of the DARTS software.
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        THE DOMAIN OF LINKED MULTIBODY SYSTEMS IS VERY LARGE
+          The Spatial Operator Algebra is a new way to do the mathematics of
+          arbitrary collections of rigid or deformable bodies connected
+          either by physical joints or by interactive forces acting at a
+          distance. This domain is huge. It includes SPACECRAFT, ROBOTS,
+          VEHICLES, ANIMALS, MOLECULES, the SOLAR SYSTEM, etc. The list is
+          endless. In fact, most of the objects that we perceive with our
+          ordinary senses in daily life can be viewed as linked multibody
+          systems. It is difficult to conceive of an ordinary object, or
+          collection of objects, that cannot be viewed in this way. Other
+          much smaller systems, such as molecular structures, we cannot
+          experience directly with our ordinary senses. Special instruments
+          nonetheless reveal their linked, multibody structure.
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        THE MATHEMATICS FOR THE DYNAMICAL MOTION OF SUCH SYSTEMS IS VERY
+          CHALLENGING
+          Newton said f = ma, force equals mass multiplied by acceleration.
+          This equation of motion has been at the root of science and
+          technology for several centuries. It is a very simple equation, as
+          are most fundamental laws of physics. It is easy to understand and
+          use. In modern times, it is taught as early as high-school, and
+          even earlier in some schools. However, as fundamental as it is,
+          this equation needs further elaboration: In its simplest form, it
+          only governs the dynamical behavior of a fictitious "point"
+          particle in space that does not occupy any volume. Things are not
+          so simple when modeling linked, multibody systems. Such systems
+          differ from a "point" particle in that dynamical interactions
+          between the various bodies in the multibody system must be
+          accounted for. An example of such a dynamic interaction occurs when
+          a spinning figure skater contracts the arms in order to change the
+          speed of rotation. Another important example occurs in space, when
+          pointing a gimballed camera toward a target may cause dynamic
+          disturbances in the rest of the spacecraft. This interaction occurs
+          even if the camera is small compared to the rest of the spacecraft.
+          In some aerospace engineering circles, this type of interaction is
+          known as the "tail wags dog" effect. Similar examples occur in all
+          types of linked, multibody systems.
+          To extend f = ma from a "point" particle to linked multibody
+          systems, equations of motion must be developed that govern the
+          interactive behavior of the complete system. These equations are
+          typically very complex. A significant number of history's greatest
+          scientists and mathematicians have made definitive contributions on
+          how to develop such equations of dynamical motion. Euler, Lagrange,
+          and Hamilton are among the most prominent. The science they created
+          is classical mechanics, which governs the dynamical motion of most
+          ordinary events when viewed at an ordinary human scale. Relativity
+          and quantum mechanics were revolutions which came later.
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        MATHEMATICAL COMPLEXITY IS OVERWHELMING EVEN FOR RELATIVELY SIMPLE
+          SYSTEMS
+          A simple robot with 6 articulated joints and 6 rigid links is one
+          of the most common tools for robotics applications and research
+          throughout the world. Fig. 1 displays the complexity of the
+          corresponding equations of motion. There is an overwhelming
+          proliferation of mathematical symbols and trigonometric functions
+          (Sine, Cosine, etc.) of the various joint angles. There are also
+          many subscripts. Counting the number of symbols is an overwhelming
+          exercise, even without trying to comprehend what the symbols mean.
+          There are so many trees that one cannot see the forest.
+          Figure 1
+
+                                     Figure 1
+
+                    [ Back to Section IV | Back to Section V ]
+          Complexity gets even more out of hand for more complex systems.
+          Some of the applications mentioned above (molecular structures,
+          animals, etc.) have significantly many more degrees of freedom than
+          a simple robot. Unless the equations of motion for such systems are
+          organized efficiently, the mathematical complexity may be far
+          beyond human capabilities.
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        THE SPATIAL OPERATOR ALGEBRA ELIMINATES COMPLEXITY
+          The Spatial Operator Algebra is a new approach to the mathematics
+          of linked multibody systems. One of its key innovations is that it
+          eliminates mathematical complexity. It reduces the number of
+          symbols that a human analyst must see and understand by several
+          orders of magnitude. This is done by using such spatial operators
+          as f and H in Fig. 1, with each operator symbol representing up to
+          10,000 more detailed arithmetical operations. Fig. 1 compares the
+          extremely simple mathematical expressions prevalent in the Spatial
+          Operator Algebra and the corresponding very complex expressions in
+          prior approaches.
+          While complexity is eliminated, no information about the system is
+          lost in the Spatial Operator approach, as the spatial operators
+          still contain precise information about the system. However, this
+          information is organized and presented to the analyst using much
+          fewer symbols.
+          Complexity is reduced to what may be the absolute minimum. Even
+          very complex systems require only a few spatial operator symbols.
+          It is difficult to conceive how there could ever be a simpler
+          mathematical representation.
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        COMPUTATIONAL COMPLEXITY GROWS ONLY LINEARLY WITH THE NUMBER OF
+          DEGREES OF FREEDOM
+          Each spatial operator in the Spatial Operator Algebra is mechanized
+          by an algorithm requiring arithmetical operations which grow only
+          linearly with the number of degrees of freedom. These are known as
+          "Order N" algorithms, because the number of arithmetical operations
+          is of the same order as the number N of degrees of freedom. This
+          means that, as system complexity grows, computational complexity
+          grows only linearly. This is almost ideal. It would be absolutely
+          ideal if the number of computations did not grow at all with system
+          complexity, but this may not be possible. However, the Spatial
+          Operator Algebra comes close to this. This is particularly true,
+          because in most traditional methods, the number of arithmetical
+          operations grows as the cube of the number of degrees of freedom.
+          Fig. 2 shows a comparison, in terms of the number of arithmetical
+          operations required, between the Order N algorithms embedded in the
+          Spatial Operator Algebra and the Order N-Cube algorithms of prior
+          state of the art. The Order N algorithms in the Spatial Operator
+          Algebra are referred to in Fig. 2 as NEIMO, which stands for Newton
+          Euler Inverse Mass Operator method.
+          Figure 2
+
+                                     Figure 2
+
+                              [ Back to Section VI ]
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        THE SPATIAL OPERATORS EXTEND TO 3-DIMENSIONAL MECHANICAL SYSTEMS THE
+          COMPUTATIONALLY EFFICIENT DIGITAL FILTERING TECHNIQUES OF MODERN
+          SIGNAL PROCESSING
+          Each spatial operator in the Spatial Operator Algebra is
+          implemented using a spatiallly recursive algorithm, in which the
+          necessary computations are performed in a sequential series of
+          steps. Each sequence starts at one end of the system and terminates
+          at the other end. Many of the spatial operators, those requiring
+          inversion of the system mass matrix for example, are mechanized by
+          spatially recursive Kalman filtering algorithms, quite popular in
+          digital filtering and signal processing. Since it was announced by
+          R. E. Kalman, now at the University of Florida, in the early
+          1960's, his Kalman filtering algorithm has found its way to
+          countless applications in science and engineering: aerospace
+          navigation, guidance and control; satellite orbit determination;
+          digital image processing; stock market modeling and prediction;
+          weather forecasting; etc. It has been stated in some occasions that
+          a good metric to measure the relative state of advancement of a
+          society is the number of Kalman filtering applications in this
+          society. While this claim may have been made somewhat in jest, it
+          may not be far from the truth.
+          That the Kalman filter embedded in the Spatial Operator Algebra
+          solves computational bottlenecks in classical mechanics is a very
+          surprising scientific discovery, requiring a deep understanding of
+          both classical mechanics and filtering methods.
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        THE SPATIAL OPERATOR ALGEBRA EMERGES FROM A SYNTHESIS OF SEVERAL
+          SCIENTIFIC DISCIPLINES, PREVIOUSLY THOUGHT TO BE UNRELATED
+          The Spatial Operator Algebra solves problems in classical mechanics
+          using a combination of powerful methods previously thought to be
+          unrelated to mechanics: (1) Filtering and Prediction Methods, which
+          emerged initially during World War II to address problems in
+          predicting the future trajectories of missiles and other
+          projectiles. N. Wiener, the father of the term Cybernetics, was
+          among the most prominent founders of this scientific discipline;
+          (2) Functional Analysis and Linear Operator Methods, a unifying
+          mathematical framework used widely in engineering and science (for
+          example in quantum mechanics); (3) Linear Control System Theory,
+          which has enabled the design of digital automatic control systems
+          in many space and terrestrial applications.
+          Finding previously undiscovered relationships and analogies among
+          areas is one of the most fundamental contributions that can be
+          made. Such discoveries inevitably enhance our knowledge and
+          understanding of the areas synthesized. For example, efficient
+          computational techniques, which have emerged from about 50 years of
+          intensive research in Filtering and Prediction Methods, can now be
+          used to organize complexity and solve computational bottlenecks in
+          classical mechanics. Knowledge from any given area is applied to
+          previously unresolved problems in the other areas. Finding
+          analogies and relationships therefore fills in gaps in our
+          knowledge, and it advances knowledge in all related areas. To a
+          large extent, the Spatial Operator Algebra does this.
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        THE SPATIAL OPERATOR ALGEBRA LEADS TO A HIERARCHICAL SOFTWARE
+          ARCHITECTURE BUILT FROM STANDARDIZED, REUSABLE MODULES
+          The Spatial Operator Algebra is easily implemented using modern
+          software development methods. At any given level in the hierarchy,
+          the computer automatically decomposes each spatial operator into a
+          set of a few more detailed operations at the next lower level in
+          the hierarchy. There is a corresponding decomposition in the
+          software architecture. This process of decomposition can be viewed
+          as that of "smart" compilation, in the sense that the compiler is
+          made smart by built-in knowledge about the system dynamical model
+          embedded in the spatial operators. The software modules which
+          constitute the architecture are simple, standardized, and easily
+          debugged.
+          Figure 3
+
+                                     Figure 3
+          Fig. 3 illustrates the software architecture. At the highest level
+          (Level 1 in the figure) of abstraction, the user inputs a
+          mathematical statement. This input requires that the program
+          decompose the operators H, J, and K that appear at this level. This
+          decomposition occurs at Level 2 in the hierarchy. At the next
+          level, labeled 3 in the figure, the computer recognizes that j is
+          what is referred to as a Kalman filter transition operator. This in
+          turn implies that j can be mechanized using an inward Kalman
+          filtering recursion, shown at Level 4, from the tip of the system
+          to the base. Subsequent levels are decomposed in the same fashion.
+          At the lowest level, Level 7 in the figure, are the very detailed
+          coordinate transformations for reference frames attached to the
+          various bodies constituting the multibody system.
+          This programming approach achieves a very high level of
+          abstraction. The number of symbols visible to the analyst at any
+          level in the hierarchy is very small. This means that the
+          corresponding computer programs are also very simple. The programs
+          are modular and map to a modular software architecture. The
+          programs are also to a large extent system-independent, in the
+          sense that going from one system to another is easy to do. Although
+          the programs are simple, computational efficiency is not lost.
+          Embedded in the programs are very efficient computational
+          algorithms.
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        HIGH-PERFORMANCE SIMULATION FOR REAL-TIME PLANETARY SPACECRAFT
+          DYNAMICS
+          Real-time computer simulators which accurately predict the
+          dynamical motion of an actual spacecraft in flight lead to
+          significant reductions in cost during system design, development
+          and testing. They also improve system performance and reliability
+          during flight operations. In the early stages of a flight project,
+          when the actual spacecraft to be flown may not yet exist in its
+          final form, design options and trades can easily be made by
+          computer simulation. For example, changing a sensor in a computer
+          simulation costs much less than changing it in an actual
+          spacecraft. In the final stages of design and testing, when the
+          spacecraft may already be built and almost ready to be flown,
+          computer simulations are used for hardware-in-the-loop testing and
+          evaluation. Such hardware-in-the-loop simulations are hybrid
+          systems consisting of both flight hardware (sensors, actuators,
+          etc.) together with software for spacecraft dynamics. They are
+          invaluable at this stage because they provide relatively
+          inexpensive end-to-end testing and evaluation prior to flight.
+          DARTS (Dynamics Algorithms for Real Time Simulation) is a software
+          package developed by the innovators which has been adopted as a
+          standard for several current and emerging JPL flight projects. It
+          is an integral element of the JPL Flight System Testbed (FST) and
+          PDC (Project Design Center), and it provides a cost-effective,
+          rapid-prototyping tool for end-to-end system design, development
+          and testing. DARTS has been adopted as a standard by the JPL
+          Pathfinder and Cassini projects for hardware-in-the-loop spacecraft
+          simulations. It is also being used to support Galileo mission
+          operations.
+          Productivity gains enabled by DARTS are as follows. The DARTS
+          simulation software meets project needs through all phases of a
+          project. Its reusability makes it the simulation standard for
+          current and future projects. It allows exploration of a larger
+          design and test space, thus reducing risks. Its high-speed
+          algorithms reduce simulation time by at least an order of
+          magnitude. It easily accommodates multiple spacecraft
+          configurations and simulation scenarios. It also allows easy
+          testing of the fault-protection subsystem by allowing insertion of
+          simulated faults while the computer simulation program is running.
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        ROBOTICS APPLICATIONS
+          The Spatial Operator Algebra organizes very efficiently the
+          mathematics and computations required by high-performance robotic
+          manipulators, arm-like systems consisting of linked objects joined
+          together by articulated joints. A robotic manipulator is a very
+          special type of a linked, multibody system. The Spatial Operator
+          Algebra ranks among the best fundamental contributions to robotics
+          research in recent years. The innovators have been systematically
+          using the Spatial Operator Algebra to solve a number of important
+          research problems in robotics research: 1) efficient inversion of
+          the manipulator mass matrix required to conduct robot dynamics
+          simulation; 2) non-interacting manipulator control, in which the
+          control system at each of the joints is independent of all of the
+          other joints; 3) control of underactuated manipulators, in which
+          not all of the degrees of freedom are actively controlled; and 4)
+          dual arm manipulation in which two or more arm-like systems work
+          together to move a commonly held object. These results have been
+          communicated to the robotics community through publication in
+          technical journals.
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        LARGE SCALE MOLECULAR DYNAMICS SIMULATIONS
+          In a joint effort with Professor W. Goddard, III of the Caltech
+          Chemistry Department, the Spatial Operator Algebra is being used to
+          investigate the dynamics of large (~1,000,000 atom) molecular
+          structures. Fig. 4 illustrates such an application. The Spatial
+          Operator Algebra is being used to study: the structural and
+          functional relationships of proteins and enzymes; protein folding
+          mechanisms and pathways; new drug design; and design and study of
+          catalysts and polymers. The fundamental technical problem being
+          addressed is the global and local dynamical behavior a complex
+          collection of many atoms joined together by interactive forces. The
+          efficiency of the dynamics algorithms in the Spatial Operator
+          Algebra enable the accurately detailed study of much larger systems
+          than could be studied with previous methods. This project is being
+          supported as part of a National Science Foundation (NSF) Grand
+          Challenge Grant in High-Performance Computing.
+          Figure 4
+
+                                     Figure 4
+
+                              [ Back to Section XII ]
+
+                                 [ Return to Top ]
+            ______________________________________________________________
+
+        CONCLUDING REMARKS
+          The Spatial Operator Algebra is a fundamental contribution to
+          engineering, science and applied mathematics. It is not only
+          technically elegant, but it is also very practical in a
+          "hard-nosed" engineering sense. Its primary applications to date
+          have been in space vehicle dynamics (spacecraft, robots, etc.), but
+          there are many more potential applications. The fundamental body of
+          knowledge that the Spatial Operator Algebra represents is being
+          disseminated at universities and through publications in technical
+          societies. This process is gradual but unstoppable. As the Spatial
+          Operator Algebra becomes more widely understood, there will be many
+          more applications. Some of the contributions in it (e.g. the Kalman
+          filter solves computational bottlenecks in classical mechanics) are
+          definitive. These contributions will stand the test of time. The
+          DARTS software implements this algebra using the tools of modern
+          software engineering, and has made substantial contributions to
+          wide variety of NASA flight projects.
+
+                                 [ Return to Top ]
+        __________________________________________________________________
+
+      Last updated:
+      For comments or questions, please e-mail dshell@dshell.jpl.nasa.gov.
+      Page designed by Electronic Publishing Services, Section 644.

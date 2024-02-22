@@ -1,0 +1,104 @@
+http://www-e835.fnal.gov/~stancari/SFTlogbook.txt
+
+   ***********************************************************************
+   * * * E 8 3 5 * * * * S c i n t i l l a t i n g - F i b e r T r a c k e
+   r * * * * L o g b o o k * * *
+   ***********************************************************************
+   Last update: 19 August 1999. For suggestions and comments, contact
+   Giulio and/or e-mail stancari@fnal.gov. For more information on the
+   Sci-Fi Tracker, check out the evolving SFT Home Page:
+   http://www-e835.fnal.gov/~mussa/sft/sft.html The official reference for
+   information regarding the readout is the green "E835 Sci-Fi Readout"
+   logbook, located in one of the Ferrara offices at the AP-50 portakamps.
+   -----------------------------------------------------------------------
+   1 9 9 6 D a t a T a k i n g
+   -----------------------------------------------------------------------
+   run(s) subsys description from thru 0533 0909 gates : PCOS gate width
+   120ns; signal width 40ns; leading edge of signal comes 60ns after gate
+   leading edge. 0533 0909 gates : FERA gate width 170ns; leading edge of
+   signal comes about 10ns after gate leading edge; analog signal rise
+   time between 10 and 20ns. 0533 0783 Vbias : all cards at 6.4V. 0533
+   0714 PCOS : fibers 66-68out noisy (PCOS #3, ch 24-27, one of which is
+   spare). Replaced module. 0533 0691 DISCRI : all thresholds at -48mV.
+   0533 0597 PCOS : meaningless delimiter word between words from the
+   master and the terminator crates (it should not even be there,
+   according to the manual). Solution? Skip it. 0688 0691 PCOS : all PCOS
+   disconnected from DYC, for they caused DAQ hangs. No digital readout of
+   the Sci-Fi tracker. 0693 0909 DISCRI : lowered (absolute value of the)
+   thresholds for DISCRI+OR #1-#4: -48mV --> -35mV. 0693 0714 PCOS : brute
+   force CLEAR to the master controller after each event, to avoid DAQ
+   hangs. All the words look shuffled and/or meaningless, except those
+   from the first events of each run. Unusable data. 0741 0784 PCOS : gave
+   up reading out both crates; modules #17-#32 and #1-#3 put in the same
+   crate; This way, all fibers are read out either by a FERA and/or by a
+   PCOS. 0784 0873 Vbias : all cards at 6.4V, except #19 at 6.0V (fibers
+   254-283out). 0784 0784 PCOS : output of DISCRI+OR #19 disconnected for
+   the first few minutes of the run; no signal to PCOS #19 (fibers
+   254-283out). 0801 0812 PCOS : in order to maximize the number of
+   channels read out with just one crate, filled master crate with modules
+   #1-#12, #14-#19, #23-#25, #29 and #31. 0813 0909 PCOS : exchanged two
+   inputs (#4A <--> #13B), in order to increase the number of fibers read
+   out with just one crate. Fiber mapping changed; new mapping loaded into
+   the dbase. 0877 0909 DISCRI : changed thresholds for modules #26-#28,
+   #30 and #32 (output connected to PCOS that are not read out -- there
+   should be no effect on PCOS efficiencies). 0877 0906 Vbias : all cards
+   at 6.2V. 0908 0909 Vbias : all cards at 6.4V.
+   -----------------------------------------------------------------------
+   1 9 9 7 D a t a T a k i n g
+   -----------------------------------------------------------------------
+   run(s) subsys description from thru 1006 FERA : implemented analog
+   readout of fibers 15-86out and 195-430out. New VSNs: 151-171. New delay
+   cables are RG-58 instead of RG-174. 1006 gates : all PCOS gates are
+   120ns wide. 1006 1292 DISCRI : all thresholds at -40mV. 1006 1292 VLPC
+   : channel 67out is noisy. 1006 1254 gates : old FERAs (VSN 101-138),
+   170ns; new FERAs (VSN 151-171), 150ns. 1006 1254 gates : leading edge
+   of signals to the new FERAs (VSN 151-171) comes 40ns after the gate
+   leading edge. 1006 1098 Vbias : all cards at 6.4V; since sometime
+   between these two runs, Vbias(19)=6.0V (fibers 254-283out). 1006 1018
+   DISCRI : no input to #3 for the first runs of this set; fibers 59-86out
+   not read out. 1099 1126 Vbias : all cards at 6.4V, except #18 = 6.0V
+   (fibers 225-253out) and #19 = 5.8V (fibers 254-283out). 1127 1130 Vbias
+   : in order to equalize channels, data file
+   /dart/daqman/camac/ferrara/vbias/vbias.conf is to be used. It has been
+   loaded for the first time during run 1127. 1131 Vbias : modified data
+   file during run 1131; just one card changes: #3 (fibers 59-86out)
+   ?6.3V? --> 6.4V. 1255 gates : 24ns delay added to new FERA gates; the
+   leading edge of the signal comes about 16ns after the gate leading
+   edge. 1271 1292 Vbias : card #12 unplugged; no signal from fibers
+   129-142inn+out. 1271 1273 FERA : VSN 171 has many dead channels; fibers
+   416-430out do not have analog readout. Replaced module after the end of
+   the stack. 1277 1277 FERA : VSN 103 and 153 disconnected for part of
+   the run for signal studies. No analog signal from fibers 45-58inn+out.
+   1278 1281 gates : all FERA gates are 250ns wide; pedestals are still
+   those from narrow gates, though. 1283 2373 gates : all FERA gates still
+   250ns wide; correct pedestals are loaded. 1299 DISCRI : new thresholds
+   set, after looking at signals from the QPA02s on the scope. DISCRI
+   bundle threshold # 5 # 1 -40mV --> -55mV (fib 8inn noisy) # 5 " -->
+   -43mV (noisy tails) #16 #11 " --> -50mV (noise above thr) #24 #16 " -->
+   -48mV ( " " " ) #27 #16 " --> -50mV ( " " " ) #30 #18 " --> -48mV ( " "
+   " ) 1299 Vbias : card #19 at 5.95V (fibers 254-283out). 1299 QPA02 :
+   channel 22 (QPA numbering), slot C, cassette P1 shorted at the input of
+   the QPA02 card (fiber 67out, noisy). 2184 DDK : swapped connectors to
+   replace bad chips. New maps loaded into the database. 2184 QPA02 : on
+   cassette 5, a latched *spare* chip channel has been isolated, in order
+   to reduce the current drawn by card 2/A. 2218 2253 FERA : during these
+   runs, Luciano was replacing the connectors at the input of the new
+   FERAs. 2376 gates : all FERA gates 150ns wide. 2404 DISCRI/: because of
+   a noisy channel (349inn), DISCRI 28 trigger (fibers 343-371inn) has
+   been excluded from the trigger (bundle 17). 2409 2410 DISCRI : for part
+   of these runs, the input to DISCRI 28 (fibers 343-371inn) was
+   accidentally left disconnected (work on noisy channel 349inn had been
+   done). 3060 DISCRI : killed channel 30 at the input of DISCRI 9
+   (spare), because it is noisy and would affect the rate of bundle 5.
+   3116 3116 FERA : a fuse blew in the crate containing VSN 151-171. Fiber
+   data missing for part of this run. 3120 3120 FERA : while fixing the
+   problem occurred during run 3116, some input connectors to the FERA
+   were partially left unplugged; 47 channels are missing for part of the
+   run due to this reason. 3226 3233 PCOS : no PCOS readout for part of
+   these runs; the crate stopped working at the end of the psi' scan. It
+   was not due to a fuse blowing or to a failure of the power supply. 3250
+   3254 VLPC : due to a power outage, the temperatures of the cassettes
+   were not controllable; VLPCs off during these runs. 3261 3263 QPA02 :
+   card 23 tripped, but was not reset promptly; channels 372-401inn off.
+   3295 general: fixed target run ended; no more helium supply to the
+   cryostat; the glorious E835 fiber tracker is off for good.

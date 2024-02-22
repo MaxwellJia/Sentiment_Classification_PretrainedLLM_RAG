@@ -1,0 +1,147 @@
+http://polar.wwb.noaa.gov/sst/Welcome.html
+
+   [NCEP Logo]
+   __________________________________________________________________
+
+Real-time, global, sea surface temperature (RTG_SST) analysis
+     __________________________________________________________________
+
+   GLOBAL SST:
+
+   Global SST Analysis
+
+   Global SST Analysis
+
+   Global SST Anomaly
+
+   Global SST Anomaly
+     __________________________________________________________________
+
+   N. AMERICAN REGION SST:
+
+   N American region SST Analysis
+
+   N American region SST Analysis
+
+   N American region SST Anomaly
+
+   N American region SST Anomaly
+     __________________________________________________________________
+
+   N. ATLANTIC SST:
+
+   N Atlantic SST Analysis
+
+   N Atlantic SST Analysis
+
+   N Atlantic SST Anomaly
+
+   N Atlantic SST Anomaly
+     __________________________________________________________________
+
+   N.E. PACIFIC SST:
+
+   NE Pacific SST Analysis
+
+   NE Pacific SST Analysis
+
+   NE Pacific SST Anomaly
+
+   NE Pacific SST Anomaly
+     __________________________________________________________________
+     __________________________________________________________________
+
+     NOTE for frequent visitors: Go to
+     http://polar.wwb.noaa.gov/sst/Changed_RTG_SST.html for information
+     on changes in the operational run-time and the data-ingest window.
+     A daily, high-resolution, real-time, global, sea surface temperature
+     (RTG_SST) analysis has been developed at the National Centers for
+     Environmental Prediction/Ocean Modeling Branch (NCEP / OMB). The
+     analysis was implemented in the NCEP production suite 30 January
+     2001, and provides the daily ocean surface temperatures for the
+     Meso-Eta model.
+     The daily sea surface temperature product is produced on a
+     half-degree (latitude, longitude) grid, with an optimum
+     interpolation analysis of the most recent 24-hours buoy and ship
+     data, satellite-retrieved SST data, and SST's derived from
+     satellite-observed sea-ice coverage. The algorithm employs the
+     following data-handling and analysis techniques:
+
+     Satellite retrieved SST values are averaged within 0.5 deg. grid
+     boxes with day and night 'superobs' created separately for each
+     satellite;
+     Bias calculation and removal, for satellite retrieved SST, is the
+     technique employed in the 7-day Reynolds-Smith climatological
+     analysis;
+     SST reports from individual ships and buoys are separately averaged
+     within grid boxes;
+     The first-guess is the prior (un-smoothed) analysis with one-day's
+     climate adjustment added;
+     Surface temperature is calculated for water where the ice cover
+     exceeds 50%, using salinity climatology in Millero's formula for the
+     freezing point of salt water:
+
+     t(S) = -0.0575 S + 0.0017 S^3/2 - 0.0002 S^2,
+
+     with S in psu.
+     An inhomogeneous correlation-scale-parameter l, for the correlation
+     function: exp(-d^2/l^2) , is calculated from a climatological
+     temperature gradient, as
+
+     l = min ( 450 , max( 2.25 / |grad T| , 100 )),
+
+     with d and l in kilometers. "grad T" is in deg. C / km
+
+     Evaluations of the analysis products have shown it to produce
+     realistically tight gradients in the Gulf Stream regions of the
+     Atlantic and the Kuroshio region of the Pacific, and to be in close
+     agreement with SST reports from moored buoys in both oceans. Also,
+     it has been shown to properly depict the wintertime colder shelf
+     water -- a feature critical in getting an accurate model prediction
+     for coastal winter storms.
+     The evaluation of the RTG_SST analysis is available by clicking the
+     link to the RTG_SST Verification page.
+     Grib files for the global SST product are available at the following
+     FTP sites:
+     ftp://ftp.ncep.noaa.gov/pub/data1/rtg_sst (most recent 2 days)
+     ftp://polar.wwb.noaa.gov/pub/sst (most recent 7 days)
+     ftp://polar.wwb.noaa.gov/pub/history/sst (fields back to Feb. 11,
+     2001)
+     For information on reading and unpacking GRIB files, go to
+     http://polar.wwb.noaa.gov/faqs/Tools.html
+     The RTG_SST analysis is done over all ocean areas and the Great
+     Lakes. There is no analysis over land. The land values are filled by
+     a Cressman interpolation to produce a complete grid for possible
+     interpolation to other grids. The ocean and land areas are defined
+     by a land sea mask. This data set is an ASCII file, ls.dat, which
+     may be found at the FTP site:
+     ftp://polar.wwb.noaa.gov/pub/history/sst/lsmask
+     The spatial grid is defined identically to the grid for the SST
+     arrays, with indices starting at the Greenwich Meridian and near the
+     South Pole. The values in ls.dat are set to 0 over the ocean and 3
+     over land. It can be read by the following Fortran code:
+
+     DIMENSION LS(720,360)
+     OPEN (11,FILE='ls.dat')
+
+     C
+     C Read in land sea tags (0 for ocean; 3 for land)
+     C
+
+     READ (11,'(80I1)') LS
+     STOP
+     END
+
+     For additional information about data-management and analysis
+     techniques, contact William.Gemmill@noaa.gov.
+     For information about the run cycle and digital data format, contact
+     Bert.Katz@noaa.gov.
+     __________________________________________________________________
+
+   Return to Ocean Modeling Branch Main Page
+
+
+    Problems?
+     __________________________________________________________________
+
+   Last updated December 19, 2001.

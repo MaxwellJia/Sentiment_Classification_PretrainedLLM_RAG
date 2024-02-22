@@ -1,0 +1,135 @@
+http://d3d.fsl.noaa.gov/symposium/jimhayes_paper.pdf
+
+   J5.2 APPLYING D3D IN AN OPERATIONAL ENVIRONMENT John W. Cannon and
+   James C. Hayes NOAA/National Weather Service Forecast Office Gray,
+   Maine Joshua Watson NOAA/National Weather Service Eastern Region
+   Headquarters Bohemia, New York 1. INTRODUCTION operational setting,
+   access to the D2D data tree in AWIPS was necessary. It is important to
+   note that D2D is not The Forecast System Laboratory (FSL) Display 3-
+   required to run D3D. Dimensions workstation application (D3D) allows
+   forecasters to view model data in a multi-dimensional Access to
+   real-time data necessitated adding the D3D interactive display. D3D,
+   based on the University of workstation to the AWIPS Local Area Network
+   (LAN). Wisconsin's Vis5D software, supplements Advanced Other options,
+   such as moving data to the workstation via Weather Interactive
+   Processing System (AWIPS) 2-D the Local Data Acquisition and
+   Dissemination computer display capabilities available to forecasters.
+   Large (LDAD), were dismissed as too taxing on the AWIPS volumes of data
+   can be rapidly assimilated with an LAN. After receiving permission from
+   the AWIPS Security increased temporal and multi-dimensional
+   understanding Office, the D3D workstation was added to the AWIPS of how
+   meteorological processes interact. LAN. During Spring 2001, the NWS
+   forecast office in Gray, ME 2.3 Training the Staff worked in
+   cooperation with the NWS Eastern Region Headquarters and FSL as a D3D
+   workstation test site. The Initially, the D3D workstation was located
+   away from the goal of this project is to determine operational
+   strengths forecast floor. This was done to facilitate staff training.
+   and limitations of the workstation through input from the Training
+   began with one-on-one sessions, performed by a hydrometeorological
+   staff. forecaster who attended the WFO-Advanced RT99 exercise (Szoke et
+   al. 2001) in November, 1999. During 2. INTRODUCING D3D INTO OPERATIONS
+   the training session, each element of the software was reviewed in
+   detail, and possible real-time applications were There were several
+   aspects to consider introducing D3D discussed. into forecast
+   operations. The hardware needed to be procured, access to a real-time
+   data feed needed to be After the one-on-one training, each forecaster
+   was asked obtained, and the staff needed to be trained, both in to
+   complete a series of job sheets, each focusing on a software interface
+   knobology and techniques application. specific aspect of the software.
+   The job sheets, based on those used in the RT99 exercise, helped
+   reinforce the 2.1 Obtaining the Hardware points brought out in the
+   one-on-one training. As part of the test, the Scientific Services
+   Division (SSD) Once the staff was trained on D3D, the workstation was
+   of ERH obtained a PC for the forecast office in Gray on relocated to
+   the operations area, where the staff began which to run the D3D
+   workstation. The Dell® PC contains using the software in a real-time
+   setting. dual Pentium III processors. While the D3D workstation
+   software does not explicitly use two processors, the Linux 3.
+   DETERMINING THE ROLE OF D3D IN OPERATIONS operating system will attempt
+   to use the second processor, allowing D3D use utilize the first
+   processor almost As is the case with any new software package or
+   forecast exclusively, thereby increasing performance. technique, it is
+   important to determine whether it adds to or detracts from the forecast
+   process. In this case, it is Due to the significant amount of software
+   rendering difficult to objectively determine the impact of the required
+   by the D3D program, a 3D accelerated video card software. with 32 MB of
+   RAM was also included. Thus, the workstation as delivered contains
+   considerably more To subjectively assess the impact of D3D in
+   operations, computing power than an typical AWIPS workstation.
+   forecasters were asked to complete an end-of-shift questionnaire.
+   Modeled after the questionnaires 2.2 Obtaining Access to Real-Time Data
+   administered during the RT99 exercise, forecasters were asked about the
+   relevance of each element of the D3D The D3D software, as delivered by
+   FSL, was configured to software, and how it could be used if included
+   in future display case study data. A case study was included in the
+   AWIPS builds. In addition, due to the beta status of the original
+   software package distribution. Since the test was software, questions
+   concerning software performance intended to gauge the utility of the
+   D3D workstation in an were included. The results of the questionnaires
+   can then be used as input to the D3D developers at FSL. 4.2 Using
+   Trajectories 4. USE OF D3D: EXAMPLES Use of trajectories in forecast
+   operations has been limited to plotting single points on a
+   two-dimensional surface. Perhaps the best way to demonstrate the
+   utility of D3D is The third dimension was simulated by changing the
+   values to present two examples where the capability of D3D, as of
+   predetermined fields for each point. a more thorough diagnostic tool
+   than D2D alone, is demonstrated. Forecast trajectories in D3D
+   explicitly show the three- dimensional aspects of trajectories, and
+   allow the 4.1 Using Isosurfaces forecaster to determine which fields to
+   display. Examination of the 0000 UTC 03 October 2001 AVN The 0000 UTC
+   27 September 2001 Eta model was model forecast cycle in D2D showed
+   strengthening warm forecasting upper-level ridging to build southeast
+   across air advection over eastern Ontario and western Quebec, Quebec
+   and northern New England. Rapid clearing was in advance of a shortwave
+   moving eastward across observed to be occurring in conjunction with the
+   building western Ontario. Precipitation associated with this feature
+   ridge. Forecasters at Gray, Maine, were interested to was forecast to
+   develop across central and southern know if the rapid clearing would
+   continue into their forecast Quebec between 1800 UTC 03 October and
+   0000 UTC area, as well as the origin of the drier air. 04 October 2001,
+   affecting mainly southeast Quebec and northern Maine. Trajectories were
+   constructed with starting points over central Quebec . The trajectories
+   had starting points Further examination of the processes involved in
+   creating ranging between 300 mb and 850 mb. Colored by relative the
+   precipitation was performed using D3D. This humidity, the trajectories
+   clearly showed the drying that examination allowed forecasters at WFO
+   Gray, Maine, to occurred as the air parcels descended from the upper
+   get a much better idea of where and when the maximum levels towards the
+   surface. precipitation could be expected. Looping through the model
+   forecasts using multiple Employing an isosurface of vorticity
+   (associated with the isosurfaces of relative humidity and the
+   trajectories also approaching short wave) and isosurfaces of
+   temperature showed the approaching airmass drying with time, as the (5
+   and 10 degrees Celsius) allowed the forecaster to get trajectories
+   reached further into southern New England. a better appreciation for
+   the depth of the approaching Thus forecasters were able to determine
+   that the arriving shortwave and associated warm advection. airmass
+   would provide rapid clearing, as well as contain air parcels that
+   originated in the upper troposphere. Finally, isosurfaces of vertical
+   velocity were added. Looping through the model output showed a maximum
+   in 5. REFERENCES depth of vertical velocity isosurface at the
+   intersection of the maximum depth of vorticity and temperature Szoke,
+   E.J., U.H. Grote, P.C. Kucera, P.T isosurfaces. Not surprisingly, the
+   forecast maximum McCaslin, P.A. McDonald, and W.F. Roberts,
+   precipitation amounts and timing coincided with the 2001: D3D: A
+   Potential 3D Visualization Tool occurrence of the maximum depth of
+   vertical velocity. for the National Weather Service. Preprints,
+   International Conference on Interactive The benefit of the D3D data
+   interrogation in this case Information and Processing Systems (IIPS)
+   for enabled forecasters to identify the feature with the most
+   Meteorology, Oceanography and Hydrology, vertical depth. This feature
+   would be responsible for a Albuquerque, NM, Amer. Meteor. Soc. majority
+   of the resultant precipitation over the Gray, Maine
+   http://d3d.fsl.noaa.gov/ams01/paper/D3D_for_the_ forecast area. Other
+   similar features were observed, but NWS.html none possessed the same
+   magnitude of depth. This is important because the "traditional" model
+   forecast interrogation (D2D) usually involves an examination of data on
+   single pressure or potential temperature fields or at single data
+   points. While multiple, seemingly identical, features may be observed
+   on a surface, such as vorticity on the 500-mb surface, one would have
+   trouble reconciling which of the vorticity maximums will likely have
+   the most effect on the sensible weather at the surface. As documented
+   in this case, the vorticity advection, coupled with the temperature
+   advection, produced numerous areas of upward vertical velocity. The
+   three-dimensional area with the largest atmospheric depth had the most
+   effect on the sensible weather at the surface.

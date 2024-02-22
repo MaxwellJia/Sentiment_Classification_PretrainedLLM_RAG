@@ -1,0 +1,66 @@
+http://www-didc.lbl.gov/Enable/
+
+                        The Enable Project Home Page
+
+                        [KU.logo.gif] [LBNL.logo.gif]
+     LBNL Data Intensive Computing Group and The University of Kansas ITTC
+       _______________________________________________________________
+
+     The Enable project is a DOE Research Project to build an adaptive
+     monitoring infrastructure, a monitor data publishing mechanism, and
+     monitor data analysis tools. We are developing a "Grid" service that
+     will provide both of these capabilities. The overall goal of this
+     work is to  provide manageability, reliability, and adaptability for
+     high performance applications running over wide-area networks. The
+     PIs are Brian Tierney (LBNL) and Joseph Evans (KU)
+
+     A main component of Enable project is the Enable network advice
+     server. An Enable server can installed on any data source host
+     (e.g.: a FTP server), and configured to monitor the network paths
+     from that host to a set of client hosts (or to scan FTP logs for a
+     list of client hosts to monitor). The Enable server monitors
+     throughput and delay values, and can be queried by client
+     applications to get the optimal TCP buffer size to use for a given
+     path.
+       _______________________________________________________________
+
+   Overview:
+
+              * "Enabling Network-Aware Applications", Tierney, Gunter, Lee,
+                Stoufer, Proceedings of IEEE HPDC '01
+              * "Experimental TCP modifications for high bandwidth delay product
+                networks" - report and talk slides
+              * Project Proposal (pdf file)
+       _______________________________________________________________
+
+     Download:
+
+     LBNL Open-Source License
+                                * Enable Network Advice Service
+                                * NetLogger instrumented version of tcpdump
+       _______________________________________________________________
+
+Documentation:
+
+     * A PDF version of the UML model is also available.
+     * For more information, see the design note s and the README file.
+     * A current changelog is maintained to keep track of current
+       modifications being made to Enable-0.2.
+       _______________________________________________________________
+
+     Enable API documentation:
+
+                                * Python
+                                * C
+                                * Java
+       _______________________________________________________________
+
+     Related Work:
+
+     * NetArchive
+     * NetLogger
+     * JAMM
+     * Grid Forum "Grid Performance" Working Group
+       _______________________________________________________________
+
+   DIDC Home

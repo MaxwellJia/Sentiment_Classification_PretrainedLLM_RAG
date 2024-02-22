@@ -1,0 +1,186 @@
+http://chartmaker.ncd.noaa.gov/csdl/op/tides/conzone.html
+
+           Continuous Water Level Zoning For Hydrographic Surveys
+
+                                                                 NOAA logo
+     __________________________________________________________________
+
+   Hydrographic survey data collected by the National Ocean Service (NOS)
+   contain measurements of water depths in the coastal waters of the U.S.
+   In order for these depths to be used in the making of the nautical
+   charts, the measured depth value must be corrected to determine depth
+   relative to Mean Lower Low Water (MLLW), which is the datum for NOS
+   charts. The departure of the instantaneous water level from MLLW is
+   called Schematic of important depths and elevations the tide correction
+   and is due to variations in the phase of the astronomic tide, the
+   difference between the long-term Mean Sea Level (MSL) and MLLW, and to
+   other, non-tidal effects caused primarily by winds and river flows.
+   The schematic to the right shows the elevations and depths that are
+   important in hydrographic surveying. The instantaneous Sea Surface
+   differs from the MSL by the sum of the astronomic tide (A) and the
+   residual or non-tidal water level (R). The MSL lies above the MLLW by
+   the spatially-varying offset (O). S is the raw depth measurement, or
+   sounding, and the tide correction is C. The depth displayed on a NOS
+   chart is D. Recently, the Global Positioning System (GPS) has been used
+   to make hydrographic surveying more accurate. Elevations measured using
+   GPS are commonly referenced to one of several possible ellipsoids. The
+   ellipsoidally-referenced sea surface is E, and the
+   ellipsoidally-referenced MSL is M.
+   Today, discrete tide zoning is the method NOS uses to obtain the tide
+   correction. For any location (x, y) and time (t) in a tide zone (k),
+   the tide correction (C) is estimated by shifting the water level
+   measured at one tide station (L[n]) by a time increment unique to that
+   zone (T[k]) and multiplying the result by a factor unique to that zone
+   (f[k]). In equation form, this is:
+
+                  C(x,y,t)=f[sub'k']L[sub'n'](t-T[sub'k'])
+
+   NOS oceanographers create the polygon-shaped tide zones and determine
+   f[k] and T[k] values for each one from the analysis of historical tide
+   data (preliminary set of tide zones for San Francisco Bay).
+
+   However, discrete tide zoning has several known inaccuracies. Tide
+   zoning rests on the simplifying assumption that the water level in each
+   zone has a fixed relationship to the measured water level at a single,
+   nearby gauge. In reality, the shape of the measured water level curve
+   varies throughout coastal waters in a complex way. Also, zoning
+   produces a discontinuity in the tide correction when a ship crosses
+   from one zone to the next. Therefore, a new method of estimating tide
+   corrections is being developed. This method does not depend on discrete
+   tide zones, but instead generates a unique value of the correction for
+   the exact time and location of the sounding; it can be thought of as
+   continuous tide zoning. The new method separates the astronomic tide
+   and the residual (or non-tidal) component and treats them differently.
+   First, the method spatially interpolates each tidal constituent's
+   amplitude and phase throughout the region and makes a tidal prediction.
+   This predicted tide is then added to the residual component and the
+   offset, which are computed by spatially interpolating the values at the
+   shore. The new method is called Tidal Constituent And Residual
+   Interpolation (TCARI).
+
+   The theory behind TCARI is as follows. In general, the tide correction
+   (C) at any point in the hydrographic survey area can be expressed as
+   the sum of the astronomic tide (A), the residual (or non-tidal) water
+   level (R), and the offset of MSL from MLLW (O), or:
+
+                                   C=A+R+O
+
+   At a water level gauge, the value of each of the three components can
+   be determined from measurements; A and O can be obtained by the
+   analysis of historical water level data, and R must be determined from
+   the observations at the time of the hydrographic survey. However, at
+   any point located some distance away from any of the gauges, the value
+   of each component is usually not known. Using TCARI, an estimate can be
+   made by spatial interpolation. That is, by summing the weighted value
+   of the component at each of the nearby water level gauges. For example,
+   the residual water level is determined by summing the weighted value of
+   the residual (R[n]) at each gauge:
+
+      R(x,y)=Sigma[sup'N sub'r'' sub'n=1']W[sup'r'sub'n'](x,y)R[sub'n']
+
+   Here W^r is the weighting function and N[r] is the number of stations
+   where the residual water level is measured. Therefore, a set of
+   weighting functions is needed, one weighting function for each water
+   level station. And because there is often a different group of water
+   level stations supplying data for each component of C, a different set
+   of weighting functions is needed for each component. Therefore, a
+   preliminary expression for C is:
+
+                        C(x,y,t)=Sigma[sup'N sub'a''
+         sub'n=1']W[sup'a'sub'n'](x,y)A[sub'n']+Sigma[sup'N sub'r''
+         sub'n=1']W[sup'r'sub'n'](x,y)R[sub'n']+Sigma[sup'N sub'o''
+                   sub'n=1']W[sup'o'sub'n'](x,y)O[sub'n']
+
+   A further refinement is to interpolate not the total astronomical tide,
+   but the harmonic constants of each tidal constituent. Given an
+   amplitude (a) and phase or epoch (f), the total astronomic tide can be
+   expressed as:
+
+                          A[sub'n']=Sigma[sup'Imax'
+           sub'i=1']alpha[sub'ni']cos(omega[sub'i']t-phi[sub'ni']
+
+   where i denotes the number of the tidal constituent, Imax is the total
+   number of constituents, and w the angular speed of the constituent (in
+   degrees per hour). Therefore, the final resulting equation is:
+
+           C(x,y,t)=Sigma[sup'Imax' sub'i=1']([Sigma[sup'N sub'a''
+   sub'n=1']W[sup'a'sub'n'](x,y)alpha[sub'ni']]cos{omega[sub'i']t-[Sigma[s
+    up'N sub'a'' sub'n=1']W[sup'a'sub'n'](x,y)phi[sub'ni']]})+Sigma[sup'N
+     sub'r'' sub'n=1']W[sup'r'sub'n'](x,y)R[sub'n']+Sigma[sup'N sub'o''
+                   sub'n=1']W[sup'o'sub'n'](x,y)O[sub'n']
+
+   Image of the instantaneous astronomic tide in Galveston Bay
+
+   The above equation for the tide correction can be applied to any
+   location within the hydrographic survey region, provided there are
+   adequate historical measurements of the water levels to determine the
+   harmonic constants (a, f) and the offsets (O), and contemporary
+   measurements to determine the residual (R) during the time of the
+   survey.
+
+   The TCARI method is applied by creating a grid for the coastal region
+   of interest and then generating the weighting functions for each set of
+   components. As an example, a plot of the instantaneous astronomic tide
+   in Galveston Bay, as determined by summing the spatially-interpolated
+   harmonic constants, is shown in the figure to the right. The grid
+   consists of squares, one-third of a nautical mile on a side. The
+   astronomic tide is shown relative to MSL.
+
+   The TCARI method was tested for accuracy using post-processed kinematic
+   GPS measurements of water levels collected by NOS in San Francisco Bay,
+   California, and Galveston Bay, Texas. In each estuary, the water levels
+   were measured by a small craft on several traverses of a fixed course
+   and then referenced to the ellipsoid. The measurements themselves had
+   root mean square (RMS) errors estimated to be 7 cm for San Francisco
+   Bay and 9 cm for Galveston Bay. The results indicate that TCARI was
+   more accurate tide zoning; RMS errors were lower than zoning by 1 cm in
+   San Francisco Bay and 2 cm in Galveston Bay. However, both methods had
+   RMS errors approximately equal to those of the measurements.
+
+   The weighting functions are computed as follows. Each function is
+   assumed to obey the two-dimensional Laplace's Equation:
+
+                     LaPlace operator times W[sub'n']=0
+
+   with 'internal boundary conditions' at the water level gauges set by:
+
+                          W[sub'j']=delta[sub'jn']
+
+   That is, W = 1 at gauge 'n' and W = 0 at all other gauges. There will
+   be one function W(x, y) for each gauge used for each component. At land
+   boundaries, the slope of W in the normal direction is proportional to
+   the slope of W in the adjacent region.
+
+   There are other applications for TCARI. One is to estimate the
+   ellipsoidally-referenced sea level (E) by substituting an
+   ellipsoidally-referenced Mean Sea Level (M) for the offset O in the
+   final equation for C. This sea level can be used for comparisons with
+   Real-Time Kinematic GPS measurements of the sea surface. A second
+   application is to use the weighting functions to generate spatial
+   distributions of the differences between tidal datums (for example, the
+   Mean High Water minus Mean Low Water, which equals the mean tide
+   range). Such spatially-varying tidal datum planes are useful in
+   re-referencing NOS chart depths to other datums such as the North
+   American Vertical Datum of 1988 (NAVD88).
+   References:
+   Hess, K. W., R. A. Schmalz, C. Zervas, and W. C. Collier, 1999. Tidal
+   Constituent And Residual Interpolation (TCARI): A New Method for the
+   Tidal Correction of Bathymetric Data. U.S. Department of Commerce,
+   National Oceanic and Atmospheric Administration, 1315 East-West
+   Highway, Silver Spring, Maryland. NOAA Technical Report NOS CS 4, 99
+   pp.
+   _______________________________________________________________________
+
+   Please send comments or questions to:
+   image of pencil    Dr. Kurt Hess
+   NOAA/NOS/Coast Survey Development Laboratory
+   Phone: (301) 713-2801 ext. 123
+   Fax: (301) 713-4501
+     __________________________________________________________________
+
+      Marine Modeling and Analysis Programs | Coast Survey Development
+                     Laboratory | Office of Coast Survey
+     __________________________________________________________________
+
+    Last updated March 14, 2001
+   Constructed and maintained by Meredith Westington

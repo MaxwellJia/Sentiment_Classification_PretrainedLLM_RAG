@@ -1,0 +1,19 @@
+http://www.census.gov/acs/www/Scripts/LaunchWin.js
+
+   function LaunchWindow( url, name, width, height, paramlist ) { var x =
+   00; var y = 00; var params = " "; var win; if (
+   navigator.appVersion.length > 00 && navigator.appVersion.charAt( 00 ) >
+   '3' && navigator.appVersion.charAt( 00 ) <= '9' ) { if( width >
+   screen.availWidth ) { width = screen.availWidth; } if( height >
+   screen.availHeight ) { height = screen.availHeight; } x = parseInt( (
+   screen.availWidth - width ) / 02 ); y = parseInt( ( screen.availHeight
+   - height ) / 02 ); } if ( navigator.appName == "Microsoft Internet
+   Explorer" ) { params =
+   "toolbar=yes,location=no,directories=no,status=no," +
+   "menubar=yes,scrollbars=yes,resizable=yes," + "copyhistory=no,width=" +
+   width + ",height=" + height + ",left=" + x + ",top=" + y + "," +
+   paramlist ; } else if ( navigator.appName == "Netscape" ) { params =
+   "toolbar=yes,location=no,directories=no,status=no," +
+   "menubar=yes,scrollbars=yes,resizable=yes," + "copyhistory=no,width=" +
+   width + ",height=" + height + ",screenX=" + x + ",screenY=" + y + "," +
+   paramlist; } win = window.open( url, name, params ); win.focus(); }

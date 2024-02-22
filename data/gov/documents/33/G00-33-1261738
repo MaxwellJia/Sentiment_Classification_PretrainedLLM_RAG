@@ -1,0 +1,36 @@
+http://www.lecb.ncifcrf.gov/~toms/src/watermark.js
+
+   if(navigator.appName == "Netscape"){ var IW= 0; var IH= 0; var PX= 0;
+   var PY= 0; var ZIN= 0; var us= null; var IMGW= 40; var IMGH= 40; var
+   LSAFETY= 20; var TSAFETY= 17; function branding() { oldIW= IW; oldIH=
+   IH; oldPX= PX; oldPY= PY; if ((window.innerHeight !=
+   oldIH)||(window.innerWidth != oldIW)||(window.pageXOffset !=
+   oldPX)||(window.pageYOffset != oldPY)) { if (us == null) { for (i=0;
+   iourDocTest){ ourDoc= window.top.frames[i]; ourDocTest=
+   window.top.frames[i].innerWidth * window.top.frames[i].innerHeight; } }
+   } if((ourDoc == self)||(!ourDoc)){ if (us != null) { us.visibility=
+   "hide"; IH= window.innerHeight; IW= window.innerWidth; PX=
+   window.pageXOffset; PY= window.pageYOffset; (IH > IMGH) ? us.top=
+   (IH+PY-(IMGH+TSAFETY)) : us.top= 0; (IW > IMGW) ? us.left=
+   (IW+PX-(IMGW+LSAFETY)) : us.left= 0; for (i=0; i ZIN) ZIN=
+   (templay.zIndex + 1); } us.zIndex= ZIN;
+   us.document.links[0].onmouseover= neat_mouseover;
+   us.document.links[0].onmouseout= neat_mouseout; us.visibility= "show";
+   } } } if(!window.top.document.layers["TDSBranding2"])
+   setTimeout("branding()", 100); } function neat_mouseover(){ if(us !=
+   null){ window.status="Tom Schneider's Home Page"; return true; } }
+   function neat_mouseout(){ if(us != null){ window.status=""; return
+   true; } } if((window.document.location.pathname.search("ad_container")
+   ==
+   -1)&&(window.document.location.pathname.search("/search/poptip.html")
+   ==
+   -1)&&(window.document.location.pathname.search("/search/adv_geo.html")
+   ==
+   -1)&&(window.document.location.pathname.search("/search/adv_web.html")
+   ==
+   -1)&&(window.document.location.pathname.search("/members/tools/clipart/
+   category/") ==
+   -1)&&(window.document.location.pathname.search("/gadgetfactory/pops/")
+   == -1)&&(!window.top.document.layers["TDSBranding2"]))
+   setTimeout("if(!branding){var branding= \"\";}else{branding();}", 100)
+   }

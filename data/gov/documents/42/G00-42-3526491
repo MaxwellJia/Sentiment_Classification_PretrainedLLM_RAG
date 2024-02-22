@@ -1,0 +1,102 @@
+http://nfirs.fema.gov/rules.htm
+
+   CAPTION:
+
+                                  USFA Seal
+
+      NFIRS 5.0
+
+   NFIRS 5.0
+   arrow bullet News
+   arrow bullet System Features
+   arrow bullet Reference Guide
+   arrow bullet Design Documentation
+   arrow bullet Specification Cycle
+   arrow bullet Incident Type/Module Rules
+   arrow bullet Hardware Requirements
+   User Section
+   arrow bullet Home Page
+   arrow bullet Tutorial
+   arrow bullet FAQs
+   arrow bullet Comments
+   Vendor Section
+   arrow bullet Vendor Software Development Procedures
+   arrow bullet Active Vendors
+   arrow bullet Vendor FAQs
+   Data Center
+   USFA
+   FEMA
+   NFIC
+   NFIRS Support Center
+
+   Comments or questions on New NFIRS?
+             E-mail them to:
+           nfirshelp@fema.gov
+
+   Incident Type/Module Rules
+
+        * The Basic Module is always required for Incident Types: 100-911
+        * If Incident Type = 571 (stand by) and if Aid Given or Received =
+          codes 3, 4 or 5, then only the information on the Basic module
+          through Block D (Aid Given or Received) need be completed by the
+          department giving aid. The rest of the Basic Module and the other
+          modules as applicable are optional.
+        * If Incident Type = any other Incident Type than 571 and if Aid
+          Given or Received = codes 3, 4 or 5, and the "THEIR FDID"
+          information in Block D is entered, then only the information on the
+          Basic module through block G1 (Resources) and the Fire Fighter
+          Casualty Module (when there is a casualty which, including
+          additionally Block H1 on Basic) must be completed by the department
+          giving aid. The remainder of the Basic module and any other modules
+          associated with the incident may be optionally completed but are
+          not required. The information not captured by the department giving
+          aid will be captured by the department that receives aid for that
+          incident.
+        * Aid Giving Departments and Aid Receiving Departments always track
+          their own Fire Service casualties separately. If a Fire Service
+          Casualty occurs in a department giving aid, they should also
+          complete the H1 Casualties block on the Basic Module in addition to
+          the FS Casualty Module.
+        * The department receiving aid is responsible for tracking and
+          entering all of the civilian casualty information for the incident.
+        * If aid is given (codes 3, 4 or 5), then only the information on the
+          Basic module through block G1 (Resources) must be completed by the
+          department giving aid unless a fire service casualty also occurs,
+          then the giving department must also complete the Fire Service
+          Casualty Module. The remainder of the Basic module and any other
+          modules associated with the incident may be optionally completed
+          but are not required. The information not captured by the
+          department giving aid is captured by the department that receives
+          aid for that incident.
+        * The Fire Module is always required for the following Incident Types
+          with no exceptions: 110-112, 120-138, 161-164 (160 is not included
+          here because that code can be a wildland fire)
+        * The Fire Module for is never (ever) allowed for: 200-911
+        * The Fire Module is optional for the following Incident Types:
+          113-118, 150-155
+        * If the Wildland Module is not used in place of the Fire Module,
+          then the Fire Module must be completed for Incident Types: 140-143,
+          160, 170-173
+        * The Structure Fire Module is always required for Incident Types:
+          111-112 (Only the Structure Type element is required on the
+          Structure Module for code 112, the rest of the module is optional)
+          120-123
+        * The Structure fire Module is never allowed for Incident Types:
+          130-173
+        * The Structure fire Module is optional for Incident Types: 113-118
+        * If the Fire Module is not used in place of the Wildland Module,
+          then the Wildland Fire Module must be completed for Incident Types:
+          140-143, 160, 170-173
+        * The Wildland Module is optional for Incident Types: 561, 631, 632
+        * The Wildland Module is never allowed for Incident Types: 100-138,
+          150-155, 161-164, 200-555, 571-621, 641-911
+        * If used, the Arson Module is only allowed for Incident Types:
+          100-173 (Fire Cause field code on the Fire Module must also be '1
+          Intentional or '2 Unintentional' or '5 Cause under investigation'
+          or 'U Undetermined after investigation'. If the Wildland Module is
+          used instead, the Wildland Fire Cause must be '7 Intentional'.)
+        * If used, the EMS module is only allowed for Incident Types:
+          100-243, 311, 321-323, 351-381, 400-431, 900
+        * If used, the HazMat module is only allowed for Incident Types:
+          100-243, 321-323, 371, 400-431, 900
+          Updated: January 21, 2000 FOOTER: UNITED STATES FIRE ADMINISTRATION

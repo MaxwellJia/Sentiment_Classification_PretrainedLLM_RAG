@@ -1,0 +1,512 @@
+http://www.nhc.noaa.gov/aboutmodels.html
+
+   Hurricane HOME ARCHIVES FORECASTS IMAGERY ABOUT TPC RECONNAISSANCE
+
+   [NCEP Logo]
+     __________________________________________________________________
+
+Summary of the Tropical Prediction Center/National Hurricane Center Tropical
+Cyclone Track and Intensity Guidance Models
+     __________________________________________________________________
+
+                  Informal Reference: Last Updated 11/26/97
+
+                                Mark DeMaria
+     __________________________________________________________________
+
+Introduction to TSB
+     __________________________________________________________________
+
+Introduction
+
+     The National Hurricane Center (NHC) in Miami, Florida issues 72 hr
+     tropical cyclone track and intensity forecasts four times per day
+     for all storms in the north Atlantic and eastern north Pacific east
+     of 140 W. The track forecasts are the storm latitude and longitude
+     (to the nearest tenth of a degree) and the intensity forecasts are
+     the 1-minute maximum sustained surface wind (to the nearest 5 kt) at
+     12, 24, 36, 48 and 72 hr. The storm structure is quantified by the
+     radial extent of the 34, 50 and 64 kt wind in four quadrants (NE,
+     SE, SW, NW) relative to the storm center. Forecasts of these wind
+     radii are issued four times per day out to 36 hr. The 50 kt wind
+     radii are also forecast at 48 and 72 hr. The Central Pacific
+     Hurricane Center (CPHC) in Honolulu, Hawaii issues similar forecasts
+     for tropical cyclones in the north Pacific from 140 W to 180 W.
+
+     The tropical cyclone guidance models that were available to the NHC
+     and CPHC forecasters for the 1997 hurricane season are briefly
+     described in this document. These models range in complexity from
+     simple statistical models to three-dimensional primitive equation
+     models. The statistical and two-dimensional models are maintained by
+     the Tropical Prediction Center (TPC). The three-dimensional models
+     are maintained by the National Centers for Environmental
+     Prediction's (NCEP) Environmental Modeling Center (EMC).
+
+2. Track Models
+
+     Table 1 lists all of the operational track guidance models used at
+     NHC. All of these models except CLIPER require output from global
+     forecast models. The global models are usually available about 4 h
+     after synoptic time. However, the official NHC forecast is issued 3
+     h after synoptic time. To overcome this problem, many of the models
+     use forecast fields from the previous global model run as input, so
+     the track predictions will be available in a timely manner. Models
+     that use forecast fields are listed as "early" in Table 1, and those
+     that wait until the global model run is completed are listed as
+     "late". The late models are typically run twice per day and the
+     early models are run four times per day, although plans are underway
+     to run all of the models four times per day.
+
+     As described above, the late models are not available to the
+     forecasters until after the advisories are sent out. To overcome
+     this problem, an interpolation technique was developed to transpose
+     the previous forecast to the current storm position. The forecasts
+     from the interpolated GFDL forecasts are designated by GFDI in Table
+     1. This technique is applied to all the late models, but for
+     simplicity, only the interpolated GFDL will be included in the
+     verification. Further details on this interpolation technique are
+     described by Horsfall et al (1997).
+
+     AVN is the Aviation Run of the NCEP Medium Range Forecast (MRF)
+     model. The MRF is a 28-level sigma vertical coordinate (terrain
+     following) global spectral model with a triangular truncation of 126
+     waves. It includes parameterizations of convective, radiative and
+     boundary layer processes and has a specialized technique for
+     initializing tropical cyclone circulations where synthetic wind
+     observations are added to the global data assimilation system. The
+     synthetic observations are constructed from the sum of a steering
+     flow and a symmetric vortex. The steering flow is determined from
+     the spectral truncation which produces a vertically averaged wind
+     that is closest to the current motion of the storm. The symmetric
+     vortex at low-levels is constructed from operational estimates of
+     central pressure, radius and pressure of the outermost closed
+     isobar, the radius and value of the maximum low- level winds and the
+     four 34 kt wind radii described above. Synthetic winds are included
+     at about 50 locations within about 200 nm of the storm center at
+     each mandatory level from the surface to the maximum level of the
+     storm circulation (typically 300 hPa). Empirical functions are used
+     to extrapolate the low-level vortex to the upper levels. An
+     automated tracking algorithm which combines six estimates of the
+     storm center (minimum wind speed, maximum relative vorticity,
+     minimum geopotential height at 1000 and 850 hPa) provides a track
+     forecast out to 72 h. Further details on the MRF and the bogussing
+     scheme are described by Surgi et al (1997) and Lord (1991).
+
+     TABLE 1. NHC Operational Track Guidance Models
+
+        Model             Type           Timeliness
+     AVN         Global baroclinic       Late
+     NOGAPS      Global baroclinic       Late
+     UKMET       Global baroclinic       Late
+     GFDL        Limited-area baroclinic Late
+     GFDI        Interpolated GFDL       Early
+     LBAR        Limited-area barotropic Early
+     BAM         Trajectory              Early
+     NHC90/NHC91 Statistical             Early
+     CLIPER      Statistical             Early
+
+     NOGAPS is the U.S. Navy's global spectral forecast model with 18
+     sigma levels, a triangular truncation of 159 waves,
+     parameterizations of physical processes and a tropical cyclone
+     bogussing scheme. Generally speaking, the NOGAPS bogussing scheme is
+     similar to that described for the MRF model, where synthetic
+     observations that represent the storm circulation are added to the
+     data assimilation system. Similar to the MRF scheme, the
+     observations are created from the sum of an environmental flow and a
+     symmetric vortex. The primary differences from the MRF scheme are
+     that for NOGAPS, the environmental wind is determined from a T20
+     spectral truncation of the model fields (rather than from a
+     truncation which best matches the storm motion), and that fewer
+     synthetic observations are added, but over larger radial distances
+     from the storm center. In addition, the synthetic observations for
+     NOGAPS are added at the mandatory levels up to 400 hPa, rather than
+     up to a maximum of 300 hPa in the MRF model. Further details of the
+     NOGAPS model and bogussing scheme are described by Hogan and Rosmond
+     (1991) and Goerss and Jeffries (1994).
+
+     UKMET is the global forecast model run by the UK Meteorological
+     Office. Similar to NOGAPS and the MRF model, it includes extensive
+     physical parameterizations and a tropical cyclone bogussing system.
+     Further details on forcasting tropical cyclones with the UKMET model
+     are described by Heming (1997).
+
+     GFDL (Geophysical Fluid Dynamics Laboratory) is a limited area
+     baroclinic model developed specifically for hurricane prediction. It
+     includes 18 sigma levels and uses a horizontal finite-difference
+     method with three nested grids. The two inner grids move to follow
+     the storm, and the resolution of the inner domain is 1/6 degree. The
+     GFDL model includes convective, radiative and boundary layer
+     parameterizations and has a specialized method for initializing the
+     storm circulation. The initial and boundary conditions are obtained
+     from the Aviation run of the MRF model. The representation of the
+     storm circulation in the global analysis is replaced with the sum of
+     an environmental flow and a vortex generating by nudging the fields
+     in a separate run of the model to an idealized vortex. This
+     idealized vortex is based upon a few parameters of the observed
+     storm, including the maximum wind, radius of maximum wind and outer
+     wind radii. The environmental flow is the global analysis modified
+     by a filtering technique which removes the hurricane circulation. A
+     more detailed description of the GFDL model is given by Kurihara et
+     al (1995).
+
+     LBAR (Limited area sine transform BARotropic) is a two-dimensional
+     track prediction model which solves the shallow-water equations
+     initialized with vertically averaged (850-200 hPa) winds and heights
+     from the Aviation Run of the MRF global model (Horsfall et al 1997).
+     An idealized symmetric vortex and a constant vector (equal to the
+     initial storm motion vector) are added to the global model analysis
+     to represent the storm circulation. The boundary conditions are
+     obtained from the global model forecast, and the model equations are
+     solved using the spectral sine transform technique described by Chen
+     et al (1997). To make LBAR timely, initial and boundary conditions
+     are obtained from the 6 hr old MRF forecast. LBAR was developed as
+     an operational version of the experimental VICBAR model (Aberson and
+     DeMaria 1994).
+
+     The BAM (Beta and Advection) model follows a trajectory from the
+     Aviation Run of the MRF model to provide a track forecast. The
+     vertically averaged horizontal wind is used for the trajectory
+     calculation. To remove the global model representation of the storm
+     circulation, a spatial filter is applied to the wind fields. This
+     filter generates fields that are similar to what would be produced
+     by a T25 spherical harmonic truncation. The trajectory also includes
+     a correction term to account for the drift of the storm due to the
+     beta-effect. The BAM model is run with shallow (850-700 hPa), medium
+     (850-400 hPa) and deep (850-200 hPa) vertically averaged winds
+     (BAMS, BAMM and BAMD, respectively). The BAM model is described by
+     Marks (1992) and is based upon the theory developed by Holland
+     (1983).
+
+     NHC90/NHC91 and CLIPER are statistical track forecast models. The
+     predictors for CLIPER (CLImatology and PERsistence) include the
+     initial latitude and longitude of the storm, the components of the
+     storm motion vector, the Julian day and the initial storm intensity
+     (Neumann 1972). The CLIPER forecasts are often used to normalize the
+     output from other track models, and as a benchmark for evaluating
+     track forecasting skill. NHC90 is a more general statistical model
+     which uses the output from CLIPER in combination with vertically
+     averaged (1000-100 hPa) geopotential heights from the Aviation Run
+     of the MRF model as predictors (Neumann and McAdie 1991). NHC90 was
+     developed for the Atlantic and NHC91 was developed for the east
+     Pacific.
+
+3. Intensity models
+
+     Table 2 lists the operational intensity models available at NHC. The
+     GFDL model was described previously in the context of track
+     prediction. The interpolation technique from the previous GFDL run
+     is also applied to the intensity forecasts (GFDI).
+
+     SHIFOR (Statistical Hurricane Intensity FORecast) is a simple
+     statistical model, which uses climatological and persistence
+     predictors to forecast intensity change (Jarvinen and Neumann 1979).
+     Analogous to the CLIPER track model, it is often used as a benchmark
+     for evaluating more general models. However, the developmental
+     sample for SHIFOR excluded cases where storms made landfall, so it
+     is only valid for storms over the ocean.
+
+     Table 2. NHC Operational Intensity Guidance Models
+
+     Model           Type           Timeliness
+     SHIFOR Statistical             Early
+     SHIPS  Statistical             Early
+     GFDL   Limited-area baroclinic Late
+     GFDI   Interpolated GFDL       Early
+
+     SHIPS (Statistical Hurricane Intensity Prediction Scheme) is a
+     statistical model that uses climatological, persistence and synoptic
+     predictors (DeMaria and Kaplan 1997). The primary predictors include
+     the difference between the maximum possible intensity (MPI) and the
+     current intensity, the 850-200 hPa vertical shear of the horizontal
+     wind, persistence (the previous 12 hr intensity change), the 200 hPa
+     eddy flux convergence of relative angular momentum, and the 200 hPa
+     zonal wind and temperature within 1000 km of the storm center. The
+     MPI is estimated from an empirical relationship between sea surface
+     temperature (SST) and intensity (DeMaria and Kaplan 1994). The SSTs
+     are obtained from the weekly analyses described by Reynolds and
+     Smith (1994). The MPI and vertical shear are averaged along the
+     storm track, where the forecast positions are obtained from the LBAR
+     model. Until 1997, only the initial analysis of the aviation run of
+     the MRF model was used to determine the synoptic parameters, due to
+     the difficulty of separating the tropical cyclone and its
+     environment during the forecast period. However, for the 1997
+     season, the model was generalized to include synoptic predictors
+     from forecasts out to 48 hr. A special filter was developed to
+     remove the vortex circulation from the MRF initial fields. These
+     modified fields were then used to initialize a "no-physics" 11-level
+     limited-area baroclinic model, with boundary forcing from the MRF
+     forecast fields. Similar to SHIFOR, SHIPS was developed from cases
+     where the storm track did not cross land. A version of SHIPS is
+     available for the Atlantic and east Pacific.
+
+4. Model Verification
+
+     In principle, all of the baroclinic models forecast track, intensity
+     and structure. However, no systematic procedures have been developed
+     for extracting structure parameters (for example, wind radii) from
+     the model forecasts. Also, the global models do not have adequate
+     horizontal resolution to resolve the inner portion of the storm, so
+     they are not currently used for intensity prediction. Therefore, no
+     verification of the storm structure is available, and the track and
+     intensity verifications will be discussed separately.
+
+     After the 1995 Atlantic hurricane season, significant improvements
+     to the NCEP MRF model were implemented (Surgi, et al 1997). Because
+     most of the other NHC models make use of the MRF model output,
+     verification statistics prior to 1996 may not be relevant to the
+     current versions of the models. Therefore, verification results for
+     a sample of cases from the 1996 and 1997 hurricane seasons will be
+     presented. The Atlantic hurricane season of 1996 was very active,
+     while the east Pacific season was unusually quiet. In 1997, the
+     Atlantic was relatively quiet, but the east Pacific was active, so
+     the combination of these two years provides reasonable sample sizes
+     in both basins.
+
+     The model forecasts are evaluated by comparison with the best track
+     positions and intensities, which are the post-storm estimates of
+     these parameters based upon all available information. The track
+     error is great circle distance from the forecast to observed storm
+     position, and the intensity error is the absolute value of the
+     forecast and observed maximum surface wind. Only those cases where
+     the storm is of tropical storm strength (maximum winds > 34 kt) or
+     greater are included in the verification sample, and the
+     extra-tropical and subtropical cases are excluded. Also, the
+     verification is restricted to forecasts that were obtained in
+     real-time.
+
+4.1 Track Verification
+
+     Table 3 shows the Atlantic track forecast errors for the combined
+     1996-97 sample for the early models. This table shows that all of
+     the models except the shallow version of BAM (BAMS) have skill at
+     all forecast periods because the average errors are less than those
+     from the CLIPER model. The lack of skill for BAMS is not surprising,
+     since it is only run as a comparison with BAMM and BAMD, and is
+     occasionally used for sheared systems that might be steered by a
+     shallow layer. The track errors from the medium and deep versions of
+     BAM had comparable errors for this sample. Overall, the interpolated
+     GFDL model (GFDI) had the smallest average errors, except at 12 hr,
+     where the LBAR errors were the smallest.
+
+     Table 4 shows the Atlantic track forecast errors for the late
+     models, where the CLIPER errors are included for comparison. The
+     sample sizes in Table 4 are considerably smaller than those in Table
+     3 because the late models are currently only run twice per day,
+     while the early models are available four times per day. Also, the
+     NOGAPS and UKMET forecasts are sent to NHC from remote sites, and
+     transmission problems sometimes prevent the transfer of data. Except
+     at 12 hr, all of the late models had smaller errors than CLIPER. The
+     GFDL and NOGAPS models had smaller track errors than the AVN and the
+     UKMET models.
+
+     Table 3. Average Errors (nm) of the Early Track Models for 1996-97
+     Atlantic Tropical Cyclones
+
+                  Forecast Interval (hr)
+       Model   12  24  36  48       72
+     CLIPER    51  103 161 220 351
+     NHC90     46  85  129 180 285
+     BAMS      61  114 168 222 336
+     BAMM      49  91  133 177 268
+     BAMD      47  88  132 183 293
+     LBAR      41  75  111 159 284
+     GFDI      42  69  98  128 200
+     No. Cases 346 310 279 255 207
+
+     Table 4. Average Errors (nm) of CLIPER and the Late Track Models for
+     1996-97 Atlantic Tropical Cyclones
+
+                  Forecast Interval (hr)
+       Model   12 24  36  48       72
+     CLIPER    51 104 166 237 408
+     AVN       56 98  139 178 248
+     NOGAPS    57 81  107 126 193
+     UKMET     57 92  136 165 244
+     GFDL      44 70  96  120 178
+     No. Cases 93 88  77  67  51
+
+     Table 5 shows the early model verification for the east Pacific.
+     Comparing Tables 5 and 3 shows that the average CLIPER errors in the
+     East Pacific are considerably smaller than those in the Atlantic.
+     This reduction is consistent with the relatively smooth tracks and
+     lack of recurvature of the east Pacific storms. In contrast to the
+     Atlantic verification, very few of the models have skill relative to
+     CLIPER. The statistical model NHC91 has the smallest errors, except
+     at 72 hr, where BAMM has the smallest error. The GFDI, which was the
+     best early model in the Atlantic, has the largest errors at 12 and
+     24 hr, and is only slightly better than CLIPER at 36- 72 hr.
+
+     Table 6 shows the late model verification for the east Pacific.
+     Similar to the early east Pacific models, the skill relative to
+     CLIPER is much less than for the Atlantic. Only the GFDL at 48 hr
+     and UKMET at 36-72 hr have errors smaller than CLIPER. This lack of
+     skill is partially due to the smaller CLIPER errors (CLIPER is
+     harder to beat). It might also be due to the relative lack of
+     observations, especially to the west of the storms. A complex
+     numerical model can not make good forecasts with a poor
+     initialization. The lack of observations may also explain why more
+     the baroclinic models generally did not outperform the simpler LBAR
+     and NHC91 models in the East Pacific. These simple models make
+     greater use of the initial storm motion vector. In a data void
+     region, this information may partially compensate for the lack
+     observations.
+
+     Table 5. Average Errors (nm) of the Early Track Models for 1996-97
+     East Pacific Tropical Cyclones
+
+                  Forecast Interval (hr)
+       Model   12  24  36  48       72
+     CLIPER    42  80  122 165 235
+     NHC91     41  74  103 135 209
+     BAMS      51  91  129 163 211
+     BAMM      47  83  113 144 208
+     BAMD      48  87  120 152 233
+     LBAR      43  80  112 148 229
+     GFDI      55  93  119 154 230
+     No. Cases 289 244 197 166 110
+
+     Table 6. Average Errors (nm) of CLIPER and the Late Track Models for
+     1996-97 East Pacific Tropical Cyclones
+
+                 Forecast Interval (hr)
+       Model   12 24 36  48       72
+     CLIPER    40 74 110 151 202
+     AVN       49 85 131 189 279
+     NOGAPS    61 98 145 186 262
+     UKMET     56 82 105 130 186
+     GFDL      57 89 115 149 227
+     No. Cases 77 68 49  37  26
+
+4.2 Intensity Verification
+
+     As described in Section 2, the SHIFOR and SHIPS models are only
+     valid for storms over water. For this reason, the cases where the
+     storm crossed land were eliminated from the intensity verification
+     sample. Analogous to track models, the SHIFOR errors are used to
+     evaluate the skill of the intensity models.
+
+     Table 7. Average Errors (kt) of the Early Intensity Models for
+     1996-97 Atlantic Tropical Cyclones.
+
+                  Forecast Interval (hr)
+       Model   12   24   36   48      72
+     SHIFOR    8.2 11.4 14.0 16.9 21.1
+     SHIPS     8.1 11.0 13.0 15.7 20.5
+     GFDI      9.3 11.6 13.9 16.6 19.0
+     No. Cases 305 270  236  211  171
+
+     Table 7 shows the early intensity model verification for the
+     Atlantic. The SHIPS errors are smaller than SHIFOR at all forecast
+     intervals, and the GFDI errors are smaller than SHIFOR at 36-72 hr.
+     However, the improvement over SHIFOR was only about 2-10% at 12- 72
+     hr. By comparison, the improvement of the best early Atlantic track
+     models relative to CLIPER was 20-40% at 12-72 hr. This result shows
+     that intensity skill is considerably less than track forecast skill.
+
+     Table 8. Average Errors (kt) of the Early Intensity Models for
+     1996-97 East Pacific Tropical Cyclones.
+
+                   Forecast Interval (hr)
+       Model    12   24   36   48      72
+     SHIFOR    9.5  15.3 19.8 23.3 26.4
+     SHIPS     9.6  14.7 17.6 20.4 21.8
+     GFDI      13.0 19.4 24.5 29.5 37.2
+     No. Cases 254  214  176  143  99
+
+     Table 8 shows the verification of the early intensity models for the
+     East Pacific. The SHIPS forecast improved upon SHIFOR by 4-17% at
+     24-72 hr, which is better than for the Atlantic. The GFDI forecast
+     errors were larger than SHIFOR at all forecast intervals, which is
+     worse than for the Atlantic.
+
+     A verification was also performed for the only late intensity model
+     (GFDL) for the Atlantic and east Pacific (not shown), where SHIFOR
+     and GFDI were included for comparison. The GFDL errors tended to be
+     larger than the GFDI errors at 12-36 hr. This increase appears to be
+     a result of the model initialization, where the vortex circulation
+     goes through an adjustment period during the first 6-12 hr of the
+     forecast, resulting in unrealistic fluctuations in intensity. The
+     interpolation technique tends to smooth these fluctuations. At 48
+     and 72 hr, the GFDL errors were smaller than those of the GFDI.
+     However, the GFDL errors were greater than or equal to those of
+     SHIFOR at all forecast intervals, except for the Atlantic sample at
+     72 hr, where the errors were about 13% smaller than those of SHIFOR.
+       _______________________________________________________________
+
+                                 REFERENCES
+
+     Aberson, S.D., and M. DeMaria, 1994: Verification of a nested
+     barotropic hurricane track forecast model (VICBAR). Mon. Wea. Rev.,
+     122, 2804-2815.
+
+     Chen, Q.-S., L.-E. Bai, and D.H. Bromwich, 1997: A harmonic-Fourier
+     spectral limited-area model with an external wind lateral boundary
+     condition. Mon. Wea. Rev., 125, 143-167.
+
+     DeMaria, M., , and J. Kaplan, 1994: Sea surface temperature and the
+     maximum intensity of Atlantic tropical cyclones. J. Climate, 7,
+     1324-1334.
+
+     DeMaria, M., and J. Kaplan, 1997: An operational evaluation of a
+     statistical hurricane intensity prediction scheme (SHIPS).
+     Preprints, 22nd Conf. on Hurricanes and Tropical Meteorology, Ft.
+     Collins, CO, Amer. Meteor. Soc., 280-281.
+
+     Goerss, J., and R. Jeffries, 1994: Assimilation of synthetic
+     tropical cyclone observations into the Navy Operational Global
+     Atmospheric Prediction System. Wea. Forecasting, 9, 557-576.
+
+     Heming, J.T., 1997: UK Meteorological Office forecast performance
+     during the unusual Atlantic hurricane season of 1995. Preprints,
+     22nd Conf. on Hurricanes and Tropical Meteorology, Ft. Collins, CO,
+     Amer. Meteor. Soc., 511-512.
+
+     Hogan, T., and T. Rosmond, 1991: The description of the Navy
+     Operational Global Atmospheric Prediction System's spectral forecast
+     model. Mon. Wea. Rev., 119, 1786-1815.
+
+     Holland, G.J., 1983: Tropical cyclone motion: Environmental
+     interaction plus a beta effect. J. Atmos. Sci., 40, 328-342.
+
+     Horsfall, F.M., M. DeMaria, and J.M. Gross, 1997: Optimal use of
+     large-scale boundary and initial fields for limited-area hurricane
+     forecast models. Preprints, 22nd Conf. on Hurricanes and Tropical
+     Meteorology, Ft. Collins, CO, Amer. Meteor. Soc., 571-572.
+
+     Jarvinen, B.R., and C.J. Neumann, 1979: Statistical forecasts of
+     tropical cyclone intensity. NOAA Tech. Memo. NWS NHC-10, 22 pp.
+
+     Kurihara, Y., M.A. Bender, R.E. Tuleya, and R.J. Ross, 1995:
+     Improvements in the GFDL hurricane prediction system. Mon. Wea.
+     Rev., 123, 2791-2801.
+
+     Lord, S.J., 1991: A bogussing system for vortex circulations in the
+     National Meteorological Center global forecast model. Preprints,
+     19th Conf. on Hurricanes and Tropical Meteorology, Miami, FL, Amer.
+     Meteor. Soc., 328-330.
+
+     Marks, D.G., 1992: The beta and advection model for hurricane track
+     forecasting. NOAA Tech. Memo. NWS NMC 70, National Meteorological
+     Center, Camp Springs, MD, 89 pp.
+
+     Neumann, C.J., 1972: An alternate to the HURRAN tropical cyclone
+     forecast system. NOAA Tech. Memo. NWS SR-62, 22 pp.
+
+     Neumann, C.J., and C.J. McAdie, 1991: A revised National Hurricane
+     Center NHC83 model (NHC90). NOAA Tech. Memo. NWS NHC-44, 35 pp.
+
+     Reynolds, R.W., and T.M. Smith, 1994: An improved real-time global
+     sea surface temperature analysis. J. Climate, 6, 114-119.
+
+     Surgi, N., H.-L. Pan, and S.J. Lord, 1997: Improvement of the NCEP
+     global model over the tropics: An evaluation of model performance
+     during the 1995 hurricane season. Mon. Wea. Rev, in press.
+     __________________________________________________________________
+     __________________________________________________________________
+
+
+    Todd Spindler
+    Jack Beven
+     __________________________________________________________________
+
+   Last updated July 20, 1999

@@ -1,0 +1,146 @@
+http://www-aig.jpl.nasa.gov/public/planning/dans/
+
+ [jpllogo.gif] Projects: DANS, Planning and Scheduling, Artificial
+               Intelligence Group                                 [Nasalogo.gif]
+
+   nothing
+
+   artificial intelligence group [_line.gif] planning and scheduling
+   [_line.gif] machine learning systems [_line.gif] jpl [_line.gif]
+   caltech [_line.gif] nasa
+
+   [dot.gif] [earth.gif]
+   nothing
+   background description impact technology status significance problem
+   sponsors moreinfo publications the team contacts
+
+   Background top
+
+   The Deep Space Network (DSN) was established in 1958 and since then it
+   has evolved into the largest and most sensitive scientific
+   telecommunications and radio navigation network in the world. The
+   purpose of the DSN is to support unpiloted interplanetary spacecraft
+   missions and support radio and radar astronomy observations in the
+   exploration of the solar system and the universe. DANS is a automated
+   system for scheduling and resource allocation for antenna and subsystem
+   resources in the DSN. DANS works from an initial schedule and uses
+   prioritized pre-emption and localized search to find antenna and other
+   equipment resources required to support changes to schedule
+   requirements which may be caused by a wide range of circumstances
+   including: changing track requirements from the flight projects,
+   equipment outages, and inclement weather.
+
+   AI Technology top
+     * Artificial Intelligence techniques: temporal constraint networks,
+       knowledge-based tactics.
+     * Operation Research techniques: Scheduling dispatch rules, heuristic
+       search.
+     * Metaobject Protocol design.
+     * Object Library of commonly-used resource and job types.
+     * Advanced human machine interface design.
+
+
+   Problem top
+     * The number of projects using the 26, 34 and 70 meter subnetwork is
+       increasing.
+     * The current scheduling process is negotiation-based and is
+       therefore expensive, time-consiming, and doesn't necessarily result
+       in the ``best'' schedule.
+     * As the loading increases the complexity of scheduling exponentially
+       increases.
+     * The current manual scheduling process will become prohibitively
+       expensive (basd on predicted future demand for support).
+     * The DSN is not reimbursed for representing the projects in the
+       scheduling negotiations.
+
+
+   Impact top
+
+   Based on the success of the project work on OMP, this system will have
+   great potential to further reduce human interaction and increase DSN
+   productivity on all its antenna.
+
+   Status top
+
+   The system is under development and will be delivered in 1998.
+
+   Description top
+
+   The objective of this task is to provide automated, reactive schedule
+   generation and rescheduling capabilities to support 26, 34 and 70 meter
+   antennas scheduling and Real Time scheduling operations for JPL's Deep
+   Space Network (DSN).
+
+   Significance top
+     * Generates a conflict-free schedule from the projects' generic
+       requests.
+     * Performs automated schedule maintenance.
+     * Greatly reduces the need for schedule negotiation meetings.
+
+
+   More Information top
+
+   Features:
+     * Table-driven inputs, e.g., Resources, Projects, Activity Types,
+       Requests.
+     * GUI interface to display schedule and resource conflicts.
+     * Uses AI and OR techniques to autonomously produce a schedule.
+     * Minimally perturbs an existing schedule to accommodate new tasks.
+     * Adjusts the schedule to match the most recent generated view
+       periods.
+
+   Related Web Sites:
+     * Deep Space Network Home Page
+     * Request Language Project Home Page
+     * OMP Project Home Page
+
+
+   Publications top
+
+   Please Note:
+   This material is provided for your personal use only and may not be
+   retransmitted or redistributed without permission in writing from the
+   paper's publisher and/or author. You may not upload this material to
+   any public server, on-line service, network, or bulletin board without
+   prior written permission from the publisher and/or author. You may not
+   make copies for any commercial purpose. This material is not public
+   domain. Reproduction or storage of materials retrieved from this web
+   site are subject to the U.S. Copyright Act of 1976, Title 17 U.S.C.
+
+   S. A. Chien, R. W. Hill Jr., A. Govindjee, X. Wang, T. Estlin, M. A.
+   Griesel, R. Lam, K. V. Fayyad, "A Hierarchical Architecture for
+   Resource Allocation, Plan Execution, and Revision for Operation of a
+   Network of Communications Antennas," Proceedings of the 1997 IEEE
+   International Conference on Robotics and Automation, Albuquerque, NM,
+   April 1997, v. 4, pp. 3340-3347. (PostScript)
+
+   S. Chien, R. Lam, and Quoc Vu, "Resource Scheduling for a Network of
+   Communications Antennas," IEEE Aerospace Conference 1997, pp. 361-373
+   (PostScript Page1) (PostScript Page2-4) (PostScript Page5-14) (PDF
+   Page1) (PDF Page2-4) (PDF Page5-14)
+
+   Contacts top
+
+   DANS Project Contact:
+   Forest Fisher, AI Group,
+   Forest.Fisher@jpl.nasa.gov, (818) 393-5368
+
+   JPL Technical Contact:
+   Dr. Steve Chien, AI Group,
+   Steve.Chien@jpl.nasa.gov, (818) 393-5320
+
+   JPL Program Contact:
+   Dr. Chad Edwards, Advanced Technology Development, Telecommunications
+   and Mission Operations Directorate.
+
+   The Project Team top
+
+   Dr. Steve Chien
+
+   Forest Fisher
+
+   Sponsors top
+
+   NASA Code O
+
+   [jpllogo.gif] Questions: www@www-aig.jpl.nasa.gov

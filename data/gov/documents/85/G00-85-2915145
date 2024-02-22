@@ -1,0 +1,58 @@
+http://www-e835.fnal.gov/~lasio/HV_history_2K.html
+
+                          HV History, Run 1999 - 2000
+   _______________________________________________________________________
+
+     * 12/14/99 :   M4, card 6 and M2 card 10 are replaced; M4 cards 0 and
+       1 has intermittent problems; M5 card 9 ch 0 has AV lower than DV.
+
+     * 1/20/00 : M3, card 0, ch 7 has 50 V AV less than DV.
+
+     * 1/24/00 :  M3 controller not working; two different replacement
+       controllers from PREP are tried, also not working. After checking
+       that the controller from another mainframe (M4) works fine, the
+       original controller is reinstalled, and after touching the
+       potentiometer that sets the maximum HV output M3 controller starts
+       working fine.
+
+     * 1/27/00 : M6, card 0 is replaced. The 128 V bit is found to be
+       always on in M2 cards.  M2 controller is replaced.
+
+     * 3/15/00 : M3, card 12, ch 2,3,4,12 has DV=AV-60V. The card is
+       replaced. M1 card 0 ch 0 (H1-1) has AV < DV by 72 V;  this
+       discrepancy disappears after power cycling the mainframes.
+
+     * 3/14/00 : M4, card 6, ch 12 has AV=DV+200V. Card replaced.
+
+     * 4/4/00 : M5 turns itself off during run 5406.
+
+     * 4/15/00 : reported problems with M2; affected run 5491, which is
+       stopped because of this. After power cycling the mainframes  the
+       problem disappears and run 5492 is started.
+
+     * 5/1/00 : during the last 20-30 min. of run 5581 M2 turns off all
+       cards. The controller keeps turning off the cards after 5-10 min.
+       after turning on the mainframe. After changing the controller the
+       problem disappears.
+
+     * 5/4/00 : run 5608 is terminated because  M6, card 11,  sets off the
+       HV alarm; it is found delivering AV lower than DV by 700 V to 900
+       V.  The last 15 min of run 5608 are affected by this problem. There
+       is no apparent pattern in the difference between AV and DV, or AV
+       alone, so the card alone is checked first, but this doesn't solve
+       the problem. Changing the controller puts things back in place.
+   _______________________________________________________________________
+
+   M = mainframe
+   AV = Actual Voltage; it is the voltage read by the ADC on the HV card
+   for each channel.
+   DV = Demand Voltage; it is the requested voltage set using the HV
+   control program.
+   BV = Backup Voltage; voltage value loaded into the backup buffer with
+   the HV control program.
+     __________________________________________________________________
+
+
+    Giovanni Lasio
+
+   Last modified: Tue Apr 18 15:27:16 CDT 2000

@@ -1,0 +1,27 @@
+http://urap.gsfc.nasa.gov/search.html
+
+                                Search URAP Site
+
+   Search Pattern:
+   __________________________________________________
+
+   Submit Search Clear Form
+
+Format for Search Pattern
+
+   The search string should be a list of words to search for, separated by
+   the operators "|" and "&", where "|" stands for "or" and "&" stands for
+   "and". Items can be grouped using parentheses. "|" has lower precedence
+   than "&". The search is case insensitive.
+
+  Examples
+
+     * Search for a document that contains the word "electron":
+       Search string = electron.
+     * Search for a document that contains "io" and "torus":
+       Search string = io & torus.
+     * Search for a document that contains either "io" and "torus" or
+       "ion" and "acoustic":
+       Search string = io & torus | ion & acoustic.
+
+   This page last updated on 1997-06-26 by Roger A. Hess

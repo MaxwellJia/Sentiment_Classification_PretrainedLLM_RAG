@@ -1,0 +1,103 @@
+http://www.itl.nist.gov/news/PR20001206.html
+
+                           ITL News navigation bar
+
+                       ITL-GE Researchers Demonstrate
+                             Mobile-Code Control
+
+   On December 6, 2000 researchers from the NIST Information Technology
+   Laboratory (ITL) and the General Electric (GE) Corporate Research and
+   Development (CRD) Laboratory demonstrated a novel technique for
+   predicting and controlling CPU use by mobile code in the Internet.
+
+
+   This breakthrough might ultimately lead to significant improvements in
+   the safety and efficiency of Internet applications, which increasingly
+   use mobile code, such as applets, scripts, and dynamically linked
+   libraries, to deliver new software to millions of users. Without
+   understanding the CPU time required by dynamically downloaded software,
+   computer operating systems cannot effectively manage system resources
+   or control the execution of mobile code. Unfortunately, since mobile
+   code can be downloaded and executed on a wide variety of computer
+   systems with a vast range of capabilities, software developers cannot
+   specify CPU requirements a priori. While investigating how to solve
+   this problem, researchers in ITL designed and evaluated a novel
+   technique that shows some promise.
+
+   The new technique adapts CPU time allocation to account jointly for the
+   needs of specific programs and the capabilities of various computer
+   nodes. ITL researchers discovered that CPU time requirements do not
+   depend solely on the processor speed of various computers, but rather
+   on a complex array of hardware and software factors. As a result, the
+   researchers developed benchmarks to calibrate the performance of
+   computer platforms with respect to the most significant factors, and
+   then designed an application model that can be expressed in terms of
+   those factors. Further, the researchers developed transformation
+   algorithms to scale an application model between pairs of computers. By
+   choosing one computer as a reference node, two simple transformations
+   enable an application model to be understood by any computer within a
+   network. Initial experiments, involving two different execution
+   environments, four distinct applications, and five computer systems,
+   found that the new technique predicted CPU usage in most cases within
+   10% error for the mean and within 20% error for high percentiles. In
+   contrast, when transforming CPU usage based solely on relative
+   processor speeds, predicted CPU usage error ranged between 10% and 60%
+   for both the mean and high percentiles.
+
+   Researchers at GE incorporated the ITL CPU usage prediction models into
+   two demonstrations presented at a recent DARPA Active Networks
+   workshop. The first demonstration compared the effectiveness of
+   controlling CPU usage in network nodes using three different policies:
+   (1) fixed CPU time per packet, (2) predicted CPU time scaled based on
+   relative processor speeds, and (3) predicted CPU time scaled based on
+   the ITL models. The demonstration relayed packets, some containing
+   erroneous code, from a source to a sink through two network nodes, one
+   fast and one slow. Erroneously coded packets were designed to consume
+   as much CPU time as possible, while normally coded packets simply
+   performed the required processing and then moved on to the next node.
+   The demonstration revealed that assigning fixed CPU time to each packet
+   allowed erroneously coded packets to steal significant amounts of CPU
+   time on fast nodes and caused slow nodes to prematurely terminate
+   normally coded packets. After scaling CPU time usage predictions to
+   account for relative processor speeds, the results improved; however,
+   the models developed at ITL performed best.
+
+   In a second demonstration, GE incorporated the ITL CPU usage prediction
+   models into the Active Virtual Network Management Prediction (AVNMP)
+   system, a GE-developed technology that predicts future load in a
+   network. AVNMP runs ahead in time of the real network, using
+   network-traffic models to predict future network conditions. As real
+   time passes various prediction points, AVNMP compares reality against
+   prediction and, if necessary, rolls back and restarts the simulation to
+   limit prediction error. Given a fixed goal for prediction error, AVNMP
+   takes appropriate actions to achieve the goal. For example, higher
+   inaccuracies in predictions lead AVNMP to make a greater number of
+   rollbacks, resulting in a smaller look-ahead into the future. In the
+   demonstration, AVNMP rollbacks were triggered by inaccuracies in either
+   the predicted message load or CPU usage on each node. When predicting
+   CPU usage based on a fixed allocation, AVNMP required as many as 12
+   rollbacks per prediction cycle to maintain the desired fidelity during
+   200 simulated seconds. In contrast, when using the ITL CPU usage model,
+   AVNMP required a maximum of 3 rollbacks per prediction cycle.
+
+   While these initial results appear promising, more research remains
+   before the ideas can be applied practically. Three issues in particular
+   must be resolved. First, the new ITL technique assumes that all
+   application behavior can be measured prior to injecting a model into
+   network nodes. Unfortunately, application behaviors often reflect
+   conditions that cannot be known before a program reaches a node. For
+   this reason, the application model must be enhanced to account for such
+   node-dependent conditions. Second, the models consist of fine-grained
+   histograms, which must be exercised with Monte Carlo simulations in
+   order to predict CPU usage. As a result, specific application models
+   can be large and can require substantial computation to produce
+   predictions. To some degree the space-time properties of the model can
+   be modulated; however, the prediction error also changes accordingly.
+   The third issue to be resolved involves characterization of error
+   bounds. Before taking operational decisions based on predictions from
+   the model, a node must consider the possible range of prediction error.
+   ITL researchers have yet to characterize the error properties of their
+   model.
+
+   For further project information, see Active Network Applications
+   Modelization.

@@ -1,0 +1,168 @@
+http://vis.lbl.gov/projects.html
+
+   Home Overview Gallery Hardware Software Publications Projects What's
+       New? Staff
+     __________________________________________________________________
+
+                       LBNL Visualization Group Projects
+
+   Below are some of the projects that we have been working on. Nearly all
+   of them are collaborations of one type or another.
+
+  Ongoing Work
+
+   Summer 2001 Projects by UCD and SFU Students
+
+   Visapult: Image Based Rendering Assisted Volume Rendering,
+          Image-based rendering principles are used as the basis for a
+          scalable, parallel volume rendering engine. This project is
+          funded by NGI under the Combustion Corridor proposal.
+
+  Past Work
+
+   3D Microtubule Reconstruction.
+          Collaboration with Ken Downing, LSD/LBL/UCB, to visualize high
+          resolution models of a 3D microtubule reconstruction (October
+          2001).
+
+   Toroidal Coiling of DNA.
+          Collaboration with Ken Downing, LSD/LBL/UCB, to visualize
+          observed and theoretical model of the toroidal coiling of DNA
+          (October 2001).
+
+   ChomboVis,
+          A adaptive mesh refinement (AMR) visualizational tool developed
+          with the Applied Numerical Algorithms Group at LBNL/NERSC.
+
+   Visualizing the Interactions of Two Fluids,
+          The goal was to develop a tool to view two interacting fluid
+          species at one time for a NERSC user at the College of William &
+          Mary. The final product was to create movies so that the time
+          dependent nature could be studied. The final tool was written in
+          IDL and the tool and documentation was released to the user.
+          Some examples movies are:
+
+                Plot of one fluid (energy.1): plot_surf,'energy.1'
+                Plot of one energy.1 & energy.2 and scaling the mins and
+                maxs.
+                plot_surf,'energy.1','energy.2',/noscale,nsteps=600,file1=
+                [.2,.7]
+
+   Cosmology,
+          Work with Julian Borrill and Rob Thacker visualizing
+          cosmological computations.
+
+   1999 Combustion Vis LDRD
+          The goal of this project is to evaulate and demonstrate some
+          techniques for visualization specifically for combustion data
+          with embedded boundary conditions.
+
+   The Virtual Protractor, Summer-Fall 1999
+          A virtual protractor is used to measure angles between objects
+          perceived in stereo image pairs using virtual reality
+          technology. Each image is generated from a scanning electron
+          microscope, and stereo pairs are obtained by either manipulating
+          the specimen or the electron beam. Images from slightly
+          different viewpoints are combined using stereoscopic rendering
+          to create the illusion of a 3D scene. Virtual reality user
+          interface technology is used to manipulate a virtual measuring
+          device with the goal of accurately measuring spatial
+          characteristics of 3D objects perceived while viewing the stereo
+          image pairs. This approach relies on the human observers'
+          ability to successfully fuse stereo geometry and image-based
+          data. A paper was presented at IEEE Vis99 that describes our
+          work.
+
+   Molecular Dynamics - Cesium, Summer-Fall 1999
+          An understanding of Cs-smectite systems is necessary to predict
+          the permeability of clay liners at nuclear waste containment
+          facilities to 137-Cs radioactive waste.
+
+   DataBlaster Toolkit , 1998
+          The intent of this toolset is to provide the means to easily
+          move data from simulations to visualization tools. Unlike some
+          other code instrumentation tools (such as CUMULVS), there are
+          absolutely no dependancies or restrictions with respect to MP
+          computing environments. The underlying presumption in this
+          toolkit is that the overall goal is to send data, which can be
+          up to a five-dimensional array of double precision floating
+          point values, from a computational source to a consumer. The
+          underlying data must be reducable to a contiguous chunk of
+          memory. This tool makes use of the "eXternal Data
+          Representation" (XDR) libraries for transmission and translation
+          from one architecture to another. Therefore, you can send
+          compute data on an 8-byte-word big-endian machine and consume
+          the data on a 4-byte-word little endian workstation. XDR takes
+          care of all the architecture representation issues (thus, XDR
+          must be present on both client and server machines).
+
+   Computational Chemistry Grand Challenge, Summer 1998
+          This work was done with researchers at Northwestern University
+          who are studying the enzyme beta-lactamase.
+
+   Dehydrogenation Catalysis, Summer 1998
+          Visualizations of a theorectical chemical reaction - the
+          dehydrogenation of ethylene.
+
+   Reservoir Simulation
+          Reservoir characterization involves predicting production.
+          Production is a function of geophysical and geochemical
+          parameters. Typically, these parameters are estimated from
+          samples. The challenge is better predictions of these unknowns,
+          as well as better tools for calculating production given a set
+          of parameters. Two separate projects were demonstrated at
+          Supercomputing 1997 in San Jose, CA.
+
+   Yucca Mountain Project, Spring 1997
+          The VisGroup is working with scientists in ESD to create a
+          visualization showing the Yucca Mountain storage facility. This
+          visualization integrates divergent types of data, and will be
+          used to ask "what if" questions pertaining to water flow through
+          the site. Look for this model soon in in LBL's Washington DC
+          office.
+
+   Mining for Copper, Spring-Summer 1997
+          This interesting collaboration has resulted in new tools for
+          interacting with and visualizing large datasets.
+
+   Material Science NMR Project
+          Material Science research relies heavily on the use of Nuclear
+          Magnetic Resonance (NMR) to study materials. Researchers at LBNL
+          and UC Berkeley are working with the Visualization Group to
+          explore the results of computer simulations of NMR physics run
+          on the NERSC T3E.
+
+   Radiation Biology and DNA Repair
+          Radiation damage to DNA and the repair thereof is being
+          investigated at LBNL by the Department of Radiation Biology and
+          DNA Repair in the Life Sciences Division. Data sets contain tens
+          of thousands atoms are generated. Hierarchical methods of
+          visualization are being investigated on these data sets.
+
+   ACTI Project
+          A collaboration with the oil industry produced new commercially
+          available products using visualization tools developed by the
+          Visualization Group at Berkeley Lab.
+
+   Computational Accelerator Physics Grand Challenge
+          Visualization will play a key role in this Grand Challenge
+          project, which is attempting to overcome many of the problems
+          with simulating particle accelerator beam physics.
+
+   UTCHEM Project
+          A prototype interface - our foray into the world of VR and
+          scientific computing. Fall, 1993.
+
+   VRModules, version 2.0
+          How can one bring Virtual Reality to the desktop? Our VRModules
+          Library is a collection of AVS Modules that implement VR. This
+          link describes the contents of the VRModules library.
+     __________________________________________________________________
+
+   We welcome questions and comments on this web page. Please send email
+   to vismaster@lbl.gov.
+
+   Privacy and Security Notice to Users
+   Last Modified: Tuesday, 18-Dec-2001 08:00:55 PST
+
+   home Back to the Visualization Group home page

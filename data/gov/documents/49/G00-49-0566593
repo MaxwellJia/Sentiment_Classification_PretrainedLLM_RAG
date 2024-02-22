@@ -1,0 +1,1034 @@
+http://step.nasa.gov/omg/mof_00-04-03.pdf
+
+   Meta Object Facility (MOF) Specification Version 1.3 New Edition: March
+   2000 Copyright 1997-1999, DSTC (Cooperative Research Centre for
+   Enterprise Distributed Systems Technology) Copyright 1997-1999,
+   Electronic Data Systems Copyright 1997-1999, IBM Corporation Copyright
+   1997-1999, International Computers Limited Copyright 1997-1999,
+   Objectivity Inc. Copyright 2000, Object Management Group Copyright
+   1997-1999, Oracle Corporation Copyright 1997-1999, Platinum Technology
+   Inc. Copyright 1997-1999, Rational Software Corporation Copyright
+   1997-1999, System Software Associates Copyright 1997-1999, Unisys
+   Corporation The companies listed above have granted to the Object
+   Management Group, Inc. (OMG) a nonexclusive, royalty-free, paid up,
+   worldwide license to copy and distribute this document and to modify
+   this document and distribute copies of the mod- ified version. Each of
+   the copyright holders listed above has agreed that no person shall be
+   deemed to have infringed the copyright in the included material of any
+   such copyright holder by reason of having used the specification set
+   forth herein or having conformed any computer software to the
+   specification. PATENT The attention of adopters is directed to the
+   possibility that compliance with or adoption of OMG specifications may
+   require use of an invention covered by patent rights. OMG shall not be
+   responsible for identifying patents for which a license may be required
+   by any OMG specification, or for conducting legal inquiries into the
+   legal validity or scope of those patents that are brought to its
+   attention. OMG specifications are prospective and advisory only.
+   Prospective users are responsible for protecting themselves against
+   liability for infringement of patents. NOTICE The information contained
+   in this document is subject to change without notice. The material in
+   this document details an Object Management Group specification in
+   accordance with the license and notices set forth on this page. This
+   document does not represent a commitment to implement any portion of
+   this specification in any company's products. WHILE THE INFORMATION IN
+   THIS PUBLICATION IS BELIEVED TO BE ACCURATE, THE OBJECT MAN- AGEMENT
+   GROUP AND THE COMPANIES LISTED ABOVE MAKE NO WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, WITH REGARD TO THIS MATERIAL INCLUDING, BUT NOT
+   LIMITED TO ANY WARRANTY OF TITLE OR OWNERSHIP, IMPLIED WARRANTY OF
+   MERCHANTABILITY OR WARRANTY OF FITNESS FOR PARTICULAR PURPOSE OR USE.
+   In no event shall The Object Management Group or any of the companies
+   listed above be liable for errors contained herein or for indirect,
+   incidental, special, consequential, reliance or cover damages,
+   including loss of profits, revenue, data or use, incurred by any user
+   or any third party. The copyright holders listed above acknowledge that
+   the Object Management Group (acting itself or through its designees) is
+   and shall at all times be the sole entity that may authorize
+   developers, suppliers and sellers of computer software to use
+   certification marks, trademarks or other special designations to
+   indicate compliance with these materials. This document contains
+   information which is pro- tected by copyright. All Rights Reserved. No
+   part of this work covered by copyright herein may be reproduced or used
+   in any form or by any means--graphic, electronic, or mechanical,
+   including photocopying, recording, taping, or information storage and
+   retrieval systems--without permission of the copyright owner.
+   RESTRICTED RIGHTS LEGEND. Use, duplication, or disclosure by government
+   is subject to restrictions as set forth in subdivision (c) (1) (ii) of
+   the Right in Technical Data and Computer Software Clause at DFARS
+   252.227.7013 OMG®and Object Management are registered trademarks of the
+   Object Management Group, Inc. Object Request Broker, OMG IDL, ORB,
+   CORBA, CORBAfacilities, CORBAservices, COSS, and IIOP are trademarks of
+   the Object Management Group, Inc. X/Open is a trademark of X/Open
+   Company Ltd. The UML logo is a trademark of Rational Software Corp.
+   ISSUE REPORTING All OMG specifications are subject to continuous review
+   and improvement. As part of this process we encourage readers to report
+   any ambiguities, inconsistencies, or inaccuracies they may find by
+   completing the issue reporting form at
+   http://www.omg.org/library/issuerpt.htm. Table of Contents Preface . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . ix 1. MOF Overview . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . 1-1 1.1 Overview . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . 1-1 1.2 Software
+   Development Scenarios. . . . . . . . . . . . . . . . . . . . 1-2 1.3
+   Type Management Scenarios . . . . . . . . . . . . . . . . . . . . . . .
+   1-4 1.4 Information Management Scenarios. . . . . . . . . . . . . . . .
+   . . 1-6 1.5 Data Warehouse Management Scenarios . . . . . . . . . . . .
+   . . 1-6 2. MOF Conceptual Overview . . . . . . . . . . . . . . . . . .
+   . . . . . . . 2-1 2.1 Overview . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . 2-1 2.2 Meta-data Architectures . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . 2-1 2.2.1 Four Layer
+   Meta-data Architectures . . . . . . . . . 2-2 2.2.2 The MOF Meta-data
+   Architecture . . . . . . . . . . 2-3 2.2.3 MOF Meta-modeling
+   Terminology. . . . . . . . . . 2-5 2.3 The MOF Model - Meta-modeling
+   Constructs . . . . . . . . . . 2-5 2.3.1 Classes . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . 2-6 2.3.2 Associations . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . 2-9 2.3.3 Aggregation . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . 2-11 2.3.4 References
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2-12 2.3.5
+   DataTypes . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   2-14 2.3.6 Packages . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . 2-14 2.3.7 Constraints and Consistency. . . . . . . . . . . . .
+   . . 2-17 2.3.8 Miscellaneous Meta-modeling Constructs . . . . 2-20 2.4
+   Meta-models and Mappings . . . . . . . . . . . . . . . . . . . . . . .
+   . 2-21 2.4.1 Abstract and Concrete Mappings . . . . . . . . . . . 2-21
+   OMG-MOF V1.3 March 2000 i Contents 2.4.2 CORBA Meta-data Services - The
+   MOF IDL Mapping 2-22 2.4.3 Meta-data Interchange - The MOF XML Mapping
+   2- 22 2.4.4 Mappings of the MOF Model . . . . . . . . . . . . . . 2-22
+   3. MOF Model and Interfaces . . . . . . . . . . . . . . . . . . . . . .
+   . . . 3-1 3.1 Overview . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . 3-1 3.2 How the MOF Model is Described. . .
+   . . . . . . . . . . . . . . . . 3-2 3.2.1 Classes . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . 3-3 3.2.2 Associations . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . 3-8 3.2.3 DataTypes. . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 3-9 3.2.4
+   Exceptions . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-10
+   3.2.5 Constants . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . 3-10 3.2.6 Constraints . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . 3-10 3.2.7 UML Diagrams. . . . . . . . . . . . . . . . . . .
+   . . . . . . 3-10 3.3 The Structure of the MOF Model. . . . . . . . . .
+   . . . . . . . . . . 3-11 3.3.1 The MOF Model Package. . . . . . . . . .
+   . . . . . . . 3-11 3.3.2 The MOF Model Service IDL . . . . . . . . . .
+   . . . 3-12 3.3.3 The MOF Model Structure . . . . . . . . . . . . . . .
+   . 3-12 3.3.4 The MOF Model Containment Hierarchy. . . . . 3-14 3.4 MOF
+   Model Classes. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . 3-15 3.4.1 ModelElement Class. . . . . . . . . . . . . . . . . . . .
+   . 3-15 3.4.2 Namespace Class . . . . . . . . . . . . . . . . . . . . .
+   . . 3-21 3.4.3 GeneralizableElement Class . . . . . . . . . . . . . . .
+   3-24 3.4.4 TypedElement. . . . . . . . . . . . . . . . . . . . . . . .
+   . . 3-29 3.4.5 Classifier. . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . 3-31 3.4.6 Class . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . 3-31 3.4.7 DataType . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . 3-33 3.4.8 TypeAlias . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . 3-35 3.4.9 Feature Class . . .
+   . . . . . . . . . . . . . . . . . . . . . . . 3-36 3.4.10
+   StructuralFeature . . . . . . . . . . . . . . . . . . . . . . . 3-38
+   3.4.11 Attribute . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . 3-40 3.4.12 Reference . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . 3-41 3.4.13 BehavioralFeature Class . . . . . . . . . . .
+   . . . . . . . 3-43 3.4.14 Operation . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . 3-44 3.4.15 Exception . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . 3-46 3.4.16 Association . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . 3-47 3.4.17 AssociationEnd. . . .
+   . . . . . . . . . . . . . . . . . . . . . 3-49 3.4.18 Package. . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 3-53 3.4.19 Import.
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-55 ii
+   OMG-MOF V1.3 March 2000 Contents 3.4.20 Parameter . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . 3-57 3.4.21 Constraint . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . 3-59 3.4.22 Constant
+   Class . . . . . . . . . . . . . . . . . . . . . . . . . 3-62 3.4.23 Tag
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   3-63 3.5 MOF Model Associations . . . . . . . . . . . . . . . . . . . .
+   . . . . . 3-65 3.5.1 Contains . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . 3-65 3.5.2 Generalizes . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . 3-66 3.5.3 RefersTo . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . 3-68 3.5.4 Exposes . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . 3-69 3.5.5 IsOfType. . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . 3-70 3.5.6 CanRaise.
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-71 3.5.7
+   Aliases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   3-72 3.5.8 Constrains. . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . 3-73 3.5.9 DependsOn . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . 3-74 3.5.10 AttachesTo . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . 3-76 3.6 \MOF Model Data Types . . . . . . . . .
+   . . . . . . . . . . . . . . . . . 3-77 3.6.1 CORBA Basic Types . . . .
+   . . . . . . . . . . . . . . . . 3-77 3.6.2 NameType. . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . 3-77 3.6.3 AnnotationType . . . .
+   . . . . . . . . . . . . . . . . . . . . 3-77 3.6.4 TypeDescriptor . . .
+   . . . . . . . . . . . . . . . . . . . . . . 3-77 3.6.5 MultiplicityType
+   . . . . . . . . . . . . . . . . . . . . . . . . 3-78 3.6.6
+   VisibilityKind . . . . . . . . . . . . . . . . . . . . . . . . . . 3-79
+   3.6.7 DepthKind . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   3-79 3.6.8 DirectionKind. . . . . . . . . . . . . . . . . . . . . . . .
+   . . 3-80 3.6.9 ScopeKind . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . 3-80 3.6.10 AggregationKind . . . . . . . . . . . . . . . . .
+   . . . . . . 3-80 3.6.11 EvaluationKind. . . . . . . . . . . . . . . . .
+   . . . . . . . . 3-80 3.6.12 DependencyKind . . . . . . . . . . . . . .
+   . . . . . . . . . 3-81 3.6.13 FormatType. . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . 3-81 3.6.14 LiteralType . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . 3-81 3.6.15 VerifyResultKind . . . . .
+   . . . . . . . . . . . . . . . . . . 3-82 3.6.16 ViolationType . . . . .
+   . . . . . . . . . . . . . . . . . . . . . 3-82 3.7 MOF Model Exceptions
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . 3-83 3.7.1
+   NameNotFound . . . . . . . . . . . . . . . . . . . . . . . . 3-83 3.7.2
+   NameNotResolved . . . . . . . . . . . . . . . . . . . . . . 3-83 3.7.3
+   ObjectNotExternalizable . . . . . . . . . . . . . . . . . 3-84 3.7.4
+   FormatNotSupported . . . . . . . . . . . . . . . . . . . . 3-84 3.7.5
+   IllformedExternalizedObject . . . . . . . . . . . . . . 3-84 3.8 MOF
+   Model Constants . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   3-85 3.8.1 Unbounded . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . 3-85 OMG-MOF V.13 March 2000 iii Contents 3.8.2 The Standard
+   DependencyKinds. . . . . . . . . . . . 3-85 3.9 MOF Model Constraints.
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 3-86 3.9.1 MOF
+   Model Constraints and other M2 Level Semantics . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . 3-86 3.9.2 Notational Conventions . .
+   . . . . . . . . . . . . . . . . 3-86 3.9.3 OCL Usage in the MOF Model
+   specification . . 3-88 3.9.4 The MOF Model Constraints . . . . . . . .
+   . . . . . . 3-91 3.9.5 Semantic specifications for some Operations,
+   derived Attributes and Derived Associations . . 3-106 3.9.6 OCL Helper
+   functions . . . . . . . . . . . . . . . . . . . 3-112 4. The MOF
+   Abstract Mapping . . . . . . . . . . . . . . . . . . . . . . . . 4-1
+   4.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . 4-1 4.2 MOF Values . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . 4-2 4.2.1 Semantics of Equality
+   for MOF Values . . . . . . 4-3 4.3 Semantics of Class Instances . . . .
+   . . . . . . . . . . . . . . . . . . . 4-3 4.4 Semantics of Attributes .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . 4-4 4.4.1 Attribute
+   name and type . . . . . . . . . . . . . . . . . . 4-4 4.4.2
+   Multiplicity. . . . . . . . . . . . . . . . . . . . . . . . . . . . 4-5
+   4.4.3 Scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . 4-6 4.4.4 Is_derived . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . 4-6 4.4.5 Aggregation . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . 4-6 4.4.6 Visibility and is_changeable . . . . . . . .
+   . . . . . . . 4-7 4.5 Package Composition. . . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . 4-7 4.5.1 Package Nesting . . . . . . . . .
+   . . . . . . . . . . . . . . . 4-7 4.5.2 Package Generalization . . . .
+   . . . . . . . . . . . . . . 4-8 4.5.3 Package Importation . . . . . . .
+   . . . . . . . . . . . . . . 4-8 4.5.4 Package Clustering . . . . . . .
+   . . . . . . . . . . . . . . . 4-8 4.6 Extents . . . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . 4-9 4.6.1 The
+   Purpose of Extents. . . . . . . . . . . . . . . . . . . 4-9 4.6.2 Class
+   Extents . . . . . . . . . . . . . . . . . . . . . . . . . . 4-10 4.6.3
+   Association Extents . . . . . . . . . . . . . . . . . . . . . 4-10
+   4.6.4 Package Extents . . . . . . . . . . . . . . . . . . . . . . . .
+   4-11 4.7 Semantics of Associations . . . . . . . . . . . . . . . . . .
+   . . . . . . . 4-12 4.7.1 MOF Associations in UML notation . . . . . . .
+   . 4-14 4.7.2 Core Association Semantics . . . . . . . . . . . . . . .
+   4-15 4.7.3 AssociationEnd Changeability . . . . . . . . . . . . . 4-17
+   4.7.4 AssociationEnd Navigability . . . . . . . . . . . . . . 4-17
+   4.7.5 Association Aggregation . . . . . . . . . . . . . . . . . 4-17
+   4.7.6 Derived Associations . . . . . . . . . . . . . . . . . . . . 4-17
+   iv OMG-MOF V1.3 March 2000 Contents 4.8 Aggregation Semantics . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . 4-17 4.8.1 Aggregation
+   "none" . . . . . . . . . . . . . . . . . . . . . 4-18 4.8.2 Aggregation
+   "composite" . . . . . . . . . . . . . . . . . 4-18 4.8.3 Aggregation
+   "shared" . . . . . . . . . . . . . . . . . . . . 4-18 4.9 Closure Rules
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   4-18 4.9.1 The Reference Closure Rule. . . . . . . . . . . . . . . 4-19
+   4.9.2 The Composition Closure Rule. . . . . . . . . . . . . 4-20 4.10
+   Recommended Copy Semantics . . . . . . . . . . . . . . . . . . . . .
+   4-21 4.11 Computational Semantics. . . . . . . . . . . . . . . . . . .
+   . . . . . . . 4-22 4.11.1 A Style Guide for Metadata Computational
+   Semantics . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   4-22 4.11.2 Access operations should not change metadata 4-23 4.11.3
+   Update operations should only change the nominated metadata . . . . . .
+   . . . . . . . . . . . . . . . 4-23 4.11.4 Derived Elements should
+   behave like non-derived Elements . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . . . 4-23 4.11.5 Constraint evaluation should not have
+   side-effects . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   4-24 4.11.6 Access operations should avoid raising Constraint
+   exceptions . . . . . . . . . . . . . . . . . . . . 4-24 5. MOF to IDL
+   Mapping. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5-1
+   5.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   . . . . . . . . . 5-1 5.2 Meta Objects and Interfaces . . . . . . . . .
+   . . . . . . . . . . . . . . . 5-2 5.2.1 Meta Object Type Overview . . .
+   . . . . . . . . . . . . 5-2 5.2.2 The Meta Object Interface Hierarchy .
+   . . . . . . . 5-4 5.3 Computational Semantics for the IDL Mapping. . .
+   . . . . . . 5-6 5.3.1 Value Types and Equality in the IDL Mapping. 5-6
+   5.3.2 Lifecycle Semantics for the IDL Mapping . . . . 5-8 5.3.3
+   Association Access and Update Semantics for the IDL Mapping . . . . . .
+   . . . . . . . . . . . . . . . . . 5-11 5.3.4 Attribute Access and
+   Update Semantics for the IDL Mapping . . . . . . . . . . . . . . . . .
+   . . . . . . . . . 5-15 5.3.5 Reference Semantics for the IDL Mapping .
+   . . 5-21 5.3.6 Cluster Semantics for the IDL Mapping . . . . . . 5-22
+   5.3.7 Atomicity Semantics for the IDL Mapping . . . 5-22 5.3.8 The
+   Supertype Closure Rule. . . . . . . . . . . . . . . 5-22 5.3.9 Copy
+   Semantics for the IDL Mapping . . . . . . . 5-23 5.4 Exception
+   Framework . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5-24
+   5.4.1 Error_kind string values . . . . . . . . . . . . . . . . . . 5-25
+   5.4.2 Structural Errors . . . . . . . . . . . . . . . . . . . . . . . .
+   5-26 OMG-MOF V.13 March 2000 v Contents 5.4.3 Constraint Errors . . . .
+   . . . . . . . . . . . . . . . . . . . 5-29 5.4.4 Semantic Errors . . .
+   . . . . . . . . . . . . . . . . . . . . . 5-29 5.4.5 Usage Errors. . .
+   . . . . . . . . . . . . . . . . . . . . . . . . 5-30 5.4.6 Reflective
+   Errors. . . . . . . . . . . . . . . . . . . . . . . . 5-31 5.5
+   Preconditions for IDL Generation . . . . . . . . . . . . . . . . . . .
+   5-33 5.6 Standard Tags for the IDL Mapping. . . . . . . . . . . . . . .
+   . . . 5-35 5.6.1 Tags for Specifying IDL #pragma prefix . . . . . 5-36
+   5.6.2 Tags for Providing Substitute Identifiers . . . . . 5-37 5.6.3
+   Tags for Specifying IDL Inheritance . . . . . . . . 5-37 5.7 Generated
+   IDL Issues. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+   5-39 5.7.1 Generated IDL Identifiers. . . . . . . . . . . . . . . . .
+   5-39 5.7.2 Generation Rules for Collection Types. . . . . . . 5-42
+   5.7.3 IDL Identifier Qualification . . . . . . . . . . . . . . . 5-44
+   5.7.4 File Organization and #include statements . . . . 5-45 5.8 IDL
+   Mapping Templates . . . . . . . . . . . . . . . . . . . . . . . . . .
+   5-45 5.8.1 Template Notation . . . . . . . . . . . . . . . . . . . . .
+   . 5-46 5.8.2 Package Module Template . . . . . . . . . . . . . . . .
+   5-46 5.8.3 Package Factory Template . . . . . . . . . . . . . . . .
+   5-49 5.8.4 Package Template . . . . . . . . . . . . . . . . . . . . . .
+   . 5-51 5.8.5 Class Forward Declaration Template . . . . . . . . 5-53
+   5.8.6 Class Template . . . . . . . . . . . . . . . . . . . . . . . . .
+   5-54 5.8.7 Class Proxy Template . . . . . . . . . . . . . . . . . . . .
+   5-54 5.8.8 Instance Template. . . . . . . . . . . . . . . . . . . . . .
+   . 5-56 5.8.9 Class Create Template . . . . . . . . . . . . . . . . . .
+   . 5-57 5.8.10 Association Template . . . . . . . . . . . . . . . . . .
+   . . 5-59 5.8.11 Attribute Template . . . . . . . . . . . . . . . . . .
+   . . . . 5-68 5.8.12 Reference Template . . . . . . . . . . . . . . . .
+   . . . . . 5-77 5.8.13 Operation Template . . . . . . . . . . . . . . .
+   . . . . . . 5-86 5.8.14 Exception Template . . . . . . . . . . . . . .
+   . . . . . . . 5-89 5.8.15 Constant Template . . . . . . . . . . . . . .
+   . . . . . . . . 5-89 5.8.16 DataType Template . . . . . . . . . . . . .
+   . . . . . . . . . 5-90 5.8.17 Constraint Template . . . . . . . . . . .
+   . . . . . . . . . . 5-91 5.8.18 Annotation Template . . . . . . . . . .
+   . . . . . . . . . . 5-92 6. The Reflective Module . . . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . 6-1 6.1 Introduction . . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6-1 6.2 The
+   Reflective Interfaces . . . . . . . . . . . . . . . . . . . . . . . . .
+   . 6-3 6.2.1 Reflective Argument Encoding Patterns. . . . . . 6-3 6.2.2
+   Reflective::RefObject . . . . . . . . . . . . . . . . . . . . 6-9 6.2.3
+   Reflective::RefAssociation . . . . . . . . . . . . . . . . 6-23 vi
+   OMG-MOF V1.3 March 2000 Contents 6.2.4 Reflective::RefPackage. . . . .
+   . . . . . . . . . . . . . . 6-28 6.3 The CORBA IDL for the Reflective
+   Interfaces . . . . . . . . . 6-30 6.3.1 Introduction . . . . . . . . .
+   . . . . . . . . . . . . . . . . . . 6-30 6.3.2 Data Types. . . . . . .
+   . . . . . . . . . . . . . . . . . . . . . 6-30 Appendix A - XMI for the
+   MOF . . . . . . . . . . . . . . . . . . . . . A-1 Appendix B - MOF IDL
+   Summary . . . . . . . . . . . . . . . . . . . B-1 Appendix C - MODL
+   Description of the MOF . . . . . . . . . . C-1 Appendix D - MOF
+   Implementation Requirements . . . . . . D-1 Appendix E - Future
+   Directions for the MOF . . . . . . . . . . . E-1 OMG-MOF V.13 March
+   2000 vii Contents viii OMG-MOF V1.3 March 2000 Preface About the Object
+   Management Group The Object Management Group, Inc. (OMG) is an
+   international organization supported by over 800 members, including
+   information system vendors, software developers and users. Founded in
+   1989, the OMG promotes the theory and practice of object-oriented
+   technology in software development. The organization's charter includes
+   the establishment of industry guidelines and object management
+   specifications to provide a common framework for application
+   development. Primary goals are the reusability, portability, and
+   interoperability of object-based software in distributed, heterogeneous
+   environments. Conformance to these specifications will make it possible
+   to develop a heterogeneous applications environment across all major
+   hardware platforms and operating systems. OMG's objectives are to
+   foster the growth of object technology and influence its direction by
+   establishing the Object Management Architecture (OMA). The OMA provides
+   the conceptual infrastructure upon which all OMG specifications are
+   based. Associated OMG Documents The CORBA documentation set includes
+   the following: * Object Management Architecture Guide defines the OMG's
+   technical objectives and terminology and describes the conceptual
+   models upon which OMG standards are based. It defines the umbrella
+   architecture for the OMG standards. It also provides information about
+   the policies and procedures of OMG, such as how standards are proposed,
+   evaluated, and accepted. * CORBA: Common Object Request Broker
+   Architecture and Specification contains the architecture and
+   specifications for the Object Request Broker. * CORBAservices: Common
+   Object Services Specification contains specifications for OMG's Object
+   Services. OMG-MOF V1.3 March 2000 ix * CORBAfacilities: Common
+   Facilities Specification is a collection of services that many
+   applications may share, but which are not as fundamental as the Object
+   Services. For instance, a system management or electronic mail facility
+   could be classified as a common facility. Common Facilities are used by
+   most systems. The OMG collects information for each book in the
+   documentation set by issuing Requests for Information, Requests for
+   Proposals, and Requests for Comment and, with its membership,
+   evaluating the responses. Specifications are adopted as standards only
+   when representatives of the OMG membership accept them as such by vote.
+   (The policies and procedures of the OMG are described in detail in the
+   Object Management Architecture Guide.) OMG formal documents are
+   available from our web site in PostScript and PDF format. To obtain
+   print-on-demand books in the documentation set or other OMG
+   publications, contact the Object Management Group, Inc. at: OMG
+   Headquarters 250 First Avenue, Suite 201 Needham, MA 02494 USA Tel:
+   +1-781-444-0404 Fax: +1-781-444-0320 pubs@omg.org http://www.omg.org
+   Introduction to OMG Modeling This document describes the OMG standards
+   for modeling distributed software architectures and systems along with
+   their CORBA Interfaces. It is composed of two complementary
+   specifications: * Unified Modeling Language Specification * Meta-Object
+   Facility Specification The Unified Modeling Language (UML)
+   Specification defines a graphical language for visualizing, specifying,
+   constructing, and documenting the artifacts of distributed object
+   systems. The specification includes the formal definition of a common
+   Object Analysis and Design (OA&D) metamodel, a graphic notation, and a
+   CORBA IDL facility that supports model interchange between OA&D tools
+   and metadata repositories. The UML provides the foundation for
+   specifying and sharing CORBA- based distributed object models. The
+   Meta-Object Facility (MOF) Specification defines a set of CORBA IDL
+   interfaces that can be used to define and manipulate a set of
+   interoperable metamodels and their corresponding models. These
+   interoperable metamodels include the UML metamodel, the MOF
+   meta-metamodel, as well as future OMG adopted technologies that will be
+   specified using metamodels. The MOF provides the infrastructure for
+   implementing CORBA-based design and reuse repositories. The MOF
+   specifies precise mapping x OMG-MOF V1.3 March 2000 rules that enable
+   the CORBA interfaces for metamodels to be automatically generated, thus
+   encouraging consistency in manipulating metadata in all phases of the
+   distributed application development cycle. Since the UML and MOF are
+   based on a four-layer metamodel architecture it is essential that the
+   metamodels for each facility are architecturally aligned. For a
+   description of the four layer metamodel architecture, please refer to
+   Section 2.2, "Meta-data Architectures," on page 2-1 in the MOF
+   Specification. In order to achieve architectural alignment considerable
+   effort has been expended so that the UML and MOF share the same core
+   semantics. This alignment allows the MOF to reuse the UML notation for
+   visualizing metamodels. In those areas where semantic differences are
+   required, well-defined mapping rules are provided between the
+   metamodels. The OMG distributed repository architecture, which
+   integrates UML and MOF with CORBA is described in Section 0.5,
+   "Resolution of Technical Criteria in the Preface of the MOF
+   Specification. As the first adopted technologies specified using a
+   metamodeling approach, the UML and MOF establish a rigorous foundation
+   for OMG's metamodel architectures. Future metamodel standards should
+   reuse their core semantics and emulate their systematic approach to
+   architecture alignment. Architectural Alignment of UML, MOF, and CORBA
+   Introduction This section explains the architectural alignment of the
+   OA&D Facility (OA&DF) metamodel and the MOF meta-metamodel, and their
+   relationships to the OMA and CORBA object models. When discussing
+   specific models, MOF corresponds to the MOF meta-metamodel also
+   referred to as the MOF Model. The UML is used to refer to the proposed
+   OA&DF metamodel. As yet, there is not an MOF meta-metamodel standard or
+   an OA&D metamodel standard. However, since each of these specifications
+   has been unified, a proactive approach has been taken towards
+   architectural alignment. Considerable structure sharing between the two
+   specifications has been accomplished. As the OA&DF and MOF technologies
+   evolve, additional alignment work will be addressed by standard OMG
+   processes such as those for Revision Task Forces and subsequent RFPs.
+   The MOF and OA&DF alignment work has focused on aligning the metamodels
+   and applying the MOF IDL Mapping for generating the CORBA IDL for both
+   the MOF and UML models. This was accomplished by defining the MOF and
+   UML models using the MOF and by generating the IDL interfaces based on
+   the MOF specification. Note that both the MOF and OADF specifications
+   use the UML notation for graphically defining the models. In terms of
+   abstraction levels and the kinds of meta-metaobjects used, the UML and
+   MOF meta-metamodels are well aligned. There are significant advantages
+   in aligning the OA&DF meta-metamodel with the MOF meta-metamodel. In
+   the case of the MOF, OMG-MOF V1.3 March 2000 xi meta-metamodel
+   alignment facilitates interoperability between the OA&DF and the MOF.
+   An example of OA&DF-MOF interoperability is the use of an MOF-compliant
+   repository to store an OA&DF object model. Alignment of the UML, MOF,
+   and CORBA paves the way for future extensibility of CORBA in key areas
+   such as richer semantics, relationships, and constraints. Likewise the
+   longer-term benefits to UML and MOF include better recognition and
+   addressing of distributed computing issues in developing
+   CORBA-compliant systems. Motivation The primary reason for aligning the
+   OA&DF metamodel with the MOF meta- metamodel is to facilitate
+   interoperability between the two facilities using CORBA IDL. When
+   considering interoperability between the OA&DF and the MOF, it is
+   important to consider the difference in scope between the facilities.
+   The MOF goal is to allow interoperability across the application
+   development cycle by supporting the definition of multiple meta models,
+   whereas the OA&DF focuses on supporting the definition of a single OA&D
+   metamodel. An example of OA&DF-MOF interoperability is the use of an
+   MOF-compliant repository to store and interchange OA&DF object models.
+   The key motivation to align the MOF and OA&DF with CORBA is to address
+   the requirement of aligning with CORBA and between the two facilities.
+   In addition, the MOF and OA&DF (especially the UML) specifications
+   signify years of modeling and metamodeling experience that are being
+   integrated. As such, some of the key concepts in the UML and MOF are
+   potential candidates to evolve the OMG Core object model and CORBA IDL
+   in the future. Approach The UML and MOF are based on a four-layer
+   metamodel architecture, where the MOF meta-metamodel is the
+   meta-metamodel for the UML metamodel. As a result, the UML metamodel
+   may be considered an instance-of the MOF meta-metamodel. This is
+   sometimes referred to as loose metamodeling, where an Mn level model is
+   an instance of an Mn+1 level model. Since the MOF and OA&DF have
+   different scopes, and diverge in the area of relationships, we have not
+   been able to apply strict metamodeling. In strict metamodeling, every
+   element of an Mn level model is an instance of exactly one element of
+   Mn+1 level model. Consequently, there is not a strict isomorphic
+   mapping between all the MOF meta-metamodel elements and the UML
+   meta-metamodel elements. In principle strict metamodeling is difficult
+   (or sometimes impossible to accomplish) as the complexity of new
+   concepts (for example patterns and frameworks) continues to increase.
+   In any case, using a small set of primitive concepts such as those
+   defined in the MOF it is possible to define arbitrarily complex
+   metamodels. xii OMG-MOF V1.3 March 2000 In spite of this, since the two
+   models were designed to be interoperable, the two metamodels are
+   structurally quite similar. The following sections compare the core MOF
+   and UML modeling concepts, and contrast them with the OMA and CORBA/IDL
+   core object models. The issues related to mapping metaclasses which are
+   not isomorphic (e.g., Association classes) are also discussed. The
+   following tables are comparison tables that summarize the mappings of
+   similar concepts across the meta-metamodeling layers. Where there is no
+   analog for a concept, it will be identified and discussed in "Issues
+   Related to UML-MOF Mapping" on page -xvi. Metamodel Comparison Most of
+   the metaobjects for the UML core metamodel and the MOF core meta-
+   metamodel can be mapped to each other in a straightforward manner.
+   Similarly, these metaobjects can also be mapped to the OMA and CORBA
+   core object models in a direct way. The following tables compare the
+   core modeling concepts and the data types for these models. UML
+   Metamodel MOF Meta- OMA Core Object Model CORBA IDL metamodel CORBA
+   Object Model Association (n-ary) Association (binary) AssociationClass
+   NA AssociationEnd AssociationEnd Attribute Attribute Attribute
+   Attribute BehavioralFeature BehavioralFeature Class Class Class
+   Interface (as Class) Classifier Classifier Constraint Constraint
+   DataType DataType Data type Data type Dependency (class) /dependsOn
+   (association) Exception Exception Exception Feature Feature
+   GeneralizableElement GeneralizableElement Generalization (class)
+   generalizes (association) Generalization Generalization Interface Class
+   (as Interface) Interface Interface ModelElement ModelElement NA
+   Reference NA Constant Constant OMG-MOF V1.3 March 2000 xiii UML
+   Metamodel MOF Meta- OMA Core Object Model CORBA IDL metamodel CORBA
+   Object Model Namespace Namespace ~ IR Containers Operation Operation
+   Operation Operation Package Package Module Parameter Parameter
+   Parameter Parameter StructuralFeature StructuralFeature Type
+   (stereotype) Class (as Type) Type Interface (as Type) UML Metamodel MOF
+   Meta-metamodel CORBA Object Model and IDL AggregationKind
+   AggregationKind Boolean CORBA Boolean Boolean Enumeration CORBA Enum
+   Enum Expression NameType Integer CORBA Short, Long, Short, Long,
+   Unsigned Short, Unsigned Unsigned Short, Unsigned Long, Double, Octet,
+   Float Long, Double, Octet, Float List List, Set Sequence Multiplicity
+   MultiplicityKind (simpler than UML multiplicity) Name NameKind Name
+   OperationDirectionKind DirectionKind dependencies (reified as classes)
+   DependencyKind (enum) ScopeKind ScopeKind String CORBA String, Char
+   String, Char Time CORBA Time Service Data Time Service Data Types Types
+   NA TypeDef TypeDef Uninterpreted CORBA Any Any VisibilityKind
+   VisibilityKind The MOF supports the full range of CORBA data types as
+   well as additional data types defined using the MOF primitive types.
+   UML supports a subset of CORBA data types in its semantic model but
+   mapping to a subset of specific CORBA types is clearly possible. xiv
+   OMG-MOF V1.3 March 2000 The following sections discuss issues related
+   to areas where the mapping between metamodels is not direct. Issues
+   Related to UML-MOF Mapping In general, the mapping from the UML
+   meta-metamodel to the MOF meta-metamodel is straightforward. A review
+   of the previous comparison tables indicates that in most cases the
+   mapping from the UML meta-metamodel to the MOF meta-metamodel is
+   direct. In fact, for most of the core constructs there is a structural
+   equivalency in the mapping. The key differences are due to different
+   usage scenarios of MOF and UML. The MOF needs to be simpler, directly
+   implementable, and provide a set of CORBA interfaces for manipulating
+   meta objects. The UML is used as a general-purpose modeling language,
+   with potentially many implementation targets. These differences are
+   commonly observed in repository, meta-CASE, and modeling-tool
+   implementations. The key differences are: * The MOF only supports
+   binary associations while UML supports higher-order (also referred to
+   as 'N-ary') associations. This trade-off was made because N-ary
+   relationships are rarely used in meta-modeling and the design goal was
+   to keep the MOF interfaces simpler. We have anticipated extending the
+   MOF to support higher order associations in future. * Associations in
+   the MOF are limited to simple associations and cannot contain features.
+   Association Classes in UML can contain features (such as attributes).
+   The MOF has been defined to be structurally extensible to full-blown
+   association classes in the future by relaxing this constraint. UML
+   Association Classes are modeled as MOF Classes with well-defined
+   multiplicity constraints to ensure shared lifetime of features owned by
+   the association. * The MOF supports the concept of a Reference which
+   allows direct navigation from one Classifier to another. The UML
+   metamodel uses the Target AssociationEnd's 'name' property as a
+   'pseudo-attribute' for the same purpose, but navigates to another
+   classifier through an Association. The concept of reference is widely
+   used in object repositories, as well as object and object-relational
+   databases and optimizes navigation across a metamodel. * Some concepts
+   such as Generalization, Dependency, and Refinement are reified as
+   classes in UML, but implemented as Associations in the MOF. The MOF
+   does not require the richness of UML in these areas. * The MOF supports
+   the full set of CORBA data types, whereas the UML meta model does not
+   define data types to this depth. A CORBA-specific implementation of UML
+   is clearly possible by either creating the additional data types needed
+   or by providing appropriate mappings. * The UML has clearly defined the
+   similarities of the key concepts of Class, Interface, and Type. The MOF
+   and UML both use the Class concept as the most general of these in
+   their respective models. The MOF specification is focused only on
+   specification of meta models and generation of CORBA interfaces;
+   therefore, it does not deal with implementation concepts such as
+   'Methods.' UML clearly needs OMG-MOF V1.3 March 2000 xv to support
+   these concepts because UML can be used to model conceptual, logical,
+   and implementation models. In this sense, the MOF uses the Class
+   concept to define Types, since MOF Classes do not have any methods,
+   just operations. This is consistent with the definition of UML Type as
+   a stereotype of Class with a constraint that Types cannot contain
+   methods. The MOF Class concept is rich enough to define Interfaces, and
+   in fact the MOF specification itself clearly shows that an MOF Class
+   can be mapped to multiple CORBA Interfaces. The previous table shows
+   that the mapping of metadatatypes between the meta- metamodels is also
+   straightforward. Here also there are more MOF meta- metaobjects than
+   there are UML meta-metaobjects. The MOF supports the full range of
+   CORBA data types as well as additional data types defined using the MOF
+   primitive types. UML supports a subset of CORBA data types in its
+   semantic model but maps to specific CORBA types in its corresponding
+   interface model. Relationship to Other Models A secondary emphasis was
+   placed on the architectural alignment with CDIF and RM- ODP, both of
+   which have influenced the metamodel architectures. CDIF offers many
+   useful concepts for specifying robust stream-based interchange formats.
+   Similarly, ODP provides many useful ideas for specifying model
+   viewpoints. Resolution of Technical Criteria Relationship to OMG IDL
+   and CORE `95 OMG IDL is used to specify all the interfaces in the Meta
+   Object Facility. The MOF itself is of course manipulated using standard
+   CORBA interfaces. The OMG core object model describes how objects
+   interact; therefore, it is an interface or interaction model. No
+   specific implementation is implied. The OMG object model is not
+   intended to be a metamodel (as described in the OMA). The CORBA object
+   model is a concrete model with the goal of specifying a mechanism for
+   portability and distributed object interoperability. The MOF does
+   define a meta-metamodel (for simplicity, we refer to this as the MOF
+   model). The purpose of the MOF model is to enable the definition and
+   manipulation of metamodels in various domains, with the initial focus
+   being on object analysis and design metamodels. The MOF can be used to
+   specify the OMG object model, which it can treat as a meta-model.
+   Likewise, because the MOF defines a set of CORBA compliant interfaces,
+   these interfaces conform to the CORBA object model. The MOF can be used
+   to specify additional semantics (relationships, constraints) that are
+   implied (or expressed in text) in the CORBA object model. The MOF is
+   intended to provide support for richer meta data definition and
+   manipulation in a CORBA environment. xvi OMG-MOF V1.3 March 2000
+   Positioning within the Common Facilities Architecture The Repository
+   Common Facility is positioned within the Information Management Common
+   Facility and is composed of a number of common facilities and object
+   services, including the MOF and the Change Management Facility. The
+   standardization of the MOF provides a solid foundation for the OMG
+   architecture in moving toward a unifying architecture for defining and
+   managing meta data in distributed environments. illustrates the
+   positioning of the MOF as a key component of the CORBA architecture as
+   well as within the Common Facilities Architecture. The Meta Data/Schema
+   Management facility in the figure corresponds to the MOF described in
+   this specification. Note that the MOF interfaces are initially targeted
+   to support the manipulation of OA&D metamodels; however, broader use in
+   areas such as data warehouse management and business object management
+   is expected. O M G A rchitecture and the Repository Com m on Facility R
+   ep ository Com mo n F acility Meta Da ta/ D ata Vers ions... App
+   lication O bjects Schem a M gm t Interchan ge AP Is AP Is Object
+   Request Bro ker (ORB ) O bject Services Iy eng ar (c ) 1995, U nisys
+   OMG Architecture and the Repository Common Facility Federation of
+   Object Schemas The MOF allows the definition of metamodels that are
+   potentially domain independent and architecture neutral. The metamodels
+   registered in the MOF can correspond to schemas that are in fact
+   federated. The MOF uses the federation capabilities provided by
+   services such as the Trader Service and the Object Transaction Service.
+   The schema information itself is accessed using the interfaces
+   specified in the MOF. The services of the MOF can be used to define
+   integrated metamodels that correspond to federated schemas. This area
+   is still emerging, and interfaces specifically designed to address
+   federation beyond the services already provided by CORBA (Object
+   Transaction Service and Object Trader service) are not specified in
+   this specification. OMG-MOF V1.3 March 2000 xvii Conformance to the MOF
+   The MOF specification has two conformance points: 1) MOF Model and
+   Interfaces and 2) OMG IDL Generation. MOF Model and Interfaces The MOF
+   Model and IDL is the first compliance point. This has the following
+   components: * The MOF Model and the interfaces of the "Model" module
+   which are defined in Chapter 3. (Additionally, Section B.1, "MOF Model
+   IDL," on page B-1 gives the consolidated IDL for the "Model" module.) *
+   The semantics of the "Model" module which are defined by elaborating
+   the MOF to IDL mapping's semantic specifications in Chapter 5 for the
+   MOF Model. * The interfaces and semantics of the "Reflective" module
+   which are defined in Chapter 6. (Addiitonally, Section B.2, "Reflective
+   IDL," on page B-22 gives the consolidated IDL for the "Reflective"
+   module.) Document Summary In addition to this Preface, the MOF
+   Specification contains the following chapters: Chapter 1, Overview,
+   provides several scenarios of domains where MOF is expected to be used.
+   The scenarios discussed include software development, type management,
+   information management, and data warehouse management. Chapter 2, Model
+   and Interfaces, is the main chapter of the specification. Each of the
+   MOF classes, associations, and data types are fully described along
+   with the IDL interfaces. The semantics of the MOF are defined using a
+   combination of UML notation, textual description, and constraints using
+   the Object Constraint Language (OCL). The MOF interfaces are used to
+   manipulate meta models and meta model constructs in a CORBA
+   environment. Chapter 3, MOF Packages, defines general purpose
+   interfaces used by all MOF objects to enable self discovery and general
+   purpose manipulation of MOF objects. These interfaces can be used in
+   addition to, or instead of, specific interfaces defined in the MOF
+   Model chapter. These interfaces apply to MOF objects defined in this
+   specification as well as MOF objects defined using the MOF in
+   additional OMG specifications, such as the CORBA interfaces in the UML
+   specification. Chapter 4, MOF Semantic Details, provides a more
+   comprehensive explanation of the fundamental modeling concepts in the
+   MOF, detailed semantics including structural and behavioral constraints
+   applied to more complex MOF concepts, such as Associations and
+   Packages. This chapter also describes MOF Extensibility Mechanisms and
+   the use of MOF in distributed repository environments. xviii OMG-MOF
+   V1.3 March 2000 Chapter 5, MOF to IDL Mapping, defines the generation
+   of CORBA IDL from the descriptions held in the MOF. IDL generation
+   capability is intended to ensure that various metamodels defined using
+   the MOF have consistent IDL. Given an MOF compliant meta-model (such as
+   UML), this portion of the specification can be used to generate a
+   concrete IDL for UML. Note  This specification does not require that
+   the MOF can derive the meta-object IDL automatically. Appendix A, MOF
+   IDL Summary, summarizes the complete set of IDL specifications for the
+   MOF and is provided in a format that can be easily processed by IDL
+   compilers. Appendix B, MODL Description of the MOF, summarizes the Meta
+   Object Definition Language (MODL) textual description of the MOF which
+   was used to generate the CORBA IDL for the MOF. Appendix C, MOF
+   Implementation Requirements, suggests approaches and principles that
+   can be used to support MOF interoperability between implementation of
+   MOF from multiple vendors. Areas addressed include Model
+   interoperability as well as client tool interoperability when using
+   multiple MOF implementations. Appendix D, Implementation Requirements,
+   includes vendor boundaries as well as limited implementation
+   requirements. Appendix E, Future Directions of the MOF, summarizes
+   potential areas of future work related to the MOF based on feedback of
+   MOF submitters and reviewers. Acknowledgments The following companies
+   submitted and/or supported parts of the MOF specification: * BEA
+   Systems, Inc. * Cooperative Research Centre for Distributed Systems
+   Technology (DSTC) * Data Access * Digital Equipment Corporation *
+   Electronic Data Systems * Hewlett-Packard Company * IBM Corporation *
+   International Computers Limited * MicroFocus * Objectivity Inc. *
+   Oracle Corporation * Platinum Technology Inc. * Rational Software
+   Corporation * System Software Associates * Unisys Corporation OMG-MOF
+   V1.3 March 2000 xix xx OMG-MOF V1.3 March 2000 MOF Overview 1 Contents
+   This chapter contains the following topics. Topic Page "Overview" 1-1
+   "Software Development Scenarios" 1-2 "Type Management Scenarios" 1-4
+   "Information Management Scenarios" 1-6 "Data Warehouse Management
+   Scenarios" 1-6 1.1 Overview The MOF is intended to support a wide range
+   of usage patterns and applications. To understand the possible usage
+   patterns for the MOF, the first thing one needs to understand is the
+   two distinct viewpoints for the MOF: 1. Modeling viewpoint: The
+   designer's viewpoint, looking "down" the meta levels. From the modeling
+   viewpoint, the MOF is used to define an information model for a
+   particular domain of interest. This definition is then used to drive
+   subsequent software design and/or implementation steps for software
+   connected with the information model. 2. Data viewpoint: The
+   programmer's viewpoint, looking at the current meta-level, and possibly
+   looking up at the higher meta-levels. From the data viewpoint, the MOF
+   (or more accurately, a product of the MOF) is used to apply the
+   OMA-based OMG-MOF V1.3 March 2000 1-1 1 distributed computing paradigm
+   to manage information corresponding to a given information model. In
+   this mode, it is possible for a CORBA client to obtain the information
+   model descriptions and to use them to support reflection. The second
+   thing one needs to realize is that this MOF specification is intended
+   to provide an open-ended information modeling capability. The
+   specification defines a core MOF model that includes a relatively
+   small, though not minimal, set of constructs for object-oriented
+   information modeling. The MOF model can be extended by inheritance and
+   composition to define a richer information model that supports
+   additional constructs. Alternatively, the MOF model can be used as a
+   model for defining information models. This feature allows the designer
+   to define information models that differ from the philosophy or details
+   of the MOF model. In this context, the MOF Model is referred to as a
+   meta-metamodel because it is being used to define metamodels such as
+   the UML. Finally, one needs to understand the purpose and the
+   limitations of the MOF model to the CORBA IDL mapping defined by this
+   specification. The prime purpose of the mapping is to define CORBA
+   interfaces for information models defined in terms of the MOF model1
+   using standard interfaces and interoperable semantics. These interfaces
+   allow a client to create, access, and update information described by
+   the model, with the expectation that the information will be managed in
+   a way that maintains the structural and logical consistency constraints
+   specified in the information model definition. While we anticipate that
+   some vendors will supply tools (for example, IDL generators, server
+   generators, and so on) to support the development of software
+   conforming to the mapping, provision of these tools is not a
+   requirement of this specification. The second limitation is that the
+   mapping is only intended to support the MOF model itself; that is, it
+   does not support extensions to the metamodel or to other unconnected
+   information models. Furthermore, since the IDL mapping is not itself
+   modeled in the MOF, there can be no standardized support for extending
+   the mapping or defining new mappings. Finally, the IDL mapping in this
+   specification supports only CORBA IDL. Mappings from the MOF model to
+   other interface definition languages are certainly feasible, as are
+   direct mappings to programming languages or data definition languages.
+   However, these mappings are beyond the scope of the first version of
+   the MOF specification. 1.2 Software Development Scenarios Initially,
+   one of the most likely applications of the MOF will be to support the
+   development of distributed object-oriented software from high-level
+   models. Such a software development system would typically consist of a
+   repository service for storing the computer representations of models
+   and a collection of associated tools. The latter would allow the
+   programmers and designers to input the models, and would assist in the
+   process of translating these models into software implementations. 1.
+   Both extensions to the MOF meta-model that are expressible in the
+   meta-model itself, and unconnected information models expressed using
+   the MOF meta-model. 1-2 OMG-MOF V1.3 March 2000 1 In the simple case,
+   the repository service could be an implementation of the MOF model
+   interfaces. This service would be accompanied by tools (for example,
+   compilers or graphical editors) that allow the designer to input
+   information models using a human readable notation for the MOF model.
+   Assuming that the target for software development is CORBA based, the
+   system would include an IDL generator that implements the standard MOF
+   model-to-CORBA IDL mapping. The usage scenario for this repository
+   service would be along the following lines: 1. The programmer uses the
+   input tools provided by the system to define an object- oriented
+   information model using the notation provided. 2. When the design is
+   complete, the programmer runs the IDL generator to translate the model
+   into CORBA IDL. 3. The programmer examines the IDL, repeating steps 1
+   and 2 to refine the model as required. 4. The programmer then
+   implements the generated IDL to produce a target object server, and
+   implement the applications that use the object server. The
+   functionality of the development suite described above can be expanded
+   in a variety of ways. We can: * Add generator tools to automatically
+   produce the skeleton of an object server corresponding to the generated
+   IDL. Depending on the sophistication of the tool, this skeleton might
+   include code for the query and update operations prescribed by the IDL
+   mapping, and code to check the constraints on the information model. *
+   Add generator tools to produce automatically stereotypical applications
+   such as scripting tools and GUI-based browsers. * Extend the repository
+   service to store the specifications and/or implementation code for
+   target server and application functionality that cannot be expressed in
+   the MOF model. While the MOF model is a powerful modeling language for
+   expressing a range of information models, it is not intended to be the
+   ultimate modeling language. Instead, one intended use of the MOF is as
+   a tool for designing and implementing more sophisticated modeling
+   systems. The following example illustrates how the MOF might be used to
+   construct a software development system centered around a hypothetical
+   "Universal Design Language" (UDL). Many parallels can be drawn between
+   the hypothetical UDL discussed below and the draft OA&DF UML proposal
+   in that UML is designed to be a general purpose modeling language for
+   visualizing, designing, and developing component software. The UDL can
+   be thought of as an extension, as well as a refinement, of many of the
+   concepts in the UML. The extensions are mainly in the area of providing
+   sufficient detail to complete the implementation framework technologies
+   and defining additional meta models that address various technology
+   domains such as database management, transaction processing, etc.
+   OMG-MOF V1.3 Software Development Scenarios March 2000 1-3 1 The
+   developer of a software development system based on UDL might start by
+   using an MOF Model notation to define a meta-model for UDL.
+   Conceivably, the UDL metamodel could reuse part or all of the MOF
+   Model, though this is not necessarily a good idea2. The developer could
+   then use a simple MOF-based development system (along the lines
+   described above) to translate the UDL metamodel into CORBA IDL for a
+   UDL repository, and to provide hand-written or generated software that
+   implements the UDL repository and suitable UDL model input tools. The
+   hypothetical UDL development system cannot be considered complete
+   without some level of support for the process of creating working code
+   that implements systems described by the UDL models. Depending on the
+   nature of the UDL, this process might involve a number of steps in
+   which the conceptual design is transformed into more concrete designs
+   and, finally, into program source code. A UDL development system might
+   provide a range of tools to assist the target system designer or
+   programmer. These tools would need to be supported by repository
+   functions to store extra design and implementation information, along
+   with information such as version histories, project schedules, and so
+   on, that form the basis of a mature software development process. In
+   practice, a software development system implemented along these lines
+   would have difficulty meeting the needs of the marketplace. A typical
+   software engineering "shop" will have requirements on both the
+   technical and the process aspects of software engineering that cannot
+   be met by a "one-size-fits-all" development system. The current trend
+   in software development systems is for Universal Repository systems;
+   that is, for highly flexible systems that can be tailored and extended
+   on the fly. An MOF-based universal repository system would be based
+   around the core of the MOF Model, and a suite of tools for developing
+   target metamodels (for example, the UDL) and their supporting tools.
+   Many of the tools in the universal repository could be reflective; that
+   is, the tools could make use of information from higher meta-levels to
+   allow them to operate across a range of model types. Functionality,
+   such as persistence, replication, version control, and access control
+   would need to be supported uniformly across the entire repository
+   framework. 1.3 Type Management Scenarios A second area where early use
+   of the MOF is likely is in the representation and management of the
+   various kinds of type information used by the expanding array of CORBA
+   infrastructure services. The CORBA Interface Repository (IR) is the
+   most central type-related service in CORBA. The IR serves as a central
+   repository for interface type definitions in a CORBA-based system. The
+   current IR essentially provides access to interface definitions that
+   conform to the implied information model of CORBA IDL. While the 2. The
+   MOF meta-model has specific requirements (e.g., model simplicity and
+   support for automatic IDL generation) that are not generally
+   applicable. As a consequence, it is unrea- sonable to expect the MOF
+   meta0model design to be suitable for all kinds of object model- ing.
+   1-4 OMG-MOF V1.3 March 2000 1 IR interfaces are tuned fairly well to
+   read-only access, there is no standard update interface and no way to
+   augment the interface definitions in the IR with other relevant
+   information, such as behavioral semantics. Given a simple MOF-based
+   development environment (as described above), it would be easy to
+   describe the implied information model for CORBA IDL using a notation
+   for the MOF Model. The resulting CORBA IDL model could then be
+   translated into the IDL for an MOF-based replacement for the CORBA IR.
+   While this replacement IR would not be upwards compatible with the
+   existing IR, the fact that it was MOF-based would provide a number of
+   advantages. The MOF-based IR would: * Support update interfaces. * Be
+   extensible in the sense that it would be feasible to extend the CORBA
+   IDL model specification by (MOF Model) composition and inheritance.
+   This ability would help smooth the path for future extensions to the
+   CORBA object model. * Make it easier to federate multiple IR instances
+   and to represent associations between CORBA interface types and other
+   kinds of type information. * Automatically include links to its own
+   meta-information definition expressed using MOF meta-objects. Other
+   candidates for use of MOF-based technology among existing and
+   forthcoming infrastructure services include: * Trader: The CORBA trader
+   service maintains a database of "service offers" from services in a
+   CORBA-based distributed environment. These offers have associated
+   service types that are represented using the
+   CosTradingRepos::ServiceTypeRepository interface. (A trader service
+   type is a tuple consisting of a type name, an interface type, and a set
+   of named property types. Service types can be defined as subtypes of
+   other service types.) * Notification: At least one initial submission
+   for the forthcoming Notification service includes the notion of an
+   event type. (An event type is a tuple consisting of a type name, a set
+   of named property types, and a set of supertypes.) In both cases, an
+   MOF-based type repository would have the advantages listed previously
+   for the MOF-based Implementation Repository. Looking to the future,
+   there are a number of other possible uses for MOF-based type
+   repositories in infrastructure services. For example: * Service
+   interface bridges: As CORBA matures and there is large-scale deployment
+   as part of enterprise-wide computing infrastructures, it will become
+   increasingly necessary to cope with legacy CORBA objects; that is, with
+   objects that provide or use out-of-date service interfaces. In
+   situations where statically deployed object wrappers are not a good
+   solution, one alternative is to provide an ORB-level service that can
+   insert an interface bridge between incompatible interfaces at bind
+   time. Such a service would depend on types that describe the available
+   bridges and the mechanisms used to instantiate them. * Complex
+   bindings: RM-ODP supports the idea that bindings between objects in a
+   distributed environment can be far more complex than simple RPC, stream
+   or multicast protocols. RM-ODP defines the notion of a multi-party
+   binding involving OMG-MOF V1.3 Type Management Scenarios March 2000 1-5
+   1 an arbitrary number of objects of various types, in which different
+   objects fill different roles in the binding. A CORBA service to manage
+   complex bindings would be based on formally described binding types
+   that specify the numbers and types of objects filling each role and the
+   allowed interaction patterns (behaviors) for a given binding. 1.4
+   Information Management Scenarios The previous sections focused on the
+   use of the MOF to support the software development life-cycle and the
+   type management requirements of CORBA infrastructure services. This
+   section broadens the scope to the more general domain of information
+   management; that is, the design, implementation, and management of
+   large bodies of more or less structured information. First, note that
+   some of the ideas outlined above carry over to the information
+   management domain. In some cases, it may be appropriate to define the
+   information model (that is, the database schema) for the application of
+   interest directly using the MOF Model. In this case, the technology
+   described previously can be used to automate the production of
+   CORBA-based servers to store the information and applications to use
+   it. In other situations, the MOF Model can be used to define a
+   metamodel suitable for defining information models for the domain of
+   interest; for example, a metamodel for describing relational database
+   schemas. Then a development environment can be designed and implemented
+   using MOF-based technology that supports the generation of CORBA-based
+   data servers and applications from information models. In addition, the
+   MOF potentially offers significant benefits for large-scale information
+   systems by allowing such a system to make meta-information available at
+   run-time. Some illustrative examples follow. Information discovery: The
+   World-Wide Web contains a vast amount of useful (and useless)
+   information on any topic imaginable. However, this information is
+   largely inaccessible. In the absence of other solutions, current
+   generation web indexing systems or search engines must rely on simple
+   word matching. Unless the user frames queries carefully, the number of
+   "hits" returned by a search engine are overwhelming. Furthermore, it is
+   now apparent that even the largest search engines cannot keep pace with
+   the Web's rate of growth. In the absence of software that can
+   "understand" English text, the approach most likely to succeed is to
+   build databases of meta-data that describe web pages. If this meta-data
+   is represented using MOF-based technology and an agreed base metamodel
+   for the meta-data, the framework can support local meta-data extensions
+   through judicious use of MOF-supported reflection. In addition, because
+   the meta-data framework is defined in the MOF context, it can be
+   accessible to a larger class of generic tools. 1.5 Data Warehouse
+   Management Scenarios Data warehousing is a recent development in
+   enterprise-scale information management. The data warehouse technique
+   recognizes that it is impractical to manage the information of an
+   enterprise as a unified logical database. Instead, this technique 1-6
+   OMG-MOF V1.3 March 2000 1 extracts information from logically- and
+   physically-distinct databases, integrates the information, and stores
+   it in a large-scale "warehouse" database that allows read-only access
+   to possibly non-current data. The extraction and integration processes
+   depend on a database administrator creating a mapping from the schemas
+   for the individual databases to the schema of the warehouse. If the
+   meta-information for the various databases is represented using
+   MOF-based technology, then it should be possible to create
+   sophisticated tools to assist the database administrator in this
+   process. Meta data is often described as the "heart and soul" of the
+   data warehouse environment. The MOF can be used to automate meta data
+   management of data warehouses. Current meta data repositories that
+   manage data warehouses often use static meta data using batch
+   file-based meta data exchange mechanisms. We expect the use of MOF- and
+   standard CORBA-based event and messaging mechanisms and mobile agent
+   technology (also being standardized by OMG) to drive a new generation
+   of data warehouse management tools and systems that are more dynamic.
+   These tools will enable customers to react in a timelier manner to
+   changing data access patterns and newly discovered patterns, which is
+   the focus of data mining and information discovery systems. The MOF
+   interfaces and the MOF Model can be used to define specific metamodels
+   for database, data warehouse, model transformation, and warehouse
+   management domains. The integration between these models in a run time
+   data warehouse and the development environment (which has data models)
+   and UML based object models (which describes the corporate data models
+   and operational databases) is a typical use of an MOF. The traceability
+   across these environments is enabled by defining an impact analysis
+   metamodel which builds on the rich model of relationships supported by
+   the MOF. OMG-MOF V1.3 Data Warehouse Management Scenarios March 2000
+   1-7 1 1-8 OMG-MOF V1.3 March 2000 MOF Conceptual Overview 2 Contents
+   This chapter contains the following topics. Topic Page "Overview" 2-1
+   "Meta-data Architectures" 2-1 "The MOF Model - Meta-modeling
+   Constructs" 2-5 "Meta-models and Mappings" 2-21 2.1 Overview The Meta
+   Object Facility is a large specification. This chapter aims to make the
+   MOF specification easier to read by providing a conceptual overview of
+   the MOF. The chapter starts by explaining the MOF's conceptual
+   architecture for describing and defining meta-data. The next section
+   introduces the meta-modelling constructs that are used to describe
+   meta-data. This is followed by a section that describes how meta-
+   models are mapped to implementation technologies, including the IDL
+   mapping and XMI. 2.2 Meta-data Architectures The central theme of the
+   MOF approach to meta-data management is openness. The aim is to provide
+   a framework that supports any kind of meta-data, and that allows new
+   kinds to be added as required. In order to achieve this, the MOF uses a
+   layered meta- data architecture that is based on the traditional four
+   layer meta-modeling architecture OMG-MOF V1.3 March 2000 2-1 2 that is
+   popular within standards communities such as ISO and CDIF. The key
+   feature of this architecture is a meta-meta-modeling layer that
+   provides a common language that ties together the meta-models and
+   models. The MOF meta-data architecture is typically (though not
+   exclusively) used as a four layer framework. The MOF Model, which
+   corresponds to the meta-meta-model in a traditional four layer
+   meta-modeling architecture, is an object modeling language that is
+   closely related to UML. The MOF Model is used to define the structure
+   and semantics of general or domain specific meta-models (i.e., schemas
+   for the meta-data of interest). While the MOF Model is object-oriented,
+   it is equally well suited to defining object oriented meta-models, more
+   traditional (e.g. Relational, Entity- Relationship) meta-models, and
+   even simpler ones. The traditional four layer meta-data architecture is
+   briefly described below. This is followed by a description of how this
+   maps onto the MOF meta-data architecture. 2.2.1 Four Layer Meta-data
+   Architectures The traditional framework for meta-modeling is based on
+   an architecture with four layers. These layers are conventionally
+   described as follows: * The user object layer is comprised of the
+   information that we wish to describe. This information is typically
+   referred to as "data." * The model layer is comprised of the meta-data
+   that describes information. Meta- data is informally aggregated as
+   models. * The meta-model layer is comprised of the descriptions (i.e.,
+   meta-meta-data) that define the structure and semantics of meta-data.
+   Meta-meta-data is informally aggregated as meta-models. A meta-model
+   can also be thought of as a "language" for describing different kinds
+   of data. * The meta-meta-model layer is comprised of the description of
+   the structure and semantics of meta-meta-data. In other words, it is
+   the "language" for defining different kinds of meta-data. The
+   traditional framework is illustrated in Figure 2-1 on page 2-3. This
+   particular example shows how the meta-data for simple records (i.e.,
+   "StockQuote" instances) might be represented. The layers are populated
+   as follows: * The information layer includes some illustrative
+   StockQuote instances. * The model level includes the meta-data that
+   represents the record type for "StockQuote" instances. The record type
+   has a name ("StockQuote") and two fields, each of which also has a name
+   and a type. This type will typically be part of some larger scale data
+   schema (not shown here). * The meta-model level defines what it means
+   to be a record type. The meta-Class for Record is shown as having two
+   meta-Attributes, the first defining the Record's name, and the second
+   defining its fields. The Meta-Class for a Field (not shown in full)
+   would similarly define the meta-Attributes for the field name and type.
+   2-2 OMG-MOF V1.3 March 2000 2 * The meta-meta-model level is typically
+   hard-wired, and defines the machinery that supports the meta-data
+   framework's meta-modelling constructs; e.g. meta-Classes and
+   meta-Attributes. Note  In theory, it is possible to add a
+   meta-meta-meta-model and so on. However, for the purposes of the MOF,
+   this 4-layer model suffices. meta-meta-model Hard-wired Meta-meta-model
+   MetaClass ( "Record", [ MetaAttr ( "name", String), meta-model MetaAttr
+   ( "fields", List < "Field"> ) ] MetaClass ( "Field", ... ) Record (
+   "StockQuote", [ Field ( "company", String ) model Field ( "price",
+   FixedPoint ) ] ) StockQuote ("Sunbeam Harvesters", 98.77) StockQuote
+   ("Ace Taxi Cab Ltd", 12.32) information ... Figure 2-1 Four Layer
+   Meta-data Architecture While the diagram above shows only one model and
+   one meta-model, the primary aim of having four meta- layers is to
+   support multiple models and meta-models. Just as the model that defines
+   the "StockQuote" type describes many StockQuote instances at the
+   information level, the meta-model that defines "Record" and "Field" can
+   describe many record types at the model level. Similarly, the
+   meta-meta-model level can describe many other meta-models that in turn
+   represent other kinds of meta-data. The four layer meta-data
+   architecture has a number of advantages: * Assuming that the
+   meta-meta-model is rich enough, it can support most if not all kinds of
+   meta-information imaginable. * It potentially allows different kinds of
+   meta-data to be related. (This depends on the design of the framework's
+   meta-meta-model.) * It potentially allows interchange of both meta-data
+   (models) and meta-meta-data (meta-models). (This presupposes that the
+   parties to the exchange are using the same meta-meta-model.) 2.2.2 The
+   MOF Meta-data Architecture The MOF meta-data architecture, shown in
+   Figure 2-2, is based on the traditional four layer meta-data
+   architecture described above. OMG-MOF V1.3 Meta-data Architectures
+   March 2000 2-3 2 M3 layer MOF Model meta-meta-model

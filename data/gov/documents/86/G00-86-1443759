@@ -1,0 +1,115 @@
+http://step.nasa.gov/software/pgpdm/docs/demo_script.html
+
+     __________________________________________________________________
+
+Pan-Galactic PDM v0.632 Demo Script
+     __________________________________________________________________
+
+     * Download the PGPDM Client setup file
+       fromhttp://step.nasa.gov/software/pgpdm/win
+       note: if you are interested in the Linux version, contact me,
+       steve.waterbury@gsfc.nasa.gov
+     * Run it to install the PGPDM Client
+     * Bring up the PGPDM Client
+
+     * MenuBar (File, Tools, Options, Help)
+     * ButtonBar - 3 buttons (PSM, PLM, DM)
+     * StatusBar (User: Not Logged In)
+
+     Login:  File/Login (guest/guest)
+     * The Project dropdown is filled in
+     * The userid is displayed in the status bar on the bottom
+
+     Select the Product Structure Module (PSM) by either of the following
+   actions:
+     * Tools/Project Structure Module
+     * Click left mouse button on leftmost button on ButtonBar
+
+     Select project "RING" from the Project ComboBox
+     * Message window displayed while data is retrieved
+     * Components grid is filled with project component data
+
+     Show the data as an assembly:  doubleclick left mouse on ME (#18 in
+   the grid)
+     * Message window is displayed while data is retrieved
+     * Assembly tree is displayed in panel to the left of the grid
+     * Plus (+) indicates subcomponents
+
+     Select project "H2G2" from the Project ComboBox
+
+     Bring up the Component "Heart of Gold" (#8) in a Component Editor
+   window by doubleclicking the left mouse button on it in the grid
+     * The Component Editor's assembly tree displays a single top-level
+       component
+
+     Add a subcomponent to the Heart of Gold:  CTRL+Leftmouse on HM (#9 in
+   the grid) and drag the mouse over Heart of Gold in the tree and release
+     * A plus appears to the left of Heart of Gold
+
+     Click on the plus
+     * Hoogie Mabob appears
+
+     [Add a few more nodes in the same way, if you like ...]
+
+     Edit metadata for a component
+     * Doubleclick the left mouse button on Hoogie Mabob in the main tree
+
+     * The Component Editor window appears
+
+     Change one or more of Hoogie Mabob's attributes and then close the
+   editor window
+     * You will be asked if you want to save your changes (i.e., whether
+       you want to save the changes locally)
+
+     Select File/Commit from the menu to commit your changes to the server
+   database
+
+     Move a component within the main assembly tree
+     * CTRL+Leftmouse on a low-level component (e.g., Hoogie Mabob)
+     * Drag the mouse over to another node and release
+
+     * Hoogie Mabob has been moved
+
+     Set User Preferences:  specify the current module (PSM) as the
+   default startup module
+     * Select Options/Preferences/"Restart with last tool" from the menu
+
+     Search for a component, and use it in your project
+     * Select PSM-Tool/Search from the menu
+
+     * The Search window appears
+
+     Type "in" in the Component Name Code field and click [Search]
+     * The Results tab is displayed with all the components that satisfy
+       the criteria
+
+     Drag a component from the Search Results grid into the assembly tree
+
+     Create a Parts List (this is a "preview" of document management -- a
+   parts list is being managed as a document, in this case)
+     * Double-click the left mouse button on Hoogie Mabob in the tree
+
+     * The Component Editor window appears
+
+     Left click on the New button
+     * The fields are cleared, and the POC field is filled in
+
+     Type in some attribute data (Filename may either be typed in or
+   selected using a dialogue)
+     * The Filename, POC, and Type fields are required
+
+     Left click on Save to save locally
+
+     Left click on Create Link to associate the parts list data with the
+   top-level node in the editor tree
+
+     Close the Component Editor window
+
+     File/Commit to send your parts list meta-data to the database
+
+     The End!
+     __________________________________________________________________
+
+Webmaster:                Steve Waterbury (email: steve.waterbury@gsfc.nasa.gov)
+Responsible NASA Contact: Steve Waterbury
+   _______________________________________________________________________

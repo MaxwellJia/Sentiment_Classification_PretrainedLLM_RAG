@@ -1,0 +1,611 @@
+http://bimas.dcrt.nih.gov/sw.html
+
+   [bimaslogo7.gif]
+     __________________________________________________________________
+
+                         Molecular Biology Software
+
+                   Available to the NIH Research Community
+     __________________________________________________________________
+
+   Genomic Software Supported by CBEL, BIMAS and made available through
+   ALW workstations running AFS.
+
+  Categories
+
+    1. Comprehensive Genomic Sequence Analysis Packages/Suites
+          + GCG 8.1
+          + GDE 2.2a
+    2. Genetic Mapping Tools/Utilities
+          + CRI-MAP 2.4
+          + Quickmap 2.0
+          + Sigma 2.2
+    3. Linkage Analysis Tools
+          + APM
+          + Fastlink 3.0P
+          + Linkage 5.1
+          + MAPMAKER
+          + MENDEL 3.3
+          + MIM
+          + Vitesse 1.0
+    4. Primer Selection Tools
+          + OSP, XOSP (Requires per-machine License Agreement)
+          + Primer 0.5
+    5. Sequence Similarity, DB Search Tools
+          + Blast Output Browser, BoB
+          + CLUSTAL W
+          + Fasta 2.0u6
+          + Local BLAST
+          + BLAST2 (Successor of network blast)
+          + SIM
+    6. Sequence Database Access Tools
+          + GDB Interface (Requires Sybase OpenClient Lib License)
+          + Network Entrez 5.002
+    7. Sequence Analysis Tools
+          + Signal Scan 4.05
+          + XGrail 1.3b
+    8. Misc. Utility Tools
+          + Blast Tabulator, btab 4.06
+          + Multiple Sequence Blaster, msblast
+          + ReadSeq
+          + Sequence Extractor, exs
+          + Translate
+     __________________________________________________________________
+
+    1. Comprehensive Genomic Sequence Analysis Packages/Suites
+
+        GCG Version 8.1 dated August 1995:
+                Commercial software package, based on the Wisconsin
+                Package, developed by Genetics Computer Group, Inc.
+                Databases available to be used with GCG are:
+
+                   GenBank            Release 95.0 ( 6/96)
+                   EMBL (Abridged)    Release 46.0 ( 3/96)
+                   PIR-Protein        Release 48.0 ( 3/96)
+                   SWISS-PROT         Release 33.0 ( 3/96)
+                   PROSITE            Release 13.0 (12/95)
+                   Restriction Enzymes (REBASE)    ( 6/96)
+
+                GCG Version 8.0 (UNIX) documentation is available on-line
+                for GCG-licensed institutions. NIH users can browse this
+                documentation and non-NIH users are directed to GCG WWW
+                Pages from Yeshiva University.
+
+                Availability: Solaris 2.4 platforms.
+                SPECIAL NOTE: Please be advised that SunOS 4.1.3 platforms
+                are running GCG 7.3 and hence are using very old version
+                of databanks.
+
+        GDE Version 2.2a dated November 28, 1993:
+                The Genetic Data Environment is part of a growing set of
+                programs for manipulating and analyzing "genetic" data. It
+                differs in design from other analysis programs in that it
+                is intended to be an expandable and customizable system,
+                while still being easy to use. GDE provides an X Windows
+                based GUI to a large number of publicly available programs
+                for sequence analysis. The software used SUN's XVIEW,
+                efforts are underway to port the software to MOTIF.
+
+                Sequence analysis functions included with this package:
+
+               o ClustalV (cluster multiple sequence alignment)
+               o MFOLD (RNA secondary prediction)
+               o Blast (Basic Local Alignment Search Tool)
+               o FastA (Similarity Search)
+               o Assemble Contigs (CAP Contig Assembly Program)
+               o Lsadt (Least squares additive tree analysis)
+               o Count (distance matrix calculator)
+               o Treetool (Tree drawing/manipulation)
+               o Readseq (format conversion program)
+
+                GDE itself was developed by Steve Smith, currently with
+                Millipore Imaging Systems. Numerous others provided or
+                contributed to the individual analysis programs included
+                with GDE.
+
+                GDE 2.2 manual is available both in text and postscript
+                format. Also, Lachlan Bell of Daresbury Laboratory,
+                Warrington in U.K. maintains a HTML document for GDE.
+
+                The following paper (to appear in CABIOS), contains
+                information describing GDE and it's development.
+
+                S.Smith, R. Overbeek, C.R. Woese, W. Gilbert and P.
+                Gillevet, The Genetic Data Environment: An Expandable GUI
+                for Multiple Sequence Analysis.
+
+                Availability: SunOS 4.1.3 platforms.
+
+    2. Genetic Mapping Tools/Utilities
+
+        CRI-MAP Version 2.4 dated March 17, 1994:
+                The main purpose of CRI-MAP is to allow rapid, largely
+                automated construction of multilocus linkage maps (and
+                facilitate the attendant tasks of assessing support
+                relative to alternative locus orders, generating LOD
+                tables, and detecting data errors).
+
+                Crimap is developed by Phil Green of Dept. of Genetics,
+                Washington University School of Medicine.
+
+                CRI-MAP 2.4 documentation is available in text, HTML and
+                postscript formats.
+
+                CRIMAP tutorial is also on-line as part of EMBnet
+                Biocomputing Tutorials
+
+                Availability: SunOS 4.1.3 platforms.
+
+        QUICKMAP Version 2.0, Dated October, 1995:
+                QUICKMAP is a compact database and navigation tool for the
+                physical map of the human genome. The backbone of the map
+                is the Genethon 1993 genetic map. This includes 2067 STS
+                genetically mapped to a chromosomal assignation and a
+                genetic position.
+
+                This package includes:
+
+    quickmap   - X windows based navigation tool
+    infoclone  - a query program
+    show_map   - support program for using navigation tool in batch
+    locus      - support program for using navigation tool in batch
+    path       - support program for using navigation tool in batch
+    clonespath - support program for using navigation tool in batch
+
+                QUICKMAP was developed at GENETHON, France by P.Rigault
+                and E. Poullier
+
+                Availability: SunOS 4.1.3 and Solaris 2.4 platforms.
+
+        SIGMA Version 2.2, Dated March 21, 1994:
+                SIGMA (System for Integrated Genome Map Assembly) is a
+                software tool for creating, maintaining and editing
+                integrated genome maps. SIGMA is produced by the Human
+                Genome Information Resources as Los Alamos National
+                Laboratory and is freely available on request (although
+                all rights are reserved).
+
+                Documentation on SIGMA is available from National Center
+                for Genome Research and also from Baylor College of
+                Medicine (Help given by menu category of the program).
+
+                Availability: SunOS 4.1.3 platforms.
+
+    3. BIMAS Genetic Linkage Analysis Tools
+    4. Primer Selection Tools
+
+        OSP dated November 11, 1991:
+                Oligo Selection Program (OSP) is a computer program
+                developed to aid in selecting oligonucleotide primers for
+                DNA sequencing and for the polymerase chain reaction. OSP
+                allows the user to specify (or use default) constraints
+                for primer and amplified product lengths, %G+C contents,
+                and (absolute or relative) melting temperatures; for
+                primer 3' nucleotides; and for the maximum allowable
+                primer-self, primer-primer, and primer-product annealing
+                propensities. Candidate primer sequences are screened
+                against a user-supplied data set of other sequences (e.g.
+                repetitive element or vector sequences) to help minimize
+                the possibility of non-specific priming. Primers meeting
+                all constraints are ranked and displayed in order of
+                increasing overall `score', which is a user-definable
+                weighted sum of the above parameter values.
+
+                osp is a text-only version and ospX is having an
+                interactive X windows graphic interface. These programs
+                are developed by LaDeana Hillier and Phil Green at
+                Washington University Medical School, St. Louis.
+
+                Additional information of osp can be found in:
+                Hillier, L. and Green, P. (1991). "OSP: A computer program
+                for choosing PCR and DNA Sequencing Primers," PCR Methods
+                and Applications, 1, 124-188.
+
+                Availability: SunOS 4.1.3 platforms.
+
+        Primer Version 0.5 dated April 27, 1992:
+                PRIMER is a computer program for automatically selecting
+                PCR primers. PRIMER tests oligos for annealing
+                temperature, complementarity to genomic repeat sequences
+                (e.g. Alu), ability to form primer-dimer, and other
+                criteria. Importantly, PRIMER's annealing temperature
+                calculation is based on thermodynamic parameters (with the
+                base stacking term dominant), and is far more accurate
+                than calculations based on GC/AT ratios.
+
+                PRIMER was developed and produced by Steve Lincoln, Mark
+                Daly, and Eric Lander of MIT center for Genome Research
+                and Whitehead Institute for Biomedical Research.
+
+                PRIMER manual can be read on-line. More information about
+                Primer software can be obtained from MIT Genome Center.
+
+                Availability: SunOS 4.1.3 platforms.
+
+    5. Sequence Similarity, DB Search Tools
+
+        Blast Output Browser dated August 22, 1994:
+                Blast Output Browser, BoB, is an an X window application
+                to browse through blast output results from either NCBI
+                Blast server, DNA workbench server or the BLITZ email
+                server in an environment where a lot of BLAST processing
+                is done (for example in cDNA projects). One or two blast
+                output results can be browsed simultaneously. While
+                browsing through results, you can immediately view
+                alignments, blast results file, and also the actual
+                database entry.
+
+                BoB program is developed by John Powell and Rao Parasa of
+                CIT at NIH and is available in the public domain by
+                anonymous ftp from ftp-bimas.dcrt.nih.gov.
+
+                User's guide and man page are available for BoB.
+
+                Availability: SunOS 4.1.3 platforms and helix.
+
+        CLUSTAL W version 1.4 dated September 23, 1994:
+                Clustal W is a general purpose multiple alignment program
+                for DNA or proteins.
+
+                Multiple alignments are carried out in 3 stages:
+
+              1. All pairs of sequences are aligned separately (pairwise
+                 alignments) in order to calculate a distance matrix
+                 giving the divergence of each pair of sequences;
+              2. A guide tree (like a phylogenetic tree) is constructed
+                 from the distance matrix;
+              3. The sequences are progressively aligned according to the
+                 branch order in the guide tree.
+
+                Clustalw program is a major update and rewrite of clustalv
+                program, distributed with GDE (Genetic Data Environment)
+                package. Clustalw is produced by Julie D. Thompson, Toby
+                Gibson of European Molecular Biology Laboratory, Germany
+                and Desmond Higgins of European Bioinformatics Institute,
+                Cambridge, UK. Algorithmic improvements over clustalv:
+
+              1. Individual weights are assigned to each sequence in a
+                 partial alignment in order to downweight near-duplicate
+                 sequences and upweight the most divergent ones.
+              2. Amino acid substitution matrices are varied at different
+                 alignment stages according to the divergence of the
+                 sequences to be aligned.
+              3. Residue specific gap penalties and locally reduced gap
+                 penalties in hydrophilic regions encourage new gaps in
+                 potential loop regions rather than regular secondary
+                 structure.
+              4. Positions in early alignments where gaps have been opened
+                 receive locally reduced gap penalties to encourage the
+                 opening up of new gaps at these positions.
+
+                CLUSTALW Reference: Thompson, J.D., Higgins, D.G. and
+                Gibson, T.J. (1994), CLUSTAL W: improving the sensitivity
+                of progressive multiple sequence alignment through
+                sequence weighting, position specific gap penalties and
+                weight matrix choice, Nucleic Acids Research, submitted,
+                June 1994.
+
+                Availability: SunOS 4.1.3 platforms.
+
+        Fasta Version 2.0u6, September 1996:
+                This program package contains sequence database search
+                programs:
+
+               o Library search programs: FASTA, TFASTA, FASTX, TFASTX,
+                 SSEARCH
+               o Local homology programs: LFASTA, PLFASTA, PCLFASTA,
+                 LALIGN, PLALIGN, FLALIGN
+               o Statistical significance: PRDF, RELATE, PRSS
+               o Global alignment: ALIGN, ALIGN0
+               o Utility programs: BESTSCOR, FROMGB
+
+                In addition, included are several programs for protein
+                sequence analysis, including a Kyte-Doolittle
+                hydropathicity plotting program (GREASE, TGREASE), and a
+                secondary structure prediction package (GARNIER).
+
+                Fasta program package is produced by William R. Pearson
+                and has the copyright 1988, 1991, 1992, 1994, 1995, 1996
+                by William R. Pearson and the University of Virginia. All
+                rights are reserved.
+
+                FASTA package documentation is here and also an
+                interpretation of FASTA output is provided by Fredj
+                Tekaia, tekaia@pasteur.fr.
+
+                Availability: SunOS 4.1.3 and Solaris 2.4 platforms.
+
+        Local BLAST dated March 03, 1994:
+                BLAST (Basic Local Alignment Search Tool) is the heuristic
+                search algorithm employed by the programs blastp, blastn,
+                blastx, tblastn, tblastx and blast3.
+
+                NOTE: To differentiate the local BLAST programs from their
+                network counterpart, an 'l' is prepended to the name of
+                each local blast program.
+
+                The programs are used for the following purposes:
+
+               o lblastp - to compare an amino acid query sequence vs. a
+                 protein sequence database.
+               o lblastn - to compare a nucleotide query sequence vs. a
+                 nucleotide sequence database.
+               o lblastx - to compare a nucleotide query sequence
+                 translated in all reading frames vs. a protein sequence
+                 database.
+               o ltblastn - to compare a protein query sequence vs. a
+                 nucleotide sequence database dynamically translated in
+                 all reading frames.
+               o ltblastx - to compare a nucleotide query sequence
+                 translated in all reading frames vs. a nucleotide
+                 sequence database translated in all reading frames.
+               o lblast3 - protein database search for three-way
+                 alignments, using the BLAST pairwise search algorithm.
+
+                Databases to be searched by local blast programs must
+                first be processed either by the program setdb for protein
+                sequence databases (re: blastp and blastx) or the program
+                pressdb for nucleotide sequence databases (re: blastn,
+                tblastn and tblastx). The input database format is
+                FASTA/Pearson.
+
+                Point accepted mutation (PAM) matrices of various
+                generations can be produced automatically with the pam
+                program. The output can be saved in a file whose name is
+                then specified in the M=filename option of a blastp,
+                blastx, or tblastn query. Also various BLOSUM matrices are
+                supplied.
+
+                BLAST programs are developed at the NCBI, NIH. Complete
+                information about BLAST is available from BLAST notebook
+
+                BLAST Reference: Altschul, Stephen F., Warren Gish, Webb
+                Miller, Eugene W. Myers, and David J. Lipman (1990). Basic
+                local alignment search tool. J. Mol. Biol. 215:403-410.
+                Availability: SunOS 4.1.3 platforms.
+                NOTE: NO LOCAL DATABASES ARE PROVIDED. Network BLAST (or
+                BLAST2) is the recommended BLAST for searches against the
+                public databases.
+
+        BLAST2 dated July 26, 1996:
+                BLAST2 programs, successor of Network BlAST programs, are
+                rapid sequence database search programs using the BLAST
+                algorithm. The network blast provides a client set of
+                programs which access the NCBI BLAST server, which in
+                turn, performs the actual search of the databases. BLAST2
+                utilizes a general service discovery and request facility
+                called Dispatcher (from network entrez concept). Network
+                BLAST is the recommended BLAST for searches against the
+                public databases.
+
+                BLAST2 programs are developed at the National Center for
+                Biotechnology Information (NCBI), a division of the
+                National Library of Medicine (NLM).
+
+                Output from BLAST server is explained by Fredj Tekaia,
+                tekaia@pasteur.fr. Complete information about BLAST is
+                available from BLAST notebook
+
+                BLAST Reference: Altschul, Stephen F., Warren Gish, Webb
+                Miller, Eugene W. Myers, and David J. Lipman (1990). Basic
+                local alignment search tool. J. Mol. Biol. 215:403-410.
+
+                Availability: SunOS 4.1.3 and Solaris 2.4 platforms.
+
+        SIM dated May 05, 1992:
+                SIM is a program for finding local similarities using
+                dynamic programming techniques. This program finds
+                non-intersecting alignments between two sequences or
+                within one sequence. The alignments are reported in order
+                of similarity score, with the highest scoring alignment
+                first.
+
+                SIM program is copyright (c) 1990,1991 by Xiaoqiu Huang
+                (Michigan Technological University) and Webb Miller (The
+                Pennsylvania State University).
+
+                SIM reference: Xiaoqiu Huang and Webb Miller. A
+                Time-Efficient, Linear-Space Local Similarity Algorithm.
+                Advances in Applied Mathematics, 12: 337-357, 1991
+
+                Availability: SunOS 4.1.3 platforms.
+
+    6. Sequence Database Access Tools
+
+        GDB Interface
+                GDB/OMIM is front-end software for Human Genome Database
+                hosted at the Johns Hopkins University School of Medicine,
+                Baltimore. GDB (Genome Database) is a consensus database
+                to support mapping effort through international
+                collaboration and is updated continuously. Data is taken
+                from:
+
+               o Literature and other databases
+               o Human Genome Mapping Workshops
+               o Chromosome-specific Workshops
+               o Genome Centers and National Laboratories
+               o GDB Editors
+               o Direct Author Submission
+
+                GDB uses the SYBASE database management system licensed
+                from Sybase, Inc., Emeryville, California and requires
+                OpenClient Library License for the front-end.
+
+                OMIM is the continuously updated online version of Dr.
+                Victor A. McKusick's catalog MENDELIAN INHERITANCE IN MAN
+                (MIM). Because this knowledge-base is updated daily, the
+                entries may differ from the most recently published
+                version of the book. MIM catalog contains Autosomal
+                Dominant, Autosomal Recessive, X-Linked, Y-Linked, and
+                Mitochondrial Phenotype modes of inheritance. OMIM comes
+                with an IRx Information Retrieval System that is currently
+                being developed by the Information Technology Branch of
+                the Lister Hill National Center for Biomedical
+                Communications at the National Library of Medicine.
+
+                More information about GDB and OMIM can be read from GDB
+                Homepage at Johns Hopkins University. Also, there is an
+                on-line course about GDB and OMIM by David Featherston.
+
+                Availability: SunOS 4.1.3 platforms.
+                NOTE: For ALW workstation users, gdb by default will start
+                GNU debugger application.
+
+        Network Entrez 5.002 dated July 26, 1996:
+                Entrez is a molecular sequence retrival system devloped at
+                NCBI, a division of the National Library of Medicine
+                (NLM). Entrez porvides an integrated approach for gaining
+                access to nucleotide and protein sequence information, to
+                the MEDLINE citations in which the sequences were
+                published, and to a sequence-associated subset of MEDLINE.
+                The sequence records are derived from a variety of
+                database sources, including GenBank, EMBL, DDJB, PIR,
+                SWISS-PROT, PRF and PDB.
+
+                Network Entrez is a client program, which requires a
+                network server to access the databases. The Network Entrez
+                installed on ALW workstations uses the NCBI network
+                servers for accessing the databases.
+
+                More information about Entrez Browser is available from
+                NCBI.
+
+                Availability: SunOS 4.1.3, Solaris 2.4 and SGI 5.2
+                platforms.
+
+    7. Sequence Analysis Tools
+
+        Signal Scan Version 4.05 dated March 15, 1996:
+                Signal scan is a program developed to facilitate the
+                analysis of DNA sequences for known eukaryotic signals. It
+                incorporates the data from Dr. David Ghosh's
+                Transcriptional Factor Database. What SIGNAL SCAN does is
+                to find homologies of published signal sequences in your
+                sequence, most of these being transcriptional elements. It
+                cannot, at this time, predict what it finds has any
+                meaning. The interpretation of those results are up to
+                you. Most signal elements found probably will not have any
+                meaning, as the elements are in the wrong milieu, wrong
+                cell type, or wrong organism. Consequently, there will be
+                many more erroneous signals found by SIGNAL SCAN than
+                significant ones.
+
+                Sigscan program is developed and produced by Dan S.
+                Prestridge of University of Minnesota at St. Paul
+                (danp@molbio.umn.edu). Although it is free, it is
+                Copyright (c) 1993, 1994, 1995, 1996 by Dan S. Prestridge.
+
+                SIGSCAN reference: Prestridge, D.S. (1991) SIGNAL SCAN: A
+                computer program that scans DNA sequences for eukaryotic
+                transcriptional elements. CABIOS 7, 203-206.
+
+                Availability: SunOS 4.1.3 platforms.
+                NOTE: SIGSCAN program is started by typing signal. Users
+                are advised to use web version of signal.
+
+        xgrail Version 1.3b dated September 27, 1995:
+                xgrail is a client-server implementation of a group of
+                analysis tools for sequence exploration and gene
+                discovery. This package allows the user to find protein
+                coding regions in anonymous DNA sequences, to assemble
+                gene models, translate part or all of these models, and
+                search these translations against various databases. It
+                also provides information about GC content, functional
+                site identification (splice junctions, poly A sites, Pol
+                II promoters, and CpG Islands) and the location of a
+                variety of repetitive DNA sequences.
+
+                xgrail is produced by M.B.Shah, X.Guan, J.R.Einstein,
+                S.Matis, Y.Xu, R.J.Mural and E.C.Uberbacher of informatics
+                group at Oak Ridge National Laboratories.
+
+                More information on xgrail can be found at the official
+                xgrail site. Here is a blurb on grail from Oak Ridge
+                National Laboratories.
+
+                Availability: SunOS 4.1.3 platforms.
+
+    8. Miscellaneous Utility Tools
+
+        btab Version 4.06 dated October 12, 1994:
+                BTAB is a program to parse BLAST output into tab delimited
+                fields. It was originally written by Mark Dubnick of NINDS
+                at NIH.
+
+                Documentation for BTAB can be read from here. Also,
+                current version of BTAB is available by anonymous ftp from
+                ftp-bimas.dcrt.nih.gov.
+
+                Availability: SunOS 4.1.3 platforms.
+
+        msblast dated July 13, 1994:
+                msblast is an X-windows interface utility to do BLASTing
+                on multiple sequences. This program uses network BLAST
+                programs.
+
+                msblast program was developed and produced by Rao Parasa
+                and John Powell of CIT at NIH and is available in the
+                public domain by anonymous ftp from
+                ftp-bimas.dcrt.nih.gov.
+
+                Man pages are available for msblast.
+
+                Availability: SunOS 4.1.3 platforms (by request).
+
+        ReadSeq dated April 15, 1996:
+                Readseq program converts between various nucleic/protein
+                sequence formats. Data files may have multiple sequences.
+                Readseq is particularly useful as it automatically detects
+                many sequence formats, and interconverts among them.
+
+                Readseq program is developed and produced by Don G.
+                Gilbert of Indiana University at Bloomington. Readseq is
+                copyright (c) 1990 by Don G. Gilbert.
+
+                Readseq help and man pages are available.
+
+                Availability: SunOS 4.1.3, Solaris 2.4 and SGI 5.2
+                platforms.
+
+        Sequence extractor dated June 24, 1994:
+                exs is a small utility program that takes a file of
+                sequences in FASTA format and parse it according to the
+                number of sequences you want per parsed section. After
+                parsing, the groups of parsed sequences can be sent to
+                another executable (can be a shell script or a program).
+
+                exs program was developed and produced by Joshua Yulish
+                and John Powell, NIH. Read the man pages for more
+                information.
+
+                Availability: SunOS 4.1.3 platforms.
+
+        Translate dated February 27, 1995:
+                Translate program translates selected sequences from
+                DNA/RNA to Amino Acid. This program can either be used
+                with a packed FASTA format sequence or GDE format
+                sequence. The frame number is appended to the sequence
+                name as '.#'
+
+                This translate program is a modified version of
+                'Translate' program, distributed with GDE (Genetic Data
+                Environment) package. The present version is produced by
+                John C. Kelley and Rao Parasa of CIT at NIH.
+
+                This program is available in the public domain by
+                anonymous ftp from ftp-bimas.dcrt.nih.gov
+                (128.231.129.60).
+
+                Availability: SunOS 4.1.3 platforms.
+     __________________________________________________________________
+
+   Go back to BIMAS homepage
+     __________________________________________________________________
+
+
+    BioInformatics and Molecular Analysis Section
+    CBEL, CIT, NIH
+    Feedback on BIMAS software or this document should be addressed to:
+    John I. Powell, jip@helix.nih.gov (OR)
+    V. Rao Parasa, parasa@nih.gov
+     __________________________________________________________________

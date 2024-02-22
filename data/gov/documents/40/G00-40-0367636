@@ -1,0 +1,82 @@
+http://pioneer.gsfc.nasa.gov/public/aiml/
+
+
+    Home Instrument Markup Language
+         » AIML | XML for Astronomy Instruments
+                                    » HAWC | SAFIRE | SPIRE Related Sites
+
+    Last Updated: 04/27/00 National Aeronautics and Space Administration
+                                               Logo
+
+   Astronomical Instrument Markup Language
+
+   Background
+
+      The Astronomical Instrument Markup Language (AIML) is a domain-specific
+      implementation of the more generalized Instrument Markup Language
+      (IML). Both AIML and IML are vocabularies based on the W3C standard,
+      the Extensible Markup Language (XML). NASA Goddard Space Flight Center
+      and Century Computing, a division of AppNet, Inc., are developing AIML
+      to command and control astronomical instruments. Our software
+      architecture combines the platform-independent processing capabilities
+      of Java with the power of XML. A key aspect of the object-oriented
+      architecture, implemented in Java, involves software that is driven by
+      the AIML instrument description. The initial effort is targeted at the
+      Stratospheric Observatory for Infrared Astronomy, an airborne
+      observatory aboard a Boeing 747. Eventually our techniques will enable
+      trusted astronomers from around the world to easily access infrared
+      instruments (e.g., telescopes, cameras, and spectrometers) located in a
+      variety of remote, inhospitable environments.
+
+      AIML is an instrument description that encompasses instrument
+      characteristics, control commands, data stream descriptions (including
+      image and housekeeping data), message formats, communication
+      mechanisms, and pipeline algorithm descriptions. AIML also supports
+      role-specific documentation and GUI component generation. Dialects such
+      as PAML (Pipeline Algorithm ML) and IGS (Instrument GUI Stylesheet
+      [XSL]) will be added in the near future. More details appear below.
+
+   Benefits
+
+        * Clearly defined interface between hardware and software engineers.
+        * Easy to make last-minute changes in AIML description that are
+          incorporated throughout the system.
+        * Clean separation of implementation (representation) from
+          description.
+        * Human readable and machine understandable instrument descriptiom.
+        * Leverages latest Java and XML technology; many more capabilities
+          expected in 1999 (from Sun, IBM, W3C).
+
+   Examples
+
+        * IML Document Type Definition (DTD), iml.dtd (formerly called
+          aiml.dtd)
+        * Example XML file of the HAWC instrument which uses iml.dtd.
+
+   Presentations
+
+        * PowerPoint 97 poster presentation from the 193rd Meeting of the AAS
+          (January 1999): Using XML for Instrument Description, Communication
+          and Control of the SOFIA / HAWC Instrument
+        * Word 97 description of IML and AIML and how they are being used on
+          SOFIA
+
+      An effort will be made to coordinate with D. Guillaume for image
+      markup: Astronomical Markup Language (AML).
+
+      Note: If you have difficulty viewing the DTD or XML files in your
+      browser, download the files and open them with any text editor.
+     __________________________________________________________________
+
+        Responsible NASA Official:
+        » Julie Breed (Julia.D.Breed.1@gsfc.nasa.gov)
+                Advanced Architectures and Automation Branch (Code 588)
+
+        Curators:
+        » Troy Ames (Troy.J.Ames.1@gsfc.nasa.gov)
+                Advanced Architectures and Automation Branch (Code 588)
+        » Lynne Case (Lynne.Case@commerceone.com)
+                Commerce One eGovernment Solutions, Inc.
+
+        Please read the NASA Website Privacy Statement.
+        Site design by Commerce One

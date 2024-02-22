@@ -1,0 +1,55 @@
+http://www-e835.fnal.gov/~vidnovic/ndst/ndst00.html
+
+Neutral DST Production on the Farms
+
+     Neutral DST Memo
+     E835 8mm Tapes at Feynman (i.e. which runs will/won't be processed)
+     Information/Statistics for DST's
+     Location of Runs/Events on the DST's
+     Tapes broken during production
+   _______________________________________________________________________
+
+   Description of Labels:
+The following labeling system was used for the NDST output tapes:
+
+GN prefix is for DST data grouped by number of clusters in the CCAL
+GP prefix is for DST data grouped by number of low threshold
+    clusters in the CCAL and by number of clusters in the CCAL+FCAL
+The next letter signifies the number of clusters
+The last three numbers are the output run number
+
+GNT###  -----  2, 3, 4, and 5 CCAL cluster data
+        -----  (note that all two cluster data is first on the tape,
+        -----  then all three cluster data, ...)
+GNX###  -----  6 CCAL cluster data
+GNV###  -----  7 CCAL cluster data
+GNE###  -----  8 CCAL cluster data
+GNN###  -----  9 CCAL cluster data
+
+GPL###  -----  2, 3, and 4 CCAL cluster data (low threshlods)
+
+GPT###  -----  2, 3, 4, and 5 CCAL+FCAL cluster data
+        -----  (note: Bad low threshold data is first on tape GPTx01)
+GPX###  -----  6 CCAL+FCAL cluster data
+GPV###  -----  7 CCAL+FCAL cluster data
+GPE###  -----  8 CCAL+FCAL cluster data
+GPN###  -----  9 CCAL+FCAL cluster data
+
+
+Neutral DSTs containing events with 2, 3, and 4 cluster data may be found on the
+E835 offline cluster. Directory /mt835t/rawGN/ contains the ChiX, ddbar, and inj
+data. Directory /mt835t/ar08/ contains 1P1 and Psip data. In addition, NDST tape
+numbers ending with a "301-309" are available in the trailers.
+   _______________________________________________________________________
+
+   Comments:
+   NDST '01 production is completed as of August 27, 2001. If you can not
+   find certain information or there is some that is missing or obviously
+   incorrect, please notify me as soon as possible.
+   I would also like to thank those who helped complete this process; WR,
+   PR, SS, JK, KG, and MS.
+   _______________________________________________________________________
+
+   Theodore Vidnovic III
+   last updated on 8/27/01
+   vidnovic@fnal.gov

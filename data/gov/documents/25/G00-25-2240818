@@ -1,0 +1,1140 @@
+http://www.ops.sgp.arm.gov/Instrument_logs/ilogmaps/ilogs/JPL/ILogJPLC1.html
+
+   JPL Radiometer Log
+
+   JPL Radiometers
+
+   C1
+
+   CF Lamont, OK IDP1
+
+   Date
+
+   Operator
+
+   Comments
+
+   11/21/01
+
+   CAM
+
+   Razmik Khachikyan notified Site Ops that no data had been collected
+   from the GPS Linux machine since 1430 GMT on 11/20.    Attempts at
+   pinging the computer were also unsuccessful.  T/S found that the Linux
+   computer and Ashteck receiver were powered off.  Site power was down
+   from 1503 to 1555 GMT on 11/20 for trench work.  Apparently the GPS
+   computer and receiver ran on UPS power until that was exhausted and
+   then shut down and were never restarted.  Powered the Linux computer
+   and receiver on at 2020 GMT.  A ping test was then successful.  RTS
+   status O.K.
+
+   7/11/01
+
+   DAN
+
+   Ron Muellerschoen of JPL onsite to pursue noise problems with their
+   GPS.  Ron checked everything and found the existing antenna to be the
+   problem.  He replaced the AOA antenna with an *Ashtech unit.  Ron also
+   moved the MET3 data cable to the Ashtech GPS Receiver to simplify the
+   system operation and improve data capture.  He prepared a wiring
+   diagram which was left with the system.  (Antenna information:
+   Manufacturer – Ashtech, Model - Choke Ring, Voltage - 5 to 15 VDC, P/N
+   - 701945-02, rev. C, S/N - CR620004601)
+
+   6/18/2001
+
+   DAN
+
+   Halted GPS PC acquisition at SGP at 1710 GMT after reconfiguring for
+   new address (198.124.99.58). Installed a 12-port hub on 198.124.99.8
+   cable (UVSR RocketPort) in the UVSR shelter. Link light on. Connected
+   UVSR RocketPort to new hub. Link light on. Moved PC to UVSR shelter and
+   connected Ashtech port 1 to PC tty1 and Ethernet to new hub. Link light
+   on. Disconnected external Rubidium Reference from the Ashech receiver
+   at JPL direction. Ron was able to ping the PC, but couldn't talk to the
+   Ashtech receiver. Ron asked for a null-modem to be installed between
+   the tty1 and GPS port 1. Work completed at 1740 GMT. Awaiting testing
+   and data retrieval by JPL.
+
+   5/23/01
+
+   DAN
+
+   Site Ops shortened the GPS antenna cable by approximately 75 feet per
+   JPL request (Dave Stowers). This involved cutting off excess RG214/u
+   cable and crimping on a new type-N connector. This action should boost
+   the signal arriving at the receiver(s) significantly. This work began
+   at 1903 GMT and concluded at 1925 GMT.
+
+   During this work the AOA Benchmark receiver was observed to not be
+   functioning. A call to Ron Muellerschoen at JPL confirmed this. JPL is
+   in the process of deciding what to do about the AOA instrument.
+
+   3/6/01
+
+   DN
+
+   Site Ops was waiting to move the JPL PC out of the UVSR shelter until a
+   permanent CORS style GPS antenna monument could be installed. That
+   monument was installed several weeks ago and relocation of the antenna
+   took place today. The new antenna is approximately 11-1/8 inches higher
+   than the previous nearby antenna location. The MetPack (near the UVSR
+   shelter) was raised 5-0 inches higher to center its barometer on the
+   GPS antenna's horizon. All measurements are referenced to the top
+   surface of the concentric aluminum rings surrounding the antenna dome.
+   The CORS style monument is quite solid, being formed of an 18 inch
+   diameter concrete plug that runs to a depth of 15 feet into the ground.
+   Above the ground surface, the monument is 12 inches in diameter and is
+   60 inches tall. The monument is reinforced with non-metallic
+   reinforcing bars and has a Delrin mount for the antenna. The mount is
+   fixed with regard to level and only allows rotational adjustment. Its
+   final horizon was measured with a digital level at 0.5 degrees low on
+   the south side and 0.2 degrees low on the east side. The JPL PC was
+   relocated to the Optical trailer. Final connections between the
+   instrument and computer will be made as soon as the serial multiplexer
+   to be used is repaired.
+
+   9/11/00
+
+   MR
+
+   Marty Marcin notified us that the Benchmark receiver was not
+   communicating. T/S found the receiver was scrambled and had garbage on
+   the screen. Power cycled the receiver and reseated the cables. This
+   seemed to repair the problem. RTS the unit at 2115 GMT.
+
+   9/8/2000
+
+   DAN
+
+   As part of BCR-00289, the JPL GPS antenna and supporting
+   instrumentation were relocated from south of the RCF to just east of
+   the SGP CF Central Instrument Cluster. This action was taken to free-up
+   the ARM SGP IDP1 area for IOPs and the like. The JPL GPS antenna is now
+   located approximately 60m east of the ARM EBBR. This location provides
+   a completely unobstructed 2Pi field of view. All supporting equipment
+   is located in or near the USDA UVSR shelter approximately 30m SW of the
+   antenna location. The system's metrology package is attached to the SW
+   corner of the UVSR foundation safety rail. It's elevation is within
+   10-15cm of the GPS antenna.
+
+   7/12/00
+
+   GRS
+
+   The antenna blew over and fell on its side some time between 2045 and
+   2115 GMT during a hard rain and high wind event on 7/11/00. Stood the
+   instrument back upright at 1630 GMT and then found that a nest of
+   yellow jackets had built a hive in the orange duct that the instruments
+   cable runs in. Left the area….in a hurry. Came back at 1800 GMT and
+   sprayed the nest and killed the wasps. Tightened the rope that holds
+   down the antenna and releveled the antenna at 1820 GMT. Contacted
+   Martin Marcin at 2120 GMT and informed him of the outage and asked him
+   to check into the instrument and make sure that it is working O.K. RTS
+   at 1820 GMT
+
+   4/6/2000
+
+   CAM
+
+   Marty Marcin shipped a new Linux OS data acquisition computer to the CF
+   to replace the old Linux and Mac JPL computers. Marty remotely
+   collected data and shut the JPL down at 1800 GMT. Removed the Benchmark
+   and Ashtech receiver serial connections from the old Linux computer and
+   connected to COM1 and COM2, respectively, of the new computer. Moved
+   the monitor, keyboard, and mouse to the new computer. Disconnected the
+   MET3 serial connection from the old Mac computer and removed the null
+   modem from the line. Connected the MET3 to ttyC0 of a multi-port serial
+   card on the new computer. Powered the new computer on at 1820 GMT.
+   Marty verified remote comms with all the instruments. RTS status O.K.
+   at 1830 GMT. The old Linux computer, Mac computer, and 17" monitor will
+   be returned to JPL.
+
+   11/16/99
+
+   KT
+
+   At 2148 GMT the JPL needed to be rebooted due to mentor loosing
+   communications. At 2150 GMT the JPL came back on line.
+
+   10/26/99
+
+   MR
+
+   Rebooted the MAC at 1430 GMT as per instrument mentor request.
+
+   10/11/99
+
+   MR
+
+   Received a request from JPL to reboot the Mac. Rebooted at 1933 GMT.
+
+   9/24/99
+
+   KT
+
+   At 2024 GMT the JPL computer needed to be rebooted. RTS at 2029 GMT.
+
+   9/10/99
+
+   MR
+
+   Rebooted the MAC computer as per mentors request. RTS at 1710.
+
+   8/11/99
+
+   CAM
+
+   Jim Liljegren requested that Site Ops check the level of the JPL
+   supporting MWR. The MWR does not appear to be finding the sun other
+   than at solar noon. T/S found that the level was accurate, however it
+   appeared that at some point the instrument had rotated a full 360
+   degrees clockwise and the power cables had made a complete wrap around
+   the base of the instrument. The instrument had then 'homed' itself with
+   the cables fully wrapped and was subsequently unable to rotate much
+   farther than about 40 degrees clockwise from the home position before
+   the cables would bind. Powered the instrument off, homed the
+   instrument, and unwrapped the cables. Restored power at 1505 GMT. Also
+   verified the moisture detector sensitivity setting. Adjusted the
+   potentiometer until the heater turned on and then backed the
+   potentiometer off 1/4 turn. Jim restarted the software remotely and
+   reported that the MWR is now successfully tracking the sun.
+
+   8/9/99
+
+   MR
+
+   Rebooted the mac computer at 2030 GMT.
+
+   7/7/99
+
+   CAM
+
+   Marty Marcin requested that Site Ops reboot the Met station Mac
+   computer. Rebooted computer at 1920 GMT. RTS at 1923 GMT.
+
+   6/29/99
+
+   CAM
+
+   Jim Liljegren indicated that the MWR laptop seemed to be hung up. Found
+   that the laptop was locked up and could not be powered off. Removed the
+   laptop battery and disconnected power supply at 1550 GMT to shut the
+   computer off. Replaced the battery and plugged power supply back in.
+   Computer booted up at 1555 GMT but locked up again shortly after
+   loading all of the start up applications. Was then able to power the
+   laptop off with the on/off switch at 1558 GMT. Powered the laptop back
+   on and this time the boot up was successful. RTS status O.K. at 1600
+   GMT
+
+   6/28/99
+
+   CAM
+
+   Jim Liljegren requested Site Ops assistance in verifying that the MWR
+   program is running properly and that the MWR rotates freely and finds
+   the sun as it should. Jim ran the program remotely and the MWR scanned
+   properly and locked onto the sun. Ran the program locally and verified
+   the displays were present. The display indicated an Azimuth error
+   occasionally but appeared to be working properly. Jim will look at the
+   code for problems.
+
+   6/25/99
+
+   DB/ZW
+
+   Installed a spare ARM MWR to support JPL visiting instruments water
+   vapor measurements.
+
+   6/7/99
+
+   CAM
+
+   Marty Marcin requested that Site Ops reboot the Met station Mac
+   computer. Rebooted computer at 1300 GMT. RTS at 1305 GMT.
+
+   5/12/99
+
+   TG
+
+   Marty Marcin notified Site Ops that he was unable to connect with the
+   Met station Mac computer. Rebooted the Mac at 1726 GMT. RTS status O.K.
+
+   4/23/99
+
+   CAM
+
+   Marty Marcin notified Site Ops that he was unable to connect with the
+   Met station Mac computer. T/S found that the UPS power cord had been
+   knocked loose when the floor was waxed. The UPS was running low on
+   battery power and the Mac had shut down. Plugged the UPS back into the
+   outlet and powered the computer on at 1740 GMT. Verified network
+   connection and RTS at 1745 GMT
+
+   4/21/99
+
+   CAM
+
+   Marty Marcin notified Site Ops that the MET station Macintosh computer
+   was hung up. Rebooted the computer at 1810 GMT and notified Marty.
+
+   4/5/99
+
+   CAM
+
+   Marty Marcin indicated to Site Ops that he was unable to ping the JPL
+   Macintosh computer. Attempts to ping the computer from the CF were also
+   unsuccessful. Rebooted the Mac at 1730 GMT. Was then able to
+   successfully ping the computer. RTS at 1735 GMT and notified Marty.
+
+   3/31/99
+
+   Mentor
+
+   Instrument mentor on site and removed JT02 and its computer. The
+   Surface Meteorological Station and Differential GPS remain in place and
+   operational.
+
+   3/22/99
+
+   MW
+
+   The instrument mentor called and said someone will be down soon to
+   collect any data off of JT-02 and box up the instrument and computer
+   for further troubleshooting.
+
+   3/16/99
+
+   MW
+
+   Instrument remains off line. No word from mentor on replacement PC.
+
+   3/11/99
+
+   MR
+
+   Instrument is still down.
+
+   2/15/99
+
+   MR
+
+   Instrument is still down.
+
+   1/19/99
+
+   MK
+
+   System is down. Awaiting parts from mentor.
+
+   1/11/99
+
+   KT
+
+   System is down. Awaiting parts from mentor.
+
+   1/4/99
+
+   MR
+
+   Instrument remains off line. Awaiting replacement PC from mentor.
+
+   12/23/98
+
+   MW
+
+   The system is down. The instrument mentor is going to send another
+   computer to SGP next week.
+
+   12/22/98
+
+   MW
+
+   The system is down. The computer will not run even with all
+   applications closed. Windows keeps shutting down because of an
+   exception error. Called Steve Kheim.
+
+   12/17/98
+
+   MW
+
+   The WR-177 program was not running this morning. The blue error screen
+   was displayed indicating an ‘exception error’ had occurred. Rebooted
+   the computer at 1445 GMT. Closed WVR-177, WVR Monitor, and Reach Out.
+   The blue error screen appeared shortly thereafter, even with none of
+   the above mentioned programs running. Rebooted again at 1455 GMT.
+   Closed all of the programs and left the system as-is until 1640 GMT
+   when WVR-177 was restarted.
+
+   12/16/98
+
+   MW
+
+   WVR-177 was not scrolling data this morning. Quit the program at 1505
+   GMT. Closed all applets. Changed the WVR-177 program properties so
+   WR-177 will run in a window instead of full screen. Restarted WVR-177,
+   WVR Monitor, and Reach Out in that order. As of 1528 GMT, data is
+   scrolling on WVR-177, a graph is displayed on WVR Monitor, and JT-02’s
+   mirror is rotating. The instrument mentor called and asked that Reach
+   Out be restarted because he couldn’t monitor the system remotely.
+   Restarted Reach Out at 1740 GMT. The mentor still could not communicate
+   with the system so he asked that the computer be shut down and
+   restarted. Restarted the computer at 1745 GMT. The mentor was able to
+   communicate with the system after the restart. However, the blue
+   exception error screen popped up shortly after he took command of the
+   system. The mentor lost communications with the system once the error
+   message appeared. Suspect that the Reach Out program is the cause of
+   the errors experienced with the system lately. Restarted the computer
+   once again at 1755 GMT. Closed the Reach Out and WVR Monitor programs
+   at the mentors request. Will let the system run with just the WVR-177
+   program running.
+
+   12/15/98
+
+   MW
+
+   The JT-02 WVR-177 program keeps hanging up. The program will not run
+   continuously and the blue error screen keeps popping up indicating an
+   exception error has occurred. The JT-02 mirror is not rotating either.
+   Rebooted the computer at 1458 GMT but this did not correct the problem.
+   Called Richard Denning and left a message.
+
+   12/14/98
+
+   MK
+
+   The graphs were not updating and an error was indicated that no
+   response was received from the WVR. Rebooted computer at 1435 GMT.
+   Contacted Dick Denning and left message.
+
+   12/11/98
+
+   CAM
+
+   Mentor requested that the JT-02 program restarted. Restarted at 2130
+   GMT. The graphs were not updating and an error was indicated that no
+   response was received from the WVR. Power cycled the instrument and
+   rebooted computer again at 2145 GMT. This time the graph began updating
+   and no errors were reported. RTS at 2155 GMT.
+
+   12/11/1998
+
+   SS
+
+   Checked JPL instruments during morning rounds. Found the JT02 computer
+   with the Reachout program only running as per Mike Ward.
+
+   12/10/98
+
+   MR
+
+   Was notified by Mike Ward to shut down all running programs and leave
+   only the reach out program running. Shut all programs down at 1638.
+
+   12/8/98
+
+   MR
+
+   Rebooted the computer and power cycled the MVR. System started to run
+   but may have locked up again. Will check on it this afternoon.
+
+   12/7/98
+
+   MR
+
+   PM. The JT02 computer was not scrolling and no data was on the screen.
+   Rebooted the computer but this did not seem to help. Will try and call
+   JPL latter due to time zone differences.
+
+   12//99
+
+   JPL Mentor
+
+   Continued to provide support for the JPL Cassini Satellite ground truth
+   experiment instruments at the CF during the month of December. During
+   this period, JPL personnel removed some of their instruments, but left
+   one MWR, Surface Meteorological Station, and Differential GPS. These
+   instruments will remain deployed at the CF through the Water Vapor IOP
+   scheduled for the Fall of 99.
+
+   11/30/98
+
+   SS
+
+   Checked the JPL instruments during morning rounds. Found that the JT02
+   computer was not scrolling data and the mirror was not rotating. Called
+   Steve Keihn and left a message.
+
+   11/24/98
+
+   MW
+
+   The Radiometrics and D02 displays were not scrolling any data. Neither
+   display had the normal program running. Restarted both computers at
+   1505 GMT. D02 returned to normal operation but Radiometrics didn’t.
+   Called Steve Keihm.
+
+   11/23/98
+
+   SS
+
+   Steve Keihn called and would like to have the Reach Out program
+   restarted on the D02 and Radiometrics computers. 2115 GMT while
+   rebooting the Reach Out programs found the JT02 computer to have an
+   error message on it stating that a program had to be shut down before
+   closing the windows program. Called Steve Keihn and left him a message
+   detailing the problem.
+
+   11/23/98
+
+   SS
+
+   Checked the JPL instruments during morning rounds and found that the
+   D02 computer had an error message stating that "The program had
+   performed an illegal operation. Close." Closed the program and the
+   computer came "unlocked". The JT02 computer was locked up and would not
+   respond to a "Control+Alt.+Del." Command. Power cycled the computer at
+   1519 GMT. The Radiometric computer is not showing the expected program
+   none of the mirrors are rotating. Left a voice mail to Steve Keihn
+   explaining.
+
+   11/20/98
+
+   MW
+
+   Re-started ReachOut on the Radiometrics laptop and leveled the JT-02
+   instrument at 1940 GMT.
+
+   11/20/98
+
+   SS
+
+   Checked the JPL instruments during daily rounds. Found that the JT02,
+   D02, and Radiometrics computers were all locked up. Rebooted the
+   computers at 1535 GMT.
+
+   11/19/98
+
+   MW
+
+   JT02’s mirror is not rotating and it is leaning slightly out of level
+   to the SE. It’s display is not scrolling data. D02’s display is
+   scrolling the message ‘error overflow.’ Called Steve Kheim and left a
+   message.
+
+   11/18/98
+
+   MW
+
+   JT-02 is out of level and leaning to the SE. Also, the mirror is not
+   rotating and no data is scrolling on the display. D02 is aligned NE to
+   SW and the message ‘Error Overflow’ is scrolling on the display.
+   Contacted Steve Kheim’s answering service and left a message detailing
+   the situation
+
+   11/13/98
+
+   SS
+
+   Checked the JPL instruments during daily checks. No trouble found.
+
+   11/10/98
+
+   SS
+
+   Checked the JPL instruments during morning checks. Found that the JT02
+   computer was not scrolling data and the mirror was not rotating. Called
+   Steve Keihm and left a message.
+
+   11/9/98
+
+   SS
+
+   Checked JPL instruments during morning checks. Found that the JT02
+   mirror was not rotating. Called Steve Keihm and left a message.
+
+   11/4/98
+
+   MW
+
+   No problems this morning.
+
+   11/3/98
+
+   MW
+
+   No problems this morning.
+
+   11/02/98
+
+   SS
+
+   Checked the instruments during morning rounds. Found that the JT02 and
+   D02 were not operating properly left a message for Steve Keihm.
+
+   10/30/98
+
+   MK
+
+   All JPL instruments checked ok.
+
+   10/29/98
+
+   MK
+
+   All JPL instruments checked ok.
+
+   10/27/98
+
+   MK
+
+   All instruments checked OK.
+
+   10/23/98
+
+   MK
+
+   JPL instruments checked O.K.
+
+   10/22/98
+
+   MK
+
+   JPL instruments checked O.K.
+
+   10/21/98
+
+   MK
+
+   The Radiometrics laptop was not scrolling data. Called Steve Keihm and
+   left message at 1345 GMT.
+
+   10/20/98
+
+   MK
+
+   JPL instruments checked O.K.
+
+   10/19/98
+
+   MK
+
+   The D2 and the JT02 displays were not updating. Left message with Steve
+   Keihm at 1340 GMT.
+
+   10/15/98
+
+   MR
+
+   JPL instruments checked O.K.
+
+   10/14/98
+
+   MR
+
+   JPL instruments checked O.K.
+
+   10/13/98
+
+   MR
+
+   The radiometrics computer was not scrolling. Called Dick Denning and he
+   had me reboot the computer and he restarted the radiometer.
+
+   10/8/98
+
+   MW
+
+   DO2 scrolling the message ‘error overflow’. Called the mentor at 1345
+   GMT.
+
+   10/7/98
+
+   MW
+
+   DO2 scrolling the message ‘error overflow’. Called mentor at 1410 GMT.
+   Otherwise status OK.
+
+   10/6/98
+
+   MW
+
+   JT02 and D02 are still not scrolling data. Called Steve Keihm and left
+   a message at 1340 GMT.
+
+   10/5/98
+
+   ZW/MW
+
+   JT02 and D02 were not scrolling data. Called Steve Keihm and left a
+   message at 1415 GMT. Steve did not call back by the end of the day.
+   JT02 and D02 are still not scrolling.
+
+   10/1/98
+
+   KT
+
+   Morning rounds showed that the D02 mirror was not rotating inside nor
+   was the computer updating. At 1649 GMT called Steve Keihm and notified
+   him of the problem. RTS at 1650 GMT.
+
+   9/30/98
+
+   KT
+
+   At 1747 GMT Steve Keihm called back and asked that the Reachout box be
+   closed down once again and reopened. At 1753 GMT after reopening the
+   Reachout box on the JT02 computer Dick Denning was called and attempted
+   to talk to the JT02 computer which he was. Status now is that Mr.
+   Denning is going over the program now and is attempting to fix the
+   problem with JT02.
+
+   9/30/98
+
+   KT
+
+   At 1630 GMT Steve Keihm called back and asked for the Reachout boxes be
+   closed down and reopened due to problems not allowing him to
+   communicate with the JT02 and the D02 computers. At 1640 GMT both
+   computers appeared to be locked up. At 1645 GMT re-booted both
+   computers and notified Steve Keihm of situation.
+
+   9/30/98
+
+   KT
+
+   At 1533 GMT the D2 computer appeared to be locked up and the D2
+   instrument mirror was not rotating. At 1540 GMT called and left a
+   message for Steve Keihm and notified him of the problem.
+
+   9/28/98
+
+   MW
+
+   The Radiometrics laptop was not scrolling data. Called Steve Keihm and
+   he asked that the ‘reach out’ application be closed and re-opened.
+   Restarted the ‘reach out’ program at 1645 GMT.
+
+   9/24/98
+
+   KT
+
+   The D2 computer monitor was not scrolling data but found an error in
+   the program that was running. At 1640 GMT called Steve Keihm and
+   notified him of the problem. The instrument itself was facing SSW and
+   MR. Keihm was notified of that problem as well.
+
+   9/23/98
+
+   KT
+
+   During inspection the D2 instrument mirror was not rotating nor was the
+   computer scrolling any data. The only message on the screen was "Error
+   overflow." At 1548 GMT called Steve Keihm and left message of problem.
+
+   9/22/98
+
+   KT
+
+   Checked instruments the D2 and JPL instruments were not working nor
+   were the computers scrolling any data. The D2 instrument was facing
+   SSW. Called Steve Keihn and left message.
+
+   9/21/98
+
+   SS
+
+   Checked JPL instruments during morning checks. Found that the JT-02
+   mirror was not rotating and the computer was not scrolling. Called
+   Steve Keihn and informed him and he restarted the instrument. RTS at
+   1830 GMT.
+
+   9/17/98
+
+   CAM
+
+   D2 radiometer mirror was not rotating and the program had not updated
+   since 0106 GMT. Notified Steve Keihm who restarted the program remotely
+   at 1705 GMT. The radiometer rotated approximately 45 degrees after the
+   reset and is now oriented NE-SW. Steve advised to leave as is for now.
+   RTS at 1710 GMT.
+
+   9/16/98
+
+   CAM
+
+   Steve Keihm restarted Radiometrics radiometer program at 1620 GMT. JTO2
+   computer was locked up and had to be power cycled at 1625 GMT. Steve
+   restarted program and RTS at 1628 GMT. Both radiometers originally went
+   down at approximately 2300 GMT on 9/15.
+
+   9/16/98
+
+   KT
+
+   The JT-02 mirror and radiometric mirror were not rotating. Both
+   computers were locked up as well. Chris Martin called the mentor and
+   left message of problem. Awaiting call from mentor for further
+   instructions at this time.
+
+   9/14/98
+
+   SS
+
+   Checked instruments during afternoon rounds and found that the
+   Radiometrics computer was still not scanning. Called Steve Keihn and
+   informed him of status. He requested that I shut down and restart the
+   Reach out program on both the Radiometrics and the JT-02 computer.
+   Steve was able to connect to them after this was done and said he would
+   call back if further assistance is needed. RTS at 2015 GMT.
+
+   9/14/98
+
+   SS
+
+   Checked the JPL instruments during daily checks. Radiometrics computer
+   was not scrolling.
+
+   9/8/98
+
+   SS
+
+   Rebooted Radiometrics computer as per mentors request.
+
+   9/8/98
+
+   SS
+
+   JPL instruments checked during daily checks. Found the Radiometrics
+   computer locked up at 13:33 and the mirror on the instrument is not
+   rotating. Called Steve and left a message for him to call me back and
+   let me know what to do with it. RTS at 1600 GMT.
+
+   9/4/98
+
+   SS
+
+   JPL instruments checked during daily checks. No problems noted.
+
+   9/3/98
+
+   SS
+
+   JPL instruments checked during daily rounds. Steve had called and asked
+   to check the D02 instrument to ensure it is oriented N-S it is. No
+   problems noted.
+
+   9/2/98
+
+   CAM
+
+   Steve Keihm requested Site Ops check the status of D2 radiometer
+   azimuth position. Found that the radiometer had rotated approximately
+   45 degrees clockwise and was oriented NE-SW. Steve reset the program
+   remotely at 2055 GMT. Azimuth position corrected itself and RTS at 2100
+   GMT.
+
+   9/2/98
+
+   SS
+
+   Checked JPL instruments during daily checks. No problems noted.
+
+   9/1/98
+
+   SS
+
+   Checked JPL instruments during daily checks. No problems noted.
+
+   8/31/98
+
+   SS
+
+   Checked JPL instruments during daily rounds. No problems noted.
+
+   8/28/98
+
+   SS
+
+   JPL instruments checked during daily rounds. No problems found.
+
+   8/27/98
+
+   SS
+
+   JPL instruments checked during daily rounds. No problems found.
+
+   8/26/98
+
+   SS
+
+   JPL instruments checked during daily instrument checks. Found that the
+   JT-01 radiometer mirror was not rotating left message for Steve Keihm.
+   Shut down and restarted Reach Out program on JT-02, D-02 and laptop
+   computers as instructed by Steve Keihm at 1645 GMT.
+
+   8/25/98
+
+   SS
+
+   The JPL instruments were checked during morning rounds at 1643 GMT. No
+   problems were found.
+
+   8/24/98
+
+   SS
+
+   The JPL instruments were checked during morning rounds. No problems
+   found.
+
+   8/19/98
+
+   MR
+
+   Performed morning rounds checks and they checked good.
+
+   8/18/98
+
+   MR
+
+   Performed morning rounds checks and they checked good.
+
+   8/17/98
+
+   MR
+
+   Morning rounds indicated that all instruments were running.
+
+   8/12/98
+
+   CAM
+
+   During morning PM checks the Radiometrics computer was not updating and
+   the instrument mirror could not be heard rotating. Left voice mail for
+   Steve Keihm at 1750 GMT and left instrument in current state.
+
+   8/11/98
+
+   CAM
+
+   Steve Keihm notified Site Ops that D02 computer locked up after he had
+   transferred data files. Status check found that the computer was locked
+   up tight and had to be power cycled to restart. Power cycled at 1844
+   GMT. RTS at 1850 GMT.
+
+   8/11/98
+
+   MK
+
+   The Mentor requested that the GPS reciever be power cycled. P/C the GPS
+   at 1423 GMT. RTS at 1430 GMT.
+
+   8/10/98
+
+   MK
+
+   The Radiometrics computer system was locked up and wouldn't respond to
+   keyboard and mouse commands. Called the mentor and left a message 1415
+   GMT. Called back again at 2100, spoke with Richard Denning who reset
+   remotely. RTS at 2110 GMT.
+
+   8/3/98
+
+   GRS
+
+   The GPS receiver has not been working correctly. Noticed that the head
+   was not level. Releveled the GPS from 2000 to 2010 GMT. Notified the
+   Mentor of the corrective maintenance and times. He wants to view the
+   data for a day or two to see if the releveling fixed the problem. RTS
+   at 2010 GMT.
+
+   8/4/98
+
+   MW
+
+   No problems found during AM checks.
+
+   8/3/98
+
+   KT
+
+   Checked out instrument cluster. Status o.k. at this time.
+
+   7/30/98
+
+   MR
+
+   PM. Rebooted the Reach out program on the DT02 and the laptop computer
+   at 2110.
+
+   7/30/98
+
+   MW
+
+   No problems found during AM checks. Status OK.
+
+   7/29/98
+
+   ZW
+
+   All the JPL radiometer had water drops on them. Cleaned rain water off
+   the JPL radiometers at 1330 GMT. Status ok. RTS 1345 GMT.
+
+   7/28/98
+
+   MW
+
+   The D02 computer system was locked up and wouldn't respond to keyboard
+   and mouse commands. Called the mentor and he requested a reboot.
+   Rebooted D02 computer at 2130 GMT. The system mentor was able to
+   communicate after the reboot. The mentor asked that 'ReachOut' be
+   closed and reopened on the laptop due to loss of communications.
+
+   7/24/98
+
+   CAM
+
+   Daily check found that JT02 program was hung up. Shut down and
+   restarted all ReachOut programs at 1615 GMT. Steve was able to get in
+   remotely and restart JT02 at 1620 GMT. It appeared that the program had
+   first hung up around 2300 GMT on 7/23.
+
+   7/22/98
+
+   CAM
+
+   Steve Keihm reported they were not able to communicate with the
+   Radiometrics laptop nor D2 computer. The programs were running and
+   updating. Closed and restarted ReachOut programs on both computers at
+   1525 GMT. Steve was then able to establish communications.
+
+   7/21/98
+
+   MW
+
+   Status OK. No Corrective maintenance performed.
+
+   7/20/98
+
+   CAM
+
+   Steve Keihm called again and said they were not able to communicate
+   with the Radiometrics laptop. Found that the laptop had locked up at
+   1740 GMT. Power cycled the laptop at 2030 GMT. Remote communications
+   still could not be established. Power cycled the laptop again at 2040
+   GMT. This time remote communications were successful. Verified the
+   program remained operational after mentor disconnected. RTS status O.K.
+   at 2050 GMT.
+
+    7/20/98
+
+   CAM
+
+   Steve Keihm called and advised that they lost communications with all 3
+   instruments over the weekend. Status check on site found that all
+   instruments and programs appeared to be running normally. Closed and
+   then restarted all 3 ReachOut programs at 1728 GMT. Steve was then able
+   to establish communications and found that no data was missing from
+   over the weekend.
+
+   7/16/98
+
+   MW
+
+   No CM performed today. All instruments/computers look OK.
+
+   7/15/98
+
+   MW
+
+   Found the JT-02 computer locked up this morning. The mouse would move
+   but the system would not respond to mouse clicks or keyboard commands.
+   Called the mentor and left a message at 1330 GMT. Mentor called back
+   and asked for the computer to be power cycled. Power cycled the JT-02
+   computer at 1610 GMT. Also, the mentor indicated that he had lost
+   communications with the MTP and asked for the ‘ReachOut’ program to be
+   shut down and restarted. Restarted the ‘ReachOut’ program at 1615 GMT.
+   RTS at 1615 GMT.
+
+   7/14/98
+
+   MW
+
+   JPL lost contact with their instruments at 0500 GMT this morning. Data
+   missing from 0500-1715 GMT. Worked with the mentor to re-establish
+   communications 1700-1715 GMT. RTS.
+
+   7/13/98
+
+   CAM
+
+   Steve Keihm advised that all the instruments had briefly lost power at
+   about 0930 GMT on 7/11/98. This corresponded with several site power
+   bumps due to passing thunderstorms at that time. T/S found that the
+   outlet used to supply power to the radiometers was not UPS supplied.
+   Mentor performed a graceful shut down of the instruments at 1935 GMT.
+   Moved the radiometers to a UPS outlet and all systems RTS at 2020 GMT.
+
+   7/13/98
+
+   KT
+
+   Daily PM. Turned on the reachout programs on the laptop and the JT02
+   instrument, and the do2 instrument. RTS at 1720 GMT.
+
+   7/10/98
+
+   CAM
+
+   Steve Keihm requested Site Ops close the remote communications feature
+   on D2, Radiometrics, and JT-02 computers for the weekend to prevent the
+   systems from locking up. Closed reachout programs on all three
+   computers at 2035 GMT. Will enable again on Monday.
+
+   7/10/98
+
+   CAM
+
+   Steve Keihm requested that Site Ops check the instruments at 1600 GMT
+   and phone him at that time. Found that the D2 program was hung up with
+   an 'Access Denied' error message on the monitor. Notified Steve who
+   remotely restarted the software. The program had originally locked up
+   at 1626 GMT on 7/9/98. All other instruments status O.K.
+
+   7/9/98
+
+   MR
+
+   The instrument mentor called and had me turn off then turn on the
+   remote communications feature on two of the instruments. This restored
+   his communications with the instruments.
+
+   7/8/98
+
+   MR
+
+   Notified the mentors at 1420 that the computer software did not seem to
+   be running. Awaiting a reply from the mentors before performing any CM.
+   At 1700 Steve called and had me reboot the small laptop computer. The
+   computer started and the software started running at 1712.
+
+   7/8/98
+
+   MR
+
+   Cleaned water droplets off the East side of the TP-2500 temperature
+   profiling radiometer radome at 1403 GMT.
+
+    7/7/98
+
+    GRS
+
+   Mentor requested re-boot due to lack of coms. Re-booted at 1930 GMT and
+   tested OK.
+
+    7/7/98
+
+    MW
+
+   Cleaned water droplets off the East side of the TP-2500 temperature
+   profiling radiometer radome at 1441 GMT.

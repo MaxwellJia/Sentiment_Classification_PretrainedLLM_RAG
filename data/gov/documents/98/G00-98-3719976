@@ -1,0 +1,126 @@
+http://prostar.carb.nist.gov/HTML/introduction.shtml
+
+                                  [bar.gif]
+                                ProStar Home
+
+INTRODUCTION
+       _______________________________________________________________
+
+  [ProStar concept] [ProStar service] [ProStar MAP]
+       _______________________________________________________________
+
+ProStar Concept
+
+   The idea of ProStar -- PROtein STructure ARchive, was born in the
+       aftermath of the first Asilomar Conference on the Critical
+       Assessment of Techniques for Protein Structure Prediction in
+       December 1994, where long discussions r/evolved around the problem
+       of establishing criteria for an objective assessment of the
+       performance of prediction methods.
+       The concept of Prostar includes:
+
+     * How well can present potentials discriminate between correct and
+       incorrect protein structures?
+     * Is there a cost in discrimination in simplifying the structural
+       description of a protein?
+     * What is the best reference state to use?
+     * What sorts of approximation representation of different terms -
+       hydrophobic, electrostatic solvation, hydrogen bonds... are
+       effective in potentials?
+     * How complicated must a potential be?
+     * What is the underlying physics of the hydrophobic effect and
+       secondary structure preference?
+     * Where can future effort in potential development be most
+       effectively focused?
+
+     This site aims to address these and other questions about potentials
+     for protein structure prediction. The strategy is simple:
+    1. Collect examples of right and wrong structures from the prediction
+       community.
+    2. Collect results of different potentials operating on these
+       examples.
+    3. Provide mechanisms for effective discussion of the significance of
+       the results.
+     __________________________________________________________________
+
+ProStar MAP
+
+                                  [map.gif]
+     __________________________________________________________________
+
+ProStar Service
+
+   Decoys
+       ProStar provides a variety of decoys to test potential functions
+       used in protein structure evaluation.
+       Total decoys were divided into sepetated decoy sets based on their
+       origin and characteristics. Each decoy set was stored in an
+       independent directory in the disk named exactly by the decoy set
+       name. A decoy set usually consists of a couple of crystal
+       structures and decoy structures. Each structure is identified by a
+       decoy set name and a decoy ID, which are shown at the beginning two
+       lines of the PDB coordinates file with the keyword of DECSET and
+       DECID. The decoy ID of the crystal structures start with "CRYSTAL".
+       Currently, the majority of decoys is based on work done in our
+       group. Some sets were derived from publicly available sources or
+       provided by other people, groups and institutions. We want to thank
+       all contributors and encourage further contributions and
+       suggestions. Detailed information about each decoy set and medline
+       reference is also provided.
+       Many current potentials are in one or another way parameterized
+       utilizing information from experimental protein structures. As a
+       basis for standardizing the structural information contained in a
+       potential we also provide standard libraries of experimental
+       structures.
+       We do our best to ensure 'clean' data sets, i.e. complete
+       sidechains, ASN/GLN sidechain O/N assignments, unique sidechain
+       conformation, etc. (see submit decoys). We greatly appreciate any
+       help we can get on this clean-up. So, if you find a problem in one
+       of the structures, please tell us.
+       Potentials
+       ProStar provides a unique database of Potential functions. It has
+       comprehensive information on the present popular potential
+       functions, including their principles, references, and very
+       conveniently, medline links etc. To make it more useful to the
+       protein folding community, many of the energy functions have source
+       codes. You are encouraged to contribute your potential source code
+       to this site.
+       Potential evaluation
+       ProStar review the test results of the potentials on the structure
+       decoys. At present, we use two evaluation protocols:
+
+     * DISCRIMINATED
+     * LOG PROB
+
+   We also provide a simple and straightforward form to evaluate and
+   compare the performance of different potentials in different decoys. In
+   the form, first, you highlight the potentials you want to evaluate, and
+   second highlight the decoy sets you want to test, third, select the
+   result display order sorted by either potential names or decoy set
+   names, finally, click DISPLAY button to get the result.
+
+   The result will be shown in a bar chart. The height of the bar
+   represents the summary score of a potential tested on a decoy set using
+   a specific evaluation method. You can click the relevant links on the
+   chart to get further information on what kind of potential, decoy or
+   evaluation method are used. You can also click INDIVIDUAL SCORES to get
+   all the detailed individual scores of this potential on this decoy set.
+
+   Any suggestions of improvements or changes to the current evaluation
+   protocols or of alternative or additional protocols are very welcome.
+
+  Submission
+
+   The Site will only be successful if all the people in the field
+   contribute to it!
+
+   ProStar need you to submit your own decoys, potentials and test results
+   to this web site. To make the process of your submission as quick as
+   possible, ProStar provides some fundamental format.
+
+                                  [bar.gif]
+
+                    [ HOME ] [ TOP ] [ Contact ProStar ]
+
+                   PROSTAR is maintained by Moult's Group
+               Administered by Eugene Melamud and Hongyu Zhang

@@ -1,0 +1,190 @@
+http://gfo.wff.nasa.gov/fts.html
+
+
+
+                                    NASA
+
+   [space20.gif]
+   WFF GFO
+
+                                    Home
+
+                                About WFF/GFO
+
+                                  The Team
+
+                                About the FTS
+
+                                  Documents
+
+                                    Data
+
+                                 Other Sites
+
+                                      o
+
+                                   Working
+                               (WFF Internal)
+
+                                      o
+
+                                  WFF TOPEX
+
+                                  WFF GLAS
+
+                                WFF OSB Home
+
+                                  WFF Home
+
+                                      o
+
+                                Mail Hancock
+
+   [space20.gif]
+
+                        The GFO File Transfer System
+
+   The GFO File Transfer System (FTS) is designed to automate the handling
+   of GFO CALVAL data. It is designed to operate autonomously with user
+   intervention at a minimum.
+
+Site Information
+
+   Hostname: calval.wff.nasa.gov
+
+   Contacts:
+
+   David Hancock
+   NASA GSFC/WFF
+   hancock@osb.wff.nasa.gov
+   757-824-1238
+
+   Dennis Lockwood
+   Raytheon Corporation; NASA GSFC/WFF
+   lockwood@osb.wff.nasa.gov
+   757-824-2252
+
+   Jeff Lee
+   Raytheon Corporation; NASA GSFC/WFF
+   jlee@osb.wff.nasa.gov
+   757-824-1853
+
+Capabilities
+
+     The FTS will "push" data to clients via an automated FTP.
+
+     The FTS will allow clients to "pull" data via FTP from an online
+   repository.
+
+File Naming Conventions
+
+   The FTS works only with all-lowercase filenames. The FTS automatically
+   translates upper-case filenames to an all lower-case equivalent. The
+   FTS uses a unique file-naming convention to determine what to do with
+   files that are processed within the system. Each unique type of file
+   used by a project must have a filename beginning with a unique
+   4-character code designated as "filetype". This "filetype" code must be
+   assigned to the filetype by the FTS administrator. Files without an
+   appropriate filetype will cause an error condition within the FTS.
+
+Incoming Files
+
+   A client may introduce a file into the system by transferring the file
+   into the "inbox" (/in) via FTP. Criteria for submitting a file to the
+   FTS via FTP are:
+
+     Files must be put in incoming directory (/in)
+
+     Filenames are case-sensitive and must conform to FTS file naming
+   conventions.
+
+   The FTS checks each project inbox once per minute. If it sees a file in
+   the inbox, it creates a lock file containing the current size in bytes
+   of the file. The next time it checks the inbox, it compares the current
+   size of the file with the size saved in the lock file. If the two
+   match, the FTS assumes the file has completed transfer and moves the
+   file. If the file sizes do not match, the new size is put into the lock
+   file and the process repeats. Do not be alarmed if files disappear out
+   of the inbox; the FTS is just doing its job.
+
+Outgoing Files
+
+   There are two basic methods by which files may be sent to clients. A
+   file may be automatically "pushed" via FTP or it may be put in the
+   "outbox" (/out) for "pull" retrieval. The FTP "push" mechanism is
+   somewhat persistent. It can discern whether a file has been transferred
+   correctly and will keep trying for up to three times if the transfer is
+   not successful. After a third unsuccessful try, the FTS will send email
+   to the FTS operator informing him of an error condition. The FTS will
+   keep a two-week (TBD?) repository of data for the GFO CALVAL project.
+   In order to ease client "pulls", the FTS will, on a daily basis, create
+   a text file listing new files which are entered into the repository.
+   The text file will be named in the format:
+
+        newfiles.YYYY_MM_DD.txt
+
+Security
+
+     The FTS is built upon rooted FTP directories. Clients will not have
+   access to the remainder of the file system.
+
+     Clients will be allowed FTP-only access to the server. Telnet
+   services will not be permitted.
+
+     Passwords will be provided to each client. Password changes will be
+   handled locally to insure good password selection and password change
+   compliance. Multiple clients may be assigned the same userid and
+   password, if deemed appropriate by the FTS administrators.
+
+     Clients must supply the FTS administrator with the hostnames and IP
+   addresses of machines which need access to the FTS before attempting
+   their first connection.
+
+Logging
+
+   All actions performed by this system are logged in a log directory. The
+   administrator can check this logfile if problems occur. A sample
+   logfile is shown below:
+
+09/09/98 13:30:03       watch_navo       Move /navo/in/ra_data98174_05_56_03.dat
+to /navo/proc/ra_data98174_05_56_03.dat.
+09/09/98 13:30:04       watch_navo       Running proc_navo.
+09/09/98 13:30:04       proc_navo        Processing ra_data98174_05_56_03.dat,
+File Type: ra_d.
+09/09/98 13:30:14       proc_config.sh   Config: Move ra_data98174_05_56_03.dat
+to /wff/in.
+09/09/98 13:30:24       proc_config.sh   Config: Move ra_data98174_05_56_03.dat
+to /calval/in.
+09/09/98 13:30:24       watch_navo       Move /navo/in/ra_data98174_09_11_14.dat
+to /navo/proc/ra_data98174_09_11_14.dat.
+09/09/98 13:30:24       watch_navo       Running proc_navo.
+09/09/98 13:30:24       proc_navo        Processing ra_data98174_09_11_14.dat,
+FileType: ra_d.
+09/09/98 13:30:28       watch_navo       Move /navo/in/ra_data98174_19_47_54.dat
+to /navo/proc/ra_data98174_19_47_54.dat.
+09/09/98 13:30:28       watch_navo       Running proc_navo.
+09/09/98 13:30:28       proc_navo        Processing ra_data98174_19_47_54.dat,
+FileType: ra_d.
+09/09/98 13:30:43       proc_config.sh   Config: Move ra_data98174_19_47_54.dat
+to /wff/in.
+09/09/98 13:30:49       watch_navo       Move /navo/in/ra_data98174_23_05_38.dat
+to /navo/proc/ra_data98174_23_05_38.dat.
+09/09/98 13:30:50       watch_navo       Running proc_navo.
+09/09/98 13:30:50       proc_navo        Processing ra_data98174_23_05_38.dat,
+FileType: ra_d.
+09/09/98 13:31:00       proc_config.sh   Config: Move ra_data98174_19_47_54.dat
+to /calval/in.
+09/09/98 13:31:18       proc_config.sh   Config: Move ra_data98174_09_11_14.dat
+to /wff/in.
+09/09/98 13:31:26       proc_config.sh   Config: Move ra_data98174_23_05_38.dat
+to /wff/in.
+09/09/98 13:32:04       proc_config.sh   Config: Move ra_data98174_23_05_38.dat
+to /calval/in.
+     __________________________________________________________________
+
+   [esplogow.gif] [wffhome.gif] [gsfchome.gif] [mininasa.gif] NASA IT
+   Security Warning
+   Observational Science Branch; Laboratory for Hydrospheric Processes
+   NASA GSFC/Wallops Flight Facility, Wallops Island VA USA
+   NASA Official 972/David W. Hancock, III
+   Maintained by Raytheon/Jeff Lee

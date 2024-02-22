@@ -1,0 +1,123 @@
+http://storm.aoml.noaa.gov/HWIND.html
+
+           [Atlantic Oceanographic and Meteorological Laboratory]
+
+                         ___________ Search Options
+
+   [HWIND.gif]
+     __________________________________________________________________
+
+   [Home.gif] [USEMAP:Meeting.gif] [USEMAP:Subproject.gif]
+   [Publication.gif] [Demo.gif] [Product.gif] [Report.gif] [Proposal.gif]
+   [Presentation.gif] [Personnel.gif]
+     __________________________________________________________________
+
+                                 [Nhc1.jpg]
+                             National Hurricane
+                                   Center
+
+                               [Mainhrd1.jpg]
+                      AOML- Hurricane Research Division
+
+                           [HWINDInstructions.gif]
+
+     H*Wind for Dummies
+
+    1. Establish an X11 windows session, via CubeX or X-Terminal.
+    2. In your local host, type: xhost +
+    3. ssh -l username cat5.nhc.noaa.gov (140.90.240.207)
+       or for faster execution at AOML
+       ssh -l username 140.90.39.134
+    4. At the prompt of cat5, type: setenv DISPLAY IP address of local
+       machine:0.0
+       For example, if your localhost is tropic: 'setenv DISPLAY
+       140.90.39.130:0.0'
+       Type: hwind
+    5. H*Wind Graphical Output {for use by HRD realtime analysts}
+       Do quality control and schedule an analysis. After a successful
+       analysis, you will find the IDL output images on
+       "cat5:/home/AnalysisOutput/year/ATCFcode/day/time/"
+       (for example, /home/AnalysisOutput/2001/al01.2001/0605/1930)
+       Final output files:
+       idlbw1.ps - Black & white, 1 degree around the storm center
+       idlbw2.ps - Black & white, 2 degrees "
+       idlbw4.ps - Black & white, 4 degrees "
+       idlc1.ps - Color, 1 degree "
+       idlc2.ps - Color, 2 degrees "
+       idlc4.ps - Color, 4 degrees "
+
+    1. These files will get overwritten every time you re-run an analysis
+       for the same storm, same day and same time.
+    2. Ftp the desired 'idl*.ps' to a NeXT machine for final processing.
+    3. Creation of PLOTS on tropic:
+       ftp tropic (140.90.39.130)
+       login: wanda
+       Name: wanda
+       331 Password required for wanda.
+       Password:
+       put idl.ps idl.eps
+       quit
+       - On tropic: (in the wanda account)
+       Launch Diagram
+       Drag '.eps' file on blank template
+       Save anotated analysis as Postscript (.ps)
+    4. To capture Hwind's data coverage window, run xv on cat5. Click on
+       the button 'Grab' and follow its instructions. Save the image in
+       '.jpg' format (for example, allison_data_0605_1930.jpg)
+    5. How to put and print the analysis output at NHC:
+       Once the analysis is ready to be sent to NHC, create a postscript
+       version of it. (Note: you can not print ".eps" files at NHC.)
+       On tropic:
+       scp analysis.ps cat5.nhc.noaa.gov:
+       ssh cat5.nhc.noaa.gov
+       For black and white printer:
+       lpr -Ptafbhp analysis.ps
+       For color printer:
+       lpr -Ptekcol analysis.ps
+       Don't forget to call and confirm printout:
+       (305) 229-4415
+       (305) 229-4418 backup
+    6. How to put and print wind analyses at CPHC:
+       Create a postscript version of the analyses
+       ftp 140.90.183.29
+       User name? hrd
+       Password? (see Shirley for it)
+       put analysis.ps stormname_latest.ps <-- PLEASE use a name like
+       "daniel_latest.ps". Remember this will overwrite the image each
+       time. We need to conserve disk space....this is NOT an archive!
+       quit
+       telnet 140.90.183.29
+       User name? hrd
+       Password? (see Shirley for it)
+       For black and white printer:
+       lp stormname_latest.ps
+       For color printer:
+       lp -d DJ1600 stormname_latest.ps
+       Don't forget to call and confirm printout:
+       (808) 973-5280
+       (808) 973-5281 FAX
+    7. Sending wind analyses to JTWC:
+       E-mail wind analysis and data coverage jpg images to:
+       tdo@npmoc.navy.mil
+       This will get to all the typhoon duty officers.
+    8. Create JPEG version of analysis
+       - Convert Diagram's postscript analysis version to a JPEG file via
+       PixelMagician, Taylor or Imageviewer. Save JPEG file following the
+       naming convention of: "stormName_mmdd_hhmm.jpg" (for example,
+       allison_0605_1930.jpg).
+    9. Put the JPEG (data coverage, analysis) files available for ftp:
+       On tropic:
+       scp analysis_jpeg_file
+       username@cat5.nhc.noaa.gov:/home/FTP/Year/StormName/Analysis
+       scp data_coverage_jpeg_file
+       username@cat5.nhc.noaa.gov:/home/FTP/Year/StormName/DataCoverage
+     __________________________________________________________________
+
+                      [USEMAP:oar_noaa_doc_logos3.gif]
+
+   Funded by High Performance Computing and Communication(HPCC)
+   Disclaimer|Privacy
+   DOC/NOAA/AOML
+
+                                                 Russell.St.Fleur@noaa.gov
+                                              Last Updated August 30, 2001

@@ -1,0 +1,77 @@
+http://atlas-csc.inst.bnl.gov/ASMII.pdf
+
+   DRAFT CSC ASM II Board K.Vetter 29-Nov-99 INTRODUCTION The purpose of
+   this document is to describe the design goals and functionality of the
+   prototype ASM (ASM II) board used on the CSC chamber. The primary
+   design objective is to develop an ASM board quickly that will serve as
+   a test-bed for the CSC front end electronics and SCA controller
+   development. This includes the characterization of the NEVIS SCA,
+   AD9220 ADC and Pre-Amp. The second objective is to be able to use the
+   ASM II board in the June-2000 CSC beam test at CERN. ASM II BOARD The
+   ASM II board will have one SCA producing twelve channels. Four
+   selectable analog channels for real-time analysis are also provided.
+   Configurable parameters include number of samples, number of samples
+   prior to trigger and analog channel select. Parameters are selected by
+   on-board switches or via remote control link. Unlike the Liquid Argon
+   configuration the SCA will be biased at +5v and GND. This biasing
+   arrangement changes the logic levels to the SCA. We hope to be able to
+   adjust the bias current to the logic inputs on the SCA such that a
+   threshold voltage of +1.2v above ground is achieved. By doing this the
+   digital control lines of the SCA will be LVDS compatible. Included are
+   four analog channels for real-time analysis. Data is multiplexed into
+   four FIFO's during the SCA read sequence. The data is then re-timed by
+   reading the FIFO's at the 5MHz SCA readout rate upon completion of the
+   SCA read sequence. Digital data from the ADC is made available for
+   transmission to a data acquisition system. The signals will be
+   transmitted using LVDS to maximize noise immunity over an approximate
+   100ft span during beam test. The ADC data is sent in parallel to an
+   on-board HP G-Link fiber optic transceiver. A functional block diagram
+   for the CSC ASM II board is shown below. It should be noted that the
+   pre-amp will not reside on the ASM II board. The pre-amp will be tested
+   with the ASM II as two interconnected separate assemblies. 1 Figure 1
+   ASM II NUMEROLOGY An example calculation of data rates is illustrated
+   in table 1 based on five samples per channel and ten bits per sample.
+   Channels 12 Samples/channel 5 Bits/sample 10 Trigger rate 100 Hz
+   Channels per ASM II 12 SCA's per ASM II 1 Samples/trigger 60
+   Bits/trigger 600 Bits/sec/ 60kbps ASM II CONTROLLER It has been decided
+   to proceed with an SCA controller based on commercial FPGA SRAM based
+   technology. An Altera EP20K100 from the Apex family has been chosen.
+   The choice of SRAM technology was deemed necessary to be able to
+   characterized the front end electrical components in the shortest time
+   possible. The controller program contents will be stored on-board in an
+   Altera 2 EPC2 EPROM. This makes it possible to reprogram the controller
+   in-circuit via the JTAG (IEEE 1149.1) interface. The first-order SCA
+   controller will not incorporate the list processor scheme. The
+   controller will be capable of reading out SCA data based on user
+   selectable starting pre-trigger address, and selectable number of
+   channel sample points. Four [12x144] FIFO's are included that are
+   capable of storing a complete SCA channel. The FIFO's are preceded by
+   an ADC multiplexor that selects 4 of 12 channels to be stored in the
+   FIFO's. The channel selection is programmable via on-board switches or
+   remote control. Upon reception of an external trigger the controller
+   inhibits the SCA write clk (Wclk) and begins the SCA readout sequence.
+   The SCA is readout at a rate of 5MHz. The FIFO's are filled at a rate
+   depending of the number of samples per channel since the SCA is readout
+   on a rotating sample per channel basis (i.e.
+   c1s1,c4s1,c7s1,c10s1,c2s1,c5s1,c8s1,c11s1,c3s1,c6s1,c9s1,c12s1,c1s2).
+   After the SCA readout process is complete a state machine is
+   initialized to begin the FIFO readout process. The FIFO's are re-timed
+   to the SCA readout clock of 5MHz. Each FIFO channel is 12 bits. Figure
+   2. DATA AQUISITON AND TEST 3 Although four channels are provided on the
+   ASM II for real-time analysis on an oscilloscope it would be desirable
+   to capture the ADC digital data. This is not only desirable for
+   development at BNL, but a requirement for beam test. A proposed Data
+   Acquisition system for beam test is shown below in figure 3. Data from
+   the ASM II would be captured by a high speed PCI based plug-in data
+   acquisition card. One possible solution is the Gage Compuscope 3200
+   capable of capturing 32-bits of data at 100MHz. This would meet the
+   5MHz burst data rate from the ASM II. The second requirement is to be
+   able to remotely control parameters on the ASM II board. A possible
+   solution would be to use the Gage 3250 plug-in card. This product is
+   capable of sending 32-bit digital words at 50MHz. Control of the 3250
+   can be accomplished using either Gage software, or LabView drivers from
+   Gage. Other solutions based on PC data acquisition from companies such
+   as National Instruments are also being evaluated. An advantage of this
+   system is that all data would be available via network or internet. It
+   would then be possible to copy files for analysis using Unix based
+   programs such as PAW. Figure 3. 4

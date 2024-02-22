@@ -1,0 +1,99 @@
+http://www-didc.lbl.gov/DMF/
+
+       The Data Intensive Distributed Computing Research Group (DIDC)
+                    Lawrence Berkeley National Laboratory
+
+   LBL logo
+
+                      Distributed Computing Department
+
+            National Energy Research Scientific Computing Center
+
+                         Computing Sciences Division
+
+
+                   Distributed Monitoring Framework (DMF)
+
+   The goal of the Distributed Monitoring Framework is to improve
+   end-to-end data throughput for data intensive applications in a
+   high-speed WAN environments, and to provide the ability to do
+   performance analysis and fault detection in a Grid computing
+   environment. This monitoring framework will provide accurate, detailed,
+   and adaptive monitoring of all of distributed computing components,
+   including the network. Analysis tools will be able to use this
+   monitoring data for real-time analysis, anomaly identification, and
+   response.
+   Many of the components of the DMF have already been prototyped or
+   implemented by the DIDC Group.  The NetLogger Toolkit  includes
+   application sensors, some system and network sensors, a powerful event
+   visualization tool, and a simple event archive. The Network
+   characterization Service has proven to be a very useful hop-by-hop
+   network sensor. Our work on the Global Grid Forum Grid Monitoring
+   Architecture (GMA) addressed the event management system. JAMM (Java
+   Agents for Monitoring Management) is preliminary work on sensor
+   management. The Enable project produced a simple network tuning advice
+   service.
+   The main components of the DMF are instrumentation, sensors, sensor
+   management, event publication, and event archiving.
+     * Instrumentation
+
+     * The ability to do precision, real-time instrumentation of Grid
+       applications and middleware is essential to the process of
+       developing high performance data intensive applications. DMF will
+       include tools to make it easy to non-intrusively add
+       instrumentation to Grid middleware, and to publish this event data
+       in a standard manner. Our previous work on the NetLogger Toolkit
+       will provide the basis for this component.
+
+     * Sensors
+
+     * Network and host sensors, combined with instrumented applications,
+       allow one to do end-to-end performance analysis. The DMF will
+       define standard schemas and publication mechanisms for this sensor
+       data. In particular, we will focus on network sensors. Based on our
+       work on the Network Characterization Service, the DMF will include
+       non-intrusive network sensors capable of hop-by-hop network
+       analysis. There are plenty of existing host sensors available, and
+       a subset of these will be integrated into the DMF. Other network
+       monitoring work such as the Net100 project, and the Self
+       Configuring Network Monitor project, whose goal is to design and
+       deploy a passive monitoring infrastructure, will also be
+       integrated.
+
+     * Sensor Management System
+
+     * As distributed systems become bigger and more complex, there are
+       more pieces to monitor and manage. Some components will require
+       constant monitoring, while others will only be monitored on demand.
+       The sensors themselves need to be automatically installed, updated,
+       and removed. We are developing a Sensor Management System, based on
+       our JAMM work, to securely control the distribution and execution
+       of monitoring sensors in a distributed/Grid environment.
+
+     * Event Publication
+
+     * To handle the potentially huge amounts of sensor event data
+       requires a flexible, highly scalable event publication and
+       subscription service. The Grid Monitoring Architecture (GMA) is
+       designed for this purpose.
+
+     * Event Archives
+
+     * The ability to archive event data is critical for performance
+       analysis and tuning, as well as for accounting purposes. The
+       archive must be extremely high performance and scalable to ensure
+       that it does not become a bottleneck. Our initial work in this area
+       is called netarchd.
+   _______________________________________________________________________
+
+   The DMF framework is being used in the following projects:
+
+   ·         Net100 Project
+
+   ·         EU DataGrid
+
+   ·         Particle Physics Data Grid
+
+   _______________________________________________________________________
+
+     DIDC home page

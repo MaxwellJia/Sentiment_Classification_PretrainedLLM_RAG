@@ -1,0 +1,106 @@
+http://www.t4.lanl.gov/ja/kinetics.html
+
+   T-4 Home
+
+                                Plasma Modeling
+     __________________________________________________________________
+
+   A collection of computer codes developed in a collaborative effort
+   between T and X Divisions at Los Alamos have been applied to a variety
+   of plasma modeling problems. The core codes are used to calculate a set
+   of basic atomic physics data based on ab initio atomic structure
+   calculations. The calculated data include atomic energy levels,
+   oscillator strengths, electron-impact excitation and ionization cross
+   sections, photoionization cross sections, and autoionization rates.
+   Plasma modeling calculations are performed by other codes which access
+   and use these data sets directly. These codes calculate both
+   equilibrium and nonequilibrium population distributions of atomic
+   levels and spectra. Both fine-structure and configuration-average
+   atomic models can be used depending of the desired level of complexity.
+   Detailed spectra involving millions of optical transitions can be
+   calculated. In configuration-average mode unresolved-transition-array
+   (UTA) theory based on Slater integrals stored in the atomic data set
+   can be used to construct realistic spectra for atoms with very complex
+   configurations. The possibility of using these methods for high-Z atoms
+   is now being considered.
+
+   The codes have been used to predict the behavior of plasmas produced in
+   the laboratory and to analyze plasma sources of commercial interest.
+   The first successful application of the codes involved the analysis of
+   opacity measurements. Here x rays are used to backlight a plasma and
+   the resulting transmission is recorded. For a given density and
+   temperature, level populations can be calculated assuming local
+   thermodynamic equilibrium. These populations with the calculated
+   photoexcitation and photoionization cross sections are used to predict
+   the absorption properties of the plasma. Figure 1 is a comparison of
+   theoretical and observed transmission from experiments performed at the
+   Rutherford Appleton Laboratory in England. The absorbing medium is an
+   aluminum plasma at a temperature of 40 eV and density of 0.0135 g/cm^3.
+
+Fig. 1 Figure 1
+
+   It is well known that impurity radiation is a significant energy loss
+   mechanism in tokomak plasmas. Here impurities from the wall contaminate
+   the plasma, and electron collisions with these ions produce radiation
+   which degrades the reactor performance. Also, impurity gases can be
+   introduced into certain regions of the reactor to cool critical plasma
+   facing components such as the divertor. The latter scheme is being
+   considered for the development of the International Thermonuclear
+   Experimental Reactor ( ITER ). Thus there is a crucial need for
+   accurate calculations of radiative power loss for a variety of elements
+   of interest. The Los Alamos codes have been used to provide more
+   accurate estimates of power loss for various impurity ions. Significant
+   discrepancies between these calculations and the standard method, which
+   uses less accurate atomic physics, have been uncovered. The effects of
+   electron density and metastable states have been found to be important.
+
+   The codes have been used to study several plasmas of commercial
+   interest. One project involves the production of extreme ultraviolet
+   radiation for lithography applications. Relativistic electron beams are
+   injected into a slightly ionized gas. Energy is transfered from the
+   beam electrons to the plasma electrons which become very hot. The hot
+   electrons then ionize and excite the surrounding gas atoms to produce
+   the desired radiation. The kinetics codes have been used to predict the
+   output spectrum. In addition, the capability to provide the
+   simultaneous solution of level populations and the free-electron energy
+   distribution is being implemented for this project.
+
+   The codes have been used to generate xenon atomic data for the one- and
+   two-dimensional modeling of plasma display panels. Here an electrical
+   discharge is used to excite a gas and produce radiation which is used
+   to drive a display panel. Since the computer simulations are very time
+   consuming the calculated atomic data must be reduced to a model
+   containing only a few atomic states. An averaging technique has been
+   developed to perform this data reduction.
+
+   Other applications include spectroscopic diagnostics for inertial
+   confinement fusion (ICF). Here spectroscopy is used to determine the
+   plasma temperature and density within ICF hohlraums by comparison with
+   calculated line ratios. Another project is a Los Alamos /Russian
+   collaboration to study highly resolved spectra from plasmas produced by
+   various means. This study has resulted in the identification of many
+   satellite lines emitted from magnesium and silicon plasmas. The codes
+   have also been used to model x-ray laser plasmas with regard to the
+   gain coefficient for various lasing transitions. Various laser produced
+   plasmas from both Los Alamos and other outside sources have been
+   studied. In addition, electron beam effects were found to be important
+   for determining spectral properties of plasmas produced by pulsed power
+   devices such as the x-pinch. Figure 2 shows a comparison of theory and
+   experiment for the Be-like spectrum of aluminum observed in the Cornell
+   University x-pinch. The electron beam effects are included in the
+   calculation by using a non-Maxwellian electron distribution.
+
+Fig. 2 Figure 2
+     __________________________________________________________________
+
+   Address scientific comments and questions to
+
+
+    Joe Abdallah <abd@lanl.gov>
+     __________________________________________________________________
+
+   Return to T-4 home page
+     __________________________________________________________________
+
+
+    T-4 Webmaster <webmaster@t4.lanl.gov>

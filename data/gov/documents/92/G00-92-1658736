@@ -1,0 +1,736 @@
+http://www.arm.gov/docs/data/dqhome.html
+
+   ARM Logo
+
+                About | News | People Directory | Site Map | Search | ARM Home
+
+
+   ARM Logo
+   Rollover button
+                   SITES
+   Rollover button North Slope of Alaska
+   Rollover button Southern Great Plains
+   Rollover button Tropical Western Pacific
+
+   Rollover button
+                   INSTRUMENTS
+   Rollover button Aerosols
+   Rollover button Atmospheric Profiling
+   Rollover button Clouds
+   Rollover button Radiometers
+   Rollover button Surface Energy Flux
+   Rollover button Surface Meteorology
+
+   Rollover button DATA
+   Rollover button Data Archive
+   Rollover button Data Quality Program
+   Rollover button Value-Added Products
+   Rollover button External Data Center
+   Rollover button Metadata Navigator
+   Rollover button Related Data Links
+   Rollover button Quick Looks
+
+   Rollover button EDUCATION
+   Rollover button Interactive Quiz
+   Rollover button Lesson Plans
+   Rollover button Outreach
+   Rollover button Ask a Scientist
+
+                   MISCELLANEOUS
+   Rollover button Acronyms / Glossary
+   Rollover button Calendar
+   Rollover button Contacts
+   Rollover button Image Library
+   Rollover button Intensive Operational Periods
+   Rollover button Internal Pages Key symbol indicating an internal web
+                   page.
+   Rollover button Links
+   Rollover button Policies / Procedures
+   Rollover button Publications
+   Rollover button Research Activities
+   Rollover button UAV Program
+   Rollover button Who is Involved
+
+                         Privacy and Security Notice
+
+                             ARM Program Data Quality
+        __________________________________________________________________
+
+      Welcome to information describing the data quality control efforts of
+      the Atmospheric Radiation Measurement (ARM) Program . For
+      instrument-specific data quality information and guidance, see ARM's
+      instrument web pages.
+        __________________________________________________________________
+
+   Page Contents:
+
+        * Introduction
+        * Data Quality Health and Status - Working Display of Current and
+          Recent Quality Control Attributes
+        * Meta Data Navigator - Display of Quality Control Attributes of
+          Archived Data
+        * Instrument Web Pages - Specifications and Expectations
+        * Automated Quality Control - Flagging Contained within Data Files
+        * Quality Control Applied by Instrument Mentors, Site Scientists, and
+          the Data Quality Office - Value-Added Checking
+        * Data Quality Reports - Notification to the Data User
+        * Value-added Procedures and Quality Measurement Experiments - Second
+          Generation Data Streams
+        * Data Collection Health and Status Information - Status Tools for
+          Site Operators
+        * Data Quicklooks - Online Visualization of Data Streams
+        * Data User Notes - General Online Guidance for the Data User
+        * Calibration and Maintenance Information - Instrument Performance
+        * The Continuous Quality Improvement Program - Never Ending
+          Improvement
+        * Data Quality Program Personnel - Who to Contact?
+        __________________________________________________________________
+
+   Introduction
+
+      One of the primary goals of the ARM Program is to provide data streams
+      of reasonable quality for scientific research.  Traditionally, data
+      quality issues have been addressed within ARM at several levels,
+      including by instrument mentors, site scientists, value-added product
+      scientists, and Science Team members at large.  Maintaining data
+      quality for a program of the size and complexity of ARM  is a
+      significant challenge - efforts toward this end have matured and
+      evolved over the life of the program.
+
+      The ARM Program Data Quality (DQ) Office was established in July 2000
+      to help coordinate the continued evolution and implementation of
+      efforts to assure the quality of the data collected by its field
+      instrumentation.  The DQ Office has the responsibility for ensuring
+      that quality assurance results are communicated to 1) data users so
+      that they may make informed decisions when using the data, and 2) ARM's
+      Site Operations and Engineers to facilitate improved instrument
+      performance and thereby minimize the amount of unacceptable data
+      collected.
+      Toward these goals, the DQ Office, instrument mentors, site scientists,
+      and others in ARM help review and assess ARM's data streams and write
+      and submit appropriate Data Quality Reports (DQRs) as needed.  These
+      DQRs provide data quality assessment to data users via the Meta Data
+      Navigator (MDN) and its color-coded display system. These groups also
+      work closely with the three Cloud and Radiation Testbed (CART) site
+      operators to impart information about data quality that will initiate
+      troubleshooting and/or corrective maintenance activity. Work is also
+      done to devise and implement schemes to flag questionable data as they
+      are processed into netCDF data files. To view ARM's netCDF file
+      structure, please click here.
+      In addition, the DQ Office oversees the collection and presentation of
+      documentation on the data quality program, such as the web page you are
+      now reading, to help achieve consistency of presentation within the ARM
+      Program and to make this information available and useful to data
+      users.  This includes ARM's informative web pages describing its
+      instruments.  Standardization of the quality assurance procedures that
+      are applied to data is also an ongoing process in order to establish
+      data quality baselines and protocols for each instrument that are
+      consistent across the three CART sites.
+
+      The results of routine data stream checking, often on an instrument by
+      instrument basis, allow us to identify where known problems and
+      questionable data are so that we may communicate this information to
+      data users and the ARM infrastructure.  We can also communicate about
+      how we made these determinations.  We in general will deem unflagged
+      data as good for most purposes. Higher-level data stream
+      intercomparisons and the generation of value-added products can augment
+      the routine checking by giving us an idea of the relative utility of
+      data streams, and in essence, tell us "how good" the good data might
+      be.  These higher-level checks can also point out deficiencies that are
+      not necessarily detectable within individual data stream checks.  The
+      creation of the higher level products also provides the user community
+      with heavily-screened, "pre-chewed" data sets ready for use in
+      high-level scientific research.
+
+      The sections within this page provide general description and
+      documentation of the various parts of ARM's Data Quality Program.  This
+      page, along with instrument-specific information on data quality that
+      is contained within the instrument web pages, represents a Quality
+      Control Manual  for the ARM Program.  These will be living documents
+      that will allow us the ability to provide updates, changes, and notices
+      of progress.
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Data Quality Health and Status - Working Display of Current and Recent
+   Quality Control Attributes
+
+      The ARM Program has a number of web areas dedicated to displaying data
+      quality "health and status" results in the near real-time so that those
+      involved in quality assurance activities can constantly monitor data
+      quality.  This ability to monitor data quality reduces the amount of
+      unacceptable data collected by ensuring faster response times when
+      problems arise.  The links below take you to such web areas for the
+      three CART sites.  An effort is underway to standardize the display of
+      this data quality information, and the checks applied, across the CART
+      sites.
+        * NSA
+          Barrow - Health and Status
+          Atqasuk - Health and Status
+        * SGP
+          Data Quality Health & Status
+        * TWP
+          Manus - Health and Status
+          Nauru - Health and Status
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Meta Data Navigator - Display of Quality Control Attributes of Archived Data
+
+      The Meta Data Navigator (MDN) is ARM's graphical user interface for
+      archived data for 1) viewing the quality assessment assigned to data,
+      2) viewing quicklooks, and 3) ordering data.  It is also the place
+      where those involved in ARM Program data quality assessment activities
+      can submit DQRs and thereby assign quality "color" attributes to the
+      data stream variables.
+
+      The tasks of 1) incorporating what is known about data availability and
+      quality, and 2) linking this knowledge directly to individual
+      measurements in a way that is easily identifiable by data users, such
+      as by data flagging and metadata, were accomplished through development
+      of the MDN.  Within the MDN, a communication interface was established
+      by color-coding data stream variables obtained from a particular
+      instrument, with different colors indicating the availability and
+      quality of the data on a daily aggregate scale.  Pointers direct the
+      data user to the data quality inspection method(s) used to color
+      characterize each measurement.  The color rules adopted include:
+        * White - Data exist but have not been checked for quality.
+        * Black - Data are missing or do not exist.
+        * Green - Data have been reviewed for quality by various methods and
+          are judged to be acceptable for use.
+        * Yellow - Data have been reviewed for quality by various methods and
+          are judged to be suspect or questionable - use at your own risk.
+        * Red - Data have been reviewed for quality by various methods and
+          are judged to be of  poor enough quality to be deemed unusable.
+
+      The color of the data may change over time to reflect the most current
+      view of their quality.  The entire process is automated but includes a
+      manual override capability.  Determination of color is ultimately made
+      by some combination of input by automated flagging contained within
+      netCDF files and by additional manual or automated checks made by
+      instrument mentors, site scientists, and the DQ Office, as reported in
+      DQRs.  A system is now being developed to allow shipment of the color
+      attributes within a data file.
+
+      To use the MDN, click on the link here and then click on "Services."
+      If you are a first-time user, you will first need to click on the "set
+      up" link.  This setup procedure may require you to download a version
+      of Java software if your web browser does not already contain it, and
+      to create a user account.
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Instrument Web Pages - Specifications and Expectations
+
+      The ARM Program has created a series of detailed web pages that
+      describe the specifications of its instruments.  A fundamental of
+      quality control is a "statement of expectations."  Quality is the
+      measure of how closely something conforms to an expectation.  Without
+      an expectation, a quality assessment is not possible.  Thus, the
+      instrument pages represent ARM's statement of expectations for its
+      instruments, the baseline against which the observations can be
+      compared.  These web pages include our current understanding of the
+      measurement systems and their quirks and deficiencies, including common
+      problems encountered or inherent to the measurement.
+
+      These pages are also the place for you to find specific information
+      about the data quality for each instrument.  The table of contents of
+      each instrument page looks like this:
+        * General Purpose
+        * Primary Quantities Measured with System
+             + Primary Quantities Measured
+             + Overall Uncertainties for Primary Quantities Measured
+        * Detailed Description
+             + List of Components
+             + Description of System Configuration and Measurement Methods
+             + Description of Observational Specifications
+        * Theory of Operations
+        * Current Status and Locations
+        * Data Quality
+             + Current Health and Status
+             + Data User Notes
+             + Automated Quality Control/flagging contained within netCDF
+               files
+             + Instrument Mentor Quality Control Checks
+             + Site Scientist/Data Quality Office Quality Control Checks
+             + Value-added Procedures
+             + Quality Measurement Experiments
+             + Examples of Data
+             + Data Quicklooks/near real-time
+        * Calibration and Maintenance
+             + Calibration Theory
+             + Calibration History
+             + Maintenance Procedures
+             + Online Maintenance Documentation
+             + Supplemental Assessment of Instrument Calibration and
+               Maintenance Procedures
+        * Frequently Asked Questions FAQs
+        * Software Documentation for this Instrument
+        * Contacts
+             + Instrument Mentor
+             + Vendor/Instrument Developer
+        * Glossary
+        * Acronyms
+        * Citable References
+
+      Topics above highlighted in bold specifically address data quality
+      issues.  The topic "Data User Notes" includes advice to the data user
+      based on ARM's experience in checking and using the data (see separate
+      section on this below).  Some advice of this type may also be contained
+      within the topics "Frequently Asked Questions FAQs" and "Overall
+      Uncertainties for Primary Quantities Measured."
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Automated Quality Control - Flagging Contained Within Data Files
+
+      Automated Quality Control refers to data quality checks that are
+      applied when data streams are processed by ARM, generally during ingest
+      into the site data systems.  At present for most ARM instruments, data
+      are checked for violations of simple physical limits (minimum, maximum)
+      and maximum change (delta) on each data field.  Samples that exceed
+      these criteria are flagged and these flags are included in the netCDF
+      files.  Some instrument data files contain the results of more
+      sophisticated quality checks.  Work is in progress to ensure the
+      results of automatic flagging provide the first "brush" of color-coding
+      as viewed in the MDN.
+
+      Information about flagging is included in the header (known as a Data
+      Object Design or DOD) of each netCDF file.  The data user needs to
+      carefully read and consider this header information and any quality
+      flags when processing their data.  See the DOD website for this header
+      information for ARM data files.
+
+      The format in which the ARM Program stores quality control information
+      in data files changed in spring 2001 to support the Meta Data Navigator
+      and to improve the consistency of data representation across the three
+      ARM CART sites.  The release of the updated approach is in progress.
+      Changes being made to the data ingests to support the new quality
+      control methods include applying consistent quality control field and
+      attribute naming conventions, using consistent data level assignments
+      for quality controlled data streams, using a recommended method for
+      storing min/max/delta data, and the addition of a global attribute to
+      specify the type of quality control applied.  Please see this document
+      for further details.  The DOD website mentioned above shows the changes
+      made for each file.
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Quality Control Applied by Instrument Mentors, Site Scientists, and the Data
+   Quality Office - Value-added Checking
+
+      In addition to the generation of automated quality control results,
+      data quality issues are addressed at several levels within the ARM
+      Program.  One of the primary goals of the ARM Program is to provide
+      data streams of known and reasonable quality.  Maintaining data quality
+      for a program of the size and complexity of ARM is a significant
+      challenge.  Coordination of the activity among the various groups
+      responsible for monitoring quality is key, and is the responsibility of
+      the DQ Office.  This coordination addresses questions such as:
+        * What quality checks should be applied, and by whom?
+        * Who has authority to write DQRs and assign color attributes to the
+          data?
+        * What is the process for triggering troubleshooting or corrective
+          maintenance, and who is responsible for triggering it?
+        * What pitfalls should be flagged within files?
+        * How consistent should or can these quality procedures be across
+          CART sites?
+        * How consistent are calibration and maintenance procedures across
+          CART sites?
+
+      Various roles and responsibilities are described below.
+
+      Instrument Mentors are charged with developing the technical
+      specifications for instruments procured for the ARM Program. The
+      instrument mentor then tests and operates the instrument system either
+      at his or her location or at a CART site.  In addition, the mentor
+      works with data system personnel on data ingest software requirements.
+      Data ingest involves the conversion of data streams to the
+      International System of Units (SI), as well as the acquisition of
+      parameters that can be used to monitor instrument performance (e.g.,
+      monitoring an instrument's output voltage for a 5-V power supply or the
+      continuity of the wire in a hot-wire anemometer). Data collection and
+      ingest, then, are the focus of this first level of data quality
+      assurance. Quality at this level is monitored routinely by instrument
+      mentors and site operators.
+
+      The next level of mentor data quality assurance involves beta release
+      of data streams from individual instruments. The mentor receives the
+      data from the instrument to determine whether the technical
+      specifications of the instrument are being met. When the mentor is
+      satisfied that the instrument is functioning properly and the technical
+      specifications have been met, the data are formally released to the
+      Science Team and other data users. After this release, the instrument
+      mentor is charged with reviewing the instrument data streams on a
+      routine basis, which varies from biweekly to monthly.  Mentors report
+      their findings to data users via Data Quality Reports and to CART site
+      operations via established pathways.  The DQRs then assign or reassign
+      color quality attributes to the pertinent data streams as viewed in the
+      MDN.  Problem Identification Reports (PIFs) are submitted for problems
+      requiring the attention of the ARM Problem Review Board (PRB).
+
+      Instrument mentors provide all calibration, operations, and maintenance
+      documents and lists of spare parts to site operations. Typically, the
+      mentor provides additional detailed documentation and hands-on training
+      so that appropriate support can be offered by site operators.
+
+      Site Scientist and DQ Office data quality assessment efforts involve
+      evaluation of both individual and multiple sets of data streams as
+      needed.  These efforts both complement and augment those of instrument
+      mentors.  The main goal is to provide quick notification to site
+      operators whenever irregularities in data quality are found; this
+      minimizes the amount of unacceptable data collected by a CART site.
+      Site scientists also perform as-needed research on topics related to
+      data quality to help resolve any issues that may arise.
+
+      Site scientists at SGP and NSA perform daily or weekly visual data
+      quality inspections (TWP checks are typically made on a monthly basis
+      after data are received from the islands).  These inspections are based
+      on automatically generated quicklooks and other diagnostics.  Data
+      streams from different instruments are often compared and the quality
+      of the data is assessed based on guidelines developed (usually
+      prescribed by instrument mentors).  To some extent, guidelines are
+      developed on the scientific knowledge of the person performing the
+      assessment.  When problems are encountered, extra time is devoted to
+      track the cause of the problem.  Findings are noted at SGP and NSA via
+      weekly summary reports that are issued to relevant ARM personnel.  At
+      NSA, a data quality control form is entered into the Quality Assessment
+      Report (QAR) database once or twice per week.  Once a problem is
+      discovered, the site scientists report their findings to site
+      operations via established pathways, who then initiate actions to fix
+      the problems.  If necessary, site scientists also submit PIFs to the
+      ARM Problem Review Board if local solutions are not found.  DQRs are
+      written in consultation and coordination with instrument mentors and
+      the DQ Office.
+
+      Essential to these quality control efforts is automated visualization
+      of site data.  SGP (and soon TWP) quicklooks are generated daily on a
+      SGP computer and made available for inspection on a web server.  At
+      NSA, data are automatically downloaded from the Barrow site data system
+      and from the ARM Data Management Facility (DMF) for Atqasuk, and
+      quicklooks are generated within a few hours after 0000 GMT.  The
+      quicklooks are added to the NSA quicklook database server and are made
+      available through a web server.  This database contains all quicklooks
+      produced by the NSA Site Scientist team, including the entire SHEBA
+      experiment, Barrow data since the site became operational in the spring
+      1998, and Atqasuk data acquired since the summer 1999.
+
+      At NSA, the QARs are entered into a NSA FileMaker Pro-based database.
+      This relational database is used to track data quality problems from
+      the time they are discovered until they are resolved and a DQR is
+      extracted.  In these QARs, problems that have occurred are marked at
+      the data point level.  These markings can then be used to color data
+      according to quality as well as to tag data with more descriptive flags
+      describing the problem.  This yields a valuable tool for operations
+      management and scientists for filtering bad data points from their data
+      sets. It provides statistics on common problems by tracking flags.  The
+      database allows tracking of current problems if they result in PIFs or
+      DQRs, and "closes" the problem without any action if the problem was
+      temporary and did not affect data quality.  The QAR web interface is
+      part of the NSA Operations Management Information System (OMIS) and can
+      be found at the NSA Site Scientist website under "NSA Data QC and OPS
+      Logs" and then under "NSA Quality Assessment Reports Database" (Barrow)
+      and "NSA Quality Assessment Atqasuk Database," respectively.
+
+      At SGP, a tracking tool was developed called the "Data Quality Problem
+      Report" (DQPR).  It allows site scientists and instrument mentors to
+      submit problems to site operations.  Once a problem is identified, it
+      is tracked by the site scientist with information provided by the
+      DQPR's originator, the relevant instrument mentor, and site
+      operations.  A DQPR is closed when the problem is solved, with the
+      final act being the writing of an official ARM DQR.  If a problem
+      cannot be solved within a reasonable amount of time, an ARM Problem
+      Identification Form (PIF) is submitted, with the problem then coming
+      under the purview of the Problem Review Board.  The end result of PIF
+      solution is also a DQR.  The SGP DQPR, which is part of the SGP OMIS,
+      can be found on the web here.
+
+      The DQ Office aids and assists the routine checking activities of both
+      instrument mentors and site scientists, and in some cases assumes many
+      of these activities (SGP now; TWP soon).  The DQ Office is also the key
+      group within ARM to apply the quality results found in Value-added
+      Procedures and Quality Measurement Experiments to evaluate the quality
+      of their input data streams.  The DQ Office will soon develop tools to
+      examine longer time series to better address issues such as instrument
+      fatigue and calibration drift.
+
+      Please see the instrument web pages for a description of the data
+      checking activities performed by each of these ARM groups for a
+      particular instrument.  The SGP and NSA site scientists also have web
+      areas devoted to current and recent quality control analyses and
+      results.
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Data Quality Reports - Notification to the Data User
+
+      A Data Quality Report (DQR) is a written statement about the quality of
+      data in a particular data stream.  The information could be quite
+      simple (e.g., stating an instrument system was turned off and the data
+      do not exist) or quite complex (e.g., providing detailed analyses and
+      equations that should be used to adjust the instrument's data).  At
+      present, when a person orders ARM data from the ARM Data Archive, all
+      DQRs written on the desired data streams are attached to the order.
+      DQRs are written by the appropriate instrument mentor, site scientist,
+      and DQ Office personnel.  These DQRs, as described earlier, then
+      provide color quality designations for viewing within the MDN.  As
+      indicated earlier, plans are underway to incorporate these "color
+      flags" in netCDF files so that they can be delivered to data users.
+
+      The ARM problem reporting system has several components. The process
+      begins with the completion and submission of a Problem Identification
+      Form (PIF). The PIF is received by the ARM Problem Review Board (PRB),
+      which is composed of representatives from across the ARM
+      infrastructure.  The PRB meets weekly via teleconference to review
+      PIFs, their attachments, and DQRs, and assigns responsibility for
+      analysis and resolution of problems.  Problem resolution is documented
+      in a Corrective Action Report (CAR).  A copy of the CAR is sent to the
+      originator of the PIF to ensure that resolution of the problem is
+      communicated to the data user via an eventual DQR.  The PIF/CAR/DQR
+      database is available online to all data users.
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Value-added Procedures and Quality Measurement Experiment - Second Generation
+   Data Streams
+
+      Unlike many other scientific projects, the ARM Program collects data in
+      an ongoing, continuous manner. Because of the volume of the perpetual
+      data streams, traditional case study methods for analyzing the data are
+      not always effective.  To meet the need for an automated analytical
+      approach, the concept of a Value-added Procedure (VAP) was defined. A
+      VAP creates a "second-generation" data stream by using existing ARM
+      data streams as input and applying algorithms or models to them.  A VAP
+      is run continuously by ARM and its output is treated as a new ARM data
+      stream.  VAPs are stored by ARM in c-level data files.  Some contain
+      automated quality flagging within their data streams.
+      A VAP in a special class called the Quality Measurement Experiment
+      (QME) compares various related data streams for consistency and allows
+      for continuous assessment of their quality.  These data streams may
+      come from direct measurements, measurements derived from instrument
+      observations via other VAPs, or model output created by other VAPs.
+
+      These VAPs and QMEs can cast a data quality "shadow" back onto their
+      input data streams, and this information is generally reported in
+      DQRs.  Instrument mentors, site scientists, and the DQ Office now use
+      the output of VAPs and QMEs to find subtle data quality problems within
+      the input data streams.
+
+      VAPs and QMEs now operational are described here.
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Data Collection Health and Status Information - Status Tools for Site
+   Operators
+
+      The ARM Program has a number of web areas dedicated to displaying
+      operational status in the near real-time so that those involved in the
+      operation of the sites and in quality assurance activities may monitor
+      site collection activity.  This ability to monitor collections helps
+      reduce the amount of instrument downtime by ensuring faster responses
+      when problems arise.  The links below take you to such web areas for
+      the three CART sites.
+        * NSA
+          Barrow - Health and Status
+          Atqasuk - Health and Status
+        * SGP
+          Production System - Collection Status
+          Development System - Collection Status
+          Data Availability During the Past Week
+          TWP
+          Manus - Health and Status
+          Nauru - Health and Status
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Data Quicklooks - Online Visualization of Data Streams
+
+      Data quicklooks are near real-time plots of collected data of varying
+      sophistication.  Some of these plots are intended and more useful for
+      operational diagnostic purposes, while others are useful for scientific
+      inquiry.  Basic quicklooks will soon become a display feature of the
+      MDN.
+
+      A compendium of ARM quicklooks is available for your perusal, which
+      includes the following specific web areas:
+        * NSA
+          Barrow
+          Atqasuk
+          SHEBA Ice Camp
+        * SGP
+          SGP
+        * TWP
+          Manus (click on "View Plot")
+          Nauru  (click on "View Plot")
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Data User Notes - General Online Guidance for the Data User
+
+      Several situations may arise during instrument operation that can
+      affect the quality of the data, but may not be flagged or otherwise
+      corrected--the user needs to be aware of them.  Some of these instances
+      may be documented in "general" DQRs and will be attached to data
+      orders.
+
+      These instances are, however, documented within the instrument web
+      pages.  Such user advice can be found under the topic "Data User Notes"
+      and sometimes under "Frequently Asked Questions FAQs."  Related
+      information about hardware performance limitations is also included in
+      the Instrument pages under the topic "Overall Uncertainties for Primary
+      Quantities Measured."
+
+      The data user is urged to read and heed such information!  CART
+      site-specific issues, based on the vagaries of measurements in diverse
+      locations such as the tropics, mid-latitudes, and polar regions, will
+      be called out in these websites or in general DQRs, if they exist.
+
+      An example of such information for the BBSS is:
+
+      "Among these situations are incorrect surface conditions, humidity
+      sensor saturation or icing, and interference or signal confusion from
+      other radiosondes. General DQRs have also been issued describing these
+      conditions, and the user is urged to read and understand them.
+      Specific DQRs are issued for those cases when incorrect surface
+      conditions are included in the soundings.  Cases of sensor saturation
+      (which may lead to unrealistic lapse rates or humidity values aloft)
+      and of sonde-to-sonde interference (which may result in incorrect data
+      values) are not generally called out in individual DQRs."
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Calibration and Maintenance Information - Instrument Performance
+
+      The ARM Program collects and stores information on calibration and
+      maintenance procedures, the results of applying such procedures, and
+      general information about the results of site maintenance visits.  Much
+      of this information is available within the instrument web pages.
+
+      Preventative maintenance procedures used by ARM are listed below under
+      "ALL SITES."  Locations for information specific to each CART site is
+      also given below.  The types of information generated by each CART
+      site, and how they are displayed, varies.
+        * GENERAL
+
+        Preventative Maintenance Procedures
+        Select instrument and toggle "Go."
+
+        * NSA
+
+        NSA Operations Management Information System (OMIS) (includes
+        preventative and corrective maintenance reports, sonde pre-launch
+        logs, and instrument inventory)
+        Click on "NSA Data QC and OPS logs."
+
+        * SGP
+
+        SGP Operations Management Information System (OMIS) (includes
+        engineering logs, preventative and corrective maintenance reports,
+        calibration reports, sonde status reports and launch logs, site
+        status, vegetation observations, instrument inventory, and
+        operations procedures)
+        SGP Preventative Maintenance Procedures
+        Click on desired site and follow links to "PM Procedures."
+
+        * TWP
+
+        Operations website (includes information on calibration and
+        maintenance procedures, event logs, daily rounds reports, RESET
+        visit reports, troubleshooting and observer manuals, and calibration
+        manuals)
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   The Continuous Quality Improvement Program - Never Ending Improvement
+
+      In 1998, SGP CART Site Operations implemented a Continuous Quality
+      Improvement Program (CQIP).  The CQIP is a field inspection program
+      designed to routinely evaluate field collection sites from the
+      scientific, engineering, operational, and safety perspectives.  It is
+      anticipated that a CQIP-type activity will be extended to the TWP and
+      NSA CART sites.
+
+      The CQIP consists of a cycle of planning, implementation, proficiency
+      checking, and analysis, and is embodied in periodic site visits, or
+      audits.  These audits are made by the CQIP team, comprised of the SGP
+      Associate Site Scientist, the Argonne National Laboratory Environmental
+      Safety and Health Director, the SGP Site Operations Safety Officer, and
+      the SGP Instrumentation and Facilities Manager.  The diversity in
+      background of this team allows it to assess the sites from the
+      aforementioned perspectives, both for the sites themselves and the
+      instrumentation deployed on them.  The audits include documented
+      inspections and observations of site grounds, instruments, equipment,
+      maintenance procedures, technician proficiency, and other work quality
+      measures.  Data collected during the audits are analyzed, and
+      improvements in the work process are developed and inserted into the
+      planning process for implementation.  Continued audits and checks
+      provide feedback to the quality cycle by assessing the effects of the
+      improvements.  The continuous assessment provides for evolution and
+      improvements in instrument performance and maintenance, site
+      maintenance, and planning for future site development.
+
+      For more details, please see the SGP CQIP website.
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Data Quality Program Personnel - Who to Contact?
+
+      Data Quality Office:
+
+      Randy A. Peppler
+      ARM Data Quality Office Manager
+      CIMMS/The University of Oklahoma
+      100 E. Boyd Street, Room 1110
+      Norman, Oklahoma 73019
+      Phone: (405) 325-6667
+      Fax: (405) 325-7614
+
+      Karen L. Sonntag
+      ARM Data Quality Office Specialist
+      CIMMS/The University of Oklahoma
+      100 E. Boyd Street, Room 1110
+      Norman, Oklahoma 73019
+      Phone: (405) 325-8983
+      Fax: (405) 325-7614
+
+      Andrew R. Dean
+      ARM Data Quality Office Specialist
+      CIMMS/The University of Oklahoma
+      100 E. Boyd Street, Room 1110
+      Norman, Oklahoma 73019
+      Phone: (405) 325-8983
+      Fax: (405) 325-7614
+
+      Instrument Mentors:  Please see contact information on the instrument
+      web pages.
+
+      NSA Site Scientist Team:  Rune Storvold, NSA Home Page
+
+      SGP Site Scientist Team:  Chad Bahrmann, SGP Home Page
+
+      TWP Site Scientist Team: Chuck Long, Jim Mather
+
+      Back to Page Contents
+        __________________________________________________________________
+
+   Page compiled by ARM Data Quality Office, University of Oklahoma.
+   Contact Randy Peppler if you have questions.
+      __________________________________________________________________
+
+      Send comments to WWW Administrator
+      This page last modified on Saturday, 26-Jan-2002 01:40:56 GMT
+      Security Notice
+      All rights reserved.

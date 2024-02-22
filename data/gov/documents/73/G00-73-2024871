@@ -1,0 +1,66 @@
+http://gams.nist.gov/Glossary.html
+
+     [Home] . . . Search by [Problem] [Package] [Module] [Keyword] . . .
+                               [Math at NIST]
+     __________________________________________________________________
+
+                                 GAMS Glossary
+
+   Class
+          The principal search mechanism in GAMS is based on a
+          tree-structured taxonomy of mathematical and statistical
+          problems. Each node in this tree is termed a problem class, and
+          is designated by a tag, an alternating sequence of letters and
+          numbers (e.g., D2b1). Each module in GAMS is assigned to one or
+          more problem classes. To locate software GAMS users find a class
+          that describes the problem they wish to solve and then view the
+          modules with that classification.
+
+   Component
+          A component is a retrievable object associated with a package or
+          module. Examples of module components are Source, Fullsource
+          (source plus dependencies), Documentation, and Example.
+          Available components vary from module to module and package to
+          package. Note that source is not always available (it is never
+          available for commercial software indexed in GAMS).
+
+   Cross-index
+          A cross-index collects in one place references to information
+          available from a variety of sources. GAMS is an example of a
+          cross-index of mathematical and statistical software.
+
+   Module
+          In GAMS we use the term module to denote a unit of software that
+          can be used to solve a particular problem. A module can be a
+          Fortran subprogram, a C procedure, a stand-alone program, or a
+          command in a system. Modules are what you are searching for when
+          you use GAMS.
+
+   Package
+          A package is a collection of modules related by authorship,
+          maintenance, or distribution. A package can be a subprogram
+          library, an interactive system, or a moderated collection of
+          programs.
+
+   Repository
+          A repository is an Internet site that maintains and distributes
+          a collection of software packages. In GAMS some repositories are
+          free public-access sites, such as netlib, while others are
+          computer systems accessible only by NIST staff. (In the latter
+          case GAMS has made special arrangements to redistribute selected
+          components.)
+
+   Virtual repository
+          GAMS does not maintain a software repository of its own.
+          Instead, it is a cross-index of a variety of repositories
+          maintained by others. Nevertheless, it does provide many
+          facilities of a software repository, such as search and
+          retrieval of source and documentation. Thus, GAMS can be viewed
+          as a virtual repository.
+     __________________________________________________________________
+
+      GAMS is a service of the Mathematical and Computational Sciences
+    Division / Information Technology Laboratory / National Institute of
+                          Standards and Technology
+
+           Last change in this page : May 22, 2000. [ Comments ].

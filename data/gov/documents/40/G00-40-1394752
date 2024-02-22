@@ -1,0 +1,119 @@
+http://polar.wwb.noaa.gov/vessel.icing/Welcome.html
+
+          Department of Commerce NOAA National Weather Service NCEP
+
+                 NCEP OMB Superstructure Ice Accretion Guidance
+
+                                                       rev 10 January 2000
+
+       !!PLEASE NOTE THE ftp FILE NAMES HAVE CHANGED FROM riceacrg_1x1 to
+  t00z.siceg_1x1 and t12z.siceg_1x1 THE GRIB INDEX FILES ARE ALSO AVAILABLE!!
+
+    The NCEP superstructure ice accretion forecast system was developed by
+    applying statistical algorithms developed by Overland and Pease at the
+    Pacific Marine Environmental Research Laboratory in the mid- 1980s. The
+    algorithm relates icing to wind speed, freezing point of sea water, air
+    temperature, and sea surface temperature. The method is designed for
+    trawlers in the 20 to 75 meter length range, underway at normal speeds in
+    open seas and not heading downwind. There are three categories: light - 0.1
+    to 0.8 inches of ice accretion/ 3 hours (aqua on chart); moderate - 0.8 to
+    2.4 inches/3 hours (dark blue on chart), and heavy - greater than 2.4
+    inches/3 hours (red on chart). It is available on a 1 deg x 1 deg grid for
+    the North Atlantic (N ATL) and Pacific (N PAC) basins. Binary data files in
+    GRIB are available on a 1 x 1 degree grid grid thoughout the year. The
+    figures are in gif format and are on the order of 10k each. The season for
+    vessel icing is 1 November - 31 May. Graphic output and binary files (GRIB
+    and GIF) are not available outside the season.
+
+   To ftp binary data, ftp to polar.wwb.noaa.gov, and cd to
+   pub/vessel.icing. Do a binary get t00z.siceg_1x1 or t12z.siceg_1x1
+   (PLEASE NOTE THIS IS A CHANGE FROM THE OLD FILE NAMES!! USERS WILL HAVE
+   TO CHANGE THEIR SCRIPTS!!) to download the GRIB ice accretion data for
+   the northern hemisphere. This file contains seven (7) records: one for
+   each projection from 00 to 72 hours at 12-h intervals on a 1 deg x 1
+   deg grid. Please send questions and comments to Lawrence D. Burroughs
+   at Lawrence.burroughs@noaa.gov
+
+     * About the NCEP Ice Accretion forecasts -- rev 19 Feb 1999
+     * N Atlantic Ice Accretion Forecasts - Figures
+     * Eurasian Ice Accretion Forecasts - Figures
+     * N Pacific Ice Accretion Forecasts - Figures
+     * Binary Ice Accretion Data - Binary Data
+     * Forecaster Considerations -- rev 19 Feb 1999
+     __________________________________________________________________
+
+North Atlantic Ice Accretion Forecasts
+
+   !!AVAILABLE ONLY FROM NOVEMBER - MAY!!
+
+     * 0000 UTC Cycle, 00-Hour Analysis Ice Accretion
+     * 0000 UTC Cycle, 12-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 24-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 36-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 48-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 60-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 72-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 00-Hour Analysis Ice Accretion
+     * 1200 UTC Cycle, 12-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 24-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 36-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 48-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 60-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 72-Hour Forecast Ice Accretion
+     __________________________________________________________________
+
+Eurasian Ice Accretion Forecasts
+
+   !!AVAILABLE ONLY FROM NOVEMBER - MAY!!
+
+     * 0000 UTC Cycle, 00-Hour Analysis Ice Accretion
+     * 0000 UTC Cycle, 12-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 24-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 36-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 48-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 60-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 72-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 00-Hour Analysis Ice Accretion
+     * 1200 UTC Cycle, 12-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 24-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 36-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 48-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 60-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 72-Hour Forecast Ice Accretion
+     __________________________________________________________________
+
+North Pacific Ice Accretion Forecasts
+
+   !!AVAILABLE ONLY FROM NOVEMBER - MAY!!
+
+     * 0000 UTC Cycle, 00-Hour Analysis Ice Accretion
+     * 0000 UTC Cycle, 12-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 24-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 36-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 48-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 60-Hour Forecast Ice Accretion
+     * 0000 UTC Cycle, 72-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 00-Hour Analysis Ice Accretion
+     * 1200 UTC Cycle, 12-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 24-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 36-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 48-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 60-Hour Forecast Ice Accretion
+     * 1200 UTC Cycle, 72-Hour Forecast Ice Accretion
+     __________________________________________________________________
+
+Binary Ice Accretion Forecast Data
+
+   !!AVAILABLE ONLY FROM NOVEMBER - MAY!!
+
+     Get 0000 UTC Ice Accretion Output
+
+     Get 1200 UTC Ice Accretion Output
+     __________________________________________________________________
+
+     * Return to the Operational Products Page
+     * Return to the Ocean Modeling Branch Page
+     * Return to the Environmental Modeling Center Page
+     __________________________________________________________________
+
+          Department of Commerce NOAA National Weather Service NCEP

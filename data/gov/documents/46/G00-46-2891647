@@ -1,0 +1,485 @@
+http://snfactory.lbl.gov/flux_calib.ps
+
+   SNfactory Spectrophotometry Requirements Document v0.2 Greg Aldering
+   Dec 4, 2000 1 Introduction The baseline requirement for
+   spectrophotometry for the SNfactory is an internally consistent
+   extra-atmospheric flux calibration with systematic accuracy better than
+   1% under photometric conditions and better than 3% under
+   non-photometric conditions. A knowledge of the flux calibration error
+   on an internally consistent system is also required. A derived
+   requirement is knowledge of whether conditions are photometric or
+   non-photometric. The flux calibration systematics requirements apply
+   over the spectral range where the total system throughput is greater
+   than 20% of peak (,3500-10500*A), with the exception of the sharp
+   atmospheric O2 bands (6900*A and 7600*A). The components necessary to
+   determine the flux calibration include: t = time * = wavelength X =
+   airmass k(*; t; X) = atmospheric extinction; as a function of *; t; X:
+   OE(*; t) = telescope throughput; as a function of *; t: ,(*; t) =
+   instrument throughput; as a function of *; t: D(*; t) = detector
+   quantum efficiency; as a function of *; t: S(*) = intrinsic standard
+   star spectrum; as a function of *: s(*; t; X) = observed standard star
+   spectrum; as a function of *; t; X: F (*) = intrinsic field star
+   spectrum; as a function of *: f (*; t; X) = observed field star
+   spectrum; as a function of *; t; X: S(*) is given by published
+   spectrophotometry of standard stars. It is possible that these
+   published results contain systematic errors which exceed the desired
+   SNfactory spectrophotometry absolute calibration budget. At this stage
+   nothing can be done about this, thus only an internally consistent
+   calibration budget is specified. Atmospheric extinction can be
+   decomposed into contributions from Rayleigh scattering, aerosol
+   scattering, ozone absorption, molecular oxygen absorption, water
+   absorption, and water scattering. None of these components can be
+   considered constant, but a great deal is known about the typical
+   spectral and temporal behavior of these components from calculations
+   and monitoring. According to the GONG site survey (Hill, et al.1994),
+   the extinction at Mauna Kea is among the lowest and most stable of any
+   astronomical site. The average optical extinction 1 Figure 1: The
+   extinction, in magnitudes per airmass, typical of Mauna Kea. on clear
+   days is 0.074, with a dispersion of only 0.015. The power spectrum of
+   transmission variations measured by GONG during clear days follows the
+   relation (\Delta I=Io)2 = (*=10\Gamma 6:80Hz)\Gamma 1:50 (1) where * is
+   the time frequency in Hz. This implies variations of 0.4% on timescales
+   of one hour and variations of 1.7% over the course of a night. At La
+   Silla, Burki, et al., 1995 found that the total U -band extinction is
+   correlated over a period of several days and that over one night the
+   autocorrelation drops by only 5% (implying a typical 2.2% variation in
+   extinction). These data indicate that ,1% extinction variations can be
+   expected over the course of a clear night, even at the best
+   astronomical sites. A closer examination of the following extinction
+   components is needed to help clarify the source and spectral
+   characteristics of such extinction variations: Rayleigh scattering:
+   Extinction due to Rayleigh scattering, kR, is known to follow aR*\Gamma
+   4+x, where x , 0:04 is a very small correction to the canonical law.
+   Rayleigh scattering dominates the extinction at most wavelengths under
+   photometric conditions. aR depends on the molecular scale height
+   (roughly 8 km) which depends on altitude, and on weakly varying
+   parameters like temperature, T , and pressure, P . Aerosols: Extinction
+   due to aerosol scattering, ka, is generally the second greatest
+   contributor. ka is often parameterized as aa*fl (*Angstrom 1961). fl
+   can vary widely, as shown in Fig. 2, 2 Figure 2: The variation in the
+   *Angstrom aerosol extinction parameter, fl, measured over Mauna Loa in
+   1999. The central bar is the median, the boxes define the 25--75%
+   range, and the outer whiskers denote the 5--95% range. Note that the
+   *Angstrom exponent in this graph is equal to \Gamma fl. (From
+   wwwsrv.cmdl.noaa.gov/aero/net/mlo/datacheck mlo.html.) using
+   observations from Mauna Loa. fl depends on the particle size
+   distribution of the aerosols, which shows variation with the source of
+   a given mass of air and can change appreciably after significant
+   volcanic explosions. Burki et al.1995 determined fl = \Gamma 1:39 for
+   La Silla using nights of low extinction. My modeling of the Mauna Kea
+   extinction curve using libRadtrans indicates that a simple power law is
+   inadequate to describe the aerosol scattering at that site. The
+   aerosols on Mauna Kea are likely a mix of sea salt and volcanic dust
+   from the summit and/or nearly islands ("vog," as it is known in
+   Hawaii). The strong temperature inversion layer below the summit helps
+   to keep a significant fraction of aerosols below the summit. Scattering
+   (but not absorption) by suspended water droplets is generally included
+   in the aerosol scattering budget. Water vapor and ice: The extinction
+   due to absorption by water vapor or clouds, kH2O;a is generally absent
+   or weak weak expect at a few wavelength intervals in the red. The night
+   time scale height for H2O is roughly 1 km. CSO monitoring indicates
+   that kH2O;a easily varies by factors of 2 over a few days (outer
+   quartiles at 1.7 and 5.9 mm of water), and by several tens of a percent
+   during a night on Mauna Kea (see Figs. 3 and 4). kH2O;s only need be
+   considered when clouds are present. It will be very time-variable as
+   clouds pass through the field of view. 3 Figure 3: The frequency
+   distribution of water vapor typical of Mauna Kea. kH2O;s is spectrally
+   neutral according to theory due to the large number of random scatters
+   in large water droplets or ice crystals. Oxygen: Extinction due to
+   ozone absorption, kO3, sets the UV limit for terrestrial observations,
+   but is generally smaller than Rayleigh scattering over most of the
+   optical spectrum. kO3 has a spectral shape which is well known, but
+   it's amplitude has seasonal variations and it is also reported to vary
+   on timescales of hours (Hayes & Latham 1975). Daily O3 observations
+   covering 1966--2000 from Mauna Loa have a dispersion of 7%, with
+   peak-to-peak variations of 36% (see www.cmdl.noaa.gov/dobson). A
+   histogram of daily Mauna Loa ozone column values is shown in Fig 5. O2
+   also produces absorption, kO2, which results in the A and B band
+   absorption features. These are strong but narrow, and their shape is
+   well known. It is generally assumed that extinction sources follow the
+   Beers-Lambert relation: Iobs = Itruee\Gamma kX (2) so the relation
+   between the true spectrum of a star, S(*), and its observed spectrum,
+   s(*; t; X) is given by: s(*; t; X) = OE(*; t),(*; t)DS(*; t)S(*)
+   exp[\Gamma X 5X i ki(*; t)] (3) 4 Figure 4: Representative Mauna Kea
+   water vapor monitor readings, from CSO. Exceptions include kO2, which
+   goes as X0:55, but this contribution can be easily determined from
+   spectroscopy since it is so spectrally isolated. Assuming that the
+   Beers-Lambert relation holds, the total extinction can be written as:
+   k(*; t) = kR(*) + ka(*) + kO3(*) + kH2O;a(*) + kH2O;s(*) + kO2(*) =
+   aR(t)*\Gamma 4+x + aa(t)*fl + aO3(t)o/O3 (*) + aH2O(t)o/H2O(*) +
+   acldo/cld(*)) + aO2 (t)o/O2(*) (4) The functions o/i(*) represent the
+   spectral properties of those extinction terms which are somewhat
+   complicated, but which are known from external measurements. Note here
+   I have separated the H2O into a "normal" component which includes only
+   absorption, and a "cloud" component. The scattering due to water vapor
+   is not included in the "normal" component since it is is already
+   accounted for in the aerosol-scattering term. The "cloud" term accounts
+   for scattering by water and ice in clouds. o/cld can change slightly
+   depending on the ice/water fraction of the clouds, and further work is
+   needed to characterize such changes. Additional absorption by water
+   vapor in clouds is accounted for in the above scheme by the "normal"
+   water component. 2 Extinction Correction under Photometric Conditions
+   When conditions are photometric, k is isotropic on the sky and has no
+   time dependence. In this case k(*) = P5i ki(*) can be solved for in
+   Eqn. 2 by observing the spectrum, s(*; t; X), of at least two stars
+   with known intrinsic spectrum, S(*). This statement implicitly assumes
+   that the combined response of the telescope, instrumentation, and
+   detector, given by: C(*; t) = OE(*; t),(*; t)DS(*; t) (5) 5 Figure 5:
+   Histogram of Ozone over Mauna Loa, measured in Dobson units. Values are
+   based on daily observations since 1966. is constant in time. That is,
+   it is assumed that C(*; t) = C(*), an issue which will be discussed
+   below. If k(*) is solved for at each wavelength, it is not necessary to
+   determine the individual ki(*) values for each extinction component.
+   However, if k(*) must be smoothed due to low S/N or other reasons, then
+   the relative contributions of the smooth (kR, ka, kO3,kH2O;s) and
+   structured (kH2O;a, kO2) components must be determined separately. Most
+   reduction methods do this in an approximate way by only separating
+   kH2O;a and kO2 at wavelengths were they are very large, and including
+   spectral regions where they are not so strong in the calculation of the
+   smooth component. It will be useful to verify the above
+   parameterization of k by decomposition of the SNfactory observations of
+   spectrophotometric standards. This is tractable because the relative
+   contributions of the various components vary with wavelength. Table 1
+   gives the relative contributions to the total extinction (mostly from
+   La Silla); several key wavelengths at which a given atmospheric
+   component will be most easily separable have extinction values
+   indicated in bold. Table 1 is also useful for identifying the
+   extinction components which must be well-determined to provide better
+   than 1% flux calibration. For instance, at most wavelengths kR
+   dominates and must be well-determined. Fortunately the behavior of
+   kR(*) is well known. ka must be 6 Table 1: Extinction components per
+   airmass at various wavelengths * Rayleigh Aerosol Ozone Water O2
+   Scattering Scattering Absorption Absorption Absorption 3460 0.500 0.049
+   0.020 0.000 0.000 4000 0.275 0.041 0.000 0.000 0.000 5800 0.062 0.025
+   0.023 0.000 0.000 7600 0.021 0.017 0.002 0.000 0.6 8500 0.013 0.015
+   0.000 0.000 0.000 9300 0.009 0.013 0.000 0.35 0.000 determined to
+   better than 10% (meaning constraints on both aa and fl), while the
+   amplitude aO3 can be uncertain by 20%, before these sources cause any
+   appreciable error. H2O and O2 must be determined very well (1%), but
+   only at certain wavelengths where they are well isolated from the other
+   components. A great advantage over existing work in this area is the
+   large simultaneous wavelength coverage the SNfactory spectrograph will
+   provide. 3 Extinction Correction under Non-Photometric Conditions Two
+   levels of non-photometric conditions can be defined: Mildly
+   non-photometric conditions are defined to occur when k is neither
+   isotropic nor time invariant, but before the formation of any visible
+   clouds. These conditions can occur for a number of reasons, most
+   notably a transition from one weather system to another during which
+   the aerosol content and composition, water content, temperature, and
+   pressure are changing. (Note that the arrival of a new weather system
+   changes temperature and pressure, which should therefore be routinely
+   monitored as a clue that conditions may be non-photometric.) These
+   conditions can also occur due to sinking of the aerosol layer (whose
+   scale-height is typically only ,1.5 km), and to a lesser degree the
+   molecular layer (having an 8 km scale-height), during the night as the
+   atmosphere cools. Strongly non-photometric conditions are defined to
+   occur whenever clouds of any kind are present. Since efficiency
+   decreases quickly with cloud optical depth, the only situation under
+   which fruitful observations might proceed is for thin cirrus clouds. In
+   this situation, the scattering properties of clouds enter into the
+   extinction through kH2O;s. As mentioned before, kH2O;s is fairly gray
+   (spectrally neutral). Under mildly non-photometric conditions where
+   temporal and spatial variations in k consist of large pockets of air,
+   as with different weather systems, then the observations of
+   spectrophotometric standard stars close in time and sky location to the
+   observation of program objects may allow localized correction for
+   extinction. Unfortunately, the accuracy of this approach is difficult
+   to verify, since the location and temporal variations in k are not
+   known a priori. With sufficient observations, trends in the standard
+   star observations can be examined for evidence of smooth changes or an
+   isolated transition in time or sky location. Only under these very
+   simple situations can calibration exclusively from spectrophotometric
+   standards hope to be sufficiently accurate. 7 Under strongly
+   non-photometric conditions, observations of spectrophotometric
+   standards is only of value of determining the relation between kH2O;a
+   and kH2O;s. Therefore, additional methods are needed in order for
+   useful observations to be obtained under non-photometric conditions.
+   3.1 The role of a parallel imager With the advent of CCD's, imaging
+   follow-up of variable events such as supernovae has exploited the fact
+   that over small fields of view non-photometric conditions tend to
+   uniformly depress the flux from all objects in the field. Thus,
+   non-variable objects in the field can be used as comparison objects,
+   and once the brightness of such comparison objects is determined under
+   photometric conditions, the relative brightness between the target
+   object and comparison objects can be converted to an absolute flux.
+   There are potential problems with this approach, namely the issues of
+   whether the non-photometric conditions really are constant over a
+   field, and whether the nonphotometric conditions have a reasonably
+   neutral spectrum so that the scaling does not depend on the spectrum of
+   the comparison stars. The constancy of the non-photometric conditions
+   across a field can be determined directly by comparing the variation in
+   scaling determined using field stars observed during both photometric
+   and non-photometric conditions. Thus, this uncertainty can be built
+   directly into the error budget. For long exposures, a range of cloud
+   patterns should be swept across the field of view, so most variations
+   should be slowly varying across the field. Most SNfactory supernova
+   fields will be visited many times, and conditions can be expected to be
+   photometric for some fraction of those visits. In particular, the visit
+   during which a final reference spectrum is obtained can be chosen to
+   occur during photometric conditions since it is not time-critical. The
+   imager will observe many stars surrounding each supernova. The
+   intrinsic spectrum, F (*) of these stars is unknown and some fraction
+   of them may be variable. The observation of star n, fn(*i; t; ff; ffi)
+   can be presented as fn(*i; t; ff; ffi) = 1Z 0 t+\Delta tZ t OE(*;
+   t),*i(*i; t)DI (*; t)Fn(*) exp[\Gamma X 5X i ki(*; t; ff; ffi)]d*dt (6)
+   Where the imager instrument response, ,*i(*; t), is dominated by the
+   response of a chosen filter, denoted by its central wavelength, *i.
+   Since parallel imaging is only of value for photometric corrections of
+   observations are obtained a precisely the same time as the
+   spectroscopy, we assume that the interval t to t + \Delta t is
+   identical for both instruments and use tj to label the observation at
+   epoch j. This necessity leads to a derived requirement for common or
+   synchronized shutters for the spectrograph and imager. Assuming that
+   the extinction is constant over a very small patch of sky surrounding
+   the supernova and observed by the imager, and using the index xk to
+   label the field, one can write: fn;*i;tj;xk = fn;*i;tj (ff; ffi) (7)
+   Thus, for each star in a field the variation at a given wavelength
+   during the course of j epochs is mapped out. Since some observations
+   are obtained during photometric conditions, the absolute brightness of
+   each star can be determined and subtracted to give the absolute
+   variation: \Delta fn;*i;tj;xk = fn;*i;tj;xk \Gamma fn;*i;xk;corr (8) 8
+   where corr denotes a flux corrected for extinction under photometric
+   conditions. The measurements for all the stars observed in one image
+   can be combined, to give: \Delta f *i;tj;xk = 1N NX n=1 \Delta
+   fn;*i;tj;xk (9) Clearly these values of \Delta f *i;tj;xk provide some
+   indication of the extinction variations over the wavelength span of
+   each filter, and for a set of wavelengths should give some information
+   on the extinction which applied to the contemporaneous and nearly
+   co-spatial supernova observation. However, there are two problems here.
+   First, note that without explicit knowledge of the *-dependencies of
+   the other terms in the integral of Eqn 6, fn;*i;corr can not be
+   calculated usingP 5 i=1 ki(*) determined from spectrophotometric
+   standard star observations. Instead each field,x k, would have to be
+   followed as a function of airmass on a photometric night so that
+   fn;*i;corr on the instrumental system of the SNfactory imager could be
+   determined for each star in that field. Such observations could be done
+   quite easily, but at some loss of observing efficiency on photometric
+   nights. Second, with a single filter, only the average extinction
+   correction over one wavelength interval is being measured at the time
+   of the supernova observation. Given the earlier discussion showing that
+   extinction has multiple components which do not scale together, such a
+   measurement could only provide an average correction for the portion of
+   the spectrum covered by the imager filter. Extrapolating to other
+   filters would be difficult, but not necessarily impossible. For
+   instance, in the case of increased water vapor due to incipient cirrus,
+   one could imagine monitoring a water absorption band to estimate the
+   column of water. The scattering component due to water will only become
+   gray once clouds actually form since multiple scattering is required,
+   however, by spectrally monitoring a standard star under such
+   conditions, a mapping between the water vapor absorption and the
+   extinction should be found and used for correction purposes. (As
+   discussed earlier, water scattering depends somewhat on whether water
+   is in ice or liquid form, and on the circumstances of ice formation.
+   Thus, any such relation would have an associated uncertainty whose
+   expected size is not known at present.) Similarly, changes in aerosol
+   content can be important contributors to non-photometric conditions and
+   one could imagine monitoring one bandpass to detect changes \Delta aa,
+   in the aerosol content if water vapor and other contributors were
+   stable. Of course ka depends on aa and fl, so it would be necessary to
+   assume a value of fl in order to extrapolate to other wavelengths. A
+   typical value (and dispersion) for fl would be known from
+   spectrophotometric standards observed under photometric conditions,
+   however, Fig. 2 shows that this parameter isn't necessarily that
+   stable. Knowledge of fl to \Sigma 0:2 is sufficient to keep the
+   calibration uncertainty below about 1%, for typical ka. Since
+   extinction correction using monitoring one one wavelength is not
+   necessarily sufficient, a solution for this and the field-star
+   calibration problem will now be addressed. 3.2 Multicolor field-star
+   monitoring One might imagine simply expanding the above approach to
+   include multiple filters. Since the observations must be taken
+   simultaneously with spectroscopic observations, an imager would have to
+   monitor different stars in a field using a single multicolor filter
+   (e.g., a series of adjacent filters close to the focal plane). By
+   covering the entire optical spectrum with filters, one would 9 obtain
+   the correct mean scaling for each portion of the simultaneous
+   spectroscopic observations. However, even such full-coverage multicolor
+   monitoring will not provide sufficient information to perfectly remove
+   extinction since the different extinction components do not vary
+   together. The uncertainty in this approach is difficult to predict
+   because it depends on details of how much different extinction
+   components can vary. In regions unaffected by water absorption, this
+   approach might work rather well. Table 1 and the previous discussion
+   suggests a means of breaking the degeneracy amongst extinction
+   components present in single-band or even full-coverage multicolor
+   monitoring under non-photometric conditions. Namely, if \Delta f
+   *i;tj;xk is determined at wavelengths where each extinction component
+   dominates, the parameterization of Eqn 4 could be used to determine the
+   correct extinction to apply to the spectroscopic observations.
+   Monitoring would have to occur at all *i at the same time in order to
+   account for variations of all the extinction components. The parameters
+   to be determined are aR(tj),aa(tj),fl(tj),aO3 (tj), and aH20(tj). It is
+   probable that aO2 can still be determined using spectrophotometric
+   standard star observations, even under non-photometric conditions, so
+   it is not included here. Methods of this type are routinely used in
+   remote sensing experiments. If the instrument response is assumed to be
+   constant, an observation taken with the imager in filter *i, at time tj
+   in field xk can be described by: fn;*i;tj;xk = 1Z 0
+   OE(*),*i(*)DI(*)Fn;xk(*) exp[\Gamma X 5X i=1 ki(*; t; ff; ffi)]d* (10)
+   The extinction term can be decomposed into its various components 5X
+   i=1 ki(*; t; ff; ffi) = aR;tj *\Gamma 4+x + aa;tj *fl + aO3;tj o/O3(*)
+   + aH2O;tj o/H2O(*) + acld;tj o/cld(*) (11) giving fn;*i;tj;xk = 1Z 0
+   C*i(*)Fn;xk (*) e[\Gamma X(aR;tj * \Gamma 4+x+aa;t j * fl+aO 3;tj
+   o/O3(*)+aH2O;tj o/H2O(*)+acld;tj o/cld(*))]d* (12) In order to solve
+   for the amplitudes of the various extinction components, the above
+   equation can be linearized by expanding the extinction terms in the
+   exponential about the mean extinction--airmass product, ! Xo/ ?, in the
+   given filter, e.g., fn;*i;tj;xk , e\Gamma hXo/i 1Z 0 C*i(*)Fn;xk(*) [1
+   + hXo/ i \Gamma X (aR;tj *\Gamma 4+x \Gamma aa;tj *fl \Gamma aO3;tj
+   o/O3 (*) \Gamma aH2O;tj o/H2O(*) \Gamma acld;tj o/cld(*))]d* (13) 10
+   fn;*i;tj;xk , e\Gamma hXo/i(1 + hXo/ i) Vo;*i;n;xk + e\Gamma hXo/iX
+   aR;tj;xk VR;*i;n;xk + e\Gamma hXo/iX aa;tj;xk Va;*i;n;xk(fl(tj; xk)) +
+   e\Gamma hXo/iX aO3;tj;xk VO3;*i;n;xk + e\Gamma hXo/iX aH2O;tj;xk
+   VH2O;*i;n;xk + e\Gamma hXo/iX acld;tj;xk Vcld;*i;n;xk (14) Where
+   Vo;*i;n;xk = 1Z 0 C*i(*)Fn;xk (*)d*; (15) VR;*i;n;xk = 1Z 0 C*i(*)Fn;xk
+   (*)*\Gamma 4+xd*; (16) and likewise for the other extinction terms.
+   This approximation should be good to better than 1% for typical
+   extinction values. The key is that observations in all I filters must
+   be taken simultaneously. Only in this case can the number of degrees of
+   freedom possibly be greater than zero (and as shown below, it is also
+   necessary that that the number of epochs be six or greater. A set of
+   nearly linear equations relates the observables, fn;*i;tj;xk, to the
+   unknown a's and V 's. The equations have a slight non-linearity due to
+   the additional unknown fl's which effects the Va;n;*i's. It is almost
+   certain that aR, aa, and fl will be correlated, but if the extinction
+   correction so obtained is good, then this is not an issue. Of course
+   the full correlation must be included in the calculations of the
+   uncertainties. The number of observables are the fluxes in I filters,
+   in K fields, of the NK stars, for JK epochs. Nobs = IX filters KX
+   fields JKX epochs NKX stars (17) (The values of the five a's and one fl
+   determined for L of J photometric epochs from spectroscopy of
+   spectrophotometric standards are not counted here): As an example, for
+   equal numbers of stars and epochs in each field, Nobs = IKJN = K(IJ N
+   ). The number of parameters is given by the five a's and one fl, to be
+   determined at JK \Gamma LK non-photometric epochs in K fields, plus the
+   six V 's for NK stars in K fields for the I filters: Npar = 6 KX fields
+   JK\Gamma LKX epochs + 6 IX filters KX fields NKX stars (18) Again, for
+   equal numbers of stars and epochs in each field, Npar = 6K(J \Gamma L)
+   + 6IKN . Note that for well-chosen filters, there will be just a few
+   dominant V 's for each measurement. In particular, for the water
+   absorption filter all but one V can be zero for a properly-chosen
+   filter. This reduces the number of unknowns. Likewise, it is reasonable
+   to expect that aR will not vary 11 strongly during a night and so can
+   be held fixed over the K fields observed on a given night, further
+   reducing the number of free parameters. To ensure that Npar ! Nobs we
+   require 6K((J \Gamma L) + IN ) ! K(IJ N ). Since in this treatment each
+   field is independent, the number of fields, K, cancels out. This can be
+   reduced to IN (J \Gamma 6)\Gamma 6(J \Gamma L) ? 0, which sets a
+   minimum requirement that the number of epochs J ? 6. Of course the
+   number of degrees of freedom is not the entire story. As discussed
+   earlier, decomposition of extinction into its various components is
+   unlikely to succeed unless there is at least one wellpositioned filter
+   per component. Although additional stars help, a range of spectral
+   types is required to provide substantially new information. The above
+   analysis shows that in principle the appropriate extinction as a
+   function of wavelength can be determined from multicolor photometry of
+   field stars taken simultaneously with spectrophotometric observations
+   of a program object under non-photometric conditions. This method can
+   be tested directly using such observations of spectrophotometric
+   standard stars. Monte Carlo simulations, and up-to-date absorption
+   spectral functions, are needed to validate the above analysis and to
+   determine the best filters (central wavelengths, widths, and shapes)
+   for the multicolor field-star monitoring. 4 The need to monitor system
+   stability So far it has been assumed that the OE(*; t), ,*i(t), and DI
+   (*; t) are constant over the entire one year period during which each
+   supernova is observed. Moreover, even if parallel multicolor fieldstar
+   observations are obtained to determine the extinction, the zero-point
+   of the spectrograph, ,(*; t), and the detector, DS(*; t) must be known
+   in order to obtain spectrophotometry from the extinction-corrected
+   spectra. Before exploring a solution, the possible sources of
+   zero-point change should be discussed. First, the telescope optics will
+   collect dust and undergo cleaning and recoating. Dust accumulation
+   alone can amount to 0.001 mag/day. The imaging filters, ,*i (t) will
+   have bandpasses that shift with temperature (and possibly humidity),
+   and they will suffer degradation over time. The spectrograph optics
+   should be fairly stable, however the dichroic beam-splitter can be
+   expected to show changes with temperature, and to degrade over time.
+   Finally, the QE(*) for the CCD detectors (DS and DI ) will depend on
+   cold-head temperature, and outgassing in the dewar will result in slow
+   condensation of contaminants on the face of the detectors. In the case
+   of the spectrograph, regular observations of spectrophotometric
+   standards on photometric nights will measure the product CS(*; t) =
+   OE(*; t),(*; t)DS(*; t) directly. Thus, if all sources of drift in the
+   spectrograph zero-point are very slow, and photometric conditions occur
+   sufficiently often, it may be possible to track CS(*; t) for the
+   spectrograph reasonably well. Sufficient standard stars will have to be
+   observed to even ascertain whether or not conditions are photometric,
+   unless there are other constraints on variations in CS(*; t). An
+   approach using standard stars also might be considered for the imager.
+   However, since the V 's result from integrals over the spectral
+   response of the imager and the unknown spectrum of the monitoring
+   stars, shifts in filter wavelength -- not just zero-point shifts --
+   become an issue. In the parlance of ordinary photometry, this problem
+   is one of a changing color term. In ordinary photometry, color terms
+   are constrained by observation of stars having a wide range of spectra
+   (colors), and such an approach might be possible here. 12 The careful
+   reader will have noticed that with each new requirement needed to
+   enable the use of non-photometric conditions, more and more of the
+   observing time when conditions are photometric must be used for
+   calibration. If calibration can not be done very quickly, observations
+   described in this section will represent an undo burden. Moreover, the
+   frequency of photometric conditions compared to expected changes in
+   zero-points and color-terms is not yet known; if changes are fast
+   compared to the frequency of photometric nights the calibration plan
+   for using non-photometric nights may fail completely. Young (1975)
+   recommends that all precision photometry systems be monitored for
+   stability using laboratory sources. This seems to be exactly what is
+   required here. Since we are concerned with changes in both zero-points
+   and color-terms, one solution would be to observe artificial stars
+   produced by a suite of two or more stable lamps having different color
+   temperature. The telescope response, OE(*; t), is common to both the
+   spectrograph and imager, and provided it is reasonably stable, the main
+   outstanding calibration that is needed is that between the spectrograph
+   and the imager. 4.1 Imager-to-Spectrograph scaling In principle, a
+   reference lamp observed simultaneously with the imager and the
+   spectrograph will give the relative response of the spectrograph and
+   imager. Imagine that the response of filters or spectral elements
+   change only by scale factors, ffX , defined as follows: CI(*; tj) =
+   ffCI;tj CI (*) (imager) (19) CS(*; tj) = ffCS;tj CS(*) (spectrograph)
+   (20) L(*; tj) = ffL;tj L(*); (21) where L(*) is the lamp spectrum.
+   Simultaneous observations of the lamp with the imager and spectrograph
+   at epoch t1, OI(t1) and OS(t1) are given by: OI (t1) = 1Z 0 ffCI;tj CI
+   (*)ffL;tj L(*)d* (22) OS(t1) = ffCS;tj CS(*0)ffL;tj L(*0); (23) where
+   *0 is arbitrary in this formulation. The ratio of these measurements
+   yields: OI(t1) OS(t1) = 1R 0 ff CI;tj CI (*)ffL;tj L(*)d* ffCS;tj
+   CS(*0)ffL;tj L(*0) = !1 1R 0 C I (*)L(*)d* L(*0) (24) The values of !tj
+   thus track the relative sensitivity of the imager and spectrograph for
+   any combination of imager filter and spectrograph wavelength, *0
+   (although it will be most sensible to compare at similar wavelengths,
+   as will now be shown). Of course it is likely that changes in the lamp
+   spectrum will occur at different epochs unless care is taken to
+   stabilize its response. How well must the lamp spectrum be stabilized?
+   Following King (1952), the above integrals can be expanded as a Taylor
+   series in derivatives of the lamp 13 spectrum. The expansion is taken
+   about the wavelength which is the 1st moment of the imager response
+   (filter plus detector): *0 = _1 = ffCI ;tj 1R 0 *C I (*)d* ffCI;tj 1R 0
+   C I (*)d* = 1R 0 *C I (*)d* 1R 0 C I (*)d* (25) (Note that *0 is immune
+   to scaling changes in the imager response.) The expansion given by King
+   results in: OI (t1) ss ffCI ;tj `L(*0) 1Z 0 CI (*)d* + dL(*)d* 1Z 0 (*
+   \Gamma *0)CI (*)d* + 12 d 2L(*) d*2 1Z 0 (* \Gamma *0)2CI (*)d*' (26)
+   ss ffCI ;tj `L(*0) 1Z 0 CI (*)d* + 12 d 2L(*) d*2 1Z 0 (* \Gamma *0)2CI
+   (*)d*' (27) ss ~ffCI ;tj `L(*0) + 12_22` d 2L(*) d*2 j*0 ''; (28) where
+   _2 is the 2nd moment of the imager bandpass, and is defined in a manner
+   analogous to _1. Note that the definition of *0 forces the 1st order
+   term in the Taylor expansion to zero. Now the earlier expression for
+   the relative scaling of the imager and spectrograph can be rewritten
+   as: OI(t1) OS(t1) = ~!1 L(*0) + 12 _22` d 2L(*) d*2) j* 0 ' L(*0) =
+   ~!1`1 + 1 2_ 22` 1 L(*0) d2L(*) d*2) j* 0 '' (29) Here it is made clear
+   that the observed flux ratio, OI(t1)=OS(t1), tracks the relative
+   response of the imager and spectrograph only if the normalized 2nd
+   derivative of the lamp spectrum at the filter wavelength *0 is very
+   small or the same from epoch to epoch. Therefore, a lamp with a linear
+   spectrum (in photons), or a temperature-stabilized lamp is required.
+   Since linear spectrum sources aren't available (to our knowledge!), the
+   required temperature stability has been investigated. For a filter
+   having _2 , 400*A, a NIST-calibrated FEL lamp stabilized at a color
+   temperature of T = 2856 \Sigma 8K (see Fig. 6) is just sufficient to
+   keep color errors below 0.5% across the entire optical spectrum (the
+   most stringent constraint is for *0 ! 4000*A). A warmer lamp, with T ,
+   5000K, would have an even smaller sensitivity. The ability to track the
+   relative response of the imager and the spectrograph leads to a derived
+   requirement for a stabilized lamp, preferably having as small of a
+   normalized 2nd derivative as possible so that the stability of _2 is
+   not a factor. 4.2 Imager wavelength shifts and bandwidth changes In the
+   above discussion, a characteristic wavelength, *0, was defined for each
+   imager channel. For all glass and interference filters the
+   characteristic bandpass is dependent on the ambient 14

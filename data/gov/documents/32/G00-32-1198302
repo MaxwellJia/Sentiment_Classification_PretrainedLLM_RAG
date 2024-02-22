@@ -1,0 +1,10 @@
+http://www-e835.fnal.gov/forum/navbar2000.js
+
+   function select(img) { if(navigator.userAgent.indexOf('Mozilla/2') !=
+   -1) { return;} document.images["navigation_bar"].src=p[img].src; }
+   function init_navigation_bar() { p = new
+   Array("2000","2100","2010","2001") p["2000"] = new Image();
+   p["2000"].src = "/forum/Images/bar2000.gif" p["2100"] = new Image();
+   p["2100"].src = "/forum/Images/bar2100.gif" p["2010"] = new Image();
+   p["2010"].src = "/forum/Images/bar2010.gif" p["2001"] = new Image();
+   p["2001"].src = "/forum/Images/bar2001.gif" }

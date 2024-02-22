@@ -1,0 +1,208 @@
+http://d3d.fsl.noaa.gov/symposium/philspaper.pdf
+
+   J5.6 TECHNICAL CONSIDERATIONS FOR THE INSTALLATION AND USE OF D3D IN AN
+   AWIPS ENVIRONMENT Philip A. McDonald* , Paula T. McCaslin, Edward J.
+   Szoke* and U. Herbert Grote NOAA Research-Forecast Systems Laboratory,
+   Boulder, Colorado *[In collaboration with the Cooperative Institute for
+   Research in the Atmosphere (CIRA), Colorado State University, Fort
+   Collins, Colorado] 1. INTRODUCTION 2.2 Memory For several years, the
+   NOAA Forecast Systems Lab- Although D3D has been implemented on systems
+   oratory (FSL) has been developing an application for the with as little
+   as 128 MB of memory, 256 MB is the recom- 3-D display of meteorological
+   model data (McCaslin et al. mended minimum. Too little memory can
+   drastically 1999 and 2000 and Szoke et al. 2001). The result of this
+   degrade D3D's performance, while, on the other hand, work has been
+   Display-Three Dimensions (D3D), a 3-D there is no such thing as too
+   much memory. display counterpart to the Advanced Weather Interactive
+   Processing System (AWIPS) 2-D display application Dis- 2.3 Graphics
+   Adapter play-Two Dimensions (D2D). Although the core of D3D is Vis5D, a
+   general purpose 3-D meteorological display Hardware rendering, which
+   utilizes the capabilities application developed at the University of
+   Wisconsin of a graphics adapter to their fullest extent, may require
+   (Hibbard and Santek 1991), the intent has always been special device
+   drivers, X servers, or even modified ver- that D3D would be used in an
+   AWIPS environment, or at sions of the operating system. Although the
+   accelerated least with an AWIPS data source. performance of hardware
+   rendering is desirable, these Until very recently, the computational
+   and graphics complications make it difficult for FSL to evaluate,
+   imple- requirements of a 3-D display application exceeded the ment,
+   document, and support it. Consequently, at this capabilities of typical
+   AWIPS workstations. However, time, D3D utilizes software rendering,
+   that relies on the with the increasing performance of Linux personal
+   com- CPU to perform all of the rendering tasks. Software ren- puter
+   (PC) workstations and their decreasing cost, cou- dering is generally
+   noticeably slower than hardware ren- pled with a movement toward Linux
+   AWIPS systems, the dering. However, in this era of ever-increasing CPU
+   day of D3D in the forecast office is at hand. speeds, the slowness of
+   software rendering becomes Since D3D is a new and relatively unknown
+   applica- less noticeable. Since D3D is not tied to any specific tion,
+   it is understandable that potential D3D users, as graphics adapter or
+   adapter type, D3D works equally well as system administrators, may have
+   concerns about well with practically any graphics adapter. the
+   ramifications of running D3D on their systems. This 2.4 Operating
+   System discussion will address these concerns, without getting into the
+   detail that one would find in an installation man- Currently, Red Hat
+   Linux versions 6.2 through 7.1 ual. are supported. Although the intent
+   is to support as many versions of Red Hat Linux as possible, the D3D 2.
+   SYSTEM REQUIREMENTS development staff cannot support them all forever.
+   Con- sequently, as newer versions of Red Hat Linux are D3D development
+   began on Hewlett-Packard sys- released, older versions may lose D3D
+   support. tems running the HP-UX 10.x operating system. How- 2.5 Other
+   Software ever, since early 2000, all D3D development has targeted
+   Intel-based Linux PCs. Although D3D is distributed in as complete a
+   form as 2.1 Platform possible, it does require some additional software
+   to be available on the workstation. Most notable of these are An
+   Intel-based PC system with a central processor the Tool Command
+   Language/Tool Kit (Tcl/tk) and the C unit (CPU) speed of at least 500
+   MHz is recommended. and C++ standard libraries. However, since these
+   are Three-dimensional displays are computationally inten- generally
+   distributed and installed with Linux, requiring sive, so users are
+   advised to acquire the fastest system their presence poses no
+   additional burden on the work- available. Since D3D makes no explicit
+   use of multiple station. processors, these are optional. However, the
+   operating 2.6 Data system may take advantage of multiple processors and
+   this may, in turn, improve D3D's performance. D3D does not require D2D.
+   However, D3D does need an AWIPS data tree and localization data for
+   access to the model grids it displays. If D3D is running on a
+   workstation that is networked to an AWIPS data Corresponding author
+   address: Phil McDonald, 325 Broadway R/FS4, server, these data can be
+   made available to D3D by sim- Boulder, CO 80305-3328. Email:
+   mcdonald@fsl.noaa.gov ply cross-mounting the data directories on the
+   server to the workstation. If the D3D workstation has no access to
+   server does D3D engage in any network activity, and an AWIPS data
+   server, then some other arrangement then only to acquire the data
+   requested by the user. must be made to provide the data. Usually this
+   means D3D requires no notifications of any kind, nor does it copying
+   the desired AWIPS data and localization data to broadcast messages of
+   any kind. Although D3D user the D3D workstation. files, such as images
+   and procedural bundles, may be written to the D3D workstation's disks,
+   no files are writ- 3. SYSTEM RESOURCE USAGE ten the data server. D3D
+   has been designed to be as unobtrusive as 4. INSTALLATION AND
+   CONFIGURATION possible, but it will, of course, use system resources.
+   Initially, D3D should be installed from the distribution 3.1 Processor
+   compact disk (CD). Requests for this CD can be made through the D3D
+   release web page (http:// Since, on single processor systems, all
+   applications d3d.fsl.noaa.gov/release). This CD contains everything
+   have to share the same CPU, adding one more applica- necessary to
+   assess D3D: the application, documenta- tion (D3D in this case) will
+   impact the performance of all tion, AWIPS localization data, and case
+   data (from 3-4 the others. This may not be the case on a system with
+   May 1999). Running D3D from this CD is a simple and multiple processors
+   if D3D can be assigned to a proces- unobtrusive way for users to assess
+   D3D and to become sor that is not in use. However, such an assignment
+   familiar with its use. However, using D3D in this way would be a
+   capability of the operating system, not D3D. does not allow it to be
+   used with real-time data or with 3.2 Memory additional data cases. For
+   these capabilities, D3D needs to be installed on the workstation. The
+   default memory limit that D3D will use is 200 4.1 Installation MB. This
+   is only the ceiling on the amount of memory that D3D will try to
+   allocate, not the amount that it will try The installation of D3D is
+   accomplished by simply to allocate outright. If the amount of system's
+   free mem- copying D3D from the distribution CD to the desired ory is
+   less than 200 MB, then D3D's limit will be the directory on the
+   workstation. It is not necessary to copy amount of system's free
+   memory. Although a default the case data or the AWIPS localization
+   data. limit of 200 MB has been found to be a comfortable one, Once D3D
+   has been installed, upgrades may be it may be modified by users if a
+   larger amount seems obtained through the D3D release web page.
+   appropriate. If the amount of memory available to D3D is less 4.2
+   Configuration than D3D needs, D3D will attempt to free up memory by
+   destroying old or unused graphical objects. However, if After
+   installation, the D3D main directory will contain these objects are
+   needed again, D3D will need to regen- a localization directory. The
+   localization directory con- erate them. This process of generating,
+   destroying, and tains a file, d3denv, which specifies the values of the
+   then regenerating objects can have a severe impact on environment
+   variables that D3D uses. To configure D3D, D3D's performance.
+   Therefore, it is advisable to allocate it is necessary to edit this
+   file and provide appropriate an ample amount of memory. values for the
+   path of the AWIPS localization data (FXA_HOME), the path of the
+   real-time AWIPS data 3.3 Disk (FXA_DATA), and the AWIPS local and
+   ingest sites (FXA_LOCAL_SITE and FXA_INGEST_SITE). If D3D The D3D
+   application and all of its ancillary data will be used with case data,
+   the path of the case data occupy about 20 MB of disk space. D3D
+   documentation, also needs to be specified (FXA_CASE). including an
+   online user's guide, occupy about 60 MB. In addition, D3D also needs
+   access to the AWIPS localiza- tion data. If these data are not
+   available, a minimal sub- 5. CASE DATA set (consisting primarily of a
+   grid source table, topographic data and map data) must be installed.
+   This D3D users may find it useful to archive 3-D model subset occupies
+   about 20 MB. grids and then later select them for use as training aids
+   During their use of D3D, users may save images or for review purposes.
+   and procedural bundles. These files will, of course, occupy disk space.
+   If activity logging is enabled, log files 5.1 Archiving will be
+   created, taking up yet more disk space. Although it is difficult to
+   precisely quantify the amount of disk To archive a data case, the user
+   need only copy space used by these types of files, several megabytes
+   the desired to the case data directory, usually on the should be
+   allocated for these purposes. D3D workstation. However, it is important
+   to save the entire path of the dataset and not just the dataset itself.
+   3.4 Network The Linux tar command is particularly well suited to this
+   purpose. Only when D3D is networked to a remote data For example,
+   imagine that the date is 4 May 1999 and a user wants to archive the
+   0000 UTC Eta run from Manager's Manual. that date. First, the desired
+   file and its path are saved in Once this has been accomplished, D3D can
+   be a tar file with a command similar to the following: modified to
+   recognize the new model. This procedure is not difficult, but it
+   involves editing several Tcl/tk and tar -cvf case.tar
+   /data/fxa/Grid/SBN/netcdf/CONU ancillary files. Most users should be
+   able to accomplish S211/Eta/19990504_0000 this task without much
+   difficulty. For a detailed descrip- tion of this procedure, users
+   should consult the D3D doc- Next, a directory for the case data needs
+   to be created: umentation found on the distribution CD. First, the D3D
+   Volume Browser menu files need to be edited to associ- mkdir
+   /case/ok_tornadoes_04May1999 ate the new model with an appropriate
+   display scale. Next, a model configuration file for the new model will
+   Finally, the current directory is changed to the case need to be placed
+   in the D3D localization data directory. directory and the case data is
+   untarred: A D3D model configuration file contains descriptive infor-
+   mation such as the model name, dimensions, vertical cd
+   /case/ok_tornadoes_04May1999 levels, available fields, and domain
+   mapping parameters. tar -xvf case.tar Generally, the model
+   configuration file for the new model can be copied from that of another
+   model with similar It should be noted that the AWIPS gridded datasets
+   properties and then modified appropriately. can be rather large (~50 MB
+   or more). While being archived, a dataset will be traveling across the
+   network and may impact the network performance. Also, the 7. SUMMARY
+   AND CONCLUSIONS archived datasets will consume space on the D3D work-
+   D3D is an evolving technology. Throughout its station. development two
+   things have been, and will continue to 5.2 Selection be, borne in mind.
+   First, the application must provide a service to the user. To meet this
+   end D3D needs to be If D3D has been configured for use with case data,
+   not only useful and easy to use, but it must continue to a case data
+   selector, similar to the one in Figure 1, will adapt to users' needs,
+   either through the users' means appear when D3D is started. This
+   selector allows the or through those of the D3D developers. Second, D3D
+   user to set the data source to real-time data or any of the must in no
+   significant way impede or interfere with any cases archived in the case
+   data directory. aspect of any system on which it is installed. This
+   must If D3D has been configured for use with real-time be especially
+   true when D3D is installed in a forecast data only, the case data
+   selector will not appear. office AWIPS environment. The D3D development
+   team believes that D3D succeeds on both counts. 8. ACKNOWLEDGMENTS
+   Grateful thanks are extended to Nita Fullerton and Patrice Kucera of
+   FSL for their reviews of this paper. 9. REFERENCES Hibbard, W. R. and
+   D. Santek, 1991: The Vis5D sys- tem for easy interactive visualization.
+   Seventh Interna- tional Conference on Interactive Information and
+   Processing Systems for Meteorology, Oceanography, and Hydrology, New
+   Orleans, LA, Amer. Meteor. Soc., Figure 1. D3D case data selector,
+   shown at D3D startup. The 129-134. user has selected
+   ok_tornadoes_04May1999 McCaslin, P. T., P. A. McDonald, and E. J.
+   Szoke, 1999: Developing and testing a 3D visualization worksta- tion
+   application at FSL. 15th International Conference on 6. ADDING A MODEL
+   Interactive Information and Processing Systems for Meteorology,
+   Oceanography, and Hydrology, Dallas, TX, When considering adding a
+   local, or any other, Amer. Meteor. Soc., 498-501. model to those that
+   D3D will display, it is extremely McCaslin, P. T., P. A. McDonald, and
+   E. J. Szoke, important to bear in mind that D3D reads data from the
+   2000: 3D Visualization development at NOAA Forecast AWIPS data tree and
+   relies on the AWIPS localization Systems Laboratory. Computer Graphics,
+   February 2000, Vol. 34 No. 1, 41-44. data for information about the
+   data in that tree. There- Szoke, E. J., U. H. Grote, P. C. Kucera, P.
+   T. McCas- fore, it is imperative that the new model be added to the
+   lin, P. A. McDonald, and W. F. Roberts, 2001: D3D: A AWIPS data tree
+   and localization data in accordance potential 3D visualization tool for
+   the National Weather with AWIPS procedures set forth in the AWIPS
+   System Service. 17th International Conference on Interactive
+   Information and Processing Systems for Meteorology, Oceanography, and
+   Hydrology, Albuquerque, NM, Amer. Meteor. Soc., 10-14.

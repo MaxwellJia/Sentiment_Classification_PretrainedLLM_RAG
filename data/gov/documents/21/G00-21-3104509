@@ -1,0 +1,854 @@
+http://www.sfablueprint.ed.gov/pdf/Mb_ch4.pdf
+
+   A. Chapter Overview The main focus of this chapter is an SFA Level I
+   and II Modernization Architecture that fits into the Modernization
+   Blueprint Framework illustrated in Figure IV.A-1. Levels I and II
+   describe the target architecture for the SFA modernization plan. Within
+   this chapter, business process requirements identified in Chapter III
+   were evaluated to establish modernization architecture process flows
+   and supporting business systems at Level I. Business subprocess
+   requirements from Chapter III were evaluated to establish modernization
+   architecture subprocess flows and subsystems at Level II.
+   7KLVÃFKDSWHUÃGHVFULEHVÃWKH 0RGHUQL]DWLRQÃ$UFKLWHFWXUH Modernization
+   Modernization Modernization Requirements Architecture Sequencing Plan
+   Process Technical Business Process Process Program System Level I
+   Requirements Flows Systems Sequencing Subprocess Business Subprocess
+   Subsystems Subsystem Level II Flows Requirements Sequencing Level III
+   Subrelease Subrelease Subrelease Requirements Design Planning Level IV
+   CI CI CI Development Requirements Design Planning 10044162-026 Figure
+   IV.A-1. Modernization Blueprint Framework The Modernization
+   Architecture is decomposed into two components at Levels I and II: the
+   Business Process Architecture and the Technical Architecture. These
+   provide a target technical architecture from which the enterprise can
+   build an information environment that addresses its long-term needs.
+   The Business Process Architecture (Section B) outlines Level I and II
+   business processes/subprocesses performed by the enterprise and the
+   data required to support the processes. This architecture is a
+   preliminary, essential element for requirements management and for the
+   conceptualization, development, and deployment of business
+   applications. The data at Levels I and II of the architecture are
+   expressed in terms of subject areas and information flows. Subject
+   areas are groupings of related data that capture basic enterprise
+   business rules. They represent an integrated view of data required to
+   support the enterprise, independent of current or future organizational
+   structures, business July 15, 2000 Page IV.A-1 applications and
+   technical implementation. These are often represented in enterprise
+   models that are used to manage data standardization. The Technical
+   Architecture (Sections C through E) is composed of a Business Systems
+   Architecture, a Target Technical Architecture, and a Privacy
+   Architecture. ! The Business Systems Architecture (Section C) is a
+   high-level initial identification of the business systems to be
+   developed. It identifies business systems (Level I) and subsystems
+   (Level II), their databases and external interfaces. It includes a
+   high-level description of each system/subsystem's capabilities and
+   traces the descriptions to the requirements in Chapter III. ! The
+   Target Technical Architecture (Section D) describes key technical
+   elements (e.g., access methods, hardware, software, communications,
+   security) that were considered in implementing the Business System
+   Architecture. The Target Technical Architecture is decomposed into
+   Levels I and II Target Technical Architectures. The Level I Target
+   Technical Architecture describes an overall technical architecture at
+   the system level. The Level II Target Technical Architecture explains
+   the application of some key technical elements to each subsystem. ! The
+   Privacy Architecture (Section E) provides a concept for implementing
+   security that addresses major privacy concerns, such as sender
+   authentication message data integrity and customer confidentiality,
+   inherent in the modernized architecture. Section F of this chapter
+   contains Level III design statements and specifications for five
+   selected projects that could be considered candidates for delivery as
+   part of subrelease 1 of the modernization architecture implementation.
+   Sections G, H, I, J, K, and L of this chapter briefly describe
+   recommended approaches to enterprise requirements management,
+   application development, enterprise model management, configuration
+   management, system integration and testing, deployment, and post
+   deployment maintenance that can be used to guide SFA in its transition
+   to a modernized enterprise architecture. ! Section G describes a
+   requirements management approach that captures requirements statements
+   in a requirements database. The database is used to ensure that all
+   requirements are implemented in a system, and to produce a requirements
+   traceability document showing the implementation of requirements in
+   every phase of the systems development lifecycle. ! Section H describes
+   an approach to Rapid Application Prototyping/Rapid Application
+   Development (RAP/RAD) using reusable system components (common logic
+   that can be reused by multiple applications to standardize business
+   processes, calculations, etc.). It includes a description of how
+   reusable components are conceptualized, developed, and deployed across
+   multiple systems to improve standardization and reduce the time and
+   cost of development. This July 15, 2000 Page IV.A-2 section also
+   describes the role of the Integration Services provided by the
+   Enterprise Application Integration (EAI) toolset. ! Section I provides
+   an overview of the SFA enterprise model management strategy. This
+   strategy provides a mechanism for managing the data standardization
+   process that will be used to assist SFA to move towards a more
+   integrated environment. ! Section J describes an approach to
+   configuration management that captures requirements statements in a
+   requirements database. The database is used to ensure that all
+   requirements are implemented in a system, and to produce a requirements
+   traceability document showing the implementation of requirements in
+   every phase of the systems development lifecycle. ! Section K describes
+   an approach to system integration and testing that captures
+   requirements statements in a requirements database. The database is
+   used to ensure that all requirements are implemented in a system, and
+   to produce a requirements traceability document showing the
+   implementation of requirements in every phase of the systems
+   development lifecycle. ! Section L describes an approach to deployment
+   that captures requirements statements in a requirements database. The
+   database is used to ensure that all requirements are implemented in a
+   system, and to produce a requirements traceability document showing the
+   implementation of requirements in every phase of the systems
+   development lifecycle. Chapter Contents Page A. Chapter Overview IV.A-1
+   B. SFA Business Process Architecture IV.B-1 B.1 Enterprise Conceptual
+   Process Model IV.B-2 B.2 Level I SFA Enterprise Conceptual Data Model
+   Subject IV.B-10 Areas B.3 Level I SFA Business Process Action Matrix
+   IV.B-12 B.4 Level I Process Flows IV.B-13 B.5 Level II SFA Enterprise
+   Conceptual Data Model  Subject IV.B-45 Areas B.6 Level II SFA Business
+   Subprocess Action Matrix IV.B-50 B.7 Level II Subprocess Flows IV.B-53
+   B.8 Subject Areas Mapped to Current Systems IV.B-176 C. SFA Business
+   Systems Architecture IV.C-1 July 15, 2000 Page IV.A-3 Chapter Contents
+   Page C.1 Level I SFA Enterprise Systems Architecture IV.C-1 C.2 Level
+   II SFA Business Systems Architecture IV.C-16 D. SFA Target Technical
+   Architecture IV.D-1 D.1 Overview IV.D-1 D.2 Level I SFA Target
+   Technical Architecture IV.D-4 D.3 Level II Target Technical
+   Architecture IV.D-12 E. SFA Privacy Architecture IV.E-1 F. Level III
+   Design Specifications IV.F-1 F.1 SFA Release 1.0 Project Design
+   Statements and IV.F-1 Specifications F.2 Ombudsman Case Tracking System
+   IV.F-2 F.3 Links to Financial Planning Sites IV.F-6 F.4 FAFSA Web
+   Updates IV.F-8 F.5 General Ledger Management IV.F-10 F.6 Digital IDs
+   Registration IV.F-14 G. SFA Enterprise Requirements Management IV.G-1
+   H. An Approach: Rapid Application Prototyping/Rapid IV.H-1 Application
+   Development (RAP/RAD) I. SFA Enterprise Model Management IV.I-1 J. An
+   Approach: Configuration Management IV.J-1 K. An Approach: System
+   Integration and Testing IV.K-1 L. An Approach: Deployment IV.L-1 July
+   15, 2000 Page IV.A-4 B. SFA Business Process Architecture The primary
+   objective of the Business Process Architecture is to provide a
+   high-level view of the Student Financial Aid areas of the Department of
+   Education. This view encompasses both the functions performed and the
+   data required to support the SFA mission. Other major objectives of the
+   Business Process Architecture are: ! To build a high-level view of SFA
+   business process activities, independent of organizational structure. !
+   To build a high-level view of the inherent data structures required to
+   support SFA. ! To gain insight into the support of data for activities.
+   ! To identify probable SFA Business Process applications. The Business
+   Process Architecture provides a stable model regardless of organization
+   realignments. The robust nature of the Business Process Architecture is
+   due to the functional view that it takes of the SFA processes and not
+   an organizational view of the duties assigned to a particular office.
+   The emphasis of the Business Process Architecture is identifying the
+   "what" of SFA, not the "how". Because the Business Process Architecture
+   reflects a stable model of SFA, development of information systems
+   based upon such a model will provide greater stability and longevity
+   than that of a diffused developmental approach lacking a coherent view
+   of the underlying SFA activities. Analysis of interactions between the
+   Business Process Architecture and organizational structure provides
+   opportunities for integrated systems, but also emphasizes the
+   requirements for control of privileged or restricted information.
+   Through such a high-level view of the SFA processes, cohesive
+   functional areas are defined which organize SFA processes into logical
+   groupings. Each functional area has a set of highly related functions
+   and information, which give it certain autonomy from other areas. By
+   prioritizing the areas' criticality to the SFA continued operation,
+   modernization projects can be sequenced appropriately. The Business
+   Process Architecture ties future development efforts directly to the
+   major functions and supporting information. The Business Process
+   Architecture has modeled the SFA processes through the following
+   components: ! Integrated SFA Process Model ! Level I Enterprise
+   Conceptual Data Model-Subject Areas ! Level I Business Process Action
+   Matrix ! Level I Process Flows ! Level II Enterprise Conceptual Data
+   Model-Subject Areas ! Level II Business Subprocess Action Matrix !
+   Level II Subprocess Flows ! Subject areas mapped to the current SFA
+   systems July 15, 2000 Page V.B-1 B.1 Enterprise Conceptual Process
+   Model The integrated SFA process model is established as part of the
+   modernized business process architecture for the SFA enterprise. The
+   high-level process model identifies, integrates, and decomposes various
+   functions, and processes, as shown in Figure IV.B-1. Student Financial
+   Aid Management (SFAM) The main function of SFAM is to perform all SFA
+   business activities. It is comprised of five functions, which are
+   Student Services, School Services, Financial Partner Services,
+   Performance Management, and Enterprise Services. Student Services The
+   Student Services function performs primary interactions with students.
+   It provides students with convenient access to aid application
+   information, forms, and account data. It facilitates coordination of
+   relationships with lenders, schools, guarantors, state agencies, and
+   SFA under one student master account, providing a consolidated view for
+   each student to facilitate his or her interaction with education
+   service providers. It provides links to financial planning sites that
+   help students understand their financial needs for postsecondary
+   education. Student Services provides debt management counseling to
+   students to help them understand the overall impact of their debt on
+   their future financial goals after completing their school education.
+   Student Services targets markets and under-served markets to increase
+   awareness of financial aid availability among youth, providing easy
+   access to user-friendly application forms, just-in-time disbursement of
+   funds and an efficient repayment process. The function is comprised of
+   three major processes: Aid Awareness, Aid Application, and Loan
+   Repayment. Aid Awareness The Aid Awareness process is part of the
+   Student Services function that identifies and educates potential
+   program participants, including students and their families. It
+   provides financial aid information and guidance to assist in the
+   postsecondary school planning and decision making process. This process
+   includes the management of special SFA initiatives and may include
+   future co-branding or sponsorship opportunities designed to reach the
+   target market through popular media. The Aid Awareness process is
+   comprised of five major subprocesses: Target Markets, Develop Awareness
+   Programs, Execute Awareness, Provide Access to Financial Simulation and
+   Modeling, and Monitor Program Effectiveness. July 15, 2000 Page V.B-2
+   Student Financial Aid Management Student Services Aid Awareness Aid
+   Application Loan Repayment School Services Program Eligibility for
+   Schools Program Support for Schools Financial Transactions for Schools
+   Aid Origination and Disbursement Financial Partner Services Program
+   Eligibility for Financial Partners Program Support for Financial
+   Partners Financial Transactions for Financial Partners Performance
+   Management Customer Satisfaction Management Employee Satisfaction
+   Management Financial Management Enterprise Services HR Management IT
+   Management Facilities Management Contracts and Acquisitions
+   10044162-40_v2 Figure IV.B-1. Integrated SFA Process Model July 15,
+   2000 Page V.B-3 Aid Application The Aid Application process is part of
+   the Student Services function that collects, organizes, and verifies
+   application information. It is responsible for the design of the
+   physical application form and assists in the creation of aid packages
+   for schools and students. It enables potential students to apply
+   through the communication medium of their choice, including the
+   Internet (such as FAFSA on the Web) or traditional mail channels. It
+   calculates and reports the participant's Expected Family Contribution
+   (EFC) to schools who put together aid packages. It reports decisions on
+   the acceptance or rejection of aid packages back to SFA. The process is
+   comprised of five subprocesses: Design and Distribution of Application
+   Forms, Manage Aid Applications, Obtain Eligibility Assessment
+   Information, Assess Participant Eligibility, and Manage Aid Package.
+   Loan Repayment The Loan Repayment process is part of the Student
+   Services function for Direct Loans, this process offers exit
+   counseling, collects money from borrowers who have entered into
+   repayment, provides invoices, processes loan consolidation requests,
+   and attempts collection on defaulted loans. It provides students with
+   different methods through which loans can be paid. As borrowers enter
+   repayment, the process designs repayment options that best suit them
+   and the overall impact of their debt. Repayment plan options, and bill
+   cycle date selections and changes can be made on the Web. It
+   automatically monitors loans and identifies defaulted loans. It chooses
+   how to deal with defaults (from wage garnishment to collection
+   agencies). The Loan Repayment process manages consolidation loan
+   information and originates consolidation loans upon receipt of borrower
+   requests. The process is comprised of eleven subprocesses, which are
+   Manage Repayment Counseling, Select Repayment Option, Process Billing
+   Information, Process Loan Payments and Overpayments, Manage Aid Status,
+   Track Borrowers, Assign Defaulted Loans, Manage Debt Collection, Manage
+   Consolidation Loan Information, Originate Consolidated Loan, and Make
+   Payments to Lenders. School Services The School Services function is
+   one of the Student Financial Aid Management functions that manage the
+   relationship with schools from schools initial and subsequent program
+   eligibility through training and performance review. The function
+   evaluates schools based on their effectiveness in managing Federal
+   funds and achieving performance-based outcomes as defined by SFA. It
+   provides other services that include financial transaction processing,
+   training/education and program/eligibility reviews. The School Services
+   function is comprised of four processes: Program Eligibility for
+   Schools, Program Support for Schools, Financial Transactions for
+   Schools, and Aid Origination and Disbursement. July 15, 2000 Page V.B-4
+   Program Eligibility for Schools The Program Eligibility for Schools
+   process is part of the School Services function that monitors
+   eligibility requirements throughout a school's involvement with Title
+   IV Aid programs. The process certifies schools for participation in
+   Title IV programs, defines the scope of their participation, and
+   discontinues eligibility, as needed. The Program Eligibility for
+   Schools process is comprised of three subprocesses: Determine School
+   Eligibility, Set Participation Parameters, and Discontinue Eligibility.
+   Program Support for Schools The Program Support process is part of the
+   School Services function that ensures that schools have the tools and
+   assistance they need to effectively manage Title IV Aid programs. The
+   process manages the relationship and exchange of information between
+   SFA and Title IV schools. It provides training and technical support.
+   It collects and maintains program information, which is then used to
+   analyze school performance across a number of indicators, including
+   financial, administrative and outcome-based measures. It also enables
+   schools to access, manipulate and self-monitor their performance
+   through the use of sophisticated technology tools that can reside on an
+   aid administrator's desktop. The Program Support for Schools process is
+   comprised of four subprocesses: Develop and Deliver Information,
+   Training, and Technical Assistance; Maintain School and Program
+   Information Status; Monitor School Performance; and Take Action on
+   Performance. Financial Transactions for Schools The Financial
+   Transactions for Schools process is part of School Services function
+   that coordinates the execution of financial activities conducted at the
+   school level versus the student level. It supports delivery of service
+   to schools through the accurate, efficient processing of financial
+   transactions. It performs necessary activities that include various
+   adjustments, reimbursements, and closeout transactions needed to ensure
+   SFA's integrated financial management system reflects accurate and
+   complete financial data related to school programs. This process
+   completes and tracks disbursement and reconciliation of funds to
+   schools for Pell, Direct Loan and Campus- Based programs. The Financial
+   Transactions for Schools process is comprised of three subprocesses:
+   Allocate Funds and Allowances, Manage Authorizations, and Execute
+   Financial Adjustments. Aid Origination and Disbursement The Aid
+   Origination and Disbursement process is part of the School Services
+   function that receives and checks the accuracy of data reported on the
+   Common origination and disbursement record. It receives, stores, and
+   distributes participant authorizations, authorizes payments to schools,
+   and reconciles funds transmitted against disbursements and adjustments.
+   Further, it tracks the enrollment status of all program July 15, 2000
+   Page V.B-5 participants and forwards the information to lenders and
+   guaranty agencies. The Aid Origination and Disbursement process is
+   comprised of six subprocesses: Edit Common Records, Process Borrower
+   Authorizations, Authorize Payments to Schools, Manage Lender
+   Disbursement Information, Reconcile Drawdown, and Maintain Enrollment
+   Status. Financial Partner Services The Financial Partners Services
+   function is part of the Student Financial Aid Management function that
+   supports lenders and guaranty agencies in their delivery of aid to
+   students. It receives information from and provides information to aid
+   organizations related to SFA programs and individual student
+   participants. The activities performed by this function include
+   training and education, eligibility processing, informational updates,
+   financial transactions and program performance analysis and review. The
+   Financial Partners Services function is comprised of three processes:
+   Program Eligibility for Financial Partners, Program Support for
+   Financial Partners, and Financial Transactions for Financial Partners.
+   Program Eligibility for Financial Partners The Program Eligibility for
+   Financial Partners process activates and deactivates eligibility for
+   financial partners, namely lenders and guaranty agencies. It determines
+   eligibility and manages state's applications for LEAPP (a Federal
+   contributions program through the application receipt, processing, and
+   decision-making process). The Program Eligibility for Financial
+   Partners process is comprised of three subprocesses: Determine
+   Financial Partner Eligibility, Manage State LEAPP Application, and
+   Discontinue Financial Partner Eligibility. Program Support for
+   Financial Partners The Program Support for Financial Partners process
+   is part of the Financial Partner Services function that maintains and
+   supports the financial partner in all aspects of the aid programs after
+   a financial partner's eligibility has been determined. It provides
+   technical assistance and guidance to institutions in program specifics
+   and changes to program guidelines. It maintains and monitors
+   performance data and reporting from the financial partners including
+   information such as number and size of loans, and distribution of funds
+   by school or region. The Program Support for Financial Partners process
+   is comprised of five subprocesses: Develop and Deliver Information,
+   Training, and Technical Assistance; Maintain Financial Partner
+   Performance Data; Monitor Financial Partner Performance; Conduct
+   Financial Partner Program Reviews; and Take Action on Performance. July
+   15, 2000 Page V.B-6 Financial Transactions for Financial Partners The
+   Financial Transactions for Financial Partners process is part of the
+   Financial Partner Services function that manages the flow of funds
+   between financial partners and SFA. It makes payments to lenders and
+   guaranty agencies that may include reimbursements and special
+   allowances. Additionally, the process manages the authorization process
+   for LEAPP funds, keeping track of contribution levels for each state
+   after the state has been accepted to the LEAPP program. The Financial
+   Transactions for Financial Partners process is comprised of three
+   subprocesses: Make Payments to Lenders, Make Payments to Guaranty
+   Agencies, and Manage State LEAPP Authorization. Performance Management
+   The Performance Management function is part of the Student Financial
+   Aid Management function that collects and analyzes performance
+   information, which is used by management to assess how well SFA is
+   performing as a PBO, and the prioritization of improvement projects. It
+   also provides a tool-set to link SFA's vision, strategy objectives, and
+   key performance measures. The Performance Management function is
+   comprised of three processes: Customer Satisfaction Management,
+   Employee Satisfaction Management, and Financial Management. Customer
+   Satisfaction Management The Customer Satisfaction Management process is
+   part of the Performance Management function that focuses on the
+   systematic, structured collection of information about customer/partner
+   preferences and satisfaction. It sets periodic performance goals and
+   develops objectives for achieving customer/partner satisfaction. The
+   process collects data from various sources and rigorously analyzes them
+   to produce trends, gaps, etc., throughout the year. By using this
+   information, the process identifies necessary changes to processes,
+   performance objectives and technology. It closely monitors and reports
+   of customer/partner satisfaction information, which determine how well
+   PBO's objectives are met for improving customer satisfaction. It gauges
+   success toward realizing the goals of the modernization blueprint. The
+   Customer Satisfaction Management process is comprised of six
+   subprocesses: Objective Setting and Planning, Customer/Partner Data
+   Gathering, Customer/Partner Information Analysis, Action Planning,
+   Decision Making, and Customer/Partner Satisfaction Performance Feedback
+   and Reporting. Employee Satisfaction Management The Employee
+   Satisfaction Management process is part of the Performance Management
+   function that executes SFA's PBO initiatives by focusing on
+   employees-building their capabilities, motivating them, and providing
+   long term growth opportunities to attract and retain them. It also
+   focuses on building July 15, 2000 Page V.B-7 organizational capability
+   through knowledge sharing. The Employee Satisfaction Management
+   function is comprised of five subprocesses: Objective Setting and
+   Planning, Employee Data Gathering, Employee Information Analysis,
+   Action Planning and Decision-Making, and Feedback and Communication.
+   Financial Management The Financial Management process is part of the
+   Performance Management function that performs all the traditional
+   accounting activities necessary to manage the flow of funds between
+   students, SFA, schools, financial partners and other government
+   agencies. The primary objective of this process is to define, establish
+   and execute an integrated financial management system that manages the
+   flow of financial information across all of SFA's information systems,
+   in order to accomplish new PBO specific financial management process
+   mandated by legislature. It produces reports that SFA management can
+   use to monitor how well the SFA organization is performing relative to
+   one of its three primary objectives: reducing the overall cost of
+   student financial assistance. The Financial Management process is
+   comprised of nine subprocesses: Core Financial System Management,
+   General Ledger Management, Funds Management, Payment Management,
+   Receipt Management, Cost Management, Financial Management Reporting,
+   Loan Portfolio Management, and Budget Analysis and Development.
+   Enterprise Services The Enterprise Services function is part of the
+   Student Financial Aid Management function that primarily improves the
+   way SFA manages its critical assets: people, technology, facilities,
+   and its relationships with vendors. It performs Human Resources (HR)
+   Management, Information Technologies (IT) Management, Facilities
+   Management, and Contract and Acquisition Management across SFA's
+   operation to provide a consolidated, channel-driven approach to support
+   services. The function creates and delivers value for SFA and support
+   processes in the business model by capitalizing on economies of scale,
+   pooled expertise, reduced overhead, and program/system integration.
+   Human Resource Management SFA is committed to building a strategic,
+   best-in-business Human Resources capability that focuses on SFA's most
+   important asset, its people. As a business enabler and strategic
+   partner, Human Resources management will address SFA's critical people
+   challenges: ! Aligning the organization and workforce with defined
+   performance objectives ! Developing a workforce with the composition
+   and competence required to perform July 15, 2000 Page V.B-8 !
+   Supporting the workforce's ongoing performance efforts ! Reinforcing
+   the workforce's efforts and performance results Ultimately, SFA Human
+   Resources seeks to address its people challenges to improve the
+   welfare, and morale of SFA employees, thereby contributing to a
+   positive culture that promotes success and delivers results. IT
+   Management The IT Management process is part of the Enterprise Services
+   function that seeks to maximize returns on current and future
+   investments in information technology. It enables SFA to prioritize
+   investments, purchase the correct technology and operate and maintain
+   its systems. In addition, the process ensures that SFA's systems have
+   common standards, are secure, readily integrate and interface with
+   channel partners, and keep pace with new technologies and technology
+   requirements. It effectively improves efficiencies, reduces costs, and
+   facilitates the easy access of information for SFA internal and
+   external customers. The IT management process is comprised of ten
+   subprocesses: IT Investment Management, IT Production and Maintenance,
+   IT Systems Development Lifecycle IT Capacity Management and Performance
+   Tuning, Systems Availability and Contingency Planning, Systems Security
+   and Privacy, IT Standards and Methodology, IT Partner Interface
+   Management, IT Configuration Management, and IT Quality Assurance.
+   Facilities Management The Facilities Management process is part of the
+   Enterprise Services function that coordinates the physical workplace
+   ensuring that procedures are fixed and that mobile assets are
+   inventoried, insured, and continually meet or exceed code. The process
+   strives to improve the comfort, welfare, and morale of SFA employees
+   and reduce SFA costs through decreases in fraud and waste while
+   promoting an environmentally friendly workplace. The Facilities
+   Management process is comprised of seven subprocesses: Equipment
+   Investment, Leasing, and Disposal; Space Planning and Management;
+   Safety and Security; Telecommunications; Asset and Inventory
+   Management; Ongoing Facilities Maintenance; and Supervision of Business
+   Services. Contracts and Acquisition Management The Contract and
+   Acquisition Management process is part of the Enterprise Services
+   function that identifies, selects, and manages external contractors who
+   supply goods and services to SFA. It establishes partnerships with
+   contractors and suppliers to provide high-value goods and services that
+   can be used to supplement or substitute existing roles and capabilities
+   critical to operating the business. Mainly, the function provides SFA
+   access to public and private best practice and subject matter expertise
+   in cost reduction and improved service levels for both internal and
+   external customers. The Contract and Acquisition Management function is
+   comprised of five subprocesses: Need Based Planning, Request for
+   Proposal (RFP) Creation and Issue, Source Selection and Evaluation,
+   Contract Management, and Policy Analysis and Innovation. July 15, 2000
+   Page V.B-9 B.2 Level I SFA Enterprise Conceptual Data Model  Subject
+   Areas A subject area is a logical grouping of similar, related data
+   that supports a business area. Subject areas are often depicted
+   graphically in a data model. Subject areas may contain lower-level
+   subject areas that further group similar data. During analysis, subject
+   areas are refined to show the entity types (data structures) that store
+   specific types of data. An entity type is a person, place, thing,
+   concept or event that the enterprise has interests in. Entity types are
+   identified at the lowest level subject area of the Levels III and IV
+   architecture. Level I of the architecture contains 10 high-level
+   conceptual subject areas required to support the SFA enterprise. Figure
+   IV.B-2 shows a high-level conceptual data model of these subject areas
+   (indicated by the shaded boxes) and relationships between the subject
+   areas (indicated by a line between two shaded boxes). In this high
+   level, conceptual model, a relationship line indicates that one or more
+   entity types within one subject area relate to one or more entity types
+   within another. The Level I subject areas are described below. These
+   subject areas conceptually contain standardized data objects,
+   lower-level subject areas, entity types, characteristics of the entity
+   type, and relationships used in support of SFA business processes.
+   Standardized data is generalized to meet the needs of the enterprise.
+   1. Student Services. This subject area includes standardized data
+   objects that support aid applications, aid awards, and loan repayments.
+   2. School Services. This subject area includes standardized data
+   objects for school eligibility services, school program support
+   services, and aid origination and disbursement. 3. Financial Partner
+   Services. This subject area includes standardized data objects that are
+   used to provide eligibility and program support services to financial
+   partners. 4. Enterprise Performance Data. This subject area includes
+   standardized data objects that support the collection and analysis of
+   customer satisfaction data, employee satisfaction data, and performance
+   metrics on key SFA business processes. 5. Enterprise Services. This
+   subject area includes standardized data objects pertaining to human
+   resources, information technology services, facilities, contracts, and
+   acquisitions. 6. Participants. This subject area includes standardized
+   data objects on members of the public who have expressed an interest in
+   participating in an SFA program. Examples include applicants,
+   borrowers, potential students, students, and parents. July 15, 2000
+   Page V.B-10 Financial Student School Enterprise Institution Services
+   Services Services Services Aid Program Enterprise Activities
+   Performance Data 1 Aid Enterprise Participants Schools Organizations
+   Financial Services -521_V 10044162 Figure IV.B-2. SFA Enterprise
+   Conceptual Data Model (Level I) 7. Schools. This subject area includes
+   standardized data objects about educational and vocational institutions
+   that have expressed an interest in or have participated in an SFA
+   program. For example, it includes information on school characteristics
+   (e.g., school calendar, FISAP data, open/closed status) and school
+   ownership. 8. Aid Organizations. This subject area includes
+   standardized data objects about organizations that are related to the
+   delivery of student financial aid, including lenders, guaranty
+   agencies, collection agencies, and other government agencies such as
+   IRS and DOJ. 9. Aid Program Activities. This subject area includes
+   standardized data objects that support aid awareness services and the
+   development of aid programs. 10. Enterprise Financial Services. This
+   subject area includes standardized data objects about various financial
+   activities that include managing the flow of funds between students,
+   SFA, schools, financial partners and other government agencies,
+   managing consumer loans, and financial management reporting. July 15,
+   2000 Page V.B-11 B.3 Level I SFA Business Process Action Matrix The SFA
+   business process actions explain interaction between business processes
+   that record what the SFA business does, and subject areas that describe
+   the things of interest to the business and the relationships between
+   them. Figure IV-B.3 indicates the impact of processes on related data
+   in various subject areas. High-level subject areas are displayed down
+   the side (labeling the rows); high-level processes are shown across the
+   top (labeling the columns). The intersection of a process and a subject
+   area indicates that a process has some impact on the data contained in
+   the subject area. There are four possible impacts a process can have on
+   data: the process can cause some information to be created, read (to
+   provide needed information to the process), updated, or deleted. Thus,
+   ! A "C" indicates the process could cause some new information in that
+   subject area to be created (recorded for the first time). ! An "R"
+   indicates the process may need information from that subject area to
+   complete an action. ! A "U" indicates the process could cause some
+   existing information in that subject area to be updated (changes to
+   existing data). ! A "D" indicates the process could cause some
+   information in that subject area to be deleted. Financial Student
+   School Partner Performance Enterprise Services Services Services
+   Management Services Student Services C, R, U, D R School Services R,U
+   C, R, U, D R Financial Partner R, U C, R, U, D R Services Enterprise
+   Performance C, R, U, D R Data Enterprise Services R, U C, R, U, D
+   Participants C, R, U, D Schools R, U C, R, U, D Aid Organizations R C,
+   R, U, D Aid Program Activities C, R, U, D R R Enterprise Financial C,
+   R, U, D C, R, U, D C, R, U, D C, R, U, D C, R, U, D Services Figure
+   IV.B-3. SFA Business Process Action Matrix (Level I) July 15, 2000 Page
+   V.B-12 B.4 Level I Process Flows The modernized SFAM information
+   architecture establishes various internal and external business
+   interactions performed by external agents of the SFA business channels,
+   SFA internals, and supporting data for all process activities. The
+   business process flows at Level I establish SFA business interactions
+   and their relationships with external agents, such as aid
+   organizations, schools, and students. The business interactions do not
+   necessarily translate into physical interfaces in the technical
+   architecture but only depict the logical processing flow among the
+   processes from a business perspective at the Level I architecture. In
+   all cases, the process flows depicted have been derived from the
+   business requirements stated in Chapter III. As the business
+   requirements are refined, the process flows will reflect this in
+   subsequent releases. Student Services Aid Awareness Process Flow The
+   process flow illustrated in Figure IV.B-4 depicts business interactions
+   performed by external agents of the SFA business channels, SFA
+   internals, and supporting data within the Aid Awareness process.
+   Targets Markets through analysis of data received from students,
+   families, and schools. For each market, SFA develops Awareness Programs
+   and tailors its message to the requirements of each segment. SFA then
+   executes Awareness Programs. Execution involves input from schools and
+   lenders as partners in distributing SFA's message, and reaches out to
+   students and their families either directly or through intermediaries.
+   Aid Awareness provides access to financial simulation and modeling both
+   through its Web site (for students and families with Web access) and
+   via telephone for students and families without Web access. For all
+   subprocesses in the process, Aid Awareness Monitors Program
+   Effectiveness both directly through measurement of key performance
+   criteria and through feedback from students, schools, and lenders. July
+   15, 2000 Page V.B-13 Target Facilitate Access to Federal 1, 3 15
+   Markets Financial Simulation Agencies 2 AW-01 Modeling AW-04 16 Execute
+   Aid 10 Awareness 13 Aid Recipient Programs Recipient AW-03 9 4 6
+   Develop Monitor Aid 7 Awareness 12 Program 18 Organization Programs
+   Effectiveness AW-02 AW-05 14 Federal 8 5 1117 Agencies Integrated
+   10044162-408_v2 SFA Enterprise Databases Aid Awareness Services Aid
+   Organizations Figure IV.B-4. Aid Awareness Process Flow (1 of 2) July
+   15, 2000 Page V.B-14 01 Grant reports and commissioned survey data 02
+   Aid survey data 03 Census data 04 Details about each segment of the
+   markets 05 Target market profile, AID products 06 Application data and
+   performance data 07 Aid programs, policies, regulations, and
+   performance matrix 08 Aid Awareness performance data and program data
+   09 Awareness programs 10 Aid Awareness program details 11 Aid Awareness
+   data 12 Awareness program details 13 Aid Awareness information and
+   tools through mail, fax, electronic media, Web sites, video/TV,
+   conferences/teleconferences, etc. 14 Products and publications media
+   relations 15 Long term debt management plan ppt 16 Long term debt
+   management plan, and simulations of possible financial aid packages
+   8a.40 and financial options 2- 17 Program effectiveness data 18 Program
+   effectiveness details 1004416 Figure IV.B-4. Aid Awareness Process Flow
+   (2 of 2) July 15, 2000 Page V.B-15 Aid Application Process Flow The
+   process flow illustrated in Figure IV.B-5 depicts business interactions
+   performed by external agents of the SFA business channels, SFA
+   internals, and supporting data within the Aid Application process. The
+   first step in the Aid Application Process is the efficient collection
+   of information through the Design and Distribution of Application
+   Forms. SFA is committed to designing and providing access to forms
+   across a variety of distribution channels. As this information comes
+   back, SFA will provide an organized single point of contact through
+   which this information can be accessed in Manage Application. SFA will
+   serve as a central administrator in obtaining Eligibility Assessment
+   Information for the student's Aid Application needs, performing a range
+   of duties, from holding student authorizations for access to classified
+   information, to generating promissory notes from a lender of the
+   student's choice. Once SFA has all the necessary information to Assess
+   Participant Eligibility, SFA will calculate the Estimated Family
+   Contribution (EFC) for the potential student. This eligibility
+   determination is made available to schools that the student specifies,
+   other grant agencies, and federal aid organizations. Finally, in Manage
+   Aid Package, SFA supports the school's creation of the aid package by
+   providing information to both schools and students. Loan Repayment
+   Process Flow The process flow illustrated in Figure IV.B-6 depicts
+   business interactions performed by external agents of the SFA business
+   channels, SFA internals, and supporting data within the Loan Repayment
+   process. The Loan Repayment process initiates the repayment option
+   based on debt counseling activities. This option selection then drives
+   processing of billing information and actual processing of payments for
+   Direct Loans and Overpayments. The output of these steps will be used
+   to update and manage status. The standard loan repayment process will
+   often trigger debt (Debt Collection and Direct Loan Consolidation)
+   collection, or loan consolidation activities. These are in effect,
+   exception processes to the loan repayment process flow. July 15, 2000
+   Page V.B-16 14 Obtain 21 Eligibility Lenders 12 Assessment Information
+   AA-03 State Agencies 15 Federal Agencies 17 7 Participants Manage
+   Assess Application 18 Participant Eligibility 21 Scholarship AA-02
+   AA-04 Agencies 8 Schools 13 20 Participants ED Manage Aid 21 OMB 22
+   Package 14 Schools AA-05 22 11 16 10 23 19 9 Integrated OMB SFA
+   Enterprise Databases 5 10044162-215_v2 4 Design and Aid 2 Aid
+   Distribution of 6 Participants 3 Applications Programs 1 Application
+   Forms AA-01 Schools Aid Organizations Figure IV.B-5. Aid Application
+   Process Flow (1 of 2) July 15, 2000 Page V.B-17 01 User suggestions 02
+   Policy changes 03 ED change requests 04 OMB change requests 05 Approval
+   details 06 Electronic forms 07 Application data, parental data and
+   signature, FAFSA/corrections/renewal on Web, paper renewals and
+   corrections, master promissory notes for Plus and Stafford loans, Ed
+   Express applications/corrections 08 The Financial Aid package 09 PIN
+   information to account holder and PIN authentication to OSFA systems
+   and SAM 10 Aid application data, loan computations, SSA authentication,
+   new application record for renewal applications, promissory note 11 PIN
+   authentication 12 Aid application 13 Lender list, promissory note,
+   prior year aid application, financial aid process 14 Notification of
+   FFELP request, promissory notes 15 Student record and request for
+   information; annotated student record in response to request 16 Student
+   record comparisons 17 Eligibility information details 18 Aid award and
+   funding information 19 Eligibility determination 20 Student aid report
+   21 Eligibility determination results 22 Row aid award information 23
+   Aid award details 10044162-215A.ppt Figure IV.B-5. Aid Application
+   Process Flow (2 of 2) July 15, 2000 Page V.B-18 Manage 3 1 Repayment 2
+   11 Counseling Borrowers 7 42 Borrowers LR-01 8 Select 6 Federal 9
+   Repayment Lenders 46 Agencies 5 Option LR-02 Federal Lenders Process 10
+   Agencies 4 Billing 41 Information LR-05 Schools 16 Schools 12 Process
+   Loan 13 15 Payment 20 14 and Loan Overpayment LR-04 13 Guaranty
+   Guaranty 23 Agencies 21 Agencies 22 Manage 23 17 20 20 Aid 19 Status
+   LR-03 Credit Bureau 24 24 24 Collection 26 Track 24 27 Agencies
+   Borrower State LR-09 Agencies 44 32 33 Assign 34 37 36 Defaulted
+   Collection Loan Manage Agencies LR-10 Consolidation 34 Loan 36
+   Information 28 LR-07 Integrated Legal 37 36 SFA Enterprise Databases 36
+   Counsel Process 31 Manage 36 39 38 Consolidated Debt Loan Loan
+   Collection Repayments LR-16 LR-12 Employer 36 38 Participants Schools
+   Aid 30 Programs 10044162-439_v2 Figure IV.B-6. Loan Repayment Process
+   Flow (1 of 2) July 15, 2000 Page V.B-19 01 Repayment option and amount
+   of outstanding debt 02 Repayment terms and conditions 03 Repayment
+   counseling details 04 Repayment option selections 05 Income
+   verification 06 Debt collection recalculations, loan details 07
+   Borrower details 08 Debt advice 09 Change requests to billing date 10
+   Payment/agreement details 11 Financial statements 12 Loan payment 13
+   Loan balance details 14 Loan/grant balance details 15 Post payments 16
+   Refunds, tax forms 17 Enrollment status change requests 18
+   Deferment/and or forbearance notification, lender service changes 19
+   Active military status/unemployment status 20 Loan aid status updates,
+   deferment qualification, loan discharges, reinstatements 21
+   Deferment/default status details 22 Deferment and/or forbearance loan
+   holders details 23 Default details 24 Borrower details 25 Defaulted
+   loan and grant details 26 Defaulted loan (FFELP) details 27 Defaulted
+   loan (FISL) details 28 Collection details 29 Loan collection
+   recommendations 30 Wage collection details 31 Delinquent loan referral
+   details 32 Employment/income/refund details 33 Default notification
+   details 34 Debt details 35 Income refund details 36 Loan consolidation
+   details 37 Loan consolidation and eligibility details 38 Loan
+   verification details 39 Credit check details 10044162-439A Figure
+   IV.B-6. Loan Repayment Process Flow (2 of 2) July 15, 2000 Page V.B-20
+   School Services Program Eligibility for Schools Process Flow The
+   process flow illustrated in Figure IV.B-7 depicts business interactions
+   performed by external agents of the SFA business channels, SFA
+   internals, and supporting data within the Program Eligibility for
+   Schools process. The majority of analysis is conducted in Determine
+   School Eligibility where information is collected from a number of
+   sources to complete certification or re-certification of a school. Set
+   Participation Parameters receives inputs from Determine School
+   Eligibility and Guaranty Agencies to determine specific participation
+   levels for the school. If SFA decides that a school may no longer
+   participate in Title IV programs, Discontinue Eligibility is triggered
+   and executes the appropriate administrative procedures and financial
+   transactions. This step may also be triggered directly by the school
+   due to school closure or other voluntary action. Discontinue
+   Eligibility notifies schools, students and Guaranty Agencies of the
+   discontinuance and associated stop payments on funds. Aid Origination
+   and Disbursement Process Flow The process flow illustrated in Figure
+   IV.B-8 depicts business interactions performed by external agents of
+   the SFA business channels, SFA internals, and supporting data within
+   the Aid Origination and Disbursement process. Aid Origination and
+   Disbursement records received by SFA are edit checked. Then
+   authorizations from the student are processed and disbursements are
+   authorized. Finally, reconciliation is performed and enrollment status
+   is maintained. Program Support for Schools Process Flow The process
+   flow illustrated in Figure IV.B-9 depicts business interactions
+   performed by external agents of the SFA business channels, SFA
+   internals, and supporting data within the Program Support for Schools
+   process. The majority of training and guidance support efforts (Develop
+   and Deliver Information, Training and Technical Assistance) will be
+   provided directly to schools in the form of technical assistance,
+   regulatory interpretation and coordination of planning efforts. These
+   activities will feed the collection and maintenance of data internal
+   and external to SFA (Maintain School and Program Information and
+   Status). This information drives the monitoring of school performance
+   (Monitor School Performance) which interfaces with schools, guaranty
+   agencies and other governmental organizations. Monitor School
+   Performance July 15, 2000 Page V.B-21 1, 2, 3, 4, 5, 6 Schools
+   Determine 18 Set Participation School Parameters External 11
+   Eligibility 7 SS-02 Authentication SS-01 Sources 86910 16 3 ED ED 11,
+   13 16 16, 15 Schools Third Party 14, 16 Discontinue Auditors
+   Eligibility SS-03 External 12 19 Authentication Sources Accreditation
+   Board 17 17 16 Guaranty Agencies Integrated SFA Enterprise Guaranty
+   Databases 10044162-385_v2 Agencies Licensing Financial Agencies
+   Services Eligibility Aid Services Programs 01 School application for
+   eligibility or recertification 11 PIN/OPE ID 02 Signed PPAs 12
+   Approval/disapproval of eligibility 03 Change of ownership 13 Program
+   acceptance package 04 Signed letters of credit 14 Order to discontinue
+   eligibility 05 School certification application data 15 Start/stop
+   payment order 06 Accreditation Information 16 School participation
+   status 07 Request for letters of credit 17 Eligibility details 08 3rd
+   party audit information 18 School parameter details 09 Review of
+   school/school audit data 19 Participation details 10 Licensing
+   information Figure IV.B-7. Program Eligibility for Schools Process Flow
+   July 15, 2000 Page V.B-22 Edit 9 2 Common State Schools 2 Origination
+   Agencies Records OD-01 8 Aid 18 Participants Organization Edit 3 Common
+   Disbursement 3 Record OD-02 18 Aid Borrowers 21 Organizations 6 Process
+   6 Borrower 19 Authorizations 8 Schools Lenders 7 OD-03 21 Financial 4
+   12 Authorize Borrowers 4 Institutions Payment to 10044162-436_v2
+   Schools OD-04 4 11 7 10 Integrated SFA Enterprise Databases Aid
+   Origination and Disbursements Participants Schools Aid Organizations
+   Figure IV.B-8. Aid Origination and Disbursement Process Flow (1 of 3)
+   This figure does not reflect changes based upon the Common Origination
+   and Disbursement Process July 15, 2000 Page V.B-23 4 State Schools
+   Manage Agencies Lender Disbursement 17 Information 7 OD-16 Lenders 17
+   Guaranty Agencies Maintain 1 Enrollment 17 Status Lenders OD-09 1 14 15
+   Schools 16 10044162-437_v2 5 Reconcile 5 Drawdown OD-06 5 Integrated
+   SFA Enterprise Databases Aid Origination and Disbursements Participants
+   Schools Aid Organizations Figure IV.B-8. Aid Origination and
+   Disbursement Process Flow (2 of 3) This figure does not reflect changes
+   based upon the Common Origination and Disbursement Process July 15,
+   2000 Page V.B-24 01 Enrollment data 02 Disbursement adjustments and
+   cancellation data 03 Disbursement records 04 Origination and
+   disbursement records 05 Drawdown details 06 Long term debt management
+   07 Borrower authorization 08 Edited disbursement records 09
+   Transmitting organization records 10 Updated disbursement record 11
+   Long term debt planning 12 Debt management plan 13 Fund disbursement
+   data 14 Notification for fund disbursement authorization 15 Edited
+   origination and disbursement 16 Student disbursement rosters 17
+   Enrollment status 18 Edited results 19 Credit check 20 Data for ACH
+   organizations 21 Schedule payment details 10044162-438 Figure IV.B-8.
+   Aid Origination and Disbursement Process Flow (3 of 3) This figure does
+   not reflect changes based upon the Common Origination and Disbursement
+   Process July 15, 2000 Page V.B-25 Develop and 3 General 8 1 Deliver
+   Training Public and Technical 9 Schools 2 Assistance 10 SS-04 2
+   Maintain School 6, 7 and Program 5 Schools Information and General
+   Status Public SS-05 4 Guaranty 2 9 9 Guaranty Agencies 6, 7 Agencies 10
+   9 Monitor School 6 Performance Federal Federal, SS-06 9 State, Local
+   State, Local Agencies 6, 7 10 Agencies 9 10044162-501 _v2 10
+   Participants 6, 7 Take Action on 10 Performance SS-07 2 Integrated SFA
+   Enterprise Databases 7 Schools Program Participants Support Services
+   Aid Programs 01 School performance details request 02 Service delivery
+   details 03 Training programs 04 Service delivery action plans 05 School
+   performance report 06 FISAD details 07 School closure details 08 School
+   directing 09 School performance details 10 Performance actions Figure
+   IV.B-9. Program Support for Schools Process Flow July 15, 2000 Page
+   V.B-26 also provides performance analysis information back to students
+   as needed. The final step in the Program Support process is to Take
+   Action on Performance. Actions typically have a direct impact on
+   schools but may require exchange of information and decisions with
+   guarantors and other agencies as depicted by the flow. Financial
+   Transactions for Schools Process Flow The process flow illustrated in
+   Figure IV.B-10 depicts business interactions performed by external
+   agents of the SFA business channels, SFA internals, and supporting data
+   within the Financial Transaction for School process. The flow diagram
+   describes the major steps that comprise Financial Transactions.
+   Allocate Funds and Allowances determines the appropriate allocation
+   level and supports disbursement of funds to schools for all
+   Campus-Based programs. Manage Authorizations executes similar
+   activities to set and track authorization levels for Pell Grant
+   funding. These steps feed the Execute Financial Adjustments step, which
+   manages cancellations, reimbursements, annual accounting closeouts and
+   other adjustments to reconcile accounts for Pell and Campus-Based
+   programs. Financial Partners Program Eligibility for Financial Partners
+   Process Flow The process flow illustrated in Figure IV.B-11 depicts
+   business interactions performed by external agents of the SFA business
+   channels, SFA internals, and supporting data within the Program
+   Eligibility for Financial Partners process. SFA receives information
+   and qualifications from Lenders and Guaranty agencies that initiate the
+   eligibility process. This data is used to Determine Financial Partner
+   Eligibility. The Second Subprocess Manage State LEAPP Applications
+   manages the applications for LEAPP funds. Finally, SFA may Discontinue
+   Financial Partner Eligibility in the event that a lender's request to
+   leave the program is received by SFA, or if adverse reporting data
+   regarding a lender's financial wherewithal is received. Discontinuance
+   decisions are communicated both to the lender and to other Government
+   agencies. Program Support for Financial Partners Process Flow The
+   process flow illustrated in Figure IV.B-12 depicts business
+   interactions performed by external agents of the SFA business channels,
+   SFA internals, and supporting data within the Program Support for
+   Financial Partners process. Information and advice in Provide Technical
+   Assistance and Guidance flow from SFA to lenders and Guaranty Agencies.
+   Maintain Financial Partner Performance Data receives and stores data
+   from lenders, guaranty agencies, and other Government Agencies. This
+   July 15, 2000 Page V.B-27 Allocate Funds (Campus-Based) 3 1 and
+   Allowances 3 Schools Schools 2 (Pell and Campus-Based) 5 SS-08
+   10044162-504 _v2 4 ED Manage Authorizations (Pell) SS-09 Execute 1
+   Financial Adjustments SS-10 5 6 7 Integrated SFA Enterprise Databases
+   Participants Schools Aid Programs 01 Drawdown requests, Perkins loan
+   cancellations 02 Low-income school information details 03 Notification
+   details 04 Drawdown details 05 Financial statements 06 Loan
+   authorizations 07 Fund and allowance details Figure IV.B-10. Financial
+   Transactions for School Process Flow July 15, 2000 Page V.B-28 Manage
+   State State Grant 10 LEAPP 11 State Grant Agencies Authorization
+   Agencies (FI-12) 1, 2 3 Lenders AFMS Determine Financial Partner
+   Eligibility 2, 4 9 Guaranty (FI-01) Lenders 5 Agencies 8 6, 7
+   10044162-388_v2 Discontinue Financial Partner Eligibility (FI-03) 8
+   Integrated 10 SFA Enterprise Databases Financial Partner Aid
+   Eligibility Programs Service 01 Title IV programs application 02 Lender
+   Participation Questionnaire (LPQs) details 03 Notification details 04
+   Eligibility notices on confirmations 05 Deactivation details 06 Claims
+   information 07 Voluntary discontinuance details 08 Institution status
+   update/retrieval 09 Approved lender applications 10 LEAPP performance
+   reports 11 LEAPP application levels Figure IV.B-11. Program Eligibility
+   for Financial Partners Process Flow July 15, 2000 Page V.B-29 24 22, 17
+   Schools Schools Develop and Conduct Deliver Financial Take Action
+   Information, Partner on Training, 17, 22 Financial Program Other 3, 5
+   Performance and Technical Institutions Reviews Participants (FI-08) 4,
+   5 Assistance 4, 5 (FI-07) (FI-04) 25,26 4, 5 23,24 Financial
+   Independent 1,2 Partners Public Accountants 6 27 6,7,8,9,10,11 13,14
+   Maintain Lenders Financial 20,13 3 Guaranty Partner 16 Agencies
+   Performance 12 Data 27 7,8,9,10,11 (FI-05) 15 ED 9,10,11 10,11 19,20,
+   21,22 Borrowers 13,14 27 Services 21,13 State Monitor 13,14 Licensing
+   16 Financial Agencies 17 Partner Guaranty Performance Agencies (FI-06)
+   Accreditation 13,22 Agencies 13 Secondary 16,17 19 Markets 13
+   10044162-387_v2 Third Party Auditors Integrated SFA Enterprise
+   Databases Secondary Markets Financial Financial Services Partner
+   Program Partner Support Services Program Eligibility Services Lenders
+   Figure IV.B-12. Program Support for Financial Partners Process Flow (1
+   of 2) July 15, 2000 Page V.B-30 01 Training on content of Title IV
+   programs, regulations, offerings, and aid levels 02 Technical
+   assistance, quality assurance, training, and tools 03 Financial Partner
+   profile 04 External review/audit data of financial partners 05 Survey
+   data and feedback from focus groups, phone statistics, etc. 06 Lender
+   Audit reports 07 Review data 08 Reporting form data 09 ED's review and
+   audit data 10 Profiles 11 Appeals of ED program reviews and appeals of
+   calculated default rates 12 Quality Control process review 13 Financial
+   program and oversight data 14 Audit and review appeal status 15
+   Organizational program review and audit data 16 Request to access
+   transaction histories 17 Feedback on services offered by financial
+   partners 18 Transaction histories 19 Secondary Market default rate 20
+   Lender default rate 2

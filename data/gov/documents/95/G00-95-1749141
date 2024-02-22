@@ -1,0 +1,87 @@
+http://gnarly.lanl.gov/Ripple/Ripple.html
+
+                                   RIPPLE
+
+                                [ripple1.gif]
+                              [meniscus4sm.gif]
+     __________________________________________________________________
+
+   RIPPLE is a model for transient, two-dimensional flows of
+   incompressible fluids with surface tension on free surfaces of general
+   shape. Such flows include ink-jet printers, application of industrial
+   surfactants, casting and mold-filling applications, and dynamics of
+   drops and bubbles. Surface tension is modeled as a volume force derived
+   from the continuum-surface-force model, which gives RIPPLE both
+   robustness and accuracy in modeling surface tension effects at the free
+   surface as well as wall-adhesion effects.
+     __________________________________________________________________
+
+                               RIPPLE Features
+
+     * Finite difference discretization on an Eulerian, rectilinear mesh
+       in Cartesian or cylindrical geometry.
+     * Free surfaces are modeled as volume-of-fluid (VOF) data on the
+       mesh.
+     * A two-step projection method is used to solve for the
+       incompressible flow.
+     * Pressure Poisson equation is solved via a robust incomplete
+       Cholesky conjugate gradient technique.
+     * Flow obstacles and curved interior boundaries are representable
+       with a partial-cell treatment.
+     __________________________________________________________________
+
+                            RIPPLE Documentation
+
+     * User's Manual (Los Alamos National Laboratory Report LA-12007-MS):
+          + Gzipped PostScript (0.78 MB)
+          + Compressed PostScript (1.0 MB)
+          + PostScript (2.9 MB)
+     * Overview article (AIAA Journal, 30: 2694-2700, 1992):
+          + Gzipped PostScript (0.072 MB)
+          + Compressed PostScript (0.093 MB)
+          + PostScript (0.24 MB)
+     * Paper detailing the RIPPLE Continuum Surface Force (CSF) model for
+       surface tension (Journal of Computational Physics, 100: 335-354,
+       1992):
+          + Gzipped PostScript (0.57 MB)
+          + Compressed PostScript (0.69 MB)
+          + PostScript (1.92 MB)
+     __________________________________________________________________
+
+              RIPPLE Source Code Availability and Installation
+
+     * Written in Fortran 77 for UNIX-based computational platforms
+     * Portable to all popular workstations and PCs running UNIX with a
+       Fortran 77 and C compiler
+     * Easy to tie in with any 2-D plotting package such as Plotmtv or
+       Gnuplot .
+     * Available for a small fee at these software centers:
+          + Energy Science and Technology Software Center (ESTSC)
+          + NASA COSMIC Software Center
+     * Trouble with installation? Contact Doug Kothe (dbk@lanl.gov).
+     * Although we are not presently funded for further RIPPLE
+       development, we are currently working a 3-D follow-on to RIPPLE
+       which we call TELLURIDE.
+     __________________________________________________________________
+
+            Users of RIPPLE and the CSF Model for Surface Tension
+
+     * An incomplete list of people (0.11 MB PostScript) who have
+       contacted us regarding RIPPLE.
+     * An incomplete list of published research citing usage of RIPPLE
+       and/or the CSF model.
+     * Contact Doug Kothe (dbk@lanl.gov) if your name should be added to
+       either of these lists.
+     * RIPPLE simulation examples:
+          + Metal Droplet Deformation and Solidification
+          + High Pressure Die Casting
+     * Got any neat RIPPLE simulation images you want to show off? Contact
+       Doug Kothe (dbk@lanl.gov).
+     __________________________________________________________________
+
+                                 [Kothe.gif]
+
+         Contact Doug Kothe (dbk@lanl.gov) for the latest on RIPPLE.
+     __________________________________________________________________
+
+          Congrats! You are the [Ripple] vistor since May 31, 1996.

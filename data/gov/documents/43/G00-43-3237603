@@ -1,0 +1,40 @@
+http://hypermail.fnal.gov/connecting.html
+
+                              Connecting to cdcvs
+
+   As of June 21, rsh access to the cdcvs repository is no longer
+   available, instead either ssh with RSA keys, or kerberos rsh, or
+   pserver must be used to access the repository. The following table
+   should help you determine what sort of access you are using:
+Type         $CVS_RSH           $CVSROOT
+----         --------           --------
+rsh                             cvsuser@cdcvs.fnal.gov:/cvs/cd
+rsh          /usr/bin/rsh       cvsuser@cdcvs.fnal.gov:/cvs/cd
+ssh          /usr/krb5/bin/ssh  cvsuser@cdcvs.fnal.gov:/cvs/cd
+ssh          /usr/local/bin/ssh cvsuser@cdcvs.fnal.gov:/cvs/cd
+kerberos-rsh /usr/krb5/bin/rsh  cvsuser@cdcvs.fnal.gov:/cvs/cd
+pserver                         :pserver:yourname@cdcvs.fnal.gov:/cvs/cd
+anonymous                       :pserver:anonymous@cdcvs.fnal.gov:/cvs/cd_read_o
+nly
+
+   For any of these styles of access except anonymous, you also need to be
+   registered. For the latter, you need the password "anoncvs".
+
+   Instructions for building your RSA key, needed to register for ssh
+   access, are at
+     http://www.fnal.gov/docs/products/cvs/cvs_ssh.html
+   You would then send public key to
+     helpdesk@fnal.gov
+
+   Requests for kerberos access involve simply sending email to
+     helpdesk@fnal.gov
+   with your kerberos principal name
+
+   Requests for psever accounts should go to   helpdesk@fnal.gov
+   you will receive a password for use with "cvs login".
+
+   If you are changing access styles in a manner that changes your CVSROOT
+   value (see table above) checked-out copies of repositories can be
+   converted to their new CVSROOT using the "fixcvsroot" script, available
+   for download at:
+     http://cdcvs.fnal.gov/

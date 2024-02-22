@@ -1,0 +1,96 @@
+http://spec.jpl.nasa.gov
+
+   Molecular Spectroscopy
+
+                           JPL Molecular Spectroscopy
+
+   Molecular spectroscopy is the study of absorption of light by
+   molecules. In the gas phase at low pressures, molecules exhibit
+   absorption in narrow lines which are very characteristic of the
+   molecule as well as the temperature and pressure of its environment. In
+   the microwave and long-wavelength infrared regions of the spectrum,
+   these lines are due to quantized rotational motion of the molecule. At
+   shorter wavelengths similar lines are due to quantized vibration and
+   electronic motion as well as rotational motion. The precise frequencies
+   of these lines can be fit to quantum mechanical models which can be
+   used both to determine the structure of the molecule and to predict the
+   frequencies and intensities of other lines. Because this absorption is
+   so characteristic, it is very valuable for detecting molecules in the
+   Earth's stratosphere, planetary atmospheres, and even the interstellar
+   medium. This web site contains very specialized technical information.
+   While the general user is welcome to browse its contents, the
+   descriptions assume a knowledge of spectroscopy and quantum mechanics.
+
+   The JPL Molecular Spectroscopy Team supports NASA programs in
+   Astrophysics, Atmospheric Science, and Planetary Science. Its
+   activities include measurement of rotational lines, fitting the lines,
+   and preparing a catalog of line positions and intensities. The members
+   of the team include Pin Chen, Edward A. Cohen, Timothy J. Crawford,
+   Brian J. Drouin, John C. Pearson, and Herbert M. Pickett.
+
+Quick Links
+
+     * Catalog Directory with links
+     * Catalog Browser Form
+     * New Catalog Additions
+     * What's New with Fitting Programs
+
+Guide to anonymous ftp file system for spec.jpl.nasa.gov
+
+     * The sub-directory calpgm contains programs for fitting spectra.
+       These programs are copyrighted, but made freely available as a
+       service to the spectroscopic community. Some of the details of the
+       program are described in H. M. Pickett, "The Fitting and Prediction
+       of Vibration-Rotation Spectra with Spin Interactions," J. Molec.
+       Spectroscopy 148, 371-377 (1991). Check out the on-line
+       documentation.
+     * The sub-directory catalog contains files related to the JPL
+       spectral line catalog. The file catdir.cat contains the current
+       catalog directory in a format described in the written catalog
+       description. Line files are designated as ctttttt.cat, where tttttt
+       is the zero-filled catalog tag number (the first entry in each line
+       of the catdir.cat file). For example, the H atom line list is in
+       file c001001.cat. The line files and the directory file are text
+       files readable with usual text file system utilities. It is
+       recommended that they be transferred under ftp using the ASCII
+       option, although binary should work with UNIX hosts. The file
+       README contains a short description of the format of catdir.cat and
+       the catalog files. A html catalog directory is available which
+       provides links to the catalog entries and the associated
+       documentation (in either pdf or Tex format). The current literature
+       reference for the catalog is H. M. Pickett, R. L. Poynter, E. A.
+       Cohen, M. L. Delitsky, J. C. Pearson, and H. S. P. Muller,
+       "Submillimeter, Millimeter, and Microwave Spectral Line Catalog,"
+       J. Quant. Spectrosc. & Rad. Transfer 60, 883-890 (1998).
+     * The sub-directory catalog/doc contains the documentation for the
+       line files. Documentation for a particular species follows the line
+       file naming convention except that the first character is 'd'
+       rather than 'c'. These files are text files in LATeX format. The
+       files catdoc.tex, catintro.tex, catdir.tex, and moldoc.tex are the
+       files used to generate the catalog descriptive report. The file
+       pretex.tex can be used to prepare a single document page.
+       Processing the full documentation will generate a document of over
+       300 pages! This documentation is also available in postscript form
+       as catdoc.ps (734 kbytes). If you have the free Adobe Acrobat
+       reader, you can read the document catdoc.pdf (707 kbytes). A pdf
+       version of the introductory information about formats, etc., is
+       available as catintro.pdf (166 kbyes).
+     * The sub-directory catalog/pgm contains utility programs for catalog
+       access. The subroutine set catread.f contains code for reading
+       files into a FORTRAN program. These routines use random access, and
+       assume that the files have a fixed line length within the file.
+       Some modification of path names and file open options will be
+       required for operating systems other than UNIX. The program
+       catlist.f uses catread.f to provide listing of lines for selected
+       molecules over a selected frequency range.
+     * The sub-directory catalog/archive contains the some of the input
+       files for calculating the catalog files
+
+     WARNING: this file system is the living repository of the JPL
+     catalog. Recently added files may still be in a preliminary state.
+     Caution should be used for species which have a catdir.cat line
+     ending with '*', which have been modified since the last published
+     edition of the catalog.
+
+
+    Herb Pickett, e-mail: Herbert.M.Pickett@jpl.nasa.gov
